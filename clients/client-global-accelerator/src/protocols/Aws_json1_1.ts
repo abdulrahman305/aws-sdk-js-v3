@@ -317,7 +317,7 @@ import {
  */
 export const se_AddCustomRoutingEndpointsCommand = async (
   input: AddCustomRoutingEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AddCustomRoutingEndpoints");
   let body: any;
@@ -330,7 +330,7 @@ export const se_AddCustomRoutingEndpointsCommand = async (
  */
 export const se_AddEndpointsCommand = async (
   input: AddEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AddEndpoints");
   let body: any;
@@ -343,7 +343,7 @@ export const se_AddEndpointsCommand = async (
  */
 export const se_AdvertiseByoipCidrCommand = async (
   input: AdvertiseByoipCidrCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AdvertiseByoipCidr");
   let body: any;
@@ -356,7 +356,7 @@ export const se_AdvertiseByoipCidrCommand = async (
  */
 export const se_AllowCustomRoutingTrafficCommand = async (
   input: AllowCustomRoutingTrafficCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AllowCustomRoutingTraffic");
   let body: any;
@@ -369,7 +369,7 @@ export const se_AllowCustomRoutingTrafficCommand = async (
  */
 export const se_CreateAcceleratorCommand = async (
   input: CreateAcceleratorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAccelerator");
   let body: any;
@@ -382,7 +382,7 @@ export const se_CreateAcceleratorCommand = async (
  */
 export const se_CreateCrossAccountAttachmentCommand = async (
   input: CreateCrossAccountAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateCrossAccountAttachment");
   let body: any;
@@ -395,7 +395,7 @@ export const se_CreateCrossAccountAttachmentCommand = async (
  */
 export const se_CreateCustomRoutingAcceleratorCommand = async (
   input: CreateCustomRoutingAcceleratorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateCustomRoutingAccelerator");
   let body: any;
@@ -408,7 +408,7 @@ export const se_CreateCustomRoutingAcceleratorCommand = async (
  */
 export const se_CreateCustomRoutingEndpointGroupCommand = async (
   input: CreateCustomRoutingEndpointGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateCustomRoutingEndpointGroup");
   let body: any;
@@ -421,7 +421,7 @@ export const se_CreateCustomRoutingEndpointGroupCommand = async (
  */
 export const se_CreateCustomRoutingListenerCommand = async (
   input: CreateCustomRoutingListenerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateCustomRoutingListener");
   let body: any;
@@ -434,7 +434,7 @@ export const se_CreateCustomRoutingListenerCommand = async (
  */
 export const se_CreateEndpointGroupCommand = async (
   input: CreateEndpointGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateEndpointGroup");
   let body: any;
@@ -447,7 +447,7 @@ export const se_CreateEndpointGroupCommand = async (
  */
 export const se_CreateListenerCommand = async (
   input: CreateListenerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateListener");
   let body: any;
@@ -460,7 +460,7 @@ export const se_CreateListenerCommand = async (
  */
 export const se_DeleteAcceleratorCommand = async (
   input: DeleteAcceleratorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAccelerator");
   let body: any;
@@ -473,7 +473,7 @@ export const se_DeleteAcceleratorCommand = async (
  */
 export const se_DeleteCrossAccountAttachmentCommand = async (
   input: DeleteCrossAccountAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteCrossAccountAttachment");
   let body: any;
@@ -486,7 +486,7 @@ export const se_DeleteCrossAccountAttachmentCommand = async (
  */
 export const se_DeleteCustomRoutingAcceleratorCommand = async (
   input: DeleteCustomRoutingAcceleratorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteCustomRoutingAccelerator");
   let body: any;
@@ -499,7 +499,7 @@ export const se_DeleteCustomRoutingAcceleratorCommand = async (
  */
 export const se_DeleteCustomRoutingEndpointGroupCommand = async (
   input: DeleteCustomRoutingEndpointGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteCustomRoutingEndpointGroup");
   let body: any;
@@ -512,7 +512,7 @@ export const se_DeleteCustomRoutingEndpointGroupCommand = async (
  */
 export const se_DeleteCustomRoutingListenerCommand = async (
   input: DeleteCustomRoutingListenerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteCustomRoutingListener");
   let body: any;
@@ -525,7 +525,7 @@ export const se_DeleteCustomRoutingListenerCommand = async (
  */
 export const se_DeleteEndpointGroupCommand = async (
   input: DeleteEndpointGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteEndpointGroup");
   let body: any;
@@ -538,7 +538,7 @@ export const se_DeleteEndpointGroupCommand = async (
  */
 export const se_DeleteListenerCommand = async (
   input: DeleteListenerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteListener");
   let body: any;
@@ -551,7 +551,7 @@ export const se_DeleteListenerCommand = async (
  */
 export const se_DenyCustomRoutingTrafficCommand = async (
   input: DenyCustomRoutingTrafficCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DenyCustomRoutingTraffic");
   let body: any;
@@ -564,7 +564,7 @@ export const se_DenyCustomRoutingTrafficCommand = async (
  */
 export const se_DeprovisionByoipCidrCommand = async (
   input: DeprovisionByoipCidrCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeprovisionByoipCidr");
   let body: any;
@@ -577,7 +577,7 @@ export const se_DeprovisionByoipCidrCommand = async (
  */
 export const se_DescribeAcceleratorCommand = async (
   input: DescribeAcceleratorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAccelerator");
   let body: any;
@@ -590,7 +590,7 @@ export const se_DescribeAcceleratorCommand = async (
  */
 export const se_DescribeAcceleratorAttributesCommand = async (
   input: DescribeAcceleratorAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAcceleratorAttributes");
   let body: any;
@@ -603,7 +603,7 @@ export const se_DescribeAcceleratorAttributesCommand = async (
  */
 export const se_DescribeCrossAccountAttachmentCommand = async (
   input: DescribeCrossAccountAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCrossAccountAttachment");
   let body: any;
@@ -616,7 +616,7 @@ export const se_DescribeCrossAccountAttachmentCommand = async (
  */
 export const se_DescribeCustomRoutingAcceleratorCommand = async (
   input: DescribeCustomRoutingAcceleratorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCustomRoutingAccelerator");
   let body: any;
@@ -629,7 +629,7 @@ export const se_DescribeCustomRoutingAcceleratorCommand = async (
  */
 export const se_DescribeCustomRoutingAcceleratorAttributesCommand = async (
   input: DescribeCustomRoutingAcceleratorAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCustomRoutingAcceleratorAttributes");
   let body: any;
@@ -642,7 +642,7 @@ export const se_DescribeCustomRoutingAcceleratorAttributesCommand = async (
  */
 export const se_DescribeCustomRoutingEndpointGroupCommand = async (
   input: DescribeCustomRoutingEndpointGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCustomRoutingEndpointGroup");
   let body: any;
@@ -655,7 +655,7 @@ export const se_DescribeCustomRoutingEndpointGroupCommand = async (
  */
 export const se_DescribeCustomRoutingListenerCommand = async (
   input: DescribeCustomRoutingListenerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCustomRoutingListener");
   let body: any;
@@ -668,7 +668,7 @@ export const se_DescribeCustomRoutingListenerCommand = async (
  */
 export const se_DescribeEndpointGroupCommand = async (
   input: DescribeEndpointGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEndpointGroup");
   let body: any;
@@ -681,7 +681,7 @@ export const se_DescribeEndpointGroupCommand = async (
  */
 export const se_DescribeListenerCommand = async (
   input: DescribeListenerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeListener");
   let body: any;
@@ -694,7 +694,7 @@ export const se_DescribeListenerCommand = async (
  */
 export const se_ListAcceleratorsCommand = async (
   input: ListAcceleratorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAccelerators");
   let body: any;
@@ -707,7 +707,7 @@ export const se_ListAcceleratorsCommand = async (
  */
 export const se_ListByoipCidrsCommand = async (
   input: ListByoipCidrsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListByoipCidrs");
   let body: any;
@@ -720,7 +720,7 @@ export const se_ListByoipCidrsCommand = async (
  */
 export const se_ListCrossAccountAttachmentsCommand = async (
   input: ListCrossAccountAttachmentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListCrossAccountAttachments");
   let body: any;
@@ -733,7 +733,7 @@ export const se_ListCrossAccountAttachmentsCommand = async (
  */
 export const se_ListCrossAccountResourceAccountsCommand = async (
   input: ListCrossAccountResourceAccountsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListCrossAccountResourceAccounts");
   let body: any;
@@ -746,7 +746,7 @@ export const se_ListCrossAccountResourceAccountsCommand = async (
  */
 export const se_ListCrossAccountResourcesCommand = async (
   input: ListCrossAccountResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListCrossAccountResources");
   let body: any;
@@ -759,7 +759,7 @@ export const se_ListCrossAccountResourcesCommand = async (
  */
 export const se_ListCustomRoutingAcceleratorsCommand = async (
   input: ListCustomRoutingAcceleratorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListCustomRoutingAccelerators");
   let body: any;
@@ -772,7 +772,7 @@ export const se_ListCustomRoutingAcceleratorsCommand = async (
  */
 export const se_ListCustomRoutingEndpointGroupsCommand = async (
   input: ListCustomRoutingEndpointGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListCustomRoutingEndpointGroups");
   let body: any;
@@ -785,7 +785,7 @@ export const se_ListCustomRoutingEndpointGroupsCommand = async (
  */
 export const se_ListCustomRoutingListenersCommand = async (
   input: ListCustomRoutingListenersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListCustomRoutingListeners");
   let body: any;
@@ -798,7 +798,7 @@ export const se_ListCustomRoutingListenersCommand = async (
  */
 export const se_ListCustomRoutingPortMappingsCommand = async (
   input: ListCustomRoutingPortMappingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListCustomRoutingPortMappings");
   let body: any;
@@ -811,7 +811,7 @@ export const se_ListCustomRoutingPortMappingsCommand = async (
  */
 export const se_ListCustomRoutingPortMappingsByDestinationCommand = async (
   input: ListCustomRoutingPortMappingsByDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListCustomRoutingPortMappingsByDestination");
   let body: any;
@@ -824,7 +824,7 @@ export const se_ListCustomRoutingPortMappingsByDestinationCommand = async (
  */
 export const se_ListEndpointGroupsCommand = async (
   input: ListEndpointGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListEndpointGroups");
   let body: any;
@@ -837,7 +837,7 @@ export const se_ListEndpointGroupsCommand = async (
  */
 export const se_ListListenersCommand = async (
   input: ListListenersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListListeners");
   let body: any;
@@ -850,7 +850,7 @@ export const se_ListListenersCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -863,7 +863,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ProvisionByoipCidrCommand = async (
   input: ProvisionByoipCidrCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ProvisionByoipCidr");
   let body: any;
@@ -876,7 +876,7 @@ export const se_ProvisionByoipCidrCommand = async (
  */
 export const se_RemoveCustomRoutingEndpointsCommand = async (
   input: RemoveCustomRoutingEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RemoveCustomRoutingEndpoints");
   let body: any;
@@ -889,7 +889,7 @@ export const se_RemoveCustomRoutingEndpointsCommand = async (
  */
 export const se_RemoveEndpointsCommand = async (
   input: RemoveEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RemoveEndpoints");
   let body: any;
@@ -902,7 +902,7 @@ export const se_RemoveEndpointsCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -915,7 +915,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -928,7 +928,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAcceleratorCommand = async (
   input: UpdateAcceleratorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateAccelerator");
   let body: any;
@@ -941,7 +941,7 @@ export const se_UpdateAcceleratorCommand = async (
  */
 export const se_UpdateAcceleratorAttributesCommand = async (
   input: UpdateAcceleratorAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateAcceleratorAttributes");
   let body: any;
@@ -954,7 +954,7 @@ export const se_UpdateAcceleratorAttributesCommand = async (
  */
 export const se_UpdateCrossAccountAttachmentCommand = async (
   input: UpdateCrossAccountAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateCrossAccountAttachment");
   let body: any;
@@ -967,7 +967,7 @@ export const se_UpdateCrossAccountAttachmentCommand = async (
  */
 export const se_UpdateCustomRoutingAcceleratorCommand = async (
   input: UpdateCustomRoutingAcceleratorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateCustomRoutingAccelerator");
   let body: any;
@@ -980,7 +980,7 @@ export const se_UpdateCustomRoutingAcceleratorCommand = async (
  */
 export const se_UpdateCustomRoutingAcceleratorAttributesCommand = async (
   input: UpdateCustomRoutingAcceleratorAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateCustomRoutingAcceleratorAttributes");
   let body: any;
@@ -993,7 +993,7 @@ export const se_UpdateCustomRoutingAcceleratorAttributesCommand = async (
  */
 export const se_UpdateCustomRoutingListenerCommand = async (
   input: UpdateCustomRoutingListenerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateCustomRoutingListener");
   let body: any;
@@ -1006,7 +1006,7 @@ export const se_UpdateCustomRoutingListenerCommand = async (
  */
 export const se_UpdateEndpointGroupCommand = async (
   input: UpdateEndpointGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateEndpointGroup");
   let body: any;
@@ -1019,7 +1019,7 @@ export const se_UpdateEndpointGroupCommand = async (
  */
 export const se_UpdateListenerCommand = async (
   input: UpdateListenerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateListener");
   let body: any;
@@ -1032,7 +1032,7 @@ export const se_UpdateListenerCommand = async (
  */
 export const se_WithdrawByoipCidrCommand = async (
   input: WithdrawByoipCidrCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("WithdrawByoipCidr");
   let body: any;
@@ -1045,7 +1045,7 @@ export const se_WithdrawByoipCidrCommand = async (
  */
 export const de_AddCustomRoutingEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddCustomRoutingEndpointsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1065,7 +1065,7 @@ export const de_AddCustomRoutingEndpointsCommand = async (
  */
 export const de_AddEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddEndpointsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1085,7 +1085,7 @@ export const de_AddEndpointsCommand = async (
  */
 export const de_AdvertiseByoipCidrCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AdvertiseByoipCidrCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1105,7 +1105,7 @@ export const de_AdvertiseByoipCidrCommand = async (
  */
 export const de_AllowCustomRoutingTrafficCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AllowCustomRoutingTrafficCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1122,7 +1122,7 @@ export const de_AllowCustomRoutingTrafficCommand = async (
  */
 export const de_CreateAcceleratorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAcceleratorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1142,7 +1142,7 @@ export const de_CreateAcceleratorCommand = async (
  */
 export const de_CreateCrossAccountAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCrossAccountAttachmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1162,7 +1162,7 @@ export const de_CreateCrossAccountAttachmentCommand = async (
  */
 export const de_CreateCustomRoutingAcceleratorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCustomRoutingAcceleratorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1182,7 +1182,7 @@ export const de_CreateCustomRoutingAcceleratorCommand = async (
  */
 export const de_CreateCustomRoutingEndpointGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCustomRoutingEndpointGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1202,7 +1202,7 @@ export const de_CreateCustomRoutingEndpointGroupCommand = async (
  */
 export const de_CreateCustomRoutingListenerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCustomRoutingListenerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1222,7 +1222,7 @@ export const de_CreateCustomRoutingListenerCommand = async (
  */
 export const de_CreateEndpointGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEndpointGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1242,7 +1242,7 @@ export const de_CreateEndpointGroupCommand = async (
  */
 export const de_CreateListenerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateListenerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1262,7 +1262,7 @@ export const de_CreateListenerCommand = async (
  */
 export const de_DeleteAcceleratorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAcceleratorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1279,7 +1279,7 @@ export const de_DeleteAcceleratorCommand = async (
  */
 export const de_DeleteCrossAccountAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCrossAccountAttachmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1296,7 +1296,7 @@ export const de_DeleteCrossAccountAttachmentCommand = async (
  */
 export const de_DeleteCustomRoutingAcceleratorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCustomRoutingAcceleratorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1313,7 +1313,7 @@ export const de_DeleteCustomRoutingAcceleratorCommand = async (
  */
 export const de_DeleteCustomRoutingEndpointGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCustomRoutingEndpointGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1330,7 +1330,7 @@ export const de_DeleteCustomRoutingEndpointGroupCommand = async (
  */
 export const de_DeleteCustomRoutingListenerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCustomRoutingListenerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1347,7 +1347,7 @@ export const de_DeleteCustomRoutingListenerCommand = async (
  */
 export const de_DeleteEndpointGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEndpointGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1364,7 +1364,7 @@ export const de_DeleteEndpointGroupCommand = async (
  */
 export const de_DeleteListenerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteListenerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1381,7 +1381,7 @@ export const de_DeleteListenerCommand = async (
  */
 export const de_DenyCustomRoutingTrafficCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DenyCustomRoutingTrafficCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1398,7 +1398,7 @@ export const de_DenyCustomRoutingTrafficCommand = async (
  */
 export const de_DeprovisionByoipCidrCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeprovisionByoipCidrCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1418,7 +1418,7 @@ export const de_DeprovisionByoipCidrCommand = async (
  */
 export const de_DescribeAcceleratorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAcceleratorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1438,7 +1438,7 @@ export const de_DescribeAcceleratorCommand = async (
  */
 export const de_DescribeAcceleratorAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAcceleratorAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1458,7 +1458,7 @@ export const de_DescribeAcceleratorAttributesCommand = async (
  */
 export const de_DescribeCrossAccountAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCrossAccountAttachmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1478,7 +1478,7 @@ export const de_DescribeCrossAccountAttachmentCommand = async (
  */
 export const de_DescribeCustomRoutingAcceleratorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCustomRoutingAcceleratorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1498,7 +1498,7 @@ export const de_DescribeCustomRoutingAcceleratorCommand = async (
  */
 export const de_DescribeCustomRoutingAcceleratorAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCustomRoutingAcceleratorAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1518,7 +1518,7 @@ export const de_DescribeCustomRoutingAcceleratorAttributesCommand = async (
  */
 export const de_DescribeCustomRoutingEndpointGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCustomRoutingEndpointGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1538,7 +1538,7 @@ export const de_DescribeCustomRoutingEndpointGroupCommand = async (
  */
 export const de_DescribeCustomRoutingListenerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCustomRoutingListenerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1558,7 +1558,7 @@ export const de_DescribeCustomRoutingListenerCommand = async (
  */
 export const de_DescribeEndpointGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEndpointGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1578,7 +1578,7 @@ export const de_DescribeEndpointGroupCommand = async (
  */
 export const de_DescribeListenerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeListenerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1598,7 +1598,7 @@ export const de_DescribeListenerCommand = async (
  */
 export const de_ListAcceleratorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAcceleratorsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1618,7 +1618,7 @@ export const de_ListAcceleratorsCommand = async (
  */
 export const de_ListByoipCidrsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListByoipCidrsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1638,7 +1638,7 @@ export const de_ListByoipCidrsCommand = async (
  */
 export const de_ListCrossAccountAttachmentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCrossAccountAttachmentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1658,7 +1658,7 @@ export const de_ListCrossAccountAttachmentsCommand = async (
  */
 export const de_ListCrossAccountResourceAccountsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCrossAccountResourceAccountsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1678,7 +1678,7 @@ export const de_ListCrossAccountResourceAccountsCommand = async (
  */
 export const de_ListCrossAccountResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCrossAccountResourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1698,7 +1698,7 @@ export const de_ListCrossAccountResourcesCommand = async (
  */
 export const de_ListCustomRoutingAcceleratorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCustomRoutingAcceleratorsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1718,7 +1718,7 @@ export const de_ListCustomRoutingAcceleratorsCommand = async (
  */
 export const de_ListCustomRoutingEndpointGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCustomRoutingEndpointGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1738,7 +1738,7 @@ export const de_ListCustomRoutingEndpointGroupsCommand = async (
  */
 export const de_ListCustomRoutingListenersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCustomRoutingListenersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1758,7 +1758,7 @@ export const de_ListCustomRoutingListenersCommand = async (
  */
 export const de_ListCustomRoutingPortMappingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCustomRoutingPortMappingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1778,7 +1778,7 @@ export const de_ListCustomRoutingPortMappingsCommand = async (
  */
 export const de_ListCustomRoutingPortMappingsByDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCustomRoutingPortMappingsByDestinationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1798,7 +1798,7 @@ export const de_ListCustomRoutingPortMappingsByDestinationCommand = async (
  */
 export const de_ListEndpointGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEndpointGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1818,7 +1818,7 @@ export const de_ListEndpointGroupsCommand = async (
  */
 export const de_ListListenersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListListenersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1838,7 +1838,7 @@ export const de_ListListenersCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1858,7 +1858,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ProvisionByoipCidrCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ProvisionByoipCidrCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1878,7 +1878,7 @@ export const de_ProvisionByoipCidrCommand = async (
  */
 export const de_RemoveCustomRoutingEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveCustomRoutingEndpointsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1895,7 +1895,7 @@ export const de_RemoveCustomRoutingEndpointsCommand = async (
  */
 export const de_RemoveEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveEndpointsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1912,7 +1912,7 @@ export const de_RemoveEndpointsCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1932,7 +1932,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1952,7 +1952,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAcceleratorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAcceleratorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1972,7 +1972,7 @@ export const de_UpdateAcceleratorCommand = async (
  */
 export const de_UpdateAcceleratorAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAcceleratorAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1992,7 +1992,7 @@ export const de_UpdateAcceleratorAttributesCommand = async (
  */
 export const de_UpdateCrossAccountAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCrossAccountAttachmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2012,7 +2012,7 @@ export const de_UpdateCrossAccountAttachmentCommand = async (
  */
 export const de_UpdateCustomRoutingAcceleratorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCustomRoutingAcceleratorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2032,7 +2032,7 @@ export const de_UpdateCustomRoutingAcceleratorCommand = async (
  */
 export const de_UpdateCustomRoutingAcceleratorAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCustomRoutingAcceleratorAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2052,7 +2052,7 @@ export const de_UpdateCustomRoutingAcceleratorAttributesCommand = async (
  */
 export const de_UpdateCustomRoutingListenerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCustomRoutingListenerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2072,7 +2072,7 @@ export const de_UpdateCustomRoutingListenerCommand = async (
  */
 export const de_UpdateEndpointGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEndpointGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2092,7 +2092,7 @@ export const de_UpdateEndpointGroupCommand = async (
  */
 export const de_UpdateListenerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateListenerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2112,7 +2112,7 @@ export const de_UpdateListenerCommand = async (
  */
 export const de_WithdrawByoipCidrCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WithdrawByoipCidrCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2212,7 +2212,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AcceleratorNotDisabledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceleratorNotDisabledException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2228,7 +2228,7 @@ const de_AcceleratorNotDisabledExceptionRes = async (
  */
 const de_AcceleratorNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceleratorNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2244,7 +2244,7 @@ const de_AcceleratorNotFoundExceptionRes = async (
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2260,7 +2260,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_AssociatedEndpointGroupFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociatedEndpointGroupFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2276,7 +2276,7 @@ const de_AssociatedEndpointGroupFoundExceptionRes = async (
  */
 const de_AssociatedListenerFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociatedListenerFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2292,7 +2292,7 @@ const de_AssociatedListenerFoundExceptionRes = async (
  */
 const de_AttachmentNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachmentNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2308,7 +2308,7 @@ const de_AttachmentNotFoundExceptionRes = async (
  */
 const de_ByoipCidrNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ByoipCidrNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2337,7 +2337,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_EndpointAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EndpointAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2353,7 +2353,7 @@ const de_EndpointAlreadyExistsExceptionRes = async (
  */
 const de_EndpointGroupAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EndpointGroupAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2369,7 +2369,7 @@ const de_EndpointGroupAlreadyExistsExceptionRes = async (
  */
 const de_EndpointGroupNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EndpointGroupNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2385,7 +2385,7 @@ const de_EndpointGroupNotFoundExceptionRes = async (
  */
 const de_EndpointNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EndpointNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2401,7 +2401,7 @@ const de_EndpointNotFoundExceptionRes = async (
  */
 const de_IncorrectCidrStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IncorrectCidrStateException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2417,7 +2417,7 @@ const de_IncorrectCidrStateExceptionRes = async (
  */
 const de_InternalServiceErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceErrorException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2433,7 +2433,7 @@ const de_InternalServiceErrorExceptionRes = async (
  */
 const de_InvalidArgumentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidArgumentException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2449,7 +2449,7 @@ const de_InvalidArgumentExceptionRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2465,7 +2465,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_InvalidPortRangeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPortRangeException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2481,7 +2481,7 @@ const de_InvalidPortRangeExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2497,7 +2497,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ListenerNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListenerNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2513,7 +2513,7 @@ const de_ListenerNotFoundExceptionRes = async (
  */
 const de_TransactionInProgressExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TransactionInProgressException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2553,7 +2553,7 @@ const se_CreateAcceleratorRequest = (input: CreateAcceleratorRequest, context: _
  */
 const se_CreateCrossAccountAttachmentRequest = (
   input: CreateCrossAccountAttachmentRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     IdempotencyToken: [true, (_) => _ ?? generateIdempotencyToken()],
@@ -2569,7 +2569,7 @@ const se_CreateCrossAccountAttachmentRequest = (
  */
 const se_CreateCustomRoutingAcceleratorRequest = (
   input: CreateCustomRoutingAcceleratorRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Enabled: [],
@@ -2586,7 +2586,7 @@ const se_CreateCustomRoutingAcceleratorRequest = (
  */
 const se_CreateCustomRoutingEndpointGroupRequest = (
   input: CreateCustomRoutingEndpointGroupRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     DestinationConfigurations: _json,
@@ -2601,7 +2601,7 @@ const se_CreateCustomRoutingEndpointGroupRequest = (
  */
 const se_CreateCustomRoutingListenerRequest = (
   input: CreateCustomRoutingListenerRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     AcceleratorArn: [],
@@ -2964,7 +2964,7 @@ const de_CreateAcceleratorResponse = (output: any, context: __SerdeContext): Cre
  */
 const de_CreateCrossAccountAttachmentResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateCrossAccountAttachmentResponse => {
   return take(output, {
     CrossAccountAttachment: (_: any) => de_Attachment(_, context),
@@ -2976,7 +2976,7 @@ const de_CreateCrossAccountAttachmentResponse = (
  */
 const de_CreateCustomRoutingAcceleratorResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateCustomRoutingAcceleratorResponse => {
   return take(output, {
     Accelerator: (_: any) => de_CustomRoutingAccelerator(_, context),
@@ -3076,7 +3076,7 @@ const de_DescribeAcceleratorResponse = (output: any, context: __SerdeContext): D
  */
 const de_DescribeCrossAccountAttachmentResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeCrossAccountAttachmentResponse => {
   return take(output, {
     CrossAccountAttachment: (_: any) => de_Attachment(_, context),
@@ -3090,7 +3090,7 @@ const de_DescribeCrossAccountAttachmentResponse = (
  */
 const de_DescribeCustomRoutingAcceleratorResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeCustomRoutingAcceleratorResponse => {
   return take(output, {
     Accelerator: (_: any) => de_CustomRoutingAccelerator(_, context),
@@ -3201,7 +3201,7 @@ const de_ListByoipCidrsResponse = (output: any, context: __SerdeContext): ListBy
  */
 const de_ListCrossAccountAttachmentsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListCrossAccountAttachmentsResponse => {
   return take(output, {
     CrossAccountAttachments: (_: any) => de_Attachments(_, context),
@@ -3218,7 +3218,7 @@ const de_ListCrossAccountAttachmentsResponse = (
  */
 const de_ListCustomRoutingAcceleratorsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListCustomRoutingAcceleratorsResponse => {
   return take(output, {
     Accelerators: (_: any) => de_CustomRoutingAccelerators(_, context),
@@ -3313,7 +3313,7 @@ const de_UpdateAcceleratorResponse = (output: any, context: __SerdeContext): Upd
  */
 const de_UpdateCrossAccountAttachmentResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateCrossAccountAttachmentResponse => {
   return take(output, {
     CrossAccountAttachment: (_: any) => de_Attachment(_, context),
@@ -3327,7 +3327,7 @@ const de_UpdateCrossAccountAttachmentResponse = (
  */
 const de_UpdateCustomRoutingAcceleratorResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateCustomRoutingAcceleratorResponse => {
   return take(output, {
     Accelerator: (_: any) => de_CustomRoutingAccelerator(_, context),
@@ -3374,7 +3374,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

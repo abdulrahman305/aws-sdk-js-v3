@@ -39,7 +39,7 @@ export const se_EchoCommand = async (input: EchoCommandInput, context: __SerdeCo
   body = JSON.stringify(
     take(input, {
       string: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -81,7 +81,7 @@ export const de_EchoCommand = async (output: __HttpResponse, context: __SerdeCon
  */
 export const de_LengthCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LengthCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);

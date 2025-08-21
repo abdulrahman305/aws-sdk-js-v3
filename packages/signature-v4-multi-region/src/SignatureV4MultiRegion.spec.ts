@@ -63,7 +63,7 @@ describe("SignatureV4MultiRegion", () => {
     expect.assertions(1);
     const signer = new SignatureV4MultiRegion({ ...params, runtime: "browser" });
     await expect(async () => await signer.sign(minimalRequest, { signingRegion: "*" })).rejects.toThrow(
-      "This request requires signing with SigV4Asymmetric algorithm. It's only available in Node.js"
+      "This request requires signing with SigV4Asymmetric algorithm. It's only available in Node.js",
     );
   });
 
@@ -71,7 +71,7 @@ describe("SignatureV4MultiRegion", () => {
     expect.assertions(1);
     const signer = new SignatureV4MultiRegion({ ...params, runtime: "browser" });
     await expect(signer.presign(minimalRequest, { signingRegion: "*" })).rejects.toThrow(
-      "This request requires signing with SigV4Asymmetric algorithm. It's only available in Node.js"
+      "This request requires signing with SigV4Asymmetric algorithm. It's only available in Node.js",
     );
   });
 
@@ -85,7 +85,7 @@ describe("SignatureV4MultiRegion", () => {
         `You must also register the package by calling [require("@aws-sdk/signature-v4-crt");] ` +
         `or an ESM equivalent such as [import "@aws-sdk/signature-v4-crt";]. \n` +
         "For more information please go to " +
-        "https://github.com/aws/aws-sdk-js-v3#functionality-requiring-aws-common-runtime-crt"
+        "https://github.com/aws/aws-sdk-js-v3#functionality-requiring-aws-common-runtime-crt",
     );
   });
 });

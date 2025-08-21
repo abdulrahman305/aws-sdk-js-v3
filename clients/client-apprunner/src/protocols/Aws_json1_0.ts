@@ -225,7 +225,7 @@ import {
  */
 export const se_AssociateCustomDomainCommand = async (
   input: AssociateCustomDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateCustomDomain");
   let body: any;
@@ -238,7 +238,7 @@ export const se_AssociateCustomDomainCommand = async (
  */
 export const se_CreateAutoScalingConfigurationCommand = async (
   input: CreateAutoScalingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAutoScalingConfiguration");
   let body: any;
@@ -251,7 +251,7 @@ export const se_CreateAutoScalingConfigurationCommand = async (
  */
 export const se_CreateConnectionCommand = async (
   input: CreateConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateConnection");
   let body: any;
@@ -264,7 +264,7 @@ export const se_CreateConnectionCommand = async (
  */
 export const se_CreateObservabilityConfigurationCommand = async (
   input: CreateObservabilityConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateObservabilityConfiguration");
   let body: any;
@@ -277,7 +277,7 @@ export const se_CreateObservabilityConfigurationCommand = async (
  */
 export const se_CreateServiceCommand = async (
   input: CreateServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateService");
   let body: any;
@@ -290,7 +290,7 @@ export const se_CreateServiceCommand = async (
  */
 export const se_CreateVpcConnectorCommand = async (
   input: CreateVpcConnectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateVpcConnector");
   let body: any;
@@ -303,7 +303,7 @@ export const se_CreateVpcConnectorCommand = async (
  */
 export const se_CreateVpcIngressConnectionCommand = async (
   input: CreateVpcIngressConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateVpcIngressConnection");
   let body: any;
@@ -316,7 +316,7 @@ export const se_CreateVpcIngressConnectionCommand = async (
  */
 export const se_DeleteAutoScalingConfigurationCommand = async (
   input: DeleteAutoScalingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAutoScalingConfiguration");
   let body: any;
@@ -329,7 +329,7 @@ export const se_DeleteAutoScalingConfigurationCommand = async (
  */
 export const se_DeleteConnectionCommand = async (
   input: DeleteConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteConnection");
   let body: any;
@@ -342,7 +342,7 @@ export const se_DeleteConnectionCommand = async (
  */
 export const se_DeleteObservabilityConfigurationCommand = async (
   input: DeleteObservabilityConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteObservabilityConfiguration");
   let body: any;
@@ -355,7 +355,7 @@ export const se_DeleteObservabilityConfigurationCommand = async (
  */
 export const se_DeleteServiceCommand = async (
   input: DeleteServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteService");
   let body: any;
@@ -368,7 +368,7 @@ export const se_DeleteServiceCommand = async (
  */
 export const se_DeleteVpcConnectorCommand = async (
   input: DeleteVpcConnectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteVpcConnector");
   let body: any;
@@ -381,7 +381,7 @@ export const se_DeleteVpcConnectorCommand = async (
  */
 export const se_DeleteVpcIngressConnectionCommand = async (
   input: DeleteVpcIngressConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteVpcIngressConnection");
   let body: any;
@@ -394,7 +394,7 @@ export const se_DeleteVpcIngressConnectionCommand = async (
  */
 export const se_DescribeAutoScalingConfigurationCommand = async (
   input: DescribeAutoScalingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAutoScalingConfiguration");
   let body: any;
@@ -407,7 +407,7 @@ export const se_DescribeAutoScalingConfigurationCommand = async (
  */
 export const se_DescribeCustomDomainsCommand = async (
   input: DescribeCustomDomainsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCustomDomains");
   let body: any;
@@ -420,7 +420,7 @@ export const se_DescribeCustomDomainsCommand = async (
  */
 export const se_DescribeObservabilityConfigurationCommand = async (
   input: DescribeObservabilityConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeObservabilityConfiguration");
   let body: any;
@@ -433,7 +433,7 @@ export const se_DescribeObservabilityConfigurationCommand = async (
  */
 export const se_DescribeServiceCommand = async (
   input: DescribeServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeService");
   let body: any;
@@ -446,7 +446,7 @@ export const se_DescribeServiceCommand = async (
  */
 export const se_DescribeVpcConnectorCommand = async (
   input: DescribeVpcConnectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeVpcConnector");
   let body: any;
@@ -459,7 +459,7 @@ export const se_DescribeVpcConnectorCommand = async (
  */
 export const se_DescribeVpcIngressConnectionCommand = async (
   input: DescribeVpcIngressConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeVpcIngressConnection");
   let body: any;
@@ -472,7 +472,7 @@ export const se_DescribeVpcIngressConnectionCommand = async (
  */
 export const se_DisassociateCustomDomainCommand = async (
   input: DisassociateCustomDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateCustomDomain");
   let body: any;
@@ -485,7 +485,7 @@ export const se_DisassociateCustomDomainCommand = async (
  */
 export const se_ListAutoScalingConfigurationsCommand = async (
   input: ListAutoScalingConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAutoScalingConfigurations");
   let body: any;
@@ -498,7 +498,7 @@ export const se_ListAutoScalingConfigurationsCommand = async (
  */
 export const se_ListConnectionsCommand = async (
   input: ListConnectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListConnections");
   let body: any;
@@ -511,7 +511,7 @@ export const se_ListConnectionsCommand = async (
  */
 export const se_ListObservabilityConfigurationsCommand = async (
   input: ListObservabilityConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListObservabilityConfigurations");
   let body: any;
@@ -524,7 +524,7 @@ export const se_ListObservabilityConfigurationsCommand = async (
  */
 export const se_ListOperationsCommand = async (
   input: ListOperationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListOperations");
   let body: any;
@@ -537,7 +537,7 @@ export const se_ListOperationsCommand = async (
  */
 export const se_ListServicesCommand = async (
   input: ListServicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListServices");
   let body: any;
@@ -550,7 +550,7 @@ export const se_ListServicesCommand = async (
  */
 export const se_ListServicesForAutoScalingConfigurationCommand = async (
   input: ListServicesForAutoScalingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListServicesForAutoScalingConfiguration");
   let body: any;
@@ -563,7 +563,7 @@ export const se_ListServicesForAutoScalingConfigurationCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -576,7 +576,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListVpcConnectorsCommand = async (
   input: ListVpcConnectorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListVpcConnectors");
   let body: any;
@@ -589,7 +589,7 @@ export const se_ListVpcConnectorsCommand = async (
  */
 export const se_ListVpcIngressConnectionsCommand = async (
   input: ListVpcIngressConnectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListVpcIngressConnections");
   let body: any;
@@ -602,7 +602,7 @@ export const se_ListVpcIngressConnectionsCommand = async (
  */
 export const se_PauseServiceCommand = async (
   input: PauseServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PauseService");
   let body: any;
@@ -615,7 +615,7 @@ export const se_PauseServiceCommand = async (
  */
 export const se_ResumeServiceCommand = async (
   input: ResumeServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ResumeService");
   let body: any;
@@ -628,7 +628,7 @@ export const se_ResumeServiceCommand = async (
  */
 export const se_StartDeploymentCommand = async (
   input: StartDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartDeployment");
   let body: any;
@@ -641,7 +641,7 @@ export const se_StartDeploymentCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -654,7 +654,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -667,7 +667,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateDefaultAutoScalingConfigurationCommand = async (
   input: UpdateDefaultAutoScalingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateDefaultAutoScalingConfiguration");
   let body: any;
@@ -680,7 +680,7 @@ export const se_UpdateDefaultAutoScalingConfigurationCommand = async (
  */
 export const se_UpdateServiceCommand = async (
   input: UpdateServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateService");
   let body: any;
@@ -693,7 +693,7 @@ export const se_UpdateServiceCommand = async (
  */
 export const se_UpdateVpcIngressConnectionCommand = async (
   input: UpdateVpcIngressConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateVpcIngressConnection");
   let body: any;
@@ -706,7 +706,7 @@ export const se_UpdateVpcIngressConnectionCommand = async (
  */
 export const de_AssociateCustomDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateCustomDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -726,7 +726,7 @@ export const de_AssociateCustomDomainCommand = async (
  */
 export const de_CreateAutoScalingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAutoScalingConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -746,7 +746,7 @@ export const de_CreateAutoScalingConfigurationCommand = async (
  */
 export const de_CreateConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -766,7 +766,7 @@ export const de_CreateConnectionCommand = async (
  */
 export const de_CreateObservabilityConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateObservabilityConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -786,7 +786,7 @@ export const de_CreateObservabilityConfigurationCommand = async (
  */
 export const de_CreateServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateServiceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -806,7 +806,7 @@ export const de_CreateServiceCommand = async (
  */
 export const de_CreateVpcConnectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVpcConnectorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -826,7 +826,7 @@ export const de_CreateVpcConnectorCommand = async (
  */
 export const de_CreateVpcIngressConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVpcIngressConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -846,7 +846,7 @@ export const de_CreateVpcIngressConnectionCommand = async (
  */
 export const de_DeleteAutoScalingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAutoScalingConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -866,7 +866,7 @@ export const de_DeleteAutoScalingConfigurationCommand = async (
  */
 export const de_DeleteConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -886,7 +886,7 @@ export const de_DeleteConnectionCommand = async (
  */
 export const de_DeleteObservabilityConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteObservabilityConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -906,7 +906,7 @@ export const de_DeleteObservabilityConfigurationCommand = async (
  */
 export const de_DeleteServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServiceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -926,7 +926,7 @@ export const de_DeleteServiceCommand = async (
  */
 export const de_DeleteVpcConnectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVpcConnectorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -946,7 +946,7 @@ export const de_DeleteVpcConnectorCommand = async (
  */
 export const de_DeleteVpcIngressConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVpcIngressConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -966,7 +966,7 @@ export const de_DeleteVpcIngressConnectionCommand = async (
  */
 export const de_DescribeAutoScalingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAutoScalingConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -986,7 +986,7 @@ export const de_DescribeAutoScalingConfigurationCommand = async (
  */
 export const de_DescribeCustomDomainsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCustomDomainsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1006,7 +1006,7 @@ export const de_DescribeCustomDomainsCommand = async (
  */
 export const de_DescribeObservabilityConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeObservabilityConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1026,7 +1026,7 @@ export const de_DescribeObservabilityConfigurationCommand = async (
  */
 export const de_DescribeServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeServiceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1046,7 +1046,7 @@ export const de_DescribeServiceCommand = async (
  */
 export const de_DescribeVpcConnectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVpcConnectorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1066,7 +1066,7 @@ export const de_DescribeVpcConnectorCommand = async (
  */
 export const de_DescribeVpcIngressConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVpcIngressConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1086,7 +1086,7 @@ export const de_DescribeVpcIngressConnectionCommand = async (
  */
 export const de_DisassociateCustomDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateCustomDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1106,7 +1106,7 @@ export const de_DisassociateCustomDomainCommand = async (
  */
 export const de_ListAutoScalingConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAutoScalingConfigurationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1126,7 +1126,7 @@ export const de_ListAutoScalingConfigurationsCommand = async (
  */
 export const de_ListConnectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConnectionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1146,7 +1146,7 @@ export const de_ListConnectionsCommand = async (
  */
 export const de_ListObservabilityConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListObservabilityConfigurationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1166,7 +1166,7 @@ export const de_ListObservabilityConfigurationsCommand = async (
  */
 export const de_ListOperationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOperationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1186,7 +1186,7 @@ export const de_ListOperationsCommand = async (
  */
 export const de_ListServicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServicesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1206,7 +1206,7 @@ export const de_ListServicesCommand = async (
  */
 export const de_ListServicesForAutoScalingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServicesForAutoScalingConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1226,7 +1226,7 @@ export const de_ListServicesForAutoScalingConfigurationCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1246,7 +1246,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListVpcConnectorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVpcConnectorsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1266,7 +1266,7 @@ export const de_ListVpcConnectorsCommand = async (
  */
 export const de_ListVpcIngressConnectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVpcIngressConnectionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1286,7 +1286,7 @@ export const de_ListVpcIngressConnectionsCommand = async (
  */
 export const de_PauseServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PauseServiceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1306,7 +1306,7 @@ export const de_PauseServiceCommand = async (
  */
 export const de_ResumeServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResumeServiceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1326,7 +1326,7 @@ export const de_ResumeServiceCommand = async (
  */
 export const de_StartDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartDeploymentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1346,7 +1346,7 @@ export const de_StartDeploymentCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1366,7 +1366,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1386,7 +1386,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateDefaultAutoScalingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDefaultAutoScalingConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1406,7 +1406,7 @@ export const de_UpdateDefaultAutoScalingConfigurationCommand = async (
  */
 export const de_UpdateServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServiceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1426,7 +1426,7 @@ export const de_UpdateServiceCommand = async (
  */
 export const de_UpdateVpcIngressConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVpcIngressConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1481,7 +1481,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_InternalServiceErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceErrorException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1497,7 +1497,7 @@ const de_InternalServiceErrorExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1513,7 +1513,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_InvalidStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidStateException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1529,7 +1529,7 @@ const de_InvalidStateExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1545,7 +1545,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1722,7 +1722,7 @@ const de_AutoScalingConfigurationSummary = (output: any, context: __SerdeContext
  */
 const de_AutoScalingConfigurationSummaryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AutoScalingConfigurationSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -1785,7 +1785,7 @@ const de_ConnectionSummaryList = (output: any, context: __SerdeContext): Connect
  */
 const de_CreateAutoScalingConfigurationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateAutoScalingConfigurationResponse => {
   return take(output, {
     AutoScalingConfiguration: (_: any) => de_AutoScalingConfiguration(_, context),
@@ -1806,7 +1806,7 @@ const de_CreateConnectionResponse = (output: any, context: __SerdeContext): Crea
  */
 const de_CreateObservabilityConfigurationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateObservabilityConfigurationResponse => {
   return take(output, {
     ObservabilityConfiguration: (_: any) => de_ObservabilityConfiguration(_, context),
@@ -1837,7 +1837,7 @@ const de_CreateVpcConnectorResponse = (output: any, context: __SerdeContext): Cr
  */
 const de_CreateVpcIngressConnectionResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateVpcIngressConnectionResponse => {
   return take(output, {
     VpcIngressConnection: (_: any) => de_VpcIngressConnection(_, context),
@@ -1853,7 +1853,7 @@ const de_CreateVpcIngressConnectionResponse = (
  */
 const de_DeleteAutoScalingConfigurationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteAutoScalingConfigurationResponse => {
   return take(output, {
     AutoScalingConfiguration: (_: any) => de_AutoScalingConfiguration(_, context),
@@ -1874,7 +1874,7 @@ const de_DeleteConnectionResponse = (output: any, context: __SerdeContext): Dele
  */
 const de_DeleteObservabilityConfigurationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteObservabilityConfigurationResponse => {
   return take(output, {
     ObservabilityConfiguration: (_: any) => de_ObservabilityConfiguration(_, context),
@@ -1905,7 +1905,7 @@ const de_DeleteVpcConnectorResponse = (output: any, context: __SerdeContext): De
  */
 const de_DeleteVpcIngressConnectionResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteVpcIngressConnectionResponse => {
   return take(output, {
     VpcIngressConnection: (_: any) => de_VpcIngressConnection(_, context),
@@ -1917,7 +1917,7 @@ const de_DeleteVpcIngressConnectionResponse = (
  */
 const de_DescribeAutoScalingConfigurationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeAutoScalingConfigurationResponse => {
   return take(output, {
     AutoScalingConfiguration: (_: any) => de_AutoScalingConfiguration(_, context),
@@ -1931,7 +1931,7 @@ const de_DescribeAutoScalingConfigurationResponse = (
  */
 const de_DescribeObservabilityConfigurationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeObservabilityConfigurationResponse => {
   return take(output, {
     ObservabilityConfiguration: (_: any) => de_ObservabilityConfiguration(_, context),
@@ -1961,7 +1961,7 @@ const de_DescribeVpcConnectorResponse = (output: any, context: __SerdeContext): 
  */
 const de_DescribeVpcIngressConnectionResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeVpcIngressConnectionResponse => {
   return take(output, {
     VpcIngressConnection: (_: any) => de_VpcIngressConnection(_, context),
@@ -1997,7 +1997,7 @@ const de_DescribeVpcIngressConnectionResponse = (
  */
 const de_ListAutoScalingConfigurationsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListAutoScalingConfigurationsResponse => {
   return take(output, {
     AutoScalingConfigurationSummaryList: (_: any) => de_AutoScalingConfigurationSummaryList(_, context),
@@ -2207,7 +2207,7 @@ const de_ServiceSummaryList = (output: any, context: __SerdeContext): ServiceSum
  */
 const de_UpdateDefaultAutoScalingConfigurationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateDefaultAutoScalingConfigurationResponse => {
   return take(output, {
     AutoScalingConfiguration: (_: any) => de_AutoScalingConfiguration(_, context),
@@ -2229,7 +2229,7 @@ const de_UpdateServiceResponse = (output: any, context: __SerdeContext): UpdateS
  */
 const de_UpdateVpcIngressConnectionResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateVpcIngressConnectionResponse => {
   return take(output, {
     VpcIngressConnection: (_: any) => de_VpcIngressConnection(_, context),
@@ -2307,7 +2307,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

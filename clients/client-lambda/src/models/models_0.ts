@@ -7470,7 +7470,7 @@ export const InvokeResponseStreamUpdateFilterSensitiveLog = (obj: InvokeResponse
  * @internal
  */
 export const InvokeWithResponseStreamResponseEventFilterSensitiveLog = (
-  obj: InvokeWithResponseStreamResponseEvent
+  obj: InvokeWithResponseStreamResponseEvent,
 ): any => {
   if (obj.PayloadChunk !== undefined)
     return { PayloadChunk: InvokeResponseStreamUpdateFilterSensitiveLog(obj.PayloadChunk) };

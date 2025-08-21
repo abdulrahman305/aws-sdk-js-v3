@@ -152,7 +152,7 @@ export interface DataExchange {
   cancelJob(
     args: CancelJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelJobCommandOutput) => void
+    cb: (err: any, data?: CancelJobCommandOutput) => void,
   ): void;
 
   /**
@@ -163,7 +163,7 @@ export interface DataExchange {
   createDataSet(
     args: CreateDataSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDataSetCommandOutput) => void
+    cb: (err: any, data?: CreateDataSetCommandOutput) => void,
   ): void;
 
   /**
@@ -171,16 +171,16 @@ export interface DataExchange {
    */
   createEventAction(
     args: CreateEventActionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEventActionCommandOutput>;
   createEventAction(
     args: CreateEventActionCommandInput,
-    cb: (err: any, data?: CreateEventActionCommandOutput) => void
+    cb: (err: any, data?: CreateEventActionCommandOutput) => void,
   ): void;
   createEventAction(
     args: CreateEventActionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEventActionCommandOutput) => void
+    cb: (err: any, data?: CreateEventActionCommandOutput) => void,
   ): void;
 
   /**
@@ -191,7 +191,7 @@ export interface DataExchange {
   createJob(
     args: CreateJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateJobCommandOutput) => void
+    cb: (err: any, data?: CreateJobCommandOutput) => void,
   ): void;
 
   /**
@@ -199,13 +199,13 @@ export interface DataExchange {
    */
   createRevision(
     args: CreateRevisionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRevisionCommandOutput>;
   createRevision(args: CreateRevisionCommandInput, cb: (err: any, data?: CreateRevisionCommandOutput) => void): void;
   createRevision(
     args: CreateRevisionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRevisionCommandOutput) => void
+    cb: (err: any, data?: CreateRevisionCommandOutput) => void,
   ): void;
 
   /**
@@ -216,7 +216,7 @@ export interface DataExchange {
   deleteAsset(
     args: DeleteAssetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAssetCommandOutput) => void
+    cb: (err: any, data?: DeleteAssetCommandOutput) => void,
   ): void;
 
   /**
@@ -227,7 +227,7 @@ export interface DataExchange {
   deleteDataSet(
     args: DeleteDataSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDataSetCommandOutput) => void
+    cb: (err: any, data?: DeleteDataSetCommandOutput) => void,
   ): void;
 
   /**
@@ -235,16 +235,16 @@ export interface DataExchange {
    */
   deleteEventAction(
     args: DeleteEventActionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEventActionCommandOutput>;
   deleteEventAction(
     args: DeleteEventActionCommandInput,
-    cb: (err: any, data?: DeleteEventActionCommandOutput) => void
+    cb: (err: any, data?: DeleteEventActionCommandOutput) => void,
   ): void;
   deleteEventAction(
     args: DeleteEventActionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEventActionCommandOutput) => void
+    cb: (err: any, data?: DeleteEventActionCommandOutput) => void,
   ): void;
 
   /**
@@ -252,13 +252,13 @@ export interface DataExchange {
    */
   deleteRevision(
     args: DeleteRevisionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRevisionCommandOutput>;
   deleteRevision(args: DeleteRevisionCommandInput, cb: (err: any, data?: DeleteRevisionCommandOutput) => void): void;
   deleteRevision(
     args: DeleteRevisionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRevisionCommandOutput) => void
+    cb: (err: any, data?: DeleteRevisionCommandOutput) => void,
   ): void;
 
   /**
@@ -269,7 +269,7 @@ export interface DataExchange {
   getAsset(
     args: GetAssetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAssetCommandOutput) => void
+    cb: (err: any, data?: GetAssetCommandOutput) => void,
   ): void;
 
   /**
@@ -280,7 +280,7 @@ export interface DataExchange {
   getDataSet(
     args: GetDataSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDataSetCommandOutput) => void
+    cb: (err: any, data?: GetDataSetCommandOutput) => void,
   ): void;
 
   /**
@@ -288,13 +288,13 @@ export interface DataExchange {
    */
   getEventAction(
     args: GetEventActionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEventActionCommandOutput>;
   getEventAction(args: GetEventActionCommandInput, cb: (err: any, data?: GetEventActionCommandOutput) => void): void;
   getEventAction(
     args: GetEventActionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEventActionCommandOutput) => void
+    cb: (err: any, data?: GetEventActionCommandOutput) => void,
   ): void;
 
   /**
@@ -305,7 +305,7 @@ export interface DataExchange {
   getJob(
     args: GetJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetJobCommandOutput) => void
+    cb: (err: any, data?: GetJobCommandOutput) => void,
   ): void;
 
   /**
@@ -316,7 +316,7 @@ export interface DataExchange {
   getRevision(
     args: GetRevisionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRevisionCommandOutput) => void
+    cb: (err: any, data?: GetRevisionCommandOutput) => void,
   ): void;
 
   /**
@@ -324,16 +324,16 @@ export interface DataExchange {
    */
   listDataSetRevisions(
     args: ListDataSetRevisionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDataSetRevisionsCommandOutput>;
   listDataSetRevisions(
     args: ListDataSetRevisionsCommandInput,
-    cb: (err: any, data?: ListDataSetRevisionsCommandOutput) => void
+    cb: (err: any, data?: ListDataSetRevisionsCommandOutput) => void,
   ): void;
   listDataSetRevisions(
     args: ListDataSetRevisionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDataSetRevisionsCommandOutput) => void
+    cb: (err: any, data?: ListDataSetRevisionsCommandOutput) => void,
   ): void;
 
   /**
@@ -345,7 +345,7 @@ export interface DataExchange {
   listDataSets(
     args: ListDataSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDataSetsCommandOutput) => void
+    cb: (err: any, data?: ListDataSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -354,16 +354,16 @@ export interface DataExchange {
   listEventActions(): Promise<ListEventActionsCommandOutput>;
   listEventActions(
     args: ListEventActionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEventActionsCommandOutput>;
   listEventActions(
     args: ListEventActionsCommandInput,
-    cb: (err: any, data?: ListEventActionsCommandOutput) => void
+    cb: (err: any, data?: ListEventActionsCommandOutput) => void,
   ): void;
   listEventActions(
     args: ListEventActionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEventActionsCommandOutput) => void
+    cb: (err: any, data?: ListEventActionsCommandOutput) => void,
   ): void;
 
   /**
@@ -375,7 +375,7 @@ export interface DataExchange {
   listJobs(
     args: ListJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListJobsCommandOutput) => void
+    cb: (err: any, data?: ListJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -383,16 +383,16 @@ export interface DataExchange {
    */
   listRevisionAssets(
     args: ListRevisionAssetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRevisionAssetsCommandOutput>;
   listRevisionAssets(
     args: ListRevisionAssetsCommandInput,
-    cb: (err: any, data?: ListRevisionAssetsCommandOutput) => void
+    cb: (err: any, data?: ListRevisionAssetsCommandOutput) => void,
   ): void;
   listRevisionAssets(
     args: ListRevisionAssetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRevisionAssetsCommandOutput) => void
+    cb: (err: any, data?: ListRevisionAssetsCommandOutput) => void,
   ): void;
 
   /**
@@ -400,16 +400,16 @@ export interface DataExchange {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -417,13 +417,13 @@ export interface DataExchange {
    */
   revokeRevision(
     args: RevokeRevisionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RevokeRevisionCommandOutput>;
   revokeRevision(args: RevokeRevisionCommandInput, cb: (err: any, data?: RevokeRevisionCommandOutput) => void): void;
   revokeRevision(
     args: RevokeRevisionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RevokeRevisionCommandOutput) => void
+    cb: (err: any, data?: RevokeRevisionCommandOutput) => void,
   ): void;
 
   /**
@@ -434,7 +434,7 @@ export interface DataExchange {
   sendApiAsset(
     args: SendApiAssetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendApiAssetCommandOutput) => void
+    cb: (err: any, data?: SendApiAssetCommandOutput) => void,
   ): void;
 
   /**
@@ -442,16 +442,16 @@ export interface DataExchange {
    */
   sendDataSetNotification(
     args: SendDataSetNotificationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SendDataSetNotificationCommandOutput>;
   sendDataSetNotification(
     args: SendDataSetNotificationCommandInput,
-    cb: (err: any, data?: SendDataSetNotificationCommandOutput) => void
+    cb: (err: any, data?: SendDataSetNotificationCommandOutput) => void,
   ): void;
   sendDataSetNotification(
     args: SendDataSetNotificationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendDataSetNotificationCommandOutput) => void
+    cb: (err: any, data?: SendDataSetNotificationCommandOutput) => void,
   ): void;
 
   /**
@@ -462,7 +462,7 @@ export interface DataExchange {
   startJob(
     args: StartJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartJobCommandOutput) => void
+    cb: (err: any, data?: StartJobCommandOutput) => void,
   ): void;
 
   /**
@@ -473,7 +473,7 @@ export interface DataExchange {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -484,7 +484,7 @@ export interface DataExchange {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -495,7 +495,7 @@ export interface DataExchange {
   updateAsset(
     args: UpdateAssetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAssetCommandOutput) => void
+    cb: (err: any, data?: UpdateAssetCommandOutput) => void,
   ): void;
 
   /**
@@ -506,7 +506,7 @@ export interface DataExchange {
   updateDataSet(
     args: UpdateDataSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDataSetCommandOutput) => void
+    cb: (err: any, data?: UpdateDataSetCommandOutput) => void,
   ): void;
 
   /**
@@ -514,16 +514,16 @@ export interface DataExchange {
    */
   updateEventAction(
     args: UpdateEventActionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEventActionCommandOutput>;
   updateEventAction(
     args: UpdateEventActionCommandInput,
-    cb: (err: any, data?: UpdateEventActionCommandOutput) => void
+    cb: (err: any, data?: UpdateEventActionCommandOutput) => void,
   ): void;
   updateEventAction(
     args: UpdateEventActionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEventActionCommandOutput) => void
+    cb: (err: any, data?: UpdateEventActionCommandOutput) => void,
   ): void;
 
   /**
@@ -531,13 +531,13 @@ export interface DataExchange {
    */
   updateRevision(
     args: UpdateRevisionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRevisionCommandOutput>;
   updateRevision(args: UpdateRevisionCommandInput, cb: (err: any, data?: UpdateRevisionCommandOutput) => void): void;
   updateRevision(
     args: UpdateRevisionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRevisionCommandOutput) => void
+    cb: (err: any, data?: UpdateRevisionCommandOutput) => void,
   ): void;
 }
 

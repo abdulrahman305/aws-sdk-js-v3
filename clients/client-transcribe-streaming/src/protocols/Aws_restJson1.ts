@@ -76,7 +76,7 @@ import { TranscribeStreamingServiceException as __BaseException } from "../model
  */
 export const se_StartCallAnalyticsStreamTranscriptionCommand = async (
   input: StartCallAnalyticsStreamTranscriptionCommandInput,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -108,7 +108,7 @@ export const se_StartCallAnalyticsStreamTranscriptionCommand = async (
  */
 export const se_StartMedicalStreamTranscriptionCommand = async (
   input: StartMedicalStreamTranscriptionCommandInput,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -138,7 +138,7 @@ export const se_StartMedicalStreamTranscriptionCommand = async (
  */
 export const se_StartStreamTranscriptionCommand = async (
   input: StartStreamTranscriptionCommandInput,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -179,7 +179,7 @@ export const se_StartStreamTranscriptionCommand = async (
  */
 export const de_StartCallAnalyticsStreamTranscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): Promise<StartCallAnalyticsStreamTranscriptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -211,7 +211,7 @@ export const de_StartCallAnalyticsStreamTranscriptionCommand = async (
  */
 export const de_StartMedicalStreamTranscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): Promise<StartMedicalStreamTranscriptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -241,7 +241,7 @@ export const de_StartMedicalStreamTranscriptionCommand = async (
  */
 export const de_StartStreamTranscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): Promise<StartStreamTranscriptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -352,7 +352,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalFailureException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -372,7 +372,7 @@ const de_InternalFailureExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -392,7 +392,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -447,7 +447,7 @@ const se_ConfigurationEvent_event = (input: ConfigurationEvent, context: __Serde
  */
 const de_CallAnalyticsTranscriptResultStream = (
   output: any,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): AsyncIterable<CallAnalyticsTranscriptResultStream> => {
   return context.eventStreamMarshaller.deserialize(output, async (event) => {
     if (event["UtteranceEvent"] != null) {
@@ -484,7 +484,7 @@ const de_CallAnalyticsTranscriptResultStream = (
       return {
         ServiceUnavailableException: await de_ServiceUnavailableException_event(
           event["ServiceUnavailableException"],
-          context
+          context,
         ),
       };
     }
@@ -496,7 +496,7 @@ const de_CallAnalyticsTranscriptResultStream = (
  */
 const de_MedicalTranscriptResultStream = (
   output: any,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): AsyncIterable<MedicalTranscriptResultStream> => {
   return context.eventStreamMarshaller.deserialize(output, async (event) => {
     if (event["TranscriptEvent"] != null) {
@@ -528,7 +528,7 @@ const de_MedicalTranscriptResultStream = (
       return {
         ServiceUnavailableException: await de_ServiceUnavailableException_event(
           event["ServiceUnavailableException"],
-          context
+          context,
         ),
       };
     }
@@ -540,7 +540,7 @@ const de_MedicalTranscriptResultStream = (
  */
 const de_TranscriptResultStream = (
   output: any,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): AsyncIterable<TranscriptResultStream> => {
   return context.eventStreamMarshaller.deserialize(output, async (event) => {
     if (event["TranscriptEvent"] != null) {
@@ -572,7 +572,7 @@ const de_TranscriptResultStream = (
       return {
         ServiceUnavailableException: await de_ServiceUnavailableException_event(
           event["ServiceUnavailableException"],
-          context
+          context,
         ),
       };
     }
@@ -601,7 +601,7 @@ const de_ConflictException_event = async (output: any, context: __SerdeContext):
 };
 const de_InternalFailureException_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalFailureException> => {
   const parsedOutput: any = {
     ...output,
@@ -611,7 +611,7 @@ const de_InternalFailureException_event = async (
 };
 const de_LimitExceededException_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const parsedOutput: any = {
     ...output,
@@ -621,7 +621,7 @@ const de_LimitExceededException_event = async (
 };
 const de_MedicalTranscriptEvent_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MedicalTranscriptEvent> => {
   const contents: MedicalTranscriptEvent = {} as any;
   const data: any = await parseBody(output.body, context);
@@ -630,7 +630,7 @@ const de_MedicalTranscriptEvent_event = async (
 };
 const de_ServiceUnavailableException_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const parsedOutput: any = {
     ...output,

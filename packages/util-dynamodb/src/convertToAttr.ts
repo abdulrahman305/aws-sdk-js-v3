@@ -51,7 +51,7 @@ export const convertToAttr = (data: NativeAttributeValue, options?: marshallOpti
     return convertToMapAttrFromEnumerableProps(data as Record<string, NativeAttributeValue>, options);
   }
   throw new Error(
-    `Unsupported type passed: ${data}. Pass options.convertClassInstanceToMap=true to marshall typeof object as map attribute.`
+    `Unsupported type passed: ${data}. Pass options.convertClassInstanceToMap=true to marshall typeof object as map attribute.`,
   );
 };
 
@@ -60,14 +60,14 @@ const convertToListAttr = (data: NativeAttributeValue[], options?: marshallOptio
     .filter(
       (item) =>
         typeof item !== "function" &&
-        (!options?.removeUndefinedValues || (options?.removeUndefinedValues && item !== undefined))
+        (!options?.removeUndefinedValues || (options?.removeUndefinedValues && item !== undefined)),
     )
     .map((item) => convertToAttr(item, options)),
 });
 
 const convertToSetAttr = (
   set: Set<any>,
-  options?: marshallOptions
+  options?: marshallOptions,
 ): { NS: string[] } | { BS: Uint8Array[] } | { SS: string[] } | { NULL: true } => {
   const setToOperate = options?.removeUndefinedValues ? new Set([...set].filter((value) => value !== undefined)) : set;
 
@@ -121,7 +121,7 @@ const convertToSetAttr = (
 
 const convertToMapAttrFromIterable = (
   data: Map<string, NativeAttributeValue>,
-  options?: marshallOptions
+  options?: marshallOptions,
 ): { M: Record<string, AttributeValue> } => ({
   M: ((data) => {
     const map: Record<string, AttributeValue> = {};
@@ -136,7 +136,7 @@ const convertToMapAttrFromIterable = (
 
 const convertToMapAttrFromEnumerableProps = (
   data: Record<string, NativeAttributeValue>,
-  options?: marshallOptions
+  options?: marshallOptions,
 ): { M: Record<string, AttributeValue> } => ({
   M: ((data) => {
     const map: Record<string, AttributeValue> = {};

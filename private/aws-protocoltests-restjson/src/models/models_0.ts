@@ -1312,7 +1312,7 @@ export interface StreamingTraitsWithMediaTypeInputOutput {
  * @internal
  */
 export const StreamingTraitsWithMediaTypeInputOutputFilterSensitiveLog = (
-  obj: StreamingTraitsWithMediaTypeInputOutput
+  obj: StreamingTraitsWithMediaTypeInputOutput,
 ): any => ({
   ...obj,
 });

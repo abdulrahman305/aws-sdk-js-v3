@@ -61,14 +61,14 @@ export class StreamingTraitsSerializer
 
 export const getStreamingTraitsHandler = <Context>(
   operation: __Operation<StreamingTraitsServerInput, StreamingTraitsServerOutput, Context>,
-  customizer: __ValidationCustomizer<"StreamingTraits">
+  customizer: __ValidationCustomizer<"StreamingTraits">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "StreamingTraits">([
     new httpbinding.UriSpec<"RestJson", "StreamingTraits">(
       "POST",
       [{ type: "path_literal", value: "StreamingTraits" }],
       [],
-      { service: "RestJson", operation: "StreamingTraits" }
+      { service: "RestJson", operation: "StreamingTraits" },
     ),
   ]);
   return new StreamingTraitsHandler(
@@ -76,7 +76,7 @@ export const getStreamingTraitsHandler = <Context>(
     mux,
     new StreamingTraitsSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -97,7 +97,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -139,7 +139,7 @@ export class StreamingTraitsHandler<Context> implements __ServiceHandler<Context
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"StreamingTraits">;
   /**
@@ -156,7 +156,7 @@ export class StreamingTraitsHandler<Context> implements __ServiceHandler<Context
     mux: __Mux<"RestJson", "StreamingTraits">,
     serializer: __OperationSerializer<RestJsonService<Context>, "StreamingTraits", StreamingTraitsErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"StreamingTraits">
+    validationCustomizer: __ValidationCustomizer<"StreamingTraits">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -168,7 +168,7 @@ export class StreamingTraitsHandler<Context> implements __ServiceHandler<Context
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.StreamingTraits. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.StreamingTraits. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -180,7 +180,7 @@ export class StreamingTraitsHandler<Context> implements __ServiceHandler<Context
       this.operation,
       this.serializeFrameworkException,
       StreamingTraitsServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

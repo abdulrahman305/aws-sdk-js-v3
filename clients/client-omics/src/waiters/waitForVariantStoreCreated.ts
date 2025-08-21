@@ -52,7 +52,7 @@ const checkState = async (client: OmicsClient, input: GetVariantStoreCommandInpu
  */
 export const waitForVariantStoreCreated = async (
   params: WaiterConfiguration<OmicsClient>,
-  input: GetVariantStoreCommandInput
+  input: GetVariantStoreCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 600 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -64,7 +64,7 @@ export const waitForVariantStoreCreated = async (
  */
 export const waitUntilVariantStoreCreated = async (
   params: WaiterConfiguration<OmicsClient>,
-  input: GetVariantStoreCommandInput
+  input: GetVariantStoreCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 600 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

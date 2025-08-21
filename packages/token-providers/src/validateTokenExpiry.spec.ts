@@ -8,7 +8,7 @@ describe(validateTokenExpiry.name, () => {
 
   it("throws TokenProviderError if token is expired", () => {
     expect(() => validateTokenExpiry({ token: mockToken, expiration: new Date(Date.now() - 1000) })).toThrow(
-      new TokenProviderError(`Token is expired. ${REFRESH_MESSAGE}`, false)
+      new TokenProviderError(`Token is expired. ${REFRESH_MESSAGE}`, false),
     );
   });
 

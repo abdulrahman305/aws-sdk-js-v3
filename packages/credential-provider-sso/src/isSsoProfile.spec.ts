@@ -9,6 +9,6 @@ describe(isSsoProfile.name, () => {
     "returns true if value at '%s' is of type string",
     (key) => {
       expect(isSsoProfile({ [key]: "string" })).toEqual(true);
-    }
+    },
   );
 });

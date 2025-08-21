@@ -224,7 +224,7 @@ import {
  */
 export const se_CancelFlowExecutionsCommand = async (
   input: CancelFlowExecutionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -236,7 +236,7 @@ export const se_CancelFlowExecutionsCommand = async (
     take(input, {
       executionIds: (_) => _json(_),
       flowName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -247,7 +247,7 @@ export const se_CancelFlowExecutionsCommand = async (
  */
 export const se_CreateConnectorProfileCommand = async (
   input: CreateConnectorProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -264,7 +264,7 @@ export const se_CreateConnectorProfileCommand = async (
       connectorProfileName: [],
       connectorType: [],
       kmsArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -275,7 +275,7 @@ export const se_CreateConnectorProfileCommand = async (
  */
 export const se_CreateFlowCommand = async (
   input: CreateFlowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -295,7 +295,7 @@ export const se_CreateFlowCommand = async (
       tags: (_) => _json(_),
       tasks: (_) => _json(_),
       triggerConfig: (_) => se_TriggerConfig(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -306,7 +306,7 @@ export const se_CreateFlowCommand = async (
  */
 export const se_DeleteConnectorProfileCommand = async (
   input: DeleteConnectorProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -318,7 +318,7 @@ export const se_DeleteConnectorProfileCommand = async (
     take(input, {
       connectorProfileName: [],
       forceDelete: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -329,7 +329,7 @@ export const se_DeleteConnectorProfileCommand = async (
  */
 export const se_DeleteFlowCommand = async (
   input: DeleteFlowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -341,7 +341,7 @@ export const se_DeleteFlowCommand = async (
     take(input, {
       flowName: [],
       forceDelete: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -352,7 +352,7 @@ export const se_DeleteFlowCommand = async (
  */
 export const se_DescribeConnectorCommand = async (
   input: DescribeConnectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -364,7 +364,7 @@ export const se_DescribeConnectorCommand = async (
     take(input, {
       connectorLabel: [],
       connectorType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -375,7 +375,7 @@ export const se_DescribeConnectorCommand = async (
  */
 export const se_DescribeConnectorEntityCommand = async (
   input: DescribeConnectorEntityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -389,7 +389,7 @@ export const se_DescribeConnectorEntityCommand = async (
       connectorEntityName: [],
       connectorProfileName: [],
       connectorType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -400,7 +400,7 @@ export const se_DescribeConnectorEntityCommand = async (
  */
 export const se_DescribeConnectorProfilesCommand = async (
   input: DescribeConnectorProfilesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -415,7 +415,7 @@ export const se_DescribeConnectorProfilesCommand = async (
       connectorType: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -426,7 +426,7 @@ export const se_DescribeConnectorProfilesCommand = async (
  */
 export const se_DescribeConnectorsCommand = async (
   input: DescribeConnectorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -439,7 +439,7 @@ export const se_DescribeConnectorsCommand = async (
       connectorTypes: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -450,7 +450,7 @@ export const se_DescribeConnectorsCommand = async (
  */
 export const se_DescribeFlowCommand = async (
   input: DescribeFlowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -461,7 +461,7 @@ export const se_DescribeFlowCommand = async (
   body = JSON.stringify(
     take(input, {
       flowName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -472,7 +472,7 @@ export const se_DescribeFlowCommand = async (
  */
 export const se_DescribeFlowExecutionRecordsCommand = async (
   input: DescribeFlowExecutionRecordsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -485,7 +485,7 @@ export const se_DescribeFlowExecutionRecordsCommand = async (
       flowName: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -496,7 +496,7 @@ export const se_DescribeFlowExecutionRecordsCommand = async (
  */
 export const se_ListConnectorEntitiesCommand = async (
   input: ListConnectorEntitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -512,7 +512,7 @@ export const se_ListConnectorEntitiesCommand = async (
       entitiesPath: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -523,7 +523,7 @@ export const se_ListConnectorEntitiesCommand = async (
  */
 export const se_ListConnectorsCommand = async (
   input: ListConnectorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -535,7 +535,7 @@ export const se_ListConnectorsCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -546,7 +546,7 @@ export const se_ListConnectorsCommand = async (
  */
 export const se_ListFlowsCommand = async (
   input: ListFlowsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -558,7 +558,7 @@ export const se_ListFlowsCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -569,7 +569,7 @@ export const se_ListFlowsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -585,7 +585,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_RegisterConnectorCommand = async (
   input: RegisterConnectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -600,7 +600,7 @@ export const se_RegisterConnectorCommand = async (
       connectorProvisioningConfig: (_) => _json(_),
       connectorProvisioningType: [],
       description: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -611,7 +611,7 @@ export const se_RegisterConnectorCommand = async (
  */
 export const se_ResetConnectorMetadataCacheCommand = async (
   input: ResetConnectorMetadataCacheCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -626,7 +626,7 @@ export const se_ResetConnectorMetadataCacheCommand = async (
       connectorProfileName: [],
       connectorType: [],
       entitiesPath: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -637,7 +637,7 @@ export const se_ResetConnectorMetadataCacheCommand = async (
  */
 export const se_StartFlowCommand = async (
   input: StartFlowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -649,7 +649,7 @@ export const se_StartFlowCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       flowName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -660,7 +660,7 @@ export const se_StartFlowCommand = async (
  */
 export const se_StopFlowCommand = async (
   input: StopFlowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -671,7 +671,7 @@ export const se_StopFlowCommand = async (
   body = JSON.stringify(
     take(input, {
       flowName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -682,7 +682,7 @@ export const se_StopFlowCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -694,7 +694,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -705,7 +705,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UnregisterConnectorCommand = async (
   input: UnregisterConnectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -717,7 +717,7 @@ export const se_UnregisterConnectorCommand = async (
     take(input, {
       connectorLabel: [],
       forceDelete: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -728,7 +728,7 @@ export const se_UnregisterConnectorCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -750,7 +750,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateConnectorProfileCommand = async (
   input: UpdateConnectorProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -764,7 +764,7 @@ export const se_UpdateConnectorProfileCommand = async (
       connectionMode: [],
       connectorProfileConfig: (_) => _json(_),
       connectorProfileName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -775,7 +775,7 @@ export const se_UpdateConnectorProfileCommand = async (
  */
 export const se_UpdateConnectorRegistrationCommand = async (
   input: UpdateConnectorRegistrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -789,7 +789,7 @@ export const se_UpdateConnectorRegistrationCommand = async (
       connectorLabel: [],
       connectorProvisioningConfig: (_) => _json(_),
       description: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -800,7 +800,7 @@ export const se_UpdateConnectorRegistrationCommand = async (
  */
 export const se_UpdateFlowCommand = async (
   input: UpdateFlowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -818,7 +818,7 @@ export const se_UpdateFlowCommand = async (
       sourceFlowConfig: (_) => _json(_),
       tasks: (_) => _json(_),
       triggerConfig: (_) => se_TriggerConfig(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -829,7 +829,7 @@ export const se_UpdateFlowCommand = async (
  */
 export const de_CancelFlowExecutionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelFlowExecutionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -850,7 +850,7 @@ export const de_CancelFlowExecutionsCommand = async (
  */
 export const de_CreateConnectorProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConnectorProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -871,7 +871,7 @@ export const de_CreateConnectorProfileCommand = async (
  */
 export const de_CreateFlowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFlowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -893,7 +893,7 @@ export const de_CreateFlowCommand = async (
  */
 export const de_DeleteConnectorProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConnectorProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -910,7 +910,7 @@ export const de_DeleteConnectorProfileCommand = async (
  */
 export const de_DeleteFlowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFlowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -927,7 +927,7 @@ export const de_DeleteFlowCommand = async (
  */
 export const de_DescribeConnectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConnectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -948,7 +948,7 @@ export const de_DescribeConnectorCommand = async (
  */
 export const de_DescribeConnectorEntityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConnectorEntityCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -969,7 +969,7 @@ export const de_DescribeConnectorEntityCommand = async (
  */
 export const de_DescribeConnectorProfilesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConnectorProfilesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -991,7 +991,7 @@ export const de_DescribeConnectorProfilesCommand = async (
  */
 export const de_DescribeConnectorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConnectorsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1014,7 +1014,7 @@ export const de_DescribeConnectorsCommand = async (
  */
 export const de_DescribeFlowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFlowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1053,7 +1053,7 @@ export const de_DescribeFlowCommand = async (
  */
 export const de_DescribeFlowExecutionRecordsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFlowExecutionRecordsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1075,7 +1075,7 @@ export const de_DescribeFlowExecutionRecordsCommand = async (
  */
 export const de_ListConnectorEntitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConnectorEntitiesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1097,7 +1097,7 @@ export const de_ListConnectorEntitiesCommand = async (
  */
 export const de_ListConnectorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConnectorsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1119,7 +1119,7 @@ export const de_ListConnectorsCommand = async (
  */
 export const de_ListFlowsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFlowsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1141,7 +1141,7 @@ export const de_ListFlowsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1162,7 +1162,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_RegisterConnectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterConnectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1183,7 +1183,7 @@ export const de_RegisterConnectorCommand = async (
  */
 export const de_ResetConnectorMetadataCacheCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetConnectorMetadataCacheCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1200,7 +1200,7 @@ export const de_ResetConnectorMetadataCacheCommand = async (
  */
 export const de_StartFlowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartFlowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1223,7 +1223,7 @@ export const de_StartFlowCommand = async (
  */
 export const de_StopFlowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopFlowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1245,7 +1245,7 @@ export const de_StopFlowCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1262,7 +1262,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UnregisterConnectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnregisterConnectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1279,7 +1279,7 @@ export const de_UnregisterConnectorCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1296,7 +1296,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateConnectorProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConnectorProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1317,7 +1317,7 @@ export const de_UpdateConnectorProfileCommand = async (
  */
 export const de_UpdateConnectorRegistrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConnectorRegistrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1338,7 +1338,7 @@ export const de_UpdateConnectorRegistrationCommand = async (
  */
 export const de_UpdateFlowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFlowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1410,7 +1410,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1447,7 +1447,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ConnectorAuthenticationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConnectorAuthenticationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1467,7 +1467,7 @@ const de_ConnectorAuthenticationExceptionRes = async (
  */
 const de_ConnectorServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConnectorServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1487,7 +1487,7 @@ const de_ConnectorServerExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1507,7 +1507,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1527,7 +1527,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1564,7 +1564,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_UnsupportedOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedOperationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1918,7 +1918,7 @@ const de_ConnectorConfiguration = (output: any, context: __SerdeContext): Connec
  */
 const de_ConnectorConfigurationsMap = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Partial<Record<ConnectorType, ConnectorConfiguration>> => {
   return Object.entries(output).reduce(
     (acc: Partial<Record<ConnectorType, ConnectorConfiguration>>, [key, value]: [string, any]) => {
@@ -1928,7 +1928,7 @@ const de_ConnectorConfigurationsMap = (
       acc[key as ConnectorType] = de_ConnectorConfiguration(value, context);
       return acc;
     },
-    {} as Partial<Record<ConnectorType, ConnectorConfiguration>>
+    {} as Partial<Record<ConnectorType, ConnectorConfiguration>>,
   );
 };
 

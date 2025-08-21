@@ -18,9 +18,9 @@ const exec = util.promisify(require("node:child_process").exec);
           return;
         }
         return exec(
-          `cp -r ./clientDocs/clients/${client}/docs/* ./clientDocs/clients/${client}/ && rm -rf ./clientDocs/clients/${client}/docs`
+          `cp -r ./clientDocs/clients/${client}/docs/* ./clientDocs/clients/${client}/ && rm -rf ./clientDocs/clients/${client}/docs`,
         );
-      })
+      }),
     );
 
     // WORKAROUND: copy first client's asset folder to fix

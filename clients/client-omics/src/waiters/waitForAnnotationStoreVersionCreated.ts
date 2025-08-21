@@ -55,7 +55,7 @@ const checkState = async (client: OmicsClient, input: GetAnnotationStoreVersionC
  */
 export const waitForAnnotationStoreVersionCreated = async (
   params: WaiterConfiguration<OmicsClient>,
-  input: GetAnnotationStoreVersionCommandInput
+  input: GetAnnotationStoreVersionCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 600 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -67,7 +67,7 @@ export const waitForAnnotationStoreVersionCreated = async (
  */
 export const waitUntilAnnotationStoreVersionCreated = async (
   params: WaiterConfiguration<OmicsClient>,
-  input: GetAnnotationStoreVersionCommandInput
+  input: GetAnnotationStoreVersionCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 600 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

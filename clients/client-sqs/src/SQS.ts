@@ -122,7 +122,7 @@ export interface SQS {
   addPermission(
     args: AddPermissionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddPermissionCommandOutput) => void
+    cb: (err: any, data?: AddPermissionCommandOutput) => void,
   ): void;
 
   /**
@@ -130,16 +130,16 @@ export interface SQS {
    */
   cancelMessageMoveTask(
     args: CancelMessageMoveTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelMessageMoveTaskCommandOutput>;
   cancelMessageMoveTask(
     args: CancelMessageMoveTaskCommandInput,
-    cb: (err: any, data?: CancelMessageMoveTaskCommandOutput) => void
+    cb: (err: any, data?: CancelMessageMoveTaskCommandOutput) => void,
   ): void;
   cancelMessageMoveTask(
     args: CancelMessageMoveTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelMessageMoveTaskCommandOutput) => void
+    cb: (err: any, data?: CancelMessageMoveTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -147,16 +147,16 @@ export interface SQS {
    */
   changeMessageVisibility(
     args: ChangeMessageVisibilityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ChangeMessageVisibilityCommandOutput>;
   changeMessageVisibility(
     args: ChangeMessageVisibilityCommandInput,
-    cb: (err: any, data?: ChangeMessageVisibilityCommandOutput) => void
+    cb: (err: any, data?: ChangeMessageVisibilityCommandOutput) => void,
   ): void;
   changeMessageVisibility(
     args: ChangeMessageVisibilityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ChangeMessageVisibilityCommandOutput) => void
+    cb: (err: any, data?: ChangeMessageVisibilityCommandOutput) => void,
   ): void;
 
   /**
@@ -164,16 +164,16 @@ export interface SQS {
    */
   changeMessageVisibilityBatch(
     args: ChangeMessageVisibilityBatchCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ChangeMessageVisibilityBatchCommandOutput>;
   changeMessageVisibilityBatch(
     args: ChangeMessageVisibilityBatchCommandInput,
-    cb: (err: any, data?: ChangeMessageVisibilityBatchCommandOutput) => void
+    cb: (err: any, data?: ChangeMessageVisibilityBatchCommandOutput) => void,
   ): void;
   changeMessageVisibilityBatch(
     args: ChangeMessageVisibilityBatchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ChangeMessageVisibilityBatchCommandOutput) => void
+    cb: (err: any, data?: ChangeMessageVisibilityBatchCommandOutput) => void,
   ): void;
 
   /**
@@ -184,7 +184,7 @@ export interface SQS {
   createQueue(
     args: CreateQueueCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateQueueCommandOutput) => void
+    cb: (err: any, data?: CreateQueueCommandOutput) => void,
   ): void;
 
   /**
@@ -195,7 +195,7 @@ export interface SQS {
   deleteMessage(
     args: DeleteMessageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMessageCommandOutput) => void
+    cb: (err: any, data?: DeleteMessageCommandOutput) => void,
   ): void;
 
   /**
@@ -203,16 +203,16 @@ export interface SQS {
    */
   deleteMessageBatch(
     args: DeleteMessageBatchCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteMessageBatchCommandOutput>;
   deleteMessageBatch(
     args: DeleteMessageBatchCommandInput,
-    cb: (err: any, data?: DeleteMessageBatchCommandOutput) => void
+    cb: (err: any, data?: DeleteMessageBatchCommandOutput) => void,
   ): void;
   deleteMessageBatch(
     args: DeleteMessageBatchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMessageBatchCommandOutput) => void
+    cb: (err: any, data?: DeleteMessageBatchCommandOutput) => void,
   ): void;
 
   /**
@@ -223,7 +223,7 @@ export interface SQS {
   deleteQueue(
     args: DeleteQueueCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteQueueCommandOutput) => void
+    cb: (err: any, data?: DeleteQueueCommandOutput) => void,
   ): void;
 
   /**
@@ -231,16 +231,16 @@ export interface SQS {
    */
   getQueueAttributes(
     args: GetQueueAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetQueueAttributesCommandOutput>;
   getQueueAttributes(
     args: GetQueueAttributesCommandInput,
-    cb: (err: any, data?: GetQueueAttributesCommandOutput) => void
+    cb: (err: any, data?: GetQueueAttributesCommandOutput) => void,
   ): void;
   getQueueAttributes(
     args: GetQueueAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetQueueAttributesCommandOutput) => void
+    cb: (err: any, data?: GetQueueAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -251,7 +251,7 @@ export interface SQS {
   getQueueUrl(
     args: GetQueueUrlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetQueueUrlCommandOutput) => void
+    cb: (err: any, data?: GetQueueUrlCommandOutput) => void,
   ): void;
 
   /**
@@ -259,16 +259,16 @@ export interface SQS {
    */
   listDeadLetterSourceQueues(
     args: ListDeadLetterSourceQueuesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDeadLetterSourceQueuesCommandOutput>;
   listDeadLetterSourceQueues(
     args: ListDeadLetterSourceQueuesCommandInput,
-    cb: (err: any, data?: ListDeadLetterSourceQueuesCommandOutput) => void
+    cb: (err: any, data?: ListDeadLetterSourceQueuesCommandOutput) => void,
   ): void;
   listDeadLetterSourceQueues(
     args: ListDeadLetterSourceQueuesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDeadLetterSourceQueuesCommandOutput) => void
+    cb: (err: any, data?: ListDeadLetterSourceQueuesCommandOutput) => void,
   ): void;
 
   /**
@@ -276,16 +276,16 @@ export interface SQS {
    */
   listMessageMoveTasks(
     args: ListMessageMoveTasksCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMessageMoveTasksCommandOutput>;
   listMessageMoveTasks(
     args: ListMessageMoveTasksCommandInput,
-    cb: (err: any, data?: ListMessageMoveTasksCommandOutput) => void
+    cb: (err: any, data?: ListMessageMoveTasksCommandOutput) => void,
   ): void;
   listMessageMoveTasks(
     args: ListMessageMoveTasksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMessageMoveTasksCommandOutput) => void
+    cb: (err: any, data?: ListMessageMoveTasksCommandOutput) => void,
   ): void;
 
   /**
@@ -297,7 +297,7 @@ export interface SQS {
   listQueues(
     args: ListQueuesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListQueuesCommandOutput) => void
+    cb: (err: any, data?: ListQueuesCommandOutput) => void,
   ): void;
 
   /**
@@ -308,7 +308,7 @@ export interface SQS {
   listQueueTags(
     args: ListQueueTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListQueueTagsCommandOutput) => void
+    cb: (err: any, data?: ListQueueTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -319,7 +319,7 @@ export interface SQS {
   purgeQueue(
     args: PurgeQueueCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PurgeQueueCommandOutput) => void
+    cb: (err: any, data?: PurgeQueueCommandOutput) => void,
   ): void;
 
   /**
@@ -327,13 +327,13 @@ export interface SQS {
    */
   receiveMessage(
     args: ReceiveMessageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ReceiveMessageCommandOutput>;
   receiveMessage(args: ReceiveMessageCommandInput, cb: (err: any, data?: ReceiveMessageCommandOutput) => void): void;
   receiveMessage(
     args: ReceiveMessageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ReceiveMessageCommandOutput) => void
+    cb: (err: any, data?: ReceiveMessageCommandOutput) => void,
   ): void;
 
   /**
@@ -341,16 +341,16 @@ export interface SQS {
    */
   removePermission(
     args: RemovePermissionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemovePermissionCommandOutput>;
   removePermission(
     args: RemovePermissionCommandInput,
-    cb: (err: any, data?: RemovePermissionCommandOutput) => void
+    cb: (err: any, data?: RemovePermissionCommandOutput) => void,
   ): void;
   removePermission(
     args: RemovePermissionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemovePermissionCommandOutput) => void
+    cb: (err: any, data?: RemovePermissionCommandOutput) => void,
   ): void;
 
   /**
@@ -361,7 +361,7 @@ export interface SQS {
   sendMessage(
     args: SendMessageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendMessageCommandOutput) => void
+    cb: (err: any, data?: SendMessageCommandOutput) => void,
   ): void;
 
   /**
@@ -369,16 +369,16 @@ export interface SQS {
    */
   sendMessageBatch(
     args: SendMessageBatchCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SendMessageBatchCommandOutput>;
   sendMessageBatch(
     args: SendMessageBatchCommandInput,
-    cb: (err: any, data?: SendMessageBatchCommandOutput) => void
+    cb: (err: any, data?: SendMessageBatchCommandOutput) => void,
   ): void;
   sendMessageBatch(
     args: SendMessageBatchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendMessageBatchCommandOutput) => void
+    cb: (err: any, data?: SendMessageBatchCommandOutput) => void,
   ): void;
 
   /**
@@ -386,16 +386,16 @@ export interface SQS {
    */
   setQueueAttributes(
     args: SetQueueAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetQueueAttributesCommandOutput>;
   setQueueAttributes(
     args: SetQueueAttributesCommandInput,
-    cb: (err: any, data?: SetQueueAttributesCommandOutput) => void
+    cb: (err: any, data?: SetQueueAttributesCommandOutput) => void,
   ): void;
   setQueueAttributes(
     args: SetQueueAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetQueueAttributesCommandOutput) => void
+    cb: (err: any, data?: SetQueueAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -403,16 +403,16 @@ export interface SQS {
    */
   startMessageMoveTask(
     args: StartMessageMoveTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartMessageMoveTaskCommandOutput>;
   startMessageMoveTask(
     args: StartMessageMoveTaskCommandInput,
-    cb: (err: any, data?: StartMessageMoveTaskCommandOutput) => void
+    cb: (err: any, data?: StartMessageMoveTaskCommandOutput) => void,
   ): void;
   startMessageMoveTask(
     args: StartMessageMoveTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartMessageMoveTaskCommandOutput) => void
+    cb: (err: any, data?: StartMessageMoveTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -423,7 +423,7 @@ export interface SQS {
   tagQueue(
     args: TagQueueCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagQueueCommandOutput) => void
+    cb: (err: any, data?: TagQueueCommandOutput) => void,
   ): void;
 
   /**
@@ -434,7 +434,7 @@ export interface SQS {
   untagQueue(
     args: UntagQueueCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagQueueCommandOutput) => void
+    cb: (err: any, data?: UntagQueueCommandOutput) => void,
   ): void;
 }
 

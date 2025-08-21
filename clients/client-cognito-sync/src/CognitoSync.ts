@@ -110,7 +110,7 @@ export interface CognitoSync {
   bulkPublish(
     args: BulkPublishCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BulkPublishCommandOutput) => void
+    cb: (err: any, data?: BulkPublishCommandOutput) => void,
   ): void;
 
   /**
@@ -121,7 +121,7 @@ export interface CognitoSync {
   deleteDataset(
     args: DeleteDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDatasetCommandOutput) => void
+    cb: (err: any, data?: DeleteDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -129,13 +129,13 @@ export interface CognitoSync {
    */
   describeDataset(
     args: DescribeDatasetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDatasetCommandOutput>;
   describeDataset(args: DescribeDatasetCommandInput, cb: (err: any, data?: DescribeDatasetCommandOutput) => void): void;
   describeDataset(
     args: DescribeDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDatasetCommandOutput) => void
+    cb: (err: any, data?: DescribeDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -143,16 +143,16 @@ export interface CognitoSync {
    */
   describeIdentityPoolUsage(
     args: DescribeIdentityPoolUsageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeIdentityPoolUsageCommandOutput>;
   describeIdentityPoolUsage(
     args: DescribeIdentityPoolUsageCommandInput,
-    cb: (err: any, data?: DescribeIdentityPoolUsageCommandOutput) => void
+    cb: (err: any, data?: DescribeIdentityPoolUsageCommandOutput) => void,
   ): void;
   describeIdentityPoolUsage(
     args: DescribeIdentityPoolUsageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeIdentityPoolUsageCommandOutput) => void
+    cb: (err: any, data?: DescribeIdentityPoolUsageCommandOutput) => void,
   ): void;
 
   /**
@@ -160,16 +160,16 @@ export interface CognitoSync {
    */
   describeIdentityUsage(
     args: DescribeIdentityUsageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeIdentityUsageCommandOutput>;
   describeIdentityUsage(
     args: DescribeIdentityUsageCommandInput,
-    cb: (err: any, data?: DescribeIdentityUsageCommandOutput) => void
+    cb: (err: any, data?: DescribeIdentityUsageCommandOutput) => void,
   ): void;
   describeIdentityUsage(
     args: DescribeIdentityUsageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeIdentityUsageCommandOutput) => void
+    cb: (err: any, data?: DescribeIdentityUsageCommandOutput) => void,
   ): void;
 
   /**
@@ -177,16 +177,16 @@ export interface CognitoSync {
    */
   getBulkPublishDetails(
     args: GetBulkPublishDetailsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBulkPublishDetailsCommandOutput>;
   getBulkPublishDetails(
     args: GetBulkPublishDetailsCommandInput,
-    cb: (err: any, data?: GetBulkPublishDetailsCommandOutput) => void
+    cb: (err: any, data?: GetBulkPublishDetailsCommandOutput) => void,
   ): void;
   getBulkPublishDetails(
     args: GetBulkPublishDetailsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBulkPublishDetailsCommandOutput) => void
+    cb: (err: any, data?: GetBulkPublishDetailsCommandOutput) => void,
   ): void;
 
   /**
@@ -194,16 +194,16 @@ export interface CognitoSync {
    */
   getCognitoEvents(
     args: GetCognitoEventsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCognitoEventsCommandOutput>;
   getCognitoEvents(
     args: GetCognitoEventsCommandInput,
-    cb: (err: any, data?: GetCognitoEventsCommandOutput) => void
+    cb: (err: any, data?: GetCognitoEventsCommandOutput) => void,
   ): void;
   getCognitoEvents(
     args: GetCognitoEventsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCognitoEventsCommandOutput) => void
+    cb: (err: any, data?: GetCognitoEventsCommandOutput) => void,
   ): void;
 
   /**
@@ -211,16 +211,16 @@ export interface CognitoSync {
    */
   getIdentityPoolConfiguration(
     args: GetIdentityPoolConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetIdentityPoolConfigurationCommandOutput>;
   getIdentityPoolConfiguration(
     args: GetIdentityPoolConfigurationCommandInput,
-    cb: (err: any, data?: GetIdentityPoolConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetIdentityPoolConfigurationCommandOutput) => void,
   ): void;
   getIdentityPoolConfiguration(
     args: GetIdentityPoolConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetIdentityPoolConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetIdentityPoolConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -231,7 +231,7 @@ export interface CognitoSync {
   listDatasets(
     args: ListDatasetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDatasetsCommandOutput) => void
+    cb: (err: any, data?: ListDatasetsCommandOutput) => void,
   ): void;
 
   /**
@@ -240,16 +240,16 @@ export interface CognitoSync {
   listIdentityPoolUsage(): Promise<ListIdentityPoolUsageCommandOutput>;
   listIdentityPoolUsage(
     args: ListIdentityPoolUsageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListIdentityPoolUsageCommandOutput>;
   listIdentityPoolUsage(
     args: ListIdentityPoolUsageCommandInput,
-    cb: (err: any, data?: ListIdentityPoolUsageCommandOutput) => void
+    cb: (err: any, data?: ListIdentityPoolUsageCommandOutput) => void,
   ): void;
   listIdentityPoolUsage(
     args: ListIdentityPoolUsageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListIdentityPoolUsageCommandOutput) => void
+    cb: (err: any, data?: ListIdentityPoolUsageCommandOutput) => void,
   ): void;
 
   /**
@@ -260,7 +260,7 @@ export interface CognitoSync {
   listRecords(
     args: ListRecordsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRecordsCommandOutput) => void
+    cb: (err: any, data?: ListRecordsCommandOutput) => void,
   ): void;
 
   /**
@@ -268,13 +268,13 @@ export interface CognitoSync {
    */
   registerDevice(
     args: RegisterDeviceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterDeviceCommandOutput>;
   registerDevice(args: RegisterDeviceCommandInput, cb: (err: any, data?: RegisterDeviceCommandOutput) => void): void;
   registerDevice(
     args: RegisterDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterDeviceCommandOutput) => void
+    cb: (err: any, data?: RegisterDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -282,16 +282,16 @@ export interface CognitoSync {
    */
   setCognitoEvents(
     args: SetCognitoEventsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetCognitoEventsCommandOutput>;
   setCognitoEvents(
     args: SetCognitoEventsCommandInput,
-    cb: (err: any, data?: SetCognitoEventsCommandOutput) => void
+    cb: (err: any, data?: SetCognitoEventsCommandOutput) => void,
   ): void;
   setCognitoEvents(
     args: SetCognitoEventsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetCognitoEventsCommandOutput) => void
+    cb: (err: any, data?: SetCognitoEventsCommandOutput) => void,
   ): void;
 
   /**
@@ -299,16 +299,16 @@ export interface CognitoSync {
    */
   setIdentityPoolConfiguration(
     args: SetIdentityPoolConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetIdentityPoolConfigurationCommandOutput>;
   setIdentityPoolConfiguration(
     args: SetIdentityPoolConfigurationCommandInput,
-    cb: (err: any, data?: SetIdentityPoolConfigurationCommandOutput) => void
+    cb: (err: any, data?: SetIdentityPoolConfigurationCommandOutput) => void,
   ): void;
   setIdentityPoolConfiguration(
     args: SetIdentityPoolConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetIdentityPoolConfigurationCommandOutput) => void
+    cb: (err: any, data?: SetIdentityPoolConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -316,16 +316,16 @@ export interface CognitoSync {
    */
   subscribeToDataset(
     args: SubscribeToDatasetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SubscribeToDatasetCommandOutput>;
   subscribeToDataset(
     args: SubscribeToDatasetCommandInput,
-    cb: (err: any, data?: SubscribeToDatasetCommandOutput) => void
+    cb: (err: any, data?: SubscribeToDatasetCommandOutput) => void,
   ): void;
   subscribeToDataset(
     args: SubscribeToDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SubscribeToDatasetCommandOutput) => void
+    cb: (err: any, data?: SubscribeToDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -333,16 +333,16 @@ export interface CognitoSync {
    */
   unsubscribeFromDataset(
     args: UnsubscribeFromDatasetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UnsubscribeFromDatasetCommandOutput>;
   unsubscribeFromDataset(
     args: UnsubscribeFromDatasetCommandInput,
-    cb: (err: any, data?: UnsubscribeFromDatasetCommandOutput) => void
+    cb: (err: any, data?: UnsubscribeFromDatasetCommandOutput) => void,
   ): void;
   unsubscribeFromDataset(
     args: UnsubscribeFromDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UnsubscribeFromDatasetCommandOutput) => void
+    cb: (err: any, data?: UnsubscribeFromDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -353,7 +353,7 @@ export interface CognitoSync {
   updateRecords(
     args: UpdateRecordsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRecordsCommandOutput) => void
+    cb: (err: any, data?: UpdateRecordsCommandOutput) => void,
   ): void;
 }
 

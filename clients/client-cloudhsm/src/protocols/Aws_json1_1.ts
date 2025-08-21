@@ -73,7 +73,7 @@ import {
  */
 export const se_AddTagsToResourceCommand = async (
   input: AddTagsToResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AddTagsToResource");
   let body: any;
@@ -86,7 +86,7 @@ export const se_AddTagsToResourceCommand = async (
  */
 export const se_CreateHapgCommand = async (
   input: CreateHapgCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateHapg");
   let body: any;
@@ -99,7 +99,7 @@ export const se_CreateHapgCommand = async (
  */
 export const se_CreateHsmCommand = async (
   input: CreateHsmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateHsm");
   let body: any;
@@ -112,7 +112,7 @@ export const se_CreateHsmCommand = async (
  */
 export const se_CreateLunaClientCommand = async (
   input: CreateLunaClientCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLunaClient");
   let body: any;
@@ -125,7 +125,7 @@ export const se_CreateLunaClientCommand = async (
  */
 export const se_DeleteHapgCommand = async (
   input: DeleteHapgCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteHapg");
   let body: any;
@@ -138,7 +138,7 @@ export const se_DeleteHapgCommand = async (
  */
 export const se_DeleteHsmCommand = async (
   input: DeleteHsmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteHsm");
   let body: any;
@@ -151,7 +151,7 @@ export const se_DeleteHsmCommand = async (
  */
 export const se_DeleteLunaClientCommand = async (
   input: DeleteLunaClientCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteLunaClient");
   let body: any;
@@ -164,7 +164,7 @@ export const se_DeleteLunaClientCommand = async (
  */
 export const se_DescribeHapgCommand = async (
   input: DescribeHapgCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeHapg");
   let body: any;
@@ -177,7 +177,7 @@ export const se_DescribeHapgCommand = async (
  */
 export const se_DescribeHsmCommand = async (
   input: DescribeHsmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeHsm");
   let body: any;
@@ -190,7 +190,7 @@ export const se_DescribeHsmCommand = async (
  */
 export const se_DescribeLunaClientCommand = async (
   input: DescribeLunaClientCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeLunaClient");
   let body: any;
@@ -203,7 +203,7 @@ export const se_DescribeLunaClientCommand = async (
  */
 export const se_GetConfigCommand = async (
   input: GetConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetConfig");
   let body: any;
@@ -216,7 +216,7 @@ export const se_GetConfigCommand = async (
  */
 export const se_ListAvailableZonesCommand = async (
   input: ListAvailableZonesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAvailableZones");
   let body: any;
@@ -229,7 +229,7 @@ export const se_ListAvailableZonesCommand = async (
  */
 export const se_ListHapgsCommand = async (
   input: ListHapgsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListHapgs");
   let body: any;
@@ -242,7 +242,7 @@ export const se_ListHapgsCommand = async (
  */
 export const se_ListHsmsCommand = async (
   input: ListHsmsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListHsms");
   let body: any;
@@ -255,7 +255,7 @@ export const se_ListHsmsCommand = async (
  */
 export const se_ListLunaClientsCommand = async (
   input: ListLunaClientsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListLunaClients");
   let body: any;
@@ -268,7 +268,7 @@ export const se_ListLunaClientsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -281,7 +281,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ModifyHapgCommand = async (
   input: ModifyHapgCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ModifyHapg");
   let body: any;
@@ -294,7 +294,7 @@ export const se_ModifyHapgCommand = async (
  */
 export const se_ModifyHsmCommand = async (
   input: ModifyHsmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ModifyHsm");
   let body: any;
@@ -307,7 +307,7 @@ export const se_ModifyHsmCommand = async (
  */
 export const se_ModifyLunaClientCommand = async (
   input: ModifyLunaClientCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ModifyLunaClient");
   let body: any;
@@ -320,7 +320,7 @@ export const se_ModifyLunaClientCommand = async (
  */
 export const se_RemoveTagsFromResourceCommand = async (
   input: RemoveTagsFromResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RemoveTagsFromResource");
   let body: any;
@@ -333,7 +333,7 @@ export const se_RemoveTagsFromResourceCommand = async (
  */
 export const de_AddTagsToResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddTagsToResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -353,7 +353,7 @@ export const de_AddTagsToResourceCommand = async (
  */
 export const de_CreateHapgCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateHapgCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -373,7 +373,7 @@ export const de_CreateHapgCommand = async (
  */
 export const de_CreateHsmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateHsmCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -393,7 +393,7 @@ export const de_CreateHsmCommand = async (
  */
 export const de_CreateLunaClientCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLunaClientCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -413,7 +413,7 @@ export const de_CreateLunaClientCommand = async (
  */
 export const de_DeleteHapgCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteHapgCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -433,7 +433,7 @@ export const de_DeleteHapgCommand = async (
  */
 export const de_DeleteHsmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteHsmCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -453,7 +453,7 @@ export const de_DeleteHsmCommand = async (
  */
 export const de_DeleteLunaClientCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLunaClientCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -473,7 +473,7 @@ export const de_DeleteLunaClientCommand = async (
  */
 export const de_DescribeHapgCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeHapgCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -493,7 +493,7 @@ export const de_DescribeHapgCommand = async (
  */
 export const de_DescribeHsmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeHsmCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -513,7 +513,7 @@ export const de_DescribeHsmCommand = async (
  */
 export const de_DescribeLunaClientCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLunaClientCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -533,7 +533,7 @@ export const de_DescribeLunaClientCommand = async (
  */
 export const de_GetConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -553,7 +553,7 @@ export const de_GetConfigCommand = async (
  */
 export const de_ListAvailableZonesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAvailableZonesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -573,7 +573,7 @@ export const de_ListAvailableZonesCommand = async (
  */
 export const de_ListHapgsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListHapgsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -593,7 +593,7 @@ export const de_ListHapgsCommand = async (
  */
 export const de_ListHsmsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListHsmsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -613,7 +613,7 @@ export const de_ListHsmsCommand = async (
  */
 export const de_ListLunaClientsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLunaClientsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -633,7 +633,7 @@ export const de_ListLunaClientsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -653,7 +653,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ModifyHapgCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyHapgCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -673,7 +673,7 @@ export const de_ModifyHapgCommand = async (
  */
 export const de_ModifyHsmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyHsmCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -693,7 +693,7 @@ export const de_ModifyHsmCommand = async (
  */
 export const de_ModifyLunaClientCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyLunaClientCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -713,7 +713,7 @@ export const de_ModifyLunaClientCommand = async (
  */
 export const de_RemoveTagsFromResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveTagsFromResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -762,7 +762,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_CloudHsmInternalExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CloudHsmInternalException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -778,7 +778,7 @@ const de_CloudHsmInternalExceptionRes = async (
  */
 const de_CloudHsmServiceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CloudHsmServiceException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -794,7 +794,7 @@ const de_CloudHsmServiceExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -935,7 +935,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

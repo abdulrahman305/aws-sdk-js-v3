@@ -79,7 +79,7 @@ import {
  */
 export const se_BatchGetTokenBalanceCommand = async (
   input: BatchGetTokenBalanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -90,7 +90,7 @@ export const se_BatchGetTokenBalanceCommand = async (
   body = JSON.stringify(
     take(input, {
       getTokenBalanceInputs: (_) => se_GetTokenBalanceInputList(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -101,7 +101,7 @@ export const se_BatchGetTokenBalanceCommand = async (
  */
 export const se_GetAssetContractCommand = async (
   input: GetAssetContractCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -112,7 +112,7 @@ export const se_GetAssetContractCommand = async (
   body = JSON.stringify(
     take(input, {
       contractIdentifier: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -123,7 +123,7 @@ export const se_GetAssetContractCommand = async (
  */
 export const se_GetTokenBalanceCommand = async (
   input: GetTokenBalanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -136,7 +136,7 @@ export const se_GetTokenBalanceCommand = async (
       atBlockchainInstant: (_) => se_BlockchainInstant(_, context),
       ownerIdentifier: (_) => _json(_),
       tokenIdentifier: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -147,7 +147,7 @@ export const se_GetTokenBalanceCommand = async (
  */
 export const se_GetTransactionCommand = async (
   input: GetTransactionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -160,7 +160,7 @@ export const se_GetTransactionCommand = async (
       network: [],
       transactionHash: [],
       transactionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -171,7 +171,7 @@ export const se_GetTransactionCommand = async (
  */
 export const se_ListAssetContractsCommand = async (
   input: ListAssetContractsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -184,7 +184,7 @@ export const se_ListAssetContractsCommand = async (
       contractFilter: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -195,7 +195,7 @@ export const se_ListAssetContractsCommand = async (
  */
 export const se_ListFilteredTransactionEventsCommand = async (
   input: ListFilteredTransactionEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -213,7 +213,7 @@ export const se_ListFilteredTransactionEventsCommand = async (
       sort: (_) => _json(_),
       timeFilter: (_) => se_TimeFilter(_, context),
       voutFilter: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -224,7 +224,7 @@ export const se_ListFilteredTransactionEventsCommand = async (
  */
 export const se_ListTokenBalancesCommand = async (
   input: ListTokenBalancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -238,7 +238,7 @@ export const se_ListTokenBalancesCommand = async (
       nextToken: [],
       ownerFilter: (_) => _json(_),
       tokenFilter: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -249,7 +249,7 @@ export const se_ListTokenBalancesCommand = async (
  */
 export const se_ListTransactionEventsCommand = async (
   input: ListTransactionEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -264,7 +264,7 @@ export const se_ListTransactionEventsCommand = async (
       nextToken: [],
       transactionHash: [],
       transactionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -275,7 +275,7 @@ export const se_ListTransactionEventsCommand = async (
  */
 export const se_ListTransactionsCommand = async (
   input: ListTransactionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -293,7 +293,7 @@ export const se_ListTransactionsCommand = async (
       nextToken: [],
       sort: (_) => _json(_),
       toBlockchainInstant: (_) => se_BlockchainInstant(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -304,7 +304,7 @@ export const se_ListTransactionsCommand = async (
  */
 export const de_BatchGetTokenBalanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetTokenBalanceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -326,7 +326,7 @@ export const de_BatchGetTokenBalanceCommand = async (
  */
 export const de_GetAssetContractCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAssetContractCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -350,7 +350,7 @@ export const de_GetAssetContractCommand = async (
  */
 export const de_GetTokenBalanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTokenBalanceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -375,7 +375,7 @@ export const de_GetTokenBalanceCommand = async (
  */
 export const de_GetTransactionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTransactionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -396,7 +396,7 @@ export const de_GetTransactionCommand = async (
  */
 export const de_ListAssetContractsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssetContractsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -418,7 +418,7 @@ export const de_ListAssetContractsCommand = async (
  */
 export const de_ListFilteredTransactionEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFilteredTransactionEventsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -440,7 +440,7 @@ export const de_ListFilteredTransactionEventsCommand = async (
  */
 export const de_ListTokenBalancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTokenBalancesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -462,7 +462,7 @@ export const de_ListTokenBalancesCommand = async (
  */
 export const de_ListTransactionEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTransactionEventsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -484,7 +484,7 @@ export const de_ListTransactionEventsCommand = async (
  */
 export const de_ListTransactionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTransactionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -545,7 +545,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -565,7 +565,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({
     [_rAS]: [() => void 0 !== parsedOutput.headers[_ra], () => __strictParseInt32(parsedOutput.headers[_ra])],
@@ -587,7 +587,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -609,7 +609,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

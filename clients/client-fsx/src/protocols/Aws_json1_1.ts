@@ -330,7 +330,7 @@ import {
  */
 export const se_AssociateFileSystemAliasesCommand = async (
   input: AssociateFileSystemAliasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateFileSystemAliases");
   let body: any;
@@ -343,7 +343,7 @@ export const se_AssociateFileSystemAliasesCommand = async (
  */
 export const se_CancelDataRepositoryTaskCommand = async (
   input: CancelDataRepositoryTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CancelDataRepositoryTask");
   let body: any;
@@ -356,7 +356,7 @@ export const se_CancelDataRepositoryTaskCommand = async (
  */
 export const se_CopyBackupCommand = async (
   input: CopyBackupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CopyBackup");
   let body: any;
@@ -369,7 +369,7 @@ export const se_CopyBackupCommand = async (
  */
 export const se_CopySnapshotAndUpdateVolumeCommand = async (
   input: CopySnapshotAndUpdateVolumeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CopySnapshotAndUpdateVolume");
   let body: any;
@@ -382,7 +382,7 @@ export const se_CopySnapshotAndUpdateVolumeCommand = async (
  */
 export const se_CreateBackupCommand = async (
   input: CreateBackupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateBackup");
   let body: any;
@@ -395,7 +395,7 @@ export const se_CreateBackupCommand = async (
  */
 export const se_CreateDataRepositoryAssociationCommand = async (
   input: CreateDataRepositoryAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDataRepositoryAssociation");
   let body: any;
@@ -408,7 +408,7 @@ export const se_CreateDataRepositoryAssociationCommand = async (
  */
 export const se_CreateDataRepositoryTaskCommand = async (
   input: CreateDataRepositoryTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDataRepositoryTask");
   let body: any;
@@ -421,7 +421,7 @@ export const se_CreateDataRepositoryTaskCommand = async (
  */
 export const se_CreateFileCacheCommand = async (
   input: CreateFileCacheCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateFileCache");
   let body: any;
@@ -434,7 +434,7 @@ export const se_CreateFileCacheCommand = async (
  */
 export const se_CreateFileSystemCommand = async (
   input: CreateFileSystemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateFileSystem");
   let body: any;
@@ -447,7 +447,7 @@ export const se_CreateFileSystemCommand = async (
  */
 export const se_CreateFileSystemFromBackupCommand = async (
   input: CreateFileSystemFromBackupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateFileSystemFromBackup");
   let body: any;
@@ -460,7 +460,7 @@ export const se_CreateFileSystemFromBackupCommand = async (
  */
 export const se_CreateSnapshotCommand = async (
   input: CreateSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateSnapshot");
   let body: any;
@@ -473,7 +473,7 @@ export const se_CreateSnapshotCommand = async (
  */
 export const se_CreateStorageVirtualMachineCommand = async (
   input: CreateStorageVirtualMachineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateStorageVirtualMachine");
   let body: any;
@@ -486,7 +486,7 @@ export const se_CreateStorageVirtualMachineCommand = async (
  */
 export const se_CreateVolumeCommand = async (
   input: CreateVolumeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateVolume");
   let body: any;
@@ -499,7 +499,7 @@ export const se_CreateVolumeCommand = async (
  */
 export const se_CreateVolumeFromBackupCommand = async (
   input: CreateVolumeFromBackupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateVolumeFromBackup");
   let body: any;
@@ -512,7 +512,7 @@ export const se_CreateVolumeFromBackupCommand = async (
  */
 export const se_DeleteBackupCommand = async (
   input: DeleteBackupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteBackup");
   let body: any;
@@ -525,7 +525,7 @@ export const se_DeleteBackupCommand = async (
  */
 export const se_DeleteDataRepositoryAssociationCommand = async (
   input: DeleteDataRepositoryAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDataRepositoryAssociation");
   let body: any;
@@ -538,7 +538,7 @@ export const se_DeleteDataRepositoryAssociationCommand = async (
  */
 export const se_DeleteFileCacheCommand = async (
   input: DeleteFileCacheCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteFileCache");
   let body: any;
@@ -551,7 +551,7 @@ export const se_DeleteFileCacheCommand = async (
  */
 export const se_DeleteFileSystemCommand = async (
   input: DeleteFileSystemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteFileSystem");
   let body: any;
@@ -564,7 +564,7 @@ export const se_DeleteFileSystemCommand = async (
  */
 export const se_DeleteSnapshotCommand = async (
   input: DeleteSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteSnapshot");
   let body: any;
@@ -577,7 +577,7 @@ export const se_DeleteSnapshotCommand = async (
  */
 export const se_DeleteStorageVirtualMachineCommand = async (
   input: DeleteStorageVirtualMachineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteStorageVirtualMachine");
   let body: any;
@@ -590,7 +590,7 @@ export const se_DeleteStorageVirtualMachineCommand = async (
  */
 export const se_DeleteVolumeCommand = async (
   input: DeleteVolumeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteVolume");
   let body: any;
@@ -603,7 +603,7 @@ export const se_DeleteVolumeCommand = async (
  */
 export const se_DescribeBackupsCommand = async (
   input: DescribeBackupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeBackups");
   let body: any;
@@ -616,7 +616,7 @@ export const se_DescribeBackupsCommand = async (
  */
 export const se_DescribeDataRepositoryAssociationsCommand = async (
   input: DescribeDataRepositoryAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDataRepositoryAssociations");
   let body: any;
@@ -629,7 +629,7 @@ export const se_DescribeDataRepositoryAssociationsCommand = async (
  */
 export const se_DescribeDataRepositoryTasksCommand = async (
   input: DescribeDataRepositoryTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDataRepositoryTasks");
   let body: any;
@@ -642,7 +642,7 @@ export const se_DescribeDataRepositoryTasksCommand = async (
  */
 export const se_DescribeFileCachesCommand = async (
   input: DescribeFileCachesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFileCaches");
   let body: any;
@@ -655,7 +655,7 @@ export const se_DescribeFileCachesCommand = async (
  */
 export const se_DescribeFileSystemAliasesCommand = async (
   input: DescribeFileSystemAliasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFileSystemAliases");
   let body: any;
@@ -668,7 +668,7 @@ export const se_DescribeFileSystemAliasesCommand = async (
  */
 export const se_DescribeFileSystemsCommand = async (
   input: DescribeFileSystemsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFileSystems");
   let body: any;
@@ -681,7 +681,7 @@ export const se_DescribeFileSystemsCommand = async (
  */
 export const se_DescribeSharedVpcConfigurationCommand = async (
   input: DescribeSharedVpcConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeSharedVpcConfiguration");
   let body: any;
@@ -694,7 +694,7 @@ export const se_DescribeSharedVpcConfigurationCommand = async (
  */
 export const se_DescribeSnapshotsCommand = async (
   input: DescribeSnapshotsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeSnapshots");
   let body: any;
@@ -707,7 +707,7 @@ export const se_DescribeSnapshotsCommand = async (
  */
 export const se_DescribeStorageVirtualMachinesCommand = async (
   input: DescribeStorageVirtualMachinesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeStorageVirtualMachines");
   let body: any;
@@ -720,7 +720,7 @@ export const se_DescribeStorageVirtualMachinesCommand = async (
  */
 export const se_DescribeVolumesCommand = async (
   input: DescribeVolumesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeVolumes");
   let body: any;
@@ -733,7 +733,7 @@ export const se_DescribeVolumesCommand = async (
  */
 export const se_DisassociateFileSystemAliasesCommand = async (
   input: DisassociateFileSystemAliasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateFileSystemAliases");
   let body: any;
@@ -746,7 +746,7 @@ export const se_DisassociateFileSystemAliasesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -759,7 +759,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ReleaseFileSystemNfsV3LocksCommand = async (
   input: ReleaseFileSystemNfsV3LocksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ReleaseFileSystemNfsV3Locks");
   let body: any;
@@ -772,7 +772,7 @@ export const se_ReleaseFileSystemNfsV3LocksCommand = async (
  */
 export const se_RestoreVolumeFromSnapshotCommand = async (
   input: RestoreVolumeFromSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RestoreVolumeFromSnapshot");
   let body: any;
@@ -785,7 +785,7 @@ export const se_RestoreVolumeFromSnapshotCommand = async (
  */
 export const se_StartMisconfiguredStateRecoveryCommand = async (
   input: StartMisconfiguredStateRecoveryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartMisconfiguredStateRecovery");
   let body: any;
@@ -798,7 +798,7 @@ export const se_StartMisconfiguredStateRecoveryCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -811,7 +811,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -824,7 +824,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateDataRepositoryAssociationCommand = async (
   input: UpdateDataRepositoryAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateDataRepositoryAssociation");
   let body: any;
@@ -837,7 +837,7 @@ export const se_UpdateDataRepositoryAssociationCommand = async (
  */
 export const se_UpdateFileCacheCommand = async (
   input: UpdateFileCacheCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateFileCache");
   let body: any;
@@ -850,7 +850,7 @@ export const se_UpdateFileCacheCommand = async (
  */
 export const se_UpdateFileSystemCommand = async (
   input: UpdateFileSystemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateFileSystem");
   let body: any;
@@ -863,7 +863,7 @@ export const se_UpdateFileSystemCommand = async (
  */
 export const se_UpdateSharedVpcConfigurationCommand = async (
   input: UpdateSharedVpcConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSharedVpcConfiguration");
   let body: any;
@@ -876,7 +876,7 @@ export const se_UpdateSharedVpcConfigurationCommand = async (
  */
 export const se_UpdateSnapshotCommand = async (
   input: UpdateSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSnapshot");
   let body: any;
@@ -889,7 +889,7 @@ export const se_UpdateSnapshotCommand = async (
  */
 export const se_UpdateStorageVirtualMachineCommand = async (
   input: UpdateStorageVirtualMachineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateStorageVirtualMachine");
   let body: any;
@@ -902,7 +902,7 @@ export const se_UpdateStorageVirtualMachineCommand = async (
  */
 export const se_UpdateVolumeCommand = async (
   input: UpdateVolumeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateVolume");
   let body: any;
@@ -915,7 +915,7 @@ export const se_UpdateVolumeCommand = async (
  */
 export const de_AssociateFileSystemAliasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateFileSystemAliasesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -935,7 +935,7 @@ export const de_AssociateFileSystemAliasesCommand = async (
  */
 export const de_CancelDataRepositoryTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelDataRepositoryTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -955,7 +955,7 @@ export const de_CancelDataRepositoryTaskCommand = async (
  */
 export const de_CopyBackupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopyBackupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -975,7 +975,7 @@ export const de_CopyBackupCommand = async (
  */
 export const de_CopySnapshotAndUpdateVolumeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopySnapshotAndUpdateVolumeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -995,7 +995,7 @@ export const de_CopySnapshotAndUpdateVolumeCommand = async (
  */
 export const de_CreateBackupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBackupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1015,7 +1015,7 @@ export const de_CreateBackupCommand = async (
  */
 export const de_CreateDataRepositoryAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDataRepositoryAssociationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1035,7 +1035,7 @@ export const de_CreateDataRepositoryAssociationCommand = async (
  */
 export const de_CreateDataRepositoryTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDataRepositoryTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1055,7 +1055,7 @@ export const de_CreateDataRepositoryTaskCommand = async (
  */
 export const de_CreateFileCacheCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFileCacheCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1075,7 +1075,7 @@ export const de_CreateFileCacheCommand = async (
  */
 export const de_CreateFileSystemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFileSystemCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1095,7 +1095,7 @@ export const de_CreateFileSystemCommand = async (
  */
 export const de_CreateFileSystemFromBackupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFileSystemFromBackupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1115,7 +1115,7 @@ export const de_CreateFileSystemFromBackupCommand = async (
  */
 export const de_CreateSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1135,7 +1135,7 @@ export const de_CreateSnapshotCommand = async (
  */
 export const de_CreateStorageVirtualMachineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStorageVirtualMachineCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1155,7 +1155,7 @@ export const de_CreateStorageVirtualMachineCommand = async (
  */
 export const de_CreateVolumeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVolumeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1175,7 +1175,7 @@ export const de_CreateVolumeCommand = async (
  */
 export const de_CreateVolumeFromBackupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVolumeFromBackupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1195,7 +1195,7 @@ export const de_CreateVolumeFromBackupCommand = async (
  */
 export const de_DeleteBackupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBackupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1215,7 +1215,7 @@ export const de_DeleteBackupCommand = async (
  */
 export const de_DeleteDataRepositoryAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDataRepositoryAssociationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1235,7 +1235,7 @@ export const de_DeleteDataRepositoryAssociationCommand = async (
  */
 export const de_DeleteFileCacheCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFileCacheCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1255,7 +1255,7 @@ export const de_DeleteFileCacheCommand = async (
  */
 export const de_DeleteFileSystemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFileSystemCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1275,7 +1275,7 @@ export const de_DeleteFileSystemCommand = async (
  */
 export const de_DeleteSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1295,7 +1295,7 @@ export const de_DeleteSnapshotCommand = async (
  */
 export const de_DeleteStorageVirtualMachineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStorageVirtualMachineCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1315,7 +1315,7 @@ export const de_DeleteStorageVirtualMachineCommand = async (
  */
 export const de_DeleteVolumeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVolumeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1335,7 +1335,7 @@ export const de_DeleteVolumeCommand = async (
  */
 export const de_DescribeBackupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBackupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1355,7 +1355,7 @@ export const de_DescribeBackupsCommand = async (
  */
 export const de_DescribeDataRepositoryAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDataRepositoryAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1375,7 +1375,7 @@ export const de_DescribeDataRepositoryAssociationsCommand = async (
  */
 export const de_DescribeDataRepositoryTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDataRepositoryTasksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1395,7 +1395,7 @@ export const de_DescribeDataRepositoryTasksCommand = async (
  */
 export const de_DescribeFileCachesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFileCachesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1415,7 +1415,7 @@ export const de_DescribeFileCachesCommand = async (
  */
 export const de_DescribeFileSystemAliasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFileSystemAliasesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1435,7 +1435,7 @@ export const de_DescribeFileSystemAliasesCommand = async (
  */
 export const de_DescribeFileSystemsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFileSystemsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1455,7 +1455,7 @@ export const de_DescribeFileSystemsCommand = async (
  */
 export const de_DescribeSharedVpcConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSharedVpcConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1475,7 +1475,7 @@ export const de_DescribeSharedVpcConfigurationCommand = async (
  */
 export const de_DescribeSnapshotsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSnapshotsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1495,7 +1495,7 @@ export const de_DescribeSnapshotsCommand = async (
  */
 export const de_DescribeStorageVirtualMachinesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStorageVirtualMachinesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1515,7 +1515,7 @@ export const de_DescribeStorageVirtualMachinesCommand = async (
  */
 export const de_DescribeVolumesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVolumesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1535,7 +1535,7 @@ export const de_DescribeVolumesCommand = async (
  */
 export const de_DisassociateFileSystemAliasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateFileSystemAliasesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1555,7 +1555,7 @@ export const de_DisassociateFileSystemAliasesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1575,7 +1575,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ReleaseFileSystemNfsV3LocksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReleaseFileSystemNfsV3LocksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1595,7 +1595,7 @@ export const de_ReleaseFileSystemNfsV3LocksCommand = async (
  */
 export const de_RestoreVolumeFromSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreVolumeFromSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1615,7 +1615,7 @@ export const de_RestoreVolumeFromSnapshotCommand = async (
  */
 export const de_StartMisconfiguredStateRecoveryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartMisconfiguredStateRecoveryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1635,7 +1635,7 @@ export const de_StartMisconfiguredStateRecoveryCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1655,7 +1655,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1675,7 +1675,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateDataRepositoryAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDataRepositoryAssociationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1695,7 +1695,7 @@ export const de_UpdateDataRepositoryAssociationCommand = async (
  */
 export const de_UpdateFileCacheCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFileCacheCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1715,7 +1715,7 @@ export const de_UpdateFileCacheCommand = async (
  */
 export const de_UpdateFileSystemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFileSystemCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1735,7 +1735,7 @@ export const de_UpdateFileSystemCommand = async (
  */
 export const de_UpdateSharedVpcConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSharedVpcConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1755,7 +1755,7 @@ export const de_UpdateSharedVpcConfigurationCommand = async (
  */
 export const de_UpdateSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1775,7 +1775,7 @@ export const de_UpdateSnapshotCommand = async (
  */
 export const de_UpdateStorageVirtualMachineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateStorageVirtualMachineCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1795,7 +1795,7 @@ export const de_UpdateStorageVirtualMachineCommand = async (
  */
 export const de_UpdateVolumeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVolumeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1940,7 +1940,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ActiveDirectoryErrorRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ActiveDirectoryError> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2021,7 +2021,7 @@ const de_BadRequestRes = async (parsedOutput: any, context: __SerdeContext): Pro
  */
 const de_DataRepositoryAssociationNotFoundRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DataRepositoryAssociationNotFound> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2037,7 +2037,7 @@ const de_DataRepositoryAssociationNotFoundRes = async (
  */
 const de_DataRepositoryTaskEndedRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DataRepositoryTaskEnded> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2053,7 +2053,7 @@ const de_DataRepositoryTaskEndedRes = async (
  */
 const de_DataRepositoryTaskExecutingRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DataRepositoryTaskExecuting> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2069,7 +2069,7 @@ const de_DataRepositoryTaskExecutingRes = async (
  */
 const de_DataRepositoryTaskNotFoundRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DataRepositoryTaskNotFound> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2111,7 +2111,7 @@ const de_FileSystemNotFoundRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_IncompatibleParameterErrorRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IncompatibleParameterError> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2127,7 +2127,7 @@ const de_IncompatibleParameterErrorRes = async (
  */
 const de_IncompatibleRegionForMultiAZRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IncompatibleRegionForMultiAZ> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2156,7 +2156,7 @@ const de_InternalServerErrorRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InvalidDataRepositoryTypeRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDataRepositoryType> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2172,7 +2172,7 @@ const de_InvalidDataRepositoryTypeRes = async (
  */
 const de_InvalidDestinationKmsKeyRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDestinationKmsKey> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2214,7 +2214,7 @@ const de_InvalidImportPathRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InvalidNetworkSettingsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNetworkSettings> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2230,7 +2230,7 @@ const de_InvalidNetworkSettingsRes = async (
  */
 const de_InvalidPerUnitStorageThroughputRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPerUnitStorageThroughput> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2272,7 +2272,7 @@ const de_InvalidSourceKmsKeyRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_MissingFileCacheConfigurationRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MissingFileCacheConfiguration> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2288,7 +2288,7 @@ const de_MissingFileCacheConfigurationRes = async (
  */
 const de_MissingFileSystemConfigurationRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MissingFileSystemConfiguration> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2304,7 +2304,7 @@ const de_MissingFileSystemConfigurationRes = async (
  */
 const de_MissingVolumeConfigurationRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MissingVolumeConfiguration> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2320,7 +2320,7 @@ const de_MissingVolumeConfigurationRes = async (
  */
 const de_NotServiceResourceErrorRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotServiceResourceError> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2336,7 +2336,7 @@ const de_NotServiceResourceErrorRes = async (
  */
 const de_ResourceDoesNotSupportTaggingRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceDoesNotSupportTagging> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2365,7 +2365,7 @@ const de_ResourceNotFoundRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_ServiceLimitExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceLimitExceeded> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2394,7 +2394,7 @@ const de_SnapshotNotFoundRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_SourceBackupUnavailableRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SourceBackupUnavailable> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2410,7 +2410,7 @@ const de_SourceBackupUnavailableRes = async (
  */
 const de_StorageVirtualMachineNotFoundRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StorageVirtualMachineNotFound> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2426,7 +2426,7 @@ const de_StorageVirtualMachineNotFoundRes = async (
  */
 const de_UnsupportedOperationRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedOperation> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2459,7 +2459,7 @@ const de_VolumeNotFoundRes = async (parsedOutput: any, context: __SerdeContext):
  */
 const se_AssociateFileSystemAliasesRequest = (
   input: AssociateFileSystemAliasesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Aliases: _json,
@@ -2499,7 +2499,7 @@ const se_CopyBackupRequest = (input: CopyBackupRequest, context: __SerdeContext)
  */
 const se_CopySnapshotAndUpdateVolumeRequest = (
   input: CopySnapshotAndUpdateVolumeRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
@@ -2529,7 +2529,7 @@ const se_CreateBackupRequest = (input: CreateBackupRequest, context: __SerdeCont
  */
 const se_CreateDataRepositoryAssociationRequest = (
   input: CreateDataRepositoryAssociationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     BatchImportMetaDataOnCreate: [],
@@ -2587,7 +2587,7 @@ const se_CreateFileCacheRequest = (input: CreateFileCacheRequest, context: __Ser
  */
 const se_CreateFileSystemFromBackupRequest = (
   input: CreateFileSystemFromBackupRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     BackupId: [],
@@ -2661,7 +2661,7 @@ const se_CreateSnapshotRequest = (input: CreateSnapshotRequest, context: __Serde
  */
 const se_CreateStorageVirtualMachineRequest = (
   input: CreateStorageVirtualMachineRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     ActiveDirectoryConfiguration: _json,
@@ -2728,7 +2728,7 @@ const se_DeleteBackupRequest = (input: DeleteBackupRequest, context: __SerdeCont
  */
 const se_DeleteDataRepositoryAssociationRequest = (
   input: DeleteDataRepositoryAssociationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     AssociationId: [],
@@ -2785,7 +2785,7 @@ const se_DeleteSnapshotRequest = (input: DeleteSnapshotRequest, context: __Serde
  */
 const se_DeleteStorageVirtualMachineRequest = (
   input: DeleteStorageVirtualMachineRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
@@ -2844,7 +2844,7 @@ const se_DescribeFileSystemAliasesRequest = (input: DescribeFileSystemAliasesReq
  */
 const se_DisassociateFileSystemAliasesRequest = (
   input: DisassociateFileSystemAliasesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Aliases: _json,
@@ -2908,7 +2908,7 @@ const se_DisassociateFileSystemAliasesRequest = (
  */
 const se_ReleaseFileSystemNfsV3LocksRequest = (
   input: ReleaseFileSystemNfsV3LocksRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
@@ -2959,7 +2959,7 @@ const se_RestoreVolumeFromSnapshotRequest = (input: RestoreVolumeFromSnapshotReq
  */
 const se_StartMisconfiguredStateRecoveryRequest = (
   input: StartMisconfiguredStateRecoveryRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
@@ -2998,7 +2998,7 @@ const se_StartMisconfiguredStateRecoveryRequest = (
  */
 const se_UpdateDataRepositoryAssociationRequest = (
   input: UpdateDataRepositoryAssociationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     AssociationId: [],
@@ -3058,7 +3058,7 @@ const se_UpdateFileSystemRequest = (input: UpdateFileSystemRequest, context: __S
  */
 const se_UpdateSharedVpcConfigurationRequest = (
   input: UpdateSharedVpcConfigurationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
@@ -3084,7 +3084,7 @@ const se_UpdateSnapshotRequest = (input: UpdateSnapshotRequest, context: __Serde
  */
 const se_UpdateStorageVirtualMachineRequest = (
   input: UpdateStorageVirtualMachineRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     ActiveDirectoryConfiguration: _json,
@@ -3237,7 +3237,7 @@ const de_CopyBackupResponse = (output: any, context: __SerdeContext): CopyBackup
  */
 const de_CopySnapshotAndUpdateVolumeResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CopySnapshotAndUpdateVolumeResponse => {
   return take(output, {
     AdministrativeActions: (_: any) => de_AdministrativeActions(_, context),
@@ -3260,7 +3260,7 @@ const de_CreateBackupResponse = (output: any, context: __SerdeContext): CreateBa
  */
 const de_CreateDataRepositoryAssociationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateDataRepositoryAssociationResponse => {
   return take(output, {
     Association: (_: any) => de_DataRepositoryAssociation(_, context),
@@ -3272,7 +3272,7 @@ const de_CreateDataRepositoryAssociationResponse = (
  */
 const de_CreateDataRepositoryTaskResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateDataRepositoryTaskResponse => {
   return take(output, {
     DataRepositoryTask: (_: any) => de_DataRepositoryTask(_, context),
@@ -3293,7 +3293,7 @@ const de_CreateFileCacheResponse = (output: any, context: __SerdeContext): Creat
  */
 const de_CreateFileSystemFromBackupResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateFileSystemFromBackupResponse => {
   return take(output, {
     FileSystem: (_: any) => de_FileSystem(_, context),
@@ -3323,7 +3323,7 @@ const de_CreateSnapshotResponse = (output: any, context: __SerdeContext): Create
  */
 const de_CreateStorageVirtualMachineResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateStorageVirtualMachineResponse => {
   return take(output, {
     StorageVirtualMachine: (_: any) => de_StorageVirtualMachine(_, context),
@@ -3488,7 +3488,7 @@ const de_DescribeBackupsResponse = (output: any, context: __SerdeContext): Descr
  */
 const de_DescribeDataRepositoryAssociationsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeDataRepositoryAssociationsResponse => {
   return take(output, {
     Associations: (_: any) => de_DataRepositoryAssociations(_, context),
@@ -3501,7 +3501,7 @@ const de_DescribeDataRepositoryAssociationsResponse = (
  */
 const de_DescribeDataRepositoryTasksResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeDataRepositoryTasksResponse => {
   return take(output, {
     DataRepositoryTasks: (_: any) => de_DataRepositoryTasks(_, context),
@@ -3548,7 +3548,7 @@ const de_DescribeSnapshotsResponse = (output: any, context: __SerdeContext): Des
  */
 const de_DescribeStorageVirtualMachinesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeStorageVirtualMachinesResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -3778,7 +3778,7 @@ const de_FileSystems = (output: any, context: __SerdeContext): FileSystem[] => {
  */
 const de_ReleaseFileSystemNfsV3LocksResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReleaseFileSystemNfsV3LocksResponse => {
   return take(output, {
     FileSystem: (_: any) => de_FileSystem(_, context),
@@ -3796,7 +3796,7 @@ const de_ReleaseFileSystemNfsV3LocksResponse = (
  */
 const de_RestoreVolumeFromSnapshotResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RestoreVolumeFromSnapshotResponse => {
   return take(output, {
     AdministrativeActions: (_: any) => de_AdministrativeActions(_, context),
@@ -3857,7 +3857,7 @@ const de_Snapshots = (output: any, context: __SerdeContext): Snapshot[] => {
  */
 const de_StartMisconfiguredStateRecoveryResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StartMisconfiguredStateRecoveryResponse => {
   return take(output, {
     FileSystem: (_: any) => de_FileSystem(_, context),
@@ -3926,7 +3926,7 @@ const de_StorageVirtualMachines = (output: any, context: __SerdeContext): Storag
  */
 const de_UpdateDataRepositoryAssociationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateDataRepositoryAssociationResponse => {
   return take(output, {
     Association: (_: any) => de_DataRepositoryAssociation(_, context),
@@ -3967,7 +3967,7 @@ const de_UpdateSnapshotResponse = (output: any, context: __SerdeContext): Update
  */
 const de_UpdateStorageVirtualMachineResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateStorageVirtualMachineResponse => {
   return take(output, {
     StorageVirtualMachine: (_: any) => de_StorageVirtualMachine(_, context),
@@ -4039,7 +4039,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

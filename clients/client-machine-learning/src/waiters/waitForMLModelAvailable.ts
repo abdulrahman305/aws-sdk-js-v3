@@ -6,7 +6,7 @@ import { MachineLearningClient } from "../MachineLearningClient";
 
 const checkState = async (
   client: MachineLearningClient,
-  input: DescribeMLModelsCommandInput
+  input: DescribeMLModelsCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -53,7 +53,7 @@ const checkState = async (
  */
 export const waitForMLModelAvailable = async (
   params: WaiterConfiguration<MachineLearningClient>,
-  input: DescribeMLModelsCommandInput
+  input: DescribeMLModelsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -65,7 +65,7 @@ export const waitForMLModelAvailable = async (
  */
 export const waitUntilMLModelAvailable = async (
   params: WaiterConfiguration<MachineLearningClient>,
-  input: DescribeMLModelsCommandInput
+  input: DescribeMLModelsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

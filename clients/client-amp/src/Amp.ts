@@ -165,16 +165,16 @@ export interface Amp {
    */
   createAlertManagerDefinition(
     args: CreateAlertManagerDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAlertManagerDefinitionCommandOutput>;
   createAlertManagerDefinition(
     args: CreateAlertManagerDefinitionCommandInput,
-    cb: (err: any, data?: CreateAlertManagerDefinitionCommandOutput) => void
+    cb: (err: any, data?: CreateAlertManagerDefinitionCommandOutput) => void,
   ): void;
   createAlertManagerDefinition(
     args: CreateAlertManagerDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAlertManagerDefinitionCommandOutput) => void
+    cb: (err: any, data?: CreateAlertManagerDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -182,16 +182,16 @@ export interface Amp {
    */
   createLoggingConfiguration(
     args: CreateLoggingConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateLoggingConfigurationCommandOutput>;
   createLoggingConfiguration(
     args: CreateLoggingConfigurationCommandInput,
-    cb: (err: any, data?: CreateLoggingConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateLoggingConfigurationCommandOutput) => void,
   ): void;
   createLoggingConfiguration(
     args: CreateLoggingConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateLoggingConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateLoggingConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -199,16 +199,16 @@ export interface Amp {
    */
   createRuleGroupsNamespace(
     args: CreateRuleGroupsNamespaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRuleGroupsNamespaceCommandOutput>;
   createRuleGroupsNamespace(
     args: CreateRuleGroupsNamespaceCommandInput,
-    cb: (err: any, data?: CreateRuleGroupsNamespaceCommandOutput) => void
+    cb: (err: any, data?: CreateRuleGroupsNamespaceCommandOutput) => void,
   ): void;
   createRuleGroupsNamespace(
     args: CreateRuleGroupsNamespaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRuleGroupsNamespaceCommandOutput) => void
+    cb: (err: any, data?: CreateRuleGroupsNamespaceCommandOutput) => void,
   ): void;
 
   /**
@@ -219,7 +219,7 @@ export interface Amp {
   createScraper(
     args: CreateScraperCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateScraperCommandOutput) => void
+    cb: (err: any, data?: CreateScraperCommandOutput) => void,
   ): void;
 
   /**
@@ -228,13 +228,13 @@ export interface Amp {
   createWorkspace(): Promise<CreateWorkspaceCommandOutput>;
   createWorkspace(
     args: CreateWorkspaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateWorkspaceCommandOutput>;
   createWorkspace(args: CreateWorkspaceCommandInput, cb: (err: any, data?: CreateWorkspaceCommandOutput) => void): void;
   createWorkspace(
     args: CreateWorkspaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateWorkspaceCommandOutput) => void
+    cb: (err: any, data?: CreateWorkspaceCommandOutput) => void,
   ): void;
 
   /**
@@ -242,16 +242,16 @@ export interface Amp {
    */
   deleteAlertManagerDefinition(
     args: DeleteAlertManagerDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAlertManagerDefinitionCommandOutput>;
   deleteAlertManagerDefinition(
     args: DeleteAlertManagerDefinitionCommandInput,
-    cb: (err: any, data?: DeleteAlertManagerDefinitionCommandOutput) => void
+    cb: (err: any, data?: DeleteAlertManagerDefinitionCommandOutput) => void,
   ): void;
   deleteAlertManagerDefinition(
     args: DeleteAlertManagerDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAlertManagerDefinitionCommandOutput) => void
+    cb: (err: any, data?: DeleteAlertManagerDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -259,16 +259,16 @@ export interface Amp {
    */
   deleteLoggingConfiguration(
     args: DeleteLoggingConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteLoggingConfigurationCommandOutput>;
   deleteLoggingConfiguration(
     args: DeleteLoggingConfigurationCommandInput,
-    cb: (err: any, data?: DeleteLoggingConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteLoggingConfigurationCommandOutput) => void,
   ): void;
   deleteLoggingConfiguration(
     args: DeleteLoggingConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLoggingConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteLoggingConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -276,16 +276,16 @@ export interface Amp {
    */
   deleteRuleGroupsNamespace(
     args: DeleteRuleGroupsNamespaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRuleGroupsNamespaceCommandOutput>;
   deleteRuleGroupsNamespace(
     args: DeleteRuleGroupsNamespaceCommandInput,
-    cb: (err: any, data?: DeleteRuleGroupsNamespaceCommandOutput) => void
+    cb: (err: any, data?: DeleteRuleGroupsNamespaceCommandOutput) => void,
   ): void;
   deleteRuleGroupsNamespace(
     args: DeleteRuleGroupsNamespaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRuleGroupsNamespaceCommandOutput) => void
+    cb: (err: any, data?: DeleteRuleGroupsNamespaceCommandOutput) => void,
   ): void;
 
   /**
@@ -296,7 +296,7 @@ export interface Amp {
   deleteScraper(
     args: DeleteScraperCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteScraperCommandOutput) => void
+    cb: (err: any, data?: DeleteScraperCommandOutput) => void,
   ): void;
 
   /**
@@ -304,13 +304,13 @@ export interface Amp {
    */
   deleteWorkspace(
     args: DeleteWorkspaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteWorkspaceCommandOutput>;
   deleteWorkspace(args: DeleteWorkspaceCommandInput, cb: (err: any, data?: DeleteWorkspaceCommandOutput) => void): void;
   deleteWorkspace(
     args: DeleteWorkspaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteWorkspaceCommandOutput) => void
+    cb: (err: any, data?: DeleteWorkspaceCommandOutput) => void,
   ): void;
 
   /**
@@ -318,16 +318,16 @@ export interface Amp {
    */
   describeAlertManagerDefinition(
     args: DescribeAlertManagerDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAlertManagerDefinitionCommandOutput>;
   describeAlertManagerDefinition(
     args: DescribeAlertManagerDefinitionCommandInput,
-    cb: (err: any, data?: DescribeAlertManagerDefinitionCommandOutput) => void
+    cb: (err: any, data?: DescribeAlertManagerDefinitionCommandOutput) => void,
   ): void;
   describeAlertManagerDefinition(
     args: DescribeAlertManagerDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAlertManagerDefinitionCommandOutput) => void
+    cb: (err: any, data?: DescribeAlertManagerDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -335,16 +335,16 @@ export interface Amp {
    */
   describeLoggingConfiguration(
     args: DescribeLoggingConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLoggingConfigurationCommandOutput>;
   describeLoggingConfiguration(
     args: DescribeLoggingConfigurationCommandInput,
-    cb: (err: any, data?: DescribeLoggingConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeLoggingConfigurationCommandOutput) => void,
   ): void;
   describeLoggingConfiguration(
     args: DescribeLoggingConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLoggingConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeLoggingConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -352,16 +352,16 @@ export interface Amp {
    */
   describeRuleGroupsNamespace(
     args: DescribeRuleGroupsNamespaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRuleGroupsNamespaceCommandOutput>;
   describeRuleGroupsNamespace(
     args: DescribeRuleGroupsNamespaceCommandInput,
-    cb: (err: any, data?: DescribeRuleGroupsNamespaceCommandOutput) => void
+    cb: (err: any, data?: DescribeRuleGroupsNamespaceCommandOutput) => void,
   ): void;
   describeRuleGroupsNamespace(
     args: DescribeRuleGroupsNamespaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRuleGroupsNamespaceCommandOutput) => void
+    cb: (err: any, data?: DescribeRuleGroupsNamespaceCommandOutput) => void,
   ): void;
 
   /**
@@ -369,13 +369,13 @@ export interface Amp {
    */
   describeScraper(
     args: DescribeScraperCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeScraperCommandOutput>;
   describeScraper(args: DescribeScraperCommandInput, cb: (err: any, data?: DescribeScraperCommandOutput) => void): void;
   describeScraper(
     args: DescribeScraperCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeScraperCommandOutput) => void
+    cb: (err: any, data?: DescribeScraperCommandOutput) => void,
   ): void;
 
   /**
@@ -383,16 +383,16 @@ export interface Amp {
    */
   describeWorkspace(
     args: DescribeWorkspaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeWorkspaceCommandOutput>;
   describeWorkspace(
     args: DescribeWorkspaceCommandInput,
-    cb: (err: any, data?: DescribeWorkspaceCommandOutput) => void
+    cb: (err: any, data?: DescribeWorkspaceCommandOutput) => void,
   ): void;
   describeWorkspace(
     args: DescribeWorkspaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeWorkspaceCommandOutput) => void
+    cb: (err: any, data?: DescribeWorkspaceCommandOutput) => void,
   ): void;
 
   /**
@@ -401,16 +401,16 @@ export interface Amp {
   getDefaultScraperConfiguration(): Promise<GetDefaultScraperConfigurationCommandOutput>;
   getDefaultScraperConfiguration(
     args: GetDefaultScraperConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDefaultScraperConfigurationCommandOutput>;
   getDefaultScraperConfiguration(
     args: GetDefaultScraperConfigurationCommandInput,
-    cb: (err: any, data?: GetDefaultScraperConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetDefaultScraperConfigurationCommandOutput) => void,
   ): void;
   getDefaultScraperConfiguration(
     args: GetDefaultScraperConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDefaultScraperConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetDefaultScraperConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -418,16 +418,16 @@ export interface Amp {
    */
   listRuleGroupsNamespaces(
     args: ListRuleGroupsNamespacesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRuleGroupsNamespacesCommandOutput>;
   listRuleGroupsNamespaces(
     args: ListRuleGroupsNamespacesCommandInput,
-    cb: (err: any, data?: ListRuleGroupsNamespacesCommandOutput) => void
+    cb: (err: any, data?: ListRuleGroupsNamespacesCommandOutput) => void,
   ): void;
   listRuleGroupsNamespaces(
     args: ListRuleGroupsNamespacesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRuleGroupsNamespacesCommandOutput) => void
+    cb: (err: any, data?: ListRuleGroupsNamespacesCommandOutput) => void,
   ): void;
 
   /**
@@ -439,7 +439,7 @@ export interface Amp {
   listScrapers(
     args: ListScrapersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListScrapersCommandOutput) => void
+    cb: (err: any, data?: ListScrapersCommandOutput) => void,
   ): void;
 
   /**
@@ -447,16 +447,16 @@ export interface Amp {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -465,13 +465,13 @@ export interface Amp {
   listWorkspaces(): Promise<ListWorkspacesCommandOutput>;
   listWorkspaces(
     args: ListWorkspacesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListWorkspacesCommandOutput>;
   listWorkspaces(args: ListWorkspacesCommandInput, cb: (err: any, data?: ListWorkspacesCommandOutput) => void): void;
   listWorkspaces(
     args: ListWorkspacesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWorkspacesCommandOutput) => void
+    cb: (err: any, data?: ListWorkspacesCommandOutput) => void,
   ): void;
 
   /**
@@ -479,16 +479,16 @@ export interface Amp {
    */
   putAlertManagerDefinition(
     args: PutAlertManagerDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAlertManagerDefinitionCommandOutput>;
   putAlertManagerDefinition(
     args: PutAlertManagerDefinitionCommandInput,
-    cb: (err: any, data?: PutAlertManagerDefinitionCommandOutput) => void
+    cb: (err: any, data?: PutAlertManagerDefinitionCommandOutput) => void,
   ): void;
   putAlertManagerDefinition(
     args: PutAlertManagerDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAlertManagerDefinitionCommandOutput) => void
+    cb: (err: any, data?: PutAlertManagerDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -496,16 +496,16 @@ export interface Amp {
    */
   putRuleGroupsNamespace(
     args: PutRuleGroupsNamespaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutRuleGroupsNamespaceCommandOutput>;
   putRuleGroupsNamespace(
     args: PutRuleGroupsNamespaceCommandInput,
-    cb: (err: any, data?: PutRuleGroupsNamespaceCommandOutput) => void
+    cb: (err: any, data?: PutRuleGroupsNamespaceCommandOutput) => void,
   ): void;
   putRuleGroupsNamespace(
     args: PutRuleGroupsNamespaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutRuleGroupsNamespaceCommandOutput) => void
+    cb: (err: any, data?: PutRuleGroupsNamespaceCommandOutput) => void,
   ): void;
 
   /**
@@ -516,7 +516,7 @@ export interface Amp {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -527,7 +527,7 @@ export interface Amp {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -535,16 +535,16 @@ export interface Amp {
    */
   updateLoggingConfiguration(
     args: UpdateLoggingConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateLoggingConfigurationCommandOutput>;
   updateLoggingConfiguration(
     args: UpdateLoggingConfigurationCommandInput,
-    cb: (err: any, data?: UpdateLoggingConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateLoggingConfigurationCommandOutput) => void,
   ): void;
   updateLoggingConfiguration(
     args: UpdateLoggingConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateLoggingConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateLoggingConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -552,16 +552,16 @@ export interface Amp {
    */
   updateWorkspaceAlias(
     args: UpdateWorkspaceAliasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateWorkspaceAliasCommandOutput>;
   updateWorkspaceAlias(
     args: UpdateWorkspaceAliasCommandInput,
-    cb: (err: any, data?: UpdateWorkspaceAliasCommandOutput) => void
+    cb: (err: any, data?: UpdateWorkspaceAliasCommandOutput) => void,
   ): void;
   updateWorkspaceAlias(
     args: UpdateWorkspaceAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateWorkspaceAliasCommandOutput) => void
+    cb: (err: any, data?: UpdateWorkspaceAliasCommandOutput) => void,
   ): void;
 }
 

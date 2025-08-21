@@ -65,14 +65,14 @@ export class NullAndEmptyHeadersServerSerializer
 
 export const getNullAndEmptyHeadersServerHandler = <Context>(
   operation: __Operation<NullAndEmptyHeadersServerServerInput, NullAndEmptyHeadersServerServerOutput, Context>,
-  customizer: __ValidationCustomizer<"NullAndEmptyHeadersServer">
+  customizer: __ValidationCustomizer<"NullAndEmptyHeadersServer">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "NullAndEmptyHeadersServer">([
     new httpbinding.UriSpec<"RestJson", "NullAndEmptyHeadersServer">(
       "GET",
       [{ type: "path_literal", value: "NullAndEmptyHeadersServer" }],
       [],
-      { service: "RestJson", operation: "NullAndEmptyHeadersServer" }
+      { service: "RestJson", operation: "NullAndEmptyHeadersServer" },
     ),
   ]);
   return new NullAndEmptyHeadersServerHandler(
@@ -80,7 +80,7 @@ export const getNullAndEmptyHeadersServerHandler = <Context>(
     mux,
     new NullAndEmptyHeadersServerSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -101,7 +101,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -147,7 +147,7 @@ export class NullAndEmptyHeadersServerHandler<Context> implements __ServiceHandl
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"NullAndEmptyHeadersServer">;
   /**
@@ -168,7 +168,7 @@ export class NullAndEmptyHeadersServerHandler<Context> implements __ServiceHandl
       NullAndEmptyHeadersServerErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"NullAndEmptyHeadersServer">
+    validationCustomizer: __ValidationCustomizer<"NullAndEmptyHeadersServer">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -180,7 +180,7 @@ export class NullAndEmptyHeadersServerHandler<Context> implements __ServiceHandl
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.NullAndEmptyHeadersServer. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.NullAndEmptyHeadersServer. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -192,7 +192,7 @@ export class NullAndEmptyHeadersServerHandler<Context> implements __ServiceHandl
       this.operation,
       this.serializeFrameworkException,
       NullAndEmptyHeadersServerServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

@@ -75,7 +75,7 @@ describe(fromSSO.name, () => {
     it("throws error if profile is not an Sso Profile", async () => {
       (isSsoProfile as unknown as jest.Mock).mockReturnValue(false);
       const expectedError = new CredentialsProviderError(
-        `Profile ${mockProfileName} is not configured with SSO credentials.`
+        `Profile ${mockProfileName} is not configured with SSO credentials.`,
       );
 
       try {
@@ -129,7 +129,7 @@ describe(fromSSO.name, () => {
     it.each(["ssoStartUrl", "ssoAccountId", "ssoRegion", "ssoRoleName"])("missing '%s'", async (key) => {
       const expectedError = new CredentialsProviderError(
         'Incomplete configuration. The fromSSO() argument hash must include "ssoStartUrl",' +
-          ' "ssoAccountId", "ssoRegion", "ssoRoleName"'
+          ' "ssoAccountId", "ssoRegion", "ssoRoleName"',
       );
       try {
         await fromSSO({ ...mockSsoProfile, [key]: undefined })();

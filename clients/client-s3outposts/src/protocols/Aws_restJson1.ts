@@ -47,7 +47,7 @@ import { S3OutpostsServiceException as __BaseException } from "../models/S3Outpo
  */
 export const se_CreateEndpointCommand = async (
   input: CreateEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -62,7 +62,7 @@ export const se_CreateEndpointCommand = async (
       OutpostId: [],
       SecurityGroupId: [],
       SubnetId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -73,7 +73,7 @@ export const se_CreateEndpointCommand = async (
  */
 export const se_DeleteEndpointCommand = async (
   input: DeleteEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -92,7 +92,7 @@ export const se_DeleteEndpointCommand = async (
  */
 export const se_ListEndpointsCommand = async (
   input: ListEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -111,7 +111,7 @@ export const se_ListEndpointsCommand = async (
  */
 export const se_ListOutpostsWithS3Command = async (
   input: ListOutpostsWithS3CommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -130,7 +130,7 @@ export const se_ListOutpostsWithS3Command = async (
  */
 export const se_ListSharedEndpointsCommand = async (
   input: ListSharedEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -150,7 +150,7 @@ export const se_ListSharedEndpointsCommand = async (
  */
 export const de_CreateEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -171,7 +171,7 @@ export const de_CreateEndpointCommand = async (
  */
 export const de_DeleteEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -188,7 +188,7 @@ export const de_DeleteEndpointCommand = async (
  */
 export const de_ListEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEndpointsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -210,7 +210,7 @@ export const de_ListEndpointsCommand = async (
  */
 export const de_ListOutpostsWithS3Command = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOutpostsWithS3CommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -232,7 +232,7 @@ export const de_ListOutpostsWithS3Command = async (
  */
 export const de_ListSharedEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSharedEndpointsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -296,7 +296,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -333,7 +333,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -353,7 +353,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_OutpostOfflineExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OutpostOfflineException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -373,7 +373,7 @@ const de_OutpostOfflineExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

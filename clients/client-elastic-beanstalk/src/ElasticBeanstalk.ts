@@ -296,16 +296,16 @@ export interface ElasticBeanstalk {
   abortEnvironmentUpdate(): Promise<AbortEnvironmentUpdateCommandOutput>;
   abortEnvironmentUpdate(
     args: AbortEnvironmentUpdateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AbortEnvironmentUpdateCommandOutput>;
   abortEnvironmentUpdate(
     args: AbortEnvironmentUpdateCommandInput,
-    cb: (err: any, data?: AbortEnvironmentUpdateCommandOutput) => void
+    cb: (err: any, data?: AbortEnvironmentUpdateCommandOutput) => void,
   ): void;
   abortEnvironmentUpdate(
     args: AbortEnvironmentUpdateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AbortEnvironmentUpdateCommandOutput) => void
+    cb: (err: any, data?: AbortEnvironmentUpdateCommandOutput) => void,
   ): void;
 
   /**
@@ -313,16 +313,16 @@ export interface ElasticBeanstalk {
    */
   applyEnvironmentManagedAction(
     args: ApplyEnvironmentManagedActionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ApplyEnvironmentManagedActionCommandOutput>;
   applyEnvironmentManagedAction(
     args: ApplyEnvironmentManagedActionCommandInput,
-    cb: (err: any, data?: ApplyEnvironmentManagedActionCommandOutput) => void
+    cb: (err: any, data?: ApplyEnvironmentManagedActionCommandOutput) => void,
   ): void;
   applyEnvironmentManagedAction(
     args: ApplyEnvironmentManagedActionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ApplyEnvironmentManagedActionCommandOutput) => void
+    cb: (err: any, data?: ApplyEnvironmentManagedActionCommandOutput) => void,
   ): void;
 
   /**
@@ -330,16 +330,16 @@ export interface ElasticBeanstalk {
    */
   associateEnvironmentOperationsRole(
     args: AssociateEnvironmentOperationsRoleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateEnvironmentOperationsRoleCommandOutput>;
   associateEnvironmentOperationsRole(
     args: AssociateEnvironmentOperationsRoleCommandInput,
-    cb: (err: any, data?: AssociateEnvironmentOperationsRoleCommandOutput) => void
+    cb: (err: any, data?: AssociateEnvironmentOperationsRoleCommandOutput) => void,
   ): void;
   associateEnvironmentOperationsRole(
     args: AssociateEnvironmentOperationsRoleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateEnvironmentOperationsRoleCommandOutput) => void
+    cb: (err: any, data?: AssociateEnvironmentOperationsRoleCommandOutput) => void,
   ): void;
 
   /**
@@ -347,16 +347,16 @@ export interface ElasticBeanstalk {
    */
   checkDNSAvailability(
     args: CheckDNSAvailabilityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CheckDNSAvailabilityCommandOutput>;
   checkDNSAvailability(
     args: CheckDNSAvailabilityCommandInput,
-    cb: (err: any, data?: CheckDNSAvailabilityCommandOutput) => void
+    cb: (err: any, data?: CheckDNSAvailabilityCommandOutput) => void,
   ): void;
   checkDNSAvailability(
     args: CheckDNSAvailabilityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CheckDNSAvailabilityCommandOutput) => void
+    cb: (err: any, data?: CheckDNSAvailabilityCommandOutput) => void,
   ): void;
 
   /**
@@ -365,16 +365,16 @@ export interface ElasticBeanstalk {
   composeEnvironments(): Promise<ComposeEnvironmentsCommandOutput>;
   composeEnvironments(
     args: ComposeEnvironmentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ComposeEnvironmentsCommandOutput>;
   composeEnvironments(
     args: ComposeEnvironmentsCommandInput,
-    cb: (err: any, data?: ComposeEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: ComposeEnvironmentsCommandOutput) => void,
   ): void;
   composeEnvironments(
     args: ComposeEnvironmentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ComposeEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: ComposeEnvironmentsCommandOutput) => void,
   ): void;
 
   /**
@@ -382,16 +382,16 @@ export interface ElasticBeanstalk {
    */
   createApplication(
     args: CreateApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateApplicationCommandOutput>;
   createApplication(
     args: CreateApplicationCommandInput,
-    cb: (err: any, data?: CreateApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationCommandOutput) => void,
   ): void;
   createApplication(
     args: CreateApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -399,16 +399,16 @@ export interface ElasticBeanstalk {
    */
   createApplicationVersion(
     args: CreateApplicationVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateApplicationVersionCommandOutput>;
   createApplicationVersion(
     args: CreateApplicationVersionCommandInput,
-    cb: (err: any, data?: CreateApplicationVersionCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationVersionCommandOutput) => void,
   ): void;
   createApplicationVersion(
     args: CreateApplicationVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateApplicationVersionCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -416,16 +416,16 @@ export interface ElasticBeanstalk {
    */
   createConfigurationTemplate(
     args: CreateConfigurationTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateConfigurationTemplateCommandOutput>;
   createConfigurationTemplate(
     args: CreateConfigurationTemplateCommandInput,
-    cb: (err: any, data?: CreateConfigurationTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateConfigurationTemplateCommandOutput) => void,
   ): void;
   createConfigurationTemplate(
     args: CreateConfigurationTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateConfigurationTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateConfigurationTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -433,16 +433,16 @@ export interface ElasticBeanstalk {
    */
   createEnvironment(
     args: CreateEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEnvironmentCommandOutput>;
   createEnvironment(
     args: CreateEnvironmentCommandInput,
-    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void,
   ): void;
   createEnvironment(
     args: CreateEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -450,16 +450,16 @@ export interface ElasticBeanstalk {
    */
   createPlatformVersion(
     args: CreatePlatformVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePlatformVersionCommandOutput>;
   createPlatformVersion(
     args: CreatePlatformVersionCommandInput,
-    cb: (err: any, data?: CreatePlatformVersionCommandOutput) => void
+    cb: (err: any, data?: CreatePlatformVersionCommandOutput) => void,
   ): void;
   createPlatformVersion(
     args: CreatePlatformVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePlatformVersionCommandOutput) => void
+    cb: (err: any, data?: CreatePlatformVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -468,16 +468,16 @@ export interface ElasticBeanstalk {
   createStorageLocation(): Promise<CreateStorageLocationCommandOutput>;
   createStorageLocation(
     args: CreateStorageLocationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateStorageLocationCommandOutput>;
   createStorageLocation(
     args: CreateStorageLocationCommandInput,
-    cb: (err: any, data?: CreateStorageLocationCommandOutput) => void
+    cb: (err: any, data?: CreateStorageLocationCommandOutput) => void,
   ): void;
   createStorageLocation(
     args: CreateStorageLocationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateStorageLocationCommandOutput) => void
+    cb: (err: any, data?: CreateStorageLocationCommandOutput) => void,
   ): void;
 
   /**
@@ -485,16 +485,16 @@ export interface ElasticBeanstalk {
    */
   deleteApplication(
     args: DeleteApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApplicationCommandOutput>;
   deleteApplication(
     args: DeleteApplicationCommandInput,
-    cb: (err: any, data?: DeleteApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCommandOutput) => void,
   ): void;
   deleteApplication(
     args: DeleteApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -502,16 +502,16 @@ export interface ElasticBeanstalk {
    */
   deleteApplicationVersion(
     args: DeleteApplicationVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApplicationVersionCommandOutput>;
   deleteApplicationVersion(
     args: DeleteApplicationVersionCommandInput,
-    cb: (err: any, data?: DeleteApplicationVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationVersionCommandOutput) => void,
   ): void;
   deleteApplicationVersion(
     args: DeleteApplicationVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApplicationVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -519,16 +519,16 @@ export interface ElasticBeanstalk {
    */
   deleteConfigurationTemplate(
     args: DeleteConfigurationTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConfigurationTemplateCommandOutput>;
   deleteConfigurationTemplate(
     args: DeleteConfigurationTemplateCommandInput,
-    cb: (err: any, data?: DeleteConfigurationTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigurationTemplateCommandOutput) => void,
   ): void;
   deleteConfigurationTemplate(
     args: DeleteConfigurationTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConfigurationTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigurationTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -536,16 +536,16 @@ export interface ElasticBeanstalk {
    */
   deleteEnvironmentConfiguration(
     args: DeleteEnvironmentConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEnvironmentConfigurationCommandOutput>;
   deleteEnvironmentConfiguration(
     args: DeleteEnvironmentConfigurationCommandInput,
-    cb: (err: any, data?: DeleteEnvironmentConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentConfigurationCommandOutput) => void,
   ): void;
   deleteEnvironmentConfiguration(
     args: DeleteEnvironmentConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEnvironmentConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -554,16 +554,16 @@ export interface ElasticBeanstalk {
   deletePlatformVersion(): Promise<DeletePlatformVersionCommandOutput>;
   deletePlatformVersion(
     args: DeletePlatformVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePlatformVersionCommandOutput>;
   deletePlatformVersion(
     args: DeletePlatformVersionCommandInput,
-    cb: (err: any, data?: DeletePlatformVersionCommandOutput) => void
+    cb: (err: any, data?: DeletePlatformVersionCommandOutput) => void,
   ): void;
   deletePlatformVersion(
     args: DeletePlatformVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePlatformVersionCommandOutput) => void
+    cb: (err: any, data?: DeletePlatformVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -572,16 +572,16 @@ export interface ElasticBeanstalk {
   describeAccountAttributes(): Promise<DescribeAccountAttributesCommandOutput>;
   describeAccountAttributes(
     args: DescribeAccountAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAccountAttributesCommandOutput>;
   describeAccountAttributes(
     args: DescribeAccountAttributesCommandInput,
-    cb: (err: any, data?: DescribeAccountAttributesCommandOutput) => void
+    cb: (err: any, data?: DescribeAccountAttributesCommandOutput) => void,
   ): void;
   describeAccountAttributes(
     args: DescribeAccountAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAccountAttributesCommandOutput) => void
+    cb: (err: any, data?: DescribeAccountAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -590,16 +590,16 @@ export interface ElasticBeanstalk {
   describeApplications(): Promise<DescribeApplicationsCommandOutput>;
   describeApplications(
     args: DescribeApplicationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeApplicationsCommandOutput>;
   describeApplications(
     args: DescribeApplicationsCommandInput,
-    cb: (err: any, data?: DescribeApplicationsCommandOutput) => void
+    cb: (err: any, data?: DescribeApplicationsCommandOutput) => void,
   ): void;
   describeApplications(
     args: DescribeApplicationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeApplicationsCommandOutput) => void
+    cb: (err: any, data?: DescribeApplicationsCommandOutput) => void,
   ): void;
 
   /**
@@ -608,16 +608,16 @@ export interface ElasticBeanstalk {
   describeApplicationVersions(): Promise<DescribeApplicationVersionsCommandOutput>;
   describeApplicationVersions(
     args: DescribeApplicationVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeApplicationVersionsCommandOutput>;
   describeApplicationVersions(
     args: DescribeApplicationVersionsCommandInput,
-    cb: (err: any, data?: DescribeApplicationVersionsCommandOutput) => void
+    cb: (err: any, data?: DescribeApplicationVersionsCommandOutput) => void,
   ): void;
   describeApplicationVersions(
     args: DescribeApplicationVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeApplicationVersionsCommandOutput) => void
+    cb: (err: any, data?: DescribeApplicationVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -626,16 +626,16 @@ export interface ElasticBeanstalk {
   describeConfigurationOptions(): Promise<DescribeConfigurationOptionsCommandOutput>;
   describeConfigurationOptions(
     args: DescribeConfigurationOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConfigurationOptionsCommandOutput>;
   describeConfigurationOptions(
     args: DescribeConfigurationOptionsCommandInput,
-    cb: (err: any, data?: DescribeConfigurationOptionsCommandOutput) => void
+    cb: (err: any, data?: DescribeConfigurationOptionsCommandOutput) => void,
   ): void;
   describeConfigurationOptions(
     args: DescribeConfigurationOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConfigurationOptionsCommandOutput) => void
+    cb: (err: any, data?: DescribeConfigurationOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -643,16 +643,16 @@ export interface ElasticBeanstalk {
    */
   describeConfigurationSettings(
     args: DescribeConfigurationSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConfigurationSettingsCommandOutput>;
   describeConfigurationSettings(
     args: DescribeConfigurationSettingsCommandInput,
-    cb: (err: any, data?: DescribeConfigurationSettingsCommandOutput) => void
+    cb: (err: any, data?: DescribeConfigurationSettingsCommandOutput) => void,
   ): void;
   describeConfigurationSettings(
     args: DescribeConfigurationSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConfigurationSettingsCommandOutput) => void
+    cb: (err: any, data?: DescribeConfigurationSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -661,16 +661,16 @@ export interface ElasticBeanstalk {
   describeEnvironmentHealth(): Promise<DescribeEnvironmentHealthCommandOutput>;
   describeEnvironmentHealth(
     args: DescribeEnvironmentHealthCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEnvironmentHealthCommandOutput>;
   describeEnvironmentHealth(
     args: DescribeEnvironmentHealthCommandInput,
-    cb: (err: any, data?: DescribeEnvironmentHealthCommandOutput) => void
+    cb: (err: any, data?: DescribeEnvironmentHealthCommandOutput) => void,
   ): void;
   describeEnvironmentHealth(
     args: DescribeEnvironmentHealthCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEnvironmentHealthCommandOutput) => void
+    cb: (err: any, data?: DescribeEnvironmentHealthCommandOutput) => void,
   ): void;
 
   /**
@@ -679,16 +679,16 @@ export interface ElasticBeanstalk {
   describeEnvironmentManagedActionHistory(): Promise<DescribeEnvironmentManagedActionHistoryCommandOutput>;
   describeEnvironmentManagedActionHistory(
     args: DescribeEnvironmentManagedActionHistoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEnvironmentManagedActionHistoryCommandOutput>;
   describeEnvironmentManagedActionHistory(
     args: DescribeEnvironmentManagedActionHistoryCommandInput,
-    cb: (err: any, data?: DescribeEnvironmentManagedActionHistoryCommandOutput) => void
+    cb: (err: any, data?: DescribeEnvironmentManagedActionHistoryCommandOutput) => void,
   ): void;
   describeEnvironmentManagedActionHistory(
     args: DescribeEnvironmentManagedActionHistoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEnvironmentManagedActionHistoryCommandOutput) => void
+    cb: (err: any, data?: DescribeEnvironmentManagedActionHistoryCommandOutput) => void,
   ): void;
 
   /**
@@ -697,16 +697,16 @@ export interface ElasticBeanstalk {
   describeEnvironmentManagedActions(): Promise<DescribeEnvironmentManagedActionsCommandOutput>;
   describeEnvironmentManagedActions(
     args: DescribeEnvironmentManagedActionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEnvironmentManagedActionsCommandOutput>;
   describeEnvironmentManagedActions(
     args: DescribeEnvironmentManagedActionsCommandInput,
-    cb: (err: any, data?: DescribeEnvironmentManagedActionsCommandOutput) => void
+    cb: (err: any, data?: DescribeEnvironmentManagedActionsCommandOutput) => void,
   ): void;
   describeEnvironmentManagedActions(
     args: DescribeEnvironmentManagedActionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEnvironmentManagedActionsCommandOutput) => void
+    cb: (err: any, data?: DescribeEnvironmentManagedActionsCommandOutput) => void,
   ): void;
 
   /**
@@ -715,16 +715,16 @@ export interface ElasticBeanstalk {
   describeEnvironmentResources(): Promise<DescribeEnvironmentResourcesCommandOutput>;
   describeEnvironmentResources(
     args: DescribeEnvironmentResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEnvironmentResourcesCommandOutput>;
   describeEnvironmentResources(
     args: DescribeEnvironmentResourcesCommandInput,
-    cb: (err: any, data?: DescribeEnvironmentResourcesCommandOutput) => void
+    cb: (err: any, data?: DescribeEnvironmentResourcesCommandOutput) => void,
   ): void;
   describeEnvironmentResources(
     args: DescribeEnvironmentResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEnvironmentResourcesCommandOutput) => void
+    cb: (err: any, data?: DescribeEnvironmentResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -733,16 +733,16 @@ export interface ElasticBeanstalk {
   describeEnvironments(): Promise<DescribeEnvironmentsCommandOutput>;
   describeEnvironments(
     args: DescribeEnvironmentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEnvironmentsCommandOutput>;
   describeEnvironments(
     args: DescribeEnvironmentsCommandInput,
-    cb: (err: any, data?: DescribeEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: DescribeEnvironmentsCommandOutput) => void,
   ): void;
   describeEnvironments(
     args: DescribeEnvironmentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: DescribeEnvironmentsCommandOutput) => void,
   ): void;
 
   /**
@@ -751,13 +751,13 @@ export interface ElasticBeanstalk {
   describeEvents(): Promise<DescribeEventsCommandOutput>;
   describeEvents(
     args: DescribeEventsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEventsCommandOutput>;
   describeEvents(args: DescribeEventsCommandInput, cb: (err: any, data?: DescribeEventsCommandOutput) => void): void;
   describeEvents(
     args: DescribeEventsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEventsCommandOutput) => void
+    cb: (err: any, data?: DescribeEventsCommandOutput) => void,
   ): void;
 
   /**
@@ -766,16 +766,16 @@ export interface ElasticBeanstalk {
   describeInstancesHealth(): Promise<DescribeInstancesHealthCommandOutput>;
   describeInstancesHealth(
     args: DescribeInstancesHealthCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeInstancesHealthCommandOutput>;
   describeInstancesHealth(
     args: DescribeInstancesHealthCommandInput,
-    cb: (err: any, data?: DescribeInstancesHealthCommandOutput) => void
+    cb: (err: any, data?: DescribeInstancesHealthCommandOutput) => void,
   ): void;
   describeInstancesHealth(
     args: DescribeInstancesHealthCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeInstancesHealthCommandOutput) => void
+    cb: (err: any, data?: DescribeInstancesHealthCommandOutput) => void,
   ): void;
 
   /**
@@ -784,16 +784,16 @@ export interface ElasticBeanstalk {
   describePlatformVersion(): Promise<DescribePlatformVersionCommandOutput>;
   describePlatformVersion(
     args: DescribePlatformVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePlatformVersionCommandOutput>;
   describePlatformVersion(
     args: DescribePlatformVersionCommandInput,
-    cb: (err: any, data?: DescribePlatformVersionCommandOutput) => void
+    cb: (err: any, data?: DescribePlatformVersionCommandOutput) => void,
   ): void;
   describePlatformVersion(
     args: DescribePlatformVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePlatformVersionCommandOutput) => void
+    cb: (err: any, data?: DescribePlatformVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -801,16 +801,16 @@ export interface ElasticBeanstalk {
    */
   disassociateEnvironmentOperationsRole(
     args: DisassociateEnvironmentOperationsRoleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateEnvironmentOperationsRoleCommandOutput>;
   disassociateEnvironmentOperationsRole(
     args: DisassociateEnvironmentOperationsRoleCommandInput,
-    cb: (err: any, data?: DisassociateEnvironmentOperationsRoleCommandOutput) => void
+    cb: (err: any, data?: DisassociateEnvironmentOperationsRoleCommandOutput) => void,
   ): void;
   disassociateEnvironmentOperationsRole(
     args: DisassociateEnvironmentOperationsRoleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateEnvironmentOperationsRoleCommandOutput) => void
+    cb: (err: any, data?: DisassociateEnvironmentOperationsRoleCommandOutput) => void,
   ): void;
 
   /**
@@ -819,16 +819,16 @@ export interface ElasticBeanstalk {
   listAvailableSolutionStacks(): Promise<ListAvailableSolutionStacksCommandOutput>;
   listAvailableSolutionStacks(
     args: ListAvailableSolutionStacksCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAvailableSolutionStacksCommandOutput>;
   listAvailableSolutionStacks(
     args: ListAvailableSolutionStacksCommandInput,
-    cb: (err: any, data?: ListAvailableSolutionStacksCommandOutput) => void
+    cb: (err: any, data?: ListAvailableSolutionStacksCommandOutput) => void,
   ): void;
   listAvailableSolutionStacks(
     args: ListAvailableSolutionStacksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAvailableSolutionStacksCommandOutput) => void
+    cb: (err: any, data?: ListAvailableSolutionStacksCommandOutput) => void,
   ): void;
 
   /**
@@ -837,16 +837,16 @@ export interface ElasticBeanstalk {
   listPlatformBranches(): Promise<ListPlatformBranchesCommandOutput>;
   listPlatformBranches(
     args: ListPlatformBranchesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPlatformBranchesCommandOutput>;
   listPlatformBranches(
     args: ListPlatformBranchesCommandInput,
-    cb: (err: any, data?: ListPlatformBranchesCommandOutput) => void
+    cb: (err: any, data?: ListPlatformBranchesCommandOutput) => void,
   ): void;
   listPlatformBranches(
     args: ListPlatformBranchesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPlatformBranchesCommandOutput) => void
+    cb: (err: any, data?: ListPlatformBranchesCommandOutput) => void,
   ): void;
 
   /**
@@ -855,16 +855,16 @@ export interface ElasticBeanstalk {
   listPlatformVersions(): Promise<ListPlatformVersionsCommandOutput>;
   listPlatformVersions(
     args: ListPlatformVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPlatformVersionsCommandOutput>;
   listPlatformVersions(
     args: ListPlatformVersionsCommandInput,
-    cb: (err: any, data?: ListPlatformVersionsCommandOutput) => void
+    cb: (err: any, data?: ListPlatformVersionsCommandOutput) => void,
   ): void;
   listPlatformVersions(
     args: ListPlatformVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPlatformVersionsCommandOutput) => void
+    cb: (err: any, data?: ListPlatformVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -872,16 +872,16 @@ export interface ElasticBeanstalk {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -890,16 +890,16 @@ export interface ElasticBeanstalk {
   rebuildEnvironment(): Promise<RebuildEnvironmentCommandOutput>;
   rebuildEnvironment(
     args: RebuildEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RebuildEnvironmentCommandOutput>;
   rebuildEnvironment(
     args: RebuildEnvironmentCommandInput,
-    cb: (err: any, data?: RebuildEnvironmentCommandOutput) => void
+    cb: (err: any, data?: RebuildEnvironmentCommandOutput) => void,
   ): void;
   rebuildEnvironment(
     args: RebuildEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RebuildEnvironmentCommandOutput) => void
+    cb: (err: any, data?: RebuildEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -907,16 +907,16 @@ export interface ElasticBeanstalk {
    */
   requestEnvironmentInfo(
     args: RequestEnvironmentInfoCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RequestEnvironmentInfoCommandOutput>;
   requestEnvironmentInfo(
     args: RequestEnvironmentInfoCommandInput,
-    cb: (err: any, data?: RequestEnvironmentInfoCommandOutput) => void
+    cb: (err: any, data?: RequestEnvironmentInfoCommandOutput) => void,
   ): void;
   requestEnvironmentInfo(
     args: RequestEnvironmentInfoCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RequestEnvironmentInfoCommandOutput) => void
+    cb: (err: any, data?: RequestEnvironmentInfoCommandOutput) => void,
   ): void;
 
   /**
@@ -925,16 +925,16 @@ export interface ElasticBeanstalk {
   restartAppServer(): Promise<RestartAppServerCommandOutput>;
   restartAppServer(
     args: RestartAppServerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RestartAppServerCommandOutput>;
   restartAppServer(
     args: RestartAppServerCommandInput,
-    cb: (err: any, data?: RestartAppServerCommandOutput) => void
+    cb: (err: any, data?: RestartAppServerCommandOutput) => void,
   ): void;
   restartAppServer(
     args: RestartAppServerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RestartAppServerCommandOutput) => void
+    cb: (err: any, data?: RestartAppServerCommandOutput) => void,
   ): void;
 
   /**
@@ -942,16 +942,16 @@ export interface ElasticBeanstalk {
    */
   retrieveEnvironmentInfo(
     args: RetrieveEnvironmentInfoCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RetrieveEnvironmentInfoCommandOutput>;
   retrieveEnvironmentInfo(
     args: RetrieveEnvironmentInfoCommandInput,
-    cb: (err: any, data?: RetrieveEnvironmentInfoCommandOutput) => void
+    cb: (err: any, data?: RetrieveEnvironmentInfoCommandOutput) => void,
   ): void;
   retrieveEnvironmentInfo(
     args: RetrieveEnvironmentInfoCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RetrieveEnvironmentInfoCommandOutput) => void
+    cb: (err: any, data?: RetrieveEnvironmentInfoCommandOutput) => void,
   ): void;
 
   /**
@@ -960,16 +960,16 @@ export interface ElasticBeanstalk {
   swapEnvironmentCNAMEs(): Promise<SwapEnvironmentCNAMEsCommandOutput>;
   swapEnvironmentCNAMEs(
     args: SwapEnvironmentCNAMEsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SwapEnvironmentCNAMEsCommandOutput>;
   swapEnvironmentCNAMEs(
     args: SwapEnvironmentCNAMEsCommandInput,
-    cb: (err: any, data?: SwapEnvironmentCNAMEsCommandOutput) => void
+    cb: (err: any, data?: SwapEnvironmentCNAMEsCommandOutput) => void,
   ): void;
   swapEnvironmentCNAMEs(
     args: SwapEnvironmentCNAMEsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SwapEnvironmentCNAMEsCommandOutput) => void
+    cb: (err: any, data?: SwapEnvironmentCNAMEsCommandOutput) => void,
   ): void;
 
   /**
@@ -978,16 +978,16 @@ export interface ElasticBeanstalk {
   terminateEnvironment(): Promise<TerminateEnvironmentCommandOutput>;
   terminateEnvironment(
     args: TerminateEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<TerminateEnvironmentCommandOutput>;
   terminateEnvironment(
     args: TerminateEnvironmentCommandInput,
-    cb: (err: any, data?: TerminateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: TerminateEnvironmentCommandOutput) => void,
   ): void;
   terminateEnvironment(
     args: TerminateEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TerminateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: TerminateEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -995,16 +995,16 @@ export interface ElasticBeanstalk {
    */
   updateApplication(
     args: UpdateApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApplicationCommandOutput>;
   updateApplication(
     args: UpdateApplicationCommandInput,
-    cb: (err: any, data?: UpdateApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationCommandOutput) => void,
   ): void;
   updateApplication(
     args: UpdateApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -1012,16 +1012,16 @@ export interface ElasticBeanstalk {
    */
   updateApplicationResourceLifecycle(
     args: UpdateApplicationResourceLifecycleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApplicationResourceLifecycleCommandOutput>;
   updateApplicationResourceLifecycle(
     args: UpdateApplicationResourceLifecycleCommandInput,
-    cb: (err: any, data?: UpdateApplicationResourceLifecycleCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationResourceLifecycleCommandOutput) => void,
   ): void;
   updateApplicationResourceLifecycle(
     args: UpdateApplicationResourceLifecycleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApplicationResourceLifecycleCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationResourceLifecycleCommandOutput) => void,
   ): void;
 
   /**
@@ -1029,16 +1029,16 @@ export interface ElasticBeanstalk {
    */
   updateApplicationVersion(
     args: UpdateApplicationVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApplicationVersionCommandOutput>;
   updateApplicationVersion(
     args: UpdateApplicationVersionCommandInput,
-    cb: (err: any, data?: UpdateApplicationVersionCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationVersionCommandOutput) => void,
   ): void;
   updateApplicationVersion(
     args: UpdateApplicationVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApplicationVersionCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -1046,16 +1046,16 @@ export interface ElasticBeanstalk {
    */
   updateConfigurationTemplate(
     args: UpdateConfigurationTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateConfigurationTemplateCommandOutput>;
   updateConfigurationTemplate(
     args: UpdateConfigurationTemplateCommandInput,
-    cb: (err: any, data?: UpdateConfigurationTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateConfigurationTemplateCommandOutput) => void,
   ): void;
   updateConfigurationTemplate(
     args: UpdateConfigurationTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateConfigurationTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateConfigurationTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1064,16 +1064,16 @@ export interface ElasticBeanstalk {
   updateEnvironment(): Promise<UpdateEnvironmentCommandOutput>;
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEnvironmentCommandOutput>;
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
-    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void,
   ): void;
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -1081,16 +1081,16 @@ export interface ElasticBeanstalk {
    */
   updateTagsForResource(
     args: UpdateTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateTagsForResourceCommandOutput>;
   updateTagsForResource(
     args: UpdateTagsForResourceCommandInput,
-    cb: (err: any, data?: UpdateTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: UpdateTagsForResourceCommandOutput) => void,
   ): void;
   updateTagsForResource(
     args: UpdateTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: UpdateTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1098,16 +1098,16 @@ export interface ElasticBeanstalk {
    */
   validateConfigurationSettings(
     args: ValidateConfigurationSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ValidateConfigurationSettingsCommandOutput>;
   validateConfigurationSettings(
     args: ValidateConfigurationSettingsCommandInput,
-    cb: (err: any, data?: ValidateConfigurationSettingsCommandOutput) => void
+    cb: (err: any, data?: ValidateConfigurationSettingsCommandOutput) => void,
   ): void;
   validateConfigurationSettings(
     args: ValidateConfigurationSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ValidateConfigurationSettingsCommandOutput) => void
+    cb: (err: any, data?: ValidateConfigurationSettingsCommandOutput) => void,
   ): void;
 }
 

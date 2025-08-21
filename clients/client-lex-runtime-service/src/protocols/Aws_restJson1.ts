@@ -55,7 +55,7 @@ import {
  */
 export const se_DeleteSessionCommand = async (
   input: DeleteSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -73,7 +73,7 @@ export const se_DeleteSessionCommand = async (
  */
 export const se_GetSessionCommand = async (
   input: GetSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -94,7 +94,7 @@ export const se_GetSessionCommand = async (
  */
 export const se_PostContentCommand = async (
   input: PostContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -131,7 +131,7 @@ export const se_PostContentCommand = async (
  */
 export const se_PostTextCommand = async (
   input: PostTextCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -148,7 +148,7 @@ export const se_PostTextCommand = async (
       inputText: [],
       requestAttributes: (_) => _json(_),
       sessionAttributes: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -159,7 +159,7 @@ export const se_PostTextCommand = async (
  */
 export const se_PutSessionCommand = async (
   input: PutSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -177,7 +177,7 @@ export const se_PutSessionCommand = async (
       dialogAction: (_) => _json(_),
       recentIntentSummaryView: (_) => _json(_),
       sessionAttributes: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -188,7 +188,7 @@ export const se_PutSessionCommand = async (
  */
 export const de_DeleteSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -212,7 +212,7 @@ export const de_DeleteSessionCommand = async (
  */
 export const de_GetSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -237,7 +237,7 @@ export const de_GetSessionCommand = async (
  */
 export const de_PostContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<PostContentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -288,7 +288,7 @@ export const de_PostContentCommand = async (
  */
 export const de_PostTextCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PostTextCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -322,7 +322,7 @@ export const de_PostTextCommand = async (
  */
 export const de_PutSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<PutSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -466,7 +466,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_DependencyFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DependencyFailedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -486,7 +486,7 @@ const de_DependencyFailedExceptionRes = async (
  */
 const de_InternalFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalFailureException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -506,7 +506,7 @@ const de_InternalFailureExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({
     [_rAS]: [, parsedOutput.headers[_ra]],
@@ -528,7 +528,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_LoopDetectedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LoopDetectedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -548,7 +548,7 @@ const de_LoopDetectedExceptionRes = async (
  */
 const de_NotAcceptableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotAcceptableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -585,7 +585,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_RequestTimeoutExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestTimeoutException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -605,7 +605,7 @@ const de_RequestTimeoutExceptionRes = async (
  */
 const de_UnsupportedMediaTypeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedMediaTypeException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

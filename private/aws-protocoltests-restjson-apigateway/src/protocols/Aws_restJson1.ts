@@ -34,7 +34,7 @@ import { BadRequestException, RestApi, TooManyRequestsException, UnauthorizedExc
  */
 export const se_GetRestApisCommand = async (
   input: GetRestApisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -53,7 +53,7 @@ export const se_GetRestApisCommand = async (
  */
 export const de_GetRestApisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRestApisCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -122,7 +122,7 @@ const de_BadRequestExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({
     [_rAS]: [, parsedOutput.headers[_ra]],
@@ -144,7 +144,7 @@ const de_TooManyRequestsExceptionRes = async (
  */
 const de_UnauthorizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthorizedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

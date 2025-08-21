@@ -51,16 +51,16 @@ export interface IoTDataPlane {
    */
   deleteThingShadow(
     args: DeleteThingShadowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteThingShadowCommandOutput>;
   deleteThingShadow(
     args: DeleteThingShadowCommandInput,
-    cb: (err: any, data?: DeleteThingShadowCommandOutput) => void
+    cb: (err: any, data?: DeleteThingShadowCommandOutput) => void,
   ): void;
   deleteThingShadow(
     args: DeleteThingShadowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteThingShadowCommandOutput) => void
+    cb: (err: any, data?: DeleteThingShadowCommandOutput) => void,
   ): void;
 
   /**
@@ -68,16 +68,16 @@ export interface IoTDataPlane {
    */
   getRetainedMessage(
     args: GetRetainedMessageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRetainedMessageCommandOutput>;
   getRetainedMessage(
     args: GetRetainedMessageCommandInput,
-    cb: (err: any, data?: GetRetainedMessageCommandOutput) => void
+    cb: (err: any, data?: GetRetainedMessageCommandOutput) => void,
   ): void;
   getRetainedMessage(
     args: GetRetainedMessageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRetainedMessageCommandOutput) => void
+    cb: (err: any, data?: GetRetainedMessageCommandOutput) => void,
   ): void;
 
   /**
@@ -85,13 +85,13 @@ export interface IoTDataPlane {
    */
   getThingShadow(
     args: GetThingShadowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetThingShadowCommandOutput>;
   getThingShadow(args: GetThingShadowCommandInput, cb: (err: any, data?: GetThingShadowCommandOutput) => void): void;
   getThingShadow(
     args: GetThingShadowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetThingShadowCommandOutput) => void
+    cb: (err: any, data?: GetThingShadowCommandOutput) => void,
   ): void;
 
   /**
@@ -99,16 +99,16 @@ export interface IoTDataPlane {
    */
   listNamedShadowsForThing(
     args: ListNamedShadowsForThingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListNamedShadowsForThingCommandOutput>;
   listNamedShadowsForThing(
     args: ListNamedShadowsForThingCommandInput,
-    cb: (err: any, data?: ListNamedShadowsForThingCommandOutput) => void
+    cb: (err: any, data?: ListNamedShadowsForThingCommandOutput) => void,
   ): void;
   listNamedShadowsForThing(
     args: ListNamedShadowsForThingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListNamedShadowsForThingCommandOutput) => void
+    cb: (err: any, data?: ListNamedShadowsForThingCommandOutput) => void,
   ): void;
 
   /**
@@ -117,16 +117,16 @@ export interface IoTDataPlane {
   listRetainedMessages(): Promise<ListRetainedMessagesCommandOutput>;
   listRetainedMessages(
     args: ListRetainedMessagesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRetainedMessagesCommandOutput>;
   listRetainedMessages(
     args: ListRetainedMessagesCommandInput,
-    cb: (err: any, data?: ListRetainedMessagesCommandOutput) => void
+    cb: (err: any, data?: ListRetainedMessagesCommandOutput) => void,
   ): void;
   listRetainedMessages(
     args: ListRetainedMessagesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRetainedMessagesCommandOutput) => void
+    cb: (err: any, data?: ListRetainedMessagesCommandOutput) => void,
   ): void;
 
   /**
@@ -137,7 +137,7 @@ export interface IoTDataPlane {
   publish(
     args: PublishCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PublishCommandOutput) => void
+    cb: (err: any, data?: PublishCommandOutput) => void,
   ): void;
 
   /**
@@ -145,16 +145,16 @@ export interface IoTDataPlane {
    */
   updateThingShadow(
     args: UpdateThingShadowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateThingShadowCommandOutput>;
   updateThingShadow(
     args: UpdateThingShadowCommandInput,
-    cb: (err: any, data?: UpdateThingShadowCommandOutput) => void
+    cb: (err: any, data?: UpdateThingShadowCommandOutput) => void,
   ): void;
   updateThingShadow(
     args: UpdateThingShadowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateThingShadowCommandOutput) => void
+    cb: (err: any, data?: UpdateThingShadowCommandOutput) => void,
   ): void;
 }
 

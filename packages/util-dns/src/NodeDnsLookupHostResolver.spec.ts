@@ -70,7 +70,7 @@ describe(NodeDnsLookupHostResolver.name, () => {
         hostName: TEST_VALID_IPV4_ADDRESS,
       };
       const RESOLVED_HOST_ADDRESSES: HostAddress[] = await TEST_HOST_RESOLVER.resolveAddress(
-        CURRENT_TEST_HOST_RESOLVER_ARGUMENTS
+        CURRENT_TEST_HOST_RESOLVER_ARGUMENTS,
       );
       expect(Array.isArray(RESOLVED_HOST_ADDRESSES)).toBe(true);
       expect(RESOLVED_HOST_ADDRESSES).toHaveLength(1);
@@ -90,7 +90,7 @@ describe(NodeDnsLookupHostResolver.name, () => {
         hostName: TEST_VALID_IPV6_ADDRESS,
       };
       const RESOLVED_HOST_ADDRESSES: HostAddress[] = await TEST_HOST_RESOLVER.resolveAddress(
-        CURRENT_TEST_HOST_RESOLVER_ARGUMENTS
+        CURRENT_TEST_HOST_RESOLVER_ARGUMENTS,
       );
       expect(Array.isArray(RESOLVED_HOST_ADDRESSES)).toBe(true);
       expect(RESOLVED_HOST_ADDRESSES).toHaveLength(1);
@@ -107,7 +107,7 @@ describe(NodeDnsLookupHostResolver.name, () => {
         ...TEST_HOST_RESOLVER_ARGUMENTS,
       };
       await expect(TEST_HOST_RESOLVER.resolveAddress(CURRENT_TEST_HOST_RESOLVER_ARGUMENTS)).rejects.toThrowError(
-        `getaddrinfo ENOTFOUND TEST_HOST_NAME`
+        `getaddrinfo ENOTFOUND TEST_HOST_NAME`,
       );
     });
 
@@ -130,7 +130,7 @@ describe(NodeDnsLookupHostResolver.name, () => {
         ...TEST_HOST_RESOLVER_ARGUMENTS,
       };
       await expect(TEST_HOST_RESOLVER.resolveAddress(CURRENT_TEST_HOST_RESOLVER_ARGUMENTS)).rejects.toThrowError(
-        "dns.lookup() Node DNS family `0` is not supported"
+        "dns.lookup() Node DNS family `0` is not supported",
       );
     });
 
@@ -148,7 +148,7 @@ describe(NodeDnsLookupHostResolver.name, () => {
         ...TEST_HOST_RESOLVER_ARGUMENTS,
       };
       await expect(TEST_HOST_RESOLVER.resolveAddress(CURRENT_TEST_HOST_RESOLVER_ARGUMENTS)).rejects.toThrowError(
-        'Could not resolve addresses for "TEST_HOST_NAME"'
+        'Could not resolve addresses for "TEST_HOST_NAME"',
       );
     });
 
@@ -166,7 +166,7 @@ describe(NodeDnsLookupHostResolver.name, () => {
         ...TEST_HOST_RESOLVER_ARGUMENTS,
       };
       await expect(TEST_HOST_RESOLVER.resolveAddress(CURRENT_TEST_HOST_RESOLVER_ARGUMENTS)).rejects.toThrowError(
-        "Resolution failed"
+        "Resolution failed",
       );
     });
 
@@ -178,7 +178,7 @@ describe(NodeDnsLookupHostResolver.name, () => {
         hostName: HOST_NAME,
       };
       const RESOLVED_HOST_ADDRESSES: HostAddress[] = await TEST_HOST_RESOLVER.resolveAddress(
-        CURRENT_TEST_HOST_RESOLVER_ARGUMENTS
+        CURRENT_TEST_HOST_RESOLVER_ARGUMENTS,
       );
       expect(RESOLVED_HOST_ADDRESSES).toHaveLength(2);
       for (const hostAddress of RESOLVED_HOST_ADDRESSES) {
@@ -206,9 +206,8 @@ describe(NodeDnsLookupHostResolver.name, () => {
         nodeDnsLookup: MOCK_NODE_DNS_LOOKUP as any,
       });
       // Resolve address
-      const RESOLVED_HOST_ADDRESSES: HostAddress[] = await TEST_HOST_RESOLVER.resolveAddress(
-        TEST_HOST_RESOLVER_ARGUMENTS
-      );
+      const RESOLVED_HOST_ADDRESSES: HostAddress[] =
+        await TEST_HOST_RESOLVER.resolveAddress(TEST_HOST_RESOLVER_ARGUMENTS);
       expect(RESOLVED_HOST_ADDRESSES).toHaveLength(1);
       const [hostAddress] = RESOLVED_HOST_ADDRESSES;
       expect(hostAddress.hostName).toBe(TEST_HOST_NAME);
@@ -232,9 +231,8 @@ describe(NodeDnsLookupHostResolver.name, () => {
         nodeDnsLookup: MOCK_NODE_DNS_LOOKUP as any,
       });
       // Resolve address
-      const RESOLVED_HOST_ADDRESSES: HostAddress[] = await TEST_HOST_RESOLVER.resolveAddress(
-        TEST_HOST_RESOLVER_ARGUMENTS
-      );
+      const RESOLVED_HOST_ADDRESSES: HostAddress[] =
+        await TEST_HOST_RESOLVER.resolveAddress(TEST_HOST_RESOLVER_ARGUMENTS);
       expect(RESOLVED_HOST_ADDRESSES).toHaveLength(1);
       const [hostAddress] = RESOLVED_HOST_ADDRESSES;
       expect(hostAddress.hostName).toBe(TEST_HOST_NAME);
@@ -302,13 +300,13 @@ describe(NodeDnsLookupHostResolver.name, () => {
       expect(hostEntryResolveAddress?.aRecords.length === expectedIpV4Size);
       expect(hostEntryResolveAddress?.aRecords.data[0].address).toBe(expectedNextIpV4Address.address);
       expect(hostEntryResolveAddress?.aRecords.data[hostEntryResolveAddress?.aRecords.data.length - 1].address).toBe(
-        expectedIpV4Address.address
+        expectedIpV4Address.address,
       );
       // Next IPv6
       expect(hostEntryResolveAddress?.aaaaRecords.length === expectedIpV6Size);
       expect(hostEntryResolveAddress?.aaaaRecords.data[0].address).toBe(expectedNextIpV6Address.address);
       expect(
-        hostEntryResolveAddress?.aaaaRecords.data[hostEntryResolveAddress?.aaaaRecords.data.length - 1].address
+        hostEntryResolveAddress?.aaaaRecords.data[hostEntryResolveAddress?.aaaaRecords.data.length - 1].address,
       ).toBe(expectedIpV6Address.address);
       // Failed IPv4
       expect(hostEntryResolveAddress?.failedARecords.length === expectedFailedIpV4Size);
@@ -594,7 +592,7 @@ describe(NodeDnsLookupHostResolver.name, () => {
       jest.advanceTimersByTime(30_000);
       // Second resolveAddress() call with no upgrades
       await expect(TEST_HOST_RESOLVER.resolveAddress(TEST_HOST_RESOLVER_ARGUMENTS)).rejects.toThrowError(
-        'Could not resolve addresses for "TEST_HOST_NAME"'
+        'Could not resolve addresses for "TEST_HOST_NAME"',
       );
     });
   });
@@ -603,7 +601,7 @@ describe(NodeDnsLookupHostResolver.name, () => {
     test("reportFailureOnAddress(addr) should throw when host name is not in cache", async () => {
       // Report failure on unavailable address
       expect(() => TEST_HOST_RESOLVER.reportFailureOnAddress(TEST_AAAA_HOST_ADDRESS_0)).toThrowError(
-        'Could not find cached host name "TEST_HOST_NAME"'
+        'Could not find cached host name "TEST_HOST_NAME"',
       );
     });
 

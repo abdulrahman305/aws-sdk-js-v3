@@ -209,7 +209,7 @@ import { NimbleServiceException as __BaseException } from "../models/NimbleServi
  */
 export const se_AcceptEulasCommand = async (
   input: AcceptEulasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -222,7 +222,7 @@ export const se_AcceptEulasCommand = async (
   body = JSON.stringify(
     take(input, {
       eulaIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -233,7 +233,7 @@ export const se_AcceptEulasCommand = async (
  */
 export const se_CreateLaunchProfileCommand = async (
   input: CreateLaunchProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -252,7 +252,7 @@ export const se_CreateLaunchProfileCommand = async (
       streamConfiguration: (_) => _json(_),
       studioComponentIds: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -263,7 +263,7 @@ export const se_CreateLaunchProfileCommand = async (
  */
 export const se_CreateStreamingImageCommand = async (
   input: CreateStreamingImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -279,7 +279,7 @@ export const se_CreateStreamingImageCommand = async (
       ec2ImageId: [],
       name: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -290,7 +290,7 @@ export const se_CreateStreamingImageCommand = async (
  */
 export const se_CreateStreamingSessionCommand = async (
   input: CreateStreamingSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -307,7 +307,7 @@ export const se_CreateStreamingSessionCommand = async (
       ownedBy: [],
       streamingImageId: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -318,7 +318,7 @@ export const se_CreateStreamingSessionCommand = async (
  */
 export const se_CreateStreamingSessionStreamCommand = async (
   input: CreateStreamingSessionStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -332,7 +332,7 @@ export const se_CreateStreamingSessionStreamCommand = async (
   body = JSON.stringify(
     take(input, {
       expirationInSeconds: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -343,7 +343,7 @@ export const se_CreateStreamingSessionStreamCommand = async (
  */
 export const se_CreateStudioCommand = async (
   input: CreateStudioCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -360,7 +360,7 @@ export const se_CreateStudioCommand = async (
       studioName: [],
       tags: (_) => _json(_),
       userRoleArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -371,7 +371,7 @@ export const se_CreateStudioCommand = async (
  */
 export const se_CreateStudioComponentCommand = async (
   input: CreateStudioComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -394,7 +394,7 @@ export const se_CreateStudioComponentCommand = async (
       subtype: [],
       tags: (_) => _json(_),
       type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -405,7 +405,7 @@ export const se_CreateStudioComponentCommand = async (
  */
 export const se_DeleteLaunchProfileCommand = async (
   input: DeleteLaunchProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -424,7 +424,7 @@ export const se_DeleteLaunchProfileCommand = async (
  */
 export const se_DeleteLaunchProfileMemberCommand = async (
   input: DeleteLaunchProfileMemberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -444,7 +444,7 @@ export const se_DeleteLaunchProfileMemberCommand = async (
  */
 export const se_DeleteStreamingImageCommand = async (
   input: DeleteStreamingImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -463,7 +463,7 @@ export const se_DeleteStreamingImageCommand = async (
  */
 export const se_DeleteStreamingSessionCommand = async (
   input: DeleteStreamingSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -482,7 +482,7 @@ export const se_DeleteStreamingSessionCommand = async (
  */
 export const se_DeleteStudioCommand = async (
   input: DeleteStudioCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -500,7 +500,7 @@ export const se_DeleteStudioCommand = async (
  */
 export const se_DeleteStudioComponentCommand = async (
   input: DeleteStudioComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -519,7 +519,7 @@ export const se_DeleteStudioComponentCommand = async (
  */
 export const se_DeleteStudioMemberCommand = async (
   input: DeleteStudioMemberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -538,7 +538,7 @@ export const se_DeleteStudioMemberCommand = async (
  */
 export const se_GetEulaCommand = async (
   input: GetEulaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -554,7 +554,7 @@ export const se_GetEulaCommand = async (
  */
 export const se_GetLaunchProfileCommand = async (
   input: GetLaunchProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -571,7 +571,7 @@ export const se_GetLaunchProfileCommand = async (
  */
 export const se_GetLaunchProfileDetailsCommand = async (
   input: GetLaunchProfileDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -588,7 +588,7 @@ export const se_GetLaunchProfileDetailsCommand = async (
  */
 export const se_GetLaunchProfileInitializationCommand = async (
   input: GetLaunchProfileInitializationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -613,7 +613,7 @@ export const se_GetLaunchProfileInitializationCommand = async (
  */
 export const se_GetLaunchProfileMemberCommand = async (
   input: GetLaunchProfileMemberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -631,7 +631,7 @@ export const se_GetLaunchProfileMemberCommand = async (
  */
 export const se_GetStreamingImageCommand = async (
   input: GetStreamingImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -648,7 +648,7 @@ export const se_GetStreamingImageCommand = async (
  */
 export const se_GetStreamingSessionCommand = async (
   input: GetStreamingSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -665,7 +665,7 @@ export const se_GetStreamingSessionCommand = async (
  */
 export const se_GetStreamingSessionBackupCommand = async (
   input: GetStreamingSessionBackupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -682,7 +682,7 @@ export const se_GetStreamingSessionBackupCommand = async (
  */
 export const se_GetStreamingSessionStreamCommand = async (
   input: GetStreamingSessionStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -700,7 +700,7 @@ export const se_GetStreamingSessionStreamCommand = async (
  */
 export const se_GetStudioCommand = async (
   input: GetStudioCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -716,7 +716,7 @@ export const se_GetStudioCommand = async (
  */
 export const se_GetStudioComponentCommand = async (
   input: GetStudioComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -733,7 +733,7 @@ export const se_GetStudioComponentCommand = async (
  */
 export const se_GetStudioMemberCommand = async (
   input: GetStudioMemberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -750,7 +750,7 @@ export const se_GetStudioMemberCommand = async (
  */
 export const se_ListEulaAcceptancesCommand = async (
   input: ListEulaAcceptancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -770,7 +770,7 @@ export const se_ListEulaAcceptancesCommand = async (
  */
 export const se_ListEulasCommand = async (
   input: ListEulasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -789,7 +789,7 @@ export const se_ListEulasCommand = async (
  */
 export const se_ListLaunchProfileMembersCommand = async (
   input: ListLaunchProfileMembersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -810,7 +810,7 @@ export const se_ListLaunchProfileMembersCommand = async (
  */
 export const se_ListLaunchProfilesCommand = async (
   input: ListLaunchProfilesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -832,7 +832,7 @@ export const se_ListLaunchProfilesCommand = async (
  */
 export const se_ListStreamingImagesCommand = async (
   input: ListStreamingImagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -852,7 +852,7 @@ export const se_ListStreamingImagesCommand = async (
  */
 export const se_ListStreamingSessionBackupsCommand = async (
   input: ListStreamingSessionBackupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -872,7 +872,7 @@ export const se_ListStreamingSessionBackupsCommand = async (
  */
 export const se_ListStreamingSessionsCommand = async (
   input: ListStreamingSessionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -894,7 +894,7 @@ export const se_ListStreamingSessionsCommand = async (
  */
 export const se_ListStudioComponentsCommand = async (
   input: ListStudioComponentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -916,7 +916,7 @@ export const se_ListStudioComponentsCommand = async (
  */
 export const se_ListStudioMembersCommand = async (
   input: ListStudioMembersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -936,7 +936,7 @@ export const se_ListStudioMembersCommand = async (
  */
 export const se_ListStudiosCommand = async (
   input: ListStudiosCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -954,7 +954,7 @@ export const se_ListStudiosCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -970,7 +970,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutLaunchProfileMembersCommand = async (
   input: PutLaunchProfileMembersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -985,7 +985,7 @@ export const se_PutLaunchProfileMembersCommand = async (
     take(input, {
       identityStoreId: [],
       members: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -996,7 +996,7 @@ export const se_PutLaunchProfileMembersCommand = async (
  */
 export const se_PutStudioMembersCommand = async (
   input: PutStudioMembersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1010,7 +1010,7 @@ export const se_PutStudioMembersCommand = async (
     take(input, {
       identityStoreId: [],
       members: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1021,7 +1021,7 @@ export const se_PutStudioMembersCommand = async (
  */
 export const se_StartStreamingSessionCommand = async (
   input: StartStreamingSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1035,7 +1035,7 @@ export const se_StartStreamingSessionCommand = async (
   body = JSON.stringify(
     take(input, {
       backupId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1046,7 +1046,7 @@ export const se_StartStreamingSessionCommand = async (
  */
 export const se_StartStudioSSOConfigurationRepairCommand = async (
   input: StartStudioSSOConfigurationRepairCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1064,7 +1064,7 @@ export const se_StartStudioSSOConfigurationRepairCommand = async (
  */
 export const se_StopStreamingSessionCommand = async (
   input: StopStreamingSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1078,7 +1078,7 @@ export const se_StopStreamingSessionCommand = async (
   body = JSON.stringify(
     take(input, {
       volumeRetentionMode: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1089,7 +1089,7 @@ export const se_StopStreamingSessionCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1101,7 +1101,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1112,7 +1112,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1134,7 +1134,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateLaunchProfileCommand = async (
   input: UpdateLaunchProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1152,7 +1152,7 @@ export const se_UpdateLaunchProfileCommand = async (
       name: [],
       streamConfiguration: (_) => _json(_),
       studioComponentIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1163,7 +1163,7 @@ export const se_UpdateLaunchProfileCommand = async (
  */
 export const se_UpdateLaunchProfileMemberCommand = async (
   input: UpdateLaunchProfileMemberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1178,7 +1178,7 @@ export const se_UpdateLaunchProfileMemberCommand = async (
   body = JSON.stringify(
     take(input, {
       persona: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1189,7 +1189,7 @@ export const se_UpdateLaunchProfileMemberCommand = async (
  */
 export const se_UpdateStreamingImageCommand = async (
   input: UpdateStreamingImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1204,7 +1204,7 @@ export const se_UpdateStreamingImageCommand = async (
     take(input, {
       description: [],
       name: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1215,7 +1215,7 @@ export const se_UpdateStreamingImageCommand = async (
  */
 export const se_UpdateStudioCommand = async (
   input: UpdateStudioCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1230,7 +1230,7 @@ export const se_UpdateStudioCommand = async (
       adminRoleArn: [],
       displayName: [],
       userRoleArn: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1241,7 +1241,7 @@ export const se_UpdateStudioCommand = async (
  */
 export const se_UpdateStudioComponentCommand = async (
   input: UpdateStudioComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1264,7 +1264,7 @@ export const se_UpdateStudioComponentCommand = async (
       secureInitializationRoleArn: [],
       subtype: [],
       type: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1275,7 +1275,7 @@ export const se_UpdateStudioComponentCommand = async (
  */
 export const de_AcceptEulasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptEulasCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1296,7 +1296,7 @@ export const de_AcceptEulasCommand = async (
  */
 export const de_CreateLaunchProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLaunchProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1317,7 +1317,7 @@ export const de_CreateLaunchProfileCommand = async (
  */
 export const de_CreateStreamingImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStreamingImageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1338,7 +1338,7 @@ export const de_CreateStreamingImageCommand = async (
  */
 export const de_CreateStreamingSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStreamingSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1359,7 +1359,7 @@ export const de_CreateStreamingSessionCommand = async (
  */
 export const de_CreateStreamingSessionStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStreamingSessionStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1380,7 +1380,7 @@ export const de_CreateStreamingSessionStreamCommand = async (
  */
 export const de_CreateStudioCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStudioCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1401,7 +1401,7 @@ export const de_CreateStudioCommand = async (
  */
 export const de_CreateStudioComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStudioComponentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1422,7 +1422,7 @@ export const de_CreateStudioComponentCommand = async (
  */
 export const de_DeleteLaunchProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLaunchProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1443,7 +1443,7 @@ export const de_DeleteLaunchProfileCommand = async (
  */
 export const de_DeleteLaunchProfileMemberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLaunchProfileMemberCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1460,7 +1460,7 @@ export const de_DeleteLaunchProfileMemberCommand = async (
  */
 export const de_DeleteStreamingImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStreamingImageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1481,7 +1481,7 @@ export const de_DeleteStreamingImageCommand = async (
  */
 export const de_DeleteStreamingSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStreamingSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1502,7 +1502,7 @@ export const de_DeleteStreamingSessionCommand = async (
  */
 export const de_DeleteStudioCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStudioCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1523,7 +1523,7 @@ export const de_DeleteStudioCommand = async (
  */
 export const de_DeleteStudioComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStudioComponentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1544,7 +1544,7 @@ export const de_DeleteStudioComponentCommand = async (
  */
 export const de_DeleteStudioMemberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStudioMemberCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1561,7 +1561,7 @@ export const de_DeleteStudioMemberCommand = async (
  */
 export const de_GetEulaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEulaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1582,7 +1582,7 @@ export const de_GetEulaCommand = async (
  */
 export const de_GetLaunchProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLaunchProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1603,7 +1603,7 @@ export const de_GetLaunchProfileCommand = async (
  */
 export const de_GetLaunchProfileDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLaunchProfileDetailsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1626,7 +1626,7 @@ export const de_GetLaunchProfileDetailsCommand = async (
  */
 export const de_GetLaunchProfileInitializationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLaunchProfileInitializationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1647,7 +1647,7 @@ export const de_GetLaunchProfileInitializationCommand = async (
  */
 export const de_GetLaunchProfileMemberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLaunchProfileMemberCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1668,7 +1668,7 @@ export const de_GetLaunchProfileMemberCommand = async (
  */
 export const de_GetStreamingImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStreamingImageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1689,7 +1689,7 @@ export const de_GetStreamingImageCommand = async (
  */
 export const de_GetStreamingSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStreamingSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1710,7 +1710,7 @@ export const de_GetStreamingSessionCommand = async (
  */
 export const de_GetStreamingSessionBackupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStreamingSessionBackupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1731,7 +1731,7 @@ export const de_GetStreamingSessionBackupCommand = async (
  */
 export const de_GetStreamingSessionStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStreamingSessionStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1752,7 +1752,7 @@ export const de_GetStreamingSessionStreamCommand = async (
  */
 export const de_GetStudioCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStudioCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1773,7 +1773,7 @@ export const de_GetStudioCommand = async (
  */
 export const de_GetStudioComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStudioComponentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1794,7 +1794,7 @@ export const de_GetStudioComponentCommand = async (
  */
 export const de_GetStudioMemberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStudioMemberCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1815,7 +1815,7 @@ export const de_GetStudioMemberCommand = async (
  */
 export const de_ListEulaAcceptancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEulaAcceptancesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1837,7 +1837,7 @@ export const de_ListEulaAcceptancesCommand = async (
  */
 export const de_ListEulasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEulasCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1859,7 +1859,7 @@ export const de_ListEulasCommand = async (
  */
 export const de_ListLaunchProfileMembersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLaunchProfileMembersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1881,7 +1881,7 @@ export const de_ListLaunchProfileMembersCommand = async (
  */
 export const de_ListLaunchProfilesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLaunchProfilesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1903,7 +1903,7 @@ export const de_ListLaunchProfilesCommand = async (
  */
 export const de_ListStreamingImagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStreamingImagesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1925,7 +1925,7 @@ export const de_ListStreamingImagesCommand = async (
  */
 export const de_ListStreamingSessionBackupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStreamingSessionBackupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1947,7 +1947,7 @@ export const de_ListStreamingSessionBackupsCommand = async (
  */
 export const de_ListStreamingSessionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStreamingSessionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1969,7 +1969,7 @@ export const de_ListStreamingSessionsCommand = async (
  */
 export const de_ListStudioComponentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStudioComponentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1991,7 +1991,7 @@ export const de_ListStudioComponentsCommand = async (
  */
 export const de_ListStudioMembersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStudioMembersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2013,7 +2013,7 @@ export const de_ListStudioMembersCommand = async (
  */
 export const de_ListStudiosCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStudiosCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2035,7 +2035,7 @@ export const de_ListStudiosCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2056,7 +2056,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutLaunchProfileMembersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutLaunchProfileMembersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2073,7 +2073,7 @@ export const de_PutLaunchProfileMembersCommand = async (
  */
 export const de_PutStudioMembersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutStudioMembersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2090,7 +2090,7 @@ export const de_PutStudioMembersCommand = async (
  */
 export const de_StartStreamingSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartStreamingSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2111,7 +2111,7 @@ export const de_StartStreamingSessionCommand = async (
  */
 export const de_StartStudioSSOConfigurationRepairCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartStudioSSOConfigurationRepairCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2132,7 +2132,7 @@ export const de_StartStudioSSOConfigurationRepairCommand = async (
  */
 export const de_StopStreamingSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopStreamingSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2153,7 +2153,7 @@ export const de_StopStreamingSessionCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2170,7 +2170,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2187,7 +2187,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateLaunchProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLaunchProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2208,7 +2208,7 @@ export const de_UpdateLaunchProfileCommand = async (
  */
 export const de_UpdateLaunchProfileMemberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLaunchProfileMemberCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2229,7 +2229,7 @@ export const de_UpdateLaunchProfileMemberCommand = async (
  */
 export const de_UpdateStreamingImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateStreamingImageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2250,7 +2250,7 @@ export const de_UpdateStreamingImageCommand = async (
  */
 export const de_UpdateStudioCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateStudioCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2271,7 +2271,7 @@ export const de_UpdateStudioCommand = async (
  */
 export const de_UpdateStudioComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateStudioComponentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2334,7 +2334,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2375,7 +2375,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2397,7 +2397,7 @@ const de_InternalServerErrorExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2419,7 +2419,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

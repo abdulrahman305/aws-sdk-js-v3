@@ -503,8 +503,8 @@ describe("convertToAttr", () => {
           convertToAttr(data);
         }).toThrowError(
           `Unsupported type passed: ${String(
-            data
-          )}. Pass options.convertClassInstanceToMap=true to marshall typeof object as map attribute.`
+            data,
+          )}. Pass options.convertClassInstanceToMap=true to marshall typeof object as map attribute.`,
         );
       });
     });
@@ -521,7 +521,7 @@ describe("convertToAttr", () => {
           private readonly bigintAttr: bigint,
           private readonly binaryAttr: Uint8Array,
           private readonly listAttr: any[],
-          private readonly mapAttr: Record<string, any>
+          private readonly mapAttr: Record<string, any>,
         ) {}
         public exampleMethod() {
           return "This method won't be marshalled";
@@ -542,12 +542,12 @@ describe("convertToAttr", () => {
               numKey: 1,
               strKey: "string",
               boolKey: true,
-            }
+            },
           ),
           {
             convertClassInstanceToMap: true,
-          }
-        )
+          },
+        ),
       ).toEqual({
         M: {
           nullAttr: { NULL: true },

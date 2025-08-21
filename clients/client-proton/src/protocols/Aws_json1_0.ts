@@ -496,7 +496,7 @@ import { ProtonServiceException as __BaseException } from "../models/ProtonServi
  */
 export const se_AcceptEnvironmentAccountConnectionCommand = async (
   input: AcceptEnvironmentAccountConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AcceptEnvironmentAccountConnection");
   let body: any;
@@ -509,7 +509,7 @@ export const se_AcceptEnvironmentAccountConnectionCommand = async (
  */
 export const se_CancelComponentDeploymentCommand = async (
   input: CancelComponentDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CancelComponentDeployment");
   let body: any;
@@ -522,7 +522,7 @@ export const se_CancelComponentDeploymentCommand = async (
  */
 export const se_CancelEnvironmentDeploymentCommand = async (
   input: CancelEnvironmentDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CancelEnvironmentDeployment");
   let body: any;
@@ -535,7 +535,7 @@ export const se_CancelEnvironmentDeploymentCommand = async (
  */
 export const se_CancelServiceInstanceDeploymentCommand = async (
   input: CancelServiceInstanceDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CancelServiceInstanceDeployment");
   let body: any;
@@ -548,7 +548,7 @@ export const se_CancelServiceInstanceDeploymentCommand = async (
  */
 export const se_CancelServicePipelineDeploymentCommand = async (
   input: CancelServicePipelineDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CancelServicePipelineDeployment");
   let body: any;
@@ -561,7 +561,7 @@ export const se_CancelServicePipelineDeploymentCommand = async (
  */
 export const se_CreateComponentCommand = async (
   input: CreateComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateComponent");
   let body: any;
@@ -574,7 +574,7 @@ export const se_CreateComponentCommand = async (
  */
 export const se_CreateEnvironmentCommand = async (
   input: CreateEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateEnvironment");
   let body: any;
@@ -587,7 +587,7 @@ export const se_CreateEnvironmentCommand = async (
  */
 export const se_CreateEnvironmentAccountConnectionCommand = async (
   input: CreateEnvironmentAccountConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateEnvironmentAccountConnection");
   let body: any;
@@ -600,7 +600,7 @@ export const se_CreateEnvironmentAccountConnectionCommand = async (
  */
 export const se_CreateEnvironmentTemplateCommand = async (
   input: CreateEnvironmentTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateEnvironmentTemplate");
   let body: any;
@@ -613,7 +613,7 @@ export const se_CreateEnvironmentTemplateCommand = async (
  */
 export const se_CreateEnvironmentTemplateVersionCommand = async (
   input: CreateEnvironmentTemplateVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateEnvironmentTemplateVersion");
   let body: any;
@@ -626,7 +626,7 @@ export const se_CreateEnvironmentTemplateVersionCommand = async (
  */
 export const se_CreateRepositoryCommand = async (
   input: CreateRepositoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateRepository");
   let body: any;
@@ -639,7 +639,7 @@ export const se_CreateRepositoryCommand = async (
  */
 export const se_CreateServiceCommand = async (
   input: CreateServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateService");
   let body: any;
@@ -652,7 +652,7 @@ export const se_CreateServiceCommand = async (
  */
 export const se_CreateServiceInstanceCommand = async (
   input: CreateServiceInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateServiceInstance");
   let body: any;
@@ -665,7 +665,7 @@ export const se_CreateServiceInstanceCommand = async (
  */
 export const se_CreateServiceSyncConfigCommand = async (
   input: CreateServiceSyncConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateServiceSyncConfig");
   let body: any;
@@ -678,7 +678,7 @@ export const se_CreateServiceSyncConfigCommand = async (
  */
 export const se_CreateServiceTemplateCommand = async (
   input: CreateServiceTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateServiceTemplate");
   let body: any;
@@ -691,7 +691,7 @@ export const se_CreateServiceTemplateCommand = async (
  */
 export const se_CreateServiceTemplateVersionCommand = async (
   input: CreateServiceTemplateVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateServiceTemplateVersion");
   let body: any;
@@ -704,7 +704,7 @@ export const se_CreateServiceTemplateVersionCommand = async (
  */
 export const se_CreateTemplateSyncConfigCommand = async (
   input: CreateTemplateSyncConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateTemplateSyncConfig");
   let body: any;
@@ -717,7 +717,7 @@ export const se_CreateTemplateSyncConfigCommand = async (
  */
 export const se_DeleteComponentCommand = async (
   input: DeleteComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteComponent");
   let body: any;
@@ -730,7 +730,7 @@ export const se_DeleteComponentCommand = async (
  */
 export const se_DeleteDeploymentCommand = async (
   input: DeleteDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDeployment");
   let body: any;
@@ -743,7 +743,7 @@ export const se_DeleteDeploymentCommand = async (
  */
 export const se_DeleteEnvironmentCommand = async (
   input: DeleteEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteEnvironment");
   let body: any;
@@ -756,7 +756,7 @@ export const se_DeleteEnvironmentCommand = async (
  */
 export const se_DeleteEnvironmentAccountConnectionCommand = async (
   input: DeleteEnvironmentAccountConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteEnvironmentAccountConnection");
   let body: any;
@@ -769,7 +769,7 @@ export const se_DeleteEnvironmentAccountConnectionCommand = async (
  */
 export const se_DeleteEnvironmentTemplateCommand = async (
   input: DeleteEnvironmentTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteEnvironmentTemplate");
   let body: any;
@@ -782,7 +782,7 @@ export const se_DeleteEnvironmentTemplateCommand = async (
  */
 export const se_DeleteEnvironmentTemplateVersionCommand = async (
   input: DeleteEnvironmentTemplateVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteEnvironmentTemplateVersion");
   let body: any;
@@ -795,7 +795,7 @@ export const se_DeleteEnvironmentTemplateVersionCommand = async (
  */
 export const se_DeleteRepositoryCommand = async (
   input: DeleteRepositoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRepository");
   let body: any;
@@ -808,7 +808,7 @@ export const se_DeleteRepositoryCommand = async (
  */
 export const se_DeleteServiceCommand = async (
   input: DeleteServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteService");
   let body: any;
@@ -821,7 +821,7 @@ export const se_DeleteServiceCommand = async (
  */
 export const se_DeleteServiceSyncConfigCommand = async (
   input: DeleteServiceSyncConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteServiceSyncConfig");
   let body: any;
@@ -834,7 +834,7 @@ export const se_DeleteServiceSyncConfigCommand = async (
  */
 export const se_DeleteServiceTemplateCommand = async (
   input: DeleteServiceTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteServiceTemplate");
   let body: any;
@@ -847,7 +847,7 @@ export const se_DeleteServiceTemplateCommand = async (
  */
 export const se_DeleteServiceTemplateVersionCommand = async (
   input: DeleteServiceTemplateVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteServiceTemplateVersion");
   let body: any;
@@ -860,7 +860,7 @@ export const se_DeleteServiceTemplateVersionCommand = async (
  */
 export const se_DeleteTemplateSyncConfigCommand = async (
   input: DeleteTemplateSyncConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteTemplateSyncConfig");
   let body: any;
@@ -873,7 +873,7 @@ export const se_DeleteTemplateSyncConfigCommand = async (
  */
 export const se_GetAccountSettingsCommand = async (
   input: GetAccountSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAccountSettings");
   let body: any;
@@ -886,7 +886,7 @@ export const se_GetAccountSettingsCommand = async (
  */
 export const se_GetComponentCommand = async (
   input: GetComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetComponent");
   let body: any;
@@ -899,7 +899,7 @@ export const se_GetComponentCommand = async (
  */
 export const se_GetDeploymentCommand = async (
   input: GetDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDeployment");
   let body: any;
@@ -912,7 +912,7 @@ export const se_GetDeploymentCommand = async (
  */
 export const se_GetEnvironmentCommand = async (
   input: GetEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetEnvironment");
   let body: any;
@@ -925,7 +925,7 @@ export const se_GetEnvironmentCommand = async (
  */
 export const se_GetEnvironmentAccountConnectionCommand = async (
   input: GetEnvironmentAccountConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetEnvironmentAccountConnection");
   let body: any;
@@ -938,7 +938,7 @@ export const se_GetEnvironmentAccountConnectionCommand = async (
  */
 export const se_GetEnvironmentTemplateCommand = async (
   input: GetEnvironmentTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetEnvironmentTemplate");
   let body: any;
@@ -951,7 +951,7 @@ export const se_GetEnvironmentTemplateCommand = async (
  */
 export const se_GetEnvironmentTemplateVersionCommand = async (
   input: GetEnvironmentTemplateVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetEnvironmentTemplateVersion");
   let body: any;
@@ -964,7 +964,7 @@ export const se_GetEnvironmentTemplateVersionCommand = async (
  */
 export const se_GetRepositoryCommand = async (
   input: GetRepositoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRepository");
   let body: any;
@@ -977,7 +977,7 @@ export const se_GetRepositoryCommand = async (
  */
 export const se_GetRepositorySyncStatusCommand = async (
   input: GetRepositorySyncStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRepositorySyncStatus");
   let body: any;
@@ -990,7 +990,7 @@ export const se_GetRepositorySyncStatusCommand = async (
  */
 export const se_GetResourcesSummaryCommand = async (
   input: GetResourcesSummaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetResourcesSummary");
   let body: any;
@@ -1003,7 +1003,7 @@ export const se_GetResourcesSummaryCommand = async (
  */
 export const se_GetServiceCommand = async (
   input: GetServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetService");
   let body: any;
@@ -1016,7 +1016,7 @@ export const se_GetServiceCommand = async (
  */
 export const se_GetServiceInstanceCommand = async (
   input: GetServiceInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetServiceInstance");
   let body: any;
@@ -1029,7 +1029,7 @@ export const se_GetServiceInstanceCommand = async (
  */
 export const se_GetServiceInstanceSyncStatusCommand = async (
   input: GetServiceInstanceSyncStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetServiceInstanceSyncStatus");
   let body: any;
@@ -1042,7 +1042,7 @@ export const se_GetServiceInstanceSyncStatusCommand = async (
  */
 export const se_GetServiceSyncBlockerSummaryCommand = async (
   input: GetServiceSyncBlockerSummaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetServiceSyncBlockerSummary");
   let body: any;
@@ -1055,7 +1055,7 @@ export const se_GetServiceSyncBlockerSummaryCommand = async (
  */
 export const se_GetServiceSyncConfigCommand = async (
   input: GetServiceSyncConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetServiceSyncConfig");
   let body: any;
@@ -1068,7 +1068,7 @@ export const se_GetServiceSyncConfigCommand = async (
  */
 export const se_GetServiceTemplateCommand = async (
   input: GetServiceTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetServiceTemplate");
   let body: any;
@@ -1081,7 +1081,7 @@ export const se_GetServiceTemplateCommand = async (
  */
 export const se_GetServiceTemplateVersionCommand = async (
   input: GetServiceTemplateVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetServiceTemplateVersion");
   let body: any;
@@ -1094,7 +1094,7 @@ export const se_GetServiceTemplateVersionCommand = async (
  */
 export const se_GetTemplateSyncConfigCommand = async (
   input: GetTemplateSyncConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetTemplateSyncConfig");
   let body: any;
@@ -1107,7 +1107,7 @@ export const se_GetTemplateSyncConfigCommand = async (
  */
 export const se_GetTemplateSyncStatusCommand = async (
   input: GetTemplateSyncStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetTemplateSyncStatus");
   let body: any;
@@ -1120,7 +1120,7 @@ export const se_GetTemplateSyncStatusCommand = async (
  */
 export const se_ListComponentOutputsCommand = async (
   input: ListComponentOutputsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListComponentOutputs");
   let body: any;
@@ -1133,7 +1133,7 @@ export const se_ListComponentOutputsCommand = async (
  */
 export const se_ListComponentProvisionedResourcesCommand = async (
   input: ListComponentProvisionedResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListComponentProvisionedResources");
   let body: any;
@@ -1146,7 +1146,7 @@ export const se_ListComponentProvisionedResourcesCommand = async (
  */
 export const se_ListComponentsCommand = async (
   input: ListComponentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListComponents");
   let body: any;
@@ -1159,7 +1159,7 @@ export const se_ListComponentsCommand = async (
  */
 export const se_ListDeploymentsCommand = async (
   input: ListDeploymentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDeployments");
   let body: any;
@@ -1172,7 +1172,7 @@ export const se_ListDeploymentsCommand = async (
  */
 export const se_ListEnvironmentAccountConnectionsCommand = async (
   input: ListEnvironmentAccountConnectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListEnvironmentAccountConnections");
   let body: any;
@@ -1185,7 +1185,7 @@ export const se_ListEnvironmentAccountConnectionsCommand = async (
  */
 export const se_ListEnvironmentOutputsCommand = async (
   input: ListEnvironmentOutputsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListEnvironmentOutputs");
   let body: any;
@@ -1198,7 +1198,7 @@ export const se_ListEnvironmentOutputsCommand = async (
  */
 export const se_ListEnvironmentProvisionedResourcesCommand = async (
   input: ListEnvironmentProvisionedResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListEnvironmentProvisionedResources");
   let body: any;
@@ -1211,7 +1211,7 @@ export const se_ListEnvironmentProvisionedResourcesCommand = async (
  */
 export const se_ListEnvironmentsCommand = async (
   input: ListEnvironmentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListEnvironments");
   let body: any;
@@ -1224,7 +1224,7 @@ export const se_ListEnvironmentsCommand = async (
  */
 export const se_ListEnvironmentTemplatesCommand = async (
   input: ListEnvironmentTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListEnvironmentTemplates");
   let body: any;
@@ -1237,7 +1237,7 @@ export const se_ListEnvironmentTemplatesCommand = async (
  */
 export const se_ListEnvironmentTemplateVersionsCommand = async (
   input: ListEnvironmentTemplateVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListEnvironmentTemplateVersions");
   let body: any;
@@ -1250,7 +1250,7 @@ export const se_ListEnvironmentTemplateVersionsCommand = async (
  */
 export const se_ListRepositoriesCommand = async (
   input: ListRepositoriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRepositories");
   let body: any;
@@ -1263,7 +1263,7 @@ export const se_ListRepositoriesCommand = async (
  */
 export const se_ListRepositorySyncDefinitionsCommand = async (
   input: ListRepositorySyncDefinitionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRepositorySyncDefinitions");
   let body: any;
@@ -1276,7 +1276,7 @@ export const se_ListRepositorySyncDefinitionsCommand = async (
  */
 export const se_ListServiceInstanceOutputsCommand = async (
   input: ListServiceInstanceOutputsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListServiceInstanceOutputs");
   let body: any;
@@ -1289,7 +1289,7 @@ export const se_ListServiceInstanceOutputsCommand = async (
  */
 export const se_ListServiceInstanceProvisionedResourcesCommand = async (
   input: ListServiceInstanceProvisionedResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListServiceInstanceProvisionedResources");
   let body: any;
@@ -1302,7 +1302,7 @@ export const se_ListServiceInstanceProvisionedResourcesCommand = async (
  */
 export const se_ListServiceInstancesCommand = async (
   input: ListServiceInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListServiceInstances");
   let body: any;
@@ -1315,7 +1315,7 @@ export const se_ListServiceInstancesCommand = async (
  */
 export const se_ListServicePipelineOutputsCommand = async (
   input: ListServicePipelineOutputsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListServicePipelineOutputs");
   let body: any;
@@ -1328,7 +1328,7 @@ export const se_ListServicePipelineOutputsCommand = async (
  */
 export const se_ListServicePipelineProvisionedResourcesCommand = async (
   input: ListServicePipelineProvisionedResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListServicePipelineProvisionedResources");
   let body: any;
@@ -1341,7 +1341,7 @@ export const se_ListServicePipelineProvisionedResourcesCommand = async (
  */
 export const se_ListServicesCommand = async (
   input: ListServicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListServices");
   let body: any;
@@ -1354,7 +1354,7 @@ export const se_ListServicesCommand = async (
  */
 export const se_ListServiceTemplatesCommand = async (
   input: ListServiceTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListServiceTemplates");
   let body: any;
@@ -1367,7 +1367,7 @@ export const se_ListServiceTemplatesCommand = async (
  */
 export const se_ListServiceTemplateVersionsCommand = async (
   input: ListServiceTemplateVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListServiceTemplateVersions");
   let body: any;
@@ -1380,7 +1380,7 @@ export const se_ListServiceTemplateVersionsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -1393,7 +1393,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_NotifyResourceDeploymentStatusChangeCommand = async (
   input: NotifyResourceDeploymentStatusChangeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("NotifyResourceDeploymentStatusChange");
   let body: any;
@@ -1406,7 +1406,7 @@ export const se_NotifyResourceDeploymentStatusChangeCommand = async (
  */
 export const se_RejectEnvironmentAccountConnectionCommand = async (
   input: RejectEnvironmentAccountConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RejectEnvironmentAccountConnection");
   let body: any;
@@ -1419,7 +1419,7 @@ export const se_RejectEnvironmentAccountConnectionCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -1432,7 +1432,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -1445,7 +1445,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAccountSettingsCommand = async (
   input: UpdateAccountSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateAccountSettings");
   let body: any;
@@ -1458,7 +1458,7 @@ export const se_UpdateAccountSettingsCommand = async (
  */
 export const se_UpdateComponentCommand = async (
   input: UpdateComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateComponent");
   let body: any;
@@ -1471,7 +1471,7 @@ export const se_UpdateComponentCommand = async (
  */
 export const se_UpdateEnvironmentCommand = async (
   input: UpdateEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateEnvironment");
   let body: any;
@@ -1484,7 +1484,7 @@ export const se_UpdateEnvironmentCommand = async (
  */
 export const se_UpdateEnvironmentAccountConnectionCommand = async (
   input: UpdateEnvironmentAccountConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateEnvironmentAccountConnection");
   let body: any;
@@ -1497,7 +1497,7 @@ export const se_UpdateEnvironmentAccountConnectionCommand = async (
  */
 export const se_UpdateEnvironmentTemplateCommand = async (
   input: UpdateEnvironmentTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateEnvironmentTemplate");
   let body: any;
@@ -1510,7 +1510,7 @@ export const se_UpdateEnvironmentTemplateCommand = async (
  */
 export const se_UpdateEnvironmentTemplateVersionCommand = async (
   input: UpdateEnvironmentTemplateVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateEnvironmentTemplateVersion");
   let body: any;
@@ -1523,7 +1523,7 @@ export const se_UpdateEnvironmentTemplateVersionCommand = async (
  */
 export const se_UpdateServiceCommand = async (
   input: UpdateServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateService");
   let body: any;
@@ -1536,7 +1536,7 @@ export const se_UpdateServiceCommand = async (
  */
 export const se_UpdateServiceInstanceCommand = async (
   input: UpdateServiceInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateServiceInstance");
   let body: any;
@@ -1549,7 +1549,7 @@ export const se_UpdateServiceInstanceCommand = async (
  */
 export const se_UpdateServicePipelineCommand = async (
   input: UpdateServicePipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateServicePipeline");
   let body: any;
@@ -1562,7 +1562,7 @@ export const se_UpdateServicePipelineCommand = async (
  */
 export const se_UpdateServiceSyncBlockerCommand = async (
   input: UpdateServiceSyncBlockerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateServiceSyncBlocker");
   let body: any;
@@ -1575,7 +1575,7 @@ export const se_UpdateServiceSyncBlockerCommand = async (
  */
 export const se_UpdateServiceSyncConfigCommand = async (
   input: UpdateServiceSyncConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateServiceSyncConfig");
   let body: any;
@@ -1588,7 +1588,7 @@ export const se_UpdateServiceSyncConfigCommand = async (
  */
 export const se_UpdateServiceTemplateCommand = async (
   input: UpdateServiceTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateServiceTemplate");
   let body: any;
@@ -1601,7 +1601,7 @@ export const se_UpdateServiceTemplateCommand = async (
  */
 export const se_UpdateServiceTemplateVersionCommand = async (
   input: UpdateServiceTemplateVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateServiceTemplateVersion");
   let body: any;
@@ -1614,7 +1614,7 @@ export const se_UpdateServiceTemplateVersionCommand = async (
  */
 export const se_UpdateTemplateSyncConfigCommand = async (
   input: UpdateTemplateSyncConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateTemplateSyncConfig");
   let body: any;
@@ -1627,7 +1627,7 @@ export const se_UpdateTemplateSyncConfigCommand = async (
  */
 export const de_AcceptEnvironmentAccountConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptEnvironmentAccountConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1647,7 +1647,7 @@ export const de_AcceptEnvironmentAccountConnectionCommand = async (
  */
 export const de_CancelComponentDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelComponentDeploymentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1667,7 +1667,7 @@ export const de_CancelComponentDeploymentCommand = async (
  */
 export const de_CancelEnvironmentDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelEnvironmentDeploymentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1687,7 +1687,7 @@ export const de_CancelEnvironmentDeploymentCommand = async (
  */
 export const de_CancelServiceInstanceDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelServiceInstanceDeploymentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1707,7 +1707,7 @@ export const de_CancelServiceInstanceDeploymentCommand = async (
  */
 export const de_CancelServicePipelineDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelServicePipelineDeploymentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1727,7 +1727,7 @@ export const de_CancelServicePipelineDeploymentCommand = async (
  */
 export const de_CreateComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateComponentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1747,7 +1747,7 @@ export const de_CreateComponentCommand = async (
  */
 export const de_CreateEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEnvironmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1767,7 +1767,7 @@ export const de_CreateEnvironmentCommand = async (
  */
 export const de_CreateEnvironmentAccountConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEnvironmentAccountConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1787,7 +1787,7 @@ export const de_CreateEnvironmentAccountConnectionCommand = async (
  */
 export const de_CreateEnvironmentTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEnvironmentTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1807,7 +1807,7 @@ export const de_CreateEnvironmentTemplateCommand = async (
  */
 export const de_CreateEnvironmentTemplateVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEnvironmentTemplateVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1827,7 +1827,7 @@ export const de_CreateEnvironmentTemplateVersionCommand = async (
  */
 export const de_CreateRepositoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRepositoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1847,7 +1847,7 @@ export const de_CreateRepositoryCommand = async (
  */
 export const de_CreateServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateServiceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1867,7 +1867,7 @@ export const de_CreateServiceCommand = async (
  */
 export const de_CreateServiceInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateServiceInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1887,7 +1887,7 @@ export const de_CreateServiceInstanceCommand = async (
  */
 export const de_CreateServiceSyncConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateServiceSyncConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1907,7 +1907,7 @@ export const de_CreateServiceSyncConfigCommand = async (
  */
 export const de_CreateServiceTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateServiceTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1927,7 +1927,7 @@ export const de_CreateServiceTemplateCommand = async (
  */
 export const de_CreateServiceTemplateVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateServiceTemplateVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1947,7 +1947,7 @@ export const de_CreateServiceTemplateVersionCommand = async (
  */
 export const de_CreateTemplateSyncConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTemplateSyncConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1967,7 +1967,7 @@ export const de_CreateTemplateSyncConfigCommand = async (
  */
 export const de_DeleteComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteComponentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1987,7 +1987,7 @@ export const de_DeleteComponentCommand = async (
  */
 export const de_DeleteDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDeploymentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2007,7 +2007,7 @@ export const de_DeleteDeploymentCommand = async (
  */
 export const de_DeleteEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEnvironmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2027,7 +2027,7 @@ export const de_DeleteEnvironmentCommand = async (
  */
 export const de_DeleteEnvironmentAccountConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEnvironmentAccountConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2047,7 +2047,7 @@ export const de_DeleteEnvironmentAccountConnectionCommand = async (
  */
 export const de_DeleteEnvironmentTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEnvironmentTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2067,7 +2067,7 @@ export const de_DeleteEnvironmentTemplateCommand = async (
  */
 export const de_DeleteEnvironmentTemplateVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEnvironmentTemplateVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2087,7 +2087,7 @@ export const de_DeleteEnvironmentTemplateVersionCommand = async (
  */
 export const de_DeleteRepositoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRepositoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2107,7 +2107,7 @@ export const de_DeleteRepositoryCommand = async (
  */
 export const de_DeleteServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServiceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2127,7 +2127,7 @@ export const de_DeleteServiceCommand = async (
  */
 export const de_DeleteServiceSyncConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServiceSyncConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2147,7 +2147,7 @@ export const de_DeleteServiceSyncConfigCommand = async (
  */
 export const de_DeleteServiceTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServiceTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2167,7 +2167,7 @@ export const de_DeleteServiceTemplateCommand = async (
  */
 export const de_DeleteServiceTemplateVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServiceTemplateVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2187,7 +2187,7 @@ export const de_DeleteServiceTemplateVersionCommand = async (
  */
 export const de_DeleteTemplateSyncConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTemplateSyncConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2207,7 +2207,7 @@ export const de_DeleteTemplateSyncConfigCommand = async (
  */
 export const de_GetAccountSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccountSettingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2227,7 +2227,7 @@ export const de_GetAccountSettingsCommand = async (
  */
 export const de_GetComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetComponentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2247,7 +2247,7 @@ export const de_GetComponentCommand = async (
  */
 export const de_GetDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDeploymentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2267,7 +2267,7 @@ export const de_GetDeploymentCommand = async (
  */
 export const de_GetEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEnvironmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2287,7 +2287,7 @@ export const de_GetEnvironmentCommand = async (
  */
 export const de_GetEnvironmentAccountConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEnvironmentAccountConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2307,7 +2307,7 @@ export const de_GetEnvironmentAccountConnectionCommand = async (
  */
 export const de_GetEnvironmentTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEnvironmentTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2327,7 +2327,7 @@ export const de_GetEnvironmentTemplateCommand = async (
  */
 export const de_GetEnvironmentTemplateVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEnvironmentTemplateVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2347,7 +2347,7 @@ export const de_GetEnvironmentTemplateVersionCommand = async (
  */
 export const de_GetRepositoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRepositoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2367,7 +2367,7 @@ export const de_GetRepositoryCommand = async (
  */
 export const de_GetRepositorySyncStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRepositorySyncStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2387,7 +2387,7 @@ export const de_GetRepositorySyncStatusCommand = async (
  */
 export const de_GetResourcesSummaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourcesSummaryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2407,7 +2407,7 @@ export const de_GetResourcesSummaryCommand = async (
  */
 export const de_GetServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2427,7 +2427,7 @@ export const de_GetServiceCommand = async (
  */
 export const de_GetServiceInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2447,7 +2447,7 @@ export const de_GetServiceInstanceCommand = async (
  */
 export const de_GetServiceInstanceSyncStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceInstanceSyncStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2467,7 +2467,7 @@ export const de_GetServiceInstanceSyncStatusCommand = async (
  */
 export const de_GetServiceSyncBlockerSummaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceSyncBlockerSummaryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2487,7 +2487,7 @@ export const de_GetServiceSyncBlockerSummaryCommand = async (
  */
 export const de_GetServiceSyncConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceSyncConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2507,7 +2507,7 @@ export const de_GetServiceSyncConfigCommand = async (
  */
 export const de_GetServiceTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2527,7 +2527,7 @@ export const de_GetServiceTemplateCommand = async (
  */
 export const de_GetServiceTemplateVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceTemplateVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2547,7 +2547,7 @@ export const de_GetServiceTemplateVersionCommand = async (
  */
 export const de_GetTemplateSyncConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTemplateSyncConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2567,7 +2567,7 @@ export const de_GetTemplateSyncConfigCommand = async (
  */
 export const de_GetTemplateSyncStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTemplateSyncStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2587,7 +2587,7 @@ export const de_GetTemplateSyncStatusCommand = async (
  */
 export const de_ListComponentOutputsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListComponentOutputsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2607,7 +2607,7 @@ export const de_ListComponentOutputsCommand = async (
  */
 export const de_ListComponentProvisionedResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListComponentProvisionedResourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2627,7 +2627,7 @@ export const de_ListComponentProvisionedResourcesCommand = async (
  */
 export const de_ListComponentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListComponentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2647,7 +2647,7 @@ export const de_ListComponentsCommand = async (
  */
 export const de_ListDeploymentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDeploymentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2667,7 +2667,7 @@ export const de_ListDeploymentsCommand = async (
  */
 export const de_ListEnvironmentAccountConnectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEnvironmentAccountConnectionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2687,7 +2687,7 @@ export const de_ListEnvironmentAccountConnectionsCommand = async (
  */
 export const de_ListEnvironmentOutputsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEnvironmentOutputsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2707,7 +2707,7 @@ export const de_ListEnvironmentOutputsCommand = async (
  */
 export const de_ListEnvironmentProvisionedResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEnvironmentProvisionedResourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2727,7 +2727,7 @@ export const de_ListEnvironmentProvisionedResourcesCommand = async (
  */
 export const de_ListEnvironmentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEnvironmentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2747,7 +2747,7 @@ export const de_ListEnvironmentsCommand = async (
  */
 export const de_ListEnvironmentTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEnvironmentTemplatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2767,7 +2767,7 @@ export const de_ListEnvironmentTemplatesCommand = async (
  */
 export const de_ListEnvironmentTemplateVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEnvironmentTemplateVersionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2787,7 +2787,7 @@ export const de_ListEnvironmentTemplateVersionsCommand = async (
  */
 export const de_ListRepositoriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRepositoriesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2807,7 +2807,7 @@ export const de_ListRepositoriesCommand = async (
  */
 export const de_ListRepositorySyncDefinitionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRepositorySyncDefinitionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2827,7 +2827,7 @@ export const de_ListRepositorySyncDefinitionsCommand = async (
  */
 export const de_ListServiceInstanceOutputsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServiceInstanceOutputsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2847,7 +2847,7 @@ export const de_ListServiceInstanceOutputsCommand = async (
  */
 export const de_ListServiceInstanceProvisionedResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServiceInstanceProvisionedResourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2867,7 +2867,7 @@ export const de_ListServiceInstanceProvisionedResourcesCommand = async (
  */
 export const de_ListServiceInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServiceInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2887,7 +2887,7 @@ export const de_ListServiceInstancesCommand = async (
  */
 export const de_ListServicePipelineOutputsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServicePipelineOutputsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2907,7 +2907,7 @@ export const de_ListServicePipelineOutputsCommand = async (
  */
 export const de_ListServicePipelineProvisionedResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServicePipelineProvisionedResourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2927,7 +2927,7 @@ export const de_ListServicePipelineProvisionedResourcesCommand = async (
  */
 export const de_ListServicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServicesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2947,7 +2947,7 @@ export const de_ListServicesCommand = async (
  */
 export const de_ListServiceTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServiceTemplatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2967,7 +2967,7 @@ export const de_ListServiceTemplatesCommand = async (
  */
 export const de_ListServiceTemplateVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServiceTemplateVersionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2987,7 +2987,7 @@ export const de_ListServiceTemplateVersionsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3007,7 +3007,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_NotifyResourceDeploymentStatusChangeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotifyResourceDeploymentStatusChangeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3027,7 +3027,7 @@ export const de_NotifyResourceDeploymentStatusChangeCommand = async (
  */
 export const de_RejectEnvironmentAccountConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RejectEnvironmentAccountConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3047,7 +3047,7 @@ export const de_RejectEnvironmentAccountConnectionCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3067,7 +3067,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3087,7 +3087,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAccountSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAccountSettingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3107,7 +3107,7 @@ export const de_UpdateAccountSettingsCommand = async (
  */
 export const de_UpdateComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateComponentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3127,7 +3127,7 @@ export const de_UpdateComponentCommand = async (
  */
 export const de_UpdateEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEnvironmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3147,7 +3147,7 @@ export const de_UpdateEnvironmentCommand = async (
  */
 export const de_UpdateEnvironmentAccountConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEnvironmentAccountConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3167,7 +3167,7 @@ export const de_UpdateEnvironmentAccountConnectionCommand = async (
  */
 export const de_UpdateEnvironmentTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEnvironmentTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3187,7 +3187,7 @@ export const de_UpdateEnvironmentTemplateCommand = async (
  */
 export const de_UpdateEnvironmentTemplateVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEnvironmentTemplateVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3207,7 +3207,7 @@ export const de_UpdateEnvironmentTemplateVersionCommand = async (
  */
 export const de_UpdateServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServiceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3227,7 +3227,7 @@ export const de_UpdateServiceCommand = async (
  */
 export const de_UpdateServiceInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServiceInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3247,7 +3247,7 @@ export const de_UpdateServiceInstanceCommand = async (
  */
 export const de_UpdateServicePipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServicePipelineCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3267,7 +3267,7 @@ export const de_UpdateServicePipelineCommand = async (
  */
 export const de_UpdateServiceSyncBlockerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServiceSyncBlockerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3287,7 +3287,7 @@ export const de_UpdateServiceSyncBlockerCommand = async (
  */
 export const de_UpdateServiceSyncConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServiceSyncConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3307,7 +3307,7 @@ export const de_UpdateServiceSyncConfigCommand = async (
  */
 export const de_UpdateServiceTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServiceTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3327,7 +3327,7 @@ export const de_UpdateServiceTemplateCommand = async (
  */
 export const de_UpdateServiceTemplateVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServiceTemplateVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3347,7 +3347,7 @@ export const de_UpdateServiceTemplateVersionCommand = async (
  */
 export const de_UpdateTemplateSyncConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTemplateSyncConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3408,7 +3408,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3437,7 +3437,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3453,7 +3453,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3469,7 +3469,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3543,7 +3543,7 @@ const se_CreateComponentInput = (input: CreateComponentInput, context: __SerdeCo
  */
 const se_CreateEnvironmentAccountConnectionInput = (
   input: CreateEnvironmentAccountConnectionInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
@@ -3583,7 +3583,7 @@ const se_CreateEnvironmentInput = (input: CreateEnvironmentInput, context: __Ser
  */
 const se_CreateEnvironmentTemplateVersionInput = (
   input: CreateEnvironmentTemplateVersionInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
@@ -3639,7 +3639,7 @@ const se_CreateServiceInstanceInput = (input: CreateServiceInstanceInput, contex
  */
 const se_CreateServiceTemplateVersionInput = (
   input: CreateServiceTemplateVersionInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
@@ -3892,7 +3892,7 @@ const se_UpdateServicePipelineInput = (input: UpdateServicePipelineInput, contex
  */
 const de_AcceptEnvironmentAccountConnectionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AcceptEnvironmentAccountConnectionOutput => {
   return take(output, {
     environmentAccountConnection: (_: any) => de_EnvironmentAccountConnection(_, context),
@@ -3917,7 +3917,7 @@ const de_CancelComponentDeploymentOutput = (output: any, context: __SerdeContext
  */
 const de_CancelEnvironmentDeploymentOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CancelEnvironmentDeploymentOutput => {
   return take(output, {
     environment: (_: any) => de_Environment(_, context),
@@ -3929,7 +3929,7 @@ const de_CancelEnvironmentDeploymentOutput = (
  */
 const de_CancelServiceInstanceDeploymentOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CancelServiceInstanceDeploymentOutput => {
   return take(output, {
     serviceInstance: (_: any) => de_ServiceInstance(_, context),
@@ -3941,7 +3941,7 @@ const de_CancelServiceInstanceDeploymentOutput = (
  */
 const de_CancelServicePipelineDeploymentOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CancelServicePipelineDeploymentOutput => {
   return take(output, {
     pipeline: (_: any) => de_ServicePipeline(_, context),
@@ -4041,7 +4041,7 @@ const de_CreateComponentOutput = (output: any, context: __SerdeContext): CreateC
  */
 const de_CreateEnvironmentAccountConnectionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateEnvironmentAccountConnectionOutput => {
   return take(output, {
     environmentAccountConnection: (_: any) => de_EnvironmentAccountConnection(_, context),
@@ -4071,7 +4071,7 @@ const de_CreateEnvironmentTemplateOutput = (output: any, context: __SerdeContext
  */
 const de_CreateEnvironmentTemplateVersionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateEnvironmentTemplateVersionOutput => {
   return take(output, {
     environmentTemplateVersion: (_: any) => de_EnvironmentTemplateVersion(_, context),
@@ -4114,7 +4114,7 @@ const de_CreateServiceTemplateOutput = (output: any, context: __SerdeContext): C
  */
 const de_CreateServiceTemplateVersionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateServiceTemplateVersionOutput => {
   return take(output, {
     serviceTemplateVersion: (_: any) => de_ServiceTemplateVersion(_, context),
@@ -4146,7 +4146,7 @@ const de_DeleteDeploymentOutput = (output: any, context: __SerdeContext): Delete
  */
 const de_DeleteEnvironmentAccountConnectionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteEnvironmentAccountConnectionOutput => {
   return take(output, {
     environmentAccountConnection: (_: any) => de_EnvironmentAccountConnection(_, context),
@@ -4176,7 +4176,7 @@ const de_DeleteEnvironmentTemplateOutput = (output: any, context: __SerdeContext
  */
 const de_DeleteEnvironmentTemplateVersionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteEnvironmentTemplateVersionOutput => {
   return take(output, {
     environmentTemplateVersion: (_: any) => de_EnvironmentTemplateVersion(_, context),
@@ -4210,7 +4210,7 @@ const de_DeleteServiceTemplateOutput = (output: any, context: __SerdeContext): D
  */
 const de_DeleteServiceTemplateVersionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteServiceTemplateVersionOutput => {
   return take(output, {
     serviceTemplateVersion: (_: any) => de_ServiceTemplateVersion(_, context),
@@ -4360,7 +4360,7 @@ const de_EnvironmentAccountConnection = (output: any, context: __SerdeContext): 
  */
 const de_EnvironmentAccountConnectionSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnvironmentAccountConnectionSummary => {
   return take(output, {
     arn: __expectString,
@@ -4381,7 +4381,7 @@ const de_EnvironmentAccountConnectionSummary = (
  */
 const de_EnvironmentAccountConnectionSummaryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnvironmentAccountConnectionSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -4510,7 +4510,7 @@ const de_EnvironmentTemplateVersion = (output: any, context: __SerdeContext): En
  */
 const de_EnvironmentTemplateVersionSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnvironmentTemplateVersionSummary => {
   return take(output, {
     arn: __expectString,
@@ -4531,7 +4531,7 @@ const de_EnvironmentTemplateVersionSummary = (
  */
 const de_EnvironmentTemplateVersionSummaryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnvironmentTemplateVersionSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -4566,7 +4566,7 @@ const de_GetDeploymentOutput = (output: any, context: __SerdeContext): GetDeploy
  */
 const de_GetEnvironmentAccountConnectionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetEnvironmentAccountConnectionOutput => {
   return take(output, {
     environmentAccountConnection: (_: any) => de_EnvironmentAccountConnection(_, context),
@@ -4596,7 +4596,7 @@ const de_GetEnvironmentTemplateOutput = (output: any, context: __SerdeContext): 
  */
 const de_GetEnvironmentTemplateVersionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetEnvironmentTemplateVersionOutput => {
   return take(output, {
     environmentTemplateVersion: (_: any) => de_EnvironmentTemplateVersion(_, context),
@@ -4630,7 +4630,7 @@ const de_GetServiceInstanceOutput = (output: any, context: __SerdeContext): GetS
  */
 const de_GetServiceInstanceSyncStatusOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetServiceInstanceSyncStatusOutput => {
   return take(output, {
     desiredState: _json,
@@ -4653,7 +4653,7 @@ const de_GetServiceOutput = (output: any, context: __SerdeContext): GetServiceOu
  */
 const de_GetServiceSyncBlockerSummaryOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetServiceSyncBlockerSummaryOutput => {
   return take(output, {
     serviceSyncBlockerSummary: (_: any) => de_ServiceSyncBlockerSummary(_, context),
@@ -4736,7 +4736,7 @@ const de_ListDeploymentsOutput = (output: any, context: __SerdeContext): ListDep
  */
 const de_ListEnvironmentAccountConnectionsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListEnvironmentAccountConnectionsOutput => {
   return take(output, {
     environmentAccountConnections: (_: any) => de_EnvironmentAccountConnectionSummaryList(_, context),
@@ -4773,7 +4773,7 @@ const de_ListEnvironmentTemplatesOutput = (output: any, context: __SerdeContext)
  */
 const de_ListEnvironmentTemplateVersionsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListEnvironmentTemplateVersionsOutput => {
   return take(output, {
     nextToken: __expectString,
@@ -4828,7 +4828,7 @@ const de_ListServiceTemplatesOutput = (output: any, context: __SerdeContext): Li
  */
 const de_ListServiceTemplateVersionsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListServiceTemplateVersionsOutput => {
   return take(output, {
     nextToken: __expectString,
@@ -4853,7 +4853,7 @@ const de_ListServiceTemplateVersionsOutput = (
  */
 const de_RejectEnvironmentAccountConnectionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RejectEnvironmentAccountConnectionOutput => {
   return take(output, {
     environmentAccountConnection: (_: any) => de_EnvironmentAccountConnection(_, context),
@@ -5211,7 +5211,7 @@ const de_ServiceTemplateVersionSummary = (output: any, context: __SerdeContext):
  */
 const de_ServiceTemplateVersionSummaryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServiceTemplateVersionSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -5269,7 +5269,7 @@ const de_UpdateComponentOutput = (output: any, context: __SerdeContext): UpdateC
  */
 const de_UpdateEnvironmentAccountConnectionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateEnvironmentAccountConnectionOutput => {
   return take(output, {
     environmentAccountConnection: (_: any) => de_EnvironmentAccountConnection(_, context),
@@ -5299,7 +5299,7 @@ const de_UpdateEnvironmentTemplateOutput = (output: any, context: __SerdeContext
  */
 const de_UpdateEnvironmentTemplateVersionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateEnvironmentTemplateVersionOutput => {
   return take(output, {
     environmentTemplateVersion: (_: any) => de_EnvironmentTemplateVersion(_, context),
@@ -5360,7 +5360,7 @@ const de_UpdateServiceTemplateOutput = (output: any, context: __SerdeContext): U
  */
 const de_UpdateServiceTemplateVersionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateServiceTemplateVersionOutput => {
   return take(output, {
     serviceTemplateVersion: (_: any) => de_ServiceTemplateVersion(_, context),
@@ -5389,7 +5389,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

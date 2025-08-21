@@ -61,7 +61,7 @@ const checkState = async (client: ACMClient, input: DescribeCertificateCommandIn
  */
 export const waitForCertificateValidated = async (
   params: WaiterConfiguration<ACMClient>,
-  input: DescribeCertificateCommandInput
+  input: DescribeCertificateCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 60, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -73,7 +73,7 @@ export const waitForCertificateValidated = async (
  */
 export const waitUntilCertificateValidated = async (
   params: WaiterConfiguration<ACMClient>,
-  input: DescribeCertificateCommandInput
+  input: DescribeCertificateCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 60, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

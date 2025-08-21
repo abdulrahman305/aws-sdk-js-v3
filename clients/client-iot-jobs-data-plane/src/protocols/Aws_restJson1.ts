@@ -50,7 +50,7 @@ import {
  */
 export const se_DescribeJobExecutionCommand = async (
   input: DescribeJobExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -71,7 +71,7 @@ export const se_DescribeJobExecutionCommand = async (
  */
 export const se_GetPendingJobExecutionsCommand = async (
   input: GetPendingJobExecutionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -87,7 +87,7 @@ export const se_GetPendingJobExecutionsCommand = async (
  */
 export const se_StartNextPendingJobExecutionCommand = async (
   input: StartNextPendingJobExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -100,7 +100,7 @@ export const se_StartNextPendingJobExecutionCommand = async (
     take(input, {
       statusDetails: (_) => _json(_),
       stepTimeoutInMinutes: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -111,7 +111,7 @@ export const se_StartNextPendingJobExecutionCommand = async (
  */
 export const se_UpdateJobExecutionCommand = async (
   input: UpdateJobExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -130,7 +130,7 @@ export const se_UpdateJobExecutionCommand = async (
       status: [],
       statusDetails: (_) => _json(_),
       stepTimeoutInMinutes: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -141,7 +141,7 @@ export const se_UpdateJobExecutionCommand = async (
  */
 export const de_DescribeJobExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeJobExecutionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -162,7 +162,7 @@ export const de_DescribeJobExecutionCommand = async (
  */
 export const de_GetPendingJobExecutionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPendingJobExecutionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -184,7 +184,7 @@ export const de_GetPendingJobExecutionsCommand = async (
  */
 export const de_StartNextPendingJobExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartNextPendingJobExecutionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -205,7 +205,7 @@ export const de_StartNextPendingJobExecutionCommand = async (
  */
 export const de_UpdateJobExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateJobExecutionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -269,7 +269,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_CertificateValidationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CertificateValidationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -289,7 +289,7 @@ const de_CertificateValidationExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -309,7 +309,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_InvalidStateTransitionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidStateTransitionException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -329,7 +329,7 @@ const de_InvalidStateTransitionExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -349,7 +349,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -369,7 +369,7 @@ const de_ServiceUnavailableExceptionRes = async (
  */
 const de_TerminalStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TerminalStateException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

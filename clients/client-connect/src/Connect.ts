@@ -1433,16 +1433,16 @@ export interface Connect {
    */
   activateEvaluationForm(
     args: ActivateEvaluationFormCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ActivateEvaluationFormCommandOutput>;
   activateEvaluationForm(
     args: ActivateEvaluationFormCommandInput,
-    cb: (err: any, data?: ActivateEvaluationFormCommandOutput) => void
+    cb: (err: any, data?: ActivateEvaluationFormCommandOutput) => void,
   ): void;
   activateEvaluationForm(
     args: ActivateEvaluationFormCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ActivateEvaluationFormCommandOutput) => void
+    cb: (err: any, data?: ActivateEvaluationFormCommandOutput) => void,
   ): void;
 
   /**
@@ -1450,16 +1450,16 @@ export interface Connect {
    */
   associateAnalyticsDataSet(
     args: AssociateAnalyticsDataSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateAnalyticsDataSetCommandOutput>;
   associateAnalyticsDataSet(
     args: AssociateAnalyticsDataSetCommandInput,
-    cb: (err: any, data?: AssociateAnalyticsDataSetCommandOutput) => void
+    cb: (err: any, data?: AssociateAnalyticsDataSetCommandOutput) => void,
   ): void;
   associateAnalyticsDataSet(
     args: AssociateAnalyticsDataSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateAnalyticsDataSetCommandOutput) => void
+    cb: (err: any, data?: AssociateAnalyticsDataSetCommandOutput) => void,
   ): void;
 
   /**
@@ -1467,16 +1467,16 @@ export interface Connect {
    */
   associateApprovedOrigin(
     args: AssociateApprovedOriginCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateApprovedOriginCommandOutput>;
   associateApprovedOrigin(
     args: AssociateApprovedOriginCommandInput,
-    cb: (err: any, data?: AssociateApprovedOriginCommandOutput) => void
+    cb: (err: any, data?: AssociateApprovedOriginCommandOutput) => void,
   ): void;
   associateApprovedOrigin(
     args: AssociateApprovedOriginCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateApprovedOriginCommandOutput) => void
+    cb: (err: any, data?: AssociateApprovedOriginCommandOutput) => void,
   ): void;
 
   /**
@@ -1487,7 +1487,7 @@ export interface Connect {
   associateBot(
     args: AssociateBotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateBotCommandOutput) => void
+    cb: (err: any, data?: AssociateBotCommandOutput) => void,
   ): void;
 
   /**
@@ -1495,16 +1495,16 @@ export interface Connect {
    */
   associateDefaultVocabulary(
     args: AssociateDefaultVocabularyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateDefaultVocabularyCommandOutput>;
   associateDefaultVocabulary(
     args: AssociateDefaultVocabularyCommandInput,
-    cb: (err: any, data?: AssociateDefaultVocabularyCommandOutput) => void
+    cb: (err: any, data?: AssociateDefaultVocabularyCommandOutput) => void,
   ): void;
   associateDefaultVocabulary(
     args: AssociateDefaultVocabularyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateDefaultVocabularyCommandOutput) => void
+    cb: (err: any, data?: AssociateDefaultVocabularyCommandOutput) => void,
   ): void;
 
   /**
@@ -1515,7 +1515,7 @@ export interface Connect {
   associateFlow(
     args: AssociateFlowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateFlowCommandOutput) => void
+    cb: (err: any, data?: AssociateFlowCommandOutput) => void,
   ): void;
 
   /**
@@ -1523,16 +1523,16 @@ export interface Connect {
    */
   associateInstanceStorageConfig(
     args: AssociateInstanceStorageConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateInstanceStorageConfigCommandOutput>;
   associateInstanceStorageConfig(
     args: AssociateInstanceStorageConfigCommandInput,
-    cb: (err: any, data?: AssociateInstanceStorageConfigCommandOutput) => void
+    cb: (err: any, data?: AssociateInstanceStorageConfigCommandOutput) => void,
   ): void;
   associateInstanceStorageConfig(
     args: AssociateInstanceStorageConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateInstanceStorageConfigCommandOutput) => void
+    cb: (err: any, data?: AssociateInstanceStorageConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1540,16 +1540,16 @@ export interface Connect {
    */
   associateLambdaFunction(
     args: AssociateLambdaFunctionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateLambdaFunctionCommandOutput>;
   associateLambdaFunction(
     args: AssociateLambdaFunctionCommandInput,
-    cb: (err: any, data?: AssociateLambdaFunctionCommandOutput) => void
+    cb: (err: any, data?: AssociateLambdaFunctionCommandOutput) => void,
   ): void;
   associateLambdaFunction(
     args: AssociateLambdaFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateLambdaFunctionCommandOutput) => void
+    cb: (err: any, data?: AssociateLambdaFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -1557,13 +1557,13 @@ export interface Connect {
    */
   associateLexBot(
     args: AssociateLexBotCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateLexBotCommandOutput>;
   associateLexBot(args: AssociateLexBotCommandInput, cb: (err: any, data?: AssociateLexBotCommandOutput) => void): void;
   associateLexBot(
     args: AssociateLexBotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateLexBotCommandOutput) => void
+    cb: (err: any, data?: AssociateLexBotCommandOutput) => void,
   ): void;
 
   /**
@@ -1571,16 +1571,16 @@ export interface Connect {
    */
   associatePhoneNumberContactFlow(
     args: AssociatePhoneNumberContactFlowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociatePhoneNumberContactFlowCommandOutput>;
   associatePhoneNumberContactFlow(
     args: AssociatePhoneNumberContactFlowCommandInput,
-    cb: (err: any, data?: AssociatePhoneNumberContactFlowCommandOutput) => void
+    cb: (err: any, data?: AssociatePhoneNumberContactFlowCommandOutput) => void,
   ): void;
   associatePhoneNumberContactFlow(
     args: AssociatePhoneNumberContactFlowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociatePhoneNumberContactFlowCommandOutput) => void
+    cb: (err: any, data?: AssociatePhoneNumberContactFlowCommandOutput) => void,
   ): void;
 
   /**
@@ -1588,16 +1588,16 @@ export interface Connect {
    */
   associateQueueQuickConnects(
     args: AssociateQueueQuickConnectsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateQueueQuickConnectsCommandOutput>;
   associateQueueQuickConnects(
     args: AssociateQueueQuickConnectsCommandInput,
-    cb: (err: any, data?: AssociateQueueQuickConnectsCommandOutput) => void
+    cb: (err: any, data?: AssociateQueueQuickConnectsCommandOutput) => void,
   ): void;
   associateQueueQuickConnects(
     args: AssociateQueueQuickConnectsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateQueueQuickConnectsCommandOutput) => void
+    cb: (err: any, data?: AssociateQueueQuickConnectsCommandOutput) => void,
   ): void;
 
   /**
@@ -1605,16 +1605,16 @@ export interface Connect {
    */
   associateRoutingProfileQueues(
     args: AssociateRoutingProfileQueuesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateRoutingProfileQueuesCommandOutput>;
   associateRoutingProfileQueues(
     args: AssociateRoutingProfileQueuesCommandInput,
-    cb: (err: any, data?: AssociateRoutingProfileQueuesCommandOutput) => void
+    cb: (err: any, data?: AssociateRoutingProfileQueuesCommandOutput) => void,
   ): void;
   associateRoutingProfileQueues(
     args: AssociateRoutingProfileQueuesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateRoutingProfileQueuesCommandOutput) => void
+    cb: (err: any, data?: AssociateRoutingProfileQueuesCommandOutput) => void,
   ): void;
 
   /**
@@ -1622,16 +1622,16 @@ export interface Connect {
    */
   associateSecurityKey(
     args: AssociateSecurityKeyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateSecurityKeyCommandOutput>;
   associateSecurityKey(
     args: AssociateSecurityKeyCommandInput,
-    cb: (err: any, data?: AssociateSecurityKeyCommandOutput) => void
+    cb: (err: any, data?: AssociateSecurityKeyCommandOutput) => void,
   ): void;
   associateSecurityKey(
     args: AssociateSecurityKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateSecurityKeyCommandOutput) => void
+    cb: (err: any, data?: AssociateSecurityKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -1639,16 +1639,16 @@ export interface Connect {
    */
   associateTrafficDistributionGroupUser(
     args: AssociateTrafficDistributionGroupUserCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateTrafficDistributionGroupUserCommandOutput>;
   associateTrafficDistributionGroupUser(
     args: AssociateTrafficDistributionGroupUserCommandInput,
-    cb: (err: any, data?: AssociateTrafficDistributionGroupUserCommandOutput) => void
+    cb: (err: any, data?: AssociateTrafficDistributionGroupUserCommandOutput) => void,
   ): void;
   associateTrafficDistributionGroupUser(
     args: AssociateTrafficDistributionGroupUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateTrafficDistributionGroupUserCommandOutput) => void
+    cb: (err: any, data?: AssociateTrafficDistributionGroupUserCommandOutput) => void,
   ): void;
 
   /**
@@ -1656,16 +1656,16 @@ export interface Connect {
    */
   associateUserProficiencies(
     args: AssociateUserProficienciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateUserProficienciesCommandOutput>;
   associateUserProficiencies(
     args: AssociateUserProficienciesCommandInput,
-    cb: (err: any, data?: AssociateUserProficienciesCommandOutput) => void
+    cb: (err: any, data?: AssociateUserProficienciesCommandOutput) => void,
   ): void;
   associateUserProficiencies(
     args: AssociateUserProficienciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateUserProficienciesCommandOutput) => void
+    cb: (err: any, data?: AssociateUserProficienciesCommandOutput) => void,
   ): void;
 
   /**
@@ -1673,16 +1673,16 @@ export interface Connect {
    */
   batchAssociateAnalyticsDataSet(
     args: BatchAssociateAnalyticsDataSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchAssociateAnalyticsDataSetCommandOutput>;
   batchAssociateAnalyticsDataSet(
     args: BatchAssociateAnalyticsDataSetCommandInput,
-    cb: (err: any, data?: BatchAssociateAnalyticsDataSetCommandOutput) => void
+    cb: (err: any, data?: BatchAssociateAnalyticsDataSetCommandOutput) => void,
   ): void;
   batchAssociateAnalyticsDataSet(
     args: BatchAssociateAnalyticsDataSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchAssociateAnalyticsDataSetCommandOutput) => void
+    cb: (err: any, data?: BatchAssociateAnalyticsDataSetCommandOutput) => void,
   ): void;
 
   /**
@@ -1690,16 +1690,16 @@ export interface Connect {
    */
   batchDisassociateAnalyticsDataSet(
     args: BatchDisassociateAnalyticsDataSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDisassociateAnalyticsDataSetCommandOutput>;
   batchDisassociateAnalyticsDataSet(
     args: BatchDisassociateAnalyticsDataSetCommandInput,
-    cb: (err: any, data?: BatchDisassociateAnalyticsDataSetCommandOutput) => void
+    cb: (err: any, data?: BatchDisassociateAnalyticsDataSetCommandOutput) => void,
   ): void;
   batchDisassociateAnalyticsDataSet(
     args: BatchDisassociateAnalyticsDataSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDisassociateAnalyticsDataSetCommandOutput) => void
+    cb: (err: any, data?: BatchDisassociateAnalyticsDataSetCommandOutput) => void,
   ): void;
 
   /**
@@ -1707,16 +1707,16 @@ export interface Connect {
    */
   batchGetAttachedFileMetadata(
     args: BatchGetAttachedFileMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetAttachedFileMetadataCommandOutput>;
   batchGetAttachedFileMetadata(
     args: BatchGetAttachedFileMetadataCommandInput,
-    cb: (err: any, data?: BatchGetAttachedFileMetadataCommandOutput) => void
+    cb: (err: any, data?: BatchGetAttachedFileMetadataCommandOutput) => void,
   ): void;
   batchGetAttachedFileMetadata(
     args: BatchGetAttachedFileMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetAttachedFileMetadataCommandOutput) => void
+    cb: (err: any, data?: BatchGetAttachedFileMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -1724,16 +1724,16 @@ export interface Connect {
    */
   batchGetFlowAssociation(
     args: BatchGetFlowAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetFlowAssociationCommandOutput>;
   batchGetFlowAssociation(
     args: BatchGetFlowAssociationCommandInput,
-    cb: (err: any, data?: BatchGetFlowAssociationCommandOutput) => void
+    cb: (err: any, data?: BatchGetFlowAssociationCommandOutput) => void,
   ): void;
   batchGetFlowAssociation(
     args: BatchGetFlowAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetFlowAssociationCommandOutput) => void
+    cb: (err: any, data?: BatchGetFlowAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -1741,13 +1741,13 @@ export interface Connect {
    */
   batchPutContact(
     args: BatchPutContactCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchPutContactCommandOutput>;
   batchPutContact(args: BatchPutContactCommandInput, cb: (err: any, data?: BatchPutContactCommandOutput) => void): void;
   batchPutContact(
     args: BatchPutContactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchPutContactCommandOutput) => void
+    cb: (err: any, data?: BatchPutContactCommandOutput) => void,
   ): void;
 
   /**
@@ -1755,16 +1755,16 @@ export interface Connect {
    */
   claimPhoneNumber(
     args: ClaimPhoneNumberCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ClaimPhoneNumberCommandOutput>;
   claimPhoneNumber(
     args: ClaimPhoneNumberCommandInput,
-    cb: (err: any, data?: ClaimPhoneNumberCommandOutput) => void
+    cb: (err: any, data?: ClaimPhoneNumberCommandOutput) => void,
   ): void;
   claimPhoneNumber(
     args: ClaimPhoneNumberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ClaimPhoneNumberCommandOutput) => void
+    cb: (err: any, data?: ClaimPhoneNumberCommandOutput) => void,
   ): void;
 
   /**
@@ -1772,16 +1772,16 @@ export interface Connect {
    */
   completeAttachedFileUpload(
     args: CompleteAttachedFileUploadCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CompleteAttachedFileUploadCommandOutput>;
   completeAttachedFileUpload(
     args: CompleteAttachedFileUploadCommandInput,
-    cb: (err: any, data?: CompleteAttachedFileUploadCommandOutput) => void
+    cb: (err: any, data?: CompleteAttachedFileUploadCommandOutput) => void,
   ): void;
   completeAttachedFileUpload(
     args: CompleteAttachedFileUploadCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CompleteAttachedFileUploadCommandOutput) => void
+    cb: (err: any, data?: CompleteAttachedFileUploadCommandOutput) => void,
   ): void;
 
   /**
@@ -1789,16 +1789,16 @@ export interface Connect {
    */
   createAgentStatus(
     args: CreateAgentStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAgentStatusCommandOutput>;
   createAgentStatus(
     args: CreateAgentStatusCommandInput,
-    cb: (err: any, data?: CreateAgentStatusCommandOutput) => void
+    cb: (err: any, data?: CreateAgentStatusCommandOutput) => void,
   ): void;
   createAgentStatus(
     args: CreateAgentStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAgentStatusCommandOutput) => void
+    cb: (err: any, data?: CreateAgentStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -1806,16 +1806,16 @@ export interface Connect {
    */
   createContactFlow(
     args: CreateContactFlowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateContactFlowCommandOutput>;
   createContactFlow(
     args: CreateContactFlowCommandInput,
-    cb: (err: any, data?: CreateContactFlowCommandOutput) => void
+    cb: (err: any, data?: CreateContactFlowCommandOutput) => void,
   ): void;
   createContactFlow(
     args: CreateContactFlowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateContactFlowCommandOutput) => void
+    cb: (err: any, data?: CreateContactFlowCommandOutput) => void,
   ): void;
 
   /**
@@ -1823,16 +1823,16 @@ export interface Connect {
    */
   createContactFlowModule(
     args: CreateContactFlowModuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateContactFlowModuleCommandOutput>;
   createContactFlowModule(
     args: CreateContactFlowModuleCommandInput,
-    cb: (err: any, data?: CreateContactFlowModuleCommandOutput) => void
+    cb: (err: any, data?: CreateContactFlowModuleCommandOutput) => void,
   ): void;
   createContactFlowModule(
     args: CreateContactFlowModuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateContactFlowModuleCommandOutput) => void
+    cb: (err: any, data?: CreateContactFlowModuleCommandOutput) => void,
   ): void;
 
   /**
@@ -1840,16 +1840,16 @@ export interface Connect {
    */
   createEvaluationForm(
     args: CreateEvaluationFormCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEvaluationFormCommandOutput>;
   createEvaluationForm(
     args: CreateEvaluationFormCommandInput,
-    cb: (err: any, data?: CreateEvaluationFormCommandOutput) => void
+    cb: (err: any, data?: CreateEvaluationFormCommandOutput) => void,
   ): void;
   createEvaluationForm(
     args: CreateEvaluationFormCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEvaluationFormCommandOutput) => void
+    cb: (err: any, data?: CreateEvaluationFormCommandOutput) => void,
   ): void;
 
   /**
@@ -1857,16 +1857,16 @@ export interface Connect {
    */
   createHoursOfOperation(
     args: CreateHoursOfOperationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateHoursOfOperationCommandOutput>;
   createHoursOfOperation(
     args: CreateHoursOfOperationCommandInput,
-    cb: (err: any, data?: CreateHoursOfOperationCommandOutput) => void
+    cb: (err: any, data?: CreateHoursOfOperationCommandOutput) => void,
   ): void;
   createHoursOfOperation(
     args: CreateHoursOfOperationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateHoursOfOperationCommandOutput) => void
+    cb: (err: any, data?: CreateHoursOfOperationCommandOutput) => void,
   ): void;
 
   /**
@@ -1874,13 +1874,13 @@ export interface Connect {
    */
   createInstance(
     args: CreateInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateInstanceCommandOutput>;
   createInstance(args: CreateInstanceCommandInput, cb: (err: any, data?: CreateInstanceCommandOutput) => void): void;
   createInstance(
     args: CreateInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateInstanceCommandOutput) => void
+    cb: (err: any, data?: CreateInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -1888,16 +1888,16 @@ export interface Connect {
    */
   createIntegrationAssociation(
     args: CreateIntegrationAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateIntegrationAssociationCommandOutput>;
   createIntegrationAssociation(
     args: CreateIntegrationAssociationCommandInput,
-    cb: (err: any, data?: CreateIntegrationAssociationCommandOutput) => void
+    cb: (err: any, data?: CreateIntegrationAssociationCommandOutput) => void,
   ): void;
   createIntegrationAssociation(
     args: CreateIntegrationAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateIntegrationAssociationCommandOutput) => void
+    cb: (err: any, data?: CreateIntegrationAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -1905,16 +1905,16 @@ export interface Connect {
    */
   createParticipant(
     args: CreateParticipantCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateParticipantCommandOutput>;
   createParticipant(
     args: CreateParticipantCommandInput,
-    cb: (err: any, data?: CreateParticipantCommandOutput) => void
+    cb: (err: any, data?: CreateParticipantCommandOutput) => void,
   ): void;
   createParticipant(
     args: CreateParticipantCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateParticipantCommandOutput) => void
+    cb: (err: any, data?: CreateParticipantCommandOutput) => void,
   ): void;
 
   /**
@@ -1922,16 +1922,16 @@ export interface Connect {
    */
   createPersistentContactAssociation(
     args: CreatePersistentContactAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePersistentContactAssociationCommandOutput>;
   createPersistentContactAssociation(
     args: CreatePersistentContactAssociationCommandInput,
-    cb: (err: any, data?: CreatePersistentContactAssociationCommandOutput) => void
+    cb: (err: any, data?: CreatePersistentContactAssociationCommandOutput) => void,
   ): void;
   createPersistentContactAssociation(
     args: CreatePersistentContactAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePersistentContactAssociationCommandOutput) => void
+    cb: (err: any, data?: CreatePersistentContactAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -1939,16 +1939,16 @@ export interface Connect {
    */
   createPredefinedAttribute(
     args: CreatePredefinedAttributeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePredefinedAttributeCommandOutput>;
   createPredefinedAttribute(
     args: CreatePredefinedAttributeCommandInput,
-    cb: (err: any, data?: CreatePredefinedAttributeCommandOutput) => void
+    cb: (err: any, data?: CreatePredefinedAttributeCommandOutput) => void,
   ): void;
   createPredefinedAttribute(
     args: CreatePredefinedAttributeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePredefinedAttributeCommandOutput) => void
+    cb: (err: any, data?: CreatePredefinedAttributeCommandOutput) => void,
   ): void;
 
   /**
@@ -1959,7 +1959,7 @@ export interface Connect {
   createPrompt(
     args: CreatePromptCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePromptCommandOutput) => void
+    cb: (err: any, data?: CreatePromptCommandOutput) => void,
   ): void;
 
   /**
@@ -1970,7 +1970,7 @@ export interface Connect {
   createQueue(
     args: CreateQueueCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateQueueCommandOutput) => void
+    cb: (err: any, data?: CreateQueueCommandOutput) => void,
   ): void;
 
   /**
@@ -1978,16 +1978,16 @@ export interface Connect {
    */
   createQuickConnect(
     args: CreateQuickConnectCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateQuickConnectCommandOutput>;
   createQuickConnect(
     args: CreateQuickConnectCommandInput,
-    cb: (err: any, data?: CreateQuickConnectCommandOutput) => void
+    cb: (err: any, data?: CreateQuickConnectCommandOutput) => void,
   ): void;
   createQuickConnect(
     args: CreateQuickConnectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateQuickConnectCommandOutput) => void
+    cb: (err: any, data?: CreateQuickConnectCommandOutput) => void,
   ): void;
 
   /**
@@ -1995,16 +1995,16 @@ export interface Connect {
    */
   createRoutingProfile(
     args: CreateRoutingProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRoutingProfileCommandOutput>;
   createRoutingProfile(
     args: CreateRoutingProfileCommandInput,
-    cb: (err: any, data?: CreateRoutingProfileCommandOutput) => void
+    cb: (err: any, data?: CreateRoutingProfileCommandOutput) => void,
   ): void;
   createRoutingProfile(
     args: CreateRoutingProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRoutingProfileCommandOutput) => void
+    cb: (err: any, data?: CreateRoutingProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -2015,7 +2015,7 @@ export interface Connect {
   createRule(
     args: CreateRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRuleCommandOutput) => void
+    cb: (err: any, data?: CreateRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -2023,16 +2023,16 @@ export interface Connect {
    */
   createSecurityProfile(
     args: CreateSecurityProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSecurityProfileCommandOutput>;
   createSecurityProfile(
     args: CreateSecurityProfileCommandInput,
-    cb: (err: any, data?: CreateSecurityProfileCommandOutput) => void
+    cb: (err: any, data?: CreateSecurityProfileCommandOutput) => void,
   ): void;
   createSecurityProfile(
     args: CreateSecurityProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSecurityProfileCommandOutput) => void
+    cb: (err: any, data?: CreateSecurityProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -2040,16 +2040,16 @@ export interface Connect {
    */
   createTaskTemplate(
     args: CreateTaskTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateTaskTemplateCommandOutput>;
   createTaskTemplate(
     args: CreateTaskTemplateCommandInput,
-    cb: (err: any, data?: CreateTaskTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateTaskTemplateCommandOutput) => void,
   ): void;
   createTaskTemplate(
     args: CreateTaskTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTaskTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateTaskTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -2057,16 +2057,16 @@ export interface Connect {
    */
   createTrafficDistributionGroup(
     args: CreateTrafficDistributionGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateTrafficDistributionGroupCommandOutput>;
   createTrafficDistributionGroup(
     args: CreateTrafficDistributionGroupCommandInput,
-    cb: (err: any, data?: CreateTrafficDistributionGroupCommandOutput) => void
+    cb: (err: any, data?: CreateTrafficDistributionGroupCommandOutput) => void,
   ): void;
   createTrafficDistributionGroup(
     args: CreateTrafficDistributionGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTrafficDistributionGroupCommandOutput) => void
+    cb: (err: any, data?: CreateTrafficDistributionGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -2077,7 +2077,7 @@ export interface Connect {
   createUseCase(
     args: CreateUseCaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateUseCaseCommandOutput) => void
+    cb: (err: any, data?: CreateUseCaseCommandOutput) => void,
   ): void;
 
   /**
@@ -2088,7 +2088,7 @@ export interface Connect {
   createUser(
     args: CreateUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateUserCommandOutput) => void
+    cb: (err: any, data?: CreateUserCommandOutput) => void,
   ): void;
 
   /**
@@ -2096,16 +2096,16 @@ export interface Connect {
    */
   createUserHierarchyGroup(
     args: CreateUserHierarchyGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateUserHierarchyGroupCommandOutput>;
   createUserHierarchyGroup(
     args: CreateUserHierarchyGroupCommandInput,
-    cb: (err: any, data?: CreateUserHierarchyGroupCommandOutput) => void
+    cb: (err: any, data?: CreateUserHierarchyGroupCommandOutput) => void,
   ): void;
   createUserHierarchyGroup(
     args: CreateUserHierarchyGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateUserHierarchyGroupCommandOutput) => void
+    cb: (err: any, data?: CreateUserHierarchyGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -2116,7 +2116,7 @@ export interface Connect {
   createView(
     args: CreateViewCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateViewCommandOutput) => void
+    cb: (err: any, data?: CreateViewCommandOutput) => void,
   ): void;
 
   /**
@@ -2124,16 +2124,16 @@ export interface Connect {
    */
   createViewVersion(
     args: CreateViewVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateViewVersionCommandOutput>;
   createViewVersion(
     args: CreateViewVersionCommandInput,
-    cb: (err: any, data?: CreateViewVersionCommandOutput) => void
+    cb: (err: any, data?: CreateViewVersionCommandOutput) => void,
   ): void;
   createViewVersion(
     args: CreateViewVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateViewVersionCommandOutput) => void
+    cb: (err: any, data?: CreateViewVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -2141,16 +2141,16 @@ export interface Connect {
    */
   createVocabulary(
     args: CreateVocabularyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateVocabularyCommandOutput>;
   createVocabulary(
     args: CreateVocabularyCommandInput,
-    cb: (err: any, data?: CreateVocabularyCommandOutput) => void
+    cb: (err: any, data?: CreateVocabularyCommandOutput) => void,
   ): void;
   createVocabulary(
     args: CreateVocabularyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateVocabularyCommandOutput) => void
+    cb: (err: any, data?: CreateVocabularyCommandOutput) => void,
   ): void;
 
   /**
@@ -2158,16 +2158,16 @@ export interface Connect {
    */
   deactivateEvaluationForm(
     args: DeactivateEvaluationFormCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeactivateEvaluationFormCommandOutput>;
   deactivateEvaluationForm(
     args: DeactivateEvaluationFormCommandInput,
-    cb: (err: any, data?: DeactivateEvaluationFormCommandOutput) => void
+    cb: (err: any, data?: DeactivateEvaluationFormCommandOutput) => void,
   ): void;
   deactivateEvaluationForm(
     args: DeactivateEvaluationFormCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeactivateEvaluationFormCommandOutput) => void
+    cb: (err: any, data?: DeactivateEvaluationFormCommandOutput) => void,
   ): void;
 
   /**
@@ -2175,16 +2175,16 @@ export interface Connect {
    */
   deleteAttachedFile(
     args: DeleteAttachedFileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAttachedFileCommandOutput>;
   deleteAttachedFile(
     args: DeleteAttachedFileCommandInput,
-    cb: (err: any, data?: DeleteAttachedFileCommandOutput) => void
+    cb: (err: any, data?: DeleteAttachedFileCommandOutput) => void,
   ): void;
   deleteAttachedFile(
     args: DeleteAttachedFileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAttachedFileCommandOutput) => void
+    cb: (err: any, data?: DeleteAttachedFileCommandOutput) => void,
   ): void;
 
   /**
@@ -2192,16 +2192,16 @@ export interface Connect {
    */
   deleteContactEvaluation(
     args: DeleteContactEvaluationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteContactEvaluationCommandOutput>;
   deleteContactEvaluation(
     args: DeleteContactEvaluationCommandInput,
-    cb: (err: any, data?: DeleteContactEvaluationCommandOutput) => void
+    cb: (err: any, data?: DeleteContactEvaluationCommandOutput) => void,
   ): void;
   deleteContactEvaluation(
     args: DeleteContactEvaluationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteContactEvaluationCommandOutput) => void
+    cb: (err: any, data?: DeleteContactEvaluationCommandOutput) => void,
   ): void;
 
   /**
@@ -2209,16 +2209,16 @@ export interface Connect {
    */
   deleteContactFlow(
     args: DeleteContactFlowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteContactFlowCommandOutput>;
   deleteContactFlow(
     args: DeleteContactFlowCommandInput,
-    cb: (err: any, data?: DeleteContactFlowCommandOutput) => void
+    cb: (err: any, data?: DeleteContactFlowCommandOutput) => void,
   ): void;
   deleteContactFlow(
     args: DeleteContactFlowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteContactFlowCommandOutput) => void
+    cb: (err: any, data?: DeleteContactFlowCommandOutput) => void,
   ): void;
 
   /**
@@ -2226,16 +2226,16 @@ export interface Connect {
    */
   deleteContactFlowModule(
     args: DeleteContactFlowModuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteContactFlowModuleCommandOutput>;
   deleteContactFlowModule(
     args: DeleteContactFlowModuleCommandInput,
-    cb: (err: any, data?: DeleteContactFlowModuleCommandOutput) => void
+    cb: (err: any, data?: DeleteContactFlowModuleCommandOutput) => void,
   ): void;
   deleteContactFlowModule(
     args: DeleteContactFlowModuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteContactFlowModuleCommandOutput) => void
+    cb: (err: any, data?: DeleteContactFlowModuleCommandOutput) => void,
   ): void;
 
   /**
@@ -2243,16 +2243,16 @@ export interface Connect {
    */
   deleteEvaluationForm(
     args: DeleteEvaluationFormCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEvaluationFormCommandOutput>;
   deleteEvaluationForm(
     args: DeleteEvaluationFormCommandInput,
-    cb: (err: any, data?: DeleteEvaluationFormCommandOutput) => void
+    cb: (err: any, data?: DeleteEvaluationFormCommandOutput) => void,
   ): void;
   deleteEvaluationForm(
     args: DeleteEvaluationFormCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEvaluationFormCommandOutput) => void
+    cb: (err: any, data?: DeleteEvaluationFormCommandOutput) => void,
   ): void;
 
   /**
@@ -2260,16 +2260,16 @@ export interface Connect {
    */
   deleteHoursOfOperation(
     args: DeleteHoursOfOperationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteHoursOfOperationCommandOutput>;
   deleteHoursOfOperation(
     args: DeleteHoursOfOperationCommandInput,
-    cb: (err: any, data?: DeleteHoursOfOperationCommandOutput) => void
+    cb: (err: any, data?: DeleteHoursOfOperationCommandOutput) => void,
   ): void;
   deleteHoursOfOperation(
     args: DeleteHoursOfOperationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteHoursOfOperationCommandOutput) => void
+    cb: (err: any, data?: DeleteHoursOfOperationCommandOutput) => void,
   ): void;
 
   /**
@@ -2277,13 +2277,13 @@ export interface Connect {
    */
   deleteInstance(
     args: DeleteInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteInstanceCommandOutput>;
   deleteInstance(args: DeleteInstanceCommandInput, cb: (err: any, data?: DeleteInstanceCommandOutput) => void): void;
   deleteInstance(
     args: DeleteInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteInstanceCommandOutput) => void
+    cb: (err: any, data?: DeleteInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -2291,16 +2291,16 @@ export interface Connect {
    */
   deleteIntegrationAssociation(
     args: DeleteIntegrationAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteIntegrationAssociationCommandOutput>;
   deleteIntegrationAssociation(
     args: DeleteIntegrationAssociationCommandInput,
-    cb: (err: any, data?: DeleteIntegrationAssociationCommandOutput) => void
+    cb: (err: any, data?: DeleteIntegrationAssociationCommandOutput) => void,
   ): void;
   deleteIntegrationAssociation(
     args: DeleteIntegrationAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteIntegrationAssociationCommandOutput) => void
+    cb: (err: any, data?: DeleteIntegrationAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -2308,16 +2308,16 @@ export interface Connect {
    */
   deletePredefinedAttribute(
     args: DeletePredefinedAttributeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePredefinedAttributeCommandOutput>;
   deletePredefinedAttribute(
     args: DeletePredefinedAttributeCommandInput,
-    cb: (err: any, data?: DeletePredefinedAttributeCommandOutput) => void
+    cb: (err: any, data?: DeletePredefinedAttributeCommandOutput) => void,
   ): void;
   deletePredefinedAttribute(
     args: DeletePredefinedAttributeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePredefinedAttributeCommandOutput) => void
+    cb: (err: any, data?: DeletePredefinedAttributeCommandOutput) => void,
   ): void;
 
   /**
@@ -2328,7 +2328,7 @@ export interface Connect {
   deletePrompt(
     args: DeletePromptCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePromptCommandOutput) => void
+    cb: (err: any, data?: DeletePromptCommandOutput) => void,
   ): void;
 
   /**
@@ -2339,7 +2339,7 @@ export interface Connect {
   deleteQueue(
     args: DeleteQueueCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteQueueCommandOutput) => void
+    cb: (err: any, data?: DeleteQueueCommandOutput) => void,
   ): void;
 
   /**
@@ -2347,16 +2347,16 @@ export interface Connect {
    */
   deleteQuickConnect(
     args: DeleteQuickConnectCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteQuickConnectCommandOutput>;
   deleteQuickConnect(
     args: DeleteQuickConnectCommandInput,
-    cb: (err: any, data?: DeleteQuickConnectCommandOutput) => void
+    cb: (err: any, data?: DeleteQuickConnectCommandOutput) => void,
   ): void;
   deleteQuickConnect(
     args: DeleteQuickConnectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteQuickConnectCommandOutput) => void
+    cb: (err: any, data?: DeleteQuickConnectCommandOutput) => void,
   ): void;
 
   /**
@@ -2364,16 +2364,16 @@ export interface Connect {
    */
   deleteRoutingProfile(
     args: DeleteRoutingProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRoutingProfileCommandOutput>;
   deleteRoutingProfile(
     args: DeleteRoutingProfileCommandInput,
-    cb: (err: any, data?: DeleteRoutingProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteRoutingProfileCommandOutput) => void,
   ): void;
   deleteRoutingProfile(
     args: DeleteRoutingProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRoutingProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteRoutingProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -2384,7 +2384,7 @@ export interface Connect {
   deleteRule(
     args: DeleteRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -2392,16 +2392,16 @@ export interface Connect {
    */
   deleteSecurityProfile(
     args: DeleteSecurityProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSecurityProfileCommandOutput>;
   deleteSecurityProfile(
     args: DeleteSecurityProfileCommandInput,
-    cb: (err: any, data?: DeleteSecurityProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteSecurityProfileCommandOutput) => void,
   ): void;
   deleteSecurityProfile(
     args: DeleteSecurityProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSecurityProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteSecurityProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -2409,16 +2409,16 @@ export interface Connect {
    */
   deleteTaskTemplate(
     args: DeleteTaskTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteTaskTemplateCommandOutput>;
   deleteTaskTemplate(
     args: DeleteTaskTemplateCommandInput,
-    cb: (err: any, data?: DeleteTaskTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteTaskTemplateCommandOutput) => void,
   ): void;
   deleteTaskTemplate(
     args: DeleteTaskTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTaskTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteTaskTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -2426,16 +2426,16 @@ export interface Connect {
    */
   deleteTrafficDistributionGroup(
     args: DeleteTrafficDistributionGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteTrafficDistributionGroupCommandOutput>;
   deleteTrafficDistributionGroup(
     args: DeleteTrafficDistributionGroupCommandInput,
-    cb: (err: any, data?: DeleteTrafficDistributionGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteTrafficDistributionGroupCommandOutput) => void,
   ): void;
   deleteTrafficDistributionGroup(
     args: DeleteTrafficDistributionGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTrafficDistributionGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteTrafficDistributionGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -2446,7 +2446,7 @@ export interface Connect {
   deleteUseCase(
     args: DeleteUseCaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteUseCaseCommandOutput) => void
+    cb: (err: any, data?: DeleteUseCaseCommandOutput) => void,
   ): void;
 
   /**
@@ -2457,7 +2457,7 @@ export interface Connect {
   deleteUser(
     args: DeleteUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteUserCommandOutput) => void
+    cb: (err: any, data?: DeleteUserCommandOutput) => void,
   ): void;
 
   /**
@@ -2465,16 +2465,16 @@ export interface Connect {
    */
   deleteUserHierarchyGroup(
     args: DeleteUserHierarchyGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteUserHierarchyGroupCommandOutput>;
   deleteUserHierarchyGroup(
     args: DeleteUserHierarchyGroupCommandInput,
-    cb: (err: any, data?: DeleteUserHierarchyGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteUserHierarchyGroupCommandOutput) => void,
   ): void;
   deleteUserHierarchyGroup(
     args: DeleteUserHierarchyGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteUserHierarchyGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteUserHierarchyGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -2485,7 +2485,7 @@ export interface Connect {
   deleteView(
     args: DeleteViewCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteViewCommandOutput) => void
+    cb: (err: any, data?: DeleteViewCommandOutput) => void,
   ): void;
 
   /**
@@ -2493,16 +2493,16 @@ export interface Connect {
    */
   deleteViewVersion(
     args: DeleteViewVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteViewVersionCommandOutput>;
   deleteViewVersion(
     args: DeleteViewVersionCommandInput,
-    cb: (err: any, data?: DeleteViewVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteViewVersionCommandOutput) => void,
   ): void;
   deleteViewVersion(
     args: DeleteViewVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteViewVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteViewVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -2510,16 +2510,16 @@ export interface Connect {
    */
   deleteVocabulary(
     args: DeleteVocabularyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteVocabularyCommandOutput>;
   deleteVocabulary(
     args: DeleteVocabularyCommandInput,
-    cb: (err: any, data?: DeleteVocabularyCommandOutput) => void
+    cb: (err: any, data?: DeleteVocabularyCommandOutput) => void,
   ): void;
   deleteVocabulary(
     args: DeleteVocabularyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteVocabularyCommandOutput) => void
+    cb: (err: any, data?: DeleteVocabularyCommandOutput) => void,
   ): void;
 
   /**
@@ -2527,16 +2527,16 @@ export interface Connect {
    */
   describeAgentStatus(
     args: DescribeAgentStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAgentStatusCommandOutput>;
   describeAgentStatus(
     args: DescribeAgentStatusCommandInput,
-    cb: (err: any, data?: DescribeAgentStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeAgentStatusCommandOutput) => void,
   ): void;
   describeAgentStatus(
     args: DescribeAgentStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAgentStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeAgentStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -2544,13 +2544,13 @@ export interface Connect {
    */
   describeContact(
     args: DescribeContactCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeContactCommandOutput>;
   describeContact(args: DescribeContactCommandInput, cb: (err: any, data?: DescribeContactCommandOutput) => void): void;
   describeContact(
     args: DescribeContactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeContactCommandOutput) => void
+    cb: (err: any, data?: DescribeContactCommandOutput) => void,
   ): void;
 
   /**
@@ -2558,16 +2558,16 @@ export interface Connect {
    */
   describeContactEvaluation(
     args: DescribeContactEvaluationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeContactEvaluationCommandOutput>;
   describeContactEvaluation(
     args: DescribeContactEvaluationCommandInput,
-    cb: (err: any, data?: DescribeContactEvaluationCommandOutput) => void
+    cb: (err: any, data?: DescribeContactEvaluationCommandOutput) => void,
   ): void;
   describeContactEvaluation(
     args: DescribeContactEvaluationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeContactEvaluationCommandOutput) => void
+    cb: (err: any, data?: DescribeContactEvaluationCommandOutput) => void,
   ): void;
 
   /**
@@ -2575,16 +2575,16 @@ export interface Connect {
    */
   describeContactFlow(
     args: DescribeContactFlowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeContactFlowCommandOutput>;
   describeContactFlow(
     args: DescribeContactFlowCommandInput,
-    cb: (err: any, data?: DescribeContactFlowCommandOutput) => void
+    cb: (err: any, data?: DescribeContactFlowCommandOutput) => void,
   ): void;
   describeContactFlow(
     args: DescribeContactFlowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeContactFlowCommandOutput) => void
+    cb: (err: any, data?: DescribeContactFlowCommandOutput) => void,
   ): void;
 
   /**
@@ -2592,16 +2592,16 @@ export interface Connect {
    */
   describeContactFlowModule(
     args: DescribeContactFlowModuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeContactFlowModuleCommandOutput>;
   describeContactFlowModule(
     args: DescribeContactFlowModuleCommandInput,
-    cb: (err: any, data?: DescribeContactFlowModuleCommandOutput) => void
+    cb: (err: any, data?: DescribeContactFlowModuleCommandOutput) => void,
   ): void;
   describeContactFlowModule(
     args: DescribeContactFlowModuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeContactFlowModuleCommandOutput) => void
+    cb: (err: any, data?: DescribeContactFlowModuleCommandOutput) => void,
   ): void;
 
   /**
@@ -2609,16 +2609,16 @@ export interface Connect {
    */
   describeEvaluationForm(
     args: DescribeEvaluationFormCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEvaluationFormCommandOutput>;
   describeEvaluationForm(
     args: DescribeEvaluationFormCommandInput,
-    cb: (err: any, data?: DescribeEvaluationFormCommandOutput) => void
+    cb: (err: any, data?: DescribeEvaluationFormCommandOutput) => void,
   ): void;
   describeEvaluationForm(
     args: DescribeEvaluationFormCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEvaluationFormCommandOutput) => void
+    cb: (err: any, data?: DescribeEvaluationFormCommandOutput) => void,
   ): void;
 
   /**
@@ -2626,16 +2626,16 @@ export interface Connect {
    */
   describeHoursOfOperation(
     args: DescribeHoursOfOperationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeHoursOfOperationCommandOutput>;
   describeHoursOfOperation(
     args: DescribeHoursOfOperationCommandInput,
-    cb: (err: any, data?: DescribeHoursOfOperationCommandOutput) => void
+    cb: (err: any, data?: DescribeHoursOfOperationCommandOutput) => void,
   ): void;
   describeHoursOfOperation(
     args: DescribeHoursOfOperationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeHoursOfOperationCommandOutput) => void
+    cb: (err: any, data?: DescribeHoursOfOperationCommandOutput) => void,
   ): void;
 
   /**
@@ -2643,16 +2643,16 @@ export interface Connect {
    */
   describeInstance(
     args: DescribeInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeInstanceCommandOutput>;
   describeInstance(
     args: DescribeInstanceCommandInput,
-    cb: (err: any, data?: DescribeInstanceCommandOutput) => void
+    cb: (err: any, data?: DescribeInstanceCommandOutput) => void,
   ): void;
   describeInstance(
     args: DescribeInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeInstanceCommandOutput) => void
+    cb: (err: any, data?: DescribeInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -2660,16 +2660,16 @@ export interface Connect {
    */
   describeInstanceAttribute(
     args: DescribeInstanceAttributeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeInstanceAttributeCommandOutput>;
   describeInstanceAttribute(
     args: DescribeInstanceAttributeCommandInput,
-    cb: (err: any, data?: DescribeInstanceAttributeCommandOutput) => void
+    cb: (err: any, data?: DescribeInstanceAttributeCommandOutput) => void,
   ): void;
   describeInstanceAttribute(
     args: DescribeInstanceAttributeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeInstanceAttributeCommandOutput) => void
+    cb: (err: any, data?: DescribeInstanceAttributeCommandOutput) => void,
   ): void;
 
   /**
@@ -2677,16 +2677,16 @@ export interface Connect {
    */
   describeInstanceStorageConfig(
     args: DescribeInstanceStorageConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeInstanceStorageConfigCommandOutput>;
   describeInstanceStorageConfig(
     args: DescribeInstanceStorageConfigCommandInput,
-    cb: (err: any, data?: DescribeInstanceStorageConfigCommandOutput) => void
+    cb: (err: any, data?: DescribeInstanceStorageConfigCommandOutput) => void,
   ): void;
   describeInstanceStorageConfig(
     args: DescribeInstanceStorageConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeInstanceStorageConfigCommandOutput) => void
+    cb: (err: any, data?: DescribeInstanceStorageConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -2694,16 +2694,16 @@ export interface Connect {
    */
   describePhoneNumber(
     args: DescribePhoneNumberCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePhoneNumberCommandOutput>;
   describePhoneNumber(
     args: DescribePhoneNumberCommandInput,
-    cb: (err: any, data?: DescribePhoneNumberCommandOutput) => void
+    cb: (err: any, data?: DescribePhoneNumberCommandOutput) => void,
   ): void;
   describePhoneNumber(
     args: DescribePhoneNumberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePhoneNumberCommandOutput) => void
+    cb: (err: any, data?: DescribePhoneNumberCommandOutput) => void,
   ): void;
 
   /**
@@ -2711,16 +2711,16 @@ export interface Connect {
    */
   describePredefinedAttribute(
     args: DescribePredefinedAttributeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePredefinedAttributeCommandOutput>;
   describePredefinedAttribute(
     args: DescribePredefinedAttributeCommandInput,
-    cb: (err: any, data?: DescribePredefinedAttributeCommandOutput) => void
+    cb: (err: any, data?: DescribePredefinedAttributeCommandOutput) => void,
   ): void;
   describePredefinedAttribute(
     args: DescribePredefinedAttributeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePredefinedAttributeCommandOutput) => void
+    cb: (err: any, data?: DescribePredefinedAttributeCommandOutput) => void,
   ): void;
 
   /**
@@ -2728,13 +2728,13 @@ export interface Connect {
    */
   describePrompt(
     args: DescribePromptCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePromptCommandOutput>;
   describePrompt(args: DescribePromptCommandInput, cb: (err: any, data?: DescribePromptCommandOutput) => void): void;
   describePrompt(
     args: DescribePromptCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePromptCommandOutput) => void
+    cb: (err: any, data?: DescribePromptCommandOutput) => void,
   ): void;
 
   /**
@@ -2745,7 +2745,7 @@ export interface Connect {
   describeQueue(
     args: DescribeQueueCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeQueueCommandOutput) => void
+    cb: (err: any, data?: DescribeQueueCommandOutput) => void,
   ): void;
 
   /**
@@ -2753,16 +2753,16 @@ export interface Connect {
    */
   describeQuickConnect(
     args: DescribeQuickConnectCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeQuickConnectCommandOutput>;
   describeQuickConnect(
     args: DescribeQuickConnectCommandInput,
-    cb: (err: any, data?: DescribeQuickConnectCommandOutput) => void
+    cb: (err: any, data?: DescribeQuickConnectCommandOutput) => void,
   ): void;
   describeQuickConnect(
     args: DescribeQuickConnectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeQuickConnectCommandOutput) => void
+    cb: (err: any, data?: DescribeQuickConnectCommandOutput) => void,
   ): void;
 
   /**
@@ -2770,16 +2770,16 @@ export interface Connect {
    */
   describeRoutingProfile(
     args: DescribeRoutingProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRoutingProfileCommandOutput>;
   describeRoutingProfile(
     args: DescribeRoutingProfileCommandInput,
-    cb: (err: any, data?: DescribeRoutingProfileCommandOutput) => void
+    cb: (err: any, data?: DescribeRoutingProfileCommandOutput) => void,
   ): void;
   describeRoutingProfile(
     args: DescribeRoutingProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRoutingProfileCommandOutput) => void
+    cb: (err: any, data?: DescribeRoutingProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -2790,7 +2790,7 @@ export interface Connect {
   describeRule(
     args: DescribeRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRuleCommandOutput) => void
+    cb: (err: any, data?: DescribeRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -2798,16 +2798,16 @@ export interface Connect {
    */
   describeSecurityProfile(
     args: DescribeSecurityProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSecurityProfileCommandOutput>;
   describeSecurityProfile(
     args: DescribeSecurityProfileCommandInput,
-    cb: (err: any, data?: DescribeSecurityProfileCommandOutput) => void
+    cb: (err: any, data?: DescribeSecurityProfileCommandOutput) => void,
   ): void;
   describeSecurityProfile(
     args: DescribeSecurityProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSecurityProfileCommandOutput) => void
+    cb: (err: any, data?: DescribeSecurityProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -2815,16 +2815,16 @@ export interface Connect {
    */
   describeTrafficDistributionGroup(
     args: DescribeTrafficDistributionGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTrafficDistributionGroupCommandOutput>;
   describeTrafficDistributionGroup(
     args: DescribeTrafficDistributionGroupCommandInput,
-    cb: (err: any, data?: DescribeTrafficDistributionGroupCommandOutput) => void
+    cb: (err: any, data?: DescribeTrafficDistributionGroupCommandOutput) => void,
   ): void;
   describeTrafficDistributionGroup(
     args: DescribeTrafficDistributionGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTrafficDistributionGroupCommandOutput) => void
+    cb: (err: any, data?: DescribeTrafficDistributionGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -2835,7 +2835,7 @@ export interface Connect {
   describeUser(
     args: DescribeUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeUserCommandOutput) => void
+    cb: (err: any, data?: DescribeUserCommandOutput) => void,
   ): void;
 
   /**
@@ -2843,16 +2843,16 @@ export interface Connect {
    */
   describeUserHierarchyGroup(
     args: DescribeUserHierarchyGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeUserHierarchyGroupCommandOutput>;
   describeUserHierarchyGroup(
     args: DescribeUserHierarchyGroupCommandInput,
-    cb: (err: any, data?: DescribeUserHierarchyGroupCommandOutput) => void
+    cb: (err: any, data?: DescribeUserHierarchyGroupCommandOutput) => void,
   ): void;
   describeUserHierarchyGroup(
     args: DescribeUserHierarchyGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeUserHierarchyGroupCommandOutput) => void
+    cb: (err: any, data?: DescribeUserHierarchyGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -2860,16 +2860,16 @@ export interface Connect {
    */
   describeUserHierarchyStructure(
     args: DescribeUserHierarchyStructureCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeUserHierarchyStructureCommandOutput>;
   describeUserHierarchyStructure(
     args: DescribeUserHierarchyStructureCommandInput,
-    cb: (err: any, data?: DescribeUserHierarchyStructureCommandOutput) => void
+    cb: (err: any, data?: DescribeUserHierarchyStructureCommandOutput) => void,
   ): void;
   describeUserHierarchyStructure(
     args: DescribeUserHierarchyStructureCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeUserHierarchyStructureCommandOutput) => void
+    cb: (err: any, data?: DescribeUserHierarchyStructureCommandOutput) => void,
   ): void;
 
   /**
@@ -2880,7 +2880,7 @@ export interface Connect {
   describeView(
     args: DescribeViewCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeViewCommandOutput) => void
+    cb: (err: any, data?: DescribeViewCommandOutput) => void,
   ): void;
 
   /**
@@ -2888,16 +2888,16 @@ export interface Connect {
    */
   describeVocabulary(
     args: DescribeVocabularyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeVocabularyCommandOutput>;
   describeVocabulary(
     args: DescribeVocabularyCommandInput,
-    cb: (err: any, data?: DescribeVocabularyCommandOutput) => void
+    cb: (err: any, data?: DescribeVocabularyCommandOutput) => void,
   ): void;
   describeVocabulary(
     args: DescribeVocabularyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeVocabularyCommandOutput) => void
+    cb: (err: any, data?: DescribeVocabularyCommandOutput) => void,
   ): void;
 
   /**
@@ -2905,16 +2905,16 @@ export interface Connect {
    */
   disassociateAnalyticsDataSet(
     args: DisassociateAnalyticsDataSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateAnalyticsDataSetCommandOutput>;
   disassociateAnalyticsDataSet(
     args: DisassociateAnalyticsDataSetCommandInput,
-    cb: (err: any, data?: DisassociateAnalyticsDataSetCommandOutput) => void
+    cb: (err: any, data?: DisassociateAnalyticsDataSetCommandOutput) => void,
   ): void;
   disassociateAnalyticsDataSet(
     args: DisassociateAnalyticsDataSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateAnalyticsDataSetCommandOutput) => void
+    cb: (err: any, data?: DisassociateAnalyticsDataSetCommandOutput) => void,
   ): void;
 
   /**
@@ -2922,16 +2922,16 @@ export interface Connect {
    */
   disassociateApprovedOrigin(
     args: DisassociateApprovedOriginCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateApprovedOriginCommandOutput>;
   disassociateApprovedOrigin(
     args: DisassociateApprovedOriginCommandInput,
-    cb: (err: any, data?: DisassociateApprovedOriginCommandOutput) => void
+    cb: (err: any, data?: DisassociateApprovedOriginCommandOutput) => void,
   ): void;
   disassociateApprovedOrigin(
     args: DisassociateApprovedOriginCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateApprovedOriginCommandOutput) => void
+    cb: (err: any, data?: DisassociateApprovedOriginCommandOutput) => void,
   ): void;
 
   /**
@@ -2939,13 +2939,13 @@ export interface Connect {
    */
   disassociateBot(
     args: DisassociateBotCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateBotCommandOutput>;
   disassociateBot(args: DisassociateBotCommandInput, cb: (err: any, data?: DisassociateBotCommandOutput) => void): void;
   disassociateBot(
     args: DisassociateBotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateBotCommandOutput) => void
+    cb: (err: any, data?: DisassociateBotCommandOutput) => void,
   ): void;
 
   /**
@@ -2953,16 +2953,16 @@ export interface Connect {
    */
   disassociateFlow(
     args: DisassociateFlowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateFlowCommandOutput>;
   disassociateFlow(
     args: DisassociateFlowCommandInput,
-    cb: (err: any, data?: DisassociateFlowCommandOutput) => void
+    cb: (err: any, data?: DisassociateFlowCommandOutput) => void,
   ): void;
   disassociateFlow(
     args: DisassociateFlowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateFlowCommandOutput) => void
+    cb: (err: any, data?: DisassociateFlowCommandOutput) => void,
   ): void;
 
   /**
@@ -2970,16 +2970,16 @@ export interface Connect {
    */
   disassociateInstanceStorageConfig(
     args: DisassociateInstanceStorageConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateInstanceStorageConfigCommandOutput>;
   disassociateInstanceStorageConfig(
     args: DisassociateInstanceStorageConfigCommandInput,
-    cb: (err: any, data?: DisassociateInstanceStorageConfigCommandOutput) => void
+    cb: (err: any, data?: DisassociateInstanceStorageConfigCommandOutput) => void,
   ): void;
   disassociateInstanceStorageConfig(
     args: DisassociateInstanceStorageConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateInstanceStorageConfigCommandOutput) => void
+    cb: (err: any, data?: DisassociateInstanceStorageConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -2987,16 +2987,16 @@ export interface Connect {
    */
   disassociateLambdaFunction(
     args: DisassociateLambdaFunctionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateLambdaFunctionCommandOutput>;
   disassociateLambdaFunction(
     args: DisassociateLambdaFunctionCommandInput,
-    cb: (err: any, data?: DisassociateLambdaFunctionCommandOutput) => void
+    cb: (err: any, data?: DisassociateLambdaFunctionCommandOutput) => void,
   ): void;
   disassociateLambdaFunction(
     args: DisassociateLambdaFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateLambdaFunctionCommandOutput) => void
+    cb: (err: any, data?: DisassociateLambdaFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -3004,16 +3004,16 @@ export interface Connect {
    */
   disassociateLexBot(
     args: DisassociateLexBotCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateLexBotCommandOutput>;
   disassociateLexBot(
     args: DisassociateLexBotCommandInput,
-    cb: (err: any, data?: DisassociateLexBotCommandOutput) => void
+    cb: (err: any, data?: DisassociateLexBotCommandOutput) => void,
   ): void;
   disassociateLexBot(
     args: DisassociateLexBotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateLexBotCommandOutput) => void
+    cb: (err: any, data?: DisassociateLexBotCommandOutput) => void,
   ): void;
 
   /**
@@ -3021,16 +3021,16 @@ export interface Connect {
    */
   disassociatePhoneNumberContactFlow(
     args: DisassociatePhoneNumberContactFlowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociatePhoneNumberContactFlowCommandOutput>;
   disassociatePhoneNumberContactFlow(
     args: DisassociatePhoneNumberContactFlowCommandInput,
-    cb: (err: any, data?: DisassociatePhoneNumberContactFlowCommandOutput) => void
+    cb: (err: any, data?: DisassociatePhoneNumberContactFlowCommandOutput) => void,
   ): void;
   disassociatePhoneNumberContactFlow(
     args: DisassociatePhoneNumberContactFlowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociatePhoneNumberContactFlowCommandOutput) => void
+    cb: (err: any, data?: DisassociatePhoneNumberContactFlowCommandOutput) => void,
   ): void;
 
   /**
@@ -3038,16 +3038,16 @@ export interface Connect {
    */
   disassociateQueueQuickConnects(
     args: DisassociateQueueQuickConnectsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateQueueQuickConnectsCommandOutput>;
   disassociateQueueQuickConnects(
     args: DisassociateQueueQuickConnectsCommandInput,
-    cb: (err: any, data?: DisassociateQueueQuickConnectsCommandOutput) => void
+    cb: (err: any, data?: DisassociateQueueQuickConnectsCommandOutput) => void,
   ): void;
   disassociateQueueQuickConnects(
     args: DisassociateQueueQuickConnectsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateQueueQuickConnectsCommandOutput) => void
+    cb: (err: any, data?: DisassociateQueueQuickConnectsCommandOutput) => void,
   ): void;
 
   /**
@@ -3055,16 +3055,16 @@ export interface Connect {
    */
   disassociateRoutingProfileQueues(
     args: DisassociateRoutingProfileQueuesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateRoutingProfileQueuesCommandOutput>;
   disassociateRoutingProfileQueues(
     args: DisassociateRoutingProfileQueuesCommandInput,
-    cb: (err: any, data?: DisassociateRoutingProfileQueuesCommandOutput) => void
+    cb: (err: any, data?: DisassociateRoutingProfileQueuesCommandOutput) => void,
   ): void;
   disassociateRoutingProfileQueues(
     args: DisassociateRoutingProfileQueuesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateRoutingProfileQueuesCommandOutput) => void
+    cb: (err: any, data?: DisassociateRoutingProfileQueuesCommandOutput) => void,
   ): void;
 
   /**
@@ -3072,16 +3072,16 @@ export interface Connect {
    */
   disassociateSecurityKey(
     args: DisassociateSecurityKeyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateSecurityKeyCommandOutput>;
   disassociateSecurityKey(
     args: DisassociateSecurityKeyCommandInput,
-    cb: (err: any, data?: DisassociateSecurityKeyCommandOutput) => void
+    cb: (err: any, data?: DisassociateSecurityKeyCommandOutput) => void,
   ): void;
   disassociateSecurityKey(
     args: DisassociateSecurityKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateSecurityKeyCommandOutput) => void
+    cb: (err: any, data?: DisassociateSecurityKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -3089,16 +3089,16 @@ export interface Connect {
    */
   disassociateTrafficDistributionGroupUser(
     args: DisassociateTrafficDistributionGroupUserCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateTrafficDistributionGroupUserCommandOutput>;
   disassociateTrafficDistributionGroupUser(
     args: DisassociateTrafficDistributionGroupUserCommandInput,
-    cb: (err: any, data?: DisassociateTrafficDistributionGroupUserCommandOutput) => void
+    cb: (err: any, data?: DisassociateTrafficDistributionGroupUserCommandOutput) => void,
   ): void;
   disassociateTrafficDistributionGroupUser(
     args: DisassociateTrafficDistributionGroupUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateTrafficDistributionGroupUserCommandOutput) => void
+    cb: (err: any, data?: DisassociateTrafficDistributionGroupUserCommandOutput) => void,
   ): void;
 
   /**
@@ -3106,16 +3106,16 @@ export interface Connect {
    */
   disassociateUserProficiencies(
     args: DisassociateUserProficienciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateUserProficienciesCommandOutput>;
   disassociateUserProficiencies(
     args: DisassociateUserProficienciesCommandInput,
-    cb: (err: any, data?: DisassociateUserProficienciesCommandOutput) => void
+    cb: (err: any, data?: DisassociateUserProficienciesCommandOutput) => void,
   ): void;
   disassociateUserProficiencies(
     args: DisassociateUserProficienciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateUserProficienciesCommandOutput) => void
+    cb: (err: any, data?: DisassociateUserProficienciesCommandOutput) => void,
   ): void;
 
   /**
@@ -3123,16 +3123,16 @@ export interface Connect {
    */
   dismissUserContact(
     args: DismissUserContactCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DismissUserContactCommandOutput>;
   dismissUserContact(
     args: DismissUserContactCommandInput,
-    cb: (err: any, data?: DismissUserContactCommandOutput) => void
+    cb: (err: any, data?: DismissUserContactCommandOutput) => void,
   ): void;
   dismissUserContact(
     args: DismissUserContactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DismissUserContactCommandOutput) => void
+    cb: (err: any, data?: DismissUserContactCommandOutput) => void,
   ): void;
 
   /**
@@ -3140,13 +3140,13 @@ export interface Connect {
    */
   getAttachedFile(
     args: GetAttachedFileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAttachedFileCommandOutput>;
   getAttachedFile(args: GetAttachedFileCommandInput, cb: (err: any, data?: GetAttachedFileCommandOutput) => void): void;
   getAttachedFile(
     args: GetAttachedFileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAttachedFileCommandOutput) => void
+    cb: (err: any, data?: GetAttachedFileCommandOutput) => void,
   ): void;
 
   /**
@@ -3154,16 +3154,16 @@ export interface Connect {
    */
   getContactAttributes(
     args: GetContactAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetContactAttributesCommandOutput>;
   getContactAttributes(
     args: GetContactAttributesCommandInput,
-    cb: (err: any, data?: GetContactAttributesCommandOutput) => void
+    cb: (err: any, data?: GetContactAttributesCommandOutput) => void,
   ): void;
   getContactAttributes(
     args: GetContactAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetContactAttributesCommandOutput) => void
+    cb: (err: any, data?: GetContactAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -3171,16 +3171,16 @@ export interface Connect {
    */
   getCurrentMetricData(
     args: GetCurrentMetricDataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCurrentMetricDataCommandOutput>;
   getCurrentMetricData(
     args: GetCurrentMetricDataCommandInput,
-    cb: (err: any, data?: GetCurrentMetricDataCommandOutput) => void
+    cb: (err: any, data?: GetCurrentMetricDataCommandOutput) => void,
   ): void;
   getCurrentMetricData(
     args: GetCurrentMetricDataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCurrentMetricDataCommandOutput) => void
+    cb: (err: any, data?: GetCurrentMetricDataCommandOutput) => void,
   ): void;
 
   /**
@@ -3188,16 +3188,16 @@ export interface Connect {
    */
   getCurrentUserData(
     args: GetCurrentUserDataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCurrentUserDataCommandOutput>;
   getCurrentUserData(
     args: GetCurrentUserDataCommandInput,
-    cb: (err: any, data?: GetCurrentUserDataCommandOutput) => void
+    cb: (err: any, data?: GetCurrentUserDataCommandOutput) => void,
   ): void;
   getCurrentUserData(
     args: GetCurrentUserDataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCurrentUserDataCommandOutput) => void
+    cb: (err: any, data?: GetCurrentUserDataCommandOutput) => void,
   ): void;
 
   /**
@@ -3205,16 +3205,16 @@ export interface Connect {
    */
   getFederationToken(
     args: GetFederationTokenCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFederationTokenCommandOutput>;
   getFederationToken(
     args: GetFederationTokenCommandInput,
-    cb: (err: any, data?: GetFederationTokenCommandOutput) => void
+    cb: (err: any, data?: GetFederationTokenCommandOutput) => void,
   ): void;
   getFederationToken(
     args: GetFederationTokenCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFederationTokenCommandOutput) => void
+    cb: (err: any, data?: GetFederationTokenCommandOutput) => void,
   ): void;
 
   /**
@@ -3222,16 +3222,16 @@ export interface Connect {
    */
   getFlowAssociation(
     args: GetFlowAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFlowAssociationCommandOutput>;
   getFlowAssociation(
     args: GetFlowAssociationCommandInput,
-    cb: (err: any, data?: GetFlowAssociationCommandOutput) => void
+    cb: (err: any, data?: GetFlowAssociationCommandOutput) => void,
   ): void;
   getFlowAssociation(
     args: GetFlowAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFlowAssociationCommandOutput) => void
+    cb: (err: any, data?: GetFlowAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -3242,7 +3242,7 @@ export interface Connect {
   getMetricData(
     args: GetMetricDataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMetricDataCommandOutput) => void
+    cb: (err: any, data?: GetMetricDataCommandOutput) => void,
   ): void;
 
   /**
@@ -3250,13 +3250,13 @@ export interface Connect {
    */
   getMetricDataV2(
     args: GetMetricDataV2CommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMetricDataV2CommandOutput>;
   getMetricDataV2(args: GetMetricDataV2CommandInput, cb: (err: any, data?: GetMetricDataV2CommandOutput) => void): void;
   getMetricDataV2(
     args: GetMetricDataV2CommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMetricDataV2CommandOutput) => void
+    cb: (err: any, data?: GetMetricDataV2CommandOutput) => void,
   ): void;
 
   /**
@@ -3267,7 +3267,7 @@ export interface Connect {
   getPromptFile(
     args: GetPromptFileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPromptFileCommandOutput) => void
+    cb: (err: any, data?: GetPromptFileCommandOutput) => void,
   ): void;
 
   /**
@@ -3275,13 +3275,13 @@ export interface Connect {
    */
   getTaskTemplate(
     args: GetTaskTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTaskTemplateCommandOutput>;
   getTaskTemplate(args: GetTaskTemplateCommandInput, cb: (err: any, data?: GetTaskTemplateCommandOutput) => void): void;
   getTaskTemplate(
     args: GetTaskTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTaskTemplateCommandOutput) => void
+    cb: (err: any, data?: GetTaskTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -3289,16 +3289,16 @@ export interface Connect {
    */
   getTrafficDistribution(
     args: GetTrafficDistributionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTrafficDistributionCommandOutput>;
   getTrafficDistribution(
     args: GetTrafficDistributionCommandInput,
-    cb: (err: any, data?: GetTrafficDistributionCommandOutput) => void
+    cb: (err: any, data?: GetTrafficDistributionCommandOutput) => void,
   ): void;
   getTrafficDistribution(
     args: GetTrafficDistributionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTrafficDistributionCommandOutput) => void
+    cb: (err: any, data?: GetTrafficDistributionCommandOutput) => void,
   ): void;
 
   /**
@@ -3306,16 +3306,16 @@ export interface Connect {
    */
   importPhoneNumber(
     args: ImportPhoneNumberCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ImportPhoneNumberCommandOutput>;
   importPhoneNumber(
     args: ImportPhoneNumberCommandInput,
-    cb: (err: any, data?: ImportPhoneNumberCommandOutput) => void
+    cb: (err: any, data?: ImportPhoneNumberCommandOutput) => void,
   ): void;
   importPhoneNumber(
     args: ImportPhoneNumberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportPhoneNumberCommandOutput) => void
+    cb: (err: any, data?: ImportPhoneNumberCommandOutput) => void,
   ): void;
 
   /**
@@ -3323,16 +3323,16 @@ export interface Connect {
    */
   listAgentStatuses(
     args: ListAgentStatusesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAgentStatusesCommandOutput>;
   listAgentStatuses(
     args: ListAgentStatusesCommandInput,
-    cb: (err: any, data?: ListAgentStatusesCommandOutput) => void
+    cb: (err: any, data?: ListAgentStatusesCommandOutput) => void,
   ): void;
   listAgentStatuses(
     args: ListAgentStatusesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAgentStatusesCommandOutput) => void
+    cb: (err: any, data?: ListAgentStatusesCommandOutput) => void,
   ): void;
 
   /**
@@ -3340,16 +3340,16 @@ export interface Connect {
    */
   listAnalyticsDataAssociations(
     args: ListAnalyticsDataAssociationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAnalyticsDataAssociationsCommandOutput>;
   listAnalyticsDataAssociations(
     args: ListAnalyticsDataAssociationsCommandInput,
-    cb: (err: any, data?: ListAnalyticsDataAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListAnalyticsDataAssociationsCommandOutput) => void,
   ): void;
   listAnalyticsDataAssociations(
     args: ListAnalyticsDataAssociationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAnalyticsDataAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListAnalyticsDataAssociationsCommandOutput) => void,
   ): void;
 
   /**
@@ -3357,16 +3357,16 @@ export interface Connect {
    */
   listApprovedOrigins(
     args: ListApprovedOriginsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApprovedOriginsCommandOutput>;
   listApprovedOrigins(
     args: ListApprovedOriginsCommandInput,
-    cb: (err: any, data?: ListApprovedOriginsCommandOutput) => void
+    cb: (err: any, data?: ListApprovedOriginsCommandOutput) => void,
   ): void;
   listApprovedOrigins(
     args: ListApprovedOriginsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApprovedOriginsCommandOutput) => void
+    cb: (err: any, data?: ListApprovedOriginsCommandOutput) => void,
   ): void;
 
   /**
@@ -3377,7 +3377,7 @@ export interface Connect {
   listBots(
     args: ListBotsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBotsCommandOutput) => void
+    cb: (err: any, data?: ListBotsCommandOutput) => void,
   ): void;
 
   /**
@@ -3385,16 +3385,16 @@ export interface Connect {
    */
   listContactEvaluations(
     args: ListContactEvaluationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListContactEvaluationsCommandOutput>;
   listContactEvaluations(
     args: ListContactEvaluationsCommandInput,
-    cb: (err: any, data?: ListContactEvaluationsCommandOutput) => void
+    cb: (err: any, data?: ListContactEvaluationsCommandOutput) => void,
   ): void;
   listContactEvaluations(
     args: ListContactEvaluationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListContactEvaluationsCommandOutput) => void
+    cb: (err: any, data?: ListContactEvaluationsCommandOutput) => void,
   ): void;
 
   /**
@@ -3402,16 +3402,16 @@ export interface Connect {
    */
   listContactFlowModules(
     args: ListContactFlowModulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListContactFlowModulesCommandOutput>;
   listContactFlowModules(
     args: ListContactFlowModulesCommandInput,
-    cb: (err: any, data?: ListContactFlowModulesCommandOutput) => void
+    cb: (err: any, data?: ListContactFlowModulesCommandOutput) => void,
   ): void;
   listContactFlowModules(
     args: ListContactFlowModulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListContactFlowModulesCommandOutput) => void
+    cb: (err: any, data?: ListContactFlowModulesCommandOutput) => void,
   ): void;
 
   /**
@@ -3419,16 +3419,16 @@ export interface Connect {
    */
   listContactFlows(
     args: ListContactFlowsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListContactFlowsCommandOutput>;
   listContactFlows(
     args: ListContactFlowsCommandInput,
-    cb: (err: any, data?: ListContactFlowsCommandOutput) => void
+    cb: (err: any, data?: ListContactFlowsCommandOutput) => void,
   ): void;
   listContactFlows(
     args: ListContactFlowsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListContactFlowsCommandOutput) => void
+    cb: (err: any, data?: ListContactFlowsCommandOutput) => void,
   ): void;
 
   /**
@@ -3436,16 +3436,16 @@ export interface Connect {
    */
   listContactReferences(
     args: ListContactReferencesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListContactReferencesCommandOutput>;
   listContactReferences(
     args: ListContactReferencesCommandInput,
-    cb: (err: any, data?: ListContactReferencesCommandOutput) => void
+    cb: (err: any, data?: ListContactReferencesCommandOutput) => void,
   ): void;
   listContactReferences(
     args: ListContactReferencesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListContactReferencesCommandOutput) => void
+    cb: (err: any, data?: ListContactReferencesCommandOutput) => void,
   ): void;
 
   /**
@@ -3453,16 +3453,16 @@ export interface Connect {
    */
   listDefaultVocabularies(
     args: ListDefaultVocabulariesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDefaultVocabulariesCommandOutput>;
   listDefaultVocabularies(
     args: ListDefaultVocabulariesCommandInput,
-    cb: (err: any, data?: ListDefaultVocabulariesCommandOutput) => void
+    cb: (err: any, data?: ListDefaultVocabulariesCommandOutput) => void,
   ): void;
   listDefaultVocabularies(
     args: ListDefaultVocabulariesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDefaultVocabulariesCommandOutput) => void
+    cb: (err: any, data?: ListDefaultVocabulariesCommandOutput) => void,
   ): void;
 
   /**
@@ -3470,16 +3470,16 @@ export interface Connect {
    */
   listEvaluationForms(
     args: ListEvaluationFormsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEvaluationFormsCommandOutput>;
   listEvaluationForms(
     args: ListEvaluationFormsCommandInput,
-    cb: (err: any, data?: ListEvaluationFormsCommandOutput) => void
+    cb: (err: any, data?: ListEvaluationFormsCommandOutput) => void,
   ): void;
   listEvaluationForms(
     args: ListEvaluationFormsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEvaluationFormsCommandOutput) => void
+    cb: (err: any, data?: ListEvaluationFormsCommandOutput) => void,
   ): void;
 
   /**
@@ -3487,16 +3487,16 @@ export interface Connect {
    */
   listEvaluationFormVersions(
     args: ListEvaluationFormVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEvaluationFormVersionsCommandOutput>;
   listEvaluationFormVersions(
     args: ListEvaluationFormVersionsCommandInput,
-    cb: (err: any, data?: ListEvaluationFormVersionsCommandOutput) => void
+    cb: (err: any, data?: ListEvaluationFormVersionsCommandOutput) => void,
   ): void;
   listEvaluationFormVersions(
     args: ListEvaluationFormVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEvaluationFormVersionsCommandOutput) => void
+    cb: (err: any, data?: ListEvaluationFormVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -3504,16 +3504,16 @@ export interface Connect {
    */
   listFlowAssociations(
     args: ListFlowAssociationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFlowAssociationsCommandOutput>;
   listFlowAssociations(
     args: ListFlowAssociationsCommandInput,
-    cb: (err: any, data?: ListFlowAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListFlowAssociationsCommandOutput) => void,
   ): void;
   listFlowAssociations(
     args: ListFlowAssociationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFlowAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListFlowAssociationsCommandOutput) => void,
   ): void;
 
   /**
@@ -3521,16 +3521,16 @@ export interface Connect {
    */
   listHoursOfOperations(
     args: ListHoursOfOperationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListHoursOfOperationsCommandOutput>;
   listHoursOfOperations(
     args: ListHoursOfOperationsCommandInput,
-    cb: (err: any, data?: ListHoursOfOperationsCommandOutput) => void
+    cb: (err: any, data?: ListHoursOfOperationsCommandOutput) => void,
   ): void;
   listHoursOfOperations(
     args: ListHoursOfOperationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListHoursOfOperationsCommandOutput) => void
+    cb: (err: any, data?: ListHoursOfOperationsCommandOutput) => void,
   ): void;
 
   /**
@@ -3538,16 +3538,16 @@ export interface Connect {
    */
   listInstanceAttributes(
     args: ListInstanceAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListInstanceAttributesCommandOutput>;
   listInstanceAttributes(
     args: ListInstanceAttributesCommandInput,
-    cb: (err: any, data?: ListInstanceAttributesCommandOutput) => void
+    cb: (err: any, data?: ListInstanceAttributesCommandOutput) => void,
   ): void;
   listInstanceAttributes(
     args: ListInstanceAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListInstanceAttributesCommandOutput) => void
+    cb: (err: any, data?: ListInstanceAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -3559,7 +3559,7 @@ export interface Connect {
   listInstances(
     args: ListInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListInstancesCommandOutput) => void
+    cb: (err: any, data?: ListInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -3567,16 +3567,16 @@ export interface Connect {
    */
   listInstanceStorageConfigs(
     args: ListInstanceStorageConfigsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListInstanceStorageConfigsCommandOutput>;
   listInstanceStorageConfigs(
     args: ListInstanceStorageConfigsCommandInput,
-    cb: (err: any, data?: ListInstanceStorageConfigsCommandOutput) => void
+    cb: (err: any, data?: ListInstanceStorageConfigsCommandOutput) => void,
   ): void;
   listInstanceStorageConfigs(
     args: ListInstanceStorageConfigsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListInstanceStorageConfigsCommandOutput) => void
+    cb: (err: any, data?: ListInstanceStorageConfigsCommandOutput) => void,
   ): void;
 
   /**
@@ -3584,16 +3584,16 @@ export interface Connect {
    */
   listIntegrationAssociations(
     args: ListIntegrationAssociationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListIntegrationAssociationsCommandOutput>;
   listIntegrationAssociations(
     args: ListIntegrationAssociationsCommandInput,
-    cb: (err: any, data?: ListIntegrationAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListIntegrationAssociationsCommandOutput) => void,
   ): void;
   listIntegrationAssociations(
     args: ListIntegrationAssociationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListIntegrationAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListIntegrationAssociationsCommandOutput) => void,
   ): void;
 
   /**
@@ -3601,16 +3601,16 @@ export interface Connect {
    */
   listLambdaFunctions(
     args: ListLambdaFunctionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListLambdaFunctionsCommandOutput>;
   listLambdaFunctions(
     args: ListLambdaFunctionsCommandInput,
-    cb: (err: any, data?: ListLambdaFunctionsCommandOutput) => void
+    cb: (err: any, data?: ListLambdaFunctionsCommandOutput) => void,
   ): void;
   listLambdaFunctions(
     args: ListLambdaFunctionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLambdaFunctionsCommandOutput) => void
+    cb: (err: any, data?: ListLambdaFunctionsCommandOutput) => void,
   ): void;
 
   /**
@@ -3621,7 +3621,7 @@ export interface Connect {
   listLexBots(
     args: ListLexBotsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLexBotsCommandOutput) => void
+    cb: (err: any, data?: ListLexBotsCommandOutput) => void,
   ): void;
 
   /**
@@ -3629,16 +3629,16 @@ export interface Connect {
    */
   listPhoneNumbers(
     args: ListPhoneNumbersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPhoneNumbersCommandOutput>;
   listPhoneNumbers(
     args: ListPhoneNumbersCommandInput,
-    cb: (err: any, data?: ListPhoneNumbersCommandOutput) => void
+    cb: (err: any, data?: ListPhoneNumbersCommandOutput) => void,
   ): void;
   listPhoneNumbers(
     args: ListPhoneNumbersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPhoneNumbersCommandOutput) => void
+    cb: (err: any, data?: ListPhoneNumbersCommandOutput) => void,
   ): void;
 
   /**
@@ -3647,16 +3647,16 @@ export interface Connect {
   listPhoneNumbersV2(): Promise<ListPhoneNumbersV2CommandOutput>;
   listPhoneNumbersV2(
     args: ListPhoneNumbersV2CommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPhoneNumbersV2CommandOutput>;
   listPhoneNumbersV2(
     args: ListPhoneNumbersV2CommandInput,
-    cb: (err: any, data?: ListPhoneNumbersV2CommandOutput) => void
+    cb: (err: any, data?: ListPhoneNumbersV2CommandOutput) => void,
   ): void;
   listPhoneNumbersV2(
     args: ListPhoneNumbersV2CommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPhoneNumbersV2CommandOutput) => void
+    cb: (err: any, data?: ListPhoneNumbersV2CommandOutput) => void,
   ): void;
 
   /**
@@ -3664,16 +3664,16 @@ export interface Connect {
    */
   listPredefinedAttributes(
     args: ListPredefinedAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPredefinedAttributesCommandOutput>;
   listPredefinedAttributes(
     args: ListPredefinedAttributesCommandInput,
-    cb: (err: any, data?: ListPredefinedAttributesCommandOutput) => void
+    cb: (err: any, data?: ListPredefinedAttributesCommandOutput) => void,
   ): void;
   listPredefinedAttributes(
     args: ListPredefinedAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPredefinedAttributesCommandOutput) => void
+    cb: (err: any, data?: ListPredefinedAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -3684,7 +3684,7 @@ export interface Connect {
   listPrompts(
     args: ListPromptsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPromptsCommandOutput) => void
+    cb: (err: any, data?: ListPromptsCommandOutput) => void,
   ): void;
 
   /**
@@ -3692,16 +3692,16 @@ export interface Connect {
    */
   listQueueQuickConnects(
     args: ListQueueQuickConnectsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListQueueQuickConnectsCommandOutput>;
   listQueueQuickConnects(
     args: ListQueueQuickConnectsCommandInput,
-    cb: (err: any, data?: ListQueueQuickConnectsCommandOutput) => void
+    cb: (err: any, data?: ListQueueQuickConnectsCommandOutput) => void,
   ): void;
   listQueueQuickConnects(
     args: ListQueueQuickConnectsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListQueueQuickConnectsCommandOutput) => void
+    cb: (err: any, data?: ListQueueQuickConnectsCommandOutput) => void,
   ): void;
 
   /**
@@ -3712,7 +3712,7 @@ export interface Connect {
   listQueues(
     args: ListQueuesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListQueuesCommandOutput) => void
+    cb: (err: any, data?: ListQueuesCommandOutput) => void,
   ): void;
 
   /**
@@ -3720,16 +3720,16 @@ export interface Connect {
    */
   listQuickConnects(
     args: ListQuickConnectsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListQuickConnectsCommandOutput>;
   listQuickConnects(
     args: ListQuickConnectsCommandInput,
-    cb: (err: any, data?: ListQuickConnectsCommandOutput) => void
+    cb: (err: any, data?: ListQuickConnectsCommandOutput) => void,
   ): void;
   listQuickConnects(
     args: ListQuickConnectsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListQuickConnectsCommandOutput) => void
+    cb: (err: any, data?: ListQuickConnectsCommandOutput) => void,
   ): void;
 
   /**
@@ -3737,16 +3737,16 @@ export interface Connect {
    */
   listRealtimeContactAnalysisSegmentsV2(
     args: ListRealtimeContactAnalysisSegmentsV2CommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRealtimeContactAnalysisSegmentsV2CommandOutput>;
   listRealtimeContactAnalysisSegmentsV2(
     args: ListRealtimeContactAnalysisSegmentsV2CommandInput,
-    cb: (err: any, data?: ListRealtimeContactAnalysisSegmentsV2CommandOutput) => void
+    cb: (err: any, data?: ListRealtimeContactAnalysisSegmentsV2CommandOutput) => void,
   ): void;
   listRealtimeContactAnalysisSegmentsV2(
     args: ListRealtimeContactAnalysisSegmentsV2CommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRealtimeContactAnalysisSegmentsV2CommandOutput) => void
+    cb: (err: any, data?: ListRealtimeContactAnalysisSegmentsV2CommandOutput) => void,
   ): void;
 
   /**
@@ -3754,16 +3754,16 @@ export interface Connect {
    */
   listRoutingProfileQueues(
     args: ListRoutingProfileQueuesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRoutingProfileQueuesCommandOutput>;
   listRoutingProfileQueues(
     args: ListRoutingProfileQueuesCommandInput,
-    cb: (err: any, data?: ListRoutingProfileQueuesCommandOutput) => void
+    cb: (err: any, data?: ListRoutingProfileQueuesCommandOutput) => void,
   ): void;
   listRoutingProfileQueues(
     args: ListRoutingProfileQueuesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRoutingProfileQueuesCommandOutput) => void
+    cb: (err: any, data?: ListRoutingProfileQueuesCommandOutput) => void,
   ): void;
 
   /**
@@ -3771,16 +3771,16 @@ export interface Connect {
    */
   listRoutingProfiles(
     args: ListRoutingProfilesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRoutingProfilesCommandOutput>;
   listRoutingProfiles(
     args: ListRoutingProfilesCommandInput,
-    cb: (err: any, data?: ListRoutingProfilesCommandOutput) => void
+    cb: (err: any, data?: ListRoutingProfilesCommandOutput) => void,
   ): void;
   listRoutingProfiles(
     args: ListRoutingProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRoutingProfilesCommandOutput) => void
+    cb: (err: any, data?: ListRoutingProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -3791,7 +3791,7 @@ export interface Connect {
   listRules(
     args: ListRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRulesCommandOutput) => void
+    cb: (err: any, data?: ListRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -3799,16 +3799,16 @@ export interface Connect {
    */
   listSecurityKeys(
     args: ListSecurityKeysCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSecurityKeysCommandOutput>;
   listSecurityKeys(
     args: ListSecurityKeysCommandInput,
-    cb: (err: any, data?: ListSecurityKeysCommandOutput) => void
+    cb: (err: any, data?: ListSecurityKeysCommandOutput) => void,
   ): void;
   listSecurityKeys(
     args: ListSecurityKeysCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSecurityKeysCommandOutput) => void
+    cb: (err: any, data?: ListSecurityKeysCommandOutput) => void,
   ): void;
 
   /**
@@ -3816,16 +3816,16 @@ export interface Connect {
    */
   listSecurityProfileApplications(
     args: ListSecurityProfileApplicationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSecurityProfileApplicationsCommandOutput>;
   listSecurityProfileApplications(
     args: ListSecurityProfileApplicationsCommandInput,
-    cb: (err: any, data?: ListSecurityProfileApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListSecurityProfileApplicationsCommandOutput) => void,
   ): void;
   listSecurityProfileApplications(
     args: ListSecurityProfileApplicationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSecurityProfileApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListSecurityProfileApplicationsCommandOutput) => void,
   ): void;
 
   /**
@@ -3833,16 +3833,16 @@ export interface Connect {
    */
   listSecurityProfilePermissions(
     args: ListSecurityProfilePermissionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSecurityProfilePermissionsCommandOutput>;
   listSecurityProfilePermissions(
     args: ListSecurityProfilePermissionsCommandInput,
-    cb: (err: any, data?: ListSecurityProfilePermissionsCommandOutput) => void
+    cb: (err: any, data?: ListSecurityProfilePermissionsCommandOutput) => void,
   ): void;
   listSecurityProfilePermissions(
     args: ListSecurityProfilePermissionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSecurityProfilePermissionsCommandOutput) => void
+    cb: (err: any, data?: ListSecurityProfilePermissionsCommandOutput) => void,
   ): void;
 
   /**
@@ -3850,16 +3850,16 @@ export interface Connect {
    */
   listSecurityProfiles(
     args: ListSecurityProfilesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSecurityProfilesCommandOutput>;
   listSecurityProfiles(
     args: ListSecurityProfilesCommandInput,
-    cb: (err: any, data?: ListSecurityProfilesCommandOutput) => void
+    cb: (err: any, data?: ListSecurityProfilesCommandOutput) => void,
   ): void;
   listSecurityProfiles(
     args: ListSecurityProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSecurityProfilesCommandOutput) => void
+    cb: (err: any, data?: ListSecurityProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -3867,16 +3867,16 @@ export interface Connect {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -3884,16 +3884,16 @@ export interface Connect {
    */
   listTaskTemplates(
     args: ListTaskTemplatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTaskTemplatesCommandOutput>;
   listTaskTemplates(
     args: ListTaskTemplatesCommandInput,
-    cb: (err: any, data?: ListTaskTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListTaskTemplatesCommandOutput) => void,
   ): void;
   listTaskTemplates(
     args: ListTaskTemplatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTaskTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListTaskTemplatesCommandOutput) => void,
   ): void;
 
   /**
@@ -3902,16 +3902,16 @@ export interface Connect {
   listTrafficDistributionGroups(): Promise<ListTrafficDistributionGroupsCommandOutput>;
   listTrafficDistributionGroups(
     args: ListTrafficDistributionGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTrafficDistributionGroupsCommandOutput>;
   listTrafficDistributionGroups(
     args: ListTrafficDistributionGroupsCommandInput,
-    cb: (err: any, data?: ListTrafficDistributionGroupsCommandOutput) => void
+    cb: (err: any, data?: ListTrafficDistributionGroupsCommandOutput) => void,
   ): void;
   listTrafficDistributionGroups(
     args: ListTrafficDistributionGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTrafficDistributionGroupsCommandOutput) => void
+    cb: (err: any, data?: ListTrafficDistributionGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -3919,16 +3919,16 @@ export interface Connect {
    */
   listTrafficDistributionGroupUsers(
     args: ListTrafficDistributionGroupUsersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTrafficDistributionGroupUsersCommandOutput>;
   listTrafficDistributionGroupUsers(
     args: ListTrafficDistributionGroupUsersCommandInput,
-    cb: (err: any, data?: ListTrafficDistributionGroupUsersCommandOutput) => void
+    cb: (err: any, data?: ListTrafficDistributionGroupUsersCommandOutput) => void,
   ): void;
   listTrafficDistributionGroupUsers(
     args: ListTrafficDistributionGroupUsersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTrafficDistributionGroupUsersCommandOutput) => void
+    cb: (err: any, data?: ListTrafficDistributionGroupUsersCommandOutput) => void,
   ): void;
 
   /**
@@ -3939,7 +3939,7 @@ export interface Connect {
   listUseCases(
     args: ListUseCasesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListUseCasesCommandOutput) => void
+    cb: (err: any, data?: ListUseCasesCommandOutput) => void,
   ): void;
 
   /**
@@ -3947,16 +3947,16 @@ export interface Connect {
    */
   listUserHierarchyGroups(
     args: ListUserHierarchyGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListUserHierarchyGroupsCommandOutput>;
   listUserHierarchyGroups(
     args: ListUserHierarchyGroupsCommandInput,
-    cb: (err: any, data?: ListUserHierarchyGroupsCommandOutput) => void
+    cb: (err: any, data?: ListUserHierarchyGroupsCommandOutput) => void,
   ): void;
   listUserHierarchyGroups(
     args: ListUserHierarchyGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListUserHierarchyGroupsCommandOutput) => void
+    cb: (err: any, data?: ListUserHierarchyGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -3964,16 +3964,16 @@ export interface Connect {
    */
   listUserProficiencies(
     args: ListUserProficienciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListUserProficienciesCommandOutput>;
   listUserProficiencies(
     args: ListUserProficienciesCommandInput,
-    cb: (err: any, data?: ListUserProficienciesCommandOutput) => void
+    cb: (err: any, data?: ListUserProficienciesCommandOutput) => void,
   ): void;
   listUserProficiencies(
     args: ListUserProficienciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListUserProficienciesCommandOutput) => void
+    cb: (err: any, data?: ListUserProficienciesCommandOutput) => void,
   ): void;
 
   /**
@@ -3984,7 +3984,7 @@ export interface Connect {
   listUsers(
     args: ListUsersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListUsersCommandOutput) => void
+    cb: (err: any, data?: ListUsersCommandOutput) => void,
   ): void;
 
   /**
@@ -3995,7 +3995,7 @@ export interface Connect {
   listViews(
     args: ListViewsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListViewsCommandOutput) => void
+    cb: (err: any, data?: ListViewsCommandOutput) => void,
   ): void;
 
   /**
@@ -4003,16 +4003,16 @@ export interface Connect {
    */
   listViewVersions(
     args: ListViewVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListViewVersionsCommandOutput>;
   listViewVersions(
     args: ListViewVersionsCommandInput,
-    cb: (err: any, data?: ListViewVersionsCommandOutput) => void
+    cb: (err: any, data?: ListViewVersionsCommandOutput) => void,
   ): void;
   listViewVersions(
     args: ListViewVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListViewVersionsCommandOutput) => void
+    cb: (err: any, data?: ListViewVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -4020,13 +4020,13 @@ export interface Connect {
    */
   monitorContact(
     args: MonitorContactCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<MonitorContactCommandOutput>;
   monitorContact(args: MonitorContactCommandInput, cb: (err: any, data?: MonitorContactCommandOutput) => void): void;
   monitorContact(
     args: MonitorContactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: MonitorContactCommandOutput) => void
+    cb: (err: any, data?: MonitorContactCommandOutput) => void,
   ): void;
 
   /**
@@ -4037,7 +4037,7 @@ export interface Connect {
   pauseContact(
     args: PauseContactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PauseContactCommandOutput) => void
+    cb: (err: any, data?: PauseContactCommandOutput) => void,
   ): void;
 
   /**
@@ -4048,7 +4048,7 @@ export interface Connect {
   putUserStatus(
     args: PutUserStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutUserStatusCommandOutput) => void
+    cb: (err: any, data?: PutUserStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -4056,16 +4056,16 @@ export interface Connect {
    */
   releasePhoneNumber(
     args: ReleasePhoneNumberCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ReleasePhoneNumberCommandOutput>;
   releasePhoneNumber(
     args: ReleasePhoneNumberCommandInput,
-    cb: (err: any, data?: ReleasePhoneNumberCommandOutput) => void
+    cb: (err: any, data?: ReleasePhoneNumberCommandOutput) => void,
   ): void;
   releasePhoneNumber(
     args: ReleasePhoneNumberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ReleasePhoneNumberCommandOutput) => void
+    cb: (err: any, data?: ReleasePhoneNumberCommandOutput) => void,
   ): void;
 
   /**
@@ -4073,16 +4073,16 @@ export interface Connect {
    */
   replicateInstance(
     args: ReplicateInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ReplicateInstanceCommandOutput>;
   replicateInstance(
     args: ReplicateInstanceCommandInput,
-    cb: (err: any, data?: ReplicateInstanceCommandOutput) => void
+    cb: (err: any, data?: ReplicateInstanceCommandOutput) => void,
   ): void;
   replicateInstance(
     args: ReplicateInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ReplicateInstanceCommandOutput) => void
+    cb: (err: any, data?: ReplicateInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -4093,7 +4093,7 @@ export interface Connect {
   resumeContact(
     args: ResumeContactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ResumeContactCommandOutput) => void
+    cb: (err: any, data?: ResumeContactCommandOutput) => void,
   ): void;
 
   /**
@@ -4101,16 +4101,16 @@ export interface Connect {
    */
   resumeContactRecording(
     args: ResumeContactRecordingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ResumeContactRecordingCommandOutput>;
   resumeContactRecording(
     args: ResumeContactRecordingCommandInput,
-    cb: (err: any, data?: ResumeContactRecordingCommandOutput) => void
+    cb: (err: any, data?: ResumeContactRecordingCommandOutput) => void,
   ): void;
   resumeContactRecording(
     args: ResumeContactRecordingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ResumeContactRecordingCommandOutput) => void
+    cb: (err: any, data?: ResumeContactRecordingCommandOutput) => void,
   ): void;
 
   /**
@@ -4118,16 +4118,16 @@ export interface Connect {
    */
   searchAvailablePhoneNumbers(
     args: SearchAvailablePhoneNumbersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchAvailablePhoneNumbersCommandOutput>;
   searchAvailablePhoneNumbers(
     args: SearchAvailablePhoneNumbersCommandInput,
-    cb: (err: any, data?: SearchAvailablePhoneNumbersCommandOutput) => void
+    cb: (err: any, data?: SearchAvailablePhoneNumbersCommandOutput) => void,
   ): void;
   searchAvailablePhoneNumbers(
     args: SearchAvailablePhoneNumbersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchAvailablePhoneNumbersCommandOutput) => void
+    cb: (err: any, data?: SearchAvailablePhoneNumbersCommandOutput) => void,
   ): void;
 
   /**
@@ -4135,16 +4135,16 @@ export interface Connect {
    */
   searchContactFlowModules(
     args: SearchContactFlowModulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchContactFlowModulesCommandOutput>;
   searchContactFlowModules(
     args: SearchContactFlowModulesCommandInput,
-    cb: (err: any, data?: SearchContactFlowModulesCommandOutput) => void
+    cb: (err: any, data?: SearchContactFlowModulesCommandOutput) => void,
   ): void;
   searchContactFlowModules(
     args: SearchContactFlowModulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchContactFlowModulesCommandOutput) => void
+    cb: (err: any, data?: SearchContactFlowModulesCommandOutput) => void,
   ): void;
 
   /**
@@ -4152,16 +4152,16 @@ export interface Connect {
    */
   searchContactFlows(
     args: SearchContactFlowsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchContactFlowsCommandOutput>;
   searchContactFlows(
     args: SearchContactFlowsCommandInput,
-    cb: (err: any, data?: SearchContactFlowsCommandOutput) => void
+    cb: (err: any, data?: SearchContactFlowsCommandOutput) => void,
   ): void;
   searchContactFlows(
     args: SearchContactFlowsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchContactFlowsCommandOutput) => void
+    cb: (err: any, data?: SearchContactFlowsCommandOutput) => void,
   ): void;
 
   /**
@@ -4169,13 +4169,13 @@ export interface Connect {
    */
   searchContacts(
     args: SearchContactsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchContactsCommandOutput>;
   searchContacts(args: SearchContactsCommandInput, cb: (err: any, data?: SearchContactsCommandOutput) => void): void;
   searchContacts(
     args: SearchContactsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchContactsCommandOutput) => void
+    cb: (err: any, data?: SearchContactsCommandOutput) => void,
   ): void;
 
   /**
@@ -4183,16 +4183,16 @@ export interface Connect {
    */
   searchHoursOfOperations(
     args: SearchHoursOfOperationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchHoursOfOperationsCommandOutput>;
   searchHoursOfOperations(
     args: SearchHoursOfOperationsCommandInput,
-    cb: (err: any, data?: SearchHoursOfOperationsCommandOutput) => void
+    cb: (err: any, data?: SearchHoursOfOperationsCommandOutput) => void,
   ): void;
   searchHoursOfOperations(
     args: SearchHoursOfOperationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchHoursOfOperationsCommandOutput) => void
+    cb: (err: any, data?: SearchHoursOfOperationsCommandOutput) => void,
   ): void;
 
   /**
@@ -4200,16 +4200,16 @@ export interface Connect {
    */
   searchPredefinedAttributes(
     args: SearchPredefinedAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchPredefinedAttributesCommandOutput>;
   searchPredefinedAttributes(
     args: SearchPredefinedAttributesCommandInput,
-    cb: (err: any, data?: SearchPredefinedAttributesCommandOutput) => void
+    cb: (err: any, data?: SearchPredefinedAttributesCommandOutput) => void,
   ): void;
   searchPredefinedAttributes(
     args: SearchPredefinedAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchPredefinedAttributesCommandOutput) => void
+    cb: (err: any, data?: SearchPredefinedAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -4220,7 +4220,7 @@ export interface Connect {
   searchPrompts(
     args: SearchPromptsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchPromptsCommandOutput) => void
+    cb: (err: any, data?: SearchPromptsCommandOutput) => void,
   ): void;
 
   /**
@@ -4231,7 +4231,7 @@ export interface Connect {
   searchQueues(
     args: SearchQueuesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchQueuesCommandOutput) => void
+    cb: (err: any, data?: SearchQueuesCommandOutput) => void,
   ): void;
 
   /**
@@ -4239,16 +4239,16 @@ export interface Connect {
    */
   searchQuickConnects(
     args: SearchQuickConnectsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchQuickConnectsCommandOutput>;
   searchQuickConnects(
     args: SearchQuickConnectsCommandInput,
-    cb: (err: any, data?: SearchQuickConnectsCommandOutput) => void
+    cb: (err: any, data?: SearchQuickConnectsCommandOutput) => void,
   ): void;
   searchQuickConnects(
     args: SearchQuickConnectsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchQuickConnectsCommandOutput) => void
+    cb: (err: any, data?: SearchQuickConnectsCommandOutput) => void,
   ): void;
 
   /**
@@ -4256,16 +4256,16 @@ export interface Connect {
    */
   searchResourceTags(
     args: SearchResourceTagsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchResourceTagsCommandOutput>;
   searchResourceTags(
     args: SearchResourceTagsCommandInput,
-    cb: (err: any, data?: SearchResourceTagsCommandOutput) => void
+    cb: (err: any, data?: SearchResourceTagsCommandOutput) => void,
   ): void;
   searchResourceTags(
     args: SearchResourceTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchResourceTagsCommandOutput) => void
+    cb: (err: any, data?: SearchResourceTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -4273,16 +4273,16 @@ export interface Connect {
    */
   searchRoutingProfiles(
     args: SearchRoutingProfilesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchRoutingProfilesCommandOutput>;
   searchRoutingProfiles(
     args: SearchRoutingProfilesCommandInput,
-    cb: (err: any, data?: SearchRoutingProfilesCommandOutput) => void
+    cb: (err: any, data?: SearchRoutingProfilesCommandOutput) => void,
   ): void;
   searchRoutingProfiles(
     args: SearchRoutingProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchRoutingProfilesCommandOutput) => void
+    cb: (err: any, data?: SearchRoutingProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -4290,16 +4290,16 @@ export interface Connect {
    */
   searchSecurityProfiles(
     args: SearchSecurityProfilesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchSecurityProfilesCommandOutput>;
   searchSecurityProfiles(
     args: SearchSecurityProfilesCommandInput,
-    cb: (err: any, data?: SearchSecurityProfilesCommandOutput) => void
+    cb: (err: any, data?: SearchSecurityProfilesCommandOutput) => void,
   ): void;
   searchSecurityProfiles(
     args: SearchSecurityProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchSecurityProfilesCommandOutput) => void
+    cb: (err: any, data?: SearchSecurityProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -4310,7 +4310,7 @@ export interface Connect {
   searchUsers(
     args: SearchUsersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchUsersCommandOutput) => void
+    cb: (err: any, data?: SearchUsersCommandOutput) => void,
   ): void;
 
   /**
@@ -4318,16 +4318,16 @@ export interface Connect {
    */
   searchVocabularies(
     args: SearchVocabulariesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchVocabulariesCommandOutput>;
   searchVocabularies(
     args: SearchVocabulariesCommandInput,
-    cb: (err: any, data?: SearchVocabulariesCommandOutput) => void
+    cb: (err: any, data?: SearchVocabulariesCommandOutput) => void,
   ): void;
   searchVocabularies(
     args: SearchVocabulariesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchVocabulariesCommandOutput) => void
+    cb: (err: any, data?: SearchVocabulariesCommandOutput) => void,
   ): void;
 
   /**
@@ -4335,16 +4335,16 @@ export interface Connect {
    */
   sendChatIntegrationEvent(
     args: SendChatIntegrationEventCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SendChatIntegrationEventCommandOutput>;
   sendChatIntegrationEvent(
     args: SendChatIntegrationEventCommandInput,
-    cb: (err: any, data?: SendChatIntegrationEventCommandOutput) => void
+    cb: (err: any, data?: SendChatIntegrationEventCommandOutput) => void,
   ): void;
   sendChatIntegrationEvent(
     args: SendChatIntegrationEventCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendChatIntegrationEventCommandOutput) => void
+    cb: (err: any, data?: SendChatIntegrationEventCommandOutput) => void,
   ): void;
 
   /**
@@ -4352,16 +4352,16 @@ export interface Connect {
    */
   startAttachedFileUpload(
     args: StartAttachedFileUploadCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartAttachedFileUploadCommandOutput>;
   startAttachedFileUpload(
     args: StartAttachedFileUploadCommandInput,
-    cb: (err: any, data?: StartAttachedFileUploadCommandOutput) => void
+    cb: (err: any, data?: StartAttachedFileUploadCommandOutput) => void,
   ): void;
   startAttachedFileUpload(
     args: StartAttachedFileUploadCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartAttachedFileUploadCommandOutput) => void
+    cb: (err: any, data?: StartAttachedFileUploadCommandOutput) => void,
   ): void;
 
   /**
@@ -4369,16 +4369,16 @@ export interface Connect {
    */
   startChatContact(
     args: StartChatContactCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartChatContactCommandOutput>;
   startChatContact(
     args: StartChatContactCommandInput,
-    cb: (err: any, data?: StartChatContactCommandOutput) => void
+    cb: (err: any, data?: StartChatContactCommandOutput) => void,
   ): void;
   startChatContact(
     args: StartChatContactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartChatContactCommandOutput) => void
+    cb: (err: any, data?: StartChatContactCommandOutput) => void,
   ): void;
 
   /**
@@ -4386,16 +4386,16 @@ export interface Connect {
    */
   startContactEvaluation(
     args: StartContactEvaluationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartContactEvaluationCommandOutput>;
   startContactEvaluation(
     args: StartContactEvaluationCommandInput,
-    cb: (err: any, data?: StartContactEvaluationCommandOutput) => void
+    cb: (err: any, data?: StartContactEvaluationCommandOutput) => void,
   ): void;
   startContactEvaluation(
     args: StartContactEvaluationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartContactEvaluationCommandOutput) => void
+    cb: (err: any, data?: StartContactEvaluationCommandOutput) => void,
   ): void;
 
   /**
@@ -4403,16 +4403,16 @@ export interface Connect {
    */
   startContactRecording(
     args: StartContactRecordingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartContactRecordingCommandOutput>;
   startContactRecording(
     args: StartContactRecordingCommandInput,
-    cb: (err: any, data?: StartContactRecordingCommandOutput) => void
+    cb: (err: any, data?: StartContactRecordingCommandOutput) => void,
   ): void;
   startContactRecording(
     args: StartContactRecordingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartContactRecordingCommandOutput) => void
+    cb: (err: any, data?: StartContactRecordingCommandOutput) => void,
   ): void;
 
   /**
@@ -4420,16 +4420,16 @@ export interface Connect {
    */
   startContactStreaming(
     args: StartContactStreamingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartContactStreamingCommandOutput>;
   startContactStreaming(
     args: StartContactStreamingCommandInput,
-    cb: (err: any, data?: StartContactStreamingCommandOutput) => void
+    cb: (err: any, data?: StartContactStreamingCommandOutput) => void,
   ): void;
   startContactStreaming(
     args: StartContactStreamingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartContactStreamingCommandOutput) => void
+    cb: (err: any, data?: StartContactStreamingCommandOutput) => void,
   ): void;
 
   /**
@@ -4437,16 +4437,16 @@ export interface Connect {
    */
   startOutboundVoiceContact(
     args: StartOutboundVoiceContactCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartOutboundVoiceContactCommandOutput>;
   startOutboundVoiceContact(
     args: StartOutboundVoiceContactCommandInput,
-    cb: (err: any, data?: StartOutboundVoiceContactCommandOutput) => void
+    cb: (err: any, data?: StartOutboundVoiceContactCommandOutput) => void,
   ): void;
   startOutboundVoiceContact(
     args: StartOutboundVoiceContactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartOutboundVoiceContactCommandOutput) => void
+    cb: (err: any, data?: StartOutboundVoiceContactCommandOutput) => void,
   ): void;
 
   /**
@@ -4454,16 +4454,16 @@ export interface Connect {
    */
   startTaskContact(
     args: StartTaskContactCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartTaskContactCommandOutput>;
   startTaskContact(
     args: StartTaskContactCommandInput,
-    cb: (err: any, data?: StartTaskContactCommandOutput) => void
+    cb: (err: any, data?: StartTaskContactCommandOutput) => void,
   ): void;
   startTaskContact(
     args: StartTaskContactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartTaskContactCommandOutput) => void
+    cb: (err: any, data?: StartTaskContactCommandOutput) => void,
   ): void;
 
   /**
@@ -4471,16 +4471,16 @@ export interface Connect {
    */
   startWebRTCContact(
     args: StartWebRTCContactCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartWebRTCContactCommandOutput>;
   startWebRTCContact(
     args: StartWebRTCContactCommandInput,
-    cb: (err: any, data?: StartWebRTCContactCommandOutput) => void
+    cb: (err: any, data?: StartWebRTCContactCommandOutput) => void,
   ): void;
   startWebRTCContact(
     args: StartWebRTCContactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartWebRTCContactCommandOutput) => void
+    cb: (err: any, data?: StartWebRTCContactCommandOutput) => void,
   ): void;
 
   /**
@@ -4491,7 +4491,7 @@ export interface Connect {
   stopContact(
     args: StopContactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopContactCommandOutput) => void
+    cb: (err: any, data?: StopContactCommandOutput) => void,
   ): void;
 
   /**
@@ -4499,16 +4499,16 @@ export interface Connect {
    */
   stopContactRecording(
     args: StopContactRecordingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopContactRecordingCommandOutput>;
   stopContactRecording(
     args: StopContactRecordingCommandInput,
-    cb: (err: any, data?: StopContactRecordingCommandOutput) => void
+    cb: (err: any, data?: StopContactRecordingCommandOutput) => void,
   ): void;
   stopContactRecording(
     args: StopContactRecordingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopContactRecordingCommandOutput) => void
+    cb: (err: any, data?: StopContactRecordingCommandOutput) => void,
   ): void;
 
   /**
@@ -4516,16 +4516,16 @@ export interface Connect {
    */
   stopContactStreaming(
     args: StopContactStreamingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopContactStreamingCommandOutput>;
   stopContactStreaming(
     args: StopContactStreamingCommandInput,
-    cb: (err: any, data?: StopContactStreamingCommandOutput) => void
+    cb: (err: any, data?: StopContactStreamingCommandOutput) => void,
   ): void;
   stopContactStreaming(
     args: StopContactStreamingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopContactStreamingCommandOutput) => void
+    cb: (err: any, data?: StopContactStreamingCommandOutput) => void,
   ): void;
 
   /**
@@ -4533,16 +4533,16 @@ export interface Connect {
    */
   submitContactEvaluation(
     args: SubmitContactEvaluationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SubmitContactEvaluationCommandOutput>;
   submitContactEvaluation(
     args: SubmitContactEvaluationCommandInput,
-    cb: (err: any, data?: SubmitContactEvaluationCommandOutput) => void
+    cb: (err: any, data?: SubmitContactEvaluationCommandOutput) => void,
   ): void;
   submitContactEvaluation(
     args: SubmitContactEvaluationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SubmitContactEvaluationCommandOutput) => void
+    cb: (err: any, data?: SubmitContactEvaluationCommandOutput) => void,
   ): void;
 
   /**
@@ -4550,16 +4550,16 @@ export interface Connect {
    */
   suspendContactRecording(
     args: SuspendContactRecordingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SuspendContactRecordingCommandOutput>;
   suspendContactRecording(
     args: SuspendContactRecordingCommandInput,
-    cb: (err: any, data?: SuspendContactRecordingCommandOutput) => void
+    cb: (err: any, data?: SuspendContactRecordingCommandOutput) => void,
   ): void;
   suspendContactRecording(
     args: SuspendContactRecordingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SuspendContactRecordingCommandOutput) => void
+    cb: (err: any, data?: SuspendContactRecordingCommandOutput) => void,
   ): void;
 
   /**
@@ -4570,7 +4570,7 @@ export interface Connect {
   tagContact(
     args: TagContactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagContactCommandOutput) => void
+    cb: (err: any, data?: TagContactCommandOutput) => void,
   ): void;
 
   /**
@@ -4581,7 +4581,7 @@ export interface Connect {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -4589,13 +4589,13 @@ export interface Connect {
    */
   transferContact(
     args: TransferContactCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<TransferContactCommandOutput>;
   transferContact(args: TransferContactCommandInput, cb: (err: any, data?: TransferContactCommandOutput) => void): void;
   transferContact(
     args: TransferContactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TransferContactCommandOutput) => void
+    cb: (err: any, data?: TransferContactCommandOutput) => void,
   ): void;
 
   /**
@@ -4606,7 +4606,7 @@ export interface Connect {
   untagContact(
     args: UntagContactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagContactCommandOutput) => void
+    cb: (err: any, data?: UntagContactCommandOutput) => void,
   ): void;
 
   /**
@@ -4617,7 +4617,7 @@ export interface Connect {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -4625,16 +4625,16 @@ export interface Connect {
    */
   updateAgentStatus(
     args: UpdateAgentStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAgentStatusCommandOutput>;
   updateAgentStatus(
     args: UpdateAgentStatusCommandInput,
-    cb: (err: any, data?: UpdateAgentStatusCommandOutput) => void
+    cb: (err: any, data?: UpdateAgentStatusCommandOutput) => void,
   ): void;
   updateAgentStatus(
     args: UpdateAgentStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAgentStatusCommandOutput) => void
+    cb: (err: any, data?: UpdateAgentStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -4645,7 +4645,7 @@ export interface Connect {
   updateContact(
     args: UpdateContactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateContactCommandOutput) => void
+    cb: (err: any, data?: UpdateContactCommandOutput) => void,
   ): void;
 
   /**
@@ -4653,16 +4653,16 @@ export interface Connect {
    */
   updateContactAttributes(
     args: UpdateContactAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateContactAttributesCommandOutput>;
   updateContactAttributes(
     args: UpdateContactAttributesCommandInput,
-    cb: (err: any, data?: UpdateContactAttributesCommandOutput) => void
+    cb: (err: any, data?: UpdateContactAttributesCommandOutput) => void,
   ): void;
   updateContactAttributes(
     args: UpdateContactAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateContactAttributesCommandOutput) => void
+    cb: (err: any, data?: UpdateContactAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -4670,16 +4670,16 @@ export interface Connect {
    */
   updateContactEvaluation(
     args: UpdateContactEvaluationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateContactEvaluationCommandOutput>;
   updateContactEvaluation(
     args: UpdateContactEvaluationCommandInput,
-    cb: (err: any, data?: UpdateContactEvaluationCommandOutput) => void
+    cb: (err: any, data?: UpdateContactEvaluationCommandOutput) => void,
   ): void;
   updateContactEvaluation(
     args: UpdateContactEvaluationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateContactEvaluationCommandOutput) => void
+    cb: (err: any, data?: UpdateContactEvaluationCommandOutput) => void,
   ): void;
 
   /**
@@ -4687,16 +4687,16 @@ export interface Connect {
    */
   updateContactFlowContent(
     args: UpdateContactFlowContentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateContactFlowContentCommandOutput>;
   updateContactFlowContent(
     args: UpdateContactFlowContentCommandInput,
-    cb: (err: any, data?: UpdateContactFlowContentCommandOutput) => void
+    cb: (err: any, data?: UpdateContactFlowContentCommandOutput) => void,
   ): void;
   updateContactFlowContent(
     args: UpdateContactFlowContentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateContactFlowContentCommandOutput) => void
+    cb: (err: any, data?: UpdateContactFlowContentCommandOutput) => void,
   ): void;
 
   /**
@@ -4704,16 +4704,16 @@ export interface Connect {
    */
   updateContactFlowMetadata(
     args: UpdateContactFlowMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateContactFlowMetadataCommandOutput>;
   updateContactFlowMetadata(
     args: UpdateContactFlowMetadataCommandInput,
-    cb: (err: any, data?: UpdateContactFlowMetadataCommandOutput) => void
+    cb: (err: any, data?: UpdateContactFlowMetadataCommandOutput) => void,
   ): void;
   updateContactFlowMetadata(
     args: UpdateContactFlowMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateContactFlowMetadataCommandOutput) => void
+    cb: (err: any, data?: UpdateContactFlowMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -4721,16 +4721,16 @@ export interface Connect {
    */
   updateContactFlowModuleContent(
     args: UpdateContactFlowModuleContentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateContactFlowModuleContentCommandOutput>;
   updateContactFlowModuleContent(
     args: UpdateContactFlowModuleContentCommandInput,
-    cb: (err: any, data?: UpdateContactFlowModuleContentCommandOutput) => void
+    cb: (err: any, data?: UpdateContactFlowModuleContentCommandOutput) => void,
   ): void;
   updateContactFlowModuleContent(
     args: UpdateContactFlowModuleContentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateContactFlowModuleContentCommandOutput) => void
+    cb: (err: any, data?: UpdateContactFlowModuleContentCommandOutput) => void,
   ): void;
 
   /**
@@ -4738,16 +4738,16 @@ export interface Connect {
    */
   updateContactFlowModuleMetadata(
     args: UpdateContactFlowModuleMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateContactFlowModuleMetadataCommandOutput>;
   updateContactFlowModuleMetadata(
     args: UpdateContactFlowModuleMetadataCommandInput,
-    cb: (err: any, data?: UpdateContactFlowModuleMetadataCommandOutput) => void
+    cb: (err: any, data?: UpdateContactFlowModuleMetadataCommandOutput) => void,
   ): void;
   updateContactFlowModuleMetadata(
     args: UpdateContactFlowModuleMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateContactFlowModuleMetadataCommandOutput) => void
+    cb: (err: any, data?: UpdateContactFlowModuleMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -4755,16 +4755,16 @@ export interface Connect {
    */
   updateContactFlowName(
     args: UpdateContactFlowNameCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateContactFlowNameCommandOutput>;
   updateContactFlowName(
     args: UpdateContactFlowNameCommandInput,
-    cb: (err: any, data?: UpdateContactFlowNameCommandOutput) => void
+    cb: (err: any, data?: UpdateContactFlowNameCommandOutput) => void,
   ): void;
   updateContactFlowName(
     args: UpdateContactFlowNameCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateContactFlowNameCommandOutput) => void
+    cb: (err: any, data?: UpdateContactFlowNameCommandOutput) => void,
   ): void;
 
   /**
@@ -4772,16 +4772,16 @@ export interface Connect {
    */
   updateContactRoutingData(
     args: UpdateContactRoutingDataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateContactRoutingDataCommandOutput>;
   updateContactRoutingData(
     args: UpdateContactRoutingDataCommandInput,
-    cb: (err: any, data?: UpdateContactRoutingDataCommandOutput) => void
+    cb: (err: any, data?: UpdateContactRoutingDataCommandOutput) => void,
   ): void;
   updateContactRoutingData(
     args: UpdateContactRoutingDataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateContactRoutingDataCommandOutput) => void
+    cb: (err: any, data?: UpdateContactRoutingDataCommandOutput) => void,
   ): void;
 
   /**
@@ -4789,16 +4789,16 @@ export interface Connect {
    */
   updateContactSchedule(
     args: UpdateContactScheduleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateContactScheduleCommandOutput>;
   updateContactSchedule(
     args: UpdateContactScheduleCommandInput,
-    cb: (err: any, data?: UpdateContactScheduleCommandOutput) => void
+    cb: (err: any, data?: UpdateContactScheduleCommandOutput) => void,
   ): void;
   updateContactSchedule(
     args: UpdateContactScheduleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateContactScheduleCommandOutput) => void
+    cb: (err: any, data?: UpdateContactScheduleCommandOutput) => void,
   ): void;
 
   /**
@@ -4806,16 +4806,16 @@ export interface Connect {
    */
   updateEvaluationForm(
     args: UpdateEvaluationFormCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEvaluationFormCommandOutput>;
   updateEvaluationForm(
     args: UpdateEvaluationFormCommandInput,
-    cb: (err: any, data?: UpdateEvaluationFormCommandOutput) => void
+    cb: (err: any, data?: UpdateEvaluationFormCommandOutput) => void,
   ): void;
   updateEvaluationForm(
     args: UpdateEvaluationFormCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEvaluationFormCommandOutput) => void
+    cb: (err: any, data?: UpdateEvaluationFormCommandOutput) => void,
   ): void;
 
   /**
@@ -4823,16 +4823,16 @@ export interface Connect {
    */
   updateHoursOfOperation(
     args: UpdateHoursOfOperationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateHoursOfOperationCommandOutput>;
   updateHoursOfOperation(
     args: UpdateHoursOfOperationCommandInput,
-    cb: (err: any, data?: UpdateHoursOfOperationCommandOutput) => void
+    cb: (err: any, data?: UpdateHoursOfOperationCommandOutput) => void,
   ): void;
   updateHoursOfOperation(
     args: UpdateHoursOfOperationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateHoursOfOperationCommandOutput) => void
+    cb: (err: any, data?: UpdateHoursOfOperationCommandOutput) => void,
   ): void;
 
   /**
@@ -4840,16 +4840,16 @@ export interface Connect {
    */
   updateInstanceAttribute(
     args: UpdateInstanceAttributeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateInstanceAttributeCommandOutput>;
   updateInstanceAttribute(
     args: UpdateInstanceAttributeCommandInput,
-    cb: (err: any, data?: UpdateInstanceAttributeCommandOutput) => void
+    cb: (err: any, data?: UpdateInstanceAttributeCommandOutput) => void,
   ): void;
   updateInstanceAttribute(
     args: UpdateInstanceAttributeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateInstanceAttributeCommandOutput) => void
+    cb: (err: any, data?: UpdateInstanceAttributeCommandOutput) => void,
   ): void;
 
   /**
@@ -4857,16 +4857,16 @@ export interface Connect {
    */
   updateInstanceStorageConfig(
     args: UpdateInstanceStorageConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateInstanceStorageConfigCommandOutput>;
   updateInstanceStorageConfig(
     args: UpdateInstanceStorageConfigCommandInput,
-    cb: (err: any, data?: UpdateInstanceStorageConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateInstanceStorageConfigCommandOutput) => void,
   ): void;
   updateInstanceStorageConfig(
     args: UpdateInstanceStorageConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateInstanceStorageConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateInstanceStorageConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -4874,16 +4874,16 @@ export interface Connect {
    */
   updateParticipantRoleConfig(
     args: UpdateParticipantRoleConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateParticipantRoleConfigCommandOutput>;
   updateParticipantRoleConfig(
     args: UpdateParticipantRoleConfigCommandInput,
-    cb: (err: any, data?: UpdateParticipantRoleConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateParticipantRoleConfigCommandOutput) => void,
   ): void;
   updateParticipantRoleConfig(
     args: UpdateParticipantRoleConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateParticipantRoleConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateParticipantRoleConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -4891,16 +4891,16 @@ export interface Connect {
    */
   updatePhoneNumber(
     args: UpdatePhoneNumberCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePhoneNumberCommandOutput>;
   updatePhoneNumber(
     args: UpdatePhoneNumberCommandInput,
-    cb: (err: any, data?: UpdatePhoneNumberCommandOutput) => void
+    cb: (err: any, data?: UpdatePhoneNumberCommandOutput) => void,
   ): void;
   updatePhoneNumber(
     args: UpdatePhoneNumberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePhoneNumberCommandOutput) => void
+    cb: (err: any, data?: UpdatePhoneNumberCommandOutput) => void,
   ): void;
 
   /**
@@ -4908,16 +4908,16 @@ export interface Connect {
    */
   updatePhoneNumberMetadata(
     args: UpdatePhoneNumberMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePhoneNumberMetadataCommandOutput>;
   updatePhoneNumberMetadata(
     args: UpdatePhoneNumberMetadataCommandInput,
-    cb: (err: any, data?: UpdatePhoneNumberMetadataCommandOutput) => void
+    cb: (err: any, data?: UpdatePhoneNumberMetadataCommandOutput) => void,
   ): void;
   updatePhoneNumberMetadata(
     args: UpdatePhoneNumberMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePhoneNumberMetadataCommandOutput) => void
+    cb: (err: any, data?: UpdatePhoneNumberMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -4925,16 +4925,16 @@ export interface Connect {
    */
   updatePredefinedAttribute(
     args: UpdatePredefinedAttributeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePredefinedAttributeCommandOutput>;
   updatePredefinedAttribute(
     args: UpdatePredefinedAttributeCommandInput,
-    cb: (err: any, data?: UpdatePredefinedAttributeCommandOutput) => void
+    cb: (err: any, data?: UpdatePredefinedAttributeCommandOutput) => void,
   ): void;
   updatePredefinedAttribute(
     args: UpdatePredefinedAttributeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePredefinedAttributeCommandOutput) => void
+    cb: (err: any, data?: UpdatePredefinedAttributeCommandOutput) => void,
   ): void;
 
   /**
@@ -4945,7 +4945,7 @@ export interface Connect {
   updatePrompt(
     args: UpdatePromptCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePromptCommandOutput) => void
+    cb: (err: any, data?: UpdatePromptCommandOutput) => void,
   ): void;
 
   /**
@@ -4953,16 +4953,16 @@ export interface Connect {
    */
   updateQueueHoursOfOperation(
     args: UpdateQueueHoursOfOperationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateQueueHoursOfOperationCommandOutput>;
   updateQueueHoursOfOperation(
     args: UpdateQueueHoursOfOperationCommandInput,
-    cb: (err: any, data?: UpdateQueueHoursOfOperationCommandOutput) => void
+    cb: (err: any, data?: UpdateQueueHoursOfOperationCommandOutput) => void,
   ): void;
   updateQueueHoursOfOperation(
     args: UpdateQueueHoursOfOperationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateQueueHoursOfOperationCommandOutput) => void
+    cb: (err: any, data?: UpdateQueueHoursOfOperationCommandOutput) => void,
   ): void;
 
   /**
@@ -4970,16 +4970,16 @@ export interface Connect {
    */
   updateQueueMaxContacts(
     args: UpdateQueueMaxContactsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateQueueMaxContactsCommandOutput>;
   updateQueueMaxContacts(
     args: UpdateQueueMaxContactsCommandInput,
-    cb: (err: any, data?: UpdateQueueMaxContactsCommandOutput) => void
+    cb: (err: any, data?: UpdateQueueMaxContactsCommandOutput) => void,
   ): void;
   updateQueueMaxContacts(
     args: UpdateQueueMaxContactsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateQueueMaxContactsCommandOutput) => void
+    cb: (err: any, data?: UpdateQueueMaxContactsCommandOutput) => void,
   ): void;
 
   /**
@@ -4987,13 +4987,13 @@ export interface Connect {
    */
   updateQueueName(
     args: UpdateQueueNameCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateQueueNameCommandOutput>;
   updateQueueName(args: UpdateQueueNameCommandInput, cb: (err: any, data?: UpdateQueueNameCommandOutput) => void): void;
   updateQueueName(
     args: UpdateQueueNameCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateQueueNameCommandOutput) => void
+    cb: (err: any, data?: UpdateQueueNameCommandOutput) => void,
   ): void;
 
   /**
@@ -5001,16 +5001,16 @@ export interface Connect {
    */
   updateQueueOutboundCallerConfig(
     args: UpdateQueueOutboundCallerConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateQueueOutboundCallerConfigCommandOutput>;
   updateQueueOutboundCallerConfig(
     args: UpdateQueueOutboundCallerConfigCommandInput,
-    cb: (err: any, data?: UpdateQueueOutboundCallerConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateQueueOutboundCallerConfigCommandOutput) => void,
   ): void;
   updateQueueOutboundCallerConfig(
     args: UpdateQueueOutboundCallerConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateQueueOutboundCallerConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateQueueOutboundCallerConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -5018,16 +5018,16 @@ export interface Connect {
    */
   updateQueueStatus(
     args: UpdateQueueStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateQueueStatusCommandOutput>;
   updateQueueStatus(
     args: UpdateQueueStatusCommandInput,
-    cb: (err: any, data?: UpdateQueueStatusCommandOutput) => void
+    cb: (err: any, data?: UpdateQueueStatusCommandOutput) => void,
   ): void;
   updateQueueStatus(
     args: UpdateQueueStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateQueueStatusCommandOutput) => void
+    cb: (err: any, data?: UpdateQueueStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -5035,16 +5035,16 @@ export interface Connect {
    */
   updateQuickConnectConfig(
     args: UpdateQuickConnectConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateQuickConnectConfigCommandOutput>;
   updateQuickConnectConfig(
     args: UpdateQuickConnectConfigCommandInput,
-    cb: (err: any, data?: UpdateQuickConnectConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateQuickConnectConfigCommandOutput) => void,
   ): void;
   updateQuickConnectConfig(
     args: UpdateQuickConnectConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateQuickConnectConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateQuickConnectConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -5052,16 +5052,16 @@ export interface Connect {
    */
   updateQuickConnectName(
     args: UpdateQuickConnectNameCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateQuickConnectNameCommandOutput>;
   updateQuickConnectName(
     args: UpdateQuickConnectNameCommandInput,
-    cb: (err: any, data?: UpdateQuickConnectNameCommandOutput) => void
+    cb: (err: any, data?: UpdateQuickConnectNameCommandOutput) => void,
   ): void;
   updateQuickConnectName(
     args: UpdateQuickConnectNameCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateQuickConnectNameCommandOutput) => void
+    cb: (err: any, data?: UpdateQuickConnectNameCommandOutput) => void,
   ): void;
 
   /**
@@ -5069,16 +5069,16 @@ export interface Connect {
    */
   updateRoutingProfileAgentAvailabilityTimer(
     args: UpdateRoutingProfileAgentAvailabilityTimerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRoutingProfileAgentAvailabilityTimerCommandOutput>;
   updateRoutingProfileAgentAvailabilityTimer(
     args: UpdateRoutingProfileAgentAvailabilityTimerCommandInput,
-    cb: (err: any, data?: UpdateRoutingProfileAgentAvailabilityTimerCommandOutput) => void
+    cb: (err: any, data?: UpdateRoutingProfileAgentAvailabilityTimerCommandOutput) => void,
   ): void;
   updateRoutingProfileAgentAvailabilityTimer(
     args: UpdateRoutingProfileAgentAvailabilityTimerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRoutingProfileAgentAvailabilityTimerCommandOutput) => void
+    cb: (err: any, data?: UpdateRoutingProfileAgentAvailabilityTimerCommandOutput) => void,
   ): void;
 
   /**
@@ -5086,16 +5086,16 @@ export interface Connect {
    */
   updateRoutingProfileConcurrency(
     args: UpdateRoutingProfileConcurrencyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRoutingProfileConcurrencyCommandOutput>;
   updateRoutingProfileConcurrency(
     args: UpdateRoutingProfileConcurrencyCommandInput,
-    cb: (err: any, data?: UpdateRoutingProfileConcurrencyCommandOutput) => void
+    cb: (err: any, data?: UpdateRoutingProfileConcurrencyCommandOutput) => void,
   ): void;
   updateRoutingProfileConcurrency(
     args: UpdateRoutingProfileConcurrencyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRoutingProfileConcurrencyCommandOutput) => void
+    cb: (err: any, data?: UpdateRoutingProfileConcurrencyCommandOutput) => void,
   ): void;
 
   /**
@@ -5103,16 +5103,16 @@ export interface Connect {
    */
   updateRoutingProfileDefaultOutboundQueue(
     args: UpdateRoutingProfileDefaultOutboundQueueCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRoutingProfileDefaultOutboundQueueCommandOutput>;
   updateRoutingProfileDefaultOutboundQueue(
     args: UpdateRoutingProfileDefaultOutboundQueueCommandInput,
-    cb: (err: any, data?: UpdateRoutingProfileDefaultOutboundQueueCommandOutput) => void
+    cb: (err: any, data?: UpdateRoutingProfileDefaultOutboundQueueCommandOutput) => void,
   ): void;
   updateRoutingProfileDefaultOutboundQueue(
     args: UpdateRoutingProfileDefaultOutboundQueueCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRoutingProfileDefaultOutboundQueueCommandOutput) => void
+    cb: (err: any, data?: UpdateRoutingProfileDefaultOutboundQueueCommandOutput) => void,
   ): void;
 
   /**
@@ -5120,16 +5120,16 @@ export interface Connect {
    */
   updateRoutingProfileName(
     args: UpdateRoutingProfileNameCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRoutingProfileNameCommandOutput>;
   updateRoutingProfileName(
     args: UpdateRoutingProfileNameCommandInput,
-    cb: (err: any, data?: UpdateRoutingProfileNameCommandOutput) => void
+    cb: (err: any, data?: UpdateRoutingProfileNameCommandOutput) => void,
   ): void;
   updateRoutingProfileName(
     args: UpdateRoutingProfileNameCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRoutingProfileNameCommandOutput) => void
+    cb: (err: any, data?: UpdateRoutingProfileNameCommandOutput) => void,
   ): void;
 
   /**
@@ -5137,16 +5137,16 @@ export interface Connect {
    */
   updateRoutingProfileQueues(
     args: UpdateRoutingProfileQueuesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRoutingProfileQueuesCommandOutput>;
   updateRoutingProfileQueues(
     args: UpdateRoutingProfileQueuesCommandInput,
-    cb: (err: any, data?: UpdateRoutingProfileQueuesCommandOutput) => void
+    cb: (err: any, data?: UpdateRoutingProfileQueuesCommandOutput) => void,
   ): void;
   updateRoutingProfileQueues(
     args: UpdateRoutingProfileQueuesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRoutingProfileQueuesCommandOutput) => void
+    cb: (err: any, data?: UpdateRoutingProfileQueuesCommandOutput) => void,
   ): void;
 
   /**
@@ -5157,7 +5157,7 @@ export interface Connect {
   updateRule(
     args: UpdateRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRuleCommandOutput) => void
+    cb: (err: any, data?: UpdateRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -5165,16 +5165,16 @@ export interface Connect {
    */
   updateSecurityProfile(
     args: UpdateSecurityProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSecurityProfileCommandOutput>;
   updateSecurityProfile(
     args: UpdateSecurityProfileCommandInput,
-    cb: (err: any, data?: UpdateSecurityProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateSecurityProfileCommandOutput) => void,
   ): void;
   updateSecurityProfile(
     args: UpdateSecurityProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSecurityProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateSecurityProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -5182,16 +5182,16 @@ export interface Connect {
    */
   updateTaskTemplate(
     args: UpdateTaskTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateTaskTemplateCommandOutput>;
   updateTaskTemplate(
     args: UpdateTaskTemplateCommandInput,
-    cb: (err: any, data?: UpdateTaskTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateTaskTemplateCommandOutput) => void,
   ): void;
   updateTaskTemplate(
     args: UpdateTaskTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTaskTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateTaskTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -5199,16 +5199,16 @@ export interface Connect {
    */
   updateTrafficDistribution(
     args: UpdateTrafficDistributionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateTrafficDistributionCommandOutput>;
   updateTrafficDistribution(
     args: UpdateTrafficDistributionCommandInput,
-    cb: (err: any, data?: UpdateTrafficDistributionCommandOutput) => void
+    cb: (err: any, data?: UpdateTrafficDistributionCommandOutput) => void,
   ): void;
   updateTrafficDistribution(
     args: UpdateTrafficDistributionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTrafficDistributionCommandOutput) => void
+    cb: (err: any, data?: UpdateTrafficDistributionCommandOutput) => void,
   ): void;
 
   /**
@@ -5216,16 +5216,16 @@ export interface Connect {
    */
   updateUserHierarchy(
     args: UpdateUserHierarchyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateUserHierarchyCommandOutput>;
   updateUserHierarchy(
     args: UpdateUserHierarchyCommandInput,
-    cb: (err: any, data?: UpdateUserHierarchyCommandOutput) => void
+    cb: (err: any, data?: UpdateUserHierarchyCommandOutput) => void,
   ): void;
   updateUserHierarchy(
     args: UpdateUserHierarchyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateUserHierarchyCommandOutput) => void
+    cb: (err: any, data?: UpdateUserHierarchyCommandOutput) => void,
   ): void;
 
   /**
@@ -5233,16 +5233,16 @@ export interface Connect {
    */
   updateUserHierarchyGroupName(
     args: UpdateUserHierarchyGroupNameCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateUserHierarchyGroupNameCommandOutput>;
   updateUserHierarchyGroupName(
     args: UpdateUserHierarchyGroupNameCommandInput,
-    cb: (err: any, data?: UpdateUserHierarchyGroupNameCommandOutput) => void
+    cb: (err: any, data?: UpdateUserHierarchyGroupNameCommandOutput) => void,
   ): void;
   updateUserHierarchyGroupName(
     args: UpdateUserHierarchyGroupNameCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateUserHierarchyGroupNameCommandOutput) => void
+    cb: (err: any, data?: UpdateUserHierarchyGroupNameCommandOutput) => void,
   ): void;
 
   /**
@@ -5250,16 +5250,16 @@ export interface Connect {
    */
   updateUserHierarchyStructure(
     args: UpdateUserHierarchyStructureCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateUserHierarchyStructureCommandOutput>;
   updateUserHierarchyStructure(
     args: UpdateUserHierarchyStructureCommandInput,
-    cb: (err: any, data?: UpdateUserHierarchyStructureCommandOutput) => void
+    cb: (err: any, data?: UpdateUserHierarchyStructureCommandOutput) => void,
   ): void;
   updateUserHierarchyStructure(
     args: UpdateUserHierarchyStructureCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateUserHierarchyStructureCommandOutput) => void
+    cb: (err: any, data?: UpdateUserHierarchyStructureCommandOutput) => void,
   ): void;
 
   /**
@@ -5267,16 +5267,16 @@ export interface Connect {
    */
   updateUserIdentityInfo(
     args: UpdateUserIdentityInfoCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateUserIdentityInfoCommandOutput>;
   updateUserIdentityInfo(
     args: UpdateUserIdentityInfoCommandInput,
-    cb: (err: any, data?: UpdateUserIdentityInfoCommandOutput) => void
+    cb: (err: any, data?: UpdateUserIdentityInfoCommandOutput) => void,
   ): void;
   updateUserIdentityInfo(
     args: UpdateUserIdentityInfoCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateUserIdentityInfoCommandOutput) => void
+    cb: (err: any, data?: UpdateUserIdentityInfoCommandOutput) => void,
   ): void;
 
   /**
@@ -5284,16 +5284,16 @@ export interface Connect {
    */
   updateUserPhoneConfig(
     args: UpdateUserPhoneConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateUserPhoneConfigCommandOutput>;
   updateUserPhoneConfig(
     args: UpdateUserPhoneConfigCommandInput,
-    cb: (err: any, data?: UpdateUserPhoneConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateUserPhoneConfigCommandOutput) => void,
   ): void;
   updateUserPhoneConfig(
     args: UpdateUserPhoneConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateUserPhoneConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateUserPhoneConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -5301,16 +5301,16 @@ export interface Connect {
    */
   updateUserProficiencies(
     args: UpdateUserProficienciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateUserProficienciesCommandOutput>;
   updateUserProficiencies(
     args: UpdateUserProficienciesCommandInput,
-    cb: (err: any, data?: UpdateUserProficienciesCommandOutput) => void
+    cb: (err: any, data?: UpdateUserProficienciesCommandOutput) => void,
   ): void;
   updateUserProficiencies(
     args: UpdateUserProficienciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateUserProficienciesCommandOutput) => void
+    cb: (err: any, data?: UpdateUserProficienciesCommandOutput) => void,
   ): void;
 
   /**
@@ -5318,16 +5318,16 @@ export interface Connect {
    */
   updateUserRoutingProfile(
     args: UpdateUserRoutingProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateUserRoutingProfileCommandOutput>;
   updateUserRoutingProfile(
     args: UpdateUserRoutingProfileCommandInput,
-    cb: (err: any, data?: UpdateUserRoutingProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateUserRoutingProfileCommandOutput) => void,
   ): void;
   updateUserRoutingProfile(
     args: UpdateUserRoutingProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateUserRoutingProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateUserRoutingProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -5335,16 +5335,16 @@ export interface Connect {
    */
   updateUserSecurityProfiles(
     args: UpdateUserSecurityProfilesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateUserSecurityProfilesCommandOutput>;
   updateUserSecurityProfiles(
     args: UpdateUserSecurityProfilesCommandInput,
-    cb: (err: any, data?: UpdateUserSecurityProfilesCommandOutput) => void
+    cb: (err: any, data?: UpdateUserSecurityProfilesCommandOutput) => void,
   ): void;
   updateUserSecurityProfiles(
     args: UpdateUserSecurityProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateUserSecurityProfilesCommandOutput) => void
+    cb: (err: any, data?: UpdateUserSecurityProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -5352,16 +5352,16 @@ export interface Connect {
    */
   updateViewContent(
     args: UpdateViewContentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateViewContentCommandOutput>;
   updateViewContent(
     args: UpdateViewContentCommandInput,
-    cb: (err: any, data?: UpdateViewContentCommandOutput) => void
+    cb: (err: any, data?: UpdateViewContentCommandOutput) => void,
   ): void;
   updateViewContent(
     args: UpdateViewContentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateViewContentCommandOutput) => void
+    cb: (err: any, data?: UpdateViewContentCommandOutput) => void,
   ): void;
 
   /**
@@ -5369,16 +5369,16 @@ export interface Connect {
    */
   updateViewMetadata(
     args: UpdateViewMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateViewMetadataCommandOutput>;
   updateViewMetadata(
     args: UpdateViewMetadataCommandInput,
-    cb: (err: any, data?: UpdateViewMetadataCommandOutput) => void
+    cb: (err: any, data?: UpdateViewMetadataCommandOutput) => void,
   ): void;
   updateViewMetadata(
     args: UpdateViewMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateViewMetadataCommandOutput) => void
+    cb: (err: any, data?: UpdateViewMetadataCommandOutput) => void,
   ): void;
 }
 

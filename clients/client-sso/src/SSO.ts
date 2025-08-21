@@ -33,16 +33,16 @@ export interface SSO {
    */
   getRoleCredentials(
     args: GetRoleCredentialsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRoleCredentialsCommandOutput>;
   getRoleCredentials(
     args: GetRoleCredentialsCommandInput,
-    cb: (err: any, data?: GetRoleCredentialsCommandOutput) => void
+    cb: (err: any, data?: GetRoleCredentialsCommandOutput) => void,
   ): void;
   getRoleCredentials(
     args: GetRoleCredentialsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRoleCredentialsCommandOutput) => void
+    cb: (err: any, data?: GetRoleCredentialsCommandOutput) => void,
   ): void;
 
   /**
@@ -50,16 +50,16 @@ export interface SSO {
    */
   listAccountRoles(
     args: ListAccountRolesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAccountRolesCommandOutput>;
   listAccountRoles(
     args: ListAccountRolesCommandInput,
-    cb: (err: any, data?: ListAccountRolesCommandOutput) => void
+    cb: (err: any, data?: ListAccountRolesCommandOutput) => void,
   ): void;
   listAccountRoles(
     args: ListAccountRolesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAccountRolesCommandOutput) => void
+    cb: (err: any, data?: ListAccountRolesCommandOutput) => void,
   ): void;
 
   /**
@@ -70,7 +70,7 @@ export interface SSO {
   listAccounts(
     args: ListAccountsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAccountsCommandOutput) => void
+    cb: (err: any, data?: ListAccountsCommandOutput) => void,
   ): void;
 
   /**
@@ -81,7 +81,7 @@ export interface SSO {
   logout(
     args: LogoutCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: LogoutCommandOutput) => void
+    cb: (err: any, data?: LogoutCommandOutput) => void,
   ): void;
 }
 

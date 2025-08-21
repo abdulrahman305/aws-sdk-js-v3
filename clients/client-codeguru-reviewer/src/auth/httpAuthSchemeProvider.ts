@@ -41,7 +41,7 @@ export interface CodeGuruReviewerHttpAuthSchemeParametersProvider
 export const defaultCodeGuruReviewerHttpAuthSchemeParametersProvider = async (
   config: CodeGuruReviewerClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<CodeGuruReviewerHttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -82,7 +82,7 @@ export interface CodeGuruReviewerHttpAuthSchemeProvider
  * @internal
  */
 export const defaultCodeGuruReviewerHttpAuthSchemeProvider: CodeGuruReviewerHttpAuthSchemeProvider = (
-  authParameters
+  authParameters,
 ) => {
   const options: HttpAuthOption[] = [];
   switch (authParameters.operation) {
@@ -131,7 +131,7 @@ export interface HttpAuthSchemeResolvedConfig extends AwsSdkSigV4AuthResolvedCon
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved
+  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved,
 ): T & HttpAuthSchemeResolvedConfig => {
   const config_0 = resolveAwsSdkSigV4Config(config);
   return {

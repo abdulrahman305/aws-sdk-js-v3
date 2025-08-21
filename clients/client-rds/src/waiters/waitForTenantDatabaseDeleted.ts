@@ -34,7 +34,7 @@ const checkState = async (client: RDSClient, input: DescribeTenantDatabasesComma
  */
 export const waitForTenantDatabaseDeleted = async (
   params: WaiterConfiguration<RDSClient>,
-  input: DescribeTenantDatabasesCommandInput
+  input: DescribeTenantDatabasesCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -46,7 +46,7 @@ export const waitForTenantDatabaseDeleted = async (
  */
 export const waitUntilTenantDatabaseDeleted = async (
   params: WaiterConfiguration<RDSClient>,
-  input: DescribeTenantDatabasesCommandInput
+  input: DescribeTenantDatabasesCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

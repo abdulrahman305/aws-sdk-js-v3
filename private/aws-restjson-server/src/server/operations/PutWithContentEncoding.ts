@@ -65,7 +65,7 @@ export class PutWithContentEncodingSerializer
 
 export const getPutWithContentEncodingHandler = <Context>(
   operation: __Operation<PutWithContentEncodingServerInput, PutWithContentEncodingServerOutput, Context>,
-  customizer: __ValidationCustomizer<"PutWithContentEncoding">
+  customizer: __ValidationCustomizer<"PutWithContentEncoding">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "PutWithContentEncoding">([
     new httpbinding.UriSpec<"RestJson", "PutWithContentEncoding">(
@@ -75,7 +75,7 @@ export const getPutWithContentEncodingHandler = <Context>(
         { type: "path_literal", value: "putcontentwithencoding" },
       ],
       [],
-      { service: "RestJson", operation: "PutWithContentEncoding" }
+      { service: "RestJson", operation: "PutWithContentEncoding" },
     ),
   ]);
   return new PutWithContentEncodingHandler(
@@ -83,7 +83,7 @@ export const getPutWithContentEncodingHandler = <Context>(
     mux,
     new PutWithContentEncodingSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -104,7 +104,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -150,7 +150,7 @@ export class PutWithContentEncodingHandler<Context> implements __ServiceHandler<
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"PutWithContentEncoding">;
   /**
@@ -167,7 +167,7 @@ export class PutWithContentEncodingHandler<Context> implements __ServiceHandler<
     mux: __Mux<"RestJson", "PutWithContentEncoding">,
     serializer: __OperationSerializer<RestJsonService<Context>, "PutWithContentEncoding", PutWithContentEncodingErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"PutWithContentEncoding">
+    validationCustomizer: __ValidationCustomizer<"PutWithContentEncoding">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -179,7 +179,7 @@ export class PutWithContentEncodingHandler<Context> implements __ServiceHandler<
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.PutWithContentEncoding. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.PutWithContentEncoding. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -191,7 +191,7 @@ export class PutWithContentEncodingHandler<Context> implements __ServiceHandler<
       this.operation,
       this.serializeFrameworkException,
       PutWithContentEncodingServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

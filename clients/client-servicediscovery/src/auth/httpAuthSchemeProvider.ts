@@ -41,7 +41,7 @@ export interface ServiceDiscoveryHttpAuthSchemeParametersProvider
 export const defaultServiceDiscoveryHttpAuthSchemeParametersProvider = async (
   config: ServiceDiscoveryClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<ServiceDiscoveryHttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -82,7 +82,7 @@ export interface ServiceDiscoveryHttpAuthSchemeProvider
  * @internal
  */
 export const defaultServiceDiscoveryHttpAuthSchemeProvider: ServiceDiscoveryHttpAuthSchemeProvider = (
-  authParameters
+  authParameters,
 ) => {
   const options: HttpAuthOption[] = [];
   switch (authParameters.operation) {
@@ -131,7 +131,7 @@ export interface HttpAuthSchemeResolvedConfig extends AwsSdkSigV4AuthResolvedCon
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved
+  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved,
 ): T & HttpAuthSchemeResolvedConfig => {
   const config_0 = resolveAwsSdkSigV4Config(config);
   return {

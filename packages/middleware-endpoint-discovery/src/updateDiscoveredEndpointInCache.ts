@@ -11,7 +11,7 @@ const requestQueue: Record<string, { resolve: Function; reject: Function }[]> = 
 
 export const updateDiscoveredEndpointInCache = async (
   config: EndpointDiscoveryResolvedConfig & PreviouslyResolved,
-  options: UpdateDiscoveredEndpointInCacheOptions
+  options: UpdateDiscoveredEndpointInCacheOptions,
 ) =>
   new Promise<void>((resolve, reject) => {
     const { endpointCache } = config;
@@ -63,9 +63,9 @@ export const updateDiscoveredEndpointInCache = async (
           const errorToThrow = Object.assign(
             new Error(
               `The operation to discover endpoint failed.` +
-                ` Please retry, or provide a custom endpoint and disable endpoint discovery to proceed.`
+                ` Please retry, or provide a custom endpoint and disable endpoint discovery to proceed.`,
             ),
-            { reason: error }
+            { reason: error },
           );
 
           //fail all the pending requests in batch

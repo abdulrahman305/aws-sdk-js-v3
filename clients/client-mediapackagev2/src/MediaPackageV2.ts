@@ -152,7 +152,7 @@ export interface MediaPackageV2 {
   createChannel(
     args: CreateChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateChannelCommandOutput) => void
+    cb: (err: any, data?: CreateChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -160,16 +160,16 @@ export interface MediaPackageV2 {
    */
   createChannelGroup(
     args: CreateChannelGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateChannelGroupCommandOutput>;
   createChannelGroup(
     args: CreateChannelGroupCommandInput,
-    cb: (err: any, data?: CreateChannelGroupCommandOutput) => void
+    cb: (err: any, data?: CreateChannelGroupCommandOutput) => void,
   ): void;
   createChannelGroup(
     args: CreateChannelGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateChannelGroupCommandOutput) => void
+    cb: (err: any, data?: CreateChannelGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -177,16 +177,16 @@ export interface MediaPackageV2 {
    */
   createOriginEndpoint(
     args: CreateOriginEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateOriginEndpointCommandOutput>;
   createOriginEndpoint(
     args: CreateOriginEndpointCommandInput,
-    cb: (err: any, data?: CreateOriginEndpointCommandOutput) => void
+    cb: (err: any, data?: CreateOriginEndpointCommandOutput) => void,
   ): void;
   createOriginEndpoint(
     args: CreateOriginEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateOriginEndpointCommandOutput) => void
+    cb: (err: any, data?: CreateOriginEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -197,7 +197,7 @@ export interface MediaPackageV2 {
   deleteChannel(
     args: DeleteChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -205,16 +205,16 @@ export interface MediaPackageV2 {
    */
   deleteChannelGroup(
     args: DeleteChannelGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteChannelGroupCommandOutput>;
   deleteChannelGroup(
     args: DeleteChannelGroupCommandInput,
-    cb: (err: any, data?: DeleteChannelGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteChannelGroupCommandOutput) => void,
   ): void;
   deleteChannelGroup(
     args: DeleteChannelGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteChannelGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteChannelGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -222,16 +222,16 @@ export interface MediaPackageV2 {
    */
   deleteChannelPolicy(
     args: DeleteChannelPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteChannelPolicyCommandOutput>;
   deleteChannelPolicy(
     args: DeleteChannelPolicyCommandInput,
-    cb: (err: any, data?: DeleteChannelPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteChannelPolicyCommandOutput) => void,
   ): void;
   deleteChannelPolicy(
     args: DeleteChannelPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteChannelPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteChannelPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -239,16 +239,16 @@ export interface MediaPackageV2 {
    */
   deleteOriginEndpoint(
     args: DeleteOriginEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteOriginEndpointCommandOutput>;
   deleteOriginEndpoint(
     args: DeleteOriginEndpointCommandInput,
-    cb: (err: any, data?: DeleteOriginEndpointCommandOutput) => void
+    cb: (err: any, data?: DeleteOriginEndpointCommandOutput) => void,
   ): void;
   deleteOriginEndpoint(
     args: DeleteOriginEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteOriginEndpointCommandOutput) => void
+    cb: (err: any, data?: DeleteOriginEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -256,16 +256,16 @@ export interface MediaPackageV2 {
    */
   deleteOriginEndpointPolicy(
     args: DeleteOriginEndpointPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteOriginEndpointPolicyCommandOutput>;
   deleteOriginEndpointPolicy(
     args: DeleteOriginEndpointPolicyCommandInput,
-    cb: (err: any, data?: DeleteOriginEndpointPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteOriginEndpointPolicyCommandOutput) => void,
   ): void;
   deleteOriginEndpointPolicy(
     args: DeleteOriginEndpointPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteOriginEndpointPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteOriginEndpointPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -276,7 +276,7 @@ export interface MediaPackageV2 {
   getChannel(
     args: GetChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetChannelCommandOutput) => void
+    cb: (err: any, data?: GetChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -284,13 +284,13 @@ export interface MediaPackageV2 {
    */
   getChannelGroup(
     args: GetChannelGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetChannelGroupCommandOutput>;
   getChannelGroup(args: GetChannelGroupCommandInput, cb: (err: any, data?: GetChannelGroupCommandOutput) => void): void;
   getChannelGroup(
     args: GetChannelGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetChannelGroupCommandOutput) => void
+    cb: (err: any, data?: GetChannelGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -298,16 +298,16 @@ export interface MediaPackageV2 {
    */
   getChannelPolicy(
     args: GetChannelPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetChannelPolicyCommandOutput>;
   getChannelPolicy(
     args: GetChannelPolicyCommandInput,
-    cb: (err: any, data?: GetChannelPolicyCommandOutput) => void
+    cb: (err: any, data?: GetChannelPolicyCommandOutput) => void,
   ): void;
   getChannelPolicy(
     args: GetChannelPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetChannelPolicyCommandOutput) => void
+    cb: (err: any, data?: GetChannelPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -315,16 +315,16 @@ export interface MediaPackageV2 {
    */
   getOriginEndpoint(
     args: GetOriginEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetOriginEndpointCommandOutput>;
   getOriginEndpoint(
     args: GetOriginEndpointCommandInput,
-    cb: (err: any, data?: GetOriginEndpointCommandOutput) => void
+    cb: (err: any, data?: GetOriginEndpointCommandOutput) => void,
   ): void;
   getOriginEndpoint(
     args: GetOriginEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetOriginEndpointCommandOutput) => void
+    cb: (err: any, data?: GetOriginEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -332,16 +332,16 @@ export interface MediaPackageV2 {
    */
   getOriginEndpointPolicy(
     args: GetOriginEndpointPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetOriginEndpointPolicyCommandOutput>;
   getOriginEndpointPolicy(
     args: GetOriginEndpointPolicyCommandInput,
-    cb: (err: any, data?: GetOriginEndpointPolicyCommandOutput) => void
+    cb: (err: any, data?: GetOriginEndpointPolicyCommandOutput) => void,
   ): void;
   getOriginEndpointPolicy(
     args: GetOriginEndpointPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetOriginEndpointPolicyCommandOutput) => void
+    cb: (err: any, data?: GetOriginEndpointPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -350,16 +350,16 @@ export interface MediaPackageV2 {
   listChannelGroups(): Promise<ListChannelGroupsCommandOutput>;
   listChannelGroups(
     args: ListChannelGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListChannelGroupsCommandOutput>;
   listChannelGroups(
     args: ListChannelGroupsCommandInput,
-    cb: (err: any, data?: ListChannelGroupsCommandOutput) => void
+    cb: (err: any, data?: ListChannelGroupsCommandOutput) => void,
   ): void;
   listChannelGroups(
     args: ListChannelGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListChannelGroupsCommandOutput) => void
+    cb: (err: any, data?: ListChannelGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -370,7 +370,7 @@ export interface MediaPackageV2 {
   listChannels(
     args: ListChannelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListChannelsCommandOutput) => void
+    cb: (err: any, data?: ListChannelsCommandOutput) => void,
   ): void;
 
   /**
@@ -378,16 +378,16 @@ export interface MediaPackageV2 {
    */
   listOriginEndpoints(
     args: ListOriginEndpointsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListOriginEndpointsCommandOutput>;
   listOriginEndpoints(
     args: ListOriginEndpointsCommandInput,
-    cb: (err: any, data?: ListOriginEndpointsCommandOutput) => void
+    cb: (err: any, data?: ListOriginEndpointsCommandOutput) => void,
   ): void;
   listOriginEndpoints(
     args: ListOriginEndpointsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOriginEndpointsCommandOutput) => void
+    cb: (err: any, data?: ListOriginEndpointsCommandOutput) => void,
   ): void;
 
   /**
@@ -395,16 +395,16 @@ export interface MediaPackageV2 {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -412,16 +412,16 @@ export interface MediaPackageV2 {
    */
   putChannelPolicy(
     args: PutChannelPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutChannelPolicyCommandOutput>;
   putChannelPolicy(
     args: PutChannelPolicyCommandInput,
-    cb: (err: any, data?: PutChannelPolicyCommandOutput) => void
+    cb: (err: any, data?: PutChannelPolicyCommandOutput) => void,
   ): void;
   putChannelPolicy(
     args: PutChannelPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutChannelPolicyCommandOutput) => void
+    cb: (err: any, data?: PutChannelPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -429,16 +429,16 @@ export interface MediaPackageV2 {
    */
   putOriginEndpointPolicy(
     args: PutOriginEndpointPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutOriginEndpointPolicyCommandOutput>;
   putOriginEndpointPolicy(
     args: PutOriginEndpointPolicyCommandInput,
-    cb: (err: any, data?: PutOriginEndpointPolicyCommandOutput) => void
+    cb: (err: any, data?: PutOriginEndpointPolicyCommandOutput) => void,
   ): void;
   putOriginEndpointPolicy(
     args: PutOriginEndpointPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutOriginEndpointPolicyCommandOutput) => void
+    cb: (err: any, data?: PutOriginEndpointPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -449,7 +449,7 @@ export interface MediaPackageV2 {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -460,7 +460,7 @@ export interface MediaPackageV2 {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -471,7 +471,7 @@ export interface MediaPackageV2 {
   updateChannel(
     args: UpdateChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -479,16 +479,16 @@ export interface MediaPackageV2 {
    */
   updateChannelGroup(
     args: UpdateChannelGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateChannelGroupCommandOutput>;
   updateChannelGroup(
     args: UpdateChannelGroupCommandInput,
-    cb: (err: any, data?: UpdateChannelGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateChannelGroupCommandOutput) => void,
   ): void;
   updateChannelGroup(
     args: UpdateChannelGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateChannelGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateChannelGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -496,16 +496,16 @@ export interface MediaPackageV2 {
    */
   updateOriginEndpoint(
     args: UpdateOriginEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateOriginEndpointCommandOutput>;
   updateOriginEndpoint(
     args: UpdateOriginEndpointCommandInput,
-    cb: (err: any, data?: UpdateOriginEndpointCommandOutput) => void
+    cb: (err: any, data?: UpdateOriginEndpointCommandOutput) => void,
   ): void;
   updateOriginEndpoint(
     args: UpdateOriginEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateOriginEndpointCommandOutput) => void
+    cb: (err: any, data?: UpdateOriginEndpointCommandOutput) => void,
   ): void;
 }
 

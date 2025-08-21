@@ -247,16 +247,16 @@ export interface KMS {
    */
   cancelKeyDeletion(
     args: CancelKeyDeletionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelKeyDeletionCommandOutput>;
   cancelKeyDeletion(
     args: CancelKeyDeletionCommandInput,
-    cb: (err: any, data?: CancelKeyDeletionCommandOutput) => void
+    cb: (err: any, data?: CancelKeyDeletionCommandOutput) => void,
   ): void;
   cancelKeyDeletion(
     args: CancelKeyDeletionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelKeyDeletionCommandOutput) => void
+    cb: (err: any, data?: CancelKeyDeletionCommandOutput) => void,
   ): void;
 
   /**
@@ -264,16 +264,16 @@ export interface KMS {
    */
   connectCustomKeyStore(
     args: ConnectCustomKeyStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ConnectCustomKeyStoreCommandOutput>;
   connectCustomKeyStore(
     args: ConnectCustomKeyStoreCommandInput,
-    cb: (err: any, data?: ConnectCustomKeyStoreCommandOutput) => void
+    cb: (err: any, data?: ConnectCustomKeyStoreCommandOutput) => void,
   ): void;
   connectCustomKeyStore(
     args: ConnectCustomKeyStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ConnectCustomKeyStoreCommandOutput) => void
+    cb: (err: any, data?: ConnectCustomKeyStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -284,7 +284,7 @@ export interface KMS {
   createAlias(
     args: CreateAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAliasCommandOutput) => void
+    cb: (err: any, data?: CreateAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -292,16 +292,16 @@ export interface KMS {
    */
   createCustomKeyStore(
     args: CreateCustomKeyStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCustomKeyStoreCommandOutput>;
   createCustomKeyStore(
     args: CreateCustomKeyStoreCommandInput,
-    cb: (err: any, data?: CreateCustomKeyStoreCommandOutput) => void
+    cb: (err: any, data?: CreateCustomKeyStoreCommandOutput) => void,
   ): void;
   createCustomKeyStore(
     args: CreateCustomKeyStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCustomKeyStoreCommandOutput) => void
+    cb: (err: any, data?: CreateCustomKeyStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -312,7 +312,7 @@ export interface KMS {
   createGrant(
     args: CreateGrantCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateGrantCommandOutput) => void
+    cb: (err: any, data?: CreateGrantCommandOutput) => void,
   ): void;
 
   /**
@@ -324,7 +324,7 @@ export interface KMS {
   createKey(
     args: CreateKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateKeyCommandOutput) => void
+    cb: (err: any, data?: CreateKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -335,7 +335,7 @@ export interface KMS {
   decrypt(
     args: DecryptCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DecryptCommandOutput) => void
+    cb: (err: any, data?: DecryptCommandOutput) => void,
   ): void;
 
   /**
@@ -346,7 +346,7 @@ export interface KMS {
   deleteAlias(
     args: DeleteAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAliasCommandOutput) => void
+    cb: (err: any, data?: DeleteAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -354,16 +354,16 @@ export interface KMS {
    */
   deleteCustomKeyStore(
     args: DeleteCustomKeyStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCustomKeyStoreCommandOutput>;
   deleteCustomKeyStore(
     args: DeleteCustomKeyStoreCommandInput,
-    cb: (err: any, data?: DeleteCustomKeyStoreCommandOutput) => void
+    cb: (err: any, data?: DeleteCustomKeyStoreCommandOutput) => void,
   ): void;
   deleteCustomKeyStore(
     args: DeleteCustomKeyStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCustomKeyStoreCommandOutput) => void
+    cb: (err: any, data?: DeleteCustomKeyStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -371,16 +371,16 @@ export interface KMS {
    */
   deleteImportedKeyMaterial(
     args: DeleteImportedKeyMaterialCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteImportedKeyMaterialCommandOutput>;
   deleteImportedKeyMaterial(
     args: DeleteImportedKeyMaterialCommandInput,
-    cb: (err: any, data?: DeleteImportedKeyMaterialCommandOutput) => void
+    cb: (err: any, data?: DeleteImportedKeyMaterialCommandOutput) => void,
   ): void;
   deleteImportedKeyMaterial(
     args: DeleteImportedKeyMaterialCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteImportedKeyMaterialCommandOutput) => void
+    cb: (err: any, data?: DeleteImportedKeyMaterialCommandOutput) => void,
   ): void;
 
   /**
@@ -388,16 +388,16 @@ export interface KMS {
    */
   deriveSharedSecret(
     args: DeriveSharedSecretCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeriveSharedSecretCommandOutput>;
   deriveSharedSecret(
     args: DeriveSharedSecretCommandInput,
-    cb: (err: any, data?: DeriveSharedSecretCommandOutput) => void
+    cb: (err: any, data?: DeriveSharedSecretCommandOutput) => void,
   ): void;
   deriveSharedSecret(
     args: DeriveSharedSecretCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeriveSharedSecretCommandOutput) => void
+    cb: (err: any, data?: DeriveSharedSecretCommandOutput) => void,
   ): void;
 
   /**
@@ -406,16 +406,16 @@ export interface KMS {
   describeCustomKeyStores(): Promise<DescribeCustomKeyStoresCommandOutput>;
   describeCustomKeyStores(
     args: DescribeCustomKeyStoresCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeCustomKeyStoresCommandOutput>;
   describeCustomKeyStores(
     args: DescribeCustomKeyStoresCommandInput,
-    cb: (err: any, data?: DescribeCustomKeyStoresCommandOutput) => void
+    cb: (err: any, data?: DescribeCustomKeyStoresCommandOutput) => void,
   ): void;
   describeCustomKeyStores(
     args: DescribeCustomKeyStoresCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeCustomKeyStoresCommandOutput) => void
+    cb: (err: any, data?: DescribeCustomKeyStoresCommandOutput) => void,
   ): void;
 
   /**
@@ -426,7 +426,7 @@ export interface KMS {
   describeKey(
     args: DescribeKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeKeyCommandOutput) => void
+    cb: (err: any, data?: DescribeKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -437,7 +437,7 @@ export interface KMS {
   disableKey(
     args: DisableKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableKeyCommandOutput) => void
+    cb: (err: any, data?: DisableKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -445,16 +445,16 @@ export interface KMS {
    */
   disableKeyRotation(
     args: DisableKeyRotationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisableKeyRotationCommandOutput>;
   disableKeyRotation(
     args: DisableKeyRotationCommandInput,
-    cb: (err: any, data?: DisableKeyRotationCommandOutput) => void
+    cb: (err: any, data?: DisableKeyRotationCommandOutput) => void,
   ): void;
   disableKeyRotation(
     args: DisableKeyRotationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableKeyRotationCommandOutput) => void
+    cb: (err: any, data?: DisableKeyRotationCommandOutput) => void,
   ): void;
 
   /**
@@ -462,16 +462,16 @@ export interface KMS {
    */
   disconnectCustomKeyStore(
     args: DisconnectCustomKeyStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisconnectCustomKeyStoreCommandOutput>;
   disconnectCustomKeyStore(
     args: DisconnectCustomKeyStoreCommandInput,
-    cb: (err: any, data?: DisconnectCustomKeyStoreCommandOutput) => void
+    cb: (err: any, data?: DisconnectCustomKeyStoreCommandOutput) => void,
   ): void;
   disconnectCustomKeyStore(
     args: DisconnectCustomKeyStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisconnectCustomKeyStoreCommandOutput) => void
+    cb: (err: any, data?: DisconnectCustomKeyStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -482,7 +482,7 @@ export interface KMS {
   enableKey(
     args: EnableKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableKeyCommandOutput) => void
+    cb: (err: any, data?: EnableKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -490,16 +490,16 @@ export interface KMS {
    */
   enableKeyRotation(
     args: EnableKeyRotationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EnableKeyRotationCommandOutput>;
   enableKeyRotation(
     args: EnableKeyRotationCommandInput,
-    cb: (err: any, data?: EnableKeyRotationCommandOutput) => void
+    cb: (err: any, data?: EnableKeyRotationCommandOutput) => void,
   ): void;
   enableKeyRotation(
     args: EnableKeyRotationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableKeyRotationCommandOutput) => void
+    cb: (err: any, data?: EnableKeyRotationCommandOutput) => void,
   ): void;
 
   /**
@@ -510,7 +510,7 @@ export interface KMS {
   encrypt(
     args: EncryptCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EncryptCommandOutput) => void
+    cb: (err: any, data?: EncryptCommandOutput) => void,
   ): void;
 
   /**
@@ -518,13 +518,13 @@ export interface KMS {
    */
   generateDataKey(
     args: GenerateDataKeyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GenerateDataKeyCommandOutput>;
   generateDataKey(args: GenerateDataKeyCommandInput, cb: (err: any, data?: GenerateDataKeyCommandOutput) => void): void;
   generateDataKey(
     args: GenerateDataKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GenerateDataKeyCommandOutput) => void
+    cb: (err: any, data?: GenerateDataKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -532,16 +532,16 @@ export interface KMS {
    */
   generateDataKeyPair(
     args: GenerateDataKeyPairCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GenerateDataKeyPairCommandOutput>;
   generateDataKeyPair(
     args: GenerateDataKeyPairCommandInput,
-    cb: (err: any, data?: GenerateDataKeyPairCommandOutput) => void
+    cb: (err: any, data?: GenerateDataKeyPairCommandOutput) => void,
   ): void;
   generateDataKeyPair(
     args: GenerateDataKeyPairCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GenerateDataKeyPairCommandOutput) => void
+    cb: (err: any, data?: GenerateDataKeyPairCommandOutput) => void,
   ): void;
 
   /**
@@ -549,16 +549,16 @@ export interface KMS {
    */
   generateDataKeyPairWithoutPlaintext(
     args: GenerateDataKeyPairWithoutPlaintextCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GenerateDataKeyPairWithoutPlaintextCommandOutput>;
   generateDataKeyPairWithoutPlaintext(
     args: GenerateDataKeyPairWithoutPlaintextCommandInput,
-    cb: (err: any, data?: GenerateDataKeyPairWithoutPlaintextCommandOutput) => void
+    cb: (err: any, data?: GenerateDataKeyPairWithoutPlaintextCommandOutput) => void,
   ): void;
   generateDataKeyPairWithoutPlaintext(
     args: GenerateDataKeyPairWithoutPlaintextCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GenerateDataKeyPairWithoutPlaintextCommandOutput) => void
+    cb: (err: any, data?: GenerateDataKeyPairWithoutPlaintextCommandOutput) => void,
   ): void;
 
   /**
@@ -566,16 +566,16 @@ export interface KMS {
    */
   generateDataKeyWithoutPlaintext(
     args: GenerateDataKeyWithoutPlaintextCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GenerateDataKeyWithoutPlaintextCommandOutput>;
   generateDataKeyWithoutPlaintext(
     args: GenerateDataKeyWithoutPlaintextCommandInput,
-    cb: (err: any, data?: GenerateDataKeyWithoutPlaintextCommandOutput) => void
+    cb: (err: any, data?: GenerateDataKeyWithoutPlaintextCommandOutput) => void,
   ): void;
   generateDataKeyWithoutPlaintext(
     args: GenerateDataKeyWithoutPlaintextCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GenerateDataKeyWithoutPlaintextCommandOutput) => void
+    cb: (err: any, data?: GenerateDataKeyWithoutPlaintextCommandOutput) => void,
   ): void;
 
   /**
@@ -586,7 +586,7 @@ export interface KMS {
   generateMac(
     args: GenerateMacCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GenerateMacCommandOutput) => void
+    cb: (err: any, data?: GenerateMacCommandOutput) => void,
   ): void;
 
   /**
@@ -595,13 +595,13 @@ export interface KMS {
   generateRandom(): Promise<GenerateRandomCommandOutput>;
   generateRandom(
     args: GenerateRandomCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GenerateRandomCommandOutput>;
   generateRandom(args: GenerateRandomCommandInput, cb: (err: any, data?: GenerateRandomCommandOutput) => void): void;
   generateRandom(
     args: GenerateRandomCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GenerateRandomCommandOutput) => void
+    cb: (err: any, data?: GenerateRandomCommandOutput) => void,
   ): void;
 
   /**
@@ -612,7 +612,7 @@ export interface KMS {
   getKeyPolicy(
     args: GetKeyPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetKeyPolicyCommandOutput) => void
+    cb: (err: any, data?: GetKeyPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -620,16 +620,16 @@ export interface KMS {
    */
   getKeyRotationStatus(
     args: GetKeyRotationStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetKeyRotationStatusCommandOutput>;
   getKeyRotationStatus(
     args: GetKeyRotationStatusCommandInput,
-    cb: (err: any, data?: GetKeyRotationStatusCommandOutput) => void
+    cb: (err: any, data?: GetKeyRotationStatusCommandOutput) => void,
   ): void;
   getKeyRotationStatus(
     args: GetKeyRotationStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetKeyRotationStatusCommandOutput) => void
+    cb: (err: any, data?: GetKeyRotationStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -637,16 +637,16 @@ export interface KMS {
    */
   getParametersForImport(
     args: GetParametersForImportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetParametersForImportCommandOutput>;
   getParametersForImport(
     args: GetParametersForImportCommandInput,
-    cb: (err: any, data?: GetParametersForImportCommandOutput) => void
+    cb: (err: any, data?: GetParametersForImportCommandOutput) => void,
   ): void;
   getParametersForImport(
     args: GetParametersForImportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetParametersForImportCommandOutput) => void
+    cb: (err: any, data?: GetParametersForImportCommandOutput) => void,
   ): void;
 
   /**
@@ -657,7 +657,7 @@ export interface KMS {
   getPublicKey(
     args: GetPublicKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPublicKeyCommandOutput) => void
+    cb: (err: any, data?: GetPublicKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -665,16 +665,16 @@ export interface KMS {
    */
   importKeyMaterial(
     args: ImportKeyMaterialCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ImportKeyMaterialCommandOutput>;
   importKeyMaterial(
     args: ImportKeyMaterialCommandInput,
-    cb: (err: any, data?: ImportKeyMaterialCommandOutput) => void
+    cb: (err: any, data?: ImportKeyMaterialCommandOutput) => void,
   ): void;
   importKeyMaterial(
     args: ImportKeyMaterialCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportKeyMaterialCommandOutput) => void
+    cb: (err: any, data?: ImportKeyMaterialCommandOutput) => void,
   ): void;
 
   /**
@@ -686,7 +686,7 @@ export interface KMS {
   listAliases(
     args: ListAliasesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAliasesCommandOutput) => void
+    cb: (err: any, data?: ListAliasesCommandOutput) => void,
   ): void;
 
   /**
@@ -697,7 +697,7 @@ export interface KMS {
   listGrants(
     args: ListGrantsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListGrantsCommandOutput) => void
+    cb: (err: any, data?: ListGrantsCommandOutput) => void,
   ): void;
 
   /**
@@ -705,13 +705,13 @@ export interface KMS {
    */
   listKeyPolicies(
     args: ListKeyPoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListKeyPoliciesCommandOutput>;
   listKeyPolicies(args: ListKeyPoliciesCommandInput, cb: (err: any, data?: ListKeyPoliciesCommandOutput) => void): void;
   listKeyPolicies(
     args: ListKeyPoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListKeyPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListKeyPoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -719,16 +719,16 @@ export interface KMS {
    */
   listKeyRotations(
     args: ListKeyRotationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListKeyRotationsCommandOutput>;
   listKeyRotations(
     args: ListKeyRotationsCommandInput,
-    cb: (err: any, data?: ListKeyRotationsCommandOutput) => void
+    cb: (err: any, data?: ListKeyRotationsCommandOutput) => void,
   ): void;
   listKeyRotations(
     args: ListKeyRotationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListKeyRotationsCommandOutput) => void
+    cb: (err: any, data?: ListKeyRotationsCommandOutput) => void,
   ): void;
 
   /**
@@ -740,7 +740,7 @@ export interface KMS {
   listKeys(
     args: ListKeysCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListKeysCommandOutput) => void
+    cb: (err: any, data?: ListKeysCommandOutput) => void,
   ): void;
 
   /**
@@ -748,16 +748,16 @@ export interface KMS {
    */
   listResourceTags(
     args: ListResourceTagsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResourceTagsCommandOutput>;
   listResourceTags(
     args: ListResourceTagsCommandInput,
-    cb: (err: any, data?: ListResourceTagsCommandOutput) => void
+    cb: (err: any, data?: ListResourceTagsCommandOutput) => void,
   ): void;
   listResourceTags(
     args: ListResourceTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResourceTagsCommandOutput) => void
+    cb: (err: any, data?: ListResourceTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -765,16 +765,16 @@ export interface KMS {
    */
   listRetirableGrants(
     args: ListRetirableGrantsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRetirableGrantsCommandOutput>;
   listRetirableGrants(
     args: ListRetirableGrantsCommandInput,
-    cb: (err: any, data?: ListRetirableGrantsCommandOutput) => void
+    cb: (err: any, data?: ListRetirableGrantsCommandOutput) => void,
   ): void;
   listRetirableGrants(
     args: ListRetirableGrantsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRetirableGrantsCommandOutput) => void
+    cb: (err: any, data?: ListRetirableGrantsCommandOutput) => void,
   ): void;
 
   /**
@@ -785,7 +785,7 @@ export interface KMS {
   putKeyPolicy(
     args: PutKeyPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutKeyPolicyCommandOutput) => void
+    cb: (err: any, data?: PutKeyPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -796,7 +796,7 @@ export interface KMS {
   reEncrypt(
     args: ReEncryptCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ReEncryptCommandOutput) => void
+    cb: (err: any, data?: ReEncryptCommandOutput) => void,
   ): void;
 
   /**
@@ -807,7 +807,7 @@ export interface KMS {
   replicateKey(
     args: ReplicateKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ReplicateKeyCommandOutput) => void
+    cb: (err: any, data?: ReplicateKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -819,7 +819,7 @@ export interface KMS {
   retireGrant(
     args: RetireGrantCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RetireGrantCommandOutput) => void
+    cb: (err: any, data?: RetireGrantCommandOutput) => void,
   ): void;
 
   /**
@@ -830,7 +830,7 @@ export interface KMS {
   revokeGrant(
     args: RevokeGrantCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RevokeGrantCommandOutput) => void
+    cb: (err: any, data?: RevokeGrantCommandOutput) => void,
   ): void;
 
   /**
@@ -838,16 +838,16 @@ export interface KMS {
    */
   rotateKeyOnDemand(
     args: RotateKeyOnDemandCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RotateKeyOnDemandCommandOutput>;
   rotateKeyOnDemand(
     args: RotateKeyOnDemandCommandInput,
-    cb: (err: any, data?: RotateKeyOnDemandCommandOutput) => void
+    cb: (err: any, data?: RotateKeyOnDemandCommandOutput) => void,
   ): void;
   rotateKeyOnDemand(
     args: RotateKeyOnDemandCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RotateKeyOnDemandCommandOutput) => void
+    cb: (err: any, data?: RotateKeyOnDemandCommandOutput) => void,
   ): void;
 
   /**
@@ -855,16 +855,16 @@ export interface KMS {
    */
   scheduleKeyDeletion(
     args: ScheduleKeyDeletionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ScheduleKeyDeletionCommandOutput>;
   scheduleKeyDeletion(
     args: ScheduleKeyDeletionCommandInput,
-    cb: (err: any, data?: ScheduleKeyDeletionCommandOutput) => void
+    cb: (err: any, data?: ScheduleKeyDeletionCommandOutput) => void,
   ): void;
   scheduleKeyDeletion(
     args: ScheduleKeyDeletionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ScheduleKeyDeletionCommandOutput) => void
+    cb: (err: any, data?: ScheduleKeyDeletionCommandOutput) => void,
   ): void;
 
   /**
@@ -882,7 +882,7 @@ export interface KMS {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -893,7 +893,7 @@ export interface KMS {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -904,7 +904,7 @@ export interface KMS {
   updateAlias(
     args: UpdateAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAliasCommandOutput) => void
+    cb: (err: any, data?: UpdateAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -912,16 +912,16 @@ export interface KMS {
    */
   updateCustomKeyStore(
     args: UpdateCustomKeyStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateCustomKeyStoreCommandOutput>;
   updateCustomKeyStore(
     args: UpdateCustomKeyStoreCommandInput,
-    cb: (err: any, data?: UpdateCustomKeyStoreCommandOutput) => void
+    cb: (err: any, data?: UpdateCustomKeyStoreCommandOutput) => void,
   ): void;
   updateCustomKeyStore(
     args: UpdateCustomKeyStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateCustomKeyStoreCommandOutput) => void
+    cb: (err: any, data?: UpdateCustomKeyStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -929,16 +929,16 @@ export interface KMS {
    */
   updateKeyDescription(
     args: UpdateKeyDescriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateKeyDescriptionCommandOutput>;
   updateKeyDescription(
     args: UpdateKeyDescriptionCommandInput,
-    cb: (err: any, data?: UpdateKeyDescriptionCommandOutput) => void
+    cb: (err: any, data?: UpdateKeyDescriptionCommandOutput) => void,
   ): void;
   updateKeyDescription(
     args: UpdateKeyDescriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateKeyDescriptionCommandOutput) => void
+    cb: (err: any, data?: UpdateKeyDescriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -946,16 +946,16 @@ export interface KMS {
    */
   updatePrimaryRegion(
     args: UpdatePrimaryRegionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePrimaryRegionCommandOutput>;
   updatePrimaryRegion(
     args: UpdatePrimaryRegionCommandInput,
-    cb: (err: any, data?: UpdatePrimaryRegionCommandOutput) => void
+    cb: (err: any, data?: UpdatePrimaryRegionCommandOutput) => void,
   ): void;
   updatePrimaryRegion(
     args: UpdatePrimaryRegionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePrimaryRegionCommandOutput) => void
+    cb: (err: any, data?: UpdatePrimaryRegionCommandOutput) => void,
   ): void;
 
   /**
@@ -966,7 +966,7 @@ export interface KMS {
   verify(
     args: VerifyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: VerifyCommandOutput) => void
+    cb: (err: any, data?: VerifyCommandOutput) => void,
   ): void;
 
   /**
@@ -977,7 +977,7 @@ export interface KMS {
   verifyMac(
     args: VerifyMacCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: VerifyMacCommandOutput) => void
+    cb: (err: any, data?: VerifyMacCommandOutput) => void,
   ): void;
 }
 

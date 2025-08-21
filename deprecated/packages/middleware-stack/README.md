@@ -4,7 +4,7 @@
 
 Moved to [smithy-typescript](https://github.com/awslabs/smithy-typescript/tree/main/packages).
 
-----
+---
 
 The package contains an implementation of middleware stack interface. Middleware
 stack is a structure storing middleware in specified order and resolve these

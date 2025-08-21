@@ -35,7 +35,7 @@ describe("getProcessArnablesMiddleware", () => {
         });
         return next(args);
       },
-      { step: "serialize" }
+      { step: "serialize" },
     );
     // Add middleware intercepting the stack and return early with the
     // execution information of stack.
@@ -50,7 +50,7 @@ describe("getProcessArnablesMiddleware", () => {
           },
         };
       },
-      { step: "finalizeRequest" }
+      { step: "finalizeRequest" },
     );
     getProcessArnablesPlugin(options).applyToStack(stack);
     return stack;
@@ -228,7 +228,7 @@ describe("getProcessArnablesMiddleware", () => {
           "s3-control.us-west-2.amazonaws.com",
           setupPluginOptions({
             region: "us-west-2",
-          })
+          }),
         );
         const handler = stack.resolve((() => {}) as any, {});
         await expect(handler({ input: { Name: arn } })).rejects.toThrow(new Error(message));
@@ -242,7 +242,7 @@ describe("getProcessArnablesMiddleware", () => {
         hostname,
         setupPluginOptions({
           region: "us-west-2",
-        })
+        }),
       );
       const handler = stack.resolve((() => {}) as any, {});
       const {
@@ -260,7 +260,7 @@ describe("getProcessArnablesMiddleware", () => {
       const stack = getStack("s3-control.us-west-2.amazonaws.com", setupPluginOptions({ region: "us-west-2" }));
       const handler = stack.resolve((() => {}) as any, {});
       await expect(handler({ input: { Name: arn, AccountId } })).rejects.toThrow(
-        new Error("AccountId is incompatible with account id inferred from Name")
+        new Error("AccountId is incompatible with account id inferred from Name"),
       );
     });
   });
@@ -454,7 +454,7 @@ describe("getProcessArnablesMiddleware", () => {
           "s3-control.us-west-2.amazonaws.com",
           setupPluginOptions({
             region: "us-west-2",
-          })
+          }),
         );
         const handler = stack.resolve((() => {}) as any, {});
         await expect(handler({ input: { Bucket: arn } })).rejects.toThrow(new Error(message));
@@ -468,11 +468,11 @@ describe("getProcessArnablesMiddleware", () => {
         "s3-control.us-west-2.amazonaws.com",
         setupPluginOptions({
           region: "us-west-2",
-        })
+        }),
       );
       const handler = stack.resolve((() => {}) as any, {});
       await expect(handler({ input: { Bucket: arn, AccountId } })).rejects.toThrow(
-        new Error("AccountId is incompatible with account id inferred from Bucket")
+        new Error("AccountId is incompatible with account id inferred from Bucket"),
       );
     });
   });

@@ -277,7 +277,7 @@ import {
  */
 export const se_AcknowledgeJobCommand = async (
   input: AcknowledgeJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AcknowledgeJob");
   let body: any;
@@ -290,7 +290,7 @@ export const se_AcknowledgeJobCommand = async (
  */
 export const se_AcknowledgeThirdPartyJobCommand = async (
   input: AcknowledgeThirdPartyJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AcknowledgeThirdPartyJob");
   let body: any;
@@ -303,7 +303,7 @@ export const se_AcknowledgeThirdPartyJobCommand = async (
  */
 export const se_CreateCustomActionTypeCommand = async (
   input: CreateCustomActionTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateCustomActionType");
   let body: any;
@@ -316,7 +316,7 @@ export const se_CreateCustomActionTypeCommand = async (
  */
 export const se_CreatePipelineCommand = async (
   input: CreatePipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreatePipeline");
   let body: any;
@@ -329,7 +329,7 @@ export const se_CreatePipelineCommand = async (
  */
 export const se_DeleteCustomActionTypeCommand = async (
   input: DeleteCustomActionTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteCustomActionType");
   let body: any;
@@ -342,7 +342,7 @@ export const se_DeleteCustomActionTypeCommand = async (
  */
 export const se_DeletePipelineCommand = async (
   input: DeletePipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeletePipeline");
   let body: any;
@@ -355,7 +355,7 @@ export const se_DeletePipelineCommand = async (
  */
 export const se_DeleteWebhookCommand = async (
   input: DeleteWebhookCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteWebhook");
   let body: any;
@@ -368,7 +368,7 @@ export const se_DeleteWebhookCommand = async (
  */
 export const se_DeregisterWebhookWithThirdPartyCommand = async (
   input: DeregisterWebhookWithThirdPartyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeregisterWebhookWithThirdParty");
   let body: any;
@@ -381,7 +381,7 @@ export const se_DeregisterWebhookWithThirdPartyCommand = async (
  */
 export const se_DisableStageTransitionCommand = async (
   input: DisableStageTransitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisableStageTransition");
   let body: any;
@@ -394,7 +394,7 @@ export const se_DisableStageTransitionCommand = async (
  */
 export const se_EnableStageTransitionCommand = async (
   input: EnableStageTransitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EnableStageTransition");
   let body: any;
@@ -407,7 +407,7 @@ export const se_EnableStageTransitionCommand = async (
  */
 export const se_GetActionTypeCommand = async (
   input: GetActionTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetActionType");
   let body: any;
@@ -420,7 +420,7 @@ export const se_GetActionTypeCommand = async (
  */
 export const se_GetJobDetailsCommand = async (
   input: GetJobDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetJobDetails");
   let body: any;
@@ -433,7 +433,7 @@ export const se_GetJobDetailsCommand = async (
  */
 export const se_GetPipelineCommand = async (
   input: GetPipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetPipeline");
   let body: any;
@@ -446,7 +446,7 @@ export const se_GetPipelineCommand = async (
  */
 export const se_GetPipelineExecutionCommand = async (
   input: GetPipelineExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetPipelineExecution");
   let body: any;
@@ -459,7 +459,7 @@ export const se_GetPipelineExecutionCommand = async (
  */
 export const se_GetPipelineStateCommand = async (
   input: GetPipelineStateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetPipelineState");
   let body: any;
@@ -472,7 +472,7 @@ export const se_GetPipelineStateCommand = async (
  */
 export const se_GetThirdPartyJobDetailsCommand = async (
   input: GetThirdPartyJobDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetThirdPartyJobDetails");
   let body: any;
@@ -485,7 +485,7 @@ export const se_GetThirdPartyJobDetailsCommand = async (
  */
 export const se_ListActionExecutionsCommand = async (
   input: ListActionExecutionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListActionExecutions");
   let body: any;
@@ -498,7 +498,7 @@ export const se_ListActionExecutionsCommand = async (
  */
 export const se_ListActionTypesCommand = async (
   input: ListActionTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListActionTypes");
   let body: any;
@@ -511,7 +511,7 @@ export const se_ListActionTypesCommand = async (
  */
 export const se_ListPipelineExecutionsCommand = async (
   input: ListPipelineExecutionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPipelineExecutions");
   let body: any;
@@ -524,7 +524,7 @@ export const se_ListPipelineExecutionsCommand = async (
  */
 export const se_ListPipelinesCommand = async (
   input: ListPipelinesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPipelines");
   let body: any;
@@ -537,7 +537,7 @@ export const se_ListPipelinesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -550,7 +550,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListWebhooksCommand = async (
   input: ListWebhooksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListWebhooks");
   let body: any;
@@ -563,7 +563,7 @@ export const se_ListWebhooksCommand = async (
  */
 export const se_PollForJobsCommand = async (
   input: PollForJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PollForJobs");
   let body: any;
@@ -576,7 +576,7 @@ export const se_PollForJobsCommand = async (
  */
 export const se_PollForThirdPartyJobsCommand = async (
   input: PollForThirdPartyJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PollForThirdPartyJobs");
   let body: any;
@@ -589,7 +589,7 @@ export const se_PollForThirdPartyJobsCommand = async (
  */
 export const se_PutActionRevisionCommand = async (
   input: PutActionRevisionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutActionRevision");
   let body: any;
@@ -602,7 +602,7 @@ export const se_PutActionRevisionCommand = async (
  */
 export const se_PutApprovalResultCommand = async (
   input: PutApprovalResultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutApprovalResult");
   let body: any;
@@ -615,7 +615,7 @@ export const se_PutApprovalResultCommand = async (
  */
 export const se_PutJobFailureResultCommand = async (
   input: PutJobFailureResultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutJobFailureResult");
   let body: any;
@@ -628,7 +628,7 @@ export const se_PutJobFailureResultCommand = async (
  */
 export const se_PutJobSuccessResultCommand = async (
   input: PutJobSuccessResultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutJobSuccessResult");
   let body: any;
@@ -641,7 +641,7 @@ export const se_PutJobSuccessResultCommand = async (
  */
 export const se_PutThirdPartyJobFailureResultCommand = async (
   input: PutThirdPartyJobFailureResultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutThirdPartyJobFailureResult");
   let body: any;
@@ -654,7 +654,7 @@ export const se_PutThirdPartyJobFailureResultCommand = async (
  */
 export const se_PutThirdPartyJobSuccessResultCommand = async (
   input: PutThirdPartyJobSuccessResultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutThirdPartyJobSuccessResult");
   let body: any;
@@ -667,7 +667,7 @@ export const se_PutThirdPartyJobSuccessResultCommand = async (
  */
 export const se_PutWebhookCommand = async (
   input: PutWebhookCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutWebhook");
   let body: any;
@@ -680,7 +680,7 @@ export const se_PutWebhookCommand = async (
  */
 export const se_RegisterWebhookWithThirdPartyCommand = async (
   input: RegisterWebhookWithThirdPartyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RegisterWebhookWithThirdParty");
   let body: any;
@@ -693,7 +693,7 @@ export const se_RegisterWebhookWithThirdPartyCommand = async (
  */
 export const se_RetryStageExecutionCommand = async (
   input: RetryStageExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RetryStageExecution");
   let body: any;
@@ -706,7 +706,7 @@ export const se_RetryStageExecutionCommand = async (
  */
 export const se_RollbackStageCommand = async (
   input: RollbackStageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RollbackStage");
   let body: any;
@@ -719,7 +719,7 @@ export const se_RollbackStageCommand = async (
  */
 export const se_StartPipelineExecutionCommand = async (
   input: StartPipelineExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartPipelineExecution");
   let body: any;
@@ -732,7 +732,7 @@ export const se_StartPipelineExecutionCommand = async (
  */
 export const se_StopPipelineExecutionCommand = async (
   input: StopPipelineExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopPipelineExecution");
   let body: any;
@@ -745,7 +745,7 @@ export const se_StopPipelineExecutionCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -758,7 +758,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -771,7 +771,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateActionTypeCommand = async (
   input: UpdateActionTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateActionType");
   let body: any;
@@ -784,7 +784,7 @@ export const se_UpdateActionTypeCommand = async (
  */
 export const se_UpdatePipelineCommand = async (
   input: UpdatePipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdatePipeline");
   let body: any;
@@ -797,7 +797,7 @@ export const se_UpdatePipelineCommand = async (
  */
 export const de_AcknowledgeJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcknowledgeJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -817,7 +817,7 @@ export const de_AcknowledgeJobCommand = async (
  */
 export const de_AcknowledgeThirdPartyJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcknowledgeThirdPartyJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -837,7 +837,7 @@ export const de_AcknowledgeThirdPartyJobCommand = async (
  */
 export const de_CreateCustomActionTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCustomActionTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -857,7 +857,7 @@ export const de_CreateCustomActionTypeCommand = async (
  */
 export const de_CreatePipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePipelineCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -877,7 +877,7 @@ export const de_CreatePipelineCommand = async (
  */
 export const de_DeleteCustomActionTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCustomActionTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -894,7 +894,7 @@ export const de_DeleteCustomActionTypeCommand = async (
  */
 export const de_DeletePipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePipelineCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -911,7 +911,7 @@ export const de_DeletePipelineCommand = async (
  */
 export const de_DeleteWebhookCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWebhookCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -931,7 +931,7 @@ export const de_DeleteWebhookCommand = async (
  */
 export const de_DeregisterWebhookWithThirdPartyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterWebhookWithThirdPartyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -951,7 +951,7 @@ export const de_DeregisterWebhookWithThirdPartyCommand = async (
  */
 export const de_DisableStageTransitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableStageTransitionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -968,7 +968,7 @@ export const de_DisableStageTransitionCommand = async (
  */
 export const de_EnableStageTransitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableStageTransitionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -985,7 +985,7 @@ export const de_EnableStageTransitionCommand = async (
  */
 export const de_GetActionTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetActionTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1005,7 +1005,7 @@ export const de_GetActionTypeCommand = async (
  */
 export const de_GetJobDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetJobDetailsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1025,7 +1025,7 @@ export const de_GetJobDetailsCommand = async (
  */
 export const de_GetPipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPipelineCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1045,7 +1045,7 @@ export const de_GetPipelineCommand = async (
  */
 export const de_GetPipelineExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPipelineExecutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1065,7 +1065,7 @@ export const de_GetPipelineExecutionCommand = async (
  */
 export const de_GetPipelineStateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPipelineStateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1085,7 +1085,7 @@ export const de_GetPipelineStateCommand = async (
  */
 export const de_GetThirdPartyJobDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetThirdPartyJobDetailsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1105,7 +1105,7 @@ export const de_GetThirdPartyJobDetailsCommand = async (
  */
 export const de_ListActionExecutionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListActionExecutionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1125,7 +1125,7 @@ export const de_ListActionExecutionsCommand = async (
  */
 export const de_ListActionTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListActionTypesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1145,7 +1145,7 @@ export const de_ListActionTypesCommand = async (
  */
 export const de_ListPipelineExecutionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPipelineExecutionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1165,7 +1165,7 @@ export const de_ListPipelineExecutionsCommand = async (
  */
 export const de_ListPipelinesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPipelinesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1185,7 +1185,7 @@ export const de_ListPipelinesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1205,7 +1205,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListWebhooksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWebhooksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1225,7 +1225,7 @@ export const de_ListWebhooksCommand = async (
  */
 export const de_PollForJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PollForJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1245,7 +1245,7 @@ export const de_PollForJobsCommand = async (
  */
 export const de_PollForThirdPartyJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PollForThirdPartyJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1265,7 +1265,7 @@ export const de_PollForThirdPartyJobsCommand = async (
  */
 export const de_PutActionRevisionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutActionRevisionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1285,7 +1285,7 @@ export const de_PutActionRevisionCommand = async (
  */
 export const de_PutApprovalResultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutApprovalResultCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1305,7 +1305,7 @@ export const de_PutApprovalResultCommand = async (
  */
 export const de_PutJobFailureResultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutJobFailureResultCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1322,7 +1322,7 @@ export const de_PutJobFailureResultCommand = async (
  */
 export const de_PutJobSuccessResultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutJobSuccessResultCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1339,7 +1339,7 @@ export const de_PutJobSuccessResultCommand = async (
  */
 export const de_PutThirdPartyJobFailureResultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutThirdPartyJobFailureResultCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1356,7 +1356,7 @@ export const de_PutThirdPartyJobFailureResultCommand = async (
  */
 export const de_PutThirdPartyJobSuccessResultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutThirdPartyJobSuccessResultCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1373,7 +1373,7 @@ export const de_PutThirdPartyJobSuccessResultCommand = async (
  */
 export const de_PutWebhookCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutWebhookCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1393,7 +1393,7 @@ export const de_PutWebhookCommand = async (
  */
 export const de_RegisterWebhookWithThirdPartyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterWebhookWithThirdPartyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1413,7 +1413,7 @@ export const de_RegisterWebhookWithThirdPartyCommand = async (
  */
 export const de_RetryStageExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RetryStageExecutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1433,7 +1433,7 @@ export const de_RetryStageExecutionCommand = async (
  */
 export const de_RollbackStageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RollbackStageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1453,7 +1453,7 @@ export const de_RollbackStageCommand = async (
  */
 export const de_StartPipelineExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartPipelineExecutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1473,7 +1473,7 @@ export const de_StartPipelineExecutionCommand = async (
  */
 export const de_StopPipelineExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopPipelineExecutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1493,7 +1493,7 @@ export const de_StopPipelineExecutionCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1513,7 +1513,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1533,7 +1533,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateActionTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateActionTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1550,7 +1550,7 @@ export const de_UpdateActionTypeCommand = async (
  */
 export const de_UpdatePipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePipelineCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1707,7 +1707,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ActionNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ActionNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1723,7 +1723,7 @@ const de_ActionNotFoundExceptionRes = async (
  */
 const de_ActionTypeNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ActionTypeNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1739,7 +1739,7 @@ const de_ActionTypeNotFoundExceptionRes = async (
  */
 const de_ApprovalAlreadyCompletedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApprovalAlreadyCompletedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1755,7 +1755,7 @@ const de_ApprovalAlreadyCompletedExceptionRes = async (
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1771,7 +1771,7 @@ const de_ConcurrentModificationExceptionRes = async (
  */
 const de_ConcurrentPipelineExecutionsLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentPipelineExecutionsLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1800,7 +1800,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_DuplicatedStopRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicatedStopRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1816,7 +1816,7 @@ const de_DuplicatedStopRequestExceptionRes = async (
  */
 const de_InvalidActionDeclarationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidActionDeclarationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1832,7 +1832,7 @@ const de_InvalidActionDeclarationExceptionRes = async (
  */
 const de_InvalidApprovalTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidApprovalTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1861,7 +1861,7 @@ const de_InvalidArnExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InvalidBlockerDeclarationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidBlockerDeclarationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1877,7 +1877,7 @@ const de_InvalidBlockerDeclarationExceptionRes = async (
  */
 const de_InvalidClientTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidClientTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1906,7 +1906,7 @@ const de_InvalidJobExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InvalidJobStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidJobStateException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1922,7 +1922,7 @@ const de_InvalidJobStateExceptionRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1938,7 +1938,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_InvalidNonceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNonceException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1954,7 +1954,7 @@ const de_InvalidNonceExceptionRes = async (
  */
 const de_InvalidStageDeclarationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidStageDeclarationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1970,7 +1970,7 @@ const de_InvalidStageDeclarationExceptionRes = async (
  */
 const de_InvalidStructureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidStructureException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1986,7 +1986,7 @@ const de_InvalidStructureExceptionRes = async (
  */
 const de_InvalidTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTagsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2002,7 +2002,7 @@ const de_InvalidTagsExceptionRes = async (
  */
 const de_InvalidWebhookAuthenticationParametersExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidWebhookAuthenticationParametersException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2018,7 +2018,7 @@ const de_InvalidWebhookAuthenticationParametersExceptionRes = async (
  */
 const de_InvalidWebhookFilterPatternExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidWebhookFilterPatternException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2034,7 +2034,7 @@ const de_InvalidWebhookFilterPatternExceptionRes = async (
  */
 const de_JobNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<JobNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2050,7 +2050,7 @@ const de_JobNotFoundExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2066,7 +2066,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_NotLatestPipelineExecutionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotLatestPipelineExecutionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2082,7 +2082,7 @@ const de_NotLatestPipelineExecutionExceptionRes = async (
  */
 const de_OutputVariablesSizeExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OutputVariablesSizeExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2098,7 +2098,7 @@ const de_OutputVariablesSizeExceededExceptionRes = async (
  */
 const de_PipelineExecutionNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PipelineExecutionNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2114,7 +2114,7 @@ const de_PipelineExecutionNotFoundExceptionRes = async (
  */
 const de_PipelineExecutionNotStoppableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PipelineExecutionNotStoppableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2130,7 +2130,7 @@ const de_PipelineExecutionNotStoppableExceptionRes = async (
  */
 const de_PipelineExecutionOutdatedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PipelineExecutionOutdatedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2146,7 +2146,7 @@ const de_PipelineExecutionOutdatedExceptionRes = async (
  */
 const de_PipelineNameInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PipelineNameInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2162,7 +2162,7 @@ const de_PipelineNameInUseExceptionRes = async (
  */
 const de_PipelineNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PipelineNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2178,7 +2178,7 @@ const de_PipelineNotFoundExceptionRes = async (
  */
 const de_PipelineVersionNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PipelineVersionNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2194,7 +2194,7 @@ const de_PipelineVersionNotFoundExceptionRes = async (
  */
 const de_RequestFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestFailedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2210,7 +2210,7 @@ const de_RequestFailedExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2226,7 +2226,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_StageNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StageNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2242,7 +2242,7 @@ const de_StageNotFoundExceptionRes = async (
  */
 const de_StageNotRetryableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StageNotRetryableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2258,7 +2258,7 @@ const de_StageNotRetryableExceptionRes = async (
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2274,7 +2274,7 @@ const de_TooManyTagsExceptionRes = async (
  */
 const de_UnableToRollbackStageExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnableToRollbackStageException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2303,7 +2303,7 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_WebhookNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WebhookNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2535,7 +2535,7 @@ const se_PutJobSuccessResultInput = (input: PutJobSuccessResultInput, context: _
  */
 const se_PutThirdPartyJobSuccessResultInput = (
   input: PutThirdPartyJobSuccessResultInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     clientToken: [],
@@ -3286,7 +3286,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

@@ -9,7 +9,7 @@ import { EC2Client } from "../EC2Client";
 
 const checkState = async (
   client: EC2Client,
-  input: DescribeSpotInstanceRequestsCommandInput
+  input: DescribeSpotInstanceRequestsCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -117,7 +117,7 @@ const checkState = async (
  */
 export const waitForSpotInstanceRequestFulfilled = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeSpotInstanceRequestsCommandInput
+  input: DescribeSpotInstanceRequestsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -129,7 +129,7 @@ export const waitForSpotInstanceRequestFulfilled = async (
  */
 export const waitUntilSpotInstanceRequestFulfilled = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeSpotInstanceRequestsCommandInput
+  input: DescribeSpotInstanceRequestsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

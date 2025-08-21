@@ -24,7 +24,7 @@ const checkState = async (client: IAMClient, input: GetPolicyCommandInput): Prom
  */
 export const waitForPolicyExists = async (
   params: WaiterConfiguration<IAMClient>,
-  input: GetPolicyCommandInput
+  input: GetPolicyCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 1, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -36,7 +36,7 @@ export const waitForPolicyExists = async (
  */
 export const waitUntilPolicyExists = async (
   params: WaiterConfiguration<IAMClient>,
-  input: GetPolicyCommandInput
+  input: GetPolicyCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 1, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

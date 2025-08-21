@@ -205,16 +205,16 @@ export interface Panorama {
    */
   createApplicationInstance(
     args: CreateApplicationInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateApplicationInstanceCommandOutput>;
   createApplicationInstance(
     args: CreateApplicationInstanceCommandInput,
-    cb: (err: any, data?: CreateApplicationInstanceCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationInstanceCommandOutput) => void,
   ): void;
   createApplicationInstance(
     args: CreateApplicationInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateApplicationInstanceCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -222,16 +222,16 @@ export interface Panorama {
    */
   createJobForDevices(
     args: CreateJobForDevicesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateJobForDevicesCommandOutput>;
   createJobForDevices(
     args: CreateJobForDevicesCommandInput,
-    cb: (err: any, data?: CreateJobForDevicesCommandOutput) => void
+    cb: (err: any, data?: CreateJobForDevicesCommandOutput) => void,
   ): void;
   createJobForDevices(
     args: CreateJobForDevicesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateJobForDevicesCommandOutput) => void
+    cb: (err: any, data?: CreateJobForDevicesCommandOutput) => void,
   ): void;
 
   /**
@@ -239,16 +239,16 @@ export interface Panorama {
    */
   createNodeFromTemplateJob(
     args: CreateNodeFromTemplateJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateNodeFromTemplateJobCommandOutput>;
   createNodeFromTemplateJob(
     args: CreateNodeFromTemplateJobCommandInput,
-    cb: (err: any, data?: CreateNodeFromTemplateJobCommandOutput) => void
+    cb: (err: any, data?: CreateNodeFromTemplateJobCommandOutput) => void,
   ): void;
   createNodeFromTemplateJob(
     args: CreateNodeFromTemplateJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateNodeFromTemplateJobCommandOutput) => void
+    cb: (err: any, data?: CreateNodeFromTemplateJobCommandOutput) => void,
   ): void;
 
   /**
@@ -259,7 +259,7 @@ export interface Panorama {
   createPackage(
     args: CreatePackageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePackageCommandOutput) => void
+    cb: (err: any, data?: CreatePackageCommandOutput) => void,
   ): void;
 
   /**
@@ -267,16 +267,16 @@ export interface Panorama {
    */
   createPackageImportJob(
     args: CreatePackageImportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePackageImportJobCommandOutput>;
   createPackageImportJob(
     args: CreatePackageImportJobCommandInput,
-    cb: (err: any, data?: CreatePackageImportJobCommandOutput) => void
+    cb: (err: any, data?: CreatePackageImportJobCommandOutput) => void,
   ): void;
   createPackageImportJob(
     args: CreatePackageImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePackageImportJobCommandOutput) => void
+    cb: (err: any, data?: CreatePackageImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -287,7 +287,7 @@ export interface Panorama {
   deleteDevice(
     args: DeleteDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDeviceCommandOutput) => void
+    cb: (err: any, data?: DeleteDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -298,7 +298,7 @@ export interface Panorama {
   deletePackage(
     args: DeletePackageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePackageCommandOutput) => void
+    cb: (err: any, data?: DeletePackageCommandOutput) => void,
   ): void;
 
   /**
@@ -306,16 +306,16 @@ export interface Panorama {
    */
   deregisterPackageVersion(
     args: DeregisterPackageVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterPackageVersionCommandOutput>;
   deregisterPackageVersion(
     args: DeregisterPackageVersionCommandInput,
-    cb: (err: any, data?: DeregisterPackageVersionCommandOutput) => void
+    cb: (err: any, data?: DeregisterPackageVersionCommandOutput) => void,
   ): void;
   deregisterPackageVersion(
     args: DeregisterPackageVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterPackageVersionCommandOutput) => void
+    cb: (err: any, data?: DeregisterPackageVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -323,16 +323,16 @@ export interface Panorama {
    */
   describeApplicationInstance(
     args: DescribeApplicationInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeApplicationInstanceCommandOutput>;
   describeApplicationInstance(
     args: DescribeApplicationInstanceCommandInput,
-    cb: (err: any, data?: DescribeApplicationInstanceCommandOutput) => void
+    cb: (err: any, data?: DescribeApplicationInstanceCommandOutput) => void,
   ): void;
   describeApplicationInstance(
     args: DescribeApplicationInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeApplicationInstanceCommandOutput) => void
+    cb: (err: any, data?: DescribeApplicationInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -340,16 +340,16 @@ export interface Panorama {
    */
   describeApplicationInstanceDetails(
     args: DescribeApplicationInstanceDetailsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeApplicationInstanceDetailsCommandOutput>;
   describeApplicationInstanceDetails(
     args: DescribeApplicationInstanceDetailsCommandInput,
-    cb: (err: any, data?: DescribeApplicationInstanceDetailsCommandOutput) => void
+    cb: (err: any, data?: DescribeApplicationInstanceDetailsCommandOutput) => void,
   ): void;
   describeApplicationInstanceDetails(
     args: DescribeApplicationInstanceDetailsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeApplicationInstanceDetailsCommandOutput) => void
+    cb: (err: any, data?: DescribeApplicationInstanceDetailsCommandOutput) => void,
   ): void;
 
   /**
@@ -357,13 +357,13 @@ export interface Panorama {
    */
   describeDevice(
     args: DescribeDeviceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDeviceCommandOutput>;
   describeDevice(args: DescribeDeviceCommandInput, cb: (err: any, data?: DescribeDeviceCommandOutput) => void): void;
   describeDevice(
     args: DescribeDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDeviceCommandOutput) => void
+    cb: (err: any, data?: DescribeDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -371,16 +371,16 @@ export interface Panorama {
    */
   describeDeviceJob(
     args: DescribeDeviceJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDeviceJobCommandOutput>;
   describeDeviceJob(
     args: DescribeDeviceJobCommandInput,
-    cb: (err: any, data?: DescribeDeviceJobCommandOutput) => void
+    cb: (err: any, data?: DescribeDeviceJobCommandOutput) => void,
   ): void;
   describeDeviceJob(
     args: DescribeDeviceJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDeviceJobCommandOutput) => void
+    cb: (err: any, data?: DescribeDeviceJobCommandOutput) => void,
   ): void;
 
   /**
@@ -391,7 +391,7 @@ export interface Panorama {
   describeNode(
     args: DescribeNodeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeNodeCommandOutput) => void
+    cb: (err: any, data?: DescribeNodeCommandOutput) => void,
   ): void;
 
   /**
@@ -399,16 +399,16 @@ export interface Panorama {
    */
   describeNodeFromTemplateJob(
     args: DescribeNodeFromTemplateJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeNodeFromTemplateJobCommandOutput>;
   describeNodeFromTemplateJob(
     args: DescribeNodeFromTemplateJobCommandInput,
-    cb: (err: any, data?: DescribeNodeFromTemplateJobCommandOutput) => void
+    cb: (err: any, data?: DescribeNodeFromTemplateJobCommandOutput) => void,
   ): void;
   describeNodeFromTemplateJob(
     args: DescribeNodeFromTemplateJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeNodeFromTemplateJobCommandOutput) => void
+    cb: (err: any, data?: DescribeNodeFromTemplateJobCommandOutput) => void,
   ): void;
 
   /**
@@ -416,13 +416,13 @@ export interface Panorama {
    */
   describePackage(
     args: DescribePackageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePackageCommandOutput>;
   describePackage(args: DescribePackageCommandInput, cb: (err: any, data?: DescribePackageCommandOutput) => void): void;
   describePackage(
     args: DescribePackageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePackageCommandOutput) => void
+    cb: (err: any, data?: DescribePackageCommandOutput) => void,
   ): void;
 
   /**
@@ -430,16 +430,16 @@ export interface Panorama {
    */
   describePackageImportJob(
     args: DescribePackageImportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePackageImportJobCommandOutput>;
   describePackageImportJob(
     args: DescribePackageImportJobCommandInput,
-    cb: (err: any, data?: DescribePackageImportJobCommandOutput) => void
+    cb: (err: any, data?: DescribePackageImportJobCommandOutput) => void,
   ): void;
   describePackageImportJob(
     args: DescribePackageImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePackageImportJobCommandOutput) => void
+    cb: (err: any, data?: DescribePackageImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -447,16 +447,16 @@ export interface Panorama {
    */
   describePackageVersion(
     args: DescribePackageVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePackageVersionCommandOutput>;
   describePackageVersion(
     args: DescribePackageVersionCommandInput,
-    cb: (err: any, data?: DescribePackageVersionCommandOutput) => void
+    cb: (err: any, data?: DescribePackageVersionCommandOutput) => void,
   ): void;
   describePackageVersion(
     args: DescribePackageVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePackageVersionCommandOutput) => void
+    cb: (err: any, data?: DescribePackageVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -464,16 +464,16 @@ export interface Panorama {
    */
   listApplicationInstanceDependencies(
     args: ListApplicationInstanceDependenciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApplicationInstanceDependenciesCommandOutput>;
   listApplicationInstanceDependencies(
     args: ListApplicationInstanceDependenciesCommandInput,
-    cb: (err: any, data?: ListApplicationInstanceDependenciesCommandOutput) => void
+    cb: (err: any, data?: ListApplicationInstanceDependenciesCommandOutput) => void,
   ): void;
   listApplicationInstanceDependencies(
     args: ListApplicationInstanceDependenciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApplicationInstanceDependenciesCommandOutput) => void
+    cb: (err: any, data?: ListApplicationInstanceDependenciesCommandOutput) => void,
   ): void;
 
   /**
@@ -481,16 +481,16 @@ export interface Panorama {
    */
   listApplicationInstanceNodeInstances(
     args: ListApplicationInstanceNodeInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApplicationInstanceNodeInstancesCommandOutput>;
   listApplicationInstanceNodeInstances(
     args: ListApplicationInstanceNodeInstancesCommandInput,
-    cb: (err: any, data?: ListApplicationInstanceNodeInstancesCommandOutput) => void
+    cb: (err: any, data?: ListApplicationInstanceNodeInstancesCommandOutput) => void,
   ): void;
   listApplicationInstanceNodeInstances(
     args: ListApplicationInstanceNodeInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApplicationInstanceNodeInstancesCommandOutput) => void
+    cb: (err: any, data?: ListApplicationInstanceNodeInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -499,16 +499,16 @@ export interface Panorama {
   listApplicationInstances(): Promise<ListApplicationInstancesCommandOutput>;
   listApplicationInstances(
     args: ListApplicationInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApplicationInstancesCommandOutput>;
   listApplicationInstances(
     args: ListApplicationInstancesCommandInput,
-    cb: (err: any, data?: ListApplicationInstancesCommandOutput) => void
+    cb: (err: any, data?: ListApplicationInstancesCommandOutput) => void,
   ): void;
   listApplicationInstances(
     args: ListApplicationInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApplicationInstancesCommandOutput) => void
+    cb: (err: any, data?: ListApplicationInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -520,7 +520,7 @@ export interface Panorama {
   listDevices(
     args: ListDevicesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDevicesCommandOutput) => void
+    cb: (err: any, data?: ListDevicesCommandOutput) => void,
   ): void;
 
   /**
@@ -529,13 +529,13 @@ export interface Panorama {
   listDevicesJobs(): Promise<ListDevicesJobsCommandOutput>;
   listDevicesJobs(
     args: ListDevicesJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDevicesJobsCommandOutput>;
   listDevicesJobs(args: ListDevicesJobsCommandInput, cb: (err: any, data?: ListDevicesJobsCommandOutput) => void): void;
   listDevicesJobs(
     args: ListDevicesJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDevicesJobsCommandOutput) => void
+    cb: (err: any, data?: ListDevicesJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -544,16 +544,16 @@ export interface Panorama {
   listNodeFromTemplateJobs(): Promise<ListNodeFromTemplateJobsCommandOutput>;
   listNodeFromTemplateJobs(
     args: ListNodeFromTemplateJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListNodeFromTemplateJobsCommandOutput>;
   listNodeFromTemplateJobs(
     args: ListNodeFromTemplateJobsCommandInput,
-    cb: (err: any, data?: ListNodeFromTemplateJobsCommandOutput) => void
+    cb: (err: any, data?: ListNodeFromTemplateJobsCommandOutput) => void,
   ): void;
   listNodeFromTemplateJobs(
     args: ListNodeFromTemplateJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListNodeFromTemplateJobsCommandOutput) => void
+    cb: (err: any, data?: ListNodeFromTemplateJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -565,7 +565,7 @@ export interface Panorama {
   listNodes(
     args: ListNodesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListNodesCommandOutput) => void
+    cb: (err: any, data?: ListNodesCommandOutput) => void,
   ): void;
 
   /**
@@ -574,16 +574,16 @@ export interface Panorama {
   listPackageImportJobs(): Promise<ListPackageImportJobsCommandOutput>;
   listPackageImportJobs(
     args: ListPackageImportJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPackageImportJobsCommandOutput>;
   listPackageImportJobs(
     args: ListPackageImportJobsCommandInput,
-    cb: (err: any, data?: ListPackageImportJobsCommandOutput) => void
+    cb: (err: any, data?: ListPackageImportJobsCommandOutput) => void,
   ): void;
   listPackageImportJobs(
     args: ListPackageImportJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPackageImportJobsCommandOutput) => void
+    cb: (err: any, data?: ListPackageImportJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -595,7 +595,7 @@ export interface Panorama {
   listPackages(
     args: ListPackagesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPackagesCommandOutput) => void
+    cb: (err: any, data?: ListPackagesCommandOutput) => void,
   ): void;
 
   /**
@@ -603,16 +603,16 @@ export interface Panorama {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -620,13 +620,13 @@ export interface Panorama {
    */
   provisionDevice(
     args: ProvisionDeviceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ProvisionDeviceCommandOutput>;
   provisionDevice(args: ProvisionDeviceCommandInput, cb: (err: any, data?: ProvisionDeviceCommandOutput) => void): void;
   provisionDevice(
     args: ProvisionDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ProvisionDeviceCommandOutput) => void
+    cb: (err: any, data?: ProvisionDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -634,16 +634,16 @@ export interface Panorama {
    */
   registerPackageVersion(
     args: RegisterPackageVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterPackageVersionCommandOutput>;
   registerPackageVersion(
     args: RegisterPackageVersionCommandInput,
-    cb: (err: any, data?: RegisterPackageVersionCommandOutput) => void
+    cb: (err: any, data?: RegisterPackageVersionCommandOutput) => void,
   ): void;
   registerPackageVersion(
     args: RegisterPackageVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterPackageVersionCommandOutput) => void
+    cb: (err: any, data?: RegisterPackageVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -651,16 +651,16 @@ export interface Panorama {
    */
   removeApplicationInstance(
     args: RemoveApplicationInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveApplicationInstanceCommandOutput>;
   removeApplicationInstance(
     args: RemoveApplicationInstanceCommandInput,
-    cb: (err: any, data?: RemoveApplicationInstanceCommandOutput) => void
+    cb: (err: any, data?: RemoveApplicationInstanceCommandOutput) => void,
   ): void;
   removeApplicationInstance(
     args: RemoveApplicationInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveApplicationInstanceCommandOutput) => void
+    cb: (err: any, data?: RemoveApplicationInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -668,16 +668,16 @@ export interface Panorama {
    */
   signalApplicationInstanceNodeInstances(
     args: SignalApplicationInstanceNodeInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SignalApplicationInstanceNodeInstancesCommandOutput>;
   signalApplicationInstanceNodeInstances(
     args: SignalApplicationInstanceNodeInstancesCommandInput,
-    cb: (err: any, data?: SignalApplicationInstanceNodeInstancesCommandOutput) => void
+    cb: (err: any, data?: SignalApplicationInstanceNodeInstancesCommandOutput) => void,
   ): void;
   signalApplicationInstanceNodeInstances(
     args: SignalApplicationInstanceNodeInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SignalApplicationInstanceNodeInstancesCommandOutput) => void
+    cb: (err: any, data?: SignalApplicationInstanceNodeInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -688,7 +688,7 @@ export interface Panorama {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -699,7 +699,7 @@ export interface Panorama {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -707,16 +707,16 @@ export interface Panorama {
    */
   updateDeviceMetadata(
     args: UpdateDeviceMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDeviceMetadataCommandOutput>;
   updateDeviceMetadata(
     args: UpdateDeviceMetadataCommandInput,
-    cb: (err: any, data?: UpdateDeviceMetadataCommandOutput) => void
+    cb: (err: any, data?: UpdateDeviceMetadataCommandOutput) => void,
   ): void;
   updateDeviceMetadata(
     args: UpdateDeviceMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDeviceMetadataCommandOutput) => void
+    cb: (err: any, data?: UpdateDeviceMetadataCommandOutput) => void,
   ): void;
 }
 

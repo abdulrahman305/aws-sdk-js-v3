@@ -32,7 +32,7 @@ const request = await createRequest(
   new GetObjectCommand({
     Bucket: "bucket",
     Key: "key",
-  })
+  }),
 );
 /**
 {
@@ -60,7 +60,7 @@ const request = await createRequest<any, GetObjectCommandInput, GetObjectCommand
   new GetObjectCommand({
     Bucket: "bucket",
     Key: "key",
-  })
+  }),
 );
 ```
 
@@ -77,6 +77,6 @@ const request = await createRequest(
   new GetObjectCommand({
     Bucket: "bucket",
     Key: "key",
-  })
+  }),
 );
 ```

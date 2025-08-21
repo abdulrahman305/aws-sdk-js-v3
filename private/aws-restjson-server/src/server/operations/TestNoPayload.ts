@@ -61,7 +61,7 @@ export class TestNoPayloadSerializer
 
 export const getTestNoPayloadHandler = <Context>(
   operation: __Operation<TestNoPayloadServerInput, TestNoPayloadServerOutput, Context>,
-  customizer: __ValidationCustomizer<"TestNoPayload">
+  customizer: __ValidationCustomizer<"TestNoPayload">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "TestNoPayload">([
     new httpbinding.UriSpec<"RestJson", "TestNoPayload">("GET", [{ type: "path_literal", value: "no_payload" }], [], {
@@ -74,7 +74,7 @@ export const getTestNoPayloadHandler = <Context>(
     mux,
     new TestNoPayloadSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -95,7 +95,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -133,7 +133,7 @@ export class TestNoPayloadHandler<Context> implements __ServiceHandler<Context> 
   private readonly serializer: __OperationSerializer<RestJsonService<Context>, "TestNoPayload", TestNoPayloadErrors>;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"TestNoPayload">;
   /**
@@ -150,7 +150,7 @@ export class TestNoPayloadHandler<Context> implements __ServiceHandler<Context> 
     mux: __Mux<"RestJson", "TestNoPayload">,
     serializer: __OperationSerializer<RestJsonService<Context>, "TestNoPayload", TestNoPayloadErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"TestNoPayload">
+    validationCustomizer: __ValidationCustomizer<"TestNoPayload">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -162,7 +162,7 @@ export class TestNoPayloadHandler<Context> implements __ServiceHandler<Context> 
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.TestNoPayload. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.TestNoPayload. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -174,7 +174,7 @@ export class TestNoPayloadHandler<Context> implements __ServiceHandler<Context> 
       this.operation,
       this.serializeFrameworkException,
       TestNoPayloadServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

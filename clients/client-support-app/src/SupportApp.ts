@@ -73,16 +73,16 @@ export interface SupportApp {
    */
   createSlackChannelConfiguration(
     args: CreateSlackChannelConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSlackChannelConfigurationCommandOutput>;
   createSlackChannelConfiguration(
     args: CreateSlackChannelConfigurationCommandInput,
-    cb: (err: any, data?: CreateSlackChannelConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateSlackChannelConfigurationCommandOutput) => void,
   ): void;
   createSlackChannelConfiguration(
     args: CreateSlackChannelConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSlackChannelConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateSlackChannelConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -91,16 +91,16 @@ export interface SupportApp {
   deleteAccountAlias(): Promise<DeleteAccountAliasCommandOutput>;
   deleteAccountAlias(
     args: DeleteAccountAliasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAccountAliasCommandOutput>;
   deleteAccountAlias(
     args: DeleteAccountAliasCommandInput,
-    cb: (err: any, data?: DeleteAccountAliasCommandOutput) => void
+    cb: (err: any, data?: DeleteAccountAliasCommandOutput) => void,
   ): void;
   deleteAccountAlias(
     args: DeleteAccountAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAccountAliasCommandOutput) => void
+    cb: (err: any, data?: DeleteAccountAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -108,16 +108,16 @@ export interface SupportApp {
    */
   deleteSlackChannelConfiguration(
     args: DeleteSlackChannelConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSlackChannelConfigurationCommandOutput>;
   deleteSlackChannelConfiguration(
     args: DeleteSlackChannelConfigurationCommandInput,
-    cb: (err: any, data?: DeleteSlackChannelConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteSlackChannelConfigurationCommandOutput) => void,
   ): void;
   deleteSlackChannelConfiguration(
     args: DeleteSlackChannelConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSlackChannelConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteSlackChannelConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -125,16 +125,16 @@ export interface SupportApp {
    */
   deleteSlackWorkspaceConfiguration(
     args: DeleteSlackWorkspaceConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSlackWorkspaceConfigurationCommandOutput>;
   deleteSlackWorkspaceConfiguration(
     args: DeleteSlackWorkspaceConfigurationCommandInput,
-    cb: (err: any, data?: DeleteSlackWorkspaceConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteSlackWorkspaceConfigurationCommandOutput) => void,
   ): void;
   deleteSlackWorkspaceConfiguration(
     args: DeleteSlackWorkspaceConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSlackWorkspaceConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteSlackWorkspaceConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -143,13 +143,13 @@ export interface SupportApp {
   getAccountAlias(): Promise<GetAccountAliasCommandOutput>;
   getAccountAlias(
     args: GetAccountAliasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAccountAliasCommandOutput>;
   getAccountAlias(args: GetAccountAliasCommandInput, cb: (err: any, data?: GetAccountAliasCommandOutput) => void): void;
   getAccountAlias(
     args: GetAccountAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAccountAliasCommandOutput) => void
+    cb: (err: any, data?: GetAccountAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -158,16 +158,16 @@ export interface SupportApp {
   listSlackChannelConfigurations(): Promise<ListSlackChannelConfigurationsCommandOutput>;
   listSlackChannelConfigurations(
     args: ListSlackChannelConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSlackChannelConfigurationsCommandOutput>;
   listSlackChannelConfigurations(
     args: ListSlackChannelConfigurationsCommandInput,
-    cb: (err: any, data?: ListSlackChannelConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListSlackChannelConfigurationsCommandOutput) => void,
   ): void;
   listSlackChannelConfigurations(
     args: ListSlackChannelConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSlackChannelConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListSlackChannelConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -176,16 +176,16 @@ export interface SupportApp {
   listSlackWorkspaceConfigurations(): Promise<ListSlackWorkspaceConfigurationsCommandOutput>;
   listSlackWorkspaceConfigurations(
     args: ListSlackWorkspaceConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSlackWorkspaceConfigurationsCommandOutput>;
   listSlackWorkspaceConfigurations(
     args: ListSlackWorkspaceConfigurationsCommandInput,
-    cb: (err: any, data?: ListSlackWorkspaceConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListSlackWorkspaceConfigurationsCommandOutput) => void,
   ): void;
   listSlackWorkspaceConfigurations(
     args: ListSlackWorkspaceConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSlackWorkspaceConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListSlackWorkspaceConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -193,13 +193,13 @@ export interface SupportApp {
    */
   putAccountAlias(
     args: PutAccountAliasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAccountAliasCommandOutput>;
   putAccountAlias(args: PutAccountAliasCommandInput, cb: (err: any, data?: PutAccountAliasCommandOutput) => void): void;
   putAccountAlias(
     args: PutAccountAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAccountAliasCommandOutput) => void
+    cb: (err: any, data?: PutAccountAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -207,16 +207,16 @@ export interface SupportApp {
    */
   registerSlackWorkspaceForOrganization(
     args: RegisterSlackWorkspaceForOrganizationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterSlackWorkspaceForOrganizationCommandOutput>;
   registerSlackWorkspaceForOrganization(
     args: RegisterSlackWorkspaceForOrganizationCommandInput,
-    cb: (err: any, data?: RegisterSlackWorkspaceForOrganizationCommandOutput) => void
+    cb: (err: any, data?: RegisterSlackWorkspaceForOrganizationCommandOutput) => void,
   ): void;
   registerSlackWorkspaceForOrganization(
     args: RegisterSlackWorkspaceForOrganizationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterSlackWorkspaceForOrganizationCommandOutput) => void
+    cb: (err: any, data?: RegisterSlackWorkspaceForOrganizationCommandOutput) => void,
   ): void;
 
   /**
@@ -224,16 +224,16 @@ export interface SupportApp {
    */
   updateSlackChannelConfiguration(
     args: UpdateSlackChannelConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSlackChannelConfigurationCommandOutput>;
   updateSlackChannelConfiguration(
     args: UpdateSlackChannelConfigurationCommandInput,
-    cb: (err: any, data?: UpdateSlackChannelConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateSlackChannelConfigurationCommandOutput) => void,
   ): void;
   updateSlackChannelConfiguration(
     args: UpdateSlackChannelConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSlackChannelConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateSlackChannelConfigurationCommandOutput) => void,
   ): void;
 }
 

@@ -199,7 +199,7 @@ it("AwsQueryDateTimeWithNegativeOffset:Response", async () => {
               <datetime>2019-12-16T22:48:18-01:00</datetime>
           </DatetimeOffsetsResult>
       </DatetimeOffsetsResponse>
-      `
+      `,
     ),
   });
 
@@ -242,7 +242,7 @@ it("AwsQueryDateTimeWithPositiveOffset:Response", async () => {
               <datetime>2019-12-17T00:48:18+01:00</datetime>
           </DatetimeOffsetsResult>
       </DatetimeOffsetsResponse>
-      `
+      `,
     ),
   });
 
@@ -428,7 +428,7 @@ it("QueryQueryFlattenedXmlMap:Response", async () => {
                   <value>Baz</value>
               </myMap>
           </FlattenedXmlMapResult>
-      </FlattenedXmlMapResponse>`
+      </FlattenedXmlMapResponse>`,
     ),
   });
 
@@ -481,7 +481,7 @@ it("QueryQueryFlattenedXmlMapWithXmlName:Response", async () => {
                   <V>B</V>
               </KVP>
           </FlattenedXmlMapWithXmlNameResult>
-      </FlattenedXmlMapWithXmlNameResponse>`
+      </FlattenedXmlMapWithXmlNameResponse>`,
     ),
   });
 
@@ -534,7 +534,7 @@ it("QueryQueryFlattenedXmlMapWithXmlNamespace:Response", async () => {
                   <V xmlns="https://the-value.example.com">B</V>
               </KVP>
           </FlattenedXmlMapWithXmlNamespaceResult>
-      </FlattenedXmlMapWithXmlNamespaceResponse>`
+      </FlattenedXmlMapWithXmlNamespaceResponse>`,
     ),
   });
 
@@ -581,7 +581,7 @@ it("AwsQueryDateTimeWithFractionalSeconds:Response", async () => {
               <datetime>2000-01-02T20:34:56.123Z</datetime>
           </FractionalSecondsResult>
       </FractionalSecondsResponse>
-      `
+      `,
     ),
   });
 
@@ -624,7 +624,7 @@ it("QueryGreetingWithErrors:Response", async () => {
               <greeting>Hello</greeting>
           </GreetingWithErrorsResult>
       </GreetingWithErrorsResponse>
-      `
+      `,
     ),
   });
 
@@ -670,7 +670,7 @@ it("QueryInvalidGreetingError:Error:GreetingWithErrors", async () => {
          </Error>
          <RequestId>foo-id</RequestId>
       </ErrorResponse>
-      `
+      `,
     ),
   });
 
@@ -721,7 +721,7 @@ it("QueryCustomizedError:Error:GreetingWithErrors", async () => {
          </Error>
          <RequestId>foo-id</RequestId>
       </ErrorResponse>
-      `
+      `,
     ),
   });
 
@@ -772,7 +772,7 @@ it("QueryComplexError:Error:GreetingWithErrors", async () => {
          </Error>
          <RequestId>foo-id</RequestId>
       </ErrorResponse>
-      `
+      `,
     ),
   });
 
@@ -856,7 +856,7 @@ it("QueryIgnoresWrappingXmlName:Response", async () => {
               <foo>bar</foo>
           </IgnoresWrappingXmlNameResult>
       </IgnoresWrappingXmlNameResponse>
-      `
+      `,
     ),
   });
 
@@ -1835,7 +1835,7 @@ it("QueryRecursiveShapes:Response", async () => {
               </nested>
           </RecursiveXmlShapesResult>
       </RecursiveXmlShapesResponse>
-      `
+      `,
     ),
   });
 
@@ -2318,7 +2318,7 @@ it("QuerySimpleScalarProperties:Response", async () => {
               <DoubleDribble>6.5</DoubleDribble>
           </SimpleScalarXmlPropertiesResult>
       </SimpleScalarXmlPropertiesResponse>
-      `
+      `,
     ),
   });
 
@@ -2380,7 +2380,7 @@ it("AwsQuerySupportsNaNFloatOutputs:Response", async () => {
               <DoubleDribble>NaN</DoubleDribble>
           </SimpleScalarXmlPropertiesResult>
       </SimpleScalarXmlPropertiesResponse>
-      `
+      `,
     ),
   });
 
@@ -2426,7 +2426,7 @@ it("AwsQuerySupportsInfinityFloatOutputs:Response", async () => {
               <DoubleDribble>Infinity</DoubleDribble>
           </SimpleScalarXmlPropertiesResult>
       </SimpleScalarXmlPropertiesResponse>
-      `
+      `,
     ),
   });
 
@@ -2472,7 +2472,7 @@ it("AwsQuerySupportsNegativeInfinityFloatOutputs:Response", async () => {
               <DoubleDribble>-Infinity</DoubleDribble>
           </SimpleScalarXmlPropertiesResult>
       </SimpleScalarXmlPropertiesResponse>
-      `
+      `,
     ),
   });
 
@@ -2517,7 +2517,7 @@ it("QueryXmlBlobs:Response", async () => {
               <data>dmFsdWU=</data>
           </XmlBlobsResult>
       </XmlBlobsResponse>
-      `
+      `,
     ),
   });
 
@@ -2560,7 +2560,7 @@ it("QueryXmlEmptyBlobs:Response", async () => {
               <data></data>
           </XmlEmptyBlobsResult>
       </XmlEmptyBlobsResponse>
-      `
+      `,
     ),
   });
 
@@ -2603,7 +2603,7 @@ it("QueryXmlEmptySelfClosedBlobs:Response", async () => {
               <data/>
           </XmlEmptyBlobsResult>
       </XmlEmptyBlobsResponse>
-      `
+      `,
     ),
   });
 
@@ -2647,7 +2647,7 @@ it("QueryXmlEmptyLists:Response", async () => {
               <stringSet></stringSet>
           </XmlEmptyListsResult>
       </XmlEmptyListsResponse>
-      `
+      `,
     ),
   });
 
@@ -2693,7 +2693,7 @@ it("QueryXmlEmptyMaps:Response", async () => {
               </myMap>
           </XmlEmptyMapsResult>
       </XmlEmptyMapsResponse>
-      `
+      `,
     ),
   });
 
@@ -2736,7 +2736,7 @@ it("QueryXmlEmptySelfClosedMaps:Response", async () => {
               <myMap/>
           </XmlEmptyMapsResult>
       </XmlEmptyMapsResponse>
-      `
+      `,
     ),
   });
 
@@ -2799,7 +2799,7 @@ it("QueryXmlEnums:Response", async () => {
               </fooEnumMap>
           </XmlEnumsResult>
       </XmlEnumsResponse>
-      `
+      `,
     ),
   });
 
@@ -2876,7 +2876,7 @@ it("QueryXmlIntEnums:Response", async () => {
               </intEnumMap>
           </XmlIntEnumsResult>
       </XmlIntEnumsResponse>
-      `
+      `,
     ),
   });
 
@@ -3000,7 +3000,7 @@ it("QueryXmlLists:Response", async () => {
               </myStructureList>
           </XmlListsResult>
       </XmlListsResponse>
-      `
+      `,
     ),
   });
 
@@ -3106,7 +3106,7 @@ it("QueryXmlMaps:Response", async () => {
               </myMap>
           </XmlMapsResult>
       </XmlMapsResponse>
-      `
+      `,
     ),
   });
 
@@ -3170,7 +3170,7 @@ it("QueryQueryXmlMapsXmlName:Response", async () => {
               </myMap>
           </XmlMapsXmlNameResult>
       </XmlMapsXmlNameResponse>
-      `
+      `,
     ),
   });
 
@@ -3227,7 +3227,7 @@ it("QueryXmlNamespaces:Response", async () => {
               </nested>
           </XmlNamespacesResult>
       </XmlNamespacesResponse>
-      `
+      `,
     ),
   });
 
@@ -3274,7 +3274,7 @@ it("QueryXmlTimestamps:Response", async () => {
               <normal>2014-04-29T18:30:38Z</normal>
           </XmlTimestampsResult>
       </XmlTimestampsResponse>
-      `
+      `,
     ),
   });
 
@@ -3317,7 +3317,7 @@ it("QueryXmlTimestampsWithDateTimeFormat:Response", async () => {
               <dateTime>2014-04-29T18:30:38Z</dateTime>
           </XmlTimestampsResult>
       </XmlTimestampsResponse>
-      `
+      `,
     ),
   });
 
@@ -3360,7 +3360,7 @@ it("QueryXmlTimestampsWithDateTimeOnTargetFormat:Response", async () => {
               <dateTimeOnTarget>2014-04-29T18:30:38Z</dateTimeOnTarget>
           </XmlTimestampsResult>
       </XmlTimestampsResponse>
-      `
+      `,
     ),
   });
 
@@ -3403,7 +3403,7 @@ it("QueryXmlTimestampsWithEpochSecondsFormat:Response", async () => {
               <epochSeconds>1398796238</epochSeconds>
           </XmlTimestampsResult>
       </XmlTimestampsResponse>
-      `
+      `,
     ),
   });
 
@@ -3446,7 +3446,7 @@ it("QueryXmlTimestampsWithEpochSecondsOnTargetFormat:Response", async () => {
               <epochSecondsOnTarget>1398796238</epochSecondsOnTarget>
           </XmlTimestampsResult>
       </XmlTimestampsResponse>
-      `
+      `,
     ),
   });
 
@@ -3489,7 +3489,7 @@ it("QueryXmlTimestampsWithHttpDateFormat:Response", async () => {
               <httpDate>Tue, 29 Apr 2014 18:30:38 GMT</httpDate>
           </XmlTimestampsResult>
       </XmlTimestampsResponse>
-      `
+      `,
     ),
   });
 
@@ -3532,7 +3532,7 @@ it("QueryXmlTimestampsWithHttpDateOnTargetFormat:Response", async () => {
               <httpDateOnTarget>Tue, 29 Apr 2014 18:30:38 GMT</httpDateOnTarget>
           </XmlTimestampsResult>
       </XmlTimestampsResponse>
-      `
+      `,
     ),
   });
 
@@ -3587,7 +3587,7 @@ const compareEquivalentFormUrlencodedBodies = (expectedBody: string, generatedBo
 const compareEquivalentUnknownTypeBodies = (
   utf8Encoder: __Encoder,
   expectedBody: string,
-  generatedBody: string | Uint8Array
+  generatedBody: string | Uint8Array,
 ): Object => {
   const expectedParts = { Value: expectedBody };
   const generatedParts = {

@@ -75,7 +75,7 @@ export class HostEntry implements DnsCacheEntry {
       successRecords.append(
         Object.assign(addressToAppend, {
           expirationTtlMs,
-        })
+        }),
       );
     }
   }
@@ -143,7 +143,7 @@ export class HostEntry implements DnsCacheEntry {
    */
   private processRecordsAddressType(
     successRecords: HostAddressEntryCollection,
-    failedRecords: HostAddressEntryCollection
+    failedRecords: HostAddressEntryCollection,
   ) {
     // Remove expired addresses
     const successRecordsToRemove: HostAddressEntry[] = [];

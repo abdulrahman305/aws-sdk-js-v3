@@ -36,7 +36,7 @@ describe(EventStreamPayloadHandler.name, () => {
       handler.handle(mockNextHandler, {
         request: { body: "body" } as HttpRequest,
         input: {},
-      })
+      }),
     ).rejects.toThrow("Eventstream payload must be a Readable stream.");
   });
 

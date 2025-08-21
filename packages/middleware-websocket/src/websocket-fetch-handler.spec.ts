@@ -42,7 +42,7 @@ describe(WebSocketFetchHandler.name, () => {
           body: new PassThrough(),
           hostname: mockHostname,
           protocol: "ws:",
-        })
+        }),
       );
 
       // @ts-expect-error Property 'sockets' is private and only accessible within class 'WebSocketHandler'.
@@ -55,7 +55,7 @@ describe(WebSocketFetchHandler.name, () => {
           body: new PassThrough(),
           hostname: mockHostname,
           protocol: "ws:",
-        })
+        }),
       );
 
       // @ts-expect-error Property 'sockets' is private and only accessible within class 'WebSocketHandler'.
@@ -71,7 +71,7 @@ describe(WebSocketFetchHandler.name, () => {
           body: new PassThrough(),
           hostname: mockHostname,
           protocol: "ws:",
-        })
+        }),
       );
 
       // @ts-expect-error Property 'sockets' is private and only accessible within class 'WebSocketHandler'.
@@ -97,7 +97,7 @@ describe(WebSocketFetchHandler.name, () => {
           body: payload,
           hostname: mockHostname,
           protocol: "ws:",
-        })
+        }),
       );
       await server.connected;
       payload.emit("error", new Error("FakeError"));
@@ -131,7 +131,7 @@ describe(WebSocketFetchHandler.name, () => {
             body: payload,
             hostname: mockInvalidHostname, //invalid websocket endpoint
             protocol: "ws:",
-          })
+          }),
         );
       } catch (err) {
         expect(err).toBeDefined();
@@ -141,7 +141,7 @@ describe(WebSocketFetchHandler.name, () => {
           ((global as any).setTimeout as jest.Mock).mock.calls.filter((args) => {
             //find the 'setTimeout' call from the websocket handler
             return args[0].toString().indexOf("$metadata") >= 0;
-          })[0][1]
+          })[0][1],
         ).toBe(connectionTimeout);
         // @ts-expect-error Property 'sockets' is private and only accessible within class 'WebSocketHandler'.
         expect(handler.sockets[mockInvalidUrl].length).toBe(0);

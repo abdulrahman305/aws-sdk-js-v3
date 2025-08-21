@@ -39,7 +39,7 @@ export const userAgentMiddleware =
   (options: UserAgentResolvedConfig) =>
   <Output extends MetadataBearer>(
     next: BuildHandler<any, any>,
-    context: HandlerExecutionContext
+    context: HandlerExecutionContext,
   ): BuildHandler<any, any> =>
   async (args: BuildHandlerArguments<any>): Promise<BuildHandlerOutput<Output>> => {
     const { request } = args;

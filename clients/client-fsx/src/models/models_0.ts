@@ -11678,7 +11678,7 @@ export const CreateFileSystemOntapConfigurationFilterSensitiveLog = (obj: Create
  * @internal
  */
 export const SelfManagedActiveDirectoryConfigurationFilterSensitiveLog = (
-  obj: SelfManagedActiveDirectoryConfiguration
+  obj: SelfManagedActiveDirectoryConfiguration,
 ): any => ({
   ...obj,
   ...(obj.Password && { Password: SENSITIVE_STRING }),
@@ -11688,12 +11688,12 @@ export const SelfManagedActiveDirectoryConfigurationFilterSensitiveLog = (
  * @internal
  */
 export const CreateFileSystemWindowsConfigurationFilterSensitiveLog = (
-  obj: CreateFileSystemWindowsConfiguration
+  obj: CreateFileSystemWindowsConfiguration,
 ): any => ({
   ...obj,
   ...(obj.SelfManagedActiveDirectoryConfiguration && {
     SelfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationFilterSensitiveLog(
-      obj.SelfManagedActiveDirectoryConfiguration
+      obj.SelfManagedActiveDirectoryConfiguration,
     ),
   }),
 });
@@ -11725,12 +11725,12 @@ export const CreateFileSystemFromBackupRequestFilterSensitiveLog = (obj: CreateF
  * @internal
  */
 export const CreateSvmActiveDirectoryConfigurationFilterSensitiveLog = (
-  obj: CreateSvmActiveDirectoryConfiguration
+  obj: CreateSvmActiveDirectoryConfiguration,
 ): any => ({
   ...obj,
   ...(obj.SelfManagedActiveDirectoryConfiguration && {
     SelfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationFilterSensitiveLog(
-      obj.SelfManagedActiveDirectoryConfiguration
+      obj.SelfManagedActiveDirectoryConfiguration,
     ),
   }),
 });
@@ -11742,7 +11742,7 @@ export const CreateStorageVirtualMachineRequestFilterSensitiveLog = (obj: Create
   ...obj,
   ...(obj.ActiveDirectoryConfiguration && {
     ActiveDirectoryConfiguration: CreateSvmActiveDirectoryConfigurationFilterSensitiveLog(
-      obj.ActiveDirectoryConfiguration
+      obj.ActiveDirectoryConfiguration,
     ),
   }),
   ...(obj.SvmAdminPassword && { SvmAdminPassword: SENSITIVE_STRING }),
@@ -11760,7 +11760,7 @@ export const UpdateFileSystemOntapConfigurationFilterSensitiveLog = (obj: Update
  * @internal
  */
 export const SelfManagedActiveDirectoryConfigurationUpdatesFilterSensitiveLog = (
-  obj: SelfManagedActiveDirectoryConfigurationUpdates
+  obj: SelfManagedActiveDirectoryConfigurationUpdates,
 ): any => ({
   ...obj,
   ...(obj.Password && { Password: SENSITIVE_STRING }),
@@ -11770,12 +11770,12 @@ export const SelfManagedActiveDirectoryConfigurationUpdatesFilterSensitiveLog = 
  * @internal
  */
 export const UpdateFileSystemWindowsConfigurationFilterSensitiveLog = (
-  obj: UpdateFileSystemWindowsConfiguration
+  obj: UpdateFileSystemWindowsConfiguration,
 ): any => ({
   ...obj,
   ...(obj.SelfManagedActiveDirectoryConfiguration && {
     SelfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationUpdatesFilterSensitiveLog(
-      obj.SelfManagedActiveDirectoryConfiguration
+      obj.SelfManagedActiveDirectoryConfiguration,
     ),
   }),
 });
@@ -11797,12 +11797,12 @@ export const UpdateFileSystemRequestFilterSensitiveLog = (obj: UpdateFileSystemR
  * @internal
  */
 export const UpdateSvmActiveDirectoryConfigurationFilterSensitiveLog = (
-  obj: UpdateSvmActiveDirectoryConfiguration
+  obj: UpdateSvmActiveDirectoryConfiguration,
 ): any => ({
   ...obj,
   ...(obj.SelfManagedActiveDirectoryConfiguration && {
     SelfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationUpdatesFilterSensitiveLog(
-      obj.SelfManagedActiveDirectoryConfiguration
+      obj.SelfManagedActiveDirectoryConfiguration,
     ),
   }),
 });
@@ -11814,7 +11814,7 @@ export const UpdateStorageVirtualMachineRequestFilterSensitiveLog = (obj: Update
   ...obj,
   ...(obj.ActiveDirectoryConfiguration && {
     ActiveDirectoryConfiguration: UpdateSvmActiveDirectoryConfigurationFilterSensitiveLog(
-      obj.ActiveDirectoryConfiguration
+      obj.ActiveDirectoryConfiguration,
     ),
   }),
   ...(obj.SvmAdminPassword && { SvmAdminPassword: SENSITIVE_STRING }),
@@ -11867,7 +11867,7 @@ export const VolumeFilterSensitiveLog = (obj: Volume): any => ({
  * @internal
  */
 export const CopySnapshotAndUpdateVolumeResponseFilterSensitiveLog = (
-  obj: CopySnapshotAndUpdateVolumeResponse
+  obj: CopySnapshotAndUpdateVolumeResponse,
 ): any => ({
   ...obj,
   ...(obj.AdministrativeActions && {
@@ -11926,7 +11926,7 @@ export const CreateVolumeResponseFilterSensitiveLog = (obj: CreateVolumeResponse
  * @internal
  */
 export const ReleaseFileSystemNfsV3LocksResponseFilterSensitiveLog = (
-  obj: ReleaseFileSystemNfsV3LocksResponse
+  obj: ReleaseFileSystemNfsV3LocksResponse,
 ): any => ({
   ...obj,
   ...(obj.FileSystem && { FileSystem: FileSystemFilterSensitiveLog(obj.FileSystem) }),
@@ -11936,7 +11936,7 @@ export const ReleaseFileSystemNfsV3LocksResponseFilterSensitiveLog = (
  * @internal
  */
 export const StartMisconfiguredStateRecoveryResponseFilterSensitiveLog = (
-  obj: StartMisconfiguredStateRecoveryResponse
+  obj: StartMisconfiguredStateRecoveryResponse,
 ): any => ({
   ...obj,
   ...(obj.FileSystem && { FileSystem: FileSystemFilterSensitiveLog(obj.FileSystem) }),

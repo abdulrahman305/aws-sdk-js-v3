@@ -26,5 +26,5 @@ export const paginateDescribeReservedElasticsearchInstanceOfferings: (
   DescribeReservedElasticsearchInstanceOfferingsCommand,
   "NextToken",
   "NextToken",
-  "MaxResults"
+  "MaxResults",
 );

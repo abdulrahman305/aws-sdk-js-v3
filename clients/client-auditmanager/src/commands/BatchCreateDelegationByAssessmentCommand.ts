@@ -136,7 +136,7 @@ export class BatchCreateDelegationByAssessmentCommand extends $Command
   .n("AuditManagerClient", "BatchCreateDelegationByAssessmentCommand")
   .f(
     BatchCreateDelegationByAssessmentRequestFilterSensitiveLog,
-    BatchCreateDelegationByAssessmentResponseFilterSensitiveLog
+    BatchCreateDelegationByAssessmentResponseFilterSensitiveLog,
   )
   .ser(se_BatchCreateDelegationByAssessmentCommand)
   .de(de_BatchCreateDelegationByAssessmentCommand)

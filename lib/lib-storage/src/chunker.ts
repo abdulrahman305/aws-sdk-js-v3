@@ -32,6 +32,6 @@ export const getChunk = (data: BodyDataTypes, partSize: number): AsyncGenerator<
   }
 
   throw new Error(
-    "Body Data is unsupported format, expected data to be one of: string | Uint8Array | Buffer | Readable | ReadableStream | Blob;."
+    "Body Data is unsupported format, expected data to be one of: string | Uint8Array | Buffer | Readable | ReadableStream | Blob;.",
   );
 };

@@ -22,7 +22,7 @@ const checkState = async (client: OpsWorksClient, input: DescribeAppsCommandInpu
  */
 export const waitForAppExists = async (
   params: WaiterConfiguration<OpsWorksClient>,
-  input: DescribeAppsCommandInput
+  input: DescribeAppsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 1, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -34,7 +34,7 @@ export const waitForAppExists = async (
  */
 export const waitUntilAppExists = async (
   params: WaiterConfiguration<OpsWorksClient>,
-  input: DescribeAppsCommandInput
+  input: DescribeAppsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 1, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

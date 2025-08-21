@@ -214,7 +214,7 @@ import { SFNServiceException as __BaseException } from "../models/SFNServiceExce
  */
 export const se_CreateActivityCommand = async (
   input: CreateActivityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateActivity");
   let body: any;
@@ -227,7 +227,7 @@ export const se_CreateActivityCommand = async (
  */
 export const se_CreateStateMachineCommand = async (
   input: CreateStateMachineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateStateMachine");
   let body: any;
@@ -240,7 +240,7 @@ export const se_CreateStateMachineCommand = async (
  */
 export const se_CreateStateMachineAliasCommand = async (
   input: CreateStateMachineAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateStateMachineAlias");
   let body: any;
@@ -253,7 +253,7 @@ export const se_CreateStateMachineAliasCommand = async (
  */
 export const se_DeleteActivityCommand = async (
   input: DeleteActivityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteActivity");
   let body: any;
@@ -266,7 +266,7 @@ export const se_DeleteActivityCommand = async (
  */
 export const se_DeleteStateMachineCommand = async (
   input: DeleteStateMachineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteStateMachine");
   let body: any;
@@ -279,7 +279,7 @@ export const se_DeleteStateMachineCommand = async (
  */
 export const se_DeleteStateMachineAliasCommand = async (
   input: DeleteStateMachineAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteStateMachineAlias");
   let body: any;
@@ -292,7 +292,7 @@ export const se_DeleteStateMachineAliasCommand = async (
  */
 export const se_DeleteStateMachineVersionCommand = async (
   input: DeleteStateMachineVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteStateMachineVersion");
   let body: any;
@@ -305,7 +305,7 @@ export const se_DeleteStateMachineVersionCommand = async (
  */
 export const se_DescribeActivityCommand = async (
   input: DescribeActivityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeActivity");
   let body: any;
@@ -318,7 +318,7 @@ export const se_DescribeActivityCommand = async (
  */
 export const se_DescribeExecutionCommand = async (
   input: DescribeExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeExecution");
   let body: any;
@@ -331,7 +331,7 @@ export const se_DescribeExecutionCommand = async (
  */
 export const se_DescribeMapRunCommand = async (
   input: DescribeMapRunCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeMapRun");
   let body: any;
@@ -344,7 +344,7 @@ export const se_DescribeMapRunCommand = async (
  */
 export const se_DescribeStateMachineCommand = async (
   input: DescribeStateMachineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeStateMachine");
   let body: any;
@@ -357,7 +357,7 @@ export const se_DescribeStateMachineCommand = async (
  */
 export const se_DescribeStateMachineAliasCommand = async (
   input: DescribeStateMachineAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeStateMachineAlias");
   let body: any;
@@ -370,7 +370,7 @@ export const se_DescribeStateMachineAliasCommand = async (
  */
 export const se_DescribeStateMachineForExecutionCommand = async (
   input: DescribeStateMachineForExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeStateMachineForExecution");
   let body: any;
@@ -383,7 +383,7 @@ export const se_DescribeStateMachineForExecutionCommand = async (
  */
 export const se_GetActivityTaskCommand = async (
   input: GetActivityTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetActivityTask");
   let body: any;
@@ -396,7 +396,7 @@ export const se_GetActivityTaskCommand = async (
  */
 export const se_GetExecutionHistoryCommand = async (
   input: GetExecutionHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetExecutionHistory");
   let body: any;
@@ -409,7 +409,7 @@ export const se_GetExecutionHistoryCommand = async (
  */
 export const se_ListActivitiesCommand = async (
   input: ListActivitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListActivities");
   let body: any;
@@ -422,7 +422,7 @@ export const se_ListActivitiesCommand = async (
  */
 export const se_ListExecutionsCommand = async (
   input: ListExecutionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListExecutions");
   let body: any;
@@ -435,7 +435,7 @@ export const se_ListExecutionsCommand = async (
  */
 export const se_ListMapRunsCommand = async (
   input: ListMapRunsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListMapRuns");
   let body: any;
@@ -448,7 +448,7 @@ export const se_ListMapRunsCommand = async (
  */
 export const se_ListStateMachineAliasesCommand = async (
   input: ListStateMachineAliasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListStateMachineAliases");
   let body: any;
@@ -461,7 +461,7 @@ export const se_ListStateMachineAliasesCommand = async (
  */
 export const se_ListStateMachinesCommand = async (
   input: ListStateMachinesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListStateMachines");
   let body: any;
@@ -474,7 +474,7 @@ export const se_ListStateMachinesCommand = async (
  */
 export const se_ListStateMachineVersionsCommand = async (
   input: ListStateMachineVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListStateMachineVersions");
   let body: any;
@@ -487,7 +487,7 @@ export const se_ListStateMachineVersionsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -500,7 +500,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PublishStateMachineVersionCommand = async (
   input: PublishStateMachineVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PublishStateMachineVersion");
   let body: any;
@@ -513,7 +513,7 @@ export const se_PublishStateMachineVersionCommand = async (
  */
 export const se_RedriveExecutionCommand = async (
   input: RedriveExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RedriveExecution");
   let body: any;
@@ -526,7 +526,7 @@ export const se_RedriveExecutionCommand = async (
  */
 export const se_SendTaskFailureCommand = async (
   input: SendTaskFailureCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SendTaskFailure");
   let body: any;
@@ -539,7 +539,7 @@ export const se_SendTaskFailureCommand = async (
  */
 export const se_SendTaskHeartbeatCommand = async (
   input: SendTaskHeartbeatCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SendTaskHeartbeat");
   let body: any;
@@ -552,7 +552,7 @@ export const se_SendTaskHeartbeatCommand = async (
  */
 export const se_SendTaskSuccessCommand = async (
   input: SendTaskSuccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SendTaskSuccess");
   let body: any;
@@ -565,7 +565,7 @@ export const se_SendTaskSuccessCommand = async (
  */
 export const se_StartExecutionCommand = async (
   input: StartExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartExecution");
   let body: any;
@@ -578,7 +578,7 @@ export const se_StartExecutionCommand = async (
  */
 export const se_StartSyncExecutionCommand = async (
   input: StartSyncExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartSyncExecution");
   let body: any;
@@ -598,7 +598,7 @@ export const se_StartSyncExecutionCommand = async (
  */
 export const se_StopExecutionCommand = async (
   input: StopExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopExecution");
   let body: any;
@@ -611,7 +611,7 @@ export const se_StopExecutionCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -624,7 +624,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_TestStateCommand = async (
   input: TestStateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TestState");
   let body: any;
@@ -644,7 +644,7 @@ export const se_TestStateCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -657,7 +657,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateMapRunCommand = async (
   input: UpdateMapRunCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateMapRun");
   let body: any;
@@ -670,7 +670,7 @@ export const se_UpdateMapRunCommand = async (
  */
 export const se_UpdateStateMachineCommand = async (
   input: UpdateStateMachineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateStateMachine");
   let body: any;
@@ -683,7 +683,7 @@ export const se_UpdateStateMachineCommand = async (
  */
 export const se_UpdateStateMachineAliasCommand = async (
   input: UpdateStateMachineAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateStateMachineAlias");
   let body: any;
@@ -696,7 +696,7 @@ export const se_UpdateStateMachineAliasCommand = async (
  */
 export const se_ValidateStateMachineDefinitionCommand = async (
   input: ValidateStateMachineDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ValidateStateMachineDefinition");
   let body: any;
@@ -709,7 +709,7 @@ export const se_ValidateStateMachineDefinitionCommand = async (
  */
 export const de_CreateActivityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateActivityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -729,7 +729,7 @@ export const de_CreateActivityCommand = async (
  */
 export const de_CreateStateMachineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStateMachineCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -749,7 +749,7 @@ export const de_CreateStateMachineCommand = async (
  */
 export const de_CreateStateMachineAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStateMachineAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -769,7 +769,7 @@ export const de_CreateStateMachineAliasCommand = async (
  */
 export const de_DeleteActivityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteActivityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -789,7 +789,7 @@ export const de_DeleteActivityCommand = async (
  */
 export const de_DeleteStateMachineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStateMachineCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -809,7 +809,7 @@ export const de_DeleteStateMachineCommand = async (
  */
 export const de_DeleteStateMachineAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStateMachineAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -829,7 +829,7 @@ export const de_DeleteStateMachineAliasCommand = async (
  */
 export const de_DeleteStateMachineVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStateMachineVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -849,7 +849,7 @@ export const de_DeleteStateMachineVersionCommand = async (
  */
 export const de_DescribeActivityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeActivityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -869,7 +869,7 @@ export const de_DescribeActivityCommand = async (
  */
 export const de_DescribeExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeExecutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -889,7 +889,7 @@ export const de_DescribeExecutionCommand = async (
  */
 export const de_DescribeMapRunCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeMapRunCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -909,7 +909,7 @@ export const de_DescribeMapRunCommand = async (
  */
 export const de_DescribeStateMachineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStateMachineCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -929,7 +929,7 @@ export const de_DescribeStateMachineCommand = async (
  */
 export const de_DescribeStateMachineAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStateMachineAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -949,7 +949,7 @@ export const de_DescribeStateMachineAliasCommand = async (
  */
 export const de_DescribeStateMachineForExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStateMachineForExecutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -969,7 +969,7 @@ export const de_DescribeStateMachineForExecutionCommand = async (
  */
 export const de_GetActivityTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetActivityTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -989,7 +989,7 @@ export const de_GetActivityTaskCommand = async (
  */
 export const de_GetExecutionHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetExecutionHistoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1009,7 +1009,7 @@ export const de_GetExecutionHistoryCommand = async (
  */
 export const de_ListActivitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListActivitiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1029,7 +1029,7 @@ export const de_ListActivitiesCommand = async (
  */
 export const de_ListExecutionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListExecutionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1049,7 +1049,7 @@ export const de_ListExecutionsCommand = async (
  */
 export const de_ListMapRunsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMapRunsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1069,7 +1069,7 @@ export const de_ListMapRunsCommand = async (
  */
 export const de_ListStateMachineAliasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStateMachineAliasesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1089,7 +1089,7 @@ export const de_ListStateMachineAliasesCommand = async (
  */
 export const de_ListStateMachinesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStateMachinesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1109,7 +1109,7 @@ export const de_ListStateMachinesCommand = async (
  */
 export const de_ListStateMachineVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStateMachineVersionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1129,7 +1129,7 @@ export const de_ListStateMachineVersionsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1149,7 +1149,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PublishStateMachineVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PublishStateMachineVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1169,7 +1169,7 @@ export const de_PublishStateMachineVersionCommand = async (
  */
 export const de_RedriveExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RedriveExecutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1189,7 +1189,7 @@ export const de_RedriveExecutionCommand = async (
  */
 export const de_SendTaskFailureCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendTaskFailureCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1209,7 +1209,7 @@ export const de_SendTaskFailureCommand = async (
  */
 export const de_SendTaskHeartbeatCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendTaskHeartbeatCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1229,7 +1229,7 @@ export const de_SendTaskHeartbeatCommand = async (
  */
 export const de_SendTaskSuccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendTaskSuccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1249,7 +1249,7 @@ export const de_SendTaskSuccessCommand = async (
  */
 export const de_StartExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartExecutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1269,7 +1269,7 @@ export const de_StartExecutionCommand = async (
  */
 export const de_StartSyncExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartSyncExecutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1289,7 +1289,7 @@ export const de_StartSyncExecutionCommand = async (
  */
 export const de_StopExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopExecutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1309,7 +1309,7 @@ export const de_StopExecutionCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1329,7 +1329,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_TestStateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TestStateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1349,7 +1349,7 @@ export const de_TestStateCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1369,7 +1369,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateMapRunCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMapRunCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1389,7 +1389,7 @@ export const de_UpdateMapRunCommand = async (
  */
 export const de_UpdateStateMachineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateStateMachineCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1409,7 +1409,7 @@ export const de_UpdateStateMachineCommand = async (
  */
 export const de_UpdateStateMachineAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateStateMachineAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1429,7 +1429,7 @@ export const de_UpdateStateMachineAliasCommand = async (
  */
 export const de_ValidateStateMachineDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ValidateStateMachineDefinitionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1553,7 +1553,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ActivityDoesNotExistRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ActivityDoesNotExist> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1569,7 +1569,7 @@ const de_ActivityDoesNotExistRes = async (
  */
 const de_ActivityLimitExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ActivityLimitExceeded> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1585,7 +1585,7 @@ const de_ActivityLimitExceededRes = async (
  */
 const de_ActivityWorkerLimitExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ActivityWorkerLimitExceeded> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1614,7 +1614,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ExecutionAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecutionAlreadyExists> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1630,7 +1630,7 @@ const de_ExecutionAlreadyExistsRes = async (
  */
 const de_ExecutionDoesNotExistRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecutionDoesNotExist> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1646,7 +1646,7 @@ const de_ExecutionDoesNotExistRes = async (
  */
 const de_ExecutionLimitExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecutionLimitExceeded> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1662,7 +1662,7 @@ const de_ExecutionLimitExceededRes = async (
  */
 const de_ExecutionNotRedrivableRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecutionNotRedrivable> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1704,7 +1704,7 @@ const de_InvalidDefinitionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InvalidExecutionInputRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidExecutionInput> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1720,7 +1720,7 @@ const de_InvalidExecutionInputRes = async (
  */
 const de_InvalidLoggingConfigurationRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidLoggingConfiguration> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1775,7 +1775,7 @@ const de_InvalidTokenRes = async (parsedOutput: any, context: __SerdeContext): P
  */
 const de_InvalidTracingConfigurationRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTracingConfiguration> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1791,7 +1791,7 @@ const de_InvalidTracingConfigurationRes = async (
  */
 const de_MissingRequiredParameterRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MissingRequiredParameter> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1820,7 +1820,7 @@ const de_ResourceNotFoundRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1836,7 +1836,7 @@ const de_ServiceQuotaExceededExceptionRes = async (
  */
 const de_StateMachineAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StateMachineAlreadyExists> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1852,7 +1852,7 @@ const de_StateMachineAlreadyExistsRes = async (
  */
 const de_StateMachineDeletingRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StateMachineDeleting> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1868,7 +1868,7 @@ const de_StateMachineDeletingRes = async (
  */
 const de_StateMachineDoesNotExistRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StateMachineDoesNotExist> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1884,7 +1884,7 @@ const de_StateMachineDoesNotExistRes = async (
  */
 const de_StateMachineLimitExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StateMachineLimitExceeded> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1900,7 +1900,7 @@ const de_StateMachineLimitExceededRes = async (
  */
 const de_StateMachineTypeNotSupportedRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StateMachineTypeNotSupported> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2241,7 +2241,7 @@ const de_DescribeStateMachineAliasOutput = (output: any, context: __SerdeContext
  */
 const de_DescribeStateMachineForExecutionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeStateMachineForExecutionOutput => {
   return take(output, {
     definition: __expectString,
@@ -2551,7 +2551,7 @@ const de_MapRunListItem = (output: any, context: __SerdeContext): MapRunListItem
  */
 const de_PublishStateMachineVersionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PublishStateMachineVersionOutput => {
   return take(output, {
     creationDate: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -2789,7 +2789,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

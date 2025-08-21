@@ -120,7 +120,7 @@ export class DisassociatePhoneNumbersFromVoiceConnectorGroupCommand extends $Com
   .n("ChimeSDKVoiceClient", "DisassociatePhoneNumbersFromVoiceConnectorGroupCommand")
   .f(
     DisassociatePhoneNumbersFromVoiceConnectorGroupRequestFilterSensitiveLog,
-    DisassociatePhoneNumbersFromVoiceConnectorGroupResponseFilterSensitiveLog
+    DisassociatePhoneNumbersFromVoiceConnectorGroupResponseFilterSensitiveLog,
   )
   .ser(se_DisassociatePhoneNumbersFromVoiceConnectorGroupCommand)
   .de(de_DisassociatePhoneNumbersFromVoiceConnectorGroupCommand)

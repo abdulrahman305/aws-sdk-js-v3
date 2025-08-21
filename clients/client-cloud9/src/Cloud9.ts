@@ -87,16 +87,16 @@ export interface Cloud9 {
    */
   createEnvironmentEC2(
     args: CreateEnvironmentEC2CommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEnvironmentEC2CommandOutput>;
   createEnvironmentEC2(
     args: CreateEnvironmentEC2CommandInput,
-    cb: (err: any, data?: CreateEnvironmentEC2CommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentEC2CommandOutput) => void,
   ): void;
   createEnvironmentEC2(
     args: CreateEnvironmentEC2CommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEnvironmentEC2CommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentEC2CommandOutput) => void,
   ): void;
 
   /**
@@ -104,16 +104,16 @@ export interface Cloud9 {
    */
   createEnvironmentMembership(
     args: CreateEnvironmentMembershipCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEnvironmentMembershipCommandOutput>;
   createEnvironmentMembership(
     args: CreateEnvironmentMembershipCommandInput,
-    cb: (err: any, data?: CreateEnvironmentMembershipCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentMembershipCommandOutput) => void,
   ): void;
   createEnvironmentMembership(
     args: CreateEnvironmentMembershipCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEnvironmentMembershipCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentMembershipCommandOutput) => void,
   ): void;
 
   /**
@@ -121,16 +121,16 @@ export interface Cloud9 {
    */
   deleteEnvironment(
     args: DeleteEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEnvironmentCommandOutput>;
   deleteEnvironment(
     args: DeleteEnvironmentCommandInput,
-    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void,
   ): void;
   deleteEnvironment(
     args: DeleteEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -138,16 +138,16 @@ export interface Cloud9 {
    */
   deleteEnvironmentMembership(
     args: DeleteEnvironmentMembershipCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEnvironmentMembershipCommandOutput>;
   deleteEnvironmentMembership(
     args: DeleteEnvironmentMembershipCommandInput,
-    cb: (err: any, data?: DeleteEnvironmentMembershipCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentMembershipCommandOutput) => void,
   ): void;
   deleteEnvironmentMembership(
     args: DeleteEnvironmentMembershipCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEnvironmentMembershipCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentMembershipCommandOutput) => void,
   ): void;
 
   /**
@@ -156,16 +156,16 @@ export interface Cloud9 {
   describeEnvironmentMemberships(): Promise<DescribeEnvironmentMembershipsCommandOutput>;
   describeEnvironmentMemberships(
     args: DescribeEnvironmentMembershipsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEnvironmentMembershipsCommandOutput>;
   describeEnvironmentMemberships(
     args: DescribeEnvironmentMembershipsCommandInput,
-    cb: (err: any, data?: DescribeEnvironmentMembershipsCommandOutput) => void
+    cb: (err: any, data?: DescribeEnvironmentMembershipsCommandOutput) => void,
   ): void;
   describeEnvironmentMemberships(
     args: DescribeEnvironmentMembershipsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEnvironmentMembershipsCommandOutput) => void
+    cb: (err: any, data?: DescribeEnvironmentMembershipsCommandOutput) => void,
   ): void;
 
   /**
@@ -173,16 +173,16 @@ export interface Cloud9 {
    */
   describeEnvironments(
     args: DescribeEnvironmentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEnvironmentsCommandOutput>;
   describeEnvironments(
     args: DescribeEnvironmentsCommandInput,
-    cb: (err: any, data?: DescribeEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: DescribeEnvironmentsCommandOutput) => void,
   ): void;
   describeEnvironments(
     args: DescribeEnvironmentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: DescribeEnvironmentsCommandOutput) => void,
   ): void;
 
   /**
@@ -190,16 +190,16 @@ export interface Cloud9 {
    */
   describeEnvironmentStatus(
     args: DescribeEnvironmentStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEnvironmentStatusCommandOutput>;
   describeEnvironmentStatus(
     args: DescribeEnvironmentStatusCommandInput,
-    cb: (err: any, data?: DescribeEnvironmentStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeEnvironmentStatusCommandOutput) => void,
   ): void;
   describeEnvironmentStatus(
     args: DescribeEnvironmentStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEnvironmentStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeEnvironmentStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -208,16 +208,16 @@ export interface Cloud9 {
   listEnvironments(): Promise<ListEnvironmentsCommandOutput>;
   listEnvironments(
     args: ListEnvironmentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEnvironmentsCommandOutput>;
   listEnvironments(
     args: ListEnvironmentsCommandInput,
-    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void,
   ): void;
   listEnvironments(
     args: ListEnvironmentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void,
   ): void;
 
   /**
@@ -225,16 +225,16 @@ export interface Cloud9 {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -245,7 +245,7 @@ export interface Cloud9 {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -256,7 +256,7 @@ export interface Cloud9 {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -264,16 +264,16 @@ export interface Cloud9 {
    */
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEnvironmentCommandOutput>;
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
-    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void,
   ): void;
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -281,16 +281,16 @@ export interface Cloud9 {
    */
   updateEnvironmentMembership(
     args: UpdateEnvironmentMembershipCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEnvironmentMembershipCommandOutput>;
   updateEnvironmentMembership(
     args: UpdateEnvironmentMembershipCommandInput,
-    cb: (err: any, data?: UpdateEnvironmentMembershipCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentMembershipCommandOutput) => void,
   ): void;
   updateEnvironmentMembership(
     args: UpdateEnvironmentMembershipCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEnvironmentMembershipCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentMembershipCommandOutput) => void,
   ): void;
 }
 

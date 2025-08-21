@@ -44,7 +44,7 @@ const checkState = async (client: NimbleClient, input: GetLaunchProfileCommandIn
  */
 export const waitForLaunchProfileReady = async (
   params: WaiterConfiguration<NimbleClient>,
-  input: GetLaunchProfileCommandInput
+  input: GetLaunchProfileCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 750 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -56,7 +56,7 @@ export const waitForLaunchProfileReady = async (
  */
 export const waitUntilLaunchProfileReady = async (
   params: WaiterConfiguration<NimbleClient>,
-  input: GetLaunchProfileCommandInput
+  input: GetLaunchProfileCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 750 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

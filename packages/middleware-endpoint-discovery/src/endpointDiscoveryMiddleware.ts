@@ -16,7 +16,7 @@ export const endpointDiscoveryMiddleware =
   (config: EndpointDiscoveryResolvedConfig & PreviouslyResolved, middlewareConfig: EndpointDiscoveryMiddlewareConfig) =>
   <Output extends MetadataBearer = MetadataBearer>(
     next: BuildHandler<any, Output>,
-    context: HandlerExecutionContext
+    context: HandlerExecutionContext,
   ): BuildHandler<any, Output> =>
   async (args: BuildHandlerArguments<any>): Promise<BuildHandlerOutput<Output>> => {
     if (config.isCustomEndpoint) {
@@ -38,7 +38,7 @@ export const endpointDiscoveryMiddleware =
       if (isEndpointDiscoveryEnabled === false) {
         throw new Error(
           `Endpoint Discovery is disabled but ${commandName} on ${clientName} requires it.` +
-            ` Please check your configurations.`
+            ` Please check your configurations.`,
         );
       }
       // call await on Endpoint Discovery API utility so that function blocks

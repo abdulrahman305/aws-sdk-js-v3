@@ -19,7 +19,7 @@ export interface EndpointDiscoveryMiddlewareConfig {
 
 export const getEndpointDiscoveryPlugin = (
   pluginConfig: EndpointDiscoveryResolvedConfig & PreviouslyResolved,
-  middlewareConfig: EndpointDiscoveryMiddlewareConfig
+  middlewareConfig: EndpointDiscoveryMiddlewareConfig,
 ): Pluggable<any, any> => ({
   applyToStack: (commandStack) => {
     commandStack.add(endpointDiscoveryMiddleware(pluginConfig, middlewareConfig), endpointDiscoveryMiddlewareOptions);
@@ -31,12 +31,12 @@ export const getEndpointDiscoveryPlugin = (
  */
 export const getEndpointDiscoveryRequiredPlugin = (
   pluginConfig: EndpointDiscoveryResolvedConfig & PreviouslyResolved,
-  middlewareConfig: Omit<EndpointDiscoveryMiddlewareConfig, "isDiscoveredEndpointRequired">
+  middlewareConfig: Omit<EndpointDiscoveryMiddlewareConfig, "isDiscoveredEndpointRequired">,
 ): Pluggable<any, any> => ({
   applyToStack: (commandStack) => {
     commandStack.add(
       endpointDiscoveryMiddleware(pluginConfig, { ...middlewareConfig, isDiscoveredEndpointRequired: true }),
-      endpointDiscoveryMiddlewareOptions
+      endpointDiscoveryMiddlewareOptions,
     );
   },
 });
@@ -46,12 +46,12 @@ export const getEndpointDiscoveryRequiredPlugin = (
  */
 export const getEndpointDiscoveryOptionalPlugin = (
   pluginConfig: EndpointDiscoveryResolvedConfig & PreviouslyResolved,
-  middlewareConfig: Omit<EndpointDiscoveryMiddlewareConfig, "isDiscoveredEndpointRequired">
+  middlewareConfig: Omit<EndpointDiscoveryMiddlewareConfig, "isDiscoveredEndpointRequired">,
 ): Pluggable<any, any> => ({
   applyToStack: (commandStack) => {
     commandStack.add(
       endpointDiscoveryMiddleware(pluginConfig, { ...middlewareConfig, isDiscoveredEndpointRequired: false }),
-      endpointDiscoveryMiddlewareOptions
+      endpointDiscoveryMiddlewareOptions,
     );
   },
 });

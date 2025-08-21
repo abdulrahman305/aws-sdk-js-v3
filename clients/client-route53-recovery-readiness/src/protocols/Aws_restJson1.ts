@@ -132,7 +132,7 @@ import { Route53RecoveryReadinessServiceException as __BaseException } from "../
  */
 export const se_CreateCellCommand = async (
   input: CreateCellCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -145,7 +145,7 @@ export const se_CreateCellCommand = async (
       cellName: [, , `CellName`],
       cells: [, (_) => _json(_), `Cells`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -156,7 +156,7 @@ export const se_CreateCellCommand = async (
  */
 export const se_CreateCrossAccountAuthorizationCommand = async (
   input: CreateCrossAccountAuthorizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -167,7 +167,7 @@ export const se_CreateCrossAccountAuthorizationCommand = async (
   body = JSON.stringify(
     take(input, {
       crossAccountAuthorization: [, , `CrossAccountAuthorization`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -178,7 +178,7 @@ export const se_CreateCrossAccountAuthorizationCommand = async (
  */
 export const se_CreateReadinessCheckCommand = async (
   input: CreateReadinessCheckCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -191,7 +191,7 @@ export const se_CreateReadinessCheckCommand = async (
       readinessCheckName: [, , `ReadinessCheckName`],
       resourceSetName: [, , `ResourceSetName`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -202,7 +202,7 @@ export const se_CreateReadinessCheckCommand = async (
  */
 export const se_CreateRecoveryGroupCommand = async (
   input: CreateRecoveryGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -215,7 +215,7 @@ export const se_CreateRecoveryGroupCommand = async (
       cells: [, (_) => _json(_), `Cells`],
       recoveryGroupName: [, , `RecoveryGroupName`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -226,7 +226,7 @@ export const se_CreateRecoveryGroupCommand = async (
  */
 export const se_CreateResourceSetCommand = async (
   input: CreateResourceSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -240,7 +240,7 @@ export const se_CreateResourceSetCommand = async (
       resourceSetType: [, , `ResourceSetType`],
       resources: [, (_) => se___listOfResource(_, context), `Resources`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -251,7 +251,7 @@ export const se_CreateResourceSetCommand = async (
  */
 export const se_DeleteCellCommand = async (
   input: DeleteCellCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -267,7 +267,7 @@ export const se_DeleteCellCommand = async (
  */
 export const se_DeleteCrossAccountAuthorizationCommand = async (
   input: DeleteCrossAccountAuthorizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -283,7 +283,7 @@ export const se_DeleteCrossAccountAuthorizationCommand = async (
  */
 export const se_DeleteReadinessCheckCommand = async (
   input: DeleteReadinessCheckCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -299,7 +299,7 @@ export const se_DeleteReadinessCheckCommand = async (
  */
 export const se_DeleteRecoveryGroupCommand = async (
   input: DeleteRecoveryGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -315,7 +315,7 @@ export const se_DeleteRecoveryGroupCommand = async (
  */
 export const se_DeleteResourceSetCommand = async (
   input: DeleteResourceSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -331,7 +331,7 @@ export const se_DeleteResourceSetCommand = async (
  */
 export const se_GetArchitectureRecommendationsCommand = async (
   input: GetArchitectureRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -351,7 +351,7 @@ export const se_GetArchitectureRecommendationsCommand = async (
  */
 export const se_GetCellCommand = async (
   input: GetCellCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -367,7 +367,7 @@ export const se_GetCellCommand = async (
  */
 export const se_GetCellReadinessSummaryCommand = async (
   input: GetCellReadinessSummaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -387,7 +387,7 @@ export const se_GetCellReadinessSummaryCommand = async (
  */
 export const se_GetReadinessCheckCommand = async (
   input: GetReadinessCheckCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -403,7 +403,7 @@ export const se_GetReadinessCheckCommand = async (
  */
 export const se_GetReadinessCheckResourceStatusCommand = async (
   input: GetReadinessCheckResourceStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -424,7 +424,7 @@ export const se_GetReadinessCheckResourceStatusCommand = async (
  */
 export const se_GetReadinessCheckStatusCommand = async (
   input: GetReadinessCheckStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -444,7 +444,7 @@ export const se_GetReadinessCheckStatusCommand = async (
  */
 export const se_GetRecoveryGroupCommand = async (
   input: GetRecoveryGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -460,7 +460,7 @@ export const se_GetRecoveryGroupCommand = async (
  */
 export const se_GetRecoveryGroupReadinessSummaryCommand = async (
   input: GetRecoveryGroupReadinessSummaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -480,7 +480,7 @@ export const se_GetRecoveryGroupReadinessSummaryCommand = async (
  */
 export const se_GetResourceSetCommand = async (
   input: GetResourceSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -496,7 +496,7 @@ export const se_GetResourceSetCommand = async (
  */
 export const se_ListCellsCommand = async (
   input: ListCellsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -515,7 +515,7 @@ export const se_ListCellsCommand = async (
  */
 export const se_ListCrossAccountAuthorizationsCommand = async (
   input: ListCrossAccountAuthorizationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -534,7 +534,7 @@ export const se_ListCrossAccountAuthorizationsCommand = async (
  */
 export const se_ListReadinessChecksCommand = async (
   input: ListReadinessChecksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -553,7 +553,7 @@ export const se_ListReadinessChecksCommand = async (
  */
 export const se_ListRecoveryGroupsCommand = async (
   input: ListRecoveryGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -572,7 +572,7 @@ export const se_ListRecoveryGroupsCommand = async (
  */
 export const se_ListResourceSetsCommand = async (
   input: ListResourceSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -591,7 +591,7 @@ export const se_ListResourceSetsCommand = async (
  */
 export const se_ListRulesCommand = async (
   input: ListRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -611,7 +611,7 @@ export const se_ListRulesCommand = async (
  */
 export const se_ListTagsForResourcesCommand = async (
   input: ListTagsForResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -627,7 +627,7 @@ export const se_ListTagsForResourcesCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -639,7 +639,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -650,7 +650,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -672,7 +672,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateCellCommand = async (
   input: UpdateCellCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -684,7 +684,7 @@ export const se_UpdateCellCommand = async (
   body = JSON.stringify(
     take(input, {
       cells: [, (_) => _json(_), `Cells`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -695,7 +695,7 @@ export const se_UpdateCellCommand = async (
  */
 export const se_UpdateReadinessCheckCommand = async (
   input: UpdateReadinessCheckCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -707,7 +707,7 @@ export const se_UpdateReadinessCheckCommand = async (
   body = JSON.stringify(
     take(input, {
       resourceSetName: [, , `ResourceSetName`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -718,7 +718,7 @@ export const se_UpdateReadinessCheckCommand = async (
  */
 export const se_UpdateRecoveryGroupCommand = async (
   input: UpdateRecoveryGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -730,7 +730,7 @@ export const se_UpdateRecoveryGroupCommand = async (
   body = JSON.stringify(
     take(input, {
       cells: [, (_) => _json(_), `Cells`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -741,7 +741,7 @@ export const se_UpdateRecoveryGroupCommand = async (
  */
 export const se_UpdateResourceSetCommand = async (
   input: UpdateResourceSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -754,7 +754,7 @@ export const se_UpdateResourceSetCommand = async (
     take(input, {
       resourceSetType: [, , `ResourceSetType`],
       resources: [, (_) => se___listOfResource(_, context), `Resources`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -765,7 +765,7 @@ export const se_UpdateResourceSetCommand = async (
  */
 export const de_CreateCellCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCellCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -790,7 +790,7 @@ export const de_CreateCellCommand = async (
  */
 export const de_CreateCrossAccountAuthorizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCrossAccountAuthorizationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -811,7 +811,7 @@ export const de_CreateCrossAccountAuthorizationCommand = async (
  */
 export const de_CreateReadinessCheckCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateReadinessCheckCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -835,7 +835,7 @@ export const de_CreateReadinessCheckCommand = async (
  */
 export const de_CreateRecoveryGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRecoveryGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -859,7 +859,7 @@ export const de_CreateRecoveryGroupCommand = async (
  */
 export const de_CreateResourceSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateResourceSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -884,7 +884,7 @@ export const de_CreateResourceSetCommand = async (
  */
 export const de_DeleteCellCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCellCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -901,7 +901,7 @@ export const de_DeleteCellCommand = async (
  */
 export const de_DeleteCrossAccountAuthorizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCrossAccountAuthorizationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -918,7 +918,7 @@ export const de_DeleteCrossAccountAuthorizationCommand = async (
  */
 export const de_DeleteReadinessCheckCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteReadinessCheckCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -935,7 +935,7 @@ export const de_DeleteReadinessCheckCommand = async (
  */
 export const de_DeleteRecoveryGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRecoveryGroupCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -952,7 +952,7 @@ export const de_DeleteRecoveryGroupCommand = async (
  */
 export const de_DeleteResourceSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResourceSetCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -969,7 +969,7 @@ export const de_DeleteResourceSetCommand = async (
  */
 export const de_GetArchitectureRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetArchitectureRecommendationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -992,7 +992,7 @@ export const de_GetArchitectureRecommendationsCommand = async (
  */
 export const de_GetCellCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCellCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1017,7 +1017,7 @@ export const de_GetCellCommand = async (
  */
 export const de_GetCellReadinessSummaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCellReadinessSummaryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1040,7 +1040,7 @@ export const de_GetCellReadinessSummaryCommand = async (
  */
 export const de_GetReadinessCheckCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReadinessCheckCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1064,7 +1064,7 @@ export const de_GetReadinessCheckCommand = async (
  */
 export const de_GetReadinessCheckResourceStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReadinessCheckResourceStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1087,7 +1087,7 @@ export const de_GetReadinessCheckResourceStatusCommand = async (
  */
 export const de_GetReadinessCheckStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReadinessCheckStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1111,7 +1111,7 @@ export const de_GetReadinessCheckStatusCommand = async (
  */
 export const de_GetRecoveryGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRecoveryGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1135,7 +1135,7 @@ export const de_GetRecoveryGroupCommand = async (
  */
 export const de_GetRecoveryGroupReadinessSummaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRecoveryGroupReadinessSummaryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1158,7 +1158,7 @@ export const de_GetRecoveryGroupReadinessSummaryCommand = async (
  */
 export const de_GetResourceSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourceSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1183,7 +1183,7 @@ export const de_GetResourceSetCommand = async (
  */
 export const de_ListCellsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCellsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1205,7 +1205,7 @@ export const de_ListCellsCommand = async (
  */
 export const de_ListCrossAccountAuthorizationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCrossAccountAuthorizationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1227,7 +1227,7 @@ export const de_ListCrossAccountAuthorizationsCommand = async (
  */
 export const de_ListReadinessChecksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReadinessChecksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1249,7 +1249,7 @@ export const de_ListReadinessChecksCommand = async (
  */
 export const de_ListRecoveryGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRecoveryGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1271,7 +1271,7 @@ export const de_ListRecoveryGroupsCommand = async (
  */
 export const de_ListResourceSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResourceSetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1293,7 +1293,7 @@ export const de_ListResourceSetsCommand = async (
  */
 export const de_ListRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRulesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1315,7 +1315,7 @@ export const de_ListRulesCommand = async (
  */
 export const de_ListTagsForResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1336,7 +1336,7 @@ export const de_ListTagsForResourcesCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1353,7 +1353,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1370,7 +1370,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateCellCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCellCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1395,7 +1395,7 @@ export const de_UpdateCellCommand = async (
  */
 export const de_UpdateReadinessCheckCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateReadinessCheckCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1419,7 +1419,7 @@ export const de_UpdateReadinessCheckCommand = async (
  */
 export const de_UpdateRecoveryGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRecoveryGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1443,7 +1443,7 @@ export const de_UpdateRecoveryGroupCommand = async (
  */
 export const de_UpdateResourceSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateResourceSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1507,7 +1507,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1544,7 +1544,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1564,7 +1564,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

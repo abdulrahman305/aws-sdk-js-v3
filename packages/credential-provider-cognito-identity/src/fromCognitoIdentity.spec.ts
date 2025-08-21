@@ -27,7 +27,7 @@ describe("fromCognitoIdentity", () => {
         client: mockClient,
         identityId,
         customRoleArn: "myArn",
-      })()
+      })(),
     ).toEqual({
       identityId: identityId,
       accessKeyId: "foo",
@@ -75,7 +75,7 @@ describe("fromCognitoIdentity", () => {
         client: mockClient,
         identityId,
         customRoleArn: "myArn",
-      })()
+      })(),
     ).rejects.toMatchObject(new CredentialsProviderError("Response from Amazon Cognito contained no credentials"));
   });
 
@@ -84,7 +84,7 @@ describe("fromCognitoIdentity", () => {
       Promise.resolve({
         Credentials: { SecretKey: "bar" },
         IdentityId: identityId,
-      })
+      }),
     );
 
     await expect(
@@ -92,7 +92,7 @@ describe("fromCognitoIdentity", () => {
         client: mockClient,
         identityId,
         customRoleArn: "myArn",
-      })()
+      })(),
     ).rejects.toMatchObject(new CredentialsProviderError("Response from Amazon Cognito contained no access key ID"));
   });
 
@@ -101,7 +101,7 @@ describe("fromCognitoIdentity", () => {
       Promise.resolve({
         Credentials: { AccessKeyId: "foo" },
         IdentityId: identityId,
-      })
+      }),
     );
 
     await expect(
@@ -109,7 +109,7 @@ describe("fromCognitoIdentity", () => {
         client: mockClient,
         identityId,
         customRoleArn: "myArn",
-      })()
+      })(),
     ).rejects.toMatchObject(new CredentialsProviderError("Response from Amazon Cognito contained no secret key"));
   });
 });

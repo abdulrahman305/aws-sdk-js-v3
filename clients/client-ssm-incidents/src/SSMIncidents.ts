@@ -195,16 +195,16 @@ export interface SSMIncidents {
    */
   batchGetIncidentFindings(
     args: BatchGetIncidentFindingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetIncidentFindingsCommandOutput>;
   batchGetIncidentFindings(
     args: BatchGetIncidentFindingsCommandInput,
-    cb: (err: any, data?: BatchGetIncidentFindingsCommandOutput) => void
+    cb: (err: any, data?: BatchGetIncidentFindingsCommandOutput) => void,
   ): void;
   batchGetIncidentFindings(
     args: BatchGetIncidentFindingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetIncidentFindingsCommandOutput) => void
+    cb: (err: any, data?: BatchGetIncidentFindingsCommandOutput) => void,
   ): void;
 
   /**
@@ -212,16 +212,16 @@ export interface SSMIncidents {
    */
   createReplicationSet(
     args: CreateReplicationSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateReplicationSetCommandOutput>;
   createReplicationSet(
     args: CreateReplicationSetCommandInput,
-    cb: (err: any, data?: CreateReplicationSetCommandOutput) => void
+    cb: (err: any, data?: CreateReplicationSetCommandOutput) => void,
   ): void;
   createReplicationSet(
     args: CreateReplicationSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateReplicationSetCommandOutput) => void
+    cb: (err: any, data?: CreateReplicationSetCommandOutput) => void,
   ): void;
 
   /**
@@ -229,16 +229,16 @@ export interface SSMIncidents {
    */
   createResponsePlan(
     args: CreateResponsePlanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateResponsePlanCommandOutput>;
   createResponsePlan(
     args: CreateResponsePlanCommandInput,
-    cb: (err: any, data?: CreateResponsePlanCommandOutput) => void
+    cb: (err: any, data?: CreateResponsePlanCommandOutput) => void,
   ): void;
   createResponsePlan(
     args: CreateResponsePlanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateResponsePlanCommandOutput) => void
+    cb: (err: any, data?: CreateResponsePlanCommandOutput) => void,
   ): void;
 
   /**
@@ -246,16 +246,16 @@ export interface SSMIncidents {
    */
   createTimelineEvent(
     args: CreateTimelineEventCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateTimelineEventCommandOutput>;
   createTimelineEvent(
     args: CreateTimelineEventCommandInput,
-    cb: (err: any, data?: CreateTimelineEventCommandOutput) => void
+    cb: (err: any, data?: CreateTimelineEventCommandOutput) => void,
   ): void;
   createTimelineEvent(
     args: CreateTimelineEventCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTimelineEventCommandOutput) => void
+    cb: (err: any, data?: CreateTimelineEventCommandOutput) => void,
   ): void;
 
   /**
@@ -263,16 +263,16 @@ export interface SSMIncidents {
    */
   deleteIncidentRecord(
     args: DeleteIncidentRecordCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteIncidentRecordCommandOutput>;
   deleteIncidentRecord(
     args: DeleteIncidentRecordCommandInput,
-    cb: (err: any, data?: DeleteIncidentRecordCommandOutput) => void
+    cb: (err: any, data?: DeleteIncidentRecordCommandOutput) => void,
   ): void;
   deleteIncidentRecord(
     args: DeleteIncidentRecordCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteIncidentRecordCommandOutput) => void
+    cb: (err: any, data?: DeleteIncidentRecordCommandOutput) => void,
   ): void;
 
   /**
@@ -280,16 +280,16 @@ export interface SSMIncidents {
    */
   deleteReplicationSet(
     args: DeleteReplicationSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteReplicationSetCommandOutput>;
   deleteReplicationSet(
     args: DeleteReplicationSetCommandInput,
-    cb: (err: any, data?: DeleteReplicationSetCommandOutput) => void
+    cb: (err: any, data?: DeleteReplicationSetCommandOutput) => void,
   ): void;
   deleteReplicationSet(
     args: DeleteReplicationSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteReplicationSetCommandOutput) => void
+    cb: (err: any, data?: DeleteReplicationSetCommandOutput) => void,
   ): void;
 
   /**
@@ -297,16 +297,16 @@ export interface SSMIncidents {
    */
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResourcePolicyCommandOutput>;
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
-    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void,
   ): void;
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -314,16 +314,16 @@ export interface SSMIncidents {
    */
   deleteResponsePlan(
     args: DeleteResponsePlanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResponsePlanCommandOutput>;
   deleteResponsePlan(
     args: DeleteResponsePlanCommandInput,
-    cb: (err: any, data?: DeleteResponsePlanCommandOutput) => void
+    cb: (err: any, data?: DeleteResponsePlanCommandOutput) => void,
   ): void;
   deleteResponsePlan(
     args: DeleteResponsePlanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResponsePlanCommandOutput) => void
+    cb: (err: any, data?: DeleteResponsePlanCommandOutput) => void,
   ): void;
 
   /**
@@ -331,16 +331,16 @@ export interface SSMIncidents {
    */
   deleteTimelineEvent(
     args: DeleteTimelineEventCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteTimelineEventCommandOutput>;
   deleteTimelineEvent(
     args: DeleteTimelineEventCommandInput,
-    cb: (err: any, data?: DeleteTimelineEventCommandOutput) => void
+    cb: (err: any, data?: DeleteTimelineEventCommandOutput) => void,
   ): void;
   deleteTimelineEvent(
     args: DeleteTimelineEventCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTimelineEventCommandOutput) => void
+    cb: (err: any, data?: DeleteTimelineEventCommandOutput) => void,
   ): void;
 
   /**
@@ -348,16 +348,16 @@ export interface SSMIncidents {
    */
   getIncidentRecord(
     args: GetIncidentRecordCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetIncidentRecordCommandOutput>;
   getIncidentRecord(
     args: GetIncidentRecordCommandInput,
-    cb: (err: any, data?: GetIncidentRecordCommandOutput) => void
+    cb: (err: any, data?: GetIncidentRecordCommandOutput) => void,
   ): void;
   getIncidentRecord(
     args: GetIncidentRecordCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetIncidentRecordCommandOutput) => void
+    cb: (err: any, data?: GetIncidentRecordCommandOutput) => void,
   ): void;
 
   /**
@@ -365,16 +365,16 @@ export interface SSMIncidents {
    */
   getReplicationSet(
     args: GetReplicationSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetReplicationSetCommandOutput>;
   getReplicationSet(
     args: GetReplicationSetCommandInput,
-    cb: (err: any, data?: GetReplicationSetCommandOutput) => void
+    cb: (err: any, data?: GetReplicationSetCommandOutput) => void,
   ): void;
   getReplicationSet(
     args: GetReplicationSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetReplicationSetCommandOutput) => void
+    cb: (err: any, data?: GetReplicationSetCommandOutput) => void,
   ): void;
 
   /**
@@ -382,16 +382,16 @@ export interface SSMIncidents {
    */
   getResourcePolicies(
     args: GetResourcePoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResourcePoliciesCommandOutput>;
   getResourcePolicies(
     args: GetResourcePoliciesCommandInput,
-    cb: (err: any, data?: GetResourcePoliciesCommandOutput) => void
+    cb: (err: any, data?: GetResourcePoliciesCommandOutput) => void,
   ): void;
   getResourcePolicies(
     args: GetResourcePoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourcePoliciesCommandOutput) => void
+    cb: (err: any, data?: GetResourcePoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -399,13 +399,13 @@ export interface SSMIncidents {
    */
   getResponsePlan(
     args: GetResponsePlanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResponsePlanCommandOutput>;
   getResponsePlan(args: GetResponsePlanCommandInput, cb: (err: any, data?: GetResponsePlanCommandOutput) => void): void;
   getResponsePlan(
     args: GetResponsePlanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResponsePlanCommandOutput) => void
+    cb: (err: any, data?: GetResponsePlanCommandOutput) => void,
   ): void;
 
   /**
@@ -413,16 +413,16 @@ export interface SSMIncidents {
    */
   getTimelineEvent(
     args: GetTimelineEventCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTimelineEventCommandOutput>;
   getTimelineEvent(
     args: GetTimelineEventCommandInput,
-    cb: (err: any, data?: GetTimelineEventCommandOutput) => void
+    cb: (err: any, data?: GetTimelineEventCommandOutput) => void,
   ): void;
   getTimelineEvent(
     args: GetTimelineEventCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTimelineEventCommandOutput) => void
+    cb: (err: any, data?: GetTimelineEventCommandOutput) => void,
   ): void;
 
   /**
@@ -430,16 +430,16 @@ export interface SSMIncidents {
    */
   listIncidentFindings(
     args: ListIncidentFindingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListIncidentFindingsCommandOutput>;
   listIncidentFindings(
     args: ListIncidentFindingsCommandInput,
-    cb: (err: any, data?: ListIncidentFindingsCommandOutput) => void
+    cb: (err: any, data?: ListIncidentFindingsCommandOutput) => void,
   ): void;
   listIncidentFindings(
     args: ListIncidentFindingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListIncidentFindingsCommandOutput) => void
+    cb: (err: any, data?: ListIncidentFindingsCommandOutput) => void,
   ): void;
 
   /**
@@ -448,16 +448,16 @@ export interface SSMIncidents {
   listIncidentRecords(): Promise<ListIncidentRecordsCommandOutput>;
   listIncidentRecords(
     args: ListIncidentRecordsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListIncidentRecordsCommandOutput>;
   listIncidentRecords(
     args: ListIncidentRecordsCommandInput,
-    cb: (err: any, data?: ListIncidentRecordsCommandOutput) => void
+    cb: (err: any, data?: ListIncidentRecordsCommandOutput) => void,
   ): void;
   listIncidentRecords(
     args: ListIncidentRecordsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListIncidentRecordsCommandOutput) => void
+    cb: (err: any, data?: ListIncidentRecordsCommandOutput) => void,
   ): void;
 
   /**
@@ -465,16 +465,16 @@ export interface SSMIncidents {
    */
   listRelatedItems(
     args: ListRelatedItemsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRelatedItemsCommandOutput>;
   listRelatedItems(
     args: ListRelatedItemsCommandInput,
-    cb: (err: any, data?: ListRelatedItemsCommandOutput) => void
+    cb: (err: any, data?: ListRelatedItemsCommandOutput) => void,
   ): void;
   listRelatedItems(
     args: ListRelatedItemsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRelatedItemsCommandOutput) => void
+    cb: (err: any, data?: ListRelatedItemsCommandOutput) => void,
   ): void;
 
   /**
@@ -483,16 +483,16 @@ export interface SSMIncidents {
   listReplicationSets(): Promise<ListReplicationSetsCommandOutput>;
   listReplicationSets(
     args: ListReplicationSetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListReplicationSetsCommandOutput>;
   listReplicationSets(
     args: ListReplicationSetsCommandInput,
-    cb: (err: any, data?: ListReplicationSetsCommandOutput) => void
+    cb: (err: any, data?: ListReplicationSetsCommandOutput) => void,
   ): void;
   listReplicationSets(
     args: ListReplicationSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListReplicationSetsCommandOutput) => void
+    cb: (err: any, data?: ListReplicationSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -501,16 +501,16 @@ export interface SSMIncidents {
   listResponsePlans(): Promise<ListResponsePlansCommandOutput>;
   listResponsePlans(
     args: ListResponsePlansCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResponsePlansCommandOutput>;
   listResponsePlans(
     args: ListResponsePlansCommandInput,
-    cb: (err: any, data?: ListResponsePlansCommandOutput) => void
+    cb: (err: any, data?: ListResponsePlansCommandOutput) => void,
   ): void;
   listResponsePlans(
     args: ListResponsePlansCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResponsePlansCommandOutput) => void
+    cb: (err: any, data?: ListResponsePlansCommandOutput) => void,
   ): void;
 
   /**
@@ -518,16 +518,16 @@ export interface SSMIncidents {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -535,16 +535,16 @@ export interface SSMIncidents {
    */
   listTimelineEvents(
     args: ListTimelineEventsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTimelineEventsCommandOutput>;
   listTimelineEvents(
     args: ListTimelineEventsCommandInput,
-    cb: (err: any, data?: ListTimelineEventsCommandOutput) => void
+    cb: (err: any, data?: ListTimelineEventsCommandOutput) => void,
   ): void;
   listTimelineEvents(
     args: ListTimelineEventsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTimelineEventsCommandOutput) => void
+    cb: (err: any, data?: ListTimelineEventsCommandOutput) => void,
   ): void;
 
   /**
@@ -552,16 +552,16 @@ export interface SSMIncidents {
    */
   putResourcePolicy(
     args: PutResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutResourcePolicyCommandOutput>;
   putResourcePolicy(
     args: PutResourcePolicyCommandInput,
-    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void,
   ): void;
   putResourcePolicy(
     args: PutResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -572,7 +572,7 @@ export interface SSMIncidents {
   startIncident(
     args: StartIncidentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartIncidentCommandOutput) => void
+    cb: (err: any, data?: StartIncidentCommandOutput) => void,
   ): void;
 
   /**
@@ -583,7 +583,7 @@ export interface SSMIncidents {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -594,7 +594,7 @@ export interface SSMIncidents {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -602,16 +602,16 @@ export interface SSMIncidents {
    */
   updateDeletionProtection(
     args: UpdateDeletionProtectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDeletionProtectionCommandOutput>;
   updateDeletionProtection(
     args: UpdateDeletionProtectionCommandInput,
-    cb: (err: any, data?: UpdateDeletionProtectionCommandOutput) => void
+    cb: (err: any, data?: UpdateDeletionProtectionCommandOutput) => void,
   ): void;
   updateDeletionProtection(
     args: UpdateDeletionProtectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDeletionProtectionCommandOutput) => void
+    cb: (err: any, data?: UpdateDeletionProtectionCommandOutput) => void,
   ): void;
 
   /**
@@ -619,16 +619,16 @@ export interface SSMIncidents {
    */
   updateIncidentRecord(
     args: UpdateIncidentRecordCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateIncidentRecordCommandOutput>;
   updateIncidentRecord(
     args: UpdateIncidentRecordCommandInput,
-    cb: (err: any, data?: UpdateIncidentRecordCommandOutput) => void
+    cb: (err: any, data?: UpdateIncidentRecordCommandOutput) => void,
   ): void;
   updateIncidentRecord(
     args: UpdateIncidentRecordCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateIncidentRecordCommandOutput) => void
+    cb: (err: any, data?: UpdateIncidentRecordCommandOutput) => void,
   ): void;
 
   /**
@@ -636,16 +636,16 @@ export interface SSMIncidents {
    */
   updateRelatedItems(
     args: UpdateRelatedItemsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRelatedItemsCommandOutput>;
   updateRelatedItems(
     args: UpdateRelatedItemsCommandInput,
-    cb: (err: any, data?: UpdateRelatedItemsCommandOutput) => void
+    cb: (err: any, data?: UpdateRelatedItemsCommandOutput) => void,
   ): void;
   updateRelatedItems(
     args: UpdateRelatedItemsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRelatedItemsCommandOutput) => void
+    cb: (err: any, data?: UpdateRelatedItemsCommandOutput) => void,
   ): void;
 
   /**
@@ -653,16 +653,16 @@ export interface SSMIncidents {
    */
   updateReplicationSet(
     args: UpdateReplicationSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateReplicationSetCommandOutput>;
   updateReplicationSet(
     args: UpdateReplicationSetCommandInput,
-    cb: (err: any, data?: UpdateReplicationSetCommandOutput) => void
+    cb: (err: any, data?: UpdateReplicationSetCommandOutput) => void,
   ): void;
   updateReplicationSet(
     args: UpdateReplicationSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateReplicationSetCommandOutput) => void
+    cb: (err: any, data?: UpdateReplicationSetCommandOutput) => void,
   ): void;
 
   /**
@@ -670,16 +670,16 @@ export interface SSMIncidents {
    */
   updateResponsePlan(
     args: UpdateResponsePlanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateResponsePlanCommandOutput>;
   updateResponsePlan(
     args: UpdateResponsePlanCommandInput,
-    cb: (err: any, data?: UpdateResponsePlanCommandOutput) => void
+    cb: (err: any, data?: UpdateResponsePlanCommandOutput) => void,
   ): void;
   updateResponsePlan(
     args: UpdateResponsePlanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateResponsePlanCommandOutput) => void
+    cb: (err: any, data?: UpdateResponsePlanCommandOutput) => void,
   ): void;
 
   /**
@@ -687,16 +687,16 @@ export interface SSMIncidents {
    */
   updateTimelineEvent(
     args: UpdateTimelineEventCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateTimelineEventCommandOutput>;
   updateTimelineEvent(
     args: UpdateTimelineEventCommandInput,
-    cb: (err: any, data?: UpdateTimelineEventCommandOutput) => void
+    cb: (err: any, data?: UpdateTimelineEventCommandOutput) => void,
   ): void;
   updateTimelineEvent(
     args: UpdateTimelineEventCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTimelineEventCommandOutput) => void
+    cb: (err: any, data?: UpdateTimelineEventCommandOutput) => void,
   ): void;
 }
 

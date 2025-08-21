@@ -9,7 +9,7 @@ import { NeptuneGraphClient } from "../NeptuneGraphClient";
 
 const checkState = async (
   client: NeptuneGraphClient,
-  input: GetPrivateGraphEndpointCommandInput
+  input: GetPrivateGraphEndpointCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -50,7 +50,7 @@ const checkState = async (
  */
 export const waitForPrivateGraphEndpointAvailable = async (
   params: WaiterConfiguration<NeptuneGraphClient>,
-  input: GetPrivateGraphEndpointCommandInput
+  input: GetPrivateGraphEndpointCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 1800 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -62,7 +62,7 @@ export const waitForPrivateGraphEndpointAvailable = async (
  */
 export const waitUntilPrivateGraphEndpointAvailable = async (
   params: WaiterConfiguration<NeptuneGraphClient>,
-  input: GetPrivateGraphEndpointCommandInput
+  input: GetPrivateGraphEndpointCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 1800 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

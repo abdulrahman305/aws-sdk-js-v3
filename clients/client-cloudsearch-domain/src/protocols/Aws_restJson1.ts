@@ -63,7 +63,7 @@ export const se_SearchCommand = async (input: SearchCommandInput, context: __Ser
  */
 export const se_SuggestCommand = async (
   input: SuggestCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -85,7 +85,7 @@ export const se_SuggestCommand = async (
  */
 export const se_UploadDocumentsCommand = async (
   input: UploadDocumentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -108,7 +108,7 @@ export const se_UploadDocumentsCommand = async (
  */
 export const de_SearchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -132,7 +132,7 @@ export const de_SearchCommand = async (
  */
 export const de_SuggestCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SuggestCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -154,7 +154,7 @@ export const de_SuggestCommand = async (
  */
 export const de_UploadDocumentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UploadDocumentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -205,7 +205,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_DocumentServiceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DocumentServiceException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -286,13 +286,16 @@ const de_FieldStats = (output: any, context: __SerdeContext): FieldStats => {
  * deserializeAws_restJson1Stats
  */
 const de_Stats = (output: any, context: __SerdeContext): Record<string, FieldStats> => {
-  return Object.entries(output).reduce((acc: Record<string, FieldStats>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, FieldStats>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_FieldStats(value, context);
       return acc;
-    }
-    acc[key as string] = de_FieldStats(value, context);
-    return acc;
-  }, {} as Record<string, FieldStats>);
+    },
+    {} as Record<string, FieldStats>,
+  );
 };
 
 // de_SuggestionMatch omitted.

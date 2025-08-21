@@ -553,7 +553,7 @@ import {
  */
 export const se_AcceptInputDeviceTransferCommand = async (
   input: AcceptInputDeviceTransferCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -569,7 +569,7 @@ export const se_AcceptInputDeviceTransferCommand = async (
  */
 export const se_BatchDeleteCommand = async (
   input: BatchDeleteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -583,7 +583,7 @@ export const se_BatchDeleteCommand = async (
       inputIds: [, (_) => _json(_), `InputIds`],
       inputSecurityGroupIds: [, (_) => _json(_), `InputSecurityGroupIds`],
       multiplexIds: [, (_) => _json(_), `MultiplexIds`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -594,7 +594,7 @@ export const se_BatchDeleteCommand = async (
  */
 export const se_BatchStartCommand = async (
   input: BatchStartCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -606,7 +606,7 @@ export const se_BatchStartCommand = async (
     take(input, {
       channelIds: [, (_) => _json(_), `ChannelIds`],
       multiplexIds: [, (_) => _json(_), `MultiplexIds`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -617,7 +617,7 @@ export const se_BatchStartCommand = async (
  */
 export const se_BatchStopCommand = async (
   input: BatchStopCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -629,7 +629,7 @@ export const se_BatchStopCommand = async (
     take(input, {
       channelIds: [, (_) => _json(_), `ChannelIds`],
       multiplexIds: [, (_) => _json(_), `MultiplexIds`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -640,7 +640,7 @@ export const se_BatchStopCommand = async (
  */
 export const se_BatchUpdateScheduleCommand = async (
   input: BatchUpdateScheduleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -653,7 +653,7 @@ export const se_BatchUpdateScheduleCommand = async (
     take(input, {
       creates: [, (_) => se_BatchScheduleActionCreateRequest(_, context), `Creates`],
       deletes: [, (_) => se_BatchScheduleActionDeleteRequest(_, context), `Deletes`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -664,7 +664,7 @@ export const se_BatchUpdateScheduleCommand = async (
  */
 export const se_CancelInputDeviceTransferCommand = async (
   input: CancelInputDeviceTransferCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -680,7 +680,7 @@ export const se_CancelInputDeviceTransferCommand = async (
  */
 export const se_ClaimDeviceCommand = async (
   input: ClaimDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -691,7 +691,7 @@ export const se_ClaimDeviceCommand = async (
   body = JSON.stringify(
     take(input, {
       id: [, , `Id`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -702,7 +702,7 @@ export const se_ClaimDeviceCommand = async (
  */
 export const se_CreateChannelCommand = async (
   input: CreateChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -726,7 +726,7 @@ export const se_CreateChannelCommand = async (
       roleArn: [, , `RoleArn`],
       tags: [, (_) => _json(_), `Tags`],
       vpc: [, (_) => se_VpcOutputSettings(_, context), `Vpc`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -737,7 +737,7 @@ export const se_CreateChannelCommand = async (
  */
 export const se_CreateCloudWatchAlarmTemplateCommand = async (
   input: CreateCloudWatchAlarmTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -760,7 +760,7 @@ export const se_CreateCloudWatchAlarmTemplateCommand = async (
       targetResourceType: [, , `TargetResourceType`],
       threshold: [, (_) => __serializeFloat(_), `Threshold`],
       treatMissingData: [, , `TreatMissingData`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -771,7 +771,7 @@ export const se_CreateCloudWatchAlarmTemplateCommand = async (
  */
 export const se_CreateCloudWatchAlarmTemplateGroupCommand = async (
   input: CreateCloudWatchAlarmTemplateGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -784,7 +784,7 @@ export const se_CreateCloudWatchAlarmTemplateGroupCommand = async (
       description: [, , `Description`],
       name: [, , `Name`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -795,7 +795,7 @@ export const se_CreateCloudWatchAlarmTemplateGroupCommand = async (
  */
 export const se_CreateEventBridgeRuleTemplateCommand = async (
   input: CreateEventBridgeRuleTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -811,7 +811,7 @@ export const se_CreateEventBridgeRuleTemplateCommand = async (
       groupIdentifier: [, , `GroupIdentifier`],
       name: [, , `Name`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -822,7 +822,7 @@ export const se_CreateEventBridgeRuleTemplateCommand = async (
  */
 export const se_CreateEventBridgeRuleTemplateGroupCommand = async (
   input: CreateEventBridgeRuleTemplateGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -835,7 +835,7 @@ export const se_CreateEventBridgeRuleTemplateGroupCommand = async (
       description: [, , `Description`],
       name: [, , `Name`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -846,7 +846,7 @@ export const se_CreateEventBridgeRuleTemplateGroupCommand = async (
  */
 export const se_CreateInputCommand = async (
   input: CreateInputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -867,7 +867,7 @@ export const se_CreateInputCommand = async (
       tags: [, (_) => _json(_), `Tags`],
       type: [, , `Type`],
       vpc: [, (_) => se_InputVpcRequest(_, context), `Vpc`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -878,7 +878,7 @@ export const se_CreateInputCommand = async (
  */
 export const se_CreateInputSecurityGroupCommand = async (
   input: CreateInputSecurityGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -890,7 +890,7 @@ export const se_CreateInputSecurityGroupCommand = async (
     take(input, {
       tags: [, (_) => _json(_), `Tags`],
       whitelistRules: [, (_) => se___listOfInputWhitelistRuleCidr(_, context), `WhitelistRules`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -901,7 +901,7 @@ export const se_CreateInputSecurityGroupCommand = async (
  */
 export const se_CreateMultiplexCommand = async (
   input: CreateMultiplexCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -916,7 +916,7 @@ export const se_CreateMultiplexCommand = async (
       name: [, , `Name`],
       requestId: [true, (_) => _ ?? generateIdempotencyToken(), `RequestId`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -927,7 +927,7 @@ export const se_CreateMultiplexCommand = async (
  */
 export const se_CreateMultiplexProgramCommand = async (
   input: CreateMultiplexProgramCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -941,7 +941,7 @@ export const se_CreateMultiplexProgramCommand = async (
       multiplexProgramSettings: [, (_) => se_MultiplexProgramSettings(_, context), `MultiplexProgramSettings`],
       programName: [, , `ProgramName`],
       requestId: [true, (_) => _ ?? generateIdempotencyToken(), `RequestId`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -952,7 +952,7 @@ export const se_CreateMultiplexProgramCommand = async (
  */
 export const se_CreatePartnerInputCommand = async (
   input: CreatePartnerInputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -965,7 +965,7 @@ export const se_CreatePartnerInputCommand = async (
     take(input, {
       requestId: [true, (_) => _ ?? generateIdempotencyToken(), `RequestId`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -976,7 +976,7 @@ export const se_CreatePartnerInputCommand = async (
  */
 export const se_CreateSignalMapCommand = async (
   input: CreateSignalMapCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -992,7 +992,7 @@ export const se_CreateSignalMapCommand = async (
       eventBridgeRuleTemplateGroupIdentifiers: [, (_) => _json(_), `EventBridgeRuleTemplateGroupIdentifiers`],
       name: [, , `Name`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1003,7 +1003,7 @@ export const se_CreateSignalMapCommand = async (
  */
 export const se_CreateTagsCommand = async (
   input: CreateTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1015,7 +1015,7 @@ export const se_CreateTagsCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1026,7 +1026,7 @@ export const se_CreateTagsCommand = async (
  */
 export const se_DeleteChannelCommand = async (
   input: DeleteChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1042,7 +1042,7 @@ export const se_DeleteChannelCommand = async (
  */
 export const se_DeleteCloudWatchAlarmTemplateCommand = async (
   input: DeleteCloudWatchAlarmTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1058,7 +1058,7 @@ export const se_DeleteCloudWatchAlarmTemplateCommand = async (
  */
 export const se_DeleteCloudWatchAlarmTemplateGroupCommand = async (
   input: DeleteCloudWatchAlarmTemplateGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1074,7 +1074,7 @@ export const se_DeleteCloudWatchAlarmTemplateGroupCommand = async (
  */
 export const se_DeleteEventBridgeRuleTemplateCommand = async (
   input: DeleteEventBridgeRuleTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1090,7 +1090,7 @@ export const se_DeleteEventBridgeRuleTemplateCommand = async (
  */
 export const se_DeleteEventBridgeRuleTemplateGroupCommand = async (
   input: DeleteEventBridgeRuleTemplateGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1106,7 +1106,7 @@ export const se_DeleteEventBridgeRuleTemplateGroupCommand = async (
  */
 export const se_DeleteInputCommand = async (
   input: DeleteInputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1122,7 +1122,7 @@ export const se_DeleteInputCommand = async (
  */
 export const se_DeleteInputSecurityGroupCommand = async (
   input: DeleteInputSecurityGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1138,7 +1138,7 @@ export const se_DeleteInputSecurityGroupCommand = async (
  */
 export const se_DeleteMultiplexCommand = async (
   input: DeleteMultiplexCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1154,7 +1154,7 @@ export const se_DeleteMultiplexCommand = async (
  */
 export const se_DeleteMultiplexProgramCommand = async (
   input: DeleteMultiplexProgramCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1171,7 +1171,7 @@ export const se_DeleteMultiplexProgramCommand = async (
  */
 export const se_DeleteReservationCommand = async (
   input: DeleteReservationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1187,7 +1187,7 @@ export const se_DeleteReservationCommand = async (
  */
 export const se_DeleteScheduleCommand = async (
   input: DeleteScheduleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1203,7 +1203,7 @@ export const se_DeleteScheduleCommand = async (
  */
 export const se_DeleteSignalMapCommand = async (
   input: DeleteSignalMapCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1219,7 +1219,7 @@ export const se_DeleteSignalMapCommand = async (
  */
 export const se_DeleteTagsCommand = async (
   input: DeleteTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1241,7 +1241,7 @@ export const se_DeleteTagsCommand = async (
  */
 export const se_DescribeAccountConfigurationCommand = async (
   input: DescribeAccountConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1259,7 +1259,7 @@ export const se_DescribeAccountConfigurationCommand = async (
  */
 export const se_DescribeChannelCommand = async (
   input: DescribeChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1275,7 +1275,7 @@ export const se_DescribeChannelCommand = async (
  */
 export const se_DescribeInputCommand = async (
   input: DescribeInputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1291,7 +1291,7 @@ export const se_DescribeInputCommand = async (
  */
 export const se_DescribeInputDeviceCommand = async (
   input: DescribeInputDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1307,7 +1307,7 @@ export const se_DescribeInputDeviceCommand = async (
  */
 export const se_DescribeInputDeviceThumbnailCommand = async (
   input: DescribeInputDeviceThumbnailCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1325,7 +1325,7 @@ export const se_DescribeInputDeviceThumbnailCommand = async (
  */
 export const se_DescribeInputSecurityGroupCommand = async (
   input: DescribeInputSecurityGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1341,7 +1341,7 @@ export const se_DescribeInputSecurityGroupCommand = async (
  */
 export const se_DescribeMultiplexCommand = async (
   input: DescribeMultiplexCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1357,7 +1357,7 @@ export const se_DescribeMultiplexCommand = async (
  */
 export const se_DescribeMultiplexProgramCommand = async (
   input: DescribeMultiplexProgramCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1374,7 +1374,7 @@ export const se_DescribeMultiplexProgramCommand = async (
  */
 export const se_DescribeOfferingCommand = async (
   input: DescribeOfferingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1390,7 +1390,7 @@ export const se_DescribeOfferingCommand = async (
  */
 export const se_DescribeReservationCommand = async (
   input: DescribeReservationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1406,7 +1406,7 @@ export const se_DescribeReservationCommand = async (
  */
 export const se_DescribeScheduleCommand = async (
   input: DescribeScheduleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1426,7 +1426,7 @@ export const se_DescribeScheduleCommand = async (
  */
 export const se_DescribeThumbnailsCommand = async (
   input: DescribeThumbnailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1446,7 +1446,7 @@ export const se_DescribeThumbnailsCommand = async (
  */
 export const se_GetCloudWatchAlarmTemplateCommand = async (
   input: GetCloudWatchAlarmTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1462,7 +1462,7 @@ export const se_GetCloudWatchAlarmTemplateCommand = async (
  */
 export const se_GetCloudWatchAlarmTemplateGroupCommand = async (
   input: GetCloudWatchAlarmTemplateGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1478,7 +1478,7 @@ export const se_GetCloudWatchAlarmTemplateGroupCommand = async (
  */
 export const se_GetEventBridgeRuleTemplateCommand = async (
   input: GetEventBridgeRuleTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1494,7 +1494,7 @@ export const se_GetEventBridgeRuleTemplateCommand = async (
  */
 export const se_GetEventBridgeRuleTemplateGroupCommand = async (
   input: GetEventBridgeRuleTemplateGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1510,7 +1510,7 @@ export const se_GetEventBridgeRuleTemplateGroupCommand = async (
  */
 export const se_GetSignalMapCommand = async (
   input: GetSignalMapCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1526,7 +1526,7 @@ export const se_GetSignalMapCommand = async (
  */
 export const se_ListChannelsCommand = async (
   input: ListChannelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1545,7 +1545,7 @@ export const se_ListChannelsCommand = async (
  */
 export const se_ListCloudWatchAlarmTemplateGroupsCommand = async (
   input: ListCloudWatchAlarmTemplateGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1566,7 +1566,7 @@ export const se_ListCloudWatchAlarmTemplateGroupsCommand = async (
  */
 export const se_ListCloudWatchAlarmTemplatesCommand = async (
   input: ListCloudWatchAlarmTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1588,7 +1588,7 @@ export const se_ListCloudWatchAlarmTemplatesCommand = async (
  */
 export const se_ListEventBridgeRuleTemplateGroupsCommand = async (
   input: ListEventBridgeRuleTemplateGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1608,7 +1608,7 @@ export const se_ListEventBridgeRuleTemplateGroupsCommand = async (
  */
 export const se_ListEventBridgeRuleTemplatesCommand = async (
   input: ListEventBridgeRuleTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1629,7 +1629,7 @@ export const se_ListEventBridgeRuleTemplatesCommand = async (
  */
 export const se_ListInputDevicesCommand = async (
   input: ListInputDevicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1648,7 +1648,7 @@ export const se_ListInputDevicesCommand = async (
  */
 export const se_ListInputDeviceTransfersCommand = async (
   input: ListInputDeviceTransfersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1668,7 +1668,7 @@ export const se_ListInputDeviceTransfersCommand = async (
  */
 export const se_ListInputsCommand = async (
   input: ListInputsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1687,7 +1687,7 @@ export const se_ListInputsCommand = async (
  */
 export const se_ListInputSecurityGroupsCommand = async (
   input: ListInputSecurityGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1706,7 +1706,7 @@ export const se_ListInputSecurityGroupsCommand = async (
  */
 export const se_ListMultiplexesCommand = async (
   input: ListMultiplexesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1725,7 +1725,7 @@ export const se_ListMultiplexesCommand = async (
  */
 export const se_ListMultiplexProgramsCommand = async (
   input: ListMultiplexProgramsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1745,7 +1745,7 @@ export const se_ListMultiplexProgramsCommand = async (
  */
 export const se_ListOfferingsCommand = async (
   input: ListOfferingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1774,7 +1774,7 @@ export const se_ListOfferingsCommand = async (
  */
 export const se_ListReservationsCommand = async (
   input: ListReservationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1801,7 +1801,7 @@ export const se_ListReservationsCommand = async (
  */
 export const se_ListSignalMapsCommand = async (
   input: ListSignalMapsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1822,7 +1822,7 @@ export const se_ListSignalMapsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1838,7 +1838,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PurchaseOfferingCommand = async (
   input: PurchaseOfferingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1855,7 +1855,7 @@ export const se_PurchaseOfferingCommand = async (
       requestId: [true, (_) => _ ?? generateIdempotencyToken(), `RequestId`],
       start: [, , `Start`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1866,7 +1866,7 @@ export const se_PurchaseOfferingCommand = async (
  */
 export const se_RebootInputDeviceCommand = async (
   input: RebootInputDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1878,7 +1878,7 @@ export const se_RebootInputDeviceCommand = async (
   body = JSON.stringify(
     take(input, {
       force: [, , `Force`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1889,7 +1889,7 @@ export const se_RebootInputDeviceCommand = async (
  */
 export const se_RejectInputDeviceTransferCommand = async (
   input: RejectInputDeviceTransferCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1905,7 +1905,7 @@ export const se_RejectInputDeviceTransferCommand = async (
  */
 export const se_RestartChannelPipelinesCommand = async (
   input: RestartChannelPipelinesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1917,7 +1917,7 @@ export const se_RestartChannelPipelinesCommand = async (
   body = JSON.stringify(
     take(input, {
       pipelineIds: [, (_) => _json(_), `PipelineIds`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1928,7 +1928,7 @@ export const se_RestartChannelPipelinesCommand = async (
  */
 export const se_StartChannelCommand = async (
   input: StartChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1944,7 +1944,7 @@ export const se_StartChannelCommand = async (
  */
 export const se_StartDeleteMonitorDeploymentCommand = async (
   input: StartDeleteMonitorDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1960,7 +1960,7 @@ export const se_StartDeleteMonitorDeploymentCommand = async (
  */
 export const se_StartInputDeviceCommand = async (
   input: StartInputDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1976,7 +1976,7 @@ export const se_StartInputDeviceCommand = async (
  */
 export const se_StartInputDeviceMaintenanceWindowCommand = async (
   input: StartInputDeviceMaintenanceWindowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1992,7 +1992,7 @@ export const se_StartInputDeviceMaintenanceWindowCommand = async (
  */
 export const se_StartMonitorDeploymentCommand = async (
   input: StartMonitorDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2004,7 +2004,7 @@ export const se_StartMonitorDeploymentCommand = async (
   body = JSON.stringify(
     take(input, {
       dryRun: [, , `DryRun`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2015,7 +2015,7 @@ export const se_StartMonitorDeploymentCommand = async (
  */
 export const se_StartMultiplexCommand = async (
   input: StartMultiplexCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2031,7 +2031,7 @@ export const se_StartMultiplexCommand = async (
  */
 export const se_StartUpdateSignalMapCommand = async (
   input: StartUpdateSignalMapCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2048,7 +2048,7 @@ export const se_StartUpdateSignalMapCommand = async (
       eventBridgeRuleTemplateGroupIdentifiers: [, (_) => _json(_), `EventBridgeRuleTemplateGroupIdentifiers`],
       forceRediscovery: [, , `ForceRediscovery`],
       name: [, , `Name`],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2059,7 +2059,7 @@ export const se_StartUpdateSignalMapCommand = async (
  */
 export const se_StopChannelCommand = async (
   input: StopChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2075,7 +2075,7 @@ export const se_StopChannelCommand = async (
  */
 export const se_StopInputDeviceCommand = async (
   input: StopInputDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2091,7 +2091,7 @@ export const se_StopInputDeviceCommand = async (
  */
 export const se_StopMultiplexCommand = async (
   input: StopMultiplexCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2107,7 +2107,7 @@ export const se_StopMultiplexCommand = async (
  */
 export const se_TransferInputDeviceCommand = async (
   input: TransferInputDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2121,7 +2121,7 @@ export const se_TransferInputDeviceCommand = async (
       targetCustomerId: [, , `TargetCustomerId`],
       targetRegion: [, , `TargetRegion`],
       transferMessage: [, , `TransferMessage`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2132,7 +2132,7 @@ export const se_TransferInputDeviceCommand = async (
  */
 export const se_UpdateAccountConfigurationCommand = async (
   input: UpdateAccountConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2143,7 +2143,7 @@ export const se_UpdateAccountConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       accountConfiguration: [, (_) => se_AccountConfiguration(_, context), `AccountConfiguration`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2154,7 +2154,7 @@ export const se_UpdateAccountConfigurationCommand = async (
  */
 export const se_UpdateChannelCommand = async (
   input: UpdateChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2174,7 +2174,7 @@ export const se_UpdateChannelCommand = async (
       maintenance: [, (_) => se_MaintenanceUpdateSettings(_, context), `Maintenance`],
       name: [, , `Name`],
       roleArn: [, , `RoleArn`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2185,7 +2185,7 @@ export const se_UpdateChannelCommand = async (
  */
 export const se_UpdateChannelClassCommand = async (
   input: UpdateChannelClassCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2198,7 +2198,7 @@ export const se_UpdateChannelClassCommand = async (
     take(input, {
       channelClass: [, , `ChannelClass`],
       destinations: [, (_) => se___listOfOutputDestination(_, context), `Destinations`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2209,7 +2209,7 @@ export const se_UpdateChannelClassCommand = async (
  */
 export const se_UpdateCloudWatchAlarmTemplateCommand = async (
   input: UpdateCloudWatchAlarmTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2232,7 +2232,7 @@ export const se_UpdateCloudWatchAlarmTemplateCommand = async (
       targetResourceType: [, , `TargetResourceType`],
       threshold: [, (_) => __serializeFloat(_), `Threshold`],
       treatMissingData: [, , `TreatMissingData`],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2243,7 +2243,7 @@ export const se_UpdateCloudWatchAlarmTemplateCommand = async (
  */
 export const se_UpdateCloudWatchAlarmTemplateGroupCommand = async (
   input: UpdateCloudWatchAlarmTemplateGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2255,7 +2255,7 @@ export const se_UpdateCloudWatchAlarmTemplateGroupCommand = async (
   body = JSON.stringify(
     take(input, {
       description: [, , `Description`],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2266,7 +2266,7 @@ export const se_UpdateCloudWatchAlarmTemplateGroupCommand = async (
  */
 export const se_UpdateEventBridgeRuleTemplateCommand = async (
   input: UpdateEventBridgeRuleTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2282,7 +2282,7 @@ export const se_UpdateEventBridgeRuleTemplateCommand = async (
       eventType: [, , `EventType`],
       groupIdentifier: [, , `GroupIdentifier`],
       name: [, , `Name`],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2293,7 +2293,7 @@ export const se_UpdateEventBridgeRuleTemplateCommand = async (
  */
 export const se_UpdateEventBridgeRuleTemplateGroupCommand = async (
   input: UpdateEventBridgeRuleTemplateGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2305,7 +2305,7 @@ export const se_UpdateEventBridgeRuleTemplateGroupCommand = async (
   body = JSON.stringify(
     take(input, {
       description: [, , `Description`],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2316,7 +2316,7 @@ export const se_UpdateEventBridgeRuleTemplateGroupCommand = async (
  */
 export const se_UpdateInputCommand = async (
   input: UpdateInputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2334,7 +2334,7 @@ export const se_UpdateInputCommand = async (
       name: [, , `Name`],
       roleArn: [, , `RoleArn`],
       sources: [, (_) => se___listOfInputSourceRequest(_, context), `Sources`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2345,7 +2345,7 @@ export const se_UpdateInputCommand = async (
  */
 export const se_UpdateInputDeviceCommand = async (
   input: UpdateInputDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2360,7 +2360,7 @@ export const se_UpdateInputDeviceCommand = async (
       hdDeviceSettings: [, (_) => se_InputDeviceConfigurableSettings(_, context), `HdDeviceSettings`],
       name: [, , `Name`],
       uhdDeviceSettings: [, (_) => se_InputDeviceConfigurableSettings(_, context), `UhdDeviceSettings`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2371,7 +2371,7 @@ export const se_UpdateInputDeviceCommand = async (
  */
 export const se_UpdateInputSecurityGroupCommand = async (
   input: UpdateInputSecurityGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2384,7 +2384,7 @@ export const se_UpdateInputSecurityGroupCommand = async (
     take(input, {
       tags: [, (_) => _json(_), `Tags`],
       whitelistRules: [, (_) => se___listOfInputWhitelistRuleCidr(_, context), `WhitelistRules`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2395,7 +2395,7 @@ export const se_UpdateInputSecurityGroupCommand = async (
  */
 export const se_UpdateMultiplexCommand = async (
   input: UpdateMultiplexCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2408,7 +2408,7 @@ export const se_UpdateMultiplexCommand = async (
     take(input, {
       multiplexSettings: [, (_) => se_MultiplexSettings(_, context), `MultiplexSettings`],
       name: [, , `Name`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2419,7 +2419,7 @@ export const se_UpdateMultiplexCommand = async (
  */
 export const se_UpdateMultiplexProgramCommand = async (
   input: UpdateMultiplexProgramCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2432,7 +2432,7 @@ export const se_UpdateMultiplexProgramCommand = async (
   body = JSON.stringify(
     take(input, {
       multiplexProgramSettings: [, (_) => se_MultiplexProgramSettings(_, context), `MultiplexProgramSettings`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2443,7 +2443,7 @@ export const se_UpdateMultiplexProgramCommand = async (
  */
 export const se_UpdateReservationCommand = async (
   input: UpdateReservationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2456,7 +2456,7 @@ export const se_UpdateReservationCommand = async (
     take(input, {
       name: [, , `Name`],
       renewalSettings: [, (_) => se_RenewalSettings(_, context), `RenewalSettings`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2467,7 +2467,7 @@ export const se_UpdateReservationCommand = async (
  */
 export const de_AcceptInputDeviceTransferCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptInputDeviceTransferCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2484,7 +2484,7 @@ export const de_AcceptInputDeviceTransferCommand = async (
  */
 export const de_BatchDeleteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDeleteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2506,7 +2506,7 @@ export const de_BatchDeleteCommand = async (
  */
 export const de_BatchStartCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchStartCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2528,7 +2528,7 @@ export const de_BatchStartCommand = async (
  */
 export const de_BatchStopCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchStopCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2550,7 +2550,7 @@ export const de_BatchStopCommand = async (
  */
 export const de_BatchUpdateScheduleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchUpdateScheduleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2572,7 +2572,7 @@ export const de_BatchUpdateScheduleCommand = async (
  */
 export const de_CancelInputDeviceTransferCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelInputDeviceTransferCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2589,7 +2589,7 @@ export const de_CancelInputDeviceTransferCommand = async (
  */
 export const de_ClaimDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ClaimDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2606,7 +2606,7 @@ export const de_ClaimDeviceCommand = async (
  */
 export const de_CreateChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateChannelCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2627,7 +2627,7 @@ export const de_CreateChannelCommand = async (
  */
 export const de_CreateCloudWatchAlarmTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCloudWatchAlarmTemplateCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2664,7 +2664,7 @@ export const de_CreateCloudWatchAlarmTemplateCommand = async (
  */
 export const de_CreateCloudWatchAlarmTemplateGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCloudWatchAlarmTemplateGroupCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2691,7 +2691,7 @@ export const de_CreateCloudWatchAlarmTemplateGroupCommand = async (
  */
 export const de_CreateEventBridgeRuleTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEventBridgeRuleTemplateCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2721,7 +2721,7 @@ export const de_CreateEventBridgeRuleTemplateCommand = async (
  */
 export const de_CreateEventBridgeRuleTemplateGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEventBridgeRuleTemplateGroupCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2748,7 +2748,7 @@ export const de_CreateEventBridgeRuleTemplateGroupCommand = async (
  */
 export const de_CreateInputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateInputCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2769,7 +2769,7 @@ export const de_CreateInputCommand = async (
  */
 export const de_CreateInputSecurityGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateInputSecurityGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2790,7 +2790,7 @@ export const de_CreateInputSecurityGroupCommand = async (
  */
 export const de_CreateMultiplexCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMultiplexCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2811,7 +2811,7 @@ export const de_CreateMultiplexCommand = async (
  */
 export const de_CreateMultiplexProgramCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMultiplexProgramCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2832,7 +2832,7 @@ export const de_CreateMultiplexProgramCommand = async (
  */
 export const de_CreatePartnerInputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePartnerInputCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2853,7 +2853,7 @@ export const de_CreatePartnerInputCommand = async (
  */
 export const de_CreateSignalMapCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSignalMapCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2895,7 +2895,7 @@ export const de_CreateSignalMapCommand = async (
  */
 export const de_CreateTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTagsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2912,7 +2912,7 @@ export const de_CreateTagsCommand = async (
  */
 export const de_DeleteChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2950,7 +2950,7 @@ export const de_DeleteChannelCommand = async (
  */
 export const de_DeleteCloudWatchAlarmTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCloudWatchAlarmTemplateCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2967,7 +2967,7 @@ export const de_DeleteCloudWatchAlarmTemplateCommand = async (
  */
 export const de_DeleteCloudWatchAlarmTemplateGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCloudWatchAlarmTemplateGroupCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2984,7 +2984,7 @@ export const de_DeleteCloudWatchAlarmTemplateGroupCommand = async (
  */
 export const de_DeleteEventBridgeRuleTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEventBridgeRuleTemplateCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3001,7 +3001,7 @@ export const de_DeleteEventBridgeRuleTemplateCommand = async (
  */
 export const de_DeleteEventBridgeRuleTemplateGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEventBridgeRuleTemplateGroupCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3018,7 +3018,7 @@ export const de_DeleteEventBridgeRuleTemplateGroupCommand = async (
  */
 export const de_DeleteInputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteInputCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3035,7 +3035,7 @@ export const de_DeleteInputCommand = async (
  */
 export const de_DeleteInputSecurityGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteInputSecurityGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3052,7 +3052,7 @@ export const de_DeleteInputSecurityGroupCommand = async (
  */
 export const de_DeleteMultiplexCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMultiplexCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3082,7 +3082,7 @@ export const de_DeleteMultiplexCommand = async (
  */
 export const de_DeleteMultiplexProgramCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMultiplexProgramCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3107,7 +3107,7 @@ export const de_DeleteMultiplexProgramCommand = async (
  */
 export const de_DeleteReservationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteReservationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3146,7 +3146,7 @@ export const de_DeleteReservationCommand = async (
  */
 export const de_DeleteScheduleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteScheduleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3163,7 +3163,7 @@ export const de_DeleteScheduleCommand = async (
  */
 export const de_DeleteSignalMapCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSignalMapCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3180,7 +3180,7 @@ export const de_DeleteSignalMapCommand = async (
  */
 export const de_DeleteTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTagsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3197,7 +3197,7 @@ export const de_DeleteTagsCommand = async (
  */
 export const de_DescribeAccountConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAccountConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3218,7 +3218,7 @@ export const de_DescribeAccountConfigurationCommand = async (
  */
 export const de_DescribeChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3256,7 +3256,7 @@ export const de_DescribeChannelCommand = async (
  */
 export const de_DescribeInputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInputCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3292,7 +3292,7 @@ export const de_DescribeInputCommand = async (
  */
 export const de_DescribeInputDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInputDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3328,7 +3328,7 @@ export const de_DescribeInputDeviceCommand = async (
  */
 export const de_DescribeInputDeviceThumbnailCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<DescribeInputDeviceThumbnailCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3351,7 +3351,7 @@ export const de_DescribeInputDeviceThumbnailCommand = async (
  */
 export const de_DescribeInputSecurityGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInputSecurityGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3377,7 +3377,7 @@ export const de_DescribeInputSecurityGroupCommand = async (
  */
 export const de_DescribeMultiplexCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeMultiplexCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3407,7 +3407,7 @@ export const de_DescribeMultiplexCommand = async (
  */
 export const de_DescribeMultiplexProgramCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeMultiplexProgramCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3432,7 +3432,7 @@ export const de_DescribeMultiplexProgramCommand = async (
  */
 export const de_DescribeOfferingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeOfferingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3463,7 +3463,7 @@ export const de_DescribeOfferingCommand = async (
  */
 export const de_DescribeReservationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReservationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3502,7 +3502,7 @@ export const de_DescribeReservationCommand = async (
  */
 export const de_DescribeScheduleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeScheduleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3524,7 +3524,7 @@ export const de_DescribeScheduleCommand = async (
  */
 export const de_DescribeThumbnailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeThumbnailsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3545,7 +3545,7 @@ export const de_DescribeThumbnailsCommand = async (
  */
 export const de_GetCloudWatchAlarmTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCloudWatchAlarmTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3582,7 +3582,7 @@ export const de_GetCloudWatchAlarmTemplateCommand = async (
  */
 export const de_GetCloudWatchAlarmTemplateGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCloudWatchAlarmTemplateGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3609,7 +3609,7 @@ export const de_GetCloudWatchAlarmTemplateGroupCommand = async (
  */
 export const de_GetEventBridgeRuleTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEventBridgeRuleTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3639,7 +3639,7 @@ export const de_GetEventBridgeRuleTemplateCommand = async (
  */
 export const de_GetEventBridgeRuleTemplateGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEventBridgeRuleTemplateGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3666,7 +3666,7 @@ export const de_GetEventBridgeRuleTemplateGroupCommand = async (
  */
 export const de_GetSignalMapCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSignalMapCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3708,7 +3708,7 @@ export const de_GetSignalMapCommand = async (
  */
 export const de_ListChannelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListChannelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3730,7 +3730,7 @@ export const de_ListChannelsCommand = async (
  */
 export const de_ListCloudWatchAlarmTemplateGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCloudWatchAlarmTemplateGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3756,7 +3756,7 @@ export const de_ListCloudWatchAlarmTemplateGroupsCommand = async (
  */
 export const de_ListCloudWatchAlarmTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCloudWatchAlarmTemplatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3782,7 +3782,7 @@ export const de_ListCloudWatchAlarmTemplatesCommand = async (
  */
 export const de_ListEventBridgeRuleTemplateGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEventBridgeRuleTemplateGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3808,7 +3808,7 @@ export const de_ListEventBridgeRuleTemplateGroupsCommand = async (
  */
 export const de_ListEventBridgeRuleTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEventBridgeRuleTemplatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3834,7 +3834,7 @@ export const de_ListEventBridgeRuleTemplatesCommand = async (
  */
 export const de_ListInputDevicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListInputDevicesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3856,7 +3856,7 @@ export const de_ListInputDevicesCommand = async (
  */
 export const de_ListInputDeviceTransfersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListInputDeviceTransfersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3878,7 +3878,7 @@ export const de_ListInputDeviceTransfersCommand = async (
  */
 export const de_ListInputsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListInputsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3900,7 +3900,7 @@ export const de_ListInputsCommand = async (
  */
 export const de_ListInputSecurityGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListInputSecurityGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3922,7 +3922,7 @@ export const de_ListInputSecurityGroupsCommand = async (
  */
 export const de_ListMultiplexesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMultiplexesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3944,7 +3944,7 @@ export const de_ListMultiplexesCommand = async (
  */
 export const de_ListMultiplexProgramsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMultiplexProgramsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3966,7 +3966,7 @@ export const de_ListMultiplexProgramsCommand = async (
  */
 export const de_ListOfferingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOfferingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3988,7 +3988,7 @@ export const de_ListOfferingsCommand = async (
  */
 export const de_ListReservationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReservationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4010,7 +4010,7 @@ export const de_ListReservationsCommand = async (
  */
 export const de_ListSignalMapsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSignalMapsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4032,7 +4032,7 @@ export const de_ListSignalMapsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4053,7 +4053,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PurchaseOfferingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PurchaseOfferingCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4074,7 +4074,7 @@ export const de_PurchaseOfferingCommand = async (
  */
 export const de_RebootInputDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RebootInputDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4091,7 +4091,7 @@ export const de_RebootInputDeviceCommand = async (
  */
 export const de_RejectInputDeviceTransferCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RejectInputDeviceTransferCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4108,7 +4108,7 @@ export const de_RejectInputDeviceTransferCommand = async (
  */
 export const de_RestartChannelPipelinesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestartChannelPipelinesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4147,7 +4147,7 @@ export const de_RestartChannelPipelinesCommand = async (
  */
 export const de_StartChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4185,7 +4185,7 @@ export const de_StartChannelCommand = async (
  */
 export const de_StartDeleteMonitorDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartDeleteMonitorDeploymentCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4227,7 +4227,7 @@ export const de_StartDeleteMonitorDeploymentCommand = async (
  */
 export const de_StartInputDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartInputDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4244,7 +4244,7 @@ export const de_StartInputDeviceCommand = async (
  */
 export const de_StartInputDeviceMaintenanceWindowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartInputDeviceMaintenanceWindowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4261,7 +4261,7 @@ export const de_StartInputDeviceMaintenanceWindowCommand = async (
  */
 export const de_StartMonitorDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartMonitorDeploymentCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4303,7 +4303,7 @@ export const de_StartMonitorDeploymentCommand = async (
  */
 export const de_StartMultiplexCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartMultiplexCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4333,7 +4333,7 @@ export const de_StartMultiplexCommand = async (
  */
 export const de_StartUpdateSignalMapCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartUpdateSignalMapCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4375,7 +4375,7 @@ export const de_StartUpdateSignalMapCommand = async (
  */
 export const de_StopChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4413,7 +4413,7 @@ export const de_StopChannelCommand = async (
  */
 export const de_StopInputDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopInputDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4430,7 +4430,7 @@ export const de_StopInputDeviceCommand = async (
  */
 export const de_StopMultiplexCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopMultiplexCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4460,7 +4460,7 @@ export const de_StopMultiplexCommand = async (
  */
 export const de_TransferInputDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TransferInputDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4477,7 +4477,7 @@ export const de_TransferInputDeviceCommand = async (
  */
 export const de_UpdateAccountConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAccountConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4498,7 +4498,7 @@ export const de_UpdateAccountConfigurationCommand = async (
  */
 export const de_UpdateChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4519,7 +4519,7 @@ export const de_UpdateChannelCommand = async (
  */
 export const de_UpdateChannelClassCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateChannelClassCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4540,7 +4540,7 @@ export const de_UpdateChannelClassCommand = async (
  */
 export const de_UpdateCloudWatchAlarmTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCloudWatchAlarmTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4577,7 +4577,7 @@ export const de_UpdateCloudWatchAlarmTemplateCommand = async (
  */
 export const de_UpdateCloudWatchAlarmTemplateGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCloudWatchAlarmTemplateGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4604,7 +4604,7 @@ export const de_UpdateCloudWatchAlarmTemplateGroupCommand = async (
  */
 export const de_UpdateEventBridgeRuleTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEventBridgeRuleTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4634,7 +4634,7 @@ export const de_UpdateEventBridgeRuleTemplateCommand = async (
  */
 export const de_UpdateEventBridgeRuleTemplateGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEventBridgeRuleTemplateGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4661,7 +4661,7 @@ export const de_UpdateEventBridgeRuleTemplateGroupCommand = async (
  */
 export const de_UpdateInputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateInputCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4682,7 +4682,7 @@ export const de_UpdateInputCommand = async (
  */
 export const de_UpdateInputDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateInputDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4718,7 +4718,7 @@ export const de_UpdateInputDeviceCommand = async (
  */
 export const de_UpdateInputSecurityGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateInputSecurityGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4739,7 +4739,7 @@ export const de_UpdateInputSecurityGroupCommand = async (
  */
 export const de_UpdateMultiplexCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMultiplexCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4760,7 +4760,7 @@ export const de_UpdateMultiplexCommand = async (
  */
 export const de_UpdateMultiplexProgramCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMultiplexProgramCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4781,7 +4781,7 @@ export const de_UpdateMultiplexProgramCommand = async (
  */
 export const de_UpdateReservationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateReservationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4918,7 +4918,7 @@ const de_ForbiddenExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_GatewayTimeoutExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GatewayTimeoutException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4938,7 +4938,7 @@ const de_GatewayTimeoutExceptionRes = async (
  */
 const de_InternalServerErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4975,7 +4975,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4995,7 +4995,7 @@ const de_TooManyRequestsExceptionRes = async (
  */
 const de_UnprocessableEntityExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnprocessableEntityException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -5114,7 +5114,7 @@ const se___listOfColorCorrection = (input: ColorCorrection[], context: __SerdeCo
  */
 const se___listOfEventBridgeRuleTemplateTarget = (
   input: EventBridgeRuleTemplateTarget[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -5174,7 +5174,7 @@ const se___listOfInputDestinationRequest = (input: InputDestinationRequest[], co
  */
 const se___listOfInputDeviceConfigurableAudioChannelPairConfig = (
   input: InputDeviceConfigurableAudioChannelPairConfig[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -5243,7 +5243,7 @@ const se___listOfMediaConnectFlowRequest = (input: MediaConnectFlowRequest[], co
  */
 const se___listOfMediaPackageOutputDestinationSettings = (
   input: MediaPackageOutputDestinationSettings[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -6094,7 +6094,7 @@ const se_FecOutputSettings = (input: FecOutputSettings, context: __SerdeContext)
  */
 const se_FixedModeScheduleActionStartSettings = (
   input: FixedModeScheduleActionStartSettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     time: [, , `Time`],
@@ -6117,7 +6117,7 @@ const se_Fmp4HlsSettings = (input: Fmp4HlsSettings, context: __SerdeContext): an
  */
 const se_FollowModeScheduleActionStartSettings = (
   input: FollowModeScheduleActionStartSettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     followPoint: [, , `FollowPoint`],
@@ -6432,7 +6432,7 @@ const se_HlsGroupSettings = (input: HlsGroupSettings, context: __SerdeContext): 
  */
 const se_HlsId3SegmentTaggingScheduleActionSettings = (
   input: HlsId3SegmentTaggingScheduleActionSettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     id3: [, , `Id3`],
@@ -6504,7 +6504,7 @@ const se_HlsSettings = (input: HlsSettings, context: __SerdeContext): any => {
  */
 const se_HlsTimedMetadataScheduleActionSettings = (
   input: HlsTimedMetadataScheduleActionSettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     id3: [, , `Id3`],
@@ -6579,7 +6579,7 @@ const se_InputDestinationRequest = (input: InputDestinationRequest, context: __S
  */
 const se_InputDeviceConfigurableAudioChannelPairConfig = (
   input: InputDeviceConfigurableAudioChannelPairConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     id: [, , `Id`],
@@ -6610,7 +6610,7 @@ const se_InputDeviceConfigurableSettings = (input: InputDeviceConfigurableSettin
  */
 const se_InputDeviceMediaConnectConfigurableSettings = (
   input: InputDeviceMediaConnectConfigurableSettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     flowArn: [, , `FlowArn`],
@@ -6676,7 +6676,7 @@ const se_InputLossFailoverSettings = (input: InputLossFailoverSettings, context:
  */
 const se_InputPrepareScheduleActionSettings = (
   input: InputPrepareScheduleActionSettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     inputAttachmentNameReference: [, , `InputAttachmentNameReference`],
@@ -6731,7 +6731,7 @@ const se_InputSpecification = (input: InputSpecification, context: __SerdeContex
  */
 const se_InputSwitchScheduleActionSettings = (
   input: InputSwitchScheduleActionSettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     inputAttachmentNameReference: [, , `InputAttachmentNameReference`],
@@ -6895,7 +6895,7 @@ const se_MediaPackageGroupSettings = (input: MediaPackageGroupSettings, context:
  */
 const se_MediaPackageOutputDestinationSettings = (
   input: MediaPackageOutputDestinationSettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     channelId: [, , `ChannelId`],
@@ -6909,7 +6909,7 @@ const se_MediaPackageOutputDestinationSettings = (
  */
 const se_MotionGraphicsActivateScheduleActionSettings = (
   input: MotionGraphicsActivateScheduleActionSettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     duration: [, , `Duration`],
@@ -7038,7 +7038,7 @@ const se_MultiplexOutputSettings = (input: MultiplexOutputSettings, context: __S
  */
 const se_MultiplexProgramChannelDestinationSettings = (
   input: MultiplexProgramChannelDestinationSettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     multiplexId: [, , `MultiplexId`],
@@ -7051,7 +7051,7 @@ const se_MultiplexProgramChannelDestinationSettings = (
  */
 const se_MultiplexProgramServiceDescriptor = (
   input: MultiplexProgramServiceDescriptor,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     providerName: [, , `ProviderName`],
@@ -7497,7 +7497,7 @@ const se_Scte35DescriptorSettings = (input: Scte35DescriptorSettings, context: _
  */
 const se_Scte35InputScheduleActionSettings = (
   input: Scte35InputScheduleActionSettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     inputAttachmentNameReference: [, , `InputAttachmentNameReference`],
@@ -7510,7 +7510,7 @@ const se_Scte35InputScheduleActionSettings = (
  */
 const se_Scte35ReturnToNetworkScheduleActionSettings = (
   input: Scte35ReturnToNetworkScheduleActionSettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     spliceEventId: [, , `SpliceEventId`],
@@ -7552,7 +7552,7 @@ const se_Scte35SpliceInsert = (input: Scte35SpliceInsert, context: __SerdeContex
  */
 const se_Scte35SpliceInsertScheduleActionSettings = (
   input: Scte35SpliceInsertScheduleActionSettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     duration: [, , `Duration`],
@@ -7576,7 +7576,7 @@ const se_Scte35TimeSignalApos = (input: Scte35TimeSignalApos, context: __SerdeCo
  */
 const se_Scte35TimeSignalScheduleActionSettings = (
   input: Scte35TimeSignalScheduleActionSettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     scte35Descriptors: [, (_) => se___listOfScte35Descriptor(_, context), `Scte35Descriptors`],
@@ -7609,7 +7609,7 @@ const se_StartTimecode = (input: StartTimecode, context: __SerdeContext): any =>
  */
 const se_StaticImageActivateScheduleActionSettings = (
   input: StaticImageActivateScheduleActionSettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     duration: [, , `Duration`],
@@ -7630,7 +7630,7 @@ const se_StaticImageActivateScheduleActionSettings = (
  */
 const se_StaticImageDeactivateScheduleActionSettings = (
   input: StaticImageDeactivateScheduleActionSettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     fadeOut: [, , `FadeOut`],
@@ -7643,7 +7643,7 @@ const se_StaticImageDeactivateScheduleActionSettings = (
  */
 const se_StaticImageOutputActivateScheduleActionSettings = (
   input: StaticImageOutputActivateScheduleActionSettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     duration: [, , `Duration`],
@@ -7665,7 +7665,7 @@ const se_StaticImageOutputActivateScheduleActionSettings = (
  */
 const se_StaticImageOutputDeactivateScheduleActionSettings = (
   input: StaticImageOutputDeactivateScheduleActionSettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     fadeOut: [, , `FadeOut`],
@@ -8051,7 +8051,7 @@ const de___listOfChannelSummary = (output: any, context: __SerdeContext): Channe
  */
 const de___listOfCloudWatchAlarmTemplateGroupSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CloudWatchAlarmTemplateGroupSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -8066,7 +8066,7 @@ const de___listOfCloudWatchAlarmTemplateGroupSummary = (
  */
 const de___listOfCloudWatchAlarmTemplateSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CloudWatchAlarmTemplateSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -8097,7 +8097,7 @@ const de___listOfColorCorrection = (output: any, context: __SerdeContext): Color
  */
 const de___listOfEventBridgeRuleTemplateGroupSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EventBridgeRuleTemplateGroupSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -8112,7 +8112,7 @@ const de___listOfEventBridgeRuleTemplateGroupSummary = (
  */
 const de___listOfEventBridgeRuleTemplateSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EventBridgeRuleTemplateSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -8127,7 +8127,7 @@ const de___listOfEventBridgeRuleTemplateSummary = (
  */
 const de___listOfEventBridgeRuleTemplateTarget = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EventBridgeRuleTemplateTarget[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -8228,7 +8228,7 @@ const de___listOfInputDeviceSummary = (output: any, context: __SerdeContext): In
  */
 const de___listOfInputDeviceUhdAudioChannelPairConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InputDeviceUhdAudioChannelPairConfig[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -8291,7 +8291,7 @@ const de___listOfMediaConnectFlow = (output: any, context: __SerdeContext): Medi
  */
 const de___listOfMediaPackageOutputDestinationSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MediaPackageOutputDestinationSettings[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -8330,7 +8330,7 @@ const de___listOfMultiplexOutputDestination = (output: any, context: __SerdeCont
  */
 const de___listOfMultiplexProgramPipelineDetail = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MultiplexProgramPipelineDetail[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -8527,7 +8527,7 @@ const de___listOfThumbnailDetail = (output: any, context: __SerdeContext): Thumb
  */
 const de___listOfTransferringInputDeviceSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransferringInputDeviceSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -9114,7 +9114,7 @@ const de_ChannelSummary = (output: any, context: __SerdeContext): ChannelSummary
  */
 const de_CloudWatchAlarmTemplateGroupSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CloudWatchAlarmTemplateGroupSummary => {
   return take(output, {
     Arn: [, __expectString, `arn`],
@@ -9393,7 +9393,7 @@ const de_Esam = (output: any, context: __SerdeContext): Esam => {
  */
 const de_EventBridgeRuleTemplateGroupSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EventBridgeRuleTemplateGroupSummary => {
   return take(output, {
     Arn: [, __expectString, `arn`],
@@ -9438,13 +9438,16 @@ const de_EventBridgeRuleTemplateTarget = (output: any, context: __SerdeContext):
  * deserializeAws_restJson1FailedMediaResourceMap
  */
 const de_FailedMediaResourceMap = (output: any, context: __SerdeContext): Record<string, MediaResource> => {
-  return Object.entries(output).reduce((acc: Record<string, MediaResource>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, MediaResource>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_MediaResource(value, context);
       return acc;
-    }
-    acc[key as string] = de_MediaResource(value, context);
-    return acc;
-  }, {} as Record<string, MediaResource>);
+    },
+    {} as Record<string, MediaResource>,
+  );
 };
 
 /**
@@ -9493,7 +9496,7 @@ const de_FecOutputSettings = (output: any, context: __SerdeContext): FecOutputSe
  */
 const de_FixedModeScheduleActionStartSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): FixedModeScheduleActionStartSettings => {
   return take(output, {
     Time: [, __expectString, `time`],
@@ -9516,7 +9519,7 @@ const de_Fmp4HlsSettings = (output: any, context: __SerdeContext): Fmp4HlsSettin
  */
 const de_FollowModeScheduleActionStartSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): FollowModeScheduleActionStartSettings => {
   return take(output, {
     FollowPoint: [, __expectString, `followPoint`],
@@ -9831,7 +9834,7 @@ const de_HlsGroupSettings = (output: any, context: __SerdeContext): HlsGroupSett
  */
 const de_HlsId3SegmentTaggingScheduleActionSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): HlsId3SegmentTaggingScheduleActionSettings => {
   return take(output, {
     Id3: [, __expectString, `id3`],
@@ -9903,7 +9906,7 @@ const de_HlsSettings = (output: any, context: __SerdeContext): HlsSettings => {
  */
 const de_HlsTimedMetadataScheduleActionSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): HlsTimedMetadataScheduleActionSettings => {
   return take(output, {
     Id3: [, __expectString, `id3`],
@@ -10090,7 +10093,7 @@ const de_InputDeviceSummary = (output: any, context: __SerdeContext): InputDevic
  */
 const de_InputDeviceUhdAudioChannelPairConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InputDeviceUhdAudioChannelPairConfig => {
   return take(output, {
     Id: [, __expectInt32, `id`],
@@ -10156,7 +10159,7 @@ const de_InputLossFailoverSettings = (output: any, context: __SerdeContext): Inp
  */
 const de_InputPrepareScheduleActionSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InputPrepareScheduleActionSettings => {
   return take(output, {
     InputAttachmentNameReference: [, __expectString, `inputAttachmentNameReference`],
@@ -10225,7 +10228,7 @@ const de_InputSpecification = (output: any, context: __SerdeContext): InputSpeci
  */
 const de_InputSwitchScheduleActionSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InputSwitchScheduleActionSettings => {
   return take(output, {
     InputAttachmentNameReference: [, __expectString, `inputAttachmentNameReference`],
@@ -10370,7 +10373,7 @@ const de_MediaPackageGroupSettings = (output: any, context: __SerdeContext): Med
  */
 const de_MediaPackageOutputDestinationSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MediaPackageOutputDestinationSettings => {
   return take(output, {
     ChannelId: [, __expectString, `channelId`],
@@ -10394,13 +10397,16 @@ const de_MediaResource = (output: any, context: __SerdeContext): MediaResource =
  * deserializeAws_restJson1MediaResourceMap
  */
 const de_MediaResourceMap = (output: any, context: __SerdeContext): Record<string, MediaResource> => {
-  return Object.entries(output).reduce((acc: Record<string, MediaResource>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, MediaResource>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_MediaResource(value, context);
       return acc;
-    }
-    acc[key as string] = de_MediaResource(value, context);
-    return acc;
-  }, {} as Record<string, MediaResource>);
+    },
+    {} as Record<string, MediaResource>,
+  );
 };
 
 /**
@@ -10429,7 +10435,7 @@ const de_MonitorDeployment = (output: any, context: __SerdeContext): MonitorDepl
  */
 const de_MotionGraphicsActivateScheduleActionSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MotionGraphicsActivateScheduleActionSettings => {
   return take(output, {
     Duration: [, __expectLong, `duration`],
@@ -10567,7 +10573,7 @@ const de_Multiplex = (output: any, context: __SerdeContext): Multiplex => {
  */
 const de_MultiplexMediaConnectOutputDestinationSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MultiplexMediaConnectOutputDestinationSettings => {
   return take(output, {
     EntitlementArn: [, __expectString, `entitlementArn`],
@@ -10614,7 +10620,7 @@ const de_MultiplexProgram = (output: any, context: __SerdeContext): MultiplexPro
  */
 const de_MultiplexProgramChannelDestinationSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MultiplexProgramChannelDestinationSettings => {
   return take(output, {
     MultiplexId: [, __expectString, `multiplexId`],
@@ -10627,7 +10633,7 @@ const de_MultiplexProgramChannelDestinationSettings = (
  */
 const de_MultiplexProgramPacketIdentifiersMap = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MultiplexProgramPacketIdentifiersMap => {
   return take(output, {
     AudioPids: [, _json, `audioPids`],
@@ -10661,7 +10667,7 @@ const de_MultiplexProgramPipelineDetail = (output: any, context: __SerdeContext)
  */
 const de_MultiplexProgramServiceDescriptor = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MultiplexProgramServiceDescriptor => {
   return take(output, {
     ProviderName: [, __expectString, `providerName`],
@@ -10934,7 +10940,7 @@ const de_OutputSettings = (output: any, context: __SerdeContext): OutputSettings
  */
 const de_PauseStateScheduleActionSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PauseStateScheduleActionSettings => {
   return take(output, {
     Pipelines: [, (_: any) => de___listOfPipelinePauseStateSettings(_, context), `pipelines`],
@@ -11024,7 +11030,7 @@ const de_Reservation = (output: any, context: __SerdeContext): Reservation => {
  */
 const de_ReservationResourceSpecification = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReservationResourceSpecification => {
   return take(output, {
     ChannelClass: [, __expectString, `channelClass`],
@@ -11228,7 +11234,7 @@ const de_Scte35DescriptorSettings = (output: any, context: __SerdeContext): Scte
  */
 const de_Scte35InputScheduleActionSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Scte35InputScheduleActionSettings => {
   return take(output, {
     InputAttachmentNameReference: [, __expectString, `inputAttachmentNameReference`],
@@ -11241,7 +11247,7 @@ const de_Scte35InputScheduleActionSettings = (
  */
 const de_Scte35ReturnToNetworkScheduleActionSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Scte35ReturnToNetworkScheduleActionSettings => {
   return take(output, {
     SpliceEventId: [, __expectLong, `spliceEventId`],
@@ -11283,7 +11289,7 @@ const de_Scte35SpliceInsert = (output: any, context: __SerdeContext): Scte35Spli
  */
 const de_Scte35SpliceInsertScheduleActionSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Scte35SpliceInsertScheduleActionSettings => {
   return take(output, {
     Duration: [, __expectLong, `duration`],
@@ -11307,7 +11313,7 @@ const de_Scte35TimeSignalApos = (output: any, context: __SerdeContext): Scte35Ti
  */
 const de_Scte35TimeSignalScheduleActionSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Scte35TimeSignalScheduleActionSettings => {
   return take(output, {
     Scte35Descriptors: [, (_: any) => de___listOfScte35Descriptor(_, context), `scte35Descriptors`],
@@ -11357,7 +11363,7 @@ const de_StartTimecode = (output: any, context: __SerdeContext): StartTimecode =
  */
 const de_StaticImageActivateScheduleActionSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StaticImageActivateScheduleActionSettings => {
   return take(output, {
     Duration: [, __expectInt32, `duration`],
@@ -11378,7 +11384,7 @@ const de_StaticImageActivateScheduleActionSettings = (
  */
 const de_StaticImageDeactivateScheduleActionSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StaticImageDeactivateScheduleActionSettings => {
   return take(output, {
     FadeOut: [, __expectInt32, `fadeOut`],
@@ -11391,7 +11397,7 @@ const de_StaticImageDeactivateScheduleActionSettings = (
  */
 const de_StaticImageOutputActivateScheduleActionSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StaticImageOutputActivateScheduleActionSettings => {
   return take(output, {
     Duration: [, __expectInt32, `duration`],
@@ -11413,7 +11419,7 @@ const de_StaticImageOutputActivateScheduleActionSettings = (
  */
 const de_StaticImageOutputDeactivateScheduleActionSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StaticImageOutputDeactivateScheduleActionSettings => {
   return take(output, {
     FadeOut: [, __expectInt32, `fadeOut`],

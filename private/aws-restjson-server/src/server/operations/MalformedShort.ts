@@ -61,14 +61,14 @@ export class MalformedShortSerializer
 
 export const getMalformedShortHandler = <Context>(
   operation: __Operation<MalformedShortServerInput, MalformedShortServerOutput, Context>,
-  customizer: __ValidationCustomizer<"MalformedShort">
+  customizer: __ValidationCustomizer<"MalformedShort">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "MalformedShort">([
     new httpbinding.UriSpec<"RestJson", "MalformedShort">(
       "POST",
       [{ type: "path_literal", value: "MalformedShort" }, { type: "path" }],
       [],
-      { service: "RestJson", operation: "MalformedShort" }
+      { service: "RestJson", operation: "MalformedShort" },
     ),
   ]);
   return new MalformedShortHandler(
@@ -76,7 +76,7 @@ export const getMalformedShortHandler = <Context>(
     mux,
     new MalformedShortSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -97,7 +97,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -135,7 +135,7 @@ export class MalformedShortHandler<Context> implements __ServiceHandler<Context>
   private readonly serializer: __OperationSerializer<RestJsonService<Context>, "MalformedShort", MalformedShortErrors>;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"MalformedShort">;
   /**
@@ -152,7 +152,7 @@ export class MalformedShortHandler<Context> implements __ServiceHandler<Context>
     mux: __Mux<"RestJson", "MalformedShort">,
     serializer: __OperationSerializer<RestJsonService<Context>, "MalformedShort", MalformedShortErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"MalformedShort">
+    validationCustomizer: __ValidationCustomizer<"MalformedShort">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -164,7 +164,7 @@ export class MalformedShortHandler<Context> implements __ServiceHandler<Context>
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedShort. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedShort. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -176,7 +176,7 @@ export class MalformedShortHandler<Context> implements __ServiceHandler<Context>
       this.operation,
       this.serializeFrameworkException,
       MalformedShortServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

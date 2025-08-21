@@ -100,12 +100,10 @@ This list is indexed by [v2 config parameters](https://docs.aws.amazon.com/AWSJa
   ```
 
   Each option of `httpOptions` is specified below:
-
   - `proxy`
     - **v2**: The URL to proxy requests through
     - **v3**: You can set up a proxy with an agent following [Configuring proxies for Node.js](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/node-configuring-proxies.html)
   - `agent`
-
     - **v2**: The Agent object to perform HTTP requests with. Used for connection pooling.
     - **v3**: You can configure `httpAgent` or `httpsAgent` as shown in the examples above.
 
@@ -194,7 +192,6 @@ Default credential provider is how SDK resolve the AWS credential if you DO NOT 
 
 - **v2**: [CredentialProviderChain](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CredentialProviderChain.html)
   in Node.js resolves credential from sources as following order:
-
   - [environmental variable](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/loading-node-credentials-environment.html)
   - [shared credentials file](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/loading-node-credentials-shared.html)
   - [ECS container credentials](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/RemoteCredentials.html)
@@ -490,7 +487,7 @@ await ddbDocClient.send(
       id: "1",
       content: "content from DynamoDBDocumentClient",
     },
-  })
+  }),
 );
 ```
 

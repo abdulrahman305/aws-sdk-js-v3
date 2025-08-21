@@ -14444,7 +14444,7 @@ export const CreateTenantDatabaseMessageFilterSensitiveLog = (obj: CreateTenantD
  * @internal
  */
 export const TenantDatabasePendingModifiedValuesFilterSensitiveLog = (
-  obj: TenantDatabasePendingModifiedValues
+  obj: TenantDatabasePendingModifiedValues,
 ): any => ({
   ...obj,
   ...(obj.MasterUserPassword && { MasterUserPassword: SENSITIVE_STRING }),

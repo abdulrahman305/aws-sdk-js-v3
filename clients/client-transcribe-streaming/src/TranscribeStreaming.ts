@@ -31,16 +31,16 @@ export interface TranscribeStreaming {
    */
   startCallAnalyticsStreamTranscription(
     args: StartCallAnalyticsStreamTranscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartCallAnalyticsStreamTranscriptionCommandOutput>;
   startCallAnalyticsStreamTranscription(
     args: StartCallAnalyticsStreamTranscriptionCommandInput,
-    cb: (err: any, data?: StartCallAnalyticsStreamTranscriptionCommandOutput) => void
+    cb: (err: any, data?: StartCallAnalyticsStreamTranscriptionCommandOutput) => void,
   ): void;
   startCallAnalyticsStreamTranscription(
     args: StartCallAnalyticsStreamTranscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartCallAnalyticsStreamTranscriptionCommandOutput) => void
+    cb: (err: any, data?: StartCallAnalyticsStreamTranscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -48,16 +48,16 @@ export interface TranscribeStreaming {
    */
   startMedicalStreamTranscription(
     args: StartMedicalStreamTranscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartMedicalStreamTranscriptionCommandOutput>;
   startMedicalStreamTranscription(
     args: StartMedicalStreamTranscriptionCommandInput,
-    cb: (err: any, data?: StartMedicalStreamTranscriptionCommandOutput) => void
+    cb: (err: any, data?: StartMedicalStreamTranscriptionCommandOutput) => void,
   ): void;
   startMedicalStreamTranscription(
     args: StartMedicalStreamTranscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartMedicalStreamTranscriptionCommandOutput) => void
+    cb: (err: any, data?: StartMedicalStreamTranscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -65,16 +65,16 @@ export interface TranscribeStreaming {
    */
   startStreamTranscription(
     args: StartStreamTranscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartStreamTranscriptionCommandOutput>;
   startStreamTranscription(
     args: StartStreamTranscriptionCommandInput,
-    cb: (err: any, data?: StartStreamTranscriptionCommandOutput) => void
+    cb: (err: any, data?: StartStreamTranscriptionCommandOutput) => void,
   ): void;
   startStreamTranscription(
     args: StartStreamTranscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartStreamTranscriptionCommandOutput) => void
+    cb: (err: any, data?: StartStreamTranscriptionCommandOutput) => void,
   ): void;
 }
 

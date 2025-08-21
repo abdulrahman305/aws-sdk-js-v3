@@ -98,7 +98,7 @@ import {
  */
 export const se_CreateGroupCommand = async (
   input: CreateGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateGroup");
   let body: any;
@@ -111,7 +111,7 @@ export const se_CreateGroupCommand = async (
  */
 export const se_CreateGroupMembershipCommand = async (
   input: CreateGroupMembershipCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateGroupMembership");
   let body: any;
@@ -124,7 +124,7 @@ export const se_CreateGroupMembershipCommand = async (
  */
 export const se_CreateUserCommand = async (
   input: CreateUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateUser");
   let body: any;
@@ -137,7 +137,7 @@ export const se_CreateUserCommand = async (
  */
 export const se_DeleteGroupCommand = async (
   input: DeleteGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteGroup");
   let body: any;
@@ -150,7 +150,7 @@ export const se_DeleteGroupCommand = async (
  */
 export const se_DeleteGroupMembershipCommand = async (
   input: DeleteGroupMembershipCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteGroupMembership");
   let body: any;
@@ -163,7 +163,7 @@ export const se_DeleteGroupMembershipCommand = async (
  */
 export const se_DeleteUserCommand = async (
   input: DeleteUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteUser");
   let body: any;
@@ -176,7 +176,7 @@ export const se_DeleteUserCommand = async (
  */
 export const se_DescribeGroupCommand = async (
   input: DescribeGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeGroup");
   let body: any;
@@ -189,7 +189,7 @@ export const se_DescribeGroupCommand = async (
  */
 export const se_DescribeGroupMembershipCommand = async (
   input: DescribeGroupMembershipCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeGroupMembership");
   let body: any;
@@ -202,7 +202,7 @@ export const se_DescribeGroupMembershipCommand = async (
  */
 export const se_DescribeUserCommand = async (
   input: DescribeUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeUser");
   let body: any;
@@ -215,7 +215,7 @@ export const se_DescribeUserCommand = async (
  */
 export const se_GetGroupIdCommand = async (
   input: GetGroupIdCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetGroupId");
   let body: any;
@@ -228,7 +228,7 @@ export const se_GetGroupIdCommand = async (
  */
 export const se_GetGroupMembershipIdCommand = async (
   input: GetGroupMembershipIdCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetGroupMembershipId");
   let body: any;
@@ -241,7 +241,7 @@ export const se_GetGroupMembershipIdCommand = async (
  */
 export const se_GetUserIdCommand = async (
   input: GetUserIdCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetUserId");
   let body: any;
@@ -254,7 +254,7 @@ export const se_GetUserIdCommand = async (
  */
 export const se_IsMemberInGroupsCommand = async (
   input: IsMemberInGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("IsMemberInGroups");
   let body: any;
@@ -267,7 +267,7 @@ export const se_IsMemberInGroupsCommand = async (
  */
 export const se_ListGroupMembershipsCommand = async (
   input: ListGroupMembershipsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListGroupMemberships");
   let body: any;
@@ -280,7 +280,7 @@ export const se_ListGroupMembershipsCommand = async (
  */
 export const se_ListGroupMembershipsForMemberCommand = async (
   input: ListGroupMembershipsForMemberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListGroupMembershipsForMember");
   let body: any;
@@ -293,7 +293,7 @@ export const se_ListGroupMembershipsForMemberCommand = async (
  */
 export const se_ListGroupsCommand = async (
   input: ListGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListGroups");
   let body: any;
@@ -306,7 +306,7 @@ export const se_ListGroupsCommand = async (
  */
 export const se_ListUsersCommand = async (
   input: ListUsersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListUsers");
   let body: any;
@@ -319,7 +319,7 @@ export const se_ListUsersCommand = async (
  */
 export const se_UpdateGroupCommand = async (
   input: UpdateGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateGroup");
   let body: any;
@@ -332,7 +332,7 @@ export const se_UpdateGroupCommand = async (
  */
 export const se_UpdateUserCommand = async (
   input: UpdateUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateUser");
   let body: any;
@@ -345,7 +345,7 @@ export const se_UpdateUserCommand = async (
  */
 export const de_CreateGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -365,7 +365,7 @@ export const de_CreateGroupCommand = async (
  */
 export const de_CreateGroupMembershipCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGroupMembershipCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -385,7 +385,7 @@ export const de_CreateGroupMembershipCommand = async (
  */
 export const de_CreateUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateUserCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -405,7 +405,7 @@ export const de_CreateUserCommand = async (
  */
 export const de_DeleteGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -425,7 +425,7 @@ export const de_DeleteGroupCommand = async (
  */
 export const de_DeleteGroupMembershipCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGroupMembershipCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -445,7 +445,7 @@ export const de_DeleteGroupMembershipCommand = async (
  */
 export const de_DeleteUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteUserCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -465,7 +465,7 @@ export const de_DeleteUserCommand = async (
  */
 export const de_DescribeGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -485,7 +485,7 @@ export const de_DescribeGroupCommand = async (
  */
 export const de_DescribeGroupMembershipCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGroupMembershipCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -505,7 +505,7 @@ export const de_DescribeGroupMembershipCommand = async (
  */
 export const de_DescribeUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeUserCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -525,7 +525,7 @@ export const de_DescribeUserCommand = async (
  */
 export const de_GetGroupIdCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGroupIdCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -545,7 +545,7 @@ export const de_GetGroupIdCommand = async (
  */
 export const de_GetGroupMembershipIdCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGroupMembershipIdCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -565,7 +565,7 @@ export const de_GetGroupMembershipIdCommand = async (
  */
 export const de_GetUserIdCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetUserIdCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -585,7 +585,7 @@ export const de_GetUserIdCommand = async (
  */
 export const de_IsMemberInGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IsMemberInGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -605,7 +605,7 @@ export const de_IsMemberInGroupsCommand = async (
  */
 export const de_ListGroupMembershipsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGroupMembershipsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -625,7 +625,7 @@ export const de_ListGroupMembershipsCommand = async (
  */
 export const de_ListGroupMembershipsForMemberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGroupMembershipsForMemberCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -645,7 +645,7 @@ export const de_ListGroupMembershipsForMemberCommand = async (
  */
 export const de_ListGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -665,7 +665,7 @@ export const de_ListGroupsCommand = async (
  */
 export const de_ListUsersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListUsersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -685,7 +685,7 @@ export const de_ListUsersCommand = async (
  */
 export const de_UpdateGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -705,7 +705,7 @@ export const de_UpdateGroupCommand = async (
  */
 export const de_UpdateUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateUserCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -766,7 +766,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -795,7 +795,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -811,7 +811,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -827,7 +827,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -875,7 +875,7 @@ const se_AlternateIdentifier = (input: AlternateIdentifier, context: __SerdeCont
   return AlternateIdentifier.visit(input, {
     ExternalId: (value) => ({ ExternalId: _json(value) }),
     UniqueAttribute: (value) => ({ UniqueAttribute: se_UniqueAttribute(value, context) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -1115,7 +1115,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

@@ -2672,7 +2672,7 @@ export const InstantiateSolNetworkInstanceInputFilterSensitiveLog = (obj: Instan
  * @internal
  */
 export const InstantiateSolNetworkInstanceOutputFilterSensitiveLog = (
-  obj: InstantiateSolNetworkInstanceOutput
+  obj: InstantiateSolNetworkInstanceOutput,
 ): any => ({
   ...obj,
   ...(obj.tags && { tags: SENSITIVE_STRING }),

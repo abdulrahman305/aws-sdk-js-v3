@@ -51,7 +51,7 @@ import { SSOOIDCServiceException as __BaseException } from "../models/SSOOIDCSer
  */
 export const se_CreateTokenCommand = async (
   input: CreateTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -70,7 +70,7 @@ export const se_CreateTokenCommand = async (
       redirectUri: [],
       refreshToken: [],
       scope: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -81,7 +81,7 @@ export const se_CreateTokenCommand = async (
  */
 export const se_CreateTokenWithIAMCommand = async (
   input: CreateTokenWithIAMCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -105,7 +105,7 @@ export const se_CreateTokenWithIAMCommand = async (
       scope: (_) => _json(_),
       subjectToken: [],
       subjectTokenType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -116,7 +116,7 @@ export const se_CreateTokenWithIAMCommand = async (
  */
 export const se_RegisterClientCommand = async (
   input: RegisterClientCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -133,7 +133,7 @@ export const se_RegisterClientCommand = async (
       issuerUrl: [],
       redirectUris: (_) => _json(_),
       scopes: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -144,7 +144,7 @@ export const se_RegisterClientCommand = async (
  */
 export const se_StartDeviceAuthorizationCommand = async (
   input: StartDeviceAuthorizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -157,7 +157,7 @@ export const se_StartDeviceAuthorizationCommand = async (
       clientId: [],
       clientSecret: [],
       startUrl: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -168,7 +168,7 @@ export const se_StartDeviceAuthorizationCommand = async (
  */
 export const de_CreateTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTokenCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -193,7 +193,7 @@ export const de_CreateTokenCommand = async (
  */
 export const de_CreateTokenWithIAMCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTokenWithIAMCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -220,7 +220,7 @@ export const de_CreateTokenWithIAMCommand = async (
  */
 export const de_RegisterClientCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterClientCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -246,7 +246,7 @@ export const de_RegisterClientCommand = async (
  */
 export const de_StartDeviceAuthorizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartDeviceAuthorizationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -335,7 +335,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -356,7 +356,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_AuthorizationPendingExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AuthorizationPendingException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -377,7 +377,7 @@ const de_AuthorizationPendingExceptionRes = async (
  */
 const de_ExpiredTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExpiredTokenException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -398,7 +398,7 @@ const de_ExpiredTokenExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -419,7 +419,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_InvalidClientExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidClientException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -440,7 +440,7 @@ const de_InvalidClientExceptionRes = async (
  */
 const de_InvalidClientMetadataExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidClientMetadataException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -461,7 +461,7 @@ const de_InvalidClientMetadataExceptionRes = async (
  */
 const de_InvalidGrantExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidGrantException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -482,7 +482,7 @@ const de_InvalidGrantExceptionRes = async (
  */
 const de_InvalidRedirectUriExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRedirectUriException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -503,7 +503,7 @@ const de_InvalidRedirectUriExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -524,7 +524,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_InvalidRequestRegionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestRegionException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -547,7 +547,7 @@ const de_InvalidRequestRegionExceptionRes = async (
  */
 const de_InvalidScopeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidScopeException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -586,7 +586,7 @@ const de_SlowDownExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_UnauthorizedClientExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthorizedClientException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -607,7 +607,7 @@ const de_UnauthorizedClientExceptionRes = async (
  */
 const de_UnsupportedGrantTypeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedGrantTypeException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

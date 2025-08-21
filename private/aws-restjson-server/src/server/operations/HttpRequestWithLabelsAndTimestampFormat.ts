@@ -43,7 +43,7 @@ export namespace HttpRequestWithLabelsAndTimestampFormatServerInput {
    * @internal
    */
   export const validate: (
-    obj: Parameters<typeof HttpRequestWithLabelsAndTimestampFormatInput.validate>[0]
+    obj: Parameters<typeof HttpRequestWithLabelsAndTimestampFormatInput.validate>[0],
   ) => __ValidationFailure[] = HttpRequestWithLabelsAndTimestampFormatInput.validate;
 }
 export interface HttpRequestWithLabelsAndTimestampFormatServerOutput {}
@@ -67,7 +67,7 @@ export class HttpRequestWithLabelsAndTimestampFormatSerializer
 
   serializeError(
     error: HttpRequestWithLabelsAndTimestampFormatErrors,
-    ctx: ServerSerdeContext
+    ctx: ServerSerdeContext,
   ): Promise<__HttpResponse> {
     throw error;
   }
@@ -79,7 +79,7 @@ export const getHttpRequestWithLabelsAndTimestampFormatHandler = <Context>(
     HttpRequestWithLabelsAndTimestampFormatServerOutput,
     Context
   >,
-  customizer: __ValidationCustomizer<"HttpRequestWithLabelsAndTimestampFormat">
+  customizer: __ValidationCustomizer<"HttpRequestWithLabelsAndTimestampFormat">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "HttpRequestWithLabelsAndTimestampFormat">([
     new httpbinding.UriSpec<"RestJson", "HttpRequestWithLabelsAndTimestampFormat">(
@@ -95,7 +95,7 @@ export const getHttpRequestWithLabelsAndTimestampFormatHandler = <Context>(
         { type: "path" },
       ],
       [],
-      { service: "RestJson", operation: "HttpRequestWithLabelsAndTimestampFormat" }
+      { service: "RestJson", operation: "HttpRequestWithLabelsAndTimestampFormat" },
     ),
   ]);
   return new HttpRequestWithLabelsAndTimestampFormatHandler(
@@ -103,7 +103,7 @@ export const getHttpRequestWithLabelsAndTimestampFormatHandler = <Context>(
     mux,
     new HttpRequestWithLabelsAndTimestampFormatSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -124,7 +124,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -170,7 +170,7 @@ export class HttpRequestWithLabelsAndTimestampFormatHandler<Context> implements 
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"HttpRequestWithLabelsAndTimestampFormat">;
   /**
@@ -195,7 +195,7 @@ export class HttpRequestWithLabelsAndTimestampFormatHandler<Context> implements 
       HttpRequestWithLabelsAndTimestampFormatErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"HttpRequestWithLabelsAndTimestampFormat">
+    validationCustomizer: __ValidationCustomizer<"HttpRequestWithLabelsAndTimestampFormat">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -207,7 +207,7 @@ export class HttpRequestWithLabelsAndTimestampFormatHandler<Context> implements 
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpRequestWithLabelsAndTimestampFormat. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpRequestWithLabelsAndTimestampFormat. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -219,7 +219,7 @@ export class HttpRequestWithLabelsAndTimestampFormatHandler<Context> implements 
       this.operation,
       this.serializeFrameworkException,
       HttpRequestWithLabelsAndTimestampFormatServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

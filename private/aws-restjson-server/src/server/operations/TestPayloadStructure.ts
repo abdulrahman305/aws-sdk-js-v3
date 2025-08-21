@@ -42,7 +42,7 @@ export namespace TestPayloadStructureServerInput {
    * @internal
    */
   export const validate: (
-    obj: Parameters<typeof TestPayloadStructureInputOutput.validate>[0]
+    obj: Parameters<typeof TestPayloadStructureInputOutput.validate>[0],
   ) => __ValidationFailure[] = TestPayloadStructureInputOutput.validate;
 }
 export interface TestPayloadStructureServerOutput extends TestPayloadStructureInputOutput {}
@@ -66,14 +66,14 @@ export class TestPayloadStructureSerializer
 
 export const getTestPayloadStructureHandler = <Context>(
   operation: __Operation<TestPayloadStructureServerInput, TestPayloadStructureServerOutput, Context>,
-  customizer: __ValidationCustomizer<"TestPayloadStructure">
+  customizer: __ValidationCustomizer<"TestPayloadStructure">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "TestPayloadStructure">([
     new httpbinding.UriSpec<"RestJson", "TestPayloadStructure">(
       "POST",
       [{ type: "path_literal", value: "payload" }],
       [],
-      { service: "RestJson", operation: "TestPayloadStructure" }
+      { service: "RestJson", operation: "TestPayloadStructure" },
     ),
   ]);
   return new TestPayloadStructureHandler(
@@ -81,7 +81,7 @@ export const getTestPayloadStructureHandler = <Context>(
     mux,
     new TestPayloadStructureSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -102,7 +102,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -144,7 +144,7 @@ export class TestPayloadStructureHandler<Context> implements __ServiceHandler<Co
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"TestPayloadStructure">;
   /**
@@ -161,7 +161,7 @@ export class TestPayloadStructureHandler<Context> implements __ServiceHandler<Co
     mux: __Mux<"RestJson", "TestPayloadStructure">,
     serializer: __OperationSerializer<RestJsonService<Context>, "TestPayloadStructure", TestPayloadStructureErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"TestPayloadStructure">
+    validationCustomizer: __ValidationCustomizer<"TestPayloadStructure">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -173,7 +173,7 @@ export class TestPayloadStructureHandler<Context> implements __ServiceHandler<Co
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.TestPayloadStructure. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.TestPayloadStructure. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -185,7 +185,7 @@ export class TestPayloadStructureHandler<Context> implements __ServiceHandler<Co
       this.operation,
       this.serializeFrameworkException,
       TestPayloadStructureServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

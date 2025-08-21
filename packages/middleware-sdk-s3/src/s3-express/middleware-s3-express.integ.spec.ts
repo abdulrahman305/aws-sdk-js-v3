@@ -8,7 +8,7 @@ describe("middleware-s3-express", () => {
   const s3ExpressIdentityProvider: S3ExpressIdentityProvider = {
     async getS3ExpressIdentity(
       awsIdentity: AwsCredentialIdentity,
-      identityProperties: Record<string, string>
+      identityProperties: Record<string, string>,
     ): Promise<S3ExpressIdentity> {
       return {
         accessKeyId: "S3_EXPRESS_ACCESS_KEY_ID",

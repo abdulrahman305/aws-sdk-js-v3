@@ -178,7 +178,7 @@ import {
  */
 export const se_ApplyArchiveRuleCommand = async (
   input: ApplyArchiveRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -191,7 +191,7 @@ export const se_ApplyArchiveRuleCommand = async (
       analyzerArn: [],
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       ruleName: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -202,7 +202,7 @@ export const se_ApplyArchiveRuleCommand = async (
  */
 export const se_CancelPolicyGenerationCommand = async (
   input: CancelPolicyGenerationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -218,7 +218,7 @@ export const se_CancelPolicyGenerationCommand = async (
  */
 export const se_CheckAccessNotGrantedCommand = async (
   input: CheckAccessNotGrantedCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -231,7 +231,7 @@ export const se_CheckAccessNotGrantedCommand = async (
       access: (_) => _json(_),
       policyDocument: [],
       policyType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -242,7 +242,7 @@ export const se_CheckAccessNotGrantedCommand = async (
  */
 export const se_CheckNoNewAccessCommand = async (
   input: CheckNoNewAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -255,7 +255,7 @@ export const se_CheckNoNewAccessCommand = async (
       existingPolicyDocument: [],
       newPolicyDocument: [],
       policyType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -266,7 +266,7 @@ export const se_CheckNoNewAccessCommand = async (
  */
 export const se_CheckNoPublicAccessCommand = async (
   input: CheckNoPublicAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -278,7 +278,7 @@ export const se_CheckNoPublicAccessCommand = async (
     take(input, {
       policyDocument: [],
       resourceType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -289,7 +289,7 @@ export const se_CheckNoPublicAccessCommand = async (
  */
 export const se_CreateAccessPreviewCommand = async (
   input: CreateAccessPreviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -302,7 +302,7 @@ export const se_CreateAccessPreviewCommand = async (
       analyzerArn: [],
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       configurations: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -313,7 +313,7 @@ export const se_CreateAccessPreviewCommand = async (
  */
 export const se_CreateAnalyzerCommand = async (
   input: CreateAnalyzerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -329,7 +329,7 @@ export const se_CreateAnalyzerCommand = async (
       configuration: (_) => _json(_),
       tags: (_) => _json(_),
       type: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -340,7 +340,7 @@ export const se_CreateAnalyzerCommand = async (
  */
 export const se_CreateArchiveRuleCommand = async (
   input: CreateArchiveRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -354,7 +354,7 @@ export const se_CreateArchiveRuleCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       filter: (_) => _json(_),
       ruleName: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -365,7 +365,7 @@ export const se_CreateArchiveRuleCommand = async (
  */
 export const se_DeleteAnalyzerCommand = async (
   input: DeleteAnalyzerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -384,7 +384,7 @@ export const se_DeleteAnalyzerCommand = async (
  */
 export const se_DeleteArchiveRuleCommand = async (
   input: DeleteArchiveRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -404,7 +404,7 @@ export const se_DeleteArchiveRuleCommand = async (
  */
 export const se_GenerateFindingRecommendationCommand = async (
   input: GenerateFindingRecommendationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -423,7 +423,7 @@ export const se_GenerateFindingRecommendationCommand = async (
  */
 export const se_GetAccessPreviewCommand = async (
   input: GetAccessPreviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -442,7 +442,7 @@ export const se_GetAccessPreviewCommand = async (
  */
 export const se_GetAnalyzedResourceCommand = async (
   input: GetAnalyzedResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -461,7 +461,7 @@ export const se_GetAnalyzedResourceCommand = async (
  */
 export const se_GetAnalyzerCommand = async (
   input: GetAnalyzerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -477,7 +477,7 @@ export const se_GetAnalyzerCommand = async (
  */
 export const se_GetArchiveRuleCommand = async (
   input: GetArchiveRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -494,7 +494,7 @@ export const se_GetArchiveRuleCommand = async (
  */
 export const se_GetFindingCommand = async (
   input: GetFindingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -513,7 +513,7 @@ export const se_GetFindingCommand = async (
  */
 export const se_GetFindingRecommendationCommand = async (
   input: GetFindingRecommendationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -534,7 +534,7 @@ export const se_GetFindingRecommendationCommand = async (
  */
 export const se_GetFindingV2Command = async (
   input: GetFindingV2CommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -555,7 +555,7 @@ export const se_GetFindingV2Command = async (
  */
 export const se_GetGeneratedPolicyCommand = async (
   input: GetGeneratedPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -575,7 +575,7 @@ export const se_GetGeneratedPolicyCommand = async (
  */
 export const se_ListAccessPreviewFindingsCommand = async (
   input: ListAccessPreviewFindingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -590,7 +590,7 @@ export const se_ListAccessPreviewFindingsCommand = async (
       filter: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -601,7 +601,7 @@ export const se_ListAccessPreviewFindingsCommand = async (
  */
 export const se_ListAccessPreviewsCommand = async (
   input: ListAccessPreviewsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -621,7 +621,7 @@ export const se_ListAccessPreviewsCommand = async (
  */
 export const se_ListAnalyzedResourcesCommand = async (
   input: ListAnalyzedResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -635,7 +635,7 @@ export const se_ListAnalyzedResourcesCommand = async (
       maxResults: [],
       nextToken: [],
       resourceType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -646,7 +646,7 @@ export const se_ListAnalyzedResourcesCommand = async (
  */
 export const se_ListAnalyzersCommand = async (
   input: ListAnalyzersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -666,7 +666,7 @@ export const se_ListAnalyzersCommand = async (
  */
 export const se_ListArchiveRulesCommand = async (
   input: ListArchiveRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -686,7 +686,7 @@ export const se_ListArchiveRulesCommand = async (
  */
 export const se_ListFindingsCommand = async (
   input: ListFindingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -701,7 +701,7 @@ export const se_ListFindingsCommand = async (
       maxResults: [],
       nextToken: [],
       sort: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -712,7 +712,7 @@ export const se_ListFindingsCommand = async (
  */
 export const se_ListFindingsV2Command = async (
   input: ListFindingsV2CommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -727,7 +727,7 @@ export const se_ListFindingsV2Command = async (
       maxResults: [],
       nextToken: [],
       sort: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -738,7 +738,7 @@ export const se_ListFindingsV2Command = async (
  */
 export const se_ListPolicyGenerationsCommand = async (
   input: ListPolicyGenerationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -758,7 +758,7 @@ export const se_ListPolicyGenerationsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -774,7 +774,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_StartPolicyGenerationCommand = async (
   input: StartPolicyGenerationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -787,7 +787,7 @@ export const se_StartPolicyGenerationCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       cloudTrailDetails: (_) => se_CloudTrailDetails(_, context),
       policyGenerationDetails: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -798,7 +798,7 @@ export const se_StartPolicyGenerationCommand = async (
  */
 export const se_StartResourceScanCommand = async (
   input: StartResourceScanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -811,7 +811,7 @@ export const se_StartResourceScanCommand = async (
       analyzerArn: [],
       resourceArn: [],
       resourceOwnerAccount: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -822,7 +822,7 @@ export const se_StartResourceScanCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -834,7 +834,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -845,7 +845,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -867,7 +867,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateArchiveRuleCommand = async (
   input: UpdateArchiveRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -881,7 +881,7 @@ export const se_UpdateArchiveRuleCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       filter: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -892,7 +892,7 @@ export const se_UpdateArchiveRuleCommand = async (
  */
 export const se_UpdateFindingsCommand = async (
   input: UpdateFindingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -907,7 +907,7 @@ export const se_UpdateFindingsCommand = async (
       ids: (_) => _json(_),
       resourceArn: [],
       status: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -918,7 +918,7 @@ export const se_UpdateFindingsCommand = async (
  */
 export const se_ValidatePolicyCommand = async (
   input: ValidatePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -936,7 +936,7 @@ export const se_ValidatePolicyCommand = async (
       policyDocument: [],
       policyType: [],
       validatePolicyResourceType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -947,7 +947,7 @@ export const se_ValidatePolicyCommand = async (
  */
 export const de_ApplyArchiveRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApplyArchiveRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -964,7 +964,7 @@ export const de_ApplyArchiveRuleCommand = async (
  */
 export const de_CancelPolicyGenerationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelPolicyGenerationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -981,7 +981,7 @@ export const de_CancelPolicyGenerationCommand = async (
  */
 export const de_CheckAccessNotGrantedCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CheckAccessNotGrantedCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1004,7 +1004,7 @@ export const de_CheckAccessNotGrantedCommand = async (
  */
 export const de_CheckNoNewAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CheckNoNewAccessCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1027,7 +1027,7 @@ export const de_CheckNoNewAccessCommand = async (
  */
 export const de_CheckNoPublicAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CheckNoPublicAccessCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1050,7 +1050,7 @@ export const de_CheckNoPublicAccessCommand = async (
  */
 export const de_CreateAccessPreviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAccessPreviewCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1071,7 +1071,7 @@ export const de_CreateAccessPreviewCommand = async (
  */
 export const de_CreateAnalyzerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAnalyzerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1092,7 +1092,7 @@ export const de_CreateAnalyzerCommand = async (
  */
 export const de_CreateArchiveRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateArchiveRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1109,7 +1109,7 @@ export const de_CreateArchiveRuleCommand = async (
  */
 export const de_DeleteAnalyzerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAnalyzerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1126,7 +1126,7 @@ export const de_DeleteAnalyzerCommand = async (
  */
 export const de_DeleteArchiveRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteArchiveRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1143,7 +1143,7 @@ export const de_DeleteArchiveRuleCommand = async (
  */
 export const de_GenerateFindingRecommendationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GenerateFindingRecommendationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1160,7 +1160,7 @@ export const de_GenerateFindingRecommendationCommand = async (
  */
 export const de_GetAccessPreviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccessPreviewCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1181,7 +1181,7 @@ export const de_GetAccessPreviewCommand = async (
  */
 export const de_GetAnalyzedResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAnalyzedResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1202,7 +1202,7 @@ export const de_GetAnalyzedResourceCommand = async (
  */
 export const de_GetAnalyzerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAnalyzerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1223,7 +1223,7 @@ export const de_GetAnalyzerCommand = async (
  */
 export const de_GetArchiveRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetArchiveRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1244,7 +1244,7 @@ export const de_GetArchiveRuleCommand = async (
  */
 export const de_GetFindingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFindingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1265,7 +1265,7 @@ export const de_GetFindingCommand = async (
  */
 export const de_GetFindingRecommendationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFindingRecommendationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1293,7 +1293,7 @@ export const de_GetFindingRecommendationCommand = async (
  */
 export const de_GetFindingV2Command = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFindingV2CommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1325,7 +1325,7 @@ export const de_GetFindingV2Command = async (
  */
 export const de_GetGeneratedPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGeneratedPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1347,7 +1347,7 @@ export const de_GetGeneratedPolicyCommand = async (
  */
 export const de_ListAccessPreviewFindingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAccessPreviewFindingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1369,7 +1369,7 @@ export const de_ListAccessPreviewFindingsCommand = async (
  */
 export const de_ListAccessPreviewsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAccessPreviewsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1391,7 +1391,7 @@ export const de_ListAccessPreviewsCommand = async (
  */
 export const de_ListAnalyzedResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAnalyzedResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1413,7 +1413,7 @@ export const de_ListAnalyzedResourcesCommand = async (
  */
 export const de_ListAnalyzersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAnalyzersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1435,7 +1435,7 @@ export const de_ListAnalyzersCommand = async (
  */
 export const de_ListArchiveRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListArchiveRulesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1457,7 +1457,7 @@ export const de_ListArchiveRulesCommand = async (
  */
 export const de_ListFindingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFindingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1479,7 +1479,7 @@ export const de_ListFindingsCommand = async (
  */
 export const de_ListFindingsV2Command = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFindingsV2CommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1501,7 +1501,7 @@ export const de_ListFindingsV2Command = async (
  */
 export const de_ListPolicyGenerationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPolicyGenerationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1523,7 +1523,7 @@ export const de_ListPolicyGenerationsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1544,7 +1544,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_StartPolicyGenerationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartPolicyGenerationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1565,7 +1565,7 @@ export const de_StartPolicyGenerationCommand = async (
  */
 export const de_StartResourceScanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartResourceScanCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1582,7 +1582,7 @@ export const de_StartResourceScanCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1599,7 +1599,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1616,7 +1616,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateArchiveRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateArchiveRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1633,7 +1633,7 @@ export const de_UpdateArchiveRuleCommand = async (
  */
 export const de_UpdateFindingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFindingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1650,7 +1650,7 @@ export const de_UpdateFindingsCommand = async (
  */
 export const de_ValidatePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ValidatePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1720,7 +1720,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1759,7 +1759,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({
     [_rAS]: [() => void 0 !== parsedOutput.headers[_ra], () => __strictParseInt32(parsedOutput.headers[_ra])],
@@ -1781,7 +1781,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1801,7 +1801,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1823,7 +1823,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1864,7 +1864,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_UnprocessableEntityExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnprocessableEntityException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2483,7 +2483,7 @@ const de_RecommendedStep = (output: any, context: __SerdeContext): RecommendedSt
     return {
       unusedPermissionsRecommendedStep: de_UnusedPermissionsRecommendedStep(
         output.unusedPermissionsRecommendedStep,
-        context
+        context,
       ),
     };
   }
@@ -2606,7 +2606,7 @@ const de_UnusedPermissionDetails = (output: any, context: __SerdeContext): Unuse
  */
 const de_UnusedPermissionsRecommendedStep = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UnusedPermissionsRecommendedStep => {
   return take(output, {
     existingPolicyId: __expectString,

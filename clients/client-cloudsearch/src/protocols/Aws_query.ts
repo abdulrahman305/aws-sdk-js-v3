@@ -187,7 +187,7 @@ import {
  */
 export const se_BuildSuggestersCommand = async (
   input: BuildSuggestersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -204,7 +204,7 @@ export const se_BuildSuggestersCommand = async (
  */
 export const se_CreateDomainCommand = async (
   input: CreateDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -221,7 +221,7 @@ export const se_CreateDomainCommand = async (
  */
 export const se_DefineAnalysisSchemeCommand = async (
   input: DefineAnalysisSchemeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -238,7 +238,7 @@ export const se_DefineAnalysisSchemeCommand = async (
  */
 export const se_DefineExpressionCommand = async (
   input: DefineExpressionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -255,7 +255,7 @@ export const se_DefineExpressionCommand = async (
  */
 export const se_DefineIndexFieldCommand = async (
   input: DefineIndexFieldCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -272,7 +272,7 @@ export const se_DefineIndexFieldCommand = async (
  */
 export const se_DefineSuggesterCommand = async (
   input: DefineSuggesterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -289,7 +289,7 @@ export const se_DefineSuggesterCommand = async (
  */
 export const se_DeleteAnalysisSchemeCommand = async (
   input: DeleteAnalysisSchemeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -306,7 +306,7 @@ export const se_DeleteAnalysisSchemeCommand = async (
  */
 export const se_DeleteDomainCommand = async (
   input: DeleteDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -323,7 +323,7 @@ export const se_DeleteDomainCommand = async (
  */
 export const se_DeleteExpressionCommand = async (
   input: DeleteExpressionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -340,7 +340,7 @@ export const se_DeleteExpressionCommand = async (
  */
 export const se_DeleteIndexFieldCommand = async (
   input: DeleteIndexFieldCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -357,7 +357,7 @@ export const se_DeleteIndexFieldCommand = async (
  */
 export const se_DeleteSuggesterCommand = async (
   input: DeleteSuggesterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -374,7 +374,7 @@ export const se_DeleteSuggesterCommand = async (
  */
 export const se_DescribeAnalysisSchemesCommand = async (
   input: DescribeAnalysisSchemesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -391,7 +391,7 @@ export const se_DescribeAnalysisSchemesCommand = async (
  */
 export const se_DescribeAvailabilityOptionsCommand = async (
   input: DescribeAvailabilityOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -408,7 +408,7 @@ export const se_DescribeAvailabilityOptionsCommand = async (
  */
 export const se_DescribeDomainEndpointOptionsCommand = async (
   input: DescribeDomainEndpointOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -425,7 +425,7 @@ export const se_DescribeDomainEndpointOptionsCommand = async (
  */
 export const se_DescribeDomainsCommand = async (
   input: DescribeDomainsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -442,7 +442,7 @@ export const se_DescribeDomainsCommand = async (
  */
 export const se_DescribeExpressionsCommand = async (
   input: DescribeExpressionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -459,7 +459,7 @@ export const se_DescribeExpressionsCommand = async (
  */
 export const se_DescribeIndexFieldsCommand = async (
   input: DescribeIndexFieldsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -476,7 +476,7 @@ export const se_DescribeIndexFieldsCommand = async (
  */
 export const se_DescribeScalingParametersCommand = async (
   input: DescribeScalingParametersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -493,7 +493,7 @@ export const se_DescribeScalingParametersCommand = async (
  */
 export const se_DescribeServiceAccessPoliciesCommand = async (
   input: DescribeServiceAccessPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -510,7 +510,7 @@ export const se_DescribeServiceAccessPoliciesCommand = async (
  */
 export const se_DescribeSuggestersCommand = async (
   input: DescribeSuggestersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -527,7 +527,7 @@ export const se_DescribeSuggestersCommand = async (
  */
 export const se_IndexDocumentsCommand = async (
   input: IndexDocumentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -544,7 +544,7 @@ export const se_IndexDocumentsCommand = async (
  */
 export const se_ListDomainNamesCommand = async (
   input: ListDomainNamesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -559,7 +559,7 @@ export const se_ListDomainNamesCommand = async (
  */
 export const se_UpdateAvailabilityOptionsCommand = async (
   input: UpdateAvailabilityOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -576,7 +576,7 @@ export const se_UpdateAvailabilityOptionsCommand = async (
  */
 export const se_UpdateDomainEndpointOptionsCommand = async (
   input: UpdateDomainEndpointOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -593,7 +593,7 @@ export const se_UpdateDomainEndpointOptionsCommand = async (
  */
 export const se_UpdateScalingParametersCommand = async (
   input: UpdateScalingParametersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -610,7 +610,7 @@ export const se_UpdateScalingParametersCommand = async (
  */
 export const se_UpdateServiceAccessPoliciesCommand = async (
   input: UpdateServiceAccessPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -627,7 +627,7 @@ export const se_UpdateServiceAccessPoliciesCommand = async (
  */
 export const de_BuildSuggestersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BuildSuggestersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -647,7 +647,7 @@ export const de_BuildSuggestersCommand = async (
  */
 export const de_CreateDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -667,7 +667,7 @@ export const de_CreateDomainCommand = async (
  */
 export const de_DefineAnalysisSchemeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DefineAnalysisSchemeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -687,7 +687,7 @@ export const de_DefineAnalysisSchemeCommand = async (
  */
 export const de_DefineExpressionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DefineExpressionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -707,7 +707,7 @@ export const de_DefineExpressionCommand = async (
  */
 export const de_DefineIndexFieldCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DefineIndexFieldCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -727,7 +727,7 @@ export const de_DefineIndexFieldCommand = async (
  */
 export const de_DefineSuggesterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DefineSuggesterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -747,7 +747,7 @@ export const de_DefineSuggesterCommand = async (
  */
 export const de_DeleteAnalysisSchemeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAnalysisSchemeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -767,7 +767,7 @@ export const de_DeleteAnalysisSchemeCommand = async (
  */
 export const de_DeleteDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -787,7 +787,7 @@ export const de_DeleteDomainCommand = async (
  */
 export const de_DeleteExpressionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteExpressionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -807,7 +807,7 @@ export const de_DeleteExpressionCommand = async (
  */
 export const de_DeleteIndexFieldCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIndexFieldCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -827,7 +827,7 @@ export const de_DeleteIndexFieldCommand = async (
  */
 export const de_DeleteSuggesterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSuggesterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -847,7 +847,7 @@ export const de_DeleteSuggesterCommand = async (
  */
 export const de_DescribeAnalysisSchemesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAnalysisSchemesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -867,7 +867,7 @@ export const de_DescribeAnalysisSchemesCommand = async (
  */
 export const de_DescribeAvailabilityOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAvailabilityOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -887,7 +887,7 @@ export const de_DescribeAvailabilityOptionsCommand = async (
  */
 export const de_DescribeDomainEndpointOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDomainEndpointOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -907,7 +907,7 @@ export const de_DescribeDomainEndpointOptionsCommand = async (
  */
 export const de_DescribeDomainsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDomainsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -927,7 +927,7 @@ export const de_DescribeDomainsCommand = async (
  */
 export const de_DescribeExpressionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeExpressionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -947,7 +947,7 @@ export const de_DescribeExpressionsCommand = async (
  */
 export const de_DescribeIndexFieldsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeIndexFieldsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -967,7 +967,7 @@ export const de_DescribeIndexFieldsCommand = async (
  */
 export const de_DescribeScalingParametersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeScalingParametersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -987,7 +987,7 @@ export const de_DescribeScalingParametersCommand = async (
  */
 export const de_DescribeServiceAccessPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeServiceAccessPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1007,7 +1007,7 @@ export const de_DescribeServiceAccessPoliciesCommand = async (
  */
 export const de_DescribeSuggestersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSuggestersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1027,7 +1027,7 @@ export const de_DescribeSuggestersCommand = async (
  */
 export const de_IndexDocumentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IndexDocumentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1047,7 +1047,7 @@ export const de_IndexDocumentsCommand = async (
  */
 export const de_ListDomainNamesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDomainNamesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1067,7 +1067,7 @@ export const de_ListDomainNamesCommand = async (
  */
 export const de_UpdateAvailabilityOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAvailabilityOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1087,7 +1087,7 @@ export const de_UpdateAvailabilityOptionsCommand = async (
  */
 export const de_UpdateDomainEndpointOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDomainEndpointOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1107,7 +1107,7 @@ export const de_UpdateDomainEndpointOptionsCommand = async (
  */
 export const de_UpdateScalingParametersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateScalingParametersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1127,7 +1127,7 @@ export const de_UpdateScalingParametersCommand = async (
  */
 export const de_UpdateServiceAccessPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServiceAccessPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1204,7 +1204,7 @@ const de_BaseExceptionRes = async (parsedOutput: any, context: __SerdeContext): 
  */
 const de_DisabledOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisabledOperationException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DisabledOperationException(body.Error, context);
@@ -1233,7 +1233,7 @@ const de_InternalExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InvalidTypeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTypeException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidTypeException(body.Error, context);
@@ -1249,7 +1249,7 @@ const de_InvalidTypeExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_LimitExceededException(body.Error, context);
@@ -1265,7 +1265,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ResourceAlreadyExistsException(body.Error, context);
@@ -1281,7 +1281,7 @@ const de_ResourceAlreadyExistsExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ResourceNotFoundException(body.Error, context);
@@ -1588,7 +1588,7 @@ const se_DescribeAnalysisSchemesRequest = (input: DescribeAnalysisSchemesRequest
  */
 const se_DescribeAvailabilityOptionsRequest = (
   input: DescribeAvailabilityOptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DN] != null) {
@@ -1605,7 +1605,7 @@ const se_DescribeAvailabilityOptionsRequest = (
  */
 const se_DescribeDomainEndpointOptionsRequest = (
   input: DescribeDomainEndpointOptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DN] != null) {
@@ -1699,7 +1699,7 @@ const se_DescribeScalingParametersRequest = (input: DescribeScalingParametersReq
  */
 const se_DescribeServiceAccessPoliciesRequest = (
   input: DescribeServiceAccessPoliciesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DN] != null) {
@@ -2206,7 +2206,7 @@ const se_UpdateAvailabilityOptionsRequest = (input: UpdateAvailabilityOptionsReq
  */
 const se_UpdateDomainEndpointOptionsRequest = (
   input: UpdateDomainEndpointOptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DN] != null) {
@@ -2245,7 +2245,7 @@ const se_UpdateScalingParametersRequest = (input: UpdateScalingParametersRequest
  */
 const se_UpdateServiceAccessPoliciesRequest = (
   input: UpdateServiceAccessPoliciesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DN] != null) {
@@ -2554,7 +2554,7 @@ const de_DescribeAnalysisSchemesResponse = (output: any, context: __SerdeContext
  */
 const de_DescribeAvailabilityOptionsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeAvailabilityOptionsResponse => {
   const contents: any = {};
   if (output[_AOv] != null) {
@@ -2568,7 +2568,7 @@ const de_DescribeAvailabilityOptionsResponse = (
  */
 const de_DescribeDomainEndpointOptionsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeDomainEndpointOptionsResponse => {
   const contents: any = {};
   if (output[_DEO] != null) {
@@ -2621,7 +2621,7 @@ const de_DescribeIndexFieldsResponse = (output: any, context: __SerdeContext): D
  */
 const de_DescribeScalingParametersResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeScalingParametersResponse => {
   const contents: any = {};
   if (output[_SP] != null) {
@@ -2635,7 +2635,7 @@ const de_DescribeScalingParametersResponse = (
  */
 const de_DescribeServiceAccessPoliciesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeServiceAccessPoliciesResponse => {
   const contents: any = {};
   if (output[_AP] != null) {
@@ -3350,7 +3350,7 @@ const de_TextOptions = (output: any, context: __SerdeContext): TextOptions => {
  */
 const de_UpdateAvailabilityOptionsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateAvailabilityOptionsResponse => {
   const contents: any = {};
   if (output[_AOv] != null) {
@@ -3364,7 +3364,7 @@ const de_UpdateAvailabilityOptionsResponse = (
  */
 const de_UpdateDomainEndpointOptionsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateDomainEndpointOptionsResponse => {
   const contents: any = {};
   if (output[_DEO] != null) {
@@ -3389,7 +3389,7 @@ const de_UpdateScalingParametersResponse = (output: any, context: __SerdeContext
  */
 const de_UpdateServiceAccessPoliciesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateServiceAccessPoliciesResponse => {
   const contents: any = {};
   if (output[_AP] != null) {
@@ -3430,7 +3430,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

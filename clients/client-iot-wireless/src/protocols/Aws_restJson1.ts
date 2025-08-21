@@ -517,7 +517,7 @@ import {
  */
 export const se_AssociateAwsAccountWithPartnerAccountCommand = async (
   input: AssociateAwsAccountWithPartnerAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -530,7 +530,7 @@ export const se_AssociateAwsAccountWithPartnerAccountCommand = async (
       ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
       Sidewalk: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -541,7 +541,7 @@ export const se_AssociateAwsAccountWithPartnerAccountCommand = async (
  */
 export const se_AssociateMulticastGroupWithFuotaTaskCommand = async (
   input: AssociateMulticastGroupWithFuotaTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -553,7 +553,7 @@ export const se_AssociateMulticastGroupWithFuotaTaskCommand = async (
   body = JSON.stringify(
     take(input, {
       MulticastGroupId: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -564,7 +564,7 @@ export const se_AssociateMulticastGroupWithFuotaTaskCommand = async (
  */
 export const se_AssociateWirelessDeviceWithFuotaTaskCommand = async (
   input: AssociateWirelessDeviceWithFuotaTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -576,7 +576,7 @@ export const se_AssociateWirelessDeviceWithFuotaTaskCommand = async (
   body = JSON.stringify(
     take(input, {
       WirelessDeviceId: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -587,7 +587,7 @@ export const se_AssociateWirelessDeviceWithFuotaTaskCommand = async (
  */
 export const se_AssociateWirelessDeviceWithMulticastGroupCommand = async (
   input: AssociateWirelessDeviceWithMulticastGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -599,7 +599,7 @@ export const se_AssociateWirelessDeviceWithMulticastGroupCommand = async (
   body = JSON.stringify(
     take(input, {
       WirelessDeviceId: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -610,7 +610,7 @@ export const se_AssociateWirelessDeviceWithMulticastGroupCommand = async (
  */
 export const se_AssociateWirelessDeviceWithThingCommand = async (
   input: AssociateWirelessDeviceWithThingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -622,7 +622,7 @@ export const se_AssociateWirelessDeviceWithThingCommand = async (
   body = JSON.stringify(
     take(input, {
       ThingArn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -633,7 +633,7 @@ export const se_AssociateWirelessDeviceWithThingCommand = async (
  */
 export const se_AssociateWirelessGatewayWithCertificateCommand = async (
   input: AssociateWirelessGatewayWithCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -645,7 +645,7 @@ export const se_AssociateWirelessGatewayWithCertificateCommand = async (
   body = JSON.stringify(
     take(input, {
       IotCertificateId: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -656,7 +656,7 @@ export const se_AssociateWirelessGatewayWithCertificateCommand = async (
  */
 export const se_AssociateWirelessGatewayWithThingCommand = async (
   input: AssociateWirelessGatewayWithThingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -668,7 +668,7 @@ export const se_AssociateWirelessGatewayWithThingCommand = async (
   body = JSON.stringify(
     take(input, {
       ThingArn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -679,7 +679,7 @@ export const se_AssociateWirelessGatewayWithThingCommand = async (
  */
 export const se_CancelMulticastGroupSessionCommand = async (
   input: CancelMulticastGroupSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -695,7 +695,7 @@ export const se_CancelMulticastGroupSessionCommand = async (
  */
 export const se_CreateDestinationCommand = async (
   input: CreateDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -712,7 +712,7 @@ export const se_CreateDestinationCommand = async (
       Name: [],
       RoleArn: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -723,7 +723,7 @@ export const se_CreateDestinationCommand = async (
  */
 export const se_CreateDeviceProfileCommand = async (
   input: CreateDeviceProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -738,7 +738,7 @@ export const se_CreateDeviceProfileCommand = async (
       Name: [],
       Sidewalk: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -749,7 +749,7 @@ export const se_CreateDeviceProfileCommand = async (
  */
 export const se_CreateFuotaTaskCommand = async (
   input: CreateFuotaTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -769,7 +769,7 @@ export const se_CreateFuotaTaskCommand = async (
       Name: [],
       RedundancyPercent: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -780,7 +780,7 @@ export const se_CreateFuotaTaskCommand = async (
  */
 export const se_CreateMulticastGroupCommand = async (
   input: CreateMulticastGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -795,7 +795,7 @@ export const se_CreateMulticastGroupCommand = async (
       LoRaWAN: (_) => _json(_),
       Name: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -806,7 +806,7 @@ export const se_CreateMulticastGroupCommand = async (
  */
 export const se_CreateNetworkAnalyzerConfigurationCommand = async (
   input: CreateNetworkAnalyzerConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -824,7 +824,7 @@ export const se_CreateNetworkAnalyzerConfigurationCommand = async (
       TraceContent: (_) => _json(_),
       WirelessDevices: (_) => _json(_),
       WirelessGateways: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -835,7 +835,7 @@ export const se_CreateNetworkAnalyzerConfigurationCommand = async (
  */
 export const se_CreateServiceProfileCommand = async (
   input: CreateServiceProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -849,7 +849,7 @@ export const se_CreateServiceProfileCommand = async (
       LoRaWAN: (_) => _json(_),
       Name: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -860,7 +860,7 @@ export const se_CreateServiceProfileCommand = async (
  */
 export const se_CreateWirelessDeviceCommand = async (
   input: CreateWirelessDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -879,7 +879,7 @@ export const se_CreateWirelessDeviceCommand = async (
       Sidewalk: (_) => _json(_),
       Tags: (_) => _json(_),
       Type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -890,7 +890,7 @@ export const se_CreateWirelessDeviceCommand = async (
  */
 export const se_CreateWirelessGatewayCommand = async (
   input: CreateWirelessGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -905,7 +905,7 @@ export const se_CreateWirelessGatewayCommand = async (
       LoRaWAN: (_) => se_LoRaWANGateway(_, context),
       Name: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -916,7 +916,7 @@ export const se_CreateWirelessGatewayCommand = async (
  */
 export const se_CreateWirelessGatewayTaskCommand = async (
   input: CreateWirelessGatewayTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -928,7 +928,7 @@ export const se_CreateWirelessGatewayTaskCommand = async (
   body = JSON.stringify(
     take(input, {
       WirelessGatewayTaskDefinitionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -939,7 +939,7 @@ export const se_CreateWirelessGatewayTaskCommand = async (
  */
 export const se_CreateWirelessGatewayTaskDefinitionCommand = async (
   input: CreateWirelessGatewayTaskDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -954,7 +954,7 @@ export const se_CreateWirelessGatewayTaskDefinitionCommand = async (
       Name: [],
       Tags: (_) => _json(_),
       Update: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -965,7 +965,7 @@ export const se_CreateWirelessGatewayTaskDefinitionCommand = async (
  */
 export const se_DeleteDestinationCommand = async (
   input: DeleteDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -981,7 +981,7 @@ export const se_DeleteDestinationCommand = async (
  */
 export const se_DeleteDeviceProfileCommand = async (
   input: DeleteDeviceProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -997,7 +997,7 @@ export const se_DeleteDeviceProfileCommand = async (
  */
 export const se_DeleteFuotaTaskCommand = async (
   input: DeleteFuotaTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1013,7 +1013,7 @@ export const se_DeleteFuotaTaskCommand = async (
  */
 export const se_DeleteMulticastGroupCommand = async (
   input: DeleteMulticastGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1029,7 +1029,7 @@ export const se_DeleteMulticastGroupCommand = async (
  */
 export const se_DeleteNetworkAnalyzerConfigurationCommand = async (
   input: DeleteNetworkAnalyzerConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1045,7 +1045,7 @@ export const se_DeleteNetworkAnalyzerConfigurationCommand = async (
  */
 export const se_DeleteQueuedMessagesCommand = async (
   input: DeleteQueuedMessagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1065,7 +1065,7 @@ export const se_DeleteQueuedMessagesCommand = async (
  */
 export const se_DeleteServiceProfileCommand = async (
   input: DeleteServiceProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1081,7 +1081,7 @@ export const se_DeleteServiceProfileCommand = async (
  */
 export const se_DeleteWirelessDeviceCommand = async (
   input: DeleteWirelessDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1097,7 +1097,7 @@ export const se_DeleteWirelessDeviceCommand = async (
  */
 export const se_DeleteWirelessDeviceImportTaskCommand = async (
   input: DeleteWirelessDeviceImportTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1113,7 +1113,7 @@ export const se_DeleteWirelessDeviceImportTaskCommand = async (
  */
 export const se_DeleteWirelessGatewayCommand = async (
   input: DeleteWirelessGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1129,7 +1129,7 @@ export const se_DeleteWirelessGatewayCommand = async (
  */
 export const se_DeleteWirelessGatewayTaskCommand = async (
   input: DeleteWirelessGatewayTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1145,7 +1145,7 @@ export const se_DeleteWirelessGatewayTaskCommand = async (
  */
 export const se_DeleteWirelessGatewayTaskDefinitionCommand = async (
   input: DeleteWirelessGatewayTaskDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1161,7 +1161,7 @@ export const se_DeleteWirelessGatewayTaskDefinitionCommand = async (
  */
 export const se_DeregisterWirelessDeviceCommand = async (
   input: DeregisterWirelessDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1180,7 +1180,7 @@ export const se_DeregisterWirelessDeviceCommand = async (
  */
 export const se_DisassociateAwsAccountFromPartnerAccountCommand = async (
   input: DisassociateAwsAccountFromPartnerAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1199,7 +1199,7 @@ export const se_DisassociateAwsAccountFromPartnerAccountCommand = async (
  */
 export const se_DisassociateMulticastGroupFromFuotaTaskCommand = async (
   input: DisassociateMulticastGroupFromFuotaTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1216,7 +1216,7 @@ export const se_DisassociateMulticastGroupFromFuotaTaskCommand = async (
  */
 export const se_DisassociateWirelessDeviceFromFuotaTaskCommand = async (
   input: DisassociateWirelessDeviceFromFuotaTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1233,7 +1233,7 @@ export const se_DisassociateWirelessDeviceFromFuotaTaskCommand = async (
  */
 export const se_DisassociateWirelessDeviceFromMulticastGroupCommand = async (
   input: DisassociateWirelessDeviceFromMulticastGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1250,7 +1250,7 @@ export const se_DisassociateWirelessDeviceFromMulticastGroupCommand = async (
  */
 export const se_DisassociateWirelessDeviceFromThingCommand = async (
   input: DisassociateWirelessDeviceFromThingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1266,7 +1266,7 @@ export const se_DisassociateWirelessDeviceFromThingCommand = async (
  */
 export const se_DisassociateWirelessGatewayFromCertificateCommand = async (
   input: DisassociateWirelessGatewayFromCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1282,7 +1282,7 @@ export const se_DisassociateWirelessGatewayFromCertificateCommand = async (
  */
 export const se_DisassociateWirelessGatewayFromThingCommand = async (
   input: DisassociateWirelessGatewayFromThingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1298,7 +1298,7 @@ export const se_DisassociateWirelessGatewayFromThingCommand = async (
  */
 export const se_GetDestinationCommand = async (
   input: GetDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1314,7 +1314,7 @@ export const se_GetDestinationCommand = async (
  */
 export const se_GetDeviceProfileCommand = async (
   input: GetDeviceProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1330,7 +1330,7 @@ export const se_GetDeviceProfileCommand = async (
  */
 export const se_GetEventConfigurationByResourceTypesCommand = async (
   input: GetEventConfigurationByResourceTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1348,7 +1348,7 @@ export const se_GetEventConfigurationByResourceTypesCommand = async (
  */
 export const se_GetFuotaTaskCommand = async (
   input: GetFuotaTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1364,7 +1364,7 @@ export const se_GetFuotaTaskCommand = async (
  */
 export const se_GetLogLevelsByResourceTypesCommand = async (
   input: GetLogLevelsByResourceTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1382,7 +1382,7 @@ export const se_GetLogLevelsByResourceTypesCommand = async (
  */
 export const se_GetMetricConfigurationCommand = async (
   input: GetMetricConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1400,7 +1400,7 @@ export const se_GetMetricConfigurationCommand = async (
  */
 export const se_GetMetricsCommand = async (
   input: GetMetricsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1411,7 +1411,7 @@ export const se_GetMetricsCommand = async (
   body = JSON.stringify(
     take(input, {
       SummaryMetricQueries: (_) => se_SummaryMetricQueries(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1422,7 +1422,7 @@ export const se_GetMetricsCommand = async (
  */
 export const se_GetMulticastGroupCommand = async (
   input: GetMulticastGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1438,7 +1438,7 @@ export const se_GetMulticastGroupCommand = async (
  */
 export const se_GetMulticastGroupSessionCommand = async (
   input: GetMulticastGroupSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1454,7 +1454,7 @@ export const se_GetMulticastGroupSessionCommand = async (
  */
 export const se_GetNetworkAnalyzerConfigurationCommand = async (
   input: GetNetworkAnalyzerConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1470,7 +1470,7 @@ export const se_GetNetworkAnalyzerConfigurationCommand = async (
  */
 export const se_GetPartnerAccountCommand = async (
   input: GetPartnerAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1489,7 +1489,7 @@ export const se_GetPartnerAccountCommand = async (
  */
 export const se_GetPositionCommand = async (
   input: GetPositionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1508,7 +1508,7 @@ export const se_GetPositionCommand = async (
  */
 export const se_GetPositionConfigurationCommand = async (
   input: GetPositionConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1527,7 +1527,7 @@ export const se_GetPositionConfigurationCommand = async (
  */
 export const se_GetPositionEstimateCommand = async (
   input: GetPositionEstimateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1542,7 +1542,7 @@ export const se_GetPositionEstimateCommand = async (
       Ip: (_) => _json(_),
       Timestamp: (_) => _.getTime() / 1_000,
       WiFiAccessPoints: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1553,7 +1553,7 @@ export const se_GetPositionEstimateCommand = async (
  */
 export const se_GetResourceEventConfigurationCommand = async (
   input: GetResourceEventConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1573,7 +1573,7 @@ export const se_GetResourceEventConfigurationCommand = async (
  */
 export const se_GetResourceLogLevelCommand = async (
   input: GetResourceLogLevelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1592,7 +1592,7 @@ export const se_GetResourceLogLevelCommand = async (
  */
 export const se_GetResourcePositionCommand = async (
   input: GetResourcePositionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1611,7 +1611,7 @@ export const se_GetResourcePositionCommand = async (
  */
 export const se_GetServiceEndpointCommand = async (
   input: GetServiceEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1629,7 +1629,7 @@ export const se_GetServiceEndpointCommand = async (
  */
 export const se_GetServiceProfileCommand = async (
   input: GetServiceProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1645,7 +1645,7 @@ export const se_GetServiceProfileCommand = async (
  */
 export const se_GetWirelessDeviceCommand = async (
   input: GetWirelessDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1664,7 +1664,7 @@ export const se_GetWirelessDeviceCommand = async (
  */
 export const se_GetWirelessDeviceImportTaskCommand = async (
   input: GetWirelessDeviceImportTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1680,7 +1680,7 @@ export const se_GetWirelessDeviceImportTaskCommand = async (
  */
 export const se_GetWirelessDeviceStatisticsCommand = async (
   input: GetWirelessDeviceStatisticsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1696,7 +1696,7 @@ export const se_GetWirelessDeviceStatisticsCommand = async (
  */
 export const se_GetWirelessGatewayCommand = async (
   input: GetWirelessGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1715,7 +1715,7 @@ export const se_GetWirelessGatewayCommand = async (
  */
 export const se_GetWirelessGatewayCertificateCommand = async (
   input: GetWirelessGatewayCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1731,7 +1731,7 @@ export const se_GetWirelessGatewayCertificateCommand = async (
  */
 export const se_GetWirelessGatewayFirmwareInformationCommand = async (
   input: GetWirelessGatewayFirmwareInformationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1747,7 +1747,7 @@ export const se_GetWirelessGatewayFirmwareInformationCommand = async (
  */
 export const se_GetWirelessGatewayStatisticsCommand = async (
   input: GetWirelessGatewayStatisticsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1763,7 +1763,7 @@ export const se_GetWirelessGatewayStatisticsCommand = async (
  */
 export const se_GetWirelessGatewayTaskCommand = async (
   input: GetWirelessGatewayTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1779,7 +1779,7 @@ export const se_GetWirelessGatewayTaskCommand = async (
  */
 export const se_GetWirelessGatewayTaskDefinitionCommand = async (
   input: GetWirelessGatewayTaskDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1795,7 +1795,7 @@ export const se_GetWirelessGatewayTaskDefinitionCommand = async (
  */
 export const se_ListDestinationsCommand = async (
   input: ListDestinationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1814,7 +1814,7 @@ export const se_ListDestinationsCommand = async (
  */
 export const se_ListDeviceProfilesCommand = async (
   input: ListDeviceProfilesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1834,7 +1834,7 @@ export const se_ListDeviceProfilesCommand = async (
  */
 export const se_ListDevicesForWirelessDeviceImportTaskCommand = async (
   input: ListDevicesForWirelessDeviceImportTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1855,7 +1855,7 @@ export const se_ListDevicesForWirelessDeviceImportTaskCommand = async (
  */
 export const se_ListEventConfigurationsCommand = async (
   input: ListEventConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1875,7 +1875,7 @@ export const se_ListEventConfigurationsCommand = async (
  */
 export const se_ListFuotaTasksCommand = async (
   input: ListFuotaTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1894,7 +1894,7 @@ export const se_ListFuotaTasksCommand = async (
  */
 export const se_ListMulticastGroupsCommand = async (
   input: ListMulticastGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1913,7 +1913,7 @@ export const se_ListMulticastGroupsCommand = async (
  */
 export const se_ListMulticastGroupsByFuotaTaskCommand = async (
   input: ListMulticastGroupsByFuotaTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1933,7 +1933,7 @@ export const se_ListMulticastGroupsByFuotaTaskCommand = async (
  */
 export const se_ListNetworkAnalyzerConfigurationsCommand = async (
   input: ListNetworkAnalyzerConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1952,7 +1952,7 @@ export const se_ListNetworkAnalyzerConfigurationsCommand = async (
  */
 export const se_ListPartnerAccountsCommand = async (
   input: ListPartnerAccountsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1971,7 +1971,7 @@ export const se_ListPartnerAccountsCommand = async (
  */
 export const se_ListPositionConfigurationsCommand = async (
   input: ListPositionConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1991,7 +1991,7 @@ export const se_ListPositionConfigurationsCommand = async (
  */
 export const se_ListQueuedMessagesCommand = async (
   input: ListQueuedMessagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2012,7 +2012,7 @@ export const se_ListQueuedMessagesCommand = async (
  */
 export const se_ListServiceProfilesCommand = async (
   input: ListServiceProfilesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2031,7 +2031,7 @@ export const se_ListServiceProfilesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2049,7 +2049,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListWirelessDeviceImportTasksCommand = async (
   input: ListWirelessDeviceImportTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2068,7 +2068,7 @@ export const se_ListWirelessDeviceImportTasksCommand = async (
  */
 export const se_ListWirelessDevicesCommand = async (
   input: ListWirelessDevicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2093,7 +2093,7 @@ export const se_ListWirelessDevicesCommand = async (
  */
 export const se_ListWirelessGatewaysCommand = async (
   input: ListWirelessGatewaysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2112,7 +2112,7 @@ export const se_ListWirelessGatewaysCommand = async (
  */
 export const se_ListWirelessGatewayTaskDefinitionsCommand = async (
   input: ListWirelessGatewayTaskDefinitionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2132,7 +2132,7 @@ export const se_ListWirelessGatewayTaskDefinitionsCommand = async (
  */
 export const se_PutPositionConfigurationCommand = async (
   input: PutPositionConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2148,7 +2148,7 @@ export const se_PutPositionConfigurationCommand = async (
     take(input, {
       Destination: [],
       Solvers: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -2159,7 +2159,7 @@ export const se_PutPositionConfigurationCommand = async (
  */
 export const se_PutResourceLogLevelCommand = async (
   input: PutResourceLogLevelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2174,7 +2174,7 @@ export const se_PutResourceLogLevelCommand = async (
   body = JSON.stringify(
     take(input, {
       LogLevel: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -2185,7 +2185,7 @@ export const se_PutResourceLogLevelCommand = async (
  */
 export const se_ResetAllResourceLogLevelsCommand = async (
   input: ResetAllResourceLogLevelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2203,7 +2203,7 @@ export const se_ResetAllResourceLogLevelsCommand = async (
  */
 export const se_ResetResourceLogLevelCommand = async (
   input: ResetResourceLogLevelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2222,7 +2222,7 @@ export const se_ResetResourceLogLevelCommand = async (
  */
 export const se_SendDataToMulticastGroupCommand = async (
   input: SendDataToMulticastGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2235,7 +2235,7 @@ export const se_SendDataToMulticastGroupCommand = async (
     take(input, {
       PayloadData: [],
       WirelessMetadata: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2246,7 +2246,7 @@ export const se_SendDataToMulticastGroupCommand = async (
  */
 export const se_SendDataToWirelessDeviceCommand = async (
   input: SendDataToWirelessDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2260,7 +2260,7 @@ export const se_SendDataToWirelessDeviceCommand = async (
       PayloadData: [],
       TransmitMode: [],
       WirelessMetadata: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2271,7 +2271,7 @@ export const se_SendDataToWirelessDeviceCommand = async (
  */
 export const se_StartBulkAssociateWirelessDeviceWithMulticastGroupCommand = async (
   input: StartBulkAssociateWirelessDeviceWithMulticastGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2284,7 +2284,7 @@ export const se_StartBulkAssociateWirelessDeviceWithMulticastGroupCommand = asyn
     take(input, {
       QueryString: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2295,7 +2295,7 @@ export const se_StartBulkAssociateWirelessDeviceWithMulticastGroupCommand = asyn
  */
 export const se_StartBulkDisassociateWirelessDeviceFromMulticastGroupCommand = async (
   input: StartBulkDisassociateWirelessDeviceFromMulticastGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2308,7 +2308,7 @@ export const se_StartBulkDisassociateWirelessDeviceFromMulticastGroupCommand = a
     take(input, {
       QueryString: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2319,7 +2319,7 @@ export const se_StartBulkDisassociateWirelessDeviceFromMulticastGroupCommand = a
  */
 export const se_StartFuotaTaskCommand = async (
   input: StartFuotaTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2331,7 +2331,7 @@ export const se_StartFuotaTaskCommand = async (
   body = JSON.stringify(
     take(input, {
       LoRaWAN: (_) => se_LoRaWANStartFuotaTask(_, context),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2342,7 +2342,7 @@ export const se_StartFuotaTaskCommand = async (
  */
 export const se_StartMulticastGroupSessionCommand = async (
   input: StartMulticastGroupSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2354,7 +2354,7 @@ export const se_StartMulticastGroupSessionCommand = async (
   body = JSON.stringify(
     take(input, {
       LoRaWAN: (_) => se_LoRaWANMulticastSession(_, context),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2365,7 +2365,7 @@ export const se_StartMulticastGroupSessionCommand = async (
  */
 export const se_StartSingleWirelessDeviceImportTaskCommand = async (
   input: StartSingleWirelessDeviceImportTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2380,7 +2380,7 @@ export const se_StartSingleWirelessDeviceImportTaskCommand = async (
       DeviceName: [],
       Sidewalk: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2391,7 +2391,7 @@ export const se_StartSingleWirelessDeviceImportTaskCommand = async (
  */
 export const se_StartWirelessDeviceImportTaskCommand = async (
   input: StartWirelessDeviceImportTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2405,7 +2405,7 @@ export const se_StartWirelessDeviceImportTaskCommand = async (
       DestinationName: [],
       Sidewalk: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2416,7 +2416,7 @@ export const se_StartWirelessDeviceImportTaskCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2430,7 +2430,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -2441,7 +2441,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_TestWirelessDeviceCommand = async (
   input: TestWirelessDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2457,7 +2457,7 @@ export const se_TestWirelessDeviceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2479,7 +2479,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateDestinationCommand = async (
   input: UpdateDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2494,7 +2494,7 @@ export const se_UpdateDestinationCommand = async (
       Expression: [],
       ExpressionType: [],
       RoleArn: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2505,7 +2505,7 @@ export const se_UpdateDestinationCommand = async (
  */
 export const se_UpdateEventConfigurationByResourceTypesCommand = async (
   input: UpdateEventConfigurationByResourceTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2520,7 +2520,7 @@ export const se_UpdateEventConfigurationByResourceTypesCommand = async (
       Join: (_) => _json(_),
       MessageDeliveryStatus: (_) => _json(_),
       Proximity: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2531,7 +2531,7 @@ export const se_UpdateEventConfigurationByResourceTypesCommand = async (
  */
 export const se_UpdateFuotaTaskCommand = async (
   input: UpdateFuotaTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2550,7 +2550,7 @@ export const se_UpdateFuotaTaskCommand = async (
       LoRaWAN: (_) => _json(_),
       Name: [],
       RedundancyPercent: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2561,7 +2561,7 @@ export const se_UpdateFuotaTaskCommand = async (
  */
 export const se_UpdateLogLevelsByResourceTypesCommand = async (
   input: UpdateLogLevelsByResourceTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2574,7 +2574,7 @@ export const se_UpdateLogLevelsByResourceTypesCommand = async (
       DefaultLogLevel: [],
       WirelessDeviceLogOptions: (_) => _json(_),
       WirelessGatewayLogOptions: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2585,7 +2585,7 @@ export const se_UpdateLogLevelsByResourceTypesCommand = async (
  */
 export const se_UpdateMetricConfigurationCommand = async (
   input: UpdateMetricConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2596,7 +2596,7 @@ export const se_UpdateMetricConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       SummaryMetric: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2607,7 +2607,7 @@ export const se_UpdateMetricConfigurationCommand = async (
  */
 export const se_UpdateMulticastGroupCommand = async (
   input: UpdateMulticastGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2621,7 +2621,7 @@ export const se_UpdateMulticastGroupCommand = async (
       Description: [],
       LoRaWAN: (_) => _json(_),
       Name: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2632,7 +2632,7 @@ export const se_UpdateMulticastGroupCommand = async (
  */
 export const se_UpdateNetworkAnalyzerConfigurationCommand = async (
   input: UpdateNetworkAnalyzerConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2651,7 +2651,7 @@ export const se_UpdateNetworkAnalyzerConfigurationCommand = async (
       WirelessDevicesToRemove: (_) => _json(_),
       WirelessGatewaysToAdd: (_) => _json(_),
       WirelessGatewaysToRemove: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2662,7 +2662,7 @@ export const se_UpdateNetworkAnalyzerConfigurationCommand = async (
  */
 export const se_UpdatePartnerAccountCommand = async (
   input: UpdatePartnerAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2677,7 +2677,7 @@ export const se_UpdatePartnerAccountCommand = async (
   body = JSON.stringify(
     take(input, {
       Sidewalk: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).q(query).b(body);
   return b.build();
@@ -2688,7 +2688,7 @@ export const se_UpdatePartnerAccountCommand = async (
  */
 export const se_UpdatePositionCommand = async (
   input: UpdatePositionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2703,7 +2703,7 @@ export const se_UpdatePositionCommand = async (
   body = JSON.stringify(
     take(input, {
       Position: (_) => se_PositionCoordinate(_, context),
-    })
+    }),
   );
   b.m("PATCH").h(headers).q(query).b(body);
   return b.build();
@@ -2714,7 +2714,7 @@ export const se_UpdatePositionCommand = async (
  */
 export const se_UpdateResourceEventConfigurationCommand = async (
   input: UpdateResourceEventConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2734,7 +2734,7 @@ export const se_UpdateResourceEventConfigurationCommand = async (
       Join: (_) => _json(_),
       MessageDeliveryStatus: (_) => _json(_),
       Proximity: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).q(query).b(body);
   return b.build();
@@ -2745,7 +2745,7 @@ export const se_UpdateResourceEventConfigurationCommand = async (
  */
 export const se_UpdateResourcePositionCommand = async (
   input: UpdateResourcePositionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2769,7 +2769,7 @@ export const se_UpdateResourcePositionCommand = async (
  */
 export const se_UpdateWirelessDeviceCommand = async (
   input: UpdateWirelessDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2785,7 +2785,7 @@ export const se_UpdateWirelessDeviceCommand = async (
       LoRaWAN: (_) => _json(_),
       Name: [],
       Positioning: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2796,7 +2796,7 @@ export const se_UpdateWirelessDeviceCommand = async (
  */
 export const se_UpdateWirelessDeviceImportTaskCommand = async (
   input: UpdateWirelessDeviceImportTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2808,7 +2808,7 @@ export const se_UpdateWirelessDeviceImportTaskCommand = async (
   body = JSON.stringify(
     take(input, {
       Sidewalk: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2819,7 +2819,7 @@ export const se_UpdateWirelessDeviceImportTaskCommand = async (
  */
 export const se_UpdateWirelessGatewayCommand = async (
   input: UpdateWirelessGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2835,7 +2835,7 @@ export const se_UpdateWirelessGatewayCommand = async (
       MaxEirp: (_) => __serializeFloat(_),
       Name: [],
       NetIdFilters: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2846,7 +2846,7 @@ export const se_UpdateWirelessGatewayCommand = async (
  */
 export const de_AssociateAwsAccountWithPartnerAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateAwsAccountWithPartnerAccountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2868,7 +2868,7 @@ export const de_AssociateAwsAccountWithPartnerAccountCommand = async (
  */
 export const de_AssociateMulticastGroupWithFuotaTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateMulticastGroupWithFuotaTaskCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2885,7 +2885,7 @@ export const de_AssociateMulticastGroupWithFuotaTaskCommand = async (
  */
 export const de_AssociateWirelessDeviceWithFuotaTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateWirelessDeviceWithFuotaTaskCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2902,7 +2902,7 @@ export const de_AssociateWirelessDeviceWithFuotaTaskCommand = async (
  */
 export const de_AssociateWirelessDeviceWithMulticastGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateWirelessDeviceWithMulticastGroupCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2919,7 +2919,7 @@ export const de_AssociateWirelessDeviceWithMulticastGroupCommand = async (
  */
 export const de_AssociateWirelessDeviceWithThingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateWirelessDeviceWithThingCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2936,7 +2936,7 @@ export const de_AssociateWirelessDeviceWithThingCommand = async (
  */
 export const de_AssociateWirelessGatewayWithCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateWirelessGatewayWithCertificateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2957,7 +2957,7 @@ export const de_AssociateWirelessGatewayWithCertificateCommand = async (
  */
 export const de_AssociateWirelessGatewayWithThingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateWirelessGatewayWithThingCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2974,7 +2974,7 @@ export const de_AssociateWirelessGatewayWithThingCommand = async (
  */
 export const de_CancelMulticastGroupSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelMulticastGroupSessionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2991,7 +2991,7 @@ export const de_CancelMulticastGroupSessionCommand = async (
  */
 export const de_CreateDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDestinationCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3013,7 +3013,7 @@ export const de_CreateDestinationCommand = async (
  */
 export const de_CreateDeviceProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDeviceProfileCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3035,7 +3035,7 @@ export const de_CreateDeviceProfileCommand = async (
  */
 export const de_CreateFuotaTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFuotaTaskCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3057,7 +3057,7 @@ export const de_CreateFuotaTaskCommand = async (
  */
 export const de_CreateMulticastGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMulticastGroupCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3079,7 +3079,7 @@ export const de_CreateMulticastGroupCommand = async (
  */
 export const de_CreateNetworkAnalyzerConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateNetworkAnalyzerConfigurationCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3101,7 +3101,7 @@ export const de_CreateNetworkAnalyzerConfigurationCommand = async (
  */
 export const de_CreateServiceProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateServiceProfileCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3123,7 +3123,7 @@ export const de_CreateServiceProfileCommand = async (
  */
 export const de_CreateWirelessDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWirelessDeviceCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3145,7 +3145,7 @@ export const de_CreateWirelessDeviceCommand = async (
  */
 export const de_CreateWirelessGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWirelessGatewayCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3167,7 +3167,7 @@ export const de_CreateWirelessGatewayCommand = async (
  */
 export const de_CreateWirelessGatewayTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWirelessGatewayTaskCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3189,7 +3189,7 @@ export const de_CreateWirelessGatewayTaskCommand = async (
  */
 export const de_CreateWirelessGatewayTaskDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWirelessGatewayTaskDefinitionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3211,7 +3211,7 @@ export const de_CreateWirelessGatewayTaskDefinitionCommand = async (
  */
 export const de_DeleteDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDestinationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3228,7 +3228,7 @@ export const de_DeleteDestinationCommand = async (
  */
 export const de_DeleteDeviceProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDeviceProfileCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3245,7 +3245,7 @@ export const de_DeleteDeviceProfileCommand = async (
  */
 export const de_DeleteFuotaTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFuotaTaskCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3262,7 +3262,7 @@ export const de_DeleteFuotaTaskCommand = async (
  */
 export const de_DeleteMulticastGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMulticastGroupCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3279,7 +3279,7 @@ export const de_DeleteMulticastGroupCommand = async (
  */
 export const de_DeleteNetworkAnalyzerConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteNetworkAnalyzerConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3296,7 +3296,7 @@ export const de_DeleteNetworkAnalyzerConfigurationCommand = async (
  */
 export const de_DeleteQueuedMessagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteQueuedMessagesCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3313,7 +3313,7 @@ export const de_DeleteQueuedMessagesCommand = async (
  */
 export const de_DeleteServiceProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServiceProfileCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3330,7 +3330,7 @@ export const de_DeleteServiceProfileCommand = async (
  */
 export const de_DeleteWirelessDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWirelessDeviceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3347,7 +3347,7 @@ export const de_DeleteWirelessDeviceCommand = async (
  */
 export const de_DeleteWirelessDeviceImportTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWirelessDeviceImportTaskCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3364,7 +3364,7 @@ export const de_DeleteWirelessDeviceImportTaskCommand = async (
  */
 export const de_DeleteWirelessGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWirelessGatewayCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3381,7 +3381,7 @@ export const de_DeleteWirelessGatewayCommand = async (
  */
 export const de_DeleteWirelessGatewayTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWirelessGatewayTaskCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3398,7 +3398,7 @@ export const de_DeleteWirelessGatewayTaskCommand = async (
  */
 export const de_DeleteWirelessGatewayTaskDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWirelessGatewayTaskDefinitionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3415,7 +3415,7 @@ export const de_DeleteWirelessGatewayTaskDefinitionCommand = async (
  */
 export const de_DeregisterWirelessDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterWirelessDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3432,7 +3432,7 @@ export const de_DeregisterWirelessDeviceCommand = async (
  */
 export const de_DisassociateAwsAccountFromPartnerAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateAwsAccountFromPartnerAccountCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3449,7 +3449,7 @@ export const de_DisassociateAwsAccountFromPartnerAccountCommand = async (
  */
 export const de_DisassociateMulticastGroupFromFuotaTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateMulticastGroupFromFuotaTaskCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3466,7 +3466,7 @@ export const de_DisassociateMulticastGroupFromFuotaTaskCommand = async (
  */
 export const de_DisassociateWirelessDeviceFromFuotaTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateWirelessDeviceFromFuotaTaskCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3483,7 +3483,7 @@ export const de_DisassociateWirelessDeviceFromFuotaTaskCommand = async (
  */
 export const de_DisassociateWirelessDeviceFromMulticastGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateWirelessDeviceFromMulticastGroupCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3500,7 +3500,7 @@ export const de_DisassociateWirelessDeviceFromMulticastGroupCommand = async (
  */
 export const de_DisassociateWirelessDeviceFromThingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateWirelessDeviceFromThingCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3517,7 +3517,7 @@ export const de_DisassociateWirelessDeviceFromThingCommand = async (
  */
 export const de_DisassociateWirelessGatewayFromCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateWirelessGatewayFromCertificateCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3534,7 +3534,7 @@ export const de_DisassociateWirelessGatewayFromCertificateCommand = async (
  */
 export const de_DisassociateWirelessGatewayFromThingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateWirelessGatewayFromThingCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3551,7 +3551,7 @@ export const de_DisassociateWirelessGatewayFromThingCommand = async (
  */
 export const de_GetDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDestinationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3577,7 +3577,7 @@ export const de_GetDestinationCommand = async (
  */
 export const de_GetDeviceProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDeviceProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3602,7 +3602,7 @@ export const de_GetDeviceProfileCommand = async (
  */
 export const de_GetEventConfigurationByResourceTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEventConfigurationByResourceTypesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3627,7 +3627,7 @@ export const de_GetEventConfigurationByResourceTypesCommand = async (
  */
 export const de_GetFuotaTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFuotaTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3659,7 +3659,7 @@ export const de_GetFuotaTaskCommand = async (
  */
 export const de_GetLogLevelsByResourceTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLogLevelsByResourceTypesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3682,7 +3682,7 @@ export const de_GetLogLevelsByResourceTypesCommand = async (
  */
 export const de_GetMetricConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMetricConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3703,7 +3703,7 @@ export const de_GetMetricConfigurationCommand = async (
  */
 export const de_GetMetricsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMetricsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3724,7 +3724,7 @@ export const de_GetMetricsCommand = async (
  */
 export const de_GetMulticastGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMulticastGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3751,7 +3751,7 @@ export const de_GetMulticastGroupCommand = async (
  */
 export const de_GetMulticastGroupSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMulticastGroupSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3772,7 +3772,7 @@ export const de_GetMulticastGroupSessionCommand = async (
  */
 export const de_GetNetworkAnalyzerConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetNetworkAnalyzerConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3799,7 +3799,7 @@ export const de_GetNetworkAnalyzerConfigurationCommand = async (
  */
 export const de_GetPartnerAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPartnerAccountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3821,7 +3821,7 @@ export const de_GetPartnerAccountCommand = async (
  */
 export const de_GetPositionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPositionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3847,7 +3847,7 @@ export const de_GetPositionCommand = async (
  */
 export const de_GetPositionConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPositionConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3869,7 +3869,7 @@ export const de_GetPositionConfigurationCommand = async (
  */
 export const de_GetPositionEstimateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPositionEstimateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3887,7 +3887,7 @@ export const de_GetPositionEstimateCommand = async (
  */
 export const de_GetResourceEventConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourceEventConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3912,7 +3912,7 @@ export const de_GetResourceEventConfigurationCommand = async (
  */
 export const de_GetResourceLogLevelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourceLogLevelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3933,7 +3933,7 @@ export const de_GetResourceLogLevelCommand = async (
  */
 export const de_GetResourcePositionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourcePositionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3951,7 +3951,7 @@ export const de_GetResourcePositionCommand = async (
  */
 export const de_GetServiceEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3974,7 +3974,7 @@ export const de_GetServiceEndpointCommand = async (
  */
 export const de_GetServiceProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3998,7 +3998,7 @@ export const de_GetServiceProfileCommand = async (
  */
 export const de_GetWirelessDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWirelessDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4029,7 +4029,7 @@ export const de_GetWirelessDeviceCommand = async (
  */
 export const de_GetWirelessDeviceImportTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWirelessDeviceImportTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4060,7 +4060,7 @@ export const de_GetWirelessDeviceImportTaskCommand = async (
  */
 export const de_GetWirelessDeviceStatisticsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWirelessDeviceStatisticsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4084,7 +4084,7 @@ export const de_GetWirelessDeviceStatisticsCommand = async (
  */
 export const de_GetWirelessGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWirelessGatewayCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4111,7 +4111,7 @@ export const de_GetWirelessGatewayCommand = async (
  */
 export const de_GetWirelessGatewayCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWirelessGatewayCertificateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4133,7 +4133,7 @@ export const de_GetWirelessGatewayCertificateCommand = async (
  */
 export const de_GetWirelessGatewayFirmwareInformationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWirelessGatewayFirmwareInformationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4154,7 +4154,7 @@ export const de_GetWirelessGatewayFirmwareInformationCommand = async (
  */
 export const de_GetWirelessGatewayStatisticsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWirelessGatewayStatisticsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4177,7 +4177,7 @@ export const de_GetWirelessGatewayStatisticsCommand = async (
  */
 export const de_GetWirelessGatewayTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWirelessGatewayTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4202,7 +4202,7 @@ export const de_GetWirelessGatewayTaskCommand = async (
  */
 export const de_GetWirelessGatewayTaskDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWirelessGatewayTaskDefinitionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4226,7 +4226,7 @@ export const de_GetWirelessGatewayTaskDefinitionCommand = async (
  */
 export const de_ListDestinationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDestinationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4248,7 +4248,7 @@ export const de_ListDestinationsCommand = async (
  */
 export const de_ListDeviceProfilesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDeviceProfilesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4270,7 +4270,7 @@ export const de_ListDeviceProfilesCommand = async (
  */
 export const de_ListDevicesForWirelessDeviceImportTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDevicesForWirelessDeviceImportTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4293,7 +4293,7 @@ export const de_ListDevicesForWirelessDeviceImportTaskCommand = async (
  */
 export const de_ListEventConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEventConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4315,7 +4315,7 @@ export const de_ListEventConfigurationsCommand = async (
  */
 export const de_ListFuotaTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFuotaTasksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4337,7 +4337,7 @@ export const de_ListFuotaTasksCommand = async (
  */
 export const de_ListMulticastGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMulticastGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4359,7 +4359,7 @@ export const de_ListMulticastGroupsCommand = async (
  */
 export const de_ListMulticastGroupsByFuotaTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMulticastGroupsByFuotaTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4381,7 +4381,7 @@ export const de_ListMulticastGroupsByFuotaTaskCommand = async (
  */
 export const de_ListNetworkAnalyzerConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListNetworkAnalyzerConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4403,7 +4403,7 @@ export const de_ListNetworkAnalyzerConfigurationsCommand = async (
  */
 export const de_ListPartnerAccountsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPartnerAccountsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4425,7 +4425,7 @@ export const de_ListPartnerAccountsCommand = async (
  */
 export const de_ListPositionConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPositionConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4447,7 +4447,7 @@ export const de_ListPositionConfigurationsCommand = async (
  */
 export const de_ListQueuedMessagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListQueuedMessagesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4469,7 +4469,7 @@ export const de_ListQueuedMessagesCommand = async (
  */
 export const de_ListServiceProfilesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServiceProfilesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4491,7 +4491,7 @@ export const de_ListServiceProfilesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4512,7 +4512,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListWirelessDeviceImportTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWirelessDeviceImportTasksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4534,7 +4534,7 @@ export const de_ListWirelessDeviceImportTasksCommand = async (
  */
 export const de_ListWirelessDevicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWirelessDevicesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4556,7 +4556,7 @@ export const de_ListWirelessDevicesCommand = async (
  */
 export const de_ListWirelessGatewaysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWirelessGatewaysCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4578,7 +4578,7 @@ export const de_ListWirelessGatewaysCommand = async (
  */
 export const de_ListWirelessGatewayTaskDefinitionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWirelessGatewayTaskDefinitionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4600,7 +4600,7 @@ export const de_ListWirelessGatewayTaskDefinitionsCommand = async (
  */
 export const de_PutPositionConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutPositionConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4617,7 +4617,7 @@ export const de_PutPositionConfigurationCommand = async (
  */
 export const de_PutResourceLogLevelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutResourceLogLevelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4634,7 +4634,7 @@ export const de_PutResourceLogLevelCommand = async (
  */
 export const de_ResetAllResourceLogLevelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetAllResourceLogLevelsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4651,7 +4651,7 @@ export const de_ResetAllResourceLogLevelsCommand = async (
  */
 export const de_ResetResourceLogLevelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetResourceLogLevelCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4668,7 +4668,7 @@ export const de_ResetResourceLogLevelCommand = async (
  */
 export const de_SendDataToMulticastGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendDataToMulticastGroupCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4689,7 +4689,7 @@ export const de_SendDataToMulticastGroupCommand = async (
  */
 export const de_SendDataToWirelessDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendDataToWirelessDeviceCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4710,7 +4710,7 @@ export const de_SendDataToWirelessDeviceCommand = async (
  */
 export const de_StartBulkAssociateWirelessDeviceWithMulticastGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartBulkAssociateWirelessDeviceWithMulticastGroupCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4727,7 +4727,7 @@ export const de_StartBulkAssociateWirelessDeviceWithMulticastGroupCommand = asyn
  */
 export const de_StartBulkDisassociateWirelessDeviceFromMulticastGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartBulkDisassociateWirelessDeviceFromMulticastGroupCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4744,7 +4744,7 @@ export const de_StartBulkDisassociateWirelessDeviceFromMulticastGroupCommand = a
  */
 export const de_StartFuotaTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartFuotaTaskCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4761,7 +4761,7 @@ export const de_StartFuotaTaskCommand = async (
  */
 export const de_StartMulticastGroupSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartMulticastGroupSessionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4778,7 +4778,7 @@ export const de_StartMulticastGroupSessionCommand = async (
  */
 export const de_StartSingleWirelessDeviceImportTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartSingleWirelessDeviceImportTaskCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4800,7 +4800,7 @@ export const de_StartSingleWirelessDeviceImportTaskCommand = async (
  */
 export const de_StartWirelessDeviceImportTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartWirelessDeviceImportTaskCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4822,7 +4822,7 @@ export const de_StartWirelessDeviceImportTaskCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4839,7 +4839,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_TestWirelessDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TestWirelessDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4860,7 +4860,7 @@ export const de_TestWirelessDeviceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4877,7 +4877,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDestinationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4894,7 +4894,7 @@ export const de_UpdateDestinationCommand = async (
  */
 export const de_UpdateEventConfigurationByResourceTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEventConfigurationByResourceTypesCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4911,7 +4911,7 @@ export const de_UpdateEventConfigurationByResourceTypesCommand = async (
  */
 export const de_UpdateFuotaTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFuotaTaskCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4928,7 +4928,7 @@ export const de_UpdateFuotaTaskCommand = async (
  */
 export const de_UpdateLogLevelsByResourceTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLogLevelsByResourceTypesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4945,7 +4945,7 @@ export const de_UpdateLogLevelsByResourceTypesCommand = async (
  */
 export const de_UpdateMetricConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMetricConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4962,7 +4962,7 @@ export const de_UpdateMetricConfigurationCommand = async (
  */
 export const de_UpdateMulticastGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMulticastGroupCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4979,7 +4979,7 @@ export const de_UpdateMulticastGroupCommand = async (
  */
 export const de_UpdateNetworkAnalyzerConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateNetworkAnalyzerConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4996,7 +4996,7 @@ export const de_UpdateNetworkAnalyzerConfigurationCommand = async (
  */
 export const de_UpdatePartnerAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePartnerAccountCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5013,7 +5013,7 @@ export const de_UpdatePartnerAccountCommand = async (
  */
 export const de_UpdatePositionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePositionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5030,7 +5030,7 @@ export const de_UpdatePositionCommand = async (
  */
 export const de_UpdateResourceEventConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateResourceEventConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5047,7 +5047,7 @@ export const de_UpdateResourceEventConfigurationCommand = async (
  */
 export const de_UpdateResourcePositionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateResourcePositionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5064,7 +5064,7 @@ export const de_UpdateResourcePositionCommand = async (
  */
 export const de_UpdateWirelessDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWirelessDeviceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5081,7 +5081,7 @@ export const de_UpdateWirelessDeviceCommand = async (
  */
 export const de_UpdateWirelessDeviceImportTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWirelessDeviceImportTaskCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5098,7 +5098,7 @@ export const de_UpdateWirelessDeviceImportTaskCommand = async (
  */
 export const de_UpdateWirelessGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWirelessGatewayCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5157,7 +5157,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -5196,7 +5196,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -5216,7 +5216,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -5255,7 +5255,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

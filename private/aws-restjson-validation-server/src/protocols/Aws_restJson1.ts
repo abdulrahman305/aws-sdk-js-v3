@@ -92,10 +92,10 @@ import {
 
 export const deserializeMalformedEnumRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedEnumServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -125,10 +125,10 @@ export const deserializeMalformedEnumRequest = async (
 
 export const deserializeMalformedLengthRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedLengthServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -159,10 +159,10 @@ export const deserializeMalformedLengthRequest = async (
 
 export const deserializeMalformedLengthOverrideRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedLengthOverrideServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -193,10 +193,10 @@ export const deserializeMalformedLengthOverrideRequest = async (
 
 export const deserializeMalformedLengthQueryStringRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedLengthQueryStringServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -234,10 +234,10 @@ export const deserializeMalformedLengthQueryStringRequest = async (
 
 export const deserializeMalformedPatternRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedPatternServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -267,10 +267,10 @@ export const deserializeMalformedPatternRequest = async (
 
 export const deserializeMalformedPatternOverrideRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedPatternOverrideServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -299,10 +299,10 @@ export const deserializeMalformedPatternOverrideRequest = async (
 
 export const deserializeMalformedRangeRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedRangeServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -342,10 +342,10 @@ export const deserializeMalformedRangeRequest = async (
 
 export const deserializeMalformedRangeOverrideRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedRangeOverrideServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -385,10 +385,10 @@ export const deserializeMalformedRangeOverrideRequest = async (
 
 export const deserializeMalformedRequiredRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedRequiredServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -432,10 +432,10 @@ export const deserializeMalformedRequiredRequest = async (
 
 export const deserializeMalformedUniqueItemsRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedUniqueItemsServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -476,10 +476,10 @@ export const deserializeMalformedUniqueItemsRequest = async (
 
 export const deserializeRecursiveStructuresRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RecursiveStructuresServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -505,10 +505,10 @@ export const deserializeRecursiveStructuresRequest = async (
 
 export const deserializeSensitiveValidationRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SensitiveValidationServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -534,7 +534,7 @@ export const deserializeSensitiveValidationRequest = async (
 
 export const serializeMalformedEnumResponse = async (
   input: MalformedEnumServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -568,7 +568,7 @@ export const serializeMalformedEnumResponse = async (
 
 export const serializeMalformedLengthResponse = async (
   input: MalformedLengthServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -602,7 +602,7 @@ export const serializeMalformedLengthResponse = async (
 
 export const serializeMalformedLengthOverrideResponse = async (
   input: MalformedLengthOverrideServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -636,7 +636,7 @@ export const serializeMalformedLengthOverrideResponse = async (
 
 export const serializeMalformedLengthQueryStringResponse = async (
   input: MalformedLengthQueryStringServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -670,7 +670,7 @@ export const serializeMalformedLengthQueryStringResponse = async (
 
 export const serializeMalformedPatternResponse = async (
   input: MalformedPatternServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -704,7 +704,7 @@ export const serializeMalformedPatternResponse = async (
 
 export const serializeMalformedPatternOverrideResponse = async (
   input: MalformedPatternOverrideServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -738,7 +738,7 @@ export const serializeMalformedPatternOverrideResponse = async (
 
 export const serializeMalformedRangeResponse = async (
   input: MalformedRangeServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -772,7 +772,7 @@ export const serializeMalformedRangeResponse = async (
 
 export const serializeMalformedRangeOverrideResponse = async (
   input: MalformedRangeOverrideServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -806,7 +806,7 @@ export const serializeMalformedRangeOverrideResponse = async (
 
 export const serializeMalformedRequiredResponse = async (
   input: MalformedRequiredServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -840,7 +840,7 @@ export const serializeMalformedRequiredResponse = async (
 
 export const serializeMalformedUniqueItemsResponse = async (
   input: MalformedUniqueItemsServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -874,7 +874,7 @@ export const serializeMalformedUniqueItemsResponse = async (
 
 export const serializeRecursiveStructuresResponse = async (
   input: RecursiveStructuresServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -908,7 +908,7 @@ export const serializeRecursiveStructuresResponse = async (
 
 export const serializeSensitiveValidationResponse = async (
   input: SensitiveValidationServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -942,7 +942,7 @@ export const serializeSensitiveValidationResponse = async (
 
 export const serializeFrameworkException = async (
   input: __SmithyFrameworkException,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -1029,7 +1029,7 @@ export const serializeFrameworkException = async (
 
 export const serializeValidationExceptionError = async (
   input: ValidationException,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -1050,7 +1050,7 @@ export const serializeValidationExceptionError = async (
     take(input, {
       fieldList: (_) => se_ValidationExceptionFieldList(_, context),
       message: [],
-    })
+    }),
   );
   return new __HttpResponse({
     headers,
@@ -1087,7 +1087,7 @@ const de_EnumList = (output: any, context: __SerdeContext): EnumString[] => {
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.restjson.validation#EnumList" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.restjson.validation#EnumList" must be non-null.',
       );
     }
     return __expectString(entry) as any;
@@ -1099,13 +1099,16 @@ const de_EnumList = (output: any, context: __SerdeContext): EnumString[] => {
  * deserializeAws_restJson1EnumMap
  */
 const de_EnumMap = (output: any, context: __SerdeContext): Partial<Record<EnumString, EnumString>> => {
-  return Object.entries(output).reduce((acc: Partial<Record<EnumString, EnumString>>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Partial<Record<EnumString, EnumString>>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as EnumString] = __expectString(value) as any;
       return acc;
-    }
-    acc[key as EnumString] = __expectString(value) as any;
-    return acc;
-  }, {} as Partial<Record<EnumString, EnumString>>);
+    },
+    {} as Partial<Record<EnumString, EnumString>>,
+  );
 };
 
 /**
@@ -1128,7 +1131,7 @@ const de_LengthList = (output: any, context: __SerdeContext): string[] => {
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.restjson.validation#LengthList" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.restjson.validation#LengthList" must be non-null.',
       );
     }
     return __expectString(entry) as any;
@@ -1140,13 +1143,16 @@ const de_LengthList = (output: any, context: __SerdeContext): string[] => {
  * deserializeAws_restJson1LengthMap
  */
 const de_LengthMap = (output: any, context: __SerdeContext): Record<string, string[]> => {
-  return Object.entries(output).reduce((acc: Record<string, string[]>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, string[]>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_LengthList(value, context);
       return acc;
-    }
-    acc[key as string] = de_LengthList(value, context);
-    return acc;
-  }, {} as Record<string, string[]>);
+    },
+    {} as Record<string, string[]>,
+  );
 };
 
 /**
@@ -1165,7 +1171,7 @@ const de_PatternList = (output: any, context: __SerdeContext): string[] => {
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.restjson.validation#PatternList" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.restjson.validation#PatternList" must be non-null.',
       );
     }
     return __expectString(entry) as any;
@@ -1180,7 +1186,7 @@ const de_PatternListOverride = (output: any, context: __SerdeContext): string[] 
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.restjson.validation#PatternListOverride" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.restjson.validation#PatternListOverride" must be non-null.',
       );
     }
     return __expectString(entry) as any;
@@ -1192,26 +1198,32 @@ const de_PatternListOverride = (output: any, context: __SerdeContext): string[] 
  * deserializeAws_restJson1PatternMap
  */
 const de_PatternMap = (output: any, context: __SerdeContext): Record<string, string> => {
-  return Object.entries(output).reduce((acc: Record<string, string>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, string>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = __expectString(value) as any;
       return acc;
-    }
-    acc[key as string] = __expectString(value) as any;
-    return acc;
-  }, {} as Record<string, string>);
+    },
+    {} as Record<string, string>,
+  );
 };
 
 /**
  * deserializeAws_restJson1PatternMapOverride
  */
 const de_PatternMapOverride = (output: any, context: __SerdeContext): Record<string, string> => {
-  return Object.entries(output).reduce((acc: Record<string, string>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, string>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = __expectString(value) as any;
       return acc;
-    }
-    acc[key as string] = __expectString(value) as any;
-    return acc;
-  }, {} as Record<string, string>);
+    },
+    {} as Record<string, string>,
+  );
 };
 
 /**
@@ -1277,7 +1289,7 @@ const de_StructureSetWithNoKey = (output: any, context: __SerdeContext): Missing
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.restjson.validation#StructureSetWithNoKey" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.restjson.validation#StructureSetWithNoKey" must be non-null.',
       );
     }
     return de_MissingKeyStructure(entry, context);
@@ -1305,7 +1317,7 @@ const de_BooleanSet = (output: any, context: __SerdeContext): boolean[] => {
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.shared#BooleanSet" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.shared#BooleanSet" must be non-null.',
       );
     }
     return __expectBoolean(entry) as any;
@@ -1333,7 +1345,7 @@ const de_DateTimeSet = (output: any, context: __SerdeContext): Date[] => {
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.shared#DateTimeSet" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.shared#DateTimeSet" must be non-null.',
       );
     }
     return __expectNonNull(__parseRfc3339DateTime(entry));
@@ -1348,7 +1360,7 @@ const de_FooEnumSet = (output: any, context: __SerdeContext): FooEnum[] => {
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.shared#FooEnumSet" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.shared#FooEnumSet" must be non-null.',
       );
     }
     return __expectString(entry) as any;
@@ -1385,7 +1397,7 @@ const de_HttpDateSet = (output: any, context: __SerdeContext): Date[] => {
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.shared#HttpDateSet" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.shared#HttpDateSet" must be non-null.',
       );
     }
     return __expectNonNull(__parseRfc7231DateTime(entry));
@@ -1400,7 +1412,7 @@ const de_IntegerEnumSet = (output: any, context: __SerdeContext): IntegerEnum[] 
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.shared#IntegerEnumSet" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.shared#IntegerEnumSet" must be non-null.',
       );
     }
     return __expectInt32(entry) as any;
@@ -1415,7 +1427,7 @@ const de_IntegerSet = (output: any, context: __SerdeContext): number[] => {
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.shared#IntegerSet" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.shared#IntegerSet" must be non-null.',
       );
     }
     return __expectInt32(entry) as any;
@@ -1469,7 +1481,7 @@ const de_StringList = (output: any, context: __SerdeContext): string[] => {
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.shared#StringList" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.shared#StringList" must be non-null.',
       );
     }
     return __expectString(entry) as any;
@@ -1497,7 +1509,7 @@ const de_StructureSet = (output: any, context: __SerdeContext): GreetingStruct[]
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.shared#StructureSet" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.shared#StructureSet" must be non-null.',
       );
     }
     return de_GreetingStruct(entry, context);
@@ -1512,7 +1524,7 @@ const de_TimestampSet = (output: any, context: __SerdeContext): Date[] => {
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.shared#TimestampSet" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.shared#TimestampSet" must be non-null.',
       );
     }
     return __expectNonNull(__parseEpochTimestamp(__expectNumber(entry)));

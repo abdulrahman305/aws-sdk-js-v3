@@ -51,11 +51,11 @@ export const flexibleChecksumsResponseMiddlewareOptions: RelativeMiddlewareOptio
 export const flexibleChecksumsResponseMiddleware =
   (
     config: PreviouslyResolved,
-    middlewareConfig: FlexibleChecksumsResponseMiddlewareConfig
+    middlewareConfig: FlexibleChecksumsResponseMiddlewareConfig,
   ): DeserializeMiddleware<any, any> =>
   <Output extends MetadataBearer>(
     next: DeserializeHandler<any, Output>,
-    context: HandlerExecutionContext
+    context: HandlerExecutionContext,
   ): DeserializeHandler<any, Output> =>
   async (args: DeserializeHandlerArguments<any>): Promise<DeserializeHandlerOutput<Output>> => {
     if (!HttpRequest.isInstance(args.request)) {

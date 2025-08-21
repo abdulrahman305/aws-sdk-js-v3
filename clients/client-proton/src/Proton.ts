@@ -527,16 +527,16 @@ export interface Proton {
    */
   acceptEnvironmentAccountConnection(
     args: AcceptEnvironmentAccountConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AcceptEnvironmentAccountConnectionCommandOutput>;
   acceptEnvironmentAccountConnection(
     args: AcceptEnvironmentAccountConnectionCommandInput,
-    cb: (err: any, data?: AcceptEnvironmentAccountConnectionCommandOutput) => void
+    cb: (err: any, data?: AcceptEnvironmentAccountConnectionCommandOutput) => void,
   ): void;
   acceptEnvironmentAccountConnection(
     args: AcceptEnvironmentAccountConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AcceptEnvironmentAccountConnectionCommandOutput) => void
+    cb: (err: any, data?: AcceptEnvironmentAccountConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -544,16 +544,16 @@ export interface Proton {
    */
   cancelComponentDeployment(
     args: CancelComponentDeploymentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelComponentDeploymentCommandOutput>;
   cancelComponentDeployment(
     args: CancelComponentDeploymentCommandInput,
-    cb: (err: any, data?: CancelComponentDeploymentCommandOutput) => void
+    cb: (err: any, data?: CancelComponentDeploymentCommandOutput) => void,
   ): void;
   cancelComponentDeployment(
     args: CancelComponentDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelComponentDeploymentCommandOutput) => void
+    cb: (err: any, data?: CancelComponentDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -561,16 +561,16 @@ export interface Proton {
    */
   cancelEnvironmentDeployment(
     args: CancelEnvironmentDeploymentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelEnvironmentDeploymentCommandOutput>;
   cancelEnvironmentDeployment(
     args: CancelEnvironmentDeploymentCommandInput,
-    cb: (err: any, data?: CancelEnvironmentDeploymentCommandOutput) => void
+    cb: (err: any, data?: CancelEnvironmentDeploymentCommandOutput) => void,
   ): void;
   cancelEnvironmentDeployment(
     args: CancelEnvironmentDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelEnvironmentDeploymentCommandOutput) => void
+    cb: (err: any, data?: CancelEnvironmentDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -578,16 +578,16 @@ export interface Proton {
    */
   cancelServiceInstanceDeployment(
     args: CancelServiceInstanceDeploymentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelServiceInstanceDeploymentCommandOutput>;
   cancelServiceInstanceDeployment(
     args: CancelServiceInstanceDeploymentCommandInput,
-    cb: (err: any, data?: CancelServiceInstanceDeploymentCommandOutput) => void
+    cb: (err: any, data?: CancelServiceInstanceDeploymentCommandOutput) => void,
   ): void;
   cancelServiceInstanceDeployment(
     args: CancelServiceInstanceDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelServiceInstanceDeploymentCommandOutput) => void
+    cb: (err: any, data?: CancelServiceInstanceDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -595,16 +595,16 @@ export interface Proton {
    */
   cancelServicePipelineDeployment(
     args: CancelServicePipelineDeploymentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelServicePipelineDeploymentCommandOutput>;
   cancelServicePipelineDeployment(
     args: CancelServicePipelineDeploymentCommandInput,
-    cb: (err: any, data?: CancelServicePipelineDeploymentCommandOutput) => void
+    cb: (err: any, data?: CancelServicePipelineDeploymentCommandOutput) => void,
   ): void;
   cancelServicePipelineDeployment(
     args: CancelServicePipelineDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelServicePipelineDeploymentCommandOutput) => void
+    cb: (err: any, data?: CancelServicePipelineDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -612,13 +612,13 @@ export interface Proton {
    */
   createComponent(
     args: CreateComponentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateComponentCommandOutput>;
   createComponent(args: CreateComponentCommandInput, cb: (err: any, data?: CreateComponentCommandOutput) => void): void;
   createComponent(
     args: CreateComponentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateComponentCommandOutput) => void
+    cb: (err: any, data?: CreateComponentCommandOutput) => void,
   ): void;
 
   /**
@@ -626,16 +626,16 @@ export interface Proton {
    */
   createEnvironment(
     args: CreateEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEnvironmentCommandOutput>;
   createEnvironment(
     args: CreateEnvironmentCommandInput,
-    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void,
   ): void;
   createEnvironment(
     args: CreateEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -643,16 +643,16 @@ export interface Proton {
    */
   createEnvironmentAccountConnection(
     args: CreateEnvironmentAccountConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEnvironmentAccountConnectionCommandOutput>;
   createEnvironmentAccountConnection(
     args: CreateEnvironmentAccountConnectionCommandInput,
-    cb: (err: any, data?: CreateEnvironmentAccountConnectionCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentAccountConnectionCommandOutput) => void,
   ): void;
   createEnvironmentAccountConnection(
     args: CreateEnvironmentAccountConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEnvironmentAccountConnectionCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentAccountConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -660,16 +660,16 @@ export interface Proton {
    */
   createEnvironmentTemplate(
     args: CreateEnvironmentTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEnvironmentTemplateCommandOutput>;
   createEnvironmentTemplate(
     args: CreateEnvironmentTemplateCommandInput,
-    cb: (err: any, data?: CreateEnvironmentTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentTemplateCommandOutput) => void,
   ): void;
   createEnvironmentTemplate(
     args: CreateEnvironmentTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEnvironmentTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -677,16 +677,16 @@ export interface Proton {
    */
   createEnvironmentTemplateVersion(
     args: CreateEnvironmentTemplateVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEnvironmentTemplateVersionCommandOutput>;
   createEnvironmentTemplateVersion(
     args: CreateEnvironmentTemplateVersionCommandInput,
-    cb: (err: any, data?: CreateEnvironmentTemplateVersionCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentTemplateVersionCommandOutput) => void,
   ): void;
   createEnvironmentTemplateVersion(
     args: CreateEnvironmentTemplateVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEnvironmentTemplateVersionCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentTemplateVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -694,16 +694,16 @@ export interface Proton {
    */
   createRepository(
     args: CreateRepositoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRepositoryCommandOutput>;
   createRepository(
     args: CreateRepositoryCommandInput,
-    cb: (err: any, data?: CreateRepositoryCommandOutput) => void
+    cb: (err: any, data?: CreateRepositoryCommandOutput) => void,
   ): void;
   createRepository(
     args: CreateRepositoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRepositoryCommandOutput) => void
+    cb: (err: any, data?: CreateRepositoryCommandOutput) => void,
   ): void;
 
   /**
@@ -714,7 +714,7 @@ export interface Proton {
   createService(
     args: CreateServiceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateServiceCommandOutput) => void
+    cb: (err: any, data?: CreateServiceCommandOutput) => void,
   ): void;
 
   /**
@@ -722,16 +722,16 @@ export interface Proton {
    */
   createServiceInstance(
     args: CreateServiceInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateServiceInstanceCommandOutput>;
   createServiceInstance(
     args: CreateServiceInstanceCommandInput,
-    cb: (err: any, data?: CreateServiceInstanceCommandOutput) => void
+    cb: (err: any, data?: CreateServiceInstanceCommandOutput) => void,
   ): void;
   createServiceInstance(
     args: CreateServiceInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateServiceInstanceCommandOutput) => void
+    cb: (err: any, data?: CreateServiceInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -739,16 +739,16 @@ export interface Proton {
    */
   createServiceSyncConfig(
     args: CreateServiceSyncConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateServiceSyncConfigCommandOutput>;
   createServiceSyncConfig(
     args: CreateServiceSyncConfigCommandInput,
-    cb: (err: any, data?: CreateServiceSyncConfigCommandOutput) => void
+    cb: (err: any, data?: CreateServiceSyncConfigCommandOutput) => void,
   ): void;
   createServiceSyncConfig(
     args: CreateServiceSyncConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateServiceSyncConfigCommandOutput) => void
+    cb: (err: any, data?: CreateServiceSyncConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -756,16 +756,16 @@ export interface Proton {
    */
   createServiceTemplate(
     args: CreateServiceTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateServiceTemplateCommandOutput>;
   createServiceTemplate(
     args: CreateServiceTemplateCommandInput,
-    cb: (err: any, data?: CreateServiceTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateServiceTemplateCommandOutput) => void,
   ): void;
   createServiceTemplate(
     args: CreateServiceTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateServiceTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateServiceTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -773,16 +773,16 @@ export interface Proton {
    */
   createServiceTemplateVersion(
     args: CreateServiceTemplateVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateServiceTemplateVersionCommandOutput>;
   createServiceTemplateVersion(
     args: CreateServiceTemplateVersionCommandInput,
-    cb: (err: any, data?: CreateServiceTemplateVersionCommandOutput) => void
+    cb: (err: any, data?: CreateServiceTemplateVersionCommandOutput) => void,
   ): void;
   createServiceTemplateVersion(
     args: CreateServiceTemplateVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateServiceTemplateVersionCommandOutput) => void
+    cb: (err: any, data?: CreateServiceTemplateVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -790,16 +790,16 @@ export interface Proton {
    */
   createTemplateSyncConfig(
     args: CreateTemplateSyncConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateTemplateSyncConfigCommandOutput>;
   createTemplateSyncConfig(
     args: CreateTemplateSyncConfigCommandInput,
-    cb: (err: any, data?: CreateTemplateSyncConfigCommandOutput) => void
+    cb: (err: any, data?: CreateTemplateSyncConfigCommandOutput) => void,
   ): void;
   createTemplateSyncConfig(
     args: CreateTemplateSyncConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTemplateSyncConfigCommandOutput) => void
+    cb: (err: any, data?: CreateTemplateSyncConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -807,13 +807,13 @@ export interface Proton {
    */
   deleteComponent(
     args: DeleteComponentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteComponentCommandOutput>;
   deleteComponent(args: DeleteComponentCommandInput, cb: (err: any, data?: DeleteComponentCommandOutput) => void): void;
   deleteComponent(
     args: DeleteComponentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteComponentCommandOutput) => void
+    cb: (err: any, data?: DeleteComponentCommandOutput) => void,
   ): void;
 
   /**
@@ -821,16 +821,16 @@ export interface Proton {
    */
   deleteDeployment(
     args: DeleteDeploymentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDeploymentCommandOutput>;
   deleteDeployment(
     args: DeleteDeploymentCommandInput,
-    cb: (err: any, data?: DeleteDeploymentCommandOutput) => void
+    cb: (err: any, data?: DeleteDeploymentCommandOutput) => void,
   ): void;
   deleteDeployment(
     args: DeleteDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDeploymentCommandOutput) => void
+    cb: (err: any, data?: DeleteDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -838,16 +838,16 @@ export interface Proton {
    */
   deleteEnvironment(
     args: DeleteEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEnvironmentCommandOutput>;
   deleteEnvironment(
     args: DeleteEnvironmentCommandInput,
-    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void,
   ): void;
   deleteEnvironment(
     args: DeleteEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -855,16 +855,16 @@ export interface Proton {
    */
   deleteEnvironmentAccountConnection(
     args: DeleteEnvironmentAccountConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEnvironmentAccountConnectionCommandOutput>;
   deleteEnvironmentAccountConnection(
     args: DeleteEnvironmentAccountConnectionCommandInput,
-    cb: (err: any, data?: DeleteEnvironmentAccountConnectionCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentAccountConnectionCommandOutput) => void,
   ): void;
   deleteEnvironmentAccountConnection(
     args: DeleteEnvironmentAccountConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEnvironmentAccountConnectionCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentAccountConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -872,16 +872,16 @@ export interface Proton {
    */
   deleteEnvironmentTemplate(
     args: DeleteEnvironmentTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEnvironmentTemplateCommandOutput>;
   deleteEnvironmentTemplate(
     args: DeleteEnvironmentTemplateCommandInput,
-    cb: (err: any, data?: DeleteEnvironmentTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentTemplateCommandOutput) => void,
   ): void;
   deleteEnvironmentTemplate(
     args: DeleteEnvironmentTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEnvironmentTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -889,16 +889,16 @@ export interface Proton {
    */
   deleteEnvironmentTemplateVersion(
     args: DeleteEnvironmentTemplateVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEnvironmentTemplateVersionCommandOutput>;
   deleteEnvironmentTemplateVersion(
     args: DeleteEnvironmentTemplateVersionCommandInput,
-    cb: (err: any, data?: DeleteEnvironmentTemplateVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentTemplateVersionCommandOutput) => void,
   ): void;
   deleteEnvironmentTemplateVersion(
     args: DeleteEnvironmentTemplateVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEnvironmentTemplateVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentTemplateVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -906,16 +906,16 @@ export interface Proton {
    */
   deleteRepository(
     args: DeleteRepositoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRepositoryCommandOutput>;
   deleteRepository(
     args: DeleteRepositoryCommandInput,
-    cb: (err: any, data?: DeleteRepositoryCommandOutput) => void
+    cb: (err: any, data?: DeleteRepositoryCommandOutput) => void,
   ): void;
   deleteRepository(
     args: DeleteRepositoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRepositoryCommandOutput) => void
+    cb: (err: any, data?: DeleteRepositoryCommandOutput) => void,
   ): void;
 
   /**
@@ -926,7 +926,7 @@ export interface Proton {
   deleteService(
     args: DeleteServiceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteServiceCommandOutput) => void
+    cb: (err: any, data?: DeleteServiceCommandOutput) => void,
   ): void;
 
   /**
@@ -934,16 +934,16 @@ export interface Proton {
    */
   deleteServiceSyncConfig(
     args: DeleteServiceSyncConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteServiceSyncConfigCommandOutput>;
   deleteServiceSyncConfig(
     args: DeleteServiceSyncConfigCommandInput,
-    cb: (err: any, data?: DeleteServiceSyncConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteServiceSyncConfigCommandOutput) => void,
   ): void;
   deleteServiceSyncConfig(
     args: DeleteServiceSyncConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteServiceSyncConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteServiceSyncConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -951,16 +951,16 @@ export interface Proton {
    */
   deleteServiceTemplate(
     args: DeleteServiceTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteServiceTemplateCommandOutput>;
   deleteServiceTemplate(
     args: DeleteServiceTemplateCommandInput,
-    cb: (err: any, data?: DeleteServiceTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteServiceTemplateCommandOutput) => void,
   ): void;
   deleteServiceTemplate(
     args: DeleteServiceTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteServiceTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteServiceTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -968,16 +968,16 @@ export interface Proton {
    */
   deleteServiceTemplateVersion(
     args: DeleteServiceTemplateVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteServiceTemplateVersionCommandOutput>;
   deleteServiceTemplateVersion(
     args: DeleteServiceTemplateVersionCommandInput,
-    cb: (err: any, data?: DeleteServiceTemplateVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteServiceTemplateVersionCommandOutput) => void,
   ): void;
   deleteServiceTemplateVersion(
     args: DeleteServiceTemplateVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteServiceTemplateVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteServiceTemplateVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -985,16 +985,16 @@ export interface Proton {
    */
   deleteTemplateSyncConfig(
     args: DeleteTemplateSyncConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteTemplateSyncConfigCommandOutput>;
   deleteTemplateSyncConfig(
     args: DeleteTemplateSyncConfigCommandInput,
-    cb: (err: any, data?: DeleteTemplateSyncConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteTemplateSyncConfigCommandOutput) => void,
   ): void;
   deleteTemplateSyncConfig(
     args: DeleteTemplateSyncConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTemplateSyncConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteTemplateSyncConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1003,16 +1003,16 @@ export interface Proton {
   getAccountSettings(): Promise<GetAccountSettingsCommandOutput>;
   getAccountSettings(
     args: GetAccountSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAccountSettingsCommandOutput>;
   getAccountSettings(
     args: GetAccountSettingsCommandInput,
-    cb: (err: any, data?: GetAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: GetAccountSettingsCommandOutput) => void,
   ): void;
   getAccountSettings(
     args: GetAccountSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: GetAccountSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -1023,7 +1023,7 @@ export interface Proton {
   getComponent(
     args: GetComponentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetComponentCommandOutput) => void
+    cb: (err: any, data?: GetComponentCommandOutput) => void,
   ): void;
 
   /**
@@ -1034,7 +1034,7 @@ export interface Proton {
   getDeployment(
     args: GetDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeploymentCommandOutput) => void
+    cb: (err: any, data?: GetDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -1042,13 +1042,13 @@ export interface Proton {
    */
   getEnvironment(
     args: GetEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEnvironmentCommandOutput>;
   getEnvironment(args: GetEnvironmentCommandInput, cb: (err: any, data?: GetEnvironmentCommandOutput) => void): void;
   getEnvironment(
     args: GetEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEnvironmentCommandOutput) => void
+    cb: (err: any, data?: GetEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -1056,16 +1056,16 @@ export interface Proton {
    */
   getEnvironmentAccountConnection(
     args: GetEnvironmentAccountConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEnvironmentAccountConnectionCommandOutput>;
   getEnvironmentAccountConnection(
     args: GetEnvironmentAccountConnectionCommandInput,
-    cb: (err: any, data?: GetEnvironmentAccountConnectionCommandOutput) => void
+    cb: (err: any, data?: GetEnvironmentAccountConnectionCommandOutput) => void,
   ): void;
   getEnvironmentAccountConnection(
     args: GetEnvironmentAccountConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEnvironmentAccountConnectionCommandOutput) => void
+    cb: (err: any, data?: GetEnvironmentAccountConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -1073,16 +1073,16 @@ export interface Proton {
    */
   getEnvironmentTemplate(
     args: GetEnvironmentTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEnvironmentTemplateCommandOutput>;
   getEnvironmentTemplate(
     args: GetEnvironmentTemplateCommandInput,
-    cb: (err: any, data?: GetEnvironmentTemplateCommandOutput) => void
+    cb: (err: any, data?: GetEnvironmentTemplateCommandOutput) => void,
   ): void;
   getEnvironmentTemplate(
     args: GetEnvironmentTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEnvironmentTemplateCommandOutput) => void
+    cb: (err: any, data?: GetEnvironmentTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1090,16 +1090,16 @@ export interface Proton {
    */
   getEnvironmentTemplateVersion(
     args: GetEnvironmentTemplateVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEnvironmentTemplateVersionCommandOutput>;
   getEnvironmentTemplateVersion(
     args: GetEnvironmentTemplateVersionCommandInput,
-    cb: (err: any, data?: GetEnvironmentTemplateVersionCommandOutput) => void
+    cb: (err: any, data?: GetEnvironmentTemplateVersionCommandOutput) => void,
   ): void;
   getEnvironmentTemplateVersion(
     args: GetEnvironmentTemplateVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEnvironmentTemplateVersionCommandOutput) => void
+    cb: (err: any, data?: GetEnvironmentTemplateVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -1110,7 +1110,7 @@ export interface Proton {
   getRepository(
     args: GetRepositoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRepositoryCommandOutput) => void
+    cb: (err: any, data?: GetRepositoryCommandOutput) => void,
   ): void;
 
   /**
@@ -1118,16 +1118,16 @@ export interface Proton {
    */
   getRepositorySyncStatus(
     args: GetRepositorySyncStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRepositorySyncStatusCommandOutput>;
   getRepositorySyncStatus(
     args: GetRepositorySyncStatusCommandInput,
-    cb: (err: any, data?: GetRepositorySyncStatusCommandOutput) => void
+    cb: (err: any, data?: GetRepositorySyncStatusCommandOutput) => void,
   ): void;
   getRepositorySyncStatus(
     args: GetRepositorySyncStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRepositorySyncStatusCommandOutput) => void
+    cb: (err: any, data?: GetRepositorySyncStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -1136,16 +1136,16 @@ export interface Proton {
   getResourcesSummary(): Promise<GetResourcesSummaryCommandOutput>;
   getResourcesSummary(
     args: GetResourcesSummaryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResourcesSummaryCommandOutput>;
   getResourcesSummary(
     args: GetResourcesSummaryCommandInput,
-    cb: (err: any, data?: GetResourcesSummaryCommandOutput) => void
+    cb: (err: any, data?: GetResourcesSummaryCommandOutput) => void,
   ): void;
   getResourcesSummary(
     args: GetResourcesSummaryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourcesSummaryCommandOutput) => void
+    cb: (err: any, data?: GetResourcesSummaryCommandOutput) => void,
   ): void;
 
   /**
@@ -1156,7 +1156,7 @@ export interface Proton {
   getService(
     args: GetServiceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetServiceCommandOutput) => void
+    cb: (err: any, data?: GetServiceCommandOutput) => void,
   ): void;
 
   /**
@@ -1164,16 +1164,16 @@ export interface Proton {
    */
   getServiceInstance(
     args: GetServiceInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetServiceInstanceCommandOutput>;
   getServiceInstance(
     args: GetServiceInstanceCommandInput,
-    cb: (err: any, data?: GetServiceInstanceCommandOutput) => void
+    cb: (err: any, data?: GetServiceInstanceCommandOutput) => void,
   ): void;
   getServiceInstance(
     args: GetServiceInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetServiceInstanceCommandOutput) => void
+    cb: (err: any, data?: GetServiceInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -1181,16 +1181,16 @@ export interface Proton {
    */
   getServiceInstanceSyncStatus(
     args: GetServiceInstanceSyncStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetServiceInstanceSyncStatusCommandOutput>;
   getServiceInstanceSyncStatus(
     args: GetServiceInstanceSyncStatusCommandInput,
-    cb: (err: any, data?: GetServiceInstanceSyncStatusCommandOutput) => void
+    cb: (err: any, data?: GetServiceInstanceSyncStatusCommandOutput) => void,
   ): void;
   getServiceInstanceSyncStatus(
     args: GetServiceInstanceSyncStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetServiceInstanceSyncStatusCommandOutput) => void
+    cb: (err: any, data?: GetServiceInstanceSyncStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -1198,16 +1198,16 @@ export interface Proton {
    */
   getServiceSyncBlockerSummary(
     args: GetServiceSyncBlockerSummaryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetServiceSyncBlockerSummaryCommandOutput>;
   getServiceSyncBlockerSummary(
     args: GetServiceSyncBlockerSummaryCommandInput,
-    cb: (err: any, data?: GetServiceSyncBlockerSummaryCommandOutput) => void
+    cb: (err: any, data?: GetServiceSyncBlockerSummaryCommandOutput) => void,
   ): void;
   getServiceSyncBlockerSummary(
     args: GetServiceSyncBlockerSummaryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetServiceSyncBlockerSummaryCommandOutput) => void
+    cb: (err: any, data?: GetServiceSyncBlockerSummaryCommandOutput) => void,
   ): void;
 
   /**
@@ -1215,16 +1215,16 @@ export interface Proton {
    */
   getServiceSyncConfig(
     args: GetServiceSyncConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetServiceSyncConfigCommandOutput>;
   getServiceSyncConfig(
     args: GetServiceSyncConfigCommandInput,
-    cb: (err: any, data?: GetServiceSyncConfigCommandOutput) => void
+    cb: (err: any, data?: GetServiceSyncConfigCommandOutput) => void,
   ): void;
   getServiceSyncConfig(
     args: GetServiceSyncConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetServiceSyncConfigCommandOutput) => void
+    cb: (err: any, data?: GetServiceSyncConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1232,16 +1232,16 @@ export interface Proton {
    */
   getServiceTemplate(
     args: GetServiceTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetServiceTemplateCommandOutput>;
   getServiceTemplate(
     args: GetServiceTemplateCommandInput,
-    cb: (err: any, data?: GetServiceTemplateCommandOutput) => void
+    cb: (err: any, data?: GetServiceTemplateCommandOutput) => void,
   ): void;
   getServiceTemplate(
     args: GetServiceTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetServiceTemplateCommandOutput) => void
+    cb: (err: any, data?: GetServiceTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1249,16 +1249,16 @@ export interface Proton {
    */
   getServiceTemplateVersion(
     args: GetServiceTemplateVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetServiceTemplateVersionCommandOutput>;
   getServiceTemplateVersion(
     args: GetServiceTemplateVersionCommandInput,
-    cb: (err: any, data?: GetServiceTemplateVersionCommandOutput) => void
+    cb: (err: any, data?: GetServiceTemplateVersionCommandOutput) => void,
   ): void;
   getServiceTemplateVersion(
     args: GetServiceTemplateVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetServiceTemplateVersionCommandOutput) => void
+    cb: (err: any, data?: GetServiceTemplateVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -1266,16 +1266,16 @@ export interface Proton {
    */
   getTemplateSyncConfig(
     args: GetTemplateSyncConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTemplateSyncConfigCommandOutput>;
   getTemplateSyncConfig(
     args: GetTemplateSyncConfigCommandInput,
-    cb: (err: any, data?: GetTemplateSyncConfigCommandOutput) => void
+    cb: (err: any, data?: GetTemplateSyncConfigCommandOutput) => void,
   ): void;
   getTemplateSyncConfig(
     args: GetTemplateSyncConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTemplateSyncConfigCommandOutput) => void
+    cb: (err: any, data?: GetTemplateSyncConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1283,16 +1283,16 @@ export interface Proton {
    */
   getTemplateSyncStatus(
     args: GetTemplateSyncStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTemplateSyncStatusCommandOutput>;
   getTemplateSyncStatus(
     args: GetTemplateSyncStatusCommandInput,
-    cb: (err: any, data?: GetTemplateSyncStatusCommandOutput) => void
+    cb: (err: any, data?: GetTemplateSyncStatusCommandOutput) => void,
   ): void;
   getTemplateSyncStatus(
     args: GetTemplateSyncStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTemplateSyncStatusCommandOutput) => void
+    cb: (err: any, data?: GetTemplateSyncStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -1300,16 +1300,16 @@ export interface Proton {
    */
   listComponentOutputs(
     args: ListComponentOutputsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListComponentOutputsCommandOutput>;
   listComponentOutputs(
     args: ListComponentOutputsCommandInput,
-    cb: (err: any, data?: ListComponentOutputsCommandOutput) => void
+    cb: (err: any, data?: ListComponentOutputsCommandOutput) => void,
   ): void;
   listComponentOutputs(
     args: ListComponentOutputsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListComponentOutputsCommandOutput) => void
+    cb: (err: any, data?: ListComponentOutputsCommandOutput) => void,
   ): void;
 
   /**
@@ -1317,16 +1317,16 @@ export interface Proton {
    */
   listComponentProvisionedResources(
     args: ListComponentProvisionedResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListComponentProvisionedResourcesCommandOutput>;
   listComponentProvisionedResources(
     args: ListComponentProvisionedResourcesCommandInput,
-    cb: (err: any, data?: ListComponentProvisionedResourcesCommandOutput) => void
+    cb: (err: any, data?: ListComponentProvisionedResourcesCommandOutput) => void,
   ): void;
   listComponentProvisionedResources(
     args: ListComponentProvisionedResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListComponentProvisionedResourcesCommandOutput) => void
+    cb: (err: any, data?: ListComponentProvisionedResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -1335,13 +1335,13 @@ export interface Proton {
   listComponents(): Promise<ListComponentsCommandOutput>;
   listComponents(
     args: ListComponentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListComponentsCommandOutput>;
   listComponents(args: ListComponentsCommandInput, cb: (err: any, data?: ListComponentsCommandOutput) => void): void;
   listComponents(
     args: ListComponentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListComponentsCommandOutput) => void
+    cb: (err: any, data?: ListComponentsCommandOutput) => void,
   ): void;
 
   /**
@@ -1350,13 +1350,13 @@ export interface Proton {
   listDeployments(): Promise<ListDeploymentsCommandOutput>;
   listDeployments(
     args: ListDeploymentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDeploymentsCommandOutput>;
   listDeployments(args: ListDeploymentsCommandInput, cb: (err: any, data?: ListDeploymentsCommandOutput) => void): void;
   listDeployments(
     args: ListDeploymentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDeploymentsCommandOutput) => void
+    cb: (err: any, data?: ListDeploymentsCommandOutput) => void,
   ): void;
 
   /**
@@ -1364,16 +1364,16 @@ export interface Proton {
    */
   listEnvironmentAccountConnections(
     args: ListEnvironmentAccountConnectionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEnvironmentAccountConnectionsCommandOutput>;
   listEnvironmentAccountConnections(
     args: ListEnvironmentAccountConnectionsCommandInput,
-    cb: (err: any, data?: ListEnvironmentAccountConnectionsCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentAccountConnectionsCommandOutput) => void,
   ): void;
   listEnvironmentAccountConnections(
     args: ListEnvironmentAccountConnectionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEnvironmentAccountConnectionsCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentAccountConnectionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1381,16 +1381,16 @@ export interface Proton {
    */
   listEnvironmentOutputs(
     args: ListEnvironmentOutputsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEnvironmentOutputsCommandOutput>;
   listEnvironmentOutputs(
     args: ListEnvironmentOutputsCommandInput,
-    cb: (err: any, data?: ListEnvironmentOutputsCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentOutputsCommandOutput) => void,
   ): void;
   listEnvironmentOutputs(
     args: ListEnvironmentOutputsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEnvironmentOutputsCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentOutputsCommandOutput) => void,
   ): void;
 
   /**
@@ -1398,16 +1398,16 @@ export interface Proton {
    */
   listEnvironmentProvisionedResources(
     args: ListEnvironmentProvisionedResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEnvironmentProvisionedResourcesCommandOutput>;
   listEnvironmentProvisionedResources(
     args: ListEnvironmentProvisionedResourcesCommandInput,
-    cb: (err: any, data?: ListEnvironmentProvisionedResourcesCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentProvisionedResourcesCommandOutput) => void,
   ): void;
   listEnvironmentProvisionedResources(
     args: ListEnvironmentProvisionedResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEnvironmentProvisionedResourcesCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentProvisionedResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -1416,16 +1416,16 @@ export interface Proton {
   listEnvironments(): Promise<ListEnvironmentsCommandOutput>;
   listEnvironments(
     args: ListEnvironmentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEnvironmentsCommandOutput>;
   listEnvironments(
     args: ListEnvironmentsCommandInput,
-    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void,
   ): void;
   listEnvironments(
     args: ListEnvironmentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void,
   ): void;
 
   /**
@@ -1434,16 +1434,16 @@ export interface Proton {
   listEnvironmentTemplates(): Promise<ListEnvironmentTemplatesCommandOutput>;
   listEnvironmentTemplates(
     args: ListEnvironmentTemplatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEnvironmentTemplatesCommandOutput>;
   listEnvironmentTemplates(
     args: ListEnvironmentTemplatesCommandInput,
-    cb: (err: any, data?: ListEnvironmentTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentTemplatesCommandOutput) => void,
   ): void;
   listEnvironmentTemplates(
     args: ListEnvironmentTemplatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEnvironmentTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentTemplatesCommandOutput) => void,
   ): void;
 
   /**
@@ -1451,16 +1451,16 @@ export interface Proton {
    */
   listEnvironmentTemplateVersions(
     args: ListEnvironmentTemplateVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEnvironmentTemplateVersionsCommandOutput>;
   listEnvironmentTemplateVersions(
     args: ListEnvironmentTemplateVersionsCommandInput,
-    cb: (err: any, data?: ListEnvironmentTemplateVersionsCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentTemplateVersionsCommandOutput) => void,
   ): void;
   listEnvironmentTemplateVersions(
     args: ListEnvironmentTemplateVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEnvironmentTemplateVersionsCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentTemplateVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1469,16 +1469,16 @@ export interface Proton {
   listRepositories(): Promise<ListRepositoriesCommandOutput>;
   listRepositories(
     args: ListRepositoriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRepositoriesCommandOutput>;
   listRepositories(
     args: ListRepositoriesCommandInput,
-    cb: (err: any, data?: ListRepositoriesCommandOutput) => void
+    cb: (err: any, data?: ListRepositoriesCommandOutput) => void,
   ): void;
   listRepositories(
     args: ListRepositoriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRepositoriesCommandOutput) => void
+    cb: (err: any, data?: ListRepositoriesCommandOutput) => void,
   ): void;
 
   /**
@@ -1486,16 +1486,16 @@ export interface Proton {
    */
   listRepositorySyncDefinitions(
     args: ListRepositorySyncDefinitionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRepositorySyncDefinitionsCommandOutput>;
   listRepositorySyncDefinitions(
     args: ListRepositorySyncDefinitionsCommandInput,
-    cb: (err: any, data?: ListRepositorySyncDefinitionsCommandOutput) => void
+    cb: (err: any, data?: ListRepositorySyncDefinitionsCommandOutput) => void,
   ): void;
   listRepositorySyncDefinitions(
     args: ListRepositorySyncDefinitionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRepositorySyncDefinitionsCommandOutput) => void
+    cb: (err: any, data?: ListRepositorySyncDefinitionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1503,16 +1503,16 @@ export interface Proton {
    */
   listServiceInstanceOutputs(
     args: ListServiceInstanceOutputsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListServiceInstanceOutputsCommandOutput>;
   listServiceInstanceOutputs(
     args: ListServiceInstanceOutputsCommandInput,
-    cb: (err: any, data?: ListServiceInstanceOutputsCommandOutput) => void
+    cb: (err: any, data?: ListServiceInstanceOutputsCommandOutput) => void,
   ): void;
   listServiceInstanceOutputs(
     args: ListServiceInstanceOutputsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServiceInstanceOutputsCommandOutput) => void
+    cb: (err: any, data?: ListServiceInstanceOutputsCommandOutput) => void,
   ): void;
 
   /**
@@ -1520,16 +1520,16 @@ export interface Proton {
    */
   listServiceInstanceProvisionedResources(
     args: ListServiceInstanceProvisionedResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListServiceInstanceProvisionedResourcesCommandOutput>;
   listServiceInstanceProvisionedResources(
     args: ListServiceInstanceProvisionedResourcesCommandInput,
-    cb: (err: any, data?: ListServiceInstanceProvisionedResourcesCommandOutput) => void
+    cb: (err: any, data?: ListServiceInstanceProvisionedResourcesCommandOutput) => void,
   ): void;
   listServiceInstanceProvisionedResources(
     args: ListServiceInstanceProvisionedResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServiceInstanceProvisionedResourcesCommandOutput) => void
+    cb: (err: any, data?: ListServiceInstanceProvisionedResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -1538,16 +1538,16 @@ export interface Proton {
   listServiceInstances(): Promise<ListServiceInstancesCommandOutput>;
   listServiceInstances(
     args: ListServiceInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListServiceInstancesCommandOutput>;
   listServiceInstances(
     args: ListServiceInstancesCommandInput,
-    cb: (err: any, data?: ListServiceInstancesCommandOutput) => void
+    cb: (err: any, data?: ListServiceInstancesCommandOutput) => void,
   ): void;
   listServiceInstances(
     args: ListServiceInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServiceInstancesCommandOutput) => void
+    cb: (err: any, data?: ListServiceInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -1555,16 +1555,16 @@ export interface Proton {
    */
   listServicePipelineOutputs(
     args: ListServicePipelineOutputsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListServicePipelineOutputsCommandOutput>;
   listServicePipelineOutputs(
     args: ListServicePipelineOutputsCommandInput,
-    cb: (err: any, data?: ListServicePipelineOutputsCommandOutput) => void
+    cb: (err: any, data?: ListServicePipelineOutputsCommandOutput) => void,
   ): void;
   listServicePipelineOutputs(
     args: ListServicePipelineOutputsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServicePipelineOutputsCommandOutput) => void
+    cb: (err: any, data?: ListServicePipelineOutputsCommandOutput) => void,
   ): void;
 
   /**
@@ -1572,16 +1572,16 @@ export interface Proton {
    */
   listServicePipelineProvisionedResources(
     args: ListServicePipelineProvisionedResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListServicePipelineProvisionedResourcesCommandOutput>;
   listServicePipelineProvisionedResources(
     args: ListServicePipelineProvisionedResourcesCommandInput,
-    cb: (err: any, data?: ListServicePipelineProvisionedResourcesCommandOutput) => void
+    cb: (err: any, data?: ListServicePipelineProvisionedResourcesCommandOutput) => void,
   ): void;
   listServicePipelineProvisionedResources(
     args: ListServicePipelineProvisionedResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServicePipelineProvisionedResourcesCommandOutput) => void
+    cb: (err: any, data?: ListServicePipelineProvisionedResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -1593,7 +1593,7 @@ export interface Proton {
   listServices(
     args: ListServicesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServicesCommandOutput) => void
+    cb: (err: any, data?: ListServicesCommandOutput) => void,
   ): void;
 
   /**
@@ -1602,16 +1602,16 @@ export interface Proton {
   listServiceTemplates(): Promise<ListServiceTemplatesCommandOutput>;
   listServiceTemplates(
     args: ListServiceTemplatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListServiceTemplatesCommandOutput>;
   listServiceTemplates(
     args: ListServiceTemplatesCommandInput,
-    cb: (err: any, data?: ListServiceTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListServiceTemplatesCommandOutput) => void,
   ): void;
   listServiceTemplates(
     args: ListServiceTemplatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServiceTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListServiceTemplatesCommandOutput) => void,
   ): void;
 
   /**
@@ -1619,16 +1619,16 @@ export interface Proton {
    */
   listServiceTemplateVersions(
     args: ListServiceTemplateVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListServiceTemplateVersionsCommandOutput>;
   listServiceTemplateVersions(
     args: ListServiceTemplateVersionsCommandInput,
-    cb: (err: any, data?: ListServiceTemplateVersionsCommandOutput) => void
+    cb: (err: any, data?: ListServiceTemplateVersionsCommandOutput) => void,
   ): void;
   listServiceTemplateVersions(
     args: ListServiceTemplateVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServiceTemplateVersionsCommandOutput) => void
+    cb: (err: any, data?: ListServiceTemplateVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1636,16 +1636,16 @@ export interface Proton {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1653,16 +1653,16 @@ export interface Proton {
    */
   notifyResourceDeploymentStatusChange(
     args: NotifyResourceDeploymentStatusChangeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<NotifyResourceDeploymentStatusChangeCommandOutput>;
   notifyResourceDeploymentStatusChange(
     args: NotifyResourceDeploymentStatusChangeCommandInput,
-    cb: (err: any, data?: NotifyResourceDeploymentStatusChangeCommandOutput) => void
+    cb: (err: any, data?: NotifyResourceDeploymentStatusChangeCommandOutput) => void,
   ): void;
   notifyResourceDeploymentStatusChange(
     args: NotifyResourceDeploymentStatusChangeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: NotifyResourceDeploymentStatusChangeCommandOutput) => void
+    cb: (err: any, data?: NotifyResourceDeploymentStatusChangeCommandOutput) => void,
   ): void;
 
   /**
@@ -1670,16 +1670,16 @@ export interface Proton {
    */
   rejectEnvironmentAccountConnection(
     args: RejectEnvironmentAccountConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RejectEnvironmentAccountConnectionCommandOutput>;
   rejectEnvironmentAccountConnection(
     args: RejectEnvironmentAccountConnectionCommandInput,
-    cb: (err: any, data?: RejectEnvironmentAccountConnectionCommandOutput) => void
+    cb: (err: any, data?: RejectEnvironmentAccountConnectionCommandOutput) => void,
   ): void;
   rejectEnvironmentAccountConnection(
     args: RejectEnvironmentAccountConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RejectEnvironmentAccountConnectionCommandOutput) => void
+    cb: (err: any, data?: RejectEnvironmentAccountConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -1690,7 +1690,7 @@ export interface Proton {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1701,7 +1701,7 @@ export interface Proton {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1710,16 +1710,16 @@ export interface Proton {
   updateAccountSettings(): Promise<UpdateAccountSettingsCommandOutput>;
   updateAccountSettings(
     args: UpdateAccountSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAccountSettingsCommandOutput>;
   updateAccountSettings(
     args: UpdateAccountSettingsCommandInput,
-    cb: (err: any, data?: UpdateAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateAccountSettingsCommandOutput) => void,
   ): void;
   updateAccountSettings(
     args: UpdateAccountSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateAccountSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -1727,13 +1727,13 @@ export interface Proton {
    */
   updateComponent(
     args: UpdateComponentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateComponentCommandOutput>;
   updateComponent(args: UpdateComponentCommandInput, cb: (err: any, data?: UpdateComponentCommandOutput) => void): void;
   updateComponent(
     args: UpdateComponentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateComponentCommandOutput) => void
+    cb: (err: any, data?: UpdateComponentCommandOutput) => void,
   ): void;
 
   /**
@@ -1741,16 +1741,16 @@ export interface Proton {
    */
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEnvironmentCommandOutput>;
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
-    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void,
   ): void;
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -1758,16 +1758,16 @@ export interface Proton {
    */
   updateEnvironmentAccountConnection(
     args: UpdateEnvironmentAccountConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEnvironmentAccountConnectionCommandOutput>;
   updateEnvironmentAccountConnection(
     args: UpdateEnvironmentAccountConnectionCommandInput,
-    cb: (err: any, data?: UpdateEnvironmentAccountConnectionCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentAccountConnectionCommandOutput) => void,
   ): void;
   updateEnvironmentAccountConnection(
     args: UpdateEnvironmentAccountConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEnvironmentAccountConnectionCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentAccountConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -1775,16 +1775,16 @@ export interface Proton {
    */
   updateEnvironmentTemplate(
     args: UpdateEnvironmentTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEnvironmentTemplateCommandOutput>;
   updateEnvironmentTemplate(
     args: UpdateEnvironmentTemplateCommandInput,
-    cb: (err: any, data?: UpdateEnvironmentTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentTemplateCommandOutput) => void,
   ): void;
   updateEnvironmentTemplate(
     args: UpdateEnvironmentTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEnvironmentTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1792,16 +1792,16 @@ export interface Proton {
    */
   updateEnvironmentTemplateVersion(
     args: UpdateEnvironmentTemplateVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEnvironmentTemplateVersionCommandOutput>;
   updateEnvironmentTemplateVersion(
     args: UpdateEnvironmentTemplateVersionCommandInput,
-    cb: (err: any, data?: UpdateEnvironmentTemplateVersionCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentTemplateVersionCommandOutput) => void,
   ): void;
   updateEnvironmentTemplateVersion(
     args: UpdateEnvironmentTemplateVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEnvironmentTemplateVersionCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentTemplateVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -1812,7 +1812,7 @@ export interface Proton {
   updateService(
     args: UpdateServiceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateServiceCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceCommandOutput) => void,
   ): void;
 
   /**
@@ -1820,16 +1820,16 @@ export interface Proton {
    */
   updateServiceInstance(
     args: UpdateServiceInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateServiceInstanceCommandOutput>;
   updateServiceInstance(
     args: UpdateServiceInstanceCommandInput,
-    cb: (err: any, data?: UpdateServiceInstanceCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceInstanceCommandOutput) => void,
   ): void;
   updateServiceInstance(
     args: UpdateServiceInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateServiceInstanceCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -1837,16 +1837,16 @@ export interface Proton {
    */
   updateServicePipeline(
     args: UpdateServicePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateServicePipelineCommandOutput>;
   updateServicePipeline(
     args: UpdateServicePipelineCommandInput,
-    cb: (err: any, data?: UpdateServicePipelineCommandOutput) => void
+    cb: (err: any, data?: UpdateServicePipelineCommandOutput) => void,
   ): void;
   updateServicePipeline(
     args: UpdateServicePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateServicePipelineCommandOutput) => void
+    cb: (err: any, data?: UpdateServicePipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -1854,16 +1854,16 @@ export interface Proton {
    */
   updateServiceSyncBlocker(
     args: UpdateServiceSyncBlockerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateServiceSyncBlockerCommandOutput>;
   updateServiceSyncBlocker(
     args: UpdateServiceSyncBlockerCommandInput,
-    cb: (err: any, data?: UpdateServiceSyncBlockerCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceSyncBlockerCommandOutput) => void,
   ): void;
   updateServiceSyncBlocker(
     args: UpdateServiceSyncBlockerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateServiceSyncBlockerCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceSyncBlockerCommandOutput) => void,
   ): void;
 
   /**
@@ -1871,16 +1871,16 @@ export interface Proton {
    */
   updateServiceSyncConfig(
     args: UpdateServiceSyncConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateServiceSyncConfigCommandOutput>;
   updateServiceSyncConfig(
     args: UpdateServiceSyncConfigCommandInput,
-    cb: (err: any, data?: UpdateServiceSyncConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceSyncConfigCommandOutput) => void,
   ): void;
   updateServiceSyncConfig(
     args: UpdateServiceSyncConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateServiceSyncConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceSyncConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1888,16 +1888,16 @@ export interface Proton {
    */
   updateServiceTemplate(
     args: UpdateServiceTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateServiceTemplateCommandOutput>;
   updateServiceTemplate(
     args: UpdateServiceTemplateCommandInput,
-    cb: (err: any, data?: UpdateServiceTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceTemplateCommandOutput) => void,
   ): void;
   updateServiceTemplate(
     args: UpdateServiceTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateServiceTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1905,16 +1905,16 @@ export interface Proton {
    */
   updateServiceTemplateVersion(
     args: UpdateServiceTemplateVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateServiceTemplateVersionCommandOutput>;
   updateServiceTemplateVersion(
     args: UpdateServiceTemplateVersionCommandInput,
-    cb: (err: any, data?: UpdateServiceTemplateVersionCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceTemplateVersionCommandOutput) => void,
   ): void;
   updateServiceTemplateVersion(
     args: UpdateServiceTemplateVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateServiceTemplateVersionCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceTemplateVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -1922,16 +1922,16 @@ export interface Proton {
    */
   updateTemplateSyncConfig(
     args: UpdateTemplateSyncConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateTemplateSyncConfigCommandOutput>;
   updateTemplateSyncConfig(
     args: UpdateTemplateSyncConfigCommandInput,
-    cb: (err: any, data?: UpdateTemplateSyncConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateTemplateSyncConfigCommandOutput) => void,
   ): void;
   updateTemplateSyncConfig(
     args: UpdateTemplateSyncConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTemplateSyncConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateTemplateSyncConfigCommandOutput) => void,
   ): void;
 }
 

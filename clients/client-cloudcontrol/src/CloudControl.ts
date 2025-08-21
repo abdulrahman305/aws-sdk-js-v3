@@ -57,16 +57,16 @@ export interface CloudControl {
    */
   cancelResourceRequest(
     args: CancelResourceRequestCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelResourceRequestCommandOutput>;
   cancelResourceRequest(
     args: CancelResourceRequestCommandInput,
-    cb: (err: any, data?: CancelResourceRequestCommandOutput) => void
+    cb: (err: any, data?: CancelResourceRequestCommandOutput) => void,
   ): void;
   cancelResourceRequest(
     args: CancelResourceRequestCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelResourceRequestCommandOutput) => void
+    cb: (err: any, data?: CancelResourceRequestCommandOutput) => void,
   ): void;
 
   /**
@@ -74,13 +74,13 @@ export interface CloudControl {
    */
   createResource(
     args: CreateResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateResourceCommandOutput>;
   createResource(args: CreateResourceCommandInput, cb: (err: any, data?: CreateResourceCommandOutput) => void): void;
   createResource(
     args: CreateResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateResourceCommandOutput) => void
+    cb: (err: any, data?: CreateResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -88,13 +88,13 @@ export interface CloudControl {
    */
   deleteResource(
     args: DeleteResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResourceCommandOutput>;
   deleteResource(args: DeleteResourceCommandInput, cb: (err: any, data?: DeleteResourceCommandOutput) => void): void;
   deleteResource(
     args: DeleteResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResourceCommandOutput) => void
+    cb: (err: any, data?: DeleteResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -105,7 +105,7 @@ export interface CloudControl {
   getResource(
     args: GetResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourceCommandOutput) => void
+    cb: (err: any, data?: GetResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -113,16 +113,16 @@ export interface CloudControl {
    */
   getResourceRequestStatus(
     args: GetResourceRequestStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResourceRequestStatusCommandOutput>;
   getResourceRequestStatus(
     args: GetResourceRequestStatusCommandInput,
-    cb: (err: any, data?: GetResourceRequestStatusCommandOutput) => void
+    cb: (err: any, data?: GetResourceRequestStatusCommandOutput) => void,
   ): void;
   getResourceRequestStatus(
     args: GetResourceRequestStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourceRequestStatusCommandOutput) => void
+    cb: (err: any, data?: GetResourceRequestStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -131,16 +131,16 @@ export interface CloudControl {
   listResourceRequests(): Promise<ListResourceRequestsCommandOutput>;
   listResourceRequests(
     args: ListResourceRequestsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResourceRequestsCommandOutput>;
   listResourceRequests(
     args: ListResourceRequestsCommandInput,
-    cb: (err: any, data?: ListResourceRequestsCommandOutput) => void
+    cb: (err: any, data?: ListResourceRequestsCommandOutput) => void,
   ): void;
   listResourceRequests(
     args: ListResourceRequestsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResourceRequestsCommandOutput) => void
+    cb: (err: any, data?: ListResourceRequestsCommandOutput) => void,
   ): void;
 
   /**
@@ -151,7 +151,7 @@ export interface CloudControl {
   listResources(
     args: ListResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResourcesCommandOutput) => void
+    cb: (err: any, data?: ListResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -159,13 +159,13 @@ export interface CloudControl {
    */
   updateResource(
     args: UpdateResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateResourceCommandOutput>;
   updateResource(args: UpdateResourceCommandInput, cb: (err: any, data?: UpdateResourceCommandOutput) => void): void;
   updateResource(
     args: UpdateResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateResourceCommandOutput) => void
+    cb: (err: any, data?: UpdateResourceCommandOutput) => void,
   ): void;
 }
 

@@ -6429,7 +6429,7 @@ export const AppInstanceUserSummaryFilterSensitiveLog = (obj: AppInstanceUserSum
  * @internal
  */
 export const AssociatePhoneNumbersWithVoiceConnectorRequestFilterSensitiveLog = (
-  obj: AssociatePhoneNumbersWithVoiceConnectorRequest
+  obj: AssociatePhoneNumbersWithVoiceConnectorRequest,
 ): any => ({
   ...obj,
   ...(obj.E164PhoneNumbers && { E164PhoneNumbers: SENSITIVE_STRING }),
@@ -6439,7 +6439,7 @@ export const AssociatePhoneNumbersWithVoiceConnectorRequestFilterSensitiveLog = 
  * @internal
  */
 export const AssociatePhoneNumbersWithVoiceConnectorGroupRequestFilterSensitiveLog = (
-  obj: AssociatePhoneNumbersWithVoiceConnectorGroupRequest
+  obj: AssociatePhoneNumbersWithVoiceConnectorGroupRequest,
 ): any => ({
   ...obj,
   ...(obj.E164PhoneNumbers && { E164PhoneNumbers: SENSITIVE_STRING }),
@@ -6449,7 +6449,7 @@ export const AssociatePhoneNumbersWithVoiceConnectorGroupRequestFilterSensitiveL
  * @internal
  */
 export const AssociatePhoneNumberWithUserRequestFilterSensitiveLog = (
-  obj: AssociatePhoneNumberWithUserRequest
+  obj: AssociatePhoneNumberWithUserRequest,
 ): any => ({
   ...obj,
   ...(obj.E164PhoneNumber && { E164PhoneNumber: SENSITIVE_STRING }),
@@ -6520,7 +6520,7 @@ export const BatchCreateAttendeeResponseFilterSensitiveLog = (obj: BatchCreateAt
  * @internal
  */
 export const BatchCreateChannelMembershipResponseFilterSensitiveLog = (
-  obj: BatchCreateChannelMembershipResponse
+  obj: BatchCreateChannelMembershipResponse,
 ): any => ({
   ...obj,
   ...(obj.BatchChannelMemberships && {
@@ -6543,7 +6543,7 @@ export const BatchUpdatePhoneNumberRequestFilterSensitiveLog = (obj: BatchUpdate
   ...obj,
   ...(obj.UpdatePhoneNumberRequestItems && {
     UpdatePhoneNumberRequestItems: obj.UpdatePhoneNumberRequestItems.map((item) =>
-      UpdatePhoneNumberRequestItemFilterSensitiveLog(item)
+      UpdatePhoneNumberRequestItemFilterSensitiveLog(item),
     ),
   }),
 });
@@ -6641,7 +6641,7 @@ export const ChannelSummaryFilterSensitiveLog = (obj: ChannelSummary): any => ({
  * @internal
  */
 export const ChannelMembershipForAppInstanceUserSummaryFilterSensitiveLog = (
-  obj: ChannelMembershipForAppInstanceUserSummary
+  obj: ChannelMembershipForAppInstanceUserSummary,
 ): any => ({
   ...obj,
   ...(obj.ChannelSummary && { ChannelSummary: ChannelSummaryFilterSensitiveLog(obj.ChannelSummary) }),
@@ -6679,7 +6679,7 @@ export const ChannelMessageSummaryFilterSensitiveLog = (obj: ChannelMessageSumma
  * @internal
  */
 export const ChannelModeratedByAppInstanceUserSummaryFilterSensitiveLog = (
-  obj: ChannelModeratedByAppInstanceUserSummary
+  obj: ChannelModeratedByAppInstanceUserSummary,
 ): any => ({
   ...obj,
   ...(obj.ChannelSummary && { ChannelSummary: ChannelSummaryFilterSensitiveLog(obj.ChannelSummary) }),
@@ -7094,7 +7094,7 @@ export const CreateSipMediaApplicationResponseFilterSensitiveLog = (obj: CreateS
  * @internal
  */
 export const CreateSipMediaApplicationCallRequestFilterSensitiveLog = (
-  obj: CreateSipMediaApplicationCallRequest
+  obj: CreateSipMediaApplicationCallRequest,
 ): any => ({
   ...obj,
   ...(obj.FromPhoneNumber && { FromPhoneNumber: SENSITIVE_STRING }),
@@ -7144,7 +7144,7 @@ export const CredentialFilterSensitiveLog = (obj: Credential): any => ({
  * @internal
  */
 export const DeleteVoiceConnectorTerminationCredentialsRequestFilterSensitiveLog = (
-  obj: DeleteVoiceConnectorTerminationCredentialsRequest
+  obj: DeleteVoiceConnectorTerminationCredentialsRequest,
 ): any => ({
   ...obj,
   ...(obj.Usernames && { Usernames: SENSITIVE_STRING }),
@@ -7202,7 +7202,7 @@ export const DescribeChannelMembershipResponseFilterSensitiveLog = (obj: Describ
  * @internal
  */
 export const DescribeChannelMembershipForAppInstanceUserResponseFilterSensitiveLog = (
-  obj: DescribeChannelMembershipForAppInstanceUserResponse
+  obj: DescribeChannelMembershipForAppInstanceUserResponse,
 ): any => ({
   ...obj,
   ...(obj.ChannelMembership && {
@@ -7214,7 +7214,7 @@ export const DescribeChannelMembershipForAppInstanceUserResponseFilterSensitiveL
  * @internal
  */
 export const DescribeChannelModeratedByAppInstanceUserResponseFilterSensitiveLog = (
-  obj: DescribeChannelModeratedByAppInstanceUserResponse
+  obj: DescribeChannelModeratedByAppInstanceUserResponse,
 ): any => ({
   ...obj,
   ...(obj.Channel && { Channel: ChannelModeratedByAppInstanceUserSummaryFilterSensitiveLog(obj.Channel) }),
@@ -7232,7 +7232,7 @@ export const DescribeChannelModeratorResponseFilterSensitiveLog = (obj: Describe
  * @internal
  */
 export const DisassociatePhoneNumbersFromVoiceConnectorRequestFilterSensitiveLog = (
-  obj: DisassociatePhoneNumbersFromVoiceConnectorRequest
+  obj: DisassociatePhoneNumbersFromVoiceConnectorRequest,
 ): any => ({
   ...obj,
   ...(obj.E164PhoneNumbers && { E164PhoneNumbers: SENSITIVE_STRING }),
@@ -7242,7 +7242,7 @@ export const DisassociatePhoneNumbersFromVoiceConnectorRequestFilterSensitiveLog
  * @internal
  */
 export const DisassociatePhoneNumbersFromVoiceConnectorGroupRequestFilterSensitiveLog = (
-  obj: DisassociatePhoneNumbersFromVoiceConnectorGroupRequest
+  obj: DisassociatePhoneNumbersFromVoiceConnectorGroupRequest,
 ): any => ({
   ...obj,
   ...(obj.E164PhoneNumbers && { E164PhoneNumbers: SENSITIVE_STRING }),
@@ -7278,12 +7278,12 @@ export const EventsConfigurationFilterSensitiveLog = (obj: EventsConfiguration):
  * @internal
  */
 export const GetAppInstanceStreamingConfigurationsResponseFilterSensitiveLog = (
-  obj: GetAppInstanceStreamingConfigurationsResponse
+  obj: GetAppInstanceStreamingConfigurationsResponse,
 ): any => ({
   ...obj,
   ...(obj.AppInstanceStreamingConfigurations && {
     AppInstanceStreamingConfigurations: obj.AppInstanceStreamingConfigurations.map((item) =>
-      AppInstanceStreamingConfigurationFilterSensitiveLog(item)
+      AppInstanceStreamingConfigurationFilterSensitiveLog(item),
     ),
   }),
 });

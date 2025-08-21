@@ -76,7 +76,7 @@ const checkState = async (client: OmicsClient, input: GetReadSetImportJobCommand
  */
 export const waitForReadSetImportJobCompleted = async (
   params: WaiterConfiguration<OmicsClient>,
-  input: GetReadSetImportJobCommandInput
+  input: GetReadSetImportJobCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 600 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -88,7 +88,7 @@ export const waitForReadSetImportJobCompleted = async (
  */
 export const waitUntilReadSetImportJobCompleted = async (
   params: WaiterConfiguration<OmicsClient>,
-  input: GetReadSetImportJobCommandInput
+  input: GetReadSetImportJobCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 600 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

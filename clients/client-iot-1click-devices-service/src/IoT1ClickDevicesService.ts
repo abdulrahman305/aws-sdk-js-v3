@@ -83,16 +83,16 @@ export interface IoT1ClickDevicesService {
    */
   claimDevicesByClaimCode(
     args: ClaimDevicesByClaimCodeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ClaimDevicesByClaimCodeCommandOutput>;
   claimDevicesByClaimCode(
     args: ClaimDevicesByClaimCodeCommandInput,
-    cb: (err: any, data?: ClaimDevicesByClaimCodeCommandOutput) => void
+    cb: (err: any, data?: ClaimDevicesByClaimCodeCommandOutput) => void,
   ): void;
   claimDevicesByClaimCode(
     args: ClaimDevicesByClaimCodeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ClaimDevicesByClaimCodeCommandOutput) => void
+    cb: (err: any, data?: ClaimDevicesByClaimCodeCommandOutput) => void,
   ): void;
 
   /**
@@ -100,13 +100,13 @@ export interface IoT1ClickDevicesService {
    */
   describeDevice(
     args: DescribeDeviceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDeviceCommandOutput>;
   describeDevice(args: DescribeDeviceCommandInput, cb: (err: any, data?: DescribeDeviceCommandOutput) => void): void;
   describeDevice(
     args: DescribeDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDeviceCommandOutput) => void
+    cb: (err: any, data?: DescribeDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -114,16 +114,16 @@ export interface IoT1ClickDevicesService {
    */
   finalizeDeviceClaim(
     args: FinalizeDeviceClaimCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<FinalizeDeviceClaimCommandOutput>;
   finalizeDeviceClaim(
     args: FinalizeDeviceClaimCommandInput,
-    cb: (err: any, data?: FinalizeDeviceClaimCommandOutput) => void
+    cb: (err: any, data?: FinalizeDeviceClaimCommandOutput) => void,
   ): void;
   finalizeDeviceClaim(
     args: FinalizeDeviceClaimCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: FinalizeDeviceClaimCommandOutput) => void
+    cb: (err: any, data?: FinalizeDeviceClaimCommandOutput) => void,
   ): void;
 
   /**
@@ -131,16 +131,16 @@ export interface IoT1ClickDevicesService {
    */
   getDeviceMethods(
     args: GetDeviceMethodsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDeviceMethodsCommandOutput>;
   getDeviceMethods(
     args: GetDeviceMethodsCommandInput,
-    cb: (err: any, data?: GetDeviceMethodsCommandOutput) => void
+    cb: (err: any, data?: GetDeviceMethodsCommandOutput) => void,
   ): void;
   getDeviceMethods(
     args: GetDeviceMethodsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeviceMethodsCommandOutput) => void
+    cb: (err: any, data?: GetDeviceMethodsCommandOutput) => void,
   ): void;
 
   /**
@@ -148,16 +148,16 @@ export interface IoT1ClickDevicesService {
    */
   initiateDeviceClaim(
     args: InitiateDeviceClaimCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<InitiateDeviceClaimCommandOutput>;
   initiateDeviceClaim(
     args: InitiateDeviceClaimCommandInput,
-    cb: (err: any, data?: InitiateDeviceClaimCommandOutput) => void
+    cb: (err: any, data?: InitiateDeviceClaimCommandOutput) => void,
   ): void;
   initiateDeviceClaim(
     args: InitiateDeviceClaimCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InitiateDeviceClaimCommandOutput) => void
+    cb: (err: any, data?: InitiateDeviceClaimCommandOutput) => void,
   ): void;
 
   /**
@@ -165,16 +165,16 @@ export interface IoT1ClickDevicesService {
    */
   invokeDeviceMethod(
     args: InvokeDeviceMethodCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<InvokeDeviceMethodCommandOutput>;
   invokeDeviceMethod(
     args: InvokeDeviceMethodCommandInput,
-    cb: (err: any, data?: InvokeDeviceMethodCommandOutput) => void
+    cb: (err: any, data?: InvokeDeviceMethodCommandOutput) => void,
   ): void;
   invokeDeviceMethod(
     args: InvokeDeviceMethodCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InvokeDeviceMethodCommandOutput) => void
+    cb: (err: any, data?: InvokeDeviceMethodCommandOutput) => void,
   ): void;
 
   /**
@@ -182,16 +182,16 @@ export interface IoT1ClickDevicesService {
    */
   listDeviceEvents(
     args: ListDeviceEventsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDeviceEventsCommandOutput>;
   listDeviceEvents(
     args: ListDeviceEventsCommandInput,
-    cb: (err: any, data?: ListDeviceEventsCommandOutput) => void
+    cb: (err: any, data?: ListDeviceEventsCommandOutput) => void,
   ): void;
   listDeviceEvents(
     args: ListDeviceEventsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDeviceEventsCommandOutput) => void
+    cb: (err: any, data?: ListDeviceEventsCommandOutput) => void,
   ): void;
 
   /**
@@ -203,7 +203,7 @@ export interface IoT1ClickDevicesService {
   listDevices(
     args: ListDevicesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDevicesCommandOutput) => void
+    cb: (err: any, data?: ListDevicesCommandOutput) => void,
   ): void;
 
   /**
@@ -211,16 +211,16 @@ export interface IoT1ClickDevicesService {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -231,7 +231,7 @@ export interface IoT1ClickDevicesService {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -242,7 +242,7 @@ export interface IoT1ClickDevicesService {
   unclaimDevice(
     args: UnclaimDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UnclaimDeviceCommandOutput) => void
+    cb: (err: any, data?: UnclaimDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -253,7 +253,7 @@ export interface IoT1ClickDevicesService {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -261,16 +261,16 @@ export interface IoT1ClickDevicesService {
    */
   updateDeviceState(
     args: UpdateDeviceStateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDeviceStateCommandOutput>;
   updateDeviceState(
     args: UpdateDeviceStateCommandInput,
-    cb: (err: any, data?: UpdateDeviceStateCommandOutput) => void
+    cb: (err: any, data?: UpdateDeviceStateCommandOutput) => void,
   ): void;
   updateDeviceState(
     args: UpdateDeviceStateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDeviceStateCommandOutput) => void
+    cb: (err: any, data?: UpdateDeviceStateCommandOutput) => void,
   ): void;
 }
 

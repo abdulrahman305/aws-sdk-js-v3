@@ -8,7 +8,7 @@ export const getCacheKey = async (
   config: { credentials: Provider<AwsCredentialIdentity> },
   options: {
     identifiers?: Record<string, string>;
-  }
+  },
 ) => {
   const { accessKeyId } = await config.credentials();
   const { identifiers } = options;

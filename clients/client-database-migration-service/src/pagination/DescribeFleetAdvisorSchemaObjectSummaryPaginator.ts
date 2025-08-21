@@ -26,5 +26,5 @@ export const paginateDescribeFleetAdvisorSchemaObjectSummary: (
   DescribeFleetAdvisorSchemaObjectSummaryCommand,
   "NextToken",
   "NextToken",
-  "MaxRecords"
+  "MaxRecords",
 );

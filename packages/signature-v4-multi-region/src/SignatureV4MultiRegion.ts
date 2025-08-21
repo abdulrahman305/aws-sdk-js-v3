@@ -52,7 +52,7 @@ export class SignatureV4MultiRegion implements RequestPresigner, RequestSigner {
   public async signWithCredentials(
     requestToSign: HttpRequest,
     credentials: AwsCredentialIdentity,
-    options: RequestSigningArguments = {}
+    options: RequestSigningArguments = {},
   ): Promise<HttpRequest> {
     if (options.signingRegion === "*") {
       if (this.signerOptions.runtime !== "node")
@@ -74,7 +74,7 @@ export class SignatureV4MultiRegion implements RequestPresigner, RequestSigner {
   public async presignWithCredentials(
     originalRequest: HttpRequest,
     credentials: AwsCredentialIdentity,
-    options: RequestPresigningArguments = {}
+    options: RequestPresigningArguments = {},
   ): Promise<HttpRequest> {
     if (options.signingRegion === "*") {
       throw new Error("Method presignWithCredentials is not supported for [signingRegion=*].");

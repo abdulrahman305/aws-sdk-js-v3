@@ -129,7 +129,7 @@ import { SecretsManagerServiceException as __BaseException } from "../models/Sec
  */
 export const se_BatchGetSecretValueCommand = async (
   input: BatchGetSecretValueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetSecretValue");
   let body: any;
@@ -142,7 +142,7 @@ export const se_BatchGetSecretValueCommand = async (
  */
 export const se_CancelRotateSecretCommand = async (
   input: CancelRotateSecretCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CancelRotateSecret");
   let body: any;
@@ -155,7 +155,7 @@ export const se_CancelRotateSecretCommand = async (
  */
 export const se_CreateSecretCommand = async (
   input: CreateSecretCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateSecret");
   let body: any;
@@ -168,7 +168,7 @@ export const se_CreateSecretCommand = async (
  */
 export const se_DeleteResourcePolicyCommand = async (
   input: DeleteResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteResourcePolicy");
   let body: any;
@@ -181,7 +181,7 @@ export const se_DeleteResourcePolicyCommand = async (
  */
 export const se_DeleteSecretCommand = async (
   input: DeleteSecretCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteSecret");
   let body: any;
@@ -194,7 +194,7 @@ export const se_DeleteSecretCommand = async (
  */
 export const se_DescribeSecretCommand = async (
   input: DescribeSecretCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeSecret");
   let body: any;
@@ -207,7 +207,7 @@ export const se_DescribeSecretCommand = async (
  */
 export const se_GetRandomPasswordCommand = async (
   input: GetRandomPasswordCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRandomPassword");
   let body: any;
@@ -220,7 +220,7 @@ export const se_GetRandomPasswordCommand = async (
  */
 export const se_GetResourcePolicyCommand = async (
   input: GetResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetResourcePolicy");
   let body: any;
@@ -233,7 +233,7 @@ export const se_GetResourcePolicyCommand = async (
  */
 export const se_GetSecretValueCommand = async (
   input: GetSecretValueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSecretValue");
   let body: any;
@@ -246,7 +246,7 @@ export const se_GetSecretValueCommand = async (
  */
 export const se_ListSecretsCommand = async (
   input: ListSecretsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSecrets");
   let body: any;
@@ -259,7 +259,7 @@ export const se_ListSecretsCommand = async (
  */
 export const se_ListSecretVersionIdsCommand = async (
   input: ListSecretVersionIdsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSecretVersionIds");
   let body: any;
@@ -272,7 +272,7 @@ export const se_ListSecretVersionIdsCommand = async (
  */
 export const se_PutResourcePolicyCommand = async (
   input: PutResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutResourcePolicy");
   let body: any;
@@ -285,7 +285,7 @@ export const se_PutResourcePolicyCommand = async (
  */
 export const se_PutSecretValueCommand = async (
   input: PutSecretValueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutSecretValue");
   let body: any;
@@ -298,7 +298,7 @@ export const se_PutSecretValueCommand = async (
  */
 export const se_RemoveRegionsFromReplicationCommand = async (
   input: RemoveRegionsFromReplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RemoveRegionsFromReplication");
   let body: any;
@@ -311,7 +311,7 @@ export const se_RemoveRegionsFromReplicationCommand = async (
  */
 export const se_ReplicateSecretToRegionsCommand = async (
   input: ReplicateSecretToRegionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ReplicateSecretToRegions");
   let body: any;
@@ -324,7 +324,7 @@ export const se_ReplicateSecretToRegionsCommand = async (
  */
 export const se_RestoreSecretCommand = async (
   input: RestoreSecretCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RestoreSecret");
   let body: any;
@@ -337,7 +337,7 @@ export const se_RestoreSecretCommand = async (
  */
 export const se_RotateSecretCommand = async (
   input: RotateSecretCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RotateSecret");
   let body: any;
@@ -350,7 +350,7 @@ export const se_RotateSecretCommand = async (
  */
 export const se_StopReplicationToReplicaCommand = async (
   input: StopReplicationToReplicaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopReplicationToReplica");
   let body: any;
@@ -363,7 +363,7 @@ export const se_StopReplicationToReplicaCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -376,7 +376,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -389,7 +389,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateSecretCommand = async (
   input: UpdateSecretCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSecret");
   let body: any;
@@ -402,7 +402,7 @@ export const se_UpdateSecretCommand = async (
  */
 export const se_UpdateSecretVersionStageCommand = async (
   input: UpdateSecretVersionStageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSecretVersionStage");
   let body: any;
@@ -415,7 +415,7 @@ export const se_UpdateSecretVersionStageCommand = async (
  */
 export const se_ValidateResourcePolicyCommand = async (
   input: ValidateResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ValidateResourcePolicy");
   let body: any;
@@ -428,7 +428,7 @@ export const se_ValidateResourcePolicyCommand = async (
  */
 export const de_BatchGetSecretValueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetSecretValueCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -448,7 +448,7 @@ export const de_BatchGetSecretValueCommand = async (
  */
 export const de_CancelRotateSecretCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelRotateSecretCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -468,7 +468,7 @@ export const de_CancelRotateSecretCommand = async (
  */
 export const de_CreateSecretCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSecretCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -488,7 +488,7 @@ export const de_CreateSecretCommand = async (
  */
 export const de_DeleteResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -508,7 +508,7 @@ export const de_DeleteResourcePolicyCommand = async (
  */
 export const de_DeleteSecretCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSecretCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -528,7 +528,7 @@ export const de_DeleteSecretCommand = async (
  */
 export const de_DescribeSecretCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSecretCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -548,7 +548,7 @@ export const de_DescribeSecretCommand = async (
  */
 export const de_GetRandomPasswordCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRandomPasswordCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -568,7 +568,7 @@ export const de_GetRandomPasswordCommand = async (
  */
 export const de_GetResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -588,7 +588,7 @@ export const de_GetResourcePolicyCommand = async (
  */
 export const de_GetSecretValueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSecretValueCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -608,7 +608,7 @@ export const de_GetSecretValueCommand = async (
  */
 export const de_ListSecretsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSecretsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -628,7 +628,7 @@ export const de_ListSecretsCommand = async (
  */
 export const de_ListSecretVersionIdsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSecretVersionIdsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -648,7 +648,7 @@ export const de_ListSecretVersionIdsCommand = async (
  */
 export const de_PutResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -668,7 +668,7 @@ export const de_PutResourcePolicyCommand = async (
  */
 export const de_PutSecretValueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutSecretValueCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -688,7 +688,7 @@ export const de_PutSecretValueCommand = async (
  */
 export const de_RemoveRegionsFromReplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveRegionsFromReplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -708,7 +708,7 @@ export const de_RemoveRegionsFromReplicationCommand = async (
  */
 export const de_ReplicateSecretToRegionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplicateSecretToRegionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -728,7 +728,7 @@ export const de_ReplicateSecretToRegionsCommand = async (
  */
 export const de_RestoreSecretCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreSecretCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -748,7 +748,7 @@ export const de_RestoreSecretCommand = async (
  */
 export const de_RotateSecretCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RotateSecretCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -768,7 +768,7 @@ export const de_RotateSecretCommand = async (
  */
 export const de_StopReplicationToReplicaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopReplicationToReplicaCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -788,7 +788,7 @@ export const de_StopReplicationToReplicaCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -805,7 +805,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -822,7 +822,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateSecretCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSecretCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -842,7 +842,7 @@ export const de_UpdateSecretCommand = async (
  */
 export const de_UpdateSecretVersionStageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSecretVersionStageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -862,7 +862,7 @@ export const de_UpdateSecretVersionStageCommand = async (
  */
 export const de_ValidateResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ValidateResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -964,7 +964,7 @@ const de_EncryptionFailureRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServiceErrorRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceError> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -980,7 +980,7 @@ const de_InternalServiceErrorRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -996,7 +996,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1012,7 +1012,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1028,7 +1028,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1044,7 +1044,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_MalformedPolicyDocumentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedPolicyDocumentException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1060,7 +1060,7 @@ const de_MalformedPolicyDocumentExceptionRes = async (
  */
 const de_PreconditionNotMetExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PreconditionNotMetException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1076,7 +1076,7 @@ const de_PreconditionNotMetExceptionRes = async (
  */
 const de_PublicPolicyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PublicPolicyException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1092,7 +1092,7 @@ const de_PublicPolicyExceptionRes = async (
  */
 const de_ResourceExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1108,7 +1108,7 @@ const de_ResourceExistsExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1379,7 +1379,7 @@ const de_ListSecretVersionIdsResponse = (output: any, context: __SerdeContext): 
  */
 const de_RemoveRegionsFromReplicationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RemoveRegionsFromReplicationResponse => {
   return take(output, {
     ARN: __expectString,
@@ -1392,7 +1392,7 @@ const de_RemoveRegionsFromReplicationResponse = (
  */
 const de_ReplicateSecretToRegionsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReplicateSecretToRegionsResponse => {
   return take(output, {
     ARN: __expectString,
@@ -1562,7 +1562,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

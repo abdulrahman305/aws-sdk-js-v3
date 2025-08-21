@@ -15,7 +15,7 @@ export interface PreviouslyResolved {
   utf8Decoder: Decoder;
   bodyChecksumGenerator: (
     request: HttpRequest,
-    Options: { sha256: ChecksumConstructor | HashConstructor; utf8Decoder: Decoder }
+    Options: { sha256: ChecksumConstructor | HashConstructor; utf8Decoder: Decoder },
   ) => Promise<[string, string]>;
 }
 

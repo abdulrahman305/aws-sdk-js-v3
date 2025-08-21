@@ -60,7 +60,7 @@ const checkState = async (client: NeptuneGraphClient, input: GetImportTaskComman
  */
 export const waitForImportTaskSuccessful = async (
   params: WaiterConfiguration<NeptuneGraphClient>,
-  input: GetImportTaskCommandInput
+  input: GetImportTaskCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 60, maxDelay: 28800 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -72,7 +72,7 @@ export const waitForImportTaskSuccessful = async (
  */
 export const waitUntilImportTaskSuccessful = async (
   params: WaiterConfiguration<NeptuneGraphClient>,
-  input: GetImportTaskCommandInput
+  input: GetImportTaskCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 60, maxDelay: 28800 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

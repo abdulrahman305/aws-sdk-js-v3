@@ -149,7 +149,7 @@ ${JSON.stringify(example.output, null, 2)}
 }
 // example id: ${example.id}
 \`\`\`
-`.split("\n")
+`.split("\n"),
             );
 
             const final = `${buffer.map((line) => " " + `* ${line}`.trim()).join("\n")}
@@ -162,7 +162,7 @@ ${JSON.stringify(example.output, null, 2)}
               const contents = file.replace(
                 ` */\nexport class ${operation}Command`,
                 `${final}
-export class ${operation}Command`
+export class ${operation}Command`,
               );
               writeFileSync(commandFile, contents, "utf-8");
             }

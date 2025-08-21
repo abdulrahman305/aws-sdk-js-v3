@@ -94,7 +94,7 @@ describe(XhrHttpHandler.name, () => {
           body: "hello",
           protocol: "http:",
           path: "/api",
-        })
+        }),
       );
       expect("this line").toBe("not reached");
     } catch (e) {
@@ -116,7 +116,7 @@ describe(XhrHttpHandler.name, () => {
         body: "hello",
         protocol: "http:",
         path: "/api",
-      })
+      }),
     );
 
     expect(XhrMock.captures).toEqual([
@@ -147,7 +147,7 @@ describe(XhrHttpHandler.name, () => {
         protocol: "http:",
         path: "/api",
       }),
-      { abortSignal }
+      { abortSignal },
     );
 
     try {
@@ -183,7 +183,7 @@ describe(XhrHttpHandler.name, () => {
         body: "hello",
         protocol: "http:",
         path: "/api",
-      })
+      }),
     );
 
     expect(XhrMock.captures).toEqual([

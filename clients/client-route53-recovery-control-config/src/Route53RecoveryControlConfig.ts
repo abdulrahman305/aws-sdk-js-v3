@@ -159,7 +159,7 @@ export interface Route53RecoveryControlConfig {
   createCluster(
     args: CreateClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateClusterCommandOutput) => void
+    cb: (err: any, data?: CreateClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -167,16 +167,16 @@ export interface Route53RecoveryControlConfig {
    */
   createControlPanel(
     args: CreateControlPanelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateControlPanelCommandOutput>;
   createControlPanel(
     args: CreateControlPanelCommandInput,
-    cb: (err: any, data?: CreateControlPanelCommandOutput) => void
+    cb: (err: any, data?: CreateControlPanelCommandOutput) => void,
   ): void;
   createControlPanel(
     args: CreateControlPanelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateControlPanelCommandOutput) => void
+    cb: (err: any, data?: CreateControlPanelCommandOutput) => void,
   ): void;
 
   /**
@@ -184,16 +184,16 @@ export interface Route53RecoveryControlConfig {
    */
   createRoutingControl(
     args: CreateRoutingControlCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRoutingControlCommandOutput>;
   createRoutingControl(
     args: CreateRoutingControlCommandInput,
-    cb: (err: any, data?: CreateRoutingControlCommandOutput) => void
+    cb: (err: any, data?: CreateRoutingControlCommandOutput) => void,
   ): void;
   createRoutingControl(
     args: CreateRoutingControlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRoutingControlCommandOutput) => void
+    cb: (err: any, data?: CreateRoutingControlCommandOutput) => void,
   ): void;
 
   /**
@@ -202,16 +202,16 @@ export interface Route53RecoveryControlConfig {
   createSafetyRule(): Promise<CreateSafetyRuleCommandOutput>;
   createSafetyRule(
     args: CreateSafetyRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSafetyRuleCommandOutput>;
   createSafetyRule(
     args: CreateSafetyRuleCommandInput,
-    cb: (err: any, data?: CreateSafetyRuleCommandOutput) => void
+    cb: (err: any, data?: CreateSafetyRuleCommandOutput) => void,
   ): void;
   createSafetyRule(
     args: CreateSafetyRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSafetyRuleCommandOutput) => void
+    cb: (err: any, data?: CreateSafetyRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -222,7 +222,7 @@ export interface Route53RecoveryControlConfig {
   deleteCluster(
     args: DeleteClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteClusterCommandOutput) => void
+    cb: (err: any, data?: DeleteClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -230,16 +230,16 @@ export interface Route53RecoveryControlConfig {
    */
   deleteControlPanel(
     args: DeleteControlPanelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteControlPanelCommandOutput>;
   deleteControlPanel(
     args: DeleteControlPanelCommandInput,
-    cb: (err: any, data?: DeleteControlPanelCommandOutput) => void
+    cb: (err: any, data?: DeleteControlPanelCommandOutput) => void,
   ): void;
   deleteControlPanel(
     args: DeleteControlPanelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteControlPanelCommandOutput) => void
+    cb: (err: any, data?: DeleteControlPanelCommandOutput) => void,
   ): void;
 
   /**
@@ -247,16 +247,16 @@ export interface Route53RecoveryControlConfig {
    */
   deleteRoutingControl(
     args: DeleteRoutingControlCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRoutingControlCommandOutput>;
   deleteRoutingControl(
     args: DeleteRoutingControlCommandInput,
-    cb: (err: any, data?: DeleteRoutingControlCommandOutput) => void
+    cb: (err: any, data?: DeleteRoutingControlCommandOutput) => void,
   ): void;
   deleteRoutingControl(
     args: DeleteRoutingControlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRoutingControlCommandOutput) => void
+    cb: (err: any, data?: DeleteRoutingControlCommandOutput) => void,
   ): void;
 
   /**
@@ -264,16 +264,16 @@ export interface Route53RecoveryControlConfig {
    */
   deleteSafetyRule(
     args: DeleteSafetyRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSafetyRuleCommandOutput>;
   deleteSafetyRule(
     args: DeleteSafetyRuleCommandInput,
-    cb: (err: any, data?: DeleteSafetyRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteSafetyRuleCommandOutput) => void,
   ): void;
   deleteSafetyRule(
     args: DeleteSafetyRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSafetyRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteSafetyRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -281,13 +281,13 @@ export interface Route53RecoveryControlConfig {
    */
   describeCluster(
     args: DescribeClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeClusterCommandOutput>;
   describeCluster(args: DescribeClusterCommandInput, cb: (err: any, data?: DescribeClusterCommandOutput) => void): void;
   describeCluster(
     args: DescribeClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeClusterCommandOutput) => void
+    cb: (err: any, data?: DescribeClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -295,16 +295,16 @@ export interface Route53RecoveryControlConfig {
    */
   describeControlPanel(
     args: DescribeControlPanelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeControlPanelCommandOutput>;
   describeControlPanel(
     args: DescribeControlPanelCommandInput,
-    cb: (err: any, data?: DescribeControlPanelCommandOutput) => void
+    cb: (err: any, data?: DescribeControlPanelCommandOutput) => void,
   ): void;
   describeControlPanel(
     args: DescribeControlPanelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeControlPanelCommandOutput) => void
+    cb: (err: any, data?: DescribeControlPanelCommandOutput) => void,
   ): void;
 
   /**
@@ -312,16 +312,16 @@ export interface Route53RecoveryControlConfig {
    */
   describeRoutingControl(
     args: DescribeRoutingControlCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRoutingControlCommandOutput>;
   describeRoutingControl(
     args: DescribeRoutingControlCommandInput,
-    cb: (err: any, data?: DescribeRoutingControlCommandOutput) => void
+    cb: (err: any, data?: DescribeRoutingControlCommandOutput) => void,
   ): void;
   describeRoutingControl(
     args: DescribeRoutingControlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRoutingControlCommandOutput) => void
+    cb: (err: any, data?: DescribeRoutingControlCommandOutput) => void,
   ): void;
 
   /**
@@ -329,16 +329,16 @@ export interface Route53RecoveryControlConfig {
    */
   describeSafetyRule(
     args: DescribeSafetyRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSafetyRuleCommandOutput>;
   describeSafetyRule(
     args: DescribeSafetyRuleCommandInput,
-    cb: (err: any, data?: DescribeSafetyRuleCommandOutput) => void
+    cb: (err: any, data?: DescribeSafetyRuleCommandOutput) => void,
   ): void;
   describeSafetyRule(
     args: DescribeSafetyRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSafetyRuleCommandOutput) => void
+    cb: (err: any, data?: DescribeSafetyRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -346,16 +346,16 @@ export interface Route53RecoveryControlConfig {
    */
   getResourcePolicy(
     args: GetResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResourcePolicyCommandOutput>;
   getResourcePolicy(
     args: GetResourcePolicyCommandInput,
-    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void,
   ): void;
   getResourcePolicy(
     args: GetResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -363,16 +363,16 @@ export interface Route53RecoveryControlConfig {
    */
   listAssociatedRoute53HealthChecks(
     args: ListAssociatedRoute53HealthChecksCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAssociatedRoute53HealthChecksCommandOutput>;
   listAssociatedRoute53HealthChecks(
     args: ListAssociatedRoute53HealthChecksCommandInput,
-    cb: (err: any, data?: ListAssociatedRoute53HealthChecksCommandOutput) => void
+    cb: (err: any, data?: ListAssociatedRoute53HealthChecksCommandOutput) => void,
   ): void;
   listAssociatedRoute53HealthChecks(
     args: ListAssociatedRoute53HealthChecksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAssociatedRoute53HealthChecksCommandOutput) => void
+    cb: (err: any, data?: ListAssociatedRoute53HealthChecksCommandOutput) => void,
   ): void;
 
   /**
@@ -384,7 +384,7 @@ export interface Route53RecoveryControlConfig {
   listClusters(
     args: ListClustersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListClustersCommandOutput) => void
+    cb: (err: any, data?: ListClustersCommandOutput) => void,
   ): void;
 
   /**
@@ -393,16 +393,16 @@ export interface Route53RecoveryControlConfig {
   listControlPanels(): Promise<ListControlPanelsCommandOutput>;
   listControlPanels(
     args: ListControlPanelsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListControlPanelsCommandOutput>;
   listControlPanels(
     args: ListControlPanelsCommandInput,
-    cb: (err: any, data?: ListControlPanelsCommandOutput) => void
+    cb: (err: any, data?: ListControlPanelsCommandOutput) => void,
   ): void;
   listControlPanels(
     args: ListControlPanelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListControlPanelsCommandOutput) => void
+    cb: (err: any, data?: ListControlPanelsCommandOutput) => void,
   ): void;
 
   /**
@@ -410,16 +410,16 @@ export interface Route53RecoveryControlConfig {
    */
   listRoutingControls(
     args: ListRoutingControlsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRoutingControlsCommandOutput>;
   listRoutingControls(
     args: ListRoutingControlsCommandInput,
-    cb: (err: any, data?: ListRoutingControlsCommandOutput) => void
+    cb: (err: any, data?: ListRoutingControlsCommandOutput) => void,
   ): void;
   listRoutingControls(
     args: ListRoutingControlsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRoutingControlsCommandOutput) => void
+    cb: (err: any, data?: ListRoutingControlsCommandOutput) => void,
   ): void;
 
   /**
@@ -427,13 +427,13 @@ export interface Route53RecoveryControlConfig {
    */
   listSafetyRules(
     args: ListSafetyRulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSafetyRulesCommandOutput>;
   listSafetyRules(args: ListSafetyRulesCommandInput, cb: (err: any, data?: ListSafetyRulesCommandOutput) => void): void;
   listSafetyRules(
     args: ListSafetyRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSafetyRulesCommandOutput) => void
+    cb: (err: any, data?: ListSafetyRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -441,16 +441,16 @@ export interface Route53RecoveryControlConfig {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -461,7 +461,7 @@ export interface Route53RecoveryControlConfig {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -472,7 +472,7 @@ export interface Route53RecoveryControlConfig {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -480,16 +480,16 @@ export interface Route53RecoveryControlConfig {
    */
   updateControlPanel(
     args: UpdateControlPanelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateControlPanelCommandOutput>;
   updateControlPanel(
     args: UpdateControlPanelCommandInput,
-    cb: (err: any, data?: UpdateControlPanelCommandOutput) => void
+    cb: (err: any, data?: UpdateControlPanelCommandOutput) => void,
   ): void;
   updateControlPanel(
     args: UpdateControlPanelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateControlPanelCommandOutput) => void
+    cb: (err: any, data?: UpdateControlPanelCommandOutput) => void,
   ): void;
 
   /**
@@ -497,16 +497,16 @@ export interface Route53RecoveryControlConfig {
    */
   updateRoutingControl(
     args: UpdateRoutingControlCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRoutingControlCommandOutput>;
   updateRoutingControl(
     args: UpdateRoutingControlCommandInput,
-    cb: (err: any, data?: UpdateRoutingControlCommandOutput) => void
+    cb: (err: any, data?: UpdateRoutingControlCommandOutput) => void,
   ): void;
   updateRoutingControl(
     args: UpdateRoutingControlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRoutingControlCommandOutput) => void
+    cb: (err: any, data?: UpdateRoutingControlCommandOutput) => void,
   ): void;
 
   /**
@@ -515,16 +515,16 @@ export interface Route53RecoveryControlConfig {
   updateSafetyRule(): Promise<UpdateSafetyRuleCommandOutput>;
   updateSafetyRule(
     args: UpdateSafetyRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSafetyRuleCommandOutput>;
   updateSafetyRule(
     args: UpdateSafetyRuleCommandInput,
-    cb: (err: any, data?: UpdateSafetyRuleCommandOutput) => void
+    cb: (err: any, data?: UpdateSafetyRuleCommandOutput) => void,
   ): void;
   updateSafetyRule(
     args: UpdateSafetyRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSafetyRuleCommandOutput) => void
+    cb: (err: any, data?: UpdateSafetyRuleCommandOutput) => void,
   ): void;
 }
 

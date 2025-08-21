@@ -313,16 +313,16 @@ export interface Location {
    */
   associateTrackerConsumer(
     args: AssociateTrackerConsumerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateTrackerConsumerCommandOutput>;
   associateTrackerConsumer(
     args: AssociateTrackerConsumerCommandInput,
-    cb: (err: any, data?: AssociateTrackerConsumerCommandOutput) => void
+    cb: (err: any, data?: AssociateTrackerConsumerCommandOutput) => void,
   ): void;
   associateTrackerConsumer(
     args: AssociateTrackerConsumerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateTrackerConsumerCommandOutput) => void
+    cb: (err: any, data?: AssociateTrackerConsumerCommandOutput) => void,
   ): void;
 
   /**
@@ -330,16 +330,16 @@ export interface Location {
    */
   batchDeleteDevicePositionHistory(
     args: BatchDeleteDevicePositionHistoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDeleteDevicePositionHistoryCommandOutput>;
   batchDeleteDevicePositionHistory(
     args: BatchDeleteDevicePositionHistoryCommandInput,
-    cb: (err: any, data?: BatchDeleteDevicePositionHistoryCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteDevicePositionHistoryCommandOutput) => void,
   ): void;
   batchDeleteDevicePositionHistory(
     args: BatchDeleteDevicePositionHistoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDeleteDevicePositionHistoryCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteDevicePositionHistoryCommandOutput) => void,
   ): void;
 
   /**
@@ -347,16 +347,16 @@ export interface Location {
    */
   batchDeleteGeofence(
     args: BatchDeleteGeofenceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDeleteGeofenceCommandOutput>;
   batchDeleteGeofence(
     args: BatchDeleteGeofenceCommandInput,
-    cb: (err: any, data?: BatchDeleteGeofenceCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteGeofenceCommandOutput) => void,
   ): void;
   batchDeleteGeofence(
     args: BatchDeleteGeofenceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDeleteGeofenceCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteGeofenceCommandOutput) => void,
   ): void;
 
   /**
@@ -364,16 +364,16 @@ export interface Location {
    */
   batchEvaluateGeofences(
     args: BatchEvaluateGeofencesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchEvaluateGeofencesCommandOutput>;
   batchEvaluateGeofences(
     args: BatchEvaluateGeofencesCommandInput,
-    cb: (err: any, data?: BatchEvaluateGeofencesCommandOutput) => void
+    cb: (err: any, data?: BatchEvaluateGeofencesCommandOutput) => void,
   ): void;
   batchEvaluateGeofences(
     args: BatchEvaluateGeofencesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchEvaluateGeofencesCommandOutput) => void
+    cb: (err: any, data?: BatchEvaluateGeofencesCommandOutput) => void,
   ): void;
 
   /**
@@ -381,16 +381,16 @@ export interface Location {
    */
   batchGetDevicePosition(
     args: BatchGetDevicePositionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetDevicePositionCommandOutput>;
   batchGetDevicePosition(
     args: BatchGetDevicePositionCommandInput,
-    cb: (err: any, data?: BatchGetDevicePositionCommandOutput) => void
+    cb: (err: any, data?: BatchGetDevicePositionCommandOutput) => void,
   ): void;
   batchGetDevicePosition(
     args: BatchGetDevicePositionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetDevicePositionCommandOutput) => void
+    cb: (err: any, data?: BatchGetDevicePositionCommandOutput) => void,
   ): void;
 
   /**
@@ -398,16 +398,16 @@ export interface Location {
    */
   batchPutGeofence(
     args: BatchPutGeofenceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchPutGeofenceCommandOutput>;
   batchPutGeofence(
     args: BatchPutGeofenceCommandInput,
-    cb: (err: any, data?: BatchPutGeofenceCommandOutput) => void
+    cb: (err: any, data?: BatchPutGeofenceCommandOutput) => void,
   ): void;
   batchPutGeofence(
     args: BatchPutGeofenceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchPutGeofenceCommandOutput) => void
+    cb: (err: any, data?: BatchPutGeofenceCommandOutput) => void,
   ): void;
 
   /**
@@ -415,16 +415,16 @@ export interface Location {
    */
   batchUpdateDevicePosition(
     args: BatchUpdateDevicePositionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchUpdateDevicePositionCommandOutput>;
   batchUpdateDevicePosition(
     args: BatchUpdateDevicePositionCommandInput,
-    cb: (err: any, data?: BatchUpdateDevicePositionCommandOutput) => void
+    cb: (err: any, data?: BatchUpdateDevicePositionCommandOutput) => void,
   ): void;
   batchUpdateDevicePosition(
     args: BatchUpdateDevicePositionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchUpdateDevicePositionCommandOutput) => void
+    cb: (err: any, data?: BatchUpdateDevicePositionCommandOutput) => void,
   ): void;
 
   /**
@@ -432,13 +432,13 @@ export interface Location {
    */
   calculateRoute(
     args: CalculateRouteCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CalculateRouteCommandOutput>;
   calculateRoute(args: CalculateRouteCommandInput, cb: (err: any, data?: CalculateRouteCommandOutput) => void): void;
   calculateRoute(
     args: CalculateRouteCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CalculateRouteCommandOutput) => void
+    cb: (err: any, data?: CalculateRouteCommandOutput) => void,
   ): void;
 
   /**
@@ -446,16 +446,16 @@ export interface Location {
    */
   calculateRouteMatrix(
     args: CalculateRouteMatrixCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CalculateRouteMatrixCommandOutput>;
   calculateRouteMatrix(
     args: CalculateRouteMatrixCommandInput,
-    cb: (err: any, data?: CalculateRouteMatrixCommandOutput) => void
+    cb: (err: any, data?: CalculateRouteMatrixCommandOutput) => void,
   ): void;
   calculateRouteMatrix(
     args: CalculateRouteMatrixCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CalculateRouteMatrixCommandOutput) => void
+    cb: (err: any, data?: CalculateRouteMatrixCommandOutput) => void,
   ): void;
 
   /**
@@ -463,16 +463,16 @@ export interface Location {
    */
   createGeofenceCollection(
     args: CreateGeofenceCollectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateGeofenceCollectionCommandOutput>;
   createGeofenceCollection(
     args: CreateGeofenceCollectionCommandInput,
-    cb: (err: any, data?: CreateGeofenceCollectionCommandOutput) => void
+    cb: (err: any, data?: CreateGeofenceCollectionCommandOutput) => void,
   ): void;
   createGeofenceCollection(
     args: CreateGeofenceCollectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateGeofenceCollectionCommandOutput) => void
+    cb: (err: any, data?: CreateGeofenceCollectionCommandOutput) => void,
   ): void;
 
   /**
@@ -483,7 +483,7 @@ export interface Location {
   createKey(
     args: CreateKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateKeyCommandOutput) => void
+    cb: (err: any, data?: CreateKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -494,7 +494,7 @@ export interface Location {
   createMap(
     args: CreateMapCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMapCommandOutput) => void
+    cb: (err: any, data?: CreateMapCommandOutput) => void,
   ): void;
 
   /**
@@ -502,16 +502,16 @@ export interface Location {
    */
   createPlaceIndex(
     args: CreatePlaceIndexCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePlaceIndexCommandOutput>;
   createPlaceIndex(
     args: CreatePlaceIndexCommandInput,
-    cb: (err: any, data?: CreatePlaceIndexCommandOutput) => void
+    cb: (err: any, data?: CreatePlaceIndexCommandOutput) => void,
   ): void;
   createPlaceIndex(
     args: CreatePlaceIndexCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePlaceIndexCommandOutput) => void
+    cb: (err: any, data?: CreatePlaceIndexCommandOutput) => void,
   ): void;
 
   /**
@@ -519,16 +519,16 @@ export interface Location {
    */
   createRouteCalculator(
     args: CreateRouteCalculatorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRouteCalculatorCommandOutput>;
   createRouteCalculator(
     args: CreateRouteCalculatorCommandInput,
-    cb: (err: any, data?: CreateRouteCalculatorCommandOutput) => void
+    cb: (err: any, data?: CreateRouteCalculatorCommandOutput) => void,
   ): void;
   createRouteCalculator(
     args: CreateRouteCalculatorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRouteCalculatorCommandOutput) => void
+    cb: (err: any, data?: CreateRouteCalculatorCommandOutput) => void,
   ): void;
 
   /**
@@ -539,7 +539,7 @@ export interface Location {
   createTracker(
     args: CreateTrackerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTrackerCommandOutput) => void
+    cb: (err: any, data?: CreateTrackerCommandOutput) => void,
   ): void;
 
   /**
@@ -547,16 +547,16 @@ export interface Location {
    */
   deleteGeofenceCollection(
     args: DeleteGeofenceCollectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteGeofenceCollectionCommandOutput>;
   deleteGeofenceCollection(
     args: DeleteGeofenceCollectionCommandInput,
-    cb: (err: any, data?: DeleteGeofenceCollectionCommandOutput) => void
+    cb: (err: any, data?: DeleteGeofenceCollectionCommandOutput) => void,
   ): void;
   deleteGeofenceCollection(
     args: DeleteGeofenceCollectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteGeofenceCollectionCommandOutput) => void
+    cb: (err: any, data?: DeleteGeofenceCollectionCommandOutput) => void,
   ): void;
 
   /**
@@ -567,7 +567,7 @@ export interface Location {
   deleteKey(
     args: DeleteKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteKeyCommandOutput) => void
+    cb: (err: any, data?: DeleteKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -578,7 +578,7 @@ export interface Location {
   deleteMap(
     args: DeleteMapCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMapCommandOutput) => void
+    cb: (err: any, data?: DeleteMapCommandOutput) => void,
   ): void;
 
   /**
@@ -586,16 +586,16 @@ export interface Location {
    */
   deletePlaceIndex(
     args: DeletePlaceIndexCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePlaceIndexCommandOutput>;
   deletePlaceIndex(
     args: DeletePlaceIndexCommandInput,
-    cb: (err: any, data?: DeletePlaceIndexCommandOutput) => void
+    cb: (err: any, data?: DeletePlaceIndexCommandOutput) => void,
   ): void;
   deletePlaceIndex(
     args: DeletePlaceIndexCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePlaceIndexCommandOutput) => void
+    cb: (err: any, data?: DeletePlaceIndexCommandOutput) => void,
   ): void;
 
   /**
@@ -603,16 +603,16 @@ export interface Location {
    */
   deleteRouteCalculator(
     args: DeleteRouteCalculatorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRouteCalculatorCommandOutput>;
   deleteRouteCalculator(
     args: DeleteRouteCalculatorCommandInput,
-    cb: (err: any, data?: DeleteRouteCalculatorCommandOutput) => void
+    cb: (err: any, data?: DeleteRouteCalculatorCommandOutput) => void,
   ): void;
   deleteRouteCalculator(
     args: DeleteRouteCalculatorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRouteCalculatorCommandOutput) => void
+    cb: (err: any, data?: DeleteRouteCalculatorCommandOutput) => void,
   ): void;
 
   /**
@@ -623,7 +623,7 @@ export interface Location {
   deleteTracker(
     args: DeleteTrackerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTrackerCommandOutput) => void
+    cb: (err: any, data?: DeleteTrackerCommandOutput) => void,
   ): void;
 
   /**
@@ -631,16 +631,16 @@ export interface Location {
    */
   describeGeofenceCollection(
     args: DescribeGeofenceCollectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeGeofenceCollectionCommandOutput>;
   describeGeofenceCollection(
     args: DescribeGeofenceCollectionCommandInput,
-    cb: (err: any, data?: DescribeGeofenceCollectionCommandOutput) => void
+    cb: (err: any, data?: DescribeGeofenceCollectionCommandOutput) => void,
   ): void;
   describeGeofenceCollection(
     args: DescribeGeofenceCollectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeGeofenceCollectionCommandOutput) => void
+    cb: (err: any, data?: DescribeGeofenceCollectionCommandOutput) => void,
   ): void;
 
   /**
@@ -651,7 +651,7 @@ export interface Location {
   describeKey(
     args: DescribeKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeKeyCommandOutput) => void
+    cb: (err: any, data?: DescribeKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -662,7 +662,7 @@ export interface Location {
   describeMap(
     args: DescribeMapCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeMapCommandOutput) => void
+    cb: (err: any, data?: DescribeMapCommandOutput) => void,
   ): void;
 
   /**
@@ -670,16 +670,16 @@ export interface Location {
    */
   describePlaceIndex(
     args: DescribePlaceIndexCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePlaceIndexCommandOutput>;
   describePlaceIndex(
     args: DescribePlaceIndexCommandInput,
-    cb: (err: any, data?: DescribePlaceIndexCommandOutput) => void
+    cb: (err: any, data?: DescribePlaceIndexCommandOutput) => void,
   ): void;
   describePlaceIndex(
     args: DescribePlaceIndexCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePlaceIndexCommandOutput) => void
+    cb: (err: any, data?: DescribePlaceIndexCommandOutput) => void,
   ): void;
 
   /**
@@ -687,16 +687,16 @@ export interface Location {
    */
   describeRouteCalculator(
     args: DescribeRouteCalculatorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRouteCalculatorCommandOutput>;
   describeRouteCalculator(
     args: DescribeRouteCalculatorCommandInput,
-    cb: (err: any, data?: DescribeRouteCalculatorCommandOutput) => void
+    cb: (err: any, data?: DescribeRouteCalculatorCommandOutput) => void,
   ): void;
   describeRouteCalculator(
     args: DescribeRouteCalculatorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRouteCalculatorCommandOutput) => void
+    cb: (err: any, data?: DescribeRouteCalculatorCommandOutput) => void,
   ): void;
 
   /**
@@ -704,13 +704,13 @@ export interface Location {
    */
   describeTracker(
     args: DescribeTrackerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTrackerCommandOutput>;
   describeTracker(args: DescribeTrackerCommandInput, cb: (err: any, data?: DescribeTrackerCommandOutput) => void): void;
   describeTracker(
     args: DescribeTrackerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTrackerCommandOutput) => void
+    cb: (err: any, data?: DescribeTrackerCommandOutput) => void,
   ): void;
 
   /**
@@ -718,16 +718,16 @@ export interface Location {
    */
   disassociateTrackerConsumer(
     args: DisassociateTrackerConsumerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateTrackerConsumerCommandOutput>;
   disassociateTrackerConsumer(
     args: DisassociateTrackerConsumerCommandInput,
-    cb: (err: any, data?: DisassociateTrackerConsumerCommandOutput) => void
+    cb: (err: any, data?: DisassociateTrackerConsumerCommandOutput) => void,
   ): void;
   disassociateTrackerConsumer(
     args: DisassociateTrackerConsumerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateTrackerConsumerCommandOutput) => void
+    cb: (err: any, data?: DisassociateTrackerConsumerCommandOutput) => void,
   ): void;
 
   /**
@@ -735,16 +735,16 @@ export interface Location {
    */
   forecastGeofenceEvents(
     args: ForecastGeofenceEventsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ForecastGeofenceEventsCommandOutput>;
   forecastGeofenceEvents(
     args: ForecastGeofenceEventsCommandInput,
-    cb: (err: any, data?: ForecastGeofenceEventsCommandOutput) => void
+    cb: (err: any, data?: ForecastGeofenceEventsCommandOutput) => void,
   ): void;
   forecastGeofenceEvents(
     args: ForecastGeofenceEventsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ForecastGeofenceEventsCommandOutput) => void
+    cb: (err: any, data?: ForecastGeofenceEventsCommandOutput) => void,
   ): void;
 
   /**
@@ -752,16 +752,16 @@ export interface Location {
    */
   getDevicePosition(
     args: GetDevicePositionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDevicePositionCommandOutput>;
   getDevicePosition(
     args: GetDevicePositionCommandInput,
-    cb: (err: any, data?: GetDevicePositionCommandOutput) => void
+    cb: (err: any, data?: GetDevicePositionCommandOutput) => void,
   ): void;
   getDevicePosition(
     args: GetDevicePositionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDevicePositionCommandOutput) => void
+    cb: (err: any, data?: GetDevicePositionCommandOutput) => void,
   ): void;
 
   /**
@@ -769,16 +769,16 @@ export interface Location {
    */
   getDevicePositionHistory(
     args: GetDevicePositionHistoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDevicePositionHistoryCommandOutput>;
   getDevicePositionHistory(
     args: GetDevicePositionHistoryCommandInput,
-    cb: (err: any, data?: GetDevicePositionHistoryCommandOutput) => void
+    cb: (err: any, data?: GetDevicePositionHistoryCommandOutput) => void,
   ): void;
   getDevicePositionHistory(
     args: GetDevicePositionHistoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDevicePositionHistoryCommandOutput) => void
+    cb: (err: any, data?: GetDevicePositionHistoryCommandOutput) => void,
   ): void;
 
   /**
@@ -789,7 +789,7 @@ export interface Location {
   getGeofence(
     args: GetGeofenceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetGeofenceCommandOutput) => void
+    cb: (err: any, data?: GetGeofenceCommandOutput) => void,
   ): void;
 
   /**
@@ -800,7 +800,7 @@ export interface Location {
   getMapGlyphs(
     args: GetMapGlyphsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMapGlyphsCommandOutput) => void
+    cb: (err: any, data?: GetMapGlyphsCommandOutput) => void,
   ): void;
 
   /**
@@ -811,7 +811,7 @@ export interface Location {
   getMapSprites(
     args: GetMapSpritesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMapSpritesCommandOutput) => void
+    cb: (err: any, data?: GetMapSpritesCommandOutput) => void,
   ): void;
 
   /**
@@ -819,16 +819,16 @@ export interface Location {
    */
   getMapStyleDescriptor(
     args: GetMapStyleDescriptorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMapStyleDescriptorCommandOutput>;
   getMapStyleDescriptor(
     args: GetMapStyleDescriptorCommandInput,
-    cb: (err: any, data?: GetMapStyleDescriptorCommandOutput) => void
+    cb: (err: any, data?: GetMapStyleDescriptorCommandOutput) => void,
   ): void;
   getMapStyleDescriptor(
     args: GetMapStyleDescriptorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMapStyleDescriptorCommandOutput) => void
+    cb: (err: any, data?: GetMapStyleDescriptorCommandOutput) => void,
   ): void;
 
   /**
@@ -839,7 +839,7 @@ export interface Location {
   getMapTile(
     args: GetMapTileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMapTileCommandOutput) => void
+    cb: (err: any, data?: GetMapTileCommandOutput) => void,
   ): void;
 
   /**
@@ -850,7 +850,7 @@ export interface Location {
   getPlace(
     args: GetPlaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPlaceCommandOutput) => void
+    cb: (err: any, data?: GetPlaceCommandOutput) => void,
   ): void;
 
   /**
@@ -858,16 +858,16 @@ export interface Location {
    */
   listDevicePositions(
     args: ListDevicePositionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDevicePositionsCommandOutput>;
   listDevicePositions(
     args: ListDevicePositionsCommandInput,
-    cb: (err: any, data?: ListDevicePositionsCommandOutput) => void
+    cb: (err: any, data?: ListDevicePositionsCommandOutput) => void,
   ): void;
   listDevicePositions(
     args: ListDevicePositionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDevicePositionsCommandOutput) => void
+    cb: (err: any, data?: ListDevicePositionsCommandOutput) => void,
   ): void;
 
   /**
@@ -876,16 +876,16 @@ export interface Location {
   listGeofenceCollections(): Promise<ListGeofenceCollectionsCommandOutput>;
   listGeofenceCollections(
     args: ListGeofenceCollectionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListGeofenceCollectionsCommandOutput>;
   listGeofenceCollections(
     args: ListGeofenceCollectionsCommandInput,
-    cb: (err: any, data?: ListGeofenceCollectionsCommandOutput) => void
+    cb: (err: any, data?: ListGeofenceCollectionsCommandOutput) => void,
   ): void;
   listGeofenceCollections(
     args: ListGeofenceCollectionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListGeofenceCollectionsCommandOutput) => void
+    cb: (err: any, data?: ListGeofenceCollectionsCommandOutput) => void,
   ): void;
 
   /**
@@ -896,7 +896,7 @@ export interface Location {
   listGeofences(
     args: ListGeofencesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListGeofencesCommandOutput) => void
+    cb: (err: any, data?: ListGeofencesCommandOutput) => void,
   ): void;
 
   /**
@@ -908,7 +908,7 @@ export interface Location {
   listKeys(
     args: ListKeysCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListKeysCommandOutput) => void
+    cb: (err: any, data?: ListKeysCommandOutput) => void,
   ): void;
 
   /**
@@ -920,7 +920,7 @@ export interface Location {
   listMaps(
     args: ListMapsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMapsCommandOutput) => void
+    cb: (err: any, data?: ListMapsCommandOutput) => void,
   ): void;
 
   /**
@@ -929,16 +929,16 @@ export interface Location {
   listPlaceIndexes(): Promise<ListPlaceIndexesCommandOutput>;
   listPlaceIndexes(
     args: ListPlaceIndexesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPlaceIndexesCommandOutput>;
   listPlaceIndexes(
     args: ListPlaceIndexesCommandInput,
-    cb: (err: any, data?: ListPlaceIndexesCommandOutput) => void
+    cb: (err: any, data?: ListPlaceIndexesCommandOutput) => void,
   ): void;
   listPlaceIndexes(
     args: ListPlaceIndexesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPlaceIndexesCommandOutput) => void
+    cb: (err: any, data?: ListPlaceIndexesCommandOutput) => void,
   ): void;
 
   /**
@@ -947,16 +947,16 @@ export interface Location {
   listRouteCalculators(): Promise<ListRouteCalculatorsCommandOutput>;
   listRouteCalculators(
     args: ListRouteCalculatorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRouteCalculatorsCommandOutput>;
   listRouteCalculators(
     args: ListRouteCalculatorsCommandInput,
-    cb: (err: any, data?: ListRouteCalculatorsCommandOutput) => void
+    cb: (err: any, data?: ListRouteCalculatorsCommandOutput) => void,
   ): void;
   listRouteCalculators(
     args: ListRouteCalculatorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRouteCalculatorsCommandOutput) => void
+    cb: (err: any, data?: ListRouteCalculatorsCommandOutput) => void,
   ): void;
 
   /**
@@ -964,16 +964,16 @@ export interface Location {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -981,16 +981,16 @@ export interface Location {
    */
   listTrackerConsumers(
     args: ListTrackerConsumersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTrackerConsumersCommandOutput>;
   listTrackerConsumers(
     args: ListTrackerConsumersCommandInput,
-    cb: (err: any, data?: ListTrackerConsumersCommandOutput) => void
+    cb: (err: any, data?: ListTrackerConsumersCommandOutput) => void,
   ): void;
   listTrackerConsumers(
     args: ListTrackerConsumersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTrackerConsumersCommandOutput) => void
+    cb: (err: any, data?: ListTrackerConsumersCommandOutput) => void,
   ): void;
 
   /**
@@ -1002,7 +1002,7 @@ export interface Location {
   listTrackers(
     args: ListTrackersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTrackersCommandOutput) => void
+    cb: (err: any, data?: ListTrackersCommandOutput) => void,
   ): void;
 
   /**
@@ -1013,7 +1013,7 @@ export interface Location {
   putGeofence(
     args: PutGeofenceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutGeofenceCommandOutput) => void
+    cb: (err: any, data?: PutGeofenceCommandOutput) => void,
   ): void;
 
   /**
@@ -1021,16 +1021,16 @@ export interface Location {
    */
   searchPlaceIndexForPosition(
     args: SearchPlaceIndexForPositionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchPlaceIndexForPositionCommandOutput>;
   searchPlaceIndexForPosition(
     args: SearchPlaceIndexForPositionCommandInput,
-    cb: (err: any, data?: SearchPlaceIndexForPositionCommandOutput) => void
+    cb: (err: any, data?: SearchPlaceIndexForPositionCommandOutput) => void,
   ): void;
   searchPlaceIndexForPosition(
     args: SearchPlaceIndexForPositionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchPlaceIndexForPositionCommandOutput) => void
+    cb: (err: any, data?: SearchPlaceIndexForPositionCommandOutput) => void,
   ): void;
 
   /**
@@ -1038,16 +1038,16 @@ export interface Location {
    */
   searchPlaceIndexForSuggestions(
     args: SearchPlaceIndexForSuggestionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchPlaceIndexForSuggestionsCommandOutput>;
   searchPlaceIndexForSuggestions(
     args: SearchPlaceIndexForSuggestionsCommandInput,
-    cb: (err: any, data?: SearchPlaceIndexForSuggestionsCommandOutput) => void
+    cb: (err: any, data?: SearchPlaceIndexForSuggestionsCommandOutput) => void,
   ): void;
   searchPlaceIndexForSuggestions(
     args: SearchPlaceIndexForSuggestionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchPlaceIndexForSuggestionsCommandOutput) => void
+    cb: (err: any, data?: SearchPlaceIndexForSuggestionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1055,16 +1055,16 @@ export interface Location {
    */
   searchPlaceIndexForText(
     args: SearchPlaceIndexForTextCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchPlaceIndexForTextCommandOutput>;
   searchPlaceIndexForText(
     args: SearchPlaceIndexForTextCommandInput,
-    cb: (err: any, data?: SearchPlaceIndexForTextCommandOutput) => void
+    cb: (err: any, data?: SearchPlaceIndexForTextCommandOutput) => void,
   ): void;
   searchPlaceIndexForText(
     args: SearchPlaceIndexForTextCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchPlaceIndexForTextCommandOutput) => void
+    cb: (err: any, data?: SearchPlaceIndexForTextCommandOutput) => void,
   ): void;
 
   /**
@@ -1075,7 +1075,7 @@ export interface Location {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1086,7 +1086,7 @@ export interface Location {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1094,16 +1094,16 @@ export interface Location {
    */
   updateGeofenceCollection(
     args: UpdateGeofenceCollectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateGeofenceCollectionCommandOutput>;
   updateGeofenceCollection(
     args: UpdateGeofenceCollectionCommandInput,
-    cb: (err: any, data?: UpdateGeofenceCollectionCommandOutput) => void
+    cb: (err: any, data?: UpdateGeofenceCollectionCommandOutput) => void,
   ): void;
   updateGeofenceCollection(
     args: UpdateGeofenceCollectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateGeofenceCollectionCommandOutput) => void
+    cb: (err: any, data?: UpdateGeofenceCollectionCommandOutput) => void,
   ): void;
 
   /**
@@ -1114,7 +1114,7 @@ export interface Location {
   updateKey(
     args: UpdateKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateKeyCommandOutput) => void
+    cb: (err: any, data?: UpdateKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -1125,7 +1125,7 @@ export interface Location {
   updateMap(
     args: UpdateMapCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMapCommandOutput) => void
+    cb: (err: any, data?: UpdateMapCommandOutput) => void,
   ): void;
 
   /**
@@ -1133,16 +1133,16 @@ export interface Location {
    */
   updatePlaceIndex(
     args: UpdatePlaceIndexCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePlaceIndexCommandOutput>;
   updatePlaceIndex(
     args: UpdatePlaceIndexCommandInput,
-    cb: (err: any, data?: UpdatePlaceIndexCommandOutput) => void
+    cb: (err: any, data?: UpdatePlaceIndexCommandOutput) => void,
   ): void;
   updatePlaceIndex(
     args: UpdatePlaceIndexCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePlaceIndexCommandOutput) => void
+    cb: (err: any, data?: UpdatePlaceIndexCommandOutput) => void,
   ): void;
 
   /**
@@ -1150,16 +1150,16 @@ export interface Location {
    */
   updateRouteCalculator(
     args: UpdateRouteCalculatorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRouteCalculatorCommandOutput>;
   updateRouteCalculator(
     args: UpdateRouteCalculatorCommandInput,
-    cb: (err: any, data?: UpdateRouteCalculatorCommandOutput) => void
+    cb: (err: any, data?: UpdateRouteCalculatorCommandOutput) => void,
   ): void;
   updateRouteCalculator(
     args: UpdateRouteCalculatorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRouteCalculatorCommandOutput) => void
+    cb: (err: any, data?: UpdateRouteCalculatorCommandOutput) => void,
   ): void;
 
   /**
@@ -1170,7 +1170,7 @@ export interface Location {
   updateTracker(
     args: UpdateTrackerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTrackerCommandOutput) => void
+    cb: (err: any, data?: UpdateTrackerCommandOutput) => void,
   ): void;
 
   /**
@@ -1178,16 +1178,16 @@ export interface Location {
    */
   verifyDevicePosition(
     args: VerifyDevicePositionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<VerifyDevicePositionCommandOutput>;
   verifyDevicePosition(
     args: VerifyDevicePositionCommandInput,
-    cb: (err: any, data?: VerifyDevicePositionCommandOutput) => void
+    cb: (err: any, data?: VerifyDevicePositionCommandOutput) => void,
   ): void;
   verifyDevicePosition(
     args: VerifyDevicePositionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: VerifyDevicePositionCommandOutput) => void
+    cb: (err: any, data?: VerifyDevicePositionCommandOutput) => void,
   ): void;
 }
 

@@ -9554,7 +9554,7 @@ export const CreateLegalHoldInputFilterSensitiveLog = (obj: CreateLegalHoldInput
  * @internal
  */
 export const CreateLogicallyAirGappedBackupVaultInputFilterSensitiveLog = (
-  obj: CreateLogicallyAirGappedBackupVaultInput
+  obj: CreateLogicallyAirGappedBackupVaultInput,
 ): any => ({
   ...obj,
   ...(obj.BackupVaultTags && { BackupVaultTags: SENSITIVE_STRING }),
@@ -9614,7 +9614,7 @@ export const GetBackupPlanFromTemplateOutputFilterSensitiveLog = (obj: GetBackup
  * @internal
  */
 export const GetRecoveryPointRestoreMetadataOutputFilterSensitiveLog = (
-  obj: GetRecoveryPointRestoreMetadataOutput
+  obj: GetRecoveryPointRestoreMetadataOutput,
 ): any => ({
   ...obj,
   ...(obj.RestoreMetadata && { RestoreMetadata: SENSITIVE_STRING }),

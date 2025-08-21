@@ -9,7 +9,7 @@ import { RedshiftClient } from "../RedshiftClient";
 
 const checkState = async (
   client: RedshiftClient,
-  input: DescribeClusterSnapshotsCommandInput
+  input: DescribeClusterSnapshotsCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -70,7 +70,7 @@ const checkState = async (
  */
 export const waitForSnapshotAvailable = async (
   params: WaiterConfiguration<RedshiftClient>,
-  input: DescribeClusterSnapshotsCommandInput
+  input: DescribeClusterSnapshotsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -82,7 +82,7 @@ export const waitForSnapshotAvailable = async (
  */
 export const waitUntilSnapshotAvailable = async (
   params: WaiterConfiguration<RedshiftClient>,
-  input: DescribeClusterSnapshotsCommandInput
+  input: DescribeClusterSnapshotsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

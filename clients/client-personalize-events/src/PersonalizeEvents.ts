@@ -27,16 +27,16 @@ export interface PersonalizeEvents {
    */
   putActionInteractions(
     args: PutActionInteractionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutActionInteractionsCommandOutput>;
   putActionInteractions(
     args: PutActionInteractionsCommandInput,
-    cb: (err: any, data?: PutActionInteractionsCommandOutput) => void
+    cb: (err: any, data?: PutActionInteractionsCommandOutput) => void,
   ): void;
   putActionInteractions(
     args: PutActionInteractionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutActionInteractionsCommandOutput) => void
+    cb: (err: any, data?: PutActionInteractionsCommandOutput) => void,
   ): void;
 
   /**
@@ -47,7 +47,7 @@ export interface PersonalizeEvents {
   putActions(
     args: PutActionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutActionsCommandOutput) => void
+    cb: (err: any, data?: PutActionsCommandOutput) => void,
   ): void;
 
   /**
@@ -58,7 +58,7 @@ export interface PersonalizeEvents {
   putEvents(
     args: PutEventsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutEventsCommandOutput) => void
+    cb: (err: any, data?: PutEventsCommandOutput) => void,
   ): void;
 
   /**
@@ -69,7 +69,7 @@ export interface PersonalizeEvents {
   putItems(
     args: PutItemsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutItemsCommandOutput) => void
+    cb: (err: any, data?: PutItemsCommandOutput) => void,
   ): void;
 
   /**
@@ -80,7 +80,7 @@ export interface PersonalizeEvents {
   putUsers(
     args: PutUsersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutUsersCommandOutput) => void
+    cb: (err: any, data?: PutUsersCommandOutput) => void,
   ): void;
 }
 

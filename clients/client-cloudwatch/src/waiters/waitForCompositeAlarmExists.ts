@@ -29,7 +29,7 @@ const checkState = async (client: CloudWatchClient, input: DescribeAlarmsCommand
  */
 export const waitForCompositeAlarmExists = async (
   params: WaiterConfiguration<CloudWatchClient>,
-  input: DescribeAlarmsCommandInput
+  input: DescribeAlarmsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -41,7 +41,7 @@ export const waitForCompositeAlarmExists = async (
  */
 export const waitUntilCompositeAlarmExists = async (
   params: WaiterConfiguration<CloudWatchClient>,
-  input: DescribeAlarmsCommandInput
+  input: DescribeAlarmsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

@@ -180,7 +180,7 @@ it("AwsJson11DateTimeWithNegativeOffset:Response", async () => {
       `      {
                 "datetime": "2019-12-16T22:48:18-01:00"
             }
-      `
+      `,
     ),
   });
 
@@ -221,7 +221,7 @@ it("AwsJson11DateTimeWithPositiveOffset:Response", async () => {
       `      {
                 "datetime": "2019-12-17T00:48:18+01:00"
             }
-      `
+      `,
     ),
   });
 
@@ -363,7 +363,7 @@ it("handles_empty_output_shape:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{}`
+      `{}`,
     ),
   });
 
@@ -397,7 +397,7 @@ it("handles_unexpected_json_output:Response", async () => {
       },
       `{
           "foo": true
-      }`
+      }`,
     ),
   });
 
@@ -430,7 +430,7 @@ it("json_1_1_service_responds_with_no_payload:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      ``
+      ``,
     ),
   });
 
@@ -547,7 +547,7 @@ it("AwsJson11DateTimeWithFractionalSeconds:Response", async () => {
       `      {
                 "datetime": "2000-01-02T20:34:56.123Z"
             }
-      `
+      `,
     ),
   });
 
@@ -588,7 +588,7 @@ it("AwsJson11InvalidGreetingError:Error:GreetingWithErrors", async () => {
       `{
           "__type": "InvalidGreeting",
           "Message": "Hi"
-      }`
+      }`,
     ),
   });
 
@@ -637,7 +637,7 @@ it("AwsJson11ComplexError:Error:GreetingWithErrors", async () => {
           "Nested": {
               "Foo": "bar"
           }
-      }`
+      }`,
     ),
   });
 
@@ -683,7 +683,7 @@ it("AwsJson11EmptyComplexError:Error:GreetingWithErrors", async () => {
       },
       `{
           "__type": "ComplexError"
-      }`
+      }`,
     ),
   });
 
@@ -812,7 +812,7 @@ it("AwsJson11FooErrorUsingCode:Error:GreetingWithErrors", async () => {
       },
       `{
           "code": "FooError"
-      }`
+      }`,
     ),
   });
 
@@ -848,7 +848,7 @@ it("AwsJson11FooErrorUsingCodeAndNamespace:Error:GreetingWithErrors", async () =
       },
       `{
           "code": "aws.protocoltests.restjson#FooError"
-      }`
+      }`,
     ),
   });
 
@@ -884,7 +884,7 @@ it("AwsJson11FooErrorUsingCodeUriAndNamespace:Error:GreetingWithErrors", async (
       },
       `{
           "code": "aws.protocoltests.restjson#FooError:http://internal.amazon.com/coral/com.amazon.coral.validate/"
-      }`
+      }`,
     ),
   });
 
@@ -920,7 +920,7 @@ it("AwsJson11FooErrorWithDunderType:Error:GreetingWithErrors", async () => {
       },
       `{
           "__type": "FooError"
-      }`
+      }`,
     ),
   });
 
@@ -956,7 +956,7 @@ it("AwsJson11FooErrorWithDunderTypeAndNamespace:Error:GreetingWithErrors", async
       },
       `{
           "__type": "aws.protocoltests.restjson#FooError"
-      }`
+      }`,
     ),
   });
 
@@ -992,7 +992,7 @@ it("AwsJson11FooErrorWithDunderTypeUriAndNamespace:Error:GreetingWithErrors", as
       },
       `{
           "__type": "aws.protocoltests.restjson#FooError:http://internal.amazon.com/coral/com.amazon.coral.validate/"
-      }`
+      }`,
     ),
   });
 
@@ -1147,7 +1147,7 @@ it("AwsJson11Enums:Response", async () => {
               "hi": "Foo",
               "zero": "0"
           }
-      }`
+      }`,
     ),
   });
 
@@ -1610,7 +1610,7 @@ it("AwsJson11DeserializeStringUnionValue:Response", async () => {
           "contents": {
               "stringValue": "foo"
           }
-      }`
+      }`,
     ),
   });
 
@@ -1654,7 +1654,7 @@ it("AwsJson11DeserializeBooleanUnionValue:Response", async () => {
           "contents": {
               "booleanValue": true
           }
-      }`
+      }`,
     ),
   });
 
@@ -1698,7 +1698,7 @@ it("AwsJson11DeserializeNumberUnionValue:Response", async () => {
           "contents": {
               "numberValue": 1
           }
-      }`
+      }`,
     ),
   });
 
@@ -1742,7 +1742,7 @@ it("AwsJson11DeserializeBlobUnionValue:Response", async () => {
           "contents": {
               "blobValue": "Zm9v"
           }
-      }`
+      }`,
     ),
   });
 
@@ -1786,7 +1786,7 @@ it("AwsJson11DeserializeTimestampUnionValue:Response", async () => {
           "contents": {
               "timestampValue": 1398796238
           }
-      }`
+      }`,
     ),
   });
 
@@ -1830,7 +1830,7 @@ it("AwsJson11DeserializeEnumUnionValue:Response", async () => {
           "contents": {
               "enumValue": "Foo"
           }
-      }`
+      }`,
     ),
   });
 
@@ -1874,7 +1874,7 @@ it("AwsJson11DeserializeListUnionValue:Response", async () => {
           "contents": {
               "listValue": ["foo", "bar"]
           }
-      }`
+      }`,
     ),
   });
 
@@ -1921,7 +1921,7 @@ it("AwsJson11DeserializeMapUnionValue:Response", async () => {
                   "spam": "eggs"
               }
           }
-      }`
+      }`,
     ),
   });
 
@@ -1971,7 +1971,7 @@ it("AwsJson11DeserializeStructureUnionValue:Response", async () => {
                   "hi": "hello"
               }
           }
-      }`
+      }`,
     ),
   });
 
@@ -2020,7 +2020,7 @@ it("AwsJson11DeserializeIgnoreType:Response", async () => {
                   "hi": "hello"
               }
           }
-      }`
+      }`,
     ),
   });
 
@@ -3247,7 +3247,7 @@ it("parses_operations_with_empty_json_bodies:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{}`
+      `{}`,
     ),
   });
 
@@ -3276,7 +3276,7 @@ it("parses_string_shapes:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{"String":"string-value"}`
+      `{"String":"string-value"}`,
     ),
   });
 
@@ -3314,7 +3314,7 @@ it("parses_integer_shapes:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{"Integer":1234}`
+      `{"Integer":1234}`,
     ),
   });
 
@@ -3352,7 +3352,7 @@ it("parses_long_shapes:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{"Long":1234567890123456789}`
+      `{"Long":1234567890123456789}`,
     ),
   });
 
@@ -3390,7 +3390,7 @@ it("parses_float_shapes:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{"Float":1234.5}`
+      `{"Float":1234.5}`,
     ),
   });
 
@@ -3428,7 +3428,7 @@ it("parses_double_shapes:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{"Double":123456789.12345679}`
+      `{"Double":123456789.12345679}`,
     ),
   });
 
@@ -3466,7 +3466,7 @@ it("parses_boolean_shapes_true:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{"Boolean":true}`
+      `{"Boolean":true}`,
     ),
   });
 
@@ -3504,7 +3504,7 @@ it("parses_boolean_false:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{"Boolean":false}`
+      `{"Boolean":false}`,
     ),
   });
 
@@ -3542,7 +3542,7 @@ it("parses_blob_shapes:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{"Blob":"YmluYXJ5LXZhbHVl"}`
+      `{"Blob":"YmluYXJ5LXZhbHVl"}`,
     ),
   });
 
@@ -3580,7 +3580,7 @@ it("parses_timestamp_shapes:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{"Timestamp":946845296}`
+      `{"Timestamp":946845296}`,
     ),
   });
 
@@ -3618,7 +3618,7 @@ it("parses_iso8601_timestamps:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{"Iso8601Timestamp":"2000-01-02T20:34:56Z"}`
+      `{"Iso8601Timestamp":"2000-01-02T20:34:56Z"}`,
     ),
   });
 
@@ -3656,7 +3656,7 @@ it("parses_httpdate_timestamps:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{"HttpdateTimestamp":"Sun, 02 Jan 2000 20:34:56 GMT"}`
+      `{"HttpdateTimestamp":"Sun, 02 Jan 2000 20:34:56 GMT"}`,
     ),
   });
 
@@ -3694,7 +3694,7 @@ it("parses_list_shapes:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{"ListOfStrings":["abc","mno","xyz"]}`
+      `{"ListOfStrings":["abc","mno","xyz"]}`,
     ),
   });
 
@@ -3732,7 +3732,7 @@ it("parses_list_of_map_shapes:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{"ListOfMapsOfStrings":[{"size":"large"},{"color":"red"}]}`
+      `{"ListOfMapsOfStrings":[{"size":"large"},{"color":"red"}]}`,
     ),
   });
 
@@ -3778,7 +3778,7 @@ it("parses_list_of_list_shapes:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{"ListOfLists":[["abc","mno","xyz"],["hjk","qrs","tuv"]]}`
+      `{"ListOfLists":[["abc","mno","xyz"],["hjk","qrs","tuv"]]}`,
     ),
   });
 
@@ -3820,7 +3820,7 @@ it("parses_list_of_structure_shapes:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{"ListOfStructs":[{"Value":"value-1"},{"Value":"value-2"}]}`
+      `{"ListOfStructs":[{"Value":"value-1"},{"Value":"value-2"}]}`,
     ),
   });
 
@@ -3866,7 +3866,7 @@ it("parses_list_of_recursive_structure_shapes:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{"RecursiveList":[{"RecursiveList":[{"RecursiveList":[{"String":"value"}]}]}]}`
+      `{"RecursiveList":[{"RecursiveList":[{"RecursiveList":[{"String":"value"}]}]}]}`,
     ),
   });
 
@@ -3916,7 +3916,7 @@ it("parses_map_shapes:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{"MapOfStrings":{"size":"large","color":"red"}}`
+      `{"MapOfStrings":{"size":"large","color":"red"}}`,
     ),
   });
 
@@ -3958,7 +3958,7 @@ it("parses_map_of_list_shapes:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{"MapOfListsOfStrings":{"sizes":["large","small"],"colors":["red","green"]}}`
+      `{"MapOfListsOfStrings":{"sizes":["large","small"],"colors":["red","green"]}}`,
     ),
   });
 
@@ -4000,7 +4000,7 @@ it("parses_map_of_map_shapes:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{"MapOfMaps":{"sizes":{"large":"L","medium":"M"},"colors":{"red":"R","blue":"B"}}}`
+      `{"MapOfMaps":{"sizes":{"large":"L","medium":"M"},"colors":{"red":"R","blue":"B"}}}`,
     ),
   });
 
@@ -4050,7 +4050,7 @@ it("parses_map_of_structure_shapes:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{"MapOfStructs":{"size":{"Value":"small"},"color":{"Value":"red"}}}`
+      `{"MapOfStructs":{"size":{"Value":"small"},"color":{"Value":"red"}}}`,
     ),
   });
 
@@ -4096,7 +4096,7 @@ it("parses_map_of_recursive_structure_shapes:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.1",
       },
-      `{"RecursiveMap":{"key-1":{"RecursiveMap":{"key-2":{"RecursiveMap":{"key-3":{"String":"value"}}}}}}}`
+      `{"RecursiveMap":{"key-1":{"RecursiveMap":{"key-2":{"RecursiveMap":{"key-3":{"String":"value"}}}}}}}`,
     ),
   });
 
@@ -4147,7 +4147,7 @@ it("parses_the_request_id_from_the_response:Response", async () => {
         "x-amzn-requestid": "amazon-uniq-request-id",
         "content-type": "application/x-amz-json-1.1",
       },
-      `{}`
+      `{}`,
     ),
   });
 
@@ -4216,7 +4216,7 @@ it("AwsJson11StructuresDontDeserializeNullValues:Response", async () => {
       },
       `{
           "string": null
-      }`
+      }`,
     ),
   });
 
@@ -4364,7 +4364,7 @@ it("PutAndGetInlineDocumentsInput:Response", async () => {
       },
       `{
           "inlineDocument": {"foo": "bar"}
-      }`
+      }`,
     ),
   });
 
@@ -4601,7 +4601,7 @@ it("AwsJson11SupportsNaNFloatInputs:Response", async () => {
       `{
           "floatValue": "NaN",
           "doubleValue": "NaN"
-      }`
+      }`,
     ),
   });
 
@@ -4644,7 +4644,7 @@ it("AwsJson11SupportsInfinityFloatInputs:Response", async () => {
       `{
           "floatValue": "Infinity",
           "doubleValue": "Infinity"
-      }`
+      }`,
     ),
   });
 
@@ -4687,7 +4687,7 @@ it("AwsJson11SupportsNegativeInfinityFloatInputs:Response", async () => {
       `{
           "floatValue": "-Infinity",
           "doubleValue": "-Infinity"
-      }`
+      }`,
     ),
   });
 
@@ -4817,7 +4817,7 @@ it("AwsJson11SparseMapsDeserializeNullValues:Response", async () => {
           "sparseStringMap": {
               "foo": null
           }
-      }`
+      }`,
     ),
   });
 
@@ -4861,7 +4861,7 @@ it("AwsJson11SparseListsDeserializeNull:Response", async () => {
           "sparseStringList": [
               null
           ]
-      }`
+      }`,
     ),
   });
 
@@ -4905,7 +4905,7 @@ const compareEquivalentJsonBodies = (expectedBody: string, generatedBody: string
 const compareEquivalentUnknownTypeBodies = (
   utf8Encoder: __Encoder,
   expectedBody: string,
-  generatedBody: string | Uint8Array
+  generatedBody: string | Uint8Array,
 ): Object => {
   const expectedParts = { Value: expectedBody };
   const generatedParts = {

@@ -31,7 +31,7 @@ const checkState = async (client: ProtonClient, input: GetComponentCommandInput)
  */
 export const waitForComponentDeleted = async (
   params: WaiterConfiguration<ProtonClient>,
-  input: GetComponentCommandInput
+  input: GetComponentCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 4999 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -43,7 +43,7 @@ export const waitForComponentDeleted = async (
  */
 export const waitUntilComponentDeleted = async (
   params: WaiterConfiguration<ProtonClient>,
-  input: GetComponentCommandInput
+  input: GetComponentCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 4999 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

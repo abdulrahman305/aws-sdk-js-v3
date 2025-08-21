@@ -61,7 +61,7 @@ interface AssumeRoleWithProviderProfile extends Profile {
  */
 export const isAssumeRoleProfile = (
   arg: any,
-  { profile = "default", logger }: { profile?: string; logger?: Logger } = {}
+  { profile = "default", logger }: { profile?: string; logger?: Logger } = {},
 ) => {
   return (
     Boolean(arg) &&
@@ -76,7 +76,7 @@ export const isAssumeRoleProfile = (
 
 const isAssumeRoleWithSourceProfile = (
   arg: any,
-  { profile, logger }: { profile: string; logger?: Logger }
+  { profile, logger }: { profile: string; logger?: Logger },
 ): arg is AssumeRoleWithSourceProfile => {
   const withSourceProfile = typeof arg.source_profile === "string" && typeof arg.credential_source === "undefined";
   if (withSourceProfile) {
@@ -87,7 +87,7 @@ const isAssumeRoleWithSourceProfile = (
 
 const isCredentialSourceProfile = (
   arg: any,
-  { profile, logger }: { profile: string; logger?: Logger }
+  { profile, logger }: { profile: string; logger?: Logger },
 ): arg is AssumeRoleWithProviderProfile => {
   const withProviderProfile = typeof arg.credential_source === "string" && typeof arg.source_profile === "undefined";
   if (withProviderProfile) {
@@ -103,7 +103,7 @@ export const resolveAssumeRoleCredentials = async (
   profileName: string,
   profiles: ParsedIniData,
   options: FromIniInit,
-  visitedProfiles: Record<string, true> = {}
+  visitedProfiles: Record<string, true> = {},
 ) => {
   options.logger?.debug("@aws-sdk/credential-provider-ini - resolveAssumeRoleCredentials (STS)");
   const data = profiles[profileName];
@@ -117,7 +117,7 @@ export const resolveAssumeRoleCredentials = async (
         credentialProviderLogger: options.logger,
         parentClientConfig: options?.parentClientConfig,
       },
-      options.clientPlugins
+      options.clientPlugins,
     );
   }
 
@@ -127,14 +127,14 @@ export const resolveAssumeRoleCredentials = async (
       `Detected a cycle attempting to resolve credentials for profile` +
         ` ${getProfileName(options)}. Profiles visited: ` +
         Object.keys(visitedProfiles).join(", "),
-      { logger: options.logger }
+      { logger: options.logger },
     );
   }
 
   options.logger?.debug(
     `@aws-sdk/credential-provider-ini - finding credential resolver using ${
       source_profile ? `source_profile=[${source_profile}]` : `profile=[${profileName}]`
-    }`
+    }`,
   );
 
   const sourceCredsProvider: Promise<AwsCredentialIdentity> = source_profile
@@ -154,7 +154,7 @@ export const resolveAssumeRoleCredentials = async (
         {
           ...visitedProfiles,
           [source_profile]: true,
-        }
+        },
       )
     : (await resolveCredentialSource(data.credential_source!, profileName, options.logger)(options))();
 
@@ -170,7 +170,7 @@ export const resolveAssumeRoleCredentials = async (
     if (!options.mfaCodeProvider) {
       throw new CredentialsProviderError(
         `Profile ${profileName} requires multi-factor authentication, but no MFA code callback was provided.`,
-        { logger: options.logger, tryNextLink: false }
+        { logger: options.logger, tryNextLink: false },
       );
     }
     params.SerialNumber = mfa_serial;

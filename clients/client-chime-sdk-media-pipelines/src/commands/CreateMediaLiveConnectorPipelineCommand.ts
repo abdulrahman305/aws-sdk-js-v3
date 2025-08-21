@@ -247,7 +247,7 @@ export class CreateMediaLiveConnectorPipelineCommand extends $Command
   .n("ChimeSDKMediaPipelinesClient", "CreateMediaLiveConnectorPipelineCommand")
   .f(
     CreateMediaLiveConnectorPipelineRequestFilterSensitiveLog,
-    CreateMediaLiveConnectorPipelineResponseFilterSensitiveLog
+    CreateMediaLiveConnectorPipelineResponseFilterSensitiveLog,
   )
   .ser(se_CreateMediaLiveConnectorPipelineCommand)
   .de(de_CreateMediaLiveConnectorPipelineCommand)

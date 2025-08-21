@@ -80,7 +80,7 @@ async function main() {
   console.log("query:", ...query);
   console.log(
     "matches:",
-    matchedPackages.map((_) => _.name)
+    matchedPackages.map((_) => _.name),
   );
 
   const [target] = matchedPackages;

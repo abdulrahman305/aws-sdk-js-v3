@@ -36,7 +36,7 @@ const checkState = async (client: AmpClient, input: DescribeScraperCommandInput)
  */
 export const waitForScraperActive = async (
   params: WaiterConfiguration<AmpClient>,
-  input: DescribeScraperCommandInput
+  input: DescribeScraperCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 2, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -48,7 +48,7 @@ export const waitForScraperActive = async (
  */
 export const waitUntilScraperActive = async (
   params: WaiterConfiguration<AmpClient>,
-  input: DescribeScraperCommandInput
+  input: DescribeScraperCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 2, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

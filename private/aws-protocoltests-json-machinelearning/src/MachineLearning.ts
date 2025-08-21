@@ -18,7 +18,7 @@ export interface MachineLearning {
   predict(
     args: PredictCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PredictCommandOutput) => void
+    cb: (err: any, data?: PredictCommandOutput) => void,
   ): void;
 }
 

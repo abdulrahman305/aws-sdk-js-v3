@@ -69,13 +69,13 @@ export interface Keyspaces {
    */
   createKeyspace(
     args: CreateKeyspaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateKeyspaceCommandOutput>;
   createKeyspace(args: CreateKeyspaceCommandInput, cb: (err: any, data?: CreateKeyspaceCommandOutput) => void): void;
   createKeyspace(
     args: CreateKeyspaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateKeyspaceCommandOutput) => void
+    cb: (err: any, data?: CreateKeyspaceCommandOutput) => void,
   ): void;
 
   /**
@@ -86,7 +86,7 @@ export interface Keyspaces {
   createTable(
     args: CreateTableCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTableCommandOutput) => void
+    cb: (err: any, data?: CreateTableCommandOutput) => void,
   ): void;
 
   /**
@@ -94,13 +94,13 @@ export interface Keyspaces {
    */
   deleteKeyspace(
     args: DeleteKeyspaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteKeyspaceCommandOutput>;
   deleteKeyspace(args: DeleteKeyspaceCommandInput, cb: (err: any, data?: DeleteKeyspaceCommandOutput) => void): void;
   deleteKeyspace(
     args: DeleteKeyspaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteKeyspaceCommandOutput) => void
+    cb: (err: any, data?: DeleteKeyspaceCommandOutput) => void,
   ): void;
 
   /**
@@ -111,7 +111,7 @@ export interface Keyspaces {
   deleteTable(
     args: DeleteTableCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTableCommandOutput) => void
+    cb: (err: any, data?: DeleteTableCommandOutput) => void,
   ): void;
 
   /**
@@ -122,7 +122,7 @@ export interface Keyspaces {
   getKeyspace(
     args: GetKeyspaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetKeyspaceCommandOutput) => void
+    cb: (err: any, data?: GetKeyspaceCommandOutput) => void,
   ): void;
 
   /**
@@ -133,7 +133,7 @@ export interface Keyspaces {
   getTable(
     args: GetTableCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTableCommandOutput) => void
+    cb: (err: any, data?: GetTableCommandOutput) => void,
   ): void;
 
   /**
@@ -141,16 +141,16 @@ export interface Keyspaces {
    */
   getTableAutoScalingSettings(
     args: GetTableAutoScalingSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTableAutoScalingSettingsCommandOutput>;
   getTableAutoScalingSettings(
     args: GetTableAutoScalingSettingsCommandInput,
-    cb: (err: any, data?: GetTableAutoScalingSettingsCommandOutput) => void
+    cb: (err: any, data?: GetTableAutoScalingSettingsCommandOutput) => void,
   ): void;
   getTableAutoScalingSettings(
     args: GetTableAutoScalingSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTableAutoScalingSettingsCommandOutput) => void
+    cb: (err: any, data?: GetTableAutoScalingSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -162,7 +162,7 @@ export interface Keyspaces {
   listKeyspaces(
     args: ListKeyspacesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListKeyspacesCommandOutput) => void
+    cb: (err: any, data?: ListKeyspacesCommandOutput) => void,
   ): void;
 
   /**
@@ -173,7 +173,7 @@ export interface Keyspaces {
   listTables(
     args: ListTablesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTablesCommandOutput) => void
+    cb: (err: any, data?: ListTablesCommandOutput) => void,
   ): void;
 
   /**
@@ -181,16 +181,16 @@ export interface Keyspaces {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -201,7 +201,7 @@ export interface Keyspaces {
   restoreTable(
     args: RestoreTableCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RestoreTableCommandOutput) => void
+    cb: (err: any, data?: RestoreTableCommandOutput) => void,
   ): void;
 
   /**
@@ -212,7 +212,7 @@ export interface Keyspaces {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -223,7 +223,7 @@ export interface Keyspaces {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -234,7 +234,7 @@ export interface Keyspaces {
   updateTable(
     args: UpdateTableCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTableCommandOutput) => void
+    cb: (err: any, data?: UpdateTableCommandOutput) => void,
   ): void;
 }
 

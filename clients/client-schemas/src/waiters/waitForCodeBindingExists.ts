@@ -47,7 +47,7 @@ const checkState = async (client: SchemasClient, input: DescribeCodeBindingComma
  */
 export const waitForCodeBindingExists = async (
   params: WaiterConfiguration<SchemasClient>,
-  input: DescribeCodeBindingCommandInput
+  input: DescribeCodeBindingCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 2, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -59,7 +59,7 @@ export const waitForCodeBindingExists = async (
  */
 export const waitUntilCodeBindingExists = async (
   params: WaiterConfiguration<SchemasClient>,
-  input: DescribeCodeBindingCommandInput
+  input: DescribeCodeBindingCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 2, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

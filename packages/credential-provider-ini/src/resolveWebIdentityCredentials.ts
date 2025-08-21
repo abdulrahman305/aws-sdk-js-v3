@@ -26,7 +26,7 @@ export const isWebIdentityProfile = (arg: any): arg is WebIdentityProfile =>
  */
 export const resolveWebIdentityCredentials = async (
   profile: WebIdentityProfile,
-  options: FromIniInit
+  options: FromIniInit,
 ): Promise<AwsCredentialIdentity> =>
   import("@aws-sdk/credential-provider-web-identity").then(({ fromTokenFile }) =>
     fromTokenFile({
@@ -36,5 +36,5 @@ export const resolveWebIdentityCredentials = async (
       roleAssumerWithWebIdentity: options.roleAssumerWithWebIdentity,
       logger: options.logger,
       parentClientConfig: options.parentClientConfig,
-    })()
+    })(),
   );

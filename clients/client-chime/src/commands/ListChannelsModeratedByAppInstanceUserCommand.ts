@@ -136,7 +136,7 @@ export class ListChannelsModeratedByAppInstanceUserCommand extends $Command
   .n("ChimeClient", "ListChannelsModeratedByAppInstanceUserCommand")
   .f(
     ListChannelsModeratedByAppInstanceUserRequestFilterSensitiveLog,
-    ListChannelsModeratedByAppInstanceUserResponseFilterSensitiveLog
+    ListChannelsModeratedByAppInstanceUserResponseFilterSensitiveLog,
   )
   .ser(se_ListChannelsModeratedByAppInstanceUserCommand)
   .de(de_ListChannelsModeratedByAppInstanceUserCommand)

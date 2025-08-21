@@ -74,7 +74,7 @@ import { PinpointSMSVoiceServiceException as __BaseException } from "../models/P
  */
 export const se_CreateConfigurationSetCommand = async (
   input: CreateConfigurationSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -85,7 +85,7 @@ export const se_CreateConfigurationSetCommand = async (
   body = JSON.stringify(
     take(input, {
       ConfigurationSetName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -96,7 +96,7 @@ export const se_CreateConfigurationSetCommand = async (
  */
 export const se_CreateConfigurationSetEventDestinationCommand = async (
   input: CreateConfigurationSetEventDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -109,7 +109,7 @@ export const se_CreateConfigurationSetEventDestinationCommand = async (
     take(input, {
       EventDestination: (_) => _json(_),
       EventDestinationName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -120,7 +120,7 @@ export const se_CreateConfigurationSetEventDestinationCommand = async (
  */
 export const se_DeleteConfigurationSetCommand = async (
   input: DeleteConfigurationSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -136,7 +136,7 @@ export const se_DeleteConfigurationSetCommand = async (
  */
 export const se_DeleteConfigurationSetEventDestinationCommand = async (
   input: DeleteConfigurationSetEventDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -153,7 +153,7 @@ export const se_DeleteConfigurationSetEventDestinationCommand = async (
  */
 export const se_GetConfigurationSetEventDestinationsCommand = async (
   input: GetConfigurationSetEventDestinationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -169,7 +169,7 @@ export const se_GetConfigurationSetEventDestinationsCommand = async (
  */
 export const se_ListConfigurationSetsCommand = async (
   input: ListConfigurationSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -188,7 +188,7 @@ export const se_ListConfigurationSetsCommand = async (
  */
 export const se_SendVoiceMessageCommand = async (
   input: SendVoiceMessageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -203,7 +203,7 @@ export const se_SendVoiceMessageCommand = async (
       Content: (_) => _json(_),
       DestinationPhoneNumber: [],
       OriginationPhoneNumber: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -214,7 +214,7 @@ export const se_SendVoiceMessageCommand = async (
  */
 export const se_UpdateConfigurationSetEventDestinationCommand = async (
   input: UpdateConfigurationSetEventDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -227,7 +227,7 @@ export const se_UpdateConfigurationSetEventDestinationCommand = async (
   body = JSON.stringify(
     take(input, {
       EventDestination: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -238,7 +238,7 @@ export const se_UpdateConfigurationSetEventDestinationCommand = async (
  */
 export const de_CreateConfigurationSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConfigurationSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -255,7 +255,7 @@ export const de_CreateConfigurationSetCommand = async (
  */
 export const de_CreateConfigurationSetEventDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConfigurationSetEventDestinationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -272,7 +272,7 @@ export const de_CreateConfigurationSetEventDestinationCommand = async (
  */
 export const de_DeleteConfigurationSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConfigurationSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -289,7 +289,7 @@ export const de_DeleteConfigurationSetCommand = async (
  */
 export const de_DeleteConfigurationSetEventDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConfigurationSetEventDestinationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -306,7 +306,7 @@ export const de_DeleteConfigurationSetEventDestinationCommand = async (
  */
 export const de_GetConfigurationSetEventDestinationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConfigurationSetEventDestinationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -327,7 +327,7 @@ export const de_GetConfigurationSetEventDestinationsCommand = async (
  */
 export const de_ListConfigurationSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConfigurationSetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -349,7 +349,7 @@ export const de_ListConfigurationSetsCommand = async (
  */
 export const de_SendVoiceMessageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendVoiceMessageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -370,7 +370,7 @@ export const de_SendVoiceMessageCommand = async (
  */
 export const de_UpdateConfigurationSetEventDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConfigurationSetEventDestinationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -426,7 +426,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AlreadyExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -463,7 +463,7 @@ const de_BadRequestExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InternalServiceErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -483,7 +483,7 @@ const de_InternalServiceErrorExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -520,7 +520,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

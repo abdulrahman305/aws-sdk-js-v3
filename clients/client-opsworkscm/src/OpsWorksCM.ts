@@ -126,7 +126,7 @@ export interface OpsWorksCM {
   associateNode(
     args: AssociateNodeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateNodeCommandOutput) => void
+    cb: (err: any, data?: AssociateNodeCommandOutput) => void,
   ): void;
 
   /**
@@ -137,7 +137,7 @@ export interface OpsWorksCM {
   createBackup(
     args: CreateBackupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateBackupCommandOutput) => void
+    cb: (err: any, data?: CreateBackupCommandOutput) => void,
   ): void;
 
   /**
@@ -148,7 +148,7 @@ export interface OpsWorksCM {
   createServer(
     args: CreateServerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateServerCommandOutput) => void
+    cb: (err: any, data?: CreateServerCommandOutput) => void,
   ): void;
 
   /**
@@ -159,7 +159,7 @@ export interface OpsWorksCM {
   deleteBackup(
     args: DeleteBackupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteBackupCommandOutput) => void
+    cb: (err: any, data?: DeleteBackupCommandOutput) => void,
   ): void;
 
   /**
@@ -170,7 +170,7 @@ export interface OpsWorksCM {
   deleteServer(
     args: DeleteServerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteServerCommandOutput) => void
+    cb: (err: any, data?: DeleteServerCommandOutput) => void,
   ): void;
 
   /**
@@ -179,16 +179,16 @@ export interface OpsWorksCM {
   describeAccountAttributes(): Promise<DescribeAccountAttributesCommandOutput>;
   describeAccountAttributes(
     args: DescribeAccountAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAccountAttributesCommandOutput>;
   describeAccountAttributes(
     args: DescribeAccountAttributesCommandInput,
-    cb: (err: any, data?: DescribeAccountAttributesCommandOutput) => void
+    cb: (err: any, data?: DescribeAccountAttributesCommandOutput) => void,
   ): void;
   describeAccountAttributes(
     args: DescribeAccountAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAccountAttributesCommandOutput) => void
+    cb: (err: any, data?: DescribeAccountAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -197,13 +197,13 @@ export interface OpsWorksCM {
   describeBackups(): Promise<DescribeBackupsCommandOutput>;
   describeBackups(
     args: DescribeBackupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeBackupsCommandOutput>;
   describeBackups(args: DescribeBackupsCommandInput, cb: (err: any, data?: DescribeBackupsCommandOutput) => void): void;
   describeBackups(
     args: DescribeBackupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeBackupsCommandOutput) => void
+    cb: (err: any, data?: DescribeBackupsCommandOutput) => void,
   ): void;
 
   /**
@@ -211,13 +211,13 @@ export interface OpsWorksCM {
    */
   describeEvents(
     args: DescribeEventsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEventsCommandOutput>;
   describeEvents(args: DescribeEventsCommandInput, cb: (err: any, data?: DescribeEventsCommandOutput) => void): void;
   describeEvents(
     args: DescribeEventsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEventsCommandOutput) => void
+    cb: (err: any, data?: DescribeEventsCommandOutput) => void,
   ): void;
 
   /**
@@ -225,16 +225,16 @@ export interface OpsWorksCM {
    */
   describeNodeAssociationStatus(
     args: DescribeNodeAssociationStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeNodeAssociationStatusCommandOutput>;
   describeNodeAssociationStatus(
     args: DescribeNodeAssociationStatusCommandInput,
-    cb: (err: any, data?: DescribeNodeAssociationStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeNodeAssociationStatusCommandOutput) => void,
   ): void;
   describeNodeAssociationStatus(
     args: DescribeNodeAssociationStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeNodeAssociationStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeNodeAssociationStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -243,13 +243,13 @@ export interface OpsWorksCM {
   describeServers(): Promise<DescribeServersCommandOutput>;
   describeServers(
     args: DescribeServersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeServersCommandOutput>;
   describeServers(args: DescribeServersCommandInput, cb: (err: any, data?: DescribeServersCommandOutput) => void): void;
   describeServers(
     args: DescribeServersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeServersCommandOutput) => void
+    cb: (err: any, data?: DescribeServersCommandOutput) => void,
   ): void;
 
   /**
@@ -257,16 +257,16 @@ export interface OpsWorksCM {
    */
   disassociateNode(
     args: DisassociateNodeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateNodeCommandOutput>;
   disassociateNode(
     args: DisassociateNodeCommandInput,
-    cb: (err: any, data?: DisassociateNodeCommandOutput) => void
+    cb: (err: any, data?: DisassociateNodeCommandOutput) => void,
   ): void;
   disassociateNode(
     args: DisassociateNodeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateNodeCommandOutput) => void
+    cb: (err: any, data?: DisassociateNodeCommandOutput) => void,
   ): void;
 
   /**
@@ -274,16 +274,16 @@ export interface OpsWorksCM {
    */
   exportServerEngineAttribute(
     args: ExportServerEngineAttributeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExportServerEngineAttributeCommandOutput>;
   exportServerEngineAttribute(
     args: ExportServerEngineAttributeCommandInput,
-    cb: (err: any, data?: ExportServerEngineAttributeCommandOutput) => void
+    cb: (err: any, data?: ExportServerEngineAttributeCommandOutput) => void,
   ): void;
   exportServerEngineAttribute(
     args: ExportServerEngineAttributeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExportServerEngineAttributeCommandOutput) => void
+    cb: (err: any, data?: ExportServerEngineAttributeCommandOutput) => void,
   ): void;
 
   /**
@@ -291,16 +291,16 @@ export interface OpsWorksCM {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -311,7 +311,7 @@ export interface OpsWorksCM {
   restoreServer(
     args: RestoreServerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RestoreServerCommandOutput) => void
+    cb: (err: any, data?: RestoreServerCommandOutput) => void,
   ): void;
 
   /**
@@ -319,16 +319,16 @@ export interface OpsWorksCM {
    */
   startMaintenance(
     args: StartMaintenanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartMaintenanceCommandOutput>;
   startMaintenance(
     args: StartMaintenanceCommandInput,
-    cb: (err: any, data?: StartMaintenanceCommandOutput) => void
+    cb: (err: any, data?: StartMaintenanceCommandOutput) => void,
   ): void;
   startMaintenance(
     args: StartMaintenanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartMaintenanceCommandOutput) => void
+    cb: (err: any, data?: StartMaintenanceCommandOutput) => void,
   ): void;
 
   /**
@@ -339,7 +339,7 @@ export interface OpsWorksCM {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -350,7 +350,7 @@ export interface OpsWorksCM {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -361,7 +361,7 @@ export interface OpsWorksCM {
   updateServer(
     args: UpdateServerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateServerCommandOutput) => void
+    cb: (err: any, data?: UpdateServerCommandOutput) => void,
   ): void;
 
   /**
@@ -369,16 +369,16 @@ export interface OpsWorksCM {
    */
   updateServerEngineAttributes(
     args: UpdateServerEngineAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateServerEngineAttributesCommandOutput>;
   updateServerEngineAttributes(
     args: UpdateServerEngineAttributesCommandInput,
-    cb: (err: any, data?: UpdateServerEngineAttributesCommandOutput) => void
+    cb: (err: any, data?: UpdateServerEngineAttributesCommandOutput) => void,
   ): void;
   updateServerEngineAttributes(
     args: UpdateServerEngineAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateServerEngineAttributesCommandOutput) => void
+    cb: (err: any, data?: UpdateServerEngineAttributesCommandOutput) => void,
   ): void;
 }
 

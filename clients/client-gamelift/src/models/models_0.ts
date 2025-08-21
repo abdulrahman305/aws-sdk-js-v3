@@ -10307,7 +10307,7 @@ export const CreateBuildOutputFilterSensitiveLog = (obj: CreateBuildOutput): any
  * @internal
  */
 export const CreateContainerGroupDefinitionInputFilterSensitiveLog = (
-  obj: CreateContainerGroupDefinitionInput
+  obj: CreateContainerGroupDefinitionInput,
 ): any => ({
   ...obj,
 });
@@ -10316,7 +10316,7 @@ export const CreateContainerGroupDefinitionInputFilterSensitiveLog = (
  * @internal
  */
 export const CreateContainerGroupDefinitionOutputFilterSensitiveLog = (
-  obj: CreateContainerGroupDefinitionOutput
+  obj: CreateContainerGroupDefinitionOutput,
 ): any => ({
   ...obj,
 });
@@ -10435,7 +10435,7 @@ export const DescribeComputeOutputFilterSensitiveLog = (obj: DescribeComputeOutp
  * @internal
  */
 export const DescribeContainerGroupDefinitionOutputFilterSensitiveLog = (
-  obj: DescribeContainerGroupDefinitionOutput
+  obj: DescribeContainerGroupDefinitionOutput,
 ): any => ({
   ...obj,
 });
@@ -10659,7 +10659,7 @@ export const ListComputeOutputFilterSensitiveLog = (obj: ListComputeOutput): any
  * @internal
  */
 export const ListContainerGroupDefinitionsOutputFilterSensitiveLog = (
-  obj: ListContainerGroupDefinitionsOutput
+  obj: ListContainerGroupDefinitionsOutput,
 ): any => ({
   ...obj,
 });

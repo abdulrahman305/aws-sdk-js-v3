@@ -5,7 +5,7 @@ import { Readable } from "stream";
 export function streamReader(
   stream: Readable,
   onChunk: (chunk: Uint8Array) => void,
-  chunkSize = 1048576 // 1 MiB
+  chunkSize = 1048576, // 1 MiB
 ): Promise<void> {
   return new Promise((resolve, reject) => {
     let temporaryBuffer: Uint8Array | undefined;

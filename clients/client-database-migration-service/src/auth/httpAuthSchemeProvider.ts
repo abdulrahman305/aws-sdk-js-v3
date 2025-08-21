@@ -44,7 +44,7 @@ export interface DatabaseMigrationServiceHttpAuthSchemeParametersProvider
 export const defaultDatabaseMigrationServiceHttpAuthSchemeParametersProvider = async (
   config: DatabaseMigrationServiceClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<DatabaseMigrationServiceHttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -57,7 +57,7 @@ export const defaultDatabaseMigrationServiceHttpAuthSchemeParametersProvider = a
 };
 
 function createAwsAuthSigv4HttpAuthOption(
-  authParameters: DatabaseMigrationServiceHttpAuthSchemeParameters
+  authParameters: DatabaseMigrationServiceHttpAuthSchemeParameters,
 ): HttpAuthOption {
   return {
     schemeId: "aws.auth#sigv4",
@@ -87,7 +87,7 @@ export interface DatabaseMigrationServiceHttpAuthSchemeProvider
  * @internal
  */
 export const defaultDatabaseMigrationServiceHttpAuthSchemeProvider: DatabaseMigrationServiceHttpAuthSchemeProvider = (
-  authParameters
+  authParameters,
 ) => {
   const options: HttpAuthOption[] = [];
   switch (authParameters.operation) {
@@ -136,7 +136,7 @@ export interface HttpAuthSchemeResolvedConfig extends AwsSdkSigV4AuthResolvedCon
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved
+  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved,
 ): T & HttpAuthSchemeResolvedConfig => {
   const config_0 = resolveAwsSdkSigV4Config(config);
   return {

@@ -31,7 +31,7 @@ const checkState = async (client: AmpClient, input: DescribeWorkspaceCommandInpu
  */
 export const waitForWorkspaceDeleted = async (
   params: WaiterConfiguration<AmpClient>,
-  input: DescribeWorkspaceCommandInput
+  input: DescribeWorkspaceCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 2, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -43,7 +43,7 @@ export const waitForWorkspaceDeleted = async (
  */
 export const waitUntilWorkspaceDeleted = async (
   params: WaiterConfiguration<AmpClient>,
-  input: DescribeWorkspaceCommandInput
+  input: DescribeWorkspaceCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 2, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

@@ -19,7 +19,7 @@ export interface APIGateway {
   getRestApis(
     args: GetRestApisCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRestApisCommandOutput) => void
+    cb: (err: any, data?: GetRestApisCommandOutput) => void,
   ): void;
 }
 

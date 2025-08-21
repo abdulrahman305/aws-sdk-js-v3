@@ -43,13 +43,13 @@ export interface S3Outposts {
    */
   createEndpoint(
     args: CreateEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEndpointCommandOutput>;
   createEndpoint(args: CreateEndpointCommandInput, cb: (err: any, data?: CreateEndpointCommandOutput) => void): void;
   createEndpoint(
     args: CreateEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEndpointCommandOutput) => void
+    cb: (err: any, data?: CreateEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -57,13 +57,13 @@ export interface S3Outposts {
    */
   deleteEndpoint(
     args: DeleteEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEndpointCommandOutput>;
   deleteEndpoint(args: DeleteEndpointCommandInput, cb: (err: any, data?: DeleteEndpointCommandOutput) => void): void;
   deleteEndpoint(
     args: DeleteEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEndpointCommandOutput) => void
+    cb: (err: any, data?: DeleteEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -75,7 +75,7 @@ export interface S3Outposts {
   listEndpoints(
     args: ListEndpointsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEndpointsCommandOutput) => void
+    cb: (err: any, data?: ListEndpointsCommandOutput) => void,
   ): void;
 
   /**
@@ -84,16 +84,16 @@ export interface S3Outposts {
   listOutpostsWithS3(): Promise<ListOutpostsWithS3CommandOutput>;
   listOutpostsWithS3(
     args: ListOutpostsWithS3CommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListOutpostsWithS3CommandOutput>;
   listOutpostsWithS3(
     args: ListOutpostsWithS3CommandInput,
-    cb: (err: any, data?: ListOutpostsWithS3CommandOutput) => void
+    cb: (err: any, data?: ListOutpostsWithS3CommandOutput) => void,
   ): void;
   listOutpostsWithS3(
     args: ListOutpostsWithS3CommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOutpostsWithS3CommandOutput) => void
+    cb: (err: any, data?: ListOutpostsWithS3CommandOutput) => void,
   ): void;
 
   /**
@@ -101,16 +101,16 @@ export interface S3Outposts {
    */
   listSharedEndpoints(
     args: ListSharedEndpointsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSharedEndpointsCommandOutput>;
   listSharedEndpoints(
     args: ListSharedEndpointsCommandInput,
-    cb: (err: any, data?: ListSharedEndpointsCommandOutput) => void
+    cb: (err: any, data?: ListSharedEndpointsCommandOutput) => void,
   ): void;
   listSharedEndpoints(
     args: ListSharedEndpointsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSharedEndpointsCommandOutput) => void
+    cb: (err: any, data?: ListSharedEndpointsCommandOutput) => void,
   ): void;
 }
 

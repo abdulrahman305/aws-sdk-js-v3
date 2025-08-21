@@ -208,7 +208,7 @@ import {
  */
 export const se_AddNotificationChannelCommand = async (
   input: AddNotificationChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -219,7 +219,7 @@ export const se_AddNotificationChannelCommand = async (
   body = JSON.stringify(
     take(input, {
       Config: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -230,7 +230,7 @@ export const se_AddNotificationChannelCommand = async (
  */
 export const se_DeleteInsightCommand = async (
   input: DeleteInsightCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -246,7 +246,7 @@ export const se_DeleteInsightCommand = async (
  */
 export const se_DescribeAccountHealthCommand = async (
   input: DescribeAccountHealthCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -264,7 +264,7 @@ export const se_DescribeAccountHealthCommand = async (
  */
 export const se_DescribeAccountOverviewCommand = async (
   input: DescribeAccountOverviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -276,7 +276,7 @@ export const se_DescribeAccountOverviewCommand = async (
     take(input, {
       FromTime: (_) => _.getTime() / 1_000,
       ToTime: (_) => _.getTime() / 1_000,
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -287,7 +287,7 @@ export const se_DescribeAccountOverviewCommand = async (
  */
 export const se_DescribeAnomalyCommand = async (
   input: DescribeAnomalyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -306,7 +306,7 @@ export const se_DescribeAnomalyCommand = async (
  */
 export const se_DescribeEventSourcesConfigCommand = async (
   input: DescribeEventSourcesConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -324,7 +324,7 @@ export const se_DescribeEventSourcesConfigCommand = async (
  */
 export const se_DescribeFeedbackCommand = async (
   input: DescribeFeedbackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -335,7 +335,7 @@ export const se_DescribeFeedbackCommand = async (
   body = JSON.stringify(
     take(input, {
       InsightId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -346,7 +346,7 @@ export const se_DescribeFeedbackCommand = async (
  */
 export const se_DescribeInsightCommand = async (
   input: DescribeInsightCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -365,7 +365,7 @@ export const se_DescribeInsightCommand = async (
  */
 export const se_DescribeOrganizationHealthCommand = async (
   input: DescribeOrganizationHealthCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -377,7 +377,7 @@ export const se_DescribeOrganizationHealthCommand = async (
     take(input, {
       AccountIds: (_) => _json(_),
       OrganizationalUnitIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -388,7 +388,7 @@ export const se_DescribeOrganizationHealthCommand = async (
  */
 export const se_DescribeOrganizationOverviewCommand = async (
   input: DescribeOrganizationOverviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -402,7 +402,7 @@ export const se_DescribeOrganizationOverviewCommand = async (
       FromTime: (_) => _.getTime() / 1_000,
       OrganizationalUnitIds: (_) => _json(_),
       ToTime: (_) => _.getTime() / 1_000,
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -413,7 +413,7 @@ export const se_DescribeOrganizationOverviewCommand = async (
  */
 export const se_DescribeOrganizationResourceCollectionHealthCommand = async (
   input: DescribeOrganizationResourceCollectionHealthCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -428,7 +428,7 @@ export const se_DescribeOrganizationResourceCollectionHealthCommand = async (
       NextToken: [],
       OrganizationResourceCollectionType: [],
       OrganizationalUnitIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -439,7 +439,7 @@ export const se_DescribeOrganizationResourceCollectionHealthCommand = async (
  */
 export const se_DescribeResourceCollectionHealthCommand = async (
   input: DescribeResourceCollectionHealthCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -458,7 +458,7 @@ export const se_DescribeResourceCollectionHealthCommand = async (
  */
 export const se_DescribeServiceIntegrationCommand = async (
   input: DescribeServiceIntegrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -476,7 +476,7 @@ export const se_DescribeServiceIntegrationCommand = async (
  */
 export const se_GetCostEstimationCommand = async (
   input: GetCostEstimationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -494,7 +494,7 @@ export const se_GetCostEstimationCommand = async (
  */
 export const se_GetResourceCollectionCommand = async (
   input: GetResourceCollectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -513,7 +513,7 @@ export const se_GetResourceCollectionCommand = async (
  */
 export const se_ListAnomaliesForInsightCommand = async (
   input: ListAnomaliesForInsightCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -529,7 +529,7 @@ export const se_ListAnomaliesForInsightCommand = async (
       MaxResults: [],
       NextToken: [],
       StartTimeRange: (_) => se_StartTimeRange(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -540,7 +540,7 @@ export const se_ListAnomaliesForInsightCommand = async (
  */
 export const se_ListAnomalousLogGroupsCommand = async (
   input: ListAnomalousLogGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -553,7 +553,7 @@ export const se_ListAnomalousLogGroupsCommand = async (
       InsightId: [],
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -564,7 +564,7 @@ export const se_ListAnomalousLogGroupsCommand = async (
  */
 export const se_ListEventsCommand = async (
   input: ListEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -578,7 +578,7 @@ export const se_ListEventsCommand = async (
       Filters: (_) => se_ListEventsFilters(_, context),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -589,7 +589,7 @@ export const se_ListEventsCommand = async (
  */
 export const se_ListInsightsCommand = async (
   input: ListInsightsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -602,7 +602,7 @@ export const se_ListInsightsCommand = async (
       MaxResults: [],
       NextToken: [],
       StatusFilter: (_) => se_ListInsightsStatusFilter(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -613,7 +613,7 @@ export const se_ListInsightsCommand = async (
  */
 export const se_ListMonitoredResourcesCommand = async (
   input: ListMonitoredResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -626,7 +626,7 @@ export const se_ListMonitoredResourcesCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -637,7 +637,7 @@ export const se_ListMonitoredResourcesCommand = async (
  */
 export const se_ListNotificationChannelsCommand = async (
   input: ListNotificationChannelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -648,7 +648,7 @@ export const se_ListNotificationChannelsCommand = async (
   body = JSON.stringify(
     take(input, {
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -659,7 +659,7 @@ export const se_ListNotificationChannelsCommand = async (
  */
 export const se_ListOrganizationInsightsCommand = async (
   input: ListOrganizationInsightsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -674,7 +674,7 @@ export const se_ListOrganizationInsightsCommand = async (
       NextToken: [],
       OrganizationalUnitIds: (_) => _json(_),
       StatusFilter: (_) => se_ListInsightsStatusFilter(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -685,7 +685,7 @@ export const se_ListOrganizationInsightsCommand = async (
  */
 export const se_ListRecommendationsCommand = async (
   input: ListRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -699,7 +699,7 @@ export const se_ListRecommendationsCommand = async (
       InsightId: [],
       Locale: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -710,7 +710,7 @@ export const se_ListRecommendationsCommand = async (
  */
 export const se_PutFeedbackCommand = async (
   input: PutFeedbackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -721,7 +721,7 @@ export const se_PutFeedbackCommand = async (
   body = JSON.stringify(
     take(input, {
       InsightFeedback: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -732,7 +732,7 @@ export const se_PutFeedbackCommand = async (
  */
 export const se_RemoveNotificationChannelCommand = async (
   input: RemoveNotificationChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -748,7 +748,7 @@ export const se_RemoveNotificationChannelCommand = async (
  */
 export const se_SearchInsightsCommand = async (
   input: SearchInsightsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -763,7 +763,7 @@ export const se_SearchInsightsCommand = async (
       NextToken: [],
       StartTimeRange: (_) => se_StartTimeRange(_, context),
       Type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -774,7 +774,7 @@ export const se_SearchInsightsCommand = async (
  */
 export const se_SearchOrganizationInsightsCommand = async (
   input: SearchOrganizationInsightsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -790,7 +790,7 @@ export const se_SearchOrganizationInsightsCommand = async (
       NextToken: [],
       StartTimeRange: (_) => se_StartTimeRange(_, context),
       Type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -801,7 +801,7 @@ export const se_SearchOrganizationInsightsCommand = async (
  */
 export const se_StartCostEstimationCommand = async (
   input: StartCostEstimationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -813,7 +813,7 @@ export const se_StartCostEstimationCommand = async (
     take(input, {
       ClientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       ResourceCollection: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -824,7 +824,7 @@ export const se_StartCostEstimationCommand = async (
  */
 export const se_UpdateEventSourcesConfigCommand = async (
   input: UpdateEventSourcesConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -835,7 +835,7 @@ export const se_UpdateEventSourcesConfigCommand = async (
   body = JSON.stringify(
     take(input, {
       EventSources: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -846,7 +846,7 @@ export const se_UpdateEventSourcesConfigCommand = async (
  */
 export const se_UpdateResourceCollectionCommand = async (
   input: UpdateResourceCollectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -858,7 +858,7 @@ export const se_UpdateResourceCollectionCommand = async (
     take(input, {
       Action: [],
       ResourceCollection: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -869,7 +869,7 @@ export const se_UpdateResourceCollectionCommand = async (
  */
 export const se_UpdateServiceIntegrationCommand = async (
   input: UpdateServiceIntegrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -880,7 +880,7 @@ export const se_UpdateServiceIntegrationCommand = async (
   body = JSON.stringify(
     take(input, {
       ServiceIntegration: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -891,7 +891,7 @@ export const se_UpdateServiceIntegrationCommand = async (
  */
 export const de_AddNotificationChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddNotificationChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -912,7 +912,7 @@ export const de_AddNotificationChannelCommand = async (
  */
 export const de_DeleteInsightCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteInsightCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -929,7 +929,7 @@ export const de_DeleteInsightCommand = async (
  */
 export const de_DescribeAccountHealthCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAccountHealthCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -954,7 +954,7 @@ export const de_DescribeAccountHealthCommand = async (
  */
 export const de_DescribeAccountOverviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAccountOverviewCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -977,7 +977,7 @@ export const de_DescribeAccountOverviewCommand = async (
  */
 export const de_DescribeAnomalyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAnomalyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -999,7 +999,7 @@ export const de_DescribeAnomalyCommand = async (
  */
 export const de_DescribeEventSourcesConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEventSourcesConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1020,7 +1020,7 @@ export const de_DescribeEventSourcesConfigCommand = async (
  */
 export const de_DescribeFeedbackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFeedbackCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1041,7 +1041,7 @@ export const de_DescribeFeedbackCommand = async (
  */
 export const de_DescribeInsightCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInsightCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1063,7 +1063,7 @@ export const de_DescribeInsightCommand = async (
  */
 export const de_DescribeOrganizationHealthCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeOrganizationHealthCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1087,7 +1087,7 @@ export const de_DescribeOrganizationHealthCommand = async (
  */
 export const de_DescribeOrganizationOverviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeOrganizationOverviewCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1109,7 +1109,7 @@ export const de_DescribeOrganizationOverviewCommand = async (
  */
 export const de_DescribeOrganizationResourceCollectionHealthCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeOrganizationResourceCollectionHealthCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1134,7 +1134,7 @@ export const de_DescribeOrganizationResourceCollectionHealthCommand = async (
  */
 export const de_DescribeResourceCollectionHealthCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeResourceCollectionHealthCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1158,7 +1158,7 @@ export const de_DescribeResourceCollectionHealthCommand = async (
  */
 export const de_DescribeServiceIntegrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeServiceIntegrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1179,7 +1179,7 @@ export const de_DescribeServiceIntegrationCommand = async (
  */
 export const de_GetCostEstimationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCostEstimationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1205,7 +1205,7 @@ export const de_GetCostEstimationCommand = async (
  */
 export const de_GetResourceCollectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourceCollectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1227,7 +1227,7 @@ export const de_GetResourceCollectionCommand = async (
  */
 export const de_ListAnomaliesForInsightCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAnomaliesForInsightCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1250,7 +1250,7 @@ export const de_ListAnomaliesForInsightCommand = async (
  */
 export const de_ListAnomalousLogGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAnomalousLogGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1273,7 +1273,7 @@ export const de_ListAnomalousLogGroupsCommand = async (
  */
 export const de_ListEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEventsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1295,7 +1295,7 @@ export const de_ListEventsCommand = async (
  */
 export const de_ListInsightsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListInsightsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1318,7 +1318,7 @@ export const de_ListInsightsCommand = async (
  */
 export const de_ListMonitoredResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMonitoredResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1340,7 +1340,7 @@ export const de_ListMonitoredResourcesCommand = async (
  */
 export const de_ListNotificationChannelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListNotificationChannelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1362,7 +1362,7 @@ export const de_ListNotificationChannelsCommand = async (
  */
 export const de_ListOrganizationInsightsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOrganizationInsightsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1385,7 +1385,7 @@ export const de_ListOrganizationInsightsCommand = async (
  */
 export const de_ListRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRecommendationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1407,7 +1407,7 @@ export const de_ListRecommendationsCommand = async (
  */
 export const de_PutFeedbackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutFeedbackCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1424,7 +1424,7 @@ export const de_PutFeedbackCommand = async (
  */
 export const de_RemoveNotificationChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveNotificationChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1441,7 +1441,7 @@ export const de_RemoveNotificationChannelCommand = async (
  */
 export const de_SearchInsightsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchInsightsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1464,7 +1464,7 @@ export const de_SearchInsightsCommand = async (
  */
 export const de_SearchOrganizationInsightsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchOrganizationInsightsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1487,7 +1487,7 @@ export const de_SearchOrganizationInsightsCommand = async (
  */
 export const de_StartCostEstimationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartCostEstimationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1504,7 +1504,7 @@ export const de_StartCostEstimationCommand = async (
  */
 export const de_UpdateEventSourcesConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEventSourcesConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1521,7 +1521,7 @@ export const de_UpdateEventSourcesConfigCommand = async (
  */
 export const de_UpdateResourceCollectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateResourceCollectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1538,7 +1538,7 @@ export const de_UpdateResourceCollectionCommand = async (
  */
 export const de_UpdateServiceIntegrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServiceIntegrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1597,7 +1597,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1636,7 +1636,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({
     [_RAS]: [() => void 0 !== parsedOutput.headers[_ra], () => __strictParseInt32(parsedOutput.headers[_ra])],
@@ -1658,7 +1658,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1680,7 +1680,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2188,7 +2188,7 @@ const de_MonitoredResourceIdentifiers = (output: any, context: __SerdeContext): 
  */
 const de_PerformanceInsightsMetricsDetail = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PerformanceInsightsMetricsDetail => {
   return take(output, {
     MetricDisplayName: __expectString,
@@ -2205,7 +2205,7 @@ const de_PerformanceInsightsMetricsDetail = (
  */
 const de_PerformanceInsightsMetricsDetails = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PerformanceInsightsMetricsDetail[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -2220,7 +2220,7 @@ const de_PerformanceInsightsMetricsDetails = (
  */
 const de_PerformanceInsightsReferenceComparisonValues = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PerformanceInsightsReferenceComparisonValues => {
   return take(output, {
     ReferenceMetric: _json,
@@ -2233,7 +2233,7 @@ const de_PerformanceInsightsReferenceComparisonValues = (
  */
 const de_PerformanceInsightsReferenceData = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PerformanceInsightsReferenceData => {
   return take(output, {
     ComparisonValues: (_: any) => de_PerformanceInsightsReferenceComparisonValues(_, context),
@@ -2246,7 +2246,7 @@ const de_PerformanceInsightsReferenceData = (
  */
 const de_PerformanceInsightsReferenceDataList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PerformanceInsightsReferenceData[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -2263,7 +2263,7 @@ const de_PerformanceInsightsReferenceDataList = (
  */
 const de_PerformanceInsightsReferenceScalar = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PerformanceInsightsReferenceScalar => {
   return take(output, {
     Value: __limitedParseDouble,
@@ -2409,7 +2409,7 @@ const de_ProactiveInsightSummary = (output: any, context: __SerdeContext): Proac
  */
 const de_ProactiveOrganizationInsights = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ProactiveOrganizationInsightSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -2424,7 +2424,7 @@ const de_ProactiveOrganizationInsights = (
  */
 const de_ProactiveOrganizationInsightSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ProactiveOrganizationInsightSummary => {
   return take(output, {
     AccountId: __expectString,
@@ -2543,7 +2543,7 @@ const de_ReactiveInsightSummary = (output: any, context: __SerdeContext): Reacti
  */
 const de_ReactiveOrganizationInsights = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReactiveOrganizationInsightSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -2558,7 +2558,7 @@ const de_ReactiveOrganizationInsights = (
  */
 const de_ReactiveOrganizationInsightSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReactiveOrganizationInsightSummary => {
   return take(output, {
     AccountId: __expectString,

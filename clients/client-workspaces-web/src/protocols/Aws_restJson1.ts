@@ -228,7 +228,7 @@ import { WorkSpacesWebServiceException as __BaseException } from "../models/Work
  */
 export const se_AssociateBrowserSettingsCommand = async (
   input: AssociateBrowserSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -247,7 +247,7 @@ export const se_AssociateBrowserSettingsCommand = async (
  */
 export const se_AssociateIpAccessSettingsCommand = async (
   input: AssociateIpAccessSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -266,7 +266,7 @@ export const se_AssociateIpAccessSettingsCommand = async (
  */
 export const se_AssociateNetworkSettingsCommand = async (
   input: AssociateNetworkSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -285,7 +285,7 @@ export const se_AssociateNetworkSettingsCommand = async (
  */
 export const se_AssociateTrustStoreCommand = async (
   input: AssociateTrustStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -304,7 +304,7 @@ export const se_AssociateTrustStoreCommand = async (
  */
 export const se_AssociateUserAccessLoggingSettingsCommand = async (
   input: AssociateUserAccessLoggingSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -323,7 +323,7 @@ export const se_AssociateUserAccessLoggingSettingsCommand = async (
  */
 export const se_AssociateUserSettingsCommand = async (
   input: AssociateUserSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -342,7 +342,7 @@ export const se_AssociateUserSettingsCommand = async (
  */
 export const se_CreateBrowserSettingsCommand = async (
   input: CreateBrowserSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -357,7 +357,7 @@ export const se_CreateBrowserSettingsCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       customerManagedKey: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -368,7 +368,7 @@ export const se_CreateBrowserSettingsCommand = async (
  */
 export const se_CreateIdentityProviderCommand = async (
   input: CreateIdentityProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -383,7 +383,7 @@ export const se_CreateIdentityProviderCommand = async (
       identityProviderName: [],
       identityProviderType: [],
       portalArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -394,7 +394,7 @@ export const se_CreateIdentityProviderCommand = async (
  */
 export const se_CreateIpAccessSettingsCommand = async (
   input: CreateIpAccessSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -411,7 +411,7 @@ export const se_CreateIpAccessSettingsCommand = async (
       displayName: [],
       ipRules: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -422,7 +422,7 @@ export const se_CreateIpAccessSettingsCommand = async (
  */
 export const se_CreateNetworkSettingsCommand = async (
   input: CreateNetworkSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -437,7 +437,7 @@ export const se_CreateNetworkSettingsCommand = async (
       subnetIds: (_) => _json(_),
       tags: (_) => _json(_),
       vpcId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -448,7 +448,7 @@ export const se_CreateNetworkSettingsCommand = async (
  */
 export const se_CreatePortalCommand = async (
   input: CreatePortalCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -466,7 +466,7 @@ export const se_CreatePortalCommand = async (
       instanceType: [],
       maxConcurrentSessions: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -477,7 +477,7 @@ export const se_CreatePortalCommand = async (
  */
 export const se_CreateTrustStoreCommand = async (
   input: CreateTrustStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -490,7 +490,7 @@ export const se_CreateTrustStoreCommand = async (
       certificateList: (_) => se_CertificateList(_, context),
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -501,7 +501,7 @@ export const se_CreateTrustStoreCommand = async (
  */
 export const se_CreateUserAccessLoggingSettingsCommand = async (
   input: CreateUserAccessLoggingSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -514,7 +514,7 @@ export const se_CreateUserAccessLoggingSettingsCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       kinesisStreamArn: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -525,7 +525,7 @@ export const se_CreateUserAccessLoggingSettingsCommand = async (
  */
 export const se_CreateUserSettingsCommand = async (
   input: CreateUserSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -547,7 +547,7 @@ export const se_CreateUserSettingsCommand = async (
       printAllowed: [],
       tags: (_) => _json(_),
       uploadAllowed: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -558,7 +558,7 @@ export const se_CreateUserSettingsCommand = async (
  */
 export const se_DeleteBrowserSettingsCommand = async (
   input: DeleteBrowserSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -574,7 +574,7 @@ export const se_DeleteBrowserSettingsCommand = async (
  */
 export const se_DeleteIdentityProviderCommand = async (
   input: DeleteIdentityProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -590,7 +590,7 @@ export const se_DeleteIdentityProviderCommand = async (
  */
 export const se_DeleteIpAccessSettingsCommand = async (
   input: DeleteIpAccessSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -606,7 +606,7 @@ export const se_DeleteIpAccessSettingsCommand = async (
  */
 export const se_DeleteNetworkSettingsCommand = async (
   input: DeleteNetworkSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -622,7 +622,7 @@ export const se_DeleteNetworkSettingsCommand = async (
  */
 export const se_DeletePortalCommand = async (
   input: DeletePortalCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -638,7 +638,7 @@ export const se_DeletePortalCommand = async (
  */
 export const se_DeleteTrustStoreCommand = async (
   input: DeleteTrustStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -654,7 +654,7 @@ export const se_DeleteTrustStoreCommand = async (
  */
 export const se_DeleteUserAccessLoggingSettingsCommand = async (
   input: DeleteUserAccessLoggingSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -663,7 +663,7 @@ export const se_DeleteUserAccessLoggingSettingsCommand = async (
     "userAccessLoggingSettingsArn",
     () => input.userAccessLoggingSettingsArn!,
     "{userAccessLoggingSettingsArn+}",
-    true
+    true,
   );
   let body: any;
   b.m("DELETE").h(headers).b(body);
@@ -675,7 +675,7 @@ export const se_DeleteUserAccessLoggingSettingsCommand = async (
  */
 export const se_DeleteUserSettingsCommand = async (
   input: DeleteUserSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -691,7 +691,7 @@ export const se_DeleteUserSettingsCommand = async (
  */
 export const se_DisassociateBrowserSettingsCommand = async (
   input: DisassociateBrowserSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -707,7 +707,7 @@ export const se_DisassociateBrowserSettingsCommand = async (
  */
 export const se_DisassociateIpAccessSettingsCommand = async (
   input: DisassociateIpAccessSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -723,7 +723,7 @@ export const se_DisassociateIpAccessSettingsCommand = async (
  */
 export const se_DisassociateNetworkSettingsCommand = async (
   input: DisassociateNetworkSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -739,7 +739,7 @@ export const se_DisassociateNetworkSettingsCommand = async (
  */
 export const se_DisassociateTrustStoreCommand = async (
   input: DisassociateTrustStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -755,7 +755,7 @@ export const se_DisassociateTrustStoreCommand = async (
  */
 export const se_DisassociateUserAccessLoggingSettingsCommand = async (
   input: DisassociateUserAccessLoggingSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -771,7 +771,7 @@ export const se_DisassociateUserAccessLoggingSettingsCommand = async (
  */
 export const se_DisassociateUserSettingsCommand = async (
   input: DisassociateUserSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -787,7 +787,7 @@ export const se_DisassociateUserSettingsCommand = async (
  */
 export const se_GetBrowserSettingsCommand = async (
   input: GetBrowserSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -803,7 +803,7 @@ export const se_GetBrowserSettingsCommand = async (
  */
 export const se_GetIdentityProviderCommand = async (
   input: GetIdentityProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -819,7 +819,7 @@ export const se_GetIdentityProviderCommand = async (
  */
 export const se_GetIpAccessSettingsCommand = async (
   input: GetIpAccessSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -835,7 +835,7 @@ export const se_GetIpAccessSettingsCommand = async (
  */
 export const se_GetNetworkSettingsCommand = async (
   input: GetNetworkSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -851,7 +851,7 @@ export const se_GetNetworkSettingsCommand = async (
  */
 export const se_GetPortalCommand = async (
   input: GetPortalCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -867,7 +867,7 @@ export const se_GetPortalCommand = async (
  */
 export const se_GetPortalServiceProviderMetadataCommand = async (
   input: GetPortalServiceProviderMetadataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -883,7 +883,7 @@ export const se_GetPortalServiceProviderMetadataCommand = async (
  */
 export const se_GetTrustStoreCommand = async (
   input: GetTrustStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -899,7 +899,7 @@ export const se_GetTrustStoreCommand = async (
  */
 export const se_GetTrustStoreCertificateCommand = async (
   input: GetTrustStoreCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -918,7 +918,7 @@ export const se_GetTrustStoreCertificateCommand = async (
  */
 export const se_GetUserAccessLoggingSettingsCommand = async (
   input: GetUserAccessLoggingSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -927,7 +927,7 @@ export const se_GetUserAccessLoggingSettingsCommand = async (
     "userAccessLoggingSettingsArn",
     () => input.userAccessLoggingSettingsArn!,
     "{userAccessLoggingSettingsArn+}",
-    true
+    true,
   );
   let body: any;
   b.m("GET").h(headers).b(body);
@@ -939,7 +939,7 @@ export const se_GetUserAccessLoggingSettingsCommand = async (
  */
 export const se_GetUserSettingsCommand = async (
   input: GetUserSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -955,7 +955,7 @@ export const se_GetUserSettingsCommand = async (
  */
 export const se_ListBrowserSettingsCommand = async (
   input: ListBrowserSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -974,7 +974,7 @@ export const se_ListBrowserSettingsCommand = async (
  */
 export const se_ListIdentityProvidersCommand = async (
   input: ListIdentityProvidersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -994,7 +994,7 @@ export const se_ListIdentityProvidersCommand = async (
  */
 export const se_ListIpAccessSettingsCommand = async (
   input: ListIpAccessSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1013,7 +1013,7 @@ export const se_ListIpAccessSettingsCommand = async (
  */
 export const se_ListNetworkSettingsCommand = async (
   input: ListNetworkSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1032,7 +1032,7 @@ export const se_ListNetworkSettingsCommand = async (
  */
 export const se_ListPortalsCommand = async (
   input: ListPortalsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1051,7 +1051,7 @@ export const se_ListPortalsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1067,7 +1067,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTrustStoreCertificatesCommand = async (
   input: ListTrustStoreCertificatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1087,7 +1087,7 @@ export const se_ListTrustStoreCertificatesCommand = async (
  */
 export const se_ListTrustStoresCommand = async (
   input: ListTrustStoresCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1106,7 +1106,7 @@ export const se_ListTrustStoresCommand = async (
  */
 export const se_ListUserAccessLoggingSettingsCommand = async (
   input: ListUserAccessLoggingSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1125,7 +1125,7 @@ export const se_ListUserAccessLoggingSettingsCommand = async (
  */
 export const se_ListUserSettingsCommand = async (
   input: ListUserSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1144,7 +1144,7 @@ export const se_ListUserSettingsCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1157,7 +1157,7 @@ export const se_TagResourceCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1168,7 +1168,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1190,7 +1190,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateBrowserSettingsCommand = async (
   input: UpdateBrowserSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1203,7 +1203,7 @@ export const se_UpdateBrowserSettingsCommand = async (
     take(input, {
       browserPolicy: [],
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1214,7 +1214,7 @@ export const se_UpdateBrowserSettingsCommand = async (
  */
 export const se_UpdateIdentityProviderCommand = async (
   input: UpdateIdentityProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1229,7 +1229,7 @@ export const se_UpdateIdentityProviderCommand = async (
       identityProviderDetails: (_) => _json(_),
       identityProviderName: [],
       identityProviderType: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1240,7 +1240,7 @@ export const se_UpdateIdentityProviderCommand = async (
  */
 export const se_UpdateIpAccessSettingsCommand = async (
   input: UpdateIpAccessSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1255,7 +1255,7 @@ export const se_UpdateIpAccessSettingsCommand = async (
       description: [],
       displayName: [],
       ipRules: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1266,7 +1266,7 @@ export const se_UpdateIpAccessSettingsCommand = async (
  */
 export const se_UpdateNetworkSettingsCommand = async (
   input: UpdateNetworkSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1281,7 +1281,7 @@ export const se_UpdateNetworkSettingsCommand = async (
       securityGroupIds: (_) => _json(_),
       subnetIds: (_) => _json(_),
       vpcId: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1292,7 +1292,7 @@ export const se_UpdateNetworkSettingsCommand = async (
  */
 export const se_UpdatePortalCommand = async (
   input: UpdatePortalCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1307,7 +1307,7 @@ export const se_UpdatePortalCommand = async (
       displayName: [],
       instanceType: [],
       maxConcurrentSessions: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1318,7 +1318,7 @@ export const se_UpdatePortalCommand = async (
  */
 export const se_UpdateTrustStoreCommand = async (
   input: UpdateTrustStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1332,7 +1332,7 @@ export const se_UpdateTrustStoreCommand = async (
       certificatesToAdd: (_) => se_CertificateList(_, context),
       certificatesToDelete: (_) => _json(_),
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1343,7 +1343,7 @@ export const se_UpdateTrustStoreCommand = async (
  */
 export const se_UpdateUserAccessLoggingSettingsCommand = async (
   input: UpdateUserAccessLoggingSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1354,14 +1354,14 @@ export const se_UpdateUserAccessLoggingSettingsCommand = async (
     "userAccessLoggingSettingsArn",
     () => input.userAccessLoggingSettingsArn!,
     "{userAccessLoggingSettingsArn+}",
-    true
+    true,
   );
   let body: any;
   body = JSON.stringify(
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       kinesisStreamArn: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1372,7 +1372,7 @@ export const se_UpdateUserAccessLoggingSettingsCommand = async (
  */
 export const se_UpdateUserSettingsCommand = async (
   input: UpdateUserSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1392,7 +1392,7 @@ export const se_UpdateUserSettingsCommand = async (
       pasteAllowed: [],
       printAllowed: [],
       uploadAllowed: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1403,7 +1403,7 @@ export const se_UpdateUserSettingsCommand = async (
  */
 export const de_AssociateBrowserSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateBrowserSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1425,7 +1425,7 @@ export const de_AssociateBrowserSettingsCommand = async (
  */
 export const de_AssociateIpAccessSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateIpAccessSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1447,7 +1447,7 @@ export const de_AssociateIpAccessSettingsCommand = async (
  */
 export const de_AssociateNetworkSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateNetworkSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1469,7 +1469,7 @@ export const de_AssociateNetworkSettingsCommand = async (
  */
 export const de_AssociateTrustStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateTrustStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1491,7 +1491,7 @@ export const de_AssociateTrustStoreCommand = async (
  */
 export const de_AssociateUserAccessLoggingSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateUserAccessLoggingSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1513,7 +1513,7 @@ export const de_AssociateUserAccessLoggingSettingsCommand = async (
  */
 export const de_AssociateUserSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateUserSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1535,7 +1535,7 @@ export const de_AssociateUserSettingsCommand = async (
  */
 export const de_CreateBrowserSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBrowserSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1556,7 +1556,7 @@ export const de_CreateBrowserSettingsCommand = async (
  */
 export const de_CreateIdentityProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateIdentityProviderCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1577,7 +1577,7 @@ export const de_CreateIdentityProviderCommand = async (
  */
 export const de_CreateIpAccessSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateIpAccessSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1598,7 +1598,7 @@ export const de_CreateIpAccessSettingsCommand = async (
  */
 export const de_CreateNetworkSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateNetworkSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1619,7 +1619,7 @@ export const de_CreateNetworkSettingsCommand = async (
  */
 export const de_CreatePortalCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePortalCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1641,7 +1641,7 @@ export const de_CreatePortalCommand = async (
  */
 export const de_CreateTrustStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTrustStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1662,7 +1662,7 @@ export const de_CreateTrustStoreCommand = async (
  */
 export const de_CreateUserAccessLoggingSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateUserAccessLoggingSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1683,7 +1683,7 @@ export const de_CreateUserAccessLoggingSettingsCommand = async (
  */
 export const de_CreateUserSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateUserSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1704,7 +1704,7 @@ export const de_CreateUserSettingsCommand = async (
  */
 export const de_DeleteBrowserSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBrowserSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1721,7 +1721,7 @@ export const de_DeleteBrowserSettingsCommand = async (
  */
 export const de_DeleteIdentityProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIdentityProviderCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1738,7 +1738,7 @@ export const de_DeleteIdentityProviderCommand = async (
  */
 export const de_DeleteIpAccessSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIpAccessSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1755,7 +1755,7 @@ export const de_DeleteIpAccessSettingsCommand = async (
  */
 export const de_DeleteNetworkSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteNetworkSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1772,7 +1772,7 @@ export const de_DeleteNetworkSettingsCommand = async (
  */
 export const de_DeletePortalCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePortalCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1789,7 +1789,7 @@ export const de_DeletePortalCommand = async (
  */
 export const de_DeleteTrustStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTrustStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1806,7 +1806,7 @@ export const de_DeleteTrustStoreCommand = async (
  */
 export const de_DeleteUserAccessLoggingSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteUserAccessLoggingSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1823,7 +1823,7 @@ export const de_DeleteUserAccessLoggingSettingsCommand = async (
  */
 export const de_DeleteUserSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteUserSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1840,7 +1840,7 @@ export const de_DeleteUserSettingsCommand = async (
  */
 export const de_DisassociateBrowserSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateBrowserSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1857,7 +1857,7 @@ export const de_DisassociateBrowserSettingsCommand = async (
  */
 export const de_DisassociateIpAccessSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateIpAccessSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1874,7 +1874,7 @@ export const de_DisassociateIpAccessSettingsCommand = async (
  */
 export const de_DisassociateNetworkSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateNetworkSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1891,7 +1891,7 @@ export const de_DisassociateNetworkSettingsCommand = async (
  */
 export const de_DisassociateTrustStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateTrustStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1908,7 +1908,7 @@ export const de_DisassociateTrustStoreCommand = async (
  */
 export const de_DisassociateUserAccessLoggingSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateUserAccessLoggingSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1925,7 +1925,7 @@ export const de_DisassociateUserAccessLoggingSettingsCommand = async (
  */
 export const de_DisassociateUserSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateUserSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1942,7 +1942,7 @@ export const de_DisassociateUserSettingsCommand = async (
  */
 export const de_GetBrowserSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBrowserSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1963,7 +1963,7 @@ export const de_GetBrowserSettingsCommand = async (
  */
 export const de_GetIdentityProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIdentityProviderCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1984,7 +1984,7 @@ export const de_GetIdentityProviderCommand = async (
  */
 export const de_GetIpAccessSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIpAccessSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2005,7 +2005,7 @@ export const de_GetIpAccessSettingsCommand = async (
  */
 export const de_GetNetworkSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetNetworkSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2026,7 +2026,7 @@ export const de_GetNetworkSettingsCommand = async (
  */
 export const de_GetPortalCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPortalCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2047,7 +2047,7 @@ export const de_GetPortalCommand = async (
  */
 export const de_GetPortalServiceProviderMetadataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPortalServiceProviderMetadataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2069,7 +2069,7 @@ export const de_GetPortalServiceProviderMetadataCommand = async (
  */
 export const de_GetTrustStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTrustStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2090,7 +2090,7 @@ export const de_GetTrustStoreCommand = async (
  */
 export const de_GetTrustStoreCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTrustStoreCertificateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2112,7 +2112,7 @@ export const de_GetTrustStoreCertificateCommand = async (
  */
 export const de_GetUserAccessLoggingSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetUserAccessLoggingSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2133,7 +2133,7 @@ export const de_GetUserAccessLoggingSettingsCommand = async (
  */
 export const de_GetUserSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetUserSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2154,7 +2154,7 @@ export const de_GetUserSettingsCommand = async (
  */
 export const de_ListBrowserSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBrowserSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2176,7 +2176,7 @@ export const de_ListBrowserSettingsCommand = async (
  */
 export const de_ListIdentityProvidersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIdentityProvidersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2198,7 +2198,7 @@ export const de_ListIdentityProvidersCommand = async (
  */
 export const de_ListIpAccessSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIpAccessSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2220,7 +2220,7 @@ export const de_ListIpAccessSettingsCommand = async (
  */
 export const de_ListNetworkSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListNetworkSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2242,7 +2242,7 @@ export const de_ListNetworkSettingsCommand = async (
  */
 export const de_ListPortalsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPortalsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2264,7 +2264,7 @@ export const de_ListPortalsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2285,7 +2285,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTrustStoreCertificatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTrustStoreCertificatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2308,7 +2308,7 @@ export const de_ListTrustStoreCertificatesCommand = async (
  */
 export const de_ListTrustStoresCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTrustStoresCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2330,7 +2330,7 @@ export const de_ListTrustStoresCommand = async (
  */
 export const de_ListUserAccessLoggingSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListUserAccessLoggingSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2352,7 +2352,7 @@ export const de_ListUserAccessLoggingSettingsCommand = async (
  */
 export const de_ListUserSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListUserSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2374,7 +2374,7 @@ export const de_ListUserSettingsCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2391,7 +2391,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2408,7 +2408,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateBrowserSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBrowserSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2429,7 +2429,7 @@ export const de_UpdateBrowserSettingsCommand = async (
  */
 export const de_UpdateIdentityProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateIdentityProviderCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2450,7 +2450,7 @@ export const de_UpdateIdentityProviderCommand = async (
  */
 export const de_UpdateIpAccessSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateIpAccessSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2471,7 +2471,7 @@ export const de_UpdateIpAccessSettingsCommand = async (
  */
 export const de_UpdateNetworkSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateNetworkSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2492,7 +2492,7 @@ export const de_UpdateNetworkSettingsCommand = async (
  */
 export const de_UpdatePortalCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePortalCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2513,7 +2513,7 @@ export const de_UpdatePortalCommand = async (
  */
 export const de_UpdateTrustStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTrustStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2534,7 +2534,7 @@ export const de_UpdateTrustStoreCommand = async (
  */
 export const de_UpdateUserAccessLoggingSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateUserAccessLoggingSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2555,7 +2555,7 @@ export const de_UpdateUserAccessLoggingSettingsCommand = async (
  */
 export const de_UpdateUserSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateUserSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2621,7 +2621,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2660,7 +2660,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({
     [_rAS]: [() => void 0 !== parsedOutput.headers[_ra], () => __strictParseInt32(parsedOutput.headers[_ra])],
@@ -2682,7 +2682,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2704,7 +2704,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2749,7 +2749,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

@@ -146,7 +146,7 @@ import {
  */
 export const se_BatchEvaluateFeatureCommand = async (
   input: BatchEvaluateFeatureCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -158,7 +158,7 @@ export const se_BatchEvaluateFeatureCommand = async (
   body = JSON.stringify(
     take(input, {
       requests: (_) => se_EvaluationRequestsList(_, context),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -177,7 +177,7 @@ export const se_BatchEvaluateFeatureCommand = async (
  */
 export const se_CreateExperimentCommand = async (
   input: CreateExperimentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -197,7 +197,7 @@ export const se_CreateExperimentCommand = async (
       segment: [],
       tags: (_) => _json(_),
       treatments: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -208,7 +208,7 @@ export const se_CreateExperimentCommand = async (
  */
 export const se_CreateFeatureCommand = async (
   input: CreateFeatureCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -226,7 +226,7 @@ export const se_CreateFeatureCommand = async (
       name: [],
       tags: (_) => _json(_),
       variations: (_) => se_VariationConfigsList(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -237,7 +237,7 @@ export const se_CreateFeatureCommand = async (
  */
 export const se_CreateLaunchCommand = async (
   input: CreateLaunchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -255,7 +255,7 @@ export const se_CreateLaunchCommand = async (
       randomizationSalt: [],
       scheduledSplitsConfig: (_) => se_ScheduledSplitsLaunchConfig(_, context),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -266,7 +266,7 @@ export const se_CreateLaunchCommand = async (
  */
 export const se_CreateProjectCommand = async (
   input: CreateProjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -281,7 +281,7 @@ export const se_CreateProjectCommand = async (
       description: [],
       name: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -292,7 +292,7 @@ export const se_CreateProjectCommand = async (
  */
 export const se_CreateSegmentCommand = async (
   input: CreateSegmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -306,7 +306,7 @@ export const se_CreateSegmentCommand = async (
       name: [],
       pattern: (_) => __LazyJsonString.fromObject(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -317,7 +317,7 @@ export const se_CreateSegmentCommand = async (
  */
 export const se_DeleteExperimentCommand = async (
   input: DeleteExperimentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -334,7 +334,7 @@ export const se_DeleteExperimentCommand = async (
  */
 export const se_DeleteFeatureCommand = async (
   input: DeleteFeatureCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -351,7 +351,7 @@ export const se_DeleteFeatureCommand = async (
  */
 export const se_DeleteLaunchCommand = async (
   input: DeleteLaunchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -368,7 +368,7 @@ export const se_DeleteLaunchCommand = async (
  */
 export const se_DeleteProjectCommand = async (
   input: DeleteProjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -384,7 +384,7 @@ export const se_DeleteProjectCommand = async (
  */
 export const se_DeleteSegmentCommand = async (
   input: DeleteSegmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -400,7 +400,7 @@ export const se_DeleteSegmentCommand = async (
  */
 export const se_EvaluateFeatureCommand = async (
   input: EvaluateFeatureCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -414,7 +414,7 @@ export const se_EvaluateFeatureCommand = async (
     take(input, {
       entityId: [],
       evaluationContext: (_) => __LazyJsonString.fromObject(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -433,7 +433,7 @@ export const se_EvaluateFeatureCommand = async (
  */
 export const se_GetExperimentCommand = async (
   input: GetExperimentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -450,7 +450,7 @@ export const se_GetExperimentCommand = async (
  */
 export const se_GetExperimentResultsCommand = async (
   input: GetExperimentResultsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -470,7 +470,7 @@ export const se_GetExperimentResultsCommand = async (
       resultStats: (_) => _json(_),
       startTime: (_) => _.getTime() / 1_000,
       treatmentNames: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -481,7 +481,7 @@ export const se_GetExperimentResultsCommand = async (
  */
 export const se_GetFeatureCommand = async (
   input: GetFeatureCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -498,7 +498,7 @@ export const se_GetFeatureCommand = async (
  */
 export const se_GetLaunchCommand = async (
   input: GetLaunchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -515,7 +515,7 @@ export const se_GetLaunchCommand = async (
  */
 export const se_GetProjectCommand = async (
   input: GetProjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -531,7 +531,7 @@ export const se_GetProjectCommand = async (
  */
 export const se_GetSegmentCommand = async (
   input: GetSegmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -547,7 +547,7 @@ export const se_GetSegmentCommand = async (
  */
 export const se_ListExperimentsCommand = async (
   input: ListExperimentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -568,7 +568,7 @@ export const se_ListExperimentsCommand = async (
  */
 export const se_ListFeaturesCommand = async (
   input: ListFeaturesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -588,7 +588,7 @@ export const se_ListFeaturesCommand = async (
  */
 export const se_ListLaunchesCommand = async (
   input: ListLaunchesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -609,7 +609,7 @@ export const se_ListLaunchesCommand = async (
  */
 export const se_ListProjectsCommand = async (
   input: ListProjectsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -628,7 +628,7 @@ export const se_ListProjectsCommand = async (
  */
 export const se_ListSegmentReferencesCommand = async (
   input: ListSegmentReferencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -649,7 +649,7 @@ export const se_ListSegmentReferencesCommand = async (
  */
 export const se_ListSegmentsCommand = async (
   input: ListSegmentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -668,7 +668,7 @@ export const se_ListSegmentsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -684,7 +684,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutProjectEventsCommand = async (
   input: PutProjectEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -696,7 +696,7 @@ export const se_PutProjectEventsCommand = async (
   body = JSON.stringify(
     take(input, {
       events: (_) => se_EventList(_, context),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -715,7 +715,7 @@ export const se_PutProjectEventsCommand = async (
  */
 export const se_StartExperimentCommand = async (
   input: StartExperimentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -728,7 +728,7 @@ export const se_StartExperimentCommand = async (
   body = JSON.stringify(
     take(input, {
       analysisCompleteTime: (_) => _.getTime() / 1_000,
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -739,7 +739,7 @@ export const se_StartExperimentCommand = async (
  */
 export const se_StartLaunchCommand = async (
   input: StartLaunchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -756,7 +756,7 @@ export const se_StartLaunchCommand = async (
  */
 export const se_StopExperimentCommand = async (
   input: StopExperimentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -770,7 +770,7 @@ export const se_StopExperimentCommand = async (
     take(input, {
       desiredState: [],
       reason: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -781,7 +781,7 @@ export const se_StopExperimentCommand = async (
  */
 export const se_StopLaunchCommand = async (
   input: StopLaunchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -795,7 +795,7 @@ export const se_StopLaunchCommand = async (
     take(input, {
       desiredState: [],
       reason: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -806,7 +806,7 @@ export const se_StopLaunchCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -818,7 +818,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -829,7 +829,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_TestSegmentPatternCommand = async (
   input: TestSegmentPatternCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -841,7 +841,7 @@ export const se_TestSegmentPatternCommand = async (
     take(input, {
       pattern: (_) => __LazyJsonString.fromObject(_),
       payload: (_) => __LazyJsonString.fromObject(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -852,7 +852,7 @@ export const se_TestSegmentPatternCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -874,7 +874,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateExperimentCommand = async (
   input: UpdateExperimentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -894,7 +894,7 @@ export const se_UpdateExperimentCommand = async (
       samplingRate: [],
       segment: [],
       treatments: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -905,7 +905,7 @@ export const se_UpdateExperimentCommand = async (
  */
 export const se_UpdateFeatureCommand = async (
   input: UpdateFeatureCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -923,7 +923,7 @@ export const se_UpdateFeatureCommand = async (
       entityOverrides: (_) => _json(_),
       evaluationStrategy: [],
       removeVariations: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -934,7 +934,7 @@ export const se_UpdateFeatureCommand = async (
  */
 export const se_UpdateLaunchCommand = async (
   input: UpdateLaunchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -951,7 +951,7 @@ export const se_UpdateLaunchCommand = async (
       metricMonitors: (_) => se_MetricMonitorConfigList(_, context),
       randomizationSalt: [],
       scheduledSplitsConfig: (_) => se_ScheduledSplitsLaunchConfig(_, context),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -962,7 +962,7 @@ export const se_UpdateLaunchCommand = async (
  */
 export const se_UpdateProjectCommand = async (
   input: UpdateProjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -975,7 +975,7 @@ export const se_UpdateProjectCommand = async (
     take(input, {
       appConfigResource: (_) => _json(_),
       description: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -986,7 +986,7 @@ export const se_UpdateProjectCommand = async (
  */
 export const se_UpdateProjectDataDeliveryCommand = async (
   input: UpdateProjectDataDeliveryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -999,7 +999,7 @@ export const se_UpdateProjectDataDeliveryCommand = async (
     take(input, {
       cloudWatchLogs: (_) => _json(_),
       s3Destination: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1010,7 +1010,7 @@ export const se_UpdateProjectDataDeliveryCommand = async (
  */
 export const de_BatchEvaluateFeatureCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchEvaluateFeatureCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1031,7 +1031,7 @@ export const de_BatchEvaluateFeatureCommand = async (
  */
 export const de_CreateExperimentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateExperimentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1052,7 +1052,7 @@ export const de_CreateExperimentCommand = async (
  */
 export const de_CreateFeatureCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFeatureCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1073,7 +1073,7 @@ export const de_CreateFeatureCommand = async (
  */
 export const de_CreateLaunchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLaunchCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1094,7 +1094,7 @@ export const de_CreateLaunchCommand = async (
  */
 export const de_CreateProjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateProjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1115,7 +1115,7 @@ export const de_CreateProjectCommand = async (
  */
 export const de_CreateSegmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSegmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1136,7 +1136,7 @@ export const de_CreateSegmentCommand = async (
  */
 export const de_DeleteExperimentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteExperimentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1153,7 +1153,7 @@ export const de_DeleteExperimentCommand = async (
  */
 export const de_DeleteFeatureCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFeatureCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1170,7 +1170,7 @@ export const de_DeleteFeatureCommand = async (
  */
 export const de_DeleteLaunchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLaunchCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1187,7 +1187,7 @@ export const de_DeleteLaunchCommand = async (
  */
 export const de_DeleteProjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1204,7 +1204,7 @@ export const de_DeleteProjectCommand = async (
  */
 export const de_DeleteSegmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSegmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1221,7 +1221,7 @@ export const de_DeleteSegmentCommand = async (
  */
 export const de_EvaluateFeatureCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EvaluateFeatureCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1245,7 +1245,7 @@ export const de_EvaluateFeatureCommand = async (
  */
 export const de_GetExperimentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetExperimentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1266,7 +1266,7 @@ export const de_GetExperimentCommand = async (
  */
 export const de_GetExperimentResultsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetExperimentResultsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1290,7 +1290,7 @@ export const de_GetExperimentResultsCommand = async (
  */
 export const de_GetFeatureCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFeatureCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1311,7 +1311,7 @@ export const de_GetFeatureCommand = async (
  */
 export const de_GetLaunchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLaunchCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1332,7 +1332,7 @@ export const de_GetLaunchCommand = async (
  */
 export const de_GetProjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetProjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1353,7 +1353,7 @@ export const de_GetProjectCommand = async (
  */
 export const de_GetSegmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSegmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1374,7 +1374,7 @@ export const de_GetSegmentCommand = async (
  */
 export const de_ListExperimentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListExperimentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1396,7 +1396,7 @@ export const de_ListExperimentsCommand = async (
  */
 export const de_ListFeaturesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFeaturesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1418,7 +1418,7 @@ export const de_ListFeaturesCommand = async (
  */
 export const de_ListLaunchesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLaunchesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1440,7 +1440,7 @@ export const de_ListLaunchesCommand = async (
  */
 export const de_ListProjectsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProjectsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1462,7 +1462,7 @@ export const de_ListProjectsCommand = async (
  */
 export const de_ListSegmentReferencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSegmentReferencesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1484,7 +1484,7 @@ export const de_ListSegmentReferencesCommand = async (
  */
 export const de_ListSegmentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSegmentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1506,7 +1506,7 @@ export const de_ListSegmentsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1527,7 +1527,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutProjectEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutProjectEventsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1549,7 +1549,7 @@ export const de_PutProjectEventsCommand = async (
  */
 export const de_StartExperimentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartExperimentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1570,7 +1570,7 @@ export const de_StartExperimentCommand = async (
  */
 export const de_StartLaunchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartLaunchCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1591,7 +1591,7 @@ export const de_StartLaunchCommand = async (
  */
 export const de_StopExperimentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopExperimentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1612,7 +1612,7 @@ export const de_StopExperimentCommand = async (
  */
 export const de_StopLaunchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopLaunchCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1633,7 +1633,7 @@ export const de_StopLaunchCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1650,7 +1650,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_TestSegmentPatternCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TestSegmentPatternCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1671,7 +1671,7 @@ export const de_TestSegmentPatternCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1688,7 +1688,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateExperimentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateExperimentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1709,7 +1709,7 @@ export const de_UpdateExperimentCommand = async (
  */
 export const de_UpdateFeatureCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFeatureCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1730,7 +1730,7 @@ export const de_UpdateFeatureCommand = async (
  */
 export const de_UpdateLaunchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLaunchCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1751,7 +1751,7 @@ export const de_UpdateLaunchCommand = async (
  */
 export const de_UpdateProjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1772,7 +1772,7 @@ export const de_UpdateProjectCommand = async (
  */
 export const de_UpdateProjectDataDeliveryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProjectDataDeliveryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1838,7 +1838,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1877,7 +1877,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1897,7 +1897,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1919,7 +1919,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1943,7 +1943,7 @@ const de_ServiceQuotaExceededExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2172,7 +2172,7 @@ const se_VariableValue = (input: VariableValue, context: __SerdeContext): any =>
     doubleValue: (value) => ({ doubleValue: __serializeFloat(value) }),
     longValue: (value) => ({ longValue: value }),
     stringValue: (value) => ({ stringValue: value }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 

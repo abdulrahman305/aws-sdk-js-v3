@@ -59,16 +59,16 @@ export interface KendraRanking {
    */
   createRescoreExecutionPlan(
     args: CreateRescoreExecutionPlanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRescoreExecutionPlanCommandOutput>;
   createRescoreExecutionPlan(
     args: CreateRescoreExecutionPlanCommandInput,
-    cb: (err: any, data?: CreateRescoreExecutionPlanCommandOutput) => void
+    cb: (err: any, data?: CreateRescoreExecutionPlanCommandOutput) => void,
   ): void;
   createRescoreExecutionPlan(
     args: CreateRescoreExecutionPlanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRescoreExecutionPlanCommandOutput) => void
+    cb: (err: any, data?: CreateRescoreExecutionPlanCommandOutput) => void,
   ): void;
 
   /**
@@ -76,16 +76,16 @@ export interface KendraRanking {
    */
   deleteRescoreExecutionPlan(
     args: DeleteRescoreExecutionPlanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRescoreExecutionPlanCommandOutput>;
   deleteRescoreExecutionPlan(
     args: DeleteRescoreExecutionPlanCommandInput,
-    cb: (err: any, data?: DeleteRescoreExecutionPlanCommandOutput) => void
+    cb: (err: any, data?: DeleteRescoreExecutionPlanCommandOutput) => void,
   ): void;
   deleteRescoreExecutionPlan(
     args: DeleteRescoreExecutionPlanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRescoreExecutionPlanCommandOutput) => void
+    cb: (err: any, data?: DeleteRescoreExecutionPlanCommandOutput) => void,
   ): void;
 
   /**
@@ -93,16 +93,16 @@ export interface KendraRanking {
    */
   describeRescoreExecutionPlan(
     args: DescribeRescoreExecutionPlanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRescoreExecutionPlanCommandOutput>;
   describeRescoreExecutionPlan(
     args: DescribeRescoreExecutionPlanCommandInput,
-    cb: (err: any, data?: DescribeRescoreExecutionPlanCommandOutput) => void
+    cb: (err: any, data?: DescribeRescoreExecutionPlanCommandOutput) => void,
   ): void;
   describeRescoreExecutionPlan(
     args: DescribeRescoreExecutionPlanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRescoreExecutionPlanCommandOutput) => void
+    cb: (err: any, data?: DescribeRescoreExecutionPlanCommandOutput) => void,
   ): void;
 
   /**
@@ -111,16 +111,16 @@ export interface KendraRanking {
   listRescoreExecutionPlans(): Promise<ListRescoreExecutionPlansCommandOutput>;
   listRescoreExecutionPlans(
     args: ListRescoreExecutionPlansCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRescoreExecutionPlansCommandOutput>;
   listRescoreExecutionPlans(
     args: ListRescoreExecutionPlansCommandInput,
-    cb: (err: any, data?: ListRescoreExecutionPlansCommandOutput) => void
+    cb: (err: any, data?: ListRescoreExecutionPlansCommandOutput) => void,
   ): void;
   listRescoreExecutionPlans(
     args: ListRescoreExecutionPlansCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRescoreExecutionPlansCommandOutput) => void
+    cb: (err: any, data?: ListRescoreExecutionPlansCommandOutput) => void,
   ): void;
 
   /**
@@ -128,16 +128,16 @@ export interface KendraRanking {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -148,7 +148,7 @@ export interface KendraRanking {
   rescore(
     args: RescoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RescoreCommandOutput) => void
+    cb: (err: any, data?: RescoreCommandOutput) => void,
   ): void;
 
   /**
@@ -159,7 +159,7 @@ export interface KendraRanking {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -170,7 +170,7 @@ export interface KendraRanking {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -178,16 +178,16 @@ export interface KendraRanking {
    */
   updateRescoreExecutionPlan(
     args: UpdateRescoreExecutionPlanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRescoreExecutionPlanCommandOutput>;
   updateRescoreExecutionPlan(
     args: UpdateRescoreExecutionPlanCommandInput,
-    cb: (err: any, data?: UpdateRescoreExecutionPlanCommandOutput) => void
+    cb: (err: any, data?: UpdateRescoreExecutionPlanCommandOutput) => void,
   ): void;
   updateRescoreExecutionPlan(
     args: UpdateRescoreExecutionPlanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRescoreExecutionPlanCommandOutput) => void
+    cb: (err: any, data?: UpdateRescoreExecutionPlanCommandOutput) => void,
   ): void;
 }
 

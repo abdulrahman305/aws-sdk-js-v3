@@ -5804,7 +5804,7 @@ export const EwsAvailabilityProviderFilterSensitiveLog = (obj: EwsAvailabilityPr
  * @internal
  */
 export const CreateAvailabilityConfigurationRequestFilterSensitiveLog = (
-  obj: CreateAvailabilityConfigurationRequest
+  obj: CreateAvailabilityConfigurationRequest,
 ): any => ({
   ...obj,
   ...(obj.EwsProvider && { EwsProvider: EwsAvailabilityProviderFilterSensitiveLog(obj.EwsProvider) }),
@@ -5877,7 +5877,7 @@ export const ResetPasswordRequestFilterSensitiveLog = (obj: ResetPasswordRequest
  * @internal
  */
 export const TestAvailabilityConfigurationRequestFilterSensitiveLog = (
-  obj: TestAvailabilityConfigurationRequest
+  obj: TestAvailabilityConfigurationRequest,
 ): any => ({
   ...obj,
   ...(obj.EwsProvider && { EwsProvider: EwsAvailabilityProviderFilterSensitiveLog(obj.EwsProvider) }),
@@ -5887,7 +5887,7 @@ export const TestAvailabilityConfigurationRequestFilterSensitiveLog = (
  * @internal
  */
 export const UpdateAvailabilityConfigurationRequestFilterSensitiveLog = (
-  obj: UpdateAvailabilityConfigurationRequest
+  obj: UpdateAvailabilityConfigurationRequest,
 ): any => ({
   ...obj,
   ...(obj.EwsProvider && { EwsProvider: EwsAvailabilityProviderFilterSensitiveLog(obj.EwsProvider) }),

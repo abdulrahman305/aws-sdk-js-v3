@@ -7,7 +7,7 @@ describe("marshallInput and processObj", () => {
         Items: {
           L: [{ N: "0" }, { BOOL: false }, { NULL: true }, { S: "" }],
         },
-      }
+      },
     );
   });
 
@@ -16,7 +16,7 @@ describe("marshallInput and processObj", () => {
     const inputKeyNodes = { Items: null };
     const output = { Items: { L: [{ N: "1" }, { S: "test" }] } };
     expect(
-      marshallInput(input, inputKeyNodes, { convertTopLevelContainer: true, convertClassInstanceToMap: true })
+      marshallInput(input, inputKeyNodes, { convertTopLevelContainer: true, convertClassInstanceToMap: true }),
     ).toEqual(output);
   });
 });

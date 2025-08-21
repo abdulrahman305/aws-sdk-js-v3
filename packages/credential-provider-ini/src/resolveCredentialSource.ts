@@ -14,7 +14,7 @@ import { AwsCredentialIdentityProvider, Logger } from "@smithy/types";
 export const resolveCredentialSource = (
   credentialSource: string,
   profileName: string,
-  logger?: Logger
+  logger?: Logger,
 ): ((options?: CredentialProviderOptions) => Promise<AwsCredentialIdentityProvider>) => {
   const sourceProvidersMap = {
     EcsContainer: async (options?: CredentialProviderOptions) => {
@@ -40,7 +40,7 @@ export const resolveCredentialSource = (
     throw new CredentialsProviderError(
       `Unsupported credential source in profile ${profileName}. Got ${credentialSource}, ` +
         `expected EcsContainer or Ec2InstanceMetadata or Environment.`,
-      { logger }
+      { logger },
     );
   }
 };

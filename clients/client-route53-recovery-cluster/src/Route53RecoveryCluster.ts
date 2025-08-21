@@ -37,16 +37,16 @@ export interface Route53RecoveryCluster {
    */
   getRoutingControlState(
     args: GetRoutingControlStateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRoutingControlStateCommandOutput>;
   getRoutingControlState(
     args: GetRoutingControlStateCommandInput,
-    cb: (err: any, data?: GetRoutingControlStateCommandOutput) => void
+    cb: (err: any, data?: GetRoutingControlStateCommandOutput) => void,
   ): void;
   getRoutingControlState(
     args: GetRoutingControlStateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRoutingControlStateCommandOutput) => void
+    cb: (err: any, data?: GetRoutingControlStateCommandOutput) => void,
   ): void;
 
   /**
@@ -55,16 +55,16 @@ export interface Route53RecoveryCluster {
   listRoutingControls(): Promise<ListRoutingControlsCommandOutput>;
   listRoutingControls(
     args: ListRoutingControlsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRoutingControlsCommandOutput>;
   listRoutingControls(
     args: ListRoutingControlsCommandInput,
-    cb: (err: any, data?: ListRoutingControlsCommandOutput) => void
+    cb: (err: any, data?: ListRoutingControlsCommandOutput) => void,
   ): void;
   listRoutingControls(
     args: ListRoutingControlsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRoutingControlsCommandOutput) => void
+    cb: (err: any, data?: ListRoutingControlsCommandOutput) => void,
   ): void;
 
   /**
@@ -72,16 +72,16 @@ export interface Route53RecoveryCluster {
    */
   updateRoutingControlState(
     args: UpdateRoutingControlStateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRoutingControlStateCommandOutput>;
   updateRoutingControlState(
     args: UpdateRoutingControlStateCommandInput,
-    cb: (err: any, data?: UpdateRoutingControlStateCommandOutput) => void
+    cb: (err: any, data?: UpdateRoutingControlStateCommandOutput) => void,
   ): void;
   updateRoutingControlState(
     args: UpdateRoutingControlStateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRoutingControlStateCommandOutput) => void
+    cb: (err: any, data?: UpdateRoutingControlStateCommandOutput) => void,
   ): void;
 
   /**
@@ -89,16 +89,16 @@ export interface Route53RecoveryCluster {
    */
   updateRoutingControlStates(
     args: UpdateRoutingControlStatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRoutingControlStatesCommandOutput>;
   updateRoutingControlStates(
     args: UpdateRoutingControlStatesCommandInput,
-    cb: (err: any, data?: UpdateRoutingControlStatesCommandOutput) => void
+    cb: (err: any, data?: UpdateRoutingControlStatesCommandOutput) => void,
   ): void;
   updateRoutingControlStates(
     args: UpdateRoutingControlStatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRoutingControlStatesCommandOutput) => void
+    cb: (err: any, data?: UpdateRoutingControlStatesCommandOutput) => void,
   ): void;
 }
 

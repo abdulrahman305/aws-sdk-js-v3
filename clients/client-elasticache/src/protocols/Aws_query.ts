@@ -553,7 +553,7 @@ import {
  */
 export const se_AddTagsToResourceCommand = async (
   input: AddTagsToResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -570,7 +570,7 @@ export const se_AddTagsToResourceCommand = async (
  */
 export const se_AuthorizeCacheSecurityGroupIngressCommand = async (
   input: AuthorizeCacheSecurityGroupIngressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -587,7 +587,7 @@ export const se_AuthorizeCacheSecurityGroupIngressCommand = async (
  */
 export const se_BatchApplyUpdateActionCommand = async (
   input: BatchApplyUpdateActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -604,7 +604,7 @@ export const se_BatchApplyUpdateActionCommand = async (
  */
 export const se_BatchStopUpdateActionCommand = async (
   input: BatchStopUpdateActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -621,7 +621,7 @@ export const se_BatchStopUpdateActionCommand = async (
  */
 export const se_CompleteMigrationCommand = async (
   input: CompleteMigrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -638,7 +638,7 @@ export const se_CompleteMigrationCommand = async (
  */
 export const se_CopyServerlessCacheSnapshotCommand = async (
   input: CopyServerlessCacheSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -655,7 +655,7 @@ export const se_CopyServerlessCacheSnapshotCommand = async (
  */
 export const se_CopySnapshotCommand = async (
   input: CopySnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -672,7 +672,7 @@ export const se_CopySnapshotCommand = async (
  */
 export const se_CreateCacheClusterCommand = async (
   input: CreateCacheClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -689,7 +689,7 @@ export const se_CreateCacheClusterCommand = async (
  */
 export const se_CreateCacheParameterGroupCommand = async (
   input: CreateCacheParameterGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -706,7 +706,7 @@ export const se_CreateCacheParameterGroupCommand = async (
  */
 export const se_CreateCacheSecurityGroupCommand = async (
   input: CreateCacheSecurityGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -723,7 +723,7 @@ export const se_CreateCacheSecurityGroupCommand = async (
  */
 export const se_CreateCacheSubnetGroupCommand = async (
   input: CreateCacheSubnetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -740,7 +740,7 @@ export const se_CreateCacheSubnetGroupCommand = async (
  */
 export const se_CreateGlobalReplicationGroupCommand = async (
   input: CreateGlobalReplicationGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -757,7 +757,7 @@ export const se_CreateGlobalReplicationGroupCommand = async (
  */
 export const se_CreateReplicationGroupCommand = async (
   input: CreateReplicationGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -774,7 +774,7 @@ export const se_CreateReplicationGroupCommand = async (
  */
 export const se_CreateServerlessCacheCommand = async (
   input: CreateServerlessCacheCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -791,7 +791,7 @@ export const se_CreateServerlessCacheCommand = async (
  */
 export const se_CreateServerlessCacheSnapshotCommand = async (
   input: CreateServerlessCacheSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -808,7 +808,7 @@ export const se_CreateServerlessCacheSnapshotCommand = async (
  */
 export const se_CreateSnapshotCommand = async (
   input: CreateSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -825,7 +825,7 @@ export const se_CreateSnapshotCommand = async (
  */
 export const se_CreateUserCommand = async (
   input: CreateUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -842,7 +842,7 @@ export const se_CreateUserCommand = async (
  */
 export const se_CreateUserGroupCommand = async (
   input: CreateUserGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -859,7 +859,7 @@ export const se_CreateUserGroupCommand = async (
  */
 export const se_DecreaseNodeGroupsInGlobalReplicationGroupCommand = async (
   input: DecreaseNodeGroupsInGlobalReplicationGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -876,7 +876,7 @@ export const se_DecreaseNodeGroupsInGlobalReplicationGroupCommand = async (
  */
 export const se_DecreaseReplicaCountCommand = async (
   input: DecreaseReplicaCountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -893,7 +893,7 @@ export const se_DecreaseReplicaCountCommand = async (
  */
 export const se_DeleteCacheClusterCommand = async (
   input: DeleteCacheClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -910,7 +910,7 @@ export const se_DeleteCacheClusterCommand = async (
  */
 export const se_DeleteCacheParameterGroupCommand = async (
   input: DeleteCacheParameterGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -927,7 +927,7 @@ export const se_DeleteCacheParameterGroupCommand = async (
  */
 export const se_DeleteCacheSecurityGroupCommand = async (
   input: DeleteCacheSecurityGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -944,7 +944,7 @@ export const se_DeleteCacheSecurityGroupCommand = async (
  */
 export const se_DeleteCacheSubnetGroupCommand = async (
   input: DeleteCacheSubnetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -961,7 +961,7 @@ export const se_DeleteCacheSubnetGroupCommand = async (
  */
 export const se_DeleteGlobalReplicationGroupCommand = async (
   input: DeleteGlobalReplicationGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -978,7 +978,7 @@ export const se_DeleteGlobalReplicationGroupCommand = async (
  */
 export const se_DeleteReplicationGroupCommand = async (
   input: DeleteReplicationGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -995,7 +995,7 @@ export const se_DeleteReplicationGroupCommand = async (
  */
 export const se_DeleteServerlessCacheCommand = async (
   input: DeleteServerlessCacheCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1012,7 +1012,7 @@ export const se_DeleteServerlessCacheCommand = async (
  */
 export const se_DeleteServerlessCacheSnapshotCommand = async (
   input: DeleteServerlessCacheSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1029,7 +1029,7 @@ export const se_DeleteServerlessCacheSnapshotCommand = async (
  */
 export const se_DeleteSnapshotCommand = async (
   input: DeleteSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1046,7 +1046,7 @@ export const se_DeleteSnapshotCommand = async (
  */
 export const se_DeleteUserCommand = async (
   input: DeleteUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1063,7 +1063,7 @@ export const se_DeleteUserCommand = async (
  */
 export const se_DeleteUserGroupCommand = async (
   input: DeleteUserGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1080,7 +1080,7 @@ export const se_DeleteUserGroupCommand = async (
  */
 export const se_DescribeCacheClustersCommand = async (
   input: DescribeCacheClustersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1097,7 +1097,7 @@ export const se_DescribeCacheClustersCommand = async (
  */
 export const se_DescribeCacheEngineVersionsCommand = async (
   input: DescribeCacheEngineVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1114,7 +1114,7 @@ export const se_DescribeCacheEngineVersionsCommand = async (
  */
 export const se_DescribeCacheParameterGroupsCommand = async (
   input: DescribeCacheParameterGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1131,7 +1131,7 @@ export const se_DescribeCacheParameterGroupsCommand = async (
  */
 export const se_DescribeCacheParametersCommand = async (
   input: DescribeCacheParametersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1148,7 +1148,7 @@ export const se_DescribeCacheParametersCommand = async (
  */
 export const se_DescribeCacheSecurityGroupsCommand = async (
   input: DescribeCacheSecurityGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1165,7 +1165,7 @@ export const se_DescribeCacheSecurityGroupsCommand = async (
  */
 export const se_DescribeCacheSubnetGroupsCommand = async (
   input: DescribeCacheSubnetGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1182,7 +1182,7 @@ export const se_DescribeCacheSubnetGroupsCommand = async (
  */
 export const se_DescribeEngineDefaultParametersCommand = async (
   input: DescribeEngineDefaultParametersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1199,7 +1199,7 @@ export const se_DescribeEngineDefaultParametersCommand = async (
  */
 export const se_DescribeEventsCommand = async (
   input: DescribeEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1216,7 +1216,7 @@ export const se_DescribeEventsCommand = async (
  */
 export const se_DescribeGlobalReplicationGroupsCommand = async (
   input: DescribeGlobalReplicationGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1233,7 +1233,7 @@ export const se_DescribeGlobalReplicationGroupsCommand = async (
  */
 export const se_DescribeReplicationGroupsCommand = async (
   input: DescribeReplicationGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1250,7 +1250,7 @@ export const se_DescribeReplicationGroupsCommand = async (
  */
 export const se_DescribeReservedCacheNodesCommand = async (
   input: DescribeReservedCacheNodesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1267,7 +1267,7 @@ export const se_DescribeReservedCacheNodesCommand = async (
  */
 export const se_DescribeReservedCacheNodesOfferingsCommand = async (
   input: DescribeReservedCacheNodesOfferingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1284,7 +1284,7 @@ export const se_DescribeReservedCacheNodesOfferingsCommand = async (
  */
 export const se_DescribeServerlessCachesCommand = async (
   input: DescribeServerlessCachesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1301,7 +1301,7 @@ export const se_DescribeServerlessCachesCommand = async (
  */
 export const se_DescribeServerlessCacheSnapshotsCommand = async (
   input: DescribeServerlessCacheSnapshotsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1318,7 +1318,7 @@ export const se_DescribeServerlessCacheSnapshotsCommand = async (
  */
 export const se_DescribeServiceUpdatesCommand = async (
   input: DescribeServiceUpdatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1335,7 +1335,7 @@ export const se_DescribeServiceUpdatesCommand = async (
  */
 export const se_DescribeSnapshotsCommand = async (
   input: DescribeSnapshotsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1352,7 +1352,7 @@ export const se_DescribeSnapshotsCommand = async (
  */
 export const se_DescribeUpdateActionsCommand = async (
   input: DescribeUpdateActionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1369,7 +1369,7 @@ export const se_DescribeUpdateActionsCommand = async (
  */
 export const se_DescribeUserGroupsCommand = async (
   input: DescribeUserGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1386,7 +1386,7 @@ export const se_DescribeUserGroupsCommand = async (
  */
 export const se_DescribeUsersCommand = async (
   input: DescribeUsersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1403,7 +1403,7 @@ export const se_DescribeUsersCommand = async (
  */
 export const se_DisassociateGlobalReplicationGroupCommand = async (
   input: DisassociateGlobalReplicationGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1420,7 +1420,7 @@ export const se_DisassociateGlobalReplicationGroupCommand = async (
  */
 export const se_ExportServerlessCacheSnapshotCommand = async (
   input: ExportServerlessCacheSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1437,7 +1437,7 @@ export const se_ExportServerlessCacheSnapshotCommand = async (
  */
 export const se_FailoverGlobalReplicationGroupCommand = async (
   input: FailoverGlobalReplicationGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1454,7 +1454,7 @@ export const se_FailoverGlobalReplicationGroupCommand = async (
  */
 export const se_IncreaseNodeGroupsInGlobalReplicationGroupCommand = async (
   input: IncreaseNodeGroupsInGlobalReplicationGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1471,7 +1471,7 @@ export const se_IncreaseNodeGroupsInGlobalReplicationGroupCommand = async (
  */
 export const se_IncreaseReplicaCountCommand = async (
   input: IncreaseReplicaCountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1488,7 +1488,7 @@ export const se_IncreaseReplicaCountCommand = async (
  */
 export const se_ListAllowedNodeTypeModificationsCommand = async (
   input: ListAllowedNodeTypeModificationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1505,7 +1505,7 @@ export const se_ListAllowedNodeTypeModificationsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1522,7 +1522,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ModifyCacheClusterCommand = async (
   input: ModifyCacheClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1539,7 +1539,7 @@ export const se_ModifyCacheClusterCommand = async (
  */
 export const se_ModifyCacheParameterGroupCommand = async (
   input: ModifyCacheParameterGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1556,7 +1556,7 @@ export const se_ModifyCacheParameterGroupCommand = async (
  */
 export const se_ModifyCacheSubnetGroupCommand = async (
   input: ModifyCacheSubnetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1573,7 +1573,7 @@ export const se_ModifyCacheSubnetGroupCommand = async (
  */
 export const se_ModifyGlobalReplicationGroupCommand = async (
   input: ModifyGlobalReplicationGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1590,7 +1590,7 @@ export const se_ModifyGlobalReplicationGroupCommand = async (
  */
 export const se_ModifyReplicationGroupCommand = async (
   input: ModifyReplicationGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1607,7 +1607,7 @@ export const se_ModifyReplicationGroupCommand = async (
  */
 export const se_ModifyReplicationGroupShardConfigurationCommand = async (
   input: ModifyReplicationGroupShardConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1624,7 +1624,7 @@ export const se_ModifyReplicationGroupShardConfigurationCommand = async (
  */
 export const se_ModifyServerlessCacheCommand = async (
   input: ModifyServerlessCacheCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1641,7 +1641,7 @@ export const se_ModifyServerlessCacheCommand = async (
  */
 export const se_ModifyUserCommand = async (
   input: ModifyUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1658,7 +1658,7 @@ export const se_ModifyUserCommand = async (
  */
 export const se_ModifyUserGroupCommand = async (
   input: ModifyUserGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1675,7 +1675,7 @@ export const se_ModifyUserGroupCommand = async (
  */
 export const se_PurchaseReservedCacheNodesOfferingCommand = async (
   input: PurchaseReservedCacheNodesOfferingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1692,7 +1692,7 @@ export const se_PurchaseReservedCacheNodesOfferingCommand = async (
  */
 export const se_RebalanceSlotsInGlobalReplicationGroupCommand = async (
   input: RebalanceSlotsInGlobalReplicationGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1709,7 +1709,7 @@ export const se_RebalanceSlotsInGlobalReplicationGroupCommand = async (
  */
 export const se_RebootCacheClusterCommand = async (
   input: RebootCacheClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1726,7 +1726,7 @@ export const se_RebootCacheClusterCommand = async (
  */
 export const se_RemoveTagsFromResourceCommand = async (
   input: RemoveTagsFromResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1743,7 +1743,7 @@ export const se_RemoveTagsFromResourceCommand = async (
  */
 export const se_ResetCacheParameterGroupCommand = async (
   input: ResetCacheParameterGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1760,7 +1760,7 @@ export const se_ResetCacheParameterGroupCommand = async (
  */
 export const se_RevokeCacheSecurityGroupIngressCommand = async (
   input: RevokeCacheSecurityGroupIngressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1777,7 +1777,7 @@ export const se_RevokeCacheSecurityGroupIngressCommand = async (
  */
 export const se_StartMigrationCommand = async (
   input: StartMigrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1794,7 +1794,7 @@ export const se_StartMigrationCommand = async (
  */
 export const se_TestFailoverCommand = async (
   input: TestFailoverCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1811,7 +1811,7 @@ export const se_TestFailoverCommand = async (
  */
 export const se_TestMigrationCommand = async (
   input: TestMigrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1828,7 +1828,7 @@ export const se_TestMigrationCommand = async (
  */
 export const de_AddTagsToResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddTagsToResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1848,7 +1848,7 @@ export const de_AddTagsToResourceCommand = async (
  */
 export const de_AuthorizeCacheSecurityGroupIngressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AuthorizeCacheSecurityGroupIngressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1868,7 +1868,7 @@ export const de_AuthorizeCacheSecurityGroupIngressCommand = async (
  */
 export const de_BatchApplyUpdateActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchApplyUpdateActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1888,7 +1888,7 @@ export const de_BatchApplyUpdateActionCommand = async (
  */
 export const de_BatchStopUpdateActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchStopUpdateActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1908,7 +1908,7 @@ export const de_BatchStopUpdateActionCommand = async (
  */
 export const de_CompleteMigrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CompleteMigrationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1928,7 +1928,7 @@ export const de_CompleteMigrationCommand = async (
  */
 export const de_CopyServerlessCacheSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopyServerlessCacheSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1948,7 +1948,7 @@ export const de_CopyServerlessCacheSnapshotCommand = async (
  */
 export const de_CopySnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopySnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1968,7 +1968,7 @@ export const de_CopySnapshotCommand = async (
  */
 export const de_CreateCacheClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCacheClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1988,7 +1988,7 @@ export const de_CreateCacheClusterCommand = async (
  */
 export const de_CreateCacheParameterGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCacheParameterGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2008,7 +2008,7 @@ export const de_CreateCacheParameterGroupCommand = async (
  */
 export const de_CreateCacheSecurityGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCacheSecurityGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2028,7 +2028,7 @@ export const de_CreateCacheSecurityGroupCommand = async (
  */
 export const de_CreateCacheSubnetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCacheSubnetGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2048,7 +2048,7 @@ export const de_CreateCacheSubnetGroupCommand = async (
  */
 export const de_CreateGlobalReplicationGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGlobalReplicationGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2068,7 +2068,7 @@ export const de_CreateGlobalReplicationGroupCommand = async (
  */
 export const de_CreateReplicationGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateReplicationGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2088,7 +2088,7 @@ export const de_CreateReplicationGroupCommand = async (
  */
 export const de_CreateServerlessCacheCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateServerlessCacheCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2108,7 +2108,7 @@ export const de_CreateServerlessCacheCommand = async (
  */
 export const de_CreateServerlessCacheSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateServerlessCacheSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2128,7 +2128,7 @@ export const de_CreateServerlessCacheSnapshotCommand = async (
  */
 export const de_CreateSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2148,7 +2148,7 @@ export const de_CreateSnapshotCommand = async (
  */
 export const de_CreateUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateUserCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2168,7 +2168,7 @@ export const de_CreateUserCommand = async (
  */
 export const de_CreateUserGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateUserGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2188,7 +2188,7 @@ export const de_CreateUserGroupCommand = async (
  */
 export const de_DecreaseNodeGroupsInGlobalReplicationGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DecreaseNodeGroupsInGlobalReplicationGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2197,7 +2197,7 @@ export const de_DecreaseNodeGroupsInGlobalReplicationGroupCommand = async (
   let contents: any = {};
   contents = de_DecreaseNodeGroupsInGlobalReplicationGroupResult(
     data.DecreaseNodeGroupsInGlobalReplicationGroupResult,
-    context
+    context,
   );
   const response: DecreaseNodeGroupsInGlobalReplicationGroupCommandOutput = {
     $metadata: deserializeMetadata(output),
@@ -2211,7 +2211,7 @@ export const de_DecreaseNodeGroupsInGlobalReplicationGroupCommand = async (
  */
 export const de_DecreaseReplicaCountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DecreaseReplicaCountCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2231,7 +2231,7 @@ export const de_DecreaseReplicaCountCommand = async (
  */
 export const de_DeleteCacheClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCacheClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2251,7 +2251,7 @@ export const de_DeleteCacheClusterCommand = async (
  */
 export const de_DeleteCacheParameterGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCacheParameterGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2268,7 +2268,7 @@ export const de_DeleteCacheParameterGroupCommand = async (
  */
 export const de_DeleteCacheSecurityGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCacheSecurityGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2285,7 +2285,7 @@ export const de_DeleteCacheSecurityGroupCommand = async (
  */
 export const de_DeleteCacheSubnetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCacheSubnetGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2302,7 +2302,7 @@ export const de_DeleteCacheSubnetGroupCommand = async (
  */
 export const de_DeleteGlobalReplicationGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGlobalReplicationGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2322,7 +2322,7 @@ export const de_DeleteGlobalReplicationGroupCommand = async (
  */
 export const de_DeleteReplicationGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteReplicationGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2342,7 +2342,7 @@ export const de_DeleteReplicationGroupCommand = async (
  */
 export const de_DeleteServerlessCacheCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServerlessCacheCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2362,7 +2362,7 @@ export const de_DeleteServerlessCacheCommand = async (
  */
 export const de_DeleteServerlessCacheSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServerlessCacheSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2382,7 +2382,7 @@ export const de_DeleteServerlessCacheSnapshotCommand = async (
  */
 export const de_DeleteSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2402,7 +2402,7 @@ export const de_DeleteSnapshotCommand = async (
  */
 export const de_DeleteUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteUserCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2422,7 +2422,7 @@ export const de_DeleteUserCommand = async (
  */
 export const de_DeleteUserGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteUserGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2442,7 +2442,7 @@ export const de_DeleteUserGroupCommand = async (
  */
 export const de_DescribeCacheClustersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCacheClustersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2462,7 +2462,7 @@ export const de_DescribeCacheClustersCommand = async (
  */
 export const de_DescribeCacheEngineVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCacheEngineVersionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2482,7 +2482,7 @@ export const de_DescribeCacheEngineVersionsCommand = async (
  */
 export const de_DescribeCacheParameterGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCacheParameterGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2502,7 +2502,7 @@ export const de_DescribeCacheParameterGroupsCommand = async (
  */
 export const de_DescribeCacheParametersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCacheParametersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2522,7 +2522,7 @@ export const de_DescribeCacheParametersCommand = async (
  */
 export const de_DescribeCacheSecurityGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCacheSecurityGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2542,7 +2542,7 @@ export const de_DescribeCacheSecurityGroupsCommand = async (
  */
 export const de_DescribeCacheSubnetGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCacheSubnetGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2562,7 +2562,7 @@ export const de_DescribeCacheSubnetGroupsCommand = async (
  */
 export const de_DescribeEngineDefaultParametersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEngineDefaultParametersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2582,7 +2582,7 @@ export const de_DescribeEngineDefaultParametersCommand = async (
  */
 export const de_DescribeEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEventsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2602,7 +2602,7 @@ export const de_DescribeEventsCommand = async (
  */
 export const de_DescribeGlobalReplicationGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGlobalReplicationGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2622,7 +2622,7 @@ export const de_DescribeGlobalReplicationGroupsCommand = async (
  */
 export const de_DescribeReplicationGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReplicationGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2642,7 +2642,7 @@ export const de_DescribeReplicationGroupsCommand = async (
  */
 export const de_DescribeReservedCacheNodesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReservedCacheNodesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2662,7 +2662,7 @@ export const de_DescribeReservedCacheNodesCommand = async (
  */
 export const de_DescribeReservedCacheNodesOfferingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReservedCacheNodesOfferingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2682,7 +2682,7 @@ export const de_DescribeReservedCacheNodesOfferingsCommand = async (
  */
 export const de_DescribeServerlessCachesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeServerlessCachesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2702,7 +2702,7 @@ export const de_DescribeServerlessCachesCommand = async (
  */
 export const de_DescribeServerlessCacheSnapshotsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeServerlessCacheSnapshotsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2722,7 +2722,7 @@ export const de_DescribeServerlessCacheSnapshotsCommand = async (
  */
 export const de_DescribeServiceUpdatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeServiceUpdatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2742,7 +2742,7 @@ export const de_DescribeServiceUpdatesCommand = async (
  */
 export const de_DescribeSnapshotsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSnapshotsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2762,7 +2762,7 @@ export const de_DescribeSnapshotsCommand = async (
  */
 export const de_DescribeUpdateActionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeUpdateActionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2782,7 +2782,7 @@ export const de_DescribeUpdateActionsCommand = async (
  */
 export const de_DescribeUserGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeUserGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2802,7 +2802,7 @@ export const de_DescribeUserGroupsCommand = async (
  */
 export const de_DescribeUsersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeUsersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2822,7 +2822,7 @@ export const de_DescribeUsersCommand = async (
  */
 export const de_DisassociateGlobalReplicationGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateGlobalReplicationGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2842,7 +2842,7 @@ export const de_DisassociateGlobalReplicationGroupCommand = async (
  */
 export const de_ExportServerlessCacheSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportServerlessCacheSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2862,7 +2862,7 @@ export const de_ExportServerlessCacheSnapshotCommand = async (
  */
 export const de_FailoverGlobalReplicationGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FailoverGlobalReplicationGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2882,7 +2882,7 @@ export const de_FailoverGlobalReplicationGroupCommand = async (
  */
 export const de_IncreaseNodeGroupsInGlobalReplicationGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IncreaseNodeGroupsInGlobalReplicationGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2891,7 +2891,7 @@ export const de_IncreaseNodeGroupsInGlobalReplicationGroupCommand = async (
   let contents: any = {};
   contents = de_IncreaseNodeGroupsInGlobalReplicationGroupResult(
     data.IncreaseNodeGroupsInGlobalReplicationGroupResult,
-    context
+    context,
   );
   const response: IncreaseNodeGroupsInGlobalReplicationGroupCommandOutput = {
     $metadata: deserializeMetadata(output),
@@ -2905,7 +2905,7 @@ export const de_IncreaseNodeGroupsInGlobalReplicationGroupCommand = async (
  */
 export const de_IncreaseReplicaCountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IncreaseReplicaCountCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2925,7 +2925,7 @@ export const de_IncreaseReplicaCountCommand = async (
  */
 export const de_ListAllowedNodeTypeModificationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAllowedNodeTypeModificationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2945,7 +2945,7 @@ export const de_ListAllowedNodeTypeModificationsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2965,7 +2965,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ModifyCacheClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyCacheClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2985,7 +2985,7 @@ export const de_ModifyCacheClusterCommand = async (
  */
 export const de_ModifyCacheParameterGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyCacheParameterGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3005,7 +3005,7 @@ export const de_ModifyCacheParameterGroupCommand = async (
  */
 export const de_ModifyCacheSubnetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyCacheSubnetGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3025,7 +3025,7 @@ export const de_ModifyCacheSubnetGroupCommand = async (
  */
 export const de_ModifyGlobalReplicationGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyGlobalReplicationGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3045,7 +3045,7 @@ export const de_ModifyGlobalReplicationGroupCommand = async (
  */
 export const de_ModifyReplicationGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyReplicationGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3065,7 +3065,7 @@ export const de_ModifyReplicationGroupCommand = async (
  */
 export const de_ModifyReplicationGroupShardConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyReplicationGroupShardConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3074,7 +3074,7 @@ export const de_ModifyReplicationGroupShardConfigurationCommand = async (
   let contents: any = {};
   contents = de_ModifyReplicationGroupShardConfigurationResult(
     data.ModifyReplicationGroupShardConfigurationResult,
-    context
+    context,
   );
   const response: ModifyReplicationGroupShardConfigurationCommandOutput = {
     $metadata: deserializeMetadata(output),
@@ -3088,7 +3088,7 @@ export const de_ModifyReplicationGroupShardConfigurationCommand = async (
  */
 export const de_ModifyServerlessCacheCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyServerlessCacheCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3108,7 +3108,7 @@ export const de_ModifyServerlessCacheCommand = async (
  */
 export const de_ModifyUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyUserCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3128,7 +3128,7 @@ export const de_ModifyUserCommand = async (
  */
 export const de_ModifyUserGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyUserGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3148,7 +3148,7 @@ export const de_ModifyUserGroupCommand = async (
  */
 export const de_PurchaseReservedCacheNodesOfferingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PurchaseReservedCacheNodesOfferingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3168,7 +3168,7 @@ export const de_PurchaseReservedCacheNodesOfferingCommand = async (
  */
 export const de_RebalanceSlotsInGlobalReplicationGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RebalanceSlotsInGlobalReplicationGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3177,7 +3177,7 @@ export const de_RebalanceSlotsInGlobalReplicationGroupCommand = async (
   let contents: any = {};
   contents = de_RebalanceSlotsInGlobalReplicationGroupResult(
     data.RebalanceSlotsInGlobalReplicationGroupResult,
-    context
+    context,
   );
   const response: RebalanceSlotsInGlobalReplicationGroupCommandOutput = {
     $metadata: deserializeMetadata(output),
@@ -3191,7 +3191,7 @@ export const de_RebalanceSlotsInGlobalReplicationGroupCommand = async (
  */
 export const de_RebootCacheClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RebootCacheClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3211,7 +3211,7 @@ export const de_RebootCacheClusterCommand = async (
  */
 export const de_RemoveTagsFromResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveTagsFromResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3231,7 +3231,7 @@ export const de_RemoveTagsFromResourceCommand = async (
  */
 export const de_ResetCacheParameterGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetCacheParameterGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3251,7 +3251,7 @@ export const de_ResetCacheParameterGroupCommand = async (
  */
 export const de_RevokeCacheSecurityGroupIngressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RevokeCacheSecurityGroupIngressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3271,7 +3271,7 @@ export const de_RevokeCacheSecurityGroupIngressCommand = async (
  */
 export const de_StartMigrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartMigrationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3291,7 +3291,7 @@ export const de_StartMigrationCommand = async (
  */
 export const de_TestFailoverCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TestFailoverCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3311,7 +3311,7 @@ export const de_TestFailoverCommand = async (
  */
 export const de_TestMigrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TestMigrationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3579,7 +3579,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_APICallRateForCustomerExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<APICallRateForCustomerExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_APICallRateForCustomerExceededFault(body.Error, context);
@@ -3595,7 +3595,7 @@ const de_APICallRateForCustomerExceededFaultRes = async (
  */
 const de_AuthorizationAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AuthorizationAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_AuthorizationAlreadyExistsFault(body.Error, context);
@@ -3611,7 +3611,7 @@ const de_AuthorizationAlreadyExistsFaultRes = async (
  */
 const de_AuthorizationNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AuthorizationNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_AuthorizationNotFoundFault(body.Error, context);
@@ -3627,7 +3627,7 @@ const de_AuthorizationNotFoundFaultRes = async (
  */
 const de_CacheClusterAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CacheClusterAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CacheClusterAlreadyExistsFault(body.Error, context);
@@ -3643,7 +3643,7 @@ const de_CacheClusterAlreadyExistsFaultRes = async (
  */
 const de_CacheClusterNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CacheClusterNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CacheClusterNotFoundFault(body.Error, context);
@@ -3659,7 +3659,7 @@ const de_CacheClusterNotFoundFaultRes = async (
  */
 const de_CacheParameterGroupAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CacheParameterGroupAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CacheParameterGroupAlreadyExistsFault(body.Error, context);
@@ -3675,7 +3675,7 @@ const de_CacheParameterGroupAlreadyExistsFaultRes = async (
  */
 const de_CacheParameterGroupNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CacheParameterGroupNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CacheParameterGroupNotFoundFault(body.Error, context);
@@ -3691,7 +3691,7 @@ const de_CacheParameterGroupNotFoundFaultRes = async (
  */
 const de_CacheParameterGroupQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CacheParameterGroupQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CacheParameterGroupQuotaExceededFault(body.Error, context);
@@ -3707,7 +3707,7 @@ const de_CacheParameterGroupQuotaExceededFaultRes = async (
  */
 const de_CacheSecurityGroupAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CacheSecurityGroupAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CacheSecurityGroupAlreadyExistsFault(body.Error, context);
@@ -3723,7 +3723,7 @@ const de_CacheSecurityGroupAlreadyExistsFaultRes = async (
  */
 const de_CacheSecurityGroupNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CacheSecurityGroupNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CacheSecurityGroupNotFoundFault(body.Error, context);
@@ -3739,7 +3739,7 @@ const de_CacheSecurityGroupNotFoundFaultRes = async (
  */
 const de_CacheSecurityGroupQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CacheSecurityGroupQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CacheSecurityGroupQuotaExceededFault(body.Error, context);
@@ -3755,7 +3755,7 @@ const de_CacheSecurityGroupQuotaExceededFaultRes = async (
  */
 const de_CacheSubnetGroupAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CacheSubnetGroupAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CacheSubnetGroupAlreadyExistsFault(body.Error, context);
@@ -3771,7 +3771,7 @@ const de_CacheSubnetGroupAlreadyExistsFaultRes = async (
  */
 const de_CacheSubnetGroupInUseRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CacheSubnetGroupInUse> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CacheSubnetGroupInUse(body.Error, context);
@@ -3787,7 +3787,7 @@ const de_CacheSubnetGroupInUseRes = async (
  */
 const de_CacheSubnetGroupNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CacheSubnetGroupNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CacheSubnetGroupNotFoundFault(body.Error, context);
@@ -3803,7 +3803,7 @@ const de_CacheSubnetGroupNotFoundFaultRes = async (
  */
 const de_CacheSubnetGroupQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CacheSubnetGroupQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CacheSubnetGroupQuotaExceededFault(body.Error, context);
@@ -3819,7 +3819,7 @@ const de_CacheSubnetGroupQuotaExceededFaultRes = async (
  */
 const de_CacheSubnetQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CacheSubnetQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CacheSubnetQuotaExceededFault(body.Error, context);
@@ -3835,7 +3835,7 @@ const de_CacheSubnetQuotaExceededFaultRes = async (
  */
 const de_ClusterQuotaForCustomerExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ClusterQuotaForCustomerExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ClusterQuotaForCustomerExceededFault(body.Error, context);
@@ -3851,7 +3851,7 @@ const de_ClusterQuotaForCustomerExceededFaultRes = async (
  */
 const de_DefaultUserAssociatedToUserGroupFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DefaultUserAssociatedToUserGroupFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DefaultUserAssociatedToUserGroupFault(body.Error, context);
@@ -3880,7 +3880,7 @@ const de_DefaultUserRequiredRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_DuplicateUserNameFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicateUserNameFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DuplicateUserNameFault(body.Error, context);
@@ -3896,7 +3896,7 @@ const de_DuplicateUserNameFaultRes = async (
  */
 const de_GlobalReplicationGroupAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GlobalReplicationGroupAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_GlobalReplicationGroupAlreadyExistsFault(body.Error, context);
@@ -3912,7 +3912,7 @@ const de_GlobalReplicationGroupAlreadyExistsFaultRes = async (
  */
 const de_GlobalReplicationGroupNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GlobalReplicationGroupNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_GlobalReplicationGroupNotFoundFault(body.Error, context);
@@ -3928,7 +3928,7 @@ const de_GlobalReplicationGroupNotFoundFaultRes = async (
  */
 const de_InsufficientCacheClusterCapacityFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InsufficientCacheClusterCapacityFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InsufficientCacheClusterCapacityFault(body.Error, context);
@@ -3957,7 +3957,7 @@ const de_InvalidARNFaultRes = async (parsedOutput: any, context: __SerdeContext)
  */
 const de_InvalidCacheClusterStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidCacheClusterStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidCacheClusterStateFault(body.Error, context);
@@ -3973,7 +3973,7 @@ const de_InvalidCacheClusterStateFaultRes = async (
  */
 const de_InvalidCacheParameterGroupStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidCacheParameterGroupStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidCacheParameterGroupStateFault(body.Error, context);
@@ -3989,7 +3989,7 @@ const de_InvalidCacheParameterGroupStateFaultRes = async (
  */
 const de_InvalidCacheSecurityGroupStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidCacheSecurityGroupStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidCacheSecurityGroupStateFault(body.Error, context);
@@ -4005,7 +4005,7 @@ const de_InvalidCacheSecurityGroupStateFaultRes = async (
  */
 const de_InvalidCredentialsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidCredentialsException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidCredentialsException(body.Error, context);
@@ -4021,7 +4021,7 @@ const de_InvalidCredentialsExceptionRes = async (
  */
 const de_InvalidGlobalReplicationGroupStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidGlobalReplicationGroupStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidGlobalReplicationGroupStateFault(body.Error, context);
@@ -4050,7 +4050,7 @@ const de_InvalidKMSKeyFaultRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_InvalidParameterCombinationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterCombinationException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidParameterCombinationException(body.Error, context);
@@ -4066,7 +4066,7 @@ const de_InvalidParameterCombinationExceptionRes = async (
  */
 const de_InvalidParameterValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterValueException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidParameterValueException(body.Error, context);
@@ -4082,7 +4082,7 @@ const de_InvalidParameterValueExceptionRes = async (
  */
 const de_InvalidReplicationGroupStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidReplicationGroupStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidReplicationGroupStateFault(body.Error, context);
@@ -4098,7 +4098,7 @@ const de_InvalidReplicationGroupStateFaultRes = async (
  */
 const de_InvalidServerlessCacheSnapshotStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidServerlessCacheSnapshotStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidServerlessCacheSnapshotStateFault(body.Error, context);
@@ -4114,7 +4114,7 @@ const de_InvalidServerlessCacheSnapshotStateFaultRes = async (
  */
 const de_InvalidServerlessCacheStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidServerlessCacheStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidServerlessCacheStateFault(body.Error, context);
@@ -4130,7 +4130,7 @@ const de_InvalidServerlessCacheStateFaultRes = async (
  */
 const de_InvalidSnapshotStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSnapshotStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidSnapshotStateFault(body.Error, context);
@@ -4159,7 +4159,7 @@ const de_InvalidSubnetRes = async (parsedOutput: any, context: __SerdeContext): 
  */
 const de_InvalidUserGroupStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidUserGroupStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidUserGroupStateFault(body.Error, context);
@@ -4175,7 +4175,7 @@ const de_InvalidUserGroupStateFaultRes = async (
  */
 const de_InvalidUserStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidUserStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidUserStateFault(body.Error, context);
@@ -4191,7 +4191,7 @@ const de_InvalidUserStateFaultRes = async (
  */
 const de_InvalidVPCNetworkStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidVPCNetworkStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidVPCNetworkStateFault(body.Error, context);
@@ -4207,7 +4207,7 @@ const de_InvalidVPCNetworkStateFaultRes = async (
  */
 const de_NodeGroupNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NodeGroupNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_NodeGroupNotFoundFault(body.Error, context);
@@ -4223,7 +4223,7 @@ const de_NodeGroupNotFoundFaultRes = async (
  */
 const de_NodeGroupsPerReplicationGroupQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NodeGroupsPerReplicationGroupQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_NodeGroupsPerReplicationGroupQuotaExceededFault(body.Error, context);
@@ -4239,7 +4239,7 @@ const de_NodeGroupsPerReplicationGroupQuotaExceededFaultRes = async (
  */
 const de_NodeQuotaForClusterExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NodeQuotaForClusterExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_NodeQuotaForClusterExceededFault(body.Error, context);
@@ -4255,7 +4255,7 @@ const de_NodeQuotaForClusterExceededFaultRes = async (
  */
 const de_NodeQuotaForCustomerExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NodeQuotaForCustomerExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_NodeQuotaForCustomerExceededFault(body.Error, context);
@@ -4284,7 +4284,7 @@ const de_NoOperationFaultRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_ReplicationGroupAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplicationGroupAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ReplicationGroupAlreadyExistsFault(body.Error, context);
@@ -4300,7 +4300,7 @@ const de_ReplicationGroupAlreadyExistsFaultRes = async (
  */
 const de_ReplicationGroupAlreadyUnderMigrationFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplicationGroupAlreadyUnderMigrationFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ReplicationGroupAlreadyUnderMigrationFault(body.Error, context);
@@ -4316,7 +4316,7 @@ const de_ReplicationGroupAlreadyUnderMigrationFaultRes = async (
  */
 const de_ReplicationGroupNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplicationGroupNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ReplicationGroupNotFoundFault(body.Error, context);
@@ -4332,7 +4332,7 @@ const de_ReplicationGroupNotFoundFaultRes = async (
  */
 const de_ReplicationGroupNotUnderMigrationFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplicationGroupNotUnderMigrationFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ReplicationGroupNotUnderMigrationFault(body.Error, context);
@@ -4348,7 +4348,7 @@ const de_ReplicationGroupNotUnderMigrationFaultRes = async (
  */
 const de_ReservedCacheNodeAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReservedCacheNodeAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ReservedCacheNodeAlreadyExistsFault(body.Error, context);
@@ -4364,7 +4364,7 @@ const de_ReservedCacheNodeAlreadyExistsFaultRes = async (
  */
 const de_ReservedCacheNodeNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReservedCacheNodeNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ReservedCacheNodeNotFoundFault(body.Error, context);
@@ -4380,7 +4380,7 @@ const de_ReservedCacheNodeNotFoundFaultRes = async (
  */
 const de_ReservedCacheNodeQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReservedCacheNodeQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ReservedCacheNodeQuotaExceededFault(body.Error, context);
@@ -4396,7 +4396,7 @@ const de_ReservedCacheNodeQuotaExceededFaultRes = async (
  */
 const de_ReservedCacheNodesOfferingNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReservedCacheNodesOfferingNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ReservedCacheNodesOfferingNotFoundFault(body.Error, context);
@@ -4412,7 +4412,7 @@ const de_ReservedCacheNodesOfferingNotFoundFaultRes = async (
  */
 const de_ServerlessCacheAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServerlessCacheAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ServerlessCacheAlreadyExistsFault(body.Error, context);
@@ -4428,7 +4428,7 @@ const de_ServerlessCacheAlreadyExistsFaultRes = async (
  */
 const de_ServerlessCacheNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServerlessCacheNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ServerlessCacheNotFoundFault(body.Error, context);
@@ -4444,7 +4444,7 @@ const de_ServerlessCacheNotFoundFaultRes = async (
  */
 const de_ServerlessCacheQuotaForCustomerExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServerlessCacheQuotaForCustomerExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ServerlessCacheQuotaForCustomerExceededFault(body.Error, context);
@@ -4460,7 +4460,7 @@ const de_ServerlessCacheQuotaForCustomerExceededFaultRes = async (
  */
 const de_ServerlessCacheSnapshotAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServerlessCacheSnapshotAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ServerlessCacheSnapshotAlreadyExistsFault(body.Error, context);
@@ -4476,7 +4476,7 @@ const de_ServerlessCacheSnapshotAlreadyExistsFaultRes = async (
  */
 const de_ServerlessCacheSnapshotNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServerlessCacheSnapshotNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ServerlessCacheSnapshotNotFoundFault(body.Error, context);
@@ -4492,7 +4492,7 @@ const de_ServerlessCacheSnapshotNotFoundFaultRes = async (
  */
 const de_ServerlessCacheSnapshotQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServerlessCacheSnapshotQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ServerlessCacheSnapshotQuotaExceededFault(body.Error, context);
@@ -4508,7 +4508,7 @@ const de_ServerlessCacheSnapshotQuotaExceededFaultRes = async (
  */
 const de_ServiceLinkedRoleNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceLinkedRoleNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ServiceLinkedRoleNotFoundFault(body.Error, context);
@@ -4524,7 +4524,7 @@ const de_ServiceLinkedRoleNotFoundFaultRes = async (
  */
 const de_ServiceUpdateNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUpdateNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ServiceUpdateNotFoundFault(body.Error, context);
@@ -4540,7 +4540,7 @@ const de_ServiceUpdateNotFoundFaultRes = async (
  */
 const de_SnapshotAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SnapshotAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_SnapshotAlreadyExistsFault(body.Error, context);
@@ -4556,7 +4556,7 @@ const de_SnapshotAlreadyExistsFaultRes = async (
  */
 const de_SnapshotFeatureNotSupportedFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SnapshotFeatureNotSupportedFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_SnapshotFeatureNotSupportedFault(body.Error, context);
@@ -4572,7 +4572,7 @@ const de_SnapshotFeatureNotSupportedFaultRes = async (
  */
 const de_SnapshotNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SnapshotNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_SnapshotNotFoundFault(body.Error, context);
@@ -4588,7 +4588,7 @@ const de_SnapshotNotFoundFaultRes = async (
  */
 const de_SnapshotQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SnapshotQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_SnapshotQuotaExceededFault(body.Error, context);
@@ -4617,7 +4617,7 @@ const de_SubnetInUseRes = async (parsedOutput: any, context: __SerdeContext): Pr
  */
 const de_SubnetNotAllowedFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SubnetNotAllowedFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_SubnetNotAllowedFault(body.Error, context);
@@ -4646,7 +4646,7 @@ const de_TagNotFoundFaultRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_TagQuotaPerResourceExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagQuotaPerResourceExceeded> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TagQuotaPerResourceExceeded(body.Error, context);
@@ -4662,7 +4662,7 @@ const de_TagQuotaPerResourceExceededRes = async (
  */
 const de_TestFailoverNotAvailableFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TestFailoverNotAvailableFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TestFailoverNotAvailableFault(body.Error, context);
@@ -4678,7 +4678,7 @@ const de_TestFailoverNotAvailableFaultRes = async (
  */
 const de_UserAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UserAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_UserAlreadyExistsFault(body.Error, context);
@@ -4694,7 +4694,7 @@ const de_UserAlreadyExistsFaultRes = async (
  */
 const de_UserGroupAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UserGroupAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_UserGroupAlreadyExistsFault(body.Error, context);
@@ -4710,7 +4710,7 @@ const de_UserGroupAlreadyExistsFaultRes = async (
  */
 const de_UserGroupNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UserGroupNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_UserGroupNotFoundFault(body.Error, context);
@@ -4726,7 +4726,7 @@ const de_UserGroupNotFoundFaultRes = async (
  */
 const de_UserGroupQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UserGroupQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_UserGroupQuotaExceededFault(body.Error, context);
@@ -4755,7 +4755,7 @@ const de_UserNotFoundFaultRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_UserQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UserQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_UserQuotaExceededFault(body.Error, context);
@@ -4813,7 +4813,7 @@ const se_AuthenticationMode = (input: AuthenticationMode, context: __SerdeContex
  */
 const se_AuthorizeCacheSecurityGroupIngressMessage = (
   input: AuthorizeCacheSecurityGroupIngressMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CSGN] != null) {
@@ -5040,7 +5040,7 @@ const se_ConfigureShard = (input: ConfigureShard, context: __SerdeContext): any 
  */
 const se_CopyServerlessCacheSnapshotRequest = (
   input: CopyServerlessCacheSnapshotRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SSCSN] != null) {
@@ -5332,7 +5332,7 @@ const se_CreateCacheSubnetGroupMessage = (input: CreateCacheSubnetGroupMessage, 
  */
 const se_CreateGlobalReplicationGroupMessage = (
   input: CreateGlobalReplicationGroupMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_GRGIS] != null) {
@@ -5612,7 +5612,7 @@ const se_CreateServerlessCacheRequest = (input: CreateServerlessCacheRequest, co
  */
 const se_CreateServerlessCacheSnapshotRequest = (
   input: CreateServerlessCacheSnapshotRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SCSN] != null) {
@@ -5806,7 +5806,7 @@ const se_DataStorage = (input: DataStorage, context: __SerdeContext): any => {
  */
 const se_DecreaseNodeGroupsInGlobalReplicationGroupMessage = (
   input: DecreaseNodeGroupsInGlobalReplicationGroupMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_GRGI] != null) {
@@ -5930,7 +5930,7 @@ const se_DeleteCacheSubnetGroupMessage = (input: DeleteCacheSubnetGroupMessage, 
  */
 const se_DeleteGlobalReplicationGroupMessage = (
   input: DeleteGlobalReplicationGroupMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_GRGI] != null) {
@@ -5978,7 +5978,7 @@ const se_DeleteServerlessCacheRequest = (input: DeleteServerlessCacheRequest, co
  */
 const se_DeleteServerlessCacheSnapshotRequest = (
   input: DeleteServerlessCacheSnapshotRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SCSN] != null) {
@@ -6048,7 +6048,7 @@ const se_DescribeCacheClustersMessage = (input: DescribeCacheClustersMessage, co
  */
 const se_DescribeCacheEngineVersionsMessage = (
   input: DescribeCacheEngineVersionsMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_E] != null) {
@@ -6077,7 +6077,7 @@ const se_DescribeCacheEngineVersionsMessage = (
  */
 const se_DescribeCacheParameterGroupsMessage = (
   input: DescribeCacheParameterGroupsMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CPGN] != null) {
@@ -6117,7 +6117,7 @@ const se_DescribeCacheParametersMessage = (input: DescribeCacheParametersMessage
  */
 const se_DescribeCacheSecurityGroupsMessage = (
   input: DescribeCacheSecurityGroupsMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CSGN] != null) {
@@ -6154,7 +6154,7 @@ const se_DescribeCacheSubnetGroupsMessage = (input: DescribeCacheSubnetGroupsMes
  */
 const se_DescribeEngineDefaultParametersMessage = (
   input: DescribeEngineDefaultParametersMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CPGF] != null) {
@@ -6203,7 +6203,7 @@ const se_DescribeEventsMessage = (input: DescribeEventsMessage, context: __Serde
  */
 const se_DescribeGlobalReplicationGroupsMessage = (
   input: DescribeGlobalReplicationGroupsMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_GRGI] != null) {
@@ -6243,7 +6243,7 @@ const se_DescribeReplicationGroupsMessage = (input: DescribeReplicationGroupsMes
  */
 const se_DescribeReservedCacheNodesMessage = (
   input: DescribeReservedCacheNodesMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_RCNI] != null) {
@@ -6278,7 +6278,7 @@ const se_DescribeReservedCacheNodesMessage = (
  */
 const se_DescribeReservedCacheNodesOfferingsMessage = (
   input: DescribeReservedCacheNodesOfferingsMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_RCNOI] != null) {
@@ -6310,7 +6310,7 @@ const se_DescribeReservedCacheNodesOfferingsMessage = (
  */
 const se_DescribeServerlessCacheSnapshotsRequest = (
   input: DescribeServerlessCacheSnapshotsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SCN] != null) {
@@ -6548,7 +6548,7 @@ const se_DestinationDetails = (input: DestinationDetails, context: __SerdeContex
  */
 const se_DisassociateGlobalReplicationGroupMessage = (
   input: DisassociateGlobalReplicationGroupMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_GRGI] != null) {
@@ -6582,7 +6582,7 @@ const se_ECPUPerSecond = (input: ECPUPerSecond, context: __SerdeContext): any =>
  */
 const se_ExportServerlessCacheSnapshotRequest = (
   input: ExportServerlessCacheSnapshotRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SCSN] != null) {
@@ -6599,7 +6599,7 @@ const se_ExportServerlessCacheSnapshotRequest = (
  */
 const se_FailoverGlobalReplicationGroupMessage = (
   input: FailoverGlobalReplicationGroupMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_GRGI] != null) {
@@ -6691,7 +6691,7 @@ const se_GlobalNodeGroupIdList = (input: string[], context: __SerdeContext): any
  */
 const se_IncreaseNodeGroupsInGlobalReplicationGroupMessage = (
   input: IncreaseNodeGroupsInGlobalReplicationGroupMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_GRGI] != null) {
@@ -6764,7 +6764,7 @@ const se_KeyList = (input: string[], context: __SerdeContext): any => {
  */
 const se_KinesisFirehoseDestinationDetails = (
   input: KinesisFirehoseDestinationDetails,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DSel] != null) {
@@ -6778,7 +6778,7 @@ const se_KinesisFirehoseDestinationDetails = (
  */
 const se_ListAllowedNodeTypeModificationsMessage = (
   input: ListAllowedNodeTypeModificationsMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CCIa] != null) {
@@ -6833,7 +6833,7 @@ const se_LogDeliveryConfigurationRequest = (input: LogDeliveryConfigurationReque
  */
 const se_LogDeliveryConfigurationRequestList = (
   input: LogDeliveryConfigurationRequest[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -7006,7 +7006,7 @@ const se_ModifyCacheSubnetGroupMessage = (input: ModifyCacheSubnetGroupMessage, 
  */
 const se_ModifyGlobalReplicationGroupMessage = (
   input: ModifyGlobalReplicationGroupMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_GRGI] != null) {
@@ -7168,7 +7168,7 @@ const se_ModifyReplicationGroupMessage = (input: ModifyReplicationGroupMessage, 
  */
 const se_ModifyReplicationGroupShardConfigurationMessage = (
   input: ModifyReplicationGroupShardConfigurationMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_RGIe] != null) {
@@ -7520,7 +7520,7 @@ const se_PreferredOutpostArnList = (input: string[], context: __SerdeContext): a
  */
 const se_PurchaseReservedCacheNodesOfferingMessage = (
   input: PurchaseReservedCacheNodesOfferingMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_RCNOI] != null) {
@@ -7550,7 +7550,7 @@ const se_PurchaseReservedCacheNodesOfferingMessage = (
  */
 const se_RebalanceSlotsInGlobalReplicationGroupMessage = (
   input: RebalanceSlotsInGlobalReplicationGroupMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_GRGI] != null) {
@@ -7767,7 +7767,7 @@ const se_ReshardingConfigurationList = (input: ReshardingConfiguration[], contex
  */
 const se_RevokeCacheSecurityGroupIngressMessage = (
   input: RevokeCacheSecurityGroupIngressMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CSGN] != null) {
@@ -8034,7 +8034,7 @@ const se_UserIdListInput = (input: string[], context: __SerdeContext): any => {
  */
 const de_AllowedNodeTypeModificationsMessage = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AllowedNodeTypeModificationsMessage => {
   const contents: any = {};
   if (output.ScaleUpModifications === "") {
@@ -8055,7 +8055,7 @@ const de_AllowedNodeTypeModificationsMessage = (
  */
 const de_APICallRateForCustomerExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): APICallRateForCustomerExceededFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -8105,7 +8105,7 @@ const de_AuthorizationNotFoundFault = (output: any, context: __SerdeContext): Au
  */
 const de_AuthorizeCacheSecurityGroupIngressResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AuthorizeCacheSecurityGroupIngressResult => {
   const contents: any = {};
   if (output[_CSG] != null) {
@@ -8446,7 +8446,7 @@ const de_CacheNodeTypeSpecificParameter = (output: any, context: __SerdeContext)
  */
 const de_CacheNodeTypeSpecificParametersList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CacheNodeTypeSpecificParameter[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -8551,7 +8551,7 @@ const de_CacheParameterGroup = (output: any, context: __SerdeContext): CachePara
  */
 const de_CacheParameterGroupAlreadyExistsFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CacheParameterGroupAlreadyExistsFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -8608,7 +8608,7 @@ const de_CacheParameterGroupNameMessage = (output: any, context: __SerdeContext)
  */
 const de_CacheParameterGroupNotFoundFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CacheParameterGroupNotFoundFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -8622,7 +8622,7 @@ const de_CacheParameterGroupNotFoundFault = (
  */
 const de_CacheParameterGroupQuotaExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CacheParameterGroupQuotaExceededFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -8696,7 +8696,7 @@ const de_CacheSecurityGroup = (output: any, context: __SerdeContext): CacheSecur
  */
 const de_CacheSecurityGroupAlreadyExistsFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CacheSecurityGroupAlreadyExistsFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -8762,7 +8762,7 @@ const de_CacheSecurityGroupNotFoundFault = (output: any, context: __SerdeContext
  */
 const de_CacheSecurityGroupQuotaExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CacheSecurityGroupQuotaExceededFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -8817,7 +8817,7 @@ const de_CacheSubnetGroup = (output: any, context: __SerdeContext): CacheSubnetG
  */
 const de_CacheSubnetGroupAlreadyExistsFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CacheSubnetGroupAlreadyExistsFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -8869,7 +8869,7 @@ const de_CacheSubnetGroupNotFoundFault = (output: any, context: __SerdeContext):
  */
 const de_CacheSubnetGroupQuotaExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CacheSubnetGroupQuotaExceededFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -8919,7 +8919,7 @@ const de_CacheUsageLimits = (output: any, context: __SerdeContext): CacheUsageLi
  */
 const de_CloudWatchLogsDestinationDetails = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CloudWatchLogsDestinationDetails => {
   const contents: any = {};
   if (output[_LG] != null) {
@@ -8944,7 +8944,7 @@ const de_ClusterIdList = (output: any, context: __SerdeContext): string[] => {
  */
 const de_ClusterQuotaForCustomerExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ClusterQuotaForCustomerExceededFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -8969,7 +8969,7 @@ const de_CompleteMigrationResponse = (output: any, context: __SerdeContext): Com
  */
 const de_CopyServerlessCacheSnapshotResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CopyServerlessCacheSnapshotResponse => {
   const contents: any = {};
   if (output[_SCS] != null) {
@@ -9038,7 +9038,7 @@ const de_CreateCacheSubnetGroupResult = (output: any, context: __SerdeContext): 
  */
 const de_CreateGlobalReplicationGroupResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateGlobalReplicationGroupResult => {
   const contents: any = {};
   if (output[_GRG] != null) {
@@ -9074,7 +9074,7 @@ const de_CreateServerlessCacheResponse = (output: any, context: __SerdeContext):
  */
 const de_CreateServerlessCacheSnapshotResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateServerlessCacheSnapshotResponse => {
   const contents: any = {};
   if (output[_SCS] != null) {
@@ -9116,7 +9116,7 @@ const de_DataStorage = (output: any, context: __SerdeContext): DataStorage => {
  */
 const de_DecreaseNodeGroupsInGlobalReplicationGroupResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DecreaseNodeGroupsInGlobalReplicationGroupResult => {
   const contents: any = {};
   if (output[_GRG] != null) {
@@ -9141,7 +9141,7 @@ const de_DecreaseReplicaCountResult = (output: any, context: __SerdeContext): De
  */
 const de_DefaultUserAssociatedToUserGroupFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DefaultUserAssociatedToUserGroupFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -9177,7 +9177,7 @@ const de_DeleteCacheClusterResult = (output: any, context: __SerdeContext): Dele
  */
 const de_DeleteGlobalReplicationGroupResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteGlobalReplicationGroupResult => {
   const contents: any = {};
   if (output[_GRG] != null) {
@@ -9213,7 +9213,7 @@ const de_DeleteServerlessCacheResponse = (output: any, context: __SerdeContext):
  */
 const de_DeleteServerlessCacheSnapshotResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteServerlessCacheSnapshotResponse => {
   const contents: any = {};
   if (output[_SCS] != null) {
@@ -9238,7 +9238,7 @@ const de_DeleteSnapshotResult = (output: any, context: __SerdeContext): DeleteSn
  */
 const de_DescribeEngineDefaultParametersResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeEngineDefaultParametersResult => {
   const contents: any = {};
   if (output[_ED] != null) {
@@ -9252,7 +9252,7 @@ const de_DescribeEngineDefaultParametersResult = (
  */
 const de_DescribeGlobalReplicationGroupsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeGlobalReplicationGroupsResult => {
   const contents: any = {};
   if (output[_Ma] != null) {
@@ -9271,7 +9271,7 @@ const de_DescribeGlobalReplicationGroupsResult = (
  */
 const de_DescribeServerlessCacheSnapshotsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeServerlessCacheSnapshotsResponse => {
   const contents: any = {};
   if (output[_NTe] != null) {
@@ -9290,7 +9290,7 @@ const de_DescribeServerlessCacheSnapshotsResponse = (
  */
 const de_DescribeServerlessCachesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeServerlessCachesResponse => {
   const contents: any = {};
   if (output[_NTe] != null) {
@@ -9371,7 +9371,7 @@ const de_DestinationDetails = (output: any, context: __SerdeContext): Destinatio
  */
 const de_DisassociateGlobalReplicationGroupResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisassociateGlobalReplicationGroupResult => {
   const contents: any = {};
   if (output[_GRG] != null) {
@@ -9523,7 +9523,7 @@ const de_EventsMessage = (output: any, context: __SerdeContext): EventsMessage =
  */
 const de_ExportServerlessCacheSnapshotResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ExportServerlessCacheSnapshotResponse => {
   const contents: any = {};
   if (output[_SCS] != null) {
@@ -9537,7 +9537,7 @@ const de_ExportServerlessCacheSnapshotResponse = (
  */
 const de_FailoverGlobalReplicationGroupResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): FailoverGlobalReplicationGroupResult => {
   const contents: any = {};
   if (output[_GRG] != null) {
@@ -9627,7 +9627,7 @@ const de_GlobalReplicationGroup = (output: any, context: __SerdeContext): Global
  */
 const de_GlobalReplicationGroupAlreadyExistsFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GlobalReplicationGroupAlreadyExistsFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -9700,7 +9700,7 @@ const de_GlobalReplicationGroupMemberList = (output: any, context: __SerdeContex
  */
 const de_GlobalReplicationGroupNotFoundFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GlobalReplicationGroupNotFoundFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -9714,7 +9714,7 @@ const de_GlobalReplicationGroupNotFoundFault = (
  */
 const de_IncreaseNodeGroupsInGlobalReplicationGroupResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): IncreaseNodeGroupsInGlobalReplicationGroupResult => {
   const contents: any = {};
   if (output[_GRG] != null) {
@@ -9739,7 +9739,7 @@ const de_IncreaseReplicaCountResult = (output: any, context: __SerdeContext): In
  */
 const de_InsufficientCacheClusterCapacityFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InsufficientCacheClusterCapacityFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -9775,7 +9775,7 @@ const de_InvalidCacheClusterStateFault = (output: any, context: __SerdeContext):
  */
 const de_InvalidCacheParameterGroupStateFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidCacheParameterGroupStateFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -9789,7 +9789,7 @@ const de_InvalidCacheParameterGroupStateFault = (
  */
 const de_InvalidCacheSecurityGroupStateFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidCacheSecurityGroupStateFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -9814,7 +9814,7 @@ const de_InvalidCredentialsException = (output: any, context: __SerdeContext): I
  */
 const de_InvalidGlobalReplicationGroupStateFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidGlobalReplicationGroupStateFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -9839,7 +9839,7 @@ const de_InvalidKMSKeyFault = (output: any, context: __SerdeContext): InvalidKMS
  */
 const de_InvalidParameterCombinationException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidParameterCombinationException => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -9864,7 +9864,7 @@ const de_InvalidParameterValueException = (output: any, context: __SerdeContext)
  */
 const de_InvalidReplicationGroupStateFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidReplicationGroupStateFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -9878,7 +9878,7 @@ const de_InvalidReplicationGroupStateFault = (
  */
 const de_InvalidServerlessCacheSnapshotStateFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidServerlessCacheSnapshotStateFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -9892,7 +9892,7 @@ const de_InvalidServerlessCacheSnapshotStateFault = (
  */
 const de_InvalidServerlessCacheStateFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidServerlessCacheStateFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -9961,7 +9961,7 @@ const de_InvalidVPCNetworkStateFault = (output: any, context: __SerdeContext): I
  */
 const de_KinesisFirehoseDestinationDetails = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): KinesisFirehoseDestinationDetails => {
   const contents: any = {};
   if (output[_DSel] != null) {
@@ -10034,7 +10034,7 @@ const de_ModifyCacheSubnetGroupResult = (output: any, context: __SerdeContext): 
  */
 const de_ModifyGlobalReplicationGroupResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyGlobalReplicationGroupResult => {
   const contents: any = {};
   if (output[_GRG] != null) {
@@ -10059,7 +10059,7 @@ const de_ModifyReplicationGroupResult = (output: any, context: __SerdeContext): 
  */
 const de_ModifyReplicationGroupShardConfigurationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyReplicationGroupShardConfigurationResult => {
   const contents: any = {};
   if (output[_RG] != null) {
@@ -10261,7 +10261,7 @@ const de_NodeGroupNotFoundFault = (output: any, context: __SerdeContext): NodeGr
  */
 const de_NodeGroupsPerReplicationGroupQuotaExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): NodeGroupsPerReplicationGroupQuotaExceededFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -10302,7 +10302,7 @@ const de_NodeGroupUpdateStatusList = (output: any, context: __SerdeContext): Nod
  */
 const de_NodeQuotaForClusterExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): NodeQuotaForClusterExceededFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -10316,7 +10316,7 @@ const de_NodeQuotaForClusterExceededFault = (
  */
 const de_NodeQuotaForCustomerExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): NodeQuotaForCustomerExceededFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -10483,7 +10483,7 @@ const de_PendingLogDeliveryConfiguration = (output: any, context: __SerdeContext
  */
 const de_PendingLogDeliveryConfigurationList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PendingLogDeliveryConfiguration[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -10564,7 +10564,7 @@ const de_ProcessedUpdateActionList = (output: any, context: __SerdeContext): Pro
  */
 const de_PurchaseReservedCacheNodesOfferingResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PurchaseReservedCacheNodesOfferingResult => {
   const contents: any = {};
   if (output[_RCN] != null) {
@@ -10578,7 +10578,7 @@ const de_PurchaseReservedCacheNodesOfferingResult = (
  */
 const de_RebalanceSlotsInGlobalReplicationGroupResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RebalanceSlotsInGlobalReplicationGroupResult => {
   const contents: any = {};
   if (output[_GRG] != null) {
@@ -10739,7 +10739,7 @@ const de_ReplicationGroup = (output: any, context: __SerdeContext): ReplicationG
  */
 const de_ReplicationGroupAlreadyExistsFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReplicationGroupAlreadyExistsFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -10753,7 +10753,7 @@ const de_ReplicationGroupAlreadyExistsFault = (
  */
 const de_ReplicationGroupAlreadyUnderMigrationFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReplicationGroupAlreadyUnderMigrationFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -10805,7 +10805,7 @@ const de_ReplicationGroupNotFoundFault = (output: any, context: __SerdeContext):
  */
 const de_ReplicationGroupNotUnderMigrationFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReplicationGroupNotUnderMigrationFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -10830,7 +10830,7 @@ const de_ReplicationGroupOutpostArnList = (output: any, context: __SerdeContext)
  */
 const de_ReplicationGroupPendingModifiedValues = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReplicationGroupPendingModifiedValues => {
   const contents: any = {};
   if (output[_PCI] != null) {
@@ -10919,7 +10919,7 @@ const de_ReservedCacheNode = (output: any, context: __SerdeContext): ReservedCac
  */
 const de_ReservedCacheNodeAlreadyExistsFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReservedCacheNodeAlreadyExistsFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -10971,7 +10971,7 @@ const de_ReservedCacheNodeNotFoundFault = (output: any, context: __SerdeContext)
  */
 const de_ReservedCacheNodeQuotaExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReservedCacheNodeQuotaExceededFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -11030,7 +11030,7 @@ const de_ReservedCacheNodesOfferingList = (output: any, context: __SerdeContext)
  */
 const de_ReservedCacheNodesOfferingMessage = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReservedCacheNodesOfferingMessage => {
   const contents: any = {};
   if (output[_Ma] != null) {
@@ -11049,7 +11049,7 @@ const de_ReservedCacheNodesOfferingMessage = (
  */
 const de_ReservedCacheNodesOfferingNotFoundFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReservedCacheNodesOfferingNotFoundFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -11074,7 +11074,7 @@ const de_ReshardingStatus = (output: any, context: __SerdeContext): ReshardingSt
  */
 const de_RevokeCacheSecurityGroupIngressResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RevokeCacheSecurityGroupIngressResult => {
   const contents: any = {};
   if (output[_CSG] != null) {
@@ -11187,7 +11187,7 @@ const de_ServerlessCache = (output: any, context: __SerdeContext): ServerlessCac
  */
 const de_ServerlessCacheAlreadyExistsFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServerlessCacheAlreadyExistsFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -11240,7 +11240,7 @@ const de_ServerlessCacheNotFoundFault = (output: any, context: __SerdeContext): 
  */
 const de_ServerlessCacheQuotaForCustomerExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServerlessCacheQuotaForCustomerExceededFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -11289,7 +11289,7 @@ const de_ServerlessCacheSnapshot = (output: any, context: __SerdeContext): Serve
  */
 const de_ServerlessCacheSnapshotAlreadyExistsFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServerlessCacheSnapshotAlreadyExistsFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -11314,7 +11314,7 @@ const de_ServerlessCacheSnapshotList = (output: any, context: __SerdeContext): S
  */
 const de_ServerlessCacheSnapshotNotFoundFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServerlessCacheSnapshotNotFoundFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -11328,7 +11328,7 @@ const de_ServerlessCacheSnapshotNotFoundFault = (
  */
 const de_ServerlessCacheSnapshotQuotaExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServerlessCacheSnapshotQuotaExceededFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -11551,7 +11551,7 @@ const de_SnapshotAlreadyExistsFault = (output: any, context: __SerdeContext): Sn
  */
 const de_SnapshotFeatureNotSupportedFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SnapshotFeatureNotSupportedFault => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -12180,7 +12180,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

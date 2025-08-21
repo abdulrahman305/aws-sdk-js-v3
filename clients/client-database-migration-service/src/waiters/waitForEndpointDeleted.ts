@@ -6,7 +6,7 @@ import { DatabaseMigrationServiceClient } from "../DatabaseMigrationServiceClien
 
 const checkState = async (
   client: DatabaseMigrationServiceClient,
-  input: DescribeEndpointsCommandInput
+  input: DescribeEndpointsCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -54,7 +54,7 @@ const checkState = async (
  */
 export const waitForEndpointDeleted = async (
   params: WaiterConfiguration<DatabaseMigrationServiceClient>,
-  input: DescribeEndpointsCommandInput
+  input: DescribeEndpointsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -66,7 +66,7 @@ export const waitForEndpointDeleted = async (
  */
 export const waitUntilEndpointDeleted = async (
   params: WaiterConfiguration<DatabaseMigrationServiceClient>,
-  input: DescribeEndpointsCommandInput
+  input: DescribeEndpointsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

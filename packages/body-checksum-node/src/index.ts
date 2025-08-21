@@ -14,7 +14,7 @@ export async function bodyChecksumGenerator(
   options: {
     sha256: ChecksumConstructor | HashConstructor;
     utf8Decoder: Decoder;
-  }
+  },
 ): Promise<[string, string]> {
   const contentHash = new options.sha256();
   const treeHash = new TreeHash(options.sha256, options.utf8Decoder);

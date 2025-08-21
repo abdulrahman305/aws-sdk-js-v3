@@ -95,7 +95,7 @@ import {
  */
 export const se_CreateContainerCommand = async (
   input: CreateContainerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateContainer");
   let body: any;
@@ -108,7 +108,7 @@ export const se_CreateContainerCommand = async (
  */
 export const se_DeleteContainerCommand = async (
   input: DeleteContainerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteContainer");
   let body: any;
@@ -121,7 +121,7 @@ export const se_DeleteContainerCommand = async (
  */
 export const se_DeleteContainerPolicyCommand = async (
   input: DeleteContainerPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteContainerPolicy");
   let body: any;
@@ -134,7 +134,7 @@ export const se_DeleteContainerPolicyCommand = async (
  */
 export const se_DeleteCorsPolicyCommand = async (
   input: DeleteCorsPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteCorsPolicy");
   let body: any;
@@ -147,7 +147,7 @@ export const se_DeleteCorsPolicyCommand = async (
  */
 export const se_DeleteLifecyclePolicyCommand = async (
   input: DeleteLifecyclePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteLifecyclePolicy");
   let body: any;
@@ -160,7 +160,7 @@ export const se_DeleteLifecyclePolicyCommand = async (
  */
 export const se_DeleteMetricPolicyCommand = async (
   input: DeleteMetricPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteMetricPolicy");
   let body: any;
@@ -173,7 +173,7 @@ export const se_DeleteMetricPolicyCommand = async (
  */
 export const se_DescribeContainerCommand = async (
   input: DescribeContainerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeContainer");
   let body: any;
@@ -186,7 +186,7 @@ export const se_DescribeContainerCommand = async (
  */
 export const se_GetContainerPolicyCommand = async (
   input: GetContainerPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetContainerPolicy");
   let body: any;
@@ -199,7 +199,7 @@ export const se_GetContainerPolicyCommand = async (
  */
 export const se_GetCorsPolicyCommand = async (
   input: GetCorsPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetCorsPolicy");
   let body: any;
@@ -212,7 +212,7 @@ export const se_GetCorsPolicyCommand = async (
  */
 export const se_GetLifecyclePolicyCommand = async (
   input: GetLifecyclePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetLifecyclePolicy");
   let body: any;
@@ -225,7 +225,7 @@ export const se_GetLifecyclePolicyCommand = async (
  */
 export const se_GetMetricPolicyCommand = async (
   input: GetMetricPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetMetricPolicy");
   let body: any;
@@ -238,7 +238,7 @@ export const se_GetMetricPolicyCommand = async (
  */
 export const se_ListContainersCommand = async (
   input: ListContainersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListContainers");
   let body: any;
@@ -251,7 +251,7 @@ export const se_ListContainersCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -264,7 +264,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutContainerPolicyCommand = async (
   input: PutContainerPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutContainerPolicy");
   let body: any;
@@ -277,7 +277,7 @@ export const se_PutContainerPolicyCommand = async (
  */
 export const se_PutCorsPolicyCommand = async (
   input: PutCorsPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutCorsPolicy");
   let body: any;
@@ -290,7 +290,7 @@ export const se_PutCorsPolicyCommand = async (
  */
 export const se_PutLifecyclePolicyCommand = async (
   input: PutLifecyclePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutLifecyclePolicy");
   let body: any;
@@ -303,7 +303,7 @@ export const se_PutLifecyclePolicyCommand = async (
  */
 export const se_PutMetricPolicyCommand = async (
   input: PutMetricPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutMetricPolicy");
   let body: any;
@@ -316,7 +316,7 @@ export const se_PutMetricPolicyCommand = async (
  */
 export const se_StartAccessLoggingCommand = async (
   input: StartAccessLoggingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartAccessLogging");
   let body: any;
@@ -329,7 +329,7 @@ export const se_StartAccessLoggingCommand = async (
  */
 export const se_StopAccessLoggingCommand = async (
   input: StopAccessLoggingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopAccessLogging");
   let body: any;
@@ -342,7 +342,7 @@ export const se_StopAccessLoggingCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -355,7 +355,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -368,7 +368,7 @@ export const se_UntagResourceCommand = async (
  */
 export const de_CreateContainerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateContainerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -388,7 +388,7 @@ export const de_CreateContainerCommand = async (
  */
 export const de_DeleteContainerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteContainerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -408,7 +408,7 @@ export const de_DeleteContainerCommand = async (
  */
 export const de_DeleteContainerPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteContainerPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -428,7 +428,7 @@ export const de_DeleteContainerPolicyCommand = async (
  */
 export const de_DeleteCorsPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCorsPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -448,7 +448,7 @@ export const de_DeleteCorsPolicyCommand = async (
  */
 export const de_DeleteLifecyclePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLifecyclePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -468,7 +468,7 @@ export const de_DeleteLifecyclePolicyCommand = async (
  */
 export const de_DeleteMetricPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMetricPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -488,7 +488,7 @@ export const de_DeleteMetricPolicyCommand = async (
  */
 export const de_DescribeContainerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeContainerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -508,7 +508,7 @@ export const de_DescribeContainerCommand = async (
  */
 export const de_GetContainerPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContainerPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -528,7 +528,7 @@ export const de_GetContainerPolicyCommand = async (
  */
 export const de_GetCorsPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCorsPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -548,7 +548,7 @@ export const de_GetCorsPolicyCommand = async (
  */
 export const de_GetLifecyclePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLifecyclePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -568,7 +568,7 @@ export const de_GetLifecyclePolicyCommand = async (
  */
 export const de_GetMetricPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMetricPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -588,7 +588,7 @@ export const de_GetMetricPolicyCommand = async (
  */
 export const de_ListContainersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListContainersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -608,7 +608,7 @@ export const de_ListContainersCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -628,7 +628,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutContainerPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutContainerPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -648,7 +648,7 @@ export const de_PutContainerPolicyCommand = async (
  */
 export const de_PutCorsPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutCorsPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -668,7 +668,7 @@ export const de_PutCorsPolicyCommand = async (
  */
 export const de_PutLifecyclePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutLifecyclePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -688,7 +688,7 @@ export const de_PutLifecyclePolicyCommand = async (
  */
 export const de_PutMetricPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutMetricPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -708,7 +708,7 @@ export const de_PutMetricPolicyCommand = async (
  */
 export const de_StartAccessLoggingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartAccessLoggingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -728,7 +728,7 @@ export const de_StartAccessLoggingCommand = async (
  */
 export const de_StopAccessLoggingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopAccessLoggingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -748,7 +748,7 @@ export const de_StopAccessLoggingCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -768,7 +768,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -826,7 +826,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ContainerInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ContainerInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -842,7 +842,7 @@ const de_ContainerInUseExceptionRes = async (
  */
 const de_ContainerNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ContainerNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -858,7 +858,7 @@ const de_ContainerNotFoundExceptionRes = async (
  */
 const de_CorsPolicyNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CorsPolicyNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -887,7 +887,7 @@ const de_InternalServerErrorRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -903,7 +903,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_PolicyNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PolicyNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1122,7 +1122,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

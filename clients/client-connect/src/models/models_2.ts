@@ -7001,7 +7001,7 @@ export const ContactAnalysisFilterSensitiveLog = (obj: ContactAnalysis): any => 
  * @internal
  */
 export const SearchableContactAttributesCriteriaFilterSensitiveLog = (
-  obj: SearchableContactAttributesCriteria
+  obj: SearchableContactAttributesCriteria,
 ): any => ({
   ...obj,
   ...(obj.Key && { Key: SENSITIVE_STRING }),

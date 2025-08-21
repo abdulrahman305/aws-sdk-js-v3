@@ -305,16 +305,16 @@ export interface Drs {
    */
   associateSourceNetworkStack(
     args: AssociateSourceNetworkStackCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateSourceNetworkStackCommandOutput>;
   associateSourceNetworkStack(
     args: AssociateSourceNetworkStackCommandInput,
-    cb: (err: any, data?: AssociateSourceNetworkStackCommandOutput) => void
+    cb: (err: any, data?: AssociateSourceNetworkStackCommandOutput) => void,
   ): void;
   associateSourceNetworkStack(
     args: AssociateSourceNetworkStackCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateSourceNetworkStackCommandOutput) => void
+    cb: (err: any, data?: AssociateSourceNetworkStackCommandOutput) => void,
   ): void;
 
   /**
@@ -322,16 +322,16 @@ export interface Drs {
    */
   createExtendedSourceServer(
     args: CreateExtendedSourceServerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateExtendedSourceServerCommandOutput>;
   createExtendedSourceServer(
     args: CreateExtendedSourceServerCommandInput,
-    cb: (err: any, data?: CreateExtendedSourceServerCommandOutput) => void
+    cb: (err: any, data?: CreateExtendedSourceServerCommandOutput) => void,
   ): void;
   createExtendedSourceServer(
     args: CreateExtendedSourceServerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateExtendedSourceServerCommandOutput) => void
+    cb: (err: any, data?: CreateExtendedSourceServerCommandOutput) => void,
   ): void;
 
   /**
@@ -340,16 +340,16 @@ export interface Drs {
   createLaunchConfigurationTemplate(): Promise<CreateLaunchConfigurationTemplateCommandOutput>;
   createLaunchConfigurationTemplate(
     args: CreateLaunchConfigurationTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateLaunchConfigurationTemplateCommandOutput>;
   createLaunchConfigurationTemplate(
     args: CreateLaunchConfigurationTemplateCommandInput,
-    cb: (err: any, data?: CreateLaunchConfigurationTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateLaunchConfigurationTemplateCommandOutput) => void,
   ): void;
   createLaunchConfigurationTemplate(
     args: CreateLaunchConfigurationTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateLaunchConfigurationTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateLaunchConfigurationTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -357,16 +357,16 @@ export interface Drs {
    */
   createReplicationConfigurationTemplate(
     args: CreateReplicationConfigurationTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateReplicationConfigurationTemplateCommandOutput>;
   createReplicationConfigurationTemplate(
     args: CreateReplicationConfigurationTemplateCommandInput,
-    cb: (err: any, data?: CreateReplicationConfigurationTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateReplicationConfigurationTemplateCommandOutput) => void,
   ): void;
   createReplicationConfigurationTemplate(
     args: CreateReplicationConfigurationTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateReplicationConfigurationTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateReplicationConfigurationTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -374,16 +374,16 @@ export interface Drs {
    */
   createSourceNetwork(
     args: CreateSourceNetworkCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSourceNetworkCommandOutput>;
   createSourceNetwork(
     args: CreateSourceNetworkCommandInput,
-    cb: (err: any, data?: CreateSourceNetworkCommandOutput) => void
+    cb: (err: any, data?: CreateSourceNetworkCommandOutput) => void,
   ): void;
   createSourceNetwork(
     args: CreateSourceNetworkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSourceNetworkCommandOutput) => void
+    cb: (err: any, data?: CreateSourceNetworkCommandOutput) => void,
   ): void;
 
   /**
@@ -394,7 +394,7 @@ export interface Drs {
   deleteJob(
     args: DeleteJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteJobCommandOutput) => void
+    cb: (err: any, data?: DeleteJobCommandOutput) => void,
   ): void;
 
   /**
@@ -402,16 +402,16 @@ export interface Drs {
    */
   deleteLaunchAction(
     args: DeleteLaunchActionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteLaunchActionCommandOutput>;
   deleteLaunchAction(
     args: DeleteLaunchActionCommandInput,
-    cb: (err: any, data?: DeleteLaunchActionCommandOutput) => void
+    cb: (err: any, data?: DeleteLaunchActionCommandOutput) => void,
   ): void;
   deleteLaunchAction(
     args: DeleteLaunchActionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLaunchActionCommandOutput) => void
+    cb: (err: any, data?: DeleteLaunchActionCommandOutput) => void,
   ): void;
 
   /**
@@ -419,16 +419,16 @@ export interface Drs {
    */
   deleteLaunchConfigurationTemplate(
     args: DeleteLaunchConfigurationTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteLaunchConfigurationTemplateCommandOutput>;
   deleteLaunchConfigurationTemplate(
     args: DeleteLaunchConfigurationTemplateCommandInput,
-    cb: (err: any, data?: DeleteLaunchConfigurationTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteLaunchConfigurationTemplateCommandOutput) => void,
   ): void;
   deleteLaunchConfigurationTemplate(
     args: DeleteLaunchConfigurationTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLaunchConfigurationTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteLaunchConfigurationTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -436,16 +436,16 @@ export interface Drs {
    */
   deleteRecoveryInstance(
     args: DeleteRecoveryInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRecoveryInstanceCommandOutput>;
   deleteRecoveryInstance(
     args: DeleteRecoveryInstanceCommandInput,
-    cb: (err: any, data?: DeleteRecoveryInstanceCommandOutput) => void
+    cb: (err: any, data?: DeleteRecoveryInstanceCommandOutput) => void,
   ): void;
   deleteRecoveryInstance(
     args: DeleteRecoveryInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRecoveryInstanceCommandOutput) => void
+    cb: (err: any, data?: DeleteRecoveryInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -453,16 +453,16 @@ export interface Drs {
    */
   deleteReplicationConfigurationTemplate(
     args: DeleteReplicationConfigurationTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteReplicationConfigurationTemplateCommandOutput>;
   deleteReplicationConfigurationTemplate(
     args: DeleteReplicationConfigurationTemplateCommandInput,
-    cb: (err: any, data?: DeleteReplicationConfigurationTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteReplicationConfigurationTemplateCommandOutput) => void,
   ): void;
   deleteReplicationConfigurationTemplate(
     args: DeleteReplicationConfigurationTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteReplicationConfigurationTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteReplicationConfigurationTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -470,16 +470,16 @@ export interface Drs {
    */
   deleteSourceNetwork(
     args: DeleteSourceNetworkCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSourceNetworkCommandOutput>;
   deleteSourceNetwork(
     args: DeleteSourceNetworkCommandInput,
-    cb: (err: any, data?: DeleteSourceNetworkCommandOutput) => void
+    cb: (err: any, data?: DeleteSourceNetworkCommandOutput) => void,
   ): void;
   deleteSourceNetwork(
     args: DeleteSourceNetworkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSourceNetworkCommandOutput) => void
+    cb: (err: any, data?: DeleteSourceNetworkCommandOutput) => void,
   ): void;
 
   /**
@@ -487,16 +487,16 @@ export interface Drs {
    */
   deleteSourceServer(
     args: DeleteSourceServerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSourceServerCommandOutput>;
   deleteSourceServer(
     args: DeleteSourceServerCommandInput,
-    cb: (err: any, data?: DeleteSourceServerCommandOutput) => void
+    cb: (err: any, data?: DeleteSourceServerCommandOutput) => void,
   ): void;
   deleteSourceServer(
     args: DeleteSourceServerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSourceServerCommandOutput) => void
+    cb: (err: any, data?: DeleteSourceServerCommandOutput) => void,
   ): void;
 
   /**
@@ -504,16 +504,16 @@ export interface Drs {
    */
   describeJobLogItems(
     args: DescribeJobLogItemsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeJobLogItemsCommandOutput>;
   describeJobLogItems(
     args: DescribeJobLogItemsCommandInput,
-    cb: (err: any, data?: DescribeJobLogItemsCommandOutput) => void
+    cb: (err: any, data?: DescribeJobLogItemsCommandOutput) => void,
   ): void;
   describeJobLogItems(
     args: DescribeJobLogItemsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeJobLogItemsCommandOutput) => void
+    cb: (err: any, data?: DescribeJobLogItemsCommandOutput) => void,
   ): void;
 
   /**
@@ -525,7 +525,7 @@ export interface Drs {
   describeJobs(
     args: DescribeJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeJobsCommandOutput) => void
+    cb: (err: any, data?: DescribeJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -534,16 +534,16 @@ export interface Drs {
   describeLaunchConfigurationTemplates(): Promise<DescribeLaunchConfigurationTemplatesCommandOutput>;
   describeLaunchConfigurationTemplates(
     args: DescribeLaunchConfigurationTemplatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLaunchConfigurationTemplatesCommandOutput>;
   describeLaunchConfigurationTemplates(
     args: DescribeLaunchConfigurationTemplatesCommandInput,
-    cb: (err: any, data?: DescribeLaunchConfigurationTemplatesCommandOutput) => void
+    cb: (err: any, data?: DescribeLaunchConfigurationTemplatesCommandOutput) => void,
   ): void;
   describeLaunchConfigurationTemplates(
     args: DescribeLaunchConfigurationTemplatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLaunchConfigurationTemplatesCommandOutput) => void
+    cb: (err: any, data?: DescribeLaunchConfigurationTemplatesCommandOutput) => void,
   ): void;
 
   /**
@@ -552,16 +552,16 @@ export interface Drs {
   describeRecoveryInstances(): Promise<DescribeRecoveryInstancesCommandOutput>;
   describeRecoveryInstances(
     args: DescribeRecoveryInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRecoveryInstancesCommandOutput>;
   describeRecoveryInstances(
     args: DescribeRecoveryInstancesCommandInput,
-    cb: (err: any, data?: DescribeRecoveryInstancesCommandOutput) => void
+    cb: (err: any, data?: DescribeRecoveryInstancesCommandOutput) => void,
   ): void;
   describeRecoveryInstances(
     args: DescribeRecoveryInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRecoveryInstancesCommandOutput) => void
+    cb: (err: any, data?: DescribeRecoveryInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -569,16 +569,16 @@ export interface Drs {
    */
   describeRecoverySnapshots(
     args: DescribeRecoverySnapshotsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRecoverySnapshotsCommandOutput>;
   describeRecoverySnapshots(
     args: DescribeRecoverySnapshotsCommandInput,
-    cb: (err: any, data?: DescribeRecoverySnapshotsCommandOutput) => void
+    cb: (err: any, data?: DescribeRecoverySnapshotsCommandOutput) => void,
   ): void;
   describeRecoverySnapshots(
     args: DescribeRecoverySnapshotsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRecoverySnapshotsCommandOutput) => void
+    cb: (err: any, data?: DescribeRecoverySnapshotsCommandOutput) => void,
   ): void;
 
   /**
@@ -587,16 +587,16 @@ export interface Drs {
   describeReplicationConfigurationTemplates(): Promise<DescribeReplicationConfigurationTemplatesCommandOutput>;
   describeReplicationConfigurationTemplates(
     args: DescribeReplicationConfigurationTemplatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeReplicationConfigurationTemplatesCommandOutput>;
   describeReplicationConfigurationTemplates(
     args: DescribeReplicationConfigurationTemplatesCommandInput,
-    cb: (err: any, data?: DescribeReplicationConfigurationTemplatesCommandOutput) => void
+    cb: (err: any, data?: DescribeReplicationConfigurationTemplatesCommandOutput) => void,
   ): void;
   describeReplicationConfigurationTemplates(
     args: DescribeReplicationConfigurationTemplatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeReplicationConfigurationTemplatesCommandOutput) => void
+    cb: (err: any, data?: DescribeReplicationConfigurationTemplatesCommandOutput) => void,
   ): void;
 
   /**
@@ -605,16 +605,16 @@ export interface Drs {
   describeSourceNetworks(): Promise<DescribeSourceNetworksCommandOutput>;
   describeSourceNetworks(
     args: DescribeSourceNetworksCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSourceNetworksCommandOutput>;
   describeSourceNetworks(
     args: DescribeSourceNetworksCommandInput,
-    cb: (err: any, data?: DescribeSourceNetworksCommandOutput) => void
+    cb: (err: any, data?: DescribeSourceNetworksCommandOutput) => void,
   ): void;
   describeSourceNetworks(
     args: DescribeSourceNetworksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSourceNetworksCommandOutput) => void
+    cb: (err: any, data?: DescribeSourceNetworksCommandOutput) => void,
   ): void;
 
   /**
@@ -623,16 +623,16 @@ export interface Drs {
   describeSourceServers(): Promise<DescribeSourceServersCommandOutput>;
   describeSourceServers(
     args: DescribeSourceServersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSourceServersCommandOutput>;
   describeSourceServers(
     args: DescribeSourceServersCommandInput,
-    cb: (err: any, data?: DescribeSourceServersCommandOutput) => void
+    cb: (err: any, data?: DescribeSourceServersCommandOutput) => void,
   ): void;
   describeSourceServers(
     args: DescribeSourceServersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSourceServersCommandOutput) => void
+    cb: (err: any, data?: DescribeSourceServersCommandOutput) => void,
   ): void;
 
   /**
@@ -640,16 +640,16 @@ export interface Drs {
    */
   disconnectRecoveryInstance(
     args: DisconnectRecoveryInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisconnectRecoveryInstanceCommandOutput>;
   disconnectRecoveryInstance(
     args: DisconnectRecoveryInstanceCommandInput,
-    cb: (err: any, data?: DisconnectRecoveryInstanceCommandOutput) => void
+    cb: (err: any, data?: DisconnectRecoveryInstanceCommandOutput) => void,
   ): void;
   disconnectRecoveryInstance(
     args: DisconnectRecoveryInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisconnectRecoveryInstanceCommandOutput) => void
+    cb: (err: any, data?: DisconnectRecoveryInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -657,16 +657,16 @@ export interface Drs {
    */
   disconnectSourceServer(
     args: DisconnectSourceServerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisconnectSourceServerCommandOutput>;
   disconnectSourceServer(
     args: DisconnectSourceServerCommandInput,
-    cb: (err: any, data?: DisconnectSourceServerCommandOutput) => void
+    cb: (err: any, data?: DisconnectSourceServerCommandOutput) => void,
   ): void;
   disconnectSourceServer(
     args: DisconnectSourceServerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisconnectSourceServerCommandOutput) => void
+    cb: (err: any, data?: DisconnectSourceServerCommandOutput) => void,
   ): void;
 
   /**
@@ -674,16 +674,16 @@ export interface Drs {
    */
   exportSourceNetworkCfnTemplate(
     args: ExportSourceNetworkCfnTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExportSourceNetworkCfnTemplateCommandOutput>;
   exportSourceNetworkCfnTemplate(
     args: ExportSourceNetworkCfnTemplateCommandInput,
-    cb: (err: any, data?: ExportSourceNetworkCfnTemplateCommandOutput) => void
+    cb: (err: any, data?: ExportSourceNetworkCfnTemplateCommandOutput) => void,
   ): void;
   exportSourceNetworkCfnTemplate(
     args: ExportSourceNetworkCfnTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExportSourceNetworkCfnTemplateCommandOutput) => void
+    cb: (err: any, data?: ExportSourceNetworkCfnTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -691,16 +691,16 @@ export interface Drs {
    */
   getFailbackReplicationConfiguration(
     args: GetFailbackReplicationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFailbackReplicationConfigurationCommandOutput>;
   getFailbackReplicationConfiguration(
     args: GetFailbackReplicationConfigurationCommandInput,
-    cb: (err: any, data?: GetFailbackReplicationConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetFailbackReplicationConfigurationCommandOutput) => void,
   ): void;
   getFailbackReplicationConfiguration(
     args: GetFailbackReplicationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFailbackReplicationConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetFailbackReplicationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -708,16 +708,16 @@ export interface Drs {
    */
   getLaunchConfiguration(
     args: GetLaunchConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetLaunchConfigurationCommandOutput>;
   getLaunchConfiguration(
     args: GetLaunchConfigurationCommandInput,
-    cb: (err: any, data?: GetLaunchConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetLaunchConfigurationCommandOutput) => void,
   ): void;
   getLaunchConfiguration(
     args: GetLaunchConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLaunchConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetLaunchConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -725,16 +725,16 @@ export interface Drs {
    */
   getReplicationConfiguration(
     args: GetReplicationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetReplicationConfigurationCommandOutput>;
   getReplicationConfiguration(
     args: GetReplicationConfigurationCommandInput,
-    cb: (err: any, data?: GetReplicationConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetReplicationConfigurationCommandOutput) => void,
   ): void;
   getReplicationConfiguration(
     args: GetReplicationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetReplicationConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetReplicationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -743,16 +743,16 @@ export interface Drs {
   initializeService(): Promise<InitializeServiceCommandOutput>;
   initializeService(
     args: InitializeServiceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<InitializeServiceCommandOutput>;
   initializeService(
     args: InitializeServiceCommandInput,
-    cb: (err: any, data?: InitializeServiceCommandOutput) => void
+    cb: (err: any, data?: InitializeServiceCommandOutput) => void,
   ): void;
   initializeService(
     args: InitializeServiceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InitializeServiceCommandOutput) => void
+    cb: (err: any, data?: InitializeServiceCommandOutput) => void,
   ): void;
 
   /**
@@ -760,16 +760,16 @@ export interface Drs {
    */
   listExtensibleSourceServers(
     args: ListExtensibleSourceServersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListExtensibleSourceServersCommandOutput>;
   listExtensibleSourceServers(
     args: ListExtensibleSourceServersCommandInput,
-    cb: (err: any, data?: ListExtensibleSourceServersCommandOutput) => void
+    cb: (err: any, data?: ListExtensibleSourceServersCommandOutput) => void,
   ): void;
   listExtensibleSourceServers(
     args: ListExtensibleSourceServersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListExtensibleSourceServersCommandOutput) => void
+    cb: (err: any, data?: ListExtensibleSourceServersCommandOutput) => void,
   ): void;
 
   /**
@@ -777,16 +777,16 @@ export interface Drs {
    */
   listLaunchActions(
     args: ListLaunchActionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListLaunchActionsCommandOutput>;
   listLaunchActions(
     args: ListLaunchActionsCommandInput,
-    cb: (err: any, data?: ListLaunchActionsCommandOutput) => void
+    cb: (err: any, data?: ListLaunchActionsCommandOutput) => void,
   ): void;
   listLaunchActions(
     args: ListLaunchActionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLaunchActionsCommandOutput) => void
+    cb: (err: any, data?: ListLaunchActionsCommandOutput) => void,
   ): void;
 
   /**
@@ -795,16 +795,16 @@ export interface Drs {
   listStagingAccounts(): Promise<ListStagingAccountsCommandOutput>;
   listStagingAccounts(
     args: ListStagingAccountsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListStagingAccountsCommandOutput>;
   listStagingAccounts(
     args: ListStagingAccountsCommandInput,
-    cb: (err: any, data?: ListStagingAccountsCommandOutput) => void
+    cb: (err: any, data?: ListStagingAccountsCommandOutput) => void,
   ): void;
   listStagingAccounts(
     args: ListStagingAccountsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStagingAccountsCommandOutput) => void
+    cb: (err: any, data?: ListStagingAccountsCommandOutput) => void,
   ): void;
 
   /**
@@ -812,16 +812,16 @@ export interface Drs {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -829,13 +829,13 @@ export interface Drs {
    */
   putLaunchAction(
     args: PutLaunchActionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutLaunchActionCommandOutput>;
   putLaunchAction(args: PutLaunchActionCommandInput, cb: (err: any, data?: PutLaunchActionCommandOutput) => void): void;
   putLaunchAction(
     args: PutLaunchActionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutLaunchActionCommandOutput) => void
+    cb: (err: any, data?: PutLaunchActionCommandOutput) => void,
   ): void;
 
   /**
@@ -843,16 +843,16 @@ export interface Drs {
    */
   retryDataReplication(
     args: RetryDataReplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RetryDataReplicationCommandOutput>;
   retryDataReplication(
     args: RetryDataReplicationCommandInput,
-    cb: (err: any, data?: RetryDataReplicationCommandOutput) => void
+    cb: (err: any, data?: RetryDataReplicationCommandOutput) => void,
   ): void;
   retryDataReplication(
     args: RetryDataReplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RetryDataReplicationCommandOutput) => void
+    cb: (err: any, data?: RetryDataReplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -860,16 +860,16 @@ export interface Drs {
    */
   reverseReplication(
     args: ReverseReplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ReverseReplicationCommandOutput>;
   reverseReplication(
     args: ReverseReplicationCommandInput,
-    cb: (err: any, data?: ReverseReplicationCommandOutput) => void
+    cb: (err: any, data?: ReverseReplicationCommandOutput) => void,
   ): void;
   reverseReplication(
     args: ReverseReplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ReverseReplicationCommandOutput) => void
+    cb: (err: any, data?: ReverseReplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -877,16 +877,16 @@ export interface Drs {
    */
   startFailbackLaunch(
     args: StartFailbackLaunchCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartFailbackLaunchCommandOutput>;
   startFailbackLaunch(
     args: StartFailbackLaunchCommandInput,
-    cb: (err: any, data?: StartFailbackLaunchCommandOutput) => void
+    cb: (err: any, data?: StartFailbackLaunchCommandOutput) => void,
   ): void;
   startFailbackLaunch(
     args: StartFailbackLaunchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartFailbackLaunchCommandOutput) => void
+    cb: (err: any, data?: StartFailbackLaunchCommandOutput) => void,
   ): void;
 
   /**
@@ -897,7 +897,7 @@ export interface Drs {
   startRecovery(
     args: StartRecoveryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartRecoveryCommandOutput) => void
+    cb: (err: any, data?: StartRecoveryCommandOutput) => void,
   ): void;
 
   /**
@@ -905,16 +905,16 @@ export interface Drs {
    */
   startReplication(
     args: StartReplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartReplicationCommandOutput>;
   startReplication(
     args: StartReplicationCommandInput,
-    cb: (err: any, data?: StartReplicationCommandOutput) => void
+    cb: (err: any, data?: StartReplicationCommandOutput) => void,
   ): void;
   startReplication(
     args: StartReplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartReplicationCommandOutput) => void
+    cb: (err: any, data?: StartReplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -922,16 +922,16 @@ export interface Drs {
    */
   startSourceNetworkRecovery(
     args: StartSourceNetworkRecoveryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartSourceNetworkRecoveryCommandOutput>;
   startSourceNetworkRecovery(
     args: StartSourceNetworkRecoveryCommandInput,
-    cb: (err: any, data?: StartSourceNetworkRecoveryCommandOutput) => void
+    cb: (err: any, data?: StartSourceNetworkRecoveryCommandOutput) => void,
   ): void;
   startSourceNetworkRecovery(
     args: StartSourceNetworkRecoveryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartSourceNetworkRecoveryCommandOutput) => void
+    cb: (err: any, data?: StartSourceNetworkRecoveryCommandOutput) => void,
   ): void;
 
   /**
@@ -939,16 +939,16 @@ export interface Drs {
    */
   startSourceNetworkReplication(
     args: StartSourceNetworkReplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartSourceNetworkReplicationCommandOutput>;
   startSourceNetworkReplication(
     args: StartSourceNetworkReplicationCommandInput,
-    cb: (err: any, data?: StartSourceNetworkReplicationCommandOutput) => void
+    cb: (err: any, data?: StartSourceNetworkReplicationCommandOutput) => void,
   ): void;
   startSourceNetworkReplication(
     args: StartSourceNetworkReplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartSourceNetworkReplicationCommandOutput) => void
+    cb: (err: any, data?: StartSourceNetworkReplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -959,7 +959,7 @@ export interface Drs {
   stopFailback(
     args: StopFailbackCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopFailbackCommandOutput) => void
+    cb: (err: any, data?: StopFailbackCommandOutput) => void,
   ): void;
 
   /**
@@ -967,13 +967,13 @@ export interface Drs {
    */
   stopReplication(
     args: StopReplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopReplicationCommandOutput>;
   stopReplication(args: StopReplicationCommandInput, cb: (err: any, data?: StopReplicationCommandOutput) => void): void;
   stopReplication(
     args: StopReplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopReplicationCommandOutput) => void
+    cb: (err: any, data?: StopReplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -981,16 +981,16 @@ export interface Drs {
    */
   stopSourceNetworkReplication(
     args: StopSourceNetworkReplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopSourceNetworkReplicationCommandOutput>;
   stopSourceNetworkReplication(
     args: StopSourceNetworkReplicationCommandInput,
-    cb: (err: any, data?: StopSourceNetworkReplicationCommandOutput) => void
+    cb: (err: any, data?: StopSourceNetworkReplicationCommandOutput) => void,
   ): void;
   stopSourceNetworkReplication(
     args: StopSourceNetworkReplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopSourceNetworkReplicationCommandOutput) => void
+    cb: (err: any, data?: StopSourceNetworkReplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -1001,7 +1001,7 @@ export interface Drs {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1009,16 +1009,16 @@ export interface Drs {
    */
   terminateRecoveryInstances(
     args: TerminateRecoveryInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<TerminateRecoveryInstancesCommandOutput>;
   terminateRecoveryInstances(
     args: TerminateRecoveryInstancesCommandInput,
-    cb: (err: any, data?: TerminateRecoveryInstancesCommandOutput) => void
+    cb: (err: any, data?: TerminateRecoveryInstancesCommandOutput) => void,
   ): void;
   terminateRecoveryInstances(
     args: TerminateRecoveryInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TerminateRecoveryInstancesCommandOutput) => void
+    cb: (err: any, data?: TerminateRecoveryInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -1029,7 +1029,7 @@ export interface Drs {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1037,16 +1037,16 @@ export interface Drs {
    */
   updateFailbackReplicationConfiguration(
     args: UpdateFailbackReplicationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateFailbackReplicationConfigurationCommandOutput>;
   updateFailbackReplicationConfiguration(
     args: UpdateFailbackReplicationConfigurationCommandInput,
-    cb: (err: any, data?: UpdateFailbackReplicationConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateFailbackReplicationConfigurationCommandOutput) => void,
   ): void;
   updateFailbackReplicationConfiguration(
     args: UpdateFailbackReplicationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFailbackReplicationConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateFailbackReplicationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1054,16 +1054,16 @@ export interface Drs {
    */
   updateLaunchConfiguration(
     args: UpdateLaunchConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateLaunchConfigurationCommandOutput>;
   updateLaunchConfiguration(
     args: UpdateLaunchConfigurationCommandInput,
-    cb: (err: any, data?: UpdateLaunchConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateLaunchConfigurationCommandOutput) => void,
   ): void;
   updateLaunchConfiguration(
     args: UpdateLaunchConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateLaunchConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateLaunchConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1071,16 +1071,16 @@ export interface Drs {
    */
   updateLaunchConfigurationTemplate(
     args: UpdateLaunchConfigurationTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateLaunchConfigurationTemplateCommandOutput>;
   updateLaunchConfigurationTemplate(
     args: UpdateLaunchConfigurationTemplateCommandInput,
-    cb: (err: any, data?: UpdateLaunchConfigurationTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateLaunchConfigurationTemplateCommandOutput) => void,
   ): void;
   updateLaunchConfigurationTemplate(
     args: UpdateLaunchConfigurationTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateLaunchConfigurationTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateLaunchConfigurationTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1088,16 +1088,16 @@ export interface Drs {
    */
   updateReplicationConfiguration(
     args: UpdateReplicationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateReplicationConfigurationCommandOutput>;
   updateReplicationConfiguration(
     args: UpdateReplicationConfigurationCommandInput,
-    cb: (err: any, data?: UpdateReplicationConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateReplicationConfigurationCommandOutput) => void,
   ): void;
   updateReplicationConfiguration(
     args: UpdateReplicationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateReplicationConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateReplicationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1105,16 +1105,16 @@ export interface Drs {
    */
   updateReplicationConfigurationTemplate(
     args: UpdateReplicationConfigurationTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateReplicationConfigurationTemplateCommandOutput>;
   updateReplicationConfigurationTemplate(
     args: UpdateReplicationConfigurationTemplateCommandInput,
-    cb: (err: any, data?: UpdateReplicationConfigurationTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateReplicationConfigurationTemplateCommandOutput) => void,
   ): void;
   updateReplicationConfigurationTemplate(
     args: UpdateReplicationConfigurationTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateReplicationConfigurationTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateReplicationConfigurationTemplateCommandOutput) => void,
   ): void;
 }
 

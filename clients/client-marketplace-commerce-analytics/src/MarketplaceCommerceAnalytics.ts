@@ -28,13 +28,13 @@ export interface MarketplaceCommerceAnalytics {
    */
   generateDataSet(
     args: GenerateDataSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GenerateDataSetCommandOutput>;
   generateDataSet(args: GenerateDataSetCommandInput, cb: (err: any, data?: GenerateDataSetCommandOutput) => void): void;
   generateDataSet(
     args: GenerateDataSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GenerateDataSetCommandOutput) => void
+    cb: (err: any, data?: GenerateDataSetCommandOutput) => void,
   ): void;
 
   /**
@@ -42,16 +42,16 @@ export interface MarketplaceCommerceAnalytics {
    */
   startSupportDataExport(
     args: StartSupportDataExportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartSupportDataExportCommandOutput>;
   startSupportDataExport(
     args: StartSupportDataExportCommandInput,
-    cb: (err: any, data?: StartSupportDataExportCommandOutput) => void
+    cb: (err: any, data?: StartSupportDataExportCommandOutput) => void,
   ): void;
   startSupportDataExport(
     args: StartSupportDataExportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartSupportDataExportCommandOutput) => void
+    cb: (err: any, data?: StartSupportDataExportCommandOutput) => void,
   ): void;
 }
 

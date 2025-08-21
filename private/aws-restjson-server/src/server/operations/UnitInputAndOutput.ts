@@ -63,14 +63,14 @@ export class UnitInputAndOutputSerializer
 
 export const getUnitInputAndOutputHandler = <Context>(
   operation: __Operation<UnitInputAndOutputServerInput, UnitInputAndOutputServerOutput, Context>,
-  customizer: __ValidationCustomizer<"UnitInputAndOutput">
+  customizer: __ValidationCustomizer<"UnitInputAndOutput">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "UnitInputAndOutput">([
     new httpbinding.UriSpec<"RestJson", "UnitInputAndOutput">(
       "POST",
       [{ type: "path_literal", value: "UnitInputAndOutput" }],
       [],
-      { service: "RestJson", operation: "UnitInputAndOutput" }
+      { service: "RestJson", operation: "UnitInputAndOutput" },
     ),
   ]);
   return new UnitInputAndOutputHandler(
@@ -78,7 +78,7 @@ export const getUnitInputAndOutputHandler = <Context>(
     mux,
     new UnitInputAndOutputSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -99,7 +99,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -141,7 +141,7 @@ export class UnitInputAndOutputHandler<Context> implements __ServiceHandler<Cont
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"UnitInputAndOutput">;
   /**
@@ -158,7 +158,7 @@ export class UnitInputAndOutputHandler<Context> implements __ServiceHandler<Cont
     mux: __Mux<"RestJson", "UnitInputAndOutput">,
     serializer: __OperationSerializer<RestJsonService<Context>, "UnitInputAndOutput", UnitInputAndOutputErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"UnitInputAndOutput">
+    validationCustomizer: __ValidationCustomizer<"UnitInputAndOutput">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -170,7 +170,7 @@ export class UnitInputAndOutputHandler<Context> implements __ServiceHandler<Cont
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.UnitInputAndOutput. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.UnitInputAndOutput. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -182,7 +182,7 @@ export class UnitInputAndOutputHandler<Context> implements __ServiceHandler<Cont
       this.operation,
       this.serializeFrameworkException,
       UnitInputAndOutputServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

@@ -183,7 +183,7 @@ import { VPCLatticeServiceException as __BaseException } from "../models/VPCLatt
  */
 export const se_BatchUpdateRuleCommand = async (
   input: BatchUpdateRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -196,7 +196,7 @@ export const se_BatchUpdateRuleCommand = async (
   body = JSON.stringify(
     take(input, {
       rules: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -207,7 +207,7 @@ export const se_BatchUpdateRuleCommand = async (
  */
 export const se_CreateAccessLogSubscriptionCommand = async (
   input: CreateAccessLogSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -221,7 +221,7 @@ export const se_CreateAccessLogSubscriptionCommand = async (
       destinationArn: [],
       resourceIdentifier: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -232,7 +232,7 @@ export const se_CreateAccessLogSubscriptionCommand = async (
  */
 export const se_CreateListenerCommand = async (
   input: CreateListenerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -249,7 +249,7 @@ export const se_CreateListenerCommand = async (
       port: [],
       protocol: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -260,7 +260,7 @@ export const se_CreateListenerCommand = async (
  */
 export const se_CreateRuleCommand = async (
   input: CreateRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -278,7 +278,7 @@ export const se_CreateRuleCommand = async (
       name: [],
       priority: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -289,7 +289,7 @@ export const se_CreateRuleCommand = async (
  */
 export const se_CreateServiceCommand = async (
   input: CreateServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -305,7 +305,7 @@ export const se_CreateServiceCommand = async (
       customDomainName: [],
       name: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -316,7 +316,7 @@ export const se_CreateServiceCommand = async (
  */
 export const se_CreateServiceNetworkCommand = async (
   input: CreateServiceNetworkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -330,7 +330,7 @@ export const se_CreateServiceNetworkCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       name: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -341,7 +341,7 @@ export const se_CreateServiceNetworkCommand = async (
  */
 export const se_CreateServiceNetworkServiceAssociationCommand = async (
   input: CreateServiceNetworkServiceAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -355,7 +355,7 @@ export const se_CreateServiceNetworkServiceAssociationCommand = async (
       serviceIdentifier: [],
       serviceNetworkIdentifier: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -366,7 +366,7 @@ export const se_CreateServiceNetworkServiceAssociationCommand = async (
  */
 export const se_CreateServiceNetworkVpcAssociationCommand = async (
   input: CreateServiceNetworkVpcAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -381,7 +381,7 @@ export const se_CreateServiceNetworkVpcAssociationCommand = async (
       serviceNetworkIdentifier: [],
       tags: (_) => _json(_),
       vpcIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -392,7 +392,7 @@ export const se_CreateServiceNetworkVpcAssociationCommand = async (
  */
 export const se_CreateTargetGroupCommand = async (
   input: CreateTargetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -407,7 +407,7 @@ export const se_CreateTargetGroupCommand = async (
       name: [],
       tags: (_) => _json(_),
       type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -418,7 +418,7 @@ export const se_CreateTargetGroupCommand = async (
  */
 export const se_DeleteAccessLogSubscriptionCommand = async (
   input: DeleteAccessLogSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -427,7 +427,7 @@ export const se_DeleteAccessLogSubscriptionCommand = async (
     "accessLogSubscriptionIdentifier",
     () => input.accessLogSubscriptionIdentifier!,
     "{accessLogSubscriptionIdentifier}",
-    false
+    false,
   );
   let body: any;
   b.m("DELETE").h(headers).b(body);
@@ -439,7 +439,7 @@ export const se_DeleteAccessLogSubscriptionCommand = async (
  */
 export const se_DeleteAuthPolicyCommand = async (
   input: DeleteAuthPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -455,7 +455,7 @@ export const se_DeleteAuthPolicyCommand = async (
  */
 export const se_DeleteListenerCommand = async (
   input: DeleteListenerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -472,7 +472,7 @@ export const se_DeleteListenerCommand = async (
  */
 export const se_DeleteResourcePolicyCommand = async (
   input: DeleteResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -488,7 +488,7 @@ export const se_DeleteResourcePolicyCommand = async (
  */
 export const se_DeleteRuleCommand = async (
   input: DeleteRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -506,7 +506,7 @@ export const se_DeleteRuleCommand = async (
  */
 export const se_DeleteServiceCommand = async (
   input: DeleteServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -522,7 +522,7 @@ export const se_DeleteServiceCommand = async (
  */
 export const se_DeleteServiceNetworkCommand = async (
   input: DeleteServiceNetworkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -538,7 +538,7 @@ export const se_DeleteServiceNetworkCommand = async (
  */
 export const se_DeleteServiceNetworkServiceAssociationCommand = async (
   input: DeleteServiceNetworkServiceAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -547,7 +547,7 @@ export const se_DeleteServiceNetworkServiceAssociationCommand = async (
     "serviceNetworkServiceAssociationIdentifier",
     () => input.serviceNetworkServiceAssociationIdentifier!,
     "{serviceNetworkServiceAssociationIdentifier}",
-    false
+    false,
   );
   let body: any;
   b.m("DELETE").h(headers).b(body);
@@ -559,7 +559,7 @@ export const se_DeleteServiceNetworkServiceAssociationCommand = async (
  */
 export const se_DeleteServiceNetworkVpcAssociationCommand = async (
   input: DeleteServiceNetworkVpcAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -568,7 +568,7 @@ export const se_DeleteServiceNetworkVpcAssociationCommand = async (
     "serviceNetworkVpcAssociationIdentifier",
     () => input.serviceNetworkVpcAssociationIdentifier!,
     "{serviceNetworkVpcAssociationIdentifier}",
-    false
+    false,
   );
   let body: any;
   b.m("DELETE").h(headers).b(body);
@@ -580,7 +580,7 @@ export const se_DeleteServiceNetworkVpcAssociationCommand = async (
  */
 export const se_DeleteTargetGroupCommand = async (
   input: DeleteTargetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -596,7 +596,7 @@ export const se_DeleteTargetGroupCommand = async (
  */
 export const se_DeregisterTargetsCommand = async (
   input: DeregisterTargetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -608,7 +608,7 @@ export const se_DeregisterTargetsCommand = async (
   body = JSON.stringify(
     take(input, {
       targets: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -619,7 +619,7 @@ export const se_DeregisterTargetsCommand = async (
  */
 export const se_GetAccessLogSubscriptionCommand = async (
   input: GetAccessLogSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -628,7 +628,7 @@ export const se_GetAccessLogSubscriptionCommand = async (
     "accessLogSubscriptionIdentifier",
     () => input.accessLogSubscriptionIdentifier!,
     "{accessLogSubscriptionIdentifier}",
-    false
+    false,
   );
   let body: any;
   b.m("GET").h(headers).b(body);
@@ -640,7 +640,7 @@ export const se_GetAccessLogSubscriptionCommand = async (
  */
 export const se_GetAuthPolicyCommand = async (
   input: GetAuthPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -656,7 +656,7 @@ export const se_GetAuthPolicyCommand = async (
  */
 export const se_GetListenerCommand = async (
   input: GetListenerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -673,7 +673,7 @@ export const se_GetListenerCommand = async (
  */
 export const se_GetResourcePolicyCommand = async (
   input: GetResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -689,7 +689,7 @@ export const se_GetResourcePolicyCommand = async (
  */
 export const se_GetRuleCommand = async (
   input: GetRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -707,7 +707,7 @@ export const se_GetRuleCommand = async (
  */
 export const se_GetServiceCommand = async (
   input: GetServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -723,7 +723,7 @@ export const se_GetServiceCommand = async (
  */
 export const se_GetServiceNetworkCommand = async (
   input: GetServiceNetworkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -739,7 +739,7 @@ export const se_GetServiceNetworkCommand = async (
  */
 export const se_GetServiceNetworkServiceAssociationCommand = async (
   input: GetServiceNetworkServiceAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -748,7 +748,7 @@ export const se_GetServiceNetworkServiceAssociationCommand = async (
     "serviceNetworkServiceAssociationIdentifier",
     () => input.serviceNetworkServiceAssociationIdentifier!,
     "{serviceNetworkServiceAssociationIdentifier}",
-    false
+    false,
   );
   let body: any;
   b.m("GET").h(headers).b(body);
@@ -760,7 +760,7 @@ export const se_GetServiceNetworkServiceAssociationCommand = async (
  */
 export const se_GetServiceNetworkVpcAssociationCommand = async (
   input: GetServiceNetworkVpcAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -769,7 +769,7 @@ export const se_GetServiceNetworkVpcAssociationCommand = async (
     "serviceNetworkVpcAssociationIdentifier",
     () => input.serviceNetworkVpcAssociationIdentifier!,
     "{serviceNetworkVpcAssociationIdentifier}",
-    false
+    false,
   );
   let body: any;
   b.m("GET").h(headers).b(body);
@@ -781,7 +781,7 @@ export const se_GetServiceNetworkVpcAssociationCommand = async (
  */
 export const se_GetTargetGroupCommand = async (
   input: GetTargetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -797,7 +797,7 @@ export const se_GetTargetGroupCommand = async (
  */
 export const se_ListAccessLogSubscriptionsCommand = async (
   input: ListAccessLogSubscriptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -817,7 +817,7 @@ export const se_ListAccessLogSubscriptionsCommand = async (
  */
 export const se_ListListenersCommand = async (
   input: ListListenersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -837,7 +837,7 @@ export const se_ListListenersCommand = async (
  */
 export const se_ListRulesCommand = async (
   input: ListRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -858,7 +858,7 @@ export const se_ListRulesCommand = async (
  */
 export const se_ListServiceNetworksCommand = async (
   input: ListServiceNetworksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -877,7 +877,7 @@ export const se_ListServiceNetworksCommand = async (
  */
 export const se_ListServiceNetworkServiceAssociationsCommand = async (
   input: ListServiceNetworkServiceAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -898,7 +898,7 @@ export const se_ListServiceNetworkServiceAssociationsCommand = async (
  */
 export const se_ListServiceNetworkVpcAssociationsCommand = async (
   input: ListServiceNetworkVpcAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -919,7 +919,7 @@ export const se_ListServiceNetworkVpcAssociationsCommand = async (
  */
 export const se_ListServicesCommand = async (
   input: ListServicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -938,7 +938,7 @@ export const se_ListServicesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -954,7 +954,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTargetGroupsCommand = async (
   input: ListTargetGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -975,7 +975,7 @@ export const se_ListTargetGroupsCommand = async (
  */
 export const se_ListTargetsCommand = async (
   input: ListTargetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -991,7 +991,7 @@ export const se_ListTargetsCommand = async (
   body = JSON.stringify(
     take(input, {
       targets: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -1002,7 +1002,7 @@ export const se_ListTargetsCommand = async (
  */
 export const se_PutAuthPolicyCommand = async (
   input: PutAuthPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1014,7 +1014,7 @@ export const se_PutAuthPolicyCommand = async (
   body = JSON.stringify(
     take(input, {
       policy: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1025,7 +1025,7 @@ export const se_PutAuthPolicyCommand = async (
  */
 export const se_PutResourcePolicyCommand = async (
   input: PutResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1037,7 +1037,7 @@ export const se_PutResourcePolicyCommand = async (
   body = JSON.stringify(
     take(input, {
       policy: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1048,7 +1048,7 @@ export const se_PutResourcePolicyCommand = async (
  */
 export const se_RegisterTargetsCommand = async (
   input: RegisterTargetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1060,7 +1060,7 @@ export const se_RegisterTargetsCommand = async (
   body = JSON.stringify(
     take(input, {
       targets: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1071,7 +1071,7 @@ export const se_RegisterTargetsCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1083,7 +1083,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1094,7 +1094,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1116,7 +1116,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAccessLogSubscriptionCommand = async (
   input: UpdateAccessLogSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1127,13 +1127,13 @@ export const se_UpdateAccessLogSubscriptionCommand = async (
     "accessLogSubscriptionIdentifier",
     () => input.accessLogSubscriptionIdentifier!,
     "{accessLogSubscriptionIdentifier}",
-    false
+    false,
   );
   let body: any;
   body = JSON.stringify(
     take(input, {
       destinationArn: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1144,7 +1144,7 @@ export const se_UpdateAccessLogSubscriptionCommand = async (
  */
 export const se_UpdateListenerCommand = async (
   input: UpdateListenerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1157,7 +1157,7 @@ export const se_UpdateListenerCommand = async (
   body = JSON.stringify(
     take(input, {
       defaultAction: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1168,7 +1168,7 @@ export const se_UpdateListenerCommand = async (
  */
 export const se_UpdateRuleCommand = async (
   input: UpdateRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1184,7 +1184,7 @@ export const se_UpdateRuleCommand = async (
       action: (_) => _json(_),
       match: (_) => _json(_),
       priority: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1195,7 +1195,7 @@ export const se_UpdateRuleCommand = async (
  */
 export const se_UpdateServiceCommand = async (
   input: UpdateServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1208,7 +1208,7 @@ export const se_UpdateServiceCommand = async (
     take(input, {
       authType: [],
       certificateArn: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1219,7 +1219,7 @@ export const se_UpdateServiceCommand = async (
  */
 export const se_UpdateServiceNetworkCommand = async (
   input: UpdateServiceNetworkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1231,7 +1231,7 @@ export const se_UpdateServiceNetworkCommand = async (
   body = JSON.stringify(
     take(input, {
       authType: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1242,7 +1242,7 @@ export const se_UpdateServiceNetworkCommand = async (
  */
 export const se_UpdateServiceNetworkVpcAssociationCommand = async (
   input: UpdateServiceNetworkVpcAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1253,13 +1253,13 @@ export const se_UpdateServiceNetworkVpcAssociationCommand = async (
     "serviceNetworkVpcAssociationIdentifier",
     () => input.serviceNetworkVpcAssociationIdentifier!,
     "{serviceNetworkVpcAssociationIdentifier}",
-    false
+    false,
   );
   let body: any;
   body = JSON.stringify(
     take(input, {
       securityGroupIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1270,7 +1270,7 @@ export const se_UpdateServiceNetworkVpcAssociationCommand = async (
  */
 export const se_UpdateTargetGroupCommand = async (
   input: UpdateTargetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1282,7 +1282,7 @@ export const se_UpdateTargetGroupCommand = async (
   body = JSON.stringify(
     take(input, {
       healthCheck: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1293,7 +1293,7 @@ export const se_UpdateTargetGroupCommand = async (
  */
 export const de_BatchUpdateRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchUpdateRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1315,7 +1315,7 @@ export const de_BatchUpdateRuleCommand = async (
  */
 export const de_CreateAccessLogSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAccessLogSubscriptionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1340,7 +1340,7 @@ export const de_CreateAccessLogSubscriptionCommand = async (
  */
 export const de_CreateListenerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateListenerCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1368,7 +1368,7 @@ export const de_CreateListenerCommand = async (
  */
 export const de_CreateRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRuleCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1394,7 +1394,7 @@ export const de_CreateRuleCommand = async (
  */
 export const de_CreateServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateServiceCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1422,7 +1422,7 @@ export const de_CreateServiceCommand = async (
  */
 export const de_CreateServiceNetworkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateServiceNetworkCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1446,7 +1446,7 @@ export const de_CreateServiceNetworkCommand = async (
  */
 export const de_CreateServiceNetworkServiceAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateServiceNetworkServiceAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1472,7 +1472,7 @@ export const de_CreateServiceNetworkServiceAssociationCommand = async (
  */
 export const de_CreateServiceNetworkVpcAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateServiceNetworkVpcAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1497,7 +1497,7 @@ export const de_CreateServiceNetworkVpcAssociationCommand = async (
  */
 export const de_CreateTargetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTargetGroupCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1523,7 +1523,7 @@ export const de_CreateTargetGroupCommand = async (
  */
 export const de_DeleteAccessLogSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAccessLogSubscriptionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1540,7 +1540,7 @@ export const de_DeleteAccessLogSubscriptionCommand = async (
  */
 export const de_DeleteAuthPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAuthPolicyCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1557,7 +1557,7 @@ export const de_DeleteAuthPolicyCommand = async (
  */
 export const de_DeleteListenerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteListenerCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1574,7 +1574,7 @@ export const de_DeleteListenerCommand = async (
  */
 export const de_DeleteResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResourcePolicyCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1591,7 +1591,7 @@ export const de_DeleteResourcePolicyCommand = async (
  */
 export const de_DeleteRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRuleCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1608,7 +1608,7 @@ export const de_DeleteRuleCommand = async (
  */
 export const de_DeleteServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServiceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1632,7 +1632,7 @@ export const de_DeleteServiceCommand = async (
  */
 export const de_DeleteServiceNetworkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServiceNetworkCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1649,7 +1649,7 @@ export const de_DeleteServiceNetworkCommand = async (
  */
 export const de_DeleteServiceNetworkServiceAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServiceNetworkServiceAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1672,7 +1672,7 @@ export const de_DeleteServiceNetworkServiceAssociationCommand = async (
  */
 export const de_DeleteServiceNetworkVpcAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServiceNetworkVpcAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1695,7 +1695,7 @@ export const de_DeleteServiceNetworkVpcAssociationCommand = async (
  */
 export const de_DeleteTargetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTargetGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1718,7 +1718,7 @@ export const de_DeleteTargetGroupCommand = async (
  */
 export const de_DeregisterTargetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterTargetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1740,7 +1740,7 @@ export const de_DeregisterTargetsCommand = async (
  */
 export const de_GetAccessLogSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccessLogSubscriptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1767,7 +1767,7 @@ export const de_GetAccessLogSubscriptionCommand = async (
  */
 export const de_GetAuthPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAuthPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1791,7 +1791,7 @@ export const de_GetAuthPolicyCommand = async (
  */
 export const de_GetListenerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetListenerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1821,7 +1821,7 @@ export const de_GetListenerCommand = async (
  */
 export const de_GetResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourcePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1842,7 +1842,7 @@ export const de_GetResourcePolicyCommand = async (
  */
 export const de_GetRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1871,7 +1871,7 @@ export const de_GetRuleCommand = async (
  */
 export const de_GetServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1903,7 +1903,7 @@ export const de_GetServiceCommand = async (
  */
 export const de_GetServiceNetworkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceNetworkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1931,7 +1931,7 @@ export const de_GetServiceNetworkCommand = async (
  */
 export const de_GetServiceNetworkServiceAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceNetworkServiceAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1966,7 +1966,7 @@ export const de_GetServiceNetworkServiceAssociationCommand = async (
  */
 export const de_GetServiceNetworkVpcAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceNetworkVpcAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1999,7 +1999,7 @@ export const de_GetServiceNetworkVpcAssociationCommand = async (
  */
 export const de_GetTargetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTargetGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2030,7 +2030,7 @@ export const de_GetTargetGroupCommand = async (
  */
 export const de_ListAccessLogSubscriptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAccessLogSubscriptionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2052,7 +2052,7 @@ export const de_ListAccessLogSubscriptionsCommand = async (
  */
 export const de_ListListenersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListListenersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2074,7 +2074,7 @@ export const de_ListListenersCommand = async (
  */
 export const de_ListRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRulesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2096,7 +2096,7 @@ export const de_ListRulesCommand = async (
  */
 export const de_ListServiceNetworksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServiceNetworksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2118,7 +2118,7 @@ export const de_ListServiceNetworksCommand = async (
  */
 export const de_ListServiceNetworkServiceAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServiceNetworkServiceAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2140,7 +2140,7 @@ export const de_ListServiceNetworkServiceAssociationsCommand = async (
  */
 export const de_ListServiceNetworkVpcAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServiceNetworkVpcAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2162,7 +2162,7 @@ export const de_ListServiceNetworkVpcAssociationsCommand = async (
  */
 export const de_ListServicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServicesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2184,7 +2184,7 @@ export const de_ListServicesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2205,7 +2205,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTargetGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTargetGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2227,7 +2227,7 @@ export const de_ListTargetGroupsCommand = async (
  */
 export const de_ListTargetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTargetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2249,7 +2249,7 @@ export const de_ListTargetsCommand = async (
  */
 export const de_PutAuthPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAuthPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2271,7 +2271,7 @@ export const de_PutAuthPolicyCommand = async (
  */
 export const de_PutResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutResourcePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2288,7 +2288,7 @@ export const de_PutResourcePolicyCommand = async (
  */
 export const de_RegisterTargetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterTargetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2310,7 +2310,7 @@ export const de_RegisterTargetsCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2327,7 +2327,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2344,7 +2344,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAccessLogSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAccessLogSubscriptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2369,7 +2369,7 @@ export const de_UpdateAccessLogSubscriptionCommand = async (
  */
 export const de_UpdateListenerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateListenerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2397,7 +2397,7 @@ export const de_UpdateListenerCommand = async (
  */
 export const de_UpdateRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2424,7 +2424,7 @@ export const de_UpdateRuleCommand = async (
  */
 export const de_UpdateServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServiceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2450,7 +2450,7 @@ export const de_UpdateServiceCommand = async (
  */
 export const de_UpdateServiceNetworkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServiceNetworkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2474,7 +2474,7 @@ export const de_UpdateServiceNetworkCommand = async (
  */
 export const de_UpdateServiceNetworkVpcAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServiceNetworkVpcAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2499,7 +2499,7 @@ export const de_UpdateServiceNetworkVpcAssociationCommand = async (
  */
 export const de_UpdateTargetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTargetGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2567,7 +2567,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2606,7 +2606,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({
     [_rAS]: [() => void 0 !== parsedOutput.headers[_ra], () => __strictParseInt32(parsedOutput.headers[_ra])],
@@ -2628,7 +2628,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2650,7 +2650,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2899,7 +2899,7 @@ const de_ServiceNetworkList = (output: any, context: __SerdeContext): ServiceNet
  */
 const de_ServiceNetworkServiceAssociationList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServiceNetworkServiceAssociationSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -2914,7 +2914,7 @@ const de_ServiceNetworkServiceAssociationList = (
  */
 const de_ServiceNetworkServiceAssociationSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServiceNetworkServiceAssociationSummary => {
   return take(output, {
     arn: __expectString,
@@ -2953,7 +2953,7 @@ const de_ServiceNetworkSummary = (output: any, context: __SerdeContext): Service
  */
 const de_ServiceNetworkVpcAssociationList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServiceNetworkVpcAssociationSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -2968,7 +2968,7 @@ const de_ServiceNetworkVpcAssociationList = (
  */
 const de_ServiceNetworkVpcAssociationSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServiceNetworkVpcAssociationSummary => {
   return take(output, {
     arn: __expectString,

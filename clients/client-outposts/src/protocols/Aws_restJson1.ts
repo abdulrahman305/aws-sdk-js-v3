@@ -94,7 +94,7 @@ import { OutpostsServiceException as __BaseException } from "../models/OutpostsS
  */
 export const se_CancelCapacityTaskCommand = async (
   input: CancelCapacityTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -111,7 +111,7 @@ export const se_CancelCapacityTaskCommand = async (
  */
 export const se_CancelOrderCommand = async (
   input: CancelOrderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -127,7 +127,7 @@ export const se_CancelOrderCommand = async (
  */
 export const se_CreateOrderCommand = async (
   input: CreateOrderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -141,7 +141,7 @@ export const se_CreateOrderCommand = async (
       OutpostIdentifier: [],
       PaymentOption: [],
       PaymentTerm: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -152,7 +152,7 @@ export const se_CreateOrderCommand = async (
  */
 export const se_CreateOutpostCommand = async (
   input: CreateOutpostCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -169,7 +169,7 @@ export const se_CreateOutpostCommand = async (
       SiteId: [],
       SupportedHardwareType: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -180,7 +180,7 @@ export const se_CreateOutpostCommand = async (
  */
 export const se_CreateSiteCommand = async (
   input: CreateSiteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -197,7 +197,7 @@ export const se_CreateSiteCommand = async (
       RackPhysicalProperties: (_) => _json(_),
       ShippingAddress: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -208,7 +208,7 @@ export const se_CreateSiteCommand = async (
  */
 export const se_DeleteOutpostCommand = async (
   input: DeleteOutpostCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -224,7 +224,7 @@ export const se_DeleteOutpostCommand = async (
  */
 export const se_DeleteSiteCommand = async (
   input: DeleteSiteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -240,7 +240,7 @@ export const se_DeleteSiteCommand = async (
  */
 export const se_GetCapacityTaskCommand = async (
   input: GetCapacityTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -257,7 +257,7 @@ export const se_GetCapacityTaskCommand = async (
  */
 export const se_GetCatalogItemCommand = async (
   input: GetCatalogItemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -273,7 +273,7 @@ export const se_GetCatalogItemCommand = async (
  */
 export const se_GetConnectionCommand = async (
   input: GetConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -289,7 +289,7 @@ export const se_GetConnectionCommand = async (
  */
 export const se_GetOrderCommand = async (
   input: GetOrderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -305,7 +305,7 @@ export const se_GetOrderCommand = async (
  */
 export const se_GetOutpostCommand = async (
   input: GetOutpostCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -321,7 +321,7 @@ export const se_GetOutpostCommand = async (
  */
 export const se_GetOutpostInstanceTypesCommand = async (
   input: GetOutpostInstanceTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -341,7 +341,7 @@ export const se_GetOutpostInstanceTypesCommand = async (
  */
 export const se_GetOutpostSupportedInstanceTypesCommand = async (
   input: GetOutpostSupportedInstanceTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -362,7 +362,7 @@ export const se_GetOutpostSupportedInstanceTypesCommand = async (
  */
 export const se_GetSiteCommand = async (
   input: GetSiteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -378,7 +378,7 @@ export const se_GetSiteCommand = async (
  */
 export const se_GetSiteAddressCommand = async (
   input: GetSiteAddressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -397,7 +397,7 @@ export const se_GetSiteAddressCommand = async (
  */
 export const se_ListAssetsCommand = async (
   input: ListAssetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -419,7 +419,7 @@ export const se_ListAssetsCommand = async (
  */
 export const se_ListCapacityTasksCommand = async (
   input: ListCapacityTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -443,7 +443,7 @@ export const se_ListCapacityTasksCommand = async (
  */
 export const se_ListCatalogItemsCommand = async (
   input: ListCatalogItemsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -465,7 +465,7 @@ export const se_ListCatalogItemsCommand = async (
  */
 export const se_ListOrdersCommand = async (
   input: ListOrdersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -485,7 +485,7 @@ export const se_ListOrdersCommand = async (
  */
 export const se_ListOutpostsCommand = async (
   input: ListOutpostsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -510,7 +510,7 @@ export const se_ListOutpostsCommand = async (
  */
 export const se_ListSitesCommand = async (
   input: ListSitesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -541,7 +541,7 @@ export const se_ListSitesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -557,7 +557,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_StartCapacityTaskCommand = async (
   input: StartCapacityTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -571,7 +571,7 @@ export const se_StartCapacityTaskCommand = async (
       DryRun: [],
       InstancePools: (_) => _json(_),
       OrderId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -582,7 +582,7 @@ export const se_StartCapacityTaskCommand = async (
  */
 export const se_StartConnectionCommand = async (
   input: StartConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -596,7 +596,7 @@ export const se_StartConnectionCommand = async (
       ClientPublicKey: [],
       DeviceSerialNumber: [],
       NetworkInterfaceDeviceIndex: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -607,7 +607,7 @@ export const se_StartConnectionCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -619,7 +619,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -630,7 +630,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -652,7 +652,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateOutpostCommand = async (
   input: UpdateOutpostCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -666,7 +666,7 @@ export const se_UpdateOutpostCommand = async (
       Description: [],
       Name: [],
       SupportedHardwareType: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -677,7 +677,7 @@ export const se_UpdateOutpostCommand = async (
  */
 export const se_UpdateSiteCommand = async (
   input: UpdateSiteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -691,7 +691,7 @@ export const se_UpdateSiteCommand = async (
       Description: [],
       Name: [],
       Notes: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -702,7 +702,7 @@ export const se_UpdateSiteCommand = async (
  */
 export const se_UpdateSiteAddressCommand = async (
   input: UpdateSiteAddressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -715,7 +715,7 @@ export const se_UpdateSiteAddressCommand = async (
     take(input, {
       Address: (_) => _json(_),
       AddressType: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -726,7 +726,7 @@ export const se_UpdateSiteAddressCommand = async (
  */
 export const se_UpdateSiteRackPhysicalPropertiesCommand = async (
   input: UpdateSiteRackPhysicalPropertiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -746,7 +746,7 @@ export const se_UpdateSiteRackPhysicalPropertiesCommand = async (
       PowerPhase: [],
       UplinkCount: [],
       UplinkGbps: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -757,7 +757,7 @@ export const se_UpdateSiteRackPhysicalPropertiesCommand = async (
  */
 export const de_CancelCapacityTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelCapacityTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -774,7 +774,7 @@ export const de_CancelCapacityTaskCommand = async (
  */
 export const de_CancelOrderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelOrderCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -791,7 +791,7 @@ export const de_CancelOrderCommand = async (
  */
 export const de_CreateOrderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateOrderCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -812,7 +812,7 @@ export const de_CreateOrderCommand = async (
  */
 export const de_CreateOutpostCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateOutpostCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -833,7 +833,7 @@ export const de_CreateOutpostCommand = async (
  */
 export const de_CreateSiteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSiteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -854,7 +854,7 @@ export const de_CreateSiteCommand = async (
  */
 export const de_DeleteOutpostCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteOutpostCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -871,7 +871,7 @@ export const de_DeleteOutpostCommand = async (
  */
 export const de_DeleteSiteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSiteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -888,7 +888,7 @@ export const de_DeleteSiteCommand = async (
  */
 export const de_GetCapacityTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCapacityTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -918,7 +918,7 @@ export const de_GetCapacityTaskCommand = async (
  */
 export const de_GetCatalogItemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCatalogItemCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -939,7 +939,7 @@ export const de_GetCatalogItemCommand = async (
  */
 export const de_GetConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -961,7 +961,7 @@ export const de_GetConnectionCommand = async (
  */
 export const de_GetOrderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOrderCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -982,7 +982,7 @@ export const de_GetOrderCommand = async (
  */
 export const de_GetOutpostCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOutpostCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1003,7 +1003,7 @@ export const de_GetOutpostCommand = async (
  */
 export const de_GetOutpostInstanceTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOutpostInstanceTypesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1027,7 +1027,7 @@ export const de_GetOutpostInstanceTypesCommand = async (
  */
 export const de_GetOutpostSupportedInstanceTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOutpostSupportedInstanceTypesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1049,7 +1049,7 @@ export const de_GetOutpostSupportedInstanceTypesCommand = async (
  */
 export const de_GetSiteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSiteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1070,7 +1070,7 @@ export const de_GetSiteCommand = async (
  */
 export const de_GetSiteAddressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSiteAddressCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1093,7 +1093,7 @@ export const de_GetSiteAddressCommand = async (
  */
 export const de_ListAssetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1115,7 +1115,7 @@ export const de_ListAssetsCommand = async (
  */
 export const de_ListCapacityTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCapacityTasksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1137,7 +1137,7 @@ export const de_ListCapacityTasksCommand = async (
  */
 export const de_ListCatalogItemsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCatalogItemsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1159,7 +1159,7 @@ export const de_ListCatalogItemsCommand = async (
  */
 export const de_ListOrdersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOrdersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1181,7 +1181,7 @@ export const de_ListOrdersCommand = async (
  */
 export const de_ListOutpostsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOutpostsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1203,7 +1203,7 @@ export const de_ListOutpostsCommand = async (
  */
 export const de_ListSitesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSitesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1225,7 +1225,7 @@ export const de_ListSitesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1246,7 +1246,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_StartCapacityTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartCapacityTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1276,7 +1276,7 @@ export const de_StartCapacityTaskCommand = async (
  */
 export const de_StartConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1298,7 +1298,7 @@ export const de_StartConnectionCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1315,7 +1315,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1332,7 +1332,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateOutpostCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateOutpostCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1353,7 +1353,7 @@ export const de_UpdateOutpostCommand = async (
  */
 export const de_UpdateSiteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSiteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1374,7 +1374,7 @@ export const de_UpdateSiteCommand = async (
  */
 export const de_UpdateSiteAddressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSiteAddressCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1396,7 +1396,7 @@ export const de_UpdateSiteAddressCommand = async (
  */
 export const de_UpdateSiteRackPhysicalPropertiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSiteRackPhysicalPropertiesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1456,7 +1456,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1495,7 +1495,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1532,7 +1532,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

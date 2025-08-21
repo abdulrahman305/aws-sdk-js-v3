@@ -39,7 +39,7 @@ const checkState = async (client: EC2Client, input: DescribeConversionTasksComma
  */
 export const waitForConversionTaskDeleted = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeConversionTasksCommandInput
+  input: DescribeConversionTasksCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -51,7 +51,7 @@ export const waitForConversionTaskDeleted = async (
  */
 export const waitUntilConversionTaskDeleted = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeConversionTasksCommandInput
+  input: DescribeConversionTasksCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

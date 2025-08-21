@@ -15,7 +15,7 @@ type PackageInfo = {
 
 test("tslib and tsc version should be consistent within workspace.", () => {
   const expectedVersions: { [name: string]: string } = JSON.parse(
-    readFileSync(join(__dirname, "versions.jsonc"), "utf8")
+    readFileSync(join(__dirname, "versions.jsonc"), "utf8"),
   );
   const packagesInfo: PackageInfo[] = JSON.parse(execSync("./node_modules/.bin/lerna list -l --json").toString());
   for (const { name, location } of packagesInfo) {

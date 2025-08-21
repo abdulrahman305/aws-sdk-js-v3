@@ -19,13 +19,13 @@ export interface CloudTrailData {
    */
   putAuditEvents(
     args: PutAuditEventsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAuditEventsCommandOutput>;
   putAuditEvents(args: PutAuditEventsCommandInput, cb: (err: any, data?: PutAuditEventsCommandOutput) => void): void;
   putAuditEvents(
     args: PutAuditEventsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAuditEventsCommandOutput) => void
+    cb: (err: any, data?: PutAuditEventsCommandOutput) => void,
   ): void;
 }
 

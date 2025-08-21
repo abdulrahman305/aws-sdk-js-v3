@@ -65,16 +65,16 @@ export interface RedshiftData {
    */
   batchExecuteStatement(
     args: BatchExecuteStatementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchExecuteStatementCommandOutput>;
   batchExecuteStatement(
     args: BatchExecuteStatementCommandInput,
-    cb: (err: any, data?: BatchExecuteStatementCommandOutput) => void
+    cb: (err: any, data?: BatchExecuteStatementCommandOutput) => void,
   ): void;
   batchExecuteStatement(
     args: BatchExecuteStatementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchExecuteStatementCommandOutput) => void
+    cb: (err: any, data?: BatchExecuteStatementCommandOutput) => void,
   ): void;
 
   /**
@@ -82,13 +82,13 @@ export interface RedshiftData {
    */
   cancelStatement(
     args: CancelStatementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelStatementCommandOutput>;
   cancelStatement(args: CancelStatementCommandInput, cb: (err: any, data?: CancelStatementCommandOutput) => void): void;
   cancelStatement(
     args: CancelStatementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelStatementCommandOutput) => void
+    cb: (err: any, data?: CancelStatementCommandOutput) => void,
   ): void;
 
   /**
@@ -96,16 +96,16 @@ export interface RedshiftData {
    */
   describeStatement(
     args: DescribeStatementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeStatementCommandOutput>;
   describeStatement(
     args: DescribeStatementCommandInput,
-    cb: (err: any, data?: DescribeStatementCommandOutput) => void
+    cb: (err: any, data?: DescribeStatementCommandOutput) => void,
   ): void;
   describeStatement(
     args: DescribeStatementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeStatementCommandOutput) => void
+    cb: (err: any, data?: DescribeStatementCommandOutput) => void,
   ): void;
 
   /**
@@ -116,7 +116,7 @@ export interface RedshiftData {
   describeTable(
     args: DescribeTableCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTableCommandOutput) => void
+    cb: (err: any, data?: DescribeTableCommandOutput) => void,
   ): void;
 
   /**
@@ -124,16 +124,16 @@ export interface RedshiftData {
    */
   executeStatement(
     args: ExecuteStatementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExecuteStatementCommandOutput>;
   executeStatement(
     args: ExecuteStatementCommandInput,
-    cb: (err: any, data?: ExecuteStatementCommandOutput) => void
+    cb: (err: any, data?: ExecuteStatementCommandOutput) => void,
   ): void;
   executeStatement(
     args: ExecuteStatementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExecuteStatementCommandOutput) => void
+    cb: (err: any, data?: ExecuteStatementCommandOutput) => void,
   ): void;
 
   /**
@@ -141,16 +141,16 @@ export interface RedshiftData {
    */
   getStatementResult(
     args: GetStatementResultCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetStatementResultCommandOutput>;
   getStatementResult(
     args: GetStatementResultCommandInput,
-    cb: (err: any, data?: GetStatementResultCommandOutput) => void
+    cb: (err: any, data?: GetStatementResultCommandOutput) => void,
   ): void;
   getStatementResult(
     args: GetStatementResultCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetStatementResultCommandOutput) => void
+    cb: (err: any, data?: GetStatementResultCommandOutput) => void,
   ): void;
 
   /**
@@ -161,7 +161,7 @@ export interface RedshiftData {
   listDatabases(
     args: ListDatabasesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDatabasesCommandOutput) => void
+    cb: (err: any, data?: ListDatabasesCommandOutput) => void,
   ): void;
 
   /**
@@ -172,7 +172,7 @@ export interface RedshiftData {
   listSchemas(
     args: ListSchemasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSchemasCommandOutput) => void
+    cb: (err: any, data?: ListSchemasCommandOutput) => void,
   ): void;
 
   /**
@@ -181,13 +181,13 @@ export interface RedshiftData {
   listStatements(): Promise<ListStatementsCommandOutput>;
   listStatements(
     args: ListStatementsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListStatementsCommandOutput>;
   listStatements(args: ListStatementsCommandInput, cb: (err: any, data?: ListStatementsCommandOutput) => void): void;
   listStatements(
     args: ListStatementsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStatementsCommandOutput) => void
+    cb: (err: any, data?: ListStatementsCommandOutput) => void,
   ): void;
 
   /**
@@ -198,7 +198,7 @@ export interface RedshiftData {
   listTables(
     args: ListTablesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTablesCommandOutput) => void
+    cb: (err: any, data?: ListTablesCommandOutput) => void,
   ): void;
 }
 

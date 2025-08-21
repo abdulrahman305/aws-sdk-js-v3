@@ -329,16 +329,16 @@ export interface ECS {
    */
   createCapacityProvider(
     args: CreateCapacityProviderCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCapacityProviderCommandOutput>;
   createCapacityProvider(
     args: CreateCapacityProviderCommandInput,
-    cb: (err: any, data?: CreateCapacityProviderCommandOutput) => void
+    cb: (err: any, data?: CreateCapacityProviderCommandOutput) => void,
   ): void;
   createCapacityProvider(
     args: CreateCapacityProviderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCapacityProviderCommandOutput) => void
+    cb: (err: any, data?: CreateCapacityProviderCommandOutput) => void,
   ): void;
 
   /**
@@ -350,7 +350,7 @@ export interface ECS {
   createCluster(
     args: CreateClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateClusterCommandOutput) => void
+    cb: (err: any, data?: CreateClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -361,7 +361,7 @@ export interface ECS {
   createService(
     args: CreateServiceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateServiceCommandOutput) => void
+    cb: (err: any, data?: CreateServiceCommandOutput) => void,
   ): void;
 
   /**
@@ -372,7 +372,7 @@ export interface ECS {
   createTaskSet(
     args: CreateTaskSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTaskSetCommandOutput) => void
+    cb: (err: any, data?: CreateTaskSetCommandOutput) => void,
   ): void;
 
   /**
@@ -380,16 +380,16 @@ export interface ECS {
    */
   deleteAccountSetting(
     args: DeleteAccountSettingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAccountSettingCommandOutput>;
   deleteAccountSetting(
     args: DeleteAccountSettingCommandInput,
-    cb: (err: any, data?: DeleteAccountSettingCommandOutput) => void
+    cb: (err: any, data?: DeleteAccountSettingCommandOutput) => void,
   ): void;
   deleteAccountSetting(
     args: DeleteAccountSettingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAccountSettingCommandOutput) => void
+    cb: (err: any, data?: DeleteAccountSettingCommandOutput) => void,
   ): void;
 
   /**
@@ -397,16 +397,16 @@ export interface ECS {
    */
   deleteAttributes(
     args: DeleteAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAttributesCommandOutput>;
   deleteAttributes(
     args: DeleteAttributesCommandInput,
-    cb: (err: any, data?: DeleteAttributesCommandOutput) => void
+    cb: (err: any, data?: DeleteAttributesCommandOutput) => void,
   ): void;
   deleteAttributes(
     args: DeleteAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAttributesCommandOutput) => void
+    cb: (err: any, data?: DeleteAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -414,16 +414,16 @@ export interface ECS {
    */
   deleteCapacityProvider(
     args: DeleteCapacityProviderCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCapacityProviderCommandOutput>;
   deleteCapacityProvider(
     args: DeleteCapacityProviderCommandInput,
-    cb: (err: any, data?: DeleteCapacityProviderCommandOutput) => void
+    cb: (err: any, data?: DeleteCapacityProviderCommandOutput) => void,
   ): void;
   deleteCapacityProvider(
     args: DeleteCapacityProviderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCapacityProviderCommandOutput) => void
+    cb: (err: any, data?: DeleteCapacityProviderCommandOutput) => void,
   ): void;
 
   /**
@@ -434,7 +434,7 @@ export interface ECS {
   deleteCluster(
     args: DeleteClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteClusterCommandOutput) => void
+    cb: (err: any, data?: DeleteClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -445,7 +445,7 @@ export interface ECS {
   deleteService(
     args: DeleteServiceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteServiceCommandOutput) => void
+    cb: (err: any, data?: DeleteServiceCommandOutput) => void,
   ): void;
 
   /**
@@ -453,16 +453,16 @@ export interface ECS {
    */
   deleteTaskDefinitions(
     args: DeleteTaskDefinitionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteTaskDefinitionsCommandOutput>;
   deleteTaskDefinitions(
     args: DeleteTaskDefinitionsCommandInput,
-    cb: (err: any, data?: DeleteTaskDefinitionsCommandOutput) => void
+    cb: (err: any, data?: DeleteTaskDefinitionsCommandOutput) => void,
   ): void;
   deleteTaskDefinitions(
     args: DeleteTaskDefinitionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTaskDefinitionsCommandOutput) => void
+    cb: (err: any, data?: DeleteTaskDefinitionsCommandOutput) => void,
   ): void;
 
   /**
@@ -473,7 +473,7 @@ export interface ECS {
   deleteTaskSet(
     args: DeleteTaskSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTaskSetCommandOutput) => void
+    cb: (err: any, data?: DeleteTaskSetCommandOutput) => void,
   ): void;
 
   /**
@@ -481,16 +481,16 @@ export interface ECS {
    */
   deregisterContainerInstance(
     args: DeregisterContainerInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterContainerInstanceCommandOutput>;
   deregisterContainerInstance(
     args: DeregisterContainerInstanceCommandInput,
-    cb: (err: any, data?: DeregisterContainerInstanceCommandOutput) => void
+    cb: (err: any, data?: DeregisterContainerInstanceCommandOutput) => void,
   ): void;
   deregisterContainerInstance(
     args: DeregisterContainerInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterContainerInstanceCommandOutput) => void
+    cb: (err: any, data?: DeregisterContainerInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -498,16 +498,16 @@ export interface ECS {
    */
   deregisterTaskDefinition(
     args: DeregisterTaskDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterTaskDefinitionCommandOutput>;
   deregisterTaskDefinition(
     args: DeregisterTaskDefinitionCommandInput,
-    cb: (err: any, data?: DeregisterTaskDefinitionCommandOutput) => void
+    cb: (err: any, data?: DeregisterTaskDefinitionCommandOutput) => void,
   ): void;
   deregisterTaskDefinition(
     args: DeregisterTaskDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterTaskDefinitionCommandOutput) => void
+    cb: (err: any, data?: DeregisterTaskDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -516,16 +516,16 @@ export interface ECS {
   describeCapacityProviders(): Promise<DescribeCapacityProvidersCommandOutput>;
   describeCapacityProviders(
     args: DescribeCapacityProvidersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeCapacityProvidersCommandOutput>;
   describeCapacityProviders(
     args: DescribeCapacityProvidersCommandInput,
-    cb: (err: any, data?: DescribeCapacityProvidersCommandOutput) => void
+    cb: (err: any, data?: DescribeCapacityProvidersCommandOutput) => void,
   ): void;
   describeCapacityProviders(
     args: DescribeCapacityProvidersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeCapacityProvidersCommandOutput) => void
+    cb: (err: any, data?: DescribeCapacityProvidersCommandOutput) => void,
   ): void;
 
   /**
@@ -534,16 +534,16 @@ export interface ECS {
   describeClusters(): Promise<DescribeClustersCommandOutput>;
   describeClusters(
     args: DescribeClustersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeClustersCommandOutput>;
   describeClusters(
     args: DescribeClustersCommandInput,
-    cb: (err: any, data?: DescribeClustersCommandOutput) => void
+    cb: (err: any, data?: DescribeClustersCommandOutput) => void,
   ): void;
   describeClusters(
     args: DescribeClustersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeClustersCommandOutput) => void
+    cb: (err: any, data?: DescribeClustersCommandOutput) => void,
   ): void;
 
   /**
@@ -551,16 +551,16 @@ export interface ECS {
    */
   describeContainerInstances(
     args: DescribeContainerInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeContainerInstancesCommandOutput>;
   describeContainerInstances(
     args: DescribeContainerInstancesCommandInput,
-    cb: (err: any, data?: DescribeContainerInstancesCommandOutput) => void
+    cb: (err: any, data?: DescribeContainerInstancesCommandOutput) => void,
   ): void;
   describeContainerInstances(
     args: DescribeContainerInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeContainerInstancesCommandOutput) => void
+    cb: (err: any, data?: DescribeContainerInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -568,16 +568,16 @@ export interface ECS {
    */
   describeServices(
     args: DescribeServicesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeServicesCommandOutput>;
   describeServices(
     args: DescribeServicesCommandInput,
-    cb: (err: any, data?: DescribeServicesCommandOutput) => void
+    cb: (err: any, data?: DescribeServicesCommandOutput) => void,
   ): void;
   describeServices(
     args: DescribeServicesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeServicesCommandOutput) => void
+    cb: (err: any, data?: DescribeServicesCommandOutput) => void,
   ): void;
 
   /**
@@ -585,16 +585,16 @@ export interface ECS {
    */
   describeTaskDefinition(
     args: DescribeTaskDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTaskDefinitionCommandOutput>;
   describeTaskDefinition(
     args: DescribeTaskDefinitionCommandInput,
-    cb: (err: any, data?: DescribeTaskDefinitionCommandOutput) => void
+    cb: (err: any, data?: DescribeTaskDefinitionCommandOutput) => void,
   ): void;
   describeTaskDefinition(
     args: DescribeTaskDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTaskDefinitionCommandOutput) => void
+    cb: (err: any, data?: DescribeTaskDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -605,7 +605,7 @@ export interface ECS {
   describeTasks(
     args: DescribeTasksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTasksCommandOutput) => void
+    cb: (err: any, data?: DescribeTasksCommandOutput) => void,
   ): void;
 
   /**
@@ -613,16 +613,16 @@ export interface ECS {
    */
   describeTaskSets(
     args: DescribeTaskSetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTaskSetsCommandOutput>;
   describeTaskSets(
     args: DescribeTaskSetsCommandInput,
-    cb: (err: any, data?: DescribeTaskSetsCommandOutput) => void
+    cb: (err: any, data?: DescribeTaskSetsCommandOutput) => void,
   ): void;
   describeTaskSets(
     args: DescribeTaskSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTaskSetsCommandOutput) => void
+    cb: (err: any, data?: DescribeTaskSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -631,16 +631,16 @@ export interface ECS {
   discoverPollEndpoint(): Promise<DiscoverPollEndpointCommandOutput>;
   discoverPollEndpoint(
     args: DiscoverPollEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DiscoverPollEndpointCommandOutput>;
   discoverPollEndpoint(
     args: DiscoverPollEndpointCommandInput,
-    cb: (err: any, data?: DiscoverPollEndpointCommandOutput) => void
+    cb: (err: any, data?: DiscoverPollEndpointCommandOutput) => void,
   ): void;
   discoverPollEndpoint(
     args: DiscoverPollEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DiscoverPollEndpointCommandOutput) => void
+    cb: (err: any, data?: DiscoverPollEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -648,13 +648,13 @@ export interface ECS {
    */
   executeCommand(
     args: ExecuteCommandCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExecuteCommandCommandOutput>;
   executeCommand(args: ExecuteCommandCommandInput, cb: (err: any, data?: ExecuteCommandCommandOutput) => void): void;
   executeCommand(
     args: ExecuteCommandCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExecuteCommandCommandOutput) => void
+    cb: (err: any, data?: ExecuteCommandCommandOutput) => void,
   ): void;
 
   /**
@@ -662,16 +662,16 @@ export interface ECS {
    */
   getTaskProtection(
     args: GetTaskProtectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTaskProtectionCommandOutput>;
   getTaskProtection(
     args: GetTaskProtectionCommandInput,
-    cb: (err: any, data?: GetTaskProtectionCommandOutput) => void
+    cb: (err: any, data?: GetTaskProtectionCommandOutput) => void,
   ): void;
   getTaskProtection(
     args: GetTaskProtectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTaskProtectionCommandOutput) => void
+    cb: (err: any, data?: GetTaskProtectionCommandOutput) => void,
   ): void;
 
   /**
@@ -680,16 +680,16 @@ export interface ECS {
   listAccountSettings(): Promise<ListAccountSettingsCommandOutput>;
   listAccountSettings(
     args: ListAccountSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAccountSettingsCommandOutput>;
   listAccountSettings(
     args: ListAccountSettingsCommandInput,
-    cb: (err: any, data?: ListAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: ListAccountSettingsCommandOutput) => void,
   ): void;
   listAccountSettings(
     args: ListAccountSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: ListAccountSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -697,13 +697,13 @@ export interface ECS {
    */
   listAttributes(
     args: ListAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAttributesCommandOutput>;
   listAttributes(args: ListAttributesCommandInput, cb: (err: any, data?: ListAttributesCommandOutput) => void): void;
   listAttributes(
     args: ListAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAttributesCommandOutput) => void
+    cb: (err: any, data?: ListAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -715,7 +715,7 @@ export interface ECS {
   listClusters(
     args: ListClustersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListClustersCommandOutput) => void
+    cb: (err: any, data?: ListClustersCommandOutput) => void,
   ): void;
 
   /**
@@ -724,16 +724,16 @@ export interface ECS {
   listContainerInstances(): Promise<ListContainerInstancesCommandOutput>;
   listContainerInstances(
     args: ListContainerInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListContainerInstancesCommandOutput>;
   listContainerInstances(
     args: ListContainerInstancesCommandInput,
-    cb: (err: any, data?: ListContainerInstancesCommandOutput) => void
+    cb: (err: any, data?: ListContainerInstancesCommandOutput) => void,
   ): void;
   listContainerInstances(
     args: ListContainerInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListContainerInstancesCommandOutput) => void
+    cb: (err: any, data?: ListContainerInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -745,7 +745,7 @@ export interface ECS {
   listServices(
     args: ListServicesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServicesCommandOutput) => void
+    cb: (err: any, data?: ListServicesCommandOutput) => void,
   ): void;
 
   /**
@@ -753,16 +753,16 @@ export interface ECS {
    */
   listServicesByNamespace(
     args: ListServicesByNamespaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListServicesByNamespaceCommandOutput>;
   listServicesByNamespace(
     args: ListServicesByNamespaceCommandInput,
-    cb: (err: any, data?: ListServicesByNamespaceCommandOutput) => void
+    cb: (err: any, data?: ListServicesByNamespaceCommandOutput) => void,
   ): void;
   listServicesByNamespace(
     args: ListServicesByNamespaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServicesByNamespaceCommandOutput) => void
+    cb: (err: any, data?: ListServicesByNamespaceCommandOutput) => void,
   ): void;
 
   /**
@@ -770,16 +770,16 @@ export interface ECS {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -788,16 +788,16 @@ export interface ECS {
   listTaskDefinitionFamilies(): Promise<ListTaskDefinitionFamiliesCommandOutput>;
   listTaskDefinitionFamilies(
     args: ListTaskDefinitionFamiliesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTaskDefinitionFamiliesCommandOutput>;
   listTaskDefinitionFamilies(
     args: ListTaskDefinitionFamiliesCommandInput,
-    cb: (err: any, data?: ListTaskDefinitionFamiliesCommandOutput) => void
+    cb: (err: any, data?: ListTaskDefinitionFamiliesCommandOutput) => void,
   ): void;
   listTaskDefinitionFamilies(
     args: ListTaskDefinitionFamiliesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTaskDefinitionFamiliesCommandOutput) => void
+    cb: (err: any, data?: ListTaskDefinitionFamiliesCommandOutput) => void,
   ): void;
 
   /**
@@ -806,16 +806,16 @@ export interface ECS {
   listTaskDefinitions(): Promise<ListTaskDefinitionsCommandOutput>;
   listTaskDefinitions(
     args: ListTaskDefinitionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTaskDefinitionsCommandOutput>;
   listTaskDefinitions(
     args: ListTaskDefinitionsCommandInput,
-    cb: (err: any, data?: ListTaskDefinitionsCommandOutput) => void
+    cb: (err: any, data?: ListTaskDefinitionsCommandOutput) => void,
   ): void;
   listTaskDefinitions(
     args: ListTaskDefinitionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTaskDefinitionsCommandOutput) => void
+    cb: (err: any, data?: ListTaskDefinitionsCommandOutput) => void,
   ): void;
 
   /**
@@ -827,7 +827,7 @@ export interface ECS {
   listTasks(
     args: ListTasksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTasksCommandOutput) => void
+    cb: (err: any, data?: ListTasksCommandOutput) => void,
   ): void;
 
   /**
@@ -835,16 +835,16 @@ export interface ECS {
    */
   putAccountSetting(
     args: PutAccountSettingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAccountSettingCommandOutput>;
   putAccountSetting(
     args: PutAccountSettingCommandInput,
-    cb: (err: any, data?: PutAccountSettingCommandOutput) => void
+    cb: (err: any, data?: PutAccountSettingCommandOutput) => void,
   ): void;
   putAccountSetting(
     args: PutAccountSettingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAccountSettingCommandOutput) => void
+    cb: (err: any, data?: PutAccountSettingCommandOutput) => void,
   ): void;
 
   /**
@@ -852,16 +852,16 @@ export interface ECS {
    */
   putAccountSettingDefault(
     args: PutAccountSettingDefaultCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAccountSettingDefaultCommandOutput>;
   putAccountSettingDefault(
     args: PutAccountSettingDefaultCommandInput,
-    cb: (err: any, data?: PutAccountSettingDefaultCommandOutput) => void
+    cb: (err: any, data?: PutAccountSettingDefaultCommandOutput) => void,
   ): void;
   putAccountSettingDefault(
     args: PutAccountSettingDefaultCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAccountSettingDefaultCommandOutput) => void
+    cb: (err: any, data?: PutAccountSettingDefaultCommandOutput) => void,
   ): void;
 
   /**
@@ -872,7 +872,7 @@ export interface ECS {
   putAttributes(
     args: PutAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAttributesCommandOutput) => void
+    cb: (err: any, data?: PutAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -880,16 +880,16 @@ export interface ECS {
    */
   putClusterCapacityProviders(
     args: PutClusterCapacityProvidersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutClusterCapacityProvidersCommandOutput>;
   putClusterCapacityProviders(
     args: PutClusterCapacityProvidersCommandInput,
-    cb: (err: any, data?: PutClusterCapacityProvidersCommandOutput) => void
+    cb: (err: any, data?: PutClusterCapacityProvidersCommandOutput) => void,
   ): void;
   putClusterCapacityProviders(
     args: PutClusterCapacityProvidersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutClusterCapacityProvidersCommandOutput) => void
+    cb: (err: any, data?: PutClusterCapacityProvidersCommandOutput) => void,
   ): void;
 
   /**
@@ -898,16 +898,16 @@ export interface ECS {
   registerContainerInstance(): Promise<RegisterContainerInstanceCommandOutput>;
   registerContainerInstance(
     args: RegisterContainerInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterContainerInstanceCommandOutput>;
   registerContainerInstance(
     args: RegisterContainerInstanceCommandInput,
-    cb: (err: any, data?: RegisterContainerInstanceCommandOutput) => void
+    cb: (err: any, data?: RegisterContainerInstanceCommandOutput) => void,
   ): void;
   registerContainerInstance(
     args: RegisterContainerInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterContainerInstanceCommandOutput) => void
+    cb: (err: any, data?: RegisterContainerInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -915,16 +915,16 @@ export interface ECS {
    */
   registerTaskDefinition(
     args: RegisterTaskDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterTaskDefinitionCommandOutput>;
   registerTaskDefinition(
     args: RegisterTaskDefinitionCommandInput,
-    cb: (err: any, data?: RegisterTaskDefinitionCommandOutput) => void
+    cb: (err: any, data?: RegisterTaskDefinitionCommandOutput) => void,
   ): void;
   registerTaskDefinition(
     args: RegisterTaskDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterTaskDefinitionCommandOutput) => void
+    cb: (err: any, data?: RegisterTaskDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -935,7 +935,7 @@ export interface ECS {
   runTask(
     args: RunTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RunTaskCommandOutput) => void
+    cb: (err: any, data?: RunTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -946,7 +946,7 @@ export interface ECS {
   startTask(
     args: StartTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartTaskCommandOutput) => void
+    cb: (err: any, data?: StartTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -957,7 +957,7 @@ export interface ECS {
   stopTask(
     args: StopTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopTaskCommandOutput) => void
+    cb: (err: any, data?: StopTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -965,16 +965,16 @@ export interface ECS {
    */
   submitAttachmentStateChanges(
     args: SubmitAttachmentStateChangesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SubmitAttachmentStateChangesCommandOutput>;
   submitAttachmentStateChanges(
     args: SubmitAttachmentStateChangesCommandInput,
-    cb: (err: any, data?: SubmitAttachmentStateChangesCommandOutput) => void
+    cb: (err: any, data?: SubmitAttachmentStateChangesCommandOutput) => void,
   ): void;
   submitAttachmentStateChanges(
     args: SubmitAttachmentStateChangesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SubmitAttachmentStateChangesCommandOutput) => void
+    cb: (err: any, data?: SubmitAttachmentStateChangesCommandOutput) => void,
   ): void;
 
   /**
@@ -983,16 +983,16 @@ export interface ECS {
   submitContainerStateChange(): Promise<SubmitContainerStateChangeCommandOutput>;
   submitContainerStateChange(
     args: SubmitContainerStateChangeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SubmitContainerStateChangeCommandOutput>;
   submitContainerStateChange(
     args: SubmitContainerStateChangeCommandInput,
-    cb: (err: any, data?: SubmitContainerStateChangeCommandOutput) => void
+    cb: (err: any, data?: SubmitContainerStateChangeCommandOutput) => void,
   ): void;
   submitContainerStateChange(
     args: SubmitContainerStateChangeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SubmitContainerStateChangeCommandOutput) => void
+    cb: (err: any, data?: SubmitContainerStateChangeCommandOutput) => void,
   ): void;
 
   /**
@@ -1001,16 +1001,16 @@ export interface ECS {
   submitTaskStateChange(): Promise<SubmitTaskStateChangeCommandOutput>;
   submitTaskStateChange(
     args: SubmitTaskStateChangeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SubmitTaskStateChangeCommandOutput>;
   submitTaskStateChange(
     args: SubmitTaskStateChangeCommandInput,
-    cb: (err: any, data?: SubmitTaskStateChangeCommandOutput) => void
+    cb: (err: any, data?: SubmitTaskStateChangeCommandOutput) => void,
   ): void;
   submitTaskStateChange(
     args: SubmitTaskStateChangeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SubmitTaskStateChangeCommandOutput) => void
+    cb: (err: any, data?: SubmitTaskStateChangeCommandOutput) => void,
   ): void;
 
   /**
@@ -1021,7 +1021,7 @@ export interface ECS {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1032,7 +1032,7 @@ export interface ECS {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1040,16 +1040,16 @@ export interface ECS {
    */
   updateCapacityProvider(
     args: UpdateCapacityProviderCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateCapacityProviderCommandOutput>;
   updateCapacityProvider(
     args: UpdateCapacityProviderCommandInput,
-    cb: (err: any, data?: UpdateCapacityProviderCommandOutput) => void
+    cb: (err: any, data?: UpdateCapacityProviderCommandOutput) => void,
   ): void;
   updateCapacityProvider(
     args: UpdateCapacityProviderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateCapacityProviderCommandOutput) => void
+    cb: (err: any, data?: UpdateCapacityProviderCommandOutput) => void,
   ): void;
 
   /**
@@ -1060,7 +1060,7 @@ export interface ECS {
   updateCluster(
     args: UpdateClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateClusterCommandOutput) => void
+    cb: (err: any, data?: UpdateClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -1068,16 +1068,16 @@ export interface ECS {
    */
   updateClusterSettings(
     args: UpdateClusterSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateClusterSettingsCommandOutput>;
   updateClusterSettings(
     args: UpdateClusterSettingsCommandInput,
-    cb: (err: any, data?: UpdateClusterSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateClusterSettingsCommandOutput) => void,
   ): void;
   updateClusterSettings(
     args: UpdateClusterSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateClusterSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateClusterSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -1085,16 +1085,16 @@ export interface ECS {
    */
   updateContainerAgent(
     args: UpdateContainerAgentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateContainerAgentCommandOutput>;
   updateContainerAgent(
     args: UpdateContainerAgentCommandInput,
-    cb: (err: any, data?: UpdateContainerAgentCommandOutput) => void
+    cb: (err: any, data?: UpdateContainerAgentCommandOutput) => void,
   ): void;
   updateContainerAgent(
     args: UpdateContainerAgentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateContainerAgentCommandOutput) => void
+    cb: (err: any, data?: UpdateContainerAgentCommandOutput) => void,
   ): void;
 
   /**
@@ -1102,16 +1102,16 @@ export interface ECS {
    */
   updateContainerInstancesState(
     args: UpdateContainerInstancesStateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateContainerInstancesStateCommandOutput>;
   updateContainerInstancesState(
     args: UpdateContainerInstancesStateCommandInput,
-    cb: (err: any, data?: UpdateContainerInstancesStateCommandOutput) => void
+    cb: (err: any, data?: UpdateContainerInstancesStateCommandOutput) => void,
   ): void;
   updateContainerInstancesState(
     args: UpdateContainerInstancesStateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateContainerInstancesStateCommandOutput) => void
+    cb: (err: any, data?: UpdateContainerInstancesStateCommandOutput) => void,
   ): void;
 
   /**
@@ -1122,7 +1122,7 @@ export interface ECS {
   updateService(
     args: UpdateServiceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateServiceCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceCommandOutput) => void,
   ): void;
 
   /**
@@ -1130,16 +1130,16 @@ export interface ECS {
    */
   updateServicePrimaryTaskSet(
     args: UpdateServicePrimaryTaskSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateServicePrimaryTaskSetCommandOutput>;
   updateServicePrimaryTaskSet(
     args: UpdateServicePrimaryTaskSetCommandInput,
-    cb: (err: any, data?: UpdateServicePrimaryTaskSetCommandOutput) => void
+    cb: (err: any, data?: UpdateServicePrimaryTaskSetCommandOutput) => void,
   ): void;
   updateServicePrimaryTaskSet(
     args: UpdateServicePrimaryTaskSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateServicePrimaryTaskSetCommandOutput) => void
+    cb: (err: any, data?: UpdateServicePrimaryTaskSetCommandOutput) => void,
   ): void;
 
   /**
@@ -1147,16 +1147,16 @@ export interface ECS {
    */
   updateTaskProtection(
     args: UpdateTaskProtectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateTaskProtectionCommandOutput>;
   updateTaskProtection(
     args: UpdateTaskProtectionCommandInput,
-    cb: (err: any, data?: UpdateTaskProtectionCommandOutput) => void
+    cb: (err: any, data?: UpdateTaskProtectionCommandOutput) => void,
   ): void;
   updateTaskProtection(
     args: UpdateTaskProtectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTaskProtectionCommandOutput) => void
+    cb: (err: any, data?: UpdateTaskProtectionCommandOutput) => void,
   ): void;
 
   /**
@@ -1167,7 +1167,7 @@ export interface ECS {
   updateTaskSet(
     args: UpdateTaskSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTaskSetCommandOutput) => void
+    cb: (err: any, data?: UpdateTaskSetCommandOutput) => void,
   ): void;
 }
 

@@ -9979,7 +9979,7 @@ export const CreateIndexRequestFilterSensitiveLog = (obj: CreateIndexRequest): a
   ...obj,
   ...(obj.ServerSideEncryptionConfiguration && {
     ServerSideEncryptionConfiguration: ServerSideEncryptionConfigurationFilterSensitiveLog(
-      obj.ServerSideEncryptionConfiguration
+      obj.ServerSideEncryptionConfiguration,
     ),
   }),
 });
@@ -9991,7 +9991,7 @@ export const DescribeIndexResponseFilterSensitiveLog = (obj: DescribeIndexRespon
   ...obj,
   ...(obj.ServerSideEncryptionConfiguration && {
     ServerSideEncryptionConfiguration: ServerSideEncryptionConfigurationFilterSensitiveLog(
-      obj.ServerSideEncryptionConfiguration
+      obj.ServerSideEncryptionConfiguration,
     ),
   }),
 });

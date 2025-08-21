@@ -4098,7 +4098,7 @@ import {
  */
 export const se_AcceptAddressTransferCommand = async (
   input: AcceptAddressTransferCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4115,7 +4115,7 @@ export const se_AcceptAddressTransferCommand = async (
  */
 export const se_AcceptReservedInstancesExchangeQuoteCommand = async (
   input: AcceptReservedInstancesExchangeQuoteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4132,7 +4132,7 @@ export const se_AcceptReservedInstancesExchangeQuoteCommand = async (
  */
 export const se_AcceptTransitGatewayMulticastDomainAssociationsCommand = async (
   input: AcceptTransitGatewayMulticastDomainAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4149,7 +4149,7 @@ export const se_AcceptTransitGatewayMulticastDomainAssociationsCommand = async (
  */
 export const se_AcceptTransitGatewayPeeringAttachmentCommand = async (
   input: AcceptTransitGatewayPeeringAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4166,7 +4166,7 @@ export const se_AcceptTransitGatewayPeeringAttachmentCommand = async (
  */
 export const se_AcceptTransitGatewayVpcAttachmentCommand = async (
   input: AcceptTransitGatewayVpcAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4183,7 +4183,7 @@ export const se_AcceptTransitGatewayVpcAttachmentCommand = async (
  */
 export const se_AcceptVpcEndpointConnectionsCommand = async (
   input: AcceptVpcEndpointConnectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4200,7 +4200,7 @@ export const se_AcceptVpcEndpointConnectionsCommand = async (
  */
 export const se_AcceptVpcPeeringConnectionCommand = async (
   input: AcceptVpcPeeringConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4217,7 +4217,7 @@ export const se_AcceptVpcPeeringConnectionCommand = async (
  */
 export const se_AdvertiseByoipCidrCommand = async (
   input: AdvertiseByoipCidrCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4234,7 +4234,7 @@ export const se_AdvertiseByoipCidrCommand = async (
  */
 export const se_AllocateAddressCommand = async (
   input: AllocateAddressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4251,7 +4251,7 @@ export const se_AllocateAddressCommand = async (
  */
 export const se_AllocateHostsCommand = async (
   input: AllocateHostsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4268,7 +4268,7 @@ export const se_AllocateHostsCommand = async (
  */
 export const se_AllocateIpamPoolCidrCommand = async (
   input: AllocateIpamPoolCidrCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4285,7 +4285,7 @@ export const se_AllocateIpamPoolCidrCommand = async (
  */
 export const se_ApplySecurityGroupsToClientVpnTargetNetworkCommand = async (
   input: ApplySecurityGroupsToClientVpnTargetNetworkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4302,7 +4302,7 @@ export const se_ApplySecurityGroupsToClientVpnTargetNetworkCommand = async (
  */
 export const se_AssignIpv6AddressesCommand = async (
   input: AssignIpv6AddressesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4319,7 +4319,7 @@ export const se_AssignIpv6AddressesCommand = async (
  */
 export const se_AssignPrivateIpAddressesCommand = async (
   input: AssignPrivateIpAddressesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4336,7 +4336,7 @@ export const se_AssignPrivateIpAddressesCommand = async (
  */
 export const se_AssignPrivateNatGatewayAddressCommand = async (
   input: AssignPrivateNatGatewayAddressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4353,7 +4353,7 @@ export const se_AssignPrivateNatGatewayAddressCommand = async (
  */
 export const se_AssociateAddressCommand = async (
   input: AssociateAddressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4370,7 +4370,7 @@ export const se_AssociateAddressCommand = async (
  */
 export const se_AssociateClientVpnTargetNetworkCommand = async (
   input: AssociateClientVpnTargetNetworkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4387,7 +4387,7 @@ export const se_AssociateClientVpnTargetNetworkCommand = async (
  */
 export const se_AssociateDhcpOptionsCommand = async (
   input: AssociateDhcpOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4404,7 +4404,7 @@ export const se_AssociateDhcpOptionsCommand = async (
  */
 export const se_AssociateEnclaveCertificateIamRoleCommand = async (
   input: AssociateEnclaveCertificateIamRoleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4421,7 +4421,7 @@ export const se_AssociateEnclaveCertificateIamRoleCommand = async (
  */
 export const se_AssociateIamInstanceProfileCommand = async (
   input: AssociateIamInstanceProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4438,7 +4438,7 @@ export const se_AssociateIamInstanceProfileCommand = async (
  */
 export const se_AssociateInstanceEventWindowCommand = async (
   input: AssociateInstanceEventWindowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4455,7 +4455,7 @@ export const se_AssociateInstanceEventWindowCommand = async (
  */
 export const se_AssociateIpamByoasnCommand = async (
   input: AssociateIpamByoasnCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4472,7 +4472,7 @@ export const se_AssociateIpamByoasnCommand = async (
  */
 export const se_AssociateIpamResourceDiscoveryCommand = async (
   input: AssociateIpamResourceDiscoveryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4489,7 +4489,7 @@ export const se_AssociateIpamResourceDiscoveryCommand = async (
  */
 export const se_AssociateNatGatewayAddressCommand = async (
   input: AssociateNatGatewayAddressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4506,7 +4506,7 @@ export const se_AssociateNatGatewayAddressCommand = async (
  */
 export const se_AssociateRouteTableCommand = async (
   input: AssociateRouteTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4523,7 +4523,7 @@ export const se_AssociateRouteTableCommand = async (
  */
 export const se_AssociateSubnetCidrBlockCommand = async (
   input: AssociateSubnetCidrBlockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4540,7 +4540,7 @@ export const se_AssociateSubnetCidrBlockCommand = async (
  */
 export const se_AssociateTransitGatewayMulticastDomainCommand = async (
   input: AssociateTransitGatewayMulticastDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4557,7 +4557,7 @@ export const se_AssociateTransitGatewayMulticastDomainCommand = async (
  */
 export const se_AssociateTransitGatewayPolicyTableCommand = async (
   input: AssociateTransitGatewayPolicyTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4574,7 +4574,7 @@ export const se_AssociateTransitGatewayPolicyTableCommand = async (
  */
 export const se_AssociateTransitGatewayRouteTableCommand = async (
   input: AssociateTransitGatewayRouteTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4591,7 +4591,7 @@ export const se_AssociateTransitGatewayRouteTableCommand = async (
  */
 export const se_AssociateTrunkInterfaceCommand = async (
   input: AssociateTrunkInterfaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4608,7 +4608,7 @@ export const se_AssociateTrunkInterfaceCommand = async (
  */
 export const se_AssociateVpcCidrBlockCommand = async (
   input: AssociateVpcCidrBlockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4625,7 +4625,7 @@ export const se_AssociateVpcCidrBlockCommand = async (
  */
 export const se_AttachClassicLinkVpcCommand = async (
   input: AttachClassicLinkVpcCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4642,7 +4642,7 @@ export const se_AttachClassicLinkVpcCommand = async (
  */
 export const se_AttachInternetGatewayCommand = async (
   input: AttachInternetGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4659,7 +4659,7 @@ export const se_AttachInternetGatewayCommand = async (
  */
 export const se_AttachNetworkInterfaceCommand = async (
   input: AttachNetworkInterfaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4676,7 +4676,7 @@ export const se_AttachNetworkInterfaceCommand = async (
  */
 export const se_AttachVerifiedAccessTrustProviderCommand = async (
   input: AttachVerifiedAccessTrustProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4693,7 +4693,7 @@ export const se_AttachVerifiedAccessTrustProviderCommand = async (
  */
 export const se_AttachVolumeCommand = async (
   input: AttachVolumeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4710,7 +4710,7 @@ export const se_AttachVolumeCommand = async (
  */
 export const se_AttachVpnGatewayCommand = async (
   input: AttachVpnGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4727,7 +4727,7 @@ export const se_AttachVpnGatewayCommand = async (
  */
 export const se_AuthorizeClientVpnIngressCommand = async (
   input: AuthorizeClientVpnIngressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4744,7 +4744,7 @@ export const se_AuthorizeClientVpnIngressCommand = async (
  */
 export const se_AuthorizeSecurityGroupEgressCommand = async (
   input: AuthorizeSecurityGroupEgressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4761,7 +4761,7 @@ export const se_AuthorizeSecurityGroupEgressCommand = async (
  */
 export const se_AuthorizeSecurityGroupIngressCommand = async (
   input: AuthorizeSecurityGroupIngressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4778,7 +4778,7 @@ export const se_AuthorizeSecurityGroupIngressCommand = async (
  */
 export const se_BundleInstanceCommand = async (
   input: BundleInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4795,7 +4795,7 @@ export const se_BundleInstanceCommand = async (
  */
 export const se_CancelBundleTaskCommand = async (
   input: CancelBundleTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4812,7 +4812,7 @@ export const se_CancelBundleTaskCommand = async (
  */
 export const se_CancelCapacityReservationCommand = async (
   input: CancelCapacityReservationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4829,7 +4829,7 @@ export const se_CancelCapacityReservationCommand = async (
  */
 export const se_CancelCapacityReservationFleetsCommand = async (
   input: CancelCapacityReservationFleetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4846,7 +4846,7 @@ export const se_CancelCapacityReservationFleetsCommand = async (
  */
 export const se_CancelConversionTaskCommand = async (
   input: CancelConversionTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4863,7 +4863,7 @@ export const se_CancelConversionTaskCommand = async (
  */
 export const se_CancelExportTaskCommand = async (
   input: CancelExportTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4880,7 +4880,7 @@ export const se_CancelExportTaskCommand = async (
  */
 export const se_CancelImageLaunchPermissionCommand = async (
   input: CancelImageLaunchPermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4897,7 +4897,7 @@ export const se_CancelImageLaunchPermissionCommand = async (
  */
 export const se_CancelImportTaskCommand = async (
   input: CancelImportTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4914,7 +4914,7 @@ export const se_CancelImportTaskCommand = async (
  */
 export const se_CancelReservedInstancesListingCommand = async (
   input: CancelReservedInstancesListingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4931,7 +4931,7 @@ export const se_CancelReservedInstancesListingCommand = async (
  */
 export const se_CancelSpotFleetRequestsCommand = async (
   input: CancelSpotFleetRequestsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4948,7 +4948,7 @@ export const se_CancelSpotFleetRequestsCommand = async (
  */
 export const se_CancelSpotInstanceRequestsCommand = async (
   input: CancelSpotInstanceRequestsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4965,7 +4965,7 @@ export const se_CancelSpotInstanceRequestsCommand = async (
  */
 export const se_ConfirmProductInstanceCommand = async (
   input: ConfirmProductInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4982,7 +4982,7 @@ export const se_ConfirmProductInstanceCommand = async (
  */
 export const se_CopyFpgaImageCommand = async (
   input: CopyFpgaImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -4999,7 +4999,7 @@ export const se_CopyFpgaImageCommand = async (
  */
 export const se_CopyImageCommand = async (
   input: CopyImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5016,7 +5016,7 @@ export const se_CopyImageCommand = async (
  */
 export const se_CopySnapshotCommand = async (
   input: CopySnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5033,7 +5033,7 @@ export const se_CopySnapshotCommand = async (
  */
 export const se_CreateCapacityReservationCommand = async (
   input: CreateCapacityReservationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5050,7 +5050,7 @@ export const se_CreateCapacityReservationCommand = async (
  */
 export const se_CreateCapacityReservationFleetCommand = async (
   input: CreateCapacityReservationFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5067,7 +5067,7 @@ export const se_CreateCapacityReservationFleetCommand = async (
  */
 export const se_CreateCarrierGatewayCommand = async (
   input: CreateCarrierGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5084,7 +5084,7 @@ export const se_CreateCarrierGatewayCommand = async (
  */
 export const se_CreateClientVpnEndpointCommand = async (
   input: CreateClientVpnEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5101,7 +5101,7 @@ export const se_CreateClientVpnEndpointCommand = async (
  */
 export const se_CreateClientVpnRouteCommand = async (
   input: CreateClientVpnRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5118,7 +5118,7 @@ export const se_CreateClientVpnRouteCommand = async (
  */
 export const se_CreateCoipCidrCommand = async (
   input: CreateCoipCidrCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5135,7 +5135,7 @@ export const se_CreateCoipCidrCommand = async (
  */
 export const se_CreateCoipPoolCommand = async (
   input: CreateCoipPoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5152,7 +5152,7 @@ export const se_CreateCoipPoolCommand = async (
  */
 export const se_CreateCustomerGatewayCommand = async (
   input: CreateCustomerGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5169,7 +5169,7 @@ export const se_CreateCustomerGatewayCommand = async (
  */
 export const se_CreateDefaultSubnetCommand = async (
   input: CreateDefaultSubnetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5186,7 +5186,7 @@ export const se_CreateDefaultSubnetCommand = async (
  */
 export const se_CreateDefaultVpcCommand = async (
   input: CreateDefaultVpcCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5203,7 +5203,7 @@ export const se_CreateDefaultVpcCommand = async (
  */
 export const se_CreateDhcpOptionsCommand = async (
   input: CreateDhcpOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5220,7 +5220,7 @@ export const se_CreateDhcpOptionsCommand = async (
  */
 export const se_CreateEgressOnlyInternetGatewayCommand = async (
   input: CreateEgressOnlyInternetGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5237,7 +5237,7 @@ export const se_CreateEgressOnlyInternetGatewayCommand = async (
  */
 export const se_CreateFleetCommand = async (
   input: CreateFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5254,7 +5254,7 @@ export const se_CreateFleetCommand = async (
  */
 export const se_CreateFlowLogsCommand = async (
   input: CreateFlowLogsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5271,7 +5271,7 @@ export const se_CreateFlowLogsCommand = async (
  */
 export const se_CreateFpgaImageCommand = async (
   input: CreateFpgaImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5288,7 +5288,7 @@ export const se_CreateFpgaImageCommand = async (
  */
 export const se_CreateImageCommand = async (
   input: CreateImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5305,7 +5305,7 @@ export const se_CreateImageCommand = async (
  */
 export const se_CreateInstanceConnectEndpointCommand = async (
   input: CreateInstanceConnectEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5322,7 +5322,7 @@ export const se_CreateInstanceConnectEndpointCommand = async (
  */
 export const se_CreateInstanceEventWindowCommand = async (
   input: CreateInstanceEventWindowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5339,7 +5339,7 @@ export const se_CreateInstanceEventWindowCommand = async (
  */
 export const se_CreateInstanceExportTaskCommand = async (
   input: CreateInstanceExportTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5356,7 +5356,7 @@ export const se_CreateInstanceExportTaskCommand = async (
  */
 export const se_CreateInternetGatewayCommand = async (
   input: CreateInternetGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5373,7 +5373,7 @@ export const se_CreateInternetGatewayCommand = async (
  */
 export const se_CreateIpamCommand = async (
   input: CreateIpamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5390,7 +5390,7 @@ export const se_CreateIpamCommand = async (
  */
 export const se_CreateIpamPoolCommand = async (
   input: CreateIpamPoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5407,7 +5407,7 @@ export const se_CreateIpamPoolCommand = async (
  */
 export const se_CreateIpamResourceDiscoveryCommand = async (
   input: CreateIpamResourceDiscoveryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5424,7 +5424,7 @@ export const se_CreateIpamResourceDiscoveryCommand = async (
  */
 export const se_CreateIpamScopeCommand = async (
   input: CreateIpamScopeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5441,7 +5441,7 @@ export const se_CreateIpamScopeCommand = async (
  */
 export const se_CreateKeyPairCommand = async (
   input: CreateKeyPairCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5458,7 +5458,7 @@ export const se_CreateKeyPairCommand = async (
  */
 export const se_CreateLaunchTemplateCommand = async (
   input: CreateLaunchTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5475,7 +5475,7 @@ export const se_CreateLaunchTemplateCommand = async (
  */
 export const se_CreateLaunchTemplateVersionCommand = async (
   input: CreateLaunchTemplateVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5492,7 +5492,7 @@ export const se_CreateLaunchTemplateVersionCommand = async (
  */
 export const se_CreateLocalGatewayRouteCommand = async (
   input: CreateLocalGatewayRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5509,7 +5509,7 @@ export const se_CreateLocalGatewayRouteCommand = async (
  */
 export const se_CreateLocalGatewayRouteTableCommand = async (
   input: CreateLocalGatewayRouteTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5526,7 +5526,7 @@ export const se_CreateLocalGatewayRouteTableCommand = async (
  */
 export const se_CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationCommand = async (
   input: CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5543,7 +5543,7 @@ export const se_CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationComm
  */
 export const se_CreateLocalGatewayRouteTableVpcAssociationCommand = async (
   input: CreateLocalGatewayRouteTableVpcAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5560,7 +5560,7 @@ export const se_CreateLocalGatewayRouteTableVpcAssociationCommand = async (
  */
 export const se_CreateManagedPrefixListCommand = async (
   input: CreateManagedPrefixListCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5577,7 +5577,7 @@ export const se_CreateManagedPrefixListCommand = async (
  */
 export const se_CreateNatGatewayCommand = async (
   input: CreateNatGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5594,7 +5594,7 @@ export const se_CreateNatGatewayCommand = async (
  */
 export const se_CreateNetworkAclCommand = async (
   input: CreateNetworkAclCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5611,7 +5611,7 @@ export const se_CreateNetworkAclCommand = async (
  */
 export const se_CreateNetworkAclEntryCommand = async (
   input: CreateNetworkAclEntryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5628,7 +5628,7 @@ export const se_CreateNetworkAclEntryCommand = async (
  */
 export const se_CreateNetworkInsightsAccessScopeCommand = async (
   input: CreateNetworkInsightsAccessScopeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5645,7 +5645,7 @@ export const se_CreateNetworkInsightsAccessScopeCommand = async (
  */
 export const se_CreateNetworkInsightsPathCommand = async (
   input: CreateNetworkInsightsPathCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5662,7 +5662,7 @@ export const se_CreateNetworkInsightsPathCommand = async (
  */
 export const se_CreateNetworkInterfaceCommand = async (
   input: CreateNetworkInterfaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5679,7 +5679,7 @@ export const se_CreateNetworkInterfaceCommand = async (
  */
 export const se_CreateNetworkInterfacePermissionCommand = async (
   input: CreateNetworkInterfacePermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5696,7 +5696,7 @@ export const se_CreateNetworkInterfacePermissionCommand = async (
  */
 export const se_CreatePlacementGroupCommand = async (
   input: CreatePlacementGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5713,7 +5713,7 @@ export const se_CreatePlacementGroupCommand = async (
  */
 export const se_CreatePublicIpv4PoolCommand = async (
   input: CreatePublicIpv4PoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5730,7 +5730,7 @@ export const se_CreatePublicIpv4PoolCommand = async (
  */
 export const se_CreateReplaceRootVolumeTaskCommand = async (
   input: CreateReplaceRootVolumeTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5747,7 +5747,7 @@ export const se_CreateReplaceRootVolumeTaskCommand = async (
  */
 export const se_CreateReservedInstancesListingCommand = async (
   input: CreateReservedInstancesListingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5764,7 +5764,7 @@ export const se_CreateReservedInstancesListingCommand = async (
  */
 export const se_CreateRestoreImageTaskCommand = async (
   input: CreateRestoreImageTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5781,7 +5781,7 @@ export const se_CreateRestoreImageTaskCommand = async (
  */
 export const se_CreateRouteCommand = async (
   input: CreateRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5798,7 +5798,7 @@ export const se_CreateRouteCommand = async (
  */
 export const se_CreateRouteTableCommand = async (
   input: CreateRouteTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5815,7 +5815,7 @@ export const se_CreateRouteTableCommand = async (
  */
 export const se_CreateSecurityGroupCommand = async (
   input: CreateSecurityGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5832,7 +5832,7 @@ export const se_CreateSecurityGroupCommand = async (
  */
 export const se_CreateSnapshotCommand = async (
   input: CreateSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5849,7 +5849,7 @@ export const se_CreateSnapshotCommand = async (
  */
 export const se_CreateSnapshotsCommand = async (
   input: CreateSnapshotsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5866,7 +5866,7 @@ export const se_CreateSnapshotsCommand = async (
  */
 export const se_CreateSpotDatafeedSubscriptionCommand = async (
   input: CreateSpotDatafeedSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5883,7 +5883,7 @@ export const se_CreateSpotDatafeedSubscriptionCommand = async (
  */
 export const se_CreateStoreImageTaskCommand = async (
   input: CreateStoreImageTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5900,7 +5900,7 @@ export const se_CreateStoreImageTaskCommand = async (
  */
 export const se_CreateSubnetCommand = async (
   input: CreateSubnetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5917,7 +5917,7 @@ export const se_CreateSubnetCommand = async (
  */
 export const se_CreateSubnetCidrReservationCommand = async (
   input: CreateSubnetCidrReservationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5934,7 +5934,7 @@ export const se_CreateSubnetCidrReservationCommand = async (
  */
 export const se_CreateTagsCommand = async (
   input: CreateTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5951,7 +5951,7 @@ export const se_CreateTagsCommand = async (
  */
 export const se_CreateTrafficMirrorFilterCommand = async (
   input: CreateTrafficMirrorFilterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5968,7 +5968,7 @@ export const se_CreateTrafficMirrorFilterCommand = async (
  */
 export const se_CreateTrafficMirrorFilterRuleCommand = async (
   input: CreateTrafficMirrorFilterRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -5985,7 +5985,7 @@ export const se_CreateTrafficMirrorFilterRuleCommand = async (
  */
 export const se_CreateTrafficMirrorSessionCommand = async (
   input: CreateTrafficMirrorSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6002,7 +6002,7 @@ export const se_CreateTrafficMirrorSessionCommand = async (
  */
 export const se_CreateTrafficMirrorTargetCommand = async (
   input: CreateTrafficMirrorTargetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6019,7 +6019,7 @@ export const se_CreateTrafficMirrorTargetCommand = async (
  */
 export const se_CreateTransitGatewayCommand = async (
   input: CreateTransitGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6036,7 +6036,7 @@ export const se_CreateTransitGatewayCommand = async (
  */
 export const se_CreateTransitGatewayConnectCommand = async (
   input: CreateTransitGatewayConnectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6053,7 +6053,7 @@ export const se_CreateTransitGatewayConnectCommand = async (
  */
 export const se_CreateTransitGatewayConnectPeerCommand = async (
   input: CreateTransitGatewayConnectPeerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6070,7 +6070,7 @@ export const se_CreateTransitGatewayConnectPeerCommand = async (
  */
 export const se_CreateTransitGatewayMulticastDomainCommand = async (
   input: CreateTransitGatewayMulticastDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6087,7 +6087,7 @@ export const se_CreateTransitGatewayMulticastDomainCommand = async (
  */
 export const se_CreateTransitGatewayPeeringAttachmentCommand = async (
   input: CreateTransitGatewayPeeringAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6104,7 +6104,7 @@ export const se_CreateTransitGatewayPeeringAttachmentCommand = async (
  */
 export const se_CreateTransitGatewayPolicyTableCommand = async (
   input: CreateTransitGatewayPolicyTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6121,7 +6121,7 @@ export const se_CreateTransitGatewayPolicyTableCommand = async (
  */
 export const se_CreateTransitGatewayPrefixListReferenceCommand = async (
   input: CreateTransitGatewayPrefixListReferenceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6138,7 +6138,7 @@ export const se_CreateTransitGatewayPrefixListReferenceCommand = async (
  */
 export const se_CreateTransitGatewayRouteCommand = async (
   input: CreateTransitGatewayRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6155,7 +6155,7 @@ export const se_CreateTransitGatewayRouteCommand = async (
  */
 export const se_CreateTransitGatewayRouteTableCommand = async (
   input: CreateTransitGatewayRouteTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6172,7 +6172,7 @@ export const se_CreateTransitGatewayRouteTableCommand = async (
  */
 export const se_CreateTransitGatewayRouteTableAnnouncementCommand = async (
   input: CreateTransitGatewayRouteTableAnnouncementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6189,7 +6189,7 @@ export const se_CreateTransitGatewayRouteTableAnnouncementCommand = async (
  */
 export const se_CreateTransitGatewayVpcAttachmentCommand = async (
   input: CreateTransitGatewayVpcAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6206,7 +6206,7 @@ export const se_CreateTransitGatewayVpcAttachmentCommand = async (
  */
 export const se_CreateVerifiedAccessEndpointCommand = async (
   input: CreateVerifiedAccessEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6223,7 +6223,7 @@ export const se_CreateVerifiedAccessEndpointCommand = async (
  */
 export const se_CreateVerifiedAccessGroupCommand = async (
   input: CreateVerifiedAccessGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6240,7 +6240,7 @@ export const se_CreateVerifiedAccessGroupCommand = async (
  */
 export const se_CreateVerifiedAccessInstanceCommand = async (
   input: CreateVerifiedAccessInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6257,7 +6257,7 @@ export const se_CreateVerifiedAccessInstanceCommand = async (
  */
 export const se_CreateVerifiedAccessTrustProviderCommand = async (
   input: CreateVerifiedAccessTrustProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6274,7 +6274,7 @@ export const se_CreateVerifiedAccessTrustProviderCommand = async (
  */
 export const se_CreateVolumeCommand = async (
   input: CreateVolumeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6291,7 +6291,7 @@ export const se_CreateVolumeCommand = async (
  */
 export const se_CreateVpcCommand = async (
   input: CreateVpcCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6308,7 +6308,7 @@ export const se_CreateVpcCommand = async (
  */
 export const se_CreateVpcEndpointCommand = async (
   input: CreateVpcEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6325,7 +6325,7 @@ export const se_CreateVpcEndpointCommand = async (
  */
 export const se_CreateVpcEndpointConnectionNotificationCommand = async (
   input: CreateVpcEndpointConnectionNotificationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6342,7 +6342,7 @@ export const se_CreateVpcEndpointConnectionNotificationCommand = async (
  */
 export const se_CreateVpcEndpointServiceConfigurationCommand = async (
   input: CreateVpcEndpointServiceConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6359,7 +6359,7 @@ export const se_CreateVpcEndpointServiceConfigurationCommand = async (
  */
 export const se_CreateVpcPeeringConnectionCommand = async (
   input: CreateVpcPeeringConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6376,7 +6376,7 @@ export const se_CreateVpcPeeringConnectionCommand = async (
  */
 export const se_CreateVpnConnectionCommand = async (
   input: CreateVpnConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6393,7 +6393,7 @@ export const se_CreateVpnConnectionCommand = async (
  */
 export const se_CreateVpnConnectionRouteCommand = async (
   input: CreateVpnConnectionRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6410,7 +6410,7 @@ export const se_CreateVpnConnectionRouteCommand = async (
  */
 export const se_CreateVpnGatewayCommand = async (
   input: CreateVpnGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6427,7 +6427,7 @@ export const se_CreateVpnGatewayCommand = async (
  */
 export const se_DeleteCarrierGatewayCommand = async (
   input: DeleteCarrierGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6444,7 +6444,7 @@ export const se_DeleteCarrierGatewayCommand = async (
  */
 export const se_DeleteClientVpnEndpointCommand = async (
   input: DeleteClientVpnEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6461,7 +6461,7 @@ export const se_DeleteClientVpnEndpointCommand = async (
  */
 export const se_DeleteClientVpnRouteCommand = async (
   input: DeleteClientVpnRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6478,7 +6478,7 @@ export const se_DeleteClientVpnRouteCommand = async (
  */
 export const se_DeleteCoipCidrCommand = async (
   input: DeleteCoipCidrCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6495,7 +6495,7 @@ export const se_DeleteCoipCidrCommand = async (
  */
 export const se_DeleteCoipPoolCommand = async (
   input: DeleteCoipPoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6512,7 +6512,7 @@ export const se_DeleteCoipPoolCommand = async (
  */
 export const se_DeleteCustomerGatewayCommand = async (
   input: DeleteCustomerGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6529,7 +6529,7 @@ export const se_DeleteCustomerGatewayCommand = async (
  */
 export const se_DeleteDhcpOptionsCommand = async (
   input: DeleteDhcpOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6546,7 +6546,7 @@ export const se_DeleteDhcpOptionsCommand = async (
  */
 export const se_DeleteEgressOnlyInternetGatewayCommand = async (
   input: DeleteEgressOnlyInternetGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6563,7 +6563,7 @@ export const se_DeleteEgressOnlyInternetGatewayCommand = async (
  */
 export const se_DeleteFleetsCommand = async (
   input: DeleteFleetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6580,7 +6580,7 @@ export const se_DeleteFleetsCommand = async (
  */
 export const se_DeleteFlowLogsCommand = async (
   input: DeleteFlowLogsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6597,7 +6597,7 @@ export const se_DeleteFlowLogsCommand = async (
  */
 export const se_DeleteFpgaImageCommand = async (
   input: DeleteFpgaImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6614,7 +6614,7 @@ export const se_DeleteFpgaImageCommand = async (
  */
 export const se_DeleteInstanceConnectEndpointCommand = async (
   input: DeleteInstanceConnectEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6631,7 +6631,7 @@ export const se_DeleteInstanceConnectEndpointCommand = async (
  */
 export const se_DeleteInstanceEventWindowCommand = async (
   input: DeleteInstanceEventWindowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6648,7 +6648,7 @@ export const se_DeleteInstanceEventWindowCommand = async (
  */
 export const se_DeleteInternetGatewayCommand = async (
   input: DeleteInternetGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6665,7 +6665,7 @@ export const se_DeleteInternetGatewayCommand = async (
  */
 export const se_DeleteIpamCommand = async (
   input: DeleteIpamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6682,7 +6682,7 @@ export const se_DeleteIpamCommand = async (
  */
 export const se_DeleteIpamPoolCommand = async (
   input: DeleteIpamPoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6699,7 +6699,7 @@ export const se_DeleteIpamPoolCommand = async (
  */
 export const se_DeleteIpamResourceDiscoveryCommand = async (
   input: DeleteIpamResourceDiscoveryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6716,7 +6716,7 @@ export const se_DeleteIpamResourceDiscoveryCommand = async (
  */
 export const se_DeleteIpamScopeCommand = async (
   input: DeleteIpamScopeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6733,7 +6733,7 @@ export const se_DeleteIpamScopeCommand = async (
  */
 export const se_DeleteKeyPairCommand = async (
   input: DeleteKeyPairCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6750,7 +6750,7 @@ export const se_DeleteKeyPairCommand = async (
  */
 export const se_DeleteLaunchTemplateCommand = async (
   input: DeleteLaunchTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6767,7 +6767,7 @@ export const se_DeleteLaunchTemplateCommand = async (
  */
 export const se_DeleteLaunchTemplateVersionsCommand = async (
   input: DeleteLaunchTemplateVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6784,7 +6784,7 @@ export const se_DeleteLaunchTemplateVersionsCommand = async (
  */
 export const se_DeleteLocalGatewayRouteCommand = async (
   input: DeleteLocalGatewayRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6801,7 +6801,7 @@ export const se_DeleteLocalGatewayRouteCommand = async (
  */
 export const se_DeleteLocalGatewayRouteTableCommand = async (
   input: DeleteLocalGatewayRouteTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6818,7 +6818,7 @@ export const se_DeleteLocalGatewayRouteTableCommand = async (
  */
 export const se_DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationCommand = async (
   input: DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6835,7 +6835,7 @@ export const se_DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationComm
  */
 export const se_DeleteLocalGatewayRouteTableVpcAssociationCommand = async (
   input: DeleteLocalGatewayRouteTableVpcAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6852,7 +6852,7 @@ export const se_DeleteLocalGatewayRouteTableVpcAssociationCommand = async (
  */
 export const se_DeleteManagedPrefixListCommand = async (
   input: DeleteManagedPrefixListCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6869,7 +6869,7 @@ export const se_DeleteManagedPrefixListCommand = async (
  */
 export const se_DeleteNatGatewayCommand = async (
   input: DeleteNatGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6886,7 +6886,7 @@ export const se_DeleteNatGatewayCommand = async (
  */
 export const se_DeleteNetworkAclCommand = async (
   input: DeleteNetworkAclCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6903,7 +6903,7 @@ export const se_DeleteNetworkAclCommand = async (
  */
 export const se_DeleteNetworkAclEntryCommand = async (
   input: DeleteNetworkAclEntryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6920,7 +6920,7 @@ export const se_DeleteNetworkAclEntryCommand = async (
  */
 export const se_DeleteNetworkInsightsAccessScopeCommand = async (
   input: DeleteNetworkInsightsAccessScopeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6937,7 +6937,7 @@ export const se_DeleteNetworkInsightsAccessScopeCommand = async (
  */
 export const se_DeleteNetworkInsightsAccessScopeAnalysisCommand = async (
   input: DeleteNetworkInsightsAccessScopeAnalysisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6954,7 +6954,7 @@ export const se_DeleteNetworkInsightsAccessScopeAnalysisCommand = async (
  */
 export const se_DeleteNetworkInsightsAnalysisCommand = async (
   input: DeleteNetworkInsightsAnalysisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6971,7 +6971,7 @@ export const se_DeleteNetworkInsightsAnalysisCommand = async (
  */
 export const se_DeleteNetworkInsightsPathCommand = async (
   input: DeleteNetworkInsightsPathCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -6988,7 +6988,7 @@ export const se_DeleteNetworkInsightsPathCommand = async (
  */
 export const se_DeleteNetworkInterfaceCommand = async (
   input: DeleteNetworkInterfaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7005,7 +7005,7 @@ export const se_DeleteNetworkInterfaceCommand = async (
  */
 export const se_DeleteNetworkInterfacePermissionCommand = async (
   input: DeleteNetworkInterfacePermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7022,7 +7022,7 @@ export const se_DeleteNetworkInterfacePermissionCommand = async (
  */
 export const se_DeletePlacementGroupCommand = async (
   input: DeletePlacementGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7039,7 +7039,7 @@ export const se_DeletePlacementGroupCommand = async (
  */
 export const se_DeletePublicIpv4PoolCommand = async (
   input: DeletePublicIpv4PoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7056,7 +7056,7 @@ export const se_DeletePublicIpv4PoolCommand = async (
  */
 export const se_DeleteQueuedReservedInstancesCommand = async (
   input: DeleteQueuedReservedInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7073,7 +7073,7 @@ export const se_DeleteQueuedReservedInstancesCommand = async (
  */
 export const se_DeleteRouteCommand = async (
   input: DeleteRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7090,7 +7090,7 @@ export const se_DeleteRouteCommand = async (
  */
 export const se_DeleteRouteTableCommand = async (
   input: DeleteRouteTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7107,7 +7107,7 @@ export const se_DeleteRouteTableCommand = async (
  */
 export const se_DeleteSecurityGroupCommand = async (
   input: DeleteSecurityGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7124,7 +7124,7 @@ export const se_DeleteSecurityGroupCommand = async (
  */
 export const se_DeleteSnapshotCommand = async (
   input: DeleteSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7141,7 +7141,7 @@ export const se_DeleteSnapshotCommand = async (
  */
 export const se_DeleteSpotDatafeedSubscriptionCommand = async (
   input: DeleteSpotDatafeedSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7158,7 +7158,7 @@ export const se_DeleteSpotDatafeedSubscriptionCommand = async (
  */
 export const se_DeleteSubnetCommand = async (
   input: DeleteSubnetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7175,7 +7175,7 @@ export const se_DeleteSubnetCommand = async (
  */
 export const se_DeleteSubnetCidrReservationCommand = async (
   input: DeleteSubnetCidrReservationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7192,7 +7192,7 @@ export const se_DeleteSubnetCidrReservationCommand = async (
  */
 export const se_DeleteTagsCommand = async (
   input: DeleteTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7209,7 +7209,7 @@ export const se_DeleteTagsCommand = async (
  */
 export const se_DeleteTrafficMirrorFilterCommand = async (
   input: DeleteTrafficMirrorFilterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7226,7 +7226,7 @@ export const se_DeleteTrafficMirrorFilterCommand = async (
  */
 export const se_DeleteTrafficMirrorFilterRuleCommand = async (
   input: DeleteTrafficMirrorFilterRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7243,7 +7243,7 @@ export const se_DeleteTrafficMirrorFilterRuleCommand = async (
  */
 export const se_DeleteTrafficMirrorSessionCommand = async (
   input: DeleteTrafficMirrorSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7260,7 +7260,7 @@ export const se_DeleteTrafficMirrorSessionCommand = async (
  */
 export const se_DeleteTrafficMirrorTargetCommand = async (
   input: DeleteTrafficMirrorTargetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7277,7 +7277,7 @@ export const se_DeleteTrafficMirrorTargetCommand = async (
  */
 export const se_DeleteTransitGatewayCommand = async (
   input: DeleteTransitGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7294,7 +7294,7 @@ export const se_DeleteTransitGatewayCommand = async (
  */
 export const se_DeleteTransitGatewayConnectCommand = async (
   input: DeleteTransitGatewayConnectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7311,7 +7311,7 @@ export const se_DeleteTransitGatewayConnectCommand = async (
  */
 export const se_DeleteTransitGatewayConnectPeerCommand = async (
   input: DeleteTransitGatewayConnectPeerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7328,7 +7328,7 @@ export const se_DeleteTransitGatewayConnectPeerCommand = async (
  */
 export const se_DeleteTransitGatewayMulticastDomainCommand = async (
   input: DeleteTransitGatewayMulticastDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7345,7 +7345,7 @@ export const se_DeleteTransitGatewayMulticastDomainCommand = async (
  */
 export const se_DeleteTransitGatewayPeeringAttachmentCommand = async (
   input: DeleteTransitGatewayPeeringAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7362,7 +7362,7 @@ export const se_DeleteTransitGatewayPeeringAttachmentCommand = async (
  */
 export const se_DeleteTransitGatewayPolicyTableCommand = async (
   input: DeleteTransitGatewayPolicyTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7379,7 +7379,7 @@ export const se_DeleteTransitGatewayPolicyTableCommand = async (
  */
 export const se_DeleteTransitGatewayPrefixListReferenceCommand = async (
   input: DeleteTransitGatewayPrefixListReferenceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7396,7 +7396,7 @@ export const se_DeleteTransitGatewayPrefixListReferenceCommand = async (
  */
 export const se_DeleteTransitGatewayRouteCommand = async (
   input: DeleteTransitGatewayRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7413,7 +7413,7 @@ export const se_DeleteTransitGatewayRouteCommand = async (
  */
 export const se_DeleteTransitGatewayRouteTableCommand = async (
   input: DeleteTransitGatewayRouteTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7430,7 +7430,7 @@ export const se_DeleteTransitGatewayRouteTableCommand = async (
  */
 export const se_DeleteTransitGatewayRouteTableAnnouncementCommand = async (
   input: DeleteTransitGatewayRouteTableAnnouncementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7447,7 +7447,7 @@ export const se_DeleteTransitGatewayRouteTableAnnouncementCommand = async (
  */
 export const se_DeleteTransitGatewayVpcAttachmentCommand = async (
   input: DeleteTransitGatewayVpcAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7464,7 +7464,7 @@ export const se_DeleteTransitGatewayVpcAttachmentCommand = async (
  */
 export const se_DeleteVerifiedAccessEndpointCommand = async (
   input: DeleteVerifiedAccessEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7481,7 +7481,7 @@ export const se_DeleteVerifiedAccessEndpointCommand = async (
  */
 export const se_DeleteVerifiedAccessGroupCommand = async (
   input: DeleteVerifiedAccessGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7498,7 +7498,7 @@ export const se_DeleteVerifiedAccessGroupCommand = async (
  */
 export const se_DeleteVerifiedAccessInstanceCommand = async (
   input: DeleteVerifiedAccessInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7515,7 +7515,7 @@ export const se_DeleteVerifiedAccessInstanceCommand = async (
  */
 export const se_DeleteVerifiedAccessTrustProviderCommand = async (
   input: DeleteVerifiedAccessTrustProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7532,7 +7532,7 @@ export const se_DeleteVerifiedAccessTrustProviderCommand = async (
  */
 export const se_DeleteVolumeCommand = async (
   input: DeleteVolumeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7549,7 +7549,7 @@ export const se_DeleteVolumeCommand = async (
  */
 export const se_DeleteVpcCommand = async (
   input: DeleteVpcCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7566,7 +7566,7 @@ export const se_DeleteVpcCommand = async (
  */
 export const se_DeleteVpcEndpointConnectionNotificationsCommand = async (
   input: DeleteVpcEndpointConnectionNotificationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7583,7 +7583,7 @@ export const se_DeleteVpcEndpointConnectionNotificationsCommand = async (
  */
 export const se_DeleteVpcEndpointsCommand = async (
   input: DeleteVpcEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7600,7 +7600,7 @@ export const se_DeleteVpcEndpointsCommand = async (
  */
 export const se_DeleteVpcEndpointServiceConfigurationsCommand = async (
   input: DeleteVpcEndpointServiceConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7617,7 +7617,7 @@ export const se_DeleteVpcEndpointServiceConfigurationsCommand = async (
  */
 export const se_DeleteVpcPeeringConnectionCommand = async (
   input: DeleteVpcPeeringConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7634,7 +7634,7 @@ export const se_DeleteVpcPeeringConnectionCommand = async (
  */
 export const se_DeleteVpnConnectionCommand = async (
   input: DeleteVpnConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7651,7 +7651,7 @@ export const se_DeleteVpnConnectionCommand = async (
  */
 export const se_DeleteVpnConnectionRouteCommand = async (
   input: DeleteVpnConnectionRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7668,7 +7668,7 @@ export const se_DeleteVpnConnectionRouteCommand = async (
  */
 export const se_DeleteVpnGatewayCommand = async (
   input: DeleteVpnGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7685,7 +7685,7 @@ export const se_DeleteVpnGatewayCommand = async (
  */
 export const se_DeprovisionByoipCidrCommand = async (
   input: DeprovisionByoipCidrCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7702,7 +7702,7 @@ export const se_DeprovisionByoipCidrCommand = async (
  */
 export const se_DeprovisionIpamByoasnCommand = async (
   input: DeprovisionIpamByoasnCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7719,7 +7719,7 @@ export const se_DeprovisionIpamByoasnCommand = async (
  */
 export const se_DeprovisionIpamPoolCidrCommand = async (
   input: DeprovisionIpamPoolCidrCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7736,7 +7736,7 @@ export const se_DeprovisionIpamPoolCidrCommand = async (
  */
 export const se_DeprovisionPublicIpv4PoolCidrCommand = async (
   input: DeprovisionPublicIpv4PoolCidrCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7753,7 +7753,7 @@ export const se_DeprovisionPublicIpv4PoolCidrCommand = async (
  */
 export const se_DeregisterImageCommand = async (
   input: DeregisterImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7770,7 +7770,7 @@ export const se_DeregisterImageCommand = async (
  */
 export const se_DeregisterInstanceEventNotificationAttributesCommand = async (
   input: DeregisterInstanceEventNotificationAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7787,7 +7787,7 @@ export const se_DeregisterInstanceEventNotificationAttributesCommand = async (
  */
 export const se_DeregisterTransitGatewayMulticastGroupMembersCommand = async (
   input: DeregisterTransitGatewayMulticastGroupMembersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7804,7 +7804,7 @@ export const se_DeregisterTransitGatewayMulticastGroupMembersCommand = async (
  */
 export const se_DeregisterTransitGatewayMulticastGroupSourcesCommand = async (
   input: DeregisterTransitGatewayMulticastGroupSourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7821,7 +7821,7 @@ export const se_DeregisterTransitGatewayMulticastGroupSourcesCommand = async (
  */
 export const se_DescribeAccountAttributesCommand = async (
   input: DescribeAccountAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7838,7 +7838,7 @@ export const se_DescribeAccountAttributesCommand = async (
  */
 export const se_DescribeAddressesCommand = async (
   input: DescribeAddressesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7855,7 +7855,7 @@ export const se_DescribeAddressesCommand = async (
  */
 export const se_DescribeAddressesAttributeCommand = async (
   input: DescribeAddressesAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7872,7 +7872,7 @@ export const se_DescribeAddressesAttributeCommand = async (
  */
 export const se_DescribeAddressTransfersCommand = async (
   input: DescribeAddressTransfersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7889,7 +7889,7 @@ export const se_DescribeAddressTransfersCommand = async (
  */
 export const se_DescribeAggregateIdFormatCommand = async (
   input: DescribeAggregateIdFormatCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7906,7 +7906,7 @@ export const se_DescribeAggregateIdFormatCommand = async (
  */
 export const se_DescribeAvailabilityZonesCommand = async (
   input: DescribeAvailabilityZonesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7923,7 +7923,7 @@ export const se_DescribeAvailabilityZonesCommand = async (
  */
 export const se_DescribeAwsNetworkPerformanceMetricSubscriptionsCommand = async (
   input: DescribeAwsNetworkPerformanceMetricSubscriptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7940,7 +7940,7 @@ export const se_DescribeAwsNetworkPerformanceMetricSubscriptionsCommand = async 
  */
 export const se_DescribeBundleTasksCommand = async (
   input: DescribeBundleTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7957,7 +7957,7 @@ export const se_DescribeBundleTasksCommand = async (
  */
 export const se_DescribeByoipCidrsCommand = async (
   input: DescribeByoipCidrsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7974,7 +7974,7 @@ export const se_DescribeByoipCidrsCommand = async (
  */
 export const se_DescribeCapacityBlockOfferingsCommand = async (
   input: DescribeCapacityBlockOfferingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -7991,7 +7991,7 @@ export const se_DescribeCapacityBlockOfferingsCommand = async (
  */
 export const se_DescribeCapacityReservationFleetsCommand = async (
   input: DescribeCapacityReservationFleetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8008,7 +8008,7 @@ export const se_DescribeCapacityReservationFleetsCommand = async (
  */
 export const se_DescribeCapacityReservationsCommand = async (
   input: DescribeCapacityReservationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8025,7 +8025,7 @@ export const se_DescribeCapacityReservationsCommand = async (
  */
 export const se_DescribeCarrierGatewaysCommand = async (
   input: DescribeCarrierGatewaysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8042,7 +8042,7 @@ export const se_DescribeCarrierGatewaysCommand = async (
  */
 export const se_DescribeClassicLinkInstancesCommand = async (
   input: DescribeClassicLinkInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8059,7 +8059,7 @@ export const se_DescribeClassicLinkInstancesCommand = async (
  */
 export const se_DescribeClientVpnAuthorizationRulesCommand = async (
   input: DescribeClientVpnAuthorizationRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8076,7 +8076,7 @@ export const se_DescribeClientVpnAuthorizationRulesCommand = async (
  */
 export const se_DescribeClientVpnConnectionsCommand = async (
   input: DescribeClientVpnConnectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8093,7 +8093,7 @@ export const se_DescribeClientVpnConnectionsCommand = async (
  */
 export const se_DescribeClientVpnEndpointsCommand = async (
   input: DescribeClientVpnEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8110,7 +8110,7 @@ export const se_DescribeClientVpnEndpointsCommand = async (
  */
 export const se_DescribeClientVpnRoutesCommand = async (
   input: DescribeClientVpnRoutesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8127,7 +8127,7 @@ export const se_DescribeClientVpnRoutesCommand = async (
  */
 export const se_DescribeClientVpnTargetNetworksCommand = async (
   input: DescribeClientVpnTargetNetworksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8144,7 +8144,7 @@ export const se_DescribeClientVpnTargetNetworksCommand = async (
  */
 export const se_DescribeCoipPoolsCommand = async (
   input: DescribeCoipPoolsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8161,7 +8161,7 @@ export const se_DescribeCoipPoolsCommand = async (
  */
 export const se_DescribeConversionTasksCommand = async (
   input: DescribeConversionTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8178,7 +8178,7 @@ export const se_DescribeConversionTasksCommand = async (
  */
 export const se_DescribeCustomerGatewaysCommand = async (
   input: DescribeCustomerGatewaysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8195,7 +8195,7 @@ export const se_DescribeCustomerGatewaysCommand = async (
  */
 export const se_DescribeDhcpOptionsCommand = async (
   input: DescribeDhcpOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8212,7 +8212,7 @@ export const se_DescribeDhcpOptionsCommand = async (
  */
 export const se_DescribeEgressOnlyInternetGatewaysCommand = async (
   input: DescribeEgressOnlyInternetGatewaysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8229,7 +8229,7 @@ export const se_DescribeEgressOnlyInternetGatewaysCommand = async (
  */
 export const se_DescribeElasticGpusCommand = async (
   input: DescribeElasticGpusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8246,7 +8246,7 @@ export const se_DescribeElasticGpusCommand = async (
  */
 export const se_DescribeExportImageTasksCommand = async (
   input: DescribeExportImageTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8263,7 +8263,7 @@ export const se_DescribeExportImageTasksCommand = async (
  */
 export const se_DescribeExportTasksCommand = async (
   input: DescribeExportTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8280,7 +8280,7 @@ export const se_DescribeExportTasksCommand = async (
  */
 export const se_DescribeFastLaunchImagesCommand = async (
   input: DescribeFastLaunchImagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8297,7 +8297,7 @@ export const se_DescribeFastLaunchImagesCommand = async (
  */
 export const se_DescribeFastSnapshotRestoresCommand = async (
   input: DescribeFastSnapshotRestoresCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8314,7 +8314,7 @@ export const se_DescribeFastSnapshotRestoresCommand = async (
  */
 export const se_DescribeFleetHistoryCommand = async (
   input: DescribeFleetHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8331,7 +8331,7 @@ export const se_DescribeFleetHistoryCommand = async (
  */
 export const se_DescribeFleetInstancesCommand = async (
   input: DescribeFleetInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8348,7 +8348,7 @@ export const se_DescribeFleetInstancesCommand = async (
  */
 export const se_DescribeFleetsCommand = async (
   input: DescribeFleetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8365,7 +8365,7 @@ export const se_DescribeFleetsCommand = async (
  */
 export const se_DescribeFlowLogsCommand = async (
   input: DescribeFlowLogsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8382,7 +8382,7 @@ export const se_DescribeFlowLogsCommand = async (
  */
 export const se_DescribeFpgaImageAttributeCommand = async (
   input: DescribeFpgaImageAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8399,7 +8399,7 @@ export const se_DescribeFpgaImageAttributeCommand = async (
  */
 export const se_DescribeFpgaImagesCommand = async (
   input: DescribeFpgaImagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8416,7 +8416,7 @@ export const se_DescribeFpgaImagesCommand = async (
  */
 export const se_DescribeHostReservationOfferingsCommand = async (
   input: DescribeHostReservationOfferingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8433,7 +8433,7 @@ export const se_DescribeHostReservationOfferingsCommand = async (
  */
 export const se_DescribeHostReservationsCommand = async (
   input: DescribeHostReservationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8450,7 +8450,7 @@ export const se_DescribeHostReservationsCommand = async (
  */
 export const se_DescribeHostsCommand = async (
   input: DescribeHostsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8467,7 +8467,7 @@ export const se_DescribeHostsCommand = async (
  */
 export const se_DescribeIamInstanceProfileAssociationsCommand = async (
   input: DescribeIamInstanceProfileAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8484,7 +8484,7 @@ export const se_DescribeIamInstanceProfileAssociationsCommand = async (
  */
 export const se_DescribeIdentityIdFormatCommand = async (
   input: DescribeIdentityIdFormatCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8501,7 +8501,7 @@ export const se_DescribeIdentityIdFormatCommand = async (
  */
 export const se_DescribeIdFormatCommand = async (
   input: DescribeIdFormatCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8518,7 +8518,7 @@ export const se_DescribeIdFormatCommand = async (
  */
 export const se_DescribeImageAttributeCommand = async (
   input: DescribeImageAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8535,7 +8535,7 @@ export const se_DescribeImageAttributeCommand = async (
  */
 export const se_DescribeImagesCommand = async (
   input: DescribeImagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8552,7 +8552,7 @@ export const se_DescribeImagesCommand = async (
  */
 export const se_DescribeImportImageTasksCommand = async (
   input: DescribeImportImageTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8569,7 +8569,7 @@ export const se_DescribeImportImageTasksCommand = async (
  */
 export const se_DescribeImportSnapshotTasksCommand = async (
   input: DescribeImportSnapshotTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8586,7 +8586,7 @@ export const se_DescribeImportSnapshotTasksCommand = async (
  */
 export const se_DescribeInstanceAttributeCommand = async (
   input: DescribeInstanceAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8603,7 +8603,7 @@ export const se_DescribeInstanceAttributeCommand = async (
  */
 export const se_DescribeInstanceConnectEndpointsCommand = async (
   input: DescribeInstanceConnectEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8620,7 +8620,7 @@ export const se_DescribeInstanceConnectEndpointsCommand = async (
  */
 export const se_DescribeInstanceCreditSpecificationsCommand = async (
   input: DescribeInstanceCreditSpecificationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8637,7 +8637,7 @@ export const se_DescribeInstanceCreditSpecificationsCommand = async (
  */
 export const se_DescribeInstanceEventNotificationAttributesCommand = async (
   input: DescribeInstanceEventNotificationAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8654,7 +8654,7 @@ export const se_DescribeInstanceEventNotificationAttributesCommand = async (
  */
 export const se_DescribeInstanceEventWindowsCommand = async (
   input: DescribeInstanceEventWindowsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8671,7 +8671,7 @@ export const se_DescribeInstanceEventWindowsCommand = async (
  */
 export const se_DescribeInstancesCommand = async (
   input: DescribeInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8688,7 +8688,7 @@ export const se_DescribeInstancesCommand = async (
  */
 export const se_DescribeInstanceStatusCommand = async (
   input: DescribeInstanceStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8705,7 +8705,7 @@ export const se_DescribeInstanceStatusCommand = async (
  */
 export const se_DescribeInstanceTopologyCommand = async (
   input: DescribeInstanceTopologyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8722,7 +8722,7 @@ export const se_DescribeInstanceTopologyCommand = async (
  */
 export const se_DescribeInstanceTypeOfferingsCommand = async (
   input: DescribeInstanceTypeOfferingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8739,7 +8739,7 @@ export const se_DescribeInstanceTypeOfferingsCommand = async (
  */
 export const se_DescribeInstanceTypesCommand = async (
   input: DescribeInstanceTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8756,7 +8756,7 @@ export const se_DescribeInstanceTypesCommand = async (
  */
 export const se_DescribeInternetGatewaysCommand = async (
   input: DescribeInternetGatewaysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8773,7 +8773,7 @@ export const se_DescribeInternetGatewaysCommand = async (
  */
 export const se_DescribeIpamByoasnCommand = async (
   input: DescribeIpamByoasnCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8790,7 +8790,7 @@ export const se_DescribeIpamByoasnCommand = async (
  */
 export const se_DescribeIpamPoolsCommand = async (
   input: DescribeIpamPoolsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8807,7 +8807,7 @@ export const se_DescribeIpamPoolsCommand = async (
  */
 export const se_DescribeIpamResourceDiscoveriesCommand = async (
   input: DescribeIpamResourceDiscoveriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8824,7 +8824,7 @@ export const se_DescribeIpamResourceDiscoveriesCommand = async (
  */
 export const se_DescribeIpamResourceDiscoveryAssociationsCommand = async (
   input: DescribeIpamResourceDiscoveryAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8841,7 +8841,7 @@ export const se_DescribeIpamResourceDiscoveryAssociationsCommand = async (
  */
 export const se_DescribeIpamsCommand = async (
   input: DescribeIpamsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8858,7 +8858,7 @@ export const se_DescribeIpamsCommand = async (
  */
 export const se_DescribeIpamScopesCommand = async (
   input: DescribeIpamScopesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8875,7 +8875,7 @@ export const se_DescribeIpamScopesCommand = async (
  */
 export const se_DescribeIpv6PoolsCommand = async (
   input: DescribeIpv6PoolsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8892,7 +8892,7 @@ export const se_DescribeIpv6PoolsCommand = async (
  */
 export const se_DescribeKeyPairsCommand = async (
   input: DescribeKeyPairsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8909,7 +8909,7 @@ export const se_DescribeKeyPairsCommand = async (
  */
 export const se_DescribeLaunchTemplatesCommand = async (
   input: DescribeLaunchTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8926,7 +8926,7 @@ export const se_DescribeLaunchTemplatesCommand = async (
  */
 export const se_DescribeLaunchTemplateVersionsCommand = async (
   input: DescribeLaunchTemplateVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8943,7 +8943,7 @@ export const se_DescribeLaunchTemplateVersionsCommand = async (
  */
 export const se_DescribeLocalGatewayRouteTablesCommand = async (
   input: DescribeLocalGatewayRouteTablesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8960,7 +8960,7 @@ export const se_DescribeLocalGatewayRouteTablesCommand = async (
  */
 export const se_DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsCommand = async (
   input: DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8977,7 +8977,7 @@ export const se_DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsC
  */
 export const se_DescribeLocalGatewayRouteTableVpcAssociationsCommand = async (
   input: DescribeLocalGatewayRouteTableVpcAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -8994,7 +8994,7 @@ export const se_DescribeLocalGatewayRouteTableVpcAssociationsCommand = async (
  */
 export const se_DescribeLocalGatewaysCommand = async (
   input: DescribeLocalGatewaysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9011,7 +9011,7 @@ export const se_DescribeLocalGatewaysCommand = async (
  */
 export const se_DescribeLocalGatewayVirtualInterfaceGroupsCommand = async (
   input: DescribeLocalGatewayVirtualInterfaceGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9028,7 +9028,7 @@ export const se_DescribeLocalGatewayVirtualInterfaceGroupsCommand = async (
  */
 export const se_DescribeLocalGatewayVirtualInterfacesCommand = async (
   input: DescribeLocalGatewayVirtualInterfacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9045,7 +9045,7 @@ export const se_DescribeLocalGatewayVirtualInterfacesCommand = async (
  */
 export const se_DescribeLockedSnapshotsCommand = async (
   input: DescribeLockedSnapshotsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9062,7 +9062,7 @@ export const se_DescribeLockedSnapshotsCommand = async (
  */
 export const se_DescribeMacHostsCommand = async (
   input: DescribeMacHostsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9079,7 +9079,7 @@ export const se_DescribeMacHostsCommand = async (
  */
 export const se_DescribeManagedPrefixListsCommand = async (
   input: DescribeManagedPrefixListsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9096,7 +9096,7 @@ export const se_DescribeManagedPrefixListsCommand = async (
  */
 export const se_DescribeMovingAddressesCommand = async (
   input: DescribeMovingAddressesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9113,7 +9113,7 @@ export const se_DescribeMovingAddressesCommand = async (
  */
 export const se_DescribeNatGatewaysCommand = async (
   input: DescribeNatGatewaysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9130,7 +9130,7 @@ export const se_DescribeNatGatewaysCommand = async (
  */
 export const se_DescribeNetworkAclsCommand = async (
   input: DescribeNetworkAclsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9147,7 +9147,7 @@ export const se_DescribeNetworkAclsCommand = async (
  */
 export const se_DescribeNetworkInsightsAccessScopeAnalysesCommand = async (
   input: DescribeNetworkInsightsAccessScopeAnalysesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9164,7 +9164,7 @@ export const se_DescribeNetworkInsightsAccessScopeAnalysesCommand = async (
  */
 export const se_DescribeNetworkInsightsAccessScopesCommand = async (
   input: DescribeNetworkInsightsAccessScopesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9181,7 +9181,7 @@ export const se_DescribeNetworkInsightsAccessScopesCommand = async (
  */
 export const se_DescribeNetworkInsightsAnalysesCommand = async (
   input: DescribeNetworkInsightsAnalysesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9198,7 +9198,7 @@ export const se_DescribeNetworkInsightsAnalysesCommand = async (
  */
 export const se_DescribeNetworkInsightsPathsCommand = async (
   input: DescribeNetworkInsightsPathsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9215,7 +9215,7 @@ export const se_DescribeNetworkInsightsPathsCommand = async (
  */
 export const se_DescribeNetworkInterfaceAttributeCommand = async (
   input: DescribeNetworkInterfaceAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9232,7 +9232,7 @@ export const se_DescribeNetworkInterfaceAttributeCommand = async (
  */
 export const se_DescribeNetworkInterfacePermissionsCommand = async (
   input: DescribeNetworkInterfacePermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9249,7 +9249,7 @@ export const se_DescribeNetworkInterfacePermissionsCommand = async (
  */
 export const se_DescribeNetworkInterfacesCommand = async (
   input: DescribeNetworkInterfacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9266,7 +9266,7 @@ export const se_DescribeNetworkInterfacesCommand = async (
  */
 export const se_DescribePlacementGroupsCommand = async (
   input: DescribePlacementGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9283,7 +9283,7 @@ export const se_DescribePlacementGroupsCommand = async (
  */
 export const se_DescribePrefixListsCommand = async (
   input: DescribePrefixListsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9300,7 +9300,7 @@ export const se_DescribePrefixListsCommand = async (
  */
 export const se_DescribePrincipalIdFormatCommand = async (
   input: DescribePrincipalIdFormatCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9317,7 +9317,7 @@ export const se_DescribePrincipalIdFormatCommand = async (
  */
 export const se_DescribePublicIpv4PoolsCommand = async (
   input: DescribePublicIpv4PoolsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9334,7 +9334,7 @@ export const se_DescribePublicIpv4PoolsCommand = async (
  */
 export const se_DescribeRegionsCommand = async (
   input: DescribeRegionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9351,7 +9351,7 @@ export const se_DescribeRegionsCommand = async (
  */
 export const se_DescribeReplaceRootVolumeTasksCommand = async (
   input: DescribeReplaceRootVolumeTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9368,7 +9368,7 @@ export const se_DescribeReplaceRootVolumeTasksCommand = async (
  */
 export const se_DescribeReservedInstancesCommand = async (
   input: DescribeReservedInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9385,7 +9385,7 @@ export const se_DescribeReservedInstancesCommand = async (
  */
 export const se_DescribeReservedInstancesListingsCommand = async (
   input: DescribeReservedInstancesListingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9402,7 +9402,7 @@ export const se_DescribeReservedInstancesListingsCommand = async (
  */
 export const se_DescribeReservedInstancesModificationsCommand = async (
   input: DescribeReservedInstancesModificationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9419,7 +9419,7 @@ export const se_DescribeReservedInstancesModificationsCommand = async (
  */
 export const se_DescribeReservedInstancesOfferingsCommand = async (
   input: DescribeReservedInstancesOfferingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9436,7 +9436,7 @@ export const se_DescribeReservedInstancesOfferingsCommand = async (
  */
 export const se_DescribeRouteTablesCommand = async (
   input: DescribeRouteTablesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9453,7 +9453,7 @@ export const se_DescribeRouteTablesCommand = async (
  */
 export const se_DescribeScheduledInstanceAvailabilityCommand = async (
   input: DescribeScheduledInstanceAvailabilityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9470,7 +9470,7 @@ export const se_DescribeScheduledInstanceAvailabilityCommand = async (
  */
 export const se_DescribeScheduledInstancesCommand = async (
   input: DescribeScheduledInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9487,7 +9487,7 @@ export const se_DescribeScheduledInstancesCommand = async (
  */
 export const se_DescribeSecurityGroupReferencesCommand = async (
   input: DescribeSecurityGroupReferencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9504,7 +9504,7 @@ export const se_DescribeSecurityGroupReferencesCommand = async (
  */
 export const se_DescribeSecurityGroupRulesCommand = async (
   input: DescribeSecurityGroupRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9521,7 +9521,7 @@ export const se_DescribeSecurityGroupRulesCommand = async (
  */
 export const se_DescribeSecurityGroupsCommand = async (
   input: DescribeSecurityGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9538,7 +9538,7 @@ export const se_DescribeSecurityGroupsCommand = async (
  */
 export const se_DescribeSnapshotAttributeCommand = async (
   input: DescribeSnapshotAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9555,7 +9555,7 @@ export const se_DescribeSnapshotAttributeCommand = async (
  */
 export const se_DescribeSnapshotsCommand = async (
   input: DescribeSnapshotsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9572,7 +9572,7 @@ export const se_DescribeSnapshotsCommand = async (
  */
 export const se_DescribeSnapshotTierStatusCommand = async (
   input: DescribeSnapshotTierStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9589,7 +9589,7 @@ export const se_DescribeSnapshotTierStatusCommand = async (
  */
 export const se_DescribeSpotDatafeedSubscriptionCommand = async (
   input: DescribeSpotDatafeedSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9606,7 +9606,7 @@ export const se_DescribeSpotDatafeedSubscriptionCommand = async (
  */
 export const se_DescribeSpotFleetInstancesCommand = async (
   input: DescribeSpotFleetInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9623,7 +9623,7 @@ export const se_DescribeSpotFleetInstancesCommand = async (
  */
 export const se_DescribeSpotFleetRequestHistoryCommand = async (
   input: DescribeSpotFleetRequestHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9640,7 +9640,7 @@ export const se_DescribeSpotFleetRequestHistoryCommand = async (
  */
 export const se_DescribeSpotFleetRequestsCommand = async (
   input: DescribeSpotFleetRequestsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9657,7 +9657,7 @@ export const se_DescribeSpotFleetRequestsCommand = async (
  */
 export const se_DescribeSpotInstanceRequestsCommand = async (
   input: DescribeSpotInstanceRequestsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9674,7 +9674,7 @@ export const se_DescribeSpotInstanceRequestsCommand = async (
  */
 export const se_DescribeSpotPriceHistoryCommand = async (
   input: DescribeSpotPriceHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9691,7 +9691,7 @@ export const se_DescribeSpotPriceHistoryCommand = async (
  */
 export const se_DescribeStaleSecurityGroupsCommand = async (
   input: DescribeStaleSecurityGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9708,7 +9708,7 @@ export const se_DescribeStaleSecurityGroupsCommand = async (
  */
 export const se_DescribeStoreImageTasksCommand = async (
   input: DescribeStoreImageTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9725,7 +9725,7 @@ export const se_DescribeStoreImageTasksCommand = async (
  */
 export const se_DescribeSubnetsCommand = async (
   input: DescribeSubnetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9742,7 +9742,7 @@ export const se_DescribeSubnetsCommand = async (
  */
 export const se_DescribeTagsCommand = async (
   input: DescribeTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9759,7 +9759,7 @@ export const se_DescribeTagsCommand = async (
  */
 export const se_DescribeTrafficMirrorFilterRulesCommand = async (
   input: DescribeTrafficMirrorFilterRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9776,7 +9776,7 @@ export const se_DescribeTrafficMirrorFilterRulesCommand = async (
  */
 export const se_DescribeTrafficMirrorFiltersCommand = async (
   input: DescribeTrafficMirrorFiltersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9793,7 +9793,7 @@ export const se_DescribeTrafficMirrorFiltersCommand = async (
  */
 export const se_DescribeTrafficMirrorSessionsCommand = async (
   input: DescribeTrafficMirrorSessionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9810,7 +9810,7 @@ export const se_DescribeTrafficMirrorSessionsCommand = async (
  */
 export const se_DescribeTrafficMirrorTargetsCommand = async (
   input: DescribeTrafficMirrorTargetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9827,7 +9827,7 @@ export const se_DescribeTrafficMirrorTargetsCommand = async (
  */
 export const se_DescribeTransitGatewayAttachmentsCommand = async (
   input: DescribeTransitGatewayAttachmentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9844,7 +9844,7 @@ export const se_DescribeTransitGatewayAttachmentsCommand = async (
  */
 export const se_DescribeTransitGatewayConnectPeersCommand = async (
   input: DescribeTransitGatewayConnectPeersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9861,7 +9861,7 @@ export const se_DescribeTransitGatewayConnectPeersCommand = async (
  */
 export const se_DescribeTransitGatewayConnectsCommand = async (
   input: DescribeTransitGatewayConnectsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9878,7 +9878,7 @@ export const se_DescribeTransitGatewayConnectsCommand = async (
  */
 export const se_DescribeTransitGatewayMulticastDomainsCommand = async (
   input: DescribeTransitGatewayMulticastDomainsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9895,7 +9895,7 @@ export const se_DescribeTransitGatewayMulticastDomainsCommand = async (
  */
 export const se_DescribeTransitGatewayPeeringAttachmentsCommand = async (
   input: DescribeTransitGatewayPeeringAttachmentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9912,7 +9912,7 @@ export const se_DescribeTransitGatewayPeeringAttachmentsCommand = async (
  */
 export const se_DescribeTransitGatewayPolicyTablesCommand = async (
   input: DescribeTransitGatewayPolicyTablesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9929,7 +9929,7 @@ export const se_DescribeTransitGatewayPolicyTablesCommand = async (
  */
 export const se_DescribeTransitGatewayRouteTableAnnouncementsCommand = async (
   input: DescribeTransitGatewayRouteTableAnnouncementsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9946,7 +9946,7 @@ export const se_DescribeTransitGatewayRouteTableAnnouncementsCommand = async (
  */
 export const se_DescribeTransitGatewayRouteTablesCommand = async (
   input: DescribeTransitGatewayRouteTablesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9963,7 +9963,7 @@ export const se_DescribeTransitGatewayRouteTablesCommand = async (
  */
 export const se_DescribeTransitGatewaysCommand = async (
   input: DescribeTransitGatewaysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9980,7 +9980,7 @@ export const se_DescribeTransitGatewaysCommand = async (
  */
 export const se_DescribeTransitGatewayVpcAttachmentsCommand = async (
   input: DescribeTransitGatewayVpcAttachmentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -9997,7 +9997,7 @@ export const se_DescribeTransitGatewayVpcAttachmentsCommand = async (
  */
 export const se_DescribeTrunkInterfaceAssociationsCommand = async (
   input: DescribeTrunkInterfaceAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10014,7 +10014,7 @@ export const se_DescribeTrunkInterfaceAssociationsCommand = async (
  */
 export const se_DescribeVerifiedAccessEndpointsCommand = async (
   input: DescribeVerifiedAccessEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10031,7 +10031,7 @@ export const se_DescribeVerifiedAccessEndpointsCommand = async (
  */
 export const se_DescribeVerifiedAccessGroupsCommand = async (
   input: DescribeVerifiedAccessGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10048,7 +10048,7 @@ export const se_DescribeVerifiedAccessGroupsCommand = async (
  */
 export const se_DescribeVerifiedAccessInstanceLoggingConfigurationsCommand = async (
   input: DescribeVerifiedAccessInstanceLoggingConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10065,7 +10065,7 @@ export const se_DescribeVerifiedAccessInstanceLoggingConfigurationsCommand = asy
  */
 export const se_DescribeVerifiedAccessInstancesCommand = async (
   input: DescribeVerifiedAccessInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10082,7 +10082,7 @@ export const se_DescribeVerifiedAccessInstancesCommand = async (
  */
 export const se_DescribeVerifiedAccessTrustProvidersCommand = async (
   input: DescribeVerifiedAccessTrustProvidersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10099,7 +10099,7 @@ export const se_DescribeVerifiedAccessTrustProvidersCommand = async (
  */
 export const se_DescribeVolumeAttributeCommand = async (
   input: DescribeVolumeAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10116,7 +10116,7 @@ export const se_DescribeVolumeAttributeCommand = async (
  */
 export const se_DescribeVolumesCommand = async (
   input: DescribeVolumesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10133,7 +10133,7 @@ export const se_DescribeVolumesCommand = async (
  */
 export const se_DescribeVolumesModificationsCommand = async (
   input: DescribeVolumesModificationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10150,7 +10150,7 @@ export const se_DescribeVolumesModificationsCommand = async (
  */
 export const se_DescribeVolumeStatusCommand = async (
   input: DescribeVolumeStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10167,7 +10167,7 @@ export const se_DescribeVolumeStatusCommand = async (
  */
 export const se_DescribeVpcAttributeCommand = async (
   input: DescribeVpcAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10184,7 +10184,7 @@ export const se_DescribeVpcAttributeCommand = async (
  */
 export const se_DescribeVpcClassicLinkCommand = async (
   input: DescribeVpcClassicLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10201,7 +10201,7 @@ export const se_DescribeVpcClassicLinkCommand = async (
  */
 export const se_DescribeVpcClassicLinkDnsSupportCommand = async (
   input: DescribeVpcClassicLinkDnsSupportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10218,7 +10218,7 @@ export const se_DescribeVpcClassicLinkDnsSupportCommand = async (
  */
 export const se_DescribeVpcEndpointConnectionNotificationsCommand = async (
   input: DescribeVpcEndpointConnectionNotificationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10235,7 +10235,7 @@ export const se_DescribeVpcEndpointConnectionNotificationsCommand = async (
  */
 export const se_DescribeVpcEndpointConnectionsCommand = async (
   input: DescribeVpcEndpointConnectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10252,7 +10252,7 @@ export const se_DescribeVpcEndpointConnectionsCommand = async (
  */
 export const se_DescribeVpcEndpointsCommand = async (
   input: DescribeVpcEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10269,7 +10269,7 @@ export const se_DescribeVpcEndpointsCommand = async (
  */
 export const se_DescribeVpcEndpointServiceConfigurationsCommand = async (
   input: DescribeVpcEndpointServiceConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10286,7 +10286,7 @@ export const se_DescribeVpcEndpointServiceConfigurationsCommand = async (
  */
 export const se_DescribeVpcEndpointServicePermissionsCommand = async (
   input: DescribeVpcEndpointServicePermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10303,7 +10303,7 @@ export const se_DescribeVpcEndpointServicePermissionsCommand = async (
  */
 export const se_DescribeVpcEndpointServicesCommand = async (
   input: DescribeVpcEndpointServicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10320,7 +10320,7 @@ export const se_DescribeVpcEndpointServicesCommand = async (
  */
 export const se_DescribeVpcPeeringConnectionsCommand = async (
   input: DescribeVpcPeeringConnectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10337,7 +10337,7 @@ export const se_DescribeVpcPeeringConnectionsCommand = async (
  */
 export const se_DescribeVpcsCommand = async (
   input: DescribeVpcsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10354,7 +10354,7 @@ export const se_DescribeVpcsCommand = async (
  */
 export const se_DescribeVpnConnectionsCommand = async (
   input: DescribeVpnConnectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10371,7 +10371,7 @@ export const se_DescribeVpnConnectionsCommand = async (
  */
 export const se_DescribeVpnGatewaysCommand = async (
   input: DescribeVpnGatewaysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10388,7 +10388,7 @@ export const se_DescribeVpnGatewaysCommand = async (
  */
 export const se_DetachClassicLinkVpcCommand = async (
   input: DetachClassicLinkVpcCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10405,7 +10405,7 @@ export const se_DetachClassicLinkVpcCommand = async (
  */
 export const se_DetachInternetGatewayCommand = async (
   input: DetachInternetGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10422,7 +10422,7 @@ export const se_DetachInternetGatewayCommand = async (
  */
 export const se_DetachNetworkInterfaceCommand = async (
   input: DetachNetworkInterfaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10439,7 +10439,7 @@ export const se_DetachNetworkInterfaceCommand = async (
  */
 export const se_DetachVerifiedAccessTrustProviderCommand = async (
   input: DetachVerifiedAccessTrustProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10456,7 +10456,7 @@ export const se_DetachVerifiedAccessTrustProviderCommand = async (
  */
 export const se_DetachVolumeCommand = async (
   input: DetachVolumeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10473,7 +10473,7 @@ export const se_DetachVolumeCommand = async (
  */
 export const se_DetachVpnGatewayCommand = async (
   input: DetachVpnGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10490,7 +10490,7 @@ export const se_DetachVpnGatewayCommand = async (
  */
 export const se_DisableAddressTransferCommand = async (
   input: DisableAddressTransferCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10507,7 +10507,7 @@ export const se_DisableAddressTransferCommand = async (
  */
 export const se_DisableAwsNetworkPerformanceMetricSubscriptionCommand = async (
   input: DisableAwsNetworkPerformanceMetricSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10524,7 +10524,7 @@ export const se_DisableAwsNetworkPerformanceMetricSubscriptionCommand = async (
  */
 export const se_DisableEbsEncryptionByDefaultCommand = async (
   input: DisableEbsEncryptionByDefaultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10541,7 +10541,7 @@ export const se_DisableEbsEncryptionByDefaultCommand = async (
  */
 export const se_DisableFastLaunchCommand = async (
   input: DisableFastLaunchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10558,7 +10558,7 @@ export const se_DisableFastLaunchCommand = async (
  */
 export const se_DisableFastSnapshotRestoresCommand = async (
   input: DisableFastSnapshotRestoresCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10575,7 +10575,7 @@ export const se_DisableFastSnapshotRestoresCommand = async (
  */
 export const se_DisableImageCommand = async (
   input: DisableImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10592,7 +10592,7 @@ export const se_DisableImageCommand = async (
  */
 export const se_DisableImageBlockPublicAccessCommand = async (
   input: DisableImageBlockPublicAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10609,7 +10609,7 @@ export const se_DisableImageBlockPublicAccessCommand = async (
  */
 export const se_DisableImageDeprecationCommand = async (
   input: DisableImageDeprecationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10626,7 +10626,7 @@ export const se_DisableImageDeprecationCommand = async (
  */
 export const se_DisableImageDeregistrationProtectionCommand = async (
   input: DisableImageDeregistrationProtectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10643,7 +10643,7 @@ export const se_DisableImageDeregistrationProtectionCommand = async (
  */
 export const se_DisableIpamOrganizationAdminAccountCommand = async (
   input: DisableIpamOrganizationAdminAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10660,7 +10660,7 @@ export const se_DisableIpamOrganizationAdminAccountCommand = async (
  */
 export const se_DisableSerialConsoleAccessCommand = async (
   input: DisableSerialConsoleAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10677,7 +10677,7 @@ export const se_DisableSerialConsoleAccessCommand = async (
  */
 export const se_DisableSnapshotBlockPublicAccessCommand = async (
   input: DisableSnapshotBlockPublicAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10694,7 +10694,7 @@ export const se_DisableSnapshotBlockPublicAccessCommand = async (
  */
 export const se_DisableTransitGatewayRouteTablePropagationCommand = async (
   input: DisableTransitGatewayRouteTablePropagationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10711,7 +10711,7 @@ export const se_DisableTransitGatewayRouteTablePropagationCommand = async (
  */
 export const se_DisableVgwRoutePropagationCommand = async (
   input: DisableVgwRoutePropagationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10728,7 +10728,7 @@ export const se_DisableVgwRoutePropagationCommand = async (
  */
 export const se_DisableVpcClassicLinkCommand = async (
   input: DisableVpcClassicLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10745,7 +10745,7 @@ export const se_DisableVpcClassicLinkCommand = async (
  */
 export const se_DisableVpcClassicLinkDnsSupportCommand = async (
   input: DisableVpcClassicLinkDnsSupportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10762,7 +10762,7 @@ export const se_DisableVpcClassicLinkDnsSupportCommand = async (
  */
 export const se_DisassociateAddressCommand = async (
   input: DisassociateAddressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10779,7 +10779,7 @@ export const se_DisassociateAddressCommand = async (
  */
 export const se_DisassociateClientVpnTargetNetworkCommand = async (
   input: DisassociateClientVpnTargetNetworkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10796,7 +10796,7 @@ export const se_DisassociateClientVpnTargetNetworkCommand = async (
  */
 export const se_DisassociateEnclaveCertificateIamRoleCommand = async (
   input: DisassociateEnclaveCertificateIamRoleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10813,7 +10813,7 @@ export const se_DisassociateEnclaveCertificateIamRoleCommand = async (
  */
 export const se_DisassociateIamInstanceProfileCommand = async (
   input: DisassociateIamInstanceProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10830,7 +10830,7 @@ export const se_DisassociateIamInstanceProfileCommand = async (
  */
 export const se_DisassociateInstanceEventWindowCommand = async (
   input: DisassociateInstanceEventWindowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10847,7 +10847,7 @@ export const se_DisassociateInstanceEventWindowCommand = async (
  */
 export const se_DisassociateIpamByoasnCommand = async (
   input: DisassociateIpamByoasnCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10864,7 +10864,7 @@ export const se_DisassociateIpamByoasnCommand = async (
  */
 export const se_DisassociateIpamResourceDiscoveryCommand = async (
   input: DisassociateIpamResourceDiscoveryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10881,7 +10881,7 @@ export const se_DisassociateIpamResourceDiscoveryCommand = async (
  */
 export const se_DisassociateNatGatewayAddressCommand = async (
   input: DisassociateNatGatewayAddressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10898,7 +10898,7 @@ export const se_DisassociateNatGatewayAddressCommand = async (
  */
 export const se_DisassociateRouteTableCommand = async (
   input: DisassociateRouteTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10915,7 +10915,7 @@ export const se_DisassociateRouteTableCommand = async (
  */
 export const se_DisassociateSubnetCidrBlockCommand = async (
   input: DisassociateSubnetCidrBlockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10932,7 +10932,7 @@ export const se_DisassociateSubnetCidrBlockCommand = async (
  */
 export const se_DisassociateTransitGatewayMulticastDomainCommand = async (
   input: DisassociateTransitGatewayMulticastDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10949,7 +10949,7 @@ export const se_DisassociateTransitGatewayMulticastDomainCommand = async (
  */
 export const se_DisassociateTransitGatewayPolicyTableCommand = async (
   input: DisassociateTransitGatewayPolicyTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10966,7 +10966,7 @@ export const se_DisassociateTransitGatewayPolicyTableCommand = async (
  */
 export const se_DisassociateTransitGatewayRouteTableCommand = async (
   input: DisassociateTransitGatewayRouteTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -10983,7 +10983,7 @@ export const se_DisassociateTransitGatewayRouteTableCommand = async (
  */
 export const se_DisassociateTrunkInterfaceCommand = async (
   input: DisassociateTrunkInterfaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11000,7 +11000,7 @@ export const se_DisassociateTrunkInterfaceCommand = async (
  */
 export const se_DisassociateVpcCidrBlockCommand = async (
   input: DisassociateVpcCidrBlockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11017,7 +11017,7 @@ export const se_DisassociateVpcCidrBlockCommand = async (
  */
 export const se_EnableAddressTransferCommand = async (
   input: EnableAddressTransferCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11034,7 +11034,7 @@ export const se_EnableAddressTransferCommand = async (
  */
 export const se_EnableAwsNetworkPerformanceMetricSubscriptionCommand = async (
   input: EnableAwsNetworkPerformanceMetricSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11051,7 +11051,7 @@ export const se_EnableAwsNetworkPerformanceMetricSubscriptionCommand = async (
  */
 export const se_EnableEbsEncryptionByDefaultCommand = async (
   input: EnableEbsEncryptionByDefaultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11068,7 +11068,7 @@ export const se_EnableEbsEncryptionByDefaultCommand = async (
  */
 export const se_EnableFastLaunchCommand = async (
   input: EnableFastLaunchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11085,7 +11085,7 @@ export const se_EnableFastLaunchCommand = async (
  */
 export const se_EnableFastSnapshotRestoresCommand = async (
   input: EnableFastSnapshotRestoresCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11102,7 +11102,7 @@ export const se_EnableFastSnapshotRestoresCommand = async (
  */
 export const se_EnableImageCommand = async (
   input: EnableImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11119,7 +11119,7 @@ export const se_EnableImageCommand = async (
  */
 export const se_EnableImageBlockPublicAccessCommand = async (
   input: EnableImageBlockPublicAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11136,7 +11136,7 @@ export const se_EnableImageBlockPublicAccessCommand = async (
  */
 export const se_EnableImageDeprecationCommand = async (
   input: EnableImageDeprecationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11153,7 +11153,7 @@ export const se_EnableImageDeprecationCommand = async (
  */
 export const se_EnableImageDeregistrationProtectionCommand = async (
   input: EnableImageDeregistrationProtectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11170,7 +11170,7 @@ export const se_EnableImageDeregistrationProtectionCommand = async (
  */
 export const se_EnableIpamOrganizationAdminAccountCommand = async (
   input: EnableIpamOrganizationAdminAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11187,7 +11187,7 @@ export const se_EnableIpamOrganizationAdminAccountCommand = async (
  */
 export const se_EnableReachabilityAnalyzerOrganizationSharingCommand = async (
   input: EnableReachabilityAnalyzerOrganizationSharingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11204,7 +11204,7 @@ export const se_EnableReachabilityAnalyzerOrganizationSharingCommand = async (
  */
 export const se_EnableSerialConsoleAccessCommand = async (
   input: EnableSerialConsoleAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11221,7 +11221,7 @@ export const se_EnableSerialConsoleAccessCommand = async (
  */
 export const se_EnableSnapshotBlockPublicAccessCommand = async (
   input: EnableSnapshotBlockPublicAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11238,7 +11238,7 @@ export const se_EnableSnapshotBlockPublicAccessCommand = async (
  */
 export const se_EnableTransitGatewayRouteTablePropagationCommand = async (
   input: EnableTransitGatewayRouteTablePropagationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11255,7 +11255,7 @@ export const se_EnableTransitGatewayRouteTablePropagationCommand = async (
  */
 export const se_EnableVgwRoutePropagationCommand = async (
   input: EnableVgwRoutePropagationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11272,7 +11272,7 @@ export const se_EnableVgwRoutePropagationCommand = async (
  */
 export const se_EnableVolumeIOCommand = async (
   input: EnableVolumeIOCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11289,7 +11289,7 @@ export const se_EnableVolumeIOCommand = async (
  */
 export const se_EnableVpcClassicLinkCommand = async (
   input: EnableVpcClassicLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11306,7 +11306,7 @@ export const se_EnableVpcClassicLinkCommand = async (
  */
 export const se_EnableVpcClassicLinkDnsSupportCommand = async (
   input: EnableVpcClassicLinkDnsSupportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11323,7 +11323,7 @@ export const se_EnableVpcClassicLinkDnsSupportCommand = async (
  */
 export const se_ExportClientVpnClientCertificateRevocationListCommand = async (
   input: ExportClientVpnClientCertificateRevocationListCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11340,7 +11340,7 @@ export const se_ExportClientVpnClientCertificateRevocationListCommand = async (
  */
 export const se_ExportClientVpnClientConfigurationCommand = async (
   input: ExportClientVpnClientConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11357,7 +11357,7 @@ export const se_ExportClientVpnClientConfigurationCommand = async (
  */
 export const se_ExportImageCommand = async (
   input: ExportImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11374,7 +11374,7 @@ export const se_ExportImageCommand = async (
  */
 export const se_ExportTransitGatewayRoutesCommand = async (
   input: ExportTransitGatewayRoutesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11391,7 +11391,7 @@ export const se_ExportTransitGatewayRoutesCommand = async (
  */
 export const se_GetAssociatedEnclaveCertificateIamRolesCommand = async (
   input: GetAssociatedEnclaveCertificateIamRolesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11408,7 +11408,7 @@ export const se_GetAssociatedEnclaveCertificateIamRolesCommand = async (
  */
 export const se_GetAssociatedIpv6PoolCidrsCommand = async (
   input: GetAssociatedIpv6PoolCidrsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11425,7 +11425,7 @@ export const se_GetAssociatedIpv6PoolCidrsCommand = async (
  */
 export const se_GetAwsNetworkPerformanceDataCommand = async (
   input: GetAwsNetworkPerformanceDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11442,7 +11442,7 @@ export const se_GetAwsNetworkPerformanceDataCommand = async (
  */
 export const se_GetCapacityReservationUsageCommand = async (
   input: GetCapacityReservationUsageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11459,7 +11459,7 @@ export const se_GetCapacityReservationUsageCommand = async (
  */
 export const se_GetCoipPoolUsageCommand = async (
   input: GetCoipPoolUsageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11476,7 +11476,7 @@ export const se_GetCoipPoolUsageCommand = async (
  */
 export const se_GetConsoleOutputCommand = async (
   input: GetConsoleOutputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11493,7 +11493,7 @@ export const se_GetConsoleOutputCommand = async (
  */
 export const se_GetConsoleScreenshotCommand = async (
   input: GetConsoleScreenshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11510,7 +11510,7 @@ export const se_GetConsoleScreenshotCommand = async (
  */
 export const se_GetDefaultCreditSpecificationCommand = async (
   input: GetDefaultCreditSpecificationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11527,7 +11527,7 @@ export const se_GetDefaultCreditSpecificationCommand = async (
  */
 export const se_GetEbsDefaultKmsKeyIdCommand = async (
   input: GetEbsDefaultKmsKeyIdCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11544,7 +11544,7 @@ export const se_GetEbsDefaultKmsKeyIdCommand = async (
  */
 export const se_GetEbsEncryptionByDefaultCommand = async (
   input: GetEbsEncryptionByDefaultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11561,7 +11561,7 @@ export const se_GetEbsEncryptionByDefaultCommand = async (
  */
 export const se_GetFlowLogsIntegrationTemplateCommand = async (
   input: GetFlowLogsIntegrationTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11578,7 +11578,7 @@ export const se_GetFlowLogsIntegrationTemplateCommand = async (
  */
 export const se_GetGroupsForCapacityReservationCommand = async (
   input: GetGroupsForCapacityReservationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11595,7 +11595,7 @@ export const se_GetGroupsForCapacityReservationCommand = async (
  */
 export const se_GetHostReservationPurchasePreviewCommand = async (
   input: GetHostReservationPurchasePreviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11612,7 +11612,7 @@ export const se_GetHostReservationPurchasePreviewCommand = async (
  */
 export const se_GetImageBlockPublicAccessStateCommand = async (
   input: GetImageBlockPublicAccessStateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11629,7 +11629,7 @@ export const se_GetImageBlockPublicAccessStateCommand = async (
  */
 export const se_GetInstanceMetadataDefaultsCommand = async (
   input: GetInstanceMetadataDefaultsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11646,7 +11646,7 @@ export const se_GetInstanceMetadataDefaultsCommand = async (
  */
 export const se_GetInstanceTpmEkPubCommand = async (
   input: GetInstanceTpmEkPubCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11663,7 +11663,7 @@ export const se_GetInstanceTpmEkPubCommand = async (
  */
 export const se_GetInstanceTypesFromInstanceRequirementsCommand = async (
   input: GetInstanceTypesFromInstanceRequirementsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11680,7 +11680,7 @@ export const se_GetInstanceTypesFromInstanceRequirementsCommand = async (
  */
 export const se_GetInstanceUefiDataCommand = async (
   input: GetInstanceUefiDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11697,7 +11697,7 @@ export const se_GetInstanceUefiDataCommand = async (
  */
 export const se_GetIpamAddressHistoryCommand = async (
   input: GetIpamAddressHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11714,7 +11714,7 @@ export const se_GetIpamAddressHistoryCommand = async (
  */
 export const se_GetIpamDiscoveredAccountsCommand = async (
   input: GetIpamDiscoveredAccountsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11731,7 +11731,7 @@ export const se_GetIpamDiscoveredAccountsCommand = async (
  */
 export const se_GetIpamDiscoveredPublicAddressesCommand = async (
   input: GetIpamDiscoveredPublicAddressesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11748,7 +11748,7 @@ export const se_GetIpamDiscoveredPublicAddressesCommand = async (
  */
 export const se_GetIpamDiscoveredResourceCidrsCommand = async (
   input: GetIpamDiscoveredResourceCidrsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11765,7 +11765,7 @@ export const se_GetIpamDiscoveredResourceCidrsCommand = async (
  */
 export const se_GetIpamPoolAllocationsCommand = async (
   input: GetIpamPoolAllocationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11782,7 +11782,7 @@ export const se_GetIpamPoolAllocationsCommand = async (
  */
 export const se_GetIpamPoolCidrsCommand = async (
   input: GetIpamPoolCidrsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11799,7 +11799,7 @@ export const se_GetIpamPoolCidrsCommand = async (
  */
 export const se_GetIpamResourceCidrsCommand = async (
   input: GetIpamResourceCidrsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11816,7 +11816,7 @@ export const se_GetIpamResourceCidrsCommand = async (
  */
 export const se_GetLaunchTemplateDataCommand = async (
   input: GetLaunchTemplateDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11833,7 +11833,7 @@ export const se_GetLaunchTemplateDataCommand = async (
  */
 export const se_GetManagedPrefixListAssociationsCommand = async (
   input: GetManagedPrefixListAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11850,7 +11850,7 @@ export const se_GetManagedPrefixListAssociationsCommand = async (
  */
 export const se_GetManagedPrefixListEntriesCommand = async (
   input: GetManagedPrefixListEntriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11867,7 +11867,7 @@ export const se_GetManagedPrefixListEntriesCommand = async (
  */
 export const se_GetNetworkInsightsAccessScopeAnalysisFindingsCommand = async (
   input: GetNetworkInsightsAccessScopeAnalysisFindingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11884,7 +11884,7 @@ export const se_GetNetworkInsightsAccessScopeAnalysisFindingsCommand = async (
  */
 export const se_GetNetworkInsightsAccessScopeContentCommand = async (
   input: GetNetworkInsightsAccessScopeContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11901,7 +11901,7 @@ export const se_GetNetworkInsightsAccessScopeContentCommand = async (
  */
 export const se_GetPasswordDataCommand = async (
   input: GetPasswordDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11918,7 +11918,7 @@ export const se_GetPasswordDataCommand = async (
  */
 export const se_GetReservedInstancesExchangeQuoteCommand = async (
   input: GetReservedInstancesExchangeQuoteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11935,7 +11935,7 @@ export const se_GetReservedInstancesExchangeQuoteCommand = async (
  */
 export const se_GetSecurityGroupsForVpcCommand = async (
   input: GetSecurityGroupsForVpcCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11952,7 +11952,7 @@ export const se_GetSecurityGroupsForVpcCommand = async (
  */
 export const se_GetSerialConsoleAccessStatusCommand = async (
   input: GetSerialConsoleAccessStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11969,7 +11969,7 @@ export const se_GetSerialConsoleAccessStatusCommand = async (
  */
 export const se_GetSnapshotBlockPublicAccessStateCommand = async (
   input: GetSnapshotBlockPublicAccessStateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -11986,7 +11986,7 @@ export const se_GetSnapshotBlockPublicAccessStateCommand = async (
  */
 export const se_GetSpotPlacementScoresCommand = async (
   input: GetSpotPlacementScoresCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12003,7 +12003,7 @@ export const se_GetSpotPlacementScoresCommand = async (
  */
 export const se_GetSubnetCidrReservationsCommand = async (
   input: GetSubnetCidrReservationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12020,7 +12020,7 @@ export const se_GetSubnetCidrReservationsCommand = async (
  */
 export const se_GetTransitGatewayAttachmentPropagationsCommand = async (
   input: GetTransitGatewayAttachmentPropagationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12037,7 +12037,7 @@ export const se_GetTransitGatewayAttachmentPropagationsCommand = async (
  */
 export const se_GetTransitGatewayMulticastDomainAssociationsCommand = async (
   input: GetTransitGatewayMulticastDomainAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12054,7 +12054,7 @@ export const se_GetTransitGatewayMulticastDomainAssociationsCommand = async (
  */
 export const se_GetTransitGatewayPolicyTableAssociationsCommand = async (
   input: GetTransitGatewayPolicyTableAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12071,7 +12071,7 @@ export const se_GetTransitGatewayPolicyTableAssociationsCommand = async (
  */
 export const se_GetTransitGatewayPolicyTableEntriesCommand = async (
   input: GetTransitGatewayPolicyTableEntriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12088,7 +12088,7 @@ export const se_GetTransitGatewayPolicyTableEntriesCommand = async (
  */
 export const se_GetTransitGatewayPrefixListReferencesCommand = async (
   input: GetTransitGatewayPrefixListReferencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12105,7 +12105,7 @@ export const se_GetTransitGatewayPrefixListReferencesCommand = async (
  */
 export const se_GetTransitGatewayRouteTableAssociationsCommand = async (
   input: GetTransitGatewayRouteTableAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12122,7 +12122,7 @@ export const se_GetTransitGatewayRouteTableAssociationsCommand = async (
  */
 export const se_GetTransitGatewayRouteTablePropagationsCommand = async (
   input: GetTransitGatewayRouteTablePropagationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12139,7 +12139,7 @@ export const se_GetTransitGatewayRouteTablePropagationsCommand = async (
  */
 export const se_GetVerifiedAccessEndpointPolicyCommand = async (
   input: GetVerifiedAccessEndpointPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12156,7 +12156,7 @@ export const se_GetVerifiedAccessEndpointPolicyCommand = async (
  */
 export const se_GetVerifiedAccessGroupPolicyCommand = async (
   input: GetVerifiedAccessGroupPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12173,7 +12173,7 @@ export const se_GetVerifiedAccessGroupPolicyCommand = async (
  */
 export const se_GetVpnConnectionDeviceSampleConfigurationCommand = async (
   input: GetVpnConnectionDeviceSampleConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12190,7 +12190,7 @@ export const se_GetVpnConnectionDeviceSampleConfigurationCommand = async (
  */
 export const se_GetVpnConnectionDeviceTypesCommand = async (
   input: GetVpnConnectionDeviceTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12207,7 +12207,7 @@ export const se_GetVpnConnectionDeviceTypesCommand = async (
  */
 export const se_GetVpnTunnelReplacementStatusCommand = async (
   input: GetVpnTunnelReplacementStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12224,7 +12224,7 @@ export const se_GetVpnTunnelReplacementStatusCommand = async (
  */
 export const se_ImportClientVpnClientCertificateRevocationListCommand = async (
   input: ImportClientVpnClientCertificateRevocationListCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12241,7 +12241,7 @@ export const se_ImportClientVpnClientCertificateRevocationListCommand = async (
  */
 export const se_ImportImageCommand = async (
   input: ImportImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12258,7 +12258,7 @@ export const se_ImportImageCommand = async (
  */
 export const se_ImportInstanceCommand = async (
   input: ImportInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12275,7 +12275,7 @@ export const se_ImportInstanceCommand = async (
  */
 export const se_ImportKeyPairCommand = async (
   input: ImportKeyPairCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12292,7 +12292,7 @@ export const se_ImportKeyPairCommand = async (
  */
 export const se_ImportSnapshotCommand = async (
   input: ImportSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12309,7 +12309,7 @@ export const se_ImportSnapshotCommand = async (
  */
 export const se_ImportVolumeCommand = async (
   input: ImportVolumeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12326,7 +12326,7 @@ export const se_ImportVolumeCommand = async (
  */
 export const se_ListImagesInRecycleBinCommand = async (
   input: ListImagesInRecycleBinCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12343,7 +12343,7 @@ export const se_ListImagesInRecycleBinCommand = async (
  */
 export const se_ListSnapshotsInRecycleBinCommand = async (
   input: ListSnapshotsInRecycleBinCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12360,7 +12360,7 @@ export const se_ListSnapshotsInRecycleBinCommand = async (
  */
 export const se_LockSnapshotCommand = async (
   input: LockSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12377,7 +12377,7 @@ export const se_LockSnapshotCommand = async (
  */
 export const se_ModifyAddressAttributeCommand = async (
   input: ModifyAddressAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12394,7 +12394,7 @@ export const se_ModifyAddressAttributeCommand = async (
  */
 export const se_ModifyAvailabilityZoneGroupCommand = async (
   input: ModifyAvailabilityZoneGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12411,7 +12411,7 @@ export const se_ModifyAvailabilityZoneGroupCommand = async (
  */
 export const se_ModifyCapacityReservationCommand = async (
   input: ModifyCapacityReservationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12428,7 +12428,7 @@ export const se_ModifyCapacityReservationCommand = async (
  */
 export const se_ModifyCapacityReservationFleetCommand = async (
   input: ModifyCapacityReservationFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12445,7 +12445,7 @@ export const se_ModifyCapacityReservationFleetCommand = async (
  */
 export const se_ModifyClientVpnEndpointCommand = async (
   input: ModifyClientVpnEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12462,7 +12462,7 @@ export const se_ModifyClientVpnEndpointCommand = async (
  */
 export const se_ModifyDefaultCreditSpecificationCommand = async (
   input: ModifyDefaultCreditSpecificationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12479,7 +12479,7 @@ export const se_ModifyDefaultCreditSpecificationCommand = async (
  */
 export const se_ModifyEbsDefaultKmsKeyIdCommand = async (
   input: ModifyEbsDefaultKmsKeyIdCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12496,7 +12496,7 @@ export const se_ModifyEbsDefaultKmsKeyIdCommand = async (
  */
 export const se_ModifyFleetCommand = async (
   input: ModifyFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12513,7 +12513,7 @@ export const se_ModifyFleetCommand = async (
  */
 export const se_ModifyFpgaImageAttributeCommand = async (
   input: ModifyFpgaImageAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12530,7 +12530,7 @@ export const se_ModifyFpgaImageAttributeCommand = async (
  */
 export const se_ModifyHostsCommand = async (
   input: ModifyHostsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12547,7 +12547,7 @@ export const se_ModifyHostsCommand = async (
  */
 export const se_ModifyIdentityIdFormatCommand = async (
   input: ModifyIdentityIdFormatCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12564,7 +12564,7 @@ export const se_ModifyIdentityIdFormatCommand = async (
  */
 export const se_ModifyIdFormatCommand = async (
   input: ModifyIdFormatCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12581,7 +12581,7 @@ export const se_ModifyIdFormatCommand = async (
  */
 export const se_ModifyImageAttributeCommand = async (
   input: ModifyImageAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12598,7 +12598,7 @@ export const se_ModifyImageAttributeCommand = async (
  */
 export const se_ModifyInstanceAttributeCommand = async (
   input: ModifyInstanceAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12615,7 +12615,7 @@ export const se_ModifyInstanceAttributeCommand = async (
  */
 export const se_ModifyInstanceCapacityReservationAttributesCommand = async (
   input: ModifyInstanceCapacityReservationAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12632,7 +12632,7 @@ export const se_ModifyInstanceCapacityReservationAttributesCommand = async (
  */
 export const se_ModifyInstanceCreditSpecificationCommand = async (
   input: ModifyInstanceCreditSpecificationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12649,7 +12649,7 @@ export const se_ModifyInstanceCreditSpecificationCommand = async (
  */
 export const se_ModifyInstanceEventStartTimeCommand = async (
   input: ModifyInstanceEventStartTimeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12666,7 +12666,7 @@ export const se_ModifyInstanceEventStartTimeCommand = async (
  */
 export const se_ModifyInstanceEventWindowCommand = async (
   input: ModifyInstanceEventWindowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12683,7 +12683,7 @@ export const se_ModifyInstanceEventWindowCommand = async (
  */
 export const se_ModifyInstanceMaintenanceOptionsCommand = async (
   input: ModifyInstanceMaintenanceOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12700,7 +12700,7 @@ export const se_ModifyInstanceMaintenanceOptionsCommand = async (
  */
 export const se_ModifyInstanceMetadataDefaultsCommand = async (
   input: ModifyInstanceMetadataDefaultsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12717,7 +12717,7 @@ export const se_ModifyInstanceMetadataDefaultsCommand = async (
  */
 export const se_ModifyInstanceMetadataOptionsCommand = async (
   input: ModifyInstanceMetadataOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12734,7 +12734,7 @@ export const se_ModifyInstanceMetadataOptionsCommand = async (
  */
 export const se_ModifyInstancePlacementCommand = async (
   input: ModifyInstancePlacementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12751,7 +12751,7 @@ export const se_ModifyInstancePlacementCommand = async (
  */
 export const se_ModifyIpamCommand = async (
   input: ModifyIpamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12768,7 +12768,7 @@ export const se_ModifyIpamCommand = async (
  */
 export const se_ModifyIpamPoolCommand = async (
   input: ModifyIpamPoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12785,7 +12785,7 @@ export const se_ModifyIpamPoolCommand = async (
  */
 export const se_ModifyIpamResourceCidrCommand = async (
   input: ModifyIpamResourceCidrCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12802,7 +12802,7 @@ export const se_ModifyIpamResourceCidrCommand = async (
  */
 export const se_ModifyIpamResourceDiscoveryCommand = async (
   input: ModifyIpamResourceDiscoveryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12819,7 +12819,7 @@ export const se_ModifyIpamResourceDiscoveryCommand = async (
  */
 export const se_ModifyIpamScopeCommand = async (
   input: ModifyIpamScopeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12836,7 +12836,7 @@ export const se_ModifyIpamScopeCommand = async (
  */
 export const se_ModifyLaunchTemplateCommand = async (
   input: ModifyLaunchTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12853,7 +12853,7 @@ export const se_ModifyLaunchTemplateCommand = async (
  */
 export const se_ModifyLocalGatewayRouteCommand = async (
   input: ModifyLocalGatewayRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12870,7 +12870,7 @@ export const se_ModifyLocalGatewayRouteCommand = async (
  */
 export const se_ModifyManagedPrefixListCommand = async (
   input: ModifyManagedPrefixListCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12887,7 +12887,7 @@ export const se_ModifyManagedPrefixListCommand = async (
  */
 export const se_ModifyNetworkInterfaceAttributeCommand = async (
   input: ModifyNetworkInterfaceAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12904,7 +12904,7 @@ export const se_ModifyNetworkInterfaceAttributeCommand = async (
  */
 export const se_ModifyPrivateDnsNameOptionsCommand = async (
   input: ModifyPrivateDnsNameOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12921,7 +12921,7 @@ export const se_ModifyPrivateDnsNameOptionsCommand = async (
  */
 export const se_ModifyReservedInstancesCommand = async (
   input: ModifyReservedInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12938,7 +12938,7 @@ export const se_ModifyReservedInstancesCommand = async (
  */
 export const se_ModifySecurityGroupRulesCommand = async (
   input: ModifySecurityGroupRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12955,7 +12955,7 @@ export const se_ModifySecurityGroupRulesCommand = async (
  */
 export const se_ModifySnapshotAttributeCommand = async (
   input: ModifySnapshotAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12972,7 +12972,7 @@ export const se_ModifySnapshotAttributeCommand = async (
  */
 export const se_ModifySnapshotTierCommand = async (
   input: ModifySnapshotTierCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -12989,7 +12989,7 @@ export const se_ModifySnapshotTierCommand = async (
  */
 export const se_ModifySpotFleetRequestCommand = async (
   input: ModifySpotFleetRequestCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13006,7 +13006,7 @@ export const se_ModifySpotFleetRequestCommand = async (
  */
 export const se_ModifySubnetAttributeCommand = async (
   input: ModifySubnetAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13023,7 +13023,7 @@ export const se_ModifySubnetAttributeCommand = async (
  */
 export const se_ModifyTrafficMirrorFilterNetworkServicesCommand = async (
   input: ModifyTrafficMirrorFilterNetworkServicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13040,7 +13040,7 @@ export const se_ModifyTrafficMirrorFilterNetworkServicesCommand = async (
  */
 export const se_ModifyTrafficMirrorFilterRuleCommand = async (
   input: ModifyTrafficMirrorFilterRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13057,7 +13057,7 @@ export const se_ModifyTrafficMirrorFilterRuleCommand = async (
  */
 export const se_ModifyTrafficMirrorSessionCommand = async (
   input: ModifyTrafficMirrorSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13074,7 +13074,7 @@ export const se_ModifyTrafficMirrorSessionCommand = async (
  */
 export const se_ModifyTransitGatewayCommand = async (
   input: ModifyTransitGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13091,7 +13091,7 @@ export const se_ModifyTransitGatewayCommand = async (
  */
 export const se_ModifyTransitGatewayPrefixListReferenceCommand = async (
   input: ModifyTransitGatewayPrefixListReferenceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13108,7 +13108,7 @@ export const se_ModifyTransitGatewayPrefixListReferenceCommand = async (
  */
 export const se_ModifyTransitGatewayVpcAttachmentCommand = async (
   input: ModifyTransitGatewayVpcAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13125,7 +13125,7 @@ export const se_ModifyTransitGatewayVpcAttachmentCommand = async (
  */
 export const se_ModifyVerifiedAccessEndpointCommand = async (
   input: ModifyVerifiedAccessEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13142,7 +13142,7 @@ export const se_ModifyVerifiedAccessEndpointCommand = async (
  */
 export const se_ModifyVerifiedAccessEndpointPolicyCommand = async (
   input: ModifyVerifiedAccessEndpointPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13159,7 +13159,7 @@ export const se_ModifyVerifiedAccessEndpointPolicyCommand = async (
  */
 export const se_ModifyVerifiedAccessGroupCommand = async (
   input: ModifyVerifiedAccessGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13176,7 +13176,7 @@ export const se_ModifyVerifiedAccessGroupCommand = async (
  */
 export const se_ModifyVerifiedAccessGroupPolicyCommand = async (
   input: ModifyVerifiedAccessGroupPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13193,7 +13193,7 @@ export const se_ModifyVerifiedAccessGroupPolicyCommand = async (
  */
 export const se_ModifyVerifiedAccessInstanceCommand = async (
   input: ModifyVerifiedAccessInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13210,7 +13210,7 @@ export const se_ModifyVerifiedAccessInstanceCommand = async (
  */
 export const se_ModifyVerifiedAccessInstanceLoggingConfigurationCommand = async (
   input: ModifyVerifiedAccessInstanceLoggingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13227,7 +13227,7 @@ export const se_ModifyVerifiedAccessInstanceLoggingConfigurationCommand = async 
  */
 export const se_ModifyVerifiedAccessTrustProviderCommand = async (
   input: ModifyVerifiedAccessTrustProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13244,7 +13244,7 @@ export const se_ModifyVerifiedAccessTrustProviderCommand = async (
  */
 export const se_ModifyVolumeCommand = async (
   input: ModifyVolumeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13261,7 +13261,7 @@ export const se_ModifyVolumeCommand = async (
  */
 export const se_ModifyVolumeAttributeCommand = async (
   input: ModifyVolumeAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13278,7 +13278,7 @@ export const se_ModifyVolumeAttributeCommand = async (
  */
 export const se_ModifyVpcAttributeCommand = async (
   input: ModifyVpcAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13295,7 +13295,7 @@ export const se_ModifyVpcAttributeCommand = async (
  */
 export const se_ModifyVpcEndpointCommand = async (
   input: ModifyVpcEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13312,7 +13312,7 @@ export const se_ModifyVpcEndpointCommand = async (
  */
 export const se_ModifyVpcEndpointConnectionNotificationCommand = async (
   input: ModifyVpcEndpointConnectionNotificationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13329,7 +13329,7 @@ export const se_ModifyVpcEndpointConnectionNotificationCommand = async (
  */
 export const se_ModifyVpcEndpointServiceConfigurationCommand = async (
   input: ModifyVpcEndpointServiceConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13346,7 +13346,7 @@ export const se_ModifyVpcEndpointServiceConfigurationCommand = async (
  */
 export const se_ModifyVpcEndpointServicePayerResponsibilityCommand = async (
   input: ModifyVpcEndpointServicePayerResponsibilityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13363,7 +13363,7 @@ export const se_ModifyVpcEndpointServicePayerResponsibilityCommand = async (
  */
 export const se_ModifyVpcEndpointServicePermissionsCommand = async (
   input: ModifyVpcEndpointServicePermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13380,7 +13380,7 @@ export const se_ModifyVpcEndpointServicePermissionsCommand = async (
  */
 export const se_ModifyVpcPeeringConnectionOptionsCommand = async (
   input: ModifyVpcPeeringConnectionOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13397,7 +13397,7 @@ export const se_ModifyVpcPeeringConnectionOptionsCommand = async (
  */
 export const se_ModifyVpcTenancyCommand = async (
   input: ModifyVpcTenancyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13414,7 +13414,7 @@ export const se_ModifyVpcTenancyCommand = async (
  */
 export const se_ModifyVpnConnectionCommand = async (
   input: ModifyVpnConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13431,7 +13431,7 @@ export const se_ModifyVpnConnectionCommand = async (
  */
 export const se_ModifyVpnConnectionOptionsCommand = async (
   input: ModifyVpnConnectionOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13448,7 +13448,7 @@ export const se_ModifyVpnConnectionOptionsCommand = async (
  */
 export const se_ModifyVpnTunnelCertificateCommand = async (
   input: ModifyVpnTunnelCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13465,7 +13465,7 @@ export const se_ModifyVpnTunnelCertificateCommand = async (
  */
 export const se_ModifyVpnTunnelOptionsCommand = async (
   input: ModifyVpnTunnelOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13482,7 +13482,7 @@ export const se_ModifyVpnTunnelOptionsCommand = async (
  */
 export const se_MonitorInstancesCommand = async (
   input: MonitorInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13499,7 +13499,7 @@ export const se_MonitorInstancesCommand = async (
  */
 export const se_MoveAddressToVpcCommand = async (
   input: MoveAddressToVpcCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13516,7 +13516,7 @@ export const se_MoveAddressToVpcCommand = async (
  */
 export const se_MoveByoipCidrToIpamCommand = async (
   input: MoveByoipCidrToIpamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13533,7 +13533,7 @@ export const se_MoveByoipCidrToIpamCommand = async (
  */
 export const se_ProvisionByoipCidrCommand = async (
   input: ProvisionByoipCidrCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13550,7 +13550,7 @@ export const se_ProvisionByoipCidrCommand = async (
  */
 export const se_ProvisionIpamByoasnCommand = async (
   input: ProvisionIpamByoasnCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13567,7 +13567,7 @@ export const se_ProvisionIpamByoasnCommand = async (
  */
 export const se_ProvisionIpamPoolCidrCommand = async (
   input: ProvisionIpamPoolCidrCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13584,7 +13584,7 @@ export const se_ProvisionIpamPoolCidrCommand = async (
  */
 export const se_ProvisionPublicIpv4PoolCidrCommand = async (
   input: ProvisionPublicIpv4PoolCidrCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13601,7 +13601,7 @@ export const se_ProvisionPublicIpv4PoolCidrCommand = async (
  */
 export const se_PurchaseCapacityBlockCommand = async (
   input: PurchaseCapacityBlockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13618,7 +13618,7 @@ export const se_PurchaseCapacityBlockCommand = async (
  */
 export const se_PurchaseHostReservationCommand = async (
   input: PurchaseHostReservationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13635,7 +13635,7 @@ export const se_PurchaseHostReservationCommand = async (
  */
 export const se_PurchaseReservedInstancesOfferingCommand = async (
   input: PurchaseReservedInstancesOfferingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13652,7 +13652,7 @@ export const se_PurchaseReservedInstancesOfferingCommand = async (
  */
 export const se_PurchaseScheduledInstancesCommand = async (
   input: PurchaseScheduledInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13669,7 +13669,7 @@ export const se_PurchaseScheduledInstancesCommand = async (
  */
 export const se_RebootInstancesCommand = async (
   input: RebootInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13686,7 +13686,7 @@ export const se_RebootInstancesCommand = async (
  */
 export const se_RegisterImageCommand = async (
   input: RegisterImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13703,7 +13703,7 @@ export const se_RegisterImageCommand = async (
  */
 export const se_RegisterInstanceEventNotificationAttributesCommand = async (
   input: RegisterInstanceEventNotificationAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13720,7 +13720,7 @@ export const se_RegisterInstanceEventNotificationAttributesCommand = async (
  */
 export const se_RegisterTransitGatewayMulticastGroupMembersCommand = async (
   input: RegisterTransitGatewayMulticastGroupMembersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13737,7 +13737,7 @@ export const se_RegisterTransitGatewayMulticastGroupMembersCommand = async (
  */
 export const se_RegisterTransitGatewayMulticastGroupSourcesCommand = async (
   input: RegisterTransitGatewayMulticastGroupSourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13754,7 +13754,7 @@ export const se_RegisterTransitGatewayMulticastGroupSourcesCommand = async (
  */
 export const se_RejectTransitGatewayMulticastDomainAssociationsCommand = async (
   input: RejectTransitGatewayMulticastDomainAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13771,7 +13771,7 @@ export const se_RejectTransitGatewayMulticastDomainAssociationsCommand = async (
  */
 export const se_RejectTransitGatewayPeeringAttachmentCommand = async (
   input: RejectTransitGatewayPeeringAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13788,7 +13788,7 @@ export const se_RejectTransitGatewayPeeringAttachmentCommand = async (
  */
 export const se_RejectTransitGatewayVpcAttachmentCommand = async (
   input: RejectTransitGatewayVpcAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13805,7 +13805,7 @@ export const se_RejectTransitGatewayVpcAttachmentCommand = async (
  */
 export const se_RejectVpcEndpointConnectionsCommand = async (
   input: RejectVpcEndpointConnectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13822,7 +13822,7 @@ export const se_RejectVpcEndpointConnectionsCommand = async (
  */
 export const se_RejectVpcPeeringConnectionCommand = async (
   input: RejectVpcPeeringConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13839,7 +13839,7 @@ export const se_RejectVpcPeeringConnectionCommand = async (
  */
 export const se_ReleaseAddressCommand = async (
   input: ReleaseAddressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13856,7 +13856,7 @@ export const se_ReleaseAddressCommand = async (
  */
 export const se_ReleaseHostsCommand = async (
   input: ReleaseHostsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13873,7 +13873,7 @@ export const se_ReleaseHostsCommand = async (
  */
 export const se_ReleaseIpamPoolAllocationCommand = async (
   input: ReleaseIpamPoolAllocationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13890,7 +13890,7 @@ export const se_ReleaseIpamPoolAllocationCommand = async (
  */
 export const se_ReplaceIamInstanceProfileAssociationCommand = async (
   input: ReplaceIamInstanceProfileAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13907,7 +13907,7 @@ export const se_ReplaceIamInstanceProfileAssociationCommand = async (
  */
 export const se_ReplaceNetworkAclAssociationCommand = async (
   input: ReplaceNetworkAclAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13924,7 +13924,7 @@ export const se_ReplaceNetworkAclAssociationCommand = async (
  */
 export const se_ReplaceNetworkAclEntryCommand = async (
   input: ReplaceNetworkAclEntryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13941,7 +13941,7 @@ export const se_ReplaceNetworkAclEntryCommand = async (
  */
 export const se_ReplaceRouteCommand = async (
   input: ReplaceRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13958,7 +13958,7 @@ export const se_ReplaceRouteCommand = async (
  */
 export const se_ReplaceRouteTableAssociationCommand = async (
   input: ReplaceRouteTableAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13975,7 +13975,7 @@ export const se_ReplaceRouteTableAssociationCommand = async (
  */
 export const se_ReplaceTransitGatewayRouteCommand = async (
   input: ReplaceTransitGatewayRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -13992,7 +13992,7 @@ export const se_ReplaceTransitGatewayRouteCommand = async (
  */
 export const se_ReplaceVpnTunnelCommand = async (
   input: ReplaceVpnTunnelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14009,7 +14009,7 @@ export const se_ReplaceVpnTunnelCommand = async (
  */
 export const se_ReportInstanceStatusCommand = async (
   input: ReportInstanceStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14026,7 +14026,7 @@ export const se_ReportInstanceStatusCommand = async (
  */
 export const se_RequestSpotFleetCommand = async (
   input: RequestSpotFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14043,7 +14043,7 @@ export const se_RequestSpotFleetCommand = async (
  */
 export const se_RequestSpotInstancesCommand = async (
   input: RequestSpotInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14060,7 +14060,7 @@ export const se_RequestSpotInstancesCommand = async (
  */
 export const se_ResetAddressAttributeCommand = async (
   input: ResetAddressAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14077,7 +14077,7 @@ export const se_ResetAddressAttributeCommand = async (
  */
 export const se_ResetEbsDefaultKmsKeyIdCommand = async (
   input: ResetEbsDefaultKmsKeyIdCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14094,7 +14094,7 @@ export const se_ResetEbsDefaultKmsKeyIdCommand = async (
  */
 export const se_ResetFpgaImageAttributeCommand = async (
   input: ResetFpgaImageAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14111,7 +14111,7 @@ export const se_ResetFpgaImageAttributeCommand = async (
  */
 export const se_ResetImageAttributeCommand = async (
   input: ResetImageAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14128,7 +14128,7 @@ export const se_ResetImageAttributeCommand = async (
  */
 export const se_ResetInstanceAttributeCommand = async (
   input: ResetInstanceAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14145,7 +14145,7 @@ export const se_ResetInstanceAttributeCommand = async (
  */
 export const se_ResetNetworkInterfaceAttributeCommand = async (
   input: ResetNetworkInterfaceAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14162,7 +14162,7 @@ export const se_ResetNetworkInterfaceAttributeCommand = async (
  */
 export const se_ResetSnapshotAttributeCommand = async (
   input: ResetSnapshotAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14179,7 +14179,7 @@ export const se_ResetSnapshotAttributeCommand = async (
  */
 export const se_RestoreAddressToClassicCommand = async (
   input: RestoreAddressToClassicCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14196,7 +14196,7 @@ export const se_RestoreAddressToClassicCommand = async (
  */
 export const se_RestoreImageFromRecycleBinCommand = async (
   input: RestoreImageFromRecycleBinCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14213,7 +14213,7 @@ export const se_RestoreImageFromRecycleBinCommand = async (
  */
 export const se_RestoreManagedPrefixListVersionCommand = async (
   input: RestoreManagedPrefixListVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14230,7 +14230,7 @@ export const se_RestoreManagedPrefixListVersionCommand = async (
  */
 export const se_RestoreSnapshotFromRecycleBinCommand = async (
   input: RestoreSnapshotFromRecycleBinCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14247,7 +14247,7 @@ export const se_RestoreSnapshotFromRecycleBinCommand = async (
  */
 export const se_RestoreSnapshotTierCommand = async (
   input: RestoreSnapshotTierCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14264,7 +14264,7 @@ export const se_RestoreSnapshotTierCommand = async (
  */
 export const se_RevokeClientVpnIngressCommand = async (
   input: RevokeClientVpnIngressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14281,7 +14281,7 @@ export const se_RevokeClientVpnIngressCommand = async (
  */
 export const se_RevokeSecurityGroupEgressCommand = async (
   input: RevokeSecurityGroupEgressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14298,7 +14298,7 @@ export const se_RevokeSecurityGroupEgressCommand = async (
  */
 export const se_RevokeSecurityGroupIngressCommand = async (
   input: RevokeSecurityGroupIngressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14315,7 +14315,7 @@ export const se_RevokeSecurityGroupIngressCommand = async (
  */
 export const se_RunInstancesCommand = async (
   input: RunInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14332,7 +14332,7 @@ export const se_RunInstancesCommand = async (
  */
 export const se_RunScheduledInstancesCommand = async (
   input: RunScheduledInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14349,7 +14349,7 @@ export const se_RunScheduledInstancesCommand = async (
  */
 export const se_SearchLocalGatewayRoutesCommand = async (
   input: SearchLocalGatewayRoutesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14366,7 +14366,7 @@ export const se_SearchLocalGatewayRoutesCommand = async (
  */
 export const se_SearchTransitGatewayMulticastGroupsCommand = async (
   input: SearchTransitGatewayMulticastGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14383,7 +14383,7 @@ export const se_SearchTransitGatewayMulticastGroupsCommand = async (
  */
 export const se_SearchTransitGatewayRoutesCommand = async (
   input: SearchTransitGatewayRoutesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14400,7 +14400,7 @@ export const se_SearchTransitGatewayRoutesCommand = async (
  */
 export const se_SendDiagnosticInterruptCommand = async (
   input: SendDiagnosticInterruptCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14417,7 +14417,7 @@ export const se_SendDiagnosticInterruptCommand = async (
  */
 export const se_StartInstancesCommand = async (
   input: StartInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14434,7 +14434,7 @@ export const se_StartInstancesCommand = async (
  */
 export const se_StartNetworkInsightsAccessScopeAnalysisCommand = async (
   input: StartNetworkInsightsAccessScopeAnalysisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14451,7 +14451,7 @@ export const se_StartNetworkInsightsAccessScopeAnalysisCommand = async (
  */
 export const se_StartNetworkInsightsAnalysisCommand = async (
   input: StartNetworkInsightsAnalysisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14468,7 +14468,7 @@ export const se_StartNetworkInsightsAnalysisCommand = async (
  */
 export const se_StartVpcEndpointServicePrivateDnsVerificationCommand = async (
   input: StartVpcEndpointServicePrivateDnsVerificationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14485,7 +14485,7 @@ export const se_StartVpcEndpointServicePrivateDnsVerificationCommand = async (
  */
 export const se_StopInstancesCommand = async (
   input: StopInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14502,7 +14502,7 @@ export const se_StopInstancesCommand = async (
  */
 export const se_TerminateClientVpnConnectionsCommand = async (
   input: TerminateClientVpnConnectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14519,7 +14519,7 @@ export const se_TerminateClientVpnConnectionsCommand = async (
  */
 export const se_TerminateInstancesCommand = async (
   input: TerminateInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14536,7 +14536,7 @@ export const se_TerminateInstancesCommand = async (
  */
 export const se_UnassignIpv6AddressesCommand = async (
   input: UnassignIpv6AddressesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14553,7 +14553,7 @@ export const se_UnassignIpv6AddressesCommand = async (
  */
 export const se_UnassignPrivateIpAddressesCommand = async (
   input: UnassignPrivateIpAddressesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14570,7 +14570,7 @@ export const se_UnassignPrivateIpAddressesCommand = async (
  */
 export const se_UnassignPrivateNatGatewayAddressCommand = async (
   input: UnassignPrivateNatGatewayAddressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14587,7 +14587,7 @@ export const se_UnassignPrivateNatGatewayAddressCommand = async (
  */
 export const se_UnlockSnapshotCommand = async (
   input: UnlockSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14604,7 +14604,7 @@ export const se_UnlockSnapshotCommand = async (
  */
 export const se_UnmonitorInstancesCommand = async (
   input: UnmonitorInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14621,7 +14621,7 @@ export const se_UnmonitorInstancesCommand = async (
  */
 export const se_UpdateSecurityGroupRuleDescriptionsEgressCommand = async (
   input: UpdateSecurityGroupRuleDescriptionsEgressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14638,7 +14638,7 @@ export const se_UpdateSecurityGroupRuleDescriptionsEgressCommand = async (
  */
 export const se_UpdateSecurityGroupRuleDescriptionsIngressCommand = async (
   input: UpdateSecurityGroupRuleDescriptionsIngressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14655,7 +14655,7 @@ export const se_UpdateSecurityGroupRuleDescriptionsIngressCommand = async (
  */
 export const se_WithdrawByoipCidrCommand = async (
   input: WithdrawByoipCidrCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -14672,7 +14672,7 @@ export const se_WithdrawByoipCidrCommand = async (
  */
 export const de_AcceptAddressTransferCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptAddressTransferCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -14692,7 +14692,7 @@ export const de_AcceptAddressTransferCommand = async (
  */
 export const de_AcceptReservedInstancesExchangeQuoteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptReservedInstancesExchangeQuoteCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -14712,7 +14712,7 @@ export const de_AcceptReservedInstancesExchangeQuoteCommand = async (
  */
 export const de_AcceptTransitGatewayMulticastDomainAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptTransitGatewayMulticastDomainAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -14732,7 +14732,7 @@ export const de_AcceptTransitGatewayMulticastDomainAssociationsCommand = async (
  */
 export const de_AcceptTransitGatewayPeeringAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptTransitGatewayPeeringAttachmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -14752,7 +14752,7 @@ export const de_AcceptTransitGatewayPeeringAttachmentCommand = async (
  */
 export const de_AcceptTransitGatewayVpcAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptTransitGatewayVpcAttachmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -14772,7 +14772,7 @@ export const de_AcceptTransitGatewayVpcAttachmentCommand = async (
  */
 export const de_AcceptVpcEndpointConnectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptVpcEndpointConnectionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -14792,7 +14792,7 @@ export const de_AcceptVpcEndpointConnectionsCommand = async (
  */
 export const de_AcceptVpcPeeringConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptVpcPeeringConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -14812,7 +14812,7 @@ export const de_AcceptVpcPeeringConnectionCommand = async (
  */
 export const de_AdvertiseByoipCidrCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AdvertiseByoipCidrCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -14832,7 +14832,7 @@ export const de_AdvertiseByoipCidrCommand = async (
  */
 export const de_AllocateAddressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AllocateAddressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -14852,7 +14852,7 @@ export const de_AllocateAddressCommand = async (
  */
 export const de_AllocateHostsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AllocateHostsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -14872,7 +14872,7 @@ export const de_AllocateHostsCommand = async (
  */
 export const de_AllocateIpamPoolCidrCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AllocateIpamPoolCidrCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -14892,7 +14892,7 @@ export const de_AllocateIpamPoolCidrCommand = async (
  */
 export const de_ApplySecurityGroupsToClientVpnTargetNetworkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApplySecurityGroupsToClientVpnTargetNetworkCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -14912,7 +14912,7 @@ export const de_ApplySecurityGroupsToClientVpnTargetNetworkCommand = async (
  */
 export const de_AssignIpv6AddressesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssignIpv6AddressesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -14932,7 +14932,7 @@ export const de_AssignIpv6AddressesCommand = async (
  */
 export const de_AssignPrivateIpAddressesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssignPrivateIpAddressesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -14952,7 +14952,7 @@ export const de_AssignPrivateIpAddressesCommand = async (
  */
 export const de_AssignPrivateNatGatewayAddressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssignPrivateNatGatewayAddressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -14972,7 +14972,7 @@ export const de_AssignPrivateNatGatewayAddressCommand = async (
  */
 export const de_AssociateAddressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateAddressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -14992,7 +14992,7 @@ export const de_AssociateAddressCommand = async (
  */
 export const de_AssociateClientVpnTargetNetworkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateClientVpnTargetNetworkCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15012,7 +15012,7 @@ export const de_AssociateClientVpnTargetNetworkCommand = async (
  */
 export const de_AssociateDhcpOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateDhcpOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15029,7 +15029,7 @@ export const de_AssociateDhcpOptionsCommand = async (
  */
 export const de_AssociateEnclaveCertificateIamRoleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateEnclaveCertificateIamRoleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15049,7 +15049,7 @@ export const de_AssociateEnclaveCertificateIamRoleCommand = async (
  */
 export const de_AssociateIamInstanceProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateIamInstanceProfileCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15069,7 +15069,7 @@ export const de_AssociateIamInstanceProfileCommand = async (
  */
 export const de_AssociateInstanceEventWindowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateInstanceEventWindowCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15089,7 +15089,7 @@ export const de_AssociateInstanceEventWindowCommand = async (
  */
 export const de_AssociateIpamByoasnCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateIpamByoasnCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15109,7 +15109,7 @@ export const de_AssociateIpamByoasnCommand = async (
  */
 export const de_AssociateIpamResourceDiscoveryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateIpamResourceDiscoveryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15129,7 +15129,7 @@ export const de_AssociateIpamResourceDiscoveryCommand = async (
  */
 export const de_AssociateNatGatewayAddressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateNatGatewayAddressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15149,7 +15149,7 @@ export const de_AssociateNatGatewayAddressCommand = async (
  */
 export const de_AssociateRouteTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateRouteTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15169,7 +15169,7 @@ export const de_AssociateRouteTableCommand = async (
  */
 export const de_AssociateSubnetCidrBlockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateSubnetCidrBlockCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15189,7 +15189,7 @@ export const de_AssociateSubnetCidrBlockCommand = async (
  */
 export const de_AssociateTransitGatewayMulticastDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateTransitGatewayMulticastDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15209,7 +15209,7 @@ export const de_AssociateTransitGatewayMulticastDomainCommand = async (
  */
 export const de_AssociateTransitGatewayPolicyTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateTransitGatewayPolicyTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15229,7 +15229,7 @@ export const de_AssociateTransitGatewayPolicyTableCommand = async (
  */
 export const de_AssociateTransitGatewayRouteTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateTransitGatewayRouteTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15249,7 +15249,7 @@ export const de_AssociateTransitGatewayRouteTableCommand = async (
  */
 export const de_AssociateTrunkInterfaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateTrunkInterfaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15269,7 +15269,7 @@ export const de_AssociateTrunkInterfaceCommand = async (
  */
 export const de_AssociateVpcCidrBlockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateVpcCidrBlockCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15289,7 +15289,7 @@ export const de_AssociateVpcCidrBlockCommand = async (
  */
 export const de_AttachClassicLinkVpcCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachClassicLinkVpcCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15309,7 +15309,7 @@ export const de_AttachClassicLinkVpcCommand = async (
  */
 export const de_AttachInternetGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachInternetGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15326,7 +15326,7 @@ export const de_AttachInternetGatewayCommand = async (
  */
 export const de_AttachNetworkInterfaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachNetworkInterfaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15346,7 +15346,7 @@ export const de_AttachNetworkInterfaceCommand = async (
  */
 export const de_AttachVerifiedAccessTrustProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachVerifiedAccessTrustProviderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15366,7 +15366,7 @@ export const de_AttachVerifiedAccessTrustProviderCommand = async (
  */
 export const de_AttachVolumeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachVolumeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15386,7 +15386,7 @@ export const de_AttachVolumeCommand = async (
  */
 export const de_AttachVpnGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachVpnGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15406,7 +15406,7 @@ export const de_AttachVpnGatewayCommand = async (
  */
 export const de_AuthorizeClientVpnIngressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AuthorizeClientVpnIngressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15426,7 +15426,7 @@ export const de_AuthorizeClientVpnIngressCommand = async (
  */
 export const de_AuthorizeSecurityGroupEgressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AuthorizeSecurityGroupEgressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15446,7 +15446,7 @@ export const de_AuthorizeSecurityGroupEgressCommand = async (
  */
 export const de_AuthorizeSecurityGroupIngressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AuthorizeSecurityGroupIngressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15466,7 +15466,7 @@ export const de_AuthorizeSecurityGroupIngressCommand = async (
  */
 export const de_BundleInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BundleInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15486,7 +15486,7 @@ export const de_BundleInstanceCommand = async (
  */
 export const de_CancelBundleTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelBundleTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15506,7 +15506,7 @@ export const de_CancelBundleTaskCommand = async (
  */
 export const de_CancelCapacityReservationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelCapacityReservationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15526,7 +15526,7 @@ export const de_CancelCapacityReservationCommand = async (
  */
 export const de_CancelCapacityReservationFleetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelCapacityReservationFleetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15546,7 +15546,7 @@ export const de_CancelCapacityReservationFleetsCommand = async (
  */
 export const de_CancelConversionTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelConversionTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15563,7 +15563,7 @@ export const de_CancelConversionTaskCommand = async (
  */
 export const de_CancelExportTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelExportTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15580,7 +15580,7 @@ export const de_CancelExportTaskCommand = async (
  */
 export const de_CancelImageLaunchPermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelImageLaunchPermissionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15600,7 +15600,7 @@ export const de_CancelImageLaunchPermissionCommand = async (
  */
 export const de_CancelImportTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelImportTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15620,7 +15620,7 @@ export const de_CancelImportTaskCommand = async (
  */
 export const de_CancelReservedInstancesListingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelReservedInstancesListingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15640,7 +15640,7 @@ export const de_CancelReservedInstancesListingCommand = async (
  */
 export const de_CancelSpotFleetRequestsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelSpotFleetRequestsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15660,7 +15660,7 @@ export const de_CancelSpotFleetRequestsCommand = async (
  */
 export const de_CancelSpotInstanceRequestsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelSpotInstanceRequestsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15680,7 +15680,7 @@ export const de_CancelSpotInstanceRequestsCommand = async (
  */
 export const de_ConfirmProductInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConfirmProductInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15700,7 +15700,7 @@ export const de_ConfirmProductInstanceCommand = async (
  */
 export const de_CopyFpgaImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopyFpgaImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15720,7 +15720,7 @@ export const de_CopyFpgaImageCommand = async (
  */
 export const de_CopyImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopyImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15740,7 +15740,7 @@ export const de_CopyImageCommand = async (
  */
 export const de_CopySnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopySnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15760,7 +15760,7 @@ export const de_CopySnapshotCommand = async (
  */
 export const de_CreateCapacityReservationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCapacityReservationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15780,7 +15780,7 @@ export const de_CreateCapacityReservationCommand = async (
  */
 export const de_CreateCapacityReservationFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCapacityReservationFleetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15800,7 +15800,7 @@ export const de_CreateCapacityReservationFleetCommand = async (
  */
 export const de_CreateCarrierGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCarrierGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15820,7 +15820,7 @@ export const de_CreateCarrierGatewayCommand = async (
  */
 export const de_CreateClientVpnEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateClientVpnEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15840,7 +15840,7 @@ export const de_CreateClientVpnEndpointCommand = async (
  */
 export const de_CreateClientVpnRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateClientVpnRouteCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15860,7 +15860,7 @@ export const de_CreateClientVpnRouteCommand = async (
  */
 export const de_CreateCoipCidrCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCoipCidrCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15880,7 +15880,7 @@ export const de_CreateCoipCidrCommand = async (
  */
 export const de_CreateCoipPoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCoipPoolCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15900,7 +15900,7 @@ export const de_CreateCoipPoolCommand = async (
  */
 export const de_CreateCustomerGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCustomerGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15920,7 +15920,7 @@ export const de_CreateCustomerGatewayCommand = async (
  */
 export const de_CreateDefaultSubnetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDefaultSubnetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15940,7 +15940,7 @@ export const de_CreateDefaultSubnetCommand = async (
  */
 export const de_CreateDefaultVpcCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDefaultVpcCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15960,7 +15960,7 @@ export const de_CreateDefaultVpcCommand = async (
  */
 export const de_CreateDhcpOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDhcpOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -15980,7 +15980,7 @@ export const de_CreateDhcpOptionsCommand = async (
  */
 export const de_CreateEgressOnlyInternetGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEgressOnlyInternetGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16000,7 +16000,7 @@ export const de_CreateEgressOnlyInternetGatewayCommand = async (
  */
 export const de_CreateFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFleetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16020,7 +16020,7 @@ export const de_CreateFleetCommand = async (
  */
 export const de_CreateFlowLogsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFlowLogsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16040,7 +16040,7 @@ export const de_CreateFlowLogsCommand = async (
  */
 export const de_CreateFpgaImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFpgaImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16060,7 +16060,7 @@ export const de_CreateFpgaImageCommand = async (
  */
 export const de_CreateImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16080,7 +16080,7 @@ export const de_CreateImageCommand = async (
  */
 export const de_CreateInstanceConnectEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateInstanceConnectEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16100,7 +16100,7 @@ export const de_CreateInstanceConnectEndpointCommand = async (
  */
 export const de_CreateInstanceEventWindowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateInstanceEventWindowCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16120,7 +16120,7 @@ export const de_CreateInstanceEventWindowCommand = async (
  */
 export const de_CreateInstanceExportTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateInstanceExportTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16140,7 +16140,7 @@ export const de_CreateInstanceExportTaskCommand = async (
  */
 export const de_CreateInternetGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateInternetGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16160,7 +16160,7 @@ export const de_CreateInternetGatewayCommand = async (
  */
 export const de_CreateIpamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateIpamCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16180,7 +16180,7 @@ export const de_CreateIpamCommand = async (
  */
 export const de_CreateIpamPoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateIpamPoolCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16200,7 +16200,7 @@ export const de_CreateIpamPoolCommand = async (
  */
 export const de_CreateIpamResourceDiscoveryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateIpamResourceDiscoveryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16220,7 +16220,7 @@ export const de_CreateIpamResourceDiscoveryCommand = async (
  */
 export const de_CreateIpamScopeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateIpamScopeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16240,7 +16240,7 @@ export const de_CreateIpamScopeCommand = async (
  */
 export const de_CreateKeyPairCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateKeyPairCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16260,7 +16260,7 @@ export const de_CreateKeyPairCommand = async (
  */
 export const de_CreateLaunchTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLaunchTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16280,7 +16280,7 @@ export const de_CreateLaunchTemplateCommand = async (
  */
 export const de_CreateLaunchTemplateVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLaunchTemplateVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16300,7 +16300,7 @@ export const de_CreateLaunchTemplateVersionCommand = async (
  */
 export const de_CreateLocalGatewayRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLocalGatewayRouteCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16320,7 +16320,7 @@ export const de_CreateLocalGatewayRouteCommand = async (
  */
 export const de_CreateLocalGatewayRouteTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLocalGatewayRouteTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16340,7 +16340,7 @@ export const de_CreateLocalGatewayRouteTableCommand = async (
  */
 export const de_CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16360,7 +16360,7 @@ export const de_CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationComm
  */
 export const de_CreateLocalGatewayRouteTableVpcAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLocalGatewayRouteTableVpcAssociationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16380,7 +16380,7 @@ export const de_CreateLocalGatewayRouteTableVpcAssociationCommand = async (
  */
 export const de_CreateManagedPrefixListCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateManagedPrefixListCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16400,7 +16400,7 @@ export const de_CreateManagedPrefixListCommand = async (
  */
 export const de_CreateNatGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateNatGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16420,7 +16420,7 @@ export const de_CreateNatGatewayCommand = async (
  */
 export const de_CreateNetworkAclCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateNetworkAclCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16440,7 +16440,7 @@ export const de_CreateNetworkAclCommand = async (
  */
 export const de_CreateNetworkAclEntryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateNetworkAclEntryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16457,7 +16457,7 @@ export const de_CreateNetworkAclEntryCommand = async (
  */
 export const de_CreateNetworkInsightsAccessScopeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateNetworkInsightsAccessScopeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16477,7 +16477,7 @@ export const de_CreateNetworkInsightsAccessScopeCommand = async (
  */
 export const de_CreateNetworkInsightsPathCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateNetworkInsightsPathCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16497,7 +16497,7 @@ export const de_CreateNetworkInsightsPathCommand = async (
  */
 export const de_CreateNetworkInterfaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateNetworkInterfaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16517,7 +16517,7 @@ export const de_CreateNetworkInterfaceCommand = async (
  */
 export const de_CreateNetworkInterfacePermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateNetworkInterfacePermissionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16537,7 +16537,7 @@ export const de_CreateNetworkInterfacePermissionCommand = async (
  */
 export const de_CreatePlacementGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePlacementGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16557,7 +16557,7 @@ export const de_CreatePlacementGroupCommand = async (
  */
 export const de_CreatePublicIpv4PoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePublicIpv4PoolCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16577,7 +16577,7 @@ export const de_CreatePublicIpv4PoolCommand = async (
  */
 export const de_CreateReplaceRootVolumeTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateReplaceRootVolumeTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16597,7 +16597,7 @@ export const de_CreateReplaceRootVolumeTaskCommand = async (
  */
 export const de_CreateReservedInstancesListingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateReservedInstancesListingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16617,7 +16617,7 @@ export const de_CreateReservedInstancesListingCommand = async (
  */
 export const de_CreateRestoreImageTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRestoreImageTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16637,7 +16637,7 @@ export const de_CreateRestoreImageTaskCommand = async (
  */
 export const de_CreateRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRouteCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16657,7 +16657,7 @@ export const de_CreateRouteCommand = async (
  */
 export const de_CreateRouteTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRouteTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16677,7 +16677,7 @@ export const de_CreateRouteTableCommand = async (
  */
 export const de_CreateSecurityGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSecurityGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16697,7 +16697,7 @@ export const de_CreateSecurityGroupCommand = async (
  */
 export const de_CreateSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16717,7 +16717,7 @@ export const de_CreateSnapshotCommand = async (
  */
 export const de_CreateSnapshotsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSnapshotsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16737,7 +16737,7 @@ export const de_CreateSnapshotsCommand = async (
  */
 export const de_CreateSpotDatafeedSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSpotDatafeedSubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16757,7 +16757,7 @@ export const de_CreateSpotDatafeedSubscriptionCommand = async (
  */
 export const de_CreateStoreImageTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStoreImageTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16777,7 +16777,7 @@ export const de_CreateStoreImageTaskCommand = async (
  */
 export const de_CreateSubnetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSubnetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16797,7 +16797,7 @@ export const de_CreateSubnetCommand = async (
  */
 export const de_CreateSubnetCidrReservationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSubnetCidrReservationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16817,7 +16817,7 @@ export const de_CreateSubnetCidrReservationCommand = async (
  */
 export const de_CreateTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16834,7 +16834,7 @@ export const de_CreateTagsCommand = async (
  */
 export const de_CreateTrafficMirrorFilterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTrafficMirrorFilterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16854,7 +16854,7 @@ export const de_CreateTrafficMirrorFilterCommand = async (
  */
 export const de_CreateTrafficMirrorFilterRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTrafficMirrorFilterRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16874,7 +16874,7 @@ export const de_CreateTrafficMirrorFilterRuleCommand = async (
  */
 export const de_CreateTrafficMirrorSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTrafficMirrorSessionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16894,7 +16894,7 @@ export const de_CreateTrafficMirrorSessionCommand = async (
  */
 export const de_CreateTrafficMirrorTargetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTrafficMirrorTargetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16914,7 +16914,7 @@ export const de_CreateTrafficMirrorTargetCommand = async (
  */
 export const de_CreateTransitGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTransitGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16934,7 +16934,7 @@ export const de_CreateTransitGatewayCommand = async (
  */
 export const de_CreateTransitGatewayConnectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTransitGatewayConnectCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16954,7 +16954,7 @@ export const de_CreateTransitGatewayConnectCommand = async (
  */
 export const de_CreateTransitGatewayConnectPeerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTransitGatewayConnectPeerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16974,7 +16974,7 @@ export const de_CreateTransitGatewayConnectPeerCommand = async (
  */
 export const de_CreateTransitGatewayMulticastDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTransitGatewayMulticastDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -16994,7 +16994,7 @@ export const de_CreateTransitGatewayMulticastDomainCommand = async (
  */
 export const de_CreateTransitGatewayPeeringAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTransitGatewayPeeringAttachmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17014,7 +17014,7 @@ export const de_CreateTransitGatewayPeeringAttachmentCommand = async (
  */
 export const de_CreateTransitGatewayPolicyTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTransitGatewayPolicyTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17034,7 +17034,7 @@ export const de_CreateTransitGatewayPolicyTableCommand = async (
  */
 export const de_CreateTransitGatewayPrefixListReferenceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTransitGatewayPrefixListReferenceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17054,7 +17054,7 @@ export const de_CreateTransitGatewayPrefixListReferenceCommand = async (
  */
 export const de_CreateTransitGatewayRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTransitGatewayRouteCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17074,7 +17074,7 @@ export const de_CreateTransitGatewayRouteCommand = async (
  */
 export const de_CreateTransitGatewayRouteTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTransitGatewayRouteTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17094,7 +17094,7 @@ export const de_CreateTransitGatewayRouteTableCommand = async (
  */
 export const de_CreateTransitGatewayRouteTableAnnouncementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTransitGatewayRouteTableAnnouncementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17114,7 +17114,7 @@ export const de_CreateTransitGatewayRouteTableAnnouncementCommand = async (
  */
 export const de_CreateTransitGatewayVpcAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTransitGatewayVpcAttachmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17134,7 +17134,7 @@ export const de_CreateTransitGatewayVpcAttachmentCommand = async (
  */
 export const de_CreateVerifiedAccessEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVerifiedAccessEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17154,7 +17154,7 @@ export const de_CreateVerifiedAccessEndpointCommand = async (
  */
 export const de_CreateVerifiedAccessGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVerifiedAccessGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17174,7 +17174,7 @@ export const de_CreateVerifiedAccessGroupCommand = async (
  */
 export const de_CreateVerifiedAccessInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVerifiedAccessInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17194,7 +17194,7 @@ export const de_CreateVerifiedAccessInstanceCommand = async (
  */
 export const de_CreateVerifiedAccessTrustProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVerifiedAccessTrustProviderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17214,7 +17214,7 @@ export const de_CreateVerifiedAccessTrustProviderCommand = async (
  */
 export const de_CreateVolumeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVolumeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17234,7 +17234,7 @@ export const de_CreateVolumeCommand = async (
  */
 export const de_CreateVpcCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVpcCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17254,7 +17254,7 @@ export const de_CreateVpcCommand = async (
  */
 export const de_CreateVpcEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVpcEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17274,7 +17274,7 @@ export const de_CreateVpcEndpointCommand = async (
  */
 export const de_CreateVpcEndpointConnectionNotificationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVpcEndpointConnectionNotificationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17294,7 +17294,7 @@ export const de_CreateVpcEndpointConnectionNotificationCommand = async (
  */
 export const de_CreateVpcEndpointServiceConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVpcEndpointServiceConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17314,7 +17314,7 @@ export const de_CreateVpcEndpointServiceConfigurationCommand = async (
  */
 export const de_CreateVpcPeeringConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVpcPeeringConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17334,7 +17334,7 @@ export const de_CreateVpcPeeringConnectionCommand = async (
  */
 export const de_CreateVpnConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVpnConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17354,7 +17354,7 @@ export const de_CreateVpnConnectionCommand = async (
  */
 export const de_CreateVpnConnectionRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVpnConnectionRouteCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17371,7 +17371,7 @@ export const de_CreateVpnConnectionRouteCommand = async (
  */
 export const de_CreateVpnGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVpnGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17391,7 +17391,7 @@ export const de_CreateVpnGatewayCommand = async (
  */
 export const de_DeleteCarrierGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCarrierGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17411,7 +17411,7 @@ export const de_DeleteCarrierGatewayCommand = async (
  */
 export const de_DeleteClientVpnEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteClientVpnEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17431,7 +17431,7 @@ export const de_DeleteClientVpnEndpointCommand = async (
  */
 export const de_DeleteClientVpnRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteClientVpnRouteCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17451,7 +17451,7 @@ export const de_DeleteClientVpnRouteCommand = async (
  */
 export const de_DeleteCoipCidrCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCoipCidrCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17471,7 +17471,7 @@ export const de_DeleteCoipCidrCommand = async (
  */
 export const de_DeleteCoipPoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCoipPoolCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17491,7 +17491,7 @@ export const de_DeleteCoipPoolCommand = async (
  */
 export const de_DeleteCustomerGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCustomerGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17508,7 +17508,7 @@ export const de_DeleteCustomerGatewayCommand = async (
  */
 export const de_DeleteDhcpOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDhcpOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17525,7 +17525,7 @@ export const de_DeleteDhcpOptionsCommand = async (
  */
 export const de_DeleteEgressOnlyInternetGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEgressOnlyInternetGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17545,7 +17545,7 @@ export const de_DeleteEgressOnlyInternetGatewayCommand = async (
  */
 export const de_DeleteFleetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFleetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17565,7 +17565,7 @@ export const de_DeleteFleetsCommand = async (
  */
 export const de_DeleteFlowLogsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFlowLogsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17585,7 +17585,7 @@ export const de_DeleteFlowLogsCommand = async (
  */
 export const de_DeleteFpgaImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFpgaImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17605,7 +17605,7 @@ export const de_DeleteFpgaImageCommand = async (
  */
 export const de_DeleteInstanceConnectEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteInstanceConnectEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17625,7 +17625,7 @@ export const de_DeleteInstanceConnectEndpointCommand = async (
  */
 export const de_DeleteInstanceEventWindowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteInstanceEventWindowCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17645,7 +17645,7 @@ export const de_DeleteInstanceEventWindowCommand = async (
  */
 export const de_DeleteInternetGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteInternetGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17662,7 +17662,7 @@ export const de_DeleteInternetGatewayCommand = async (
  */
 export const de_DeleteIpamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIpamCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17682,7 +17682,7 @@ export const de_DeleteIpamCommand = async (
  */
 export const de_DeleteIpamPoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIpamPoolCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17702,7 +17702,7 @@ export const de_DeleteIpamPoolCommand = async (
  */
 export const de_DeleteIpamResourceDiscoveryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIpamResourceDiscoveryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17722,7 +17722,7 @@ export const de_DeleteIpamResourceDiscoveryCommand = async (
  */
 export const de_DeleteIpamScopeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIpamScopeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17742,7 +17742,7 @@ export const de_DeleteIpamScopeCommand = async (
  */
 export const de_DeleteKeyPairCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteKeyPairCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17762,7 +17762,7 @@ export const de_DeleteKeyPairCommand = async (
  */
 export const de_DeleteLaunchTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLaunchTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17782,7 +17782,7 @@ export const de_DeleteLaunchTemplateCommand = async (
  */
 export const de_DeleteLaunchTemplateVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLaunchTemplateVersionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17802,7 +17802,7 @@ export const de_DeleteLaunchTemplateVersionsCommand = async (
  */
 export const de_DeleteLocalGatewayRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLocalGatewayRouteCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17822,7 +17822,7 @@ export const de_DeleteLocalGatewayRouteCommand = async (
  */
 export const de_DeleteLocalGatewayRouteTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLocalGatewayRouteTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17842,7 +17842,7 @@ export const de_DeleteLocalGatewayRouteTableCommand = async (
  */
 export const de_DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17862,7 +17862,7 @@ export const de_DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationComm
  */
 export const de_DeleteLocalGatewayRouteTableVpcAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLocalGatewayRouteTableVpcAssociationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17882,7 +17882,7 @@ export const de_DeleteLocalGatewayRouteTableVpcAssociationCommand = async (
  */
 export const de_DeleteManagedPrefixListCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteManagedPrefixListCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17902,7 +17902,7 @@ export const de_DeleteManagedPrefixListCommand = async (
  */
 export const de_DeleteNatGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteNatGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17922,7 +17922,7 @@ export const de_DeleteNatGatewayCommand = async (
  */
 export const de_DeleteNetworkAclCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteNetworkAclCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17939,7 +17939,7 @@ export const de_DeleteNetworkAclCommand = async (
  */
 export const de_DeleteNetworkAclEntryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteNetworkAclEntryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17956,7 +17956,7 @@ export const de_DeleteNetworkAclEntryCommand = async (
  */
 export const de_DeleteNetworkInsightsAccessScopeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteNetworkInsightsAccessScopeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17976,7 +17976,7 @@ export const de_DeleteNetworkInsightsAccessScopeCommand = async (
  */
 export const de_DeleteNetworkInsightsAccessScopeAnalysisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteNetworkInsightsAccessScopeAnalysisCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -17996,7 +17996,7 @@ export const de_DeleteNetworkInsightsAccessScopeAnalysisCommand = async (
  */
 export const de_DeleteNetworkInsightsAnalysisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteNetworkInsightsAnalysisCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18016,7 +18016,7 @@ export const de_DeleteNetworkInsightsAnalysisCommand = async (
  */
 export const de_DeleteNetworkInsightsPathCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteNetworkInsightsPathCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18036,7 +18036,7 @@ export const de_DeleteNetworkInsightsPathCommand = async (
  */
 export const de_DeleteNetworkInterfaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteNetworkInterfaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18053,7 +18053,7 @@ export const de_DeleteNetworkInterfaceCommand = async (
  */
 export const de_DeleteNetworkInterfacePermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteNetworkInterfacePermissionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18073,7 +18073,7 @@ export const de_DeleteNetworkInterfacePermissionCommand = async (
  */
 export const de_DeletePlacementGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePlacementGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18090,7 +18090,7 @@ export const de_DeletePlacementGroupCommand = async (
  */
 export const de_DeletePublicIpv4PoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePublicIpv4PoolCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18110,7 +18110,7 @@ export const de_DeletePublicIpv4PoolCommand = async (
  */
 export const de_DeleteQueuedReservedInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteQueuedReservedInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18130,7 +18130,7 @@ export const de_DeleteQueuedReservedInstancesCommand = async (
  */
 export const de_DeleteRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRouteCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18147,7 +18147,7 @@ export const de_DeleteRouteCommand = async (
  */
 export const de_DeleteRouteTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRouteTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18164,7 +18164,7 @@ export const de_DeleteRouteTableCommand = async (
  */
 export const de_DeleteSecurityGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSecurityGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18181,7 +18181,7 @@ export const de_DeleteSecurityGroupCommand = async (
  */
 export const de_DeleteSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18198,7 +18198,7 @@ export const de_DeleteSnapshotCommand = async (
  */
 export const de_DeleteSpotDatafeedSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSpotDatafeedSubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18215,7 +18215,7 @@ export const de_DeleteSpotDatafeedSubscriptionCommand = async (
  */
 export const de_DeleteSubnetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSubnetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18232,7 +18232,7 @@ export const de_DeleteSubnetCommand = async (
  */
 export const de_DeleteSubnetCidrReservationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSubnetCidrReservationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18252,7 +18252,7 @@ export const de_DeleteSubnetCidrReservationCommand = async (
  */
 export const de_DeleteTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18269,7 +18269,7 @@ export const de_DeleteTagsCommand = async (
  */
 export const de_DeleteTrafficMirrorFilterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTrafficMirrorFilterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18289,7 +18289,7 @@ export const de_DeleteTrafficMirrorFilterCommand = async (
  */
 export const de_DeleteTrafficMirrorFilterRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTrafficMirrorFilterRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18309,7 +18309,7 @@ export const de_DeleteTrafficMirrorFilterRuleCommand = async (
  */
 export const de_DeleteTrafficMirrorSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTrafficMirrorSessionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18329,7 +18329,7 @@ export const de_DeleteTrafficMirrorSessionCommand = async (
  */
 export const de_DeleteTrafficMirrorTargetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTrafficMirrorTargetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18349,7 +18349,7 @@ export const de_DeleteTrafficMirrorTargetCommand = async (
  */
 export const de_DeleteTransitGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTransitGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18369,7 +18369,7 @@ export const de_DeleteTransitGatewayCommand = async (
  */
 export const de_DeleteTransitGatewayConnectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTransitGatewayConnectCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18389,7 +18389,7 @@ export const de_DeleteTransitGatewayConnectCommand = async (
  */
 export const de_DeleteTransitGatewayConnectPeerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTransitGatewayConnectPeerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18409,7 +18409,7 @@ export const de_DeleteTransitGatewayConnectPeerCommand = async (
  */
 export const de_DeleteTransitGatewayMulticastDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTransitGatewayMulticastDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18429,7 +18429,7 @@ export const de_DeleteTransitGatewayMulticastDomainCommand = async (
  */
 export const de_DeleteTransitGatewayPeeringAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTransitGatewayPeeringAttachmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18449,7 +18449,7 @@ export const de_DeleteTransitGatewayPeeringAttachmentCommand = async (
  */
 export const de_DeleteTransitGatewayPolicyTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTransitGatewayPolicyTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18469,7 +18469,7 @@ export const de_DeleteTransitGatewayPolicyTableCommand = async (
  */
 export const de_DeleteTransitGatewayPrefixListReferenceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTransitGatewayPrefixListReferenceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18489,7 +18489,7 @@ export const de_DeleteTransitGatewayPrefixListReferenceCommand = async (
  */
 export const de_DeleteTransitGatewayRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTransitGatewayRouteCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18509,7 +18509,7 @@ export const de_DeleteTransitGatewayRouteCommand = async (
  */
 export const de_DeleteTransitGatewayRouteTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTransitGatewayRouteTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18529,7 +18529,7 @@ export const de_DeleteTransitGatewayRouteTableCommand = async (
  */
 export const de_DeleteTransitGatewayRouteTableAnnouncementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTransitGatewayRouteTableAnnouncementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18549,7 +18549,7 @@ export const de_DeleteTransitGatewayRouteTableAnnouncementCommand = async (
  */
 export const de_DeleteTransitGatewayVpcAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTransitGatewayVpcAttachmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18569,7 +18569,7 @@ export const de_DeleteTransitGatewayVpcAttachmentCommand = async (
  */
 export const de_DeleteVerifiedAccessEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVerifiedAccessEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18589,7 +18589,7 @@ export const de_DeleteVerifiedAccessEndpointCommand = async (
  */
 export const de_DeleteVerifiedAccessGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVerifiedAccessGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18609,7 +18609,7 @@ export const de_DeleteVerifiedAccessGroupCommand = async (
  */
 export const de_DeleteVerifiedAccessInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVerifiedAccessInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18629,7 +18629,7 @@ export const de_DeleteVerifiedAccessInstanceCommand = async (
  */
 export const de_DeleteVerifiedAccessTrustProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVerifiedAccessTrustProviderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18649,7 +18649,7 @@ export const de_DeleteVerifiedAccessTrustProviderCommand = async (
  */
 export const de_DeleteVolumeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVolumeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18666,7 +18666,7 @@ export const de_DeleteVolumeCommand = async (
  */
 export const de_DeleteVpcCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVpcCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18683,7 +18683,7 @@ export const de_DeleteVpcCommand = async (
  */
 export const de_DeleteVpcEndpointConnectionNotificationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVpcEndpointConnectionNotificationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18703,7 +18703,7 @@ export const de_DeleteVpcEndpointConnectionNotificationsCommand = async (
  */
 export const de_DeleteVpcEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVpcEndpointsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18723,7 +18723,7 @@ export const de_DeleteVpcEndpointsCommand = async (
  */
 export const de_DeleteVpcEndpointServiceConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVpcEndpointServiceConfigurationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18743,7 +18743,7 @@ export const de_DeleteVpcEndpointServiceConfigurationsCommand = async (
  */
 export const de_DeleteVpcPeeringConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVpcPeeringConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18763,7 +18763,7 @@ export const de_DeleteVpcPeeringConnectionCommand = async (
  */
 export const de_DeleteVpnConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVpnConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18780,7 +18780,7 @@ export const de_DeleteVpnConnectionCommand = async (
  */
 export const de_DeleteVpnConnectionRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVpnConnectionRouteCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18797,7 +18797,7 @@ export const de_DeleteVpnConnectionRouteCommand = async (
  */
 export const de_DeleteVpnGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVpnGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18814,7 +18814,7 @@ export const de_DeleteVpnGatewayCommand = async (
  */
 export const de_DeprovisionByoipCidrCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeprovisionByoipCidrCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18834,7 +18834,7 @@ export const de_DeprovisionByoipCidrCommand = async (
  */
 export const de_DeprovisionIpamByoasnCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeprovisionIpamByoasnCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18854,7 +18854,7 @@ export const de_DeprovisionIpamByoasnCommand = async (
  */
 export const de_DeprovisionIpamPoolCidrCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeprovisionIpamPoolCidrCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18874,7 +18874,7 @@ export const de_DeprovisionIpamPoolCidrCommand = async (
  */
 export const de_DeprovisionPublicIpv4PoolCidrCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeprovisionPublicIpv4PoolCidrCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18894,7 +18894,7 @@ export const de_DeprovisionPublicIpv4PoolCidrCommand = async (
  */
 export const de_DeregisterImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18911,7 +18911,7 @@ export const de_DeregisterImageCommand = async (
  */
 export const de_DeregisterInstanceEventNotificationAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterInstanceEventNotificationAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18931,7 +18931,7 @@ export const de_DeregisterInstanceEventNotificationAttributesCommand = async (
  */
 export const de_DeregisterTransitGatewayMulticastGroupMembersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterTransitGatewayMulticastGroupMembersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18951,7 +18951,7 @@ export const de_DeregisterTransitGatewayMulticastGroupMembersCommand = async (
  */
 export const de_DeregisterTransitGatewayMulticastGroupSourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterTransitGatewayMulticastGroupSourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18971,7 +18971,7 @@ export const de_DeregisterTransitGatewayMulticastGroupSourcesCommand = async (
  */
 export const de_DescribeAccountAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAccountAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -18991,7 +18991,7 @@ export const de_DescribeAccountAttributesCommand = async (
  */
 export const de_DescribeAddressesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAddressesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19011,7 +19011,7 @@ export const de_DescribeAddressesCommand = async (
  */
 export const de_DescribeAddressesAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAddressesAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19031,7 +19031,7 @@ export const de_DescribeAddressesAttributeCommand = async (
  */
 export const de_DescribeAddressTransfersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAddressTransfersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19051,7 +19051,7 @@ export const de_DescribeAddressTransfersCommand = async (
  */
 export const de_DescribeAggregateIdFormatCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAggregateIdFormatCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19071,7 +19071,7 @@ export const de_DescribeAggregateIdFormatCommand = async (
  */
 export const de_DescribeAvailabilityZonesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAvailabilityZonesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19091,7 +19091,7 @@ export const de_DescribeAvailabilityZonesCommand = async (
  */
 export const de_DescribeAwsNetworkPerformanceMetricSubscriptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAwsNetworkPerformanceMetricSubscriptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19111,7 +19111,7 @@ export const de_DescribeAwsNetworkPerformanceMetricSubscriptionsCommand = async 
  */
 export const de_DescribeBundleTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBundleTasksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19131,7 +19131,7 @@ export const de_DescribeBundleTasksCommand = async (
  */
 export const de_DescribeByoipCidrsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeByoipCidrsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19151,7 +19151,7 @@ export const de_DescribeByoipCidrsCommand = async (
  */
 export const de_DescribeCapacityBlockOfferingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCapacityBlockOfferingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19171,7 +19171,7 @@ export const de_DescribeCapacityBlockOfferingsCommand = async (
  */
 export const de_DescribeCapacityReservationFleetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCapacityReservationFleetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19191,7 +19191,7 @@ export const de_DescribeCapacityReservationFleetsCommand = async (
  */
 export const de_DescribeCapacityReservationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCapacityReservationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19211,7 +19211,7 @@ export const de_DescribeCapacityReservationsCommand = async (
  */
 export const de_DescribeCarrierGatewaysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCarrierGatewaysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19231,7 +19231,7 @@ export const de_DescribeCarrierGatewaysCommand = async (
  */
 export const de_DescribeClassicLinkInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeClassicLinkInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19251,7 +19251,7 @@ export const de_DescribeClassicLinkInstancesCommand = async (
  */
 export const de_DescribeClientVpnAuthorizationRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeClientVpnAuthorizationRulesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19271,7 +19271,7 @@ export const de_DescribeClientVpnAuthorizationRulesCommand = async (
  */
 export const de_DescribeClientVpnConnectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeClientVpnConnectionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19291,7 +19291,7 @@ export const de_DescribeClientVpnConnectionsCommand = async (
  */
 export const de_DescribeClientVpnEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeClientVpnEndpointsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19311,7 +19311,7 @@ export const de_DescribeClientVpnEndpointsCommand = async (
  */
 export const de_DescribeClientVpnRoutesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeClientVpnRoutesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19331,7 +19331,7 @@ export const de_DescribeClientVpnRoutesCommand = async (
  */
 export const de_DescribeClientVpnTargetNetworksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeClientVpnTargetNetworksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19351,7 +19351,7 @@ export const de_DescribeClientVpnTargetNetworksCommand = async (
  */
 export const de_DescribeCoipPoolsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCoipPoolsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19371,7 +19371,7 @@ export const de_DescribeCoipPoolsCommand = async (
  */
 export const de_DescribeConversionTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConversionTasksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19391,7 +19391,7 @@ export const de_DescribeConversionTasksCommand = async (
  */
 export const de_DescribeCustomerGatewaysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCustomerGatewaysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19411,7 +19411,7 @@ export const de_DescribeCustomerGatewaysCommand = async (
  */
 export const de_DescribeDhcpOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDhcpOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19431,7 +19431,7 @@ export const de_DescribeDhcpOptionsCommand = async (
  */
 export const de_DescribeEgressOnlyInternetGatewaysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEgressOnlyInternetGatewaysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19451,7 +19451,7 @@ export const de_DescribeEgressOnlyInternetGatewaysCommand = async (
  */
 export const de_DescribeElasticGpusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeElasticGpusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19471,7 +19471,7 @@ export const de_DescribeElasticGpusCommand = async (
  */
 export const de_DescribeExportImageTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeExportImageTasksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19491,7 +19491,7 @@ export const de_DescribeExportImageTasksCommand = async (
  */
 export const de_DescribeExportTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeExportTasksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19511,7 +19511,7 @@ export const de_DescribeExportTasksCommand = async (
  */
 export const de_DescribeFastLaunchImagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFastLaunchImagesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19531,7 +19531,7 @@ export const de_DescribeFastLaunchImagesCommand = async (
  */
 export const de_DescribeFastSnapshotRestoresCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFastSnapshotRestoresCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19551,7 +19551,7 @@ export const de_DescribeFastSnapshotRestoresCommand = async (
  */
 export const de_DescribeFleetHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFleetHistoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19571,7 +19571,7 @@ export const de_DescribeFleetHistoryCommand = async (
  */
 export const de_DescribeFleetInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFleetInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19591,7 +19591,7 @@ export const de_DescribeFleetInstancesCommand = async (
  */
 export const de_DescribeFleetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFleetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19611,7 +19611,7 @@ export const de_DescribeFleetsCommand = async (
  */
 export const de_DescribeFlowLogsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFlowLogsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19631,7 +19631,7 @@ export const de_DescribeFlowLogsCommand = async (
  */
 export const de_DescribeFpgaImageAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFpgaImageAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19651,7 +19651,7 @@ export const de_DescribeFpgaImageAttributeCommand = async (
  */
 export const de_DescribeFpgaImagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFpgaImagesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19671,7 +19671,7 @@ export const de_DescribeFpgaImagesCommand = async (
  */
 export const de_DescribeHostReservationOfferingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeHostReservationOfferingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19691,7 +19691,7 @@ export const de_DescribeHostReservationOfferingsCommand = async (
  */
 export const de_DescribeHostReservationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeHostReservationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19711,7 +19711,7 @@ export const de_DescribeHostReservationsCommand = async (
  */
 export const de_DescribeHostsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeHostsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19731,7 +19731,7 @@ export const de_DescribeHostsCommand = async (
  */
 export const de_DescribeIamInstanceProfileAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeIamInstanceProfileAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19751,7 +19751,7 @@ export const de_DescribeIamInstanceProfileAssociationsCommand = async (
  */
 export const de_DescribeIdentityIdFormatCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeIdentityIdFormatCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19771,7 +19771,7 @@ export const de_DescribeIdentityIdFormatCommand = async (
  */
 export const de_DescribeIdFormatCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeIdFormatCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19791,7 +19791,7 @@ export const de_DescribeIdFormatCommand = async (
  */
 export const de_DescribeImageAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeImageAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19811,7 +19811,7 @@ export const de_DescribeImageAttributeCommand = async (
  */
 export const de_DescribeImagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeImagesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19831,7 +19831,7 @@ export const de_DescribeImagesCommand = async (
  */
 export const de_DescribeImportImageTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeImportImageTasksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19851,7 +19851,7 @@ export const de_DescribeImportImageTasksCommand = async (
  */
 export const de_DescribeImportSnapshotTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeImportSnapshotTasksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19871,7 +19871,7 @@ export const de_DescribeImportSnapshotTasksCommand = async (
  */
 export const de_DescribeInstanceAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInstanceAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19891,7 +19891,7 @@ export const de_DescribeInstanceAttributeCommand = async (
  */
 export const de_DescribeInstanceConnectEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInstanceConnectEndpointsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19911,7 +19911,7 @@ export const de_DescribeInstanceConnectEndpointsCommand = async (
  */
 export const de_DescribeInstanceCreditSpecificationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInstanceCreditSpecificationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19931,7 +19931,7 @@ export const de_DescribeInstanceCreditSpecificationsCommand = async (
  */
 export const de_DescribeInstanceEventNotificationAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInstanceEventNotificationAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19951,7 +19951,7 @@ export const de_DescribeInstanceEventNotificationAttributesCommand = async (
  */
 export const de_DescribeInstanceEventWindowsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInstanceEventWindowsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19971,7 +19971,7 @@ export const de_DescribeInstanceEventWindowsCommand = async (
  */
 export const de_DescribeInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -19991,7 +19991,7 @@ export const de_DescribeInstancesCommand = async (
  */
 export const de_DescribeInstanceStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInstanceStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20011,7 +20011,7 @@ export const de_DescribeInstanceStatusCommand = async (
  */
 export const de_DescribeInstanceTopologyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInstanceTopologyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20031,7 +20031,7 @@ export const de_DescribeInstanceTopologyCommand = async (
  */
 export const de_DescribeInstanceTypeOfferingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInstanceTypeOfferingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20051,7 +20051,7 @@ export const de_DescribeInstanceTypeOfferingsCommand = async (
  */
 export const de_DescribeInstanceTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInstanceTypesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20071,7 +20071,7 @@ export const de_DescribeInstanceTypesCommand = async (
  */
 export const de_DescribeInternetGatewaysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInternetGatewaysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20091,7 +20091,7 @@ export const de_DescribeInternetGatewaysCommand = async (
  */
 export const de_DescribeIpamByoasnCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeIpamByoasnCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20111,7 +20111,7 @@ export const de_DescribeIpamByoasnCommand = async (
  */
 export const de_DescribeIpamPoolsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeIpamPoolsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20131,7 +20131,7 @@ export const de_DescribeIpamPoolsCommand = async (
  */
 export const de_DescribeIpamResourceDiscoveriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeIpamResourceDiscoveriesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20151,7 +20151,7 @@ export const de_DescribeIpamResourceDiscoveriesCommand = async (
  */
 export const de_DescribeIpamResourceDiscoveryAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeIpamResourceDiscoveryAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20171,7 +20171,7 @@ export const de_DescribeIpamResourceDiscoveryAssociationsCommand = async (
  */
 export const de_DescribeIpamsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeIpamsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20191,7 +20191,7 @@ export const de_DescribeIpamsCommand = async (
  */
 export const de_DescribeIpamScopesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeIpamScopesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20211,7 +20211,7 @@ export const de_DescribeIpamScopesCommand = async (
  */
 export const de_DescribeIpv6PoolsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeIpv6PoolsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20231,7 +20231,7 @@ export const de_DescribeIpv6PoolsCommand = async (
  */
 export const de_DescribeKeyPairsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeKeyPairsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20251,7 +20251,7 @@ export const de_DescribeKeyPairsCommand = async (
  */
 export const de_DescribeLaunchTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLaunchTemplatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20271,7 +20271,7 @@ export const de_DescribeLaunchTemplatesCommand = async (
  */
 export const de_DescribeLaunchTemplateVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLaunchTemplateVersionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20291,7 +20291,7 @@ export const de_DescribeLaunchTemplateVersionsCommand = async (
  */
 export const de_DescribeLocalGatewayRouteTablesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLocalGatewayRouteTablesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20311,7 +20311,7 @@ export const de_DescribeLocalGatewayRouteTablesCommand = async (
  */
 export const de_DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20331,7 +20331,7 @@ export const de_DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsC
  */
 export const de_DescribeLocalGatewayRouteTableVpcAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLocalGatewayRouteTableVpcAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20351,7 +20351,7 @@ export const de_DescribeLocalGatewayRouteTableVpcAssociationsCommand = async (
  */
 export const de_DescribeLocalGatewaysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLocalGatewaysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20371,7 +20371,7 @@ export const de_DescribeLocalGatewaysCommand = async (
  */
 export const de_DescribeLocalGatewayVirtualInterfaceGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLocalGatewayVirtualInterfaceGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20391,7 +20391,7 @@ export const de_DescribeLocalGatewayVirtualInterfaceGroupsCommand = async (
  */
 export const de_DescribeLocalGatewayVirtualInterfacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLocalGatewayVirtualInterfacesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20411,7 +20411,7 @@ export const de_DescribeLocalGatewayVirtualInterfacesCommand = async (
  */
 export const de_DescribeLockedSnapshotsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLockedSnapshotsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20431,7 +20431,7 @@ export const de_DescribeLockedSnapshotsCommand = async (
  */
 export const de_DescribeMacHostsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeMacHostsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20451,7 +20451,7 @@ export const de_DescribeMacHostsCommand = async (
  */
 export const de_DescribeManagedPrefixListsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeManagedPrefixListsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20471,7 +20471,7 @@ export const de_DescribeManagedPrefixListsCommand = async (
  */
 export const de_DescribeMovingAddressesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeMovingAddressesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20491,7 +20491,7 @@ export const de_DescribeMovingAddressesCommand = async (
  */
 export const de_DescribeNatGatewaysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeNatGatewaysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20511,7 +20511,7 @@ export const de_DescribeNatGatewaysCommand = async (
  */
 export const de_DescribeNetworkAclsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeNetworkAclsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20531,7 +20531,7 @@ export const de_DescribeNetworkAclsCommand = async (
  */
 export const de_DescribeNetworkInsightsAccessScopeAnalysesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeNetworkInsightsAccessScopeAnalysesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20551,7 +20551,7 @@ export const de_DescribeNetworkInsightsAccessScopeAnalysesCommand = async (
  */
 export const de_DescribeNetworkInsightsAccessScopesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeNetworkInsightsAccessScopesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20571,7 +20571,7 @@ export const de_DescribeNetworkInsightsAccessScopesCommand = async (
  */
 export const de_DescribeNetworkInsightsAnalysesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeNetworkInsightsAnalysesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20591,7 +20591,7 @@ export const de_DescribeNetworkInsightsAnalysesCommand = async (
  */
 export const de_DescribeNetworkInsightsPathsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeNetworkInsightsPathsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20611,7 +20611,7 @@ export const de_DescribeNetworkInsightsPathsCommand = async (
  */
 export const de_DescribeNetworkInterfaceAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeNetworkInterfaceAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20631,7 +20631,7 @@ export const de_DescribeNetworkInterfaceAttributeCommand = async (
  */
 export const de_DescribeNetworkInterfacePermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeNetworkInterfacePermissionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20651,7 +20651,7 @@ export const de_DescribeNetworkInterfacePermissionsCommand = async (
  */
 export const de_DescribeNetworkInterfacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeNetworkInterfacesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20671,7 +20671,7 @@ export const de_DescribeNetworkInterfacesCommand = async (
  */
 export const de_DescribePlacementGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePlacementGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20691,7 +20691,7 @@ export const de_DescribePlacementGroupsCommand = async (
  */
 export const de_DescribePrefixListsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePrefixListsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20711,7 +20711,7 @@ export const de_DescribePrefixListsCommand = async (
  */
 export const de_DescribePrincipalIdFormatCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePrincipalIdFormatCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20731,7 +20731,7 @@ export const de_DescribePrincipalIdFormatCommand = async (
  */
 export const de_DescribePublicIpv4PoolsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePublicIpv4PoolsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20751,7 +20751,7 @@ export const de_DescribePublicIpv4PoolsCommand = async (
  */
 export const de_DescribeRegionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRegionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20771,7 +20771,7 @@ export const de_DescribeRegionsCommand = async (
  */
 export const de_DescribeReplaceRootVolumeTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReplaceRootVolumeTasksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20791,7 +20791,7 @@ export const de_DescribeReplaceRootVolumeTasksCommand = async (
  */
 export const de_DescribeReservedInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReservedInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20811,7 +20811,7 @@ export const de_DescribeReservedInstancesCommand = async (
  */
 export const de_DescribeReservedInstancesListingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReservedInstancesListingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20831,7 +20831,7 @@ export const de_DescribeReservedInstancesListingsCommand = async (
  */
 export const de_DescribeReservedInstancesModificationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReservedInstancesModificationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20851,7 +20851,7 @@ export const de_DescribeReservedInstancesModificationsCommand = async (
  */
 export const de_DescribeReservedInstancesOfferingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReservedInstancesOfferingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20871,7 +20871,7 @@ export const de_DescribeReservedInstancesOfferingsCommand = async (
  */
 export const de_DescribeRouteTablesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRouteTablesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20891,7 +20891,7 @@ export const de_DescribeRouteTablesCommand = async (
  */
 export const de_DescribeScheduledInstanceAvailabilityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeScheduledInstanceAvailabilityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20911,7 +20911,7 @@ export const de_DescribeScheduledInstanceAvailabilityCommand = async (
  */
 export const de_DescribeScheduledInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeScheduledInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20931,7 +20931,7 @@ export const de_DescribeScheduledInstancesCommand = async (
  */
 export const de_DescribeSecurityGroupReferencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSecurityGroupReferencesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20951,7 +20951,7 @@ export const de_DescribeSecurityGroupReferencesCommand = async (
  */
 export const de_DescribeSecurityGroupRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSecurityGroupRulesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20971,7 +20971,7 @@ export const de_DescribeSecurityGroupRulesCommand = async (
  */
 export const de_DescribeSecurityGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSecurityGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -20991,7 +20991,7 @@ export const de_DescribeSecurityGroupsCommand = async (
  */
 export const de_DescribeSnapshotAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSnapshotAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21011,7 +21011,7 @@ export const de_DescribeSnapshotAttributeCommand = async (
  */
 export const de_DescribeSnapshotsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSnapshotsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21031,7 +21031,7 @@ export const de_DescribeSnapshotsCommand = async (
  */
 export const de_DescribeSnapshotTierStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSnapshotTierStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21051,7 +21051,7 @@ export const de_DescribeSnapshotTierStatusCommand = async (
  */
 export const de_DescribeSpotDatafeedSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSpotDatafeedSubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21071,7 +21071,7 @@ export const de_DescribeSpotDatafeedSubscriptionCommand = async (
  */
 export const de_DescribeSpotFleetInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSpotFleetInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21091,7 +21091,7 @@ export const de_DescribeSpotFleetInstancesCommand = async (
  */
 export const de_DescribeSpotFleetRequestHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSpotFleetRequestHistoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21111,7 +21111,7 @@ export const de_DescribeSpotFleetRequestHistoryCommand = async (
  */
 export const de_DescribeSpotFleetRequestsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSpotFleetRequestsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21131,7 +21131,7 @@ export const de_DescribeSpotFleetRequestsCommand = async (
  */
 export const de_DescribeSpotInstanceRequestsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSpotInstanceRequestsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21151,7 +21151,7 @@ export const de_DescribeSpotInstanceRequestsCommand = async (
  */
 export const de_DescribeSpotPriceHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSpotPriceHistoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21171,7 +21171,7 @@ export const de_DescribeSpotPriceHistoryCommand = async (
  */
 export const de_DescribeStaleSecurityGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStaleSecurityGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21191,7 +21191,7 @@ export const de_DescribeStaleSecurityGroupsCommand = async (
  */
 export const de_DescribeStoreImageTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStoreImageTasksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21211,7 +21211,7 @@ export const de_DescribeStoreImageTasksCommand = async (
  */
 export const de_DescribeSubnetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSubnetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21231,7 +21231,7 @@ export const de_DescribeSubnetsCommand = async (
  */
 export const de_DescribeTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21251,7 +21251,7 @@ export const de_DescribeTagsCommand = async (
  */
 export const de_DescribeTrafficMirrorFilterRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTrafficMirrorFilterRulesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21271,7 +21271,7 @@ export const de_DescribeTrafficMirrorFilterRulesCommand = async (
  */
 export const de_DescribeTrafficMirrorFiltersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTrafficMirrorFiltersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21291,7 +21291,7 @@ export const de_DescribeTrafficMirrorFiltersCommand = async (
  */
 export const de_DescribeTrafficMirrorSessionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTrafficMirrorSessionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21311,7 +21311,7 @@ export const de_DescribeTrafficMirrorSessionsCommand = async (
  */
 export const de_DescribeTrafficMirrorTargetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTrafficMirrorTargetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21331,7 +21331,7 @@ export const de_DescribeTrafficMirrorTargetsCommand = async (
  */
 export const de_DescribeTransitGatewayAttachmentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTransitGatewayAttachmentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21351,7 +21351,7 @@ export const de_DescribeTransitGatewayAttachmentsCommand = async (
  */
 export const de_DescribeTransitGatewayConnectPeersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTransitGatewayConnectPeersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21371,7 +21371,7 @@ export const de_DescribeTransitGatewayConnectPeersCommand = async (
  */
 export const de_DescribeTransitGatewayConnectsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTransitGatewayConnectsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21391,7 +21391,7 @@ export const de_DescribeTransitGatewayConnectsCommand = async (
  */
 export const de_DescribeTransitGatewayMulticastDomainsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTransitGatewayMulticastDomainsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21411,7 +21411,7 @@ export const de_DescribeTransitGatewayMulticastDomainsCommand = async (
  */
 export const de_DescribeTransitGatewayPeeringAttachmentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTransitGatewayPeeringAttachmentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21431,7 +21431,7 @@ export const de_DescribeTransitGatewayPeeringAttachmentsCommand = async (
  */
 export const de_DescribeTransitGatewayPolicyTablesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTransitGatewayPolicyTablesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21451,7 +21451,7 @@ export const de_DescribeTransitGatewayPolicyTablesCommand = async (
  */
 export const de_DescribeTransitGatewayRouteTableAnnouncementsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTransitGatewayRouteTableAnnouncementsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21471,7 +21471,7 @@ export const de_DescribeTransitGatewayRouteTableAnnouncementsCommand = async (
  */
 export const de_DescribeTransitGatewayRouteTablesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTransitGatewayRouteTablesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21491,7 +21491,7 @@ export const de_DescribeTransitGatewayRouteTablesCommand = async (
  */
 export const de_DescribeTransitGatewaysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTransitGatewaysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21511,7 +21511,7 @@ export const de_DescribeTransitGatewaysCommand = async (
  */
 export const de_DescribeTransitGatewayVpcAttachmentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTransitGatewayVpcAttachmentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21531,7 +21531,7 @@ export const de_DescribeTransitGatewayVpcAttachmentsCommand = async (
  */
 export const de_DescribeTrunkInterfaceAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTrunkInterfaceAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21551,7 +21551,7 @@ export const de_DescribeTrunkInterfaceAssociationsCommand = async (
  */
 export const de_DescribeVerifiedAccessEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVerifiedAccessEndpointsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21571,7 +21571,7 @@ export const de_DescribeVerifiedAccessEndpointsCommand = async (
  */
 export const de_DescribeVerifiedAccessGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVerifiedAccessGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21591,7 +21591,7 @@ export const de_DescribeVerifiedAccessGroupsCommand = async (
  */
 export const de_DescribeVerifiedAccessInstanceLoggingConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVerifiedAccessInstanceLoggingConfigurationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21611,7 +21611,7 @@ export const de_DescribeVerifiedAccessInstanceLoggingConfigurationsCommand = asy
  */
 export const de_DescribeVerifiedAccessInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVerifiedAccessInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21631,7 +21631,7 @@ export const de_DescribeVerifiedAccessInstancesCommand = async (
  */
 export const de_DescribeVerifiedAccessTrustProvidersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVerifiedAccessTrustProvidersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21651,7 +21651,7 @@ export const de_DescribeVerifiedAccessTrustProvidersCommand = async (
  */
 export const de_DescribeVolumeAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVolumeAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21671,7 +21671,7 @@ export const de_DescribeVolumeAttributeCommand = async (
  */
 export const de_DescribeVolumesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVolumesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21691,7 +21691,7 @@ export const de_DescribeVolumesCommand = async (
  */
 export const de_DescribeVolumesModificationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVolumesModificationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21711,7 +21711,7 @@ export const de_DescribeVolumesModificationsCommand = async (
  */
 export const de_DescribeVolumeStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVolumeStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21731,7 +21731,7 @@ export const de_DescribeVolumeStatusCommand = async (
  */
 export const de_DescribeVpcAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVpcAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21751,7 +21751,7 @@ export const de_DescribeVpcAttributeCommand = async (
  */
 export const de_DescribeVpcClassicLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVpcClassicLinkCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21771,7 +21771,7 @@ export const de_DescribeVpcClassicLinkCommand = async (
  */
 export const de_DescribeVpcClassicLinkDnsSupportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVpcClassicLinkDnsSupportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21791,7 +21791,7 @@ export const de_DescribeVpcClassicLinkDnsSupportCommand = async (
  */
 export const de_DescribeVpcEndpointConnectionNotificationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVpcEndpointConnectionNotificationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21811,7 +21811,7 @@ export const de_DescribeVpcEndpointConnectionNotificationsCommand = async (
  */
 export const de_DescribeVpcEndpointConnectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVpcEndpointConnectionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21831,7 +21831,7 @@ export const de_DescribeVpcEndpointConnectionsCommand = async (
  */
 export const de_DescribeVpcEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVpcEndpointsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21851,7 +21851,7 @@ export const de_DescribeVpcEndpointsCommand = async (
  */
 export const de_DescribeVpcEndpointServiceConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVpcEndpointServiceConfigurationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21871,7 +21871,7 @@ export const de_DescribeVpcEndpointServiceConfigurationsCommand = async (
  */
 export const de_DescribeVpcEndpointServicePermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVpcEndpointServicePermissionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21891,7 +21891,7 @@ export const de_DescribeVpcEndpointServicePermissionsCommand = async (
  */
 export const de_DescribeVpcEndpointServicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVpcEndpointServicesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21911,7 +21911,7 @@ export const de_DescribeVpcEndpointServicesCommand = async (
  */
 export const de_DescribeVpcPeeringConnectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVpcPeeringConnectionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21931,7 +21931,7 @@ export const de_DescribeVpcPeeringConnectionsCommand = async (
  */
 export const de_DescribeVpcsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVpcsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21951,7 +21951,7 @@ export const de_DescribeVpcsCommand = async (
  */
 export const de_DescribeVpnConnectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVpnConnectionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21971,7 +21971,7 @@ export const de_DescribeVpnConnectionsCommand = async (
  */
 export const de_DescribeVpnGatewaysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVpnGatewaysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -21991,7 +21991,7 @@ export const de_DescribeVpnGatewaysCommand = async (
  */
 export const de_DetachClassicLinkVpcCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachClassicLinkVpcCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22011,7 +22011,7 @@ export const de_DetachClassicLinkVpcCommand = async (
  */
 export const de_DetachInternetGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachInternetGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22028,7 +22028,7 @@ export const de_DetachInternetGatewayCommand = async (
  */
 export const de_DetachNetworkInterfaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachNetworkInterfaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22045,7 +22045,7 @@ export const de_DetachNetworkInterfaceCommand = async (
  */
 export const de_DetachVerifiedAccessTrustProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachVerifiedAccessTrustProviderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22065,7 +22065,7 @@ export const de_DetachVerifiedAccessTrustProviderCommand = async (
  */
 export const de_DetachVolumeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachVolumeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22085,7 +22085,7 @@ export const de_DetachVolumeCommand = async (
  */
 export const de_DetachVpnGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachVpnGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22102,7 +22102,7 @@ export const de_DetachVpnGatewayCommand = async (
  */
 export const de_DisableAddressTransferCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableAddressTransferCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22122,7 +22122,7 @@ export const de_DisableAddressTransferCommand = async (
  */
 export const de_DisableAwsNetworkPerformanceMetricSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableAwsNetworkPerformanceMetricSubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22142,7 +22142,7 @@ export const de_DisableAwsNetworkPerformanceMetricSubscriptionCommand = async (
  */
 export const de_DisableEbsEncryptionByDefaultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableEbsEncryptionByDefaultCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22162,7 +22162,7 @@ export const de_DisableEbsEncryptionByDefaultCommand = async (
  */
 export const de_DisableFastLaunchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableFastLaunchCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22182,7 +22182,7 @@ export const de_DisableFastLaunchCommand = async (
  */
 export const de_DisableFastSnapshotRestoresCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableFastSnapshotRestoresCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22202,7 +22202,7 @@ export const de_DisableFastSnapshotRestoresCommand = async (
  */
 export const de_DisableImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22222,7 +22222,7 @@ export const de_DisableImageCommand = async (
  */
 export const de_DisableImageBlockPublicAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableImageBlockPublicAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22242,7 +22242,7 @@ export const de_DisableImageBlockPublicAccessCommand = async (
  */
 export const de_DisableImageDeprecationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableImageDeprecationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22262,7 +22262,7 @@ export const de_DisableImageDeprecationCommand = async (
  */
 export const de_DisableImageDeregistrationProtectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableImageDeregistrationProtectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22282,7 +22282,7 @@ export const de_DisableImageDeregistrationProtectionCommand = async (
  */
 export const de_DisableIpamOrganizationAdminAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableIpamOrganizationAdminAccountCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22302,7 +22302,7 @@ export const de_DisableIpamOrganizationAdminAccountCommand = async (
  */
 export const de_DisableSerialConsoleAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableSerialConsoleAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22322,7 +22322,7 @@ export const de_DisableSerialConsoleAccessCommand = async (
  */
 export const de_DisableSnapshotBlockPublicAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableSnapshotBlockPublicAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22342,7 +22342,7 @@ export const de_DisableSnapshotBlockPublicAccessCommand = async (
  */
 export const de_DisableTransitGatewayRouteTablePropagationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableTransitGatewayRouteTablePropagationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22362,7 +22362,7 @@ export const de_DisableTransitGatewayRouteTablePropagationCommand = async (
  */
 export const de_DisableVgwRoutePropagationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableVgwRoutePropagationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22379,7 +22379,7 @@ export const de_DisableVgwRoutePropagationCommand = async (
  */
 export const de_DisableVpcClassicLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableVpcClassicLinkCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22399,7 +22399,7 @@ export const de_DisableVpcClassicLinkCommand = async (
  */
 export const de_DisableVpcClassicLinkDnsSupportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableVpcClassicLinkDnsSupportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22419,7 +22419,7 @@ export const de_DisableVpcClassicLinkDnsSupportCommand = async (
  */
 export const de_DisassociateAddressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateAddressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22436,7 +22436,7 @@ export const de_DisassociateAddressCommand = async (
  */
 export const de_DisassociateClientVpnTargetNetworkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateClientVpnTargetNetworkCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22456,7 +22456,7 @@ export const de_DisassociateClientVpnTargetNetworkCommand = async (
  */
 export const de_DisassociateEnclaveCertificateIamRoleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateEnclaveCertificateIamRoleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22476,7 +22476,7 @@ export const de_DisassociateEnclaveCertificateIamRoleCommand = async (
  */
 export const de_DisassociateIamInstanceProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateIamInstanceProfileCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22496,7 +22496,7 @@ export const de_DisassociateIamInstanceProfileCommand = async (
  */
 export const de_DisassociateInstanceEventWindowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateInstanceEventWindowCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22516,7 +22516,7 @@ export const de_DisassociateInstanceEventWindowCommand = async (
  */
 export const de_DisassociateIpamByoasnCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateIpamByoasnCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22536,7 +22536,7 @@ export const de_DisassociateIpamByoasnCommand = async (
  */
 export const de_DisassociateIpamResourceDiscoveryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateIpamResourceDiscoveryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22556,7 +22556,7 @@ export const de_DisassociateIpamResourceDiscoveryCommand = async (
  */
 export const de_DisassociateNatGatewayAddressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateNatGatewayAddressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22576,7 +22576,7 @@ export const de_DisassociateNatGatewayAddressCommand = async (
  */
 export const de_DisassociateRouteTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateRouteTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22593,7 +22593,7 @@ export const de_DisassociateRouteTableCommand = async (
  */
 export const de_DisassociateSubnetCidrBlockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateSubnetCidrBlockCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22613,7 +22613,7 @@ export const de_DisassociateSubnetCidrBlockCommand = async (
  */
 export const de_DisassociateTransitGatewayMulticastDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateTransitGatewayMulticastDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22633,7 +22633,7 @@ export const de_DisassociateTransitGatewayMulticastDomainCommand = async (
  */
 export const de_DisassociateTransitGatewayPolicyTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateTransitGatewayPolicyTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22653,7 +22653,7 @@ export const de_DisassociateTransitGatewayPolicyTableCommand = async (
  */
 export const de_DisassociateTransitGatewayRouteTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateTransitGatewayRouteTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22673,7 +22673,7 @@ export const de_DisassociateTransitGatewayRouteTableCommand = async (
  */
 export const de_DisassociateTrunkInterfaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateTrunkInterfaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22693,7 +22693,7 @@ export const de_DisassociateTrunkInterfaceCommand = async (
  */
 export const de_DisassociateVpcCidrBlockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateVpcCidrBlockCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22713,7 +22713,7 @@ export const de_DisassociateVpcCidrBlockCommand = async (
  */
 export const de_EnableAddressTransferCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableAddressTransferCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22733,7 +22733,7 @@ export const de_EnableAddressTransferCommand = async (
  */
 export const de_EnableAwsNetworkPerformanceMetricSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableAwsNetworkPerformanceMetricSubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22753,7 +22753,7 @@ export const de_EnableAwsNetworkPerformanceMetricSubscriptionCommand = async (
  */
 export const de_EnableEbsEncryptionByDefaultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableEbsEncryptionByDefaultCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22773,7 +22773,7 @@ export const de_EnableEbsEncryptionByDefaultCommand = async (
  */
 export const de_EnableFastLaunchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableFastLaunchCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22793,7 +22793,7 @@ export const de_EnableFastLaunchCommand = async (
  */
 export const de_EnableFastSnapshotRestoresCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableFastSnapshotRestoresCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22813,7 +22813,7 @@ export const de_EnableFastSnapshotRestoresCommand = async (
  */
 export const de_EnableImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22833,7 +22833,7 @@ export const de_EnableImageCommand = async (
  */
 export const de_EnableImageBlockPublicAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableImageBlockPublicAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22853,7 +22853,7 @@ export const de_EnableImageBlockPublicAccessCommand = async (
  */
 export const de_EnableImageDeprecationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableImageDeprecationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22873,7 +22873,7 @@ export const de_EnableImageDeprecationCommand = async (
  */
 export const de_EnableImageDeregistrationProtectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableImageDeregistrationProtectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22893,7 +22893,7 @@ export const de_EnableImageDeregistrationProtectionCommand = async (
  */
 export const de_EnableIpamOrganizationAdminAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableIpamOrganizationAdminAccountCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22913,7 +22913,7 @@ export const de_EnableIpamOrganizationAdminAccountCommand = async (
  */
 export const de_EnableReachabilityAnalyzerOrganizationSharingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableReachabilityAnalyzerOrganizationSharingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22933,7 +22933,7 @@ export const de_EnableReachabilityAnalyzerOrganizationSharingCommand = async (
  */
 export const de_EnableSerialConsoleAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableSerialConsoleAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22953,7 +22953,7 @@ export const de_EnableSerialConsoleAccessCommand = async (
  */
 export const de_EnableSnapshotBlockPublicAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableSnapshotBlockPublicAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22973,7 +22973,7 @@ export const de_EnableSnapshotBlockPublicAccessCommand = async (
  */
 export const de_EnableTransitGatewayRouteTablePropagationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableTransitGatewayRouteTablePropagationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -22993,7 +22993,7 @@ export const de_EnableTransitGatewayRouteTablePropagationCommand = async (
  */
 export const de_EnableVgwRoutePropagationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableVgwRoutePropagationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23010,7 +23010,7 @@ export const de_EnableVgwRoutePropagationCommand = async (
  */
 export const de_EnableVolumeIOCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableVolumeIOCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23027,7 +23027,7 @@ export const de_EnableVolumeIOCommand = async (
  */
 export const de_EnableVpcClassicLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableVpcClassicLinkCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23047,7 +23047,7 @@ export const de_EnableVpcClassicLinkCommand = async (
  */
 export const de_EnableVpcClassicLinkDnsSupportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableVpcClassicLinkDnsSupportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23067,7 +23067,7 @@ export const de_EnableVpcClassicLinkDnsSupportCommand = async (
  */
 export const de_ExportClientVpnClientCertificateRevocationListCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportClientVpnClientCertificateRevocationListCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23087,7 +23087,7 @@ export const de_ExportClientVpnClientCertificateRevocationListCommand = async (
  */
 export const de_ExportClientVpnClientConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportClientVpnClientConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23107,7 +23107,7 @@ export const de_ExportClientVpnClientConfigurationCommand = async (
  */
 export const de_ExportImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23127,7 +23127,7 @@ export const de_ExportImageCommand = async (
  */
 export const de_ExportTransitGatewayRoutesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportTransitGatewayRoutesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23147,7 +23147,7 @@ export const de_ExportTransitGatewayRoutesCommand = async (
  */
 export const de_GetAssociatedEnclaveCertificateIamRolesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAssociatedEnclaveCertificateIamRolesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23167,7 +23167,7 @@ export const de_GetAssociatedEnclaveCertificateIamRolesCommand = async (
  */
 export const de_GetAssociatedIpv6PoolCidrsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAssociatedIpv6PoolCidrsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23187,7 +23187,7 @@ export const de_GetAssociatedIpv6PoolCidrsCommand = async (
  */
 export const de_GetAwsNetworkPerformanceDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAwsNetworkPerformanceDataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23207,7 +23207,7 @@ export const de_GetAwsNetworkPerformanceDataCommand = async (
  */
 export const de_GetCapacityReservationUsageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCapacityReservationUsageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23227,7 +23227,7 @@ export const de_GetCapacityReservationUsageCommand = async (
  */
 export const de_GetCoipPoolUsageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCoipPoolUsageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23247,7 +23247,7 @@ export const de_GetCoipPoolUsageCommand = async (
  */
 export const de_GetConsoleOutputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConsoleOutputCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23267,7 +23267,7 @@ export const de_GetConsoleOutputCommand = async (
  */
 export const de_GetConsoleScreenshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConsoleScreenshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23287,7 +23287,7 @@ export const de_GetConsoleScreenshotCommand = async (
  */
 export const de_GetDefaultCreditSpecificationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDefaultCreditSpecificationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23307,7 +23307,7 @@ export const de_GetDefaultCreditSpecificationCommand = async (
  */
 export const de_GetEbsDefaultKmsKeyIdCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEbsDefaultKmsKeyIdCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23327,7 +23327,7 @@ export const de_GetEbsDefaultKmsKeyIdCommand = async (
  */
 export const de_GetEbsEncryptionByDefaultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEbsEncryptionByDefaultCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23347,7 +23347,7 @@ export const de_GetEbsEncryptionByDefaultCommand = async (
  */
 export const de_GetFlowLogsIntegrationTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFlowLogsIntegrationTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23367,7 +23367,7 @@ export const de_GetFlowLogsIntegrationTemplateCommand = async (
  */
 export const de_GetGroupsForCapacityReservationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGroupsForCapacityReservationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23387,7 +23387,7 @@ export const de_GetGroupsForCapacityReservationCommand = async (
  */
 export const de_GetHostReservationPurchasePreviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetHostReservationPurchasePreviewCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23407,7 +23407,7 @@ export const de_GetHostReservationPurchasePreviewCommand = async (
  */
 export const de_GetImageBlockPublicAccessStateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetImageBlockPublicAccessStateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23427,7 +23427,7 @@ export const de_GetImageBlockPublicAccessStateCommand = async (
  */
 export const de_GetInstanceMetadataDefaultsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInstanceMetadataDefaultsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23447,7 +23447,7 @@ export const de_GetInstanceMetadataDefaultsCommand = async (
  */
 export const de_GetInstanceTpmEkPubCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInstanceTpmEkPubCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23467,7 +23467,7 @@ export const de_GetInstanceTpmEkPubCommand = async (
  */
 export const de_GetInstanceTypesFromInstanceRequirementsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInstanceTypesFromInstanceRequirementsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23487,7 +23487,7 @@ export const de_GetInstanceTypesFromInstanceRequirementsCommand = async (
  */
 export const de_GetInstanceUefiDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInstanceUefiDataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23507,7 +23507,7 @@ export const de_GetInstanceUefiDataCommand = async (
  */
 export const de_GetIpamAddressHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIpamAddressHistoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23527,7 +23527,7 @@ export const de_GetIpamAddressHistoryCommand = async (
  */
 export const de_GetIpamDiscoveredAccountsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIpamDiscoveredAccountsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23547,7 +23547,7 @@ export const de_GetIpamDiscoveredAccountsCommand = async (
  */
 export const de_GetIpamDiscoveredPublicAddressesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIpamDiscoveredPublicAddressesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23567,7 +23567,7 @@ export const de_GetIpamDiscoveredPublicAddressesCommand = async (
  */
 export const de_GetIpamDiscoveredResourceCidrsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIpamDiscoveredResourceCidrsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23587,7 +23587,7 @@ export const de_GetIpamDiscoveredResourceCidrsCommand = async (
  */
 export const de_GetIpamPoolAllocationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIpamPoolAllocationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23607,7 +23607,7 @@ export const de_GetIpamPoolAllocationsCommand = async (
  */
 export const de_GetIpamPoolCidrsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIpamPoolCidrsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23627,7 +23627,7 @@ export const de_GetIpamPoolCidrsCommand = async (
  */
 export const de_GetIpamResourceCidrsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIpamResourceCidrsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23647,7 +23647,7 @@ export const de_GetIpamResourceCidrsCommand = async (
  */
 export const de_GetLaunchTemplateDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLaunchTemplateDataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23667,7 +23667,7 @@ export const de_GetLaunchTemplateDataCommand = async (
  */
 export const de_GetManagedPrefixListAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetManagedPrefixListAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23687,7 +23687,7 @@ export const de_GetManagedPrefixListAssociationsCommand = async (
  */
 export const de_GetManagedPrefixListEntriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetManagedPrefixListEntriesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23707,7 +23707,7 @@ export const de_GetManagedPrefixListEntriesCommand = async (
  */
 export const de_GetNetworkInsightsAccessScopeAnalysisFindingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetNetworkInsightsAccessScopeAnalysisFindingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23727,7 +23727,7 @@ export const de_GetNetworkInsightsAccessScopeAnalysisFindingsCommand = async (
  */
 export const de_GetNetworkInsightsAccessScopeContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetNetworkInsightsAccessScopeContentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23747,7 +23747,7 @@ export const de_GetNetworkInsightsAccessScopeContentCommand = async (
  */
 export const de_GetPasswordDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPasswordDataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23767,7 +23767,7 @@ export const de_GetPasswordDataCommand = async (
  */
 export const de_GetReservedInstancesExchangeQuoteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReservedInstancesExchangeQuoteCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23787,7 +23787,7 @@ export const de_GetReservedInstancesExchangeQuoteCommand = async (
  */
 export const de_GetSecurityGroupsForVpcCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSecurityGroupsForVpcCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23807,7 +23807,7 @@ export const de_GetSecurityGroupsForVpcCommand = async (
  */
 export const de_GetSerialConsoleAccessStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSerialConsoleAccessStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23827,7 +23827,7 @@ export const de_GetSerialConsoleAccessStatusCommand = async (
  */
 export const de_GetSnapshotBlockPublicAccessStateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSnapshotBlockPublicAccessStateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23847,7 +23847,7 @@ export const de_GetSnapshotBlockPublicAccessStateCommand = async (
  */
 export const de_GetSpotPlacementScoresCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSpotPlacementScoresCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23867,7 +23867,7 @@ export const de_GetSpotPlacementScoresCommand = async (
  */
 export const de_GetSubnetCidrReservationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSubnetCidrReservationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23887,7 +23887,7 @@ export const de_GetSubnetCidrReservationsCommand = async (
  */
 export const de_GetTransitGatewayAttachmentPropagationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTransitGatewayAttachmentPropagationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23907,7 +23907,7 @@ export const de_GetTransitGatewayAttachmentPropagationsCommand = async (
  */
 export const de_GetTransitGatewayMulticastDomainAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTransitGatewayMulticastDomainAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23927,7 +23927,7 @@ export const de_GetTransitGatewayMulticastDomainAssociationsCommand = async (
  */
 export const de_GetTransitGatewayPolicyTableAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTransitGatewayPolicyTableAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23947,7 +23947,7 @@ export const de_GetTransitGatewayPolicyTableAssociationsCommand = async (
  */
 export const de_GetTransitGatewayPolicyTableEntriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTransitGatewayPolicyTableEntriesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23967,7 +23967,7 @@ export const de_GetTransitGatewayPolicyTableEntriesCommand = async (
  */
 export const de_GetTransitGatewayPrefixListReferencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTransitGatewayPrefixListReferencesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -23987,7 +23987,7 @@ export const de_GetTransitGatewayPrefixListReferencesCommand = async (
  */
 export const de_GetTransitGatewayRouteTableAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTransitGatewayRouteTableAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24007,7 +24007,7 @@ export const de_GetTransitGatewayRouteTableAssociationsCommand = async (
  */
 export const de_GetTransitGatewayRouteTablePropagationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTransitGatewayRouteTablePropagationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24027,7 +24027,7 @@ export const de_GetTransitGatewayRouteTablePropagationsCommand = async (
  */
 export const de_GetVerifiedAccessEndpointPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVerifiedAccessEndpointPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24047,7 +24047,7 @@ export const de_GetVerifiedAccessEndpointPolicyCommand = async (
  */
 export const de_GetVerifiedAccessGroupPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVerifiedAccessGroupPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24067,7 +24067,7 @@ export const de_GetVerifiedAccessGroupPolicyCommand = async (
  */
 export const de_GetVpnConnectionDeviceSampleConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVpnConnectionDeviceSampleConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24087,7 +24087,7 @@ export const de_GetVpnConnectionDeviceSampleConfigurationCommand = async (
  */
 export const de_GetVpnConnectionDeviceTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVpnConnectionDeviceTypesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24107,7 +24107,7 @@ export const de_GetVpnConnectionDeviceTypesCommand = async (
  */
 export const de_GetVpnTunnelReplacementStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVpnTunnelReplacementStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24127,7 +24127,7 @@ export const de_GetVpnTunnelReplacementStatusCommand = async (
  */
 export const de_ImportClientVpnClientCertificateRevocationListCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportClientVpnClientCertificateRevocationListCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24147,7 +24147,7 @@ export const de_ImportClientVpnClientCertificateRevocationListCommand = async (
  */
 export const de_ImportImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24167,7 +24167,7 @@ export const de_ImportImageCommand = async (
  */
 export const de_ImportInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24187,7 +24187,7 @@ export const de_ImportInstanceCommand = async (
  */
 export const de_ImportKeyPairCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportKeyPairCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24207,7 +24207,7 @@ export const de_ImportKeyPairCommand = async (
  */
 export const de_ImportSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24227,7 +24227,7 @@ export const de_ImportSnapshotCommand = async (
  */
 export const de_ImportVolumeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportVolumeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24247,7 +24247,7 @@ export const de_ImportVolumeCommand = async (
  */
 export const de_ListImagesInRecycleBinCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListImagesInRecycleBinCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24267,7 +24267,7 @@ export const de_ListImagesInRecycleBinCommand = async (
  */
 export const de_ListSnapshotsInRecycleBinCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSnapshotsInRecycleBinCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24287,7 +24287,7 @@ export const de_ListSnapshotsInRecycleBinCommand = async (
  */
 export const de_LockSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LockSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24307,7 +24307,7 @@ export const de_LockSnapshotCommand = async (
  */
 export const de_ModifyAddressAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyAddressAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24327,7 +24327,7 @@ export const de_ModifyAddressAttributeCommand = async (
  */
 export const de_ModifyAvailabilityZoneGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyAvailabilityZoneGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24347,7 +24347,7 @@ export const de_ModifyAvailabilityZoneGroupCommand = async (
  */
 export const de_ModifyCapacityReservationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyCapacityReservationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24367,7 +24367,7 @@ export const de_ModifyCapacityReservationCommand = async (
  */
 export const de_ModifyCapacityReservationFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyCapacityReservationFleetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24387,7 +24387,7 @@ export const de_ModifyCapacityReservationFleetCommand = async (
  */
 export const de_ModifyClientVpnEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyClientVpnEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24407,7 +24407,7 @@ export const de_ModifyClientVpnEndpointCommand = async (
  */
 export const de_ModifyDefaultCreditSpecificationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyDefaultCreditSpecificationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24427,7 +24427,7 @@ export const de_ModifyDefaultCreditSpecificationCommand = async (
  */
 export const de_ModifyEbsDefaultKmsKeyIdCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyEbsDefaultKmsKeyIdCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24447,7 +24447,7 @@ export const de_ModifyEbsDefaultKmsKeyIdCommand = async (
  */
 export const de_ModifyFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyFleetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24467,7 +24467,7 @@ export const de_ModifyFleetCommand = async (
  */
 export const de_ModifyFpgaImageAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyFpgaImageAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24487,7 +24487,7 @@ export const de_ModifyFpgaImageAttributeCommand = async (
  */
 export const de_ModifyHostsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyHostsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24507,7 +24507,7 @@ export const de_ModifyHostsCommand = async (
  */
 export const de_ModifyIdentityIdFormatCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyIdentityIdFormatCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24524,7 +24524,7 @@ export const de_ModifyIdentityIdFormatCommand = async (
  */
 export const de_ModifyIdFormatCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyIdFormatCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24541,7 +24541,7 @@ export const de_ModifyIdFormatCommand = async (
  */
 export const de_ModifyImageAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyImageAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24558,7 +24558,7 @@ export const de_ModifyImageAttributeCommand = async (
  */
 export const de_ModifyInstanceAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyInstanceAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24575,7 +24575,7 @@ export const de_ModifyInstanceAttributeCommand = async (
  */
 export const de_ModifyInstanceCapacityReservationAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyInstanceCapacityReservationAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24595,7 +24595,7 @@ export const de_ModifyInstanceCapacityReservationAttributesCommand = async (
  */
 export const de_ModifyInstanceCreditSpecificationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyInstanceCreditSpecificationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24615,7 +24615,7 @@ export const de_ModifyInstanceCreditSpecificationCommand = async (
  */
 export const de_ModifyInstanceEventStartTimeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyInstanceEventStartTimeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24635,7 +24635,7 @@ export const de_ModifyInstanceEventStartTimeCommand = async (
  */
 export const de_ModifyInstanceEventWindowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyInstanceEventWindowCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24655,7 +24655,7 @@ export const de_ModifyInstanceEventWindowCommand = async (
  */
 export const de_ModifyInstanceMaintenanceOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyInstanceMaintenanceOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24675,7 +24675,7 @@ export const de_ModifyInstanceMaintenanceOptionsCommand = async (
  */
 export const de_ModifyInstanceMetadataDefaultsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyInstanceMetadataDefaultsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24695,7 +24695,7 @@ export const de_ModifyInstanceMetadataDefaultsCommand = async (
  */
 export const de_ModifyInstanceMetadataOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyInstanceMetadataOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24715,7 +24715,7 @@ export const de_ModifyInstanceMetadataOptionsCommand = async (
  */
 export const de_ModifyInstancePlacementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyInstancePlacementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24735,7 +24735,7 @@ export const de_ModifyInstancePlacementCommand = async (
  */
 export const de_ModifyIpamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyIpamCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24755,7 +24755,7 @@ export const de_ModifyIpamCommand = async (
  */
 export const de_ModifyIpamPoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyIpamPoolCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24775,7 +24775,7 @@ export const de_ModifyIpamPoolCommand = async (
  */
 export const de_ModifyIpamResourceCidrCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyIpamResourceCidrCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24795,7 +24795,7 @@ export const de_ModifyIpamResourceCidrCommand = async (
  */
 export const de_ModifyIpamResourceDiscoveryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyIpamResourceDiscoveryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24815,7 +24815,7 @@ export const de_ModifyIpamResourceDiscoveryCommand = async (
  */
 export const de_ModifyIpamScopeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyIpamScopeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24835,7 +24835,7 @@ export const de_ModifyIpamScopeCommand = async (
  */
 export const de_ModifyLaunchTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyLaunchTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24855,7 +24855,7 @@ export const de_ModifyLaunchTemplateCommand = async (
  */
 export const de_ModifyLocalGatewayRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyLocalGatewayRouteCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24875,7 +24875,7 @@ export const de_ModifyLocalGatewayRouteCommand = async (
  */
 export const de_ModifyManagedPrefixListCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyManagedPrefixListCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24895,7 +24895,7 @@ export const de_ModifyManagedPrefixListCommand = async (
  */
 export const de_ModifyNetworkInterfaceAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyNetworkInterfaceAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24912,7 +24912,7 @@ export const de_ModifyNetworkInterfaceAttributeCommand = async (
  */
 export const de_ModifyPrivateDnsNameOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyPrivateDnsNameOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24932,7 +24932,7 @@ export const de_ModifyPrivateDnsNameOptionsCommand = async (
  */
 export const de_ModifyReservedInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyReservedInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24952,7 +24952,7 @@ export const de_ModifyReservedInstancesCommand = async (
  */
 export const de_ModifySecurityGroupRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifySecurityGroupRulesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24972,7 +24972,7 @@ export const de_ModifySecurityGroupRulesCommand = async (
  */
 export const de_ModifySnapshotAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifySnapshotAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -24989,7 +24989,7 @@ export const de_ModifySnapshotAttributeCommand = async (
  */
 export const de_ModifySnapshotTierCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifySnapshotTierCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25009,7 +25009,7 @@ export const de_ModifySnapshotTierCommand = async (
  */
 export const de_ModifySpotFleetRequestCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifySpotFleetRequestCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25029,7 +25029,7 @@ export const de_ModifySpotFleetRequestCommand = async (
  */
 export const de_ModifySubnetAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifySubnetAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25046,7 +25046,7 @@ export const de_ModifySubnetAttributeCommand = async (
  */
 export const de_ModifyTrafficMirrorFilterNetworkServicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyTrafficMirrorFilterNetworkServicesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25066,7 +25066,7 @@ export const de_ModifyTrafficMirrorFilterNetworkServicesCommand = async (
  */
 export const de_ModifyTrafficMirrorFilterRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyTrafficMirrorFilterRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25086,7 +25086,7 @@ export const de_ModifyTrafficMirrorFilterRuleCommand = async (
  */
 export const de_ModifyTrafficMirrorSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyTrafficMirrorSessionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25106,7 +25106,7 @@ export const de_ModifyTrafficMirrorSessionCommand = async (
  */
 export const de_ModifyTransitGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyTransitGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25126,7 +25126,7 @@ export const de_ModifyTransitGatewayCommand = async (
  */
 export const de_ModifyTransitGatewayPrefixListReferenceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyTransitGatewayPrefixListReferenceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25146,7 +25146,7 @@ export const de_ModifyTransitGatewayPrefixListReferenceCommand = async (
  */
 export const de_ModifyTransitGatewayVpcAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyTransitGatewayVpcAttachmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25166,7 +25166,7 @@ export const de_ModifyTransitGatewayVpcAttachmentCommand = async (
  */
 export const de_ModifyVerifiedAccessEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyVerifiedAccessEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25186,7 +25186,7 @@ export const de_ModifyVerifiedAccessEndpointCommand = async (
  */
 export const de_ModifyVerifiedAccessEndpointPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyVerifiedAccessEndpointPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25206,7 +25206,7 @@ export const de_ModifyVerifiedAccessEndpointPolicyCommand = async (
  */
 export const de_ModifyVerifiedAccessGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyVerifiedAccessGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25226,7 +25226,7 @@ export const de_ModifyVerifiedAccessGroupCommand = async (
  */
 export const de_ModifyVerifiedAccessGroupPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyVerifiedAccessGroupPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25246,7 +25246,7 @@ export const de_ModifyVerifiedAccessGroupPolicyCommand = async (
  */
 export const de_ModifyVerifiedAccessInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyVerifiedAccessInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25266,7 +25266,7 @@ export const de_ModifyVerifiedAccessInstanceCommand = async (
  */
 export const de_ModifyVerifiedAccessInstanceLoggingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyVerifiedAccessInstanceLoggingConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25286,7 +25286,7 @@ export const de_ModifyVerifiedAccessInstanceLoggingConfigurationCommand = async 
  */
 export const de_ModifyVerifiedAccessTrustProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyVerifiedAccessTrustProviderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25306,7 +25306,7 @@ export const de_ModifyVerifiedAccessTrustProviderCommand = async (
  */
 export const de_ModifyVolumeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyVolumeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25326,7 +25326,7 @@ export const de_ModifyVolumeCommand = async (
  */
 export const de_ModifyVolumeAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyVolumeAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25343,7 +25343,7 @@ export const de_ModifyVolumeAttributeCommand = async (
  */
 export const de_ModifyVpcAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyVpcAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25360,7 +25360,7 @@ export const de_ModifyVpcAttributeCommand = async (
  */
 export const de_ModifyVpcEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyVpcEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25380,7 +25380,7 @@ export const de_ModifyVpcEndpointCommand = async (
  */
 export const de_ModifyVpcEndpointConnectionNotificationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyVpcEndpointConnectionNotificationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25400,7 +25400,7 @@ export const de_ModifyVpcEndpointConnectionNotificationCommand = async (
  */
 export const de_ModifyVpcEndpointServiceConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyVpcEndpointServiceConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25420,7 +25420,7 @@ export const de_ModifyVpcEndpointServiceConfigurationCommand = async (
  */
 export const de_ModifyVpcEndpointServicePayerResponsibilityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyVpcEndpointServicePayerResponsibilityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25440,7 +25440,7 @@ export const de_ModifyVpcEndpointServicePayerResponsibilityCommand = async (
  */
 export const de_ModifyVpcEndpointServicePermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyVpcEndpointServicePermissionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25460,7 +25460,7 @@ export const de_ModifyVpcEndpointServicePermissionsCommand = async (
  */
 export const de_ModifyVpcPeeringConnectionOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyVpcPeeringConnectionOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25480,7 +25480,7 @@ export const de_ModifyVpcPeeringConnectionOptionsCommand = async (
  */
 export const de_ModifyVpcTenancyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyVpcTenancyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25500,7 +25500,7 @@ export const de_ModifyVpcTenancyCommand = async (
  */
 export const de_ModifyVpnConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyVpnConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25520,7 +25520,7 @@ export const de_ModifyVpnConnectionCommand = async (
  */
 export const de_ModifyVpnConnectionOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyVpnConnectionOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25540,7 +25540,7 @@ export const de_ModifyVpnConnectionOptionsCommand = async (
  */
 export const de_ModifyVpnTunnelCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyVpnTunnelCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25560,7 +25560,7 @@ export const de_ModifyVpnTunnelCertificateCommand = async (
  */
 export const de_ModifyVpnTunnelOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyVpnTunnelOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25580,7 +25580,7 @@ export const de_ModifyVpnTunnelOptionsCommand = async (
  */
 export const de_MonitorInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MonitorInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25600,7 +25600,7 @@ export const de_MonitorInstancesCommand = async (
  */
 export const de_MoveAddressToVpcCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MoveAddressToVpcCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25620,7 +25620,7 @@ export const de_MoveAddressToVpcCommand = async (
  */
 export const de_MoveByoipCidrToIpamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MoveByoipCidrToIpamCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25640,7 +25640,7 @@ export const de_MoveByoipCidrToIpamCommand = async (
  */
 export const de_ProvisionByoipCidrCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ProvisionByoipCidrCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25660,7 +25660,7 @@ export const de_ProvisionByoipCidrCommand = async (
  */
 export const de_ProvisionIpamByoasnCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ProvisionIpamByoasnCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25680,7 +25680,7 @@ export const de_ProvisionIpamByoasnCommand = async (
  */
 export const de_ProvisionIpamPoolCidrCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ProvisionIpamPoolCidrCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25700,7 +25700,7 @@ export const de_ProvisionIpamPoolCidrCommand = async (
  */
 export const de_ProvisionPublicIpv4PoolCidrCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ProvisionPublicIpv4PoolCidrCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25720,7 +25720,7 @@ export const de_ProvisionPublicIpv4PoolCidrCommand = async (
  */
 export const de_PurchaseCapacityBlockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PurchaseCapacityBlockCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25740,7 +25740,7 @@ export const de_PurchaseCapacityBlockCommand = async (
  */
 export const de_PurchaseHostReservationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PurchaseHostReservationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25760,7 +25760,7 @@ export const de_PurchaseHostReservationCommand = async (
  */
 export const de_PurchaseReservedInstancesOfferingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PurchaseReservedInstancesOfferingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25780,7 +25780,7 @@ export const de_PurchaseReservedInstancesOfferingCommand = async (
  */
 export const de_PurchaseScheduledInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PurchaseScheduledInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25800,7 +25800,7 @@ export const de_PurchaseScheduledInstancesCommand = async (
  */
 export const de_RebootInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RebootInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25817,7 +25817,7 @@ export const de_RebootInstancesCommand = async (
  */
 export const de_RegisterImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25837,7 +25837,7 @@ export const de_RegisterImageCommand = async (
  */
 export const de_RegisterInstanceEventNotificationAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterInstanceEventNotificationAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25857,7 +25857,7 @@ export const de_RegisterInstanceEventNotificationAttributesCommand = async (
  */
 export const de_RegisterTransitGatewayMulticastGroupMembersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterTransitGatewayMulticastGroupMembersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25877,7 +25877,7 @@ export const de_RegisterTransitGatewayMulticastGroupMembersCommand = async (
  */
 export const de_RegisterTransitGatewayMulticastGroupSourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterTransitGatewayMulticastGroupSourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25897,7 +25897,7 @@ export const de_RegisterTransitGatewayMulticastGroupSourcesCommand = async (
  */
 export const de_RejectTransitGatewayMulticastDomainAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RejectTransitGatewayMulticastDomainAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25917,7 +25917,7 @@ export const de_RejectTransitGatewayMulticastDomainAssociationsCommand = async (
  */
 export const de_RejectTransitGatewayPeeringAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RejectTransitGatewayPeeringAttachmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25937,7 +25937,7 @@ export const de_RejectTransitGatewayPeeringAttachmentCommand = async (
  */
 export const de_RejectTransitGatewayVpcAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RejectTransitGatewayVpcAttachmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25957,7 +25957,7 @@ export const de_RejectTransitGatewayVpcAttachmentCommand = async (
  */
 export const de_RejectVpcEndpointConnectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RejectVpcEndpointConnectionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25977,7 +25977,7 @@ export const de_RejectVpcEndpointConnectionsCommand = async (
  */
 export const de_RejectVpcPeeringConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RejectVpcPeeringConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -25997,7 +25997,7 @@ export const de_RejectVpcPeeringConnectionCommand = async (
  */
 export const de_ReleaseAddressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReleaseAddressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26014,7 +26014,7 @@ export const de_ReleaseAddressCommand = async (
  */
 export const de_ReleaseHostsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReleaseHostsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26034,7 +26034,7 @@ export const de_ReleaseHostsCommand = async (
  */
 export const de_ReleaseIpamPoolAllocationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReleaseIpamPoolAllocationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26054,7 +26054,7 @@ export const de_ReleaseIpamPoolAllocationCommand = async (
  */
 export const de_ReplaceIamInstanceProfileAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplaceIamInstanceProfileAssociationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26074,7 +26074,7 @@ export const de_ReplaceIamInstanceProfileAssociationCommand = async (
  */
 export const de_ReplaceNetworkAclAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplaceNetworkAclAssociationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26094,7 +26094,7 @@ export const de_ReplaceNetworkAclAssociationCommand = async (
  */
 export const de_ReplaceNetworkAclEntryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplaceNetworkAclEntryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26111,7 +26111,7 @@ export const de_ReplaceNetworkAclEntryCommand = async (
  */
 export const de_ReplaceRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplaceRouteCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26128,7 +26128,7 @@ export const de_ReplaceRouteCommand = async (
  */
 export const de_ReplaceRouteTableAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplaceRouteTableAssociationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26148,7 +26148,7 @@ export const de_ReplaceRouteTableAssociationCommand = async (
  */
 export const de_ReplaceTransitGatewayRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplaceTransitGatewayRouteCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26168,7 +26168,7 @@ export const de_ReplaceTransitGatewayRouteCommand = async (
  */
 export const de_ReplaceVpnTunnelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplaceVpnTunnelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26188,7 +26188,7 @@ export const de_ReplaceVpnTunnelCommand = async (
  */
 export const de_ReportInstanceStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReportInstanceStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26205,7 +26205,7 @@ export const de_ReportInstanceStatusCommand = async (
  */
 export const de_RequestSpotFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestSpotFleetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26225,7 +26225,7 @@ export const de_RequestSpotFleetCommand = async (
  */
 export const de_RequestSpotInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestSpotInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26245,7 +26245,7 @@ export const de_RequestSpotInstancesCommand = async (
  */
 export const de_ResetAddressAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetAddressAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26265,7 +26265,7 @@ export const de_ResetAddressAttributeCommand = async (
  */
 export const de_ResetEbsDefaultKmsKeyIdCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetEbsDefaultKmsKeyIdCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26285,7 +26285,7 @@ export const de_ResetEbsDefaultKmsKeyIdCommand = async (
  */
 export const de_ResetFpgaImageAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetFpgaImageAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26305,7 +26305,7 @@ export const de_ResetFpgaImageAttributeCommand = async (
  */
 export const de_ResetImageAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetImageAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26322,7 +26322,7 @@ export const de_ResetImageAttributeCommand = async (
  */
 export const de_ResetInstanceAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetInstanceAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26339,7 +26339,7 @@ export const de_ResetInstanceAttributeCommand = async (
  */
 export const de_ResetNetworkInterfaceAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetNetworkInterfaceAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26356,7 +26356,7 @@ export const de_ResetNetworkInterfaceAttributeCommand = async (
  */
 export const de_ResetSnapshotAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetSnapshotAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26373,7 +26373,7 @@ export const de_ResetSnapshotAttributeCommand = async (
  */
 export const de_RestoreAddressToClassicCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreAddressToClassicCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26393,7 +26393,7 @@ export const de_RestoreAddressToClassicCommand = async (
  */
 export const de_RestoreImageFromRecycleBinCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreImageFromRecycleBinCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26413,7 +26413,7 @@ export const de_RestoreImageFromRecycleBinCommand = async (
  */
 export const de_RestoreManagedPrefixListVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreManagedPrefixListVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26433,7 +26433,7 @@ export const de_RestoreManagedPrefixListVersionCommand = async (
  */
 export const de_RestoreSnapshotFromRecycleBinCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreSnapshotFromRecycleBinCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26453,7 +26453,7 @@ export const de_RestoreSnapshotFromRecycleBinCommand = async (
  */
 export const de_RestoreSnapshotTierCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreSnapshotTierCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26473,7 +26473,7 @@ export const de_RestoreSnapshotTierCommand = async (
  */
 export const de_RevokeClientVpnIngressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RevokeClientVpnIngressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26493,7 +26493,7 @@ export const de_RevokeClientVpnIngressCommand = async (
  */
 export const de_RevokeSecurityGroupEgressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RevokeSecurityGroupEgressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26513,7 +26513,7 @@ export const de_RevokeSecurityGroupEgressCommand = async (
  */
 export const de_RevokeSecurityGroupIngressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RevokeSecurityGroupIngressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26533,7 +26533,7 @@ export const de_RevokeSecurityGroupIngressCommand = async (
  */
 export const de_RunInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RunInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26553,7 +26553,7 @@ export const de_RunInstancesCommand = async (
  */
 export const de_RunScheduledInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RunScheduledInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26573,7 +26573,7 @@ export const de_RunScheduledInstancesCommand = async (
  */
 export const de_SearchLocalGatewayRoutesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchLocalGatewayRoutesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26593,7 +26593,7 @@ export const de_SearchLocalGatewayRoutesCommand = async (
  */
 export const de_SearchTransitGatewayMulticastGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchTransitGatewayMulticastGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26613,7 +26613,7 @@ export const de_SearchTransitGatewayMulticastGroupsCommand = async (
  */
 export const de_SearchTransitGatewayRoutesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchTransitGatewayRoutesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26633,7 +26633,7 @@ export const de_SearchTransitGatewayRoutesCommand = async (
  */
 export const de_SendDiagnosticInterruptCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendDiagnosticInterruptCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26650,7 +26650,7 @@ export const de_SendDiagnosticInterruptCommand = async (
  */
 export const de_StartInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26670,7 +26670,7 @@ export const de_StartInstancesCommand = async (
  */
 export const de_StartNetworkInsightsAccessScopeAnalysisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartNetworkInsightsAccessScopeAnalysisCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26690,7 +26690,7 @@ export const de_StartNetworkInsightsAccessScopeAnalysisCommand = async (
  */
 export const de_StartNetworkInsightsAnalysisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartNetworkInsightsAnalysisCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26710,7 +26710,7 @@ export const de_StartNetworkInsightsAnalysisCommand = async (
  */
 export const de_StartVpcEndpointServicePrivateDnsVerificationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartVpcEndpointServicePrivateDnsVerificationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26730,7 +26730,7 @@ export const de_StartVpcEndpointServicePrivateDnsVerificationCommand = async (
  */
 export const de_StopInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26750,7 +26750,7 @@ export const de_StopInstancesCommand = async (
  */
 export const de_TerminateClientVpnConnectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TerminateClientVpnConnectionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26770,7 +26770,7 @@ export const de_TerminateClientVpnConnectionsCommand = async (
  */
 export const de_TerminateInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TerminateInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26790,7 +26790,7 @@ export const de_TerminateInstancesCommand = async (
  */
 export const de_UnassignIpv6AddressesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnassignIpv6AddressesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26810,7 +26810,7 @@ export const de_UnassignIpv6AddressesCommand = async (
  */
 export const de_UnassignPrivateIpAddressesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnassignPrivateIpAddressesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26827,7 +26827,7 @@ export const de_UnassignPrivateIpAddressesCommand = async (
  */
 export const de_UnassignPrivateNatGatewayAddressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnassignPrivateNatGatewayAddressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26847,7 +26847,7 @@ export const de_UnassignPrivateNatGatewayAddressCommand = async (
  */
 export const de_UnlockSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnlockSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26867,7 +26867,7 @@ export const de_UnlockSnapshotCommand = async (
  */
 export const de_UnmonitorInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnmonitorInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26887,7 +26887,7 @@ export const de_UnmonitorInstancesCommand = async (
  */
 export const de_UpdateSecurityGroupRuleDescriptionsEgressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSecurityGroupRuleDescriptionsEgressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26907,7 +26907,7 @@ export const de_UpdateSecurityGroupRuleDescriptionsEgressCommand = async (
  */
 export const de_UpdateSecurityGroupRuleDescriptionsIngressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSecurityGroupRuleDescriptionsIngressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -26927,7 +26927,7 @@ export const de_UpdateSecurityGroupRuleDescriptionsIngressCommand = async (
  */
 export const de_WithdrawByoipCidrCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WithdrawByoipCidrCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -27089,7 +27089,7 @@ const se_AcceptAddressTransferRequest = (input: AcceptAddressTransferRequest, co
  */
 const se_AcceptReservedInstancesExchangeQuoteRequest = (
   input: AcceptReservedInstancesExchangeQuoteRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -27117,7 +27117,7 @@ const se_AcceptReservedInstancesExchangeQuoteRequest = (
  */
 const se_AcceptTransitGatewayMulticastDomainAssociationsRequest = (
   input: AcceptTransitGatewayMulticastDomainAssociationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGMDI] != null) {
@@ -27144,7 +27144,7 @@ const se_AcceptTransitGatewayMulticastDomainAssociationsRequest = (
  */
 const se_AcceptTransitGatewayPeeringAttachmentRequest = (
   input: AcceptTransitGatewayPeeringAttachmentRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGAI] != null) {
@@ -27161,7 +27161,7 @@ const se_AcceptTransitGatewayPeeringAttachmentRequest = (
  */
 const se_AcceptTransitGatewayVpcAttachmentRequest = (
   input: AcceptTransitGatewayVpcAttachmentRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGAI] != null) {
@@ -27178,7 +27178,7 @@ const se_AcceptTransitGatewayVpcAttachmentRequest = (
  */
 const se_AcceptVpcEndpointConnectionsRequest = (
   input: AcceptVpcEndpointConnectionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -27202,7 +27202,7 @@ const se_AcceptVpcEndpointConnectionsRequest = (
  */
 const se_AcceptVpcPeeringConnectionRequest = (
   input: AcceptVpcPeeringConnectionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -27542,7 +27542,7 @@ const se_AllowedInstanceTypeSet = (input: string[], context: __SerdeContext): an
  */
 const se_ApplySecurityGroupsToClientVpnTargetNetworkRequest = (
   input: ApplySecurityGroupsToClientVpnTargetNetworkRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CVEI] != null) {
@@ -27696,7 +27696,7 @@ const se_AssignPrivateIpAddressesRequest = (input: AssignPrivateIpAddressesReque
  */
 const se_AssignPrivateNatGatewayAddressRequest = (
   input: AssignPrivateNatGatewayAddressRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_NGI] != null) {
@@ -27752,7 +27752,7 @@ const se_AssociateAddressRequest = (input: AssociateAddressRequest, context: __S
  */
 const se_AssociateClientVpnTargetNetworkRequest = (
   input: AssociateClientVpnTargetNetworkRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CVEI] != null) {
@@ -27795,7 +27795,7 @@ const se_AssociateDhcpOptionsRequest = (input: AssociateDhcpOptionsRequest, cont
  */
 const se_AssociateEnclaveCertificateIamRoleRequest = (
   input: AssociateEnclaveCertificateIamRoleRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CA] != null) {
@@ -27815,7 +27815,7 @@ const se_AssociateEnclaveCertificateIamRoleRequest = (
  */
 const se_AssociateIamInstanceProfileRequest = (
   input: AssociateIamInstanceProfileRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IIP] != null) {
@@ -27836,7 +27836,7 @@ const se_AssociateIamInstanceProfileRequest = (
  */
 const se_AssociateInstanceEventWindowRequest = (
   input: AssociateInstanceEventWindowRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -27877,7 +27877,7 @@ const se_AssociateIpamByoasnRequest = (input: AssociateIpamByoasnRequest, contex
  */
 const se_AssociateIpamResourceDiscoveryRequest = (
   input: AssociateIpamResourceDiscoveryRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -27910,7 +27910,7 @@ const se_AssociateIpamResourceDiscoveryRequest = (
  */
 const se_AssociateNatGatewayAddressRequest = (
   input: AssociateNatGatewayAddressRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_NGI] != null) {
@@ -27981,7 +27981,7 @@ const se_AssociateSubnetCidrBlockRequest = (input: AssociateSubnetCidrBlockReque
  */
 const se_AssociateTransitGatewayMulticastDomainRequest = (
   input: AssociateTransitGatewayMulticastDomainRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGMDI] != null) {
@@ -28008,7 +28008,7 @@ const se_AssociateTransitGatewayMulticastDomainRequest = (
  */
 const se_AssociateTransitGatewayPolicyTableRequest = (
   input: AssociateTransitGatewayPolicyTableRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGPTI] != null) {
@@ -28028,7 +28028,7 @@ const se_AssociateTransitGatewayPolicyTableRequest = (
  */
 const se_AssociateTransitGatewayRouteTableRequest = (
   input: AssociateTransitGatewayRouteTableRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGRTI] != null) {
@@ -28241,7 +28241,7 @@ const se_AttachNetworkInterfaceRequest = (input: AttachNetworkInterfaceRequest, 
  */
 const se_AttachVerifiedAccessTrustProviderRequest = (
   input: AttachVerifiedAccessTrustProviderRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VAII] != null) {
@@ -28358,7 +28358,7 @@ const se_AuthorizeClientVpnIngressRequest = (input: AuthorizeClientVpnIngressReq
  */
 const se_AuthorizeSecurityGroupEgressRequest = (
   input: AuthorizeSecurityGroupEgressRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -28407,7 +28407,7 @@ const se_AuthorizeSecurityGroupEgressRequest = (
  */
 const se_AuthorizeSecurityGroupIngressRequest = (
   input: AuthorizeSecurityGroupIngressRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CIi] != null) {
@@ -28643,7 +28643,7 @@ const se_CancelBundleTaskRequest = (input: CancelBundleTaskRequest, context: __S
  */
 const se_CancelCapacityReservationFleetsRequest = (
   input: CancelCapacityReservationFleetsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -28706,7 +28706,7 @@ const se_CancelExportTaskRequest = (input: CancelExportTaskRequest, context: __S
  */
 const se_CancelImageLaunchPermissionRequest = (
   input: CancelImageLaunchPermissionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IIma] != null) {
@@ -28740,7 +28740,7 @@ const se_CancelImportTaskRequest = (input: CancelImportTaskRequest, context: __S
  */
 const se_CancelReservedInstancesListingRequest = (
   input: CancelReservedInstancesListingRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_RILI] != null) {
@@ -28775,7 +28775,7 @@ const se_CancelSpotFleetRequestsRequest = (input: CancelSpotFleetRequestsRequest
  */
 const se_CancelSpotInstanceRequestsRequest = (
   input: CancelSpotInstanceRequestsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -28828,7 +28828,7 @@ const se_CapacityReservationIdSet = (input: string[], context: __SerdeContext): 
  */
 const se_CapacityReservationOptionsRequest = (
   input: CapacityReservationOptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_USs] != null) {
@@ -29040,7 +29040,7 @@ const se_ClientVpnAuthenticationRequest = (input: ClientVpnAuthenticationRequest
  */
 const se_ClientVpnAuthenticationRequestList = (
   input: ClientVpnAuthenticationRequest[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -29094,7 +29094,7 @@ const se_ClientVpnSecurityGroupIdSet = (input: string[], context: __SerdeContext
  */
 const se_CloudWatchLogOptionsSpecification = (
   input: CloudWatchLogOptionsSpecification,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LE] != null) {
@@ -29180,7 +29180,7 @@ const se_ConnectionNotificationIdsList = (input: string[], context: __SerdeConte
  */
 const se_ConnectionTrackingSpecificationRequest = (
   input: ConnectionTrackingSpecificationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TET] != null) {
@@ -29362,7 +29362,7 @@ const se_CpuOptionsRequest = (input: CpuOptionsRequest, context: __SerdeContext)
  */
 const se_CreateCapacityReservationFleetRequest = (
   input: CreateCapacityReservationFleetRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_AS] != null) {
@@ -29750,7 +29750,7 @@ const se_CreateDhcpOptionsRequest = (input: CreateDhcpOptionsRequest, context: _
  */
 const se_CreateEgressOnlyInternetGatewayRequest = (
   input: CreateEgressOnlyInternetGatewayRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CTl] != null) {
@@ -29987,7 +29987,7 @@ const se_CreateImageRequest = (input: CreateImageRequest, context: __SerdeContex
  */
 const se_CreateInstanceConnectEndpointRequest = (
   input: CreateInstanceConnectEndpointRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -30218,7 +30218,7 @@ const se_CreateIpamRequest = (input: CreateIpamRequest, context: __SerdeContext)
  */
 const se_CreateIpamResourceDiscoveryRequest = (
   input: CreateIpamResourceDiscoveryRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -30346,7 +30346,7 @@ const se_CreateLaunchTemplateRequest = (input: CreateLaunchTemplateRequest, cont
  */
 const se_CreateLaunchTemplateVersionRequest = (
   input: CreateLaunchTemplateVersionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -30411,7 +30411,7 @@ const se_CreateLocalGatewayRouteRequest = (input: CreateLocalGatewayRouteRequest
  */
 const se_CreateLocalGatewayRouteTableRequest = (
   input: CreateLocalGatewayRouteTableRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LGI] != null) {
@@ -30438,7 +30438,7 @@ const se_CreateLocalGatewayRouteTableRequest = (
  */
 const se_CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest = (
   input: CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LGRTI] != null) {
@@ -30465,7 +30465,7 @@ const se_CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest = (
  */
 const se_CreateLocalGatewayRouteTableVpcAssociationRequest = (
   input: CreateLocalGatewayRouteTableVpcAssociationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LGRTI] != null) {
@@ -30658,7 +30658,7 @@ const se_CreateNetworkAclRequest = (input: CreateNetworkAclRequest, context: __S
  */
 const se_CreateNetworkInsightsAccessScopeRequest = (
   input: CreateNetworkInsightsAccessScopeRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_MP] != null) {
@@ -30755,7 +30755,7 @@ const se_CreateNetworkInsightsPathRequest = (input: CreateNetworkInsightsPathReq
  */
 const se_CreateNetworkInterfacePermissionRequest = (
   input: CreateNetworkInterfacePermissionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_NII] != null) {
@@ -30922,7 +30922,7 @@ const se_CreatePublicIpv4PoolRequest = (input: CreatePublicIpv4PoolRequest, cont
  */
 const se_CreateReplaceRootVolumeTaskRequest = (
   input: CreateReplaceRootVolumeTaskRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IIn] != null) {
@@ -30961,7 +30961,7 @@ const se_CreateReplaceRootVolumeTaskRequest = (
  */
 const se_CreateReservedInstancesListingRequest = (
   input: CreateReservedInstancesListingRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CTl] != null) {
@@ -31186,7 +31186,7 @@ const se_CreateSnapshotsRequest = (input: CreateSnapshotsRequest, context: __Ser
  */
 const se_CreateSpotDatafeedSubscriptionRequest = (
   input: CreateSpotDatafeedSubscriptionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_B] != null) {
@@ -31230,7 +31230,7 @@ const se_CreateStoreImageTaskRequest = (input: CreateStoreImageTaskRequest, cont
  */
 const se_CreateSubnetCidrReservationRequest = (
   input: CreateSubnetCidrReservationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SIub] != null) {
@@ -31366,7 +31366,7 @@ const se_CreateTrafficMirrorFilterRequest = (input: CreateTrafficMirrorFilterReq
  */
 const se_CreateTrafficMirrorFilterRuleRequest = (
   input: CreateTrafficMirrorFilterRuleRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TMFI] != null) {
@@ -31431,7 +31431,7 @@ const se_CreateTrafficMirrorFilterRuleRequest = (
  */
 const se_CreateTrafficMirrorSessionRequest = (
   input: CreateTrafficMirrorSessionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_NII] != null) {
@@ -31515,7 +31515,7 @@ const se_CreateTrafficMirrorTargetRequest = (input: CreateTrafficMirrorTargetReq
  */
 const se_CreateTransitGatewayConnectPeerRequest = (
   input: CreateTransitGatewayConnectPeerRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGAI] != null) {
@@ -31559,7 +31559,7 @@ const se_CreateTransitGatewayConnectPeerRequest = (
  */
 const se_CreateTransitGatewayConnectRequest = (
   input: CreateTransitGatewayConnectRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TTGAI] != null) {
@@ -31590,7 +31590,7 @@ const se_CreateTransitGatewayConnectRequest = (
  */
 const se_CreateTransitGatewayConnectRequestOptions = (
   input: CreateTransitGatewayConnectRequestOptions,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_P] != null) {
@@ -31604,7 +31604,7 @@ const se_CreateTransitGatewayConnectRequestOptions = (
  */
 const se_CreateTransitGatewayMulticastDomainRequest = (
   input: CreateTransitGatewayMulticastDomainRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGI] != null) {
@@ -31635,7 +31635,7 @@ const se_CreateTransitGatewayMulticastDomainRequest = (
  */
 const se_CreateTransitGatewayMulticastDomainRequestOptions = (
   input: CreateTransitGatewayMulticastDomainRequestOptions,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_ISg] != null) {
@@ -31655,7 +31655,7 @@ const se_CreateTransitGatewayMulticastDomainRequestOptions = (
  */
 const se_CreateTransitGatewayPeeringAttachmentRequest = (
   input: CreateTransitGatewayPeeringAttachmentRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGI] != null) {
@@ -31695,7 +31695,7 @@ const se_CreateTransitGatewayPeeringAttachmentRequest = (
  */
 const se_CreateTransitGatewayPeeringAttachmentRequestOptions = (
   input: CreateTransitGatewayPeeringAttachmentRequestOptions,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRy] != null) {
@@ -31709,7 +31709,7 @@ const se_CreateTransitGatewayPeeringAttachmentRequestOptions = (
  */
 const se_CreateTransitGatewayPolicyTableRequest = (
   input: CreateTransitGatewayPolicyTableRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGI] != null) {
@@ -31733,7 +31733,7 @@ const se_CreateTransitGatewayPolicyTableRequest = (
  */
 const se_CreateTransitGatewayPrefixListReferenceRequest = (
   input: CreateTransitGatewayPrefixListReferenceRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGRTI] != null) {
@@ -31810,7 +31810,7 @@ const se_CreateTransitGatewayRouteRequest = (input: CreateTransitGatewayRouteReq
  */
 const se_CreateTransitGatewayRouteTableAnnouncementRequest = (
   input: CreateTransitGatewayRouteTableAnnouncementRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGRTI] != null) {
@@ -31837,7 +31837,7 @@ const se_CreateTransitGatewayRouteTableAnnouncementRequest = (
  */
 const se_CreateTransitGatewayRouteTableRequest = (
   input: CreateTransitGatewayRouteTableRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGI] != null) {
@@ -31861,7 +31861,7 @@ const se_CreateTransitGatewayRouteTableRequest = (
  */
 const se_CreateTransitGatewayVpcAttachmentRequest = (
   input: CreateTransitGatewayVpcAttachmentRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGI] != null) {
@@ -31902,7 +31902,7 @@ const se_CreateTransitGatewayVpcAttachmentRequest = (
  */
 const se_CreateTransitGatewayVpcAttachmentRequestOptions = (
   input: CreateTransitGatewayVpcAttachmentRequestOptions,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DSns] != null) {
@@ -31925,7 +31925,7 @@ const se_CreateTransitGatewayVpcAttachmentRequestOptions = (
  */
 const se_CreateVerifiedAccessEndpointEniOptions = (
   input: CreateVerifiedAccessEndpointEniOptions,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_NII] != null) {
@@ -31945,7 +31945,7 @@ const se_CreateVerifiedAccessEndpointEniOptions = (
  */
 const se_CreateVerifiedAccessEndpointLoadBalancerOptions = (
   input: CreateVerifiedAccessEndpointLoadBalancerOptions,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_P] != null) {
@@ -31972,7 +31972,7 @@ const se_CreateVerifiedAccessEndpointLoadBalancerOptions = (
  */
 const se_CreateVerifiedAccessEndpointRequest = (
   input: CreateVerifiedAccessEndpointRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VAGI] != null) {
@@ -32107,7 +32107,7 @@ const se_CreateVerifiedAccessGroupRequest = (input: CreateVerifiedAccessGroupReq
  */
 const se_CreateVerifiedAccessInstanceRequest = (
   input: CreateVerifiedAccessInstanceRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_De] != null) {
@@ -32140,7 +32140,7 @@ const se_CreateVerifiedAccessInstanceRequest = (
  */
 const se_CreateVerifiedAccessTrustProviderDeviceOptions = (
   input: CreateVerifiedAccessTrustProviderDeviceOptions,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TIe] != null) {
@@ -32157,7 +32157,7 @@ const se_CreateVerifiedAccessTrustProviderDeviceOptions = (
  */
 const se_CreateVerifiedAccessTrustProviderOidcOptions = (
   input: CreateVerifiedAccessTrustProviderOidcOptions,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_I] != null) {
@@ -32189,7 +32189,7 @@ const se_CreateVerifiedAccessTrustProviderOidcOptions = (
  */
 const se_CreateVerifiedAccessTrustProviderRequest = (
   input: CreateVerifiedAccessTrustProviderRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TPT] != null) {
@@ -32285,7 +32285,7 @@ const se_CreateVolumePermissionList = (input: CreateVolumePermission[], context:
  */
 const se_CreateVolumePermissionModifications = (
   input: CreateVolumePermissionModifications,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Add] != null) {
@@ -32364,7 +32364,7 @@ const se_CreateVolumeRequest = (input: CreateVolumeRequest, context: __SerdeCont
  */
 const se_CreateVpcEndpointConnectionNotificationRequest = (
   input: CreateVpcEndpointConnectionNotificationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -32471,7 +32471,7 @@ const se_CreateVpcEndpointRequest = (input: CreateVpcEndpointRequest, context: _
  */
 const se_CreateVpcEndpointServiceConfigurationRequest = (
   input: CreateVpcEndpointServiceConfigurationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -32522,7 +32522,7 @@ const se_CreateVpcEndpointServiceConfigurationRequest = (
  */
 const se_CreateVpcPeeringConnectionRequest = (
   input: CreateVpcPeeringConnectionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -32876,7 +32876,7 @@ const se_DeleteDhcpOptionsRequest = (input: DeleteDhcpOptionsRequest, context: _
  */
 const se_DeleteEgressOnlyInternetGatewayRequest = (
   input: DeleteEgressOnlyInternetGatewayRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -32946,7 +32946,7 @@ const se_DeleteFpgaImageRequest = (input: DeleteFpgaImageRequest, context: __Ser
  */
 const se_DeleteInstanceConnectEndpointRequest = (
   input: DeleteInstanceConnectEndpointRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -33028,7 +33028,7 @@ const se_DeleteIpamRequest = (input: DeleteIpamRequest, context: __SerdeContext)
  */
 const se_DeleteIpamResourceDiscoveryRequest = (
   input: DeleteIpamResourceDiscoveryRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -33093,7 +33093,7 @@ const se_DeleteLaunchTemplateRequest = (input: DeleteLaunchTemplateRequest, cont
  */
 const se_DeleteLaunchTemplateVersionsRequest = (
   input: DeleteLaunchTemplateVersionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -33140,7 +33140,7 @@ const se_DeleteLocalGatewayRouteRequest = (input: DeleteLocalGatewayRouteRequest
  */
 const se_DeleteLocalGatewayRouteTableRequest = (
   input: DeleteLocalGatewayRouteTableRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LGRTI] != null) {
@@ -33157,7 +33157,7 @@ const se_DeleteLocalGatewayRouteTableRequest = (
  */
 const se_DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest = (
   input: DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LGRTVIGAI] != null) {
@@ -33174,7 +33174,7 @@ const se_DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest = (
  */
 const se_DeleteLocalGatewayRouteTableVpcAssociationRequest = (
   input: DeleteLocalGatewayRouteTableVpcAssociationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LGRTVAI] != null) {
@@ -33253,7 +33253,7 @@ const se_DeleteNetworkAclRequest = (input: DeleteNetworkAclRequest, context: __S
  */
 const se_DeleteNetworkInsightsAccessScopeAnalysisRequest = (
   input: DeleteNetworkInsightsAccessScopeAnalysisRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_NIASAI] != null) {
@@ -33270,7 +33270,7 @@ const se_DeleteNetworkInsightsAccessScopeAnalysisRequest = (
  */
 const se_DeleteNetworkInsightsAccessScopeRequest = (
   input: DeleteNetworkInsightsAccessScopeRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -33287,7 +33287,7 @@ const se_DeleteNetworkInsightsAccessScopeRequest = (
  */
 const se_DeleteNetworkInsightsAnalysisRequest = (
   input: DeleteNetworkInsightsAnalysisRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -33318,7 +33318,7 @@ const se_DeleteNetworkInsightsPathRequest = (input: DeleteNetworkInsightsPathReq
  */
 const se_DeleteNetworkInterfacePermissionRequest = (
   input: DeleteNetworkInterfacePermissionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_NIPIe] != null) {
@@ -33396,7 +33396,7 @@ const se_DeleteQueuedReservedInstancesIdList = (input: string[], context: __Serd
  */
 const se_DeleteQueuedReservedInstancesRequest = (
   input: DeleteQueuedReservedInstancesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -33485,7 +33485,7 @@ const se_DeleteSnapshotRequest = (input: DeleteSnapshotRequest, context: __Serde
  */
 const se_DeleteSpotDatafeedSubscriptionRequest = (
   input: DeleteSpotDatafeedSubscriptionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -33499,7 +33499,7 @@ const se_DeleteSpotDatafeedSubscriptionRequest = (
  */
 const se_DeleteSubnetCidrReservationRequest = (
   input: DeleteSubnetCidrReservationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SCRI] != null) {
@@ -33569,7 +33569,7 @@ const se_DeleteTrafficMirrorFilterRequest = (input: DeleteTrafficMirrorFilterReq
  */
 const se_DeleteTrafficMirrorFilterRuleRequest = (
   input: DeleteTrafficMirrorFilterRuleRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TMFRI] != null) {
@@ -33586,7 +33586,7 @@ const se_DeleteTrafficMirrorFilterRuleRequest = (
  */
 const se_DeleteTrafficMirrorSessionRequest = (
   input: DeleteTrafficMirrorSessionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TMSI] != null) {
@@ -33617,7 +33617,7 @@ const se_DeleteTrafficMirrorTargetRequest = (input: DeleteTrafficMirrorTargetReq
  */
 const se_DeleteTransitGatewayConnectPeerRequest = (
   input: DeleteTransitGatewayConnectPeerRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGCPI] != null) {
@@ -33634,7 +33634,7 @@ const se_DeleteTransitGatewayConnectPeerRequest = (
  */
 const se_DeleteTransitGatewayConnectRequest = (
   input: DeleteTransitGatewayConnectRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGAI] != null) {
@@ -33651,7 +33651,7 @@ const se_DeleteTransitGatewayConnectRequest = (
  */
 const se_DeleteTransitGatewayMulticastDomainRequest = (
   input: DeleteTransitGatewayMulticastDomainRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGMDI] != null) {
@@ -33668,7 +33668,7 @@ const se_DeleteTransitGatewayMulticastDomainRequest = (
  */
 const se_DeleteTransitGatewayPeeringAttachmentRequest = (
   input: DeleteTransitGatewayPeeringAttachmentRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGAI] != null) {
@@ -33685,7 +33685,7 @@ const se_DeleteTransitGatewayPeeringAttachmentRequest = (
  */
 const se_DeleteTransitGatewayPolicyTableRequest = (
   input: DeleteTransitGatewayPolicyTableRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGPTI] != null) {
@@ -33702,7 +33702,7 @@ const se_DeleteTransitGatewayPolicyTableRequest = (
  */
 const se_DeleteTransitGatewayPrefixListReferenceRequest = (
   input: DeleteTransitGatewayPrefixListReferenceRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGRTI] != null) {
@@ -33753,7 +33753,7 @@ const se_DeleteTransitGatewayRouteRequest = (input: DeleteTransitGatewayRouteReq
  */
 const se_DeleteTransitGatewayRouteTableAnnouncementRequest = (
   input: DeleteTransitGatewayRouteTableAnnouncementRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGRTAI] != null) {
@@ -33770,7 +33770,7 @@ const se_DeleteTransitGatewayRouteTableAnnouncementRequest = (
  */
 const se_DeleteTransitGatewayRouteTableRequest = (
   input: DeleteTransitGatewayRouteTableRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGRTI] != null) {
@@ -33787,7 +33787,7 @@ const se_DeleteTransitGatewayRouteTableRequest = (
  */
 const se_DeleteTransitGatewayVpcAttachmentRequest = (
   input: DeleteTransitGatewayVpcAttachmentRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGAI] != null) {
@@ -33804,7 +33804,7 @@ const se_DeleteTransitGatewayVpcAttachmentRequest = (
  */
 const se_DeleteVerifiedAccessEndpointRequest = (
   input: DeleteVerifiedAccessEndpointRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VAEI] != null) {
@@ -33847,7 +33847,7 @@ const se_DeleteVerifiedAccessGroupRequest = (input: DeleteVerifiedAccessGroupReq
  */
 const se_DeleteVerifiedAccessInstanceRequest = (
   input: DeleteVerifiedAccessInstanceRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VAII] != null) {
@@ -33870,7 +33870,7 @@ const se_DeleteVerifiedAccessInstanceRequest = (
  */
 const se_DeleteVerifiedAccessTrustProviderRequest = (
   input: DeleteVerifiedAccessTrustProviderRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VATPI] != null) {
@@ -33907,7 +33907,7 @@ const se_DeleteVolumeRequest = (input: DeleteVolumeRequest, context: __SerdeCont
  */
 const se_DeleteVpcEndpointConnectionNotificationsRequest = (
   input: DeleteVpcEndpointConnectionNotificationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -33928,7 +33928,7 @@ const se_DeleteVpcEndpointConnectionNotificationsRequest = (
  */
 const se_DeleteVpcEndpointServiceConfigurationsRequest = (
   input: DeleteVpcEndpointServiceConfigurationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -33967,7 +33967,7 @@ const se_DeleteVpcEndpointsRequest = (input: DeleteVpcEndpointsRequest, context:
  */
 const se_DeleteVpcPeeringConnectionRequest = (
   input: DeleteVpcPeeringConnectionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -34088,7 +34088,7 @@ const se_DeprovisionIpamPoolCidrRequest = (input: DeprovisionIpamPoolCidrRequest
  */
 const se_DeprovisionPublicIpv4PoolCidrRequest = (
   input: DeprovisionPublicIpv4PoolCidrRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -34122,7 +34122,7 @@ const se_DeregisterImageRequest = (input: DeregisterImageRequest, context: __Ser
  */
 const se_DeregisterInstanceEventNotificationAttributesRequest = (
   input: DeregisterInstanceEventNotificationAttributesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -34143,7 +34143,7 @@ const se_DeregisterInstanceEventNotificationAttributesRequest = (
  */
 const se_DeregisterInstanceTagAttributeRequest = (
   input: DeregisterInstanceTagAttributeRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IATOI] != null) {
@@ -34164,7 +34164,7 @@ const se_DeregisterInstanceTagAttributeRequest = (
  */
 const se_DeregisterTransitGatewayMulticastGroupMembersRequest = (
   input: DeregisterTransitGatewayMulticastGroupMembersRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGMDI] != null) {
@@ -34191,7 +34191,7 @@ const se_DeregisterTransitGatewayMulticastGroupMembersRequest = (
  */
 const se_DeregisterTransitGatewayMulticastGroupSourcesRequest = (
   input: DeregisterTransitGatewayMulticastGroupSourcesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGMDI] != null) {
@@ -34236,7 +34236,7 @@ const se_DescribeAccountAttributesRequest = (input: DescribeAccountAttributesReq
  */
 const se_DescribeAddressesAttributeRequest = (
   input: DescribeAddressesAttributeRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_AIll] != null) {
@@ -34368,7 +34368,7 @@ const se_DescribeAvailabilityZonesRequest = (input: DescribeAvailabilityZonesReq
  */
 const se_DescribeAwsNetworkPerformanceMetricSubscriptionsRequest = (
   input: DescribeAwsNetworkPerformanceMetricSubscriptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_MR] != null) {
@@ -34437,7 +34437,7 @@ const se_DescribeByoipCidrsRequest = (input: DescribeByoipCidrsRequest, context:
  */
 const se_DescribeCapacityBlockOfferingsRequest = (
   input: DescribeCapacityBlockOfferingsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -34472,7 +34472,7 @@ const se_DescribeCapacityBlockOfferingsRequest = (
  */
 const se_DescribeCapacityReservationFleetsRequest = (
   input: DescribeCapacityReservationFleetsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CRFI] != null) {
@@ -34506,7 +34506,7 @@ const se_DescribeCapacityReservationFleetsRequest = (
  */
 const se_DescribeCapacityReservationsRequest = (
   input: DescribeCapacityReservationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CRIa] != null) {
@@ -34571,7 +34571,7 @@ const se_DescribeCarrierGatewaysRequest = (input: DescribeCarrierGatewaysRequest
  */
 const se_DescribeClassicLinkInstancesRequest = (
   input: DescribeClassicLinkInstancesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Fi] != null) {
@@ -34605,7 +34605,7 @@ const se_DescribeClassicLinkInstancesRequest = (
  */
 const se_DescribeClientVpnAuthorizationRulesRequest = (
   input: DescribeClientVpnAuthorizationRulesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CVEI] != null) {
@@ -34635,7 +34635,7 @@ const se_DescribeClientVpnAuthorizationRulesRequest = (
  */
 const se_DescribeClientVpnConnectionsRequest = (
   input: DescribeClientVpnConnectionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CVEI] != null) {
@@ -34665,7 +34665,7 @@ const se_DescribeClientVpnConnectionsRequest = (
  */
 const se_DescribeClientVpnEndpointsRequest = (
   input: DescribeClientVpnEndpointsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CVEIl] != null) {
@@ -34726,7 +34726,7 @@ const se_DescribeClientVpnRoutesRequest = (input: DescribeClientVpnRoutesRequest
  */
 const se_DescribeClientVpnTargetNetworksRequest = (
   input: DescribeClientVpnTargetNetworksRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CVEI] != null) {
@@ -34868,7 +34868,7 @@ const se_DescribeDhcpOptionsRequest = (input: DescribeDhcpOptionsRequest, contex
  */
 const se_DescribeEgressOnlyInternetGatewaysRequest = (
   input: DescribeEgressOnlyInternetGatewaysRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -35017,7 +35017,7 @@ const se_DescribeFastLaunchImagesRequest = (input: DescribeFastLaunchImagesReque
  */
 const se_DescribeFastSnapshotRestoresRequest = (
   input: DescribeFastSnapshotRestoresRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Fi] != null) {
@@ -35159,7 +35159,7 @@ const se_DescribeFlowLogsRequest = (input: DescribeFlowLogsRequest, context: __S
  */
 const se_DescribeFpgaImageAttributeRequest = (
   input: DescribeFpgaImageAttributeRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -35217,7 +35217,7 @@ const se_DescribeFpgaImagesRequest = (input: DescribeFpgaImagesRequest, context:
  */
 const se_DescribeHostReservationOfferingsRequest = (
   input: DescribeHostReservationOfferingsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Fil] != null) {
@@ -35306,7 +35306,7 @@ const se_DescribeHostsRequest = (input: DescribeHostsRequest, context: __SerdeCo
  */
 const se_DescribeIamInstanceProfileAssociationsRequest = (
   input: DescribeIamInstanceProfileAssociationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_AIs] != null) {
@@ -35461,7 +35461,7 @@ const se_DescribeImportImageTasksRequest = (input: DescribeImportImageTasksReque
  */
 const se_DescribeImportSnapshotTasksRequest = (
   input: DescribeImportSnapshotTasksRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -35512,7 +35512,7 @@ const se_DescribeInstanceAttributeRequest = (input: DescribeInstanceAttributeReq
  */
 const se_DescribeInstanceConnectEndpointsRequest = (
   input: DescribeInstanceConnectEndpointsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -35546,7 +35546,7 @@ const se_DescribeInstanceConnectEndpointsRequest = (
  */
 const se_DescribeInstanceCreditSpecificationsRequest = (
   input: DescribeInstanceCreditSpecificationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -35580,7 +35580,7 @@ const se_DescribeInstanceCreditSpecificationsRequest = (
  */
 const se_DescribeInstanceEventNotificationAttributesRequest = (
   input: DescribeInstanceEventNotificationAttributesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -35594,7 +35594,7 @@ const se_DescribeInstanceEventNotificationAttributesRequest = (
  */
 const se_DescribeInstanceEventWindowsRequest = (
   input: DescribeInstanceEventWindowsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -35763,7 +35763,7 @@ const se_DescribeInstanceTopologyRequest = (input: DescribeInstanceTopologyReque
  */
 const se_DescribeInstanceTypeOfferingsRequest = (
   input: DescribeInstanceTypeOfferingsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -35903,7 +35903,7 @@ const se_DescribeIpamPoolsRequest = (input: DescribeIpamPoolsRequest, context: _
  */
 const se_DescribeIpamResourceDiscoveriesRequest = (
   input: DescribeIpamResourceDiscoveriesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -35937,7 +35937,7 @@ const se_DescribeIpamResourceDiscoveriesRequest = (
  */
 const se_DescribeIpamResourceDiscoveryAssociationsRequest = (
   input: DescribeIpamResourceDiscoveryAssociationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -36137,7 +36137,7 @@ const se_DescribeLaunchTemplatesRequest = (input: DescribeLaunchTemplatesRequest
  */
 const se_DescribeLaunchTemplateVersionsRequest = (
   input: DescribeLaunchTemplateVersionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -36186,7 +36186,7 @@ const se_DescribeLaunchTemplateVersionsRequest = (
  */
 const se_DescribeLocalGatewayRouteTablesRequest = (
   input: DescribeLocalGatewayRouteTablesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LGRTIo] != null) {
@@ -36220,7 +36220,7 @@ const se_DescribeLocalGatewayRouteTablesRequest = (
  */
 const se_DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequest = (
   input: DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LGRTVIGAIo] != null) {
@@ -36254,7 +36254,7 @@ const se_DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequest 
  */
 const se_DescribeLocalGatewayRouteTableVpcAssociationsRequest = (
   input: DescribeLocalGatewayRouteTableVpcAssociationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LGRTVAIo] != null) {
@@ -36319,7 +36319,7 @@ const se_DescribeLocalGatewaysRequest = (input: DescribeLocalGatewaysRequest, co
  */
 const se_DescribeLocalGatewayVirtualInterfaceGroupsRequest = (
   input: DescribeLocalGatewayVirtualInterfaceGroupsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LGVIGIo] != null) {
@@ -36353,7 +36353,7 @@ const se_DescribeLocalGatewayVirtualInterfaceGroupsRequest = (
  */
 const se_DescribeLocalGatewayVirtualInterfacesRequest = (
   input: DescribeLocalGatewayVirtualInterfacesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LGVII] != null) {
@@ -36446,7 +36446,7 @@ const se_DescribeMacHostsRequest = (input: DescribeMacHostsRequest, context: __S
  */
 const se_DescribeManagedPrefixListsRequest = (
   input: DescribeManagedPrefixListsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -36573,7 +36573,7 @@ const se_DescribeNetworkAclsRequest = (input: DescribeNetworkAclsRequest, contex
  */
 const se_DescribeNetworkInsightsAccessScopeAnalysesRequest = (
   input: DescribeNetworkInsightsAccessScopeAnalysesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_NIASAIe] != null) {
@@ -36616,7 +36616,7 @@ const se_DescribeNetworkInsightsAccessScopeAnalysesRequest = (
  */
 const se_DescribeNetworkInsightsAccessScopesRequest = (
   input: DescribeNetworkInsightsAccessScopesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_NIASIe] != null) {
@@ -36650,7 +36650,7 @@ const se_DescribeNetworkInsightsAccessScopesRequest = (
  */
 const se_DescribeNetworkInsightsAnalysesRequest = (
   input: DescribeNetworkInsightsAnalysesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_NIAIe] != null) {
@@ -36693,7 +36693,7 @@ const se_DescribeNetworkInsightsAnalysesRequest = (
  */
 const se_DescribeNetworkInsightsPathsRequest = (
   input: DescribeNetworkInsightsPathsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_NIPIet] != null) {
@@ -36727,7 +36727,7 @@ const se_DescribeNetworkInsightsPathsRequest = (
  */
 const se_DescribeNetworkInterfaceAttributeRequest = (
   input: DescribeNetworkInterfaceAttributeRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_At] != null) {
@@ -36747,7 +36747,7 @@ const se_DescribeNetworkInterfaceAttributeRequest = (
  */
 const se_DescribeNetworkInterfacePermissionsRequest = (
   input: DescribeNetworkInterfacePermissionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_NIPIetw] != null) {
@@ -36952,7 +36952,7 @@ const se_DescribeRegionsRequest = (input: DescribeRegionsRequest, context: __Ser
  */
 const se_DescribeReplaceRootVolumeTasksRequest = (
   input: DescribeReplaceRootVolumeTasksRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_RRVTI] != null) {
@@ -36986,7 +36986,7 @@ const se_DescribeReplaceRootVolumeTasksRequest = (
  */
 const se_DescribeReservedInstancesListingsRequest = (
   input: DescribeReservedInstancesListingsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Fi] != null) {
@@ -37010,7 +37010,7 @@ const se_DescribeReservedInstancesListingsRequest = (
  */
 const se_DescribeReservedInstancesModificationsRequest = (
   input: DescribeReservedInstancesModificationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Fi] != null) {
@@ -37038,7 +37038,7 @@ const se_DescribeReservedInstancesModificationsRequest = (
  */
 const se_DescribeReservedInstancesOfferingsRequest = (
   input: DescribeReservedInstancesOfferingsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_AZ] != null) {
@@ -37164,7 +37164,7 @@ const se_DescribeRouteTablesRequest = (input: DescribeRouteTablesRequest, contex
  */
 const se_DescribeScheduledInstanceAvailabilityRequest = (
   input: DescribeScheduledInstanceAvailabilityRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -37211,7 +37211,7 @@ const se_DescribeScheduledInstanceAvailabilityRequest = (
  */
 const se_DescribeScheduledInstancesRequest = (
   input: DescribeScheduledInstancesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -37252,7 +37252,7 @@ const se_DescribeScheduledInstancesRequest = (
  */
 const se_DescribeSecurityGroupReferencesRequest = (
   input: DescribeSecurityGroupReferencesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -37273,7 +37273,7 @@ const se_DescribeSecurityGroupReferencesRequest = (
  */
 const se_DescribeSecurityGroupRulesRequest = (
   input: DescribeSecurityGroupRulesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Fi] != null) {
@@ -37407,7 +37407,7 @@ const se_DescribeSnapshotsRequest = (input: DescribeSnapshotsRequest, context: _
  */
 const se_DescribeSnapshotTierStatusRequest = (
   input: DescribeSnapshotTierStatusRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Fi] != null) {
@@ -37434,7 +37434,7 @@ const se_DescribeSnapshotTierStatusRequest = (
  */
 const se_DescribeSpotDatafeedSubscriptionRequest = (
   input: DescribeSpotDatafeedSubscriptionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -37448,7 +37448,7 @@ const se_DescribeSpotDatafeedSubscriptionRequest = (
  */
 const se_DescribeSpotFleetInstancesRequest = (
   input: DescribeSpotFleetInstancesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -37471,7 +37471,7 @@ const se_DescribeSpotFleetInstancesRequest = (
  */
 const se_DescribeSpotFleetRequestHistoryRequest = (
   input: DescribeSpotFleetRequestHistoryRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -37524,7 +37524,7 @@ const se_DescribeSpotFleetRequestsRequest = (input: DescribeSpotFleetRequestsReq
  */
 const se_DescribeSpotInstanceRequestsRequest = (
   input: DescribeSpotInstanceRequestsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Fi] != null) {
@@ -37605,7 +37605,7 @@ const se_DescribeSpotPriceHistoryRequest = (input: DescribeSpotPriceHistoryReque
  */
 const se_DescribeStaleSecurityGroupsRequest = (
   input: DescribeStaleSecurityGroupsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -37714,7 +37714,7 @@ const se_DescribeTagsRequest = (input: DescribeTagsRequest, context: __SerdeCont
  */
 const se_DescribeTrafficMirrorFilterRulesRequest = (
   input: DescribeTrafficMirrorFilterRulesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TMFRIr] != null) {
@@ -37751,7 +37751,7 @@ const se_DescribeTrafficMirrorFilterRulesRequest = (
  */
 const se_DescribeTrafficMirrorFiltersRequest = (
   input: DescribeTrafficMirrorFiltersRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TMFIr] != null) {
@@ -37785,7 +37785,7 @@ const se_DescribeTrafficMirrorFiltersRequest = (
  */
 const se_DescribeTrafficMirrorSessionsRequest = (
   input: DescribeTrafficMirrorSessionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TMSIr] != null) {
@@ -37819,7 +37819,7 @@ const se_DescribeTrafficMirrorSessionsRequest = (
  */
 const se_DescribeTrafficMirrorTargetsRequest = (
   input: DescribeTrafficMirrorTargetsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TMTIr] != null) {
@@ -37853,7 +37853,7 @@ const se_DescribeTrafficMirrorTargetsRequest = (
  */
 const se_DescribeTransitGatewayAttachmentsRequest = (
   input: DescribeTransitGatewayAttachmentsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGAIr] != null) {
@@ -37887,7 +37887,7 @@ const se_DescribeTransitGatewayAttachmentsRequest = (
  */
 const se_DescribeTransitGatewayConnectPeersRequest = (
   input: DescribeTransitGatewayConnectPeersRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGCPIr] != null) {
@@ -37921,7 +37921,7 @@ const se_DescribeTransitGatewayConnectPeersRequest = (
  */
 const se_DescribeTransitGatewayConnectsRequest = (
   input: DescribeTransitGatewayConnectsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGAIr] != null) {
@@ -37955,7 +37955,7 @@ const se_DescribeTransitGatewayConnectsRequest = (
  */
 const se_DescribeTransitGatewayMulticastDomainsRequest = (
   input: DescribeTransitGatewayMulticastDomainsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGMDIr] != null) {
@@ -37989,7 +37989,7 @@ const se_DescribeTransitGatewayMulticastDomainsRequest = (
  */
 const se_DescribeTransitGatewayPeeringAttachmentsRequest = (
   input: DescribeTransitGatewayPeeringAttachmentsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGAIr] != null) {
@@ -38023,7 +38023,7 @@ const se_DescribeTransitGatewayPeeringAttachmentsRequest = (
  */
 const se_DescribeTransitGatewayPolicyTablesRequest = (
   input: DescribeTransitGatewayPolicyTablesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGPTIr] != null) {
@@ -38057,7 +38057,7 @@ const se_DescribeTransitGatewayPolicyTablesRequest = (
  */
 const se_DescribeTransitGatewayRouteTableAnnouncementsRequest = (
   input: DescribeTransitGatewayRouteTableAnnouncementsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGRTAIr] != null) {
@@ -38091,7 +38091,7 @@ const se_DescribeTransitGatewayRouteTableAnnouncementsRequest = (
  */
 const se_DescribeTransitGatewayRouteTablesRequest = (
   input: DescribeTransitGatewayRouteTablesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGRTIr] != null) {
@@ -38156,7 +38156,7 @@ const se_DescribeTransitGatewaysRequest = (input: DescribeTransitGatewaysRequest
  */
 const se_DescribeTransitGatewayVpcAttachmentsRequest = (
   input: DescribeTransitGatewayVpcAttachmentsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGAIr] != null) {
@@ -38190,7 +38190,7 @@ const se_DescribeTransitGatewayVpcAttachmentsRequest = (
  */
 const se_DescribeTrunkInterfaceAssociationsRequest = (
   input: DescribeTrunkInterfaceAssociationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_AIs] != null) {
@@ -38224,7 +38224,7 @@ const se_DescribeTrunkInterfaceAssociationsRequest = (
  */
 const se_DescribeVerifiedAccessEndpointsRequest = (
   input: DescribeVerifiedAccessEndpointsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VAEIe] != null) {
@@ -38264,7 +38264,7 @@ const se_DescribeVerifiedAccessEndpointsRequest = (
  */
 const se_DescribeVerifiedAccessGroupsRequest = (
   input: DescribeVerifiedAccessGroupsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VAGIe] != null) {
@@ -38301,7 +38301,7 @@ const se_DescribeVerifiedAccessGroupsRequest = (
  */
 const se_DescribeVerifiedAccessInstanceLoggingConfigurationsRequest = (
   input: DescribeVerifiedAccessInstanceLoggingConfigurationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VAIIe] != null) {
@@ -38335,7 +38335,7 @@ const se_DescribeVerifiedAccessInstanceLoggingConfigurationsRequest = (
  */
 const se_DescribeVerifiedAccessInstancesRequest = (
   input: DescribeVerifiedAccessInstancesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VAIIe] != null) {
@@ -38369,7 +38369,7 @@ const se_DescribeVerifiedAccessInstancesRequest = (
  */
 const se_DescribeVerifiedAccessTrustProvidersRequest = (
   input: DescribeVerifiedAccessTrustProvidersRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VATPIe] != null) {
@@ -38420,7 +38420,7 @@ const se_DescribeVolumeAttributeRequest = (input: DescribeVolumeAttributeRequest
  */
 const se_DescribeVolumesModificationsRequest = (
   input: DescribeVolumesModificationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -38533,7 +38533,7 @@ const se_DescribeVpcAttributeRequest = (input: DescribeVpcAttributeRequest, cont
  */
 const se_DescribeVpcClassicLinkDnsSupportRequest = (
   input: DescribeVpcClassicLinkDnsSupportRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_MR] != null) {
@@ -38582,7 +38582,7 @@ const se_DescribeVpcClassicLinkRequest = (input: DescribeVpcClassicLinkRequest, 
  */
 const se_DescribeVpcEndpointConnectionNotificationsRequest = (
   input: DescribeVpcEndpointConnectionNotificationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -38612,7 +38612,7 @@ const se_DescribeVpcEndpointConnectionNotificationsRequest = (
  */
 const se_DescribeVpcEndpointConnectionsRequest = (
   input: DescribeVpcEndpointConnectionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -38639,7 +38639,7 @@ const se_DescribeVpcEndpointConnectionsRequest = (
  */
 const se_DescribeVpcEndpointServiceConfigurationsRequest = (
   input: DescribeVpcEndpointServiceConfigurationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -38673,7 +38673,7 @@ const se_DescribeVpcEndpointServiceConfigurationsRequest = (
  */
 const se_DescribeVpcEndpointServicePermissionsRequest = (
   input: DescribeVpcEndpointServicePermissionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -38703,7 +38703,7 @@ const se_DescribeVpcEndpointServicePermissionsRequest = (
  */
 const se_DescribeVpcEndpointServicesRequest = (
   input: DescribeVpcEndpointServicesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -38768,7 +38768,7 @@ const se_DescribeVpcEndpointsRequest = (input: DescribeVpcEndpointsRequest, cont
  */
 const se_DescribeVpcPeeringConnectionsRequest = (
   input: DescribeVpcPeeringConnectionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Fi] != null) {
@@ -38951,7 +38951,7 @@ const se_DetachNetworkInterfaceRequest = (input: DetachNetworkInterfaceRequest, 
  */
 const se_DetachVerifiedAccessTrustProviderRequest = (
   input: DetachVerifiedAccessTrustProviderRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VAII] != null) {
@@ -39033,7 +39033,7 @@ const se_DhcpOptionsIdStringList = (input: string[], context: __SerdeContext): a
  */
 const se_DirectoryServiceAuthenticationRequest = (
   input: DirectoryServiceAuthenticationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DIir] != null) {
@@ -39061,7 +39061,7 @@ const se_DisableAddressTransferRequest = (input: DisableAddressTransferRequest, 
  */
 const se_DisableAwsNetworkPerformanceMetricSubscriptionRequest = (
   input: DisableAwsNetworkPerformanceMetricSubscriptionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_S] != null) {
@@ -39087,7 +39087,7 @@ const se_DisableAwsNetworkPerformanceMetricSubscriptionRequest = (
  */
 const se_DisableEbsEncryptionByDefaultRequest = (
   input: DisableEbsEncryptionByDefaultRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -39118,7 +39118,7 @@ const se_DisableFastLaunchRequest = (input: DisableFastLaunchRequest, context: _
  */
 const se_DisableFastSnapshotRestoresRequest = (
   input: DisableFastSnapshotRestoresRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_AZv] != null) {
@@ -39146,7 +39146,7 @@ const se_DisableFastSnapshotRestoresRequest = (
  */
 const se_DisableImageBlockPublicAccessRequest = (
   input: DisableImageBlockPublicAccessRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -39174,7 +39174,7 @@ const se_DisableImageDeprecationRequest = (input: DisableImageDeprecationRequest
  */
 const se_DisableImageDeregistrationProtectionRequest = (
   input: DisableImageDeregistrationProtectionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IIma] != null) {
@@ -39205,7 +39205,7 @@ const se_DisableImageRequest = (input: DisableImageRequest, context: __SerdeCont
  */
 const se_DisableIpamOrganizationAdminAccountRequest = (
   input: DisableIpamOrganizationAdminAccountRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -39222,7 +39222,7 @@ const se_DisableIpamOrganizationAdminAccountRequest = (
  */
 const se_DisableSerialConsoleAccessRequest = (
   input: DisableSerialConsoleAccessRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -39236,7 +39236,7 @@ const se_DisableSerialConsoleAccessRequest = (
  */
 const se_DisableSnapshotBlockPublicAccessRequest = (
   input: DisableSnapshotBlockPublicAccessRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -39250,7 +39250,7 @@ const se_DisableSnapshotBlockPublicAccessRequest = (
  */
 const se_DisableTransitGatewayRouteTablePropagationRequest = (
   input: DisableTransitGatewayRouteTablePropagationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGRTI] != null) {
@@ -39273,7 +39273,7 @@ const se_DisableTransitGatewayRouteTablePropagationRequest = (
  */
 const se_DisableVgwRoutePropagationRequest = (
   input: DisableVgwRoutePropagationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_GI] != null) {
@@ -39293,7 +39293,7 @@ const se_DisableVgwRoutePropagationRequest = (
  */
 const se_DisableVpcClassicLinkDnsSupportRequest = (
   input: DisableVpcClassicLinkDnsSupportRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VI] != null) {
@@ -39338,7 +39338,7 @@ const se_DisassociateAddressRequest = (input: DisassociateAddressRequest, contex
  */
 const se_DisassociateClientVpnTargetNetworkRequest = (
   input: DisassociateClientVpnTargetNetworkRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CVEI] != null) {
@@ -39358,7 +39358,7 @@ const se_DisassociateClientVpnTargetNetworkRequest = (
  */
 const se_DisassociateEnclaveCertificateIamRoleRequest = (
   input: DisassociateEnclaveCertificateIamRoleRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CA] != null) {
@@ -39378,7 +39378,7 @@ const se_DisassociateEnclaveCertificateIamRoleRequest = (
  */
 const se_DisassociateIamInstanceProfileRequest = (
   input: DisassociateIamInstanceProfileRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_AIss] != null) {
@@ -39392,7 +39392,7 @@ const se_DisassociateIamInstanceProfileRequest = (
  */
 const se_DisassociateInstanceEventWindowRequest = (
   input: DisassociateInstanceEventWindowRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -39433,7 +39433,7 @@ const se_DisassociateIpamByoasnRequest = (input: DisassociateIpamByoasnRequest, 
  */
 const se_DisassociateIpamResourceDiscoveryRequest = (
   input: DisassociateIpamResourceDiscoveryRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -39450,7 +39450,7 @@ const se_DisassociateIpamResourceDiscoveryRequest = (
  */
 const se_DisassociateNatGatewayAddressRequest = (
   input: DisassociateNatGatewayAddressRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_NGI] != null) {
@@ -39491,7 +39491,7 @@ const se_DisassociateRouteTableRequest = (input: DisassociateRouteTableRequest, 
  */
 const se_DisassociateSubnetCidrBlockRequest = (
   input: DisassociateSubnetCidrBlockRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_AIss] != null) {
@@ -39505,7 +39505,7 @@ const se_DisassociateSubnetCidrBlockRequest = (
  */
 const se_DisassociateTransitGatewayMulticastDomainRequest = (
   input: DisassociateTransitGatewayMulticastDomainRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGMDI] != null) {
@@ -39532,7 +39532,7 @@ const se_DisassociateTransitGatewayMulticastDomainRequest = (
  */
 const se_DisassociateTransitGatewayPolicyTableRequest = (
   input: DisassociateTransitGatewayPolicyTableRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGPTI] != null) {
@@ -39552,7 +39552,7 @@ const se_DisassociateTransitGatewayPolicyTableRequest = (
  */
 const se_DisassociateTransitGatewayRouteTableRequest = (
   input: DisassociateTransitGatewayRouteTableRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGRTI] != null) {
@@ -39572,7 +39572,7 @@ const se_DisassociateTransitGatewayRouteTableRequest = (
  */
 const se_DisassociateTrunkInterfaceRequest = (
   input: DisassociateTrunkInterfaceRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_AIss] != null) {
@@ -39734,7 +39734,7 @@ const se_EbsBlockDevice = (input: EbsBlockDevice, context: __SerdeContext): any 
  */
 const se_EbsInstanceBlockDeviceSpecification = (
   input: EbsInstanceBlockDeviceSpecification,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DOT] != null) {
@@ -39898,7 +39898,7 @@ const se_EnableAddressTransferRequest = (input: EnableAddressTransferRequest, co
  */
 const se_EnableAwsNetworkPerformanceMetricSubscriptionRequest = (
   input: EnableAwsNetworkPerformanceMetricSubscriptionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_S] != null) {
@@ -39924,7 +39924,7 @@ const se_EnableAwsNetworkPerformanceMetricSubscriptionRequest = (
  */
 const se_EnableEbsEncryptionByDefaultRequest = (
   input: EnableEbsEncryptionByDefaultRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -39972,7 +39972,7 @@ const se_EnableFastLaunchRequest = (input: EnableFastLaunchRequest, context: __S
  */
 const se_EnableFastSnapshotRestoresRequest = (
   input: EnableFastSnapshotRestoresRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_AZv] != null) {
@@ -40000,7 +40000,7 @@ const se_EnableFastSnapshotRestoresRequest = (
  */
 const se_EnableImageBlockPublicAccessRequest = (
   input: EnableImageBlockPublicAccessRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IBPAS] != null) {
@@ -40034,7 +40034,7 @@ const se_EnableImageDeprecationRequest = (input: EnableImageDeprecationRequest, 
  */
 const se_EnableImageDeregistrationProtectionRequest = (
   input: EnableImageDeregistrationProtectionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IIma] != null) {
@@ -40068,7 +40068,7 @@ const se_EnableImageRequest = (input: EnableImageRequest, context: __SerdeContex
  */
 const se_EnableIpamOrganizationAdminAccountRequest = (
   input: EnableIpamOrganizationAdminAccountRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -40085,7 +40085,7 @@ const se_EnableIpamOrganizationAdminAccountRequest = (
  */
 const se_EnableReachabilityAnalyzerOrganizationSharingRequest = (
   input: EnableReachabilityAnalyzerOrganizationSharingRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -40110,7 +40110,7 @@ const se_EnableSerialConsoleAccessRequest = (input: EnableSerialConsoleAccessReq
  */
 const se_EnableSnapshotBlockPublicAccessRequest = (
   input: EnableSnapshotBlockPublicAccessRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Stat] != null) {
@@ -40127,7 +40127,7 @@ const se_EnableSnapshotBlockPublicAccessRequest = (
  */
 const se_EnableTransitGatewayRouteTablePropagationRequest = (
   input: EnableTransitGatewayRouteTablePropagationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGRTI] != null) {
@@ -40181,7 +40181,7 @@ const se_EnableVolumeIORequest = (input: EnableVolumeIORequest, context: __Serde
  */
 const se_EnableVpcClassicLinkDnsSupportRequest = (
   input: EnableVpcClassicLinkDnsSupportRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VI] != null) {
@@ -40310,7 +40310,7 @@ const se_ExecutableByStringList = (input: string[], context: __SerdeContext): an
  */
 const se_ExportClientVpnClientCertificateRevocationListRequest = (
   input: ExportClientVpnClientCertificateRevocationListRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CVEI] != null) {
@@ -40327,7 +40327,7 @@ const se_ExportClientVpnClientCertificateRevocationListRequest = (
  */
 const se_ExportClientVpnClientConfigurationRequest = (
   input: ExportClientVpnClientConfigurationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CVEI] != null) {
@@ -40453,7 +40453,7 @@ const se_ExportToS3TaskSpecification = (input: ExportToS3TaskSpecification, cont
  */
 const se_ExportTransitGatewayRoutesRequest = (
   input: ExportTransitGatewayRoutesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGRTI] != null) {
@@ -40496,7 +40496,7 @@ const se_FastLaunchImageIdList = (input: string[], context: __SerdeContext): any
  */
 const se_FastLaunchLaunchTemplateSpecificationRequest = (
   input: FastLaunchLaunchTemplateSpecificationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LTI] != null) {
@@ -40516,7 +40516,7 @@ const se_FastLaunchLaunchTemplateSpecificationRequest = (
  */
 const se_FastLaunchSnapshotConfigurationRequest = (
   input: FastLaunchSnapshotConfigurationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TRC] != null) {
@@ -40597,7 +40597,7 @@ const se_FleetIdSet = (input: string[], context: __SerdeContext): any => {
  */
 const se_FleetLaunchTemplateConfigListRequest = (
   input: FleetLaunchTemplateConfigRequest[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -40641,7 +40641,7 @@ const se_FleetLaunchTemplateConfigRequest = (input: FleetLaunchTemplateConfigReq
  */
 const se_FleetLaunchTemplateOverridesListRequest = (
   input: FleetLaunchTemplateOverridesRequest[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -40663,7 +40663,7 @@ const se_FleetLaunchTemplateOverridesListRequest = (
  */
 const se_FleetLaunchTemplateOverridesRequest = (
   input: FleetLaunchTemplateOverridesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IT] != null) {
@@ -40726,7 +40726,7 @@ const se_FleetLaunchTemplateSpecification = (input: FleetLaunchTemplateSpecifica
  */
 const se_FleetLaunchTemplateSpecificationRequest = (
   input: FleetLaunchTemplateSpecificationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LTI] != null) {
@@ -40746,7 +40746,7 @@ const se_FleetLaunchTemplateSpecificationRequest = (
  */
 const se_FleetSpotCapacityRebalanceRequest = (
   input: FleetSpotCapacityRebalanceRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_RS] != null) {
@@ -40763,7 +40763,7 @@ const se_FleetSpotCapacityRebalanceRequest = (
  */
 const se_FleetSpotMaintenanceStrategiesRequest = (
   input: FleetSpotMaintenanceStrategiesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CRap] != null) {
@@ -40829,7 +40829,7 @@ const se_FpgaImageIdList = (input: string[], context: __SerdeContext): any => {
  */
 const se_GetAssociatedEnclaveCertificateIamRolesRequest = (
   input: GetAssociatedEnclaveCertificateIamRolesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CA] != null) {
@@ -40846,7 +40846,7 @@ const se_GetAssociatedEnclaveCertificateIamRolesRequest = (
  */
 const se_GetAssociatedIpv6PoolCidrsRequest = (
   input: GetAssociatedIpv6PoolCidrsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_PIo] != null) {
@@ -40869,7 +40869,7 @@ const se_GetAssociatedIpv6PoolCidrsRequest = (
  */
 const se_GetAwsNetworkPerformanceDataRequest = (
   input: GetAwsNetworkPerformanceDataRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DQ] != null) {
@@ -40902,7 +40902,7 @@ const se_GetAwsNetworkPerformanceDataRequest = (
  */
 const se_GetCapacityReservationUsageRequest = (
   input: GetCapacityReservationUsageRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CRI] != null) {
@@ -40986,7 +40986,7 @@ const se_GetConsoleScreenshotRequest = (input: GetConsoleScreenshotRequest, cont
  */
 const se_GetDefaultCreditSpecificationRequest = (
   input: GetDefaultCreditSpecificationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -41025,7 +41025,7 @@ const se_GetEbsEncryptionByDefaultRequest = (input: GetEbsEncryptionByDefaultReq
  */
 const se_GetFlowLogsIntegrationTemplateRequest = (
   input: GetFlowLogsIntegrationTemplateRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -41052,7 +41052,7 @@ const se_GetFlowLogsIntegrationTemplateRequest = (
  */
 const se_GetGroupsForCapacityReservationRequest = (
   input: GetGroupsForCapacityReservationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CRI] != null) {
@@ -41075,7 +41075,7 @@ const se_GetGroupsForCapacityReservationRequest = (
  */
 const se_GetHostReservationPurchasePreviewRequest = (
   input: GetHostReservationPurchasePreviewRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_HIS] != null) {
@@ -41096,7 +41096,7 @@ const se_GetHostReservationPurchasePreviewRequest = (
  */
 const se_GetImageBlockPublicAccessStateRequest = (
   input: GetImageBlockPublicAccessStateRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -41110,7 +41110,7 @@ const se_GetImageBlockPublicAccessStateRequest = (
  */
 const se_GetInstanceMetadataDefaultsRequest = (
   input: GetInstanceMetadataDefaultsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -41144,7 +41144,7 @@ const se_GetInstanceTpmEkPubRequest = (input: GetInstanceTpmEkPubRequest, contex
  */
 const se_GetInstanceTypesFromInstanceRequirementsRequest = (
   input: GetInstanceTypesFromInstanceRequirementsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -41261,7 +41261,7 @@ const se_GetIpamDiscoveredAccountsRequest = (input: GetIpamDiscoveredAccountsReq
  */
 const se_GetIpamDiscoveredPublicAddressesRequest = (
   input: GetIpamDiscoveredPublicAddressesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -41294,7 +41294,7 @@ const se_GetIpamDiscoveredPublicAddressesRequest = (
  */
 const se_GetIpamDiscoveredResourceCidrsRequest = (
   input: GetIpamDiscoveredResourceCidrsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -41444,7 +41444,7 @@ const se_GetLaunchTemplateDataRequest = (input: GetLaunchTemplateDataRequest, co
  */
 const se_GetManagedPrefixListAssociationsRequest = (
   input: GetManagedPrefixListAssociationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -41467,7 +41467,7 @@ const se_GetManagedPrefixListAssociationsRequest = (
  */
 const se_GetManagedPrefixListEntriesRequest = (
   input: GetManagedPrefixListEntriesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -41493,7 +41493,7 @@ const se_GetManagedPrefixListEntriesRequest = (
  */
 const se_GetNetworkInsightsAccessScopeAnalysisFindingsRequest = (
   input: GetNetworkInsightsAccessScopeAnalysisFindingsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_NIASAI] != null) {
@@ -41516,7 +41516,7 @@ const se_GetNetworkInsightsAccessScopeAnalysisFindingsRequest = (
  */
 const se_GetNetworkInsightsAccessScopeContentRequest = (
   input: GetNetworkInsightsAccessScopeContentRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_NIASI] != null) {
@@ -41547,7 +41547,7 @@ const se_GetPasswordDataRequest = (input: GetPasswordDataRequest, context: __Ser
  */
 const se_GetReservedInstancesExchangeQuoteRequest = (
   input: GetReservedInstancesExchangeQuoteRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -41602,7 +41602,7 @@ const se_GetSecurityGroupsForVpcRequest = (input: GetSecurityGroupsForVpcRequest
  */
 const se_GetSerialConsoleAccessStatusRequest = (
   input: GetSerialConsoleAccessStatusRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -41616,7 +41616,7 @@ const se_GetSerialConsoleAccessStatusRequest = (
  */
 const se_GetSnapshotBlockPublicAccessStateRequest = (
   input: GetSnapshotBlockPublicAccessStateRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -41704,7 +41704,7 @@ const se_GetSubnetCidrReservationsRequest = (input: GetSubnetCidrReservationsReq
  */
 const se_GetTransitGatewayAttachmentPropagationsRequest = (
   input: GetTransitGatewayAttachmentPropagationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGAI] != null) {
@@ -41734,7 +41734,7 @@ const se_GetTransitGatewayAttachmentPropagationsRequest = (
  */
 const se_GetTransitGatewayMulticastDomainAssociationsRequest = (
   input: GetTransitGatewayMulticastDomainAssociationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGMDI] != null) {
@@ -41764,7 +41764,7 @@ const se_GetTransitGatewayMulticastDomainAssociationsRequest = (
  */
 const se_GetTransitGatewayPolicyTableAssociationsRequest = (
   input: GetTransitGatewayPolicyTableAssociationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGPTI] != null) {
@@ -41794,7 +41794,7 @@ const se_GetTransitGatewayPolicyTableAssociationsRequest = (
  */
 const se_GetTransitGatewayPolicyTableEntriesRequest = (
   input: GetTransitGatewayPolicyTableEntriesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGPTI] != null) {
@@ -41824,7 +41824,7 @@ const se_GetTransitGatewayPolicyTableEntriesRequest = (
  */
 const se_GetTransitGatewayPrefixListReferencesRequest = (
   input: GetTransitGatewayPrefixListReferencesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGRTI] != null) {
@@ -41854,7 +41854,7 @@ const se_GetTransitGatewayPrefixListReferencesRequest = (
  */
 const se_GetTransitGatewayRouteTableAssociationsRequest = (
   input: GetTransitGatewayRouteTableAssociationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGRTI] != null) {
@@ -41884,7 +41884,7 @@ const se_GetTransitGatewayRouteTableAssociationsRequest = (
  */
 const se_GetTransitGatewayRouteTablePropagationsRequest = (
   input: GetTransitGatewayRouteTablePropagationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGRTI] != null) {
@@ -41914,7 +41914,7 @@ const se_GetTransitGatewayRouteTablePropagationsRequest = (
  */
 const se_GetVerifiedAccessEndpointPolicyRequest = (
   input: GetVerifiedAccessEndpointPolicyRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VAEI] != null) {
@@ -41931,7 +41931,7 @@ const se_GetVerifiedAccessEndpointPolicyRequest = (
  */
 const se_GetVerifiedAccessGroupPolicyRequest = (
   input: GetVerifiedAccessGroupPolicyRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VAGI] != null) {
@@ -41948,7 +41948,7 @@ const se_GetVerifiedAccessGroupPolicyRequest = (
  */
 const se_GetVpnConnectionDeviceSampleConfigurationRequest = (
   input: GetVpnConnectionDeviceSampleConfigurationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VCI] != null) {
@@ -41971,7 +41971,7 @@ const se_GetVpnConnectionDeviceSampleConfigurationRequest = (
  */
 const se_GetVpnConnectionDeviceTypesRequest = (
   input: GetVpnConnectionDeviceTypesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_MR] != null) {
@@ -41991,7 +41991,7 @@ const se_GetVpnConnectionDeviceTypesRequest = (
  */
 const se_GetVpnTunnelReplacementStatusRequest = (
   input: GetVpnTunnelReplacementStatusRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VCI] != null) {
@@ -42258,7 +42258,7 @@ const se_ImageIdStringList = (input: string[], context: __SerdeContext): any => 
  */
 const se_ImportClientVpnClientCertificateRevocationListRequest = (
   input: ImportClientVpnClientCertificateRevocationListRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CVEI] != null) {
@@ -42278,7 +42278,7 @@ const se_ImportClientVpnClientCertificateRevocationListRequest = (
  */
 const se_ImportImageLicenseConfigurationRequest = (
   input: ImportImageLicenseConfigurationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LCA] != null) {
@@ -42292,7 +42292,7 @@ const se_ImportImageLicenseConfigurationRequest = (
  */
 const se_ImportImageLicenseSpecificationListRequest = (
   input: ImportImageLicenseConfigurationRequest[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -42386,7 +42386,7 @@ const se_ImportImageRequest = (input: ImportImageRequest, context: __SerdeContex
  */
 const se_ImportInstanceLaunchSpecification = (
   input: ImportInstanceLaunchSpecification,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_AId] != null) {
@@ -42627,7 +42627,7 @@ const se_InsideCidrBlocksStringList = (input: string[], context: __SerdeContext)
  */
 const se_InstanceBlockDeviceMappingSpecification = (
   input: InstanceBlockDeviceMappingSpecification,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DN] != null) {
@@ -42654,7 +42654,7 @@ const se_InstanceBlockDeviceMappingSpecification = (
  */
 const se_InstanceBlockDeviceMappingSpecificationList = (
   input: InstanceBlockDeviceMappingSpecification[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -42676,7 +42676,7 @@ const se_InstanceBlockDeviceMappingSpecificationList = (
  */
 const se_InstanceCreditSpecificationListRequest = (
   input: InstanceCreditSpecificationRequest[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -42698,7 +42698,7 @@ const se_InstanceCreditSpecificationListRequest = (
  */
 const se_InstanceCreditSpecificationRequest = (
   input: InstanceCreditSpecificationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IIn] != null) {
@@ -42715,7 +42715,7 @@ const se_InstanceCreditSpecificationRequest = (
  */
 const se_InstanceEventWindowAssociationRequest = (
   input: InstanceEventWindowAssociationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IIns] != null) {
@@ -42747,7 +42747,7 @@ const se_InstanceEventWindowAssociationRequest = (
  */
 const se_InstanceEventWindowDisassociationRequest = (
   input: InstanceEventWindowDisassociationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IIns] != null) {
@@ -42795,7 +42795,7 @@ const se_InstanceEventWindowIdSet = (input: string[], context: __SerdeContext): 
  */
 const se_InstanceEventWindowTimeRangeRequest = (
   input: InstanceEventWindowTimeRangeRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SWD] != null) {
@@ -42818,7 +42818,7 @@ const se_InstanceEventWindowTimeRangeRequest = (
  */
 const se_InstanceEventWindowTimeRangeRequestSet = (
   input: InstanceEventWindowTimeRangeRequest[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -42951,7 +42951,7 @@ const se_InstanceIpv6AddressRequest = (input: InstanceIpv6AddressRequest, contex
  */
 const se_InstanceMaintenanceOptionsRequest = (
   input: InstanceMaintenanceOptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_ARu] != null) {
@@ -43006,7 +43006,7 @@ const se_InstanceMetadataOptionsRequest = (input: InstanceMetadataOptionsRequest
  */
 const se_InstanceNetworkInterfaceSpecification = (
   input: InstanceNetworkInterfaceSpecification,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_APIAs] != null) {
@@ -43111,7 +43111,7 @@ const se_InstanceNetworkInterfaceSpecification = (
  */
 const se_InstanceNetworkInterfaceSpecificationList = (
   input: InstanceNetworkInterfaceSpecification[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -43429,7 +43429,7 @@ const se_InstanceRequirementsRequest = (input: InstanceRequirementsRequest, cont
  */
 const se_InstanceRequirementsWithMetadataRequest = (
   input: InstanceRequirementsWithMetadataRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_ATr] != null) {
@@ -43993,7 +43993,7 @@ const se_LaunchSpecsList = (input: SpotFleetLaunchSpecification[], context: __Se
  */
 const se_LaunchTemplateBlockDeviceMappingRequest = (
   input: LaunchTemplateBlockDeviceMappingRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DN] != null) {
@@ -44020,7 +44020,7 @@ const se_LaunchTemplateBlockDeviceMappingRequest = (
  */
 const se_LaunchTemplateBlockDeviceMappingRequestList = (
   input: LaunchTemplateBlockDeviceMappingRequest[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -44042,7 +44042,7 @@ const se_LaunchTemplateBlockDeviceMappingRequestList = (
  */
 const se_LaunchTemplateCapacityReservationSpecificationRequest = (
   input: LaunchTemplateCapacityReservationSpecificationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CRP] != null) {
@@ -44121,7 +44121,7 @@ const se_LaunchTemplateCpuOptionsRequest = (input: LaunchTemplateCpuOptionsReque
  */
 const se_LaunchTemplateEbsBlockDeviceRequest = (
   input: LaunchTemplateEbsBlockDeviceRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Enc] != null) {
@@ -44156,7 +44156,7 @@ const se_LaunchTemplateEbsBlockDeviceRequest = (
  */
 const se_LaunchTemplateElasticInferenceAccelerator = (
   input: LaunchTemplateElasticInferenceAccelerator,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_T] != null) {
@@ -44173,7 +44173,7 @@ const se_LaunchTemplateElasticInferenceAccelerator = (
  */
 const se_LaunchTemplateElasticInferenceAcceleratorList = (
   input: LaunchTemplateElasticInferenceAccelerator[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -44195,7 +44195,7 @@ const se_LaunchTemplateElasticInferenceAcceleratorList = (
  */
 const se_LaunchTemplateEnclaveOptionsRequest = (
   input: LaunchTemplateEnclaveOptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_En] != null) {
@@ -44209,7 +44209,7 @@ const se_LaunchTemplateEnclaveOptionsRequest = (
  */
 const se_LaunchTemplateHibernationOptionsRequest = (
   input: LaunchTemplateHibernationOptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Conf] != null) {
@@ -44223,7 +44223,7 @@ const se_LaunchTemplateHibernationOptionsRequest = (
  */
 const se_LaunchTemplateIamInstanceProfileSpecificationRequest = (
   input: LaunchTemplateIamInstanceProfileSpecificationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Ar] != null) {
@@ -44256,7 +44256,7 @@ const se_LaunchTemplateIdStringList = (input: string[], context: __SerdeContext)
  */
 const se_LaunchTemplateInstanceMaintenanceOptionsRequest = (
   input: LaunchTemplateInstanceMaintenanceOptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_ARu] != null) {
@@ -44270,7 +44270,7 @@ const se_LaunchTemplateInstanceMaintenanceOptionsRequest = (
  */
 const se_LaunchTemplateInstanceMarketOptionsRequest = (
   input: LaunchTemplateInstanceMarketOptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_MT] != null) {
@@ -44291,7 +44291,7 @@ const se_LaunchTemplateInstanceMarketOptionsRequest = (
  */
 const se_LaunchTemplateInstanceMetadataOptionsRequest = (
   input: LaunchTemplateInstanceMetadataOptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_HT] != null) {
@@ -44317,7 +44317,7 @@ const se_LaunchTemplateInstanceMetadataOptionsRequest = (
  */
 const se_LaunchTemplateInstanceNetworkInterfaceSpecificationRequest = (
   input: LaunchTemplateInstanceNetworkInterfaceSpecificationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_ACIA] != null) {
@@ -44422,7 +44422,7 @@ const se_LaunchTemplateInstanceNetworkInterfaceSpecificationRequest = (
  */
 const se_LaunchTemplateInstanceNetworkInterfaceSpecificationRequestList = (
   input: LaunchTemplateInstanceNetworkInterfaceSpecificationRequest[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -44444,7 +44444,7 @@ const se_LaunchTemplateInstanceNetworkInterfaceSpecificationRequestList = (
  */
 const se_LaunchTemplateLicenseConfigurationRequest = (
   input: LaunchTemplateLicenseConfigurationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LCA] != null) {
@@ -44458,7 +44458,7 @@ const se_LaunchTemplateLicenseConfigurationRequest = (
  */
 const se_LaunchTemplateLicenseSpecificationListRequest = (
   input: LaunchTemplateLicenseConfigurationRequest[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -44583,7 +44583,7 @@ const se_LaunchTemplatePlacementRequest = (input: LaunchTemplatePlacementRequest
  */
 const se_LaunchTemplatePrivateDnsNameOptionsRequest = (
   input: LaunchTemplatePrivateDnsNameOptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_HTo] != null) {
@@ -44631,7 +44631,7 @@ const se_LaunchTemplateSpecification = (input: LaunchTemplateSpecification, cont
  */
 const se_LaunchTemplateSpotMarketOptionsRequest = (
   input: LaunchTemplateSpotMarketOptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_MPa] != null) {
@@ -44657,7 +44657,7 @@ const se_LaunchTemplateSpotMarketOptionsRequest = (
  */
 const se_LaunchTemplateTagSpecificationRequest = (
   input: LaunchTemplateTagSpecificationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_RT] != null) {
@@ -44678,7 +44678,7 @@ const se_LaunchTemplateTagSpecificationRequest = (
  */
 const se_LaunchTemplateTagSpecificationRequestList = (
   input: LaunchTemplateTagSpecificationRequest[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -44887,7 +44887,7 @@ const se_LocalGatewayRouteTableIdSet = (input: string[], context: __SerdeContext
  */
 const se_LocalGatewayRouteTableVirtualInterfaceGroupAssociationIdSet = (
   input: string[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -45069,7 +45069,7 @@ const se_ModifyAddressAttributeRequest = (input: ModifyAddressAttributeRequest, 
  */
 const se_ModifyAvailabilityZoneGroupRequest = (
   input: ModifyAvailabilityZoneGroupRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_GN] != null) {
@@ -45089,7 +45089,7 @@ const se_ModifyAvailabilityZoneGroupRequest = (
  */
 const se_ModifyCapacityReservationFleetRequest = (
   input: ModifyCapacityReservationFleetRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CRFIa] != null) {
@@ -45214,7 +45214,7 @@ const se_ModifyClientVpnEndpointRequest = (input: ModifyClientVpnEndpointRequest
  */
 const se_ModifyDefaultCreditSpecificationRequest = (
   input: ModifyDefaultCreditSpecificationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -45587,7 +45587,7 @@ const se_ModifyInstanceAttributeRequest = (input: ModifyInstanceAttributeRequest
  */
 const se_ModifyInstanceCapacityReservationAttributesRequest = (
   input: ModifyInstanceCapacityReservationAttributesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IIn] != null) {
@@ -45611,7 +45611,7 @@ const se_ModifyInstanceCapacityReservationAttributesRequest = (
  */
 const se_ModifyInstanceCreditSpecificationRequest = (
   input: ModifyInstanceCreditSpecificationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -45635,7 +45635,7 @@ const se_ModifyInstanceCreditSpecificationRequest = (
  */
 const se_ModifyInstanceEventStartTimeRequest = (
   input: ModifyInstanceEventStartTimeRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -45685,7 +45685,7 @@ const se_ModifyInstanceEventWindowRequest = (input: ModifyInstanceEventWindowReq
  */
 const se_ModifyInstanceMaintenanceOptionsRequest = (
   input: ModifyInstanceMaintenanceOptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IIn] != null) {
@@ -45705,7 +45705,7 @@ const se_ModifyInstanceMaintenanceOptionsRequest = (
  */
 const se_ModifyInstanceMetadataDefaultsRequest = (
   input: ModifyInstanceMetadataDefaultsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_HT] != null) {
@@ -45731,7 +45731,7 @@ const se_ModifyInstanceMetadataDefaultsRequest = (
  */
 const se_ModifyInstanceMetadataOptionsRequest = (
   input: ModifyInstanceMetadataOptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IIn] != null) {
@@ -45904,7 +45904,7 @@ const se_ModifyIpamResourceCidrRequest = (input: ModifyIpamResourceCidrRequest, 
  */
 const se_ModifyIpamResourceDiscoveryRequest = (
   input: ModifyIpamResourceDiscoveryRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -46041,7 +46041,7 @@ const se_ModifyManagedPrefixListRequest = (input: ModifyManagedPrefixListRequest
  */
 const se_ModifyNetworkInterfaceAttributeRequest = (
   input: ModifyNetworkInterfaceAttributeRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Att] != null) {
@@ -46106,7 +46106,7 @@ const se_ModifyNetworkInterfaceAttributeRequest = (
  */
 const se_ModifyPrivateDnsNameOptionsRequest = (
   input: ModifyPrivateDnsNameOptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -46335,7 +46335,7 @@ const se_ModifySubnetAttributeRequest = (input: ModifySubnetAttributeRequest, co
  */
 const se_ModifyTrafficMirrorFilterNetworkServicesRequest = (
   input: ModifyTrafficMirrorFilterNetworkServicesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TMFI] != null) {
@@ -46366,7 +46366,7 @@ const se_ModifyTrafficMirrorFilterNetworkServicesRequest = (
  */
 const se_ModifyTrafficMirrorFilterRuleRequest = (
   input: ModifyTrafficMirrorFilterRuleRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TMFRI] != null) {
@@ -46425,7 +46425,7 @@ const se_ModifyTrafficMirrorFilterRuleRequest = (
  */
 const se_ModifyTrafficMirrorSessionRequest = (
   input: ModifyTrafficMirrorSessionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TMSI] != null) {
@@ -46516,7 +46516,7 @@ const se_ModifyTransitGatewayOptions = (input: ModifyTransitGatewayOptions, cont
  */
 const se_ModifyTransitGatewayPrefixListReferenceRequest = (
   input: ModifyTransitGatewayPrefixListReferenceRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGRTI] != null) {
@@ -46566,7 +46566,7 @@ const se_ModifyTransitGatewayRequest = (input: ModifyTransitGatewayRequest, cont
  */
 const se_ModifyTransitGatewayVpcAttachmentRequest = (
   input: ModifyTransitGatewayVpcAttachmentRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGAI] != null) {
@@ -46604,7 +46604,7 @@ const se_ModifyTransitGatewayVpcAttachmentRequest = (
  */
 const se_ModifyTransitGatewayVpcAttachmentRequestOptions = (
   input: ModifyTransitGatewayVpcAttachmentRequestOptions,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DSns] != null) {
@@ -46627,7 +46627,7 @@ const se_ModifyTransitGatewayVpcAttachmentRequestOptions = (
  */
 const se_ModifyVerifiedAccessEndpointEniOptions = (
   input: ModifyVerifiedAccessEndpointEniOptions,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_P] != null) {
@@ -46644,7 +46644,7 @@ const se_ModifyVerifiedAccessEndpointEniOptions = (
  */
 const se_ModifyVerifiedAccessEndpointLoadBalancerOptions = (
   input: ModifyVerifiedAccessEndpointLoadBalancerOptions,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SIu] != null) {
@@ -46668,7 +46668,7 @@ const se_ModifyVerifiedAccessEndpointLoadBalancerOptions = (
  */
 const se_ModifyVerifiedAccessEndpointPolicyRequest = (
   input: ModifyVerifiedAccessEndpointPolicyRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VAEI] != null) {
@@ -46704,7 +46704,7 @@ const se_ModifyVerifiedAccessEndpointPolicyRequest = (
  */
 const se_ModifyVerifiedAccessEndpointRequest = (
   input: ModifyVerifiedAccessEndpointRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VAEI] != null) {
@@ -46763,7 +46763,7 @@ const se_ModifyVerifiedAccessEndpointSubnetIdList = (input: string[], context: _
  */
 const se_ModifyVerifiedAccessGroupPolicyRequest = (
   input: ModifyVerifiedAccessGroupPolicyRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VAGI] != null) {
@@ -46825,7 +46825,7 @@ const se_ModifyVerifiedAccessGroupRequest = (input: ModifyVerifiedAccessGroupReq
  */
 const se_ModifyVerifiedAccessInstanceLoggingConfigurationRequest = (
   input: ModifyVerifiedAccessInstanceLoggingConfigurationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VAII] != null) {
@@ -46855,7 +46855,7 @@ const se_ModifyVerifiedAccessInstanceLoggingConfigurationRequest = (
  */
 const se_ModifyVerifiedAccessInstanceRequest = (
   input: ModifyVerifiedAccessInstanceRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VAII] != null) {
@@ -46881,7 +46881,7 @@ const se_ModifyVerifiedAccessInstanceRequest = (
  */
 const se_ModifyVerifiedAccessTrustProviderDeviceOptions = (
   input: ModifyVerifiedAccessTrustProviderDeviceOptions,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_PSKU] != null) {
@@ -46895,7 +46895,7 @@ const se_ModifyVerifiedAccessTrustProviderDeviceOptions = (
  */
 const se_ModifyVerifiedAccessTrustProviderOidcOptions = (
   input: ModifyVerifiedAccessTrustProviderOidcOptions,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_I] != null) {
@@ -46927,7 +46927,7 @@ const se_ModifyVerifiedAccessTrustProviderOidcOptions = (
  */
 const se_ModifyVerifiedAccessTrustProviderRequest = (
   input: ModifyVerifiedAccessTrustProviderRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VATPI] != null) {
@@ -47056,7 +47056,7 @@ const se_ModifyVpcAttributeRequest = (input: ModifyVpcAttributeRequest, context:
  */
 const se_ModifyVpcEndpointConnectionNotificationRequest = (
   input: ModifyVpcEndpointConnectionNotificationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -47165,7 +47165,7 @@ const se_ModifyVpcEndpointRequest = (input: ModifyVpcEndpointRequest, context: _
  */
 const se_ModifyVpcEndpointServiceConfigurationRequest = (
   input: ModifyVpcEndpointServiceConfigurationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -47233,7 +47233,7 @@ const se_ModifyVpcEndpointServiceConfigurationRequest = (
  */
 const se_ModifyVpcEndpointServicePayerResponsibilityRequest = (
   input: ModifyVpcEndpointServicePayerResponsibilityRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -47253,7 +47253,7 @@ const se_ModifyVpcEndpointServicePayerResponsibilityRequest = (
  */
 const se_ModifyVpcEndpointServicePermissionsRequest = (
   input: ModifyVpcEndpointServicePermissionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -47284,7 +47284,7 @@ const se_ModifyVpcEndpointServicePermissionsRequest = (
  */
 const se_ModifyVpcPeeringConnectionOptionsRequest = (
   input: ModifyVpcPeeringConnectionOptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_APCO] != null) {
@@ -47332,7 +47332,7 @@ const se_ModifyVpcTenancyRequest = (input: ModifyVpcTenancyRequest, context: __S
  */
 const se_ModifyVpnConnectionOptionsRequest = (
   input: ModifyVpnConnectionOptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VCI] != null) {
@@ -47384,7 +47384,7 @@ const se_ModifyVpnConnectionRequest = (input: ModifyVpnConnectionRequest, contex
  */
 const se_ModifyVpnTunnelCertificateRequest = (
   input: ModifyVpnTunnelCertificateRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_VCI] != null) {
@@ -47431,7 +47431,7 @@ const se_ModifyVpnTunnelOptionsRequest = (input: ModifyVpnTunnelOptionsRequest, 
  */
 const se_ModifyVpnTunnelOptionsSpecification = (
   input: ModifyVpnTunnelOptionsSpecification,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TIC] != null) {
@@ -47710,7 +47710,7 @@ const se_NetworkInsightsPathIdList = (input: string[], context: __SerdeContext):
  */
 const se_NetworkInterfaceAttachmentChanges = (
   input: NetworkInterfaceAttachmentChanges,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_AIt] != null) {
@@ -48042,7 +48042,7 @@ const se_PeeringConnectionOptionsRequest = (input: PeeringConnectionOptionsReque
  */
 const se_Phase1DHGroupNumbersRequestList = (
   input: Phase1DHGroupNumbersRequestListValue[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -48064,7 +48064,7 @@ const se_Phase1DHGroupNumbersRequestList = (
  */
 const se_Phase1DHGroupNumbersRequestListValue = (
   input: Phase1DHGroupNumbersRequestListValue,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Va] != null) {
@@ -48078,7 +48078,7 @@ const se_Phase1DHGroupNumbersRequestListValue = (
  */
 const se_Phase1EncryptionAlgorithmsRequestList = (
   input: Phase1EncryptionAlgorithmsRequestListValue[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -48100,7 +48100,7 @@ const se_Phase1EncryptionAlgorithmsRequestList = (
  */
 const se_Phase1EncryptionAlgorithmsRequestListValue = (
   input: Phase1EncryptionAlgorithmsRequestListValue,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Va] != null) {
@@ -48114,7 +48114,7 @@ const se_Phase1EncryptionAlgorithmsRequestListValue = (
  */
 const se_Phase1IntegrityAlgorithmsRequestList = (
   input: Phase1IntegrityAlgorithmsRequestListValue[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -48136,7 +48136,7 @@ const se_Phase1IntegrityAlgorithmsRequestList = (
  */
 const se_Phase1IntegrityAlgorithmsRequestListValue = (
   input: Phase1IntegrityAlgorithmsRequestListValue,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Va] != null) {
@@ -48150,7 +48150,7 @@ const se_Phase1IntegrityAlgorithmsRequestListValue = (
  */
 const se_Phase2DHGroupNumbersRequestList = (
   input: Phase2DHGroupNumbersRequestListValue[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -48172,7 +48172,7 @@ const se_Phase2DHGroupNumbersRequestList = (
  */
 const se_Phase2DHGroupNumbersRequestListValue = (
   input: Phase2DHGroupNumbersRequestListValue,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Va] != null) {
@@ -48186,7 +48186,7 @@ const se_Phase2DHGroupNumbersRequestListValue = (
  */
 const se_Phase2EncryptionAlgorithmsRequestList = (
   input: Phase2EncryptionAlgorithmsRequestListValue[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -48208,7 +48208,7 @@ const se_Phase2EncryptionAlgorithmsRequestList = (
  */
 const se_Phase2EncryptionAlgorithmsRequestListValue = (
   input: Phase2EncryptionAlgorithmsRequestListValue,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Va] != null) {
@@ -48222,7 +48222,7 @@ const se_Phase2EncryptionAlgorithmsRequestListValue = (
  */
 const se_Phase2IntegrityAlgorithmsRequestList = (
   input: Phase2IntegrityAlgorithmsRequestListValue[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -48244,7 +48244,7 @@ const se_Phase2IntegrityAlgorithmsRequestList = (
  */
 const se_Phase2IntegrityAlgorithmsRequestListValue = (
   input: Phase2IntegrityAlgorithmsRequestListValue,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Va] != null) {
@@ -48441,7 +48441,7 @@ const se_PrivateDnsNameOptionsRequest = (input: PrivateDnsNameOptionsRequest, co
  */
 const se_PrivateIpAddressConfigSet = (
   input: ScheduledInstancesPrivateIpAddressConfig[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -48657,7 +48657,7 @@ const se_ProvisionIpamPoolCidrRequest = (input: ProvisionIpamPoolCidrRequest, co
  */
 const se_ProvisionPublicIpv4PoolCidrRequest = (
   input: ProvisionPublicIpv4PoolCidrRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -48803,7 +48803,7 @@ const se_PurchaseRequestSet = (input: PurchaseRequest[], context: __SerdeContext
  */
 const se_PurchaseReservedInstancesOfferingRequest = (
   input: PurchaseReservedInstancesOfferingRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IC] != null) {
@@ -48833,7 +48833,7 @@ const se_PurchaseReservedInstancesOfferingRequest = (
  */
 const se_PurchaseScheduledInstancesRequest = (
   input: PurchaseScheduledInstancesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CTl] === undefined) {
@@ -49000,7 +49000,7 @@ const se_RegisterImageRequest = (input: RegisterImageRequest, context: __SerdeCo
  */
 const se_RegisterInstanceEventNotificationAttributesRequest = (
   input: RegisterInstanceEventNotificationAttributesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -49021,7 +49021,7 @@ const se_RegisterInstanceEventNotificationAttributesRequest = (
  */
 const se_RegisterInstanceTagAttributeRequest = (
   input: RegisterInstanceTagAttributeRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IATOI] != null) {
@@ -49042,7 +49042,7 @@ const se_RegisterInstanceTagAttributeRequest = (
  */
 const se_RegisterTransitGatewayMulticastGroupMembersRequest = (
   input: RegisterTransitGatewayMulticastGroupMembersRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGMDI] != null) {
@@ -49069,7 +49069,7 @@ const se_RegisterTransitGatewayMulticastGroupMembersRequest = (
  */
 const se_RegisterTransitGatewayMulticastGroupSourcesRequest = (
   input: RegisterTransitGatewayMulticastGroupSourcesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGMDI] != null) {
@@ -49096,7 +49096,7 @@ const se_RegisterTransitGatewayMulticastGroupSourcesRequest = (
  */
 const se_RejectTransitGatewayMulticastDomainAssociationsRequest = (
   input: RejectTransitGatewayMulticastDomainAssociationsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGMDI] != null) {
@@ -49123,7 +49123,7 @@ const se_RejectTransitGatewayMulticastDomainAssociationsRequest = (
  */
 const se_RejectTransitGatewayPeeringAttachmentRequest = (
   input: RejectTransitGatewayPeeringAttachmentRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGAI] != null) {
@@ -49140,7 +49140,7 @@ const se_RejectTransitGatewayPeeringAttachmentRequest = (
  */
 const se_RejectTransitGatewayVpcAttachmentRequest = (
   input: RejectTransitGatewayVpcAttachmentRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGAI] != null) {
@@ -49157,7 +49157,7 @@ const se_RejectTransitGatewayVpcAttachmentRequest = (
  */
 const se_RejectVpcEndpointConnectionsRequest = (
   input: RejectVpcEndpointConnectionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -49181,7 +49181,7 @@ const se_RejectVpcEndpointConnectionsRequest = (
  */
 const se_RejectVpcPeeringConnectionRequest = (
   input: RejectVpcPeeringConnectionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -49313,7 +49313,7 @@ const se_RemovePrefixListEntry = (input: RemovePrefixListEntry, context: __Serde
  */
 const se_ReplaceIamInstanceProfileAssociationRequest = (
   input: ReplaceIamInstanceProfileAssociationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IIP] != null) {
@@ -49334,7 +49334,7 @@ const se_ReplaceIamInstanceProfileAssociationRequest = (
  */
 const se_ReplaceNetworkAclAssociationRequest = (
   input: ReplaceNetworkAclAssociationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_AIss] != null) {
@@ -49475,7 +49475,7 @@ const se_ReplaceRouteRequest = (input: ReplaceRouteRequest, context: __SerdeCont
  */
 const se_ReplaceRouteTableAssociationRequest = (
   input: ReplaceRouteTableAssociationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_AIss] != null) {
@@ -49495,7 +49495,7 @@ const se_ReplaceRouteTableAssociationRequest = (
  */
 const se_ReplaceTransitGatewayRouteRequest = (
   input: ReplaceTransitGatewayRouteRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DCB] != null) {
@@ -50047,7 +50047,7 @@ const se_RequestSpotLaunchSpecificationSecurityGroupList = (input: string[], con
  */
 const se_ReservationFleetInstanceSpecification = (
   input: ReservationFleetInstanceSpecification,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IT] != null) {
@@ -50079,7 +50079,7 @@ const se_ReservationFleetInstanceSpecification = (
  */
 const se_ReservationFleetInstanceSpecificationList = (
   input: ReservationFleetInstanceSpecification[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -50154,7 +50154,7 @@ const se_ReservedInstancesConfiguration = (input: ReservedInstancesConfiguration
  */
 const se_ReservedInstancesConfigurationList = (
   input: ReservedInstancesConfiguration[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -50303,7 +50303,7 @@ const se_ResetInstanceAttributeRequest = (input: ResetInstanceAttributeRequest, 
  */
 const se_ResetNetworkInterfaceAttributeRequest = (
   input: ResetNetworkInterfaceAttributeRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -50424,7 +50424,7 @@ const se_RestoreAddressToClassicRequest = (input: RestoreAddressToClassicRequest
  */
 const se_RestoreImageFromRecycleBinRequest = (
   input: RestoreImageFromRecycleBinRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IIma] != null) {
@@ -50441,7 +50441,7 @@ const se_RestoreImageFromRecycleBinRequest = (
  */
 const se_RestoreManagedPrefixListVersionRequest = (
   input: RestoreManagedPrefixListVersionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -50464,7 +50464,7 @@ const se_RestoreManagedPrefixListVersionRequest = (
  */
 const se_RestoreSnapshotFromRecycleBinRequest = (
   input: RestoreSnapshotFromRecycleBinRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SIn] != null) {
@@ -50570,7 +50570,7 @@ const se_RevokeSecurityGroupEgressRequest = (input: RevokeSecurityGroupEgressReq
  */
 const se_RevokeSecurityGroupIngressRequest = (
   input: RevokeSecurityGroupIngressRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CIi] != null) {
@@ -50973,7 +50973,7 @@ const se_ScheduledInstanceIdRequestSet = (input: string[], context: __SerdeConte
  */
 const se_ScheduledInstanceRecurrenceRequest = (
   input: ScheduledInstanceRecurrenceRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Fre] != null) {
@@ -51003,7 +51003,7 @@ const se_ScheduledInstanceRecurrenceRequest = (
  */
 const se_ScheduledInstancesBlockDeviceMapping = (
   input: ScheduledInstancesBlockDeviceMapping,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DN] != null) {
@@ -51030,7 +51030,7 @@ const se_ScheduledInstancesBlockDeviceMapping = (
  */
 const se_ScheduledInstancesBlockDeviceMappingSet = (
   input: ScheduledInstancesBlockDeviceMapping[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -51078,7 +51078,7 @@ const se_ScheduledInstancesEbs = (input: ScheduledInstancesEbs, context: __Serde
  */
 const se_ScheduledInstancesIamInstanceProfile = (
   input: ScheduledInstancesIamInstanceProfile,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Ar] != null) {
@@ -51125,7 +51125,7 @@ const se_ScheduledInstancesIpv6AddressList = (input: ScheduledInstancesIpv6Addre
  */
 const se_ScheduledInstancesLaunchSpecification = (
   input: ScheduledInstancesLaunchSpecification,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_BDM] != null) {
@@ -51213,7 +51213,7 @@ const se_ScheduledInstancesMonitoring = (input: ScheduledInstancesMonitoring, co
  */
 const se_ScheduledInstancesNetworkInterface = (
   input: ScheduledInstancesNetworkInterface,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_APIAs] != null) {
@@ -51272,7 +51272,7 @@ const se_ScheduledInstancesNetworkInterface = (
  */
 const se_ScheduledInstancesNetworkInterfaceSet = (
   input: ScheduledInstancesNetworkInterface[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -51308,7 +51308,7 @@ const se_ScheduledInstancesPlacement = (input: ScheduledInstancesPlacement, cont
  */
 const se_ScheduledInstancesPrivateIpAddressConfig = (
   input: ScheduledInstancesPrivateIpAddressConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Prim] != null) {
@@ -51368,7 +51368,7 @@ const se_SearchLocalGatewayRoutesRequest = (input: SearchLocalGatewayRoutesReque
  */
 const se_SearchTransitGatewayMulticastGroupsRequest = (
   input: SearchTransitGatewayMulticastGroupsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGMDI] != null) {
@@ -51398,7 +51398,7 @@ const se_SearchTransitGatewayMulticastGroupsRequest = (
  */
 const se_SearchTransitGatewayRoutesRequest = (
   input: SearchTransitGatewayRoutesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGRTI] != null) {
@@ -52098,7 +52098,7 @@ const se_StartInstancesRequest = (input: StartInstancesRequest, context: __Serde
  */
 const se_StartNetworkInsightsAccessScopeAnalysisRequest = (
   input: StartNetworkInsightsAccessScopeAnalysisRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_NIASI] != null) {
@@ -52128,7 +52128,7 @@ const se_StartNetworkInsightsAccessScopeAnalysisRequest = (
  */
 const se_StartNetworkInsightsAnalysisRequest = (
   input: StartNetworkInsightsAnalysisRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_NIPI] != null) {
@@ -52172,7 +52172,7 @@ const se_StartNetworkInsightsAnalysisRequest = (
  */
 const se_StartVpcEndpointServicePrivateDnsVerificationRequest = (
   input: StartVpcEndpointServicePrivateDnsVerificationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -52364,7 +52364,7 @@ const se_TagSpecificationList = (input: TagSpecification[], context: __SerdeCont
  */
 const se_TargetCapacitySpecificationRequest = (
   input: TargetCapacitySpecificationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TTC] != null) {
@@ -52468,7 +52468,7 @@ const se_TargetGroupsConfig = (input: TargetGroupsConfig, context: __SerdeContex
  */
 const se_TerminateClientVpnConnectionsRequest = (
   input: TerminateClientVpnConnectionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CVEI] != null) {
@@ -52524,7 +52524,7 @@ const se_ThroughResourcesStatementRequest = (input: ThroughResourcesStatementReq
  */
 const se_ThroughResourcesStatementRequestList = (
   input: ThroughResourcesStatementRequest[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -52748,7 +52748,7 @@ const se_TransitGatewayConnectPeerIdStringList = (input: string[], context: __Se
  */
 const se_TransitGatewayConnectRequestBgpOptions = (
   input: TransitGatewayConnectRequestBgpOptions,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_PAee] != null) {
@@ -52954,7 +52954,7 @@ const se_UnassignIpv6AddressesRequest = (input: UnassignIpv6AddressesRequest, co
  */
 const se_UnassignPrivateIpAddressesRequest = (
   input: UnassignPrivateIpAddressesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_NII] != null) {
@@ -52982,7 +52982,7 @@ const se_UnassignPrivateIpAddressesRequest = (
  */
 const se_UnassignPrivateNatGatewayAddressRequest = (
   input: UnassignPrivateNatGatewayAddressRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_NGI] != null) {
@@ -53041,7 +53041,7 @@ const se_UnmonitorInstancesRequest = (input: UnmonitorInstancesRequest, context:
  */
 const se_UpdateSecurityGroupRuleDescriptionsEgressRequest = (
   input: UpdateSecurityGroupRuleDescriptionsEgressRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -53075,7 +53075,7 @@ const se_UpdateSecurityGroupRuleDescriptionsEgressRequest = (
  */
 const se_UpdateSecurityGroupRuleDescriptionsIngressRequest = (
   input: UpdateSecurityGroupRuleDescriptionsIngressRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRr] != null) {
@@ -53306,7 +53306,7 @@ const se_VerifiedAccessInstanceIdList = (input: string[], context: __SerdeContex
  */
 const se_VerifiedAccessLogCloudWatchLogsDestinationOptions = (
   input: VerifiedAccessLogCloudWatchLogsDestinationOptions,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_En] != null) {
@@ -53323,7 +53323,7 @@ const se_VerifiedAccessLogCloudWatchLogsDestinationOptions = (
  */
 const se_VerifiedAccessLogKinesisDataFirehoseDestinationOptions = (
   input: VerifiedAccessLogKinesisDataFirehoseDestinationOptions,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_En] != null) {
@@ -53375,7 +53375,7 @@ const se_VerifiedAccessLogOptions = (input: VerifiedAccessLogOptions, context: _
  */
 const se_VerifiedAccessLogS3DestinationOptions = (
   input: VerifiedAccessLogS3DestinationOptions,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_En] != null) {
@@ -53398,7 +53398,7 @@ const se_VerifiedAccessLogS3DestinationOptions = (
  */
 const se_VerifiedAccessSseSpecificationRequest = (
   input: VerifiedAccessSseSpecificationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CMKE] != null) {
@@ -53634,7 +53634,7 @@ const se_VpnConnectionIdStringList = (input: string[], context: __SerdeContext):
  */
 const se_VpnConnectionOptionsSpecification = (
   input: VpnConnectionOptionsSpecification,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_EA] != null) {
@@ -53810,7 +53810,7 @@ const se_VpnTunnelOptionsSpecification = (input: VpnTunnelOptionsSpecification, 
  */
 const se_VpnTunnelOptionsSpecificationsList = (
   input: VpnTunnelOptionsSpecification[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -53950,7 +53950,7 @@ const de_AcceptAddressTransferResult = (output: any, context: __SerdeContext): A
  */
 const de_AcceptReservedInstancesExchangeQuoteResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AcceptReservedInstancesExchangeQuoteResult => {
   const contents: any = {};
   if (output[_eI] != null) {
@@ -53964,7 +53964,7 @@ const de_AcceptReservedInstancesExchangeQuoteResult = (
  */
 const de_AcceptTransitGatewayMulticastDomainAssociationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AcceptTransitGatewayMulticastDomainAssociationsResult => {
   const contents: any = {};
   if (output[_a] != null) {
@@ -53978,7 +53978,7 @@ const de_AcceptTransitGatewayMulticastDomainAssociationsResult = (
  */
 const de_AcceptTransitGatewayPeeringAttachmentResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AcceptTransitGatewayPeeringAttachmentResult => {
   const contents: any = {};
   if (output[_tGPA] != null) {
@@ -53992,7 +53992,7 @@ const de_AcceptTransitGatewayPeeringAttachmentResult = (
  */
 const de_AcceptTransitGatewayVpcAttachmentResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AcceptTransitGatewayVpcAttachmentResult => {
   const contents: any = {};
   if (output[_tGVA] != null) {
@@ -54006,7 +54006,7 @@ const de_AcceptTransitGatewayVpcAttachmentResult = (
  */
 const de_AcceptVpcEndpointConnectionsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AcceptVpcEndpointConnectionsResult => {
   const contents: any = {};
   if (output.unsuccessful === "") {
@@ -54022,7 +54022,7 @@ const de_AcceptVpcEndpointConnectionsResult = (
  */
 const de_AcceptVpcPeeringConnectionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AcceptVpcPeeringConnectionResult => {
   const contents: any = {};
   if (output[_vPC] != null) {
@@ -54726,7 +54726,7 @@ const de_AnalysisSecurityGroupRule = (output: any, context: __SerdeContext): Ana
  */
 const de_ApplySecurityGroupsToClientVpnTargetNetworkResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ApplySecurityGroupsToClientVpnTargetNetworkResult => {
   const contents: any = {};
   if (output.securityGroupIds === "") {
@@ -54859,7 +54859,7 @@ const de_AssignPrivateIpAddressesResult = (output: any, context: __SerdeContext)
  */
 const de_AssignPrivateNatGatewayAddressResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AssignPrivateNatGatewayAddressResult => {
   const contents: any = {};
   if (output[_nGI] != null) {
@@ -54889,7 +54889,7 @@ const de_AssociateAddressResult = (output: any, context: __SerdeContext): Associ
  */
 const de_AssociateClientVpnTargetNetworkResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AssociateClientVpnTargetNetworkResult => {
   const contents: any = {};
   if (output[_aIs] != null) {
@@ -54962,7 +54962,7 @@ const de_AssociatedTargetNetworkSet = (output: any, context: __SerdeContext): As
  */
 const de_AssociateEnclaveCertificateIamRoleResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AssociateEnclaveCertificateIamRoleResult => {
   const contents: any = {};
   if (output[_cSBN] != null) {
@@ -54982,7 +54982,7 @@ const de_AssociateEnclaveCertificateIamRoleResult = (
  */
 const de_AssociateIamInstanceProfileResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AssociateIamInstanceProfileResult => {
   const contents: any = {};
   if (output[_iIPA] != null) {
@@ -54996,7 +54996,7 @@ const de_AssociateIamInstanceProfileResult = (
  */
 const de_AssociateInstanceEventWindowResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AssociateInstanceEventWindowResult => {
   const contents: any = {};
   if (output[_iEW] != null) {
@@ -55021,7 +55021,7 @@ const de_AssociateIpamByoasnResult = (output: any, context: __SerdeContext): Ass
  */
 const de_AssociateIpamResourceDiscoveryResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AssociateIpamResourceDiscoveryResult => {
   const contents: any = {};
   if (output[_iRDA] != null) {
@@ -55035,7 +55035,7 @@ const de_AssociateIpamResourceDiscoveryResult = (
  */
 const de_AssociateNatGatewayAddressResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AssociateNatGatewayAddressResult => {
   const contents: any = {};
   if (output[_nGI] != null) {
@@ -55082,7 +55082,7 @@ const de_AssociateSubnetCidrBlockResult = (output: any, context: __SerdeContext)
  */
 const de_AssociateTransitGatewayMulticastDomainResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AssociateTransitGatewayMulticastDomainResult => {
   const contents: any = {};
   if (output[_a] != null) {
@@ -55096,7 +55096,7 @@ const de_AssociateTransitGatewayMulticastDomainResult = (
  */
 const de_AssociateTransitGatewayPolicyTableResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AssociateTransitGatewayPolicyTableResult => {
   const contents: any = {};
   if (output[_ass] != null) {
@@ -55110,7 +55110,7 @@ const de_AssociateTransitGatewayPolicyTableResult = (
  */
 const de_AssociateTransitGatewayRouteTableResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AssociateTransitGatewayRouteTableResult => {
   const contents: any = {};
   if (output[_ass] != null) {
@@ -55194,7 +55194,7 @@ const de_AttachmentEnaSrdSpecification = (output: any, context: __SerdeContext):
  */
 const de_AttachmentEnaSrdUdpSpecification = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AttachmentEnaSrdUdpSpecification => {
   const contents: any = {};
   if (output[_eSUE] != null) {
@@ -55222,7 +55222,7 @@ const de_AttachNetworkInterfaceResult = (output: any, context: __SerdeContext): 
  */
 const de_AttachVerifiedAccessTrustProviderResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AttachVerifiedAccessTrustProviderResult => {
   const contents: any = {};
   if (output[_vATP] != null) {
@@ -55320,7 +55320,7 @@ const de_AuthorizeClientVpnIngressResult = (output: any, context: __SerdeContext
  */
 const de_AuthorizeSecurityGroupEgressResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AuthorizeSecurityGroupEgressResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -55339,7 +55339,7 @@ const de_AuthorizeSecurityGroupEgressResult = (
  */
 const de_AuthorizeSecurityGroupIngressResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AuthorizeSecurityGroupIngressResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -55666,7 +55666,7 @@ const de_CancelBundleTaskResult = (output: any, context: __SerdeContext): Cancel
  */
 const de_CancelCapacityReservationFleetError = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CancelCapacityReservationFleetError => {
   const contents: any = {};
   if (output[_co] != null) {
@@ -55683,7 +55683,7 @@ const de_CancelCapacityReservationFleetError = (
  */
 const de_CancelCapacityReservationFleetsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CancelCapacityReservationFleetsResult => {
   const contents: any = {};
   if (output.successfulFleetCancellationSet === "") {
@@ -55691,7 +55691,7 @@ const de_CancelCapacityReservationFleetsResult = (
   } else if (output[_sFCS] != null && output[_sFCS][_i] != null) {
     contents[_SFC] = de_CapacityReservationFleetCancellationStateSet(
       __getArrayIfSingleItem(output[_sFCS][_i]),
-      context
+      context,
     );
   }
   if (output.failedFleetCancellationSet === "") {
@@ -55699,7 +55699,7 @@ const de_CancelCapacityReservationFleetsResult = (
   } else if (output[_fFCS] != null && output[_fFCS][_i] != null) {
     contents[_FFC] = de_FailedCapacityReservationFleetCancellationResultSet(
       __getArrayIfSingleItem(output[_fFCS][_i]),
-      context
+      context,
     );
   }
   return contents;
@@ -55721,7 +55721,7 @@ const de_CancelCapacityReservationResult = (output: any, context: __SerdeContext
  */
 const de_CancelImageLaunchPermissionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CancelImageLaunchPermissionResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -55777,7 +55777,7 @@ const de_CancelledSpotInstanceRequestList = (output: any, context: __SerdeContex
  */
 const de_CancelReservedInstancesListingResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CancelReservedInstancesListingResult => {
   const contents: any = {};
   if (output.reservedInstancesListingsSet === "") {
@@ -55807,7 +55807,7 @@ const de_CancelSpotFleetRequestsError = (output: any, context: __SerdeContext): 
  */
 const de_CancelSpotFleetRequestsErrorItem = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CancelSpotFleetRequestsErrorItem => {
   const contents: any = {};
   if (output[_er] != null) {
@@ -55824,7 +55824,7 @@ const de_CancelSpotFleetRequestsErrorItem = (
  */
 const de_CancelSpotFleetRequestsErrorSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CancelSpotFleetRequestsErrorItem[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -55856,7 +55856,7 @@ const de_CancelSpotFleetRequestsResponse = (output: any, context: __SerdeContext
  */
 const de_CancelSpotFleetRequestsSuccessItem = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CancelSpotFleetRequestsSuccessItem => {
   const contents: any = {};
   if (output[_cSFRS] != null) {
@@ -55876,7 +55876,7 @@ const de_CancelSpotFleetRequestsSuccessItem = (
  */
 const de_CancelSpotFleetRequestsSuccessSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CancelSpotFleetRequestsSuccessItem[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -55890,7 +55890,7 @@ const de_CancelSpotFleetRequestsSuccessSet = (
  */
 const de_CancelSpotInstanceRequestsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CancelSpotInstanceRequestsResult => {
   const contents: any = {};
   if (output.spotInstanceRequestSet === "") {
@@ -56112,7 +56112,7 @@ const de_CapacityReservationFleet = (output: any, context: __SerdeContext): Capa
  */
 const de_CapacityReservationFleetCancellationState = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CapacityReservationFleetCancellationState => {
   const contents: any = {};
   if (output[_cFS] != null) {
@@ -56132,7 +56132,7 @@ const de_CapacityReservationFleetCancellationState = (
  */
 const de_CapacityReservationFleetCancellationStateSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CapacityReservationFleetCancellationState[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -56204,7 +56204,7 @@ const de_CapacityReservationSet = (output: any, context: __SerdeContext): Capaci
  */
 const de_CapacityReservationSpecificationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CapacityReservationSpecificationResponse => {
   const contents: any = {};
   if (output[_cRP] != null) {
@@ -56221,7 +56221,7 @@ const de_CapacityReservationSpecificationResponse = (
  */
 const de_CapacityReservationTargetResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CapacityReservationTargetResponse => {
   const contents: any = {};
   if (output[_cRI] != null) {
@@ -56402,7 +56402,7 @@ const de_ClassicLoadBalancersConfig = (output: any, context: __SerdeContext): Cl
  */
 const de_ClientCertificateRevocationListStatus = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ClientCertificateRevocationListStatus => {
   const contents: any = {};
   if (output[_co] != null) {
@@ -56436,7 +56436,7 @@ const de_ClientConnectResponseOptions = (output: any, context: __SerdeContext): 
  */
 const de_ClientLoginBannerResponseOptions = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ClientLoginBannerResponseOptions => {
   const contents: any = {};
   if (output[_en] != null) {
@@ -56484,7 +56484,7 @@ const de_ClientVpnAuthenticationList = (output: any, context: __SerdeContext): C
  */
 const de_ClientVpnAuthorizationRuleStatus = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ClientVpnAuthorizationRuleStatus => {
   const contents: any = {};
   if (output[_co] != null) {
@@ -56665,7 +56665,7 @@ const de_ClientVpnEndpoint = (output: any, context: __SerdeContext): ClientVpnEn
  */
 const de_ClientVpnEndpointAttributeStatus = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ClientVpnEndpointAttributeStatus => {
   const contents: any = {};
   if (output[_co] != null) {
@@ -56971,7 +56971,7 @@ const de_ConnectionTrackingSpecification = (output: any, context: __SerdeContext
  */
 const de_ConnectionTrackingSpecificationRequest = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ConnectionTrackingSpecificationRequest => {
   const contents: any = {};
   if (output[_TET] != null) {
@@ -56991,7 +56991,7 @@ const de_ConnectionTrackingSpecificationRequest = (
  */
 const de_ConnectionTrackingSpecificationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ConnectionTrackingSpecificationResponse => {
   const contents: any = {};
   if (output[_tET] != null) {
@@ -57119,7 +57119,7 @@ const de_CpuOptions = (output: any, context: __SerdeContext): CpuOptions => {
  */
 const de_CreateCapacityReservationFleetResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateCapacityReservationFleetResult => {
   const contents: any = {};
   if (output[_cRFI] != null) {
@@ -57283,7 +57283,7 @@ const de_CreateDhcpOptionsResult = (output: any, context: __SerdeContext): Creat
  */
 const de_CreateEgressOnlyInternetGatewayResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateEgressOnlyInternetGatewayResult => {
   const contents: any = {};
   if (output[_cT] != null) {
@@ -57434,7 +57434,7 @@ const de_CreateImageResult = (output: any, context: __SerdeContext): CreateImage
  */
 const de_CreateInstanceConnectEndpointResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateInstanceConnectEndpointResult => {
   const contents: any = {};
   if (output[_iCE] != null) {
@@ -57495,7 +57495,7 @@ const de_CreateIpamPoolResult = (output: any, context: __SerdeContext): CreateIp
  */
 const de_CreateIpamResourceDiscoveryResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateIpamResourceDiscoveryResult => {
   const contents: any = {};
   if (output[_iRD] != null) {
@@ -57545,7 +57545,7 @@ const de_CreateLaunchTemplateResult = (output: any, context: __SerdeContext): Cr
  */
 const de_CreateLaunchTemplateVersionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateLaunchTemplateVersionResult => {
   const contents: any = {};
   if (output[_lTV] != null) {
@@ -57573,7 +57573,7 @@ const de_CreateLocalGatewayRouteResult = (output: any, context: __SerdeContext):
  */
 const de_CreateLocalGatewayRouteTableResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateLocalGatewayRouteTableResult => {
   const contents: any = {};
   if (output[_lGRT] != null) {
@@ -57587,7 +57587,7 @@ const de_CreateLocalGatewayRouteTableResult = (
  */
 const de_CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult => {
   const contents: any = {};
   if (output[_lGRTVIGA] != null) {
@@ -57601,7 +57601,7 @@ const de_CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult = (
  */
 const de_CreateLocalGatewayRouteTableVpcAssociationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateLocalGatewayRouteTableVpcAssociationResult => {
   const contents: any = {};
   if (output[_lGRTVA] != null) {
@@ -57654,7 +57654,7 @@ const de_CreateNetworkAclResult = (output: any, context: __SerdeContext): Create
  */
 const de_CreateNetworkInsightsAccessScopeResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateNetworkInsightsAccessScopeResult => {
   const contents: any = {};
   if (output[_nIAS] != null) {
@@ -57682,7 +57682,7 @@ const de_CreateNetworkInsightsPathResult = (output: any, context: __SerdeContext
  */
 const de_CreateNetworkInterfacePermissionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateNetworkInterfacePermissionResult => {
   const contents: any = {};
   if (output[_iPnt] != null) {
@@ -57732,7 +57732,7 @@ const de_CreatePublicIpv4PoolResult = (output: any, context: __SerdeContext): Cr
  */
 const de_CreateReplaceRootVolumeTaskResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateReplaceRootVolumeTaskResult => {
   const contents: any = {};
   if (output[_rRVT] != null) {
@@ -57746,7 +57746,7 @@ const de_CreateReplaceRootVolumeTaskResult = (
  */
 const de_CreateReservedInstancesListingResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateReservedInstancesListingResult => {
   const contents: any = {};
   if (output.reservedInstancesListingsSet === "") {
@@ -57827,7 +57827,7 @@ const de_CreateSnapshotsResult = (output: any, context: __SerdeContext): CreateS
  */
 const de_CreateSpotDatafeedSubscriptionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateSpotDatafeedSubscriptionResult => {
   const contents: any = {};
   if (output[_sDS] != null) {
@@ -57852,7 +57852,7 @@ const de_CreateStoreImageTaskResult = (output: any, context: __SerdeContext): Cr
  */
 const de_CreateSubnetCidrReservationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateSubnetCidrReservationResult => {
   const contents: any = {};
   if (output[_sCR] != null) {
@@ -57891,7 +57891,7 @@ const de_CreateTrafficMirrorFilterResult = (output: any, context: __SerdeContext
  */
 const de_CreateTrafficMirrorFilterRuleResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateTrafficMirrorFilterRuleResult => {
   const contents: any = {};
   if (output[_tMFR] != null) {
@@ -57908,7 +57908,7 @@ const de_CreateTrafficMirrorFilterRuleResult = (
  */
 const de_CreateTrafficMirrorSessionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateTrafficMirrorSessionResult => {
   const contents: any = {};
   if (output[_tMS] != null) {
@@ -57939,7 +57939,7 @@ const de_CreateTrafficMirrorTargetResult = (output: any, context: __SerdeContext
  */
 const de_CreateTransitGatewayConnectPeerResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateTransitGatewayConnectPeerResult => {
   const contents: any = {};
   if (output[_tGCP] != null) {
@@ -57953,7 +57953,7 @@ const de_CreateTransitGatewayConnectPeerResult = (
  */
 const de_CreateTransitGatewayConnectResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateTransitGatewayConnectResult => {
   const contents: any = {};
   if (output[_tGC] != null) {
@@ -57967,7 +57967,7 @@ const de_CreateTransitGatewayConnectResult = (
  */
 const de_CreateTransitGatewayMulticastDomainResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateTransitGatewayMulticastDomainResult => {
   const contents: any = {};
   if (output[_tGMD] != null) {
@@ -57981,7 +57981,7 @@ const de_CreateTransitGatewayMulticastDomainResult = (
  */
 const de_CreateTransitGatewayPeeringAttachmentResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateTransitGatewayPeeringAttachmentResult => {
   const contents: any = {};
   if (output[_tGPA] != null) {
@@ -57995,7 +57995,7 @@ const de_CreateTransitGatewayPeeringAttachmentResult = (
  */
 const de_CreateTransitGatewayPolicyTableResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateTransitGatewayPolicyTableResult => {
   const contents: any = {};
   if (output[_tGPT] != null) {
@@ -58009,7 +58009,7 @@ const de_CreateTransitGatewayPolicyTableResult = (
  */
 const de_CreateTransitGatewayPrefixListReferenceResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateTransitGatewayPrefixListReferenceResult => {
   const contents: any = {};
   if (output[_tGPLR] != null) {
@@ -58045,7 +58045,7 @@ const de_CreateTransitGatewayRouteResult = (output: any, context: __SerdeContext
  */
 const de_CreateTransitGatewayRouteTableAnnouncementResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateTransitGatewayRouteTableAnnouncementResult => {
   const contents: any = {};
   if (output[_tGRTA] != null) {
@@ -58059,7 +58059,7 @@ const de_CreateTransitGatewayRouteTableAnnouncementResult = (
  */
 const de_CreateTransitGatewayRouteTableResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateTransitGatewayRouteTableResult => {
   const contents: any = {};
   if (output[_tGRT] != null) {
@@ -58073,7 +58073,7 @@ const de_CreateTransitGatewayRouteTableResult = (
  */
 const de_CreateTransitGatewayVpcAttachmentResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateTransitGatewayVpcAttachmentResult => {
   const contents: any = {};
   if (output[_tGVA] != null) {
@@ -58087,7 +58087,7 @@ const de_CreateTransitGatewayVpcAttachmentResult = (
  */
 const de_CreateVerifiedAccessEndpointResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateVerifiedAccessEndpointResult => {
   const contents: any = {};
   if (output[_vAE] != null) {
@@ -58112,7 +58112,7 @@ const de_CreateVerifiedAccessGroupResult = (output: any, context: __SerdeContext
  */
 const de_CreateVerifiedAccessInstanceResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateVerifiedAccessInstanceResult => {
   const contents: any = {};
   if (output[_vAI] != null) {
@@ -58126,7 +58126,7 @@ const de_CreateVerifiedAccessInstanceResult = (
  */
 const de_CreateVerifiedAccessTrustProviderResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateVerifiedAccessTrustProviderResult => {
   const contents: any = {};
   if (output[_vATP] != null) {
@@ -58165,7 +58165,7 @@ const de_CreateVolumePermissionList = (output: any, context: __SerdeContext): Cr
  */
 const de_CreateVpcEndpointConnectionNotificationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateVpcEndpointConnectionNotificationResult => {
   const contents: any = {};
   if (output[_cNo] != null) {
@@ -58196,7 +58196,7 @@ const de_CreateVpcEndpointResult = (output: any, context: __SerdeContext): Creat
  */
 const de_CreateVpcEndpointServiceConfigurationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateVpcEndpointServiceConfigurationResult => {
   const contents: any = {};
   if (output[_sC] != null) {
@@ -58213,7 +58213,7 @@ const de_CreateVpcEndpointServiceConfigurationResult = (
  */
 const de_CreateVpcPeeringConnectionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateVpcPeeringConnectionResult => {
   const contents: any = {};
   if (output[_vPC] != null) {
@@ -58427,7 +58427,7 @@ const de_DeleteCoipPoolResult = (output: any, context: __SerdeContext): DeleteCo
  */
 const de_DeleteEgressOnlyInternetGatewayResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteEgressOnlyInternetGatewayResult => {
   const contents: any = {};
   if (output[_rC] != null) {
@@ -58550,7 +58550,7 @@ const de_DeleteFpgaImageResult = (output: any, context: __SerdeContext): DeleteF
  */
 const de_DeleteInstanceConnectEndpointResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteInstanceConnectEndpointResult => {
   const contents: any = {};
   if (output[_iCE] != null) {
@@ -58586,7 +58586,7 @@ const de_DeleteIpamPoolResult = (output: any, context: __SerdeContext): DeleteIp
  */
 const de_DeleteIpamResourceDiscoveryResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteIpamResourceDiscoveryResult => {
   const contents: any = {};
   if (output[_iRD] != null) {
@@ -58647,7 +58647,7 @@ const de_DeleteLaunchTemplateResult = (output: any, context: __SerdeContext): De
  */
 const de_DeleteLaunchTemplateVersionsResponseErrorItem = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteLaunchTemplateVersionsResponseErrorItem => {
   const contents: any = {};
   if (output[_lTI] != null) {
@@ -58670,7 +58670,7 @@ const de_DeleteLaunchTemplateVersionsResponseErrorItem = (
  */
 const de_DeleteLaunchTemplateVersionsResponseErrorSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteLaunchTemplateVersionsResponseErrorItem[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -58684,7 +58684,7 @@ const de_DeleteLaunchTemplateVersionsResponseErrorSet = (
  */
 const de_DeleteLaunchTemplateVersionsResponseSuccessItem = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteLaunchTemplateVersionsResponseSuccessItem => {
   const contents: any = {};
   if (output[_lTI] != null) {
@@ -58704,7 +58704,7 @@ const de_DeleteLaunchTemplateVersionsResponseSuccessItem = (
  */
 const de_DeleteLaunchTemplateVersionsResponseSuccessSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteLaunchTemplateVersionsResponseSuccessItem[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -58718,7 +58718,7 @@ const de_DeleteLaunchTemplateVersionsResponseSuccessSet = (
  */
 const de_DeleteLaunchTemplateVersionsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteLaunchTemplateVersionsResult => {
   const contents: any = {};
   if (output.successfullyDeletedLaunchTemplateVersionSet === "") {
@@ -58726,7 +58726,7 @@ const de_DeleteLaunchTemplateVersionsResult = (
   } else if (output[_sDLTVS] != null && output[_sDLTVS][_i] != null) {
     contents[_SDLTV] = de_DeleteLaunchTemplateVersionsResponseSuccessSet(
       __getArrayIfSingleItem(output[_sDLTVS][_i]),
-      context
+      context,
     );
   }
   if (output.unsuccessfullyDeletedLaunchTemplateVersionSet === "") {
@@ -58734,7 +58734,7 @@ const de_DeleteLaunchTemplateVersionsResult = (
   } else if (output[_uDLTVS] != null && output[_uDLTVS][_i] != null) {
     contents[_UDLTV] = de_DeleteLaunchTemplateVersionsResponseErrorSet(
       __getArrayIfSingleItem(output[_uDLTVS][_i]),
-      context
+      context,
     );
   }
   return contents;
@@ -58756,7 +58756,7 @@ const de_DeleteLocalGatewayRouteResult = (output: any, context: __SerdeContext):
  */
 const de_DeleteLocalGatewayRouteTableResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteLocalGatewayRouteTableResult => {
   const contents: any = {};
   if (output[_lGRT] != null) {
@@ -58770,7 +58770,7 @@ const de_DeleteLocalGatewayRouteTableResult = (
  */
 const de_DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult => {
   const contents: any = {};
   if (output[_lGRTVIGA] != null) {
@@ -58784,7 +58784,7 @@ const de_DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult = (
  */
 const de_DeleteLocalGatewayRouteTableVpcAssociationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteLocalGatewayRouteTableVpcAssociationResult => {
   const contents: any = {};
   if (output[_lGRTVA] != null) {
@@ -58820,7 +58820,7 @@ const de_DeleteNatGatewayResult = (output: any, context: __SerdeContext): Delete
  */
 const de_DeleteNetworkInsightsAccessScopeAnalysisResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteNetworkInsightsAccessScopeAnalysisResult => {
   const contents: any = {};
   if (output[_nIASAI] != null) {
@@ -58834,7 +58834,7 @@ const de_DeleteNetworkInsightsAccessScopeAnalysisResult = (
  */
 const de_DeleteNetworkInsightsAccessScopeResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteNetworkInsightsAccessScopeResult => {
   const contents: any = {};
   if (output[_nIASI] != null) {
@@ -58848,7 +58848,7 @@ const de_DeleteNetworkInsightsAccessScopeResult = (
  */
 const de_DeleteNetworkInsightsAnalysisResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteNetworkInsightsAnalysisResult => {
   const contents: any = {};
   if (output[_nIAI] != null) {
@@ -58873,7 +58873,7 @@ const de_DeleteNetworkInsightsPathResult = (output: any, context: __SerdeContext
  */
 const de_DeleteNetworkInterfacePermissionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteNetworkInterfacePermissionResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -58898,7 +58898,7 @@ const de_DeletePublicIpv4PoolResult = (output: any, context: __SerdeContext): De
  */
 const de_DeleteQueuedReservedInstancesError = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteQueuedReservedInstancesError => {
   const contents: any = {};
   if (output[_co] != null) {
@@ -58915,7 +58915,7 @@ const de_DeleteQueuedReservedInstancesError = (
  */
 const de_DeleteQueuedReservedInstancesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteQueuedReservedInstancesResult => {
   const contents: any = {};
   if (output.successfulQueuedPurchaseDeletionSet === "") {
@@ -58936,7 +58936,7 @@ const de_DeleteQueuedReservedInstancesResult = (
  */
 const de_DeleteSubnetCidrReservationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteSubnetCidrReservationResult => {
   const contents: any = {};
   if (output[_dSCR] != null) {
@@ -58961,7 +58961,7 @@ const de_DeleteTrafficMirrorFilterResult = (output: any, context: __SerdeContext
  */
 const de_DeleteTrafficMirrorFilterRuleResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteTrafficMirrorFilterRuleResult => {
   const contents: any = {};
   if (output[_tMFRI] != null) {
@@ -58975,7 +58975,7 @@ const de_DeleteTrafficMirrorFilterRuleResult = (
  */
 const de_DeleteTrafficMirrorSessionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteTrafficMirrorSessionResult => {
   const contents: any = {};
   if (output[_tMSI] != null) {
@@ -59000,7 +59000,7 @@ const de_DeleteTrafficMirrorTargetResult = (output: any, context: __SerdeContext
  */
 const de_DeleteTransitGatewayConnectPeerResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteTransitGatewayConnectPeerResult => {
   const contents: any = {};
   if (output[_tGCP] != null) {
@@ -59014,7 +59014,7 @@ const de_DeleteTransitGatewayConnectPeerResult = (
  */
 const de_DeleteTransitGatewayConnectResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteTransitGatewayConnectResult => {
   const contents: any = {};
   if (output[_tGC] != null) {
@@ -59028,7 +59028,7 @@ const de_DeleteTransitGatewayConnectResult = (
  */
 const de_DeleteTransitGatewayMulticastDomainResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteTransitGatewayMulticastDomainResult => {
   const contents: any = {};
   if (output[_tGMD] != null) {
@@ -59042,7 +59042,7 @@ const de_DeleteTransitGatewayMulticastDomainResult = (
  */
 const de_DeleteTransitGatewayPeeringAttachmentResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteTransitGatewayPeeringAttachmentResult => {
   const contents: any = {};
   if (output[_tGPA] != null) {
@@ -59056,7 +59056,7 @@ const de_DeleteTransitGatewayPeeringAttachmentResult = (
  */
 const de_DeleteTransitGatewayPolicyTableResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteTransitGatewayPolicyTableResult => {
   const contents: any = {};
   if (output[_tGPT] != null) {
@@ -59070,7 +59070,7 @@ const de_DeleteTransitGatewayPolicyTableResult = (
  */
 const de_DeleteTransitGatewayPrefixListReferenceResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteTransitGatewayPrefixListReferenceResult => {
   const contents: any = {};
   if (output[_tGPLR] != null) {
@@ -59106,7 +59106,7 @@ const de_DeleteTransitGatewayRouteResult = (output: any, context: __SerdeContext
  */
 const de_DeleteTransitGatewayRouteTableAnnouncementResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteTransitGatewayRouteTableAnnouncementResult => {
   const contents: any = {};
   if (output[_tGRTA] != null) {
@@ -59120,7 +59120,7 @@ const de_DeleteTransitGatewayRouteTableAnnouncementResult = (
  */
 const de_DeleteTransitGatewayRouteTableResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteTransitGatewayRouteTableResult => {
   const contents: any = {};
   if (output[_tGRT] != null) {
@@ -59134,7 +59134,7 @@ const de_DeleteTransitGatewayRouteTableResult = (
  */
 const de_DeleteTransitGatewayVpcAttachmentResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteTransitGatewayVpcAttachmentResult => {
   const contents: any = {};
   if (output[_tGVA] != null) {
@@ -59148,7 +59148,7 @@ const de_DeleteTransitGatewayVpcAttachmentResult = (
  */
 const de_DeleteVerifiedAccessEndpointResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteVerifiedAccessEndpointResult => {
   const contents: any = {};
   if (output[_vAE] != null) {
@@ -59173,7 +59173,7 @@ const de_DeleteVerifiedAccessGroupResult = (output: any, context: __SerdeContext
  */
 const de_DeleteVerifiedAccessInstanceResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteVerifiedAccessInstanceResult => {
   const contents: any = {};
   if (output[_vAI] != null) {
@@ -59187,7 +59187,7 @@ const de_DeleteVerifiedAccessInstanceResult = (
  */
 const de_DeleteVerifiedAccessTrustProviderResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteVerifiedAccessTrustProviderResult => {
   const contents: any = {};
   if (output[_vATP] != null) {
@@ -59201,7 +59201,7 @@ const de_DeleteVerifiedAccessTrustProviderResult = (
  */
 const de_DeleteVpcEndpointConnectionNotificationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteVpcEndpointConnectionNotificationsResult => {
   const contents: any = {};
   if (output.unsuccessful === "") {
@@ -59217,7 +59217,7 @@ const de_DeleteVpcEndpointConnectionNotificationsResult = (
  */
 const de_DeleteVpcEndpointServiceConfigurationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteVpcEndpointServiceConfigurationsResult => {
   const contents: any = {};
   if (output.unsuccessful === "") {
@@ -59246,7 +59246,7 @@ const de_DeleteVpcEndpointsResult = (output: any, context: __SerdeContext): Dele
  */
 const de_DeleteVpcPeeringConnectionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteVpcPeeringConnectionResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -59304,7 +59304,7 @@ const de_DeprovisionIpamPoolCidrResult = (output: any, context: __SerdeContext):
  */
 const de_DeprovisionPublicIpv4PoolCidrResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeprovisionPublicIpv4PoolCidrResult => {
   const contents: any = {};
   if (output[_pIo] != null) {
@@ -59323,7 +59323,7 @@ const de_DeprovisionPublicIpv4PoolCidrResult = (
  */
 const de_DeregisterInstanceEventNotificationAttributesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeregisterInstanceEventNotificationAttributesResult => {
   const contents: any = {};
   if (output[_iTA] != null) {
@@ -59337,7 +59337,7 @@ const de_DeregisterInstanceEventNotificationAttributesResult = (
  */
 const de_DeregisterTransitGatewayMulticastGroupMembersResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeregisterTransitGatewayMulticastGroupMembersResult => {
   const contents: any = {};
   if (output[_dMGM] != null) {
@@ -59351,7 +59351,7 @@ const de_DeregisterTransitGatewayMulticastGroupMembersResult = (
  */
 const de_DeregisterTransitGatewayMulticastGroupSourcesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeregisterTransitGatewayMulticastGroupSourcesResult => {
   const contents: any = {};
   if (output[_dMGS] != null) {
@@ -59378,7 +59378,7 @@ const de_DescribeAccountAttributesResult = (output: any, context: __SerdeContext
  */
 const de_DescribeAddressesAttributeResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeAddressesAttributeResult => {
   const contents: any = {};
   if (output.addressSet === "") {
@@ -59455,7 +59455,7 @@ const de_DescribeAvailabilityZonesResult = (output: any, context: __SerdeContext
  */
 const de_DescribeAwsNetworkPerformanceMetricSubscriptionsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeAwsNetworkPerformanceMetricSubscriptionsResult => {
   const contents: any = {};
   if (output[_nTe] != null) {
@@ -59503,7 +59503,7 @@ const de_DescribeByoipCidrsResult = (output: any, context: __SerdeContext): Desc
  */
 const de_DescribeCapacityBlockOfferingsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeCapacityBlockOfferingsResult => {
   const contents: any = {};
   if (output.capacityBlockOfferingSet === "") {
@@ -59522,7 +59522,7 @@ const de_DescribeCapacityBlockOfferingsResult = (
  */
 const de_DescribeCapacityReservationFleetsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeCapacityReservationFleetsResult => {
   const contents: any = {};
   if (output.capacityReservationFleetSet === "") {
@@ -59541,7 +59541,7 @@ const de_DescribeCapacityReservationFleetsResult = (
  */
 const de_DescribeCapacityReservationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeCapacityReservationsResult => {
   const contents: any = {};
   if (output[_nTe] != null) {
@@ -59576,7 +59576,7 @@ const de_DescribeCarrierGatewaysResult = (output: any, context: __SerdeContext):
  */
 const de_DescribeClassicLinkInstancesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeClassicLinkInstancesResult => {
   const contents: any = {};
   if (output.instancesSet === "") {
@@ -59595,7 +59595,7 @@ const de_DescribeClassicLinkInstancesResult = (
  */
 const de_DescribeClientVpnAuthorizationRulesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeClientVpnAuthorizationRulesResult => {
   const contents: any = {};
   if (output.authorizationRule === "") {
@@ -59614,7 +59614,7 @@ const de_DescribeClientVpnAuthorizationRulesResult = (
  */
 const de_DescribeClientVpnConnectionsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeClientVpnConnectionsResult => {
   const contents: any = {};
   if (output.connections === "") {
@@ -59633,7 +59633,7 @@ const de_DescribeClientVpnConnectionsResult = (
  */
 const de_DescribeClientVpnEndpointsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeClientVpnEndpointsResult => {
   const contents: any = {};
   if (output.clientVpnEndpoint === "") {
@@ -59668,7 +59668,7 @@ const de_DescribeClientVpnRoutesResult = (output: any, context: __SerdeContext):
  */
 const de_DescribeClientVpnTargetNetworksResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeClientVpnTargetNetworksResult => {
   const contents: any = {};
   if (output.clientVpnTargetNetworks === "") {
@@ -59756,7 +59756,7 @@ const de_DescribeDhcpOptionsResult = (output: any, context: __SerdeContext): Des
  */
 const de_DescribeEgressOnlyInternetGatewaysResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeEgressOnlyInternetGatewaysResult => {
   const contents: any = {};
   if (output.egressOnlyInternetGatewaySet === "") {
@@ -59839,7 +59839,7 @@ const de_DescribeFastLaunchImagesResult = (output: any, context: __SerdeContext)
  */
 const de_DescribeFastLaunchImagesSuccessItem = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeFastLaunchImagesSuccessItem => {
   const contents: any = {};
   if (output[_iIma] != null) {
@@ -59877,7 +59877,7 @@ const de_DescribeFastLaunchImagesSuccessItem = (
  */
 const de_DescribeFastLaunchImagesSuccessSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeFastLaunchImagesSuccessItem[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -59891,7 +59891,7 @@ const de_DescribeFastLaunchImagesSuccessSet = (
  */
 const de_DescribeFastSnapshotRestoresResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeFastSnapshotRestoresResult => {
   const contents: any = {};
   if (output.fastSnapshotRestoreSet === "") {
@@ -59910,7 +59910,7 @@ const de_DescribeFastSnapshotRestoresResult = (
  */
 const de_DescribeFastSnapshotRestoreSuccessItem = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeFastSnapshotRestoreSuccessItem => {
   const contents: any = {};
   if (output[_sIn] != null) {
@@ -59954,7 +59954,7 @@ const de_DescribeFastSnapshotRestoreSuccessItem = (
  */
 const de_DescribeFastSnapshotRestoreSuccessSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeFastSnapshotRestoreSuccessItem[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -60111,7 +60111,7 @@ const de_DescribeFlowLogsResult = (output: any, context: __SerdeContext): Descri
  */
 const de_DescribeFpgaImageAttributeResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeFpgaImageAttributeResult => {
   const contents: any = {};
   if (output[_fIA] != null) {
@@ -60141,7 +60141,7 @@ const de_DescribeFpgaImagesResult = (output: any, context: __SerdeContext): Desc
  */
 const de_DescribeHostReservationOfferingsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeHostReservationOfferingsResult => {
   const contents: any = {};
   if (output[_nTe] != null) {
@@ -60192,7 +60192,7 @@ const de_DescribeHostsResult = (output: any, context: __SerdeContext): DescribeH
  */
 const de_DescribeIamInstanceProfileAssociationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeIamInstanceProfileAssociationsResult => {
   const contents: any = {};
   if (output.iamInstanceProfileAssociationSet === "") {
@@ -60269,7 +60269,7 @@ const de_DescribeImportImageTasksResult = (output: any, context: __SerdeContext)
  */
 const de_DescribeImportSnapshotTasksResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeImportSnapshotTasksResult => {
   const contents: any = {};
   if (output.importSnapshotTaskSet === "") {
@@ -60288,7 +60288,7 @@ const de_DescribeImportSnapshotTasksResult = (
  */
 const de_DescribeInstanceConnectEndpointsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeInstanceConnectEndpointsResult => {
   const contents: any = {};
   if (output.instanceConnectEndpointSet === "") {
@@ -60307,7 +60307,7 @@ const de_DescribeInstanceConnectEndpointsResult = (
  */
 const de_DescribeInstanceCreditSpecificationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeInstanceCreditSpecificationsResult => {
   const contents: any = {};
   if (output.instanceCreditSpecificationSet === "") {
@@ -60326,7 +60326,7 @@ const de_DescribeInstanceCreditSpecificationsResult = (
  */
 const de_DescribeInstanceEventNotificationAttributesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeInstanceEventNotificationAttributesResult => {
   const contents: any = {};
   if (output[_iTA] != null) {
@@ -60340,7 +60340,7 @@ const de_DescribeInstanceEventNotificationAttributesResult = (
  */
 const de_DescribeInstanceEventWindowsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeInstanceEventWindowsResult => {
   const contents: any = {};
   if (output.instanceEventWindowSet === "") {
@@ -60407,7 +60407,7 @@ const de_DescribeInstanceTopologyResult = (output: any, context: __SerdeContext)
  */
 const de_DescribeInstanceTypeOfferingsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeInstanceTypeOfferingsResult => {
   const contents: any = {};
   if (output.instanceTypeOfferingSet === "") {
@@ -60490,7 +60490,7 @@ const de_DescribeIpamPoolsResult = (output: any, context: __SerdeContext): Descr
  */
 const de_DescribeIpamResourceDiscoveriesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeIpamResourceDiscoveriesResult => {
   const contents: any = {};
   if (output.ipamResourceDiscoverySet === "") {
@@ -60509,7 +60509,7 @@ const de_DescribeIpamResourceDiscoveriesResult = (
  */
 const de_DescribeIpamResourceDiscoveryAssociationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeIpamResourceDiscoveryAssociationsResult => {
   const contents: any = {};
   if (output.ipamResourceDiscoveryAssociationSet === "") {
@@ -60605,7 +60605,7 @@ const de_DescribeLaunchTemplatesResult = (output: any, context: __SerdeContext):
  */
 const de_DescribeLaunchTemplateVersionsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeLaunchTemplateVersionsResult => {
   const contents: any = {};
   if (output.launchTemplateVersionSet === "") {
@@ -60624,7 +60624,7 @@ const de_DescribeLaunchTemplateVersionsResult = (
  */
 const de_DescribeLocalGatewayRouteTablesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeLocalGatewayRouteTablesResult => {
   const contents: any = {};
   if (output.localGatewayRouteTableSet === "") {
@@ -60643,7 +60643,7 @@ const de_DescribeLocalGatewayRouteTablesResult = (
  */
 const de_DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsResult => {
   const contents: any = {};
   if (output.localGatewayRouteTableVirtualInterfaceGroupAssociationSet === "") {
@@ -60651,7 +60651,7 @@ const de_DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsResult =
   } else if (output[_lGRTVIGAS] != null && output[_lGRTVIGAS][_i] != null) {
     contents[_LGRTVIGAo] = de_LocalGatewayRouteTableVirtualInterfaceGroupAssociationSet(
       __getArrayIfSingleItem(output[_lGRTVIGAS][_i]),
-      context
+      context,
     );
   }
   if (output[_nTe] != null) {
@@ -60665,7 +60665,7 @@ const de_DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsResult =
  */
 const de_DescribeLocalGatewayRouteTableVpcAssociationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeLocalGatewayRouteTableVpcAssociationsResult => {
   const contents: any = {};
   if (output.localGatewayRouteTableVpcAssociationSet === "") {
@@ -60673,7 +60673,7 @@ const de_DescribeLocalGatewayRouteTableVpcAssociationsResult = (
   } else if (output[_lGRTVAS] != null && output[_lGRTVAS][_i] != null) {
     contents[_LGRTVAo] = de_LocalGatewayRouteTableVpcAssociationSet(
       __getArrayIfSingleItem(output[_lGRTVAS][_i]),
-      context
+      context,
     );
   }
   if (output[_nTe] != null) {
@@ -60703,7 +60703,7 @@ const de_DescribeLocalGatewaysResult = (output: any, context: __SerdeContext): D
  */
 const de_DescribeLocalGatewayVirtualInterfaceGroupsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeLocalGatewayVirtualInterfaceGroupsResult => {
   const contents: any = {};
   if (output.localGatewayVirtualInterfaceGroupSet === "") {
@@ -60722,7 +60722,7 @@ const de_DescribeLocalGatewayVirtualInterfaceGroupsResult = (
  */
 const de_DescribeLocalGatewayVirtualInterfacesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeLocalGatewayVirtualInterfacesResult => {
   const contents: any = {};
   if (output.localGatewayVirtualInterfaceSet === "") {
@@ -60773,7 +60773,7 @@ const de_DescribeMacHostsResult = (output: any, context: __SerdeContext): Descri
  */
 const de_DescribeManagedPrefixListsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeManagedPrefixListsResult => {
   const contents: any = {};
   if (output[_nTe] != null) {
@@ -60840,7 +60840,7 @@ const de_DescribeNetworkAclsResult = (output: any, context: __SerdeContext): Des
  */
 const de_DescribeNetworkInsightsAccessScopeAnalysesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeNetworkInsightsAccessScopeAnalysesResult => {
   const contents: any = {};
   if (output.networkInsightsAccessScopeAnalysisSet === "") {
@@ -60859,7 +60859,7 @@ const de_DescribeNetworkInsightsAccessScopeAnalysesResult = (
  */
 const de_DescribeNetworkInsightsAccessScopesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeNetworkInsightsAccessScopesResult => {
   const contents: any = {};
   if (output.networkInsightsAccessScopeSet === "") {
@@ -60878,7 +60878,7 @@ const de_DescribeNetworkInsightsAccessScopesResult = (
  */
 const de_DescribeNetworkInsightsAnalysesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeNetworkInsightsAnalysesResult => {
   const contents: any = {};
   if (output.networkInsightsAnalysisSet === "") {
@@ -60897,7 +60897,7 @@ const de_DescribeNetworkInsightsAnalysesResult = (
  */
 const de_DescribeNetworkInsightsPathsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeNetworkInsightsPathsResult => {
   const contents: any = {};
   if (output.networkInsightsPathSet === "") {
@@ -60916,7 +60916,7 @@ const de_DescribeNetworkInsightsPathsResult = (
  */
 const de_DescribeNetworkInterfaceAttributeResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeNetworkInterfaceAttributeResult => {
   const contents: any = {};
   if (output[_at] != null) {
@@ -60947,7 +60947,7 @@ const de_DescribeNetworkInterfaceAttributeResult = (
  */
 const de_DescribeNetworkInterfacePermissionsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeNetworkInterfacePermissionsResult => {
   const contents: any = {};
   if (output.networkInterfacePermissions === "") {
@@ -61056,7 +61056,7 @@ const de_DescribeRegionsResult = (output: any, context: __SerdeContext): Describ
  */
 const de_DescribeReplaceRootVolumeTasksResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeReplaceRootVolumeTasksResult => {
   const contents: any = {};
   if (output.replaceRootVolumeTaskSet === "") {
@@ -61075,7 +61075,7 @@ const de_DescribeReplaceRootVolumeTasksResult = (
  */
 const de_DescribeReservedInstancesListingsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeReservedInstancesListingsResult => {
   const contents: any = {};
   if (output.reservedInstancesListingsSet === "") {
@@ -61091,7 +61091,7 @@ const de_DescribeReservedInstancesListingsResult = (
  */
 const de_DescribeReservedInstancesModificationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeReservedInstancesModificationsResult => {
   const contents: any = {};
   if (output[_nTe] != null) {
@@ -61110,7 +61110,7 @@ const de_DescribeReservedInstancesModificationsResult = (
  */
 const de_DescribeReservedInstancesOfferingsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeReservedInstancesOfferingsResult => {
   const contents: any = {};
   if (output.reservedInstancesOfferingsSet === "") {
@@ -61158,7 +61158,7 @@ const de_DescribeRouteTablesResult = (output: any, context: __SerdeContext): Des
  */
 const de_DescribeScheduledInstanceAvailabilityResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeScheduledInstanceAvailabilityResult => {
   const contents: any = {};
   if (output[_nTe] != null) {
@@ -61177,7 +61177,7 @@ const de_DescribeScheduledInstanceAvailabilityResult = (
  */
 const de_DescribeScheduledInstancesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeScheduledInstancesResult => {
   const contents: any = {};
   if (output[_nTe] != null) {
@@ -61196,7 +61196,7 @@ const de_DescribeScheduledInstancesResult = (
  */
 const de_DescribeSecurityGroupReferencesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeSecurityGroupReferencesResult => {
   const contents: any = {};
   if (output.securityGroupReferenceSet === "") {
@@ -61212,7 +61212,7 @@ const de_DescribeSecurityGroupReferencesResult = (
  */
 const de_DescribeSecurityGroupRulesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeSecurityGroupRulesResult => {
   const contents: any = {};
   if (output.securityGroupRuleSet === "") {
@@ -61284,7 +61284,7 @@ const de_DescribeSnapshotsResult = (output: any, context: __SerdeContext): Descr
  */
 const de_DescribeSnapshotTierStatusResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeSnapshotTierStatusResult => {
   const contents: any = {};
   if (output.snapshotTierStatusSet === "") {
@@ -61303,7 +61303,7 @@ const de_DescribeSnapshotTierStatusResult = (
  */
 const de_DescribeSpotDatafeedSubscriptionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeSpotDatafeedSubscriptionResult => {
   const contents: any = {};
   if (output[_sDS] != null) {
@@ -61317,7 +61317,7 @@ const de_DescribeSpotDatafeedSubscriptionResult = (
  */
 const de_DescribeSpotFleetInstancesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeSpotFleetInstancesResponse => {
   const contents: any = {};
   if (output.activeInstanceSet === "") {
@@ -61339,7 +61339,7 @@ const de_DescribeSpotFleetInstancesResponse = (
  */
 const de_DescribeSpotFleetRequestHistoryResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeSpotFleetRequestHistoryResponse => {
   const contents: any = {};
   if (output.historyRecordSet === "") {
@@ -61367,7 +61367,7 @@ const de_DescribeSpotFleetRequestHistoryResponse = (
  */
 const de_DescribeSpotFleetRequestsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeSpotFleetRequestsResponse => {
   const contents: any = {};
   if (output[_nTe] != null) {
@@ -61386,7 +61386,7 @@ const de_DescribeSpotFleetRequestsResponse = (
  */
 const de_DescribeSpotInstanceRequestsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeSpotInstanceRequestsResult => {
   const contents: any = {};
   if (output.spotInstanceRequestSet === "") {
@@ -61421,7 +61421,7 @@ const de_DescribeSpotPriceHistoryResult = (output: any, context: __SerdeContext)
  */
 const de_DescribeStaleSecurityGroupsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeStaleSecurityGroupsResult => {
   const contents: any = {};
   if (output[_nTe] != null) {
@@ -61488,7 +61488,7 @@ const de_DescribeTagsResult = (output: any, context: __SerdeContext): DescribeTa
  */
 const de_DescribeTrafficMirrorFilterRulesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTrafficMirrorFilterRulesResult => {
   const contents: any = {};
   if (output.trafficMirrorFilterRuleSet === "") {
@@ -61507,7 +61507,7 @@ const de_DescribeTrafficMirrorFilterRulesResult = (
  */
 const de_DescribeTrafficMirrorFiltersResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTrafficMirrorFiltersResult => {
   const contents: any = {};
   if (output.trafficMirrorFilterSet === "") {
@@ -61526,7 +61526,7 @@ const de_DescribeTrafficMirrorFiltersResult = (
  */
 const de_DescribeTrafficMirrorSessionsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTrafficMirrorSessionsResult => {
   const contents: any = {};
   if (output.trafficMirrorSessionSet === "") {
@@ -61545,7 +61545,7 @@ const de_DescribeTrafficMirrorSessionsResult = (
  */
 const de_DescribeTrafficMirrorTargetsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTrafficMirrorTargetsResult => {
   const contents: any = {};
   if (output.trafficMirrorTargetSet === "") {
@@ -61564,7 +61564,7 @@ const de_DescribeTrafficMirrorTargetsResult = (
  */
 const de_DescribeTransitGatewayAttachmentsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTransitGatewayAttachmentsResult => {
   const contents: any = {};
   if (output.transitGatewayAttachments === "") {
@@ -61583,7 +61583,7 @@ const de_DescribeTransitGatewayAttachmentsResult = (
  */
 const de_DescribeTransitGatewayConnectPeersResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTransitGatewayConnectPeersResult => {
   const contents: any = {};
   if (output.transitGatewayConnectPeerSet === "") {
@@ -61602,7 +61602,7 @@ const de_DescribeTransitGatewayConnectPeersResult = (
  */
 const de_DescribeTransitGatewayConnectsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTransitGatewayConnectsResult => {
   const contents: any = {};
   if (output.transitGatewayConnectSet === "") {
@@ -61621,7 +61621,7 @@ const de_DescribeTransitGatewayConnectsResult = (
  */
 const de_DescribeTransitGatewayMulticastDomainsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTransitGatewayMulticastDomainsResult => {
   const contents: any = {};
   if (output.transitGatewayMulticastDomains === "") {
@@ -61640,7 +61640,7 @@ const de_DescribeTransitGatewayMulticastDomainsResult = (
  */
 const de_DescribeTransitGatewayPeeringAttachmentsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTransitGatewayPeeringAttachmentsResult => {
   const contents: any = {};
   if (output.transitGatewayPeeringAttachments === "") {
@@ -61659,7 +61659,7 @@ const de_DescribeTransitGatewayPeeringAttachmentsResult = (
  */
 const de_DescribeTransitGatewayPolicyTablesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTransitGatewayPolicyTablesResult => {
   const contents: any = {};
   if (output.transitGatewayPolicyTables === "") {
@@ -61678,7 +61678,7 @@ const de_DescribeTransitGatewayPolicyTablesResult = (
  */
 const de_DescribeTransitGatewayRouteTableAnnouncementsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTransitGatewayRouteTableAnnouncementsResult => {
   const contents: any = {};
   if (output.transitGatewayRouteTableAnnouncements === "") {
@@ -61686,7 +61686,7 @@ const de_DescribeTransitGatewayRouteTableAnnouncementsResult = (
   } else if (output[_tGRTAr] != null && output[_tGRTAr][_i] != null) {
     contents[_TGRTAr] = de_TransitGatewayRouteTableAnnouncementList(
       __getArrayIfSingleItem(output[_tGRTAr][_i]),
-      context
+      context,
     );
   }
   if (output[_nTe] != null) {
@@ -61700,7 +61700,7 @@ const de_DescribeTransitGatewayRouteTableAnnouncementsResult = (
  */
 const de_DescribeTransitGatewayRouteTablesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTransitGatewayRouteTablesResult => {
   const contents: any = {};
   if (output.transitGatewayRouteTables === "") {
@@ -61735,7 +61735,7 @@ const de_DescribeTransitGatewaysResult = (output: any, context: __SerdeContext):
  */
 const de_DescribeTransitGatewayVpcAttachmentsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTransitGatewayVpcAttachmentsResult => {
   const contents: any = {};
   if (output.transitGatewayVpcAttachments === "") {
@@ -61754,7 +61754,7 @@ const de_DescribeTransitGatewayVpcAttachmentsResult = (
  */
 const de_DescribeTrunkInterfaceAssociationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTrunkInterfaceAssociationsResult => {
   const contents: any = {};
   if (output.interfaceAssociationSet === "") {
@@ -61773,7 +61773,7 @@ const de_DescribeTrunkInterfaceAssociationsResult = (
  */
 const de_DescribeVerifiedAccessEndpointsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeVerifiedAccessEndpointsResult => {
   const contents: any = {};
   if (output.verifiedAccessEndpointSet === "") {
@@ -61792,7 +61792,7 @@ const de_DescribeVerifiedAccessEndpointsResult = (
  */
 const de_DescribeVerifiedAccessGroupsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeVerifiedAccessGroupsResult => {
   const contents: any = {};
   if (output.verifiedAccessGroupSet === "") {
@@ -61811,7 +61811,7 @@ const de_DescribeVerifiedAccessGroupsResult = (
  */
 const de_DescribeVerifiedAccessInstanceLoggingConfigurationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeVerifiedAccessInstanceLoggingConfigurationsResult => {
   const contents: any = {};
   if (output.loggingConfigurationSet === "") {
@@ -61819,7 +61819,7 @@ const de_DescribeVerifiedAccessInstanceLoggingConfigurationsResult = (
   } else if (output[_lCS] != null && output[_lCS][_i] != null) {
     contents[_LC] = de_VerifiedAccessInstanceLoggingConfigurationList(
       __getArrayIfSingleItem(output[_lCS][_i]),
-      context
+      context,
     );
   }
   if (output[_nTe] != null) {
@@ -61833,7 +61833,7 @@ const de_DescribeVerifiedAccessInstanceLoggingConfigurationsResult = (
  */
 const de_DescribeVerifiedAccessInstancesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeVerifiedAccessInstancesResult => {
   const contents: any = {};
   if (output.verifiedAccessInstanceSet === "") {
@@ -61852,7 +61852,7 @@ const de_DescribeVerifiedAccessInstancesResult = (
  */
 const de_DescribeVerifiedAccessTrustProvidersResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeVerifiedAccessTrustProvidersResult => {
   const contents: any = {};
   if (output.verifiedAccessTrustProviderSet === "") {
@@ -61890,7 +61890,7 @@ const de_DescribeVolumeAttributeResult = (output: any, context: __SerdeContext):
  */
 const de_DescribeVolumesModificationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeVolumesModificationsResult => {
   const contents: any = {};
   if (output.volumeModificationSet === "") {
@@ -61961,7 +61961,7 @@ const de_DescribeVpcAttributeResult = (output: any, context: __SerdeContext): De
  */
 const de_DescribeVpcClassicLinkDnsSupportResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeVpcClassicLinkDnsSupportResult => {
   const contents: any = {};
   if (output[_nTe] != null) {
@@ -61993,7 +61993,7 @@ const de_DescribeVpcClassicLinkResult = (output: any, context: __SerdeContext): 
  */
 const de_DescribeVpcEndpointConnectionNotificationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeVpcEndpointConnectionNotificationsResult => {
   const contents: any = {};
   if (output.connectionNotificationSet === "") {
@@ -62012,7 +62012,7 @@ const de_DescribeVpcEndpointConnectionNotificationsResult = (
  */
 const de_DescribeVpcEndpointConnectionsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeVpcEndpointConnectionsResult => {
   const contents: any = {};
   if (output.vpcEndpointConnectionSet === "") {
@@ -62031,7 +62031,7 @@ const de_DescribeVpcEndpointConnectionsResult = (
  */
 const de_DescribeVpcEndpointServiceConfigurationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeVpcEndpointServiceConfigurationsResult => {
   const contents: any = {};
   if (output.serviceConfigurationSet === "") {
@@ -62050,7 +62050,7 @@ const de_DescribeVpcEndpointServiceConfigurationsResult = (
  */
 const de_DescribeVpcEndpointServicePermissionsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeVpcEndpointServicePermissionsResult => {
   const contents: any = {};
   if (output.allowedPrincipals === "") {
@@ -62069,7 +62069,7 @@ const de_DescribeVpcEndpointServicePermissionsResult = (
  */
 const de_DescribeVpcEndpointServicesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeVpcEndpointServicesResult => {
   const contents: any = {};
   if (output.serviceNameSet === "") {
@@ -62109,7 +62109,7 @@ const de_DescribeVpcEndpointsResult = (output: any, context: __SerdeContext): De
  */
 const de_DescribeVpcPeeringConnectionsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeVpcPeeringConnectionsResult => {
   const contents: any = {};
   if (output.vpcPeeringConnectionSet === "") {
@@ -62198,7 +62198,7 @@ const de_DetachClassicLinkVpcResult = (output: any, context: __SerdeContext): De
  */
 const de_DetachVerifiedAccessTrustProviderResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DetachVerifiedAccessTrustProviderResult => {
   const contents: any = {};
   if (output[_vATP] != null) {
@@ -62324,7 +62324,7 @@ const de_DisableAddressTransferResult = (output: any, context: __SerdeContext): 
  */
 const de_DisableAwsNetworkPerformanceMetricSubscriptionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisableAwsNetworkPerformanceMetricSubscriptionResult => {
   const contents: any = {};
   if (output[_ou] != null) {
@@ -62338,7 +62338,7 @@ const de_DisableAwsNetworkPerformanceMetricSubscriptionResult = (
  */
 const de_DisableEbsEncryptionByDefaultResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisableEbsEncryptionByDefaultResult => {
   const contents: any = {};
   if (output[_eEBD] != null) {
@@ -62387,7 +62387,7 @@ const de_DisableFastLaunchResult = (output: any, context: __SerdeContext): Disab
  */
 const de_DisableFastSnapshotRestoreErrorItem = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisableFastSnapshotRestoreErrorItem => {
   const contents: any = {};
   if (output[_sIn] != null) {
@@ -62406,7 +62406,7 @@ const de_DisableFastSnapshotRestoreErrorItem = (
  */
 const de_DisableFastSnapshotRestoreErrorSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisableFastSnapshotRestoreErrorItem[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -62420,7 +62420,7 @@ const de_DisableFastSnapshotRestoreErrorSet = (
  */
 const de_DisableFastSnapshotRestoresResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisableFastSnapshotRestoresResult => {
   const contents: any = {};
   if (output.successful === "") {
@@ -62441,7 +62441,7 @@ const de_DisableFastSnapshotRestoresResult = (
  */
 const de_DisableFastSnapshotRestoreStateError = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisableFastSnapshotRestoreStateError => {
   const contents: any = {};
   if (output[_co] != null) {
@@ -62458,7 +62458,7 @@ const de_DisableFastSnapshotRestoreStateError = (
  */
 const de_DisableFastSnapshotRestoreStateErrorItem = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisableFastSnapshotRestoreStateErrorItem => {
   const contents: any = {};
   if (output[_aZ] != null) {
@@ -62475,7 +62475,7 @@ const de_DisableFastSnapshotRestoreStateErrorItem = (
  */
 const de_DisableFastSnapshotRestoreStateErrorSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisableFastSnapshotRestoreStateErrorItem[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -62489,7 +62489,7 @@ const de_DisableFastSnapshotRestoreStateErrorSet = (
  */
 const de_DisableFastSnapshotRestoreSuccessItem = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisableFastSnapshotRestoreSuccessItem => {
   const contents: any = {};
   if (output[_sIn] != null) {
@@ -62533,7 +62533,7 @@ const de_DisableFastSnapshotRestoreSuccessItem = (
  */
 const de_DisableFastSnapshotRestoreSuccessSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisableFastSnapshotRestoreSuccessItem[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -62547,7 +62547,7 @@ const de_DisableFastSnapshotRestoreSuccessSet = (
  */
 const de_DisableImageBlockPublicAccessResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisableImageBlockPublicAccessResult => {
   const contents: any = {};
   if (output[_iBPAS] != null) {
@@ -62572,7 +62572,7 @@ const de_DisableImageDeprecationResult = (output: any, context: __SerdeContext):
  */
 const de_DisableImageDeregistrationProtectionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisableImageDeregistrationProtectionResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -62597,7 +62597,7 @@ const de_DisableImageResult = (output: any, context: __SerdeContext): DisableIma
  */
 const de_DisableIpamOrganizationAdminAccountResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisableIpamOrganizationAdminAccountResult => {
   const contents: any = {};
   if (output[_succ] != null) {
@@ -62611,7 +62611,7 @@ const de_DisableIpamOrganizationAdminAccountResult = (
  */
 const de_DisableSerialConsoleAccessResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisableSerialConsoleAccessResult => {
   const contents: any = {};
   if (output[_sCAE] != null) {
@@ -62625,7 +62625,7 @@ const de_DisableSerialConsoleAccessResult = (
  */
 const de_DisableSnapshotBlockPublicAccessResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisableSnapshotBlockPublicAccessResult => {
   const contents: any = {};
   if (output[_st] != null) {
@@ -62639,7 +62639,7 @@ const de_DisableSnapshotBlockPublicAccessResult = (
  */
 const de_DisableTransitGatewayRouteTablePropagationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisableTransitGatewayRouteTablePropagationResult => {
   const contents: any = {};
   if (output[_prop] != null) {
@@ -62653,7 +62653,7 @@ const de_DisableTransitGatewayRouteTablePropagationResult = (
  */
 const de_DisableVpcClassicLinkDnsSupportResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisableVpcClassicLinkDnsSupportResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -62678,7 +62678,7 @@ const de_DisableVpcClassicLinkResult = (output: any, context: __SerdeContext): D
  */
 const de_DisassociateClientVpnTargetNetworkResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisassociateClientVpnTargetNetworkResult => {
   const contents: any = {};
   if (output[_aIs] != null) {
@@ -62695,7 +62695,7 @@ const de_DisassociateClientVpnTargetNetworkResult = (
  */
 const de_DisassociateEnclaveCertificateIamRoleResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisassociateEnclaveCertificateIamRoleResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -62709,7 +62709,7 @@ const de_DisassociateEnclaveCertificateIamRoleResult = (
  */
 const de_DisassociateIamInstanceProfileResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisassociateIamInstanceProfileResult => {
   const contents: any = {};
   if (output[_iIPA] != null) {
@@ -62723,7 +62723,7 @@ const de_DisassociateIamInstanceProfileResult = (
  */
 const de_DisassociateInstanceEventWindowResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisassociateInstanceEventWindowResult => {
   const contents: any = {};
   if (output[_iEW] != null) {
@@ -62748,7 +62748,7 @@ const de_DisassociateIpamByoasnResult = (output: any, context: __SerdeContext): 
  */
 const de_DisassociateIpamResourceDiscoveryResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisassociateIpamResourceDiscoveryResult => {
   const contents: any = {};
   if (output[_iRDA] != null) {
@@ -62762,7 +62762,7 @@ const de_DisassociateIpamResourceDiscoveryResult = (
  */
 const de_DisassociateNatGatewayAddressResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisassociateNatGatewayAddressResult => {
   const contents: any = {};
   if (output[_nGI] != null) {
@@ -62781,7 +62781,7 @@ const de_DisassociateNatGatewayAddressResult = (
  */
 const de_DisassociateSubnetCidrBlockResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisassociateSubnetCidrBlockResult => {
   const contents: any = {};
   if (output[_iCBA] != null) {
@@ -62798,7 +62798,7 @@ const de_DisassociateSubnetCidrBlockResult = (
  */
 const de_DisassociateTransitGatewayMulticastDomainResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisassociateTransitGatewayMulticastDomainResult => {
   const contents: any = {};
   if (output[_a] != null) {
@@ -62812,7 +62812,7 @@ const de_DisassociateTransitGatewayMulticastDomainResult = (
  */
 const de_DisassociateTransitGatewayPolicyTableResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisassociateTransitGatewayPolicyTableResult => {
   const contents: any = {};
   if (output[_ass] != null) {
@@ -62826,7 +62826,7 @@ const de_DisassociateTransitGatewayPolicyTableResult = (
  */
 const de_DisassociateTransitGatewayRouteTableResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisassociateTransitGatewayRouteTableResult => {
   const contents: any = {};
   if (output[_ass] != null) {
@@ -62840,7 +62840,7 @@ const de_DisassociateTransitGatewayRouteTableResult = (
  */
 const de_DisassociateTrunkInterfaceResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisassociateTrunkInterfaceResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -63279,7 +63279,7 @@ const de_ElasticGpuSpecificationResponse = (output: any, context: __SerdeContext
  */
 const de_ElasticGpuSpecificationResponseList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ElasticGpuSpecificationResponse[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -63293,7 +63293,7 @@ const de_ElasticGpuSpecificationResponseList = (
  */
 const de_ElasticInferenceAcceleratorAssociation = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ElasticInferenceAcceleratorAssociation => {
   const contents: any = {};
   if (output[_eIAA] != null) {
@@ -63316,7 +63316,7 @@ const de_ElasticInferenceAcceleratorAssociation = (
  */
 const de_ElasticInferenceAcceleratorAssociationList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ElasticInferenceAcceleratorAssociation[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -63341,7 +63341,7 @@ const de_EnableAddressTransferResult = (output: any, context: __SerdeContext): E
  */
 const de_EnableAwsNetworkPerformanceMetricSubscriptionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnableAwsNetworkPerformanceMetricSubscriptionResult => {
   const contents: any = {};
   if (output[_ou] != null) {
@@ -63355,7 +63355,7 @@ const de_EnableAwsNetworkPerformanceMetricSubscriptionResult = (
  */
 const de_EnableEbsEncryptionByDefaultResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnableEbsEncryptionByDefaultResult => {
   const contents: any = {};
   if (output[_eEBD] != null) {
@@ -63404,7 +63404,7 @@ const de_EnableFastLaunchResult = (output: any, context: __SerdeContext): Enable
  */
 const de_EnableFastSnapshotRestoreErrorItem = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnableFastSnapshotRestoreErrorItem => {
   const contents: any = {};
   if (output[_sIn] != null) {
@@ -63423,7 +63423,7 @@ const de_EnableFastSnapshotRestoreErrorItem = (
  */
 const de_EnableFastSnapshotRestoreErrorSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnableFastSnapshotRestoreErrorItem[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -63437,7 +63437,7 @@ const de_EnableFastSnapshotRestoreErrorSet = (
  */
 const de_EnableFastSnapshotRestoresResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnableFastSnapshotRestoresResult => {
   const contents: any = {};
   if (output.successful === "") {
@@ -63458,7 +63458,7 @@ const de_EnableFastSnapshotRestoresResult = (
  */
 const de_EnableFastSnapshotRestoreStateError = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnableFastSnapshotRestoreStateError => {
   const contents: any = {};
   if (output[_co] != null) {
@@ -63475,7 +63475,7 @@ const de_EnableFastSnapshotRestoreStateError = (
  */
 const de_EnableFastSnapshotRestoreStateErrorItem = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnableFastSnapshotRestoreStateErrorItem => {
   const contents: any = {};
   if (output[_aZ] != null) {
@@ -63492,7 +63492,7 @@ const de_EnableFastSnapshotRestoreStateErrorItem = (
  */
 const de_EnableFastSnapshotRestoreStateErrorSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnableFastSnapshotRestoreStateErrorItem[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -63506,7 +63506,7 @@ const de_EnableFastSnapshotRestoreStateErrorSet = (
  */
 const de_EnableFastSnapshotRestoreSuccessItem = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnableFastSnapshotRestoreSuccessItem => {
   const contents: any = {};
   if (output[_sIn] != null) {
@@ -63550,7 +63550,7 @@ const de_EnableFastSnapshotRestoreSuccessItem = (
  */
 const de_EnableFastSnapshotRestoreSuccessSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnableFastSnapshotRestoreSuccessItem[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -63564,7 +63564,7 @@ const de_EnableFastSnapshotRestoreSuccessSet = (
  */
 const de_EnableImageBlockPublicAccessResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnableImageBlockPublicAccessResult => {
   const contents: any = {};
   if (output[_iBPAS] != null) {
@@ -63589,7 +63589,7 @@ const de_EnableImageDeprecationResult = (output: any, context: __SerdeContext): 
  */
 const de_EnableImageDeregistrationProtectionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnableImageDeregistrationProtectionResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -63614,7 +63614,7 @@ const de_EnableImageResult = (output: any, context: __SerdeContext): EnableImage
  */
 const de_EnableIpamOrganizationAdminAccountResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnableIpamOrganizationAdminAccountResult => {
   const contents: any = {};
   if (output[_succ] != null) {
@@ -63628,7 +63628,7 @@ const de_EnableIpamOrganizationAdminAccountResult = (
  */
 const de_EnableReachabilityAnalyzerOrganizationSharingResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnableReachabilityAnalyzerOrganizationSharingResult => {
   const contents: any = {};
   if (output[_rV] != null) {
@@ -63653,7 +63653,7 @@ const de_EnableSerialConsoleAccessResult = (output: any, context: __SerdeContext
  */
 const de_EnableSnapshotBlockPublicAccessResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnableSnapshotBlockPublicAccessResult => {
   const contents: any = {};
   if (output[_st] != null) {
@@ -63667,7 +63667,7 @@ const de_EnableSnapshotBlockPublicAccessResult = (
  */
 const de_EnableTransitGatewayRouteTablePropagationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnableTransitGatewayRouteTablePropagationResult => {
   const contents: any = {};
   if (output[_prop] != null) {
@@ -63681,7 +63681,7 @@ const de_EnableTransitGatewayRouteTablePropagationResult = (
  */
 const de_EnableVpcClassicLinkDnsSupportResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnableVpcClassicLinkDnsSupportResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -63984,7 +63984,7 @@ const de_ExplanationList = (output: any, context: __SerdeContext): Explanation[]
  */
 const de_ExportClientVpnClientCertificateRevocationListResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ExportClientVpnClientCertificateRevocationListResult => {
   const contents: any = {};
   if (output[_cRL] != null) {
@@ -64001,7 +64001,7 @@ const de_ExportClientVpnClientCertificateRevocationListResult = (
  */
 const de_ExportClientVpnClientConfigurationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ExportClientVpnClientConfigurationResult => {
   const contents: any = {};
   if (output[_cCl] != null) {
@@ -64176,7 +64176,7 @@ const de_ExportToS3Task = (output: any, context: __SerdeContext): ExportToS3Task
  */
 const de_ExportTransitGatewayRoutesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ExportTransitGatewayRoutesResult => {
   const contents: any = {};
   if (output[_sL] != null) {
@@ -64190,7 +64190,7 @@ const de_ExportTransitGatewayRoutesResult = (
  */
 const de_FailedCapacityReservationFleetCancellationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): FailedCapacityReservationFleetCancellationResult => {
   const contents: any = {};
   if (output[_cRFI] != null) {
@@ -64207,7 +64207,7 @@ const de_FailedCapacityReservationFleetCancellationResult = (
  */
 const de_FailedCapacityReservationFleetCancellationResultSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): FailedCapacityReservationFleetCancellationResult[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -64246,7 +64246,7 @@ const de_FailedQueuedPurchaseDeletionSet = (output: any, context: __SerdeContext
  */
 const de_FastLaunchLaunchTemplateSpecificationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): FastLaunchLaunchTemplateSpecificationResponse => {
   const contents: any = {};
   if (output[_lTI] != null) {
@@ -64266,7 +64266,7 @@ const de_FastLaunchLaunchTemplateSpecificationResponse = (
  */
 const de_FastLaunchSnapshotConfigurationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): FastLaunchSnapshotConfigurationResponse => {
   const contents: any = {};
   if (output[_tRC] != null) {
@@ -64594,7 +64594,7 @@ const de_FleetLaunchTemplateOverridesList = (output: any, context: __SerdeContex
  */
 const de_FleetLaunchTemplateSpecification = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): FleetLaunchTemplateSpecification => {
   const contents: any = {};
   if (output[_lTI] != null) {
@@ -64891,7 +64891,7 @@ const de_FpgaInfo = (output: any, context: __SerdeContext): FpgaInfo => {
  */
 const de_GetAssociatedEnclaveCertificateIamRolesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetAssociatedEnclaveCertificateIamRolesResult => {
   const contents: any = {};
   if (output.associatedRoleSet === "") {
@@ -64907,7 +64907,7 @@ const de_GetAssociatedEnclaveCertificateIamRolesResult = (
  */
 const de_GetAssociatedIpv6PoolCidrsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetAssociatedIpv6PoolCidrsResult => {
   const contents: any = {};
   if (output.ipv6CidrAssociationSet === "") {
@@ -64926,7 +64926,7 @@ const de_GetAssociatedIpv6PoolCidrsResult = (
  */
 const de_GetAwsNetworkPerformanceDataResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetAwsNetworkPerformanceDataResult => {
   const contents: any = {};
   if (output.dataResponseSet === "") {
@@ -64945,7 +64945,7 @@ const de_GetAwsNetworkPerformanceDataResult = (
  */
 const de_GetCapacityReservationUsageResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetCapacityReservationUsageResult => {
   const contents: any = {};
   if (output[_nTe] != null) {
@@ -65032,7 +65032,7 @@ const de_GetConsoleScreenshotResult = (output: any, context: __SerdeContext): Ge
  */
 const de_GetDefaultCreditSpecificationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetDefaultCreditSpecificationResult => {
   const contents: any = {};
   if (output[_iFCS] != null) {
@@ -65071,7 +65071,7 @@ const de_GetEbsEncryptionByDefaultResult = (output: any, context: __SerdeContext
  */
 const de_GetFlowLogsIntegrationTemplateResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetFlowLogsIntegrationTemplateResult => {
   const contents: any = {};
   if (output[_re] != null) {
@@ -65085,7 +65085,7 @@ const de_GetFlowLogsIntegrationTemplateResult = (
  */
 const de_GetGroupsForCapacityReservationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetGroupsForCapacityReservationResult => {
   const contents: any = {};
   if (output[_nTe] != null) {
@@ -65104,7 +65104,7 @@ const de_GetGroupsForCapacityReservationResult = (
  */
 const de_GetHostReservationPurchasePreviewResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetHostReservationPurchasePreviewResult => {
   const contents: any = {};
   if (output[_cC] != null) {
@@ -65129,7 +65129,7 @@ const de_GetHostReservationPurchasePreviewResult = (
  */
 const de_GetImageBlockPublicAccessStateResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetImageBlockPublicAccessStateResult => {
   const contents: any = {};
   if (output[_iBPAS] != null) {
@@ -65143,7 +65143,7 @@ const de_GetImageBlockPublicAccessStateResult = (
  */
 const de_GetInstanceMetadataDefaultsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetInstanceMetadataDefaultsResult => {
   const contents: any = {};
   if (output[_aL] != null) {
@@ -65177,7 +65177,7 @@ const de_GetInstanceTpmEkPubResult = (output: any, context: __SerdeContext): Get
  */
 const de_GetInstanceTypesFromInstanceRequirementsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetInstanceTypesFromInstanceRequirementsResult => {
   const contents: any = {};
   if (output.instanceTypeSet === "") {
@@ -65185,7 +65185,7 @@ const de_GetInstanceTypesFromInstanceRequirementsResult = (
   } else if (output[_iTS] != null && output[_iTS][_i] != null) {
     contents[_ITnst] = de_InstanceTypeInfoFromInstanceRequirementsSet(
       __getArrayIfSingleItem(output[_iTS][_i]),
-      context
+      context,
     );
   }
   if (output[_nTe] != null) {
@@ -65245,7 +65245,7 @@ const de_GetIpamDiscoveredAccountsResult = (output: any, context: __SerdeContext
  */
 const de_GetIpamDiscoveredPublicAddressesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetIpamDiscoveredPublicAddressesResult => {
   const contents: any = {};
   if (output.ipamDiscoveredPublicAddressSet === "") {
@@ -65267,7 +65267,7 @@ const de_GetIpamDiscoveredPublicAddressesResult = (
  */
 const de_GetIpamDiscoveredResourceCidrsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetIpamDiscoveredResourceCidrsResult => {
   const contents: any = {};
   if (output.ipamDiscoveredResourceCidrSet === "") {
@@ -65345,7 +65345,7 @@ const de_GetLaunchTemplateDataResult = (output: any, context: __SerdeContext): G
  */
 const de_GetManagedPrefixListAssociationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetManagedPrefixListAssociationsResult => {
   const contents: any = {};
   if (output.prefixListAssociationSet === "") {
@@ -65364,7 +65364,7 @@ const de_GetManagedPrefixListAssociationsResult = (
  */
 const de_GetManagedPrefixListEntriesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetManagedPrefixListEntriesResult => {
   const contents: any = {};
   if (output.entrySet === "") {
@@ -65383,7 +65383,7 @@ const de_GetManagedPrefixListEntriesResult = (
  */
 const de_GetNetworkInsightsAccessScopeAnalysisFindingsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetNetworkInsightsAccessScopeAnalysisFindingsResult => {
   const contents: any = {};
   if (output[_nIASAI] != null) {
@@ -65408,7 +65408,7 @@ const de_GetNetworkInsightsAccessScopeAnalysisFindingsResult = (
  */
 const de_GetNetworkInsightsAccessScopeContentResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetNetworkInsightsAccessScopeContentResult => {
   const contents: any = {};
   if (output[_nIASC] != null) {
@@ -65439,7 +65439,7 @@ const de_GetPasswordDataResult = (output: any, context: __SerdeContext): GetPass
  */
 const de_GetReservedInstancesExchangeQuoteResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetReservedInstancesExchangeQuoteResult => {
   const contents: any = {};
   if (output[_cC] != null) {
@@ -65497,7 +65497,7 @@ const de_GetSecurityGroupsForVpcResult = (output: any, context: __SerdeContext):
  */
 const de_GetSerialConsoleAccessStatusResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetSerialConsoleAccessStatusResult => {
   const contents: any = {};
   if (output[_sCAE] != null) {
@@ -65511,7 +65511,7 @@ const de_GetSerialConsoleAccessStatusResult = (
  */
 const de_GetSnapshotBlockPublicAccessStateResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetSnapshotBlockPublicAccessStateResult => {
   const contents: any = {};
   if (output[_st] != null) {
@@ -65562,7 +65562,7 @@ const de_GetSubnetCidrReservationsResult = (output: any, context: __SerdeContext
  */
 const de_GetTransitGatewayAttachmentPropagationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetTransitGatewayAttachmentPropagationsResult => {
   const contents: any = {};
   if (output.transitGatewayAttachmentPropagations === "") {
@@ -65581,7 +65581,7 @@ const de_GetTransitGatewayAttachmentPropagationsResult = (
  */
 const de_GetTransitGatewayMulticastDomainAssociationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetTransitGatewayMulticastDomainAssociationsResult => {
   const contents: any = {};
   if (output.multicastDomainAssociations === "") {
@@ -65600,7 +65600,7 @@ const de_GetTransitGatewayMulticastDomainAssociationsResult = (
  */
 const de_GetTransitGatewayPolicyTableAssociationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetTransitGatewayPolicyTableAssociationsResult => {
   const contents: any = {};
   if (output.associations === "") {
@@ -65619,7 +65619,7 @@ const de_GetTransitGatewayPolicyTableAssociationsResult = (
  */
 const de_GetTransitGatewayPolicyTableEntriesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetTransitGatewayPolicyTableEntriesResult => {
   const contents: any = {};
   if (output.transitGatewayPolicyTableEntries === "") {
@@ -65635,7 +65635,7 @@ const de_GetTransitGatewayPolicyTableEntriesResult = (
  */
 const de_GetTransitGatewayPrefixListReferencesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetTransitGatewayPrefixListReferencesResult => {
   const contents: any = {};
   if (output.transitGatewayPrefixListReferenceSet === "") {
@@ -65654,7 +65654,7 @@ const de_GetTransitGatewayPrefixListReferencesResult = (
  */
 const de_GetTransitGatewayRouteTableAssociationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetTransitGatewayRouteTableAssociationsResult => {
   const contents: any = {};
   if (output.associations === "") {
@@ -65673,7 +65673,7 @@ const de_GetTransitGatewayRouteTableAssociationsResult = (
  */
 const de_GetTransitGatewayRouteTablePropagationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetTransitGatewayRouteTablePropagationsResult => {
   const contents: any = {};
   if (output.transitGatewayRouteTablePropagations === "") {
@@ -65692,7 +65692,7 @@ const de_GetTransitGatewayRouteTablePropagationsResult = (
  */
 const de_GetVerifiedAccessEndpointPolicyResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetVerifiedAccessEndpointPolicyResult => {
   const contents: any = {};
   if (output[_pE] != null) {
@@ -65709,7 +65709,7 @@ const de_GetVerifiedAccessEndpointPolicyResult = (
  */
 const de_GetVerifiedAccessGroupPolicyResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetVerifiedAccessGroupPolicyResult => {
   const contents: any = {};
   if (output[_pE] != null) {
@@ -65726,7 +65726,7 @@ const de_GetVerifiedAccessGroupPolicyResult = (
  */
 const de_GetVpnConnectionDeviceSampleConfigurationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetVpnConnectionDeviceSampleConfigurationResult => {
   const contents: any = {};
   if (output[_vCDSC] != null) {
@@ -65740,7 +65740,7 @@ const de_GetVpnConnectionDeviceSampleConfigurationResult = (
  */
 const de_GetVpnConnectionDeviceTypesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetVpnConnectionDeviceTypesResult => {
   const contents: any = {};
   if (output.vpnConnectionDeviceTypeSet === "") {
@@ -65759,7 +65759,7 @@ const de_GetVpnConnectionDeviceTypesResult = (
  */
 const de_GetVpnTunnelReplacementStatusResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetVpnTunnelReplacementStatusResult => {
   const contents: any = {};
   if (output[_vCI] != null) {
@@ -66539,7 +66539,7 @@ const de_ImageRecycleBinInfoList = (output: any, context: __SerdeContext): Image
  */
 const de_ImportClientVpnClientCertificateRevocationListResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ImportClientVpnClientCertificateRevocationListResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -66553,7 +66553,7 @@ const de_ImportClientVpnClientCertificateRevocationListResult = (
  */
 const de_ImportImageLicenseConfigurationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ImportImageLicenseConfigurationResponse => {
   const contents: any = {};
   if (output[_lCA] != null) {
@@ -66567,7 +66567,7 @@ const de_ImportImageLicenseConfigurationResponse = (
  */
 const de_ImportImageLicenseSpecificationListResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ImportImageLicenseConfigurationResponse[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -67070,7 +67070,7 @@ const de_Instance = (output: any, context: __SerdeContext): Instance => {
   } else if (output[_eIAASl] != null && output[_eIAASl][_i] != null) {
     contents[_EIAAl] = de_ElasticInferenceAcceleratorAssociationList(
       __getArrayIfSingleItem(output[_eIAASl][_i]),
-      context
+      context,
     );
   }
   if (output.networkInterfaceSet === "") {
@@ -67170,7 +67170,7 @@ const de_Instance = (output: any, context: __SerdeContext): Instance => {
  */
 const de_InstanceAttachmentEnaSrdSpecification = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InstanceAttachmentEnaSrdSpecification => {
   const contents: any = {};
   if (output[_eSE] != null) {
@@ -67187,7 +67187,7 @@ const de_InstanceAttachmentEnaSrdSpecification = (
  */
 const de_InstanceAttachmentEnaSrdUdpSpecification = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InstanceAttachmentEnaSrdUdpSpecification => {
   const contents: any = {};
   if (output[_eSUE] != null) {
@@ -67402,7 +67402,7 @@ const de_InstanceEventWindow = (output: any, context: __SerdeContext): InstanceE
  */
 const de_InstanceEventWindowAssociationTarget = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InstanceEventWindowAssociationTarget => {
   const contents: any = {};
   if (output.instanceIdSet === "") {
@@ -67498,7 +67498,7 @@ const de_InstanceExportDetails = (output: any, context: __SerdeContext): Instanc
  */
 const de_InstanceFamilyCreditSpecification = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InstanceFamilyCreditSpecification => {
   const contents: any = {};
   if (output[_iF] != null) {
@@ -67650,7 +67650,7 @@ const de_InstanceMaintenanceOptions = (output: any, context: __SerdeContext): In
  */
 const de_InstanceMetadataDefaultsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InstanceMetadataDefaultsResponse => {
   const contents: any = {};
   if (output[_hT] != null) {
@@ -67799,7 +67799,7 @@ const de_InstanceNetworkInterface = (output: any, context: __SerdeContext): Inst
  */
 const de_InstanceNetworkInterfaceAssociation = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InstanceNetworkInterfaceAssociation => {
   const contents: any = {};
   if (output[_cI] != null) {
@@ -67825,7 +67825,7 @@ const de_InstanceNetworkInterfaceAssociation = (
  */
 const de_InstanceNetworkInterfaceAttachment = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InstanceNetworkInterfaceAttachment => {
   const contents: any = {};
   if (output[_aTt] != null) {
@@ -67868,7 +67868,7 @@ const de_InstanceNetworkInterfaceList = (output: any, context: __SerdeContext): 
  */
 const de_InstanceNetworkInterfaceSpecification = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InstanceNetworkInterfaceSpecification => {
   const contents: any = {};
   if (output[_aPIA] != null) {
@@ -67955,7 +67955,7 @@ const de_InstanceNetworkInterfaceSpecification = (
  */
 const de_InstanceNetworkInterfaceSpecificationList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InstanceNetworkInterfaceSpecification[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -68305,7 +68305,7 @@ const de_InstanceTagKeySet = (output: any, context: __SerdeContext): string[] =>
  */
 const de_InstanceTagNotificationAttribute = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InstanceTagNotificationAttribute => {
   const contents: any = {};
   if (output.instanceTagKeySet === "") {
@@ -68458,7 +68458,7 @@ const de_InstanceTypeInfo = (output: any, context: __SerdeContext): InstanceType
  */
 const de_InstanceTypeInfoFromInstanceRequirements = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InstanceTypeInfoFromInstanceRequirements => {
   const contents: any = {};
   if (output[_iT] != null) {
@@ -68472,7 +68472,7 @@ const de_InstanceTypeInfoFromInstanceRequirements = (
  */
 const de_InstanceTypeInfoFromInstanceRequirementsSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InstanceTypeInfoFromInstanceRequirements[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -69160,7 +69160,7 @@ const de_IpamPublicAddressSecurityGroup = (output: any, context: __SerdeContext)
  */
 const de_IpamPublicAddressSecurityGroupList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): IpamPublicAddressSecurityGroup[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -69317,7 +69317,7 @@ const de_IpamResourceDiscovery = (output: any, context: __SerdeContext): IpamRes
  */
 const de_IpamResourceDiscoveryAssociation = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): IpamResourceDiscoveryAssociation => {
   const contents: any = {};
   if (output[_oI] != null) {
@@ -69363,7 +69363,7 @@ const de_IpamResourceDiscoveryAssociation = (
  */
 const de_IpamResourceDiscoveryAssociationSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): IpamResourceDiscoveryAssociation[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -70036,7 +70036,7 @@ const de_LaunchTemplate = (output: any, context: __SerdeContext): LaunchTemplate
  */
 const de_LaunchTemplateAndOverridesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LaunchTemplateAndOverridesResponse => {
   const contents: any = {};
   if (output[_lTS] != null) {
@@ -70053,7 +70053,7 @@ const de_LaunchTemplateAndOverridesResponse = (
  */
 const de_LaunchTemplateBlockDeviceMapping = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LaunchTemplateBlockDeviceMapping => {
   const contents: any = {};
   if (output[_dN] != null) {
@@ -70076,7 +70076,7 @@ const de_LaunchTemplateBlockDeviceMapping = (
  */
 const de_LaunchTemplateBlockDeviceMappingList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LaunchTemplateBlockDeviceMapping[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -70090,7 +70090,7 @@ const de_LaunchTemplateBlockDeviceMappingList = (
  */
 const de_LaunchTemplateCapacityReservationSpecificationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LaunchTemplateCapacityReservationSpecificationResponse => {
   const contents: any = {};
   if (output[_cRP] != null) {
@@ -70183,7 +70183,7 @@ const de_LaunchTemplateEbsBlockDevice = (output: any, context: __SerdeContext): 
  */
 const de_LaunchTemplateElasticInferenceAcceleratorResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LaunchTemplateElasticInferenceAcceleratorResponse => {
   const contents: any = {};
   if (output[_ty] != null) {
@@ -70200,7 +70200,7 @@ const de_LaunchTemplateElasticInferenceAcceleratorResponse = (
  */
 const de_LaunchTemplateElasticInferenceAcceleratorResponseList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LaunchTemplateElasticInferenceAcceleratorResponse[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -70214,7 +70214,7 @@ const de_LaunchTemplateElasticInferenceAcceleratorResponseList = (
  */
 const de_LaunchTemplateEnaSrdSpecification = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LaunchTemplateEnaSrdSpecification => {
   const contents: any = {};
   if (output[_eSE] != null) {
@@ -70231,7 +70231,7 @@ const de_LaunchTemplateEnaSrdSpecification = (
  */
 const de_LaunchTemplateEnaSrdUdpSpecification = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LaunchTemplateEnaSrdUdpSpecification => {
   const contents: any = {};
   if (output[_eSUE] != null) {
@@ -70256,7 +70256,7 @@ const de_LaunchTemplateEnclaveOptions = (output: any, context: __SerdeContext): 
  */
 const de_LaunchTemplateHibernationOptions = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LaunchTemplateHibernationOptions => {
   const contents: any = {};
   if (output[_conf] != null) {
@@ -70270,7 +70270,7 @@ const de_LaunchTemplateHibernationOptions = (
  */
 const de_LaunchTemplateIamInstanceProfileSpecification = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LaunchTemplateIamInstanceProfileSpecification => {
   const contents: any = {};
   if (output[_ar] != null) {
@@ -70287,7 +70287,7 @@ const de_LaunchTemplateIamInstanceProfileSpecification = (
  */
 const de_LaunchTemplateInstanceMaintenanceOptions = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LaunchTemplateInstanceMaintenanceOptions => {
   const contents: any = {};
   if (output[_aRu] != null) {
@@ -70301,7 +70301,7 @@ const de_LaunchTemplateInstanceMaintenanceOptions = (
  */
 const de_LaunchTemplateInstanceMarketOptions = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LaunchTemplateInstanceMarketOptions => {
   const contents: any = {};
   if (output[_mT] != null) {
@@ -70318,7 +70318,7 @@ const de_LaunchTemplateInstanceMarketOptions = (
  */
 const de_LaunchTemplateInstanceMetadataOptions = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LaunchTemplateInstanceMetadataOptions => {
   const contents: any = {};
   if (output[_st] != null) {
@@ -70347,7 +70347,7 @@ const de_LaunchTemplateInstanceMetadataOptions = (
  */
 const de_LaunchTemplateInstanceNetworkInterfaceSpecification = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LaunchTemplateInstanceNetworkInterfaceSpecification => {
   const contents: any = {};
   if (output[_aCIA] != null) {
@@ -70434,7 +70434,7 @@ const de_LaunchTemplateInstanceNetworkInterfaceSpecification = (
  */
 const de_LaunchTemplateInstanceNetworkInterfaceSpecificationList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LaunchTemplateInstanceNetworkInterfaceSpecification[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -70448,7 +70448,7 @@ const de_LaunchTemplateInstanceNetworkInterfaceSpecificationList = (
  */
 const de_LaunchTemplateLicenseConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LaunchTemplateLicenseConfiguration => {
   const contents: any = {};
   if (output[_lCA] != null) {
@@ -70548,7 +70548,7 @@ const de_LaunchTemplatePlacement = (output: any, context: __SerdeContext): Launc
  */
 const de_LaunchTemplatePrivateDnsNameOptions = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LaunchTemplatePrivateDnsNameOptions => {
   const contents: any = {};
   if (output[_hTo] != null) {
@@ -70629,7 +70629,7 @@ const de_LaunchTemplateTagSpecification = (output: any, context: __SerdeContext)
  */
 const de_LaunchTemplateTagSpecificationList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LaunchTemplateTagSpecification[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -70904,7 +70904,7 @@ const de_LocalGatewayRouteTableSet = (output: any, context: __SerdeContext): Loc
  */
 const de_LocalGatewayRouteTableVirtualInterfaceGroupAssociation = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LocalGatewayRouteTableVirtualInterfaceGroupAssociation => {
   const contents: any = {};
   if (output[_lGRTVIGAI] != null) {
@@ -70941,7 +70941,7 @@ const de_LocalGatewayRouteTableVirtualInterfaceGroupAssociation = (
  */
 const de_LocalGatewayRouteTableVirtualInterfaceGroupAssociationSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LocalGatewayRouteTableVirtualInterfaceGroupAssociation[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -70955,7 +70955,7 @@ const de_LocalGatewayRouteTableVirtualInterfaceGroupAssociationSet = (
  */
 const de_LocalGatewayRouteTableVpcAssociation = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LocalGatewayRouteTableVpcAssociation => {
   const contents: any = {};
   if (output[_lGRTVAI] != null) {
@@ -70992,7 +70992,7 @@ const de_LocalGatewayRouteTableVpcAssociation = (
  */
 const de_LocalGatewayRouteTableVpcAssociationSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LocalGatewayRouteTableVpcAssociation[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -71054,7 +71054,7 @@ const de_LocalGatewayVirtualInterface = (output: any, context: __SerdeContext): 
  */
 const de_LocalGatewayVirtualInterfaceGroup = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LocalGatewayVirtualInterfaceGroup => {
   const contents: any = {};
   if (output[_lGVIGI] != null) {
@@ -71084,7 +71084,7 @@ const de_LocalGatewayVirtualInterfaceGroup = (
  */
 const de_LocalGatewayVirtualInterfaceGroupSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LocalGatewayVirtualInterfaceGroup[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -71454,7 +71454,7 @@ const de_ModifyAddressAttributeResult = (output: any, context: __SerdeContext): 
  */
 const de_ModifyAvailabilityZoneGroupResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyAvailabilityZoneGroupResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -71468,7 +71468,7 @@ const de_ModifyAvailabilityZoneGroupResult = (
  */
 const de_ModifyCapacityReservationFleetResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyCapacityReservationFleetResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -71504,7 +71504,7 @@ const de_ModifyClientVpnEndpointResult = (output: any, context: __SerdeContext):
  */
 const de_ModifyDefaultCreditSpecificationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyDefaultCreditSpecificationResult => {
   const contents: any = {};
   if (output[_iFCS] != null) {
@@ -71569,7 +71569,7 @@ const de_ModifyHostsResult = (output: any, context: __SerdeContext): ModifyHosts
  */
 const de_ModifyInstanceCapacityReservationAttributesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyInstanceCapacityReservationAttributesResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -71583,7 +71583,7 @@ const de_ModifyInstanceCapacityReservationAttributesResult = (
  */
 const de_ModifyInstanceCreditSpecificationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyInstanceCreditSpecificationResult => {
   const contents: any = {};
   if (output.successfulInstanceCreditSpecificationSet === "") {
@@ -71596,7 +71596,7 @@ const de_ModifyInstanceCreditSpecificationResult = (
   } else if (output[_uICSS] != null && output[_uICSS][_i] != null) {
     contents[_UICS] = de_UnsuccessfulInstanceCreditSpecificationSet(
       __getArrayIfSingleItem(output[_uICSS][_i]),
-      context
+      context,
     );
   }
   return contents;
@@ -71607,7 +71607,7 @@ const de_ModifyInstanceCreditSpecificationResult = (
  */
 const de_ModifyInstanceEventStartTimeResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyInstanceEventStartTimeResult => {
   const contents: any = {};
   if (output[_ev] != null) {
@@ -71632,7 +71632,7 @@ const de_ModifyInstanceEventWindowResult = (output: any, context: __SerdeContext
  */
 const de_ModifyInstanceMaintenanceOptionsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyInstanceMaintenanceOptionsResult => {
   const contents: any = {};
   if (output[_iI] != null) {
@@ -71649,7 +71649,7 @@ const de_ModifyInstanceMaintenanceOptionsResult = (
  */
 const de_ModifyInstanceMetadataDefaultsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyInstanceMetadataDefaultsResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -71663,7 +71663,7 @@ const de_ModifyInstanceMetadataDefaultsResult = (
  */
 const de_ModifyInstanceMetadataOptionsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyInstanceMetadataOptionsResult => {
   const contents: any = {};
   if (output[_iI] != null) {
@@ -71713,7 +71713,7 @@ const de_ModifyIpamResourceCidrResult = (output: any, context: __SerdeContext): 
  */
 const de_ModifyIpamResourceDiscoveryResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyIpamResourceDiscoveryResult => {
   const contents: any = {};
   if (output[_iRD] != null) {
@@ -71782,7 +71782,7 @@ const de_ModifyManagedPrefixListResult = (output: any, context: __SerdeContext):
  */
 const de_ModifyPrivateDnsNameOptionsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyPrivateDnsNameOptionsResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -71843,7 +71843,7 @@ const de_ModifySpotFleetRequestResponse = (output: any, context: __SerdeContext)
  */
 const de_ModifyTrafficMirrorFilterNetworkServicesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyTrafficMirrorFilterNetworkServicesResult => {
   const contents: any = {};
   if (output[_tMF] != null) {
@@ -71857,7 +71857,7 @@ const de_ModifyTrafficMirrorFilterNetworkServicesResult = (
  */
 const de_ModifyTrafficMirrorFilterRuleResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyTrafficMirrorFilterRuleResult => {
   const contents: any = {};
   if (output[_tMFR] != null) {
@@ -71871,7 +71871,7 @@ const de_ModifyTrafficMirrorFilterRuleResult = (
  */
 const de_ModifyTrafficMirrorSessionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyTrafficMirrorSessionResult => {
   const contents: any = {};
   if (output[_tMS] != null) {
@@ -71885,7 +71885,7 @@ const de_ModifyTrafficMirrorSessionResult = (
  */
 const de_ModifyTransitGatewayPrefixListReferenceResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyTransitGatewayPrefixListReferenceResult => {
   const contents: any = {};
   if (output[_tGPLR] != null) {
@@ -71910,7 +71910,7 @@ const de_ModifyTransitGatewayResult = (output: any, context: __SerdeContext): Mo
  */
 const de_ModifyTransitGatewayVpcAttachmentResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyTransitGatewayVpcAttachmentResult => {
   const contents: any = {};
   if (output[_tGVA] != null) {
@@ -71924,7 +71924,7 @@ const de_ModifyTransitGatewayVpcAttachmentResult = (
  */
 const de_ModifyVerifiedAccessEndpointPolicyResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyVerifiedAccessEndpointPolicyResult => {
   const contents: any = {};
   if (output[_pE] != null) {
@@ -71944,7 +71944,7 @@ const de_ModifyVerifiedAccessEndpointPolicyResult = (
  */
 const de_ModifyVerifiedAccessEndpointResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyVerifiedAccessEndpointResult => {
   const contents: any = {};
   if (output[_vAE] != null) {
@@ -71958,7 +71958,7 @@ const de_ModifyVerifiedAccessEndpointResult = (
  */
 const de_ModifyVerifiedAccessGroupPolicyResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyVerifiedAccessGroupPolicyResult => {
   const contents: any = {};
   if (output[_pE] != null) {
@@ -71989,7 +71989,7 @@ const de_ModifyVerifiedAccessGroupResult = (output: any, context: __SerdeContext
  */
 const de_ModifyVerifiedAccessInstanceLoggingConfigurationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyVerifiedAccessInstanceLoggingConfigurationResult => {
   const contents: any = {};
   if (output[_lC] != null) {
@@ -72003,7 +72003,7 @@ const de_ModifyVerifiedAccessInstanceLoggingConfigurationResult = (
  */
 const de_ModifyVerifiedAccessInstanceResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyVerifiedAccessInstanceResult => {
   const contents: any = {};
   if (output[_vAI] != null) {
@@ -72017,7 +72017,7 @@ const de_ModifyVerifiedAccessInstanceResult = (
  */
 const de_ModifyVerifiedAccessTrustProviderResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyVerifiedAccessTrustProviderResult => {
   const contents: any = {};
   if (output[_vATP] != null) {
@@ -72042,7 +72042,7 @@ const de_ModifyVolumeResult = (output: any, context: __SerdeContext): ModifyVolu
  */
 const de_ModifyVpcEndpointConnectionNotificationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyVpcEndpointConnectionNotificationResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -72067,7 +72067,7 @@ const de_ModifyVpcEndpointResult = (output: any, context: __SerdeContext): Modif
  */
 const de_ModifyVpcEndpointServiceConfigurationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyVpcEndpointServiceConfigurationResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -72081,7 +72081,7 @@ const de_ModifyVpcEndpointServiceConfigurationResult = (
  */
 const de_ModifyVpcEndpointServicePayerResponsibilityResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyVpcEndpointServicePayerResponsibilityResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -72095,7 +72095,7 @@ const de_ModifyVpcEndpointServicePayerResponsibilityResult = (
  */
 const de_ModifyVpcEndpointServicePermissionsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyVpcEndpointServicePermissionsResult => {
   const contents: any = {};
   if (output.addedPrincipalSet === "") {
@@ -72114,7 +72114,7 @@ const de_ModifyVpcEndpointServicePermissionsResult = (
  */
 const de_ModifyVpcPeeringConnectionOptionsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyVpcPeeringConnectionOptionsResult => {
   const contents: any = {};
   if (output[_aPCO] != null) {
@@ -72142,7 +72142,7 @@ const de_ModifyVpcTenancyResult = (output: any, context: __SerdeContext): Modify
  */
 const de_ModifyVpnConnectionOptionsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyVpnConnectionOptionsResult => {
   const contents: any = {};
   if (output[_vC] != null) {
@@ -72167,7 +72167,7 @@ const de_ModifyVpnConnectionResult = (output: any, context: __SerdeContext): Mod
  */
 const de_ModifyVpnTunnelCertificateResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyVpnTunnelCertificateResult => {
   const contents: any = {};
   if (output[_vC] != null) {
@@ -72607,7 +72607,7 @@ const de_NetworkInsightsAccessScope = (output: any, context: __SerdeContext): Ne
  */
 const de_NetworkInsightsAccessScopeAnalysis = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): NetworkInsightsAccessScopeAnalysis => {
   const contents: any = {};
   if (output[_nIASAI] != null) {
@@ -72653,7 +72653,7 @@ const de_NetworkInsightsAccessScopeAnalysis = (
  */
 const de_NetworkInsightsAccessScopeAnalysisList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): NetworkInsightsAccessScopeAnalysis[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -72667,7 +72667,7 @@ const de_NetworkInsightsAccessScopeAnalysisList = (
  */
 const de_NetworkInsightsAccessScopeContent = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): NetworkInsightsAccessScopeContent => {
   const contents: any = {};
   if (output[_nIASI] != null) {
@@ -73125,7 +73125,7 @@ const de_NetworkInterfacePermissionState = (output: any, context: __SerdeContext
  */
 const de_NetworkInterfacePrivateIpAddress = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): NetworkInterfacePrivateIpAddress => {
   const contents: any = {};
   if (output[_ass] != null) {
@@ -73148,7 +73148,7 @@ const de_NetworkInterfacePrivateIpAddress = (
  */
 const de_NetworkInterfacePrivateIpAddressList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): NetworkInterfacePrivateIpAddress[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -73588,7 +73588,7 @@ const de_Phase1DHGroupNumbersListValue = (output: any, context: __SerdeContext):
  */
 const de_Phase1EncryptionAlgorithmsList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Phase1EncryptionAlgorithmsListValue[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -73602,7 +73602,7 @@ const de_Phase1EncryptionAlgorithmsList = (
  */
 const de_Phase1EncryptionAlgorithmsListValue = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Phase1EncryptionAlgorithmsListValue => {
   const contents: any = {};
   if (output[_v] != null) {
@@ -73616,7 +73616,7 @@ const de_Phase1EncryptionAlgorithmsListValue = (
  */
 const de_Phase1IntegrityAlgorithmsList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Phase1IntegrityAlgorithmsListValue[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -73630,7 +73630,7 @@ const de_Phase1IntegrityAlgorithmsList = (
  */
 const de_Phase1IntegrityAlgorithmsListValue = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Phase1IntegrityAlgorithmsListValue => {
   const contents: any = {};
   if (output[_v] != null) {
@@ -73666,7 +73666,7 @@ const de_Phase2DHGroupNumbersListValue = (output: any, context: __SerdeContext):
  */
 const de_Phase2EncryptionAlgorithmsList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Phase2EncryptionAlgorithmsListValue[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -73680,7 +73680,7 @@ const de_Phase2EncryptionAlgorithmsList = (
  */
 const de_Phase2EncryptionAlgorithmsListValue = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Phase2EncryptionAlgorithmsListValue => {
   const contents: any = {};
   if (output[_v] != null) {
@@ -73694,7 +73694,7 @@ const de_Phase2EncryptionAlgorithmsListValue = (
  */
 const de_Phase2IntegrityAlgorithmsList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Phase2IntegrityAlgorithmsListValue[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -73708,7 +73708,7 @@ const de_Phase2IntegrityAlgorithmsList = (
  */
 const de_Phase2IntegrityAlgorithmsListValue = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Phase2IntegrityAlgorithmsListValue => {
   const contents: any = {};
   if (output[_v] != null) {
@@ -74173,7 +74173,7 @@ const de_PrivateIpAddressSpecification = (output: any, context: __SerdeContext):
  */
 const de_PrivateIpAddressSpecificationList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PrivateIpAddressSpecification[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -74336,7 +74336,7 @@ const de_ProvisionIpamPoolCidrResult = (output: any, context: __SerdeContext): P
  */
 const de_ProvisionPublicIpv4PoolCidrResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ProvisionPublicIpv4PoolCidrResult => {
   const contents: any = {};
   if (output[_pIo] != null) {
@@ -74526,7 +74526,7 @@ const de_PurchaseHostReservationResult = (output: any, context: __SerdeContext):
  */
 const de_PurchaseReservedInstancesOfferingResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PurchaseReservedInstancesOfferingResult => {
   const contents: any = {};
   if (output[_rII] != null) {
@@ -74540,7 +74540,7 @@ const de_PurchaseReservedInstancesOfferingResult = (
  */
 const de_PurchaseScheduledInstancesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PurchaseScheduledInstancesResult => {
   const contents: any = {};
   if (output.scheduledInstanceSet === "") {
@@ -74654,7 +74654,7 @@ const de_RegisterImageResult = (output: any, context: __SerdeContext): RegisterI
  */
 const de_RegisterInstanceEventNotificationAttributesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RegisterInstanceEventNotificationAttributesResult => {
   const contents: any = {};
   if (output[_iTA] != null) {
@@ -74668,7 +74668,7 @@ const de_RegisterInstanceEventNotificationAttributesResult = (
  */
 const de_RegisterTransitGatewayMulticastGroupMembersResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RegisterTransitGatewayMulticastGroupMembersResult => {
   const contents: any = {};
   if (output[_rMGM] != null) {
@@ -74682,7 +74682,7 @@ const de_RegisterTransitGatewayMulticastGroupMembersResult = (
  */
 const de_RegisterTransitGatewayMulticastGroupSourcesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RegisterTransitGatewayMulticastGroupSourcesResult => {
   const contents: any = {};
   if (output[_rMGS] != null) {
@@ -74696,7 +74696,7 @@ const de_RegisterTransitGatewayMulticastGroupSourcesResult = (
  */
 const de_RejectTransitGatewayMulticastDomainAssociationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RejectTransitGatewayMulticastDomainAssociationsResult => {
   const contents: any = {};
   if (output[_a] != null) {
@@ -74710,7 +74710,7 @@ const de_RejectTransitGatewayMulticastDomainAssociationsResult = (
  */
 const de_RejectTransitGatewayPeeringAttachmentResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RejectTransitGatewayPeeringAttachmentResult => {
   const contents: any = {};
   if (output[_tGPA] != null) {
@@ -74724,7 +74724,7 @@ const de_RejectTransitGatewayPeeringAttachmentResult = (
  */
 const de_RejectTransitGatewayVpcAttachmentResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RejectTransitGatewayVpcAttachmentResult => {
   const contents: any = {};
   if (output[_tGVA] != null) {
@@ -74738,7 +74738,7 @@ const de_RejectTransitGatewayVpcAttachmentResult = (
  */
 const de_RejectVpcEndpointConnectionsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RejectVpcEndpointConnectionsResult => {
   const contents: any = {};
   if (output.unsuccessful === "") {
@@ -74754,7 +74754,7 @@ const de_RejectVpcEndpointConnectionsResult = (
  */
 const de_RejectVpcPeeringConnectionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RejectVpcPeeringConnectionResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -74797,7 +74797,7 @@ const de_ReleaseIpamPoolAllocationResult = (output: any, context: __SerdeContext
  */
 const de_ReplaceIamInstanceProfileAssociationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReplaceIamInstanceProfileAssociationResult => {
   const contents: any = {};
   if (output[_iIPA] != null) {
@@ -74811,7 +74811,7 @@ const de_ReplaceIamInstanceProfileAssociationResult = (
  */
 const de_ReplaceNetworkAclAssociationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReplaceNetworkAclAssociationResult => {
   const contents: any = {};
   if (output[_nAIe] != null) {
@@ -74873,7 +74873,7 @@ const de_ReplaceRootVolumeTasks = (output: any, context: __SerdeContext): Replac
  */
 const de_ReplaceRouteTableAssociationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReplaceRouteTableAssociationResult => {
   const contents: any = {};
   if (output[_nAIe] != null) {
@@ -74890,7 +74890,7 @@ const de_ReplaceRouteTableAssociationResult = (
  */
 const de_ReplaceTransitGatewayRouteResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReplaceTransitGatewayRouteResult => {
   const contents: any = {};
   if (output[_ro] != null) {
@@ -74994,7 +74994,7 @@ const de_ReservationValue = (output: any, context: __SerdeContext): ReservationV
  */
 const de_ReservedInstanceReservationValue = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReservedInstanceReservationValue => {
   const contents: any = {};
   if (output[_rVe] != null) {
@@ -75011,7 +75011,7 @@ const de_ReservedInstanceReservationValue = (
  */
 const de_ReservedInstanceReservationValueSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReservedInstanceReservationValue[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -75230,7 +75230,7 @@ const de_ReservedInstancesModification = (output: any, context: __SerdeContext):
  */
 const de_ReservedInstancesModificationList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReservedInstancesModification[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -75244,7 +75244,7 @@ const de_ReservedInstancesModificationList = (
  */
 const de_ReservedInstancesModificationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReservedInstancesModificationResult => {
   const contents: any = {};
   if (output[_rII] != null) {
@@ -75261,7 +75261,7 @@ const de_ReservedInstancesModificationResult = (
  */
 const de_ReservedInstancesModificationResultList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReservedInstancesModificationResult[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -75460,7 +75460,7 @@ const de_ResponseLaunchTemplateData = (output: any, context: __SerdeContext): Re
   } else if (output[_nIS] != null && output[_nIS][_i] != null) {
     contents[_NI] = de_LaunchTemplateInstanceNetworkInterfaceSpecificationList(
       __getArrayIfSingleItem(output[_nIS][_i]),
-      context
+      context,
     );
   }
   if (output[_iIma] != null) {
@@ -75505,7 +75505,7 @@ const de_ResponseLaunchTemplateData = (output: any, context: __SerdeContext): Re
   } else if (output[_eIAS] != null && output[_eIAS][_i] != null) {
     contents[_EIA] = de_LaunchTemplateElasticInferenceAcceleratorResponseList(
       __getArrayIfSingleItem(output[_eIAS][_i]),
-      context
+      context,
     );
   }
   if (output.securityGroupIdSet === "") {
@@ -75578,7 +75578,7 @@ const de_RestoreAddressToClassicResult = (output: any, context: __SerdeContext):
  */
 const de_RestoreImageFromRecycleBinResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RestoreImageFromRecycleBinResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -75592,7 +75592,7 @@ const de_RestoreImageFromRecycleBinResult = (
  */
 const de_RestoreManagedPrefixListVersionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RestoreManagedPrefixListVersionResult => {
   const contents: any = {};
   if (output[_pL] != null) {
@@ -75606,7 +75606,7 @@ const de_RestoreManagedPrefixListVersionResult = (
  */
 const de_RestoreSnapshotFromRecycleBinResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RestoreSnapshotFromRecycleBinResult => {
   const contents: any = {};
   if (output[_sIn] != null) {
@@ -75697,7 +75697,7 @@ const de_RevokeSecurityGroupEgressResult = (output: any, context: __SerdeContext
  */
 const de_RevokeSecurityGroupIngressResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RevokeSecurityGroupIngressResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -76182,7 +76182,7 @@ const de_SearchLocalGatewayRoutesResult = (output: any, context: __SerdeContext)
  */
 const de_SearchTransitGatewayMulticastGroupsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SearchTransitGatewayMulticastGroupsResult => {
   const contents: any = {};
   if (output.multicastGroups === "") {
@@ -76201,7 +76201,7 @@ const de_SearchTransitGatewayMulticastGroupsResult = (
  */
 const de_SearchTransitGatewayRoutesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SearchTransitGatewayRoutesResult => {
   const contents: any = {};
   if (output.routeSet === "") {
@@ -77542,7 +77542,7 @@ const de_StartInstancesResult = (output: any, context: __SerdeContext): StartIns
  */
 const de_StartNetworkInsightsAccessScopeAnalysisResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StartNetworkInsightsAccessScopeAnalysisResult => {
   const contents: any = {};
   if (output[_nIASAe] != null) {
@@ -77556,7 +77556,7 @@ const de_StartNetworkInsightsAccessScopeAnalysisResult = (
  */
 const de_StartNetworkInsightsAnalysisResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StartNetworkInsightsAnalysisResult => {
   const contents: any = {};
   if (output[_nIA] != null) {
@@ -77570,7 +77570,7 @@ const de_StartNetworkInsightsAnalysisResult = (
  */
 const de_StartVpcEndpointServicePrivateDnsVerificationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StartVpcEndpointServicePrivateDnsVerificationResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -77846,7 +77846,7 @@ const de_SubnetIpv6CidrBlockAssociation = (output: any, context: __SerdeContext)
  */
 const de_SubnetIpv6CidrBlockAssociationSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SubnetIpv6CidrBlockAssociation[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -77905,7 +77905,7 @@ const de_SubscriptionList = (output: any, context: __SerdeContext): Subscription
  */
 const de_SuccessfulInstanceCreditSpecificationItem = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SuccessfulInstanceCreditSpecificationItem => {
   const contents: any = {};
   if (output[_iI] != null) {
@@ -77919,7 +77919,7 @@ const de_SuccessfulInstanceCreditSpecificationItem = (
  */
 const de_SuccessfulInstanceCreditSpecificationSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SuccessfulInstanceCreditSpecificationItem[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -77933,7 +77933,7 @@ const de_SuccessfulInstanceCreditSpecificationSet = (
  */
 const de_SuccessfulQueuedPurchaseDeletion = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SuccessfulQueuedPurchaseDeletion => {
   const contents: any = {};
   if (output[_rII] != null) {
@@ -77947,7 +77947,7 @@ const de_SuccessfulQueuedPurchaseDeletion = (
  */
 const de_SuccessfulQueuedPurchaseDeletionSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SuccessfulQueuedPurchaseDeletion[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -77961,7 +77961,7 @@ const de_SuccessfulQueuedPurchaseDeletionSet = (
  */
 const de_SupportedAdditionalProcessorFeatureList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SupportedAdditionalProcessorFeature[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -78205,7 +78205,7 @@ const de_TargetReservationValueSet = (output: any, context: __SerdeContext): Tar
  */
 const de_TerminateClientVpnConnectionsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TerminateClientVpnConnectionsResult => {
   const contents: any = {};
   if (output[_cVEI] != null) {
@@ -78646,7 +78646,7 @@ const de_TransitGatewayAttachment = (output: any, context: __SerdeContext): Tran
  */
 const de_TransitGatewayAttachmentAssociation = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayAttachmentAssociation => {
   const contents: any = {};
   if (output[_tGRTI] != null) {
@@ -78663,7 +78663,7 @@ const de_TransitGatewayAttachmentAssociation = (
  */
 const de_TransitGatewayAttachmentBgpConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayAttachmentBgpConfiguration => {
   const contents: any = {};
   if (output[_tGAran] != null) {
@@ -78689,7 +78689,7 @@ const de_TransitGatewayAttachmentBgpConfiguration = (
  */
 const de_TransitGatewayAttachmentBgpConfigurationList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayAttachmentBgpConfiguration[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -78714,7 +78714,7 @@ const de_TransitGatewayAttachmentList = (output: any, context: __SerdeContext): 
  */
 const de_TransitGatewayAttachmentPropagation = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayAttachmentPropagation => {
   const contents: any = {};
   if (output[_tGRTI] != null) {
@@ -78731,7 +78731,7 @@ const de_TransitGatewayAttachmentPropagation = (
  */
 const de_TransitGatewayAttachmentPropagationList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayAttachmentPropagation[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -78826,7 +78826,7 @@ const de_TransitGatewayConnectPeer = (output: any, context: __SerdeContext): Tra
  */
 const de_TransitGatewayConnectPeerConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayConnectPeerConfiguration => {
   const contents: any = {};
   if (output[_tGArans] != null) {
@@ -78878,7 +78878,7 @@ const de_TransitGatewayList = (output: any, context: __SerdeContext): TransitGat
  */
 const de_TransitGatewayMulticastDeregisteredGroupMembers = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayMulticastDeregisteredGroupMembers => {
   const contents: any = {};
   if (output[_tGMDI] != null) {
@@ -78900,7 +78900,7 @@ const de_TransitGatewayMulticastDeregisteredGroupMembers = (
  */
 const de_TransitGatewayMulticastDeregisteredGroupSources = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayMulticastDeregisteredGroupSources => {
   const contents: any = {};
   if (output[_tGMDI] != null) {
@@ -78956,7 +78956,7 @@ const de_TransitGatewayMulticastDomain = (output: any, context: __SerdeContext):
  */
 const de_TransitGatewayMulticastDomainAssociation = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayMulticastDomainAssociation => {
   const contents: any = {};
   if (output[_tGAI] != null) {
@@ -78982,7 +78982,7 @@ const de_TransitGatewayMulticastDomainAssociation = (
  */
 const de_TransitGatewayMulticastDomainAssociationList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayMulticastDomainAssociation[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -78996,7 +78996,7 @@ const de_TransitGatewayMulticastDomainAssociationList = (
  */
 const de_TransitGatewayMulticastDomainAssociations = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayMulticastDomainAssociations => {
   const contents: any = {};
   if (output[_tGMDI] != null) {
@@ -79027,7 +79027,7 @@ const de_TransitGatewayMulticastDomainAssociations = (
  */
 const de_TransitGatewayMulticastDomainList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayMulticastDomain[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -79041,7 +79041,7 @@ const de_TransitGatewayMulticastDomainList = (
  */
 const de_TransitGatewayMulticastDomainOptions = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayMulticastDomainOptions => {
   const contents: any = {};
   if (output[_iSg] != null) {
@@ -79113,7 +79113,7 @@ const de_TransitGatewayMulticastGroupList = (output: any, context: __SerdeContex
  */
 const de_TransitGatewayMulticastRegisteredGroupMembers = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayMulticastRegisteredGroupMembers => {
   const contents: any = {};
   if (output[_tGMDI] != null) {
@@ -79135,7 +79135,7 @@ const de_TransitGatewayMulticastRegisteredGroupMembers = (
  */
 const de_TransitGatewayMulticastRegisteredGroupSources = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayMulticastRegisteredGroupSources => {
   const contents: any = {};
   if (output[_tGMDI] != null) {
@@ -79237,7 +79237,7 @@ const de_TransitGatewayPeeringAttachment = (output: any, context: __SerdeContext
  */
 const de_TransitGatewayPeeringAttachmentList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayPeeringAttachment[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -79251,7 +79251,7 @@ const de_TransitGatewayPeeringAttachmentList = (
  */
 const de_TransitGatewayPeeringAttachmentOptions = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayPeeringAttachmentOptions => {
   const contents: any = {};
   if (output[_dRy] != null) {
@@ -79291,7 +79291,7 @@ const de_TransitGatewayPolicyRule = (output: any, context: __SerdeContext): Tran
  */
 const de_TransitGatewayPolicyRuleMetaData = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayPolicyRuleMetaData => {
   const contents: any = {};
   if (output[_mDK] != null) {
@@ -79333,7 +79333,7 @@ const de_TransitGatewayPolicyTable = (output: any, context: __SerdeContext): Tra
  */
 const de_TransitGatewayPolicyTableAssociation = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayPolicyTableAssociation => {
   const contents: any = {};
   if (output[_tGPTI] != null) {
@@ -79359,7 +79359,7 @@ const de_TransitGatewayPolicyTableAssociation = (
  */
 const de_TransitGatewayPolicyTableAssociationList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayPolicyTableAssociation[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -79390,7 +79390,7 @@ const de_TransitGatewayPolicyTableEntry = (output: any, context: __SerdeContext)
  */
 const de_TransitGatewayPolicyTableEntryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayPolicyTableEntry[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -79415,7 +79415,7 @@ const de_TransitGatewayPolicyTableList = (output: any, context: __SerdeContext):
  */
 const de_TransitGatewayPrefixListAttachment = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayPrefixListAttachment => {
   const contents: any = {};
   if (output[_tGAI] != null) {
@@ -79435,7 +79435,7 @@ const de_TransitGatewayPrefixListAttachment = (
  */
 const de_TransitGatewayPrefixListReference = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayPrefixListReference => {
   const contents: any = {};
   if (output[_tGRTI] != null) {
@@ -79464,7 +79464,7 @@ const de_TransitGatewayPrefixListReference = (
  */
 const de_TransitGatewayPrefixListReferenceSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayPrefixListReference[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -79549,7 +79549,7 @@ const de_TransitGatewayRouteAttachment = (output: any, context: __SerdeContext):
  */
 const de_TransitGatewayRouteAttachmentList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayRouteAttachment[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -79605,7 +79605,7 @@ const de_TransitGatewayRouteTable = (output: any, context: __SerdeContext): Tran
  */
 const de_TransitGatewayRouteTableAnnouncement = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayRouteTableAnnouncement => {
   const contents: any = {};
   if (output[_tGRTAI] != null) {
@@ -79651,7 +79651,7 @@ const de_TransitGatewayRouteTableAnnouncement = (
  */
 const de_TransitGatewayRouteTableAnnouncementList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayRouteTableAnnouncement[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -79665,7 +79665,7 @@ const de_TransitGatewayRouteTableAnnouncementList = (
  */
 const de_TransitGatewayRouteTableAssociation = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayRouteTableAssociation => {
   const contents: any = {};
   if (output[_tGAI] != null) {
@@ -79688,7 +79688,7 @@ const de_TransitGatewayRouteTableAssociation = (
  */
 const de_TransitGatewayRouteTableAssociationList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayRouteTableAssociation[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -79713,7 +79713,7 @@ const de_TransitGatewayRouteTableList = (output: any, context: __SerdeContext): 
  */
 const de_TransitGatewayRouteTablePropagation = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayRouteTablePropagation => {
   const contents: any = {};
   if (output[_tGAI] != null) {
@@ -79739,7 +79739,7 @@ const de_TransitGatewayRouteTablePropagation = (
  */
 const de_TransitGatewayRouteTablePropagationList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayRouteTablePropagation[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -79832,7 +79832,7 @@ const de_TransitGatewayVpcAttachmentList = (output: any, context: __SerdeContext
  */
 const de_TransitGatewayVpcAttachmentOptions = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayVpcAttachmentOptions => {
   const contents: any = {};
   if (output[_dSn] != null) {
@@ -80014,7 +80014,7 @@ const de_UnassignIpv6AddressesResult = (output: any, context: __SerdeContext): U
  */
 const de_UnassignPrivateNatGatewayAddressResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UnassignPrivateNatGatewayAddressResult => {
   const contents: any = {};
   if (output[_nGI] != null) {
@@ -80057,7 +80057,7 @@ const de_UnmonitorInstancesResult = (output: any, context: __SerdeContext): Unmo
  */
 const de_UnsuccessfulInstanceCreditSpecificationItem = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UnsuccessfulInstanceCreditSpecificationItem => {
   const contents: any = {};
   if (output[_iI] != null) {
@@ -80074,7 +80074,7 @@ const de_UnsuccessfulInstanceCreditSpecificationItem = (
  */
 const de_UnsuccessfulInstanceCreditSpecificationItemError = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UnsuccessfulInstanceCreditSpecificationItemError => {
   const contents: any = {};
   if (output[_co] != null) {
@@ -80091,7 +80091,7 @@ const de_UnsuccessfulInstanceCreditSpecificationItemError = (
  */
 const de_UnsuccessfulInstanceCreditSpecificationSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UnsuccessfulInstanceCreditSpecificationItem[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -80155,7 +80155,7 @@ const de_UnsuccessfulItemSet = (output: any, context: __SerdeContext): Unsuccess
  */
 const de_UpdateSecurityGroupRuleDescriptionsEgressResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateSecurityGroupRuleDescriptionsEgressResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -80169,7 +80169,7 @@ const de_UpdateSecurityGroupRuleDescriptionsEgressResult = (
  */
 const de_UpdateSecurityGroupRuleDescriptionsIngressResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateSecurityGroupRuleDescriptionsIngressResult => {
   const contents: any = {};
   if (output[_r] != null) {
@@ -80407,7 +80407,7 @@ const de_VerifiedAccessEndpoint = (output: any, context: __SerdeContext): Verifi
  */
 const de_VerifiedAccessEndpointEniOptions = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): VerifiedAccessEndpointEniOptions => {
   const contents: any = {};
   if (output[_nII] != null) {
@@ -80438,7 +80438,7 @@ const de_VerifiedAccessEndpointList = (output: any, context: __SerdeContext): Ve
  */
 const de_VerifiedAccessEndpointLoadBalancerOptions = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): VerifiedAccessEndpointLoadBalancerOptions => {
   const contents: any = {};
   if (output[_pr] != null) {
@@ -80583,7 +80583,7 @@ const de_VerifiedAccessInstanceList = (output: any, context: __SerdeContext): Ve
  */
 const de_VerifiedAccessInstanceLoggingConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): VerifiedAccessInstanceLoggingConfiguration => {
   const contents: any = {};
   if (output[_vAII] != null) {
@@ -80600,7 +80600,7 @@ const de_VerifiedAccessInstanceLoggingConfiguration = (
  */
 const de_VerifiedAccessInstanceLoggingConfigurationList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): VerifiedAccessInstanceLoggingConfiguration[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -80614,7 +80614,7 @@ const de_VerifiedAccessInstanceLoggingConfigurationList = (
  */
 const de_VerifiedAccessLogCloudWatchLogsDestination = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): VerifiedAccessLogCloudWatchLogsDestination => {
   const contents: any = {};
   if (output[_en] != null) {
@@ -80648,7 +80648,7 @@ const de_VerifiedAccessLogDeliveryStatus = (output: any, context: __SerdeContext
  */
 const de_VerifiedAccessLogKinesisDataFirehoseDestination = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): VerifiedAccessLogKinesisDataFirehoseDestination => {
   const contents: any = {};
   if (output[_en] != null) {
@@ -80714,7 +80714,7 @@ const de_VerifiedAccessLogS3Destination = (output: any, context: __SerdeContext)
  */
 const de_VerifiedAccessSseSpecificationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): VerifiedAccessSseSpecificationResponse => {
   const contents: any = {};
   if (output[_cMKE] != null) {
@@ -80777,7 +80777,7 @@ const de_VerifiedAccessTrustProvider = (output: any, context: __SerdeContext): V
  */
 const de_VerifiedAccessTrustProviderCondensed = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): VerifiedAccessTrustProviderCondensed => {
   const contents: any = {};
   if (output[_vATPI] != null) {
@@ -80803,7 +80803,7 @@ const de_VerifiedAccessTrustProviderCondensed = (
  */
 const de_VerifiedAccessTrustProviderCondensedList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): VerifiedAccessTrustProviderCondensed[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -81613,7 +81613,7 @@ const de_VpcPeeringConnectionList = (output: any, context: __SerdeContext): VpcP
  */
 const de_VpcPeeringConnectionOptionsDescription = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): VpcPeeringConnectionOptionsDescription => {
   const contents: any = {};
   if (output[_aDRFRV] != null) {
@@ -81928,7 +81928,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

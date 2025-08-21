@@ -28,7 +28,7 @@ const checkState = async (client: CloudFrontClient, input: GetInvalidationComman
  */
 export const waitForInvalidationCompleted = async (
   params: WaiterConfiguration<CloudFrontClient>,
-  input: GetInvalidationCommandInput
+  input: GetInvalidationCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 20, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -40,7 +40,7 @@ export const waitForInvalidationCompleted = async (
  */
 export const waitUntilInvalidationCompleted = async (
   params: WaiterConfiguration<CloudFrontClient>,
-  input: GetInvalidationCommandInput
+  input: GetInvalidationCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 20, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

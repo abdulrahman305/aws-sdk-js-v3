@@ -28,7 +28,7 @@ const checkState = async (client: KinesisClient, input: DescribeStreamCommandInp
  */
 export const waitForStreamExists = async (
   params: WaiterConfiguration<KinesisClient>,
-  input: DescribeStreamCommandInput
+  input: DescribeStreamCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -40,7 +40,7 @@ export const waitForStreamExists = async (
  */
 export const waitUntilStreamExists = async (
   params: WaiterConfiguration<KinesisClient>,
-  input: DescribeStreamCommandInput
+  input: DescribeStreamCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

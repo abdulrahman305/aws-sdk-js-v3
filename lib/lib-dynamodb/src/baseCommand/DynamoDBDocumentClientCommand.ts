@@ -27,7 +27,7 @@ export abstract class DynamoDBDocumentClientCommand<
   Output extends object,
   BaseInput extends object,
   BaseOutput extends object,
-  ResolvedClientConfiguration
+  ResolvedClientConfiguration,
 > extends $Command<Input | BaseInput, Output | BaseOutput, ResolvedClientConfiguration> {
   protected abstract readonly inputKeyNodes: KeyNodeChildren;
   protected abstract readonly outputKeyNodes: KeyNodeChildren;
@@ -49,7 +49,7 @@ export abstract class DynamoDBDocumentClientCommand<
     this.clientCommand.middlewareStack.addRelativeTo(
       (next: InitializeHandler<Input | BaseInput, Output | BaseOutput>, context: HandlerExecutionContext) =>
         async (
-          args: InitializeHandlerArguments<Input | BaseInput>
+          args: InitializeHandlerArguments<Input | BaseInput>,
         ): Promise<InitializeHandlerOutput<Output | BaseOutput>> => {
           args.input = marshallInput(this.input, this.inputKeyNodes, marshallOptions);
           context.dynamoDbDocumentClientOptions =
@@ -66,12 +66,12 @@ export abstract class DynamoDBDocumentClientCommand<
         relation: "before",
         toMiddleware: "serializerMiddleware",
         override: true,
-      }
+      },
     );
     this.clientCommand.middlewareStack.addRelativeTo(
       (next: DeserializeHandler<Input | BaseInput, Output | BaseOutput>, context: HandlerExecutionContext) =>
         async (
-          args: DeserializeHandlerArguments<Input | BaseInput>
+          args: DeserializeHandlerArguments<Input | BaseInput>,
         ): Promise<DeserializeHandlerOutput<Output | BaseOutput>> => {
           const deserialized = await next(args);
 
@@ -97,7 +97,7 @@ export abstract class DynamoDBDocumentClientCommand<
         relation: "before",
         toMiddleware: "deserializerMiddleware",
         override: true,
-      }
+      },
     );
   }
 }

@@ -159,7 +159,7 @@ import {
  */
 export const se_CreateDeliveryStreamCommand = async (
   input: CreateDeliveryStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDeliveryStream");
   let body: any;
@@ -172,7 +172,7 @@ export const se_CreateDeliveryStreamCommand = async (
  */
 export const se_DeleteDeliveryStreamCommand = async (
   input: DeleteDeliveryStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDeliveryStream");
   let body: any;
@@ -185,7 +185,7 @@ export const se_DeleteDeliveryStreamCommand = async (
  */
 export const se_DescribeDeliveryStreamCommand = async (
   input: DescribeDeliveryStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDeliveryStream");
   let body: any;
@@ -198,7 +198,7 @@ export const se_DescribeDeliveryStreamCommand = async (
  */
 export const se_ListDeliveryStreamsCommand = async (
   input: ListDeliveryStreamsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDeliveryStreams");
   let body: any;
@@ -211,7 +211,7 @@ export const se_ListDeliveryStreamsCommand = async (
  */
 export const se_ListTagsForDeliveryStreamCommand = async (
   input: ListTagsForDeliveryStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForDeliveryStream");
   let body: any;
@@ -224,7 +224,7 @@ export const se_ListTagsForDeliveryStreamCommand = async (
  */
 export const se_PutRecordCommand = async (
   input: PutRecordCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutRecord");
   let body: any;
@@ -237,7 +237,7 @@ export const se_PutRecordCommand = async (
  */
 export const se_PutRecordBatchCommand = async (
   input: PutRecordBatchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutRecordBatch");
   let body: any;
@@ -250,7 +250,7 @@ export const se_PutRecordBatchCommand = async (
  */
 export const se_StartDeliveryStreamEncryptionCommand = async (
   input: StartDeliveryStreamEncryptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartDeliveryStreamEncryption");
   let body: any;
@@ -263,7 +263,7 @@ export const se_StartDeliveryStreamEncryptionCommand = async (
  */
 export const se_StopDeliveryStreamEncryptionCommand = async (
   input: StopDeliveryStreamEncryptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopDeliveryStreamEncryption");
   let body: any;
@@ -276,7 +276,7 @@ export const se_StopDeliveryStreamEncryptionCommand = async (
  */
 export const se_TagDeliveryStreamCommand = async (
   input: TagDeliveryStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagDeliveryStream");
   let body: any;
@@ -289,7 +289,7 @@ export const se_TagDeliveryStreamCommand = async (
  */
 export const se_UntagDeliveryStreamCommand = async (
   input: UntagDeliveryStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagDeliveryStream");
   let body: any;
@@ -302,7 +302,7 @@ export const se_UntagDeliveryStreamCommand = async (
  */
 export const se_UpdateDestinationCommand = async (
   input: UpdateDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateDestination");
   let body: any;
@@ -315,7 +315,7 @@ export const se_UpdateDestinationCommand = async (
  */
 export const de_CreateDeliveryStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDeliveryStreamCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -335,7 +335,7 @@ export const de_CreateDeliveryStreamCommand = async (
  */
 export const de_DeleteDeliveryStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDeliveryStreamCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -355,7 +355,7 @@ export const de_DeleteDeliveryStreamCommand = async (
  */
 export const de_DescribeDeliveryStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDeliveryStreamCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -375,7 +375,7 @@ export const de_DescribeDeliveryStreamCommand = async (
  */
 export const de_ListDeliveryStreamsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDeliveryStreamsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -395,7 +395,7 @@ export const de_ListDeliveryStreamsCommand = async (
  */
 export const de_ListTagsForDeliveryStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForDeliveryStreamCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -415,7 +415,7 @@ export const de_ListTagsForDeliveryStreamCommand = async (
  */
 export const de_PutRecordCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutRecordCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -435,7 +435,7 @@ export const de_PutRecordCommand = async (
  */
 export const de_PutRecordBatchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutRecordBatchCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -455,7 +455,7 @@ export const de_PutRecordBatchCommand = async (
  */
 export const de_StartDeliveryStreamEncryptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartDeliveryStreamEncryptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -475,7 +475,7 @@ export const de_StartDeliveryStreamEncryptionCommand = async (
  */
 export const de_StopDeliveryStreamEncryptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopDeliveryStreamEncryptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -495,7 +495,7 @@ export const de_StopDeliveryStreamEncryptionCommand = async (
  */
 export const de_TagDeliveryStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagDeliveryStreamCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -515,7 +515,7 @@ export const de_TagDeliveryStreamCommand = async (
  */
 export const de_UntagDeliveryStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagDeliveryStreamCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -535,7 +535,7 @@ export const de_UntagDeliveryStreamCommand = async (
  */
 export const de_UpdateDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDestinationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -599,7 +599,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -615,7 +615,7 @@ const de_ConcurrentModificationExceptionRes = async (
  */
 const de_InvalidArgumentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidArgumentException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -631,7 +631,7 @@ const de_InvalidArgumentExceptionRes = async (
  */
 const de_InvalidKMSResourceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidKMSResourceException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -647,7 +647,7 @@ const de_InvalidKMSResourceExceptionRes = async (
  */
 const de_InvalidSourceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSourceException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -663,7 +663,7 @@ const de_InvalidSourceExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -679,7 +679,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -695,7 +695,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -711,7 +711,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -776,7 +776,7 @@ const se_CreateDeliveryStreamInput = (input: CreateDeliveryStreamInput, context:
  */
 const se_DataFormatConversionConfiguration = (
   input: DataFormatConversionConfiguration,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Enabled: [],
@@ -813,7 +813,7 @@ const se_DataFormatConversionConfiguration = (
  */
 const se_ExtendedS3DestinationConfiguration = (
   input: ExtendedS3DestinationConfiguration,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     BucketARN: [],
@@ -1087,7 +1087,7 @@ const se_UpdateDestinationInput = (input: UpdateDestinationInput, context: __Ser
  */
 const de_DataFormatConversionConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DataFormatConversionConfiguration => {
   return take(output, {
     Enabled: __expectBoolean,
@@ -1181,7 +1181,7 @@ const de_DestinationDescriptionList = (output: any, context: __SerdeContext): De
  */
 const de_ExtendedS3DestinationDescription = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ExtendedS3DestinationDescription => {
   return take(output, {
     BucketARN: __expectString,
@@ -1402,7 +1402,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

@@ -32,7 +32,7 @@ export const fromHttp = (options: FromHttpOptions = {}): AwsCredentialIdentityPr
   if (relative && full) {
     warn(
       "@aws-sdk/credential-provider-http: " +
-        "you have set both awsContainerCredentialsRelativeUri and awsContainerCredentialsFullUri."
+        "you have set both awsContainerCredentialsRelativeUri and awsContainerCredentialsFullUri.",
     );
     warn("awsContainerCredentialsFullUri will take precedence.");
   }
@@ -40,7 +40,7 @@ export const fromHttp = (options: FromHttpOptions = {}): AwsCredentialIdentityPr
   if (token && tokenFile) {
     warn(
       "@aws-sdk/credential-provider-http: " +
-        "you have set both awsContainerAuthorizationToken and awsContainerAuthorizationTokenFile."
+        "you have set both awsContainerAuthorizationToken and awsContainerAuthorizationTokenFile.",
     );
     warn("awsContainerAuthorizationToken will take precedence.");
   }
@@ -53,7 +53,7 @@ export const fromHttp = (options: FromHttpOptions = {}): AwsCredentialIdentityPr
     throw new CredentialsProviderError(
       `No HTTP credential provider host provided.
 Set AWS_CONTAINER_CREDENTIALS_FULL_URI or AWS_CONTAINER_CREDENTIALS_RELATIVE_URI.`,
-      { logger: options.logger }
+      { logger: options.logger },
     );
   }
 
@@ -87,6 +87,6 @@ Set AWS_CONTAINER_CREDENTIALS_FULL_URI or AWS_CONTAINER_CREDENTIALS_RELATIVE_URI
       }
     },
     options.maxRetries ?? 3,
-    options.timeout ?? 1000
+    options.timeout ?? 1000,
   );
 };

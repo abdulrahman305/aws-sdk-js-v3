@@ -151,16 +151,16 @@ export interface CodeConnections {
    */
   createConnection(
     args: CreateConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateConnectionCommandOutput>;
   createConnection(
     args: CreateConnectionCommandInput,
-    cb: (err: any, data?: CreateConnectionCommandOutput) => void
+    cb: (err: any, data?: CreateConnectionCommandOutput) => void,
   ): void;
   createConnection(
     args: CreateConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateConnectionCommandOutput) => void
+    cb: (err: any, data?: CreateConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -171,7 +171,7 @@ export interface CodeConnections {
   createHost(
     args: CreateHostCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateHostCommandOutput) => void
+    cb: (err: any, data?: CreateHostCommandOutput) => void,
   ): void;
 
   /**
@@ -179,16 +179,16 @@ export interface CodeConnections {
    */
   createRepositoryLink(
     args: CreateRepositoryLinkCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRepositoryLinkCommandOutput>;
   createRepositoryLink(
     args: CreateRepositoryLinkCommandInput,
-    cb: (err: any, data?: CreateRepositoryLinkCommandOutput) => void
+    cb: (err: any, data?: CreateRepositoryLinkCommandOutput) => void,
   ): void;
   createRepositoryLink(
     args: CreateRepositoryLinkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRepositoryLinkCommandOutput) => void
+    cb: (err: any, data?: CreateRepositoryLinkCommandOutput) => void,
   ): void;
 
   /**
@@ -196,16 +196,16 @@ export interface CodeConnections {
    */
   createSyncConfiguration(
     args: CreateSyncConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSyncConfigurationCommandOutput>;
   createSyncConfiguration(
     args: CreateSyncConfigurationCommandInput,
-    cb: (err: any, data?: CreateSyncConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateSyncConfigurationCommandOutput) => void,
   ): void;
   createSyncConfiguration(
     args: CreateSyncConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSyncConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateSyncConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -213,16 +213,16 @@ export interface CodeConnections {
    */
   deleteConnection(
     args: DeleteConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConnectionCommandOutput>;
   deleteConnection(
     args: DeleteConnectionCommandInput,
-    cb: (err: any, data?: DeleteConnectionCommandOutput) => void
+    cb: (err: any, data?: DeleteConnectionCommandOutput) => void,
   ): void;
   deleteConnection(
     args: DeleteConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConnectionCommandOutput) => void
+    cb: (err: any, data?: DeleteConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -233,7 +233,7 @@ export interface CodeConnections {
   deleteHost(
     args: DeleteHostCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteHostCommandOutput) => void
+    cb: (err: any, data?: DeleteHostCommandOutput) => void,
   ): void;
 
   /**
@@ -241,16 +241,16 @@ export interface CodeConnections {
    */
   deleteRepositoryLink(
     args: DeleteRepositoryLinkCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRepositoryLinkCommandOutput>;
   deleteRepositoryLink(
     args: DeleteRepositoryLinkCommandInput,
-    cb: (err: any, data?: DeleteRepositoryLinkCommandOutput) => void
+    cb: (err: any, data?: DeleteRepositoryLinkCommandOutput) => void,
   ): void;
   deleteRepositoryLink(
     args: DeleteRepositoryLinkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRepositoryLinkCommandOutput) => void
+    cb: (err: any, data?: DeleteRepositoryLinkCommandOutput) => void,
   ): void;
 
   /**
@@ -258,16 +258,16 @@ export interface CodeConnections {
    */
   deleteSyncConfiguration(
     args: DeleteSyncConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSyncConfigurationCommandOutput>;
   deleteSyncConfiguration(
     args: DeleteSyncConfigurationCommandInput,
-    cb: (err: any, data?: DeleteSyncConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteSyncConfigurationCommandOutput) => void,
   ): void;
   deleteSyncConfiguration(
     args: DeleteSyncConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSyncConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteSyncConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -278,7 +278,7 @@ export interface CodeConnections {
   getConnection(
     args: GetConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetConnectionCommandOutput) => void
+    cb: (err: any, data?: GetConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -289,7 +289,7 @@ export interface CodeConnections {
   getHost(
     args: GetHostCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetHostCommandOutput) => void
+    cb: (err: any, data?: GetHostCommandOutput) => void,
   ): void;
 
   /**
@@ -297,16 +297,16 @@ export interface CodeConnections {
    */
   getRepositoryLink(
     args: GetRepositoryLinkCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRepositoryLinkCommandOutput>;
   getRepositoryLink(
     args: GetRepositoryLinkCommandInput,
-    cb: (err: any, data?: GetRepositoryLinkCommandOutput) => void
+    cb: (err: any, data?: GetRepositoryLinkCommandOutput) => void,
   ): void;
   getRepositoryLink(
     args: GetRepositoryLinkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRepositoryLinkCommandOutput) => void
+    cb: (err: any, data?: GetRepositoryLinkCommandOutput) => void,
   ): void;
 
   /**
@@ -314,16 +314,16 @@ export interface CodeConnections {
    */
   getRepositorySyncStatus(
     args: GetRepositorySyncStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRepositorySyncStatusCommandOutput>;
   getRepositorySyncStatus(
     args: GetRepositorySyncStatusCommandInput,
-    cb: (err: any, data?: GetRepositorySyncStatusCommandOutput) => void
+    cb: (err: any, data?: GetRepositorySyncStatusCommandOutput) => void,
   ): void;
   getRepositorySyncStatus(
     args: GetRepositorySyncStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRepositorySyncStatusCommandOutput) => void
+    cb: (err: any, data?: GetRepositorySyncStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -331,16 +331,16 @@ export interface CodeConnections {
    */
   getResourceSyncStatus(
     args: GetResourceSyncStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResourceSyncStatusCommandOutput>;
   getResourceSyncStatus(
     args: GetResourceSyncStatusCommandInput,
-    cb: (err: any, data?: GetResourceSyncStatusCommandOutput) => void
+    cb: (err: any, data?: GetResourceSyncStatusCommandOutput) => void,
   ): void;
   getResourceSyncStatus(
     args: GetResourceSyncStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourceSyncStatusCommandOutput) => void
+    cb: (err: any, data?: GetResourceSyncStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -348,16 +348,16 @@ export interface CodeConnections {
    */
   getSyncBlockerSummary(
     args: GetSyncBlockerSummaryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSyncBlockerSummaryCommandOutput>;
   getSyncBlockerSummary(
     args: GetSyncBlockerSummaryCommandInput,
-    cb: (err: any, data?: GetSyncBlockerSummaryCommandOutput) => void
+    cb: (err: any, data?: GetSyncBlockerSummaryCommandOutput) => void,
   ): void;
   getSyncBlockerSummary(
     args: GetSyncBlockerSummaryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSyncBlockerSummaryCommandOutput) => void
+    cb: (err: any, data?: GetSyncBlockerSummaryCommandOutput) => void,
   ): void;
 
   /**
@@ -365,16 +365,16 @@ export interface CodeConnections {
    */
   getSyncConfiguration(
     args: GetSyncConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSyncConfigurationCommandOutput>;
   getSyncConfiguration(
     args: GetSyncConfigurationCommandInput,
-    cb: (err: any, data?: GetSyncConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetSyncConfigurationCommandOutput) => void,
   ): void;
   getSyncConfiguration(
     args: GetSyncConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSyncConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetSyncConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -383,13 +383,13 @@ export interface CodeConnections {
   listConnections(): Promise<ListConnectionsCommandOutput>;
   listConnections(
     args: ListConnectionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListConnectionsCommandOutput>;
   listConnections(args: ListConnectionsCommandInput, cb: (err: any, data?: ListConnectionsCommandOutput) => void): void;
   listConnections(
     args: ListConnectionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListConnectionsCommandOutput) => void
+    cb: (err: any, data?: ListConnectionsCommandOutput) => void,
   ): void;
 
   /**
@@ -401,7 +401,7 @@ export interface CodeConnections {
   listHosts(
     args: ListHostsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListHostsCommandOutput) => void
+    cb: (err: any, data?: ListHostsCommandOutput) => void,
   ): void;
 
   /**
@@ -410,16 +410,16 @@ export interface CodeConnections {
   listRepositoryLinks(): Promise<ListRepositoryLinksCommandOutput>;
   listRepositoryLinks(
     args: ListRepositoryLinksCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRepositoryLinksCommandOutput>;
   listRepositoryLinks(
     args: ListRepositoryLinksCommandInput,
-    cb: (err: any, data?: ListRepositoryLinksCommandOutput) => void
+    cb: (err: any, data?: ListRepositoryLinksCommandOutput) => void,
   ): void;
   listRepositoryLinks(
     args: ListRepositoryLinksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRepositoryLinksCommandOutput) => void
+    cb: (err: any, data?: ListRepositoryLinksCommandOutput) => void,
   ): void;
 
   /**
@@ -427,16 +427,16 @@ export interface CodeConnections {
    */
   listRepositorySyncDefinitions(
     args: ListRepositorySyncDefinitionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRepositorySyncDefinitionsCommandOutput>;
   listRepositorySyncDefinitions(
     args: ListRepositorySyncDefinitionsCommandInput,
-    cb: (err: any, data?: ListRepositorySyncDefinitionsCommandOutput) => void
+    cb: (err: any, data?: ListRepositorySyncDefinitionsCommandOutput) => void,
   ): void;
   listRepositorySyncDefinitions(
     args: ListRepositorySyncDefinitionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRepositorySyncDefinitionsCommandOutput) => void
+    cb: (err: any, data?: ListRepositorySyncDefinitionsCommandOutput) => void,
   ): void;
 
   /**
@@ -444,16 +444,16 @@ export interface CodeConnections {
    */
   listSyncConfigurations(
     args: ListSyncConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSyncConfigurationsCommandOutput>;
   listSyncConfigurations(
     args: ListSyncConfigurationsCommandInput,
-    cb: (err: any, data?: ListSyncConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListSyncConfigurationsCommandOutput) => void,
   ): void;
   listSyncConfigurations(
     args: ListSyncConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSyncConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListSyncConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -461,16 +461,16 @@ export interface CodeConnections {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -481,7 +481,7 @@ export interface CodeConnections {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -492,7 +492,7 @@ export interface CodeConnections {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -503,7 +503,7 @@ export interface CodeConnections {
   updateHost(
     args: UpdateHostCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateHostCommandOutput) => void
+    cb: (err: any, data?: UpdateHostCommandOutput) => void,
   ): void;
 
   /**
@@ -511,16 +511,16 @@ export interface CodeConnections {
    */
   updateRepositoryLink(
     args: UpdateRepositoryLinkCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRepositoryLinkCommandOutput>;
   updateRepositoryLink(
     args: UpdateRepositoryLinkCommandInput,
-    cb: (err: any, data?: UpdateRepositoryLinkCommandOutput) => void
+    cb: (err: any, data?: UpdateRepositoryLinkCommandOutput) => void,
   ): void;
   updateRepositoryLink(
     args: UpdateRepositoryLinkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRepositoryLinkCommandOutput) => void
+    cb: (err: any, data?: UpdateRepositoryLinkCommandOutput) => void,
   ): void;
 
   /**
@@ -528,16 +528,16 @@ export interface CodeConnections {
    */
   updateSyncBlocker(
     args: UpdateSyncBlockerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSyncBlockerCommandOutput>;
   updateSyncBlocker(
     args: UpdateSyncBlockerCommandInput,
-    cb: (err: any, data?: UpdateSyncBlockerCommandOutput) => void
+    cb: (err: any, data?: UpdateSyncBlockerCommandOutput) => void,
   ): void;
   updateSyncBlocker(
     args: UpdateSyncBlockerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSyncBlockerCommandOutput) => void
+    cb: (err: any, data?: UpdateSyncBlockerCommandOutput) => void,
   ): void;
 
   /**
@@ -545,16 +545,16 @@ export interface CodeConnections {
    */
   updateSyncConfiguration(
     args: UpdateSyncConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSyncConfigurationCommandOutput>;
   updateSyncConfiguration(
     args: UpdateSyncConfigurationCommandInput,
-    cb: (err: any, data?: UpdateSyncConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateSyncConfigurationCommandOutput) => void,
   ): void;
   updateSyncConfiguration(
     args: UpdateSyncConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSyncConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateSyncConfigurationCommandOutput) => void,
   ): void;
 }
 

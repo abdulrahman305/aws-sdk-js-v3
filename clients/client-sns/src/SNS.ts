@@ -240,7 +240,7 @@ export interface SNS {
   addPermission(
     args: AddPermissionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddPermissionCommandOutput) => void
+    cb: (err: any, data?: AddPermissionCommandOutput) => void,
   ): void;
 
   /**
@@ -248,16 +248,16 @@ export interface SNS {
    */
   checkIfPhoneNumberIsOptedOut(
     args: CheckIfPhoneNumberIsOptedOutCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CheckIfPhoneNumberIsOptedOutCommandOutput>;
   checkIfPhoneNumberIsOptedOut(
     args: CheckIfPhoneNumberIsOptedOutCommandInput,
-    cb: (err: any, data?: CheckIfPhoneNumberIsOptedOutCommandOutput) => void
+    cb: (err: any, data?: CheckIfPhoneNumberIsOptedOutCommandOutput) => void,
   ): void;
   checkIfPhoneNumberIsOptedOut(
     args: CheckIfPhoneNumberIsOptedOutCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CheckIfPhoneNumberIsOptedOutCommandOutput) => void
+    cb: (err: any, data?: CheckIfPhoneNumberIsOptedOutCommandOutput) => void,
   ): void;
 
   /**
@@ -265,16 +265,16 @@ export interface SNS {
    */
   confirmSubscription(
     args: ConfirmSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ConfirmSubscriptionCommandOutput>;
   confirmSubscription(
     args: ConfirmSubscriptionCommandInput,
-    cb: (err: any, data?: ConfirmSubscriptionCommandOutput) => void
+    cb: (err: any, data?: ConfirmSubscriptionCommandOutput) => void,
   ): void;
   confirmSubscription(
     args: ConfirmSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ConfirmSubscriptionCommandOutput) => void
+    cb: (err: any, data?: ConfirmSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -282,16 +282,16 @@ export interface SNS {
    */
   createPlatformApplication(
     args: CreatePlatformApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePlatformApplicationCommandOutput>;
   createPlatformApplication(
     args: CreatePlatformApplicationCommandInput,
-    cb: (err: any, data?: CreatePlatformApplicationCommandOutput) => void
+    cb: (err: any, data?: CreatePlatformApplicationCommandOutput) => void,
   ): void;
   createPlatformApplication(
     args: CreatePlatformApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePlatformApplicationCommandOutput) => void
+    cb: (err: any, data?: CreatePlatformApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -299,16 +299,16 @@ export interface SNS {
    */
   createPlatformEndpoint(
     args: CreatePlatformEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePlatformEndpointCommandOutput>;
   createPlatformEndpoint(
     args: CreatePlatformEndpointCommandInput,
-    cb: (err: any, data?: CreatePlatformEndpointCommandOutput) => void
+    cb: (err: any, data?: CreatePlatformEndpointCommandOutput) => void,
   ): void;
   createPlatformEndpoint(
     args: CreatePlatformEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePlatformEndpointCommandOutput) => void
+    cb: (err: any, data?: CreatePlatformEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -316,16 +316,16 @@ export interface SNS {
    */
   createSMSSandboxPhoneNumber(
     args: CreateSMSSandboxPhoneNumberCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSMSSandboxPhoneNumberCommandOutput>;
   createSMSSandboxPhoneNumber(
     args: CreateSMSSandboxPhoneNumberCommandInput,
-    cb: (err: any, data?: CreateSMSSandboxPhoneNumberCommandOutput) => void
+    cb: (err: any, data?: CreateSMSSandboxPhoneNumberCommandOutput) => void,
   ): void;
   createSMSSandboxPhoneNumber(
     args: CreateSMSSandboxPhoneNumberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSMSSandboxPhoneNumberCommandOutput) => void
+    cb: (err: any, data?: CreateSMSSandboxPhoneNumberCommandOutput) => void,
   ): void;
 
   /**
@@ -336,7 +336,7 @@ export interface SNS {
   createTopic(
     args: CreateTopicCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTopicCommandOutput) => void
+    cb: (err: any, data?: CreateTopicCommandOutput) => void,
   ): void;
 
   /**
@@ -344,13 +344,13 @@ export interface SNS {
    */
   deleteEndpoint(
     args: DeleteEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEndpointCommandOutput>;
   deleteEndpoint(args: DeleteEndpointCommandInput, cb: (err: any, data?: DeleteEndpointCommandOutput) => void): void;
   deleteEndpoint(
     args: DeleteEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEndpointCommandOutput) => void
+    cb: (err: any, data?: DeleteEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -358,16 +358,16 @@ export interface SNS {
    */
   deletePlatformApplication(
     args: DeletePlatformApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePlatformApplicationCommandOutput>;
   deletePlatformApplication(
     args: DeletePlatformApplicationCommandInput,
-    cb: (err: any, data?: DeletePlatformApplicationCommandOutput) => void
+    cb: (err: any, data?: DeletePlatformApplicationCommandOutput) => void,
   ): void;
   deletePlatformApplication(
     args: DeletePlatformApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePlatformApplicationCommandOutput) => void
+    cb: (err: any, data?: DeletePlatformApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -375,16 +375,16 @@ export interface SNS {
    */
   deleteSMSSandboxPhoneNumber(
     args: DeleteSMSSandboxPhoneNumberCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSMSSandboxPhoneNumberCommandOutput>;
   deleteSMSSandboxPhoneNumber(
     args: DeleteSMSSandboxPhoneNumberCommandInput,
-    cb: (err: any, data?: DeleteSMSSandboxPhoneNumberCommandOutput) => void
+    cb: (err: any, data?: DeleteSMSSandboxPhoneNumberCommandOutput) => void,
   ): void;
   deleteSMSSandboxPhoneNumber(
     args: DeleteSMSSandboxPhoneNumberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSMSSandboxPhoneNumberCommandOutput) => void
+    cb: (err: any, data?: DeleteSMSSandboxPhoneNumberCommandOutput) => void,
   ): void;
 
   /**
@@ -395,7 +395,7 @@ export interface SNS {
   deleteTopic(
     args: DeleteTopicCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTopicCommandOutput) => void
+    cb: (err: any, data?: DeleteTopicCommandOutput) => void,
   ): void;
 
   /**
@@ -403,16 +403,16 @@ export interface SNS {
    */
   getDataProtectionPolicy(
     args: GetDataProtectionPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDataProtectionPolicyCommandOutput>;
   getDataProtectionPolicy(
     args: GetDataProtectionPolicyCommandInput,
-    cb: (err: any, data?: GetDataProtectionPolicyCommandOutput) => void
+    cb: (err: any, data?: GetDataProtectionPolicyCommandOutput) => void,
   ): void;
   getDataProtectionPolicy(
     args: GetDataProtectionPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDataProtectionPolicyCommandOutput) => void
+    cb: (err: any, data?: GetDataProtectionPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -420,16 +420,16 @@ export interface SNS {
    */
   getEndpointAttributes(
     args: GetEndpointAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEndpointAttributesCommandOutput>;
   getEndpointAttributes(
     args: GetEndpointAttributesCommandInput,
-    cb: (err: any, data?: GetEndpointAttributesCommandOutput) => void
+    cb: (err: any, data?: GetEndpointAttributesCommandOutput) => void,
   ): void;
   getEndpointAttributes(
     args: GetEndpointAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEndpointAttributesCommandOutput) => void
+    cb: (err: any, data?: GetEndpointAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -437,16 +437,16 @@ export interface SNS {
    */
   getPlatformApplicationAttributes(
     args: GetPlatformApplicationAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPlatformApplicationAttributesCommandOutput>;
   getPlatformApplicationAttributes(
     args: GetPlatformApplicationAttributesCommandInput,
-    cb: (err: any, data?: GetPlatformApplicationAttributesCommandOutput) => void
+    cb: (err: any, data?: GetPlatformApplicationAttributesCommandOutput) => void,
   ): void;
   getPlatformApplicationAttributes(
     args: GetPlatformApplicationAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPlatformApplicationAttributesCommandOutput) => void
+    cb: (err: any, data?: GetPlatformApplicationAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -455,16 +455,16 @@ export interface SNS {
   getSMSAttributes(): Promise<GetSMSAttributesCommandOutput>;
   getSMSAttributes(
     args: GetSMSAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSMSAttributesCommandOutput>;
   getSMSAttributes(
     args: GetSMSAttributesCommandInput,
-    cb: (err: any, data?: GetSMSAttributesCommandOutput) => void
+    cb: (err: any, data?: GetSMSAttributesCommandOutput) => void,
   ): void;
   getSMSAttributes(
     args: GetSMSAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSMSAttributesCommandOutput) => void
+    cb: (err: any, data?: GetSMSAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -473,16 +473,16 @@ export interface SNS {
   getSMSSandboxAccountStatus(): Promise<GetSMSSandboxAccountStatusCommandOutput>;
   getSMSSandboxAccountStatus(
     args: GetSMSSandboxAccountStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSMSSandboxAccountStatusCommandOutput>;
   getSMSSandboxAccountStatus(
     args: GetSMSSandboxAccountStatusCommandInput,
-    cb: (err: any, data?: GetSMSSandboxAccountStatusCommandOutput) => void
+    cb: (err: any, data?: GetSMSSandboxAccountStatusCommandOutput) => void,
   ): void;
   getSMSSandboxAccountStatus(
     args: GetSMSSandboxAccountStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSMSSandboxAccountStatusCommandOutput) => void
+    cb: (err: any, data?: GetSMSSandboxAccountStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -490,16 +490,16 @@ export interface SNS {
    */
   getSubscriptionAttributes(
     args: GetSubscriptionAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSubscriptionAttributesCommandOutput>;
   getSubscriptionAttributes(
     args: GetSubscriptionAttributesCommandInput,
-    cb: (err: any, data?: GetSubscriptionAttributesCommandOutput) => void
+    cb: (err: any, data?: GetSubscriptionAttributesCommandOutput) => void,
   ): void;
   getSubscriptionAttributes(
     args: GetSubscriptionAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSubscriptionAttributesCommandOutput) => void
+    cb: (err: any, data?: GetSubscriptionAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -507,16 +507,16 @@ export interface SNS {
    */
   getTopicAttributes(
     args: GetTopicAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTopicAttributesCommandOutput>;
   getTopicAttributes(
     args: GetTopicAttributesCommandInput,
-    cb: (err: any, data?: GetTopicAttributesCommandOutput) => void
+    cb: (err: any, data?: GetTopicAttributesCommandOutput) => void,
   ): void;
   getTopicAttributes(
     args: GetTopicAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTopicAttributesCommandOutput) => void
+    cb: (err: any, data?: GetTopicAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -524,16 +524,16 @@ export interface SNS {
    */
   listEndpointsByPlatformApplication(
     args: ListEndpointsByPlatformApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEndpointsByPlatformApplicationCommandOutput>;
   listEndpointsByPlatformApplication(
     args: ListEndpointsByPlatformApplicationCommandInput,
-    cb: (err: any, data?: ListEndpointsByPlatformApplicationCommandOutput) => void
+    cb: (err: any, data?: ListEndpointsByPlatformApplicationCommandOutput) => void,
   ): void;
   listEndpointsByPlatformApplication(
     args: ListEndpointsByPlatformApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEndpointsByPlatformApplicationCommandOutput) => void
+    cb: (err: any, data?: ListEndpointsByPlatformApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -542,16 +542,16 @@ export interface SNS {
   listOriginationNumbers(): Promise<ListOriginationNumbersCommandOutput>;
   listOriginationNumbers(
     args: ListOriginationNumbersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListOriginationNumbersCommandOutput>;
   listOriginationNumbers(
     args: ListOriginationNumbersCommandInput,
-    cb: (err: any, data?: ListOriginationNumbersCommandOutput) => void
+    cb: (err: any, data?: ListOriginationNumbersCommandOutput) => void,
   ): void;
   listOriginationNumbers(
     args: ListOriginationNumbersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOriginationNumbersCommandOutput) => void
+    cb: (err: any, data?: ListOriginationNumbersCommandOutput) => void,
   ): void;
 
   /**
@@ -560,16 +560,16 @@ export interface SNS {
   listPhoneNumbersOptedOut(): Promise<ListPhoneNumbersOptedOutCommandOutput>;
   listPhoneNumbersOptedOut(
     args: ListPhoneNumbersOptedOutCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPhoneNumbersOptedOutCommandOutput>;
   listPhoneNumbersOptedOut(
     args: ListPhoneNumbersOptedOutCommandInput,
-    cb: (err: any, data?: ListPhoneNumbersOptedOutCommandOutput) => void
+    cb: (err: any, data?: ListPhoneNumbersOptedOutCommandOutput) => void,
   ): void;
   listPhoneNumbersOptedOut(
     args: ListPhoneNumbersOptedOutCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPhoneNumbersOptedOutCommandOutput) => void
+    cb: (err: any, data?: ListPhoneNumbersOptedOutCommandOutput) => void,
   ): void;
 
   /**
@@ -578,16 +578,16 @@ export interface SNS {
   listPlatformApplications(): Promise<ListPlatformApplicationsCommandOutput>;
   listPlatformApplications(
     args: ListPlatformApplicationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPlatformApplicationsCommandOutput>;
   listPlatformApplications(
     args: ListPlatformApplicationsCommandInput,
-    cb: (err: any, data?: ListPlatformApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListPlatformApplicationsCommandOutput) => void,
   ): void;
   listPlatformApplications(
     args: ListPlatformApplicationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPlatformApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListPlatformApplicationsCommandOutput) => void,
   ): void;
 
   /**
@@ -596,16 +596,16 @@ export interface SNS {
   listSMSSandboxPhoneNumbers(): Promise<ListSMSSandboxPhoneNumbersCommandOutput>;
   listSMSSandboxPhoneNumbers(
     args: ListSMSSandboxPhoneNumbersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSMSSandboxPhoneNumbersCommandOutput>;
   listSMSSandboxPhoneNumbers(
     args: ListSMSSandboxPhoneNumbersCommandInput,
-    cb: (err: any, data?: ListSMSSandboxPhoneNumbersCommandOutput) => void
+    cb: (err: any, data?: ListSMSSandboxPhoneNumbersCommandOutput) => void,
   ): void;
   listSMSSandboxPhoneNumbers(
     args: ListSMSSandboxPhoneNumbersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSMSSandboxPhoneNumbersCommandOutput) => void
+    cb: (err: any, data?: ListSMSSandboxPhoneNumbersCommandOutput) => void,
   ): void;
 
   /**
@@ -614,16 +614,16 @@ export interface SNS {
   listSubscriptions(): Promise<ListSubscriptionsCommandOutput>;
   listSubscriptions(
     args: ListSubscriptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSubscriptionsCommandOutput>;
   listSubscriptions(
     args: ListSubscriptionsCommandInput,
-    cb: (err: any, data?: ListSubscriptionsCommandOutput) => void
+    cb: (err: any, data?: ListSubscriptionsCommandOutput) => void,
   ): void;
   listSubscriptions(
     args: ListSubscriptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSubscriptionsCommandOutput) => void
+    cb: (err: any, data?: ListSubscriptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -631,16 +631,16 @@ export interface SNS {
    */
   listSubscriptionsByTopic(
     args: ListSubscriptionsByTopicCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSubscriptionsByTopicCommandOutput>;
   listSubscriptionsByTopic(
     args: ListSubscriptionsByTopicCommandInput,
-    cb: (err: any, data?: ListSubscriptionsByTopicCommandOutput) => void
+    cb: (err: any, data?: ListSubscriptionsByTopicCommandOutput) => void,
   ): void;
   listSubscriptionsByTopic(
     args: ListSubscriptionsByTopicCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSubscriptionsByTopicCommandOutput) => void
+    cb: (err: any, data?: ListSubscriptionsByTopicCommandOutput) => void,
   ): void;
 
   /**
@@ -648,16 +648,16 @@ export interface SNS {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -669,7 +669,7 @@ export interface SNS {
   listTopics(
     args: ListTopicsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTopicsCommandOutput) => void
+    cb: (err: any, data?: ListTopicsCommandOutput) => void,
   ): void;
 
   /**
@@ -677,16 +677,16 @@ export interface SNS {
    */
   optInPhoneNumber(
     args: OptInPhoneNumberCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<OptInPhoneNumberCommandOutput>;
   optInPhoneNumber(
     args: OptInPhoneNumberCommandInput,
-    cb: (err: any, data?: OptInPhoneNumberCommandOutput) => void
+    cb: (err: any, data?: OptInPhoneNumberCommandOutput) => void,
   ): void;
   optInPhoneNumber(
     args: OptInPhoneNumberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: OptInPhoneNumberCommandOutput) => void
+    cb: (err: any, data?: OptInPhoneNumberCommandOutput) => void,
   ): void;
 
   /**
@@ -697,7 +697,7 @@ export interface SNS {
   publish(
     args: PublishCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PublishCommandOutput) => void
+    cb: (err: any, data?: PublishCommandOutput) => void,
   ): void;
 
   /**
@@ -708,7 +708,7 @@ export interface SNS {
   publishBatch(
     args: PublishBatchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PublishBatchCommandOutput) => void
+    cb: (err: any, data?: PublishBatchCommandOutput) => void,
   ): void;
 
   /**
@@ -716,16 +716,16 @@ export interface SNS {
    */
   putDataProtectionPolicy(
     args: PutDataProtectionPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutDataProtectionPolicyCommandOutput>;
   putDataProtectionPolicy(
     args: PutDataProtectionPolicyCommandInput,
-    cb: (err: any, data?: PutDataProtectionPolicyCommandOutput) => void
+    cb: (err: any, data?: PutDataProtectionPolicyCommandOutput) => void,
   ): void;
   putDataProtectionPolicy(
     args: PutDataProtectionPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutDataProtectionPolicyCommandOutput) => void
+    cb: (err: any, data?: PutDataProtectionPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -733,16 +733,16 @@ export interface SNS {
    */
   removePermission(
     args: RemovePermissionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemovePermissionCommandOutput>;
   removePermission(
     args: RemovePermissionCommandInput,
-    cb: (err: any, data?: RemovePermissionCommandOutput) => void
+    cb: (err: any, data?: RemovePermissionCommandOutput) => void,
   ): void;
   removePermission(
     args: RemovePermissionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemovePermissionCommandOutput) => void
+    cb: (err: any, data?: RemovePermissionCommandOutput) => void,
   ): void;
 
   /**
@@ -750,16 +750,16 @@ export interface SNS {
    */
   setEndpointAttributes(
     args: SetEndpointAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetEndpointAttributesCommandOutput>;
   setEndpointAttributes(
     args: SetEndpointAttributesCommandInput,
-    cb: (err: any, data?: SetEndpointAttributesCommandOutput) => void
+    cb: (err: any, data?: SetEndpointAttributesCommandOutput) => void,
   ): void;
   setEndpointAttributes(
     args: SetEndpointAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetEndpointAttributesCommandOutput) => void
+    cb: (err: any, data?: SetEndpointAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -767,16 +767,16 @@ export interface SNS {
    */
   setPlatformApplicationAttributes(
     args: SetPlatformApplicationAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetPlatformApplicationAttributesCommandOutput>;
   setPlatformApplicationAttributes(
     args: SetPlatformApplicationAttributesCommandInput,
-    cb: (err: any, data?: SetPlatformApplicationAttributesCommandOutput) => void
+    cb: (err: any, data?: SetPlatformApplicationAttributesCommandOutput) => void,
   ): void;
   setPlatformApplicationAttributes(
     args: SetPlatformApplicationAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetPlatformApplicationAttributesCommandOutput) => void
+    cb: (err: any, data?: SetPlatformApplicationAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -784,16 +784,16 @@ export interface SNS {
    */
   setSMSAttributes(
     args: SetSMSAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetSMSAttributesCommandOutput>;
   setSMSAttributes(
     args: SetSMSAttributesCommandInput,
-    cb: (err: any, data?: SetSMSAttributesCommandOutput) => void
+    cb: (err: any, data?: SetSMSAttributesCommandOutput) => void,
   ): void;
   setSMSAttributes(
     args: SetSMSAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetSMSAttributesCommandOutput) => void
+    cb: (err: any, data?: SetSMSAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -801,16 +801,16 @@ export interface SNS {
    */
   setSubscriptionAttributes(
     args: SetSubscriptionAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetSubscriptionAttributesCommandOutput>;
   setSubscriptionAttributes(
     args: SetSubscriptionAttributesCommandInput,
-    cb: (err: any, data?: SetSubscriptionAttributesCommandOutput) => void
+    cb: (err: any, data?: SetSubscriptionAttributesCommandOutput) => void,
   ): void;
   setSubscriptionAttributes(
     args: SetSubscriptionAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetSubscriptionAttributesCommandOutput) => void
+    cb: (err: any, data?: SetSubscriptionAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -818,16 +818,16 @@ export interface SNS {
    */
   setTopicAttributes(
     args: SetTopicAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetTopicAttributesCommandOutput>;
   setTopicAttributes(
     args: SetTopicAttributesCommandInput,
-    cb: (err: any, data?: SetTopicAttributesCommandOutput) => void
+    cb: (err: any, data?: SetTopicAttributesCommandOutput) => void,
   ): void;
   setTopicAttributes(
     args: SetTopicAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetTopicAttributesCommandOutput) => void
+    cb: (err: any, data?: SetTopicAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -838,7 +838,7 @@ export interface SNS {
   subscribe(
     args: SubscribeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SubscribeCommandOutput) => void
+    cb: (err: any, data?: SubscribeCommandOutput) => void,
   ): void;
 
   /**
@@ -849,7 +849,7 @@ export interface SNS {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -860,7 +860,7 @@ export interface SNS {
   unsubscribe(
     args: UnsubscribeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UnsubscribeCommandOutput) => void
+    cb: (err: any, data?: UnsubscribeCommandOutput) => void,
   ): void;
 
   /**
@@ -871,7 +871,7 @@ export interface SNS {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -879,16 +879,16 @@ export interface SNS {
    */
   verifySMSSandboxPhoneNumber(
     args: VerifySMSSandboxPhoneNumberCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<VerifySMSSandboxPhoneNumberCommandOutput>;
   verifySMSSandboxPhoneNumber(
     args: VerifySMSSandboxPhoneNumberCommandInput,
-    cb: (err: any, data?: VerifySMSSandboxPhoneNumberCommandOutput) => void
+    cb: (err: any, data?: VerifySMSSandboxPhoneNumberCommandOutput) => void,
   ): void;
   verifySMSSandboxPhoneNumber(
     args: VerifySMSSandboxPhoneNumberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: VerifySMSSandboxPhoneNumberCommandOutput) => void
+    cb: (err: any, data?: VerifySMSSandboxPhoneNumberCommandOutput) => void,
   ): void;
 }
 

@@ -158,7 +158,7 @@ import {
  */
 export const se_CreateSignalingChannelCommand = async (
   input: CreateSignalingChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -172,7 +172,7 @@ export const se_CreateSignalingChannelCommand = async (
       ChannelType: [],
       SingleMasterConfiguration: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -183,7 +183,7 @@ export const se_CreateSignalingChannelCommand = async (
  */
 export const se_CreateStreamCommand = async (
   input: CreateStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -199,7 +199,7 @@ export const se_CreateStreamCommand = async (
       MediaType: [],
       StreamName: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -210,7 +210,7 @@ export const se_CreateStreamCommand = async (
  */
 export const se_DeleteEdgeConfigurationCommand = async (
   input: DeleteEdgeConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -222,7 +222,7 @@ export const se_DeleteEdgeConfigurationCommand = async (
     take(input, {
       StreamARN: [],
       StreamName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -233,7 +233,7 @@ export const se_DeleteEdgeConfigurationCommand = async (
  */
 export const se_DeleteSignalingChannelCommand = async (
   input: DeleteSignalingChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -245,7 +245,7 @@ export const se_DeleteSignalingChannelCommand = async (
     take(input, {
       ChannelARN: [],
       CurrentVersion: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -256,7 +256,7 @@ export const se_DeleteSignalingChannelCommand = async (
  */
 export const se_DeleteStreamCommand = async (
   input: DeleteStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -268,7 +268,7 @@ export const se_DeleteStreamCommand = async (
     take(input, {
       CurrentVersion: [],
       StreamARN: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -279,7 +279,7 @@ export const se_DeleteStreamCommand = async (
  */
 export const se_DescribeEdgeConfigurationCommand = async (
   input: DescribeEdgeConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -291,7 +291,7 @@ export const se_DescribeEdgeConfigurationCommand = async (
     take(input, {
       StreamARN: [],
       StreamName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -302,7 +302,7 @@ export const se_DescribeEdgeConfigurationCommand = async (
  */
 export const se_DescribeImageGenerationConfigurationCommand = async (
   input: DescribeImageGenerationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -314,7 +314,7 @@ export const se_DescribeImageGenerationConfigurationCommand = async (
     take(input, {
       StreamARN: [],
       StreamName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -325,7 +325,7 @@ export const se_DescribeImageGenerationConfigurationCommand = async (
  */
 export const se_DescribeMappedResourceConfigurationCommand = async (
   input: DescribeMappedResourceConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -339,7 +339,7 @@ export const se_DescribeMappedResourceConfigurationCommand = async (
       NextToken: [],
       StreamARN: [],
       StreamName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -350,7 +350,7 @@ export const se_DescribeMappedResourceConfigurationCommand = async (
  */
 export const se_DescribeMediaStorageConfigurationCommand = async (
   input: DescribeMediaStorageConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -362,7 +362,7 @@ export const se_DescribeMediaStorageConfigurationCommand = async (
     take(input, {
       ChannelARN: [],
       ChannelName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -373,7 +373,7 @@ export const se_DescribeMediaStorageConfigurationCommand = async (
  */
 export const se_DescribeNotificationConfigurationCommand = async (
   input: DescribeNotificationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -385,7 +385,7 @@ export const se_DescribeNotificationConfigurationCommand = async (
     take(input, {
       StreamARN: [],
       StreamName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -396,7 +396,7 @@ export const se_DescribeNotificationConfigurationCommand = async (
  */
 export const se_DescribeSignalingChannelCommand = async (
   input: DescribeSignalingChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -408,7 +408,7 @@ export const se_DescribeSignalingChannelCommand = async (
     take(input, {
       ChannelARN: [],
       ChannelName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -419,7 +419,7 @@ export const se_DescribeSignalingChannelCommand = async (
  */
 export const se_DescribeStreamCommand = async (
   input: DescribeStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -431,7 +431,7 @@ export const se_DescribeStreamCommand = async (
     take(input, {
       StreamARN: [],
       StreamName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -442,7 +442,7 @@ export const se_DescribeStreamCommand = async (
  */
 export const se_GetDataEndpointCommand = async (
   input: GetDataEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -455,7 +455,7 @@ export const se_GetDataEndpointCommand = async (
       APIName: [],
       StreamARN: [],
       StreamName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -466,7 +466,7 @@ export const se_GetDataEndpointCommand = async (
  */
 export const se_GetSignalingChannelEndpointCommand = async (
   input: GetSignalingChannelEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -478,7 +478,7 @@ export const se_GetSignalingChannelEndpointCommand = async (
     take(input, {
       ChannelARN: [],
       SingleMasterChannelEndpointConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -489,7 +489,7 @@ export const se_GetSignalingChannelEndpointCommand = async (
  */
 export const se_ListEdgeAgentConfigurationsCommand = async (
   input: ListEdgeAgentConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -502,7 +502,7 @@ export const se_ListEdgeAgentConfigurationsCommand = async (
       HubDeviceArn: [],
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -513,7 +513,7 @@ export const se_ListEdgeAgentConfigurationsCommand = async (
  */
 export const se_ListSignalingChannelsCommand = async (
   input: ListSignalingChannelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -526,7 +526,7 @@ export const se_ListSignalingChannelsCommand = async (
       ChannelNameCondition: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -537,7 +537,7 @@ export const se_ListSignalingChannelsCommand = async (
  */
 export const se_ListStreamsCommand = async (
   input: ListStreamsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -550,7 +550,7 @@ export const se_ListStreamsCommand = async (
       MaxResults: [],
       NextToken: [],
       StreamNameCondition: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -561,7 +561,7 @@ export const se_ListStreamsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -573,7 +573,7 @@ export const se_ListTagsForResourceCommand = async (
     take(input, {
       NextToken: [],
       ResourceARN: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -584,7 +584,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTagsForStreamCommand = async (
   input: ListTagsForStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -597,7 +597,7 @@ export const se_ListTagsForStreamCommand = async (
       NextToken: [],
       StreamARN: [],
       StreamName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -608,7 +608,7 @@ export const se_ListTagsForStreamCommand = async (
  */
 export const se_StartEdgeConfigurationUpdateCommand = async (
   input: StartEdgeConfigurationUpdateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -621,7 +621,7 @@ export const se_StartEdgeConfigurationUpdateCommand = async (
       EdgeConfig: (_) => _json(_),
       StreamARN: [],
       StreamName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -632,7 +632,7 @@ export const se_StartEdgeConfigurationUpdateCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -644,7 +644,7 @@ export const se_TagResourceCommand = async (
     take(input, {
       ResourceARN: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -655,7 +655,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_TagStreamCommand = async (
   input: TagStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -668,7 +668,7 @@ export const se_TagStreamCommand = async (
       StreamARN: [],
       StreamName: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -679,7 +679,7 @@ export const se_TagStreamCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -691,7 +691,7 @@ export const se_UntagResourceCommand = async (
     take(input, {
       ResourceARN: [],
       TagKeyList: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -702,7 +702,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UntagStreamCommand = async (
   input: UntagStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -715,7 +715,7 @@ export const se_UntagStreamCommand = async (
       StreamARN: [],
       StreamName: [],
       TagKeyList: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -726,7 +726,7 @@ export const se_UntagStreamCommand = async (
  */
 export const se_UpdateDataRetentionCommand = async (
   input: UpdateDataRetentionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -741,7 +741,7 @@ export const se_UpdateDataRetentionCommand = async (
       Operation: [],
       StreamARN: [],
       StreamName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -752,7 +752,7 @@ export const se_UpdateDataRetentionCommand = async (
  */
 export const se_UpdateImageGenerationConfigurationCommand = async (
   input: UpdateImageGenerationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -765,7 +765,7 @@ export const se_UpdateImageGenerationConfigurationCommand = async (
       ImageGenerationConfiguration: (_) => _json(_),
       StreamARN: [],
       StreamName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -776,7 +776,7 @@ export const se_UpdateImageGenerationConfigurationCommand = async (
  */
 export const se_UpdateMediaStorageConfigurationCommand = async (
   input: UpdateMediaStorageConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -788,7 +788,7 @@ export const se_UpdateMediaStorageConfigurationCommand = async (
     take(input, {
       ChannelARN: [],
       MediaStorageConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -799,7 +799,7 @@ export const se_UpdateMediaStorageConfigurationCommand = async (
  */
 export const se_UpdateNotificationConfigurationCommand = async (
   input: UpdateNotificationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -812,7 +812,7 @@ export const se_UpdateNotificationConfigurationCommand = async (
       NotificationConfiguration: (_) => _json(_),
       StreamARN: [],
       StreamName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -823,7 +823,7 @@ export const se_UpdateNotificationConfigurationCommand = async (
  */
 export const se_UpdateSignalingChannelCommand = async (
   input: UpdateSignalingChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -836,7 +836,7 @@ export const se_UpdateSignalingChannelCommand = async (
       ChannelARN: [],
       CurrentVersion: [],
       SingleMasterConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -847,7 +847,7 @@ export const se_UpdateSignalingChannelCommand = async (
  */
 export const se_UpdateStreamCommand = async (
   input: UpdateStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -862,7 +862,7 @@ export const se_UpdateStreamCommand = async (
       MediaType: [],
       StreamARN: [],
       StreamName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -873,7 +873,7 @@ export const se_UpdateStreamCommand = async (
  */
 export const de_CreateSignalingChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSignalingChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -894,7 +894,7 @@ export const de_CreateSignalingChannelCommand = async (
  */
 export const de_CreateStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -915,7 +915,7 @@ export const de_CreateStreamCommand = async (
  */
 export const de_DeleteEdgeConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEdgeConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -932,7 +932,7 @@ export const de_DeleteEdgeConfigurationCommand = async (
  */
 export const de_DeleteSignalingChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSignalingChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -949,7 +949,7 @@ export const de_DeleteSignalingChannelCommand = async (
  */
 export const de_DeleteStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -966,7 +966,7 @@ export const de_DeleteStreamCommand = async (
  */
 export const de_DescribeEdgeConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEdgeConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -994,7 +994,7 @@ export const de_DescribeEdgeConfigurationCommand = async (
  */
 export const de_DescribeImageGenerationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeImageGenerationConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1015,7 +1015,7 @@ export const de_DescribeImageGenerationConfigurationCommand = async (
  */
 export const de_DescribeMappedResourceConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeMappedResourceConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1037,7 +1037,7 @@ export const de_DescribeMappedResourceConfigurationCommand = async (
  */
 export const de_DescribeMediaStorageConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeMediaStorageConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1058,7 +1058,7 @@ export const de_DescribeMediaStorageConfigurationCommand = async (
  */
 export const de_DescribeNotificationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeNotificationConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1079,7 +1079,7 @@ export const de_DescribeNotificationConfigurationCommand = async (
  */
 export const de_DescribeSignalingChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSignalingChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1100,7 +1100,7 @@ export const de_DescribeSignalingChannelCommand = async (
  */
 export const de_DescribeStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1121,7 +1121,7 @@ export const de_DescribeStreamCommand = async (
  */
 export const de_GetDataEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDataEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1142,7 +1142,7 @@ export const de_GetDataEndpointCommand = async (
  */
 export const de_GetSignalingChannelEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSignalingChannelEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1163,7 +1163,7 @@ export const de_GetSignalingChannelEndpointCommand = async (
  */
 export const de_ListEdgeAgentConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEdgeAgentConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1185,7 +1185,7 @@ export const de_ListEdgeAgentConfigurationsCommand = async (
  */
 export const de_ListSignalingChannelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSignalingChannelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1207,7 +1207,7 @@ export const de_ListSignalingChannelsCommand = async (
  */
 export const de_ListStreamsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStreamsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1229,7 +1229,7 @@ export const de_ListStreamsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1251,7 +1251,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTagsForStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1273,7 +1273,7 @@ export const de_ListTagsForStreamCommand = async (
  */
 export const de_StartEdgeConfigurationUpdateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartEdgeConfigurationUpdateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1300,7 +1300,7 @@ export const de_StartEdgeConfigurationUpdateCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1317,7 +1317,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_TagStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1334,7 +1334,7 @@ export const de_TagStreamCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1351,7 +1351,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UntagStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1368,7 +1368,7 @@ export const de_UntagStreamCommand = async (
  */
 export const de_UpdateDataRetentionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDataRetentionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1385,7 +1385,7 @@ export const de_UpdateDataRetentionCommand = async (
  */
 export const de_UpdateImageGenerationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateImageGenerationConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1402,7 +1402,7 @@ export const de_UpdateImageGenerationConfigurationCommand = async (
  */
 export const de_UpdateMediaStorageConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMediaStorageConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1419,7 +1419,7 @@ export const de_UpdateMediaStorageConfigurationCommand = async (
  */
 export const de_UpdateNotificationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateNotificationConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1436,7 +1436,7 @@ export const de_UpdateNotificationConfigurationCommand = async (
  */
 export const de_UpdateSignalingChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSignalingChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1453,7 +1453,7 @@ export const de_UpdateSignalingChannelCommand = async (
  */
 export const de_UpdateStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1536,7 +1536,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1556,7 +1556,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_AccountChannelLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccountChannelLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1576,7 +1576,7 @@ const de_AccountChannelLimitExceededExceptionRes = async (
  */
 const de_AccountStreamLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccountStreamLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1596,7 +1596,7 @@ const de_AccountStreamLimitExceededExceptionRes = async (
  */
 const de_ClientLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ClientLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1616,7 +1616,7 @@ const de_ClientLimitExceededExceptionRes = async (
  */
 const de_DeviceStreamLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeviceStreamLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1636,7 +1636,7 @@ const de_DeviceStreamLimitExceededExceptionRes = async (
  */
 const de_InvalidArgumentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidArgumentException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1656,7 +1656,7 @@ const de_InvalidArgumentExceptionRes = async (
  */
 const de_InvalidDeviceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDeviceException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1676,7 +1676,7 @@ const de_InvalidDeviceExceptionRes = async (
  */
 const de_InvalidResourceFormatExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidResourceFormatException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1696,7 +1696,7 @@ const de_InvalidResourceFormatExceptionRes = async (
  */
 const de_NoDataRetentionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoDataRetentionException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1716,7 +1716,7 @@ const de_NoDataRetentionExceptionRes = async (
  */
 const de_NotAuthorizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotAuthorizedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1736,7 +1736,7 @@ const de_NotAuthorizedExceptionRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1756,7 +1756,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1776,7 +1776,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_StreamEdgeConfigurationNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StreamEdgeConfigurationNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1796,7 +1796,7 @@ const de_StreamEdgeConfigurationNotFoundExceptionRes = async (
  */
 const de_TagsPerResourceExceededLimitExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagsPerResourceExceededLimitException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1816,7 +1816,7 @@ const de_TagsPerResourceExceededLimitExceptionRes = async (
  */
 const de_VersionMismatchExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<VersionMismatchException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1953,7 +1953,7 @@ const de_LastUploaderStatus = (output: any, context: __SerdeContext): LastUpload
  */
 const de_ListEdgeAgentConfigurationsEdgeConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListEdgeAgentConfigurationsEdgeConfig => {
   return take(output, {
     CreationTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -1971,7 +1971,7 @@ const de_ListEdgeAgentConfigurationsEdgeConfig = (
  */
 const de_ListEdgeAgentConfigurationsEdgeConfigList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListEdgeAgentConfigurationsEdgeConfig[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)

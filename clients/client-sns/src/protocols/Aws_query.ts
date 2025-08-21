@@ -261,7 +261,7 @@ import { SNSServiceException as __BaseException } from "../models/SNSServiceExce
  */
 export const se_AddPermissionCommand = async (
   input: AddPermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -278,7 +278,7 @@ export const se_AddPermissionCommand = async (
  */
 export const se_CheckIfPhoneNumberIsOptedOutCommand = async (
   input: CheckIfPhoneNumberIsOptedOutCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -295,7 +295,7 @@ export const se_CheckIfPhoneNumberIsOptedOutCommand = async (
  */
 export const se_ConfirmSubscriptionCommand = async (
   input: ConfirmSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -312,7 +312,7 @@ export const se_ConfirmSubscriptionCommand = async (
  */
 export const se_CreatePlatformApplicationCommand = async (
   input: CreatePlatformApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -329,7 +329,7 @@ export const se_CreatePlatformApplicationCommand = async (
  */
 export const se_CreatePlatformEndpointCommand = async (
   input: CreatePlatformEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -346,7 +346,7 @@ export const se_CreatePlatformEndpointCommand = async (
  */
 export const se_CreateSMSSandboxPhoneNumberCommand = async (
   input: CreateSMSSandboxPhoneNumberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -363,7 +363,7 @@ export const se_CreateSMSSandboxPhoneNumberCommand = async (
  */
 export const se_CreateTopicCommand = async (
   input: CreateTopicCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -380,7 +380,7 @@ export const se_CreateTopicCommand = async (
  */
 export const se_DeleteEndpointCommand = async (
   input: DeleteEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -397,7 +397,7 @@ export const se_DeleteEndpointCommand = async (
  */
 export const se_DeletePlatformApplicationCommand = async (
   input: DeletePlatformApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -414,7 +414,7 @@ export const se_DeletePlatformApplicationCommand = async (
  */
 export const se_DeleteSMSSandboxPhoneNumberCommand = async (
   input: DeleteSMSSandboxPhoneNumberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -431,7 +431,7 @@ export const se_DeleteSMSSandboxPhoneNumberCommand = async (
  */
 export const se_DeleteTopicCommand = async (
   input: DeleteTopicCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -448,7 +448,7 @@ export const se_DeleteTopicCommand = async (
  */
 export const se_GetDataProtectionPolicyCommand = async (
   input: GetDataProtectionPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -465,7 +465,7 @@ export const se_GetDataProtectionPolicyCommand = async (
  */
 export const se_GetEndpointAttributesCommand = async (
   input: GetEndpointAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -482,7 +482,7 @@ export const se_GetEndpointAttributesCommand = async (
  */
 export const se_GetPlatformApplicationAttributesCommand = async (
   input: GetPlatformApplicationAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -499,7 +499,7 @@ export const se_GetPlatformApplicationAttributesCommand = async (
  */
 export const se_GetSMSAttributesCommand = async (
   input: GetSMSAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -516,7 +516,7 @@ export const se_GetSMSAttributesCommand = async (
  */
 export const se_GetSMSSandboxAccountStatusCommand = async (
   input: GetSMSSandboxAccountStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -533,7 +533,7 @@ export const se_GetSMSSandboxAccountStatusCommand = async (
  */
 export const se_GetSubscriptionAttributesCommand = async (
   input: GetSubscriptionAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -550,7 +550,7 @@ export const se_GetSubscriptionAttributesCommand = async (
  */
 export const se_GetTopicAttributesCommand = async (
   input: GetTopicAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -567,7 +567,7 @@ export const se_GetTopicAttributesCommand = async (
  */
 export const se_ListEndpointsByPlatformApplicationCommand = async (
   input: ListEndpointsByPlatformApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -584,7 +584,7 @@ export const se_ListEndpointsByPlatformApplicationCommand = async (
  */
 export const se_ListOriginationNumbersCommand = async (
   input: ListOriginationNumbersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -601,7 +601,7 @@ export const se_ListOriginationNumbersCommand = async (
  */
 export const se_ListPhoneNumbersOptedOutCommand = async (
   input: ListPhoneNumbersOptedOutCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -618,7 +618,7 @@ export const se_ListPhoneNumbersOptedOutCommand = async (
  */
 export const se_ListPlatformApplicationsCommand = async (
   input: ListPlatformApplicationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -635,7 +635,7 @@ export const se_ListPlatformApplicationsCommand = async (
  */
 export const se_ListSMSSandboxPhoneNumbersCommand = async (
   input: ListSMSSandboxPhoneNumbersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -652,7 +652,7 @@ export const se_ListSMSSandboxPhoneNumbersCommand = async (
  */
 export const se_ListSubscriptionsCommand = async (
   input: ListSubscriptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -669,7 +669,7 @@ export const se_ListSubscriptionsCommand = async (
  */
 export const se_ListSubscriptionsByTopicCommand = async (
   input: ListSubscriptionsByTopicCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -686,7 +686,7 @@ export const se_ListSubscriptionsByTopicCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -703,7 +703,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTopicsCommand = async (
   input: ListTopicsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -720,7 +720,7 @@ export const se_ListTopicsCommand = async (
  */
 export const se_OptInPhoneNumberCommand = async (
   input: OptInPhoneNumberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -737,7 +737,7 @@ export const se_OptInPhoneNumberCommand = async (
  */
 export const se_PublishCommand = async (
   input: PublishCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -754,7 +754,7 @@ export const se_PublishCommand = async (
  */
 export const se_PublishBatchCommand = async (
   input: PublishBatchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -771,7 +771,7 @@ export const se_PublishBatchCommand = async (
  */
 export const se_PutDataProtectionPolicyCommand = async (
   input: PutDataProtectionPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -788,7 +788,7 @@ export const se_PutDataProtectionPolicyCommand = async (
  */
 export const se_RemovePermissionCommand = async (
   input: RemovePermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -805,7 +805,7 @@ export const se_RemovePermissionCommand = async (
  */
 export const se_SetEndpointAttributesCommand = async (
   input: SetEndpointAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -822,7 +822,7 @@ export const se_SetEndpointAttributesCommand = async (
  */
 export const se_SetPlatformApplicationAttributesCommand = async (
   input: SetPlatformApplicationAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -839,7 +839,7 @@ export const se_SetPlatformApplicationAttributesCommand = async (
  */
 export const se_SetSMSAttributesCommand = async (
   input: SetSMSAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -856,7 +856,7 @@ export const se_SetSMSAttributesCommand = async (
  */
 export const se_SetSubscriptionAttributesCommand = async (
   input: SetSubscriptionAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -873,7 +873,7 @@ export const se_SetSubscriptionAttributesCommand = async (
  */
 export const se_SetTopicAttributesCommand = async (
   input: SetTopicAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -890,7 +890,7 @@ export const se_SetTopicAttributesCommand = async (
  */
 export const se_SubscribeCommand = async (
   input: SubscribeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -907,7 +907,7 @@ export const se_SubscribeCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -924,7 +924,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UnsubscribeCommand = async (
   input: UnsubscribeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -941,7 +941,7 @@ export const se_UnsubscribeCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -958,7 +958,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_VerifySMSSandboxPhoneNumberCommand = async (
   input: VerifySMSSandboxPhoneNumberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -975,7 +975,7 @@ export const se_VerifySMSSandboxPhoneNumberCommand = async (
  */
 export const de_AddPermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddPermissionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -992,7 +992,7 @@ export const de_AddPermissionCommand = async (
  */
 export const de_CheckIfPhoneNumberIsOptedOutCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CheckIfPhoneNumberIsOptedOutCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1012,7 +1012,7 @@ export const de_CheckIfPhoneNumberIsOptedOutCommand = async (
  */
 export const de_ConfirmSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConfirmSubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1032,7 +1032,7 @@ export const de_ConfirmSubscriptionCommand = async (
  */
 export const de_CreatePlatformApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePlatformApplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1052,7 +1052,7 @@ export const de_CreatePlatformApplicationCommand = async (
  */
 export const de_CreatePlatformEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePlatformEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1072,7 +1072,7 @@ export const de_CreatePlatformEndpointCommand = async (
  */
 export const de_CreateSMSSandboxPhoneNumberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSMSSandboxPhoneNumberCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1092,7 +1092,7 @@ export const de_CreateSMSSandboxPhoneNumberCommand = async (
  */
 export const de_CreateTopicCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTopicCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1112,7 +1112,7 @@ export const de_CreateTopicCommand = async (
  */
 export const de_DeleteEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1129,7 +1129,7 @@ export const de_DeleteEndpointCommand = async (
  */
 export const de_DeletePlatformApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePlatformApplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1146,7 +1146,7 @@ export const de_DeletePlatformApplicationCommand = async (
  */
 export const de_DeleteSMSSandboxPhoneNumberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSMSSandboxPhoneNumberCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1166,7 +1166,7 @@ export const de_DeleteSMSSandboxPhoneNumberCommand = async (
  */
 export const de_DeleteTopicCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTopicCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1183,7 +1183,7 @@ export const de_DeleteTopicCommand = async (
  */
 export const de_GetDataProtectionPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDataProtectionPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1203,7 +1203,7 @@ export const de_GetDataProtectionPolicyCommand = async (
  */
 export const de_GetEndpointAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEndpointAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1223,7 +1223,7 @@ export const de_GetEndpointAttributesCommand = async (
  */
 export const de_GetPlatformApplicationAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPlatformApplicationAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1243,7 +1243,7 @@ export const de_GetPlatformApplicationAttributesCommand = async (
  */
 export const de_GetSMSAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSMSAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1263,7 +1263,7 @@ export const de_GetSMSAttributesCommand = async (
  */
 export const de_GetSMSSandboxAccountStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSMSSandboxAccountStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1283,7 +1283,7 @@ export const de_GetSMSSandboxAccountStatusCommand = async (
  */
 export const de_GetSubscriptionAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSubscriptionAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1303,7 +1303,7 @@ export const de_GetSubscriptionAttributesCommand = async (
  */
 export const de_GetTopicAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTopicAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1323,7 +1323,7 @@ export const de_GetTopicAttributesCommand = async (
  */
 export const de_ListEndpointsByPlatformApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEndpointsByPlatformApplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1343,7 +1343,7 @@ export const de_ListEndpointsByPlatformApplicationCommand = async (
  */
 export const de_ListOriginationNumbersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOriginationNumbersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1363,7 +1363,7 @@ export const de_ListOriginationNumbersCommand = async (
  */
 export const de_ListPhoneNumbersOptedOutCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPhoneNumbersOptedOutCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1383,7 +1383,7 @@ export const de_ListPhoneNumbersOptedOutCommand = async (
  */
 export const de_ListPlatformApplicationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPlatformApplicationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1403,7 +1403,7 @@ export const de_ListPlatformApplicationsCommand = async (
  */
 export const de_ListSMSSandboxPhoneNumbersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSMSSandboxPhoneNumbersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1423,7 +1423,7 @@ export const de_ListSMSSandboxPhoneNumbersCommand = async (
  */
 export const de_ListSubscriptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSubscriptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1443,7 +1443,7 @@ export const de_ListSubscriptionsCommand = async (
  */
 export const de_ListSubscriptionsByTopicCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSubscriptionsByTopicCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1463,7 +1463,7 @@ export const de_ListSubscriptionsByTopicCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1483,7 +1483,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTopicsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTopicsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1503,7 +1503,7 @@ export const de_ListTopicsCommand = async (
  */
 export const de_OptInPhoneNumberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OptInPhoneNumberCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1523,7 +1523,7 @@ export const de_OptInPhoneNumberCommand = async (
  */
 export const de_PublishCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PublishCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1543,7 +1543,7 @@ export const de_PublishCommand = async (
  */
 export const de_PublishBatchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PublishBatchCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1563,7 +1563,7 @@ export const de_PublishBatchCommand = async (
  */
 export const de_PutDataProtectionPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutDataProtectionPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1580,7 +1580,7 @@ export const de_PutDataProtectionPolicyCommand = async (
  */
 export const de_RemovePermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemovePermissionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1597,7 +1597,7 @@ export const de_RemovePermissionCommand = async (
  */
 export const de_SetEndpointAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetEndpointAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1614,7 +1614,7 @@ export const de_SetEndpointAttributesCommand = async (
  */
 export const de_SetPlatformApplicationAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetPlatformApplicationAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1631,7 +1631,7 @@ export const de_SetPlatformApplicationAttributesCommand = async (
  */
 export const de_SetSMSAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetSMSAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1651,7 +1651,7 @@ export const de_SetSMSAttributesCommand = async (
  */
 export const de_SetSubscriptionAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetSubscriptionAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1668,7 +1668,7 @@ export const de_SetSubscriptionAttributesCommand = async (
  */
 export const de_SetTopicAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetTopicAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1685,7 +1685,7 @@ export const de_SetTopicAttributesCommand = async (
  */
 export const de_SubscribeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SubscribeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1705,7 +1705,7 @@ export const de_SubscribeCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1725,7 +1725,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UnsubscribeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsubscribeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1742,7 +1742,7 @@ export const de_UnsubscribeCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1762,7 +1762,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_VerifySMSSandboxPhoneNumberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<VerifySMSSandboxPhoneNumberCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1904,7 +1904,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AuthorizationErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AuthorizationErrorException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_AuthorizationErrorException(body.Error, context);
@@ -1920,7 +1920,7 @@ const de_AuthorizationErrorExceptionRes = async (
  */
 const de_BatchEntryIdsNotDistinctExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchEntryIdsNotDistinctException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_BatchEntryIdsNotDistinctException(body.Error, context);
@@ -1936,7 +1936,7 @@ const de_BatchEntryIdsNotDistinctExceptionRes = async (
  */
 const de_BatchRequestTooLongExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchRequestTooLongException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_BatchRequestTooLongException(body.Error, context);
@@ -1952,7 +1952,7 @@ const de_BatchRequestTooLongExceptionRes = async (
  */
 const de_ConcurrentAccessExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentAccessException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ConcurrentAccessException(body.Error, context);
@@ -1968,7 +1968,7 @@ const de_ConcurrentAccessExceptionRes = async (
  */
 const de_EmptyBatchRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EmptyBatchRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_EmptyBatchRequestException(body.Error, context);
@@ -1984,7 +1984,7 @@ const de_EmptyBatchRequestExceptionRes = async (
  */
 const de_EndpointDisabledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EndpointDisabledException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_EndpointDisabledException(body.Error, context);
@@ -2000,7 +2000,7 @@ const de_EndpointDisabledExceptionRes = async (
  */
 const de_FilterPolicyLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FilterPolicyLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_FilterPolicyLimitExceededException(body.Error, context);
@@ -2016,7 +2016,7 @@ const de_FilterPolicyLimitExceededExceptionRes = async (
  */
 const de_InternalErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalErrorException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InternalErrorException(body.Error, context);
@@ -2032,7 +2032,7 @@ const de_InternalErrorExceptionRes = async (
  */
 const de_InvalidBatchEntryIdExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidBatchEntryIdException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidBatchEntryIdException(body.Error, context);
@@ -2048,7 +2048,7 @@ const de_InvalidBatchEntryIdExceptionRes = async (
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidParameterException(body.Error, context);
@@ -2064,7 +2064,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_InvalidParameterValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterValueException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidParameterValueException(body.Error, context);
@@ -2080,7 +2080,7 @@ const de_InvalidParameterValueExceptionRes = async (
  */
 const de_InvalidSecurityExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSecurityException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidSecurityException(body.Error, context);
@@ -2096,7 +2096,7 @@ const de_InvalidSecurityExceptionRes = async (
  */
 const de_InvalidStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidStateException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidStateException(body.Error, context);
@@ -2112,7 +2112,7 @@ const de_InvalidStateExceptionRes = async (
  */
 const de_KMSAccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KMSAccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_KMSAccessDeniedException(body.Error, context);
@@ -2128,7 +2128,7 @@ const de_KMSAccessDeniedExceptionRes = async (
  */
 const de_KMSDisabledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KMSDisabledException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_KMSDisabledException(body.Error, context);
@@ -2144,7 +2144,7 @@ const de_KMSDisabledExceptionRes = async (
  */
 const de_KMSInvalidStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KMSInvalidStateException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_KMSInvalidStateException(body.Error, context);
@@ -2160,7 +2160,7 @@ const de_KMSInvalidStateExceptionRes = async (
  */
 const de_KMSNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KMSNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_KMSNotFoundException(body.Error, context);
@@ -2189,7 +2189,7 @@ const de_KMSOptInRequiredRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_KMSThrottlingExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KMSThrottlingException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_KMSThrottlingException(body.Error, context);
@@ -2231,7 +2231,7 @@ const de_OptedOutExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_PlatformApplicationDisabledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PlatformApplicationDisabledException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_PlatformApplicationDisabledException(body.Error, context);
@@ -2247,7 +2247,7 @@ const de_PlatformApplicationDisabledExceptionRes = async (
  */
 const de_ReplayLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplayLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ReplayLimitExceededException(body.Error, context);
@@ -2263,7 +2263,7 @@ const de_ReplayLimitExceededExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ResourceNotFoundException(body.Error, context);
@@ -2292,7 +2292,7 @@ const de_StaleTagExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_SubscriptionLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SubscriptionLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_SubscriptionLimitExceededException(body.Error, context);
@@ -2308,7 +2308,7 @@ const de_SubscriptionLimitExceededExceptionRes = async (
  */
 const de_TagLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TagLimitExceededException(body.Error, context);
@@ -2350,7 +2350,7 @@ const de_ThrottledExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_TooManyEntriesInBatchRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyEntriesInBatchRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TooManyEntriesInBatchRequestException(body.Error, context);
@@ -2366,7 +2366,7 @@ const de_TooManyEntriesInBatchRequestExceptionRes = async (
  */
 const de_TopicLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TopicLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TopicLimitExceededException(body.Error, context);
@@ -2408,7 +2408,7 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_VerificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<VerificationException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_VerificationException(body.Error, context);
@@ -2474,7 +2474,7 @@ const se_AddPermissionInput = (input: AddPermissionInput, context: __SerdeContex
  */
 const se_CheckIfPhoneNumberIsOptedOutInput = (
   input: CheckIfPhoneNumberIsOptedOutInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_pN] != null) {
@@ -2677,7 +2677,7 @@ const se_GetEndpointAttributesInput = (input: GetEndpointAttributesInput, contex
  */
 const se_GetPlatformApplicationAttributesInput = (
   input: GetPlatformApplicationAttributesInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_PAA] != null) {
@@ -2739,7 +2739,7 @@ const se_GetTopicAttributesInput = (input: GetTopicAttributesInput, context: __S
  */
 const se_ListEndpointsByPlatformApplicationInput = (
   input: ListEndpointsByPlatformApplicationInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_PAA] != null) {
@@ -3090,7 +3090,7 @@ const se_SetEndpointAttributesInput = (input: SetEndpointAttributesInput, contex
  */
 const se_SetPlatformApplicationAttributesInput = (
   input: SetPlatformApplicationAttributesInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_PAA] != null) {
@@ -3346,7 +3346,7 @@ const de_AuthorizationErrorException = (output: any, context: __SerdeContext): A
  */
 const de_BatchEntryIdsNotDistinctException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchEntryIdsNotDistinctException => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -3402,7 +3402,7 @@ const de_BatchResultErrorEntryList = (output: any, context: __SerdeContext): Bat
  */
 const de_CheckIfPhoneNumberIsOptedOutResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CheckIfPhoneNumberIsOptedOutResponse => {
   const contents: any = {};
   if (output[_iOO] != null) {
@@ -3449,7 +3449,7 @@ const de_CreateEndpointResponse = (output: any, context: __SerdeContext): Create
  */
 const de_CreatePlatformApplicationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreatePlatformApplicationResponse => {
   const contents: any = {};
   if (output[_PAA] != null) {
@@ -3463,7 +3463,7 @@ const de_CreatePlatformApplicationResponse = (
  */
 const de_CreateSMSSandboxPhoneNumberResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateSMSSandboxPhoneNumberResult => {
   const contents: any = {};
   return contents;
@@ -3485,7 +3485,7 @@ const de_CreateTopicResponse = (output: any, context: __SerdeContext): CreateTop
  */
 const de_DeleteSMSSandboxPhoneNumberResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteSMSSandboxPhoneNumberResult => {
   const contents: any = {};
   return contents;
@@ -3534,7 +3534,7 @@ const de_EndpointDisabledException = (output: any, context: __SerdeContext): End
  */
 const de_FilterPolicyLimitExceededException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): FilterPolicyLimitExceededException => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -3572,7 +3572,7 @@ const de_GetEndpointAttributesResponse = (output: any, context: __SerdeContext):
  */
 const de_GetPlatformApplicationAttributesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetPlatformApplicationAttributesResponse => {
   const contents: any = {};
   if (output.Attributes === "") {
@@ -3601,7 +3601,7 @@ const de_GetSMSAttributesResponse = (output: any, context: __SerdeContext): GetS
  */
 const de_GetSMSSandboxAccountStatusResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetSMSSandboxAccountStatusResult => {
   const contents: any = {};
   if (output[_IIS] != null) {
@@ -3615,7 +3615,7 @@ const de_GetSMSSandboxAccountStatusResult = (
  */
 const de_GetSubscriptionAttributesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetSubscriptionAttributesResponse => {
   const contents: any = {};
   if (output.Attributes === "") {
@@ -3776,7 +3776,7 @@ const de_KMSThrottlingException = (output: any, context: __SerdeContext): KMSThr
  */
 const de_ListEndpointsByPlatformApplicationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListEndpointsByPlatformApplicationResponse => {
   const contents: any = {};
   if (output.Endpoints === "") {
@@ -3833,7 +3833,7 @@ const de_ListOriginationNumbersResult = (output: any, context: __SerdeContext): 
  */
 const de_ListPhoneNumbersOptedOutResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListPhoneNumbersOptedOutResponse => {
   const contents: any = {};
   if (output.phoneNumbers === "") {
@@ -3852,7 +3852,7 @@ const de_ListPhoneNumbersOptedOutResponse = (
  */
 const de_ListPlatformApplicationsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListPlatformApplicationsResponse => {
   const contents: any = {};
   if (output.PlatformApplications === "") {
@@ -3871,7 +3871,7 @@ const de_ListPlatformApplicationsResponse = (
  */
 const de_ListSMSSandboxPhoneNumbersResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListSMSSandboxPhoneNumbersResult => {
   const contents: any = {};
   if (output.PhoneNumbers === "") {
@@ -3890,7 +3890,7 @@ const de_ListSMSSandboxPhoneNumbersResult = (
  */
 const de_ListSubscriptionsByTopicResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListSubscriptionsByTopicResponse => {
   const contents: any = {};
   if (output.Subscriptions === "") {
@@ -4074,7 +4074,7 @@ const de_PlatformApplication = (output: any, context: __SerdeContext): PlatformA
  */
 const de_PlatformApplicationDisabledException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PlatformApplicationDisabledException => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -4261,7 +4261,7 @@ const de_SubscriptionAttributesMap = (output: any, context: __SerdeContext): Rec
  */
 const de_SubscriptionLimitExceededException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SubscriptionLimitExceededException => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -4352,7 +4352,7 @@ const de_ThrottledException = (output: any, context: __SerdeContext): ThrottledE
  */
 const de_TooManyEntriesInBatchRequestException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TooManyEntriesInBatchRequestException => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -4456,7 +4456,7 @@ const de_VerificationException = (output: any, context: __SerdeContext): Verific
  */
 const de_VerifySMSSandboxPhoneNumberResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): VerifySMSSandboxPhoneNumberResult => {
   const contents: any = {};
   return contents;
@@ -4480,7 +4480,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

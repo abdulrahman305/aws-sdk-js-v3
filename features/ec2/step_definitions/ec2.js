@@ -25,17 +25,17 @@ Given("I describe the EC2 instance {string}", function (instanceId, callback) {
 
 Given(
   "I attempt to copy an encrypted snapshot across regions",
-  copySnapshotIntegration({ encryptSource: true, encryptDestination: false })
+  copySnapshotIntegration({ encryptSource: true, encryptDestination: false }),
 );
 
 Given(
   "I attempt to copy and encrypt an unencrypted snapshot across regions",
-  copySnapshotIntegration({ encryptSource: false, encryptDestination: true })
+  copySnapshotIntegration({ encryptSource: false, encryptDestination: true }),
 );
 
 Given(
   "I attempt to copy and encrypt an encrypted snapshot across regions",
-  copySnapshotIntegration({ encryptSource: true, encryptDestination: true })
+  copySnapshotIntegration({ encryptSource: true, encryptDestination: true }),
 );
 
 Then("the copy snapshot attempt should be successful", function (callback) {
@@ -103,7 +103,7 @@ function copySnapshotIntegration({ encryptSource, encryptDestination } = {}) {
         { client: srcEc2, maxWaitTime: 300 },
         {
           SnapshotId: createSnapshot.SnapshotId,
-        }
+        },
       );
 
       const copySnapshot = await dstEc2.copySnapshot({

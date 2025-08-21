@@ -35,7 +35,7 @@ const checkState = async (client: EC2Client, input: DescribeKeyPairsCommandInput
  */
 export const waitForKeyPairExists = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeKeyPairsCommandInput
+  input: DescribeKeyPairsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -47,7 +47,7 @@ export const waitForKeyPairExists = async (
  */
 export const waitUntilKeyPairExists = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeKeyPairsCommandInput
+  input: DescribeKeyPairsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

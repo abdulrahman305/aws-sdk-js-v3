@@ -104,7 +104,7 @@ import {
  */
 export const se_AssociateRepositoryCommand = async (
   input: AssociateRepositoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -118,7 +118,7 @@ export const se_AssociateRepositoryCommand = async (
       KMSKeyDetails: (_) => _json(_),
       Repository: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -129,7 +129,7 @@ export const se_AssociateRepositoryCommand = async (
  */
 export const se_CreateCodeReviewCommand = async (
   input: CreateCodeReviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -143,7 +143,7 @@ export const se_CreateCodeReviewCommand = async (
       Name: [],
       RepositoryAssociationArn: [],
       Type: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -154,7 +154,7 @@ export const se_CreateCodeReviewCommand = async (
  */
 export const se_DescribeCodeReviewCommand = async (
   input: DescribeCodeReviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -170,7 +170,7 @@ export const se_DescribeCodeReviewCommand = async (
  */
 export const se_DescribeRecommendationFeedbackCommand = async (
   input: DescribeRecommendationFeedbackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -190,7 +190,7 @@ export const se_DescribeRecommendationFeedbackCommand = async (
  */
 export const se_DescribeRepositoryAssociationCommand = async (
   input: DescribeRepositoryAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -206,7 +206,7 @@ export const se_DescribeRepositoryAssociationCommand = async (
  */
 export const se_DisassociateRepositoryCommand = async (
   input: DisassociateRepositoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -222,7 +222,7 @@ export const se_DisassociateRepositoryCommand = async (
  */
 export const se_ListCodeReviewsCommand = async (
   input: ListCodeReviewsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -245,7 +245,7 @@ export const se_ListCodeReviewsCommand = async (
  */
 export const se_ListRecommendationFeedbackCommand = async (
   input: ListRecommendationFeedbackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -267,7 +267,7 @@ export const se_ListRecommendationFeedbackCommand = async (
  */
 export const se_ListRecommendationsCommand = async (
   input: ListRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -287,7 +287,7 @@ export const se_ListRecommendationsCommand = async (
  */
 export const se_ListRepositoryAssociationsCommand = async (
   input: ListRepositoryAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -310,7 +310,7 @@ export const se_ListRepositoryAssociationsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -326,7 +326,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutRecommendationFeedbackCommand = async (
   input: PutRecommendationFeedbackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -339,7 +339,7 @@ export const se_PutRecommendationFeedbackCommand = async (
       CodeReviewArn: [],
       Reactions: (_) => _json(_),
       RecommendationId: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -350,7 +350,7 @@ export const se_PutRecommendationFeedbackCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -362,7 +362,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -373,7 +373,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -395,7 +395,7 @@ export const se_UntagResourceCommand = async (
  */
 export const de_AssociateRepositoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateRepositoryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -417,7 +417,7 @@ export const de_AssociateRepositoryCommand = async (
  */
 export const de_CreateCodeReviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCodeReviewCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -438,7 +438,7 @@ export const de_CreateCodeReviewCommand = async (
  */
 export const de_DescribeCodeReviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCodeReviewCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -459,7 +459,7 @@ export const de_DescribeCodeReviewCommand = async (
  */
 export const de_DescribeRecommendationFeedbackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRecommendationFeedbackCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -480,7 +480,7 @@ export const de_DescribeRecommendationFeedbackCommand = async (
  */
 export const de_DescribeRepositoryAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRepositoryAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -502,7 +502,7 @@ export const de_DescribeRepositoryAssociationCommand = async (
  */
 export const de_DisassociateRepositoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateRepositoryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -524,7 +524,7 @@ export const de_DisassociateRepositoryCommand = async (
  */
 export const de_ListCodeReviewsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCodeReviewsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -546,7 +546,7 @@ export const de_ListCodeReviewsCommand = async (
  */
 export const de_ListRecommendationFeedbackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRecommendationFeedbackCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -568,7 +568,7 @@ export const de_ListRecommendationFeedbackCommand = async (
  */
 export const de_ListRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRecommendationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -590,7 +590,7 @@ export const de_ListRecommendationsCommand = async (
  */
 export const de_ListRepositoryAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRepositoryAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -612,7 +612,7 @@ export const de_ListRepositoryAssociationsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -633,7 +633,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutRecommendationFeedbackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutRecommendationFeedbackCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -650,7 +650,7 @@ export const de_PutRecommendationFeedbackCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -667,7 +667,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -726,7 +726,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -763,7 +763,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -800,7 +800,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

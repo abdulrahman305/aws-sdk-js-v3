@@ -39,7 +39,7 @@ const checkState = async (client: EKSClient, input: DescribeFargateProfileComman
  */
 export const waitForFargateProfileActive = async (
   params: WaiterConfiguration<EKSClient>,
-  input: DescribeFargateProfileCommandInput
+  input: DescribeFargateProfileCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -51,7 +51,7 @@ export const waitForFargateProfileActive = async (
  */
 export const waitUntilFargateProfileActive = async (
   params: WaiterConfiguration<EKSClient>,
-  input: DescribeFargateProfileCommandInput
+  input: DescribeFargateProfileCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

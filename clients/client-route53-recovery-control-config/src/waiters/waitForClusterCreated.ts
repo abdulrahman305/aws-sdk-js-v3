@@ -6,7 +6,7 @@ import { Route53RecoveryControlConfigClient } from "../Route53RecoveryControlCon
 
 const checkState = async (
   client: Route53RecoveryControlConfigClient,
-  input: DescribeClusterCommandInput
+  input: DescribeClusterCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -42,7 +42,7 @@ const checkState = async (
  */
 export const waitForClusterCreated = async (
   params: WaiterConfiguration<Route53RecoveryControlConfigClient>,
-  input: DescribeClusterCommandInput
+  input: DescribeClusterCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -54,7 +54,7 @@ export const waitForClusterCreated = async (
  */
 export const waitUntilClusterCreated = async (
   params: WaiterConfiguration<Route53RecoveryControlConfigClient>,
-  input: DescribeClusterCommandInput
+  input: DescribeClusterCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

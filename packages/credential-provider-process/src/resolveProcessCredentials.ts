@@ -12,7 +12,7 @@ import { ProcessCredentials } from "./ProcessCredentials";
 export const resolveProcessCredentials = async (
   profileName: string,
   profiles: ParsedIniData,
-  logger?: Logger
+  logger?: Logger,
 ): Promise<AwsCredentialIdentity> => {
   const profile = profiles[profileName];
 

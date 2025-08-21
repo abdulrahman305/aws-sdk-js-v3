@@ -4024,7 +4024,7 @@ export const UntagResourceRequestFilterSensitiveLog = (obj: UntagResourceRequest
  * @internal
  */
 export const CreateUserAccessLoggingSettingsRequestFilterSensitiveLog = (
-  obj: CreateUserAccessLoggingSettingsRequest
+  obj: CreateUserAccessLoggingSettingsRequest,
 ): any => ({
   ...obj,
   ...(obj.tags && { tags: SENSITIVE_STRING }),

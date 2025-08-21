@@ -28,7 +28,7 @@ export const tokenMiddlewareOptions: RelativeMiddlewareOptions = {
  */
 export const tokenMiddleware =
   <Input extends object, Output extends object>(
-    options: TokenResolvedConfig
+    options: TokenResolvedConfig,
   ): FinalizeRequestMiddleware<Input, Output> =>
   (next: FinalizeHandler<Input, Output>, context: HandlerExecutionContext): FinalizeHandler<Input, Output> =>
   async (args: FinalizeHandlerArguments<Input>): Promise<FinalizeHandlerOutput<Output>> => {

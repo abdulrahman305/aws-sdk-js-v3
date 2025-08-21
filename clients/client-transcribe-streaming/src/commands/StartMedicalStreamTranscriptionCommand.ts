@@ -241,7 +241,7 @@ export class StartMedicalStreamTranscriptionCommand extends $Command
   .n("TranscribeStreamingClient", "StartMedicalStreamTranscriptionCommand")
   .f(
     StartMedicalStreamTranscriptionRequestFilterSensitiveLog,
-    StartMedicalStreamTranscriptionResponseFilterSensitiveLog
+    StartMedicalStreamTranscriptionResponseFilterSensitiveLog,
   )
   .ser(se_StartMedicalStreamTranscriptionCommand)
   .de(de_StartMedicalStreamTranscriptionCommand)

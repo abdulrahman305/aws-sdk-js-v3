@@ -106,7 +106,7 @@ describe(DynamoDBDocument.name, () => {
     string: "myString",
     number: NumberValue.from(1),
     bigInt: NumberValue.from(
-      "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
     ),
     bigNumber: NumberValue.from("3210000000000000000.0000000000000123"),
     boolean: true,
@@ -203,7 +203,7 @@ describe(DynamoDBDocument.name, () => {
         { client: dynamodb, maxWaitTime: 120 },
         {
           TableName,
-        }
+        },
       );
     }
 
@@ -529,7 +529,7 @@ describe(DynamoDBDocument.name, () => {
         "string-x": "myString-x",
         "number-x": NumberValue.from(1),
         "bigInt-x": NumberValue.from(
-          "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
         ),
         "bigNumber-x": NumberValue.from("3210000000000000000.0000000000000123"),
         "boolean-x": false,

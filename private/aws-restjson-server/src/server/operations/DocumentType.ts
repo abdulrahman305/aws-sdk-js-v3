@@ -61,7 +61,7 @@ export class DocumentTypeSerializer
 
 export const getDocumentTypeHandler = <Context>(
   operation: __Operation<DocumentTypeServerInput, DocumentTypeServerOutput, Context>,
-  customizer: __ValidationCustomizer<"DocumentType">
+  customizer: __ValidationCustomizer<"DocumentType">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "DocumentType">([
     new httpbinding.UriSpec<"RestJson", "DocumentType">("PUT", [{ type: "path_literal", value: "DocumentType" }], [], {
@@ -89,7 +89,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -127,7 +127,7 @@ export class DocumentTypeHandler<Context> implements __ServiceHandler<Context> {
   private readonly serializer: __OperationSerializer<RestJsonService<Context>, "DocumentType", DocumentTypeErrors>;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"DocumentType">;
   /**
@@ -144,7 +144,7 @@ export class DocumentTypeHandler<Context> implements __ServiceHandler<Context> {
     mux: __Mux<"RestJson", "DocumentType">,
     serializer: __OperationSerializer<RestJsonService<Context>, "DocumentType", DocumentTypeErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"DocumentType">
+    validationCustomizer: __ValidationCustomizer<"DocumentType">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -156,7 +156,7 @@ export class DocumentTypeHandler<Context> implements __ServiceHandler<Context> {
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.DocumentType. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.DocumentType. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -168,7 +168,7 @@ export class DocumentTypeHandler<Context> implements __ServiceHandler<Context> {
       this.operation,
       this.serializeFrameworkException,
       DocumentTypeServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

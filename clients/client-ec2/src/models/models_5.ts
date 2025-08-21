@@ -8789,12 +8789,12 @@ export type IpamOverlapStatus = (typeof IpamOverlapStatus)[keyof typeof IpamOver
  * @internal
  */
 export const DescribeVerifiedAccessTrustProvidersResultFilterSensitiveLog = (
-  obj: DescribeVerifiedAccessTrustProvidersResult
+  obj: DescribeVerifiedAccessTrustProvidersResult,
 ): any => ({
   ...obj,
   ...(obj.VerifiedAccessTrustProviders && {
     VerifiedAccessTrustProviders: obj.VerifiedAccessTrustProviders.map((item) =>
-      VerifiedAccessTrustProviderFilterSensitiveLog(item)
+      VerifiedAccessTrustProviderFilterSensitiveLog(item),
     ),
   }),
 });
@@ -8813,7 +8813,7 @@ export const DescribeVpnConnectionsResultFilterSensitiveLog = (obj: DescribeVpnC
  * @internal
  */
 export const DetachVerifiedAccessTrustProviderResultFilterSensitiveLog = (
-  obj: DetachVerifiedAccessTrustProviderResult
+  obj: DetachVerifiedAccessTrustProviderResult,
 ): any => ({
   ...obj,
   ...(obj.VerifiedAccessTrustProvider && {

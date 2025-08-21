@@ -64,14 +64,14 @@ export class FractionalSecondsSerializer
 
 export const getFractionalSecondsHandler = <Context>(
   operation: __Operation<FractionalSecondsServerInput, FractionalSecondsServerOutput, Context>,
-  customizer: __ValidationCustomizer<"FractionalSeconds">
+  customizer: __ValidationCustomizer<"FractionalSeconds">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "FractionalSeconds">([
     new httpbinding.UriSpec<"RestJson", "FractionalSeconds">(
       "POST",
       [{ type: "path_literal", value: "FractionalSeconds" }],
       [],
-      { service: "RestJson", operation: "FractionalSeconds" }
+      { service: "RestJson", operation: "FractionalSeconds" },
     ),
   ]);
   return new FractionalSecondsHandler(
@@ -79,7 +79,7 @@ export const getFractionalSecondsHandler = <Context>(
     mux,
     new FractionalSecondsSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -100,7 +100,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -142,7 +142,7 @@ export class FractionalSecondsHandler<Context> implements __ServiceHandler<Conte
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"FractionalSeconds">;
   /**
@@ -159,7 +159,7 @@ export class FractionalSecondsHandler<Context> implements __ServiceHandler<Conte
     mux: __Mux<"RestJson", "FractionalSeconds">,
     serializer: __OperationSerializer<RestJsonService<Context>, "FractionalSeconds", FractionalSecondsErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"FractionalSeconds">
+    validationCustomizer: __ValidationCustomizer<"FractionalSeconds">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -171,7 +171,7 @@ export class FractionalSecondsHandler<Context> implements __ServiceHandler<Conte
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.FractionalSeconds. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.FractionalSeconds. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -183,7 +183,7 @@ export class FractionalSecondsHandler<Context> implements __ServiceHandler<Conte
       this.operation,
       this.serializeFrameworkException,
       FractionalSecondsServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

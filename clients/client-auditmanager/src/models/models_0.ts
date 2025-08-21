@@ -5732,7 +5732,7 @@ export const CreateDelegationRequestFilterSensitiveLog = (obj: CreateDelegationR
  * @internal
  */
 export const BatchCreateDelegationByAssessmentRequestFilterSensitiveLog = (
-  obj: BatchCreateDelegationByAssessmentRequest
+  obj: BatchCreateDelegationByAssessmentRequest,
 ): any => ({
   ...obj,
   ...(obj.createDelegationRequests && { createDelegationRequests: SENSITIVE_STRING }),
@@ -5742,7 +5742,7 @@ export const BatchCreateDelegationByAssessmentRequestFilterSensitiveLog = (
  * @internal
  */
 export const BatchCreateDelegationByAssessmentErrorFilterSensitiveLog = (
-  obj: BatchCreateDelegationByAssessmentError
+  obj: BatchCreateDelegationByAssessmentError,
 ): any => ({
   ...obj,
   ...(obj.createDelegationRequest && {
@@ -5754,7 +5754,7 @@ export const BatchCreateDelegationByAssessmentErrorFilterSensitiveLog = (
  * @internal
  */
 export const BatchCreateDelegationByAssessmentResponseFilterSensitiveLog = (
-  obj: BatchCreateDelegationByAssessmentResponse
+  obj: BatchCreateDelegationByAssessmentResponse,
 ): any => ({
   ...obj,
   ...(obj.delegations && { delegations: SENSITIVE_STRING }),
@@ -5765,7 +5765,7 @@ export const BatchCreateDelegationByAssessmentResponseFilterSensitiveLog = (
  * @internal
  */
 export const BatchDeleteDelegationByAssessmentResponseFilterSensitiveLog = (
-  obj: BatchDeleteDelegationByAssessmentResponse
+  obj: BatchDeleteDelegationByAssessmentResponse,
 ): any => ({
   ...obj,
   ...(obj.errors && { errors: SENSITIVE_STRING }),
@@ -5784,7 +5784,7 @@ export const ManualEvidenceFilterSensitiveLog = (obj: ManualEvidence): any => ({
  * @internal
  */
 export const BatchImportEvidenceToAssessmentControlRequestFilterSensitiveLog = (
-  obj: BatchImportEvidenceToAssessmentControlRequest
+  obj: BatchImportEvidenceToAssessmentControlRequest,
 ): any => ({
   ...obj,
   ...(obj.manualEvidence && {
@@ -5796,7 +5796,7 @@ export const BatchImportEvidenceToAssessmentControlRequestFilterSensitiveLog = (
  * @internal
  */
 export const BatchImportEvidenceToAssessmentControlErrorFilterSensitiveLog = (
-  obj: BatchImportEvidenceToAssessmentControlError
+  obj: BatchImportEvidenceToAssessmentControlError,
 ): any => ({
   ...obj,
   ...(obj.manualEvidence && { manualEvidence: ManualEvidenceFilterSensitiveLog(obj.manualEvidence) }),
@@ -5806,7 +5806,7 @@ export const BatchImportEvidenceToAssessmentControlErrorFilterSensitiveLog = (
  * @internal
  */
 export const BatchImportEvidenceToAssessmentControlResponseFilterSensitiveLog = (
-  obj: BatchImportEvidenceToAssessmentControlResponse
+  obj: BatchImportEvidenceToAssessmentControlResponse,
 ): any => ({
   ...obj,
   ...(obj.errors && {
@@ -6026,12 +6026,12 @@ export const ListAssessmentFrameworksResponseFilterSensitiveLog = (obj: ListAsse
  * @internal
  */
 export const ListAssessmentFrameworkShareRequestsResponseFilterSensitiveLog = (
-  obj: ListAssessmentFrameworkShareRequestsResponse
+  obj: ListAssessmentFrameworkShareRequestsResponse,
 ): any => ({
   ...obj,
   ...(obj.assessmentFrameworkShareRequests && {
     assessmentFrameworkShareRequests: obj.assessmentFrameworkShareRequests.map((item) =>
-      AssessmentFrameworkShareRequestFilterSensitiveLog(item)
+      AssessmentFrameworkShareRequestFilterSensitiveLog(item),
     ),
   }),
 });
@@ -6076,12 +6076,12 @@ export const ListNotificationsResponseFilterSensitiveLog = (obj: ListNotificatio
  * @internal
  */
 export const StartAssessmentFrameworkShareResponseFilterSensitiveLog = (
-  obj: StartAssessmentFrameworkShareResponse
+  obj: StartAssessmentFrameworkShareResponse,
 ): any => ({
   ...obj,
   ...(obj.assessmentFrameworkShareRequest && {
     assessmentFrameworkShareRequest: AssessmentFrameworkShareRequestFilterSensitiveLog(
-      obj.assessmentFrameworkShareRequest
+      obj.assessmentFrameworkShareRequest,
     ),
   }),
 });
@@ -6126,7 +6126,7 @@ export const UpdateAssessmentControlResponseFilterSensitiveLog = (obj: UpdateAss
  * @internal
  */
 export const UpdateAssessmentControlSetStatusRequestFilterSensitiveLog = (
-  obj: UpdateAssessmentControlSetStatusRequest
+  obj: UpdateAssessmentControlSetStatusRequest,
 ): any => ({
   ...obj,
   ...(obj.comment && { comment: SENSITIVE_STRING }),
@@ -6136,7 +6136,7 @@ export const UpdateAssessmentControlSetStatusRequestFilterSensitiveLog = (
  * @internal
  */
 export const UpdateAssessmentControlSetStatusResponseFilterSensitiveLog = (
-  obj: UpdateAssessmentControlSetStatusResponse
+  obj: UpdateAssessmentControlSetStatusResponse,
 ): any => ({
   ...obj,
   ...(obj.controlSet && { controlSet: AssessmentControlSetFilterSensitiveLog(obj.controlSet) }),
@@ -6162,12 +6162,12 @@ export const UpdateAssessmentFrameworkResponseFilterSensitiveLog = (obj: UpdateA
  * @internal
  */
 export const UpdateAssessmentFrameworkShareResponseFilterSensitiveLog = (
-  obj: UpdateAssessmentFrameworkShareResponse
+  obj: UpdateAssessmentFrameworkShareResponse,
 ): any => ({
   ...obj,
   ...(obj.assessmentFrameworkShareRequest && {
     assessmentFrameworkShareRequest: AssessmentFrameworkShareRequestFilterSensitiveLog(
-      obj.assessmentFrameworkShareRequest
+      obj.assessmentFrameworkShareRequest,
     ),
   }),
 });

@@ -65,14 +65,14 @@ export class HttpPayloadTraitsSerializer
 
 export const getHttpPayloadTraitsHandler = <Context>(
   operation: __Operation<HttpPayloadTraitsServerInput, HttpPayloadTraitsServerOutput, Context>,
-  customizer: __ValidationCustomizer<"HttpPayloadTraits">
+  customizer: __ValidationCustomizer<"HttpPayloadTraits">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "HttpPayloadTraits">([
     new httpbinding.UriSpec<"RestJson", "HttpPayloadTraits">(
       "POST",
       [{ type: "path_literal", value: "HttpPayloadTraits" }],
       [],
-      { service: "RestJson", operation: "HttpPayloadTraits" }
+      { service: "RestJson", operation: "HttpPayloadTraits" },
     ),
   ]);
   return new HttpPayloadTraitsHandler(
@@ -80,7 +80,7 @@ export const getHttpPayloadTraitsHandler = <Context>(
     mux,
     new HttpPayloadTraitsSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -101,7 +101,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -143,7 +143,7 @@ export class HttpPayloadTraitsHandler<Context> implements __ServiceHandler<Conte
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"HttpPayloadTraits">;
   /**
@@ -160,7 +160,7 @@ export class HttpPayloadTraitsHandler<Context> implements __ServiceHandler<Conte
     mux: __Mux<"RestJson", "HttpPayloadTraits">,
     serializer: __OperationSerializer<RestJsonService<Context>, "HttpPayloadTraits", HttpPayloadTraitsErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"HttpPayloadTraits">
+    validationCustomizer: __ValidationCustomizer<"HttpPayloadTraits">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -172,7 +172,7 @@ export class HttpPayloadTraitsHandler<Context> implements __ServiceHandler<Conte
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpPayloadTraits. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpPayloadTraits. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -184,7 +184,7 @@ export class HttpPayloadTraitsHandler<Context> implements __ServiceHandler<Conte
       this.operation,
       this.serializeFrameworkException,
       HttpPayloadTraitsServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

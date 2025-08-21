@@ -166,7 +166,7 @@ import { ServiceDiscoveryServiceException as __BaseException } from "../models/S
  */
 export const se_CreateHttpNamespaceCommand = async (
   input: CreateHttpNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateHttpNamespace");
   let body: any;
@@ -179,7 +179,7 @@ export const se_CreateHttpNamespaceCommand = async (
  */
 export const se_CreatePrivateDnsNamespaceCommand = async (
   input: CreatePrivateDnsNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreatePrivateDnsNamespace");
   let body: any;
@@ -192,7 +192,7 @@ export const se_CreatePrivateDnsNamespaceCommand = async (
  */
 export const se_CreatePublicDnsNamespaceCommand = async (
   input: CreatePublicDnsNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreatePublicDnsNamespace");
   let body: any;
@@ -205,7 +205,7 @@ export const se_CreatePublicDnsNamespaceCommand = async (
  */
 export const se_CreateServiceCommand = async (
   input: CreateServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateService");
   let body: any;
@@ -218,7 +218,7 @@ export const se_CreateServiceCommand = async (
  */
 export const se_DeleteNamespaceCommand = async (
   input: DeleteNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteNamespace");
   let body: any;
@@ -231,7 +231,7 @@ export const se_DeleteNamespaceCommand = async (
  */
 export const se_DeleteServiceCommand = async (
   input: DeleteServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteService");
   let body: any;
@@ -244,7 +244,7 @@ export const se_DeleteServiceCommand = async (
  */
 export const se_DeregisterInstanceCommand = async (
   input: DeregisterInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeregisterInstance");
   let body: any;
@@ -257,7 +257,7 @@ export const se_DeregisterInstanceCommand = async (
  */
 export const se_DiscoverInstancesCommand = async (
   input: DiscoverInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DiscoverInstances");
   let body: any;
@@ -277,7 +277,7 @@ export const se_DiscoverInstancesCommand = async (
  */
 export const se_DiscoverInstancesRevisionCommand = async (
   input: DiscoverInstancesRevisionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DiscoverInstancesRevision");
   let body: any;
@@ -297,7 +297,7 @@ export const se_DiscoverInstancesRevisionCommand = async (
  */
 export const se_GetInstanceCommand = async (
   input: GetInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetInstance");
   let body: any;
@@ -310,7 +310,7 @@ export const se_GetInstanceCommand = async (
  */
 export const se_GetInstancesHealthStatusCommand = async (
   input: GetInstancesHealthStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetInstancesHealthStatus");
   let body: any;
@@ -323,7 +323,7 @@ export const se_GetInstancesHealthStatusCommand = async (
  */
 export const se_GetNamespaceCommand = async (
   input: GetNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetNamespace");
   let body: any;
@@ -336,7 +336,7 @@ export const se_GetNamespaceCommand = async (
  */
 export const se_GetOperationCommand = async (
   input: GetOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetOperation");
   let body: any;
@@ -349,7 +349,7 @@ export const se_GetOperationCommand = async (
  */
 export const se_GetServiceCommand = async (
   input: GetServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetService");
   let body: any;
@@ -362,7 +362,7 @@ export const se_GetServiceCommand = async (
  */
 export const se_ListInstancesCommand = async (
   input: ListInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListInstances");
   let body: any;
@@ -375,7 +375,7 @@ export const se_ListInstancesCommand = async (
  */
 export const se_ListNamespacesCommand = async (
   input: ListNamespacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListNamespaces");
   let body: any;
@@ -388,7 +388,7 @@ export const se_ListNamespacesCommand = async (
  */
 export const se_ListOperationsCommand = async (
   input: ListOperationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListOperations");
   let body: any;
@@ -401,7 +401,7 @@ export const se_ListOperationsCommand = async (
  */
 export const se_ListServicesCommand = async (
   input: ListServicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListServices");
   let body: any;
@@ -414,7 +414,7 @@ export const se_ListServicesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -427,7 +427,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_RegisterInstanceCommand = async (
   input: RegisterInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RegisterInstance");
   let body: any;
@@ -440,7 +440,7 @@ export const se_RegisterInstanceCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -453,7 +453,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -466,7 +466,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateHttpNamespaceCommand = async (
   input: UpdateHttpNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateHttpNamespace");
   let body: any;
@@ -479,7 +479,7 @@ export const se_UpdateHttpNamespaceCommand = async (
  */
 export const se_UpdateInstanceCustomHealthStatusCommand = async (
   input: UpdateInstanceCustomHealthStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateInstanceCustomHealthStatus");
   let body: any;
@@ -492,7 +492,7 @@ export const se_UpdateInstanceCustomHealthStatusCommand = async (
  */
 export const se_UpdatePrivateDnsNamespaceCommand = async (
   input: UpdatePrivateDnsNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdatePrivateDnsNamespace");
   let body: any;
@@ -505,7 +505,7 @@ export const se_UpdatePrivateDnsNamespaceCommand = async (
  */
 export const se_UpdatePublicDnsNamespaceCommand = async (
   input: UpdatePublicDnsNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdatePublicDnsNamespace");
   let body: any;
@@ -518,7 +518,7 @@ export const se_UpdatePublicDnsNamespaceCommand = async (
  */
 export const se_UpdateServiceCommand = async (
   input: UpdateServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateService");
   let body: any;
@@ -531,7 +531,7 @@ export const se_UpdateServiceCommand = async (
  */
 export const de_CreateHttpNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateHttpNamespaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -551,7 +551,7 @@ export const de_CreateHttpNamespaceCommand = async (
  */
 export const de_CreatePrivateDnsNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePrivateDnsNamespaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -571,7 +571,7 @@ export const de_CreatePrivateDnsNamespaceCommand = async (
  */
 export const de_CreatePublicDnsNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePublicDnsNamespaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -591,7 +591,7 @@ export const de_CreatePublicDnsNamespaceCommand = async (
  */
 export const de_CreateServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateServiceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -611,7 +611,7 @@ export const de_CreateServiceCommand = async (
  */
 export const de_DeleteNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteNamespaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -631,7 +631,7 @@ export const de_DeleteNamespaceCommand = async (
  */
 export const de_DeleteServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServiceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -651,7 +651,7 @@ export const de_DeleteServiceCommand = async (
  */
 export const de_DeregisterInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -671,7 +671,7 @@ export const de_DeregisterInstanceCommand = async (
  */
 export const de_DiscoverInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DiscoverInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -691,7 +691,7 @@ export const de_DiscoverInstancesCommand = async (
  */
 export const de_DiscoverInstancesRevisionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DiscoverInstancesRevisionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -711,7 +711,7 @@ export const de_DiscoverInstancesRevisionCommand = async (
  */
 export const de_GetInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -731,7 +731,7 @@ export const de_GetInstanceCommand = async (
  */
 export const de_GetInstancesHealthStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInstancesHealthStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -751,7 +751,7 @@ export const de_GetInstancesHealthStatusCommand = async (
  */
 export const de_GetNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetNamespaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -771,7 +771,7 @@ export const de_GetNamespaceCommand = async (
  */
 export const de_GetOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOperationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -791,7 +791,7 @@ export const de_GetOperationCommand = async (
  */
 export const de_GetServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -811,7 +811,7 @@ export const de_GetServiceCommand = async (
  */
 export const de_ListInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -831,7 +831,7 @@ export const de_ListInstancesCommand = async (
  */
 export const de_ListNamespacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListNamespacesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -851,7 +851,7 @@ export const de_ListNamespacesCommand = async (
  */
 export const de_ListOperationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOperationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -871,7 +871,7 @@ export const de_ListOperationsCommand = async (
  */
 export const de_ListServicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServicesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -891,7 +891,7 @@ export const de_ListServicesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -911,7 +911,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_RegisterInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -931,7 +931,7 @@ export const de_RegisterInstanceCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -951,7 +951,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -971,7 +971,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateHttpNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateHttpNamespaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -991,7 +991,7 @@ export const de_UpdateHttpNamespaceCommand = async (
  */
 export const de_UpdateInstanceCustomHealthStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateInstanceCustomHealthStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1008,7 +1008,7 @@ export const de_UpdateInstanceCustomHealthStatusCommand = async (
  */
 export const de_UpdatePrivateDnsNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePrivateDnsNamespaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1028,7 +1028,7 @@ export const de_UpdatePrivateDnsNamespaceCommand = async (
  */
 export const de_UpdatePublicDnsNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePublicDnsNamespaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1048,7 +1048,7 @@ export const de_UpdatePublicDnsNamespaceCommand = async (
  */
 export const de_UpdateServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServiceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1130,7 +1130,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_CustomHealthNotFoundRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CustomHealthNotFound> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1185,7 +1185,7 @@ const de_InvalidInputRes = async (parsedOutput: any, context: __SerdeContext): P
  */
 const de_NamespaceAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NamespaceAlreadyExists> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1227,7 +1227,7 @@ const de_OperationNotFoundRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_RequestLimitExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestLimitExceeded> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1256,7 +1256,7 @@ const de_ResourceInUseRes = async (parsedOutput: any, context: __SerdeContext): 
  */
 const de_ResourceLimitExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceLimitExceeded> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1272,7 +1272,7 @@ const de_ResourceLimitExceededRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1288,7 +1288,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceAlreadyExists> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1317,7 +1317,7 @@ const de_ServiceNotFoundRes = async (parsedOutput: any, context: __SerdeContext)
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1826,7 +1826,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

@@ -197,16 +197,16 @@ export interface Route53Domains {
    */
   acceptDomainTransferFromAnotherAwsAccount(
     args: AcceptDomainTransferFromAnotherAwsAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AcceptDomainTransferFromAnotherAwsAccountCommandOutput>;
   acceptDomainTransferFromAnotherAwsAccount(
     args: AcceptDomainTransferFromAnotherAwsAccountCommandInput,
-    cb: (err: any, data?: AcceptDomainTransferFromAnotherAwsAccountCommandOutput) => void
+    cb: (err: any, data?: AcceptDomainTransferFromAnotherAwsAccountCommandOutput) => void,
   ): void;
   acceptDomainTransferFromAnotherAwsAccount(
     args: AcceptDomainTransferFromAnotherAwsAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AcceptDomainTransferFromAnotherAwsAccountCommandOutput) => void
+    cb: (err: any, data?: AcceptDomainTransferFromAnotherAwsAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -214,16 +214,16 @@ export interface Route53Domains {
    */
   associateDelegationSignerToDomain(
     args: AssociateDelegationSignerToDomainCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateDelegationSignerToDomainCommandOutput>;
   associateDelegationSignerToDomain(
     args: AssociateDelegationSignerToDomainCommandInput,
-    cb: (err: any, data?: AssociateDelegationSignerToDomainCommandOutput) => void
+    cb: (err: any, data?: AssociateDelegationSignerToDomainCommandOutput) => void,
   ): void;
   associateDelegationSignerToDomain(
     args: AssociateDelegationSignerToDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateDelegationSignerToDomainCommandOutput) => void
+    cb: (err: any, data?: AssociateDelegationSignerToDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -231,16 +231,16 @@ export interface Route53Domains {
    */
   cancelDomainTransferToAnotherAwsAccount(
     args: CancelDomainTransferToAnotherAwsAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelDomainTransferToAnotherAwsAccountCommandOutput>;
   cancelDomainTransferToAnotherAwsAccount(
     args: CancelDomainTransferToAnotherAwsAccountCommandInput,
-    cb: (err: any, data?: CancelDomainTransferToAnotherAwsAccountCommandOutput) => void
+    cb: (err: any, data?: CancelDomainTransferToAnotherAwsAccountCommandOutput) => void,
   ): void;
   cancelDomainTransferToAnotherAwsAccount(
     args: CancelDomainTransferToAnotherAwsAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelDomainTransferToAnotherAwsAccountCommandOutput) => void
+    cb: (err: any, data?: CancelDomainTransferToAnotherAwsAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -248,16 +248,16 @@ export interface Route53Domains {
    */
   checkDomainAvailability(
     args: CheckDomainAvailabilityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CheckDomainAvailabilityCommandOutput>;
   checkDomainAvailability(
     args: CheckDomainAvailabilityCommandInput,
-    cb: (err: any, data?: CheckDomainAvailabilityCommandOutput) => void
+    cb: (err: any, data?: CheckDomainAvailabilityCommandOutput) => void,
   ): void;
   checkDomainAvailability(
     args: CheckDomainAvailabilityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CheckDomainAvailabilityCommandOutput) => void
+    cb: (err: any, data?: CheckDomainAvailabilityCommandOutput) => void,
   ): void;
 
   /**
@@ -265,16 +265,16 @@ export interface Route53Domains {
    */
   checkDomainTransferability(
     args: CheckDomainTransferabilityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CheckDomainTransferabilityCommandOutput>;
   checkDomainTransferability(
     args: CheckDomainTransferabilityCommandInput,
-    cb: (err: any, data?: CheckDomainTransferabilityCommandOutput) => void
+    cb: (err: any, data?: CheckDomainTransferabilityCommandOutput) => void,
   ): void;
   checkDomainTransferability(
     args: CheckDomainTransferabilityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CheckDomainTransferabilityCommandOutput) => void
+    cb: (err: any, data?: CheckDomainTransferabilityCommandOutput) => void,
   ): void;
 
   /**
@@ -285,7 +285,7 @@ export interface Route53Domains {
   deleteDomain(
     args: DeleteDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDomainCommandOutput) => void
+    cb: (err: any, data?: DeleteDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -293,16 +293,16 @@ export interface Route53Domains {
    */
   deleteTagsForDomain(
     args: DeleteTagsForDomainCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteTagsForDomainCommandOutput>;
   deleteTagsForDomain(
     args: DeleteTagsForDomainCommandInput,
-    cb: (err: any, data?: DeleteTagsForDomainCommandOutput) => void
+    cb: (err: any, data?: DeleteTagsForDomainCommandOutput) => void,
   ): void;
   deleteTagsForDomain(
     args: DeleteTagsForDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTagsForDomainCommandOutput) => void
+    cb: (err: any, data?: DeleteTagsForDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -310,16 +310,16 @@ export interface Route53Domains {
    */
   disableDomainAutoRenew(
     args: DisableDomainAutoRenewCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisableDomainAutoRenewCommandOutput>;
   disableDomainAutoRenew(
     args: DisableDomainAutoRenewCommandInput,
-    cb: (err: any, data?: DisableDomainAutoRenewCommandOutput) => void
+    cb: (err: any, data?: DisableDomainAutoRenewCommandOutput) => void,
   ): void;
   disableDomainAutoRenew(
     args: DisableDomainAutoRenewCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableDomainAutoRenewCommandOutput) => void
+    cb: (err: any, data?: DisableDomainAutoRenewCommandOutput) => void,
   ): void;
 
   /**
@@ -327,16 +327,16 @@ export interface Route53Domains {
    */
   disableDomainTransferLock(
     args: DisableDomainTransferLockCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisableDomainTransferLockCommandOutput>;
   disableDomainTransferLock(
     args: DisableDomainTransferLockCommandInput,
-    cb: (err: any, data?: DisableDomainTransferLockCommandOutput) => void
+    cb: (err: any, data?: DisableDomainTransferLockCommandOutput) => void,
   ): void;
   disableDomainTransferLock(
     args: DisableDomainTransferLockCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableDomainTransferLockCommandOutput) => void
+    cb: (err: any, data?: DisableDomainTransferLockCommandOutput) => void,
   ): void;
 
   /**
@@ -344,16 +344,16 @@ export interface Route53Domains {
    */
   disassociateDelegationSignerFromDomain(
     args: DisassociateDelegationSignerFromDomainCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateDelegationSignerFromDomainCommandOutput>;
   disassociateDelegationSignerFromDomain(
     args: DisassociateDelegationSignerFromDomainCommandInput,
-    cb: (err: any, data?: DisassociateDelegationSignerFromDomainCommandOutput) => void
+    cb: (err: any, data?: DisassociateDelegationSignerFromDomainCommandOutput) => void,
   ): void;
   disassociateDelegationSignerFromDomain(
     args: DisassociateDelegationSignerFromDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateDelegationSignerFromDomainCommandOutput) => void
+    cb: (err: any, data?: DisassociateDelegationSignerFromDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -361,16 +361,16 @@ export interface Route53Domains {
    */
   enableDomainAutoRenew(
     args: EnableDomainAutoRenewCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EnableDomainAutoRenewCommandOutput>;
   enableDomainAutoRenew(
     args: EnableDomainAutoRenewCommandInput,
-    cb: (err: any, data?: EnableDomainAutoRenewCommandOutput) => void
+    cb: (err: any, data?: EnableDomainAutoRenewCommandOutput) => void,
   ): void;
   enableDomainAutoRenew(
     args: EnableDomainAutoRenewCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableDomainAutoRenewCommandOutput) => void
+    cb: (err: any, data?: EnableDomainAutoRenewCommandOutput) => void,
   ): void;
 
   /**
@@ -378,16 +378,16 @@ export interface Route53Domains {
    */
   enableDomainTransferLock(
     args: EnableDomainTransferLockCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EnableDomainTransferLockCommandOutput>;
   enableDomainTransferLock(
     args: EnableDomainTransferLockCommandInput,
-    cb: (err: any, data?: EnableDomainTransferLockCommandOutput) => void
+    cb: (err: any, data?: EnableDomainTransferLockCommandOutput) => void,
   ): void;
   enableDomainTransferLock(
     args: EnableDomainTransferLockCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableDomainTransferLockCommandOutput) => void
+    cb: (err: any, data?: EnableDomainTransferLockCommandOutput) => void,
   ): void;
 
   /**
@@ -396,16 +396,16 @@ export interface Route53Domains {
   getContactReachabilityStatus(): Promise<GetContactReachabilityStatusCommandOutput>;
   getContactReachabilityStatus(
     args: GetContactReachabilityStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetContactReachabilityStatusCommandOutput>;
   getContactReachabilityStatus(
     args: GetContactReachabilityStatusCommandInput,
-    cb: (err: any, data?: GetContactReachabilityStatusCommandOutput) => void
+    cb: (err: any, data?: GetContactReachabilityStatusCommandOutput) => void,
   ): void;
   getContactReachabilityStatus(
     args: GetContactReachabilityStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetContactReachabilityStatusCommandOutput) => void
+    cb: (err: any, data?: GetContactReachabilityStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -413,13 +413,13 @@ export interface Route53Domains {
    */
   getDomainDetail(
     args: GetDomainDetailCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDomainDetailCommandOutput>;
   getDomainDetail(args: GetDomainDetailCommandInput, cb: (err: any, data?: GetDomainDetailCommandOutput) => void): void;
   getDomainDetail(
     args: GetDomainDetailCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDomainDetailCommandOutput) => void
+    cb: (err: any, data?: GetDomainDetailCommandOutput) => void,
   ): void;
 
   /**
@@ -427,16 +427,16 @@ export interface Route53Domains {
    */
   getDomainSuggestions(
     args: GetDomainSuggestionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDomainSuggestionsCommandOutput>;
   getDomainSuggestions(
     args: GetDomainSuggestionsCommandInput,
-    cb: (err: any, data?: GetDomainSuggestionsCommandOutput) => void
+    cb: (err: any, data?: GetDomainSuggestionsCommandOutput) => void,
   ): void;
   getDomainSuggestions(
     args: GetDomainSuggestionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDomainSuggestionsCommandOutput) => void
+    cb: (err: any, data?: GetDomainSuggestionsCommandOutput) => void,
   ): void;
 
   /**
@@ -444,16 +444,16 @@ export interface Route53Domains {
    */
   getOperationDetail(
     args: GetOperationDetailCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetOperationDetailCommandOutput>;
   getOperationDetail(
     args: GetOperationDetailCommandInput,
-    cb: (err: any, data?: GetOperationDetailCommandOutput) => void
+    cb: (err: any, data?: GetOperationDetailCommandOutput) => void,
   ): void;
   getOperationDetail(
     args: GetOperationDetailCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetOperationDetailCommandOutput) => void
+    cb: (err: any, data?: GetOperationDetailCommandOutput) => void,
   ): void;
 
   /**
@@ -465,7 +465,7 @@ export interface Route53Domains {
   listDomains(
     args: ListDomainsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDomainsCommandOutput) => void
+    cb: (err: any, data?: ListDomainsCommandOutput) => void,
   ): void;
 
   /**
@@ -474,13 +474,13 @@ export interface Route53Domains {
   listOperations(): Promise<ListOperationsCommandOutput>;
   listOperations(
     args: ListOperationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListOperationsCommandOutput>;
   listOperations(args: ListOperationsCommandInput, cb: (err: any, data?: ListOperationsCommandOutput) => void): void;
   listOperations(
     args: ListOperationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOperationsCommandOutput) => void
+    cb: (err: any, data?: ListOperationsCommandOutput) => void,
   ): void;
 
   /**
@@ -492,7 +492,7 @@ export interface Route53Domains {
   listPrices(
     args: ListPricesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPricesCommandOutput) => void
+    cb: (err: any, data?: ListPricesCommandOutput) => void,
   ): void;
 
   /**
@@ -500,16 +500,16 @@ export interface Route53Domains {
    */
   listTagsForDomain(
     args: ListTagsForDomainCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForDomainCommandOutput>;
   listTagsForDomain(
     args: ListTagsForDomainCommandInput,
-    cb: (err: any, data?: ListTagsForDomainCommandOutput) => void
+    cb: (err: any, data?: ListTagsForDomainCommandOutput) => void,
   ): void;
   listTagsForDomain(
     args: ListTagsForDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForDomainCommandOutput) => void
+    cb: (err: any, data?: ListTagsForDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -520,7 +520,7 @@ export interface Route53Domains {
   pushDomain(
     args: PushDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PushDomainCommandOutput) => void
+    cb: (err: any, data?: PushDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -528,13 +528,13 @@ export interface Route53Domains {
    */
   registerDomain(
     args: RegisterDomainCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterDomainCommandOutput>;
   registerDomain(args: RegisterDomainCommandInput, cb: (err: any, data?: RegisterDomainCommandOutput) => void): void;
   registerDomain(
     args: RegisterDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterDomainCommandOutput) => void
+    cb: (err: any, data?: RegisterDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -542,16 +542,16 @@ export interface Route53Domains {
    */
   rejectDomainTransferFromAnotherAwsAccount(
     args: RejectDomainTransferFromAnotherAwsAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RejectDomainTransferFromAnotherAwsAccountCommandOutput>;
   rejectDomainTransferFromAnotherAwsAccount(
     args: RejectDomainTransferFromAnotherAwsAccountCommandInput,
-    cb: (err: any, data?: RejectDomainTransferFromAnotherAwsAccountCommandOutput) => void
+    cb: (err: any, data?: RejectDomainTransferFromAnotherAwsAccountCommandOutput) => void,
   ): void;
   rejectDomainTransferFromAnotherAwsAccount(
     args: RejectDomainTransferFromAnotherAwsAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RejectDomainTransferFromAnotherAwsAccountCommandOutput) => void
+    cb: (err: any, data?: RejectDomainTransferFromAnotherAwsAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -562,7 +562,7 @@ export interface Route53Domains {
   renewDomain(
     args: RenewDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RenewDomainCommandOutput) => void
+    cb: (err: any, data?: RenewDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -571,16 +571,16 @@ export interface Route53Domains {
   resendContactReachabilityEmail(): Promise<ResendContactReachabilityEmailCommandOutput>;
   resendContactReachabilityEmail(
     args: ResendContactReachabilityEmailCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ResendContactReachabilityEmailCommandOutput>;
   resendContactReachabilityEmail(
     args: ResendContactReachabilityEmailCommandInput,
-    cb: (err: any, data?: ResendContactReachabilityEmailCommandOutput) => void
+    cb: (err: any, data?: ResendContactReachabilityEmailCommandOutput) => void,
   ): void;
   resendContactReachabilityEmail(
     args: ResendContactReachabilityEmailCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ResendContactReachabilityEmailCommandOutput) => void
+    cb: (err: any, data?: ResendContactReachabilityEmailCommandOutput) => void,
   ): void;
 
   /**
@@ -588,16 +588,16 @@ export interface Route53Domains {
    */
   resendOperationAuthorization(
     args: ResendOperationAuthorizationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ResendOperationAuthorizationCommandOutput>;
   resendOperationAuthorization(
     args: ResendOperationAuthorizationCommandInput,
-    cb: (err: any, data?: ResendOperationAuthorizationCommandOutput) => void
+    cb: (err: any, data?: ResendOperationAuthorizationCommandOutput) => void,
   ): void;
   resendOperationAuthorization(
     args: ResendOperationAuthorizationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ResendOperationAuthorizationCommandOutput) => void
+    cb: (err: any, data?: ResendOperationAuthorizationCommandOutput) => void,
   ): void;
 
   /**
@@ -605,16 +605,16 @@ export interface Route53Domains {
    */
   retrieveDomainAuthCode(
     args: RetrieveDomainAuthCodeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RetrieveDomainAuthCodeCommandOutput>;
   retrieveDomainAuthCode(
     args: RetrieveDomainAuthCodeCommandInput,
-    cb: (err: any, data?: RetrieveDomainAuthCodeCommandOutput) => void
+    cb: (err: any, data?: RetrieveDomainAuthCodeCommandOutput) => void,
   ): void;
   retrieveDomainAuthCode(
     args: RetrieveDomainAuthCodeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RetrieveDomainAuthCodeCommandOutput) => void
+    cb: (err: any, data?: RetrieveDomainAuthCodeCommandOutput) => void,
   ): void;
 
   /**
@@ -622,13 +622,13 @@ export interface Route53Domains {
    */
   transferDomain(
     args: TransferDomainCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<TransferDomainCommandOutput>;
   transferDomain(args: TransferDomainCommandInput, cb: (err: any, data?: TransferDomainCommandOutput) => void): void;
   transferDomain(
     args: TransferDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TransferDomainCommandOutput) => void
+    cb: (err: any, data?: TransferDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -636,16 +636,16 @@ export interface Route53Domains {
    */
   transferDomainToAnotherAwsAccount(
     args: TransferDomainToAnotherAwsAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<TransferDomainToAnotherAwsAccountCommandOutput>;
   transferDomainToAnotherAwsAccount(
     args: TransferDomainToAnotherAwsAccountCommandInput,
-    cb: (err: any, data?: TransferDomainToAnotherAwsAccountCommandOutput) => void
+    cb: (err: any, data?: TransferDomainToAnotherAwsAccountCommandOutput) => void,
   ): void;
   transferDomainToAnotherAwsAccount(
     args: TransferDomainToAnotherAwsAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TransferDomainToAnotherAwsAccountCommandOutput) => void
+    cb: (err: any, data?: TransferDomainToAnotherAwsAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -653,16 +653,16 @@ export interface Route53Domains {
    */
   updateDomainContact(
     args: UpdateDomainContactCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDomainContactCommandOutput>;
   updateDomainContact(
     args: UpdateDomainContactCommandInput,
-    cb: (err: any, data?: UpdateDomainContactCommandOutput) => void
+    cb: (err: any, data?: UpdateDomainContactCommandOutput) => void,
   ): void;
   updateDomainContact(
     args: UpdateDomainContactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDomainContactCommandOutput) => void
+    cb: (err: any, data?: UpdateDomainContactCommandOutput) => void,
   ): void;
 
   /**
@@ -670,16 +670,16 @@ export interface Route53Domains {
    */
   updateDomainContactPrivacy(
     args: UpdateDomainContactPrivacyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDomainContactPrivacyCommandOutput>;
   updateDomainContactPrivacy(
     args: UpdateDomainContactPrivacyCommandInput,
-    cb: (err: any, data?: UpdateDomainContactPrivacyCommandOutput) => void
+    cb: (err: any, data?: UpdateDomainContactPrivacyCommandOutput) => void,
   ): void;
   updateDomainContactPrivacy(
     args: UpdateDomainContactPrivacyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDomainContactPrivacyCommandOutput) => void
+    cb: (err: any, data?: UpdateDomainContactPrivacyCommandOutput) => void,
   ): void;
 
   /**
@@ -687,16 +687,16 @@ export interface Route53Domains {
    */
   updateDomainNameservers(
     args: UpdateDomainNameserversCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDomainNameserversCommandOutput>;
   updateDomainNameservers(
     args: UpdateDomainNameserversCommandInput,
-    cb: (err: any, data?: UpdateDomainNameserversCommandOutput) => void
+    cb: (err: any, data?: UpdateDomainNameserversCommandOutput) => void,
   ): void;
   updateDomainNameservers(
     args: UpdateDomainNameserversCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDomainNameserversCommandOutput) => void
+    cb: (err: any, data?: UpdateDomainNameserversCommandOutput) => void,
   ): void;
 
   /**
@@ -704,16 +704,16 @@ export interface Route53Domains {
    */
   updateTagsForDomain(
     args: UpdateTagsForDomainCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateTagsForDomainCommandOutput>;
   updateTagsForDomain(
     args: UpdateTagsForDomainCommandInput,
-    cb: (err: any, data?: UpdateTagsForDomainCommandOutput) => void
+    cb: (err: any, data?: UpdateTagsForDomainCommandOutput) => void,
   ): void;
   updateTagsForDomain(
     args: UpdateTagsForDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTagsForDomainCommandOutput) => void
+    cb: (err: any, data?: UpdateTagsForDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -725,7 +725,7 @@ export interface Route53Domains {
   viewBilling(
     args: ViewBillingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ViewBillingCommandOutput) => void
+    cb: (err: any, data?: ViewBillingCommandOutput) => void,
   ): void;
 }
 

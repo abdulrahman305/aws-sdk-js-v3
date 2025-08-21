@@ -28,7 +28,7 @@ export interface Forecastquery {
   queryForecast(
     args: QueryForecastCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: QueryForecastCommandOutput) => void
+    cb: (err: any, data?: QueryForecastCommandOutput) => void,
   ): void;
 
   /**
@@ -36,16 +36,16 @@ export interface Forecastquery {
    */
   queryWhatIfForecast(
     args: QueryWhatIfForecastCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<QueryWhatIfForecastCommandOutput>;
   queryWhatIfForecast(
     args: QueryWhatIfForecastCommandInput,
-    cb: (err: any, data?: QueryWhatIfForecastCommandOutput) => void
+    cb: (err: any, data?: QueryWhatIfForecastCommandOutput) => void,
   ): void;
   queryWhatIfForecast(
     args: QueryWhatIfForecastCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: QueryWhatIfForecastCommandOutput) => void
+    cb: (err: any, data?: QueryWhatIfForecastCommandOutput) => void,
   ): void;
 }
 

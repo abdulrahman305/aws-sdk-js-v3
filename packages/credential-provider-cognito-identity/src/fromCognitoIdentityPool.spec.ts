@@ -48,7 +48,7 @@ describe("fromCognitoIdentityPool", () => {
         client: mockClient,
         identityPoolId,
         customRoleArn: "myArn",
-      })()
+      })(),
     ).toEqual({
       accessKeyId: "foo",
       secretAccessKey: "bar",
@@ -126,7 +126,7 @@ describe("fromCognitoIdentityPool", () => {
         accountId: "myAccountId",
         client: mockClient,
         identityPoolId,
-      })()
+      })(),
     ).rejects.toMatchObject(new CredentialsProviderError("Response from Amazon Cognito contained no identity ID"));
   });
 
@@ -174,7 +174,7 @@ describe("fromCognitoIdentityPool", () => {
         client: mockClient,
         identityPoolId,
         cache,
-      })()
+      })(),
     ).rejects.toMatchObject(new Error("PANIC"));
 
     expect(cache.getItem(cacheKey)).toBe(null);
@@ -202,7 +202,7 @@ describe("fromCognitoIdentityPool", () => {
         logins: {
           "www.amazon.com": "token",
         },
-      })()
+      })(),
     ).rejects.toMatchObject(new Error("PANIC"));
 
     expect((localStorage().removeItem as any).mock.calls.length).toBe(0);

@@ -179,7 +179,7 @@ export class GenerateEmbedUrlForAnonymousUserCommand extends $Command
   .n("QuickSightClient", "GenerateEmbedUrlForAnonymousUserCommand")
   .f(
     GenerateEmbedUrlForAnonymousUserRequestFilterSensitiveLog,
-    GenerateEmbedUrlForAnonymousUserResponseFilterSensitiveLog
+    GenerateEmbedUrlForAnonymousUserResponseFilterSensitiveLog,
   )
   .ser(se_GenerateEmbedUrlForAnonymousUserCommand)
   .de(de_GenerateEmbedUrlForAnonymousUserCommand)

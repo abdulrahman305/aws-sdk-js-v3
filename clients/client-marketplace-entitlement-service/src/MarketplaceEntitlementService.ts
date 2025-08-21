@@ -22,13 +22,13 @@ export interface MarketplaceEntitlementService {
    */
   getEntitlements(
     args: GetEntitlementsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEntitlementsCommandOutput>;
   getEntitlements(args: GetEntitlementsCommandInput, cb: (err: any, data?: GetEntitlementsCommandOutput) => void): void;
   getEntitlements(
     args: GetEntitlementsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEntitlementsCommandOutput) => void
+    cb: (err: any, data?: GetEntitlementsCommandOutput) => void,
   ): void;
 }
 

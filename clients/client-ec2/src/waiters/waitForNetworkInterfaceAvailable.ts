@@ -42,7 +42,7 @@ const checkState = async (client: EC2Client, input: DescribeNetworkInterfacesCom
  */
 export const waitForNetworkInterfaceAvailable = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeNetworkInterfacesCommandInput
+  input: DescribeNetworkInterfacesCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 20, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -54,7 +54,7 @@ export const waitForNetworkInterfaceAvailable = async (
  */
 export const waitUntilNetworkInterfaceAvailable = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeNetworkInterfacesCommandInput
+  input: DescribeNetworkInterfacesCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 20, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

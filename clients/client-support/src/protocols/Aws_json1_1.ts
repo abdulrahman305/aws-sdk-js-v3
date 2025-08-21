@@ -113,7 +113,7 @@ import { SupportServiceException as __BaseException } from "../models/SupportSer
  */
 export const se_AddAttachmentsToSetCommand = async (
   input: AddAttachmentsToSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AddAttachmentsToSet");
   let body: any;
@@ -126,7 +126,7 @@ export const se_AddAttachmentsToSetCommand = async (
  */
 export const se_AddCommunicationToCaseCommand = async (
   input: AddCommunicationToCaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AddCommunicationToCase");
   let body: any;
@@ -139,7 +139,7 @@ export const se_AddCommunicationToCaseCommand = async (
  */
 export const se_CreateCaseCommand = async (
   input: CreateCaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateCase");
   let body: any;
@@ -152,7 +152,7 @@ export const se_CreateCaseCommand = async (
  */
 export const se_DescribeAttachmentCommand = async (
   input: DescribeAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAttachment");
   let body: any;
@@ -165,7 +165,7 @@ export const se_DescribeAttachmentCommand = async (
  */
 export const se_DescribeCasesCommand = async (
   input: DescribeCasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCases");
   let body: any;
@@ -178,7 +178,7 @@ export const se_DescribeCasesCommand = async (
  */
 export const se_DescribeCommunicationsCommand = async (
   input: DescribeCommunicationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCommunications");
   let body: any;
@@ -191,7 +191,7 @@ export const se_DescribeCommunicationsCommand = async (
  */
 export const se_DescribeCreateCaseOptionsCommand = async (
   input: DescribeCreateCaseOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCreateCaseOptions");
   let body: any;
@@ -204,7 +204,7 @@ export const se_DescribeCreateCaseOptionsCommand = async (
  */
 export const se_DescribeServicesCommand = async (
   input: DescribeServicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeServices");
   let body: any;
@@ -217,7 +217,7 @@ export const se_DescribeServicesCommand = async (
  */
 export const se_DescribeSeverityLevelsCommand = async (
   input: DescribeSeverityLevelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeSeverityLevels");
   let body: any;
@@ -230,7 +230,7 @@ export const se_DescribeSeverityLevelsCommand = async (
  */
 export const se_DescribeSupportedLanguagesCommand = async (
   input: DescribeSupportedLanguagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeSupportedLanguages");
   let body: any;
@@ -243,7 +243,7 @@ export const se_DescribeSupportedLanguagesCommand = async (
  */
 export const se_DescribeTrustedAdvisorCheckRefreshStatusesCommand = async (
   input: DescribeTrustedAdvisorCheckRefreshStatusesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTrustedAdvisorCheckRefreshStatuses");
   let body: any;
@@ -256,7 +256,7 @@ export const se_DescribeTrustedAdvisorCheckRefreshStatusesCommand = async (
  */
 export const se_DescribeTrustedAdvisorCheckResultCommand = async (
   input: DescribeTrustedAdvisorCheckResultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTrustedAdvisorCheckResult");
   let body: any;
@@ -269,7 +269,7 @@ export const se_DescribeTrustedAdvisorCheckResultCommand = async (
  */
 export const se_DescribeTrustedAdvisorChecksCommand = async (
   input: DescribeTrustedAdvisorChecksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTrustedAdvisorChecks");
   let body: any;
@@ -282,7 +282,7 @@ export const se_DescribeTrustedAdvisorChecksCommand = async (
  */
 export const se_DescribeTrustedAdvisorCheckSummariesCommand = async (
   input: DescribeTrustedAdvisorCheckSummariesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTrustedAdvisorCheckSummaries");
   let body: any;
@@ -295,7 +295,7 @@ export const se_DescribeTrustedAdvisorCheckSummariesCommand = async (
  */
 export const se_RefreshTrustedAdvisorCheckCommand = async (
   input: RefreshTrustedAdvisorCheckCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RefreshTrustedAdvisorCheck");
   let body: any;
@@ -308,7 +308,7 @@ export const se_RefreshTrustedAdvisorCheckCommand = async (
  */
 export const se_ResolveCaseCommand = async (
   input: ResolveCaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ResolveCase");
   let body: any;
@@ -321,7 +321,7 @@ export const se_ResolveCaseCommand = async (
  */
 export const de_AddAttachmentsToSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddAttachmentsToSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -341,7 +341,7 @@ export const de_AddAttachmentsToSetCommand = async (
  */
 export const de_AddCommunicationToCaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddCommunicationToCaseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -361,7 +361,7 @@ export const de_AddCommunicationToCaseCommand = async (
  */
 export const de_CreateCaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCaseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -381,7 +381,7 @@ export const de_CreateCaseCommand = async (
  */
 export const de_DescribeAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAttachmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -401,7 +401,7 @@ export const de_DescribeAttachmentCommand = async (
  */
 export const de_DescribeCasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCasesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -421,7 +421,7 @@ export const de_DescribeCasesCommand = async (
  */
 export const de_DescribeCommunicationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCommunicationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -441,7 +441,7 @@ export const de_DescribeCommunicationsCommand = async (
  */
 export const de_DescribeCreateCaseOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCreateCaseOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -461,7 +461,7 @@ export const de_DescribeCreateCaseOptionsCommand = async (
  */
 export const de_DescribeServicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeServicesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -481,7 +481,7 @@ export const de_DescribeServicesCommand = async (
  */
 export const de_DescribeSeverityLevelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSeverityLevelsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -501,7 +501,7 @@ export const de_DescribeSeverityLevelsCommand = async (
  */
 export const de_DescribeSupportedLanguagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSupportedLanguagesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -521,7 +521,7 @@ export const de_DescribeSupportedLanguagesCommand = async (
  */
 export const de_DescribeTrustedAdvisorCheckRefreshStatusesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTrustedAdvisorCheckRefreshStatusesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -541,7 +541,7 @@ export const de_DescribeTrustedAdvisorCheckRefreshStatusesCommand = async (
  */
 export const de_DescribeTrustedAdvisorCheckResultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTrustedAdvisorCheckResultCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -561,7 +561,7 @@ export const de_DescribeTrustedAdvisorCheckResultCommand = async (
  */
 export const de_DescribeTrustedAdvisorChecksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTrustedAdvisorChecksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -581,7 +581,7 @@ export const de_DescribeTrustedAdvisorChecksCommand = async (
  */
 export const de_DescribeTrustedAdvisorCheckSummariesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTrustedAdvisorCheckSummariesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -601,7 +601,7 @@ export const de_DescribeTrustedAdvisorCheckSummariesCommand = async (
  */
 export const de_RefreshTrustedAdvisorCheckCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RefreshTrustedAdvisorCheckCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -621,7 +621,7 @@ export const de_RefreshTrustedAdvisorCheckCommand = async (
  */
 export const de_ResolveCaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResolveCaseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -691,7 +691,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AttachmentIdNotFoundRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachmentIdNotFound> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -707,7 +707,7 @@ const de_AttachmentIdNotFoundRes = async (
  */
 const de_AttachmentLimitExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachmentLimitExceeded> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -723,7 +723,7 @@ const de_AttachmentLimitExceededRes = async (
  */
 const de_AttachmentSetExpiredRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachmentSetExpired> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -739,7 +739,7 @@ const de_AttachmentSetExpiredRes = async (
  */
 const de_AttachmentSetIdNotFoundRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachmentSetIdNotFound> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -755,7 +755,7 @@ const de_AttachmentSetIdNotFoundRes = async (
  */
 const de_AttachmentSetSizeLimitExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachmentSetSizeLimitExceeded> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -771,7 +771,7 @@ const de_AttachmentSetSizeLimitExceededRes = async (
  */
 const de_CaseCreationLimitExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CaseCreationLimitExceeded> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -800,7 +800,7 @@ const de_CaseIdNotFoundRes = async (parsedOutput: any, context: __SerdeContext):
  */
 const de_DescribeAttachmentLimitExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAttachmentLimitExceeded> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -895,7 +895,7 @@ const se_Attachments = (input: Attachment[], context: __SerdeContext): any => {
  */
 const se_DescribeTrustedAdvisorCheckRefreshStatusesRequest = (
   input: DescribeTrustedAdvisorCheckRefreshStatusesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     checkIds: (_) => se_StringList(_, context),
@@ -911,7 +911,7 @@ const se_DescribeTrustedAdvisorCheckRefreshStatusesRequest = (
  */
 const se_DescribeTrustedAdvisorCheckSummariesRequest = (
   input: DescribeTrustedAdvisorCheckSummariesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     checkIds: (_) => se_StringList(_, context),
@@ -1017,7 +1017,7 @@ const de_DescribeAttachmentResponse = (output: any, context: __SerdeContext): De
  */
 const de_DescribeTrustedAdvisorCheckResultResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTrustedAdvisorCheckResultResponse => {
   return take(output, {
     result: (_: any) => de_TrustedAdvisorCheckResult(_, context),
@@ -1029,7 +1029,7 @@ const de_DescribeTrustedAdvisorCheckResultResponse = (
  */
 const de_DescribeTrustedAdvisorChecksResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTrustedAdvisorChecksResponse => {
   return take(output, {
     checks: (_: any) => de_TrustedAdvisorCheckList(_, context),
@@ -1041,7 +1041,7 @@ const de_DescribeTrustedAdvisorChecksResponse = (
  */
 const de_DescribeTrustedAdvisorCheckSummariesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTrustedAdvisorCheckSummariesResponse => {
   return take(output, {
     summaries: (_: any) => de_TrustedAdvisorCheckSummaryList(_, context),
@@ -1092,7 +1092,7 @@ const de_StringList = (output: any, context: __SerdeContext): string[] => {
  */
 const de_TrustedAdvisorCategorySpecificSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TrustedAdvisorCategorySpecificSummary => {
   return take(output, {
     costOptimizing: (_: any) => de_TrustedAdvisorCostOptimizingSummary(_, context),
@@ -1173,7 +1173,7 @@ const de_TrustedAdvisorCheckSummaryList = (output: any, context: __SerdeContext)
  */
 const de_TrustedAdvisorCostOptimizingSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TrustedAdvisorCostOptimizingSummary => {
   return take(output, {
     estimatedMonthlySavings: __limitedParseDouble,
@@ -1226,7 +1226,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

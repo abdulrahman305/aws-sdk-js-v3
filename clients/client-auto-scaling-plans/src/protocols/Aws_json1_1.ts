@@ -76,7 +76,7 @@ import {
  */
 export const se_CreateScalingPlanCommand = async (
   input: CreateScalingPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateScalingPlan");
   let body: any;
@@ -89,7 +89,7 @@ export const se_CreateScalingPlanCommand = async (
  */
 export const se_DeleteScalingPlanCommand = async (
   input: DeleteScalingPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteScalingPlan");
   let body: any;
@@ -102,7 +102,7 @@ export const se_DeleteScalingPlanCommand = async (
  */
 export const se_DescribeScalingPlanResourcesCommand = async (
   input: DescribeScalingPlanResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeScalingPlanResources");
   let body: any;
@@ -115,7 +115,7 @@ export const se_DescribeScalingPlanResourcesCommand = async (
  */
 export const se_DescribeScalingPlansCommand = async (
   input: DescribeScalingPlansCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeScalingPlans");
   let body: any;
@@ -128,7 +128,7 @@ export const se_DescribeScalingPlansCommand = async (
  */
 export const se_GetScalingPlanResourceForecastDataCommand = async (
   input: GetScalingPlanResourceForecastDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetScalingPlanResourceForecastData");
   let body: any;
@@ -141,7 +141,7 @@ export const se_GetScalingPlanResourceForecastDataCommand = async (
  */
 export const se_UpdateScalingPlanCommand = async (
   input: UpdateScalingPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateScalingPlan");
   let body: any;
@@ -154,7 +154,7 @@ export const se_UpdateScalingPlanCommand = async (
  */
 export const de_CreateScalingPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateScalingPlanCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -174,7 +174,7 @@ export const de_CreateScalingPlanCommand = async (
  */
 export const de_DeleteScalingPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteScalingPlanCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -194,7 +194,7 @@ export const de_DeleteScalingPlanCommand = async (
  */
 export const de_DescribeScalingPlanResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeScalingPlanResourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -214,7 +214,7 @@ export const de_DescribeScalingPlanResourcesCommand = async (
  */
 export const de_DescribeScalingPlansCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeScalingPlansCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -234,7 +234,7 @@ export const de_DescribeScalingPlansCommand = async (
  */
 export const de_GetScalingPlanResourceForecastDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetScalingPlanResourceForecastDataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -254,7 +254,7 @@ export const de_GetScalingPlanResourceForecastDataCommand = async (
  */
 export const de_UpdateScalingPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateScalingPlanCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -312,7 +312,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ConcurrentUpdateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentUpdateException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -328,7 +328,7 @@ const de_ConcurrentUpdateExceptionRes = async (
  */
 const de_InternalServiceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -344,7 +344,7 @@ const de_InternalServiceExceptionRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -360,7 +360,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -376,7 +376,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ObjectNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ObjectNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -430,7 +430,7 @@ const se_CreateScalingPlanRequest = (input: CreateScalingPlanRequest, context: _
  */
 const se_GetScalingPlanResourceForecastDataRequest = (
   input: GetScalingPlanResourceForecastDataRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     EndTime: (_) => _.getTime() / 1_000,
@@ -570,7 +570,7 @@ const de_Datapoints = (output: any, context: __SerdeContext): Datapoint[] => {
  */
 const de_DescribeScalingPlanResourcesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeScalingPlanResourcesResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -593,7 +593,7 @@ const de_DescribeScalingPlansResponse = (output: any, context: __SerdeContext): 
  */
 const de_GetScalingPlanResourceForecastDataResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetScalingPlanResourceForecastDataResponse => {
   return take(output, {
     Datapoints: (_: any) => de_Datapoints(_, context),
@@ -784,7 +784,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

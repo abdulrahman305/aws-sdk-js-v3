@@ -41,16 +41,16 @@ export interface LicenseManagerLinuxSubscriptions {
   getServiceSettings(): Promise<GetServiceSettingsCommandOutput>;
   getServiceSettings(
     args: GetServiceSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetServiceSettingsCommandOutput>;
   getServiceSettings(
     args: GetServiceSettingsCommandInput,
-    cb: (err: any, data?: GetServiceSettingsCommandOutput) => void
+    cb: (err: any, data?: GetServiceSettingsCommandOutput) => void,
   ): void;
   getServiceSettings(
     args: GetServiceSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetServiceSettingsCommandOutput) => void
+    cb: (err: any, data?: GetServiceSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -59,16 +59,16 @@ export interface LicenseManagerLinuxSubscriptions {
   listLinuxSubscriptionInstances(): Promise<ListLinuxSubscriptionInstancesCommandOutput>;
   listLinuxSubscriptionInstances(
     args: ListLinuxSubscriptionInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListLinuxSubscriptionInstancesCommandOutput>;
   listLinuxSubscriptionInstances(
     args: ListLinuxSubscriptionInstancesCommandInput,
-    cb: (err: any, data?: ListLinuxSubscriptionInstancesCommandOutput) => void
+    cb: (err: any, data?: ListLinuxSubscriptionInstancesCommandOutput) => void,
   ): void;
   listLinuxSubscriptionInstances(
     args: ListLinuxSubscriptionInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLinuxSubscriptionInstancesCommandOutput) => void
+    cb: (err: any, data?: ListLinuxSubscriptionInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -77,16 +77,16 @@ export interface LicenseManagerLinuxSubscriptions {
   listLinuxSubscriptions(): Promise<ListLinuxSubscriptionsCommandOutput>;
   listLinuxSubscriptions(
     args: ListLinuxSubscriptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListLinuxSubscriptionsCommandOutput>;
   listLinuxSubscriptions(
     args: ListLinuxSubscriptionsCommandInput,
-    cb: (err: any, data?: ListLinuxSubscriptionsCommandOutput) => void
+    cb: (err: any, data?: ListLinuxSubscriptionsCommandOutput) => void,
   ): void;
   listLinuxSubscriptions(
     args: ListLinuxSubscriptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLinuxSubscriptionsCommandOutput) => void
+    cb: (err: any, data?: ListLinuxSubscriptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -94,16 +94,16 @@ export interface LicenseManagerLinuxSubscriptions {
    */
   updateServiceSettings(
     args: UpdateServiceSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateServiceSettingsCommandOutput>;
   updateServiceSettings(
     args: UpdateServiceSettingsCommandInput,
-    cb: (err: any, data?: UpdateServiceSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceSettingsCommandOutput) => void,
   ): void;
   updateServiceSettings(
     args: UpdateServiceSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateServiceSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceSettingsCommandOutput) => void,
   ): void;
 }
 

@@ -223,7 +223,7 @@ import {
  */
 export const se_AddAttributesToFindingsCommand = async (
   input: AddAttributesToFindingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AddAttributesToFindings");
   let body: any;
@@ -236,7 +236,7 @@ export const se_AddAttributesToFindingsCommand = async (
  */
 export const se_CreateAssessmentTargetCommand = async (
   input: CreateAssessmentTargetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAssessmentTarget");
   let body: any;
@@ -249,7 +249,7 @@ export const se_CreateAssessmentTargetCommand = async (
  */
 export const se_CreateAssessmentTemplateCommand = async (
   input: CreateAssessmentTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAssessmentTemplate");
   let body: any;
@@ -262,7 +262,7 @@ export const se_CreateAssessmentTemplateCommand = async (
  */
 export const se_CreateExclusionsPreviewCommand = async (
   input: CreateExclusionsPreviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateExclusionsPreview");
   let body: any;
@@ -275,7 +275,7 @@ export const se_CreateExclusionsPreviewCommand = async (
  */
 export const se_CreateResourceGroupCommand = async (
   input: CreateResourceGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateResourceGroup");
   let body: any;
@@ -288,7 +288,7 @@ export const se_CreateResourceGroupCommand = async (
  */
 export const se_DeleteAssessmentRunCommand = async (
   input: DeleteAssessmentRunCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAssessmentRun");
   let body: any;
@@ -301,7 +301,7 @@ export const se_DeleteAssessmentRunCommand = async (
  */
 export const se_DeleteAssessmentTargetCommand = async (
   input: DeleteAssessmentTargetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAssessmentTarget");
   let body: any;
@@ -314,7 +314,7 @@ export const se_DeleteAssessmentTargetCommand = async (
  */
 export const se_DeleteAssessmentTemplateCommand = async (
   input: DeleteAssessmentTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAssessmentTemplate");
   let body: any;
@@ -327,7 +327,7 @@ export const se_DeleteAssessmentTemplateCommand = async (
  */
 export const se_DescribeAssessmentRunsCommand = async (
   input: DescribeAssessmentRunsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAssessmentRuns");
   let body: any;
@@ -340,7 +340,7 @@ export const se_DescribeAssessmentRunsCommand = async (
  */
 export const se_DescribeAssessmentTargetsCommand = async (
   input: DescribeAssessmentTargetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAssessmentTargets");
   let body: any;
@@ -353,7 +353,7 @@ export const se_DescribeAssessmentTargetsCommand = async (
  */
 export const se_DescribeAssessmentTemplatesCommand = async (
   input: DescribeAssessmentTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAssessmentTemplates");
   let body: any;
@@ -366,7 +366,7 @@ export const se_DescribeAssessmentTemplatesCommand = async (
  */
 export const se_DescribeCrossAccountAccessRoleCommand = async (
   input: DescribeCrossAccountAccessRoleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCrossAccountAccessRole");
   const body = "{}";
@@ -378,7 +378,7 @@ export const se_DescribeCrossAccountAccessRoleCommand = async (
  */
 export const se_DescribeExclusionsCommand = async (
   input: DescribeExclusionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeExclusions");
   let body: any;
@@ -391,7 +391,7 @@ export const se_DescribeExclusionsCommand = async (
  */
 export const se_DescribeFindingsCommand = async (
   input: DescribeFindingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFindings");
   let body: any;
@@ -404,7 +404,7 @@ export const se_DescribeFindingsCommand = async (
  */
 export const se_DescribeResourceGroupsCommand = async (
   input: DescribeResourceGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeResourceGroups");
   let body: any;
@@ -417,7 +417,7 @@ export const se_DescribeResourceGroupsCommand = async (
  */
 export const se_DescribeRulesPackagesCommand = async (
   input: DescribeRulesPackagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeRulesPackages");
   let body: any;
@@ -430,7 +430,7 @@ export const se_DescribeRulesPackagesCommand = async (
  */
 export const se_GetAssessmentReportCommand = async (
   input: GetAssessmentReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAssessmentReport");
   let body: any;
@@ -443,7 +443,7 @@ export const se_GetAssessmentReportCommand = async (
  */
 export const se_GetExclusionsPreviewCommand = async (
   input: GetExclusionsPreviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetExclusionsPreview");
   let body: any;
@@ -456,7 +456,7 @@ export const se_GetExclusionsPreviewCommand = async (
  */
 export const se_GetTelemetryMetadataCommand = async (
   input: GetTelemetryMetadataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetTelemetryMetadata");
   let body: any;
@@ -469,7 +469,7 @@ export const se_GetTelemetryMetadataCommand = async (
  */
 export const se_ListAssessmentRunAgentsCommand = async (
   input: ListAssessmentRunAgentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAssessmentRunAgents");
   let body: any;
@@ -482,7 +482,7 @@ export const se_ListAssessmentRunAgentsCommand = async (
  */
 export const se_ListAssessmentRunsCommand = async (
   input: ListAssessmentRunsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAssessmentRuns");
   let body: any;
@@ -495,7 +495,7 @@ export const se_ListAssessmentRunsCommand = async (
  */
 export const se_ListAssessmentTargetsCommand = async (
   input: ListAssessmentTargetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAssessmentTargets");
   let body: any;
@@ -508,7 +508,7 @@ export const se_ListAssessmentTargetsCommand = async (
  */
 export const se_ListAssessmentTemplatesCommand = async (
   input: ListAssessmentTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAssessmentTemplates");
   let body: any;
@@ -521,7 +521,7 @@ export const se_ListAssessmentTemplatesCommand = async (
  */
 export const se_ListEventSubscriptionsCommand = async (
   input: ListEventSubscriptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListEventSubscriptions");
   let body: any;
@@ -534,7 +534,7 @@ export const se_ListEventSubscriptionsCommand = async (
  */
 export const se_ListExclusionsCommand = async (
   input: ListExclusionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListExclusions");
   let body: any;
@@ -547,7 +547,7 @@ export const se_ListExclusionsCommand = async (
  */
 export const se_ListFindingsCommand = async (
   input: ListFindingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListFindings");
   let body: any;
@@ -560,7 +560,7 @@ export const se_ListFindingsCommand = async (
  */
 export const se_ListRulesPackagesCommand = async (
   input: ListRulesPackagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRulesPackages");
   let body: any;
@@ -573,7 +573,7 @@ export const se_ListRulesPackagesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -586,7 +586,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PreviewAgentsCommand = async (
   input: PreviewAgentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PreviewAgents");
   let body: any;
@@ -599,7 +599,7 @@ export const se_PreviewAgentsCommand = async (
  */
 export const se_RegisterCrossAccountAccessRoleCommand = async (
   input: RegisterCrossAccountAccessRoleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RegisterCrossAccountAccessRole");
   let body: any;
@@ -612,7 +612,7 @@ export const se_RegisterCrossAccountAccessRoleCommand = async (
  */
 export const se_RemoveAttributesFromFindingsCommand = async (
   input: RemoveAttributesFromFindingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RemoveAttributesFromFindings");
   let body: any;
@@ -625,7 +625,7 @@ export const se_RemoveAttributesFromFindingsCommand = async (
  */
 export const se_SetTagsForResourceCommand = async (
   input: SetTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SetTagsForResource");
   let body: any;
@@ -638,7 +638,7 @@ export const se_SetTagsForResourceCommand = async (
  */
 export const se_StartAssessmentRunCommand = async (
   input: StartAssessmentRunCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartAssessmentRun");
   let body: any;
@@ -651,7 +651,7 @@ export const se_StartAssessmentRunCommand = async (
  */
 export const se_StopAssessmentRunCommand = async (
   input: StopAssessmentRunCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopAssessmentRun");
   let body: any;
@@ -664,7 +664,7 @@ export const se_StopAssessmentRunCommand = async (
  */
 export const se_SubscribeToEventCommand = async (
   input: SubscribeToEventCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SubscribeToEvent");
   let body: any;
@@ -677,7 +677,7 @@ export const se_SubscribeToEventCommand = async (
  */
 export const se_UnsubscribeFromEventCommand = async (
   input: UnsubscribeFromEventCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UnsubscribeFromEvent");
   let body: any;
@@ -690,7 +690,7 @@ export const se_UnsubscribeFromEventCommand = async (
  */
 export const se_UpdateAssessmentTargetCommand = async (
   input: UpdateAssessmentTargetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateAssessmentTarget");
   let body: any;
@@ -703,7 +703,7 @@ export const se_UpdateAssessmentTargetCommand = async (
  */
 export const de_AddAttributesToFindingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddAttributesToFindingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -723,7 +723,7 @@ export const de_AddAttributesToFindingsCommand = async (
  */
 export const de_CreateAssessmentTargetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAssessmentTargetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -743,7 +743,7 @@ export const de_CreateAssessmentTargetCommand = async (
  */
 export const de_CreateAssessmentTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAssessmentTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -763,7 +763,7 @@ export const de_CreateAssessmentTemplateCommand = async (
  */
 export const de_CreateExclusionsPreviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateExclusionsPreviewCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -783,7 +783,7 @@ export const de_CreateExclusionsPreviewCommand = async (
  */
 export const de_CreateResourceGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateResourceGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -803,7 +803,7 @@ export const de_CreateResourceGroupCommand = async (
  */
 export const de_DeleteAssessmentRunCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAssessmentRunCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -820,7 +820,7 @@ export const de_DeleteAssessmentRunCommand = async (
  */
 export const de_DeleteAssessmentTargetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAssessmentTargetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -837,7 +837,7 @@ export const de_DeleteAssessmentTargetCommand = async (
  */
 export const de_DeleteAssessmentTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAssessmentTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -854,7 +854,7 @@ export const de_DeleteAssessmentTemplateCommand = async (
  */
 export const de_DescribeAssessmentRunsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAssessmentRunsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -874,7 +874,7 @@ export const de_DescribeAssessmentRunsCommand = async (
  */
 export const de_DescribeAssessmentTargetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAssessmentTargetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -894,7 +894,7 @@ export const de_DescribeAssessmentTargetsCommand = async (
  */
 export const de_DescribeAssessmentTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAssessmentTemplatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -914,7 +914,7 @@ export const de_DescribeAssessmentTemplatesCommand = async (
  */
 export const de_DescribeCrossAccountAccessRoleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCrossAccountAccessRoleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -934,7 +934,7 @@ export const de_DescribeCrossAccountAccessRoleCommand = async (
  */
 export const de_DescribeExclusionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeExclusionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -954,7 +954,7 @@ export const de_DescribeExclusionsCommand = async (
  */
 export const de_DescribeFindingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFindingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -974,7 +974,7 @@ export const de_DescribeFindingsCommand = async (
  */
 export const de_DescribeResourceGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeResourceGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -994,7 +994,7 @@ export const de_DescribeResourceGroupsCommand = async (
  */
 export const de_DescribeRulesPackagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRulesPackagesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1014,7 +1014,7 @@ export const de_DescribeRulesPackagesCommand = async (
  */
 export const de_GetAssessmentReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAssessmentReportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1034,7 +1034,7 @@ export const de_GetAssessmentReportCommand = async (
  */
 export const de_GetExclusionsPreviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetExclusionsPreviewCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1054,7 +1054,7 @@ export const de_GetExclusionsPreviewCommand = async (
  */
 export const de_GetTelemetryMetadataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTelemetryMetadataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1074,7 +1074,7 @@ export const de_GetTelemetryMetadataCommand = async (
  */
 export const de_ListAssessmentRunAgentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssessmentRunAgentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1094,7 +1094,7 @@ export const de_ListAssessmentRunAgentsCommand = async (
  */
 export const de_ListAssessmentRunsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssessmentRunsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1114,7 +1114,7 @@ export const de_ListAssessmentRunsCommand = async (
  */
 export const de_ListAssessmentTargetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssessmentTargetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1134,7 +1134,7 @@ export const de_ListAssessmentTargetsCommand = async (
  */
 export const de_ListAssessmentTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssessmentTemplatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1154,7 +1154,7 @@ export const de_ListAssessmentTemplatesCommand = async (
  */
 export const de_ListEventSubscriptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEventSubscriptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1174,7 +1174,7 @@ export const de_ListEventSubscriptionsCommand = async (
  */
 export const de_ListExclusionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListExclusionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1194,7 +1194,7 @@ export const de_ListExclusionsCommand = async (
  */
 export const de_ListFindingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFindingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1214,7 +1214,7 @@ export const de_ListFindingsCommand = async (
  */
 export const de_ListRulesPackagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRulesPackagesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1234,7 +1234,7 @@ export const de_ListRulesPackagesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1254,7 +1254,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PreviewAgentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PreviewAgentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1274,7 +1274,7 @@ export const de_PreviewAgentsCommand = async (
  */
 export const de_RegisterCrossAccountAccessRoleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterCrossAccountAccessRoleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1291,7 +1291,7 @@ export const de_RegisterCrossAccountAccessRoleCommand = async (
  */
 export const de_RemoveAttributesFromFindingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveAttributesFromFindingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1311,7 +1311,7 @@ export const de_RemoveAttributesFromFindingsCommand = async (
  */
 export const de_SetTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1328,7 +1328,7 @@ export const de_SetTagsForResourceCommand = async (
  */
 export const de_StartAssessmentRunCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartAssessmentRunCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1348,7 +1348,7 @@ export const de_StartAssessmentRunCommand = async (
  */
 export const de_StopAssessmentRunCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopAssessmentRunCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1365,7 +1365,7 @@ export const de_StopAssessmentRunCommand = async (
  */
 export const de_SubscribeToEventCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SubscribeToEventCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1382,7 +1382,7 @@ export const de_SubscribeToEventCommand = async (
  */
 export const de_UnsubscribeFromEventCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsubscribeFromEventCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1399,7 +1399,7 @@ export const de_UnsubscribeFromEventCommand = async (
  */
 export const de_UpdateAssessmentTargetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAssessmentTargetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1469,7 +1469,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1485,7 +1485,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_AgentsAlreadyRunningAssessmentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AgentsAlreadyRunningAssessmentException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1501,7 +1501,7 @@ const de_AgentsAlreadyRunningAssessmentExceptionRes = async (
  */
 const de_AssessmentRunInProgressExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssessmentRunInProgressException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1530,7 +1530,7 @@ const de_InternalExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InvalidCrossAccountRoleExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidCrossAccountRoleException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1546,7 +1546,7 @@ const de_InvalidCrossAccountRoleExceptionRes = async (
  */
 const de_InvalidInputExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidInputException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1562,7 +1562,7 @@ const de_InvalidInputExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1578,7 +1578,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_NoSuchEntityExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchEntityException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1594,7 +1594,7 @@ const de_NoSuchEntityExceptionRes = async (
  */
 const de_PreviewGenerationInProgressExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PreviewGenerationInProgressException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1610,7 +1610,7 @@ const de_PreviewGenerationInProgressExceptionRes = async (
  */
 const de_ServiceTemporarilyUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceTemporarilyUnavailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1626,7 +1626,7 @@ const de_ServiceTemporarilyUnavailableExceptionRes = async (
  */
 const de_UnsupportedFeatureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedFeatureException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2014,7 +2014,7 @@ const de_DescribeAssessmentRunsResponse = (output: any, context: __SerdeContext)
  */
 const de_DescribeAssessmentTargetsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeAssessmentTargetsResponse => {
   return take(output, {
     assessmentTargets: (_: any) => de_AssessmentTargetList(_, context),
@@ -2027,7 +2027,7 @@ const de_DescribeAssessmentTargetsResponse = (
  */
 const de_DescribeAssessmentTemplatesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeAssessmentTemplatesResponse => {
   return take(output, {
     assessmentTemplates: (_: any) => de_AssessmentTemplateList(_, context),
@@ -2040,7 +2040,7 @@ const de_DescribeAssessmentTemplatesResponse = (
  */
 const de_DescribeCrossAccountAccessRoleResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeCrossAccountAccessRoleResponse => {
   return take(output, {
     registeredAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -2307,7 +2307,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

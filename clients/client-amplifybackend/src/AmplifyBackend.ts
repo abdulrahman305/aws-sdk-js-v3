@@ -186,7 +186,7 @@ export interface AmplifyBackend {
   cloneBackend(
     args: CloneBackendCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CloneBackendCommandOutput) => void
+    cb: (err: any, data?: CloneBackendCommandOutput) => void,
   ): void;
 
   /**
@@ -197,7 +197,7 @@ export interface AmplifyBackend {
   createBackend(
     args: CreateBackendCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateBackendCommandOutput) => void
+    cb: (err: any, data?: CreateBackendCommandOutput) => void,
   ): void;
 
   /**
@@ -205,16 +205,16 @@ export interface AmplifyBackend {
    */
   createBackendAPI(
     args: CreateBackendAPICommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateBackendAPICommandOutput>;
   createBackendAPI(
     args: CreateBackendAPICommandInput,
-    cb: (err: any, data?: CreateBackendAPICommandOutput) => void
+    cb: (err: any, data?: CreateBackendAPICommandOutput) => void,
   ): void;
   createBackendAPI(
     args: CreateBackendAPICommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateBackendAPICommandOutput) => void
+    cb: (err: any, data?: CreateBackendAPICommandOutput) => void,
   ): void;
 
   /**
@@ -222,16 +222,16 @@ export interface AmplifyBackend {
    */
   createBackendAuth(
     args: CreateBackendAuthCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateBackendAuthCommandOutput>;
   createBackendAuth(
     args: CreateBackendAuthCommandInput,
-    cb: (err: any, data?: CreateBackendAuthCommandOutput) => void
+    cb: (err: any, data?: CreateBackendAuthCommandOutput) => void,
   ): void;
   createBackendAuth(
     args: CreateBackendAuthCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateBackendAuthCommandOutput) => void
+    cb: (err: any, data?: CreateBackendAuthCommandOutput) => void,
   ): void;
 
   /**
@@ -239,16 +239,16 @@ export interface AmplifyBackend {
    */
   createBackendConfig(
     args: CreateBackendConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateBackendConfigCommandOutput>;
   createBackendConfig(
     args: CreateBackendConfigCommandInput,
-    cb: (err: any, data?: CreateBackendConfigCommandOutput) => void
+    cb: (err: any, data?: CreateBackendConfigCommandOutput) => void,
   ): void;
   createBackendConfig(
     args: CreateBackendConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateBackendConfigCommandOutput) => void
+    cb: (err: any, data?: CreateBackendConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -256,16 +256,16 @@ export interface AmplifyBackend {
    */
   createBackendStorage(
     args: CreateBackendStorageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateBackendStorageCommandOutput>;
   createBackendStorage(
     args: CreateBackendStorageCommandInput,
-    cb: (err: any, data?: CreateBackendStorageCommandOutput) => void
+    cb: (err: any, data?: CreateBackendStorageCommandOutput) => void,
   ): void;
   createBackendStorage(
     args: CreateBackendStorageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateBackendStorageCommandOutput) => void
+    cb: (err: any, data?: CreateBackendStorageCommandOutput) => void,
   ): void;
 
   /**
@@ -276,7 +276,7 @@ export interface AmplifyBackend {
   createToken(
     args: CreateTokenCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTokenCommandOutput) => void
+    cb: (err: any, data?: CreateTokenCommandOutput) => void,
   ): void;
 
   /**
@@ -287,7 +287,7 @@ export interface AmplifyBackend {
   deleteBackend(
     args: DeleteBackendCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteBackendCommandOutput) => void
+    cb: (err: any, data?: DeleteBackendCommandOutput) => void,
   ): void;
 
   /**
@@ -295,16 +295,16 @@ export interface AmplifyBackend {
    */
   deleteBackendAPI(
     args: DeleteBackendAPICommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteBackendAPICommandOutput>;
   deleteBackendAPI(
     args: DeleteBackendAPICommandInput,
-    cb: (err: any, data?: DeleteBackendAPICommandOutput) => void
+    cb: (err: any, data?: DeleteBackendAPICommandOutput) => void,
   ): void;
   deleteBackendAPI(
     args: DeleteBackendAPICommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteBackendAPICommandOutput) => void
+    cb: (err: any, data?: DeleteBackendAPICommandOutput) => void,
   ): void;
 
   /**
@@ -312,16 +312,16 @@ export interface AmplifyBackend {
    */
   deleteBackendAuth(
     args: DeleteBackendAuthCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteBackendAuthCommandOutput>;
   deleteBackendAuth(
     args: DeleteBackendAuthCommandInput,
-    cb: (err: any, data?: DeleteBackendAuthCommandOutput) => void
+    cb: (err: any, data?: DeleteBackendAuthCommandOutput) => void,
   ): void;
   deleteBackendAuth(
     args: DeleteBackendAuthCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteBackendAuthCommandOutput) => void
+    cb: (err: any, data?: DeleteBackendAuthCommandOutput) => void,
   ): void;
 
   /**
@@ -329,16 +329,16 @@ export interface AmplifyBackend {
    */
   deleteBackendStorage(
     args: DeleteBackendStorageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteBackendStorageCommandOutput>;
   deleteBackendStorage(
     args: DeleteBackendStorageCommandInput,
-    cb: (err: any, data?: DeleteBackendStorageCommandOutput) => void
+    cb: (err: any, data?: DeleteBackendStorageCommandOutput) => void,
   ): void;
   deleteBackendStorage(
     args: DeleteBackendStorageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteBackendStorageCommandOutput) => void
+    cb: (err: any, data?: DeleteBackendStorageCommandOutput) => void,
   ): void;
 
   /**
@@ -349,7 +349,7 @@ export interface AmplifyBackend {
   deleteToken(
     args: DeleteTokenCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTokenCommandOutput) => void
+    cb: (err: any, data?: DeleteTokenCommandOutput) => void,
   ): void;
 
   /**
@@ -357,16 +357,16 @@ export interface AmplifyBackend {
    */
   generateBackendAPIModels(
     args: GenerateBackendAPIModelsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GenerateBackendAPIModelsCommandOutput>;
   generateBackendAPIModels(
     args: GenerateBackendAPIModelsCommandInput,
-    cb: (err: any, data?: GenerateBackendAPIModelsCommandOutput) => void
+    cb: (err: any, data?: GenerateBackendAPIModelsCommandOutput) => void,
   ): void;
   generateBackendAPIModels(
     args: GenerateBackendAPIModelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GenerateBackendAPIModelsCommandOutput) => void
+    cb: (err: any, data?: GenerateBackendAPIModelsCommandOutput) => void,
   ): void;
 
   /**
@@ -377,7 +377,7 @@ export interface AmplifyBackend {
   getBackend(
     args: GetBackendCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBackendCommandOutput) => void
+    cb: (err: any, data?: GetBackendCommandOutput) => void,
   ): void;
 
   /**
@@ -388,7 +388,7 @@ export interface AmplifyBackend {
   getBackendAPI(
     args: GetBackendAPICommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBackendAPICommandOutput) => void
+    cb: (err: any, data?: GetBackendAPICommandOutput) => void,
   ): void;
 
   /**
@@ -396,16 +396,16 @@ export interface AmplifyBackend {
    */
   getBackendAPIModels(
     args: GetBackendAPIModelsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBackendAPIModelsCommandOutput>;
   getBackendAPIModels(
     args: GetBackendAPIModelsCommandInput,
-    cb: (err: any, data?: GetBackendAPIModelsCommandOutput) => void
+    cb: (err: any, data?: GetBackendAPIModelsCommandOutput) => void,
   ): void;
   getBackendAPIModels(
     args: GetBackendAPIModelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBackendAPIModelsCommandOutput) => void
+    cb: (err: any, data?: GetBackendAPIModelsCommandOutput) => void,
   ): void;
 
   /**
@@ -413,13 +413,13 @@ export interface AmplifyBackend {
    */
   getBackendAuth(
     args: GetBackendAuthCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBackendAuthCommandOutput>;
   getBackendAuth(args: GetBackendAuthCommandInput, cb: (err: any, data?: GetBackendAuthCommandOutput) => void): void;
   getBackendAuth(
     args: GetBackendAuthCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBackendAuthCommandOutput) => void
+    cb: (err: any, data?: GetBackendAuthCommandOutput) => void,
   ): void;
 
   /**
@@ -430,7 +430,7 @@ export interface AmplifyBackend {
   getBackendJob(
     args: GetBackendJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBackendJobCommandOutput) => void
+    cb: (err: any, data?: GetBackendJobCommandOutput) => void,
   ): void;
 
   /**
@@ -438,16 +438,16 @@ export interface AmplifyBackend {
    */
   getBackendStorage(
     args: GetBackendStorageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBackendStorageCommandOutput>;
   getBackendStorage(
     args: GetBackendStorageCommandInput,
-    cb: (err: any, data?: GetBackendStorageCommandOutput) => void
+    cb: (err: any, data?: GetBackendStorageCommandOutput) => void,
   ): void;
   getBackendStorage(
     args: GetBackendStorageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBackendStorageCommandOutput) => void
+    cb: (err: any, data?: GetBackendStorageCommandOutput) => void,
   ): void;
 
   /**
@@ -458,7 +458,7 @@ export interface AmplifyBackend {
   getToken(
     args: GetTokenCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTokenCommandOutput) => void
+    cb: (err: any, data?: GetTokenCommandOutput) => void,
   ): void;
 
   /**
@@ -466,16 +466,16 @@ export interface AmplifyBackend {
    */
   importBackendAuth(
     args: ImportBackendAuthCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ImportBackendAuthCommandOutput>;
   importBackendAuth(
     args: ImportBackendAuthCommandInput,
-    cb: (err: any, data?: ImportBackendAuthCommandOutput) => void
+    cb: (err: any, data?: ImportBackendAuthCommandOutput) => void,
   ): void;
   importBackendAuth(
     args: ImportBackendAuthCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportBackendAuthCommandOutput) => void
+    cb: (err: any, data?: ImportBackendAuthCommandOutput) => void,
   ): void;
 
   /**
@@ -483,16 +483,16 @@ export interface AmplifyBackend {
    */
   importBackendStorage(
     args: ImportBackendStorageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ImportBackendStorageCommandOutput>;
   importBackendStorage(
     args: ImportBackendStorageCommandInput,
-    cb: (err: any, data?: ImportBackendStorageCommandOutput) => void
+    cb: (err: any, data?: ImportBackendStorageCommandOutput) => void,
   ): void;
   importBackendStorage(
     args: ImportBackendStorageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportBackendStorageCommandOutput) => void
+    cb: (err: any, data?: ImportBackendStorageCommandOutput) => void,
   ): void;
 
   /**
@@ -500,13 +500,13 @@ export interface AmplifyBackend {
    */
   listBackendJobs(
     args: ListBackendJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListBackendJobsCommandOutput>;
   listBackendJobs(args: ListBackendJobsCommandInput, cb: (err: any, data?: ListBackendJobsCommandOutput) => void): void;
   listBackendJobs(
     args: ListBackendJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBackendJobsCommandOutput) => void
+    cb: (err: any, data?: ListBackendJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -518,7 +518,7 @@ export interface AmplifyBackend {
   listS3Buckets(
     args: ListS3BucketsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListS3BucketsCommandOutput) => void
+    cb: (err: any, data?: ListS3BucketsCommandOutput) => void,
   ): void;
 
   /**
@@ -526,16 +526,16 @@ export interface AmplifyBackend {
    */
   removeAllBackends(
     args: RemoveAllBackendsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveAllBackendsCommandOutput>;
   removeAllBackends(
     args: RemoveAllBackendsCommandInput,
-    cb: (err: any, data?: RemoveAllBackendsCommandOutput) => void
+    cb: (err: any, data?: RemoveAllBackendsCommandOutput) => void,
   ): void;
   removeAllBackends(
     args: RemoveAllBackendsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveAllBackendsCommandOutput) => void
+    cb: (err: any, data?: RemoveAllBackendsCommandOutput) => void,
   ): void;
 
   /**
@@ -543,16 +543,16 @@ export interface AmplifyBackend {
    */
   removeBackendConfig(
     args: RemoveBackendConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveBackendConfigCommandOutput>;
   removeBackendConfig(
     args: RemoveBackendConfigCommandInput,
-    cb: (err: any, data?: RemoveBackendConfigCommandOutput) => void
+    cb: (err: any, data?: RemoveBackendConfigCommandOutput) => void,
   ): void;
   removeBackendConfig(
     args: RemoveBackendConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveBackendConfigCommandOutput) => void
+    cb: (err: any, data?: RemoveBackendConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -560,16 +560,16 @@ export interface AmplifyBackend {
    */
   updateBackendAPI(
     args: UpdateBackendAPICommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateBackendAPICommandOutput>;
   updateBackendAPI(
     args: UpdateBackendAPICommandInput,
-    cb: (err: any, data?: UpdateBackendAPICommandOutput) => void
+    cb: (err: any, data?: UpdateBackendAPICommandOutput) => void,
   ): void;
   updateBackendAPI(
     args: UpdateBackendAPICommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateBackendAPICommandOutput) => void
+    cb: (err: any, data?: UpdateBackendAPICommandOutput) => void,
   ): void;
 
   /**
@@ -577,16 +577,16 @@ export interface AmplifyBackend {
    */
   updateBackendAuth(
     args: UpdateBackendAuthCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateBackendAuthCommandOutput>;
   updateBackendAuth(
     args: UpdateBackendAuthCommandInput,
-    cb: (err: any, data?: UpdateBackendAuthCommandOutput) => void
+    cb: (err: any, data?: UpdateBackendAuthCommandOutput) => void,
   ): void;
   updateBackendAuth(
     args: UpdateBackendAuthCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateBackendAuthCommandOutput) => void
+    cb: (err: any, data?: UpdateBackendAuthCommandOutput) => void,
   ): void;
 
   /**
@@ -594,16 +594,16 @@ export interface AmplifyBackend {
    */
   updateBackendConfig(
     args: UpdateBackendConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateBackendConfigCommandOutput>;
   updateBackendConfig(
     args: UpdateBackendConfigCommandInput,
-    cb: (err: any, data?: UpdateBackendConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateBackendConfigCommandOutput) => void,
   ): void;
   updateBackendConfig(
     args: UpdateBackendConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateBackendConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateBackendConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -611,16 +611,16 @@ export interface AmplifyBackend {
    */
   updateBackendJob(
     args: UpdateBackendJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateBackendJobCommandOutput>;
   updateBackendJob(
     args: UpdateBackendJobCommandInput,
-    cb: (err: any, data?: UpdateBackendJobCommandOutput) => void
+    cb: (err: any, data?: UpdateBackendJobCommandOutput) => void,
   ): void;
   updateBackendJob(
     args: UpdateBackendJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateBackendJobCommandOutput) => void
+    cb: (err: any, data?: UpdateBackendJobCommandOutput) => void,
   ): void;
 
   /**
@@ -628,16 +628,16 @@ export interface AmplifyBackend {
    */
   updateBackendStorage(
     args: UpdateBackendStorageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateBackendStorageCommandOutput>;
   updateBackendStorage(
     args: UpdateBackendStorageCommandInput,
-    cb: (err: any, data?: UpdateBackendStorageCommandOutput) => void
+    cb: (err: any, data?: UpdateBackendStorageCommandOutput) => void,
   ): void;
   updateBackendStorage(
     args: UpdateBackendStorageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateBackendStorageCommandOutput) => void
+    cb: (err: any, data?: UpdateBackendStorageCommandOutput) => void,
   ): void;
 }
 

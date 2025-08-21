@@ -161,16 +161,16 @@ export interface ComprehendMedical {
    */
   describeEntitiesDetectionV2Job(
     args: DescribeEntitiesDetectionV2JobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEntitiesDetectionV2JobCommandOutput>;
   describeEntitiesDetectionV2Job(
     args: DescribeEntitiesDetectionV2JobCommandInput,
-    cb: (err: any, data?: DescribeEntitiesDetectionV2JobCommandOutput) => void
+    cb: (err: any, data?: DescribeEntitiesDetectionV2JobCommandOutput) => void,
   ): void;
   describeEntitiesDetectionV2Job(
     args: DescribeEntitiesDetectionV2JobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEntitiesDetectionV2JobCommandOutput) => void
+    cb: (err: any, data?: DescribeEntitiesDetectionV2JobCommandOutput) => void,
   ): void;
 
   /**
@@ -178,16 +178,16 @@ export interface ComprehendMedical {
    */
   describeICD10CMInferenceJob(
     args: DescribeICD10CMInferenceJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeICD10CMInferenceJobCommandOutput>;
   describeICD10CMInferenceJob(
     args: DescribeICD10CMInferenceJobCommandInput,
-    cb: (err: any, data?: DescribeICD10CMInferenceJobCommandOutput) => void
+    cb: (err: any, data?: DescribeICD10CMInferenceJobCommandOutput) => void,
   ): void;
   describeICD10CMInferenceJob(
     args: DescribeICD10CMInferenceJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeICD10CMInferenceJobCommandOutput) => void
+    cb: (err: any, data?: DescribeICD10CMInferenceJobCommandOutput) => void,
   ): void;
 
   /**
@@ -195,16 +195,16 @@ export interface ComprehendMedical {
    */
   describePHIDetectionJob(
     args: DescribePHIDetectionJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePHIDetectionJobCommandOutput>;
   describePHIDetectionJob(
     args: DescribePHIDetectionJobCommandInput,
-    cb: (err: any, data?: DescribePHIDetectionJobCommandOutput) => void
+    cb: (err: any, data?: DescribePHIDetectionJobCommandOutput) => void,
   ): void;
   describePHIDetectionJob(
     args: DescribePHIDetectionJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePHIDetectionJobCommandOutput) => void
+    cb: (err: any, data?: DescribePHIDetectionJobCommandOutput) => void,
   ): void;
 
   /**
@@ -212,16 +212,16 @@ export interface ComprehendMedical {
    */
   describeRxNormInferenceJob(
     args: DescribeRxNormInferenceJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRxNormInferenceJobCommandOutput>;
   describeRxNormInferenceJob(
     args: DescribeRxNormInferenceJobCommandInput,
-    cb: (err: any, data?: DescribeRxNormInferenceJobCommandOutput) => void
+    cb: (err: any, data?: DescribeRxNormInferenceJobCommandOutput) => void,
   ): void;
   describeRxNormInferenceJob(
     args: DescribeRxNormInferenceJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRxNormInferenceJobCommandOutput) => void
+    cb: (err: any, data?: DescribeRxNormInferenceJobCommandOutput) => void,
   ): void;
 
   /**
@@ -229,16 +229,16 @@ export interface ComprehendMedical {
    */
   describeSNOMEDCTInferenceJob(
     args: DescribeSNOMEDCTInferenceJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSNOMEDCTInferenceJobCommandOutput>;
   describeSNOMEDCTInferenceJob(
     args: DescribeSNOMEDCTInferenceJobCommandInput,
-    cb: (err: any, data?: DescribeSNOMEDCTInferenceJobCommandOutput) => void
+    cb: (err: any, data?: DescribeSNOMEDCTInferenceJobCommandOutput) => void,
   ): void;
   describeSNOMEDCTInferenceJob(
     args: DescribeSNOMEDCTInferenceJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSNOMEDCTInferenceJobCommandOutput) => void
+    cb: (err: any, data?: DescribeSNOMEDCTInferenceJobCommandOutput) => void,
   ): void;
 
   /**
@@ -246,13 +246,13 @@ export interface ComprehendMedical {
    */
   detectEntities(
     args: DetectEntitiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DetectEntitiesCommandOutput>;
   detectEntities(args: DetectEntitiesCommandInput, cb: (err: any, data?: DetectEntitiesCommandOutput) => void): void;
   detectEntities(
     args: DetectEntitiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DetectEntitiesCommandOutput) => void
+    cb: (err: any, data?: DetectEntitiesCommandOutput) => void,
   ): void;
 
   /**
@@ -260,16 +260,16 @@ export interface ComprehendMedical {
    */
   detectEntitiesV2(
     args: DetectEntitiesV2CommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DetectEntitiesV2CommandOutput>;
   detectEntitiesV2(
     args: DetectEntitiesV2CommandInput,
-    cb: (err: any, data?: DetectEntitiesV2CommandOutput) => void
+    cb: (err: any, data?: DetectEntitiesV2CommandOutput) => void,
   ): void;
   detectEntitiesV2(
     args: DetectEntitiesV2CommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DetectEntitiesV2CommandOutput) => void
+    cb: (err: any, data?: DetectEntitiesV2CommandOutput) => void,
   ): void;
 
   /**
@@ -280,7 +280,7 @@ export interface ComprehendMedical {
   detectPHI(
     args: DetectPHICommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DetectPHICommandOutput) => void
+    cb: (err: any, data?: DetectPHICommandOutput) => void,
   ): void;
 
   /**
@@ -291,7 +291,7 @@ export interface ComprehendMedical {
   inferICD10CM(
     args: InferICD10CMCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InferICD10CMCommandOutput) => void
+    cb: (err: any, data?: InferICD10CMCommandOutput) => void,
   ): void;
 
   /**
@@ -302,7 +302,7 @@ export interface ComprehendMedical {
   inferRxNorm(
     args: InferRxNormCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InferRxNormCommandOutput) => void
+    cb: (err: any, data?: InferRxNormCommandOutput) => void,
   ): void;
 
   /**
@@ -313,7 +313,7 @@ export interface ComprehendMedical {
   inferSNOMEDCT(
     args: InferSNOMEDCTCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InferSNOMEDCTCommandOutput) => void
+    cb: (err: any, data?: InferSNOMEDCTCommandOutput) => void,
   ): void;
 
   /**
@@ -322,16 +322,16 @@ export interface ComprehendMedical {
   listEntitiesDetectionV2Jobs(): Promise<ListEntitiesDetectionV2JobsCommandOutput>;
   listEntitiesDetectionV2Jobs(
     args: ListEntitiesDetectionV2JobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEntitiesDetectionV2JobsCommandOutput>;
   listEntitiesDetectionV2Jobs(
     args: ListEntitiesDetectionV2JobsCommandInput,
-    cb: (err: any, data?: ListEntitiesDetectionV2JobsCommandOutput) => void
+    cb: (err: any, data?: ListEntitiesDetectionV2JobsCommandOutput) => void,
   ): void;
   listEntitiesDetectionV2Jobs(
     args: ListEntitiesDetectionV2JobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEntitiesDetectionV2JobsCommandOutput) => void
+    cb: (err: any, data?: ListEntitiesDetectionV2JobsCommandOutput) => void,
   ): void;
 
   /**
@@ -340,16 +340,16 @@ export interface ComprehendMedical {
   listICD10CMInferenceJobs(): Promise<ListICD10CMInferenceJobsCommandOutput>;
   listICD10CMInferenceJobs(
     args: ListICD10CMInferenceJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListICD10CMInferenceJobsCommandOutput>;
   listICD10CMInferenceJobs(
     args: ListICD10CMInferenceJobsCommandInput,
-    cb: (err: any, data?: ListICD10CMInferenceJobsCommandOutput) => void
+    cb: (err: any, data?: ListICD10CMInferenceJobsCommandOutput) => void,
   ): void;
   listICD10CMInferenceJobs(
     args: ListICD10CMInferenceJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListICD10CMInferenceJobsCommandOutput) => void
+    cb: (err: any, data?: ListICD10CMInferenceJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -358,16 +358,16 @@ export interface ComprehendMedical {
   listPHIDetectionJobs(): Promise<ListPHIDetectionJobsCommandOutput>;
   listPHIDetectionJobs(
     args: ListPHIDetectionJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPHIDetectionJobsCommandOutput>;
   listPHIDetectionJobs(
     args: ListPHIDetectionJobsCommandInput,
-    cb: (err: any, data?: ListPHIDetectionJobsCommandOutput) => void
+    cb: (err: any, data?: ListPHIDetectionJobsCommandOutput) => void,
   ): void;
   listPHIDetectionJobs(
     args: ListPHIDetectionJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPHIDetectionJobsCommandOutput) => void
+    cb: (err: any, data?: ListPHIDetectionJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -376,16 +376,16 @@ export interface ComprehendMedical {
   listRxNormInferenceJobs(): Promise<ListRxNormInferenceJobsCommandOutput>;
   listRxNormInferenceJobs(
     args: ListRxNormInferenceJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRxNormInferenceJobsCommandOutput>;
   listRxNormInferenceJobs(
     args: ListRxNormInferenceJobsCommandInput,
-    cb: (err: any, data?: ListRxNormInferenceJobsCommandOutput) => void
+    cb: (err: any, data?: ListRxNormInferenceJobsCommandOutput) => void,
   ): void;
   listRxNormInferenceJobs(
     args: ListRxNormInferenceJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRxNormInferenceJobsCommandOutput) => void
+    cb: (err: any, data?: ListRxNormInferenceJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -394,16 +394,16 @@ export interface ComprehendMedical {
   listSNOMEDCTInferenceJobs(): Promise<ListSNOMEDCTInferenceJobsCommandOutput>;
   listSNOMEDCTInferenceJobs(
     args: ListSNOMEDCTInferenceJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSNOMEDCTInferenceJobsCommandOutput>;
   listSNOMEDCTInferenceJobs(
     args: ListSNOMEDCTInferenceJobsCommandInput,
-    cb: (err: any, data?: ListSNOMEDCTInferenceJobsCommandOutput) => void
+    cb: (err: any, data?: ListSNOMEDCTInferenceJobsCommandOutput) => void,
   ): void;
   listSNOMEDCTInferenceJobs(
     args: ListSNOMEDCTInferenceJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSNOMEDCTInferenceJobsCommandOutput) => void
+    cb: (err: any, data?: ListSNOMEDCTInferenceJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -411,16 +411,16 @@ export interface ComprehendMedical {
    */
   startEntitiesDetectionV2Job(
     args: StartEntitiesDetectionV2JobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartEntitiesDetectionV2JobCommandOutput>;
   startEntitiesDetectionV2Job(
     args: StartEntitiesDetectionV2JobCommandInput,
-    cb: (err: any, data?: StartEntitiesDetectionV2JobCommandOutput) => void
+    cb: (err: any, data?: StartEntitiesDetectionV2JobCommandOutput) => void,
   ): void;
   startEntitiesDetectionV2Job(
     args: StartEntitiesDetectionV2JobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartEntitiesDetectionV2JobCommandOutput) => void
+    cb: (err: any, data?: StartEntitiesDetectionV2JobCommandOutput) => void,
   ): void;
 
   /**
@@ -428,16 +428,16 @@ export interface ComprehendMedical {
    */
   startICD10CMInferenceJob(
     args: StartICD10CMInferenceJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartICD10CMInferenceJobCommandOutput>;
   startICD10CMInferenceJob(
     args: StartICD10CMInferenceJobCommandInput,
-    cb: (err: any, data?: StartICD10CMInferenceJobCommandOutput) => void
+    cb: (err: any, data?: StartICD10CMInferenceJobCommandOutput) => void,
   ): void;
   startICD10CMInferenceJob(
     args: StartICD10CMInferenceJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartICD10CMInferenceJobCommandOutput) => void
+    cb: (err: any, data?: StartICD10CMInferenceJobCommandOutput) => void,
   ): void;
 
   /**
@@ -445,16 +445,16 @@ export interface ComprehendMedical {
    */
   startPHIDetectionJob(
     args: StartPHIDetectionJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartPHIDetectionJobCommandOutput>;
   startPHIDetectionJob(
     args: StartPHIDetectionJobCommandInput,
-    cb: (err: any, data?: StartPHIDetectionJobCommandOutput) => void
+    cb: (err: any, data?: StartPHIDetectionJobCommandOutput) => void,
   ): void;
   startPHIDetectionJob(
     args: StartPHIDetectionJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartPHIDetectionJobCommandOutput) => void
+    cb: (err: any, data?: StartPHIDetectionJobCommandOutput) => void,
   ): void;
 
   /**
@@ -462,16 +462,16 @@ export interface ComprehendMedical {
    */
   startRxNormInferenceJob(
     args: StartRxNormInferenceJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartRxNormInferenceJobCommandOutput>;
   startRxNormInferenceJob(
     args: StartRxNormInferenceJobCommandInput,
-    cb: (err: any, data?: StartRxNormInferenceJobCommandOutput) => void
+    cb: (err: any, data?: StartRxNormInferenceJobCommandOutput) => void,
   ): void;
   startRxNormInferenceJob(
     args: StartRxNormInferenceJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartRxNormInferenceJobCommandOutput) => void
+    cb: (err: any, data?: StartRxNormInferenceJobCommandOutput) => void,
   ): void;
 
   /**
@@ -479,16 +479,16 @@ export interface ComprehendMedical {
    */
   startSNOMEDCTInferenceJob(
     args: StartSNOMEDCTInferenceJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartSNOMEDCTInferenceJobCommandOutput>;
   startSNOMEDCTInferenceJob(
     args: StartSNOMEDCTInferenceJobCommandInput,
-    cb: (err: any, data?: StartSNOMEDCTInferenceJobCommandOutput) => void
+    cb: (err: any, data?: StartSNOMEDCTInferenceJobCommandOutput) => void,
   ): void;
   startSNOMEDCTInferenceJob(
     args: StartSNOMEDCTInferenceJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartSNOMEDCTInferenceJobCommandOutput) => void
+    cb: (err: any, data?: StartSNOMEDCTInferenceJobCommandOutput) => void,
   ): void;
 
   /**
@@ -496,16 +496,16 @@ export interface ComprehendMedical {
    */
   stopEntitiesDetectionV2Job(
     args: StopEntitiesDetectionV2JobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopEntitiesDetectionV2JobCommandOutput>;
   stopEntitiesDetectionV2Job(
     args: StopEntitiesDetectionV2JobCommandInput,
-    cb: (err: any, data?: StopEntitiesDetectionV2JobCommandOutput) => void
+    cb: (err: any, data?: StopEntitiesDetectionV2JobCommandOutput) => void,
   ): void;
   stopEntitiesDetectionV2Job(
     args: StopEntitiesDetectionV2JobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopEntitiesDetectionV2JobCommandOutput) => void
+    cb: (err: any, data?: StopEntitiesDetectionV2JobCommandOutput) => void,
   ): void;
 
   /**
@@ -513,16 +513,16 @@ export interface ComprehendMedical {
    */
   stopICD10CMInferenceJob(
     args: StopICD10CMInferenceJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopICD10CMInferenceJobCommandOutput>;
   stopICD10CMInferenceJob(
     args: StopICD10CMInferenceJobCommandInput,
-    cb: (err: any, data?: StopICD10CMInferenceJobCommandOutput) => void
+    cb: (err: any, data?: StopICD10CMInferenceJobCommandOutput) => void,
   ): void;
   stopICD10CMInferenceJob(
     args: StopICD10CMInferenceJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopICD10CMInferenceJobCommandOutput) => void
+    cb: (err: any, data?: StopICD10CMInferenceJobCommandOutput) => void,
   ): void;
 
   /**
@@ -530,16 +530,16 @@ export interface ComprehendMedical {
    */
   stopPHIDetectionJob(
     args: StopPHIDetectionJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopPHIDetectionJobCommandOutput>;
   stopPHIDetectionJob(
     args: StopPHIDetectionJobCommandInput,
-    cb: (err: any, data?: StopPHIDetectionJobCommandOutput) => void
+    cb: (err: any, data?: StopPHIDetectionJobCommandOutput) => void,
   ): void;
   stopPHIDetectionJob(
     args: StopPHIDetectionJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopPHIDetectionJobCommandOutput) => void
+    cb: (err: any, data?: StopPHIDetectionJobCommandOutput) => void,
   ): void;
 
   /**
@@ -547,16 +547,16 @@ export interface ComprehendMedical {
    */
   stopRxNormInferenceJob(
     args: StopRxNormInferenceJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopRxNormInferenceJobCommandOutput>;
   stopRxNormInferenceJob(
     args: StopRxNormInferenceJobCommandInput,
-    cb: (err: any, data?: StopRxNormInferenceJobCommandOutput) => void
+    cb: (err: any, data?: StopRxNormInferenceJobCommandOutput) => void,
   ): void;
   stopRxNormInferenceJob(
     args: StopRxNormInferenceJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopRxNormInferenceJobCommandOutput) => void
+    cb: (err: any, data?: StopRxNormInferenceJobCommandOutput) => void,
   ): void;
 
   /**
@@ -564,16 +564,16 @@ export interface ComprehendMedical {
    */
   stopSNOMEDCTInferenceJob(
     args: StopSNOMEDCTInferenceJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopSNOMEDCTInferenceJobCommandOutput>;
   stopSNOMEDCTInferenceJob(
     args: StopSNOMEDCTInferenceJobCommandInput,
-    cb: (err: any, data?: StopSNOMEDCTInferenceJobCommandOutput) => void
+    cb: (err: any, data?: StopSNOMEDCTInferenceJobCommandOutput) => void,
   ): void;
   stopSNOMEDCTInferenceJob(
     args: StopSNOMEDCTInferenceJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopSNOMEDCTInferenceJobCommandOutput) => void
+    cb: (err: any, data?: StopSNOMEDCTInferenceJobCommandOutput) => void,
   ): void;
 }
 

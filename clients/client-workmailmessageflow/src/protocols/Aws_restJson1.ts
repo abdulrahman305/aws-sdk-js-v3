@@ -42,7 +42,7 @@ import { WorkMailMessageFlowServiceException as __BaseException } from "../model
  */
 export const se_GetRawMessageContentCommand = async (
   input: GetRawMessageContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -58,7 +58,7 @@ export const se_GetRawMessageContentCommand = async (
  */
 export const se_PutRawMessageContentCommand = async (
   input: PutRawMessageContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -70,7 +70,7 @@ export const se_PutRawMessageContentCommand = async (
   body = JSON.stringify(
     take(input, {
       content: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -81,7 +81,7 @@ export const se_PutRawMessageContentCommand = async (
  */
 export const de_GetRawMessageContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<GetRawMessageContentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -100,7 +100,7 @@ export const de_GetRawMessageContentCommand = async (
  */
 export const de_PutRawMessageContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutRawMessageContentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -150,7 +150,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_InvalidContentLocationRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidContentLocation> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -204,7 +204,7 @@ const de_MessageRejectedRes = async (parsedOutput: any, context: __SerdeContext)
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

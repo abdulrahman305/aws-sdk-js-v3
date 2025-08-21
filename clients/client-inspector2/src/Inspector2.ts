@@ -343,13 +343,13 @@ export interface Inspector2 {
    */
   associateMember(
     args: AssociateMemberCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateMemberCommandOutput>;
   associateMember(args: AssociateMemberCommandInput, cb: (err: any, data?: AssociateMemberCommandOutput) => void): void;
   associateMember(
     args: AssociateMemberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateMemberCommandOutput) => void
+    cb: (err: any, data?: AssociateMemberCommandOutput) => void,
   ): void;
 
   /**
@@ -358,16 +358,16 @@ export interface Inspector2 {
   batchGetAccountStatus(): Promise<BatchGetAccountStatusCommandOutput>;
   batchGetAccountStatus(
     args: BatchGetAccountStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetAccountStatusCommandOutput>;
   batchGetAccountStatus(
     args: BatchGetAccountStatusCommandInput,
-    cb: (err: any, data?: BatchGetAccountStatusCommandOutput) => void
+    cb: (err: any, data?: BatchGetAccountStatusCommandOutput) => void,
   ): void;
   batchGetAccountStatus(
     args: BatchGetAccountStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetAccountStatusCommandOutput) => void
+    cb: (err: any, data?: BatchGetAccountStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -375,16 +375,16 @@ export interface Inspector2 {
    */
   batchGetCodeSnippet(
     args: BatchGetCodeSnippetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetCodeSnippetCommandOutput>;
   batchGetCodeSnippet(
     args: BatchGetCodeSnippetCommandInput,
-    cb: (err: any, data?: BatchGetCodeSnippetCommandOutput) => void
+    cb: (err: any, data?: BatchGetCodeSnippetCommandOutput) => void,
   ): void;
   batchGetCodeSnippet(
     args: BatchGetCodeSnippetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetCodeSnippetCommandOutput) => void
+    cb: (err: any, data?: BatchGetCodeSnippetCommandOutput) => void,
   ): void;
 
   /**
@@ -392,16 +392,16 @@ export interface Inspector2 {
    */
   batchGetFindingDetails(
     args: BatchGetFindingDetailsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetFindingDetailsCommandOutput>;
   batchGetFindingDetails(
     args: BatchGetFindingDetailsCommandInput,
-    cb: (err: any, data?: BatchGetFindingDetailsCommandOutput) => void
+    cb: (err: any, data?: BatchGetFindingDetailsCommandOutput) => void,
   ): void;
   batchGetFindingDetails(
     args: BatchGetFindingDetailsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetFindingDetailsCommandOutput) => void
+    cb: (err: any, data?: BatchGetFindingDetailsCommandOutput) => void,
   ): void;
 
   /**
@@ -409,16 +409,16 @@ export interface Inspector2 {
    */
   batchGetFreeTrialInfo(
     args: BatchGetFreeTrialInfoCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetFreeTrialInfoCommandOutput>;
   batchGetFreeTrialInfo(
     args: BatchGetFreeTrialInfoCommandInput,
-    cb: (err: any, data?: BatchGetFreeTrialInfoCommandOutput) => void
+    cb: (err: any, data?: BatchGetFreeTrialInfoCommandOutput) => void,
   ): void;
   batchGetFreeTrialInfo(
     args: BatchGetFreeTrialInfoCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetFreeTrialInfoCommandOutput) => void
+    cb: (err: any, data?: BatchGetFreeTrialInfoCommandOutput) => void,
   ): void;
 
   /**
@@ -427,16 +427,16 @@ export interface Inspector2 {
   batchGetMemberEc2DeepInspectionStatus(): Promise<BatchGetMemberEc2DeepInspectionStatusCommandOutput>;
   batchGetMemberEc2DeepInspectionStatus(
     args: BatchGetMemberEc2DeepInspectionStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetMemberEc2DeepInspectionStatusCommandOutput>;
   batchGetMemberEc2DeepInspectionStatus(
     args: BatchGetMemberEc2DeepInspectionStatusCommandInput,
-    cb: (err: any, data?: BatchGetMemberEc2DeepInspectionStatusCommandOutput) => void
+    cb: (err: any, data?: BatchGetMemberEc2DeepInspectionStatusCommandOutput) => void,
   ): void;
   batchGetMemberEc2DeepInspectionStatus(
     args: BatchGetMemberEc2DeepInspectionStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetMemberEc2DeepInspectionStatusCommandOutput) => void
+    cb: (err: any, data?: BatchGetMemberEc2DeepInspectionStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -444,16 +444,16 @@ export interface Inspector2 {
    */
   batchUpdateMemberEc2DeepInspectionStatus(
     args: BatchUpdateMemberEc2DeepInspectionStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchUpdateMemberEc2DeepInspectionStatusCommandOutput>;
   batchUpdateMemberEc2DeepInspectionStatus(
     args: BatchUpdateMemberEc2DeepInspectionStatusCommandInput,
-    cb: (err: any, data?: BatchUpdateMemberEc2DeepInspectionStatusCommandOutput) => void
+    cb: (err: any, data?: BatchUpdateMemberEc2DeepInspectionStatusCommandOutput) => void,
   ): void;
   batchUpdateMemberEc2DeepInspectionStatus(
     args: BatchUpdateMemberEc2DeepInspectionStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchUpdateMemberEc2DeepInspectionStatusCommandOutput) => void
+    cb: (err: any, data?: BatchUpdateMemberEc2DeepInspectionStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -461,16 +461,16 @@ export interface Inspector2 {
    */
   cancelFindingsReport(
     args: CancelFindingsReportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelFindingsReportCommandOutput>;
   cancelFindingsReport(
     args: CancelFindingsReportCommandInput,
-    cb: (err: any, data?: CancelFindingsReportCommandOutput) => void
+    cb: (err: any, data?: CancelFindingsReportCommandOutput) => void,
   ): void;
   cancelFindingsReport(
     args: CancelFindingsReportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelFindingsReportCommandOutput) => void
+    cb: (err: any, data?: CancelFindingsReportCommandOutput) => void,
   ): void;
 
   /**
@@ -478,16 +478,16 @@ export interface Inspector2 {
    */
   cancelSbomExport(
     args: CancelSbomExportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelSbomExportCommandOutput>;
   cancelSbomExport(
     args: CancelSbomExportCommandInput,
-    cb: (err: any, data?: CancelSbomExportCommandOutput) => void
+    cb: (err: any, data?: CancelSbomExportCommandOutput) => void,
   ): void;
   cancelSbomExport(
     args: CancelSbomExportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelSbomExportCommandOutput) => void
+    cb: (err: any, data?: CancelSbomExportCommandOutput) => void,
   ): void;
 
   /**
@@ -495,16 +495,16 @@ export interface Inspector2 {
    */
   createCisScanConfiguration(
     args: CreateCisScanConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCisScanConfigurationCommandOutput>;
   createCisScanConfiguration(
     args: CreateCisScanConfigurationCommandInput,
-    cb: (err: any, data?: CreateCisScanConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateCisScanConfigurationCommandOutput) => void,
   ): void;
   createCisScanConfiguration(
     args: CreateCisScanConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCisScanConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateCisScanConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -515,7 +515,7 @@ export interface Inspector2 {
   createFilter(
     args: CreateFilterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateFilterCommandOutput) => void
+    cb: (err: any, data?: CreateFilterCommandOutput) => void,
   ): void;
 
   /**
@@ -523,16 +523,16 @@ export interface Inspector2 {
    */
   createFindingsReport(
     args: CreateFindingsReportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateFindingsReportCommandOutput>;
   createFindingsReport(
     args: CreateFindingsReportCommandInput,
-    cb: (err: any, data?: CreateFindingsReportCommandOutput) => void
+    cb: (err: any, data?: CreateFindingsReportCommandOutput) => void,
   ): void;
   createFindingsReport(
     args: CreateFindingsReportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateFindingsReportCommandOutput) => void
+    cb: (err: any, data?: CreateFindingsReportCommandOutput) => void,
   ): void;
 
   /**
@@ -540,16 +540,16 @@ export interface Inspector2 {
    */
   createSbomExport(
     args: CreateSbomExportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSbomExportCommandOutput>;
   createSbomExport(
     args: CreateSbomExportCommandInput,
-    cb: (err: any, data?: CreateSbomExportCommandOutput) => void
+    cb: (err: any, data?: CreateSbomExportCommandOutput) => void,
   ): void;
   createSbomExport(
     args: CreateSbomExportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSbomExportCommandOutput) => void
+    cb: (err: any, data?: CreateSbomExportCommandOutput) => void,
   ): void;
 
   /**
@@ -557,16 +557,16 @@ export interface Inspector2 {
    */
   deleteCisScanConfiguration(
     args: DeleteCisScanConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCisScanConfigurationCommandOutput>;
   deleteCisScanConfiguration(
     args: DeleteCisScanConfigurationCommandInput,
-    cb: (err: any, data?: DeleteCisScanConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteCisScanConfigurationCommandOutput) => void,
   ): void;
   deleteCisScanConfiguration(
     args: DeleteCisScanConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCisScanConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteCisScanConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -577,7 +577,7 @@ export interface Inspector2 {
   deleteFilter(
     args: DeleteFilterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFilterCommandOutput) => void
+    cb: (err: any, data?: DeleteFilterCommandOutput) => void,
   ): void;
 
   /**
@@ -586,16 +586,16 @@ export interface Inspector2 {
   describeOrganizationConfiguration(): Promise<DescribeOrganizationConfigurationCommandOutput>;
   describeOrganizationConfiguration(
     args: DescribeOrganizationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeOrganizationConfigurationCommandOutput>;
   describeOrganizationConfiguration(
     args: DescribeOrganizationConfigurationCommandInput,
-    cb: (err: any, data?: DescribeOrganizationConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationConfigurationCommandOutput) => void,
   ): void;
   describeOrganizationConfiguration(
     args: DescribeOrganizationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeOrganizationConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -607,7 +607,7 @@ export interface Inspector2 {
   disable(
     args: DisableCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableCommandOutput) => void
+    cb: (err: any, data?: DisableCommandOutput) => void,
   ): void;
 
   /**
@@ -615,16 +615,16 @@ export interface Inspector2 {
    */
   disableDelegatedAdminAccount(
     args: DisableDelegatedAdminAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisableDelegatedAdminAccountCommandOutput>;
   disableDelegatedAdminAccount(
     args: DisableDelegatedAdminAccountCommandInput,
-    cb: (err: any, data?: DisableDelegatedAdminAccountCommandOutput) => void
+    cb: (err: any, data?: DisableDelegatedAdminAccountCommandOutput) => void,
   ): void;
   disableDelegatedAdminAccount(
     args: DisableDelegatedAdminAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableDelegatedAdminAccountCommandOutput) => void
+    cb: (err: any, data?: DisableDelegatedAdminAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -632,16 +632,16 @@ export interface Inspector2 {
    */
   disassociateMember(
     args: DisassociateMemberCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateMemberCommandOutput>;
   disassociateMember(
     args: DisassociateMemberCommandInput,
-    cb: (err: any, data?: DisassociateMemberCommandOutput) => void
+    cb: (err: any, data?: DisassociateMemberCommandOutput) => void,
   ): void;
   disassociateMember(
     args: DisassociateMemberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateMemberCommandOutput) => void
+    cb: (err: any, data?: DisassociateMemberCommandOutput) => void,
   ): void;
 
   /**
@@ -652,7 +652,7 @@ export interface Inspector2 {
   enable(
     args: EnableCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableCommandOutput) => void
+    cb: (err: any, data?: EnableCommandOutput) => void,
   ): void;
 
   /**
@@ -660,16 +660,16 @@ export interface Inspector2 {
    */
   enableDelegatedAdminAccount(
     args: EnableDelegatedAdminAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EnableDelegatedAdminAccountCommandOutput>;
   enableDelegatedAdminAccount(
     args: EnableDelegatedAdminAccountCommandInput,
-    cb: (err: any, data?: EnableDelegatedAdminAccountCommandOutput) => void
+    cb: (err: any, data?: EnableDelegatedAdminAccountCommandOutput) => void,
   ): void;
   enableDelegatedAdminAccount(
     args: EnableDelegatedAdminAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableDelegatedAdminAccountCommandOutput) => void
+    cb: (err: any, data?: EnableDelegatedAdminAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -677,16 +677,16 @@ export interface Inspector2 {
    */
   getCisScanReport(
     args: GetCisScanReportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCisScanReportCommandOutput>;
   getCisScanReport(
     args: GetCisScanReportCommandInput,
-    cb: (err: any, data?: GetCisScanReportCommandOutput) => void
+    cb: (err: any, data?: GetCisScanReportCommandOutput) => void,
   ): void;
   getCisScanReport(
     args: GetCisScanReportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCisScanReportCommandOutput) => void
+    cb: (err: any, data?: GetCisScanReportCommandOutput) => void,
   ): void;
 
   /**
@@ -694,16 +694,16 @@ export interface Inspector2 {
    */
   getCisScanResultDetails(
     args: GetCisScanResultDetailsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCisScanResultDetailsCommandOutput>;
   getCisScanResultDetails(
     args: GetCisScanResultDetailsCommandInput,
-    cb: (err: any, data?: GetCisScanResultDetailsCommandOutput) => void
+    cb: (err: any, data?: GetCisScanResultDetailsCommandOutput) => void,
   ): void;
   getCisScanResultDetails(
     args: GetCisScanResultDetailsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCisScanResultDetailsCommandOutput) => void
+    cb: (err: any, data?: GetCisScanResultDetailsCommandOutput) => void,
   ): void;
 
   /**
@@ -712,16 +712,16 @@ export interface Inspector2 {
   getConfiguration(): Promise<GetConfigurationCommandOutput>;
   getConfiguration(
     args: GetConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetConfigurationCommandOutput>;
   getConfiguration(
     args: GetConfigurationCommandInput,
-    cb: (err: any, data?: GetConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetConfigurationCommandOutput) => void,
   ): void;
   getConfiguration(
     args: GetConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -730,16 +730,16 @@ export interface Inspector2 {
   getDelegatedAdminAccount(): Promise<GetDelegatedAdminAccountCommandOutput>;
   getDelegatedAdminAccount(
     args: GetDelegatedAdminAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDelegatedAdminAccountCommandOutput>;
   getDelegatedAdminAccount(
     args: GetDelegatedAdminAccountCommandInput,
-    cb: (err: any, data?: GetDelegatedAdminAccountCommandOutput) => void
+    cb: (err: any, data?: GetDelegatedAdminAccountCommandOutput) => void,
   ): void;
   getDelegatedAdminAccount(
     args: GetDelegatedAdminAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDelegatedAdminAccountCommandOutput) => void
+    cb: (err: any, data?: GetDelegatedAdminAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -748,16 +748,16 @@ export interface Inspector2 {
   getEc2DeepInspectionConfiguration(): Promise<GetEc2DeepInspectionConfigurationCommandOutput>;
   getEc2DeepInspectionConfiguration(
     args: GetEc2DeepInspectionConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEc2DeepInspectionConfigurationCommandOutput>;
   getEc2DeepInspectionConfiguration(
     args: GetEc2DeepInspectionConfigurationCommandInput,
-    cb: (err: any, data?: GetEc2DeepInspectionConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetEc2DeepInspectionConfigurationCommandOutput) => void,
   ): void;
   getEc2DeepInspectionConfiguration(
     args: GetEc2DeepInspectionConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEc2DeepInspectionConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetEc2DeepInspectionConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -765,16 +765,16 @@ export interface Inspector2 {
    */
   getEncryptionKey(
     args: GetEncryptionKeyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEncryptionKeyCommandOutput>;
   getEncryptionKey(
     args: GetEncryptionKeyCommandInput,
-    cb: (err: any, data?: GetEncryptionKeyCommandOutput) => void
+    cb: (err: any, data?: GetEncryptionKeyCommandOutput) => void,
   ): void;
   getEncryptionKey(
     args: GetEncryptionKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEncryptionKeyCommandOutput) => void
+    cb: (err: any, data?: GetEncryptionKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -783,16 +783,16 @@ export interface Inspector2 {
   getFindingsReportStatus(): Promise<GetFindingsReportStatusCommandOutput>;
   getFindingsReportStatus(
     args: GetFindingsReportStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFindingsReportStatusCommandOutput>;
   getFindingsReportStatus(
     args: GetFindingsReportStatusCommandInput,
-    cb: (err: any, data?: GetFindingsReportStatusCommandOutput) => void
+    cb: (err: any, data?: GetFindingsReportStatusCommandOutput) => void,
   ): void;
   getFindingsReportStatus(
     args: GetFindingsReportStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFindingsReportStatusCommandOutput) => void
+    cb: (err: any, data?: GetFindingsReportStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -803,7 +803,7 @@ export interface Inspector2 {
   getMember(
     args: GetMemberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMemberCommandOutput) => void
+    cb: (err: any, data?: GetMemberCommandOutput) => void,
   ): void;
 
   /**
@@ -814,7 +814,7 @@ export interface Inspector2 {
   getSbomExport(
     args: GetSbomExportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSbomExportCommandOutput) => void
+    cb: (err: any, data?: GetSbomExportCommandOutput) => void,
   ): void;
 
   /**
@@ -823,16 +823,16 @@ export interface Inspector2 {
   listAccountPermissions(): Promise<ListAccountPermissionsCommandOutput>;
   listAccountPermissions(
     args: ListAccountPermissionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAccountPermissionsCommandOutput>;
   listAccountPermissions(
     args: ListAccountPermissionsCommandInput,
-    cb: (err: any, data?: ListAccountPermissionsCommandOutput) => void
+    cb: (err: any, data?: ListAccountPermissionsCommandOutput) => void,
   ): void;
   listAccountPermissions(
     args: ListAccountPermissionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAccountPermissionsCommandOutput) => void
+    cb: (err: any, data?: ListAccountPermissionsCommandOutput) => void,
   ): void;
 
   /**
@@ -841,16 +841,16 @@ export interface Inspector2 {
   listCisScanConfigurations(): Promise<ListCisScanConfigurationsCommandOutput>;
   listCisScanConfigurations(
     args: ListCisScanConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCisScanConfigurationsCommandOutput>;
   listCisScanConfigurations(
     args: ListCisScanConfigurationsCommandInput,
-    cb: (err: any, data?: ListCisScanConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListCisScanConfigurationsCommandOutput) => void,
   ): void;
   listCisScanConfigurations(
     args: ListCisScanConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCisScanConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListCisScanConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -858,16 +858,16 @@ export interface Inspector2 {
    */
   listCisScanResultsAggregatedByChecks(
     args: ListCisScanResultsAggregatedByChecksCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCisScanResultsAggregatedByChecksCommandOutput>;
   listCisScanResultsAggregatedByChecks(
     args: ListCisScanResultsAggregatedByChecksCommandInput,
-    cb: (err: any, data?: ListCisScanResultsAggregatedByChecksCommandOutput) => void
+    cb: (err: any, data?: ListCisScanResultsAggregatedByChecksCommandOutput) => void,
   ): void;
   listCisScanResultsAggregatedByChecks(
     args: ListCisScanResultsAggregatedByChecksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCisScanResultsAggregatedByChecksCommandOutput) => void
+    cb: (err: any, data?: ListCisScanResultsAggregatedByChecksCommandOutput) => void,
   ): void;
 
   /**
@@ -875,16 +875,16 @@ export interface Inspector2 {
    */
   listCisScanResultsAggregatedByTargetResource(
     args: ListCisScanResultsAggregatedByTargetResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCisScanResultsAggregatedByTargetResourceCommandOutput>;
   listCisScanResultsAggregatedByTargetResource(
     args: ListCisScanResultsAggregatedByTargetResourceCommandInput,
-    cb: (err: any, data?: ListCisScanResultsAggregatedByTargetResourceCommandOutput) => void
+    cb: (err: any, data?: ListCisScanResultsAggregatedByTargetResourceCommandOutput) => void,
   ): void;
   listCisScanResultsAggregatedByTargetResource(
     args: ListCisScanResultsAggregatedByTargetResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCisScanResultsAggregatedByTargetResourceCommandOutput) => void
+    cb: (err: any, data?: ListCisScanResultsAggregatedByTargetResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -896,7 +896,7 @@ export interface Inspector2 {
   listCisScans(
     args: ListCisScansCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCisScansCommandOutput) => void
+    cb: (err: any, data?: ListCisScansCommandOutput) => void,
   ): void;
 
   /**
@@ -908,7 +908,7 @@ export interface Inspector2 {
   listCoverage(
     args: ListCoverageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCoverageCommandOutput) => void
+    cb: (err: any, data?: ListCoverageCommandOutput) => void,
   ): void;
 
   /**
@@ -917,16 +917,16 @@ export interface Inspector2 {
   listCoverageStatistics(): Promise<ListCoverageStatisticsCommandOutput>;
   listCoverageStatistics(
     args: ListCoverageStatisticsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCoverageStatisticsCommandOutput>;
   listCoverageStatistics(
     args: ListCoverageStatisticsCommandInput,
-    cb: (err: any, data?: ListCoverageStatisticsCommandOutput) => void
+    cb: (err: any, data?: ListCoverageStatisticsCommandOutput) => void,
   ): void;
   listCoverageStatistics(
     args: ListCoverageStatisticsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCoverageStatisticsCommandOutput) => void
+    cb: (err: any, data?: ListCoverageStatisticsCommandOutput) => void,
   ): void;
 
   /**
@@ -935,16 +935,16 @@ export interface Inspector2 {
   listDelegatedAdminAccounts(): Promise<ListDelegatedAdminAccountsCommandOutput>;
   listDelegatedAdminAccounts(
     args: ListDelegatedAdminAccountsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDelegatedAdminAccountsCommandOutput>;
   listDelegatedAdminAccounts(
     args: ListDelegatedAdminAccountsCommandInput,
-    cb: (err: any, data?: ListDelegatedAdminAccountsCommandOutput) => void
+    cb: (err: any, data?: ListDelegatedAdminAccountsCommandOutput) => void,
   ): void;
   listDelegatedAdminAccounts(
     args: ListDelegatedAdminAccountsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDelegatedAdminAccountsCommandOutput) => void
+    cb: (err: any, data?: ListDelegatedAdminAccountsCommandOutput) => void,
   ): void;
 
   /**
@@ -956,7 +956,7 @@ export interface Inspector2 {
   listFilters(
     args: ListFiltersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFiltersCommandOutput) => void
+    cb: (err: any, data?: ListFiltersCommandOutput) => void,
   ): void;
 
   /**
@@ -964,16 +964,16 @@ export interface Inspector2 {
    */
   listFindingAggregations(
     args: ListFindingAggregationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFindingAggregationsCommandOutput>;
   listFindingAggregations(
     args: ListFindingAggregationsCommandInput,
-    cb: (err: any, data?: ListFindingAggregationsCommandOutput) => void
+    cb: (err: any, data?: ListFindingAggregationsCommandOutput) => void,
   ): void;
   listFindingAggregations(
     args: ListFindingAggregationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFindingAggregationsCommandOutput) => void
+    cb: (err: any, data?: ListFindingAggregationsCommandOutput) => void,
   ): void;
 
   /**
@@ -985,7 +985,7 @@ export interface Inspector2 {
   listFindings(
     args: ListFindingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFindingsCommandOutput) => void
+    cb: (err: any, data?: ListFindingsCommandOutput) => void,
   ): void;
 
   /**
@@ -997,7 +997,7 @@ export interface Inspector2 {
   listMembers(
     args: ListMembersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMembersCommandOutput) => void
+    cb: (err: any, data?: ListMembersCommandOutput) => void,
   ): void;
 
   /**
@@ -1005,16 +1005,16 @@ export interface Inspector2 {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1023,13 +1023,13 @@ export interface Inspector2 {
   listUsageTotals(): Promise<ListUsageTotalsCommandOutput>;
   listUsageTotals(
     args: ListUsageTotalsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListUsageTotalsCommandOutput>;
   listUsageTotals(args: ListUsageTotalsCommandInput, cb: (err: any, data?: ListUsageTotalsCommandOutput) => void): void;
   listUsageTotals(
     args: ListUsageTotalsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListUsageTotalsCommandOutput) => void
+    cb: (err: any, data?: ListUsageTotalsCommandOutput) => void,
   ): void;
 
   /**
@@ -1037,16 +1037,16 @@ export interface Inspector2 {
    */
   resetEncryptionKey(
     args: ResetEncryptionKeyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ResetEncryptionKeyCommandOutput>;
   resetEncryptionKey(
     args: ResetEncryptionKeyCommandInput,
-    cb: (err: any, data?: ResetEncryptionKeyCommandOutput) => void
+    cb: (err: any, data?: ResetEncryptionKeyCommandOutput) => void,
   ): void;
   resetEncryptionKey(
     args: ResetEncryptionKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ResetEncryptionKeyCommandOutput) => void
+    cb: (err: any, data?: ResetEncryptionKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -1054,16 +1054,16 @@ export interface Inspector2 {
    */
   searchVulnerabilities(
     args: SearchVulnerabilitiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchVulnerabilitiesCommandOutput>;
   searchVulnerabilities(
     args: SearchVulnerabilitiesCommandInput,
-    cb: (err: any, data?: SearchVulnerabilitiesCommandOutput) => void
+    cb: (err: any, data?: SearchVulnerabilitiesCommandOutput) => void,
   ): void;
   searchVulnerabilities(
     args: SearchVulnerabilitiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchVulnerabilitiesCommandOutput) => void
+    cb: (err: any, data?: SearchVulnerabilitiesCommandOutput) => void,
   ): void;
 
   /**
@@ -1071,16 +1071,16 @@ export interface Inspector2 {
    */
   sendCisSessionHealth(
     args: SendCisSessionHealthCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SendCisSessionHealthCommandOutput>;
   sendCisSessionHealth(
     args: SendCisSessionHealthCommandInput,
-    cb: (err: any, data?: SendCisSessionHealthCommandOutput) => void
+    cb: (err: any, data?: SendCisSessionHealthCommandOutput) => void,
   ): void;
   sendCisSessionHealth(
     args: SendCisSessionHealthCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendCisSessionHealthCommandOutput) => void
+    cb: (err: any, data?: SendCisSessionHealthCommandOutput) => void,
   ): void;
 
   /**
@@ -1088,16 +1088,16 @@ export interface Inspector2 {
    */
   sendCisSessionTelemetry(
     args: SendCisSessionTelemetryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SendCisSessionTelemetryCommandOutput>;
   sendCisSessionTelemetry(
     args: SendCisSessionTelemetryCommandInput,
-    cb: (err: any, data?: SendCisSessionTelemetryCommandOutput) => void
+    cb: (err: any, data?: SendCisSessionTelemetryCommandOutput) => void,
   ): void;
   sendCisSessionTelemetry(
     args: SendCisSessionTelemetryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendCisSessionTelemetryCommandOutput) => void
+    cb: (err: any, data?: SendCisSessionTelemetryCommandOutput) => void,
   ): void;
 
   /**
@@ -1105,13 +1105,13 @@ export interface Inspector2 {
    */
   startCisSession(
     args: StartCisSessionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartCisSessionCommandOutput>;
   startCisSession(args: StartCisSessionCommandInput, cb: (err: any, data?: StartCisSessionCommandOutput) => void): void;
   startCisSession(
     args: StartCisSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartCisSessionCommandOutput) => void
+    cb: (err: any, data?: StartCisSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -1119,13 +1119,13 @@ export interface Inspector2 {
    */
   stopCisSession(
     args: StopCisSessionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopCisSessionCommandOutput>;
   stopCisSession(args: StopCisSessionCommandInput, cb: (err: any, data?: StopCisSessionCommandOutput) => void): void;
   stopCisSession(
     args: StopCisSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopCisSessionCommandOutput) => void
+    cb: (err: any, data?: StopCisSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -1136,7 +1136,7 @@ export interface Inspector2 {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1147,7 +1147,7 @@ export interface Inspector2 {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1155,16 +1155,16 @@ export interface Inspector2 {
    */
   updateCisScanConfiguration(
     args: UpdateCisScanConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateCisScanConfigurationCommandOutput>;
   updateCisScanConfiguration(
     args: UpdateCisScanConfigurationCommandInput,
-    cb: (err: any, data?: UpdateCisScanConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateCisScanConfigurationCommandOutput) => void,
   ): void;
   updateCisScanConfiguration(
     args: UpdateCisScanConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateCisScanConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateCisScanConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1173,16 +1173,16 @@ export interface Inspector2 {
   updateConfiguration(): Promise<UpdateConfigurationCommandOutput>;
   updateConfiguration(
     args: UpdateConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateConfigurationCommandOutput>;
   updateConfiguration(
     args: UpdateConfigurationCommandInput,
-    cb: (err: any, data?: UpdateConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateConfigurationCommandOutput) => void,
   ): void;
   updateConfiguration(
     args: UpdateConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1191,16 +1191,16 @@ export interface Inspector2 {
   updateEc2DeepInspectionConfiguration(): Promise<UpdateEc2DeepInspectionConfigurationCommandOutput>;
   updateEc2DeepInspectionConfiguration(
     args: UpdateEc2DeepInspectionConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEc2DeepInspectionConfigurationCommandOutput>;
   updateEc2DeepInspectionConfiguration(
     args: UpdateEc2DeepInspectionConfigurationCommandInput,
-    cb: (err: any, data?: UpdateEc2DeepInspectionConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateEc2DeepInspectionConfigurationCommandOutput) => void,
   ): void;
   updateEc2DeepInspectionConfiguration(
     args: UpdateEc2DeepInspectionConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEc2DeepInspectionConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateEc2DeepInspectionConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1208,16 +1208,16 @@ export interface Inspector2 {
    */
   updateEncryptionKey(
     args: UpdateEncryptionKeyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEncryptionKeyCommandOutput>;
   updateEncryptionKey(
     args: UpdateEncryptionKeyCommandInput,
-    cb: (err: any, data?: UpdateEncryptionKeyCommandOutput) => void
+    cb: (err: any, data?: UpdateEncryptionKeyCommandOutput) => void,
   ): void;
   updateEncryptionKey(
     args: UpdateEncryptionKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEncryptionKeyCommandOutput) => void
+    cb: (err: any, data?: UpdateEncryptionKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -1228,7 +1228,7 @@ export interface Inspector2 {
   updateFilter(
     args: UpdateFilterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFilterCommandOutput) => void
+    cb: (err: any, data?: UpdateFilterCommandOutput) => void,
   ): void;
 
   /**
@@ -1236,16 +1236,16 @@ export interface Inspector2 {
    */
   updateOrganizationConfiguration(
     args: UpdateOrganizationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateOrganizationConfigurationCommandOutput>;
   updateOrganizationConfiguration(
     args: UpdateOrganizationConfigurationCommandInput,
-    cb: (err: any, data?: UpdateOrganizationConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateOrganizationConfigurationCommandOutput) => void,
   ): void;
   updateOrganizationConfiguration(
     args: UpdateOrganizationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateOrganizationConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateOrganizationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1253,16 +1253,16 @@ export interface Inspector2 {
    */
   updateOrgEc2DeepInspectionConfiguration(
     args: UpdateOrgEc2DeepInspectionConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateOrgEc2DeepInspectionConfigurationCommandOutput>;
   updateOrgEc2DeepInspectionConfiguration(
     args: UpdateOrgEc2DeepInspectionConfigurationCommandInput,
-    cb: (err: any, data?: UpdateOrgEc2DeepInspectionConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateOrgEc2DeepInspectionConfigurationCommandOutput) => void,
   ): void;
   updateOrgEc2DeepInspectionConfiguration(
     args: UpdateOrgEc2DeepInspectionConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateOrgEc2DeepInspectionConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateOrgEc2DeepInspectionConfigurationCommandOutput) => void,
   ): void;
 }
 

@@ -146,7 +146,7 @@ export class UpdateCalculatedAttributeDefinitionCommand extends $Command
   .n("CustomerProfilesClient", "UpdateCalculatedAttributeDefinitionCommand")
   .f(
     UpdateCalculatedAttributeDefinitionRequestFilterSensitiveLog,
-    UpdateCalculatedAttributeDefinitionResponseFilterSensitiveLog
+    UpdateCalculatedAttributeDefinitionResponseFilterSensitiveLog,
   )
   .ser(se_UpdateCalculatedAttributeDefinitionCommand)
   .de(de_UpdateCalculatedAttributeDefinitionCommand)

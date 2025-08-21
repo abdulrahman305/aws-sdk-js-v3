@@ -77,14 +77,9 @@ for (const pkg of nonClientPackages) {
     } else if (name.startsWith("@smithy")) {
       if (colocatedSmithy && setCanonicalVersion) {
         const pkgFolderName = name.replace("@smithy/", "");
-        const canonicalVersion = require(path.join(
-          root,
-          "..",
-          "smithy-typescript",
-          "packages",
-          pkgFolderName,
-          "package.json"
-        )).version;
+        const canonicalVersion = require(
+          path.join(root, "..", "smithy-typescript", "packages", pkgFolderName, "package.json"),
+        ).version;
         if (pkgJson.dependencies[name] !== `^${canonicalVersion}`) {
           pkgJson.dependencies[name] = `^${canonicalVersion}`;
           console.log("[--set-smithy-version=true] set", pkgJson.name, "dependencies", name, "to", canonicalVersion);
@@ -106,14 +101,9 @@ for (const pkg of nonClientPackages) {
     } else if (name.startsWith("@smithy")) {
       if (colocatedSmithy && setCanonicalVersion) {
         const pkgFolderName = name.replace("@smithy/", "");
-        const canonicalVersion = require(path.join(
-          root,
-          "..",
-          "smithy-typescript",
-          "packages",
-          pkgFolderName,
-          "package.json"
-        )).version;
+        const canonicalVersion = require(
+          path.join(root, "..", "smithy-typescript", "packages", pkgFolderName, "package.json"),
+        ).version;
         if (pkgJson.devDependencies[name] !== `^${canonicalVersion}`) {
           pkgJson.devDependencies[name] = `^${canonicalVersion}`;
           console.log("[--set-smithy-version=true] set", pkgJson.name, "dependencies", name, "to", canonicalVersion);
@@ -140,7 +130,7 @@ function checkVersions() {
         Object.entries(versions).reduce((acc, [version, locations]) => {
           acc[version] = locations.length > 20 ? `${locations.length} locations` : locations;
           return acc;
-        }, {})
+        }, {}),
       );
       errors.push(pkg);
     }

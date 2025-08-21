@@ -86,7 +86,7 @@ import { ServerlessApplicationRepositoryServiceException as __BaseException } fr
  */
 export const se_CreateApplicationCommand = async (
   input: CreateApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -111,7 +111,7 @@ export const se_CreateApplicationCommand = async (
       spdxLicenseId: [, , `SpdxLicenseId`],
       templateBody: [, , `TemplateBody`],
       templateUrl: [, , `TemplateUrl`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -122,7 +122,7 @@ export const se_CreateApplicationCommand = async (
  */
 export const se_CreateApplicationVersionCommand = async (
   input: CreateApplicationVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -138,7 +138,7 @@ export const se_CreateApplicationVersionCommand = async (
       sourceCodeUrl: [, , `SourceCodeUrl`],
       templateBody: [, , `TemplateBody`],
       templateUrl: [, , `TemplateUrl`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -149,7 +149,7 @@ export const se_CreateApplicationVersionCommand = async (
  */
 export const se_CreateCloudFormationChangeSetCommand = async (
   input: CreateCloudFormationChangeSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -172,7 +172,7 @@ export const se_CreateCloudFormationChangeSetCommand = async (
       stackName: [, , `StackName`],
       tags: [, (_) => se___listOfTag(_, context), `Tags`],
       templateId: [, , `TemplateId`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -183,7 +183,7 @@ export const se_CreateCloudFormationChangeSetCommand = async (
  */
 export const se_CreateCloudFormationTemplateCommand = async (
   input: CreateCloudFormationTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -195,7 +195,7 @@ export const se_CreateCloudFormationTemplateCommand = async (
   body = JSON.stringify(
     take(input, {
       semanticVersion: [, , `SemanticVersion`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -206,7 +206,7 @@ export const se_CreateCloudFormationTemplateCommand = async (
  */
 export const se_DeleteApplicationCommand = async (
   input: DeleteApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -222,7 +222,7 @@ export const se_DeleteApplicationCommand = async (
  */
 export const se_GetApplicationCommand = async (
   input: GetApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -241,7 +241,7 @@ export const se_GetApplicationCommand = async (
  */
 export const se_GetApplicationPolicyCommand = async (
   input: GetApplicationPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -257,7 +257,7 @@ export const se_GetApplicationPolicyCommand = async (
  */
 export const se_GetCloudFormationTemplateCommand = async (
   input: GetCloudFormationTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -274,7 +274,7 @@ export const se_GetCloudFormationTemplateCommand = async (
  */
 export const se_ListApplicationDependenciesCommand = async (
   input: ListApplicationDependenciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -295,7 +295,7 @@ export const se_ListApplicationDependenciesCommand = async (
  */
 export const se_ListApplicationsCommand = async (
   input: ListApplicationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -314,7 +314,7 @@ export const se_ListApplicationsCommand = async (
  */
 export const se_ListApplicationVersionsCommand = async (
   input: ListApplicationVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -334,7 +334,7 @@ export const se_ListApplicationVersionsCommand = async (
  */
 export const se_PutApplicationPolicyCommand = async (
   input: PutApplicationPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -346,7 +346,7 @@ export const se_PutApplicationPolicyCommand = async (
   body = JSON.stringify(
     take(input, {
       statements: [, (_) => se___listOfApplicationPolicyStatement(_, context), `Statements`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -357,7 +357,7 @@ export const se_PutApplicationPolicyCommand = async (
  */
 export const se_UnshareApplicationCommand = async (
   input: UnshareApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -369,7 +369,7 @@ export const se_UnshareApplicationCommand = async (
   body = JSON.stringify(
     take(input, {
       organizationId: [, , `OrganizationId`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -380,7 +380,7 @@ export const se_UnshareApplicationCommand = async (
  */
 export const se_UpdateApplicationCommand = async (
   input: UpdateApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -397,7 +397,7 @@ export const se_UpdateApplicationCommand = async (
       labels: [, (_) => _json(_), `Labels`],
       readmeBody: [, , `ReadmeBody`],
       readmeUrl: [, , `ReadmeUrl`],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -408,7 +408,7 @@ export const se_UpdateApplicationCommand = async (
  */
 export const de_CreateApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateApplicationCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -441,7 +441,7 @@ export const de_CreateApplicationCommand = async (
  */
 export const de_CreateApplicationVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateApplicationVersionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -470,7 +470,7 @@ export const de_CreateApplicationVersionCommand = async (
  */
 export const de_CreateCloudFormationChangeSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCloudFormationChangeSetCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -494,7 +494,7 @@ export const de_CreateCloudFormationChangeSetCommand = async (
  */
 export const de_CreateCloudFormationTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCloudFormationTemplateCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -521,7 +521,7 @@ export const de_CreateCloudFormationTemplateCommand = async (
  */
 export const de_DeleteApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteApplicationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -538,7 +538,7 @@ export const de_DeleteApplicationCommand = async (
  */
 export const de_GetApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -571,7 +571,7 @@ export const de_GetApplicationCommand = async (
  */
 export const de_GetApplicationPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApplicationPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -592,7 +592,7 @@ export const de_GetApplicationPolicyCommand = async (
  */
 export const de_GetCloudFormationTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCloudFormationTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -619,7 +619,7 @@ export const de_GetCloudFormationTemplateCommand = async (
  */
 export const de_ListApplicationDependenciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListApplicationDependenciesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -641,7 +641,7 @@ export const de_ListApplicationDependenciesCommand = async (
  */
 export const de_ListApplicationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListApplicationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -663,7 +663,7 @@ export const de_ListApplicationsCommand = async (
  */
 export const de_ListApplicationVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListApplicationVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -685,7 +685,7 @@ export const de_ListApplicationVersionsCommand = async (
  */
 export const de_PutApplicationPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutApplicationPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -706,7 +706,7 @@ export const de_PutApplicationPolicyCommand = async (
  */
 export const de_UnshareApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnshareApplicationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -723,7 +723,7 @@ export const de_UnshareApplicationCommand = async (
  */
 export const de_UpdateApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -849,7 +849,7 @@ const de_ForbiddenExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_InternalServerErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -888,7 +888,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1009,7 +1009,7 @@ const se_Tag = (input: Tag, context: __SerdeContext): any => {
  */
 const de___listOfApplicationDependencySummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ApplicationDependencySummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)

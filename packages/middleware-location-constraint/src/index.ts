@@ -17,7 +17,7 @@ import { LocationConstraintResolvedConfig } from "./configuration";
  */
 
 export function locationConstraintMiddleware(
-  options: LocationConstraintResolvedConfig
+  options: LocationConstraintResolvedConfig,
 ): InitializeMiddleware<any, any> {
   return <Output extends MetadataBearer>(next: InitializeHandler<any, Output>): InitializeHandler<any, Output> =>
     async (args: InitializeHandlerArguments<any>): Promise<InitializeHandlerOutput<Output>> => {

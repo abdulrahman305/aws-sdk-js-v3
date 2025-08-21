@@ -304,7 +304,7 @@ import {
  */
 export const se_AddLayerVersionPermissionCommand = async (
   input: AddLayerVersionPermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -323,7 +323,7 @@ export const se_AddLayerVersionPermissionCommand = async (
       OrganizationId: [],
       Principal: [],
       StatementId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -334,7 +334,7 @@ export const se_AddLayerVersionPermissionCommand = async (
  */
 export const se_AddPermissionCommand = async (
   input: AddPermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -357,7 +357,7 @@ export const se_AddPermissionCommand = async (
       SourceAccount: [],
       SourceArn: [],
       StatementId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -368,7 +368,7 @@ export const se_AddPermissionCommand = async (
  */
 export const se_CreateAliasCommand = async (
   input: CreateAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -383,7 +383,7 @@ export const se_CreateAliasCommand = async (
       FunctionVersion: [],
       Name: [],
       RoutingConfig: (_) => se_AliasRoutingConfiguration(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -394,7 +394,7 @@ export const se_CreateAliasCommand = async (
  */
 export const se_CreateCodeSigningConfigCommand = async (
   input: CreateCodeSigningConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -407,7 +407,7 @@ export const se_CreateCodeSigningConfigCommand = async (
       AllowedPublishers: (_) => _json(_),
       CodeSigningPolicies: (_) => _json(_),
       Description: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -418,7 +418,7 @@ export const se_CreateCodeSigningConfigCommand = async (
  */
 export const se_CreateEventSourceMappingCommand = async (
   input: CreateEventSourceMappingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -451,7 +451,7 @@ export const se_CreateEventSourceMappingCommand = async (
       StartingPositionTimestamp: (_) => _.getTime() / 1_000,
       Topics: (_) => _json(_),
       TumblingWindowInSeconds: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -462,7 +462,7 @@ export const se_CreateEventSourceMappingCommand = async (
  */
 export const se_CreateFunctionCommand = async (
   input: CreateFunctionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -496,7 +496,7 @@ export const se_CreateFunctionCommand = async (
       Timeout: [],
       TracingConfig: (_) => _json(_),
       VpcConfig: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -507,7 +507,7 @@ export const se_CreateFunctionCommand = async (
  */
 export const se_CreateFunctionUrlConfigCommand = async (
   input: CreateFunctionUrlConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -524,7 +524,7 @@ export const se_CreateFunctionUrlConfigCommand = async (
       AuthType: [],
       Cors: (_) => _json(_),
       InvokeMode: [],
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -535,7 +535,7 @@ export const se_CreateFunctionUrlConfigCommand = async (
  */
 export const se_DeleteAliasCommand = async (
   input: DeleteAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -552,7 +552,7 @@ export const se_DeleteAliasCommand = async (
  */
 export const se_DeleteCodeSigningConfigCommand = async (
   input: DeleteCodeSigningConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -568,7 +568,7 @@ export const se_DeleteCodeSigningConfigCommand = async (
  */
 export const se_DeleteEventSourceMappingCommand = async (
   input: DeleteEventSourceMappingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -584,7 +584,7 @@ export const se_DeleteEventSourceMappingCommand = async (
  */
 export const se_DeleteFunctionCommand = async (
   input: DeleteFunctionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -603,7 +603,7 @@ export const se_DeleteFunctionCommand = async (
  */
 export const se_DeleteFunctionCodeSigningConfigCommand = async (
   input: DeleteFunctionCodeSigningConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -619,7 +619,7 @@ export const se_DeleteFunctionCodeSigningConfigCommand = async (
  */
 export const se_DeleteFunctionConcurrencyCommand = async (
   input: DeleteFunctionConcurrencyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -635,7 +635,7 @@ export const se_DeleteFunctionConcurrencyCommand = async (
  */
 export const se_DeleteFunctionEventInvokeConfigCommand = async (
   input: DeleteFunctionEventInvokeConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -654,7 +654,7 @@ export const se_DeleteFunctionEventInvokeConfigCommand = async (
  */
 export const se_DeleteFunctionUrlConfigCommand = async (
   input: DeleteFunctionUrlConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -673,7 +673,7 @@ export const se_DeleteFunctionUrlConfigCommand = async (
  */
 export const se_DeleteLayerVersionCommand = async (
   input: DeleteLayerVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -690,7 +690,7 @@ export const se_DeleteLayerVersionCommand = async (
  */
 export const se_DeleteProvisionedConcurrencyConfigCommand = async (
   input: DeleteProvisionedConcurrencyConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -709,7 +709,7 @@ export const se_DeleteProvisionedConcurrencyConfigCommand = async (
  */
 export const se_GetAccountSettingsCommand = async (
   input: GetAccountSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -727,7 +727,7 @@ export const se_GetAccountSettingsCommand = async (
  */
 export const se_GetAliasCommand = async (
   input: GetAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -744,7 +744,7 @@ export const se_GetAliasCommand = async (
  */
 export const se_GetCodeSigningConfigCommand = async (
   input: GetCodeSigningConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -760,7 +760,7 @@ export const se_GetCodeSigningConfigCommand = async (
  */
 export const se_GetEventSourceMappingCommand = async (
   input: GetEventSourceMappingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -776,7 +776,7 @@ export const se_GetEventSourceMappingCommand = async (
  */
 export const se_GetFunctionCommand = async (
   input: GetFunctionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -795,7 +795,7 @@ export const se_GetFunctionCommand = async (
  */
 export const se_GetFunctionCodeSigningConfigCommand = async (
   input: GetFunctionCodeSigningConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -811,7 +811,7 @@ export const se_GetFunctionCodeSigningConfigCommand = async (
  */
 export const se_GetFunctionConcurrencyCommand = async (
   input: GetFunctionConcurrencyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -827,7 +827,7 @@ export const se_GetFunctionConcurrencyCommand = async (
  */
 export const se_GetFunctionConfigurationCommand = async (
   input: GetFunctionConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -846,7 +846,7 @@ export const se_GetFunctionConfigurationCommand = async (
  */
 export const se_GetFunctionEventInvokeConfigCommand = async (
   input: GetFunctionEventInvokeConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -865,7 +865,7 @@ export const se_GetFunctionEventInvokeConfigCommand = async (
  */
 export const se_GetFunctionUrlConfigCommand = async (
   input: GetFunctionUrlConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -884,7 +884,7 @@ export const se_GetFunctionUrlConfigCommand = async (
  */
 export const se_GetLayerVersionCommand = async (
   input: GetLayerVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -901,7 +901,7 @@ export const se_GetLayerVersionCommand = async (
  */
 export const se_GetLayerVersionByArnCommand = async (
   input: GetLayerVersionByArnCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -920,7 +920,7 @@ export const se_GetLayerVersionByArnCommand = async (
  */
 export const se_GetLayerVersionPolicyCommand = async (
   input: GetLayerVersionPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -937,7 +937,7 @@ export const se_GetLayerVersionPolicyCommand = async (
  */
 export const se_GetPolicyCommand = async (
   input: GetPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -956,7 +956,7 @@ export const se_GetPolicyCommand = async (
  */
 export const se_GetProvisionedConcurrencyConfigCommand = async (
   input: GetProvisionedConcurrencyConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -975,7 +975,7 @@ export const se_GetProvisionedConcurrencyConfigCommand = async (
  */
 export const se_GetRuntimeManagementConfigCommand = async (
   input: GetRuntimeManagementConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1018,7 +1018,7 @@ export const se_InvokeCommand = async (input: InvokeCommandInput, context: __Ser
  */
 export const se_InvokeAsyncCommand = async (
   input: InvokeAsyncCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1039,7 +1039,7 @@ export const se_InvokeAsyncCommand = async (
  */
 export const se_InvokeWithResponseStreamCommand = async (
   input: InvokeWithResponseStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1066,7 +1066,7 @@ export const se_InvokeWithResponseStreamCommand = async (
  */
 export const se_ListAliasesCommand = async (
   input: ListAliasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1087,7 +1087,7 @@ export const se_ListAliasesCommand = async (
  */
 export const se_ListCodeSigningConfigsCommand = async (
   input: ListCodeSigningConfigsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1106,7 +1106,7 @@ export const se_ListCodeSigningConfigsCommand = async (
  */
 export const se_ListEventSourceMappingsCommand = async (
   input: ListEventSourceMappingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1127,7 +1127,7 @@ export const se_ListEventSourceMappingsCommand = async (
  */
 export const se_ListFunctionEventInvokeConfigsCommand = async (
   input: ListFunctionEventInvokeConfigsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1147,7 +1147,7 @@ export const se_ListFunctionEventInvokeConfigsCommand = async (
  */
 export const se_ListFunctionsCommand = async (
   input: ListFunctionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1168,7 +1168,7 @@ export const se_ListFunctionsCommand = async (
  */
 export const se_ListFunctionsByCodeSigningConfigCommand = async (
   input: ListFunctionsByCodeSigningConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1188,7 +1188,7 @@ export const se_ListFunctionsByCodeSigningConfigCommand = async (
  */
 export const se_ListFunctionUrlConfigsCommand = async (
   input: ListFunctionUrlConfigsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1208,7 +1208,7 @@ export const se_ListFunctionUrlConfigsCommand = async (
  */
 export const se_ListLayersCommand = async (
   input: ListLayersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1229,7 +1229,7 @@ export const se_ListLayersCommand = async (
  */
 export const se_ListLayerVersionsCommand = async (
   input: ListLayerVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1251,7 +1251,7 @@ export const se_ListLayerVersionsCommand = async (
  */
 export const se_ListProvisionedConcurrencyConfigsCommand = async (
   input: ListProvisionedConcurrencyConfigsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1272,7 +1272,7 @@ export const se_ListProvisionedConcurrencyConfigsCommand = async (
  */
 export const se_ListTagsCommand = async (
   input: ListTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1288,7 +1288,7 @@ export const se_ListTagsCommand = async (
  */
 export const se_ListVersionsByFunctionCommand = async (
   input: ListVersionsByFunctionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1308,7 +1308,7 @@ export const se_ListVersionsByFunctionCommand = async (
  */
 export const se_PublishLayerVersionCommand = async (
   input: PublishLayerVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1324,7 +1324,7 @@ export const se_PublishLayerVersionCommand = async (
       Content: (_) => se_LayerVersionContentInput(_, context),
       Description: [],
       LicenseInfo: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1335,7 +1335,7 @@ export const se_PublishLayerVersionCommand = async (
  */
 export const se_PublishVersionCommand = async (
   input: PublishVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1349,7 +1349,7 @@ export const se_PublishVersionCommand = async (
       CodeSha256: [],
       Description: [],
       RevisionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1360,7 +1360,7 @@ export const se_PublishVersionCommand = async (
  */
 export const se_PutFunctionCodeSigningConfigCommand = async (
   input: PutFunctionCodeSigningConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1372,7 +1372,7 @@ export const se_PutFunctionCodeSigningConfigCommand = async (
   body = JSON.stringify(
     take(input, {
       CodeSigningConfigArn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1383,7 +1383,7 @@ export const se_PutFunctionCodeSigningConfigCommand = async (
  */
 export const se_PutFunctionConcurrencyCommand = async (
   input: PutFunctionConcurrencyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1395,7 +1395,7 @@ export const se_PutFunctionConcurrencyCommand = async (
   body = JSON.stringify(
     take(input, {
       ReservedConcurrentExecutions: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1406,7 +1406,7 @@ export const se_PutFunctionConcurrencyCommand = async (
  */
 export const se_PutFunctionEventInvokeConfigCommand = async (
   input: PutFunctionEventInvokeConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1423,7 +1423,7 @@ export const se_PutFunctionEventInvokeConfigCommand = async (
       DestinationConfig: (_) => _json(_),
       MaximumEventAgeInSeconds: [],
       MaximumRetryAttempts: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -1434,7 +1434,7 @@ export const se_PutFunctionEventInvokeConfigCommand = async (
  */
 export const se_PutProvisionedConcurrencyConfigCommand = async (
   input: PutProvisionedConcurrencyConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1449,7 +1449,7 @@ export const se_PutProvisionedConcurrencyConfigCommand = async (
   body = JSON.stringify(
     take(input, {
       ProvisionedConcurrentExecutions: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -1460,7 +1460,7 @@ export const se_PutProvisionedConcurrencyConfigCommand = async (
  */
 export const se_PutRuntimeManagementConfigCommand = async (
   input: PutRuntimeManagementConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1476,7 +1476,7 @@ export const se_PutRuntimeManagementConfigCommand = async (
     take(input, {
       RuntimeVersionArn: [],
       UpdateRuntimeOn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -1487,7 +1487,7 @@ export const se_PutRuntimeManagementConfigCommand = async (
  */
 export const se_RemoveLayerVersionPermissionCommand = async (
   input: RemoveLayerVersionPermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1508,7 +1508,7 @@ export const se_RemoveLayerVersionPermissionCommand = async (
  */
 export const se_RemovePermissionCommand = async (
   input: RemovePermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1529,7 +1529,7 @@ export const se_RemovePermissionCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1541,7 +1541,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1552,7 +1552,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1574,7 +1574,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAliasCommand = async (
   input: UpdateAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1590,7 +1590,7 @@ export const se_UpdateAliasCommand = async (
       FunctionVersion: [],
       RevisionId: [],
       RoutingConfig: (_) => se_AliasRoutingConfiguration(_, context),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1601,7 +1601,7 @@ export const se_UpdateAliasCommand = async (
  */
 export const se_UpdateCodeSigningConfigCommand = async (
   input: UpdateCodeSigningConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1615,7 +1615,7 @@ export const se_UpdateCodeSigningConfigCommand = async (
       AllowedPublishers: (_) => _json(_),
       CodeSigningPolicies: (_) => _json(_),
       Description: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1626,7 +1626,7 @@ export const se_UpdateCodeSigningConfigCommand = async (
  */
 export const se_UpdateEventSourceMappingCommand = async (
   input: UpdateEventSourceMappingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1652,7 +1652,7 @@ export const se_UpdateEventSourceMappingCommand = async (
       ScalingConfig: (_) => _json(_),
       SourceAccessConfigurations: (_) => _json(_),
       TumblingWindowInSeconds: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1663,7 +1663,7 @@ export const se_UpdateEventSourceMappingCommand = async (
  */
 export const se_UpdateFunctionCodeCommand = async (
   input: UpdateFunctionCodeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1683,7 +1683,7 @@ export const se_UpdateFunctionCodeCommand = async (
       S3Key: [],
       S3ObjectVersion: [],
       ZipFile: (_) => context.base64Encoder(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1694,7 +1694,7 @@ export const se_UpdateFunctionCodeCommand = async (
  */
 export const se_UpdateFunctionConfigurationCommand = async (
   input: UpdateFunctionConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1723,7 +1723,7 @@ export const se_UpdateFunctionConfigurationCommand = async (
       Timeout: [],
       TracingConfig: (_) => _json(_),
       VpcConfig: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1734,7 +1734,7 @@ export const se_UpdateFunctionConfigurationCommand = async (
  */
 export const se_UpdateFunctionEventInvokeConfigCommand = async (
   input: UpdateFunctionEventInvokeConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1751,7 +1751,7 @@ export const se_UpdateFunctionEventInvokeConfigCommand = async (
       DestinationConfig: (_) => _json(_),
       MaximumEventAgeInSeconds: [],
       MaximumRetryAttempts: [],
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -1762,7 +1762,7 @@ export const se_UpdateFunctionEventInvokeConfigCommand = async (
  */
 export const se_UpdateFunctionUrlConfigCommand = async (
   input: UpdateFunctionUrlConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1779,7 +1779,7 @@ export const se_UpdateFunctionUrlConfigCommand = async (
       AuthType: [],
       Cors: (_) => _json(_),
       InvokeMode: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -1790,7 +1790,7 @@ export const se_UpdateFunctionUrlConfigCommand = async (
  */
 export const de_AddLayerVersionPermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddLayerVersionPermissionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1812,7 +1812,7 @@ export const de_AddLayerVersionPermissionCommand = async (
  */
 export const de_AddPermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddPermissionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1833,7 +1833,7 @@ export const de_AddPermissionCommand = async (
  */
 export const de_CreateAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAliasCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1859,7 +1859,7 @@ export const de_CreateAliasCommand = async (
  */
 export const de_CreateCodeSigningConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCodeSigningConfigCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1880,7 +1880,7 @@ export const de_CreateCodeSigningConfigCommand = async (
  */
 export const de_CreateEventSourceMappingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEventSourceMappingCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1927,7 +1927,7 @@ export const de_CreateEventSourceMappingCommand = async (
  */
 export const de_CreateFunctionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFunctionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1983,7 +1983,7 @@ export const de_CreateFunctionCommand = async (
  */
 export const de_CreateFunctionUrlConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFunctionUrlConfigCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2009,7 +2009,7 @@ export const de_CreateFunctionUrlConfigCommand = async (
  */
 export const de_DeleteAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAliasCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2026,7 +2026,7 @@ export const de_DeleteAliasCommand = async (
  */
 export const de_DeleteCodeSigningConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCodeSigningConfigCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2043,7 +2043,7 @@ export const de_DeleteCodeSigningConfigCommand = async (
  */
 export const de_DeleteEventSourceMappingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEventSourceMappingCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2090,7 +2090,7 @@ export const de_DeleteEventSourceMappingCommand = async (
  */
 export const de_DeleteFunctionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFunctionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2107,7 +2107,7 @@ export const de_DeleteFunctionCommand = async (
  */
 export const de_DeleteFunctionCodeSigningConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFunctionCodeSigningConfigCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2124,7 +2124,7 @@ export const de_DeleteFunctionCodeSigningConfigCommand = async (
  */
 export const de_DeleteFunctionConcurrencyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFunctionConcurrencyCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2141,7 +2141,7 @@ export const de_DeleteFunctionConcurrencyCommand = async (
  */
 export const de_DeleteFunctionEventInvokeConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFunctionEventInvokeConfigCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2158,7 +2158,7 @@ export const de_DeleteFunctionEventInvokeConfigCommand = async (
  */
 export const de_DeleteFunctionUrlConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFunctionUrlConfigCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2175,7 +2175,7 @@ export const de_DeleteFunctionUrlConfigCommand = async (
  */
 export const de_DeleteLayerVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLayerVersionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2192,7 +2192,7 @@ export const de_DeleteLayerVersionCommand = async (
  */
 export const de_DeleteProvisionedConcurrencyConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProvisionedConcurrencyConfigCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2209,7 +2209,7 @@ export const de_DeleteProvisionedConcurrencyConfigCommand = async (
  */
 export const de_GetAccountSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccountSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2231,7 +2231,7 @@ export const de_GetAccountSettingsCommand = async (
  */
 export const de_GetAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAliasCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2257,7 +2257,7 @@ export const de_GetAliasCommand = async (
  */
 export const de_GetCodeSigningConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCodeSigningConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2278,7 +2278,7 @@ export const de_GetCodeSigningConfigCommand = async (
  */
 export const de_GetEventSourceMappingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEventSourceMappingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2325,7 +2325,7 @@ export const de_GetEventSourceMappingCommand = async (
  */
 export const de_GetFunctionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFunctionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2349,7 +2349,7 @@ export const de_GetFunctionCommand = async (
  */
 export const de_GetFunctionCodeSigningConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFunctionCodeSigningConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2371,7 +2371,7 @@ export const de_GetFunctionCodeSigningConfigCommand = async (
  */
 export const de_GetFunctionConcurrencyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFunctionConcurrencyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2392,7 +2392,7 @@ export const de_GetFunctionConcurrencyCommand = async (
  */
 export const de_GetFunctionConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFunctionConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2448,7 +2448,7 @@ export const de_GetFunctionConfigurationCommand = async (
  */
 export const de_GetFunctionEventInvokeConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFunctionEventInvokeConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2473,7 +2473,7 @@ export const de_GetFunctionEventInvokeConfigCommand = async (
  */
 export const de_GetFunctionUrlConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFunctionUrlConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2500,7 +2500,7 @@ export const de_GetFunctionUrlConfigCommand = async (
  */
 export const de_GetLayerVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLayerVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2529,7 +2529,7 @@ export const de_GetLayerVersionCommand = async (
  */
 export const de_GetLayerVersionByArnCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLayerVersionByArnCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2558,7 +2558,7 @@ export const de_GetLayerVersionByArnCommand = async (
  */
 export const de_GetLayerVersionPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLayerVersionPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2580,7 +2580,7 @@ export const de_GetLayerVersionPolicyCommand = async (
  */
 export const de_GetPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2602,7 +2602,7 @@ export const de_GetPolicyCommand = async (
  */
 export const de_GetProvisionedConcurrencyConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetProvisionedConcurrencyConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2628,7 +2628,7 @@ export const de_GetProvisionedConcurrencyConfigCommand = async (
  */
 export const de_GetRuntimeManagementConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRuntimeManagementConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2651,7 +2651,7 @@ export const de_GetRuntimeManagementConfigCommand = async (
  */
 export const de_InvokeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvokeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2675,7 +2675,7 @@ export const de_InvokeCommand = async (
  */
 export const de_InvokeAsyncCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvokeAsyncCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2695,7 +2695,7 @@ export const de_InvokeAsyncCommand = async (
  */
 export const de_InvokeWithResponseStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): Promise<InvokeWithResponseStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2718,7 +2718,7 @@ export const de_InvokeWithResponseStreamCommand = async (
  */
 export const de_ListAliasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAliasesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2740,7 +2740,7 @@ export const de_ListAliasesCommand = async (
  */
 export const de_ListCodeSigningConfigsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCodeSigningConfigsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2762,7 +2762,7 @@ export const de_ListCodeSigningConfigsCommand = async (
  */
 export const de_ListEventSourceMappingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEventSourceMappingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2784,7 +2784,7 @@ export const de_ListEventSourceMappingsCommand = async (
  */
 export const de_ListFunctionEventInvokeConfigsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFunctionEventInvokeConfigsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2806,7 +2806,7 @@ export const de_ListFunctionEventInvokeConfigsCommand = async (
  */
 export const de_ListFunctionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFunctionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2828,7 +2828,7 @@ export const de_ListFunctionsCommand = async (
  */
 export const de_ListFunctionsByCodeSigningConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFunctionsByCodeSigningConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2850,7 +2850,7 @@ export const de_ListFunctionsByCodeSigningConfigCommand = async (
  */
 export const de_ListFunctionUrlConfigsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFunctionUrlConfigsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2872,7 +2872,7 @@ export const de_ListFunctionUrlConfigsCommand = async (
  */
 export const de_ListLayersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLayersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2894,7 +2894,7 @@ export const de_ListLayersCommand = async (
  */
 export const de_ListLayerVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLayerVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2916,7 +2916,7 @@ export const de_ListLayerVersionsCommand = async (
  */
 export const de_ListProvisionedConcurrencyConfigsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProvisionedConcurrencyConfigsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2938,7 +2938,7 @@ export const de_ListProvisionedConcurrencyConfigsCommand = async (
  */
 export const de_ListTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2959,7 +2959,7 @@ export const de_ListTagsCommand = async (
  */
 export const de_ListVersionsByFunctionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVersionsByFunctionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2981,7 +2981,7 @@ export const de_ListVersionsByFunctionCommand = async (
  */
 export const de_PublishLayerVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PublishLayerVersionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3010,7 +3010,7 @@ export const de_PublishLayerVersionCommand = async (
  */
 export const de_PublishVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PublishVersionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3066,7 +3066,7 @@ export const de_PublishVersionCommand = async (
  */
 export const de_PutFunctionCodeSigningConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutFunctionCodeSigningConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3088,7 +3088,7 @@ export const de_PutFunctionCodeSigningConfigCommand = async (
  */
 export const de_PutFunctionConcurrencyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutFunctionConcurrencyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3109,7 +3109,7 @@ export const de_PutFunctionConcurrencyCommand = async (
  */
 export const de_PutFunctionEventInvokeConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutFunctionEventInvokeConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3134,7 +3134,7 @@ export const de_PutFunctionEventInvokeConfigCommand = async (
  */
 export const de_PutProvisionedConcurrencyConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutProvisionedConcurrencyConfigCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3160,7 +3160,7 @@ export const de_PutProvisionedConcurrencyConfigCommand = async (
  */
 export const de_PutRuntimeManagementConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutRuntimeManagementConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3183,7 +3183,7 @@ export const de_PutRuntimeManagementConfigCommand = async (
  */
 export const de_RemoveLayerVersionPermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveLayerVersionPermissionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3200,7 +3200,7 @@ export const de_RemoveLayerVersionPermissionCommand = async (
  */
 export const de_RemovePermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemovePermissionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3217,7 +3217,7 @@ export const de_RemovePermissionCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3234,7 +3234,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3251,7 +3251,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAliasCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3277,7 +3277,7 @@ export const de_UpdateAliasCommand = async (
  */
 export const de_UpdateCodeSigningConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCodeSigningConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3298,7 +3298,7 @@ export const de_UpdateCodeSigningConfigCommand = async (
  */
 export const de_UpdateEventSourceMappingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEventSourceMappingCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3345,7 +3345,7 @@ export const de_UpdateEventSourceMappingCommand = async (
  */
 export const de_UpdateFunctionCodeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFunctionCodeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3401,7 +3401,7 @@ export const de_UpdateFunctionCodeCommand = async (
  */
 export const de_UpdateFunctionConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFunctionConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3457,7 +3457,7 @@ export const de_UpdateFunctionConfigurationCommand = async (
  */
 export const de_UpdateFunctionEventInvokeConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFunctionEventInvokeConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3482,7 +3482,7 @@ export const de_UpdateFunctionEventInvokeConfigCommand = async (
  */
 export const de_UpdateFunctionUrlConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFunctionUrlConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3644,7 +3644,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_CodeSigningConfigNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CodeSigningConfigNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3665,7 +3665,7 @@ const de_CodeSigningConfigNotFoundExceptionRes = async (
  */
 const de_CodeStorageExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CodeStorageExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3686,7 +3686,7 @@ const de_CodeStorageExceededExceptionRes = async (
  */
 const de_CodeVerificationFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CodeVerificationFailedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3707,7 +3707,7 @@ const de_CodeVerificationFailedExceptionRes = async (
  */
 const de_EC2AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EC2AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3728,7 +3728,7 @@ const de_EC2AccessDeniedExceptionRes = async (
  */
 const de_EC2ThrottledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EC2ThrottledException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3749,7 +3749,7 @@ const de_EC2ThrottledExceptionRes = async (
  */
 const de_EC2UnexpectedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EC2UnexpectedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3789,7 +3789,7 @@ const de_EFSIOExceptionRes = async (parsedOutput: any, context: __SerdeContext):
  */
 const de_EFSMountConnectivityExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EFSMountConnectivityException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3810,7 +3810,7 @@ const de_EFSMountConnectivityExceptionRes = async (
  */
 const de_EFSMountFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EFSMountFailureException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3831,7 +3831,7 @@ const de_EFSMountFailureExceptionRes = async (
  */
 const de_EFSMountTimeoutExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EFSMountTimeoutException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3852,7 +3852,7 @@ const de_EFSMountTimeoutExceptionRes = async (
  */
 const de_ENILimitReachedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ENILimitReachedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3873,7 +3873,7 @@ const de_ENILimitReachedExceptionRes = async (
  */
 const de_InvalidCodeSignatureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidCodeSignatureException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3894,7 +3894,7 @@ const de_InvalidCodeSignatureExceptionRes = async (
  */
 const de_InvalidParameterValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterValueException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3915,7 +3915,7 @@ const de_InvalidParameterValueExceptionRes = async (
  */
 const de_InvalidRequestContentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestContentException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3936,7 +3936,7 @@ const de_InvalidRequestContentExceptionRes = async (
  */
 const de_InvalidRuntimeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRuntimeException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3957,7 +3957,7 @@ const de_InvalidRuntimeExceptionRes = async (
  */
 const de_InvalidSecurityGroupIDExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSecurityGroupIDException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3978,7 +3978,7 @@ const de_InvalidSecurityGroupIDExceptionRes = async (
  */
 const de_InvalidSubnetIDExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSubnetIDException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3999,7 +3999,7 @@ const de_InvalidSubnetIDExceptionRes = async (
  */
 const de_InvalidZipFileExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidZipFileException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4020,7 +4020,7 @@ const de_InvalidZipFileExceptionRes = async (
  */
 const de_KMSAccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KMSAccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4041,7 +4041,7 @@ const de_KMSAccessDeniedExceptionRes = async (
  */
 const de_KMSDisabledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KMSDisabledException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4062,7 +4062,7 @@ const de_KMSDisabledExceptionRes = async (
  */
 const de_KMSInvalidStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KMSInvalidStateException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4083,7 +4083,7 @@ const de_KMSInvalidStateExceptionRes = async (
  */
 const de_KMSNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KMSNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4104,7 +4104,7 @@ const de_KMSNotFoundExceptionRes = async (
  */
 const de_PolicyLengthExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PolicyLengthExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4125,7 +4125,7 @@ const de_PolicyLengthExceededExceptionRes = async (
  */
 const de_PreconditionFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PreconditionFailedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4146,7 +4146,7 @@ const de_PreconditionFailedExceptionRes = async (
  */
 const de_ProvisionedConcurrencyConfigNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ProvisionedConcurrencyConfigNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4167,7 +4167,7 @@ const de_ProvisionedConcurrencyConfigNotFoundExceptionRes = async (
  */
 const de_RecursiveInvocationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RecursiveInvocationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4188,7 +4188,7 @@ const de_RecursiveInvocationExceptionRes = async (
  */
 const de_RequestTooLargeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestTooLargeException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4209,7 +4209,7 @@ const de_RequestTooLargeExceptionRes = async (
  */
 const de_ResourceConflictExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceConflictException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4230,7 +4230,7 @@ const de_ResourceConflictExceptionRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4251,7 +4251,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4272,7 +4272,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ResourceNotReadyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotReadyException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4329,7 +4329,7 @@ const de_SnapStartExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_SnapStartNotReadyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SnapStartNotReadyException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4350,7 +4350,7 @@ const de_SnapStartNotReadyExceptionRes = async (
  */
 const de_SnapStartTimeoutExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SnapStartTimeoutException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4371,7 +4371,7 @@ const de_SnapStartTimeoutExceptionRes = async (
  */
 const de_SubnetIPAddressLimitReachedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SubnetIPAddressLimitReachedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4392,7 +4392,7 @@ const de_SubnetIPAddressLimitReachedExceptionRes = async (
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({
     [_rAS]: [, parsedOutput.headers[_ra]],
@@ -4416,7 +4416,7 @@ const de_TooManyRequestsExceptionRes = async (
  */
 const de_UnsupportedMediaTypeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedMediaTypeException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4437,7 +4437,7 @@ const de_UnsupportedMediaTypeExceptionRes = async (
  */
 const de_InvokeWithResponseStreamResponseEvent = (
   output: any,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): AsyncIterable<InvokeWithResponseStreamResponseEvent> => {
   return context.eventStreamMarshaller.deserialize(output, async (event) => {
     if (event["PayloadChunk"] != null) {
@@ -4455,7 +4455,7 @@ const de_InvokeWithResponseStreamResponseEvent = (
 };
 const de_InvokeResponseStreamUpdate_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvokeResponseStreamUpdate> => {
   const contents: InvokeResponseStreamUpdate = {} as any;
   contents.Payload = output.body;
@@ -4463,7 +4463,7 @@ const de_InvokeResponseStreamUpdate_event = async (
 };
 const de_InvokeWithResponseStreamCompleteEvent_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvokeWithResponseStreamCompleteEvent> => {
   const contents: InvokeWithResponseStreamCompleteEvent = {} as any;
   const data: any = await parseBody(output.body, context);
@@ -4613,13 +4613,16 @@ const se_LayerVersionContentInput = (input: LayerVersionContentInput, context: _
  * deserializeAws_restJson1AdditionalVersionWeights
  */
 const de_AdditionalVersionWeights = (output: any, context: __SerdeContext): Record<string, number> => {
-  return Object.entries(output).reduce((acc: Record<string, number>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, number>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = __limitedParseDouble(value) as any;
       return acc;
-    }
-    acc[key as string] = __limitedParseDouble(value) as any;
-    return acc;
-  }, {} as Record<string, number>);
+    },
+    {} as Record<string, number>,
+  );
 };
 
 /**

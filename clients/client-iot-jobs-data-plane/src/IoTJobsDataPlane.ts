@@ -37,16 +37,16 @@ export interface IoTJobsDataPlane {
    */
   describeJobExecution(
     args: DescribeJobExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeJobExecutionCommandOutput>;
   describeJobExecution(
     args: DescribeJobExecutionCommandInput,
-    cb: (err: any, data?: DescribeJobExecutionCommandOutput) => void
+    cb: (err: any, data?: DescribeJobExecutionCommandOutput) => void,
   ): void;
   describeJobExecution(
     args: DescribeJobExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeJobExecutionCommandOutput) => void
+    cb: (err: any, data?: DescribeJobExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -54,16 +54,16 @@ export interface IoTJobsDataPlane {
    */
   getPendingJobExecutions(
     args: GetPendingJobExecutionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPendingJobExecutionsCommandOutput>;
   getPendingJobExecutions(
     args: GetPendingJobExecutionsCommandInput,
-    cb: (err: any, data?: GetPendingJobExecutionsCommandOutput) => void
+    cb: (err: any, data?: GetPendingJobExecutionsCommandOutput) => void,
   ): void;
   getPendingJobExecutions(
     args: GetPendingJobExecutionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPendingJobExecutionsCommandOutput) => void
+    cb: (err: any, data?: GetPendingJobExecutionsCommandOutput) => void,
   ): void;
 
   /**
@@ -71,16 +71,16 @@ export interface IoTJobsDataPlane {
    */
   startNextPendingJobExecution(
     args: StartNextPendingJobExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartNextPendingJobExecutionCommandOutput>;
   startNextPendingJobExecution(
     args: StartNextPendingJobExecutionCommandInput,
-    cb: (err: any, data?: StartNextPendingJobExecutionCommandOutput) => void
+    cb: (err: any, data?: StartNextPendingJobExecutionCommandOutput) => void,
   ): void;
   startNextPendingJobExecution(
     args: StartNextPendingJobExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartNextPendingJobExecutionCommandOutput) => void
+    cb: (err: any, data?: StartNextPendingJobExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -88,16 +88,16 @@ export interface IoTJobsDataPlane {
    */
   updateJobExecution(
     args: UpdateJobExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateJobExecutionCommandOutput>;
   updateJobExecution(
     args: UpdateJobExecutionCommandInput,
-    cb: (err: any, data?: UpdateJobExecutionCommandOutput) => void
+    cb: (err: any, data?: UpdateJobExecutionCommandOutput) => void,
   ): void;
   updateJobExecution(
     args: UpdateJobExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateJobExecutionCommandOutput) => void
+    cb: (err: any, data?: UpdateJobExecutionCommandOutput) => void,
   ): void;
 }
 

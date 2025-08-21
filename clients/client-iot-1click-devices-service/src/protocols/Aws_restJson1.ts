@@ -70,7 +70,7 @@ import {
  */
 export const se_ClaimDevicesByClaimCodeCommand = async (
   input: ClaimDevicesByClaimCodeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -86,7 +86,7 @@ export const se_ClaimDevicesByClaimCodeCommand = async (
  */
 export const se_DescribeDeviceCommand = async (
   input: DescribeDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -102,7 +102,7 @@ export const se_DescribeDeviceCommand = async (
  */
 export const se_FinalizeDeviceClaimCommand = async (
   input: FinalizeDeviceClaimCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -114,7 +114,7 @@ export const se_FinalizeDeviceClaimCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -125,7 +125,7 @@ export const se_FinalizeDeviceClaimCommand = async (
  */
 export const se_GetDeviceMethodsCommand = async (
   input: GetDeviceMethodsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -141,7 +141,7 @@ export const se_GetDeviceMethodsCommand = async (
  */
 export const se_InitiateDeviceClaimCommand = async (
   input: InitiateDeviceClaimCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -157,7 +157,7 @@ export const se_InitiateDeviceClaimCommand = async (
  */
 export const se_InvokeDeviceMethodCommand = async (
   input: InvokeDeviceMethodCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -170,7 +170,7 @@ export const se_InvokeDeviceMethodCommand = async (
     take(input, {
       deviceMethod: [, (_) => se_DeviceMethod(_, context), `DeviceMethod`],
       deviceMethodParameters: [, , `DeviceMethodParameters`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -181,7 +181,7 @@ export const se_InvokeDeviceMethodCommand = async (
  */
 export const se_ListDeviceEventsCommand = async (
   input: ListDeviceEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -209,7 +209,7 @@ export const se_ListDeviceEventsCommand = async (
  */
 export const se_ListDevicesCommand = async (
   input: ListDevicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -229,7 +229,7 @@ export const se_ListDevicesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -245,7 +245,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -257,7 +257,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -268,7 +268,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UnclaimDeviceCommand = async (
   input: UnclaimDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -284,7 +284,7 @@ export const se_UnclaimDeviceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -306,7 +306,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateDeviceStateCommand = async (
   input: UpdateDeviceStateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -318,7 +318,7 @@ export const se_UpdateDeviceStateCommand = async (
   body = JSON.stringify(
     take(input, {
       enabled: [, , `Enabled`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -329,7 +329,7 @@ export const se_UpdateDeviceStateCommand = async (
  */
 export const de_ClaimDevicesByClaimCodeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ClaimDevicesByClaimCodeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -351,7 +351,7 @@ export const de_ClaimDevicesByClaimCodeCommand = async (
  */
 export const de_DescribeDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -372,7 +372,7 @@ export const de_DescribeDeviceCommand = async (
  */
 export const de_FinalizeDeviceClaimCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FinalizeDeviceClaimCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -393,7 +393,7 @@ export const de_FinalizeDeviceClaimCommand = async (
  */
 export const de_GetDeviceMethodsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDeviceMethodsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -414,7 +414,7 @@ export const de_GetDeviceMethodsCommand = async (
  */
 export const de_InitiateDeviceClaimCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InitiateDeviceClaimCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -435,7 +435,7 @@ export const de_InitiateDeviceClaimCommand = async (
  */
 export const de_InvokeDeviceMethodCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvokeDeviceMethodCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -456,7 +456,7 @@ export const de_InvokeDeviceMethodCommand = async (
  */
 export const de_ListDeviceEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDeviceEventsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -478,7 +478,7 @@ export const de_ListDeviceEventsCommand = async (
  */
 export const de_ListDevicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDevicesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -500,7 +500,7 @@ export const de_ListDevicesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -521,7 +521,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -538,7 +538,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UnclaimDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnclaimDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -559,7 +559,7 @@ export const de_UnclaimDeviceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -576,7 +576,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateDeviceStateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDeviceStateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -653,7 +653,7 @@ const de_ForbiddenExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_InternalFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalFailureException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -674,7 +674,7 @@ const de_InternalFailureExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -695,7 +695,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_PreconditionFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PreconditionFailedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -716,7 +716,7 @@ const de_PreconditionFailedExceptionRes = async (
  */
 const de_RangeNotSatisfiableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RangeNotSatisfiableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -737,7 +737,7 @@ const de_RangeNotSatisfiableExceptionRes = async (
  */
 const de_ResourceConflictExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceConflictException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -758,7 +758,7 @@ const de_ResourceConflictExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

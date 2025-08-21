@@ -37,7 +37,7 @@ import {
  */
 export const se_PutAuditEventsCommand = async (
   input: PutAuditEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -52,7 +52,7 @@ export const se_PutAuditEventsCommand = async (
   body = JSON.stringify(
     take(input, {
       auditEvents: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -63,7 +63,7 @@ export const se_PutAuditEventsCommand = async (
  */
 export const de_PutAuditEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAuditEventsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -124,7 +124,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_ChannelInsufficientPermissionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ChannelInsufficientPermission> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -161,7 +161,7 @@ const de_ChannelNotFoundRes = async (parsedOutput: any, context: __SerdeContext)
  */
 const de_ChannelUnsupportedSchemaRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ChannelUnsupportedSchema> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -181,7 +181,7 @@ const de_ChannelUnsupportedSchemaRes = async (
  */
 const de_DuplicatedAuditEventIdRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicatedAuditEventId> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -218,7 +218,7 @@ const de_InvalidChannelARNRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_UnsupportedOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedOperationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

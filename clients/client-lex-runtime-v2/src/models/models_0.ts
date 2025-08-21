@@ -2712,7 +2712,7 @@ export const RecognizeTextRequestFilterSensitiveLog = (obj: RecognizeTextRequest
  * @internal
  */
 export const StartConversationRequestEventStreamFilterSensitiveLog = (
-  obj: StartConversationRequestEventStream
+  obj: StartConversationRequestEventStream,
 ): any => {
   if (obj.ConfigurationEvent !== undefined)
     return { ConfigurationEvent: ConfigurationEventFilterSensitiveLog(obj.ConfigurationEvent) };
@@ -2759,7 +2759,7 @@ export const RecognizeTextResponseFilterSensitiveLog = (obj: RecognizeTextRespon
  * @internal
  */
 export const StartConversationResponseEventStreamFilterSensitiveLog = (
-  obj: StartConversationResponseEventStream
+  obj: StartConversationResponseEventStream,
 ): any => {
   if (obj.PlaybackInterruptionEvent !== undefined) return { PlaybackInterruptionEvent: obj.PlaybackInterruptionEvent };
   if (obj.TranscriptEvent !== undefined) return { TranscriptEvent: obj.TranscriptEvent };

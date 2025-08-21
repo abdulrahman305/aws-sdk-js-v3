@@ -15,5 +15,5 @@ Given(
   function (idpid, idid, callback) {
     const params = { IdentityPoolId: idpid, IdentityId: idid };
     this.request(null, "listDatasets", params, callback, false);
-  }
+  },
 );

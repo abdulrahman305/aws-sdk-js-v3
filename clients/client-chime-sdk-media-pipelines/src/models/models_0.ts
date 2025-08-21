@@ -4079,7 +4079,7 @@ export const ConcatenationSinkFilterSensitiveLog = (obj: ConcatenationSink): any
  * @internal
  */
 export const MediaCapturePipelineSourceConfigurationFilterSensitiveLog = (
-  obj: MediaCapturePipelineSourceConfiguration
+  obj: MediaCapturePipelineSourceConfiguration,
 ): any => ({
   ...obj,
   ...(obj.MediaPipelineArn && { MediaPipelineArn: SENSITIVE_STRING }),
@@ -4092,7 +4092,7 @@ export const ConcatenationSourceFilterSensitiveLog = (obj: ConcatenationSource):
   ...obj,
   ...(obj.MediaCapturePipelineSourceConfiguration && {
     MediaCapturePipelineSourceConfiguration: MediaCapturePipelineSourceConfigurationFilterSensitiveLog(
-      obj.MediaCapturePipelineSourceConfiguration
+      obj.MediaCapturePipelineSourceConfiguration,
     ),
   }),
 });
@@ -4101,7 +4101,7 @@ export const ConcatenationSourceFilterSensitiveLog = (obj: ConcatenationSource):
  * @internal
  */
 export const CreateMediaConcatenationPipelineRequestFilterSensitiveLog = (
-  obj: CreateMediaConcatenationPipelineRequest
+  obj: CreateMediaConcatenationPipelineRequest,
 ): any => ({
   ...obj,
   ...(obj.Sources && { Sources: obj.Sources.map((item) => ConcatenationSourceFilterSensitiveLog(item)) }),
@@ -4122,7 +4122,7 @@ export const MediaConcatenationPipelineFilterSensitiveLog = (obj: MediaConcatena
  * @internal
  */
 export const CreateMediaConcatenationPipelineResponseFilterSensitiveLog = (
-  obj: CreateMediaConcatenationPipelineResponse
+  obj: CreateMediaConcatenationPipelineResponse,
 ): any => ({
   ...obj,
   ...(obj.MediaConcatenationPipeline && {
@@ -4134,7 +4134,7 @@ export const CreateMediaConcatenationPipelineResponseFilterSensitiveLog = (
  * @internal
  */
 export const S3RecordingSinkRuntimeConfigurationFilterSensitiveLog = (
-  obj: S3RecordingSinkRuntimeConfiguration
+  obj: S3RecordingSinkRuntimeConfiguration,
 ): any => ({
   ...obj,
   ...(obj.Destination && { Destination: SENSITIVE_STRING }),
@@ -4149,7 +4149,7 @@ export const CreateMediaInsightsPipelineRequestFilterSensitiveLog = (obj: Create
   ...(obj.MediaInsightsRuntimeMetadata && { MediaInsightsRuntimeMetadata: SENSITIVE_STRING }),
   ...(obj.S3RecordingSinkRuntimeConfiguration && {
     S3RecordingSinkRuntimeConfiguration: S3RecordingSinkRuntimeConfigurationFilterSensitiveLog(
-      obj.S3RecordingSinkRuntimeConfiguration
+      obj.S3RecordingSinkRuntimeConfiguration,
     ),
   }),
   ...(obj.ClientRequestToken && { ClientRequestToken: SENSITIVE_STRING }),
@@ -4165,7 +4165,7 @@ export const MediaInsightsPipelineFilterSensitiveLog = (obj: MediaInsightsPipeli
   ...(obj.MediaInsightsRuntimeMetadata && { MediaInsightsRuntimeMetadata: SENSITIVE_STRING }),
   ...(obj.S3RecordingSinkRuntimeConfiguration && {
     S3RecordingSinkRuntimeConfiguration: S3RecordingSinkRuntimeConfigurationFilterSensitiveLog(
-      obj.S3RecordingSinkRuntimeConfiguration
+      obj.S3RecordingSinkRuntimeConfiguration,
     ),
   }),
 });
@@ -4174,7 +4174,7 @@ export const MediaInsightsPipelineFilterSensitiveLog = (obj: MediaInsightsPipeli
  * @internal
  */
 export const CreateMediaInsightsPipelineResponseFilterSensitiveLog = (
-  obj: CreateMediaInsightsPipelineResponse
+  obj: CreateMediaInsightsPipelineResponse,
 ): any => ({
   ...obj,
   ...(obj.MediaInsightsPipeline && {
@@ -4226,12 +4226,12 @@ export const SqsQueueSinkConfigurationFilterSensitiveLog = (obj: SqsQueueSinkCon
  * @internal
  */
 export const MediaInsightsPipelineConfigurationElementFilterSensitiveLog = (
-  obj: MediaInsightsPipelineConfigurationElement
+  obj: MediaInsightsPipelineConfigurationElement,
 ): any => ({
   ...obj,
   ...(obj.KinesisDataStreamSinkConfiguration && {
     KinesisDataStreamSinkConfiguration: KinesisDataStreamSinkConfigurationFilterSensitiveLog(
-      obj.KinesisDataStreamSinkConfiguration
+      obj.KinesisDataStreamSinkConfiguration,
     ),
   }),
   ...(obj.S3RecordingSinkConfiguration && {
@@ -4239,7 +4239,7 @@ export const MediaInsightsPipelineConfigurationElementFilterSensitiveLog = (
   }),
   ...(obj.LambdaFunctionSinkConfiguration && {
     LambdaFunctionSinkConfiguration: LambdaFunctionSinkConfigurationFilterSensitiveLog(
-      obj.LambdaFunctionSinkConfiguration
+      obj.LambdaFunctionSinkConfiguration,
     ),
   }),
   ...(obj.SqsQueueSinkConfiguration && {
@@ -4254,7 +4254,7 @@ export const MediaInsightsPipelineConfigurationElementFilterSensitiveLog = (
  * @internal
  */
 export const CreateMediaInsightsPipelineConfigurationRequestFilterSensitiveLog = (
-  obj: CreateMediaInsightsPipelineConfigurationRequest
+  obj: CreateMediaInsightsPipelineConfigurationRequest,
 ): any => ({
   ...obj,
   ...(obj.ResourceAccessRoleArn && { ResourceAccessRoleArn: SENSITIVE_STRING }),
@@ -4280,12 +4280,12 @@ export const MediaInsightsPipelineConfigurationFilterSensitiveLog = (obj: MediaI
  * @internal
  */
 export const CreateMediaInsightsPipelineConfigurationResponseFilterSensitiveLog = (
-  obj: CreateMediaInsightsPipelineConfigurationResponse
+  obj: CreateMediaInsightsPipelineConfigurationResponse,
 ): any => ({
   ...obj,
   ...(obj.MediaInsightsPipelineConfiguration && {
     MediaInsightsPipelineConfiguration: MediaInsightsPipelineConfigurationFilterSensitiveLog(
-      obj.MediaInsightsPipelineConfiguration
+      obj.MediaInsightsPipelineConfiguration,
     ),
   }),
 });
@@ -4312,7 +4312,7 @@ export const LiveConnectorSinkConfigurationFilterSensitiveLog = (obj: LiveConnec
  * @internal
  */
 export const ChimeSdkMeetingLiveConnectorConfigurationFilterSensitiveLog = (
-  obj: ChimeSdkMeetingLiveConnectorConfiguration
+  obj: ChimeSdkMeetingLiveConnectorConfiguration,
 ): any => ({
   ...obj,
   ...(obj.Arn && { Arn: SENSITIVE_STRING }),
@@ -4328,7 +4328,7 @@ export const LiveConnectorSourceConfigurationFilterSensitiveLog = (obj: LiveConn
   ...obj,
   ...(obj.ChimeSdkMeetingLiveConnectorConfiguration && {
     ChimeSdkMeetingLiveConnectorConfiguration: ChimeSdkMeetingLiveConnectorConfigurationFilterSensitiveLog(
-      obj.ChimeSdkMeetingLiveConnectorConfiguration
+      obj.ChimeSdkMeetingLiveConnectorConfiguration,
     ),
   }),
 });
@@ -4337,7 +4337,7 @@ export const LiveConnectorSourceConfigurationFilterSensitiveLog = (obj: LiveConn
  * @internal
  */
 export const CreateMediaLiveConnectorPipelineRequestFilterSensitiveLog = (
-  obj: CreateMediaLiveConnectorPipelineRequest
+  obj: CreateMediaLiveConnectorPipelineRequest,
 ): any => ({
   ...obj,
   ...(obj.Sources && { Sources: obj.Sources.map((item) => LiveConnectorSourceConfigurationFilterSensitiveLog(item)) }),
@@ -4358,7 +4358,7 @@ export const MediaLiveConnectorPipelineFilterSensitiveLog = (obj: MediaLiveConne
  * @internal
  */
 export const CreateMediaLiveConnectorPipelineResponseFilterSensitiveLog = (
-  obj: CreateMediaLiveConnectorPipelineResponse
+  obj: CreateMediaLiveConnectorPipelineResponse,
 ): any => ({
   ...obj,
   ...(obj.MediaLiveConnectorPipeline && {
@@ -4370,7 +4370,7 @@ export const CreateMediaLiveConnectorPipelineResponseFilterSensitiveLog = (
  * @internal
  */
 export const CreateMediaPipelineKinesisVideoStreamPoolRequestFilterSensitiveLog = (
-  obj: CreateMediaPipelineKinesisVideoStreamPoolRequest
+  obj: CreateMediaPipelineKinesisVideoStreamPoolRequest,
 ): any => ({
   ...obj,
   ...(obj.ClientRequestToken && { ClientRequestToken: SENSITIVE_STRING }),
@@ -4380,7 +4380,7 @@ export const CreateMediaPipelineKinesisVideoStreamPoolRequestFilterSensitiveLog 
  * @internal
  */
 export const KinesisVideoStreamPoolConfigurationFilterSensitiveLog = (
-  obj: KinesisVideoStreamPoolConfiguration
+  obj: KinesisVideoStreamPoolConfiguration,
 ): any => ({
   ...obj,
   ...(obj.PoolArn && { PoolArn: SENSITIVE_STRING }),
@@ -4390,12 +4390,12 @@ export const KinesisVideoStreamPoolConfigurationFilterSensitiveLog = (
  * @internal
  */
 export const CreateMediaPipelineKinesisVideoStreamPoolResponseFilterSensitiveLog = (
-  obj: CreateMediaPipelineKinesisVideoStreamPoolResponse
+  obj: CreateMediaPipelineKinesisVideoStreamPoolResponse,
 ): any => ({
   ...obj,
   ...(obj.KinesisVideoStreamPoolConfiguration && {
     KinesisVideoStreamPoolConfiguration: KinesisVideoStreamPoolConfigurationFilterSensitiveLog(
-      obj.KinesisVideoStreamPoolConfiguration
+      obj.KinesisVideoStreamPoolConfiguration,
     ),
   }),
 });
@@ -4459,12 +4459,12 @@ export const GetMediaCapturePipelineResponseFilterSensitiveLog = (obj: GetMediaC
  * @internal
  */
 export const GetMediaInsightsPipelineConfigurationResponseFilterSensitiveLog = (
-  obj: GetMediaInsightsPipelineConfigurationResponse
+  obj: GetMediaInsightsPipelineConfigurationResponse,
 ): any => ({
   ...obj,
   ...(obj.MediaInsightsPipelineConfiguration && {
     MediaInsightsPipelineConfiguration: MediaInsightsPipelineConfigurationFilterSensitiveLog(
-      obj.MediaInsightsPipelineConfiguration
+      obj.MediaInsightsPipelineConfiguration,
     ),
   }),
 });
@@ -4503,12 +4503,12 @@ export const GetMediaPipelineResponseFilterSensitiveLog = (obj: GetMediaPipeline
  * @internal
  */
 export const GetMediaPipelineKinesisVideoStreamPoolResponseFilterSensitiveLog = (
-  obj: GetMediaPipelineKinesisVideoStreamPoolResponse
+  obj: GetMediaPipelineKinesisVideoStreamPoolResponse,
 ): any => ({
   ...obj,
   ...(obj.KinesisVideoStreamPoolConfiguration && {
     KinesisVideoStreamPoolConfiguration: KinesisVideoStreamPoolConfigurationFilterSensitiveLog(
-      obj.KinesisVideoStreamPoolConfiguration
+      obj.KinesisVideoStreamPoolConfiguration,
     ),
   }),
 });
@@ -4517,7 +4517,7 @@ export const GetMediaPipelineKinesisVideoStreamPoolResponseFilterSensitiveLog = 
  * @internal
  */
 export const MediaInsightsPipelineConfigurationSummaryFilterSensitiveLog = (
-  obj: MediaInsightsPipelineConfigurationSummary
+  obj: MediaInsightsPipelineConfigurationSummary,
 ): any => ({
   ...obj,
   ...(obj.MediaInsightsPipelineConfigurationArn && { MediaInsightsPipelineConfigurationArn: SENSITIVE_STRING }),
@@ -4527,12 +4527,12 @@ export const MediaInsightsPipelineConfigurationSummaryFilterSensitiveLog = (
  * @internal
  */
 export const ListMediaInsightsPipelineConfigurationsResponseFilterSensitiveLog = (
-  obj: ListMediaInsightsPipelineConfigurationsResponse
+  obj: ListMediaInsightsPipelineConfigurationsResponse,
 ): any => ({
   ...obj,
   ...(obj.MediaInsightsPipelineConfigurations && {
     MediaInsightsPipelineConfigurations: obj.MediaInsightsPipelineConfigurations.map((item) =>
-      MediaInsightsPipelineConfigurationSummaryFilterSensitiveLog(item)
+      MediaInsightsPipelineConfigurationSummaryFilterSensitiveLog(item),
     ),
   }),
 });
@@ -4549,12 +4549,12 @@ export const KinesisVideoStreamPoolSummaryFilterSensitiveLog = (obj: KinesisVide
  * @internal
  */
 export const ListMediaPipelineKinesisVideoStreamPoolsResponseFilterSensitiveLog = (
-  obj: ListMediaPipelineKinesisVideoStreamPoolsResponse
+  obj: ListMediaPipelineKinesisVideoStreamPoolsResponse,
 ): any => ({
   ...obj,
   ...(obj.KinesisVideoStreamPools && {
     KinesisVideoStreamPools: obj.KinesisVideoStreamPools.map((item) =>
-      KinesisVideoStreamPoolSummaryFilterSensitiveLog(item)
+      KinesisVideoStreamPoolSummaryFilterSensitiveLog(item),
     ),
   }),
 });
@@ -4580,7 +4580,7 @@ export const StartVoiceToneAnalysisTaskRequestFilterSensitiveLog = (obj: StartVo
  * @internal
  */
 export const UpdateMediaInsightsPipelineConfigurationRequestFilterSensitiveLog = (
-  obj: UpdateMediaInsightsPipelineConfigurationRequest
+  obj: UpdateMediaInsightsPipelineConfigurationRequest,
 ): any => ({
   ...obj,
   ...(obj.ResourceAccessRoleArn && { ResourceAccessRoleArn: SENSITIVE_STRING }),
@@ -4593,12 +4593,12 @@ export const UpdateMediaInsightsPipelineConfigurationRequestFilterSensitiveLog =
  * @internal
  */
 export const UpdateMediaInsightsPipelineConfigurationResponseFilterSensitiveLog = (
-  obj: UpdateMediaInsightsPipelineConfigurationResponse
+  obj: UpdateMediaInsightsPipelineConfigurationResponse,
 ): any => ({
   ...obj,
   ...(obj.MediaInsightsPipelineConfiguration && {
     MediaInsightsPipelineConfiguration: MediaInsightsPipelineConfigurationFilterSensitiveLog(
-      obj.MediaInsightsPipelineConfiguration
+      obj.MediaInsightsPipelineConfiguration,
     ),
   }),
 });
@@ -4607,12 +4607,12 @@ export const UpdateMediaInsightsPipelineConfigurationResponseFilterSensitiveLog 
  * @internal
  */
 export const UpdateMediaPipelineKinesisVideoStreamPoolResponseFilterSensitiveLog = (
-  obj: UpdateMediaPipelineKinesisVideoStreamPoolResponse
+  obj: UpdateMediaPipelineKinesisVideoStreamPoolResponse,
 ): any => ({
   ...obj,
   ...(obj.KinesisVideoStreamPoolConfiguration && {
     KinesisVideoStreamPoolConfiguration: KinesisVideoStreamPoolConfigurationFilterSensitiveLog(
-      obj.KinesisVideoStreamPoolConfiguration
+      obj.KinesisVideoStreamPoolConfiguration,
     ),
   }),
 });

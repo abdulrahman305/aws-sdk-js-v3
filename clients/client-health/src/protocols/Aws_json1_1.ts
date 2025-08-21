@@ -113,7 +113,7 @@ import {
  */
 export const se_DescribeAffectedAccountsForOrganizationCommand = async (
   input: DescribeAffectedAccountsForOrganizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAffectedAccountsForOrganization");
   let body: any;
@@ -126,7 +126,7 @@ export const se_DescribeAffectedAccountsForOrganizationCommand = async (
  */
 export const se_DescribeAffectedEntitiesCommand = async (
   input: DescribeAffectedEntitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAffectedEntities");
   let body: any;
@@ -139,7 +139,7 @@ export const se_DescribeAffectedEntitiesCommand = async (
  */
 export const se_DescribeAffectedEntitiesForOrganizationCommand = async (
   input: DescribeAffectedEntitiesForOrganizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAffectedEntitiesForOrganization");
   let body: any;
@@ -152,7 +152,7 @@ export const se_DescribeAffectedEntitiesForOrganizationCommand = async (
  */
 export const se_DescribeEntityAggregatesCommand = async (
   input: DescribeEntityAggregatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEntityAggregates");
   let body: any;
@@ -165,7 +165,7 @@ export const se_DescribeEntityAggregatesCommand = async (
  */
 export const se_DescribeEntityAggregatesForOrganizationCommand = async (
   input: DescribeEntityAggregatesForOrganizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEntityAggregatesForOrganization");
   let body: any;
@@ -178,7 +178,7 @@ export const se_DescribeEntityAggregatesForOrganizationCommand = async (
  */
 export const se_DescribeEventAggregatesCommand = async (
   input: DescribeEventAggregatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEventAggregates");
   let body: any;
@@ -191,7 +191,7 @@ export const se_DescribeEventAggregatesCommand = async (
  */
 export const se_DescribeEventDetailsCommand = async (
   input: DescribeEventDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEventDetails");
   let body: any;
@@ -204,7 +204,7 @@ export const se_DescribeEventDetailsCommand = async (
  */
 export const se_DescribeEventDetailsForOrganizationCommand = async (
   input: DescribeEventDetailsForOrganizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEventDetailsForOrganization");
   let body: any;
@@ -217,7 +217,7 @@ export const se_DescribeEventDetailsForOrganizationCommand = async (
  */
 export const se_DescribeEventsCommand = async (
   input: DescribeEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEvents");
   let body: any;
@@ -230,7 +230,7 @@ export const se_DescribeEventsCommand = async (
  */
 export const se_DescribeEventsForOrganizationCommand = async (
   input: DescribeEventsForOrganizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEventsForOrganization");
   let body: any;
@@ -243,7 +243,7 @@ export const se_DescribeEventsForOrganizationCommand = async (
  */
 export const se_DescribeEventTypesCommand = async (
   input: DescribeEventTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEventTypes");
   let body: any;
@@ -256,7 +256,7 @@ export const se_DescribeEventTypesCommand = async (
  */
 export const se_DescribeHealthServiceStatusForOrganizationCommand = async (
   input: DescribeHealthServiceStatusForOrganizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeHealthServiceStatusForOrganization");
   const body = "{}";
@@ -268,7 +268,7 @@ export const se_DescribeHealthServiceStatusForOrganizationCommand = async (
  */
 export const se_DisableHealthServiceAccessForOrganizationCommand = async (
   input: DisableHealthServiceAccessForOrganizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisableHealthServiceAccessForOrganization");
   const body = "{}";
@@ -280,7 +280,7 @@ export const se_DisableHealthServiceAccessForOrganizationCommand = async (
  */
 export const se_EnableHealthServiceAccessForOrganizationCommand = async (
   input: EnableHealthServiceAccessForOrganizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EnableHealthServiceAccessForOrganization");
   const body = "{}";
@@ -292,7 +292,7 @@ export const se_EnableHealthServiceAccessForOrganizationCommand = async (
  */
 export const de_DescribeAffectedAccountsForOrganizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAffectedAccountsForOrganizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -312,7 +312,7 @@ export const de_DescribeAffectedAccountsForOrganizationCommand = async (
  */
 export const de_DescribeAffectedEntitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAffectedEntitiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -332,7 +332,7 @@ export const de_DescribeAffectedEntitiesCommand = async (
  */
 export const de_DescribeAffectedEntitiesForOrganizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAffectedEntitiesForOrganizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -352,7 +352,7 @@ export const de_DescribeAffectedEntitiesForOrganizationCommand = async (
  */
 export const de_DescribeEntityAggregatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEntityAggregatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -372,7 +372,7 @@ export const de_DescribeEntityAggregatesCommand = async (
  */
 export const de_DescribeEntityAggregatesForOrganizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEntityAggregatesForOrganizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -392,7 +392,7 @@ export const de_DescribeEntityAggregatesForOrganizationCommand = async (
  */
 export const de_DescribeEventAggregatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEventAggregatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -412,7 +412,7 @@ export const de_DescribeEventAggregatesCommand = async (
  */
 export const de_DescribeEventDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEventDetailsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -432,7 +432,7 @@ export const de_DescribeEventDetailsCommand = async (
  */
 export const de_DescribeEventDetailsForOrganizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEventDetailsForOrganizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -452,7 +452,7 @@ export const de_DescribeEventDetailsForOrganizationCommand = async (
  */
 export const de_DescribeEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEventsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -472,7 +472,7 @@ export const de_DescribeEventsCommand = async (
  */
 export const de_DescribeEventsForOrganizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEventsForOrganizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -492,7 +492,7 @@ export const de_DescribeEventsForOrganizationCommand = async (
  */
 export const de_DescribeEventTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEventTypesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -512,7 +512,7 @@ export const de_DescribeEventTypesCommand = async (
  */
 export const de_DescribeHealthServiceStatusForOrganizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeHealthServiceStatusForOrganizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -532,7 +532,7 @@ export const de_DescribeHealthServiceStatusForOrganizationCommand = async (
  */
 export const de_DisableHealthServiceAccessForOrganizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableHealthServiceAccessForOrganizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -549,7 +549,7 @@ export const de_DisableHealthServiceAccessForOrganizationCommand = async (
  */
 export const de_EnableHealthServiceAccessForOrganizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableHealthServiceAccessForOrganizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -595,7 +595,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -611,7 +611,7 @@ const de_ConcurrentModificationExceptionRes = async (
  */
 const de_InvalidPaginationTokenRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPaginationToken> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -701,7 +701,7 @@ const se_DescribeEventAggregatesRequest = (input: DescribeEventAggregatesRequest
  */
 const se_DescribeEventsForOrganizationRequest = (
   input: DescribeEventsForOrganizationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     filter: (_) => se_OrganizationEventFilter(_, context),
@@ -856,7 +856,7 @@ const de_AffectedEntity = (output: any, context: __SerdeContext): AffectedEntity
  */
 const de_DescribeAffectedEntitiesForOrganizationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeAffectedEntitiesForOrganizationResponse => {
   return take(output, {
     entities: (_: any) => de_EntityList(_, context),
@@ -870,7 +870,7 @@ const de_DescribeAffectedEntitiesForOrganizationResponse = (
  */
 const de_DescribeAffectedEntitiesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeAffectedEntitiesResponse => {
   return take(output, {
     entities: (_: any) => de_EntityList(_, context),
@@ -893,7 +893,7 @@ const de_DescribeAffectedEntitiesResponse = (
  */
 const de_DescribeEventDetailsForOrganizationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeEventDetailsForOrganizationResponse => {
   return take(output, {
     failedSet: _json,
@@ -906,7 +906,7 @@ const de_DescribeEventDetailsForOrganizationResponse = (
  */
 const de_DescribeEventDetailsForOrganizationSuccessfulSet = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): OrganizationEventDetails[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -943,7 +943,7 @@ const de_DescribeEventDetailsSuccessfulSet = (output: any, context: __SerdeConte
  */
 const de_DescribeEventsForOrganizationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeEventsForOrganizationResponse => {
   return take(output, {
     events: (_: any) => de_OrganizationEventList(_, context),
@@ -1113,7 +1113,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

@@ -165,16 +165,16 @@ export interface LookoutMetrics {
    */
   activateAnomalyDetector(
     args: ActivateAnomalyDetectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ActivateAnomalyDetectorCommandOutput>;
   activateAnomalyDetector(
     args: ActivateAnomalyDetectorCommandInput,
-    cb: (err: any, data?: ActivateAnomalyDetectorCommandOutput) => void
+    cb: (err: any, data?: ActivateAnomalyDetectorCommandOutput) => void,
   ): void;
   activateAnomalyDetector(
     args: ActivateAnomalyDetectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ActivateAnomalyDetectorCommandOutput) => void
+    cb: (err: any, data?: ActivateAnomalyDetectorCommandOutput) => void,
   ): void;
 
   /**
@@ -182,16 +182,16 @@ export interface LookoutMetrics {
    */
   backTestAnomalyDetector(
     args: BackTestAnomalyDetectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BackTestAnomalyDetectorCommandOutput>;
   backTestAnomalyDetector(
     args: BackTestAnomalyDetectorCommandInput,
-    cb: (err: any, data?: BackTestAnomalyDetectorCommandOutput) => void
+    cb: (err: any, data?: BackTestAnomalyDetectorCommandOutput) => void,
   ): void;
   backTestAnomalyDetector(
     args: BackTestAnomalyDetectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BackTestAnomalyDetectorCommandOutput) => void
+    cb: (err: any, data?: BackTestAnomalyDetectorCommandOutput) => void,
   ): void;
 
   /**
@@ -202,7 +202,7 @@ export interface LookoutMetrics {
   createAlert(
     args: CreateAlertCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAlertCommandOutput) => void
+    cb: (err: any, data?: CreateAlertCommandOutput) => void,
   ): void;
 
   /**
@@ -210,16 +210,16 @@ export interface LookoutMetrics {
    */
   createAnomalyDetector(
     args: CreateAnomalyDetectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAnomalyDetectorCommandOutput>;
   createAnomalyDetector(
     args: CreateAnomalyDetectorCommandInput,
-    cb: (err: any, data?: CreateAnomalyDetectorCommandOutput) => void
+    cb: (err: any, data?: CreateAnomalyDetectorCommandOutput) => void,
   ): void;
   createAnomalyDetector(
     args: CreateAnomalyDetectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAnomalyDetectorCommandOutput) => void
+    cb: (err: any, data?: CreateAnomalyDetectorCommandOutput) => void,
   ): void;
 
   /**
@@ -227,13 +227,13 @@ export interface LookoutMetrics {
    */
   createMetricSet(
     args: CreateMetricSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateMetricSetCommandOutput>;
   createMetricSet(args: CreateMetricSetCommandInput, cb: (err: any, data?: CreateMetricSetCommandOutput) => void): void;
   createMetricSet(
     args: CreateMetricSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMetricSetCommandOutput) => void
+    cb: (err: any, data?: CreateMetricSetCommandOutput) => void,
   ): void;
 
   /**
@@ -241,16 +241,16 @@ export interface LookoutMetrics {
    */
   deactivateAnomalyDetector(
     args: DeactivateAnomalyDetectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeactivateAnomalyDetectorCommandOutput>;
   deactivateAnomalyDetector(
     args: DeactivateAnomalyDetectorCommandInput,
-    cb: (err: any, data?: DeactivateAnomalyDetectorCommandOutput) => void
+    cb: (err: any, data?: DeactivateAnomalyDetectorCommandOutput) => void,
   ): void;
   deactivateAnomalyDetector(
     args: DeactivateAnomalyDetectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeactivateAnomalyDetectorCommandOutput) => void
+    cb: (err: any, data?: DeactivateAnomalyDetectorCommandOutput) => void,
   ): void;
 
   /**
@@ -261,7 +261,7 @@ export interface LookoutMetrics {
   deleteAlert(
     args: DeleteAlertCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAlertCommandOutput) => void
+    cb: (err: any, data?: DeleteAlertCommandOutput) => void,
   ): void;
 
   /**
@@ -269,16 +269,16 @@ export interface LookoutMetrics {
    */
   deleteAnomalyDetector(
     args: DeleteAnomalyDetectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAnomalyDetectorCommandOutput>;
   deleteAnomalyDetector(
     args: DeleteAnomalyDetectorCommandInput,
-    cb: (err: any, data?: DeleteAnomalyDetectorCommandOutput) => void
+    cb: (err: any, data?: DeleteAnomalyDetectorCommandOutput) => void,
   ): void;
   deleteAnomalyDetector(
     args: DeleteAnomalyDetectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAnomalyDetectorCommandOutput) => void
+    cb: (err: any, data?: DeleteAnomalyDetectorCommandOutput) => void,
   ): void;
 
   /**
@@ -289,7 +289,7 @@ export interface LookoutMetrics {
   describeAlert(
     args: DescribeAlertCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAlertCommandOutput) => void
+    cb: (err: any, data?: DescribeAlertCommandOutput) => void,
   ): void;
 
   /**
@@ -297,16 +297,16 @@ export interface LookoutMetrics {
    */
   describeAnomalyDetectionExecutions(
     args: DescribeAnomalyDetectionExecutionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAnomalyDetectionExecutionsCommandOutput>;
   describeAnomalyDetectionExecutions(
     args: DescribeAnomalyDetectionExecutionsCommandInput,
-    cb: (err: any, data?: DescribeAnomalyDetectionExecutionsCommandOutput) => void
+    cb: (err: any, data?: DescribeAnomalyDetectionExecutionsCommandOutput) => void,
   ): void;
   describeAnomalyDetectionExecutions(
     args: DescribeAnomalyDetectionExecutionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAnomalyDetectionExecutionsCommandOutput) => void
+    cb: (err: any, data?: DescribeAnomalyDetectionExecutionsCommandOutput) => void,
   ): void;
 
   /**
@@ -314,16 +314,16 @@ export interface LookoutMetrics {
    */
   describeAnomalyDetector(
     args: DescribeAnomalyDetectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAnomalyDetectorCommandOutput>;
   describeAnomalyDetector(
     args: DescribeAnomalyDetectorCommandInput,
-    cb: (err: any, data?: DescribeAnomalyDetectorCommandOutput) => void
+    cb: (err: any, data?: DescribeAnomalyDetectorCommandOutput) => void,
   ): void;
   describeAnomalyDetector(
     args: DescribeAnomalyDetectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAnomalyDetectorCommandOutput) => void
+    cb: (err: any, data?: DescribeAnomalyDetectorCommandOutput) => void,
   ): void;
 
   /**
@@ -331,16 +331,16 @@ export interface LookoutMetrics {
    */
   describeMetricSet(
     args: DescribeMetricSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeMetricSetCommandOutput>;
   describeMetricSet(
     args: DescribeMetricSetCommandInput,
-    cb: (err: any, data?: DescribeMetricSetCommandOutput) => void
+    cb: (err: any, data?: DescribeMetricSetCommandOutput) => void,
   ): void;
   describeMetricSet(
     args: DescribeMetricSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeMetricSetCommandOutput) => void
+    cb: (err: any, data?: DescribeMetricSetCommandOutput) => void,
   ): void;
 
   /**
@@ -348,16 +348,16 @@ export interface LookoutMetrics {
    */
   detectMetricSetConfig(
     args: DetectMetricSetConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DetectMetricSetConfigCommandOutput>;
   detectMetricSetConfig(
     args: DetectMetricSetConfigCommandInput,
-    cb: (err: any, data?: DetectMetricSetConfigCommandOutput) => void
+    cb: (err: any, data?: DetectMetricSetConfigCommandOutput) => void,
   ): void;
   detectMetricSetConfig(
     args: DetectMetricSetConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DetectMetricSetConfigCommandOutput) => void
+    cb: (err: any, data?: DetectMetricSetConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -365,13 +365,13 @@ export interface LookoutMetrics {
    */
   getAnomalyGroup(
     args: GetAnomalyGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAnomalyGroupCommandOutput>;
   getAnomalyGroup(args: GetAnomalyGroupCommandInput, cb: (err: any, data?: GetAnomalyGroupCommandOutput) => void): void;
   getAnomalyGroup(
     args: GetAnomalyGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAnomalyGroupCommandOutput) => void
+    cb: (err: any, data?: GetAnomalyGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -379,16 +379,16 @@ export interface LookoutMetrics {
    */
   getDataQualityMetrics(
     args: GetDataQualityMetricsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDataQualityMetricsCommandOutput>;
   getDataQualityMetrics(
     args: GetDataQualityMetricsCommandInput,
-    cb: (err: any, data?: GetDataQualityMetricsCommandOutput) => void
+    cb: (err: any, data?: GetDataQualityMetricsCommandOutput) => void,
   ): void;
   getDataQualityMetrics(
     args: GetDataQualityMetricsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDataQualityMetricsCommandOutput) => void
+    cb: (err: any, data?: GetDataQualityMetricsCommandOutput) => void,
   ): void;
 
   /**
@@ -399,7 +399,7 @@ export interface LookoutMetrics {
   getFeedback(
     args: GetFeedbackCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFeedbackCommandOutput) => void
+    cb: (err: any, data?: GetFeedbackCommandOutput) => void,
   ): void;
 
   /**
@@ -411,7 +411,7 @@ export interface LookoutMetrics {
   getSampleData(
     args: GetSampleDataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSampleDataCommandOutput) => void
+    cb: (err: any, data?: GetSampleDataCommandOutput) => void,
   ): void;
 
   /**
@@ -423,7 +423,7 @@ export interface LookoutMetrics {
   listAlerts(
     args: ListAlertsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAlertsCommandOutput) => void
+    cb: (err: any, data?: ListAlertsCommandOutput) => void,
   ): void;
 
   /**
@@ -432,16 +432,16 @@ export interface LookoutMetrics {
   listAnomalyDetectors(): Promise<ListAnomalyDetectorsCommandOutput>;
   listAnomalyDetectors(
     args: ListAnomalyDetectorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAnomalyDetectorsCommandOutput>;
   listAnomalyDetectors(
     args: ListAnomalyDetectorsCommandInput,
-    cb: (err: any, data?: ListAnomalyDetectorsCommandOutput) => void
+    cb: (err: any, data?: ListAnomalyDetectorsCommandOutput) => void,
   ): void;
   listAnomalyDetectors(
     args: ListAnomalyDetectorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAnomalyDetectorsCommandOutput) => void
+    cb: (err: any, data?: ListAnomalyDetectorsCommandOutput) => void,
   ): void;
 
   /**
@@ -449,16 +449,16 @@ export interface LookoutMetrics {
    */
   listAnomalyGroupRelatedMetrics(
     args: ListAnomalyGroupRelatedMetricsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAnomalyGroupRelatedMetricsCommandOutput>;
   listAnomalyGroupRelatedMetrics(
     args: ListAnomalyGroupRelatedMetricsCommandInput,
-    cb: (err: any, data?: ListAnomalyGroupRelatedMetricsCommandOutput) => void
+    cb: (err: any, data?: ListAnomalyGroupRelatedMetricsCommandOutput) => void,
   ): void;
   listAnomalyGroupRelatedMetrics(
     args: ListAnomalyGroupRelatedMetricsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAnomalyGroupRelatedMetricsCommandOutput) => void
+    cb: (err: any, data?: ListAnomalyGroupRelatedMetricsCommandOutput) => void,
   ): void;
 
   /**
@@ -466,16 +466,16 @@ export interface LookoutMetrics {
    */
   listAnomalyGroupSummaries(
     args: ListAnomalyGroupSummariesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAnomalyGroupSummariesCommandOutput>;
   listAnomalyGroupSummaries(
     args: ListAnomalyGroupSummariesCommandInput,
-    cb: (err: any, data?: ListAnomalyGroupSummariesCommandOutput) => void
+    cb: (err: any, data?: ListAnomalyGroupSummariesCommandOutput) => void,
   ): void;
   listAnomalyGroupSummaries(
     args: ListAnomalyGroupSummariesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAnomalyGroupSummariesCommandOutput) => void
+    cb: (err: any, data?: ListAnomalyGroupSummariesCommandOutput) => void,
   ): void;
 
   /**
@@ -483,16 +483,16 @@ export interface LookoutMetrics {
    */
   listAnomalyGroupTimeSeries(
     args: ListAnomalyGroupTimeSeriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAnomalyGroupTimeSeriesCommandOutput>;
   listAnomalyGroupTimeSeries(
     args: ListAnomalyGroupTimeSeriesCommandInput,
-    cb: (err: any, data?: ListAnomalyGroupTimeSeriesCommandOutput) => void
+    cb: (err: any, data?: ListAnomalyGroupTimeSeriesCommandOutput) => void,
   ): void;
   listAnomalyGroupTimeSeries(
     args: ListAnomalyGroupTimeSeriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAnomalyGroupTimeSeriesCommandOutput) => void
+    cb: (err: any, data?: ListAnomalyGroupTimeSeriesCommandOutput) => void,
   ): void;
 
   /**
@@ -501,13 +501,13 @@ export interface LookoutMetrics {
   listMetricSets(): Promise<ListMetricSetsCommandOutput>;
   listMetricSets(
     args: ListMetricSetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMetricSetsCommandOutput>;
   listMetricSets(args: ListMetricSetsCommandInput, cb: (err: any, data?: ListMetricSetsCommandOutput) => void): void;
   listMetricSets(
     args: ListMetricSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMetricSetsCommandOutput) => void
+    cb: (err: any, data?: ListMetricSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -515,16 +515,16 @@ export interface LookoutMetrics {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -535,7 +535,7 @@ export interface LookoutMetrics {
   putFeedback(
     args: PutFeedbackCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutFeedbackCommandOutput) => void
+    cb: (err: any, data?: PutFeedbackCommandOutput) => void,
   ): void;
 
   /**
@@ -546,7 +546,7 @@ export interface LookoutMetrics {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -557,7 +557,7 @@ export interface LookoutMetrics {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -568,7 +568,7 @@ export interface LookoutMetrics {
   updateAlert(
     args: UpdateAlertCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAlertCommandOutput) => void
+    cb: (err: any, data?: UpdateAlertCommandOutput) => void,
   ): void;
 
   /**
@@ -576,16 +576,16 @@ export interface LookoutMetrics {
    */
   updateAnomalyDetector(
     args: UpdateAnomalyDetectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAnomalyDetectorCommandOutput>;
   updateAnomalyDetector(
     args: UpdateAnomalyDetectorCommandInput,
-    cb: (err: any, data?: UpdateAnomalyDetectorCommandOutput) => void
+    cb: (err: any, data?: UpdateAnomalyDetectorCommandOutput) => void,
   ): void;
   updateAnomalyDetector(
     args: UpdateAnomalyDetectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAnomalyDetectorCommandOutput) => void
+    cb: (err: any, data?: UpdateAnomalyDetectorCommandOutput) => void,
   ): void;
 
   /**
@@ -593,13 +593,13 @@ export interface LookoutMetrics {
    */
   updateMetricSet(
     args: UpdateMetricSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateMetricSetCommandOutput>;
   updateMetricSet(args: UpdateMetricSetCommandInput, cb: (err: any, data?: UpdateMetricSetCommandOutput) => void): void;
   updateMetricSet(
     args: UpdateMetricSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMetricSetCommandOutput) => void
+    cb: (err: any, data?: UpdateMetricSetCommandOutput) => void,
   ): void;
 }
 

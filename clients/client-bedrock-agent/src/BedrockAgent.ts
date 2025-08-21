@@ -229,16 +229,16 @@ export interface BedrockAgent {
    */
   associateAgentKnowledgeBase(
     args: AssociateAgentKnowledgeBaseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateAgentKnowledgeBaseCommandOutput>;
   associateAgentKnowledgeBase(
     args: AssociateAgentKnowledgeBaseCommandInput,
-    cb: (err: any, data?: AssociateAgentKnowledgeBaseCommandOutput) => void
+    cb: (err: any, data?: AssociateAgentKnowledgeBaseCommandOutput) => void,
   ): void;
   associateAgentKnowledgeBase(
     args: AssociateAgentKnowledgeBaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateAgentKnowledgeBaseCommandOutput) => void
+    cb: (err: any, data?: AssociateAgentKnowledgeBaseCommandOutput) => void,
   ): void;
 
   /**
@@ -249,7 +249,7 @@ export interface BedrockAgent {
   createAgent(
     args: CreateAgentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAgentCommandOutput) => void
+    cb: (err: any, data?: CreateAgentCommandOutput) => void,
   ): void;
 
   /**
@@ -257,16 +257,16 @@ export interface BedrockAgent {
    */
   createAgentActionGroup(
     args: CreateAgentActionGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAgentActionGroupCommandOutput>;
   createAgentActionGroup(
     args: CreateAgentActionGroupCommandInput,
-    cb: (err: any, data?: CreateAgentActionGroupCommandOutput) => void
+    cb: (err: any, data?: CreateAgentActionGroupCommandOutput) => void,
   ): void;
   createAgentActionGroup(
     args: CreateAgentActionGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAgentActionGroupCommandOutput) => void
+    cb: (err: any, data?: CreateAgentActionGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -274,16 +274,16 @@ export interface BedrockAgent {
    */
   createAgentAlias(
     args: CreateAgentAliasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAgentAliasCommandOutput>;
   createAgentAlias(
     args: CreateAgentAliasCommandInput,
-    cb: (err: any, data?: CreateAgentAliasCommandOutput) => void
+    cb: (err: any, data?: CreateAgentAliasCommandOutput) => void,
   ): void;
   createAgentAlias(
     args: CreateAgentAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAgentAliasCommandOutput) => void
+    cb: (err: any, data?: CreateAgentAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -291,16 +291,16 @@ export interface BedrockAgent {
    */
   createDataSource(
     args: CreateDataSourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDataSourceCommandOutput>;
   createDataSource(
     args: CreateDataSourceCommandInput,
-    cb: (err: any, data?: CreateDataSourceCommandOutput) => void
+    cb: (err: any, data?: CreateDataSourceCommandOutput) => void,
   ): void;
   createDataSource(
     args: CreateDataSourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDataSourceCommandOutput) => void
+    cb: (err: any, data?: CreateDataSourceCommandOutput) => void,
   ): void;
 
   /**
@@ -308,16 +308,16 @@ export interface BedrockAgent {
    */
   createKnowledgeBase(
     args: CreateKnowledgeBaseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateKnowledgeBaseCommandOutput>;
   createKnowledgeBase(
     args: CreateKnowledgeBaseCommandInput,
-    cb: (err: any, data?: CreateKnowledgeBaseCommandOutput) => void
+    cb: (err: any, data?: CreateKnowledgeBaseCommandOutput) => void,
   ): void;
   createKnowledgeBase(
     args: CreateKnowledgeBaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateKnowledgeBaseCommandOutput) => void
+    cb: (err: any, data?: CreateKnowledgeBaseCommandOutput) => void,
   ): void;
 
   /**
@@ -328,7 +328,7 @@ export interface BedrockAgent {
   deleteAgent(
     args: DeleteAgentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAgentCommandOutput) => void
+    cb: (err: any, data?: DeleteAgentCommandOutput) => void,
   ): void;
 
   /**
@@ -336,16 +336,16 @@ export interface BedrockAgent {
    */
   deleteAgentActionGroup(
     args: DeleteAgentActionGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAgentActionGroupCommandOutput>;
   deleteAgentActionGroup(
     args: DeleteAgentActionGroupCommandInput,
-    cb: (err: any, data?: DeleteAgentActionGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteAgentActionGroupCommandOutput) => void,
   ): void;
   deleteAgentActionGroup(
     args: DeleteAgentActionGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAgentActionGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteAgentActionGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -353,16 +353,16 @@ export interface BedrockAgent {
    */
   deleteAgentAlias(
     args: DeleteAgentAliasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAgentAliasCommandOutput>;
   deleteAgentAlias(
     args: DeleteAgentAliasCommandInput,
-    cb: (err: any, data?: DeleteAgentAliasCommandOutput) => void
+    cb: (err: any, data?: DeleteAgentAliasCommandOutput) => void,
   ): void;
   deleteAgentAlias(
     args: DeleteAgentAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAgentAliasCommandOutput) => void
+    cb: (err: any, data?: DeleteAgentAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -370,16 +370,16 @@ export interface BedrockAgent {
    */
   deleteAgentVersion(
     args: DeleteAgentVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAgentVersionCommandOutput>;
   deleteAgentVersion(
     args: DeleteAgentVersionCommandInput,
-    cb: (err: any, data?: DeleteAgentVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteAgentVersionCommandOutput) => void,
   ): void;
   deleteAgentVersion(
     args: DeleteAgentVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAgentVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteAgentVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -387,16 +387,16 @@ export interface BedrockAgent {
    */
   deleteDataSource(
     args: DeleteDataSourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDataSourceCommandOutput>;
   deleteDataSource(
     args: DeleteDataSourceCommandInput,
-    cb: (err: any, data?: DeleteDataSourceCommandOutput) => void
+    cb: (err: any, data?: DeleteDataSourceCommandOutput) => void,
   ): void;
   deleteDataSource(
     args: DeleteDataSourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDataSourceCommandOutput) => void
+    cb: (err: any, data?: DeleteDataSourceCommandOutput) => void,
   ): void;
 
   /**
@@ -404,16 +404,16 @@ export interface BedrockAgent {
    */
   deleteKnowledgeBase(
     args: DeleteKnowledgeBaseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteKnowledgeBaseCommandOutput>;
   deleteKnowledgeBase(
     args: DeleteKnowledgeBaseCommandInput,
-    cb: (err: any, data?: DeleteKnowledgeBaseCommandOutput) => void
+    cb: (err: any, data?: DeleteKnowledgeBaseCommandOutput) => void,
   ): void;
   deleteKnowledgeBase(
     args: DeleteKnowledgeBaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteKnowledgeBaseCommandOutput) => void
+    cb: (err: any, data?: DeleteKnowledgeBaseCommandOutput) => void,
   ): void;
 
   /**
@@ -421,16 +421,16 @@ export interface BedrockAgent {
    */
   disassociateAgentKnowledgeBase(
     args: DisassociateAgentKnowledgeBaseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateAgentKnowledgeBaseCommandOutput>;
   disassociateAgentKnowledgeBase(
     args: DisassociateAgentKnowledgeBaseCommandInput,
-    cb: (err: any, data?: DisassociateAgentKnowledgeBaseCommandOutput) => void
+    cb: (err: any, data?: DisassociateAgentKnowledgeBaseCommandOutput) => void,
   ): void;
   disassociateAgentKnowledgeBase(
     args: DisassociateAgentKnowledgeBaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateAgentKnowledgeBaseCommandOutput) => void
+    cb: (err: any, data?: DisassociateAgentKnowledgeBaseCommandOutput) => void,
   ): void;
 
   /**
@@ -441,7 +441,7 @@ export interface BedrockAgent {
   getAgent(
     args: GetAgentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAgentCommandOutput) => void
+    cb: (err: any, data?: GetAgentCommandOutput) => void,
   ): void;
 
   /**
@@ -449,16 +449,16 @@ export interface BedrockAgent {
    */
   getAgentActionGroup(
     args: GetAgentActionGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAgentActionGroupCommandOutput>;
   getAgentActionGroup(
     args: GetAgentActionGroupCommandInput,
-    cb: (err: any, data?: GetAgentActionGroupCommandOutput) => void
+    cb: (err: any, data?: GetAgentActionGroupCommandOutput) => void,
   ): void;
   getAgentActionGroup(
     args: GetAgentActionGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAgentActionGroupCommandOutput) => void
+    cb: (err: any, data?: GetAgentActionGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -469,7 +469,7 @@ export interface BedrockAgent {
   getAgentAlias(
     args: GetAgentAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAgentAliasCommandOutput) => void
+    cb: (err: any, data?: GetAgentAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -477,16 +477,16 @@ export interface BedrockAgent {
    */
   getAgentKnowledgeBase(
     args: GetAgentKnowledgeBaseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAgentKnowledgeBaseCommandOutput>;
   getAgentKnowledgeBase(
     args: GetAgentKnowledgeBaseCommandInput,
-    cb: (err: any, data?: GetAgentKnowledgeBaseCommandOutput) => void
+    cb: (err: any, data?: GetAgentKnowledgeBaseCommandOutput) => void,
   ): void;
   getAgentKnowledgeBase(
     args: GetAgentKnowledgeBaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAgentKnowledgeBaseCommandOutput) => void
+    cb: (err: any, data?: GetAgentKnowledgeBaseCommandOutput) => void,
   ): void;
 
   /**
@@ -494,13 +494,13 @@ export interface BedrockAgent {
    */
   getAgentVersion(
     args: GetAgentVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAgentVersionCommandOutput>;
   getAgentVersion(args: GetAgentVersionCommandInput, cb: (err: any, data?: GetAgentVersionCommandOutput) => void): void;
   getAgentVersion(
     args: GetAgentVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAgentVersionCommandOutput) => void
+    cb: (err: any, data?: GetAgentVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -511,7 +511,7 @@ export interface BedrockAgent {
   getDataSource(
     args: GetDataSourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDataSourceCommandOutput) => void
+    cb: (err: any, data?: GetDataSourceCommandOutput) => void,
   ): void;
 
   /**
@@ -519,13 +519,13 @@ export interface BedrockAgent {
    */
   getIngestionJob(
     args: GetIngestionJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetIngestionJobCommandOutput>;
   getIngestionJob(args: GetIngestionJobCommandInput, cb: (err: any, data?: GetIngestionJobCommandOutput) => void): void;
   getIngestionJob(
     args: GetIngestionJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetIngestionJobCommandOutput) => void
+    cb: (err: any, data?: GetIngestionJobCommandOutput) => void,
   ): void;
 
   /**
@@ -533,16 +533,16 @@ export interface BedrockAgent {
    */
   getKnowledgeBase(
     args: GetKnowledgeBaseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetKnowledgeBaseCommandOutput>;
   getKnowledgeBase(
     args: GetKnowledgeBaseCommandInput,
-    cb: (err: any, data?: GetKnowledgeBaseCommandOutput) => void
+    cb: (err: any, data?: GetKnowledgeBaseCommandOutput) => void,
   ): void;
   getKnowledgeBase(
     args: GetKnowledgeBaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetKnowledgeBaseCommandOutput) => void
+    cb: (err: any, data?: GetKnowledgeBaseCommandOutput) => void,
   ): void;
 
   /**
@@ -550,16 +550,16 @@ export interface BedrockAgent {
    */
   listAgentActionGroups(
     args: ListAgentActionGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAgentActionGroupsCommandOutput>;
   listAgentActionGroups(
     args: ListAgentActionGroupsCommandInput,
-    cb: (err: any, data?: ListAgentActionGroupsCommandOutput) => void
+    cb: (err: any, data?: ListAgentActionGroupsCommandOutput) => void,
   ): void;
   listAgentActionGroups(
     args: ListAgentActionGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAgentActionGroupsCommandOutput) => void
+    cb: (err: any, data?: ListAgentActionGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -567,16 +567,16 @@ export interface BedrockAgent {
    */
   listAgentAliases(
     args: ListAgentAliasesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAgentAliasesCommandOutput>;
   listAgentAliases(
     args: ListAgentAliasesCommandInput,
-    cb: (err: any, data?: ListAgentAliasesCommandOutput) => void
+    cb: (err: any, data?: ListAgentAliasesCommandOutput) => void,
   ): void;
   listAgentAliases(
     args: ListAgentAliasesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAgentAliasesCommandOutput) => void
+    cb: (err: any, data?: ListAgentAliasesCommandOutput) => void,
   ): void;
 
   /**
@@ -584,16 +584,16 @@ export interface BedrockAgent {
    */
   listAgentKnowledgeBases(
     args: ListAgentKnowledgeBasesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAgentKnowledgeBasesCommandOutput>;
   listAgentKnowledgeBases(
     args: ListAgentKnowledgeBasesCommandInput,
-    cb: (err: any, data?: ListAgentKnowledgeBasesCommandOutput) => void
+    cb: (err: any, data?: ListAgentKnowledgeBasesCommandOutput) => void,
   ): void;
   listAgentKnowledgeBases(
     args: ListAgentKnowledgeBasesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAgentKnowledgeBasesCommandOutput) => void
+    cb: (err: any, data?: ListAgentKnowledgeBasesCommandOutput) => void,
   ): void;
 
   /**
@@ -605,7 +605,7 @@ export interface BedrockAgent {
   listAgents(
     args: ListAgentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAgentsCommandOutput) => void
+    cb: (err: any, data?: ListAgentsCommandOutput) => void,
   ): void;
 
   /**
@@ -613,16 +613,16 @@ export interface BedrockAgent {
    */
   listAgentVersions(
     args: ListAgentVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAgentVersionsCommandOutput>;
   listAgentVersions(
     args: ListAgentVersionsCommandInput,
-    cb: (err: any, data?: ListAgentVersionsCommandOutput) => void
+    cb: (err: any, data?: ListAgentVersionsCommandOutput) => void,
   ): void;
   listAgentVersions(
     args: ListAgentVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAgentVersionsCommandOutput) => void
+    cb: (err: any, data?: ListAgentVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -630,13 +630,13 @@ export interface BedrockAgent {
    */
   listDataSources(
     args: ListDataSourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDataSourcesCommandOutput>;
   listDataSources(args: ListDataSourcesCommandInput, cb: (err: any, data?: ListDataSourcesCommandOutput) => void): void;
   listDataSources(
     args: ListDataSourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDataSourcesCommandOutput) => void
+    cb: (err: any, data?: ListDataSourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -644,16 +644,16 @@ export interface BedrockAgent {
    */
   listIngestionJobs(
     args: ListIngestionJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListIngestionJobsCommandOutput>;
   listIngestionJobs(
     args: ListIngestionJobsCommandInput,
-    cb: (err: any, data?: ListIngestionJobsCommandOutput) => void
+    cb: (err: any, data?: ListIngestionJobsCommandOutput) => void,
   ): void;
   listIngestionJobs(
     args: ListIngestionJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListIngestionJobsCommandOutput) => void
+    cb: (err: any, data?: ListIngestionJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -662,16 +662,16 @@ export interface BedrockAgent {
   listKnowledgeBases(): Promise<ListKnowledgeBasesCommandOutput>;
   listKnowledgeBases(
     args: ListKnowledgeBasesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListKnowledgeBasesCommandOutput>;
   listKnowledgeBases(
     args: ListKnowledgeBasesCommandInput,
-    cb: (err: any, data?: ListKnowledgeBasesCommandOutput) => void
+    cb: (err: any, data?: ListKnowledgeBasesCommandOutput) => void,
   ): void;
   listKnowledgeBases(
     args: ListKnowledgeBasesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListKnowledgeBasesCommandOutput) => void
+    cb: (err: any, data?: ListKnowledgeBasesCommandOutput) => void,
   ): void;
 
   /**
@@ -679,16 +679,16 @@ export interface BedrockAgent {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -699,7 +699,7 @@ export interface BedrockAgent {
   prepareAgent(
     args: PrepareAgentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PrepareAgentCommandOutput) => void
+    cb: (err: any, data?: PrepareAgentCommandOutput) => void,
   ): void;
 
   /**
@@ -707,16 +707,16 @@ export interface BedrockAgent {
    */
   startIngestionJob(
     args: StartIngestionJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartIngestionJobCommandOutput>;
   startIngestionJob(
     args: StartIngestionJobCommandInput,
-    cb: (err: any, data?: StartIngestionJobCommandOutput) => void
+    cb: (err: any, data?: StartIngestionJobCommandOutput) => void,
   ): void;
   startIngestionJob(
     args: StartIngestionJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartIngestionJobCommandOutput) => void
+    cb: (err: any, data?: StartIngestionJobCommandOutput) => void,
   ): void;
 
   /**
@@ -727,7 +727,7 @@ export interface BedrockAgent {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -738,7 +738,7 @@ export interface BedrockAgent {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -749,7 +749,7 @@ export interface BedrockAgent {
   updateAgent(
     args: UpdateAgentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAgentCommandOutput) => void
+    cb: (err: any, data?: UpdateAgentCommandOutput) => void,
   ): void;
 
   /**
@@ -757,16 +757,16 @@ export interface BedrockAgent {
    */
   updateAgentActionGroup(
     args: UpdateAgentActionGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAgentActionGroupCommandOutput>;
   updateAgentActionGroup(
     args: UpdateAgentActionGroupCommandInput,
-    cb: (err: any, data?: UpdateAgentActionGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateAgentActionGroupCommandOutput) => void,
   ): void;
   updateAgentActionGroup(
     args: UpdateAgentActionGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAgentActionGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateAgentActionGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -774,16 +774,16 @@ export interface BedrockAgent {
    */
   updateAgentAlias(
     args: UpdateAgentAliasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAgentAliasCommandOutput>;
   updateAgentAlias(
     args: UpdateAgentAliasCommandInput,
-    cb: (err: any, data?: UpdateAgentAliasCommandOutput) => void
+    cb: (err: any, data?: UpdateAgentAliasCommandOutput) => void,
   ): void;
   updateAgentAlias(
     args: UpdateAgentAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAgentAliasCommandOutput) => void
+    cb: (err: any, data?: UpdateAgentAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -791,16 +791,16 @@ export interface BedrockAgent {
    */
   updateAgentKnowledgeBase(
     args: UpdateAgentKnowledgeBaseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAgentKnowledgeBaseCommandOutput>;
   updateAgentKnowledgeBase(
     args: UpdateAgentKnowledgeBaseCommandInput,
-    cb: (err: any, data?: UpdateAgentKnowledgeBaseCommandOutput) => void
+    cb: (err: any, data?: UpdateAgentKnowledgeBaseCommandOutput) => void,
   ): void;
   updateAgentKnowledgeBase(
     args: UpdateAgentKnowledgeBaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAgentKnowledgeBaseCommandOutput) => void
+    cb: (err: any, data?: UpdateAgentKnowledgeBaseCommandOutput) => void,
   ): void;
 
   /**
@@ -808,16 +808,16 @@ export interface BedrockAgent {
    */
   updateDataSource(
     args: UpdateDataSourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDataSourceCommandOutput>;
   updateDataSource(
     args: UpdateDataSourceCommandInput,
-    cb: (err: any, data?: UpdateDataSourceCommandOutput) => void
+    cb: (err: any, data?: UpdateDataSourceCommandOutput) => void,
   ): void;
   updateDataSource(
     args: UpdateDataSourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDataSourceCommandOutput) => void
+    cb: (err: any, data?: UpdateDataSourceCommandOutput) => void,
   ): void;
 
   /**
@@ -825,16 +825,16 @@ export interface BedrockAgent {
    */
   updateKnowledgeBase(
     args: UpdateKnowledgeBaseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateKnowledgeBaseCommandOutput>;
   updateKnowledgeBase(
     args: UpdateKnowledgeBaseCommandInput,
-    cb: (err: any, data?: UpdateKnowledgeBaseCommandOutput) => void
+    cb: (err: any, data?: UpdateKnowledgeBaseCommandOutput) => void,
   ): void;
   updateKnowledgeBase(
     args: UpdateKnowledgeBaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateKnowledgeBaseCommandOutput) => void
+    cb: (err: any, data?: UpdateKnowledgeBaseCommandOutput) => void,
   ): void;
 }
 

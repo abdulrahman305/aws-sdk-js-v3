@@ -3460,7 +3460,7 @@ export interface UpdateServerConfigResponse {}
  * @internal
  */
 export const UpdateApplicationComponentConfigRequestFilterSensitiveLog = (
-  obj: UpdateApplicationComponentConfigRequest
+  obj: UpdateApplicationComponentConfigRequest,
 ): any => ({
   ...obj,
   ...(obj.secretsManagerKey && { secretsManagerKey: SENSITIVE_STRING }),

@@ -9,7 +9,7 @@ import { EC2Client } from "../EC2Client";
 
 const checkState = async (
   client: EC2Client,
-  input: DescribeVpcPeeringConnectionsCommandInput
+  input: DescribeVpcPeeringConnectionsCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -30,7 +30,7 @@ const checkState = async (
  */
 export const waitForVpcPeeringConnectionExists = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeVpcPeeringConnectionsCommandInput
+  input: DescribeVpcPeeringConnectionsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -42,7 +42,7 @@ export const waitForVpcPeeringConnectionExists = async (
  */
 export const waitUntilVpcPeeringConnectionExists = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeVpcPeeringConnectionsCommandInput
+  input: DescribeVpcPeeringConnectionsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

@@ -199,7 +199,7 @@ export interface SMS {
   createApp(
     args: CreateAppCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAppCommandOutput) => void
+    cb: (err: any, data?: CreateAppCommandOutput) => void,
   ): void;
 
   /**
@@ -207,16 +207,16 @@ export interface SMS {
    */
   createReplicationJob(
     args: CreateReplicationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateReplicationJobCommandOutput>;
   createReplicationJob(
     args: CreateReplicationJobCommandInput,
-    cb: (err: any, data?: CreateReplicationJobCommandOutput) => void
+    cb: (err: any, data?: CreateReplicationJobCommandOutput) => void,
   ): void;
   createReplicationJob(
     args: CreateReplicationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateReplicationJobCommandOutput) => void
+    cb: (err: any, data?: CreateReplicationJobCommandOutput) => void,
   ): void;
 
   /**
@@ -228,7 +228,7 @@ export interface SMS {
   deleteApp(
     args: DeleteAppCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAppCommandOutput) => void
+    cb: (err: any, data?: DeleteAppCommandOutput) => void,
   ): void;
 
   /**
@@ -237,16 +237,16 @@ export interface SMS {
   deleteAppLaunchConfiguration(): Promise<DeleteAppLaunchConfigurationCommandOutput>;
   deleteAppLaunchConfiguration(
     args: DeleteAppLaunchConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAppLaunchConfigurationCommandOutput>;
   deleteAppLaunchConfiguration(
     args: DeleteAppLaunchConfigurationCommandInput,
-    cb: (err: any, data?: DeleteAppLaunchConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteAppLaunchConfigurationCommandOutput) => void,
   ): void;
   deleteAppLaunchConfiguration(
     args: DeleteAppLaunchConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAppLaunchConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteAppLaunchConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -255,16 +255,16 @@ export interface SMS {
   deleteAppReplicationConfiguration(): Promise<DeleteAppReplicationConfigurationCommandOutput>;
   deleteAppReplicationConfiguration(
     args: DeleteAppReplicationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAppReplicationConfigurationCommandOutput>;
   deleteAppReplicationConfiguration(
     args: DeleteAppReplicationConfigurationCommandInput,
-    cb: (err: any, data?: DeleteAppReplicationConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteAppReplicationConfigurationCommandOutput) => void,
   ): void;
   deleteAppReplicationConfiguration(
     args: DeleteAppReplicationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAppReplicationConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteAppReplicationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -272,16 +272,16 @@ export interface SMS {
    */
   deleteAppValidationConfiguration(
     args: DeleteAppValidationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAppValidationConfigurationCommandOutput>;
   deleteAppValidationConfiguration(
     args: DeleteAppValidationConfigurationCommandInput,
-    cb: (err: any, data?: DeleteAppValidationConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteAppValidationConfigurationCommandOutput) => void,
   ): void;
   deleteAppValidationConfiguration(
     args: DeleteAppValidationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAppValidationConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteAppValidationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -289,16 +289,16 @@ export interface SMS {
    */
   deleteReplicationJob(
     args: DeleteReplicationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteReplicationJobCommandOutput>;
   deleteReplicationJob(
     args: DeleteReplicationJobCommandInput,
-    cb: (err: any, data?: DeleteReplicationJobCommandOutput) => void
+    cb: (err: any, data?: DeleteReplicationJobCommandOutput) => void,
   ): void;
   deleteReplicationJob(
     args: DeleteReplicationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteReplicationJobCommandOutput) => void
+    cb: (err: any, data?: DeleteReplicationJobCommandOutput) => void,
   ): void;
 
   /**
@@ -307,16 +307,16 @@ export interface SMS {
   deleteServerCatalog(): Promise<DeleteServerCatalogCommandOutput>;
   deleteServerCatalog(
     args: DeleteServerCatalogCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteServerCatalogCommandOutput>;
   deleteServerCatalog(
     args: DeleteServerCatalogCommandInput,
-    cb: (err: any, data?: DeleteServerCatalogCommandOutput) => void
+    cb: (err: any, data?: DeleteServerCatalogCommandOutput) => void,
   ): void;
   deleteServerCatalog(
     args: DeleteServerCatalogCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteServerCatalogCommandOutput) => void
+    cb: (err: any, data?: DeleteServerCatalogCommandOutput) => void,
   ): void;
 
   /**
@@ -324,16 +324,16 @@ export interface SMS {
    */
   disassociateConnector(
     args: DisassociateConnectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateConnectorCommandOutput>;
   disassociateConnector(
     args: DisassociateConnectorCommandInput,
-    cb: (err: any, data?: DisassociateConnectorCommandOutput) => void
+    cb: (err: any, data?: DisassociateConnectorCommandOutput) => void,
   ): void;
   disassociateConnector(
     args: DisassociateConnectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateConnectorCommandOutput) => void
+    cb: (err: any, data?: DisassociateConnectorCommandOutput) => void,
   ): void;
 
   /**
@@ -342,16 +342,16 @@ export interface SMS {
   generateChangeSet(): Promise<GenerateChangeSetCommandOutput>;
   generateChangeSet(
     args: GenerateChangeSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GenerateChangeSetCommandOutput>;
   generateChangeSet(
     args: GenerateChangeSetCommandInput,
-    cb: (err: any, data?: GenerateChangeSetCommandOutput) => void
+    cb: (err: any, data?: GenerateChangeSetCommandOutput) => void,
   ): void;
   generateChangeSet(
     args: GenerateChangeSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GenerateChangeSetCommandOutput) => void
+    cb: (err: any, data?: GenerateChangeSetCommandOutput) => void,
   ): void;
 
   /**
@@ -360,16 +360,16 @@ export interface SMS {
   generateTemplate(): Promise<GenerateTemplateCommandOutput>;
   generateTemplate(
     args: GenerateTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GenerateTemplateCommandOutput>;
   generateTemplate(
     args: GenerateTemplateCommandInput,
-    cb: (err: any, data?: GenerateTemplateCommandOutput) => void
+    cb: (err: any, data?: GenerateTemplateCommandOutput) => void,
   ): void;
   generateTemplate(
     args: GenerateTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GenerateTemplateCommandOutput) => void
+    cb: (err: any, data?: GenerateTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -381,7 +381,7 @@ export interface SMS {
   getApp(
     args: GetAppCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAppCommandOutput) => void
+    cb: (err: any, data?: GetAppCommandOutput) => void,
   ): void;
 
   /**
@@ -390,16 +390,16 @@ export interface SMS {
   getAppLaunchConfiguration(): Promise<GetAppLaunchConfigurationCommandOutput>;
   getAppLaunchConfiguration(
     args: GetAppLaunchConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAppLaunchConfigurationCommandOutput>;
   getAppLaunchConfiguration(
     args: GetAppLaunchConfigurationCommandInput,
-    cb: (err: any, data?: GetAppLaunchConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetAppLaunchConfigurationCommandOutput) => void,
   ): void;
   getAppLaunchConfiguration(
     args: GetAppLaunchConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAppLaunchConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetAppLaunchConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -408,16 +408,16 @@ export interface SMS {
   getAppReplicationConfiguration(): Promise<GetAppReplicationConfigurationCommandOutput>;
   getAppReplicationConfiguration(
     args: GetAppReplicationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAppReplicationConfigurationCommandOutput>;
   getAppReplicationConfiguration(
     args: GetAppReplicationConfigurationCommandInput,
-    cb: (err: any, data?: GetAppReplicationConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetAppReplicationConfigurationCommandOutput) => void,
   ): void;
   getAppReplicationConfiguration(
     args: GetAppReplicationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAppReplicationConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetAppReplicationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -425,16 +425,16 @@ export interface SMS {
    */
   getAppValidationConfiguration(
     args: GetAppValidationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAppValidationConfigurationCommandOutput>;
   getAppValidationConfiguration(
     args: GetAppValidationConfigurationCommandInput,
-    cb: (err: any, data?: GetAppValidationConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetAppValidationConfigurationCommandOutput) => void,
   ): void;
   getAppValidationConfiguration(
     args: GetAppValidationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAppValidationConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetAppValidationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -442,16 +442,16 @@ export interface SMS {
    */
   getAppValidationOutput(
     args: GetAppValidationOutputCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAppValidationOutputCommandOutput>;
   getAppValidationOutput(
     args: GetAppValidationOutputCommandInput,
-    cb: (err: any, data?: GetAppValidationOutputCommandOutput) => void
+    cb: (err: any, data?: GetAppValidationOutputCommandOutput) => void,
   ): void;
   getAppValidationOutput(
     args: GetAppValidationOutputCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAppValidationOutputCommandOutput) => void
+    cb: (err: any, data?: GetAppValidationOutputCommandOutput) => void,
   ): void;
 
   /**
@@ -463,7 +463,7 @@ export interface SMS {
   getConnectors(
     args: GetConnectorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetConnectorsCommandOutput) => void
+    cb: (err: any, data?: GetConnectorsCommandOutput) => void,
   ): void;
 
   /**
@@ -472,16 +472,16 @@ export interface SMS {
   getReplicationJobs(): Promise<GetReplicationJobsCommandOutput>;
   getReplicationJobs(
     args: GetReplicationJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetReplicationJobsCommandOutput>;
   getReplicationJobs(
     args: GetReplicationJobsCommandInput,
-    cb: (err: any, data?: GetReplicationJobsCommandOutput) => void
+    cb: (err: any, data?: GetReplicationJobsCommandOutput) => void,
   ): void;
   getReplicationJobs(
     args: GetReplicationJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetReplicationJobsCommandOutput) => void
+    cb: (err: any, data?: GetReplicationJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -489,16 +489,16 @@ export interface SMS {
    */
   getReplicationRuns(
     args: GetReplicationRunsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetReplicationRunsCommandOutput>;
   getReplicationRuns(
     args: GetReplicationRunsCommandInput,
-    cb: (err: any, data?: GetReplicationRunsCommandOutput) => void
+    cb: (err: any, data?: GetReplicationRunsCommandOutput) => void,
   ): void;
   getReplicationRuns(
     args: GetReplicationRunsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetReplicationRunsCommandOutput) => void
+    cb: (err: any, data?: GetReplicationRunsCommandOutput) => void,
   ): void;
 
   /**
@@ -510,7 +510,7 @@ export interface SMS {
   getServers(
     args: GetServersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetServersCommandOutput) => void
+    cb: (err: any, data?: GetServersCommandOutput) => void,
   ): void;
 
   /**
@@ -519,16 +519,16 @@ export interface SMS {
   importAppCatalog(): Promise<ImportAppCatalogCommandOutput>;
   importAppCatalog(
     args: ImportAppCatalogCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ImportAppCatalogCommandOutput>;
   importAppCatalog(
     args: ImportAppCatalogCommandInput,
-    cb: (err: any, data?: ImportAppCatalogCommandOutput) => void
+    cb: (err: any, data?: ImportAppCatalogCommandOutput) => void,
   ): void;
   importAppCatalog(
     args: ImportAppCatalogCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportAppCatalogCommandOutput) => void
+    cb: (err: any, data?: ImportAppCatalogCommandOutput) => void,
   ): void;
 
   /**
@@ -537,16 +537,16 @@ export interface SMS {
   importServerCatalog(): Promise<ImportServerCatalogCommandOutput>;
   importServerCatalog(
     args: ImportServerCatalogCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ImportServerCatalogCommandOutput>;
   importServerCatalog(
     args: ImportServerCatalogCommandInput,
-    cb: (err: any, data?: ImportServerCatalogCommandOutput) => void
+    cb: (err: any, data?: ImportServerCatalogCommandOutput) => void,
   ): void;
   importServerCatalog(
     args: ImportServerCatalogCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportServerCatalogCommandOutput) => void
+    cb: (err: any, data?: ImportServerCatalogCommandOutput) => void,
   ): void;
 
   /**
@@ -558,7 +558,7 @@ export interface SMS {
   launchApp(
     args: LaunchAppCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: LaunchAppCommandOutput) => void
+    cb: (err: any, data?: LaunchAppCommandOutput) => void,
   ): void;
 
   /**
@@ -570,7 +570,7 @@ export interface SMS {
   listApps(
     args: ListAppsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAppsCommandOutput) => void
+    cb: (err: any, data?: ListAppsCommandOutput) => void,
   ): void;
 
   /**
@@ -578,16 +578,16 @@ export interface SMS {
    */
   notifyAppValidationOutput(
     args: NotifyAppValidationOutputCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<NotifyAppValidationOutputCommandOutput>;
   notifyAppValidationOutput(
     args: NotifyAppValidationOutputCommandInput,
-    cb: (err: any, data?: NotifyAppValidationOutputCommandOutput) => void
+    cb: (err: any, data?: NotifyAppValidationOutputCommandOutput) => void,
   ): void;
   notifyAppValidationOutput(
     args: NotifyAppValidationOutputCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: NotifyAppValidationOutputCommandOutput) => void
+    cb: (err: any, data?: NotifyAppValidationOutputCommandOutput) => void,
   ): void;
 
   /**
@@ -596,16 +596,16 @@ export interface SMS {
   putAppLaunchConfiguration(): Promise<PutAppLaunchConfigurationCommandOutput>;
   putAppLaunchConfiguration(
     args: PutAppLaunchConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAppLaunchConfigurationCommandOutput>;
   putAppLaunchConfiguration(
     args: PutAppLaunchConfigurationCommandInput,
-    cb: (err: any, data?: PutAppLaunchConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutAppLaunchConfigurationCommandOutput) => void,
   ): void;
   putAppLaunchConfiguration(
     args: PutAppLaunchConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAppLaunchConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutAppLaunchConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -614,16 +614,16 @@ export interface SMS {
   putAppReplicationConfiguration(): Promise<PutAppReplicationConfigurationCommandOutput>;
   putAppReplicationConfiguration(
     args: PutAppReplicationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAppReplicationConfigurationCommandOutput>;
   putAppReplicationConfiguration(
     args: PutAppReplicationConfigurationCommandInput,
-    cb: (err: any, data?: PutAppReplicationConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutAppReplicationConfigurationCommandOutput) => void,
   ): void;
   putAppReplicationConfiguration(
     args: PutAppReplicationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAppReplicationConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutAppReplicationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -631,16 +631,16 @@ export interface SMS {
    */
   putAppValidationConfiguration(
     args: PutAppValidationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAppValidationConfigurationCommandOutput>;
   putAppValidationConfiguration(
     args: PutAppValidationConfigurationCommandInput,
-    cb: (err: any, data?: PutAppValidationConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutAppValidationConfigurationCommandOutput) => void,
   ): void;
   putAppValidationConfiguration(
     args: PutAppValidationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAppValidationConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutAppValidationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -649,16 +649,16 @@ export interface SMS {
   startAppReplication(): Promise<StartAppReplicationCommandOutput>;
   startAppReplication(
     args: StartAppReplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartAppReplicationCommandOutput>;
   startAppReplication(
     args: StartAppReplicationCommandInput,
-    cb: (err: any, data?: StartAppReplicationCommandOutput) => void
+    cb: (err: any, data?: StartAppReplicationCommandOutput) => void,
   ): void;
   startAppReplication(
     args: StartAppReplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartAppReplicationCommandOutput) => void
+    cb: (err: any, data?: StartAppReplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -666,16 +666,16 @@ export interface SMS {
    */
   startOnDemandAppReplication(
     args: StartOnDemandAppReplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartOnDemandAppReplicationCommandOutput>;
   startOnDemandAppReplication(
     args: StartOnDemandAppReplicationCommandInput,
-    cb: (err: any, data?: StartOnDemandAppReplicationCommandOutput) => void
+    cb: (err: any, data?: StartOnDemandAppReplicationCommandOutput) => void,
   ): void;
   startOnDemandAppReplication(
     args: StartOnDemandAppReplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartOnDemandAppReplicationCommandOutput) => void
+    cb: (err: any, data?: StartOnDemandAppReplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -683,16 +683,16 @@ export interface SMS {
    */
   startOnDemandReplicationRun(
     args: StartOnDemandReplicationRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartOnDemandReplicationRunCommandOutput>;
   startOnDemandReplicationRun(
     args: StartOnDemandReplicationRunCommandInput,
-    cb: (err: any, data?: StartOnDemandReplicationRunCommandOutput) => void
+    cb: (err: any, data?: StartOnDemandReplicationRunCommandOutput) => void,
   ): void;
   startOnDemandReplicationRun(
     args: StartOnDemandReplicationRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartOnDemandReplicationRunCommandOutput) => void
+    cb: (err: any, data?: StartOnDemandReplicationRunCommandOutput) => void,
   ): void;
 
   /**
@@ -701,16 +701,16 @@ export interface SMS {
   stopAppReplication(): Promise<StopAppReplicationCommandOutput>;
   stopAppReplication(
     args: StopAppReplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopAppReplicationCommandOutput>;
   stopAppReplication(
     args: StopAppReplicationCommandInput,
-    cb: (err: any, data?: StopAppReplicationCommandOutput) => void
+    cb: (err: any, data?: StopAppReplicationCommandOutput) => void,
   ): void;
   stopAppReplication(
     args: StopAppReplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopAppReplicationCommandOutput) => void
+    cb: (err: any, data?: StopAppReplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -722,7 +722,7 @@ export interface SMS {
   terminateApp(
     args: TerminateAppCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TerminateAppCommandOutput) => void
+    cb: (err: any, data?: TerminateAppCommandOutput) => void,
   ): void;
 
   /**
@@ -734,7 +734,7 @@ export interface SMS {
   updateApp(
     args: UpdateAppCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAppCommandOutput) => void
+    cb: (err: any, data?: UpdateAppCommandOutput) => void,
   ): void;
 
   /**
@@ -742,16 +742,16 @@ export interface SMS {
    */
   updateReplicationJob(
     args: UpdateReplicationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateReplicationJobCommandOutput>;
   updateReplicationJob(
     args: UpdateReplicationJobCommandInput,
-    cb: (err: any, data?: UpdateReplicationJobCommandOutput) => void
+    cb: (err: any, data?: UpdateReplicationJobCommandOutput) => void,
   ): void;
   updateReplicationJob(
     args: UpdateReplicationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateReplicationJobCommandOutput) => void
+    cb: (err: any, data?: UpdateReplicationJobCommandOutput) => void,
   ): void;
 }
 

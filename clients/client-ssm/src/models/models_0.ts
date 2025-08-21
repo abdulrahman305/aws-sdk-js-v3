@@ -9669,7 +9669,7 @@ export const DescribeInstancePatchStatesResultFilterSensitiveLog = (obj: Describ
  * @internal
  */
 export const DescribeInstancePatchStatesForPatchGroupResultFilterSensitiveLog = (
-  obj: DescribeInstancePatchStatesForPatchGroupResult
+  obj: DescribeInstancePatchStatesForPatchGroupResult,
 ): any => ({
   ...obj,
   ...(obj.InstancePatchStates && {
@@ -9681,7 +9681,7 @@ export const DescribeInstancePatchStatesForPatchGroupResultFilterSensitiveLog = 
  * @internal
  */
 export const MaintenanceWindowExecutionTaskInvocationIdentityFilterSensitiveLog = (
-  obj: MaintenanceWindowExecutionTaskInvocationIdentity
+  obj: MaintenanceWindowExecutionTaskInvocationIdentity,
 ): any => ({
   ...obj,
   ...(obj.Parameters && { Parameters: SENSITIVE_STRING }),
@@ -9692,12 +9692,12 @@ export const MaintenanceWindowExecutionTaskInvocationIdentityFilterSensitiveLog 
  * @internal
  */
 export const DescribeMaintenanceWindowExecutionTaskInvocationsResultFilterSensitiveLog = (
-  obj: DescribeMaintenanceWindowExecutionTaskInvocationsResult
+  obj: DescribeMaintenanceWindowExecutionTaskInvocationsResult,
 ): any => ({
   ...obj,
   ...(obj.WindowExecutionTaskInvocationIdentities && {
     WindowExecutionTaskInvocationIdentities: obj.WindowExecutionTaskInvocationIdentities.map((item) =>
-      MaintenanceWindowExecutionTaskInvocationIdentityFilterSensitiveLog(item)
+      MaintenanceWindowExecutionTaskInvocationIdentityFilterSensitiveLog(item),
     ),
   }),
 });

@@ -108,7 +108,7 @@ import { MqServiceException as __BaseException } from "../models/MqServiceExcept
  */
 export const se_CreateBrokerCommand = async (
   input: CreateBrokerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -139,7 +139,7 @@ export const se_CreateBrokerCommand = async (
       subnetIds: [, (_) => _json(_), `SubnetIds`],
       tags: [, (_) => _json(_), `Tags`],
       users: [, (_) => se___listOfUser(_, context), `Users`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -150,7 +150,7 @@ export const se_CreateBrokerCommand = async (
  */
 export const se_CreateConfigurationCommand = async (
   input: CreateConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -165,7 +165,7 @@ export const se_CreateConfigurationCommand = async (
       engineVersion: [, , `EngineVersion`],
       name: [, , `Name`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -176,7 +176,7 @@ export const se_CreateConfigurationCommand = async (
  */
 export const se_CreateTagsCommand = async (
   input: CreateTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -188,7 +188,7 @@ export const se_CreateTagsCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -199,7 +199,7 @@ export const se_CreateTagsCommand = async (
  */
 export const se_CreateUserCommand = async (
   input: CreateUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -215,7 +215,7 @@ export const se_CreateUserCommand = async (
       groups: [, (_) => _json(_), `Groups`],
       password: [, , `Password`],
       replicationUser: [, , `ReplicationUser`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -226,7 +226,7 @@ export const se_CreateUserCommand = async (
  */
 export const se_DeleteBrokerCommand = async (
   input: DeleteBrokerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -242,7 +242,7 @@ export const se_DeleteBrokerCommand = async (
  */
 export const se_DeleteTagsCommand = async (
   input: DeleteTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -264,7 +264,7 @@ export const se_DeleteTagsCommand = async (
  */
 export const se_DeleteUserCommand = async (
   input: DeleteUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -281,7 +281,7 @@ export const se_DeleteUserCommand = async (
  */
 export const se_DescribeBrokerCommand = async (
   input: DescribeBrokerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -297,7 +297,7 @@ export const se_DescribeBrokerCommand = async (
  */
 export const se_DescribeBrokerEngineTypesCommand = async (
   input: DescribeBrokerEngineTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -317,7 +317,7 @@ export const se_DescribeBrokerEngineTypesCommand = async (
  */
 export const se_DescribeBrokerInstanceOptionsCommand = async (
   input: DescribeBrokerInstanceOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -339,7 +339,7 @@ export const se_DescribeBrokerInstanceOptionsCommand = async (
  */
 export const se_DescribeConfigurationCommand = async (
   input: DescribeConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -355,7 +355,7 @@ export const se_DescribeConfigurationCommand = async (
  */
 export const se_DescribeConfigurationRevisionCommand = async (
   input: DescribeConfigurationRevisionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -372,7 +372,7 @@ export const se_DescribeConfigurationRevisionCommand = async (
  */
 export const se_DescribeUserCommand = async (
   input: DescribeUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -389,7 +389,7 @@ export const se_DescribeUserCommand = async (
  */
 export const se_ListBrokersCommand = async (
   input: ListBrokersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -408,7 +408,7 @@ export const se_ListBrokersCommand = async (
  */
 export const se_ListConfigurationRevisionsCommand = async (
   input: ListConfigurationRevisionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -428,7 +428,7 @@ export const se_ListConfigurationRevisionsCommand = async (
  */
 export const se_ListConfigurationsCommand = async (
   input: ListConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -447,7 +447,7 @@ export const se_ListConfigurationsCommand = async (
  */
 export const se_ListTagsCommand = async (
   input: ListTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -463,7 +463,7 @@ export const se_ListTagsCommand = async (
  */
 export const se_ListUsersCommand = async (
   input: ListUsersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -483,7 +483,7 @@ export const se_ListUsersCommand = async (
  */
 export const se_PromoteCommand = async (
   input: PromoteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -495,7 +495,7 @@ export const se_PromoteCommand = async (
   body = JSON.stringify(
     take(input, {
       mode: [, , `Mode`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -506,7 +506,7 @@ export const se_PromoteCommand = async (
  */
 export const se_RebootBrokerCommand = async (
   input: RebootBrokerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -522,7 +522,7 @@ export const se_RebootBrokerCommand = async (
  */
 export const se_UpdateBrokerCommand = async (
   input: UpdateBrokerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -543,7 +543,7 @@ export const se_UpdateBrokerCommand = async (
       logs: [, (_) => se_Logs(_, context), `Logs`],
       maintenanceWindowStartTime: [, (_) => se_WeeklyStartTime(_, context), `MaintenanceWindowStartTime`],
       securityGroups: [, (_) => _json(_), `SecurityGroups`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -554,7 +554,7 @@ export const se_UpdateBrokerCommand = async (
  */
 export const se_UpdateConfigurationCommand = async (
   input: UpdateConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -567,7 +567,7 @@ export const se_UpdateConfigurationCommand = async (
     take(input, {
       data: [, , `Data`],
       description: [, , `Description`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -578,7 +578,7 @@ export const se_UpdateConfigurationCommand = async (
  */
 export const se_UpdateUserCommand = async (
   input: UpdateUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -594,7 +594,7 @@ export const se_UpdateUserCommand = async (
       groups: [, (_) => _json(_), `Groups`],
       password: [, , `Password`],
       replicationUser: [, , `ReplicationUser`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -605,7 +605,7 @@ export const se_UpdateUserCommand = async (
  */
 export const de_CreateBrokerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBrokerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -627,7 +627,7 @@ export const de_CreateBrokerCommand = async (
  */
 export const de_CreateConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -653,7 +653,7 @@ export const de_CreateConfigurationCommand = async (
  */
 export const de_CreateTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTagsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -670,7 +670,7 @@ export const de_CreateTagsCommand = async (
  */
 export const de_CreateUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -687,7 +687,7 @@ export const de_CreateUserCommand = async (
  */
 export const de_DeleteBrokerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBrokerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -708,7 +708,7 @@ export const de_DeleteBrokerCommand = async (
  */
 export const de_DeleteTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTagsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -725,7 +725,7 @@ export const de_DeleteTagsCommand = async (
  */
 export const de_DeleteUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -742,7 +742,7 @@ export const de_DeleteUserCommand = async (
  */
 export const de_DescribeBrokerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBrokerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -799,7 +799,7 @@ export const de_DescribeBrokerCommand = async (
  */
 export const de_DescribeBrokerEngineTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBrokerEngineTypesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -822,7 +822,7 @@ export const de_DescribeBrokerEngineTypesCommand = async (
  */
 export const de_DescribeBrokerInstanceOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBrokerInstanceOptionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -845,7 +845,7 @@ export const de_DescribeBrokerInstanceOptionsCommand = async (
  */
 export const de_DescribeConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -875,7 +875,7 @@ export const de_DescribeConfigurationCommand = async (
  */
 export const de_DescribeConfigurationRevisionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConfigurationRevisionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -899,7 +899,7 @@ export const de_DescribeConfigurationRevisionCommand = async (
  */
 export const de_DescribeUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -925,7 +925,7 @@ export const de_DescribeUserCommand = async (
  */
 export const de_ListBrokersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBrokersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -947,7 +947,7 @@ export const de_ListBrokersCommand = async (
  */
 export const de_ListConfigurationRevisionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConfigurationRevisionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -971,7 +971,7 @@ export const de_ListConfigurationRevisionsCommand = async (
  */
 export const de_ListConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -994,7 +994,7 @@ export const de_ListConfigurationsCommand = async (
  */
 export const de_ListTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1015,7 +1015,7 @@ export const de_ListTagsCommand = async (
  */
 export const de_ListUsersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListUsersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1039,7 +1039,7 @@ export const de_ListUsersCommand = async (
  */
 export const de_PromoteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PromoteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1060,7 +1060,7 @@ export const de_PromoteCommand = async (
  */
 export const de_RebootBrokerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RebootBrokerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1077,7 +1077,7 @@ export const de_RebootBrokerCommand = async (
  */
 export const de_UpdateBrokerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBrokerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1115,7 +1115,7 @@ export const de_UpdateBrokerCommand = async (
  */
 export const de_UpdateConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1141,7 +1141,7 @@ export const de_UpdateConfigurationCommand = async (
  */
 export const de_UpdateUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1251,7 +1251,7 @@ const de_ForbiddenExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_InternalServerErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1290,7 +1290,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_UnauthorizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthorizedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

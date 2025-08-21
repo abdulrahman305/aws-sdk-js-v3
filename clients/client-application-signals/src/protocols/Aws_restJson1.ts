@@ -107,7 +107,7 @@ import {
  */
 export const se_BatchGetServiceLevelObjectiveBudgetReportCommand = async (
   input: BatchGetServiceLevelObjectiveBudgetReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -119,7 +119,7 @@ export const se_BatchGetServiceLevelObjectiveBudgetReportCommand = async (
     take(input, {
       SloIds: (_) => _json(_),
       Timestamp: (_) => _.getTime() / 1_000,
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -130,7 +130,7 @@ export const se_BatchGetServiceLevelObjectiveBudgetReportCommand = async (
  */
 export const se_CreateServiceLevelObjectiveCommand = async (
   input: CreateServiceLevelObjectiveCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -145,7 +145,7 @@ export const se_CreateServiceLevelObjectiveCommand = async (
       Name: [],
       SliConfig: (_) => se_ServiceLevelIndicatorConfig(_, context),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -156,7 +156,7 @@ export const se_CreateServiceLevelObjectiveCommand = async (
  */
 export const se_DeleteServiceLevelObjectiveCommand = async (
   input: DeleteServiceLevelObjectiveCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -172,7 +172,7 @@ export const se_DeleteServiceLevelObjectiveCommand = async (
  */
 export const se_GetServiceCommand = async (
   input: GetServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -187,7 +187,7 @@ export const se_GetServiceCommand = async (
   body = JSON.stringify(
     take(input, {
       KeyAttributes: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -198,7 +198,7 @@ export const se_GetServiceCommand = async (
  */
 export const se_GetServiceLevelObjectiveCommand = async (
   input: GetServiceLevelObjectiveCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -214,7 +214,7 @@ export const se_GetServiceLevelObjectiveCommand = async (
  */
 export const se_ListServiceDependenciesCommand = async (
   input: ListServiceDependenciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -231,7 +231,7 @@ export const se_ListServiceDependenciesCommand = async (
   body = JSON.stringify(
     take(input, {
       KeyAttributes: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -242,7 +242,7 @@ export const se_ListServiceDependenciesCommand = async (
  */
 export const se_ListServiceDependentsCommand = async (
   input: ListServiceDependentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -259,7 +259,7 @@ export const se_ListServiceDependentsCommand = async (
   body = JSON.stringify(
     take(input, {
       KeyAttributes: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -270,7 +270,7 @@ export const se_ListServiceDependentsCommand = async (
  */
 export const se_ListServiceLevelObjectivesCommand = async (
   input: ListServiceLevelObjectivesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -286,7 +286,7 @@ export const se_ListServiceLevelObjectivesCommand = async (
   body = JSON.stringify(
     take(input, {
       KeyAttributes: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -297,7 +297,7 @@ export const se_ListServiceLevelObjectivesCommand = async (
  */
 export const se_ListServiceOperationsCommand = async (
   input: ListServiceOperationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -314,7 +314,7 @@ export const se_ListServiceOperationsCommand = async (
   body = JSON.stringify(
     take(input, {
       KeyAttributes: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -325,7 +325,7 @@ export const se_ListServiceOperationsCommand = async (
  */
 export const se_ListServicesCommand = async (
   input: ListServicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -346,7 +346,7 @@ export const se_ListServicesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -364,7 +364,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_StartDiscoveryCommand = async (
   input: StartDiscoveryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -382,7 +382,7 @@ export const se_StartDiscoveryCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -394,7 +394,7 @@ export const se_TagResourceCommand = async (
     take(input, {
       ResourceArn: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -405,7 +405,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -417,7 +417,7 @@ export const se_UntagResourceCommand = async (
     take(input, {
       ResourceArn: [],
       TagKeys: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -428,7 +428,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateServiceLevelObjectiveCommand = async (
   input: UpdateServiceLevelObjectiveCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -442,7 +442,7 @@ export const se_UpdateServiceLevelObjectiveCommand = async (
       Description: [],
       Goal: (_) => se_Goal(_, context),
       SliConfig: (_) => se_ServiceLevelIndicatorConfig(_, context),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -453,7 +453,7 @@ export const se_UpdateServiceLevelObjectiveCommand = async (
  */
 export const de_BatchGetServiceLevelObjectiveBudgetReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetServiceLevelObjectiveBudgetReportCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -476,7 +476,7 @@ export const de_BatchGetServiceLevelObjectiveBudgetReportCommand = async (
  */
 export const de_CreateServiceLevelObjectiveCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateServiceLevelObjectiveCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -497,7 +497,7 @@ export const de_CreateServiceLevelObjectiveCommand = async (
  */
 export const de_DeleteServiceLevelObjectiveCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServiceLevelObjectiveCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -514,7 +514,7 @@ export const de_DeleteServiceLevelObjectiveCommand = async (
  */
 export const de_GetServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -537,7 +537,7 @@ export const de_GetServiceCommand = async (
  */
 export const de_GetServiceLevelObjectiveCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceLevelObjectiveCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -558,7 +558,7 @@ export const de_GetServiceLevelObjectiveCommand = async (
  */
 export const de_ListServiceDependenciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServiceDependenciesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -582,7 +582,7 @@ export const de_ListServiceDependenciesCommand = async (
  */
 export const de_ListServiceDependentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServiceDependentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -606,7 +606,7 @@ export const de_ListServiceDependentsCommand = async (
  */
 export const de_ListServiceLevelObjectivesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServiceLevelObjectivesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -628,7 +628,7 @@ export const de_ListServiceLevelObjectivesCommand = async (
  */
 export const de_ListServiceOperationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServiceOperationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -652,7 +652,7 @@ export const de_ListServiceOperationsCommand = async (
  */
 export const de_ListServicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServicesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -676,7 +676,7 @@ export const de_ListServicesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -697,7 +697,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_StartDiscoveryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartDiscoveryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -714,7 +714,7 @@ export const de_StartDiscoveryCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -731,7 +731,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -748,7 +748,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateServiceLevelObjectiveCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServiceLevelObjectiveCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -808,7 +808,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -845,7 +845,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -867,7 +867,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -951,7 +951,7 @@ const se_Interval = (input: Interval, context: __SerdeContext): any => {
   return Interval.visit(input, {
     CalendarInterval: (value) => ({ CalendarInterval: se_CalendarInterval(value, context) }),
     RollingInterval: (value) => ({ RollingInterval: _json(value) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -1092,7 +1092,7 @@ const de_ServiceLevelObjective = (output: any, context: __SerdeContext): Service
  */
 const de_ServiceLevelObjectiveBudgetReport = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServiceLevelObjectiveBudgetReport => {
   return take(output, {
     Arn: __expectString,
@@ -1115,7 +1115,7 @@ const de_ServiceLevelObjectiveBudgetReport = (
  */
 const de_ServiceLevelObjectiveBudgetReports = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServiceLevelObjectiveBudgetReport[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)

@@ -40,7 +40,7 @@ export class WebSocketFetchHandler {
       | WebSocketFetchHandler
       | WebSocketFetchHandlerOptions
       | Provider<WebSocketFetchHandlerOptions | void>,
-    httpHandler: RequestHandler<any, any> = new FetchHttpHandler()
+    httpHandler: RequestHandler<any, any> = new FetchHttpHandler(),
   ) {
     if (typeof (instanceOrOptions as any)?.handle === "function") {
       // is already an instance of HttpHandler.
@@ -49,13 +49,13 @@ export class WebSocketFetchHandler {
     // input is ctor options or undefined.
     return new WebSocketFetchHandler(
       instanceOrOptions as undefined | WebSocketFetchHandlerOptions | Provider<WebSocketFetchHandlerOptions>,
-      httpHandler
+      httpHandler,
     );
   }
 
   constructor(
     options?: WebSocketFetchHandlerOptions | Provider<WebSocketFetchHandlerOptions>,
-    httpHandler: RequestHandler<any, any> = new FetchHttpHandler()
+    httpHandler: RequestHandler<any, any> = new FetchHttpHandler(),
   ) {
     this.httpHandler = httpHandler;
     if (typeof options === "function") {
@@ -111,7 +111,7 @@ export class WebSocketFetchHandler {
 
   updateHttpClientConfig(
     key: keyof WebSocketFetchHandlerOptions,
-    value: WebSocketFetchHandlerOptions[typeof key]
+    value: WebSocketFetchHandlerOptions[typeof key],
   ): void {
     this.configPromise = this.configPromise.then((config) => {
       (config as Record<typeof key, typeof value>)[key] = value;
@@ -128,7 +128,7 @@ export class WebSocketFetchHandler {
    */
   private removeNotUsableSockets(url: string): void {
     this.sockets[url] = (this.sockets[url] ?? []).filter(
-      (socket) => ![WebSocket.CLOSING, WebSocket.CLOSED].includes(socket.readyState)
+      (socket) => ![WebSocket.CLOSING, WebSocket.CLOSED].includes(socket.readyState),
     );
   }
 

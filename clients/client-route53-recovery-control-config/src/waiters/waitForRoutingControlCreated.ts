@@ -9,7 +9,7 @@ import { Route53RecoveryControlConfigClient } from "../Route53RecoveryControlCon
 
 const checkState = async (
   client: Route53RecoveryControlConfigClient,
-  input: DescribeRoutingControlCommandInput
+  input: DescribeRoutingControlCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -45,7 +45,7 @@ const checkState = async (
  */
 export const waitForRoutingControlCreated = async (
   params: WaiterConfiguration<Route53RecoveryControlConfigClient>,
-  input: DescribeRoutingControlCommandInput
+  input: DescribeRoutingControlCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -57,7 +57,7 @@ export const waitForRoutingControlCreated = async (
  */
 export const waitUntilRoutingControlCreated = async (
   params: WaiterConfiguration<Route53RecoveryControlConfigClient>,
-  input: DescribeRoutingControlCommandInput
+  input: DescribeRoutingControlCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

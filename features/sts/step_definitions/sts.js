@@ -14,7 +14,7 @@ Given("I get an STS session token with a duration of {int} seconds", function (d
       DurationSeconds: parseInt(duration),
     },
     callback,
-    false
+    false,
   );
 });
 

@@ -139,7 +139,7 @@ import {
  */
 export const se_AbortMultipartUploadCommand = async (
   input: AbortMultipartUploadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -157,7 +157,7 @@ export const se_AbortMultipartUploadCommand = async (
  */
 export const se_AbortVaultLockCommand = async (
   input: AbortVaultLockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -174,7 +174,7 @@ export const se_AbortVaultLockCommand = async (
  */
 export const se_AddTagsToVaultCommand = async (
   input: AddTagsToVaultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -190,7 +190,7 @@ export const se_AddTagsToVaultCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -201,7 +201,7 @@ export const se_AddTagsToVaultCommand = async (
  */
 export const se_CompleteMultipartUploadCommand = async (
   input: CompleteMultipartUploadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -222,7 +222,7 @@ export const se_CompleteMultipartUploadCommand = async (
  */
 export const se_CompleteVaultLockCommand = async (
   input: CompleteVaultLockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -240,7 +240,7 @@ export const se_CompleteVaultLockCommand = async (
  */
 export const se_CreateVaultCommand = async (
   input: CreateVaultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -257,7 +257,7 @@ export const se_CreateVaultCommand = async (
  */
 export const se_DeleteArchiveCommand = async (
   input: DeleteArchiveCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -275,7 +275,7 @@ export const se_DeleteArchiveCommand = async (
  */
 export const se_DeleteVaultCommand = async (
   input: DeleteVaultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -292,7 +292,7 @@ export const se_DeleteVaultCommand = async (
  */
 export const se_DeleteVaultAccessPolicyCommand = async (
   input: DeleteVaultAccessPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -309,7 +309,7 @@ export const se_DeleteVaultAccessPolicyCommand = async (
  */
 export const se_DeleteVaultNotificationsCommand = async (
   input: DeleteVaultNotificationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -326,7 +326,7 @@ export const se_DeleteVaultNotificationsCommand = async (
  */
 export const se_DescribeJobCommand = async (
   input: DescribeJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -344,7 +344,7 @@ export const se_DescribeJobCommand = async (
  */
 export const se_DescribeVaultCommand = async (
   input: DescribeVaultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -361,7 +361,7 @@ export const se_DescribeVaultCommand = async (
  */
 export const se_GetDataRetrievalPolicyCommand = async (
   input: GetDataRetrievalPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -377,7 +377,7 @@ export const se_GetDataRetrievalPolicyCommand = async (
  */
 export const se_GetJobOutputCommand = async (
   input: GetJobOutputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -397,7 +397,7 @@ export const se_GetJobOutputCommand = async (
  */
 export const se_GetVaultAccessPolicyCommand = async (
   input: GetVaultAccessPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -414,7 +414,7 @@ export const se_GetVaultAccessPolicyCommand = async (
  */
 export const se_GetVaultLockCommand = async (
   input: GetVaultLockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -431,7 +431,7 @@ export const se_GetVaultLockCommand = async (
  */
 export const se_GetVaultNotificationsCommand = async (
   input: GetVaultNotificationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -448,7 +448,7 @@ export const se_GetVaultNotificationsCommand = async (
  */
 export const se_InitiateJobCommand = async (
   input: InitiateJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -474,7 +474,7 @@ export const se_InitiateJobCommand = async (
  */
 export const se_InitiateMultipartUploadCommand = async (
   input: InitiateMultipartUploadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -494,7 +494,7 @@ export const se_InitiateMultipartUploadCommand = async (
  */
 export const se_InitiateVaultLockCommand = async (
   input: InitiateVaultLockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -520,7 +520,7 @@ export const se_InitiateVaultLockCommand = async (
  */
 export const se_ListJobsCommand = async (
   input: ListJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -543,7 +543,7 @@ export const se_ListJobsCommand = async (
  */
 export const se_ListMultipartUploadsCommand = async (
   input: ListMultipartUploadsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -564,7 +564,7 @@ export const se_ListMultipartUploadsCommand = async (
  */
 export const se_ListPartsCommand = async (
   input: ListPartsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -586,7 +586,7 @@ export const se_ListPartsCommand = async (
  */
 export const se_ListProvisionedCapacityCommand = async (
   input: ListProvisionedCapacityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -602,7 +602,7 @@ export const se_ListProvisionedCapacityCommand = async (
  */
 export const se_ListTagsForVaultCommand = async (
   input: ListTagsForVaultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -619,7 +619,7 @@ export const se_ListTagsForVaultCommand = async (
  */
 export const se_ListVaultsCommand = async (
   input: ListVaultsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -639,7 +639,7 @@ export const se_ListVaultsCommand = async (
  */
 export const se_PurchaseProvisionedCapacityCommand = async (
   input: PurchaseProvisionedCapacityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -655,7 +655,7 @@ export const se_PurchaseProvisionedCapacityCommand = async (
  */
 export const se_RemoveTagsFromVaultCommand = async (
   input: RemoveTagsFromVaultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -671,7 +671,7 @@ export const se_RemoveTagsFromVaultCommand = async (
   body = JSON.stringify(
     take(input, {
       TagKeys: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -682,7 +682,7 @@ export const se_RemoveTagsFromVaultCommand = async (
  */
 export const se_SetDataRetrievalPolicyCommand = async (
   input: SetDataRetrievalPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -694,7 +694,7 @@ export const se_SetDataRetrievalPolicyCommand = async (
   body = JSON.stringify(
     take(input, {
       Policy: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -705,7 +705,7 @@ export const se_SetDataRetrievalPolicyCommand = async (
  */
 export const se_SetVaultAccessPolicyCommand = async (
   input: SetVaultAccessPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -731,7 +731,7 @@ export const se_SetVaultAccessPolicyCommand = async (
  */
 export const se_SetVaultNotificationsCommand = async (
   input: SetVaultNotificationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -757,7 +757,7 @@ export const se_SetVaultNotificationsCommand = async (
  */
 export const se_UploadArchiveCommand = async (
   input: UploadArchiveCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -781,7 +781,7 @@ export const se_UploadArchiveCommand = async (
  */
 export const se_UploadMultipartPartCommand = async (
   input: UploadMultipartPartCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -806,7 +806,7 @@ export const se_UploadMultipartPartCommand = async (
  */
 export const de_AbortMultipartUploadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AbortMultipartUploadCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -823,7 +823,7 @@ export const de_AbortMultipartUploadCommand = async (
  */
 export const de_AbortVaultLockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AbortVaultLockCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -840,7 +840,7 @@ export const de_AbortVaultLockCommand = async (
  */
 export const de_AddTagsToVaultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddTagsToVaultCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -857,7 +857,7 @@ export const de_AddTagsToVaultCommand = async (
  */
 export const de_CompleteMultipartUploadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CompleteMultipartUploadCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -877,7 +877,7 @@ export const de_CompleteMultipartUploadCommand = async (
  */
 export const de_CompleteVaultLockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CompleteVaultLockCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -894,7 +894,7 @@ export const de_CompleteVaultLockCommand = async (
  */
 export const de_CreateVaultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVaultCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -912,7 +912,7 @@ export const de_CreateVaultCommand = async (
  */
 export const de_DeleteArchiveCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteArchiveCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -929,7 +929,7 @@ export const de_DeleteArchiveCommand = async (
  */
 export const de_DeleteVaultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVaultCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -946,7 +946,7 @@ export const de_DeleteVaultCommand = async (
  */
 export const de_DeleteVaultAccessPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVaultAccessPolicyCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -963,7 +963,7 @@ export const de_DeleteVaultAccessPolicyCommand = async (
  */
 export const de_DeleteVaultNotificationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVaultNotificationsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -980,7 +980,7 @@ export const de_DeleteVaultNotificationsCommand = async (
  */
 export const de_DescribeJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1021,7 +1021,7 @@ export const de_DescribeJobCommand = async (
  */
 export const de_DescribeVaultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVaultCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1047,7 +1047,7 @@ export const de_DescribeVaultCommand = async (
  */
 export const de_GetDataRetrievalPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDataRetrievalPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1068,7 +1068,7 @@ export const de_GetDataRetrievalPolicyCommand = async (
  */
 export const de_GetJobOutputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<GetJobOutputCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1095,7 +1095,7 @@ export const de_GetJobOutputCommand = async (
  */
 export const de_GetVaultAccessPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVaultAccessPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1113,7 +1113,7 @@ export const de_GetVaultAccessPolicyCommand = async (
  */
 export const de_GetVaultLockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVaultLockCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1137,7 +1137,7 @@ export const de_GetVaultLockCommand = async (
  */
 export const de_GetVaultNotificationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVaultNotificationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1155,7 +1155,7 @@ export const de_GetVaultNotificationsCommand = async (
  */
 export const de_InitiateJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InitiateJobCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1175,7 +1175,7 @@ export const de_InitiateJobCommand = async (
  */
 export const de_InitiateMultipartUploadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InitiateMultipartUploadCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1194,7 +1194,7 @@ export const de_InitiateMultipartUploadCommand = async (
  */
 export const de_InitiateVaultLockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InitiateVaultLockCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1212,7 +1212,7 @@ export const de_InitiateVaultLockCommand = async (
  */
 export const de_ListJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1234,7 +1234,7 @@ export const de_ListJobsCommand = async (
  */
 export const de_ListMultipartUploadsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMultipartUploadsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1256,7 +1256,7 @@ export const de_ListMultipartUploadsCommand = async (
  */
 export const de_ListPartsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPartsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1283,7 +1283,7 @@ export const de_ListPartsCommand = async (
  */
 export const de_ListProvisionedCapacityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProvisionedCapacityCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1304,7 +1304,7 @@ export const de_ListProvisionedCapacityCommand = async (
  */
 export const de_ListTagsForVaultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForVaultCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1325,7 +1325,7 @@ export const de_ListTagsForVaultCommand = async (
  */
 export const de_ListVaultsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVaultsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1347,7 +1347,7 @@ export const de_ListVaultsCommand = async (
  */
 export const de_PurchaseProvisionedCapacityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PurchaseProvisionedCapacityCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1365,7 +1365,7 @@ export const de_PurchaseProvisionedCapacityCommand = async (
  */
 export const de_RemoveTagsFromVaultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveTagsFromVaultCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1382,7 +1382,7 @@ export const de_RemoveTagsFromVaultCommand = async (
  */
 export const de_SetDataRetrievalPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetDataRetrievalPolicyCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1399,7 +1399,7 @@ export const de_SetDataRetrievalPolicyCommand = async (
  */
 export const de_SetVaultAccessPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetVaultAccessPolicyCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1416,7 +1416,7 @@ export const de_SetVaultAccessPolicyCommand = async (
  */
 export const de_SetVaultNotificationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetVaultNotificationsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1433,7 +1433,7 @@ export const de_SetVaultNotificationsCommand = async (
  */
 export const de_UploadArchiveCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UploadArchiveCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1453,7 +1453,7 @@ export const de_UploadArchiveCommand = async (
  */
 export const de_UploadMultipartPartCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UploadMultipartPartCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1516,7 +1516,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_InsufficientCapacityExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InsufficientCapacityException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1538,7 +1538,7 @@ const de_InsufficientCapacityExceptionRes = async (
  */
 const de_InvalidParameterValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterValueException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1560,7 +1560,7 @@ const de_InvalidParameterValueExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1582,7 +1582,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_MissingParameterValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MissingParameterValueException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1604,7 +1604,7 @@ const de_MissingParameterValueExceptionRes = async (
  */
 const de_PolicyEnforcedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PolicyEnforcedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1626,7 +1626,7 @@ const de_PolicyEnforcedExceptionRes = async (
  */
 const de_RequestTimeoutExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestTimeoutException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1648,7 +1648,7 @@ const de_RequestTimeoutExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1670,7 +1670,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

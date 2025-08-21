@@ -47,7 +47,7 @@ import {
  */
 export const se_GetLatestConfigurationCommand = async (
   input: GetLatestConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -65,7 +65,7 @@ export const se_GetLatestConfigurationCommand = async (
  */
 export const se_StartConfigurationSessionCommand = async (
   input: StartConfigurationSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -79,7 +79,7 @@ export const se_StartConfigurationSessionCommand = async (
       ConfigurationProfileIdentifier: [],
       EnvironmentIdentifier: [],
       RequiredMinimumPollIntervalInSeconds: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -90,7 +90,7 @@ export const se_StartConfigurationSessionCommand = async (
  */
 export const de_GetLatestConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLatestConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -112,7 +112,7 @@ export const de_GetLatestConfigurationCommand = async (
  */
 export const de_StartConfigurationSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartConfigurationSessionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -185,7 +185,7 @@ const de_BadRequestExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -205,7 +205,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

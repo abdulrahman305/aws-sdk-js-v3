@@ -9,7 +9,7 @@ import { DeadlineClient } from "../DeadlineClient";
 
 const checkState = async (
   client: DeadlineClient,
-  input: GetQueueFleetAssociationCommandInput
+  input: GetQueueFleetAssociationCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -34,7 +34,7 @@ const checkState = async (
  */
 export const waitForQueueFleetAssociationStopped = async (
   params: WaiterConfiguration<DeadlineClient>,
-  input: GetQueueFleetAssociationCommandInput
+  input: GetQueueFleetAssociationCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 600 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -46,7 +46,7 @@ export const waitForQueueFleetAssociationStopped = async (
  */
 export const waitUntilQueueFleetAssociationStopped = async (
   params: WaiterConfiguration<DeadlineClient>,
-  input: GetQueueFleetAssociationCommandInput
+  input: GetQueueFleetAssociationCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 600 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

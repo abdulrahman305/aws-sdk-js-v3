@@ -31,13 +31,13 @@ export interface SagemakerEdge {
    */
   getDeployments(
     args: GetDeploymentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDeploymentsCommandOutput>;
   getDeployments(args: GetDeploymentsCommandInput, cb: (err: any, data?: GetDeploymentsCommandOutput) => void): void;
   getDeployments(
     args: GetDeploymentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeploymentsCommandOutput) => void
+    cb: (err: any, data?: GetDeploymentsCommandOutput) => void,
   ): void;
 
   /**
@@ -45,16 +45,16 @@ export interface SagemakerEdge {
    */
   getDeviceRegistration(
     args: GetDeviceRegistrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDeviceRegistrationCommandOutput>;
   getDeviceRegistration(
     args: GetDeviceRegistrationCommandInput,
-    cb: (err: any, data?: GetDeviceRegistrationCommandOutput) => void
+    cb: (err: any, data?: GetDeviceRegistrationCommandOutput) => void,
   ): void;
   getDeviceRegistration(
     args: GetDeviceRegistrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeviceRegistrationCommandOutput) => void
+    cb: (err: any, data?: GetDeviceRegistrationCommandOutput) => void,
   ): void;
 
   /**
@@ -65,7 +65,7 @@ export interface SagemakerEdge {
   sendHeartbeat(
     args: SendHeartbeatCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendHeartbeatCommandOutput) => void
+    cb: (err: any, data?: SendHeartbeatCommandOutput) => void,
   ): void;
 }
 

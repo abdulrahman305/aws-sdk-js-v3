@@ -12714,7 +12714,7 @@ export const DescribeImportSnapshotTasksResultFilterSensitiveLog = (obj: Describ
  * @internal
  */
 export const DescribeLaunchTemplateVersionsResultFilterSensitiveLog = (
-  obj: DescribeLaunchTemplateVersionsResult
+  obj: DescribeLaunchTemplateVersionsResult,
 ): any => ({
   ...obj,
   ...(obj.LaunchTemplateVersions && {

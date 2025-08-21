@@ -44,7 +44,7 @@ const checkState = async (client: DeadlineClient, input: GetFleetCommandInput): 
  */
 export const waitForFleetActive = async (
   params: WaiterConfiguration<DeadlineClient>,
-  input: GetFleetCommandInput
+  input: GetFleetCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 900 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -56,7 +56,7 @@ export const waitForFleetActive = async (
  */
 export const waitUntilFleetActive = async (
   params: WaiterConfiguration<DeadlineClient>,
-  input: GetFleetCommandInput
+  input: GetFleetCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 900 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

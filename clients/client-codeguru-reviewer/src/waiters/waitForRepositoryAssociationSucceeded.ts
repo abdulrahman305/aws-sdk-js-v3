@@ -9,7 +9,7 @@ import {
 
 const checkState = async (
   client: CodeGuruReviewerClient,
-  input: DescribeRepositoryAssociationCommandInput
+  input: DescribeRepositoryAssociationCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -50,7 +50,7 @@ const checkState = async (
  */
 export const waitForRepositoryAssociationSucceeded = async (
   params: WaiterConfiguration<CodeGuruReviewerClient>,
-  input: DescribeRepositoryAssociationCommandInput
+  input: DescribeRepositoryAssociationCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -62,7 +62,7 @@ export const waitForRepositoryAssociationSucceeded = async (
  */
 export const waitUntilRepositoryAssociationSucceeded = async (
   params: WaiterConfiguration<CodeGuruReviewerClient>,
-  input: DescribeRepositoryAssociationCommandInput
+  input: DescribeRepositoryAssociationCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

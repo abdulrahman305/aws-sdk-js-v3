@@ -166,7 +166,7 @@ await ddbDocClient.send(
       id: "1",
       content: "content from DynamoDBDocumentClient",
     },
-  })
+  }),
 );
 ```
 
@@ -271,7 +271,7 @@ command.middlewareStack.addRelativeTo(
   {
     relation: "before",
     toMiddleware: "DocumentMarshall",
-  }
+  },
 );
 command.middlewareStack.addRelativeTo(
   (next) => async (args) => {
@@ -281,7 +281,7 @@ command.middlewareStack.addRelativeTo(
   {
     relation: "after",
     toMiddleware: "DocumentMarshall",
-  }
+  },
 );
 ```
 
@@ -297,7 +297,7 @@ command.middlewareStack.addRelativeTo(
   {
     relation: "after", // <- after for pre-unmarshall
     toMiddleware: "DocumentUnmarshall",
-  }
+  },
 );
 command.middlewareStack.addRelativeTo(
   (next) => async (args) => {
@@ -308,7 +308,7 @@ command.middlewareStack.addRelativeTo(
   {
     relation: "before", // <- before for post-unmarshall
     toMiddleware: "DocumentUnmarshall",
-  }
+  },
 );
 ```
 

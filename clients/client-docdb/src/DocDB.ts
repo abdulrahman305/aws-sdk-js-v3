@@ -337,16 +337,16 @@ export interface DocDB {
    */
   addSourceIdentifierToSubscription(
     args: AddSourceIdentifierToSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AddSourceIdentifierToSubscriptionCommandOutput>;
   addSourceIdentifierToSubscription(
     args: AddSourceIdentifierToSubscriptionCommandInput,
-    cb: (err: any, data?: AddSourceIdentifierToSubscriptionCommandOutput) => void
+    cb: (err: any, data?: AddSourceIdentifierToSubscriptionCommandOutput) => void,
   ): void;
   addSourceIdentifierToSubscription(
     args: AddSourceIdentifierToSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddSourceIdentifierToSubscriptionCommandOutput) => void
+    cb: (err: any, data?: AddSourceIdentifierToSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -354,16 +354,16 @@ export interface DocDB {
    */
   addTagsToResource(
     args: AddTagsToResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AddTagsToResourceCommandOutput>;
   addTagsToResource(
     args: AddTagsToResourceCommandInput,
-    cb: (err: any, data?: AddTagsToResourceCommandOutput) => void
+    cb: (err: any, data?: AddTagsToResourceCommandOutput) => void,
   ): void;
   addTagsToResource(
     args: AddTagsToResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddTagsToResourceCommandOutput) => void
+    cb: (err: any, data?: AddTagsToResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -371,16 +371,16 @@ export interface DocDB {
    */
   applyPendingMaintenanceAction(
     args: ApplyPendingMaintenanceActionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ApplyPendingMaintenanceActionCommandOutput>;
   applyPendingMaintenanceAction(
     args: ApplyPendingMaintenanceActionCommandInput,
-    cb: (err: any, data?: ApplyPendingMaintenanceActionCommandOutput) => void
+    cb: (err: any, data?: ApplyPendingMaintenanceActionCommandOutput) => void,
   ): void;
   applyPendingMaintenanceAction(
     args: ApplyPendingMaintenanceActionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ApplyPendingMaintenanceActionCommandOutput) => void
+    cb: (err: any, data?: ApplyPendingMaintenanceActionCommandOutput) => void,
   ): void;
 
   /**
@@ -388,16 +388,16 @@ export interface DocDB {
    */
   copyDBClusterParameterGroup(
     args: CopyDBClusterParameterGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CopyDBClusterParameterGroupCommandOutput>;
   copyDBClusterParameterGroup(
     args: CopyDBClusterParameterGroupCommandInput,
-    cb: (err: any, data?: CopyDBClusterParameterGroupCommandOutput) => void
+    cb: (err: any, data?: CopyDBClusterParameterGroupCommandOutput) => void,
   ): void;
   copyDBClusterParameterGroup(
     args: CopyDBClusterParameterGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CopyDBClusterParameterGroupCommandOutput) => void
+    cb: (err: any, data?: CopyDBClusterParameterGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -405,16 +405,16 @@ export interface DocDB {
    */
   copyDBClusterSnapshot(
     args: CopyDBClusterSnapshotCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CopyDBClusterSnapshotCommandOutput>;
   copyDBClusterSnapshot(
     args: CopyDBClusterSnapshotCommandInput,
-    cb: (err: any, data?: CopyDBClusterSnapshotCommandOutput) => void
+    cb: (err: any, data?: CopyDBClusterSnapshotCommandOutput) => void,
   ): void;
   copyDBClusterSnapshot(
     args: CopyDBClusterSnapshotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CopyDBClusterSnapshotCommandOutput) => void
+    cb: (err: any, data?: CopyDBClusterSnapshotCommandOutput) => void,
   ): void;
 
   /**
@@ -422,13 +422,13 @@ export interface DocDB {
    */
   createDBCluster(
     args: CreateDBClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDBClusterCommandOutput>;
   createDBCluster(args: CreateDBClusterCommandInput, cb: (err: any, data?: CreateDBClusterCommandOutput) => void): void;
   createDBCluster(
     args: CreateDBClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDBClusterCommandOutput) => void
+    cb: (err: any, data?: CreateDBClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -436,16 +436,16 @@ export interface DocDB {
    */
   createDBClusterParameterGroup(
     args: CreateDBClusterParameterGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDBClusterParameterGroupCommandOutput>;
   createDBClusterParameterGroup(
     args: CreateDBClusterParameterGroupCommandInput,
-    cb: (err: any, data?: CreateDBClusterParameterGroupCommandOutput) => void
+    cb: (err: any, data?: CreateDBClusterParameterGroupCommandOutput) => void,
   ): void;
   createDBClusterParameterGroup(
     args: CreateDBClusterParameterGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDBClusterParameterGroupCommandOutput) => void
+    cb: (err: any, data?: CreateDBClusterParameterGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -453,16 +453,16 @@ export interface DocDB {
    */
   createDBClusterSnapshot(
     args: CreateDBClusterSnapshotCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDBClusterSnapshotCommandOutput>;
   createDBClusterSnapshot(
     args: CreateDBClusterSnapshotCommandInput,
-    cb: (err: any, data?: CreateDBClusterSnapshotCommandOutput) => void
+    cb: (err: any, data?: CreateDBClusterSnapshotCommandOutput) => void,
   ): void;
   createDBClusterSnapshot(
     args: CreateDBClusterSnapshotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDBClusterSnapshotCommandOutput) => void
+    cb: (err: any, data?: CreateDBClusterSnapshotCommandOutput) => void,
   ): void;
 
   /**
@@ -470,16 +470,16 @@ export interface DocDB {
    */
   createDBInstance(
     args: CreateDBInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDBInstanceCommandOutput>;
   createDBInstance(
     args: CreateDBInstanceCommandInput,
-    cb: (err: any, data?: CreateDBInstanceCommandOutput) => void
+    cb: (err: any, data?: CreateDBInstanceCommandOutput) => void,
   ): void;
   createDBInstance(
     args: CreateDBInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDBInstanceCommandOutput) => void
+    cb: (err: any, data?: CreateDBInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -487,16 +487,16 @@ export interface DocDB {
    */
   createDBSubnetGroup(
     args: CreateDBSubnetGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDBSubnetGroupCommandOutput>;
   createDBSubnetGroup(
     args: CreateDBSubnetGroupCommandInput,
-    cb: (err: any, data?: CreateDBSubnetGroupCommandOutput) => void
+    cb: (err: any, data?: CreateDBSubnetGroupCommandOutput) => void,
   ): void;
   createDBSubnetGroup(
     args: CreateDBSubnetGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDBSubnetGroupCommandOutput) => void
+    cb: (err: any, data?: CreateDBSubnetGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -504,16 +504,16 @@ export interface DocDB {
    */
   createEventSubscription(
     args: CreateEventSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEventSubscriptionCommandOutput>;
   createEventSubscription(
     args: CreateEventSubscriptionCommandInput,
-    cb: (err: any, data?: CreateEventSubscriptionCommandOutput) => void
+    cb: (err: any, data?: CreateEventSubscriptionCommandOutput) => void,
   ): void;
   createEventSubscription(
     args: CreateEventSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEventSubscriptionCommandOutput) => void
+    cb: (err: any, data?: CreateEventSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -521,16 +521,16 @@ export interface DocDB {
    */
   createGlobalCluster(
     args: CreateGlobalClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateGlobalClusterCommandOutput>;
   createGlobalCluster(
     args: CreateGlobalClusterCommandInput,
-    cb: (err: any, data?: CreateGlobalClusterCommandOutput) => void
+    cb: (err: any, data?: CreateGlobalClusterCommandOutput) => void,
   ): void;
   createGlobalCluster(
     args: CreateGlobalClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateGlobalClusterCommandOutput) => void
+    cb: (err: any, data?: CreateGlobalClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -538,13 +538,13 @@ export interface DocDB {
    */
   deleteDBCluster(
     args: DeleteDBClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDBClusterCommandOutput>;
   deleteDBCluster(args: DeleteDBClusterCommandInput, cb: (err: any, data?: DeleteDBClusterCommandOutput) => void): void;
   deleteDBCluster(
     args: DeleteDBClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDBClusterCommandOutput) => void
+    cb: (err: any, data?: DeleteDBClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -552,16 +552,16 @@ export interface DocDB {
    */
   deleteDBClusterParameterGroup(
     args: DeleteDBClusterParameterGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDBClusterParameterGroupCommandOutput>;
   deleteDBClusterParameterGroup(
     args: DeleteDBClusterParameterGroupCommandInput,
-    cb: (err: any, data?: DeleteDBClusterParameterGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteDBClusterParameterGroupCommandOutput) => void,
   ): void;
   deleteDBClusterParameterGroup(
     args: DeleteDBClusterParameterGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDBClusterParameterGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteDBClusterParameterGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -569,16 +569,16 @@ export interface DocDB {
    */
   deleteDBClusterSnapshot(
     args: DeleteDBClusterSnapshotCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDBClusterSnapshotCommandOutput>;
   deleteDBClusterSnapshot(
     args: DeleteDBClusterSnapshotCommandInput,
-    cb: (err: any, data?: DeleteDBClusterSnapshotCommandOutput) => void
+    cb: (err: any, data?: DeleteDBClusterSnapshotCommandOutput) => void,
   ): void;
   deleteDBClusterSnapshot(
     args: DeleteDBClusterSnapshotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDBClusterSnapshotCommandOutput) => void
+    cb: (err: any, data?: DeleteDBClusterSnapshotCommandOutput) => void,
   ): void;
 
   /**
@@ -586,16 +586,16 @@ export interface DocDB {
    */
   deleteDBInstance(
     args: DeleteDBInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDBInstanceCommandOutput>;
   deleteDBInstance(
     args: DeleteDBInstanceCommandInput,
-    cb: (err: any, data?: DeleteDBInstanceCommandOutput) => void
+    cb: (err: any, data?: DeleteDBInstanceCommandOutput) => void,
   ): void;
   deleteDBInstance(
     args: DeleteDBInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDBInstanceCommandOutput) => void
+    cb: (err: any, data?: DeleteDBInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -603,16 +603,16 @@ export interface DocDB {
    */
   deleteDBSubnetGroup(
     args: DeleteDBSubnetGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDBSubnetGroupCommandOutput>;
   deleteDBSubnetGroup(
     args: DeleteDBSubnetGroupCommandInput,
-    cb: (err: any, data?: DeleteDBSubnetGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteDBSubnetGroupCommandOutput) => void,
   ): void;
   deleteDBSubnetGroup(
     args: DeleteDBSubnetGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDBSubnetGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteDBSubnetGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -620,16 +620,16 @@ export interface DocDB {
    */
   deleteEventSubscription(
     args: DeleteEventSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEventSubscriptionCommandOutput>;
   deleteEventSubscription(
     args: DeleteEventSubscriptionCommandInput,
-    cb: (err: any, data?: DeleteEventSubscriptionCommandOutput) => void
+    cb: (err: any, data?: DeleteEventSubscriptionCommandOutput) => void,
   ): void;
   deleteEventSubscription(
     args: DeleteEventSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEventSubscriptionCommandOutput) => void
+    cb: (err: any, data?: DeleteEventSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -637,16 +637,16 @@ export interface DocDB {
    */
   deleteGlobalCluster(
     args: DeleteGlobalClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteGlobalClusterCommandOutput>;
   deleteGlobalCluster(
     args: DeleteGlobalClusterCommandInput,
-    cb: (err: any, data?: DeleteGlobalClusterCommandOutput) => void
+    cb: (err: any, data?: DeleteGlobalClusterCommandOutput) => void,
   ): void;
   deleteGlobalCluster(
     args: DeleteGlobalClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteGlobalClusterCommandOutput) => void
+    cb: (err: any, data?: DeleteGlobalClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -655,16 +655,16 @@ export interface DocDB {
   describeCertificates(): Promise<DescribeCertificatesCommandOutput>;
   describeCertificates(
     args: DescribeCertificatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeCertificatesCommandOutput>;
   describeCertificates(
     args: DescribeCertificatesCommandInput,
-    cb: (err: any, data?: DescribeCertificatesCommandOutput) => void
+    cb: (err: any, data?: DescribeCertificatesCommandOutput) => void,
   ): void;
   describeCertificates(
     args: DescribeCertificatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeCertificatesCommandOutput) => void
+    cb: (err: any, data?: DescribeCertificatesCommandOutput) => void,
   ): void;
 
   /**
@@ -673,16 +673,16 @@ export interface DocDB {
   describeDBClusterParameterGroups(): Promise<DescribeDBClusterParameterGroupsCommandOutput>;
   describeDBClusterParameterGroups(
     args: DescribeDBClusterParameterGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDBClusterParameterGroupsCommandOutput>;
   describeDBClusterParameterGroups(
     args: DescribeDBClusterParameterGroupsCommandInput,
-    cb: (err: any, data?: DescribeDBClusterParameterGroupsCommandOutput) => void
+    cb: (err: any, data?: DescribeDBClusterParameterGroupsCommandOutput) => void,
   ): void;
   describeDBClusterParameterGroups(
     args: DescribeDBClusterParameterGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDBClusterParameterGroupsCommandOutput) => void
+    cb: (err: any, data?: DescribeDBClusterParameterGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -690,16 +690,16 @@ export interface DocDB {
    */
   describeDBClusterParameters(
     args: DescribeDBClusterParametersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDBClusterParametersCommandOutput>;
   describeDBClusterParameters(
     args: DescribeDBClusterParametersCommandInput,
-    cb: (err: any, data?: DescribeDBClusterParametersCommandOutput) => void
+    cb: (err: any, data?: DescribeDBClusterParametersCommandOutput) => void,
   ): void;
   describeDBClusterParameters(
     args: DescribeDBClusterParametersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDBClusterParametersCommandOutput) => void
+    cb: (err: any, data?: DescribeDBClusterParametersCommandOutput) => void,
   ): void;
 
   /**
@@ -708,16 +708,16 @@ export interface DocDB {
   describeDBClusters(): Promise<DescribeDBClustersCommandOutput>;
   describeDBClusters(
     args: DescribeDBClustersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDBClustersCommandOutput>;
   describeDBClusters(
     args: DescribeDBClustersCommandInput,
-    cb: (err: any, data?: DescribeDBClustersCommandOutput) => void
+    cb: (err: any, data?: DescribeDBClustersCommandOutput) => void,
   ): void;
   describeDBClusters(
     args: DescribeDBClustersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDBClustersCommandOutput) => void
+    cb: (err: any, data?: DescribeDBClustersCommandOutput) => void,
   ): void;
 
   /**
@@ -725,16 +725,16 @@ export interface DocDB {
    */
   describeDBClusterSnapshotAttributes(
     args: DescribeDBClusterSnapshotAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDBClusterSnapshotAttributesCommandOutput>;
   describeDBClusterSnapshotAttributes(
     args: DescribeDBClusterSnapshotAttributesCommandInput,
-    cb: (err: any, data?: DescribeDBClusterSnapshotAttributesCommandOutput) => void
+    cb: (err: any, data?: DescribeDBClusterSnapshotAttributesCommandOutput) => void,
   ): void;
   describeDBClusterSnapshotAttributes(
     args: DescribeDBClusterSnapshotAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDBClusterSnapshotAttributesCommandOutput) => void
+    cb: (err: any, data?: DescribeDBClusterSnapshotAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -743,16 +743,16 @@ export interface DocDB {
   describeDBClusterSnapshots(): Promise<DescribeDBClusterSnapshotsCommandOutput>;
   describeDBClusterSnapshots(
     args: DescribeDBClusterSnapshotsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDBClusterSnapshotsCommandOutput>;
   describeDBClusterSnapshots(
     args: DescribeDBClusterSnapshotsCommandInput,
-    cb: (err: any, data?: DescribeDBClusterSnapshotsCommandOutput) => void
+    cb: (err: any, data?: DescribeDBClusterSnapshotsCommandOutput) => void,
   ): void;
   describeDBClusterSnapshots(
     args: DescribeDBClusterSnapshotsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDBClusterSnapshotsCommandOutput) => void
+    cb: (err: any, data?: DescribeDBClusterSnapshotsCommandOutput) => void,
   ): void;
 
   /**
@@ -761,16 +761,16 @@ export interface DocDB {
   describeDBEngineVersions(): Promise<DescribeDBEngineVersionsCommandOutput>;
   describeDBEngineVersions(
     args: DescribeDBEngineVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDBEngineVersionsCommandOutput>;
   describeDBEngineVersions(
     args: DescribeDBEngineVersionsCommandInput,
-    cb: (err: any, data?: DescribeDBEngineVersionsCommandOutput) => void
+    cb: (err: any, data?: DescribeDBEngineVersionsCommandOutput) => void,
   ): void;
   describeDBEngineVersions(
     args: DescribeDBEngineVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDBEngineVersionsCommandOutput) => void
+    cb: (err: any, data?: DescribeDBEngineVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -779,16 +779,16 @@ export interface DocDB {
   describeDBInstances(): Promise<DescribeDBInstancesCommandOutput>;
   describeDBInstances(
     args: DescribeDBInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDBInstancesCommandOutput>;
   describeDBInstances(
     args: DescribeDBInstancesCommandInput,
-    cb: (err: any, data?: DescribeDBInstancesCommandOutput) => void
+    cb: (err: any, data?: DescribeDBInstancesCommandOutput) => void,
   ): void;
   describeDBInstances(
     args: DescribeDBInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDBInstancesCommandOutput) => void
+    cb: (err: any, data?: DescribeDBInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -797,16 +797,16 @@ export interface DocDB {
   describeDBSubnetGroups(): Promise<DescribeDBSubnetGroupsCommandOutput>;
   describeDBSubnetGroups(
     args: DescribeDBSubnetGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDBSubnetGroupsCommandOutput>;
   describeDBSubnetGroups(
     args: DescribeDBSubnetGroupsCommandInput,
-    cb: (err: any, data?: DescribeDBSubnetGroupsCommandOutput) => void
+    cb: (err: any, data?: DescribeDBSubnetGroupsCommandOutput) => void,
   ): void;
   describeDBSubnetGroups(
     args: DescribeDBSubnetGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDBSubnetGroupsCommandOutput) => void
+    cb: (err: any, data?: DescribeDBSubnetGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -814,16 +814,16 @@ export interface DocDB {
    */
   describeEngineDefaultClusterParameters(
     args: DescribeEngineDefaultClusterParametersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEngineDefaultClusterParametersCommandOutput>;
   describeEngineDefaultClusterParameters(
     args: DescribeEngineDefaultClusterParametersCommandInput,
-    cb: (err: any, data?: DescribeEngineDefaultClusterParametersCommandOutput) => void
+    cb: (err: any, data?: DescribeEngineDefaultClusterParametersCommandOutput) => void,
   ): void;
   describeEngineDefaultClusterParameters(
     args: DescribeEngineDefaultClusterParametersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEngineDefaultClusterParametersCommandOutput) => void
+    cb: (err: any, data?: DescribeEngineDefaultClusterParametersCommandOutput) => void,
   ): void;
 
   /**
@@ -832,16 +832,16 @@ export interface DocDB {
   describeEventCategories(): Promise<DescribeEventCategoriesCommandOutput>;
   describeEventCategories(
     args: DescribeEventCategoriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEventCategoriesCommandOutput>;
   describeEventCategories(
     args: DescribeEventCategoriesCommandInput,
-    cb: (err: any, data?: DescribeEventCategoriesCommandOutput) => void
+    cb: (err: any, data?: DescribeEventCategoriesCommandOutput) => void,
   ): void;
   describeEventCategories(
     args: DescribeEventCategoriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEventCategoriesCommandOutput) => void
+    cb: (err: any, data?: DescribeEventCategoriesCommandOutput) => void,
   ): void;
 
   /**
@@ -850,13 +850,13 @@ export interface DocDB {
   describeEvents(): Promise<DescribeEventsCommandOutput>;
   describeEvents(
     args: DescribeEventsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEventsCommandOutput>;
   describeEvents(args: DescribeEventsCommandInput, cb: (err: any, data?: DescribeEventsCommandOutput) => void): void;
   describeEvents(
     args: DescribeEventsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEventsCommandOutput) => void
+    cb: (err: any, data?: DescribeEventsCommandOutput) => void,
   ): void;
 
   /**
@@ -865,16 +865,16 @@ export interface DocDB {
   describeEventSubscriptions(): Promise<DescribeEventSubscriptionsCommandOutput>;
   describeEventSubscriptions(
     args: DescribeEventSubscriptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEventSubscriptionsCommandOutput>;
   describeEventSubscriptions(
     args: DescribeEventSubscriptionsCommandInput,
-    cb: (err: any, data?: DescribeEventSubscriptionsCommandOutput) => void
+    cb: (err: any, data?: DescribeEventSubscriptionsCommandOutput) => void,
   ): void;
   describeEventSubscriptions(
     args: DescribeEventSubscriptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEventSubscriptionsCommandOutput) => void
+    cb: (err: any, data?: DescribeEventSubscriptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -883,16 +883,16 @@ export interface DocDB {
   describeGlobalClusters(): Promise<DescribeGlobalClustersCommandOutput>;
   describeGlobalClusters(
     args: DescribeGlobalClustersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeGlobalClustersCommandOutput>;
   describeGlobalClusters(
     args: DescribeGlobalClustersCommandInput,
-    cb: (err: any, data?: DescribeGlobalClustersCommandOutput) => void
+    cb: (err: any, data?: DescribeGlobalClustersCommandOutput) => void,
   ): void;
   describeGlobalClusters(
     args: DescribeGlobalClustersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeGlobalClustersCommandOutput) => void
+    cb: (err: any, data?: DescribeGlobalClustersCommandOutput) => void,
   ): void;
 
   /**
@@ -900,16 +900,16 @@ export interface DocDB {
    */
   describeOrderableDBInstanceOptions(
     args: DescribeOrderableDBInstanceOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeOrderableDBInstanceOptionsCommandOutput>;
   describeOrderableDBInstanceOptions(
     args: DescribeOrderableDBInstanceOptionsCommandInput,
-    cb: (err: any, data?: DescribeOrderableDBInstanceOptionsCommandOutput) => void
+    cb: (err: any, data?: DescribeOrderableDBInstanceOptionsCommandOutput) => void,
   ): void;
   describeOrderableDBInstanceOptions(
     args: DescribeOrderableDBInstanceOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeOrderableDBInstanceOptionsCommandOutput) => void
+    cb: (err: any, data?: DescribeOrderableDBInstanceOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -918,16 +918,16 @@ export interface DocDB {
   describePendingMaintenanceActions(): Promise<DescribePendingMaintenanceActionsCommandOutput>;
   describePendingMaintenanceActions(
     args: DescribePendingMaintenanceActionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePendingMaintenanceActionsCommandOutput>;
   describePendingMaintenanceActions(
     args: DescribePendingMaintenanceActionsCommandInput,
-    cb: (err: any, data?: DescribePendingMaintenanceActionsCommandOutput) => void
+    cb: (err: any, data?: DescribePendingMaintenanceActionsCommandOutput) => void,
   ): void;
   describePendingMaintenanceActions(
     args: DescribePendingMaintenanceActionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePendingMaintenanceActionsCommandOutput) => void
+    cb: (err: any, data?: DescribePendingMaintenanceActionsCommandOutput) => void,
   ): void;
 
   /**
@@ -936,16 +936,16 @@ export interface DocDB {
   failoverDBCluster(): Promise<FailoverDBClusterCommandOutput>;
   failoverDBCluster(
     args: FailoverDBClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<FailoverDBClusterCommandOutput>;
   failoverDBCluster(
     args: FailoverDBClusterCommandInput,
-    cb: (err: any, data?: FailoverDBClusterCommandOutput) => void
+    cb: (err: any, data?: FailoverDBClusterCommandOutput) => void,
   ): void;
   failoverDBCluster(
     args: FailoverDBClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: FailoverDBClusterCommandOutput) => void
+    cb: (err: any, data?: FailoverDBClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -953,16 +953,16 @@ export interface DocDB {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -970,13 +970,13 @@ export interface DocDB {
    */
   modifyDBCluster(
     args: ModifyDBClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ModifyDBClusterCommandOutput>;
   modifyDBCluster(args: ModifyDBClusterCommandInput, cb: (err: any, data?: ModifyDBClusterCommandOutput) => void): void;
   modifyDBCluster(
     args: ModifyDBClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ModifyDBClusterCommandOutput) => void
+    cb: (err: any, data?: ModifyDBClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -984,16 +984,16 @@ export interface DocDB {
    */
   modifyDBClusterParameterGroup(
     args: ModifyDBClusterParameterGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ModifyDBClusterParameterGroupCommandOutput>;
   modifyDBClusterParameterGroup(
     args: ModifyDBClusterParameterGroupCommandInput,
-    cb: (err: any, data?: ModifyDBClusterParameterGroupCommandOutput) => void
+    cb: (err: any, data?: ModifyDBClusterParameterGroupCommandOutput) => void,
   ): void;
   modifyDBClusterParameterGroup(
     args: ModifyDBClusterParameterGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ModifyDBClusterParameterGroupCommandOutput) => void
+    cb: (err: any, data?: ModifyDBClusterParameterGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1001,16 +1001,16 @@ export interface DocDB {
    */
   modifyDBClusterSnapshotAttribute(
     args: ModifyDBClusterSnapshotAttributeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ModifyDBClusterSnapshotAttributeCommandOutput>;
   modifyDBClusterSnapshotAttribute(
     args: ModifyDBClusterSnapshotAttributeCommandInput,
-    cb: (err: any, data?: ModifyDBClusterSnapshotAttributeCommandOutput) => void
+    cb: (err: any, data?: ModifyDBClusterSnapshotAttributeCommandOutput) => void,
   ): void;
   modifyDBClusterSnapshotAttribute(
     args: ModifyDBClusterSnapshotAttributeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ModifyDBClusterSnapshotAttributeCommandOutput) => void
+    cb: (err: any, data?: ModifyDBClusterSnapshotAttributeCommandOutput) => void,
   ): void;
 
   /**
@@ -1018,16 +1018,16 @@ export interface DocDB {
    */
   modifyDBInstance(
     args: ModifyDBInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ModifyDBInstanceCommandOutput>;
   modifyDBInstance(
     args: ModifyDBInstanceCommandInput,
-    cb: (err: any, data?: ModifyDBInstanceCommandOutput) => void
+    cb: (err: any, data?: ModifyDBInstanceCommandOutput) => void,
   ): void;
   modifyDBInstance(
     args: ModifyDBInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ModifyDBInstanceCommandOutput) => void
+    cb: (err: any, data?: ModifyDBInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -1035,16 +1035,16 @@ export interface DocDB {
    */
   modifyDBSubnetGroup(
     args: ModifyDBSubnetGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ModifyDBSubnetGroupCommandOutput>;
   modifyDBSubnetGroup(
     args: ModifyDBSubnetGroupCommandInput,
-    cb: (err: any, data?: ModifyDBSubnetGroupCommandOutput) => void
+    cb: (err: any, data?: ModifyDBSubnetGroupCommandOutput) => void,
   ): void;
   modifyDBSubnetGroup(
     args: ModifyDBSubnetGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ModifyDBSubnetGroupCommandOutput) => void
+    cb: (err: any, data?: ModifyDBSubnetGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1052,16 +1052,16 @@ export interface DocDB {
    */
   modifyEventSubscription(
     args: ModifyEventSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ModifyEventSubscriptionCommandOutput>;
   modifyEventSubscription(
     args: ModifyEventSubscriptionCommandInput,
-    cb: (err: any, data?: ModifyEventSubscriptionCommandOutput) => void
+    cb: (err: any, data?: ModifyEventSubscriptionCommandOutput) => void,
   ): void;
   modifyEventSubscription(
     args: ModifyEventSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ModifyEventSubscriptionCommandOutput) => void
+    cb: (err: any, data?: ModifyEventSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -1069,16 +1069,16 @@ export interface DocDB {
    */
   modifyGlobalCluster(
     args: ModifyGlobalClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ModifyGlobalClusterCommandOutput>;
   modifyGlobalCluster(
     args: ModifyGlobalClusterCommandInput,
-    cb: (err: any, data?: ModifyGlobalClusterCommandOutput) => void
+    cb: (err: any, data?: ModifyGlobalClusterCommandOutput) => void,
   ): void;
   modifyGlobalCluster(
     args: ModifyGlobalClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ModifyGlobalClusterCommandOutput) => void
+    cb: (err: any, data?: ModifyGlobalClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -1086,16 +1086,16 @@ export interface DocDB {
    */
   rebootDBInstance(
     args: RebootDBInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RebootDBInstanceCommandOutput>;
   rebootDBInstance(
     args: RebootDBInstanceCommandInput,
-    cb: (err: any, data?: RebootDBInstanceCommandOutput) => void
+    cb: (err: any, data?: RebootDBInstanceCommandOutput) => void,
   ): void;
   rebootDBInstance(
     args: RebootDBInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RebootDBInstanceCommandOutput) => void
+    cb: (err: any, data?: RebootDBInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -1103,16 +1103,16 @@ export interface DocDB {
    */
   removeFromGlobalCluster(
     args: RemoveFromGlobalClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveFromGlobalClusterCommandOutput>;
   removeFromGlobalCluster(
     args: RemoveFromGlobalClusterCommandInput,
-    cb: (err: any, data?: RemoveFromGlobalClusterCommandOutput) => void
+    cb: (err: any, data?: RemoveFromGlobalClusterCommandOutput) => void,
   ): void;
   removeFromGlobalCluster(
     args: RemoveFromGlobalClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveFromGlobalClusterCommandOutput) => void
+    cb: (err: any, data?: RemoveFromGlobalClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -1120,16 +1120,16 @@ export interface DocDB {
    */
   removeSourceIdentifierFromSubscription(
     args: RemoveSourceIdentifierFromSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveSourceIdentifierFromSubscriptionCommandOutput>;
   removeSourceIdentifierFromSubscription(
     args: RemoveSourceIdentifierFromSubscriptionCommandInput,
-    cb: (err: any, data?: RemoveSourceIdentifierFromSubscriptionCommandOutput) => void
+    cb: (err: any, data?: RemoveSourceIdentifierFromSubscriptionCommandOutput) => void,
   ): void;
   removeSourceIdentifierFromSubscription(
     args: RemoveSourceIdentifierFromSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveSourceIdentifierFromSubscriptionCommandOutput) => void
+    cb: (err: any, data?: RemoveSourceIdentifierFromSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -1137,16 +1137,16 @@ export interface DocDB {
    */
   removeTagsFromResource(
     args: RemoveTagsFromResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveTagsFromResourceCommandOutput>;
   removeTagsFromResource(
     args: RemoveTagsFromResourceCommandInput,
-    cb: (err: any, data?: RemoveTagsFromResourceCommandOutput) => void
+    cb: (err: any, data?: RemoveTagsFromResourceCommandOutput) => void,
   ): void;
   removeTagsFromResource(
     args: RemoveTagsFromResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveTagsFromResourceCommandOutput) => void
+    cb: (err: any, data?: RemoveTagsFromResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1154,16 +1154,16 @@ export interface DocDB {
    */
   resetDBClusterParameterGroup(
     args: ResetDBClusterParameterGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ResetDBClusterParameterGroupCommandOutput>;
   resetDBClusterParameterGroup(
     args: ResetDBClusterParameterGroupCommandInput,
-    cb: (err: any, data?: ResetDBClusterParameterGroupCommandOutput) => void
+    cb: (err: any, data?: ResetDBClusterParameterGroupCommandOutput) => void,
   ): void;
   resetDBClusterParameterGroup(
     args: ResetDBClusterParameterGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ResetDBClusterParameterGroupCommandOutput) => void
+    cb: (err: any, data?: ResetDBClusterParameterGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1171,16 +1171,16 @@ export interface DocDB {
    */
   restoreDBClusterFromSnapshot(
     args: RestoreDBClusterFromSnapshotCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RestoreDBClusterFromSnapshotCommandOutput>;
   restoreDBClusterFromSnapshot(
     args: RestoreDBClusterFromSnapshotCommandInput,
-    cb: (err: any, data?: RestoreDBClusterFromSnapshotCommandOutput) => void
+    cb: (err: any, data?: RestoreDBClusterFromSnapshotCommandOutput) => void,
   ): void;
   restoreDBClusterFromSnapshot(
     args: RestoreDBClusterFromSnapshotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RestoreDBClusterFromSnapshotCommandOutput) => void
+    cb: (err: any, data?: RestoreDBClusterFromSnapshotCommandOutput) => void,
   ): void;
 
   /**
@@ -1188,16 +1188,16 @@ export interface DocDB {
    */
   restoreDBClusterToPointInTime(
     args: RestoreDBClusterToPointInTimeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RestoreDBClusterToPointInTimeCommandOutput>;
   restoreDBClusterToPointInTime(
     args: RestoreDBClusterToPointInTimeCommandInput,
-    cb: (err: any, data?: RestoreDBClusterToPointInTimeCommandOutput) => void
+    cb: (err: any, data?: RestoreDBClusterToPointInTimeCommandOutput) => void,
   ): void;
   restoreDBClusterToPointInTime(
     args: RestoreDBClusterToPointInTimeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RestoreDBClusterToPointInTimeCommandOutput) => void
+    cb: (err: any, data?: RestoreDBClusterToPointInTimeCommandOutput) => void,
   ): void;
 
   /**
@@ -1205,13 +1205,13 @@ export interface DocDB {
    */
   startDBCluster(
     args: StartDBClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartDBClusterCommandOutput>;
   startDBCluster(args: StartDBClusterCommandInput, cb: (err: any, data?: StartDBClusterCommandOutput) => void): void;
   startDBCluster(
     args: StartDBClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartDBClusterCommandOutput) => void
+    cb: (err: any, data?: StartDBClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -1222,7 +1222,7 @@ export interface DocDB {
   stopDBCluster(
     args: StopDBClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopDBClusterCommandOutput) => void
+    cb: (err: any, data?: StopDBClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -1230,16 +1230,16 @@ export interface DocDB {
    */
   switchoverGlobalCluster(
     args: SwitchoverGlobalClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SwitchoverGlobalClusterCommandOutput>;
   switchoverGlobalCluster(
     args: SwitchoverGlobalClusterCommandInput,
-    cb: (err: any, data?: SwitchoverGlobalClusterCommandOutput) => void
+    cb: (err: any, data?: SwitchoverGlobalClusterCommandOutput) => void,
   ): void;
   switchoverGlobalCluster(
     args: SwitchoverGlobalClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SwitchoverGlobalClusterCommandOutput) => void
+    cb: (err: any, data?: SwitchoverGlobalClusterCommandOutput) => void,
   ): void;
 }
 

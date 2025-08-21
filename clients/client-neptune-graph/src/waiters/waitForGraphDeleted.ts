@@ -31,7 +31,7 @@ const checkState = async (client: NeptuneGraphClient, input: GetGraphCommandInpu
  */
 export const waitForGraphDeleted = async (
   params: WaiterConfiguration<NeptuneGraphClient>,
-  input: GetGraphCommandInput
+  input: GetGraphCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 60, maxDelay: 3600 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -43,7 +43,7 @@ export const waitForGraphDeleted = async (
  */
 export const waitUntilGraphDeleted = async (
   params: WaiterConfiguration<NeptuneGraphClient>,
-  input: GetGraphCommandInput
+  input: GetGraphCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 60, maxDelay: 3600 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

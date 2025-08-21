@@ -32,13 +32,13 @@ export interface SageMakerFeatureStoreRuntime {
    */
   batchGetRecord(
     args: BatchGetRecordCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetRecordCommandOutput>;
   batchGetRecord(args: BatchGetRecordCommandInput, cb: (err: any, data?: BatchGetRecordCommandOutput) => void): void;
   batchGetRecord(
     args: BatchGetRecordCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetRecordCommandOutput) => void
+    cb: (err: any, data?: BatchGetRecordCommandOutput) => void,
   ): void;
 
   /**
@@ -49,7 +49,7 @@ export interface SageMakerFeatureStoreRuntime {
   deleteRecord(
     args: DeleteRecordCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRecordCommandOutput) => void
+    cb: (err: any, data?: DeleteRecordCommandOutput) => void,
   ): void;
 
   /**
@@ -60,7 +60,7 @@ export interface SageMakerFeatureStoreRuntime {
   getRecord(
     args: GetRecordCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRecordCommandOutput) => void
+    cb: (err: any, data?: GetRecordCommandOutput) => void,
   ): void;
 
   /**
@@ -71,7 +71,7 @@ export interface SageMakerFeatureStoreRuntime {
   putRecord(
     args: PutRecordCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutRecordCommandOutput) => void
+    cb: (err: any, data?: PutRecordCommandOutput) => void,
   ): void;
 }
 

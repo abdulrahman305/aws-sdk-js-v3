@@ -112,7 +112,7 @@ describe("SignatureV4A", () => {
         SIGV4ATEST_EXPECTED_CANONICAL_PRESIGNED_REQUEST,
         ECC_KEY_PUB.X,
         ECC_KEY_PUB.Y,
-        presigningOptions
+        presigningOptions,
       );
       expect(result).toBe(true);
     });
@@ -125,7 +125,7 @@ describe("SignatureV4A", () => {
       };
       const { headers } = await signerV4A.sign(V4aRequest, option);
       expect(headers[AUTH_HEADER]).toMatch(
-        /^AWS4-ECDSA-P256-SHA256 Credential=AKIDEXAMPLE\/20150830\/service\/aws4_request, SignedHeaders=host;my-header1;x-amz-date;x-amz-region-set, Signature=/
+        /^AWS4-ECDSA-P256-SHA256 Credential=AKIDEXAMPLE\/20150830\/service\/aws4_request, SignedHeaders=host;my-header1;x-amz-date;x-amz-region-set, Signature=/,
       );
       const signature = getSignature(headers[AUTH_HEADER]);
       const result = await signerV4A.verifySigv4aSigning(
@@ -134,7 +134,7 @@ describe("SignatureV4A", () => {
         SIGV4ATEST_EXPECTED_CANONICAL_REQUEST,
         ECC_KEY_PUB.X,
         ECC_KEY_PUB.Y,
-        option
+        option,
       );
       expect(result).toBe(true);
     });

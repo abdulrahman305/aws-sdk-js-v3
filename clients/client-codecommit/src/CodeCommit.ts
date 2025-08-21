@@ -451,16 +451,16 @@ export interface CodeCommit {
    */
   associateApprovalRuleTemplateWithRepository(
     args: AssociateApprovalRuleTemplateWithRepositoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateApprovalRuleTemplateWithRepositoryCommandOutput>;
   associateApprovalRuleTemplateWithRepository(
     args: AssociateApprovalRuleTemplateWithRepositoryCommandInput,
-    cb: (err: any, data?: AssociateApprovalRuleTemplateWithRepositoryCommandOutput) => void
+    cb: (err: any, data?: AssociateApprovalRuleTemplateWithRepositoryCommandOutput) => void,
   ): void;
   associateApprovalRuleTemplateWithRepository(
     args: AssociateApprovalRuleTemplateWithRepositoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateApprovalRuleTemplateWithRepositoryCommandOutput) => void
+    cb: (err: any, data?: AssociateApprovalRuleTemplateWithRepositoryCommandOutput) => void,
   ): void;
 
   /**
@@ -468,16 +468,16 @@ export interface CodeCommit {
    */
   batchAssociateApprovalRuleTemplateWithRepositories(
     args: BatchAssociateApprovalRuleTemplateWithRepositoriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchAssociateApprovalRuleTemplateWithRepositoriesCommandOutput>;
   batchAssociateApprovalRuleTemplateWithRepositories(
     args: BatchAssociateApprovalRuleTemplateWithRepositoriesCommandInput,
-    cb: (err: any, data?: BatchAssociateApprovalRuleTemplateWithRepositoriesCommandOutput) => void
+    cb: (err: any, data?: BatchAssociateApprovalRuleTemplateWithRepositoriesCommandOutput) => void,
   ): void;
   batchAssociateApprovalRuleTemplateWithRepositories(
     args: BatchAssociateApprovalRuleTemplateWithRepositoriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchAssociateApprovalRuleTemplateWithRepositoriesCommandOutput) => void
+    cb: (err: any, data?: BatchAssociateApprovalRuleTemplateWithRepositoriesCommandOutput) => void,
   ): void;
 
   /**
@@ -485,16 +485,16 @@ export interface CodeCommit {
    */
   batchDescribeMergeConflicts(
     args: BatchDescribeMergeConflictsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDescribeMergeConflictsCommandOutput>;
   batchDescribeMergeConflicts(
     args: BatchDescribeMergeConflictsCommandInput,
-    cb: (err: any, data?: BatchDescribeMergeConflictsCommandOutput) => void
+    cb: (err: any, data?: BatchDescribeMergeConflictsCommandOutput) => void,
   ): void;
   batchDescribeMergeConflicts(
     args: BatchDescribeMergeConflictsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDescribeMergeConflictsCommandOutput) => void
+    cb: (err: any, data?: BatchDescribeMergeConflictsCommandOutput) => void,
   ): void;
 
   /**
@@ -502,16 +502,16 @@ export interface CodeCommit {
    */
   batchDisassociateApprovalRuleTemplateFromRepositories(
     args: BatchDisassociateApprovalRuleTemplateFromRepositoriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDisassociateApprovalRuleTemplateFromRepositoriesCommandOutput>;
   batchDisassociateApprovalRuleTemplateFromRepositories(
     args: BatchDisassociateApprovalRuleTemplateFromRepositoriesCommandInput,
-    cb: (err: any, data?: BatchDisassociateApprovalRuleTemplateFromRepositoriesCommandOutput) => void
+    cb: (err: any, data?: BatchDisassociateApprovalRuleTemplateFromRepositoriesCommandOutput) => void,
   ): void;
   batchDisassociateApprovalRuleTemplateFromRepositories(
     args: BatchDisassociateApprovalRuleTemplateFromRepositoriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDisassociateApprovalRuleTemplateFromRepositoriesCommandOutput) => void
+    cb: (err: any, data?: BatchDisassociateApprovalRuleTemplateFromRepositoriesCommandOutput) => void,
   ): void;
 
   /**
@@ -519,13 +519,13 @@ export interface CodeCommit {
    */
   batchGetCommits(
     args: BatchGetCommitsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetCommitsCommandOutput>;
   batchGetCommits(args: BatchGetCommitsCommandInput, cb: (err: any, data?: BatchGetCommitsCommandOutput) => void): void;
   batchGetCommits(
     args: BatchGetCommitsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetCommitsCommandOutput) => void
+    cb: (err: any, data?: BatchGetCommitsCommandOutput) => void,
   ): void;
 
   /**
@@ -533,16 +533,16 @@ export interface CodeCommit {
    */
   batchGetRepositories(
     args: BatchGetRepositoriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetRepositoriesCommandOutput>;
   batchGetRepositories(
     args: BatchGetRepositoriesCommandInput,
-    cb: (err: any, data?: BatchGetRepositoriesCommandOutput) => void
+    cb: (err: any, data?: BatchGetRepositoriesCommandOutput) => void,
   ): void;
   batchGetRepositories(
     args: BatchGetRepositoriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetRepositoriesCommandOutput) => void
+    cb: (err: any, data?: BatchGetRepositoriesCommandOutput) => void,
   ): void;
 
   /**
@@ -550,16 +550,16 @@ export interface CodeCommit {
    */
   createApprovalRuleTemplate(
     args: CreateApprovalRuleTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateApprovalRuleTemplateCommandOutput>;
   createApprovalRuleTemplate(
     args: CreateApprovalRuleTemplateCommandInput,
-    cb: (err: any, data?: CreateApprovalRuleTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateApprovalRuleTemplateCommandOutput) => void,
   ): void;
   createApprovalRuleTemplate(
     args: CreateApprovalRuleTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateApprovalRuleTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateApprovalRuleTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -570,7 +570,7 @@ export interface CodeCommit {
   createBranch(
     args: CreateBranchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateBranchCommandOutput) => void
+    cb: (err: any, data?: CreateBranchCommandOutput) => void,
   ): void;
 
   /**
@@ -581,7 +581,7 @@ export interface CodeCommit {
   createCommit(
     args: CreateCommitCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCommitCommandOutput) => void
+    cb: (err: any, data?: CreateCommitCommandOutput) => void,
   ): void;
 
   /**
@@ -589,16 +589,16 @@ export interface CodeCommit {
    */
   createPullRequest(
     args: CreatePullRequestCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePullRequestCommandOutput>;
   createPullRequest(
     args: CreatePullRequestCommandInput,
-    cb: (err: any, data?: CreatePullRequestCommandOutput) => void
+    cb: (err: any, data?: CreatePullRequestCommandOutput) => void,
   ): void;
   createPullRequest(
     args: CreatePullRequestCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePullRequestCommandOutput) => void
+    cb: (err: any, data?: CreatePullRequestCommandOutput) => void,
   ): void;
 
   /**
@@ -606,16 +606,16 @@ export interface CodeCommit {
    */
   createPullRequestApprovalRule(
     args: CreatePullRequestApprovalRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePullRequestApprovalRuleCommandOutput>;
   createPullRequestApprovalRule(
     args: CreatePullRequestApprovalRuleCommandInput,
-    cb: (err: any, data?: CreatePullRequestApprovalRuleCommandOutput) => void
+    cb: (err: any, data?: CreatePullRequestApprovalRuleCommandOutput) => void,
   ): void;
   createPullRequestApprovalRule(
     args: CreatePullRequestApprovalRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePullRequestApprovalRuleCommandOutput) => void
+    cb: (err: any, data?: CreatePullRequestApprovalRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -623,16 +623,16 @@ export interface CodeCommit {
    */
   createRepository(
     args: CreateRepositoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRepositoryCommandOutput>;
   createRepository(
     args: CreateRepositoryCommandInput,
-    cb: (err: any, data?: CreateRepositoryCommandOutput) => void
+    cb: (err: any, data?: CreateRepositoryCommandOutput) => void,
   ): void;
   createRepository(
     args: CreateRepositoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRepositoryCommandOutput) => void
+    cb: (err: any, data?: CreateRepositoryCommandOutput) => void,
   ): void;
 
   /**
@@ -640,16 +640,16 @@ export interface CodeCommit {
    */
   createUnreferencedMergeCommit(
     args: CreateUnreferencedMergeCommitCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateUnreferencedMergeCommitCommandOutput>;
   createUnreferencedMergeCommit(
     args: CreateUnreferencedMergeCommitCommandInput,
-    cb: (err: any, data?: CreateUnreferencedMergeCommitCommandOutput) => void
+    cb: (err: any, data?: CreateUnreferencedMergeCommitCommandOutput) => void,
   ): void;
   createUnreferencedMergeCommit(
     args: CreateUnreferencedMergeCommitCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateUnreferencedMergeCommitCommandOutput) => void
+    cb: (err: any, data?: CreateUnreferencedMergeCommitCommandOutput) => void,
   ): void;
 
   /**
@@ -657,16 +657,16 @@ export interface CodeCommit {
    */
   deleteApprovalRuleTemplate(
     args: DeleteApprovalRuleTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApprovalRuleTemplateCommandOutput>;
   deleteApprovalRuleTemplate(
     args: DeleteApprovalRuleTemplateCommandInput,
-    cb: (err: any, data?: DeleteApprovalRuleTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteApprovalRuleTemplateCommandOutput) => void,
   ): void;
   deleteApprovalRuleTemplate(
     args: DeleteApprovalRuleTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApprovalRuleTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteApprovalRuleTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -677,7 +677,7 @@ export interface CodeCommit {
   deleteBranch(
     args: DeleteBranchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteBranchCommandOutput) => void
+    cb: (err: any, data?: DeleteBranchCommandOutput) => void,
   ): void;
 
   /**
@@ -685,16 +685,16 @@ export interface CodeCommit {
    */
   deleteCommentContent(
     args: DeleteCommentContentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCommentContentCommandOutput>;
   deleteCommentContent(
     args: DeleteCommentContentCommandInput,
-    cb: (err: any, data?: DeleteCommentContentCommandOutput) => void
+    cb: (err: any, data?: DeleteCommentContentCommandOutput) => void,
   ): void;
   deleteCommentContent(
     args: DeleteCommentContentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCommentContentCommandOutput) => void
+    cb: (err: any, data?: DeleteCommentContentCommandOutput) => void,
   ): void;
 
   /**
@@ -705,7 +705,7 @@ export interface CodeCommit {
   deleteFile(
     args: DeleteFileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFileCommandOutput) => void
+    cb: (err: any, data?: DeleteFileCommandOutput) => void,
   ): void;
 
   /**
@@ -713,16 +713,16 @@ export interface CodeCommit {
    */
   deletePullRequestApprovalRule(
     args: DeletePullRequestApprovalRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePullRequestApprovalRuleCommandOutput>;
   deletePullRequestApprovalRule(
     args: DeletePullRequestApprovalRuleCommandInput,
-    cb: (err: any, data?: DeletePullRequestApprovalRuleCommandOutput) => void
+    cb: (err: any, data?: DeletePullRequestApprovalRuleCommandOutput) => void,
   ): void;
   deletePullRequestApprovalRule(
     args: DeletePullRequestApprovalRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePullRequestApprovalRuleCommandOutput) => void
+    cb: (err: any, data?: DeletePullRequestApprovalRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -730,16 +730,16 @@ export interface CodeCommit {
    */
   deleteRepository(
     args: DeleteRepositoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRepositoryCommandOutput>;
   deleteRepository(
     args: DeleteRepositoryCommandInput,
-    cb: (err: any, data?: DeleteRepositoryCommandOutput) => void
+    cb: (err: any, data?: DeleteRepositoryCommandOutput) => void,
   ): void;
   deleteRepository(
     args: DeleteRepositoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRepositoryCommandOutput) => void
+    cb: (err: any, data?: DeleteRepositoryCommandOutput) => void,
   ): void;
 
   /**
@@ -747,16 +747,16 @@ export interface CodeCommit {
    */
   describeMergeConflicts(
     args: DescribeMergeConflictsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeMergeConflictsCommandOutput>;
   describeMergeConflicts(
     args: DescribeMergeConflictsCommandInput,
-    cb: (err: any, data?: DescribeMergeConflictsCommandOutput) => void
+    cb: (err: any, data?: DescribeMergeConflictsCommandOutput) => void,
   ): void;
   describeMergeConflicts(
     args: DescribeMergeConflictsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeMergeConflictsCommandOutput) => void
+    cb: (err: any, data?: DescribeMergeConflictsCommandOutput) => void,
   ): void;
 
   /**
@@ -764,16 +764,16 @@ export interface CodeCommit {
    */
   describePullRequestEvents(
     args: DescribePullRequestEventsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePullRequestEventsCommandOutput>;
   describePullRequestEvents(
     args: DescribePullRequestEventsCommandInput,
-    cb: (err: any, data?: DescribePullRequestEventsCommandOutput) => void
+    cb: (err: any, data?: DescribePullRequestEventsCommandOutput) => void,
   ): void;
   describePullRequestEvents(
     args: DescribePullRequestEventsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePullRequestEventsCommandOutput) => void
+    cb: (err: any, data?: DescribePullRequestEventsCommandOutput) => void,
   ): void;
 
   /**
@@ -781,16 +781,16 @@ export interface CodeCommit {
    */
   disassociateApprovalRuleTemplateFromRepository(
     args: DisassociateApprovalRuleTemplateFromRepositoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateApprovalRuleTemplateFromRepositoryCommandOutput>;
   disassociateApprovalRuleTemplateFromRepository(
     args: DisassociateApprovalRuleTemplateFromRepositoryCommandInput,
-    cb: (err: any, data?: DisassociateApprovalRuleTemplateFromRepositoryCommandOutput) => void
+    cb: (err: any, data?: DisassociateApprovalRuleTemplateFromRepositoryCommandOutput) => void,
   ): void;
   disassociateApprovalRuleTemplateFromRepository(
     args: DisassociateApprovalRuleTemplateFromRepositoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateApprovalRuleTemplateFromRepositoryCommandOutput) => void
+    cb: (err: any, data?: DisassociateApprovalRuleTemplateFromRepositoryCommandOutput) => void,
   ): void;
 
   /**
@@ -798,16 +798,16 @@ export interface CodeCommit {
    */
   evaluatePullRequestApprovalRules(
     args: EvaluatePullRequestApprovalRulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EvaluatePullRequestApprovalRulesCommandOutput>;
   evaluatePullRequestApprovalRules(
     args: EvaluatePullRequestApprovalRulesCommandInput,
-    cb: (err: any, data?: EvaluatePullRequestApprovalRulesCommandOutput) => void
+    cb: (err: any, data?: EvaluatePullRequestApprovalRulesCommandOutput) => void,
   ): void;
   evaluatePullRequestApprovalRules(
     args: EvaluatePullRequestApprovalRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EvaluatePullRequestApprovalRulesCommandOutput) => void
+    cb: (err: any, data?: EvaluatePullRequestApprovalRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -815,16 +815,16 @@ export interface CodeCommit {
    */
   getApprovalRuleTemplate(
     args: GetApprovalRuleTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetApprovalRuleTemplateCommandOutput>;
   getApprovalRuleTemplate(
     args: GetApprovalRuleTemplateCommandInput,
-    cb: (err: any, data?: GetApprovalRuleTemplateCommandOutput) => void
+    cb: (err: any, data?: GetApprovalRuleTemplateCommandOutput) => void,
   ): void;
   getApprovalRuleTemplate(
     args: GetApprovalRuleTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApprovalRuleTemplateCommandOutput) => void
+    cb: (err: any, data?: GetApprovalRuleTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -835,7 +835,7 @@ export interface CodeCommit {
   getBlob(
     args: GetBlobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBlobCommandOutput) => void
+    cb: (err: any, data?: GetBlobCommandOutput) => void,
   ): void;
 
   /**
@@ -847,7 +847,7 @@ export interface CodeCommit {
   getBranch(
     args: GetBranchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBranchCommandOutput) => void
+    cb: (err: any, data?: GetBranchCommandOutput) => void,
   ): void;
 
   /**
@@ -858,7 +858,7 @@ export interface CodeCommit {
   getComment(
     args: GetCommentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCommentCommandOutput) => void
+    cb: (err: any, data?: GetCommentCommandOutput) => void,
   ): void;
 
   /**
@@ -866,16 +866,16 @@ export interface CodeCommit {
    */
   getCommentReactions(
     args: GetCommentReactionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCommentReactionsCommandOutput>;
   getCommentReactions(
     args: GetCommentReactionsCommandInput,
-    cb: (err: any, data?: GetCommentReactionsCommandOutput) => void
+    cb: (err: any, data?: GetCommentReactionsCommandOutput) => void,
   ): void;
   getCommentReactions(
     args: GetCommentReactionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCommentReactionsCommandOutput) => void
+    cb: (err: any, data?: GetCommentReactionsCommandOutput) => void,
   ): void;
 
   /**
@@ -883,16 +883,16 @@ export interface CodeCommit {
    */
   getCommentsForComparedCommit(
     args: GetCommentsForComparedCommitCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCommentsForComparedCommitCommandOutput>;
   getCommentsForComparedCommit(
     args: GetCommentsForComparedCommitCommandInput,
-    cb: (err: any, data?: GetCommentsForComparedCommitCommandOutput) => void
+    cb: (err: any, data?: GetCommentsForComparedCommitCommandOutput) => void,
   ): void;
   getCommentsForComparedCommit(
     args: GetCommentsForComparedCommitCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCommentsForComparedCommitCommandOutput) => void
+    cb: (err: any, data?: GetCommentsForComparedCommitCommandOutput) => void,
   ): void;
 
   /**
@@ -900,16 +900,16 @@ export interface CodeCommit {
    */
   getCommentsForPullRequest(
     args: GetCommentsForPullRequestCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCommentsForPullRequestCommandOutput>;
   getCommentsForPullRequest(
     args: GetCommentsForPullRequestCommandInput,
-    cb: (err: any, data?: GetCommentsForPullRequestCommandOutput) => void
+    cb: (err: any, data?: GetCommentsForPullRequestCommandOutput) => void,
   ): void;
   getCommentsForPullRequest(
     args: GetCommentsForPullRequestCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCommentsForPullRequestCommandOutput) => void
+    cb: (err: any, data?: GetCommentsForPullRequestCommandOutput) => void,
   ): void;
 
   /**
@@ -920,7 +920,7 @@ export interface CodeCommit {
   getCommit(
     args: GetCommitCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCommitCommandOutput) => void
+    cb: (err: any, data?: GetCommitCommandOutput) => void,
   ): void;
 
   /**
@@ -928,13 +928,13 @@ export interface CodeCommit {
    */
   getDifferences(
     args: GetDifferencesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDifferencesCommandOutput>;
   getDifferences(args: GetDifferencesCommandInput, cb: (err: any, data?: GetDifferencesCommandOutput) => void): void;
   getDifferences(
     args: GetDifferencesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDifferencesCommandOutput) => void
+    cb: (err: any, data?: GetDifferencesCommandOutput) => void,
   ): void;
 
   /**
@@ -945,7 +945,7 @@ export interface CodeCommit {
   getFile(
     args: GetFileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFileCommandOutput) => void
+    cb: (err: any, data?: GetFileCommandOutput) => void,
   ): void;
 
   /**
@@ -956,7 +956,7 @@ export interface CodeCommit {
   getFolder(
     args: GetFolderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFolderCommandOutput) => void
+    cb: (err: any, data?: GetFolderCommandOutput) => void,
   ): void;
 
   /**
@@ -964,13 +964,13 @@ export interface CodeCommit {
    */
   getMergeCommit(
     args: GetMergeCommitCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMergeCommitCommandOutput>;
   getMergeCommit(args: GetMergeCommitCommandInput, cb: (err: any, data?: GetMergeCommitCommandOutput) => void): void;
   getMergeCommit(
     args: GetMergeCommitCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMergeCommitCommandOutput) => void
+    cb: (err: any, data?: GetMergeCommitCommandOutput) => void,
   ): void;
 
   /**
@@ -978,16 +978,16 @@ export interface CodeCommit {
    */
   getMergeConflicts(
     args: GetMergeConflictsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMergeConflictsCommandOutput>;
   getMergeConflicts(
     args: GetMergeConflictsCommandInput,
-    cb: (err: any, data?: GetMergeConflictsCommandOutput) => void
+    cb: (err: any, data?: GetMergeConflictsCommandOutput) => void,
   ): void;
   getMergeConflicts(
     args: GetMergeConflictsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMergeConflictsCommandOutput) => void
+    cb: (err: any, data?: GetMergeConflictsCommandOutput) => void,
   ): void;
 
   /**
@@ -995,13 +995,13 @@ export interface CodeCommit {
    */
   getMergeOptions(
     args: GetMergeOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMergeOptionsCommandOutput>;
   getMergeOptions(args: GetMergeOptionsCommandInput, cb: (err: any, data?: GetMergeOptionsCommandOutput) => void): void;
   getMergeOptions(
     args: GetMergeOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMergeOptionsCommandOutput) => void
+    cb: (err: any, data?: GetMergeOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1009,13 +1009,13 @@ export interface CodeCommit {
    */
   getPullRequest(
     args: GetPullRequestCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPullRequestCommandOutput>;
   getPullRequest(args: GetPullRequestCommandInput, cb: (err: any, data?: GetPullRequestCommandOutput) => void): void;
   getPullRequest(
     args: GetPullRequestCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPullRequestCommandOutput) => void
+    cb: (err: any, data?: GetPullRequestCommandOutput) => void,
   ): void;
 
   /**
@@ -1023,16 +1023,16 @@ export interface CodeCommit {
    */
   getPullRequestApprovalStates(
     args: GetPullRequestApprovalStatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPullRequestApprovalStatesCommandOutput>;
   getPullRequestApprovalStates(
     args: GetPullRequestApprovalStatesCommandInput,
-    cb: (err: any, data?: GetPullRequestApprovalStatesCommandOutput) => void
+    cb: (err: any, data?: GetPullRequestApprovalStatesCommandOutput) => void,
   ): void;
   getPullRequestApprovalStates(
     args: GetPullRequestApprovalStatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPullRequestApprovalStatesCommandOutput) => void
+    cb: (err: any, data?: GetPullRequestApprovalStatesCommandOutput) => void,
   ): void;
 
   /**
@@ -1040,16 +1040,16 @@ export interface CodeCommit {
    */
   getPullRequestOverrideState(
     args: GetPullRequestOverrideStateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPullRequestOverrideStateCommandOutput>;
   getPullRequestOverrideState(
     args: GetPullRequestOverrideStateCommandInput,
-    cb: (err: any, data?: GetPullRequestOverrideStateCommandOutput) => void
+    cb: (err: any, data?: GetPullRequestOverrideStateCommandOutput) => void,
   ): void;
   getPullRequestOverrideState(
     args: GetPullRequestOverrideStateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPullRequestOverrideStateCommandOutput) => void
+    cb: (err: any, data?: GetPullRequestOverrideStateCommandOutput) => void,
   ): void;
 
   /**
@@ -1060,7 +1060,7 @@ export interface CodeCommit {
   getRepository(
     args: GetRepositoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRepositoryCommandOutput) => void
+    cb: (err: any, data?: GetRepositoryCommandOutput) => void,
   ): void;
 
   /**
@@ -1068,16 +1068,16 @@ export interface CodeCommit {
    */
   getRepositoryTriggers(
     args: GetRepositoryTriggersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRepositoryTriggersCommandOutput>;
   getRepositoryTriggers(
     args: GetRepositoryTriggersCommandInput,
-    cb: (err: any, data?: GetRepositoryTriggersCommandOutput) => void
+    cb: (err: any, data?: GetRepositoryTriggersCommandOutput) => void,
   ): void;
   getRepositoryTriggers(
     args: GetRepositoryTriggersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRepositoryTriggersCommandOutput) => void
+    cb: (err: any, data?: GetRepositoryTriggersCommandOutput) => void,
   ): void;
 
   /**
@@ -1086,16 +1086,16 @@ export interface CodeCommit {
   listApprovalRuleTemplates(): Promise<ListApprovalRuleTemplatesCommandOutput>;
   listApprovalRuleTemplates(
     args: ListApprovalRuleTemplatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApprovalRuleTemplatesCommandOutput>;
   listApprovalRuleTemplates(
     args: ListApprovalRuleTemplatesCommandInput,
-    cb: (err: any, data?: ListApprovalRuleTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListApprovalRuleTemplatesCommandOutput) => void,
   ): void;
   listApprovalRuleTemplates(
     args: ListApprovalRuleTemplatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApprovalRuleTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListApprovalRuleTemplatesCommandOutput) => void,
   ): void;
 
   /**
@@ -1103,16 +1103,16 @@ export interface CodeCommit {
    */
   listAssociatedApprovalRuleTemplatesForRepository(
     args: ListAssociatedApprovalRuleTemplatesForRepositoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAssociatedApprovalRuleTemplatesForRepositoryCommandOutput>;
   listAssociatedApprovalRuleTemplatesForRepository(
     args: ListAssociatedApprovalRuleTemplatesForRepositoryCommandInput,
-    cb: (err: any, data?: ListAssociatedApprovalRuleTemplatesForRepositoryCommandOutput) => void
+    cb: (err: any, data?: ListAssociatedApprovalRuleTemplatesForRepositoryCommandOutput) => void,
   ): void;
   listAssociatedApprovalRuleTemplatesForRepository(
     args: ListAssociatedApprovalRuleTemplatesForRepositoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAssociatedApprovalRuleTemplatesForRepositoryCommandOutput) => void
+    cb: (err: any, data?: ListAssociatedApprovalRuleTemplatesForRepositoryCommandOutput) => void,
   ): void;
 
   /**
@@ -1123,7 +1123,7 @@ export interface CodeCommit {
   listBranches(
     args: ListBranchesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBranchesCommandOutput) => void
+    cb: (err: any, data?: ListBranchesCommandOutput) => void,
   ): void;
 
   /**
@@ -1131,16 +1131,16 @@ export interface CodeCommit {
    */
   listFileCommitHistory(
     args: ListFileCommitHistoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFileCommitHistoryCommandOutput>;
   listFileCommitHistory(
     args: ListFileCommitHistoryCommandInput,
-    cb: (err: any, data?: ListFileCommitHistoryCommandOutput) => void
+    cb: (err: any, data?: ListFileCommitHistoryCommandOutput) => void,
   ): void;
   listFileCommitHistory(
     args: ListFileCommitHistoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFileCommitHistoryCommandOutput) => void
+    cb: (err: any, data?: ListFileCommitHistoryCommandOutput) => void,
   ): void;
 
   /**
@@ -1148,16 +1148,16 @@ export interface CodeCommit {
    */
   listPullRequests(
     args: ListPullRequestsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPullRequestsCommandOutput>;
   listPullRequests(
     args: ListPullRequestsCommandInput,
-    cb: (err: any, data?: ListPullRequestsCommandOutput) => void
+    cb: (err: any, data?: ListPullRequestsCommandOutput) => void,
   ): void;
   listPullRequests(
     args: ListPullRequestsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPullRequestsCommandOutput) => void
+    cb: (err: any, data?: ListPullRequestsCommandOutput) => void,
   ): void;
 
   /**
@@ -1166,16 +1166,16 @@ export interface CodeCommit {
   listRepositories(): Promise<ListRepositoriesCommandOutput>;
   listRepositories(
     args: ListRepositoriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRepositoriesCommandOutput>;
   listRepositories(
     args: ListRepositoriesCommandInput,
-    cb: (err: any, data?: ListRepositoriesCommandOutput) => void
+    cb: (err: any, data?: ListRepositoriesCommandOutput) => void,
   ): void;
   listRepositories(
     args: ListRepositoriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRepositoriesCommandOutput) => void
+    cb: (err: any, data?: ListRepositoriesCommandOutput) => void,
   ): void;
 
   /**
@@ -1183,16 +1183,16 @@ export interface CodeCommit {
    */
   listRepositoriesForApprovalRuleTemplate(
     args: ListRepositoriesForApprovalRuleTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRepositoriesForApprovalRuleTemplateCommandOutput>;
   listRepositoriesForApprovalRuleTemplate(
     args: ListRepositoriesForApprovalRuleTemplateCommandInput,
-    cb: (err: any, data?: ListRepositoriesForApprovalRuleTemplateCommandOutput) => void
+    cb: (err: any, data?: ListRepositoriesForApprovalRuleTemplateCommandOutput) => void,
   ): void;
   listRepositoriesForApprovalRuleTemplate(
     args: ListRepositoriesForApprovalRuleTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRepositoriesForApprovalRuleTemplateCommandOutput) => void
+    cb: (err: any, data?: ListRepositoriesForApprovalRuleTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1200,16 +1200,16 @@ export interface CodeCommit {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1217,16 +1217,16 @@ export interface CodeCommit {
    */
   mergeBranchesByFastForward(
     args: MergeBranchesByFastForwardCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<MergeBranchesByFastForwardCommandOutput>;
   mergeBranchesByFastForward(
     args: MergeBranchesByFastForwardCommandInput,
-    cb: (err: any, data?: MergeBranchesByFastForwardCommandOutput) => void
+    cb: (err: any, data?: MergeBranchesByFastForwardCommandOutput) => void,
   ): void;
   mergeBranchesByFastForward(
     args: MergeBranchesByFastForwardCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: MergeBranchesByFastForwardCommandOutput) => void
+    cb: (err: any, data?: MergeBranchesByFastForwardCommandOutput) => void,
   ): void;
 
   /**
@@ -1234,16 +1234,16 @@ export interface CodeCommit {
    */
   mergeBranchesBySquash(
     args: MergeBranchesBySquashCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<MergeBranchesBySquashCommandOutput>;
   mergeBranchesBySquash(
     args: MergeBranchesBySquashCommandInput,
-    cb: (err: any, data?: MergeBranchesBySquashCommandOutput) => void
+    cb: (err: any, data?: MergeBranchesBySquashCommandOutput) => void,
   ): void;
   mergeBranchesBySquash(
     args: MergeBranchesBySquashCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: MergeBranchesBySquashCommandOutput) => void
+    cb: (err: any, data?: MergeBranchesBySquashCommandOutput) => void,
   ): void;
 
   /**
@@ -1251,16 +1251,16 @@ export interface CodeCommit {
    */
   mergeBranchesByThreeWay(
     args: MergeBranchesByThreeWayCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<MergeBranchesByThreeWayCommandOutput>;
   mergeBranchesByThreeWay(
     args: MergeBranchesByThreeWayCommandInput,
-    cb: (err: any, data?: MergeBranchesByThreeWayCommandOutput) => void
+    cb: (err: any, data?: MergeBranchesByThreeWayCommandOutput) => void,
   ): void;
   mergeBranchesByThreeWay(
     args: MergeBranchesByThreeWayCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: MergeBranchesByThreeWayCommandOutput) => void
+    cb: (err: any, data?: MergeBranchesByThreeWayCommandOutput) => void,
   ): void;
 
   /**
@@ -1268,16 +1268,16 @@ export interface CodeCommit {
    */
   mergePullRequestByFastForward(
     args: MergePullRequestByFastForwardCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<MergePullRequestByFastForwardCommandOutput>;
   mergePullRequestByFastForward(
     args: MergePullRequestByFastForwardCommandInput,
-    cb: (err: any, data?: MergePullRequestByFastForwardCommandOutput) => void
+    cb: (err: any, data?: MergePullRequestByFastForwardCommandOutput) => void,
   ): void;
   mergePullRequestByFastForward(
     args: MergePullRequestByFastForwardCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: MergePullRequestByFastForwardCommandOutput) => void
+    cb: (err: any, data?: MergePullRequestByFastForwardCommandOutput) => void,
   ): void;
 
   /**
@@ -1285,16 +1285,16 @@ export interface CodeCommit {
    */
   mergePullRequestBySquash(
     args: MergePullRequestBySquashCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<MergePullRequestBySquashCommandOutput>;
   mergePullRequestBySquash(
     args: MergePullRequestBySquashCommandInput,
-    cb: (err: any, data?: MergePullRequestBySquashCommandOutput) => void
+    cb: (err: any, data?: MergePullRequestBySquashCommandOutput) => void,
   ): void;
   mergePullRequestBySquash(
     args: MergePullRequestBySquashCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: MergePullRequestBySquashCommandOutput) => void
+    cb: (err: any, data?: MergePullRequestBySquashCommandOutput) => void,
   ): void;
 
   /**
@@ -1302,16 +1302,16 @@ export interface CodeCommit {
    */
   mergePullRequestByThreeWay(
     args: MergePullRequestByThreeWayCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<MergePullRequestByThreeWayCommandOutput>;
   mergePullRequestByThreeWay(
     args: MergePullRequestByThreeWayCommandInput,
-    cb: (err: any, data?: MergePullRequestByThreeWayCommandOutput) => void
+    cb: (err: any, data?: MergePullRequestByThreeWayCommandOutput) => void,
   ): void;
   mergePullRequestByThreeWay(
     args: MergePullRequestByThreeWayCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: MergePullRequestByThreeWayCommandOutput) => void
+    cb: (err: any, data?: MergePullRequestByThreeWayCommandOutput) => void,
   ): void;
 
   /**
@@ -1319,16 +1319,16 @@ export interface CodeCommit {
    */
   overridePullRequestApprovalRules(
     args: OverridePullRequestApprovalRulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<OverridePullRequestApprovalRulesCommandOutput>;
   overridePullRequestApprovalRules(
     args: OverridePullRequestApprovalRulesCommandInput,
-    cb: (err: any, data?: OverridePullRequestApprovalRulesCommandOutput) => void
+    cb: (err: any, data?: OverridePullRequestApprovalRulesCommandOutput) => void,
   ): void;
   overridePullRequestApprovalRules(
     args: OverridePullRequestApprovalRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: OverridePullRequestApprovalRulesCommandOutput) => void
+    cb: (err: any, data?: OverridePullRequestApprovalRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -1336,16 +1336,16 @@ export interface CodeCommit {
    */
   postCommentForComparedCommit(
     args: PostCommentForComparedCommitCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PostCommentForComparedCommitCommandOutput>;
   postCommentForComparedCommit(
     args: PostCommentForComparedCommitCommandInput,
-    cb: (err: any, data?: PostCommentForComparedCommitCommandOutput) => void
+    cb: (err: any, data?: PostCommentForComparedCommitCommandOutput) => void,
   ): void;
   postCommentForComparedCommit(
     args: PostCommentForComparedCommitCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PostCommentForComparedCommitCommandOutput) => void
+    cb: (err: any, data?: PostCommentForComparedCommitCommandOutput) => void,
   ): void;
 
   /**
@@ -1353,16 +1353,16 @@ export interface CodeCommit {
    */
   postCommentForPullRequest(
     args: PostCommentForPullRequestCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PostCommentForPullRequestCommandOutput>;
   postCommentForPullRequest(
     args: PostCommentForPullRequestCommandInput,
-    cb: (err: any, data?: PostCommentForPullRequestCommandOutput) => void
+    cb: (err: any, data?: PostCommentForPullRequestCommandOutput) => void,
   ): void;
   postCommentForPullRequest(
     args: PostCommentForPullRequestCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PostCommentForPullRequestCommandOutput) => void
+    cb: (err: any, data?: PostCommentForPullRequestCommandOutput) => void,
   ): void;
 
   /**
@@ -1370,16 +1370,16 @@ export interface CodeCommit {
    */
   postCommentReply(
     args: PostCommentReplyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PostCommentReplyCommandOutput>;
   postCommentReply(
     args: PostCommentReplyCommandInput,
-    cb: (err: any, data?: PostCommentReplyCommandOutput) => void
+    cb: (err: any, data?: PostCommentReplyCommandOutput) => void,
   ): void;
   postCommentReply(
     args: PostCommentReplyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PostCommentReplyCommandOutput) => void
+    cb: (err: any, data?: PostCommentReplyCommandOutput) => void,
   ): void;
 
   /**
@@ -1387,16 +1387,16 @@ export interface CodeCommit {
    */
   putCommentReaction(
     args: PutCommentReactionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutCommentReactionCommandOutput>;
   putCommentReaction(
     args: PutCommentReactionCommandInput,
-    cb: (err: any, data?: PutCommentReactionCommandOutput) => void
+    cb: (err: any, data?: PutCommentReactionCommandOutput) => void,
   ): void;
   putCommentReaction(
     args: PutCommentReactionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutCommentReactionCommandOutput) => void
+    cb: (err: any, data?: PutCommentReactionCommandOutput) => void,
   ): void;
 
   /**
@@ -1407,7 +1407,7 @@ export interface CodeCommit {
   putFile(
     args: PutFileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutFileCommandOutput) => void
+    cb: (err: any, data?: PutFileCommandOutput) => void,
   ): void;
 
   /**
@@ -1415,16 +1415,16 @@ export interface CodeCommit {
    */
   putRepositoryTriggers(
     args: PutRepositoryTriggersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutRepositoryTriggersCommandOutput>;
   putRepositoryTriggers(
     args: PutRepositoryTriggersCommandInput,
-    cb: (err: any, data?: PutRepositoryTriggersCommandOutput) => void
+    cb: (err: any, data?: PutRepositoryTriggersCommandOutput) => void,
   ): void;
   putRepositoryTriggers(
     args: PutRepositoryTriggersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutRepositoryTriggersCommandOutput) => void
+    cb: (err: any, data?: PutRepositoryTriggersCommandOutput) => void,
   ): void;
 
   /**
@@ -1435,7 +1435,7 @@ export interface CodeCommit {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1443,16 +1443,16 @@ export interface CodeCommit {
    */
   testRepositoryTriggers(
     args: TestRepositoryTriggersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<TestRepositoryTriggersCommandOutput>;
   testRepositoryTriggers(
     args: TestRepositoryTriggersCommandInput,
-    cb: (err: any, data?: TestRepositoryTriggersCommandOutput) => void
+    cb: (err: any, data?: TestRepositoryTriggersCommandOutput) => void,
   ): void;
   testRepositoryTriggers(
     args: TestRepositoryTriggersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TestRepositoryTriggersCommandOutput) => void
+    cb: (err: any, data?: TestRepositoryTriggersCommandOutput) => void,
   ): void;
 
   /**
@@ -1463,7 +1463,7 @@ export interface CodeCommit {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1471,16 +1471,16 @@ export interface CodeCommit {
    */
   updateApprovalRuleTemplateContent(
     args: UpdateApprovalRuleTemplateContentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApprovalRuleTemplateContentCommandOutput>;
   updateApprovalRuleTemplateContent(
     args: UpdateApprovalRuleTemplateContentCommandInput,
-    cb: (err: any, data?: UpdateApprovalRuleTemplateContentCommandOutput) => void
+    cb: (err: any, data?: UpdateApprovalRuleTemplateContentCommandOutput) => void,
   ): void;
   updateApprovalRuleTemplateContent(
     args: UpdateApprovalRuleTemplateContentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApprovalRuleTemplateContentCommandOutput) => void
+    cb: (err: any, data?: UpdateApprovalRuleTemplateContentCommandOutput) => void,
   ): void;
 
   /**
@@ -1488,16 +1488,16 @@ export interface CodeCommit {
    */
   updateApprovalRuleTemplateDescription(
     args: UpdateApprovalRuleTemplateDescriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApprovalRuleTemplateDescriptionCommandOutput>;
   updateApprovalRuleTemplateDescription(
     args: UpdateApprovalRuleTemplateDescriptionCommandInput,
-    cb: (err: any, data?: UpdateApprovalRuleTemplateDescriptionCommandOutput) => void
+    cb: (err: any, data?: UpdateApprovalRuleTemplateDescriptionCommandOutput) => void,
   ): void;
   updateApprovalRuleTemplateDescription(
     args: UpdateApprovalRuleTemplateDescriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApprovalRuleTemplateDescriptionCommandOutput) => void
+    cb: (err: any, data?: UpdateApprovalRuleTemplateDescriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -1505,16 +1505,16 @@ export interface CodeCommit {
    */
   updateApprovalRuleTemplateName(
     args: UpdateApprovalRuleTemplateNameCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApprovalRuleTemplateNameCommandOutput>;
   updateApprovalRuleTemplateName(
     args: UpdateApprovalRuleTemplateNameCommandInput,
-    cb: (err: any, data?: UpdateApprovalRuleTemplateNameCommandOutput) => void
+    cb: (err: any, data?: UpdateApprovalRuleTemplateNameCommandOutput) => void,
   ): void;
   updateApprovalRuleTemplateName(
     args: UpdateApprovalRuleTemplateNameCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApprovalRuleTemplateNameCommandOutput) => void
+    cb: (err: any, data?: UpdateApprovalRuleTemplateNameCommandOutput) => void,
   ): void;
 
   /**
@@ -1525,7 +1525,7 @@ export interface CodeCommit {
   updateComment(
     args: UpdateCommentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateCommentCommandOutput) => void
+    cb: (err: any, data?: UpdateCommentCommandOutput) => void,
   ): void;
 
   /**
@@ -1533,16 +1533,16 @@ export interface CodeCommit {
    */
   updateDefaultBranch(
     args: UpdateDefaultBranchCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDefaultBranchCommandOutput>;
   updateDefaultBranch(
     args: UpdateDefaultBranchCommandInput,
-    cb: (err: any, data?: UpdateDefaultBranchCommandOutput) => void
+    cb: (err: any, data?: UpdateDefaultBranchCommandOutput) => void,
   ): void;
   updateDefaultBranch(
     args: UpdateDefaultBranchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDefaultBranchCommandOutput) => void
+    cb: (err: any, data?: UpdateDefaultBranchCommandOutput) => void,
   ): void;
 
   /**
@@ -1550,16 +1550,16 @@ export interface CodeCommit {
    */
   updatePullRequestApprovalRuleContent(
     args: UpdatePullRequestApprovalRuleContentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePullRequestApprovalRuleContentCommandOutput>;
   updatePullRequestApprovalRuleContent(
     args: UpdatePullRequestApprovalRuleContentCommandInput,
-    cb: (err: any, data?: UpdatePullRequestApprovalRuleContentCommandOutput) => void
+    cb: (err: any, data?: UpdatePullRequestApprovalRuleContentCommandOutput) => void,
   ): void;
   updatePullRequestApprovalRuleContent(
     args: UpdatePullRequestApprovalRuleContentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePullRequestApprovalRuleContentCommandOutput) => void
+    cb: (err: any, data?: UpdatePullRequestApprovalRuleContentCommandOutput) => void,
   ): void;
 
   /**
@@ -1567,16 +1567,16 @@ export interface CodeCommit {
    */
   updatePullRequestApprovalState(
     args: UpdatePullRequestApprovalStateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePullRequestApprovalStateCommandOutput>;
   updatePullRequestApprovalState(
     args: UpdatePullRequestApprovalStateCommandInput,
-    cb: (err: any, data?: UpdatePullRequestApprovalStateCommandOutput) => void
+    cb: (err: any, data?: UpdatePullRequestApprovalStateCommandOutput) => void,
   ): void;
   updatePullRequestApprovalState(
     args: UpdatePullRequestApprovalStateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePullRequestApprovalStateCommandOutput) => void
+    cb: (err: any, data?: UpdatePullRequestApprovalStateCommandOutput) => void,
   ): void;
 
   /**
@@ -1584,16 +1584,16 @@ export interface CodeCommit {
    */
   updatePullRequestDescription(
     args: UpdatePullRequestDescriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePullRequestDescriptionCommandOutput>;
   updatePullRequestDescription(
     args: UpdatePullRequestDescriptionCommandInput,
-    cb: (err: any, data?: UpdatePullRequestDescriptionCommandOutput) => void
+    cb: (err: any, data?: UpdatePullRequestDescriptionCommandOutput) => void,
   ): void;
   updatePullRequestDescription(
     args: UpdatePullRequestDescriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePullRequestDescriptionCommandOutput) => void
+    cb: (err: any, data?: UpdatePullRequestDescriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -1601,16 +1601,16 @@ export interface CodeCommit {
    */
   updatePullRequestStatus(
     args: UpdatePullRequestStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePullRequestStatusCommandOutput>;
   updatePullRequestStatus(
     args: UpdatePullRequestStatusCommandInput,
-    cb: (err: any, data?: UpdatePullRequestStatusCommandOutput) => void
+    cb: (err: any, data?: UpdatePullRequestStatusCommandOutput) => void,
   ): void;
   updatePullRequestStatus(
     args: UpdatePullRequestStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePullRequestStatusCommandOutput) => void
+    cb: (err: any, data?: UpdatePullRequestStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -1618,16 +1618,16 @@ export interface CodeCommit {
    */
   updatePullRequestTitle(
     args: UpdatePullRequestTitleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePullRequestTitleCommandOutput>;
   updatePullRequestTitle(
     args: UpdatePullRequestTitleCommandInput,
-    cb: (err: any, data?: UpdatePullRequestTitleCommandOutput) => void
+    cb: (err: any, data?: UpdatePullRequestTitleCommandOutput) => void,
   ): void;
   updatePullRequestTitle(
     args: UpdatePullRequestTitleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePullRequestTitleCommandOutput) => void
+    cb: (err: any, data?: UpdatePullRequestTitleCommandOutput) => void,
   ): void;
 
   /**
@@ -1635,16 +1635,16 @@ export interface CodeCommit {
    */
   updateRepositoryDescription(
     args: UpdateRepositoryDescriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRepositoryDescriptionCommandOutput>;
   updateRepositoryDescription(
     args: UpdateRepositoryDescriptionCommandInput,
-    cb: (err: any, data?: UpdateRepositoryDescriptionCommandOutput) => void
+    cb: (err: any, data?: UpdateRepositoryDescriptionCommandOutput) => void,
   ): void;
   updateRepositoryDescription(
     args: UpdateRepositoryDescriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRepositoryDescriptionCommandOutput) => void
+    cb: (err: any, data?: UpdateRepositoryDescriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -1652,16 +1652,16 @@ export interface CodeCommit {
    */
   updateRepositoryEncryptionKey(
     args: UpdateRepositoryEncryptionKeyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRepositoryEncryptionKeyCommandOutput>;
   updateRepositoryEncryptionKey(
     args: UpdateRepositoryEncryptionKeyCommandInput,
-    cb: (err: any, data?: UpdateRepositoryEncryptionKeyCommandOutput) => void
+    cb: (err: any, data?: UpdateRepositoryEncryptionKeyCommandOutput) => void,
   ): void;
   updateRepositoryEncryptionKey(
     args: UpdateRepositoryEncryptionKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRepositoryEncryptionKeyCommandOutput) => void
+    cb: (err: any, data?: UpdateRepositoryEncryptionKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -1669,16 +1669,16 @@ export interface CodeCommit {
    */
   updateRepositoryName(
     args: UpdateRepositoryNameCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRepositoryNameCommandOutput>;
   updateRepositoryName(
     args: UpdateRepositoryNameCommandInput,
-    cb: (err: any, data?: UpdateRepositoryNameCommandOutput) => void
+    cb: (err: any, data?: UpdateRepositoryNameCommandOutput) => void,
   ): void;
   updateRepositoryName(
     args: UpdateRepositoryNameCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRepositoryNameCommandOutput) => void
+    cb: (err: any, data?: UpdateRepositoryNameCommandOutput) => void,
   ): void;
 }
 

@@ -8,7 +8,7 @@ import { ruleSet } from "./ruleset";
 
 export const defaultEndpointResolver = (
   endpointParams: EndpointParameters,
-  context: { logger?: Logger } = {}
+  context: { logger?: Logger } = {},
 ): EndpointV2 => {
   return resolveEndpoint(ruleSet, {
     endpointParams: endpointParams as EndpointParams,

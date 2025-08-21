@@ -360,7 +360,7 @@ export interface AppSync {
   associateApi(
     args: AssociateApiCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateApiCommandOutput) => void
+    cb: (err: any, data?: AssociateApiCommandOutput) => void,
   ): void;
 
   /**
@@ -368,16 +368,16 @@ export interface AppSync {
    */
   associateMergedGraphqlApi(
     args: AssociateMergedGraphqlApiCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateMergedGraphqlApiCommandOutput>;
   associateMergedGraphqlApi(
     args: AssociateMergedGraphqlApiCommandInput,
-    cb: (err: any, data?: AssociateMergedGraphqlApiCommandOutput) => void
+    cb: (err: any, data?: AssociateMergedGraphqlApiCommandOutput) => void,
   ): void;
   associateMergedGraphqlApi(
     args: AssociateMergedGraphqlApiCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateMergedGraphqlApiCommandOutput) => void
+    cb: (err: any, data?: AssociateMergedGraphqlApiCommandOutput) => void,
   ): void;
 
   /**
@@ -385,16 +385,16 @@ export interface AppSync {
    */
   associateSourceGraphqlApi(
     args: AssociateSourceGraphqlApiCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateSourceGraphqlApiCommandOutput>;
   associateSourceGraphqlApi(
     args: AssociateSourceGraphqlApiCommandInput,
-    cb: (err: any, data?: AssociateSourceGraphqlApiCommandOutput) => void
+    cb: (err: any, data?: AssociateSourceGraphqlApiCommandOutput) => void,
   ): void;
   associateSourceGraphqlApi(
     args: AssociateSourceGraphqlApiCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateSourceGraphqlApiCommandOutput) => void
+    cb: (err: any, data?: AssociateSourceGraphqlApiCommandOutput) => void,
   ): void;
 
   /**
@@ -402,13 +402,13 @@ export interface AppSync {
    */
   createApiCache(
     args: CreateApiCacheCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateApiCacheCommandOutput>;
   createApiCache(args: CreateApiCacheCommandInput, cb: (err: any, data?: CreateApiCacheCommandOutput) => void): void;
   createApiCache(
     args: CreateApiCacheCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateApiCacheCommandOutput) => void
+    cb: (err: any, data?: CreateApiCacheCommandOutput) => void,
   ): void;
 
   /**
@@ -419,7 +419,7 @@ export interface AppSync {
   createApiKey(
     args: CreateApiKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateApiKeyCommandOutput) => void
+    cb: (err: any, data?: CreateApiKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -427,16 +427,16 @@ export interface AppSync {
    */
   createDataSource(
     args: CreateDataSourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDataSourceCommandOutput>;
   createDataSource(
     args: CreateDataSourceCommandInput,
-    cb: (err: any, data?: CreateDataSourceCommandOutput) => void
+    cb: (err: any, data?: CreateDataSourceCommandOutput) => void,
   ): void;
   createDataSource(
     args: CreateDataSourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDataSourceCommandOutput) => void
+    cb: (err: any, data?: CreateDataSourceCommandOutput) => void,
   ): void;
 
   /**
@@ -444,16 +444,16 @@ export interface AppSync {
    */
   createDomainName(
     args: CreateDomainNameCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDomainNameCommandOutput>;
   createDomainName(
     args: CreateDomainNameCommandInput,
-    cb: (err: any, data?: CreateDomainNameCommandOutput) => void
+    cb: (err: any, data?: CreateDomainNameCommandOutput) => void,
   ): void;
   createDomainName(
     args: CreateDomainNameCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDomainNameCommandOutput) => void
+    cb: (err: any, data?: CreateDomainNameCommandOutput) => void,
   ): void;
 
   /**
@@ -461,13 +461,13 @@ export interface AppSync {
    */
   createFunction(
     args: CreateFunctionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateFunctionCommandOutput>;
   createFunction(args: CreateFunctionCommandInput, cb: (err: any, data?: CreateFunctionCommandOutput) => void): void;
   createFunction(
     args: CreateFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateFunctionCommandOutput) => void
+    cb: (err: any, data?: CreateFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -475,16 +475,16 @@ export interface AppSync {
    */
   createGraphqlApi(
     args: CreateGraphqlApiCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateGraphqlApiCommandOutput>;
   createGraphqlApi(
     args: CreateGraphqlApiCommandInput,
-    cb: (err: any, data?: CreateGraphqlApiCommandOutput) => void
+    cb: (err: any, data?: CreateGraphqlApiCommandOutput) => void,
   ): void;
   createGraphqlApi(
     args: CreateGraphqlApiCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateGraphqlApiCommandOutput) => void
+    cb: (err: any, data?: CreateGraphqlApiCommandOutput) => void,
   ): void;
 
   /**
@@ -492,13 +492,13 @@ export interface AppSync {
    */
   createResolver(
     args: CreateResolverCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateResolverCommandOutput>;
   createResolver(args: CreateResolverCommandInput, cb: (err: any, data?: CreateResolverCommandOutput) => void): void;
   createResolver(
     args: CreateResolverCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateResolverCommandOutput) => void
+    cb: (err: any, data?: CreateResolverCommandOutput) => void,
   ): void;
 
   /**
@@ -509,7 +509,7 @@ export interface AppSync {
   createType(
     args: CreateTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTypeCommandOutput) => void
+    cb: (err: any, data?: CreateTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -517,13 +517,13 @@ export interface AppSync {
    */
   deleteApiCache(
     args: DeleteApiCacheCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApiCacheCommandOutput>;
   deleteApiCache(args: DeleteApiCacheCommandInput, cb: (err: any, data?: DeleteApiCacheCommandOutput) => void): void;
   deleteApiCache(
     args: DeleteApiCacheCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApiCacheCommandOutput) => void
+    cb: (err: any, data?: DeleteApiCacheCommandOutput) => void,
   ): void;
 
   /**
@@ -534,7 +534,7 @@ export interface AppSync {
   deleteApiKey(
     args: DeleteApiKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApiKeyCommandOutput) => void
+    cb: (err: any, data?: DeleteApiKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -542,16 +542,16 @@ export interface AppSync {
    */
   deleteDataSource(
     args: DeleteDataSourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDataSourceCommandOutput>;
   deleteDataSource(
     args: DeleteDataSourceCommandInput,
-    cb: (err: any, data?: DeleteDataSourceCommandOutput) => void
+    cb: (err: any, data?: DeleteDataSourceCommandOutput) => void,
   ): void;
   deleteDataSource(
     args: DeleteDataSourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDataSourceCommandOutput) => void
+    cb: (err: any, data?: DeleteDataSourceCommandOutput) => void,
   ): void;
 
   /**
@@ -559,16 +559,16 @@ export interface AppSync {
    */
   deleteDomainName(
     args: DeleteDomainNameCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDomainNameCommandOutput>;
   deleteDomainName(
     args: DeleteDomainNameCommandInput,
-    cb: (err: any, data?: DeleteDomainNameCommandOutput) => void
+    cb: (err: any, data?: DeleteDomainNameCommandOutput) => void,
   ): void;
   deleteDomainName(
     args: DeleteDomainNameCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDomainNameCommandOutput) => void
+    cb: (err: any, data?: DeleteDomainNameCommandOutput) => void,
   ): void;
 
   /**
@@ -576,13 +576,13 @@ export interface AppSync {
    */
   deleteFunction(
     args: DeleteFunctionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteFunctionCommandOutput>;
   deleteFunction(args: DeleteFunctionCommandInput, cb: (err: any, data?: DeleteFunctionCommandOutput) => void): void;
   deleteFunction(
     args: DeleteFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFunctionCommandOutput) => void
+    cb: (err: any, data?: DeleteFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -590,16 +590,16 @@ export interface AppSync {
    */
   deleteGraphqlApi(
     args: DeleteGraphqlApiCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteGraphqlApiCommandOutput>;
   deleteGraphqlApi(
     args: DeleteGraphqlApiCommandInput,
-    cb: (err: any, data?: DeleteGraphqlApiCommandOutput) => void
+    cb: (err: any, data?: DeleteGraphqlApiCommandOutput) => void,
   ): void;
   deleteGraphqlApi(
     args: DeleteGraphqlApiCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteGraphqlApiCommandOutput) => void
+    cb: (err: any, data?: DeleteGraphqlApiCommandOutput) => void,
   ): void;
 
   /**
@@ -607,13 +607,13 @@ export interface AppSync {
    */
   deleteResolver(
     args: DeleteResolverCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResolverCommandOutput>;
   deleteResolver(args: DeleteResolverCommandInput, cb: (err: any, data?: DeleteResolverCommandOutput) => void): void;
   deleteResolver(
     args: DeleteResolverCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResolverCommandOutput) => void
+    cb: (err: any, data?: DeleteResolverCommandOutput) => void,
   ): void;
 
   /**
@@ -624,7 +624,7 @@ export interface AppSync {
   deleteType(
     args: DeleteTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTypeCommandOutput) => void
+    cb: (err: any, data?: DeleteTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -632,13 +632,13 @@ export interface AppSync {
    */
   disassociateApi(
     args: DisassociateApiCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateApiCommandOutput>;
   disassociateApi(args: DisassociateApiCommandInput, cb: (err: any, data?: DisassociateApiCommandOutput) => void): void;
   disassociateApi(
     args: DisassociateApiCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateApiCommandOutput) => void
+    cb: (err: any, data?: DisassociateApiCommandOutput) => void,
   ): void;
 
   /**
@@ -646,16 +646,16 @@ export interface AppSync {
    */
   disassociateMergedGraphqlApi(
     args: DisassociateMergedGraphqlApiCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateMergedGraphqlApiCommandOutput>;
   disassociateMergedGraphqlApi(
     args: DisassociateMergedGraphqlApiCommandInput,
-    cb: (err: any, data?: DisassociateMergedGraphqlApiCommandOutput) => void
+    cb: (err: any, data?: DisassociateMergedGraphqlApiCommandOutput) => void,
   ): void;
   disassociateMergedGraphqlApi(
     args: DisassociateMergedGraphqlApiCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateMergedGraphqlApiCommandOutput) => void
+    cb: (err: any, data?: DisassociateMergedGraphqlApiCommandOutput) => void,
   ): void;
 
   /**
@@ -663,16 +663,16 @@ export interface AppSync {
    */
   disassociateSourceGraphqlApi(
     args: DisassociateSourceGraphqlApiCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateSourceGraphqlApiCommandOutput>;
   disassociateSourceGraphqlApi(
     args: DisassociateSourceGraphqlApiCommandInput,
-    cb: (err: any, data?: DisassociateSourceGraphqlApiCommandOutput) => void
+    cb: (err: any, data?: DisassociateSourceGraphqlApiCommandOutput) => void,
   ): void;
   disassociateSourceGraphqlApi(
     args: DisassociateSourceGraphqlApiCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateSourceGraphqlApiCommandOutput) => void
+    cb: (err: any, data?: DisassociateSourceGraphqlApiCommandOutput) => void,
   ): void;
 
   /**
@@ -683,7 +683,7 @@ export interface AppSync {
   evaluateCode(
     args: EvaluateCodeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EvaluateCodeCommandOutput) => void
+    cb: (err: any, data?: EvaluateCodeCommandOutput) => void,
   ): void;
 
   /**
@@ -691,16 +691,16 @@ export interface AppSync {
    */
   evaluateMappingTemplate(
     args: EvaluateMappingTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EvaluateMappingTemplateCommandOutput>;
   evaluateMappingTemplate(
     args: EvaluateMappingTemplateCommandInput,
-    cb: (err: any, data?: EvaluateMappingTemplateCommandOutput) => void
+    cb: (err: any, data?: EvaluateMappingTemplateCommandOutput) => void,
   ): void;
   evaluateMappingTemplate(
     args: EvaluateMappingTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EvaluateMappingTemplateCommandOutput) => void
+    cb: (err: any, data?: EvaluateMappingTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -711,7 +711,7 @@ export interface AppSync {
   flushApiCache(
     args: FlushApiCacheCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: FlushApiCacheCommandOutput) => void
+    cb: (err: any, data?: FlushApiCacheCommandOutput) => void,
   ): void;
 
   /**
@@ -719,16 +719,16 @@ export interface AppSync {
    */
   getApiAssociation(
     args: GetApiAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetApiAssociationCommandOutput>;
   getApiAssociation(
     args: GetApiAssociationCommandInput,
-    cb: (err: any, data?: GetApiAssociationCommandOutput) => void
+    cb: (err: any, data?: GetApiAssociationCommandOutput) => void,
   ): void;
   getApiAssociation(
     args: GetApiAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApiAssociationCommandOutput) => void
+    cb: (err: any, data?: GetApiAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -739,7 +739,7 @@ export interface AppSync {
   getApiCache(
     args: GetApiCacheCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApiCacheCommandOutput) => void
+    cb: (err: any, data?: GetApiCacheCommandOutput) => void,
   ): void;
 
   /**
@@ -750,7 +750,7 @@ export interface AppSync {
   getDataSource(
     args: GetDataSourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDataSourceCommandOutput) => void
+    cb: (err: any, data?: GetDataSourceCommandOutput) => void,
   ): void;
 
   /**
@@ -758,16 +758,16 @@ export interface AppSync {
    */
   getDataSourceIntrospection(
     args: GetDataSourceIntrospectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDataSourceIntrospectionCommandOutput>;
   getDataSourceIntrospection(
     args: GetDataSourceIntrospectionCommandInput,
-    cb: (err: any, data?: GetDataSourceIntrospectionCommandOutput) => void
+    cb: (err: any, data?: GetDataSourceIntrospectionCommandOutput) => void,
   ): void;
   getDataSourceIntrospection(
     args: GetDataSourceIntrospectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDataSourceIntrospectionCommandOutput) => void
+    cb: (err: any, data?: GetDataSourceIntrospectionCommandOutput) => void,
   ): void;
 
   /**
@@ -778,7 +778,7 @@ export interface AppSync {
   getDomainName(
     args: GetDomainNameCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDomainNameCommandOutput) => void
+    cb: (err: any, data?: GetDomainNameCommandOutput) => void,
   ): void;
 
   /**
@@ -789,7 +789,7 @@ export interface AppSync {
   getFunction(
     args: GetFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFunctionCommandOutput) => void
+    cb: (err: any, data?: GetFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -800,7 +800,7 @@ export interface AppSync {
   getGraphqlApi(
     args: GetGraphqlApiCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetGraphqlApiCommandOutput) => void
+    cb: (err: any, data?: GetGraphqlApiCommandOutput) => void,
   ): void;
 
   /**
@@ -808,16 +808,16 @@ export interface AppSync {
    */
   getGraphqlApiEnvironmentVariables(
     args: GetGraphqlApiEnvironmentVariablesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetGraphqlApiEnvironmentVariablesCommandOutput>;
   getGraphqlApiEnvironmentVariables(
     args: GetGraphqlApiEnvironmentVariablesCommandInput,
-    cb: (err: any, data?: GetGraphqlApiEnvironmentVariablesCommandOutput) => void
+    cb: (err: any, data?: GetGraphqlApiEnvironmentVariablesCommandOutput) => void,
   ): void;
   getGraphqlApiEnvironmentVariables(
     args: GetGraphqlApiEnvironmentVariablesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetGraphqlApiEnvironmentVariablesCommandOutput) => void
+    cb: (err: any, data?: GetGraphqlApiEnvironmentVariablesCommandOutput) => void,
   ): void;
 
   /**
@@ -825,16 +825,16 @@ export interface AppSync {
    */
   getIntrospectionSchema(
     args: GetIntrospectionSchemaCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetIntrospectionSchemaCommandOutput>;
   getIntrospectionSchema(
     args: GetIntrospectionSchemaCommandInput,
-    cb: (err: any, data?: GetIntrospectionSchemaCommandOutput) => void
+    cb: (err: any, data?: GetIntrospectionSchemaCommandOutput) => void,
   ): void;
   getIntrospectionSchema(
     args: GetIntrospectionSchemaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetIntrospectionSchemaCommandOutput) => void
+    cb: (err: any, data?: GetIntrospectionSchemaCommandOutput) => void,
   ): void;
 
   /**
@@ -845,7 +845,7 @@ export interface AppSync {
   getResolver(
     args: GetResolverCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResolverCommandOutput) => void
+    cb: (err: any, data?: GetResolverCommandOutput) => void,
   ): void;
 
   /**
@@ -853,16 +853,16 @@ export interface AppSync {
    */
   getSchemaCreationStatus(
     args: GetSchemaCreationStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSchemaCreationStatusCommandOutput>;
   getSchemaCreationStatus(
     args: GetSchemaCreationStatusCommandInput,
-    cb: (err: any, data?: GetSchemaCreationStatusCommandOutput) => void
+    cb: (err: any, data?: GetSchemaCreationStatusCommandOutput) => void,
   ): void;
   getSchemaCreationStatus(
     args: GetSchemaCreationStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSchemaCreationStatusCommandOutput) => void
+    cb: (err: any, data?: GetSchemaCreationStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -870,16 +870,16 @@ export interface AppSync {
    */
   getSourceApiAssociation(
     args: GetSourceApiAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSourceApiAssociationCommandOutput>;
   getSourceApiAssociation(
     args: GetSourceApiAssociationCommandInput,
-    cb: (err: any, data?: GetSourceApiAssociationCommandOutput) => void
+    cb: (err: any, data?: GetSourceApiAssociationCommandOutput) => void,
   ): void;
   getSourceApiAssociation(
     args: GetSourceApiAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSourceApiAssociationCommandOutput) => void
+    cb: (err: any, data?: GetSourceApiAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -890,7 +890,7 @@ export interface AppSync {
   getType(
     args: GetTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTypeCommandOutput) => void
+    cb: (err: any, data?: GetTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -901,7 +901,7 @@ export interface AppSync {
   listApiKeys(
     args: ListApiKeysCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApiKeysCommandOutput) => void
+    cb: (err: any, data?: ListApiKeysCommandOutput) => void,
   ): void;
 
   /**
@@ -909,13 +909,13 @@ export interface AppSync {
    */
   listDataSources(
     args: ListDataSourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDataSourcesCommandOutput>;
   listDataSources(args: ListDataSourcesCommandInput, cb: (err: any, data?: ListDataSourcesCommandOutput) => void): void;
   listDataSources(
     args: ListDataSourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDataSourcesCommandOutput) => void
+    cb: (err: any, data?: ListDataSourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -924,13 +924,13 @@ export interface AppSync {
   listDomainNames(): Promise<ListDomainNamesCommandOutput>;
   listDomainNames(
     args: ListDomainNamesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDomainNamesCommandOutput>;
   listDomainNames(args: ListDomainNamesCommandInput, cb: (err: any, data?: ListDomainNamesCommandOutput) => void): void;
   listDomainNames(
     args: ListDomainNamesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDomainNamesCommandOutput) => void
+    cb: (err: any, data?: ListDomainNamesCommandOutput) => void,
   ): void;
 
   /**
@@ -941,7 +941,7 @@ export interface AppSync {
   listFunctions(
     args: ListFunctionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFunctionsCommandOutput) => void
+    cb: (err: any, data?: ListFunctionsCommandOutput) => void,
   ): void;
 
   /**
@@ -950,13 +950,13 @@ export interface AppSync {
   listGraphqlApis(): Promise<ListGraphqlApisCommandOutput>;
   listGraphqlApis(
     args: ListGraphqlApisCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListGraphqlApisCommandOutput>;
   listGraphqlApis(args: ListGraphqlApisCommandInput, cb: (err: any, data?: ListGraphqlApisCommandOutput) => void): void;
   listGraphqlApis(
     args: ListGraphqlApisCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListGraphqlApisCommandOutput) => void
+    cb: (err: any, data?: ListGraphqlApisCommandOutput) => void,
   ): void;
 
   /**
@@ -967,7 +967,7 @@ export interface AppSync {
   listResolvers(
     args: ListResolversCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResolversCommandOutput) => void
+    cb: (err: any, data?: ListResolversCommandOutput) => void,
   ): void;
 
   /**
@@ -975,16 +975,16 @@ export interface AppSync {
    */
   listResolversByFunction(
     args: ListResolversByFunctionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResolversByFunctionCommandOutput>;
   listResolversByFunction(
     args: ListResolversByFunctionCommandInput,
-    cb: (err: any, data?: ListResolversByFunctionCommandOutput) => void
+    cb: (err: any, data?: ListResolversByFunctionCommandOutput) => void,
   ): void;
   listResolversByFunction(
     args: ListResolversByFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResolversByFunctionCommandOutput) => void
+    cb: (err: any, data?: ListResolversByFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -992,16 +992,16 @@ export interface AppSync {
    */
   listSourceApiAssociations(
     args: ListSourceApiAssociationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSourceApiAssociationsCommandOutput>;
   listSourceApiAssociations(
     args: ListSourceApiAssociationsCommandInput,
-    cb: (err: any, data?: ListSourceApiAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListSourceApiAssociationsCommandOutput) => void,
   ): void;
   listSourceApiAssociations(
     args: ListSourceApiAssociationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSourceApiAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListSourceApiAssociationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1009,16 +1009,16 @@ export interface AppSync {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1029,7 +1029,7 @@ export interface AppSync {
   listTypes(
     args: ListTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTypesCommandOutput) => void
+    cb: (err: any, data?: ListTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -1037,16 +1037,16 @@ export interface AppSync {
    */
   listTypesByAssociation(
     args: ListTypesByAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTypesByAssociationCommandOutput>;
   listTypesByAssociation(
     args: ListTypesByAssociationCommandInput,
-    cb: (err: any, data?: ListTypesByAssociationCommandOutput) => void
+    cb: (err: any, data?: ListTypesByAssociationCommandOutput) => void,
   ): void;
   listTypesByAssociation(
     args: ListTypesByAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTypesByAssociationCommandOutput) => void
+    cb: (err: any, data?: ListTypesByAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -1054,16 +1054,16 @@ export interface AppSync {
    */
   putGraphqlApiEnvironmentVariables(
     args: PutGraphqlApiEnvironmentVariablesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutGraphqlApiEnvironmentVariablesCommandOutput>;
   putGraphqlApiEnvironmentVariables(
     args: PutGraphqlApiEnvironmentVariablesCommandInput,
-    cb: (err: any, data?: PutGraphqlApiEnvironmentVariablesCommandOutput) => void
+    cb: (err: any, data?: PutGraphqlApiEnvironmentVariablesCommandOutput) => void,
   ): void;
   putGraphqlApiEnvironmentVariables(
     args: PutGraphqlApiEnvironmentVariablesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutGraphqlApiEnvironmentVariablesCommandOutput) => void
+    cb: (err: any, data?: PutGraphqlApiEnvironmentVariablesCommandOutput) => void,
   ): void;
 
   /**
@@ -1072,16 +1072,16 @@ export interface AppSync {
   startDataSourceIntrospection(): Promise<StartDataSourceIntrospectionCommandOutput>;
   startDataSourceIntrospection(
     args: StartDataSourceIntrospectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartDataSourceIntrospectionCommandOutput>;
   startDataSourceIntrospection(
     args: StartDataSourceIntrospectionCommandInput,
-    cb: (err: any, data?: StartDataSourceIntrospectionCommandOutput) => void
+    cb: (err: any, data?: StartDataSourceIntrospectionCommandOutput) => void,
   ): void;
   startDataSourceIntrospection(
     args: StartDataSourceIntrospectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartDataSourceIntrospectionCommandOutput) => void
+    cb: (err: any, data?: StartDataSourceIntrospectionCommandOutput) => void,
   ): void;
 
   /**
@@ -1089,16 +1089,16 @@ export interface AppSync {
    */
   startSchemaCreation(
     args: StartSchemaCreationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartSchemaCreationCommandOutput>;
   startSchemaCreation(
     args: StartSchemaCreationCommandInput,
-    cb: (err: any, data?: StartSchemaCreationCommandOutput) => void
+    cb: (err: any, data?: StartSchemaCreationCommandOutput) => void,
   ): void;
   startSchemaCreation(
     args: StartSchemaCreationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartSchemaCreationCommandOutput) => void
+    cb: (err: any, data?: StartSchemaCreationCommandOutput) => void,
   ): void;
 
   /**
@@ -1106,16 +1106,16 @@ export interface AppSync {
    */
   startSchemaMerge(
     args: StartSchemaMergeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartSchemaMergeCommandOutput>;
   startSchemaMerge(
     args: StartSchemaMergeCommandInput,
-    cb: (err: any, data?: StartSchemaMergeCommandOutput) => void
+    cb: (err: any, data?: StartSchemaMergeCommandOutput) => void,
   ): void;
   startSchemaMerge(
     args: StartSchemaMergeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartSchemaMergeCommandOutput) => void
+    cb: (err: any, data?: StartSchemaMergeCommandOutput) => void,
   ): void;
 
   /**
@@ -1126,7 +1126,7 @@ export interface AppSync {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1137,7 +1137,7 @@ export interface AppSync {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1145,13 +1145,13 @@ export interface AppSync {
    */
   updateApiCache(
     args: UpdateApiCacheCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApiCacheCommandOutput>;
   updateApiCache(args: UpdateApiCacheCommandInput, cb: (err: any, data?: UpdateApiCacheCommandOutput) => void): void;
   updateApiCache(
     args: UpdateApiCacheCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApiCacheCommandOutput) => void
+    cb: (err: any, data?: UpdateApiCacheCommandOutput) => void,
   ): void;
 
   /**
@@ -1162,7 +1162,7 @@ export interface AppSync {
   updateApiKey(
     args: UpdateApiKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApiKeyCommandOutput) => void
+    cb: (err: any, data?: UpdateApiKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -1170,16 +1170,16 @@ export interface AppSync {
    */
   updateDataSource(
     args: UpdateDataSourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDataSourceCommandOutput>;
   updateDataSource(
     args: UpdateDataSourceCommandInput,
-    cb: (err: any, data?: UpdateDataSourceCommandOutput) => void
+    cb: (err: any, data?: UpdateDataSourceCommandOutput) => void,
   ): void;
   updateDataSource(
     args: UpdateDataSourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDataSourceCommandOutput) => void
+    cb: (err: any, data?: UpdateDataSourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1187,16 +1187,16 @@ export interface AppSync {
    */
   updateDomainName(
     args: UpdateDomainNameCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDomainNameCommandOutput>;
   updateDomainName(
     args: UpdateDomainNameCommandInput,
-    cb: (err: any, data?: UpdateDomainNameCommandOutput) => void
+    cb: (err: any, data?: UpdateDomainNameCommandOutput) => void,
   ): void;
   updateDomainName(
     args: UpdateDomainNameCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDomainNameCommandOutput) => void
+    cb: (err: any, data?: UpdateDomainNameCommandOutput) => void,
   ): void;
 
   /**
@@ -1204,13 +1204,13 @@ export interface AppSync {
    */
   updateFunction(
     args: UpdateFunctionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateFunctionCommandOutput>;
   updateFunction(args: UpdateFunctionCommandInput, cb: (err: any, data?: UpdateFunctionCommandOutput) => void): void;
   updateFunction(
     args: UpdateFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFunctionCommandOutput) => void
+    cb: (err: any, data?: UpdateFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -1218,16 +1218,16 @@ export interface AppSync {
    */
   updateGraphqlApi(
     args: UpdateGraphqlApiCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateGraphqlApiCommandOutput>;
   updateGraphqlApi(
     args: UpdateGraphqlApiCommandInput,
-    cb: (err: any, data?: UpdateGraphqlApiCommandOutput) => void
+    cb: (err: any, data?: UpdateGraphqlApiCommandOutput) => void,
   ): void;
   updateGraphqlApi(
     args: UpdateGraphqlApiCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateGraphqlApiCommandOutput) => void
+    cb: (err: any, data?: UpdateGraphqlApiCommandOutput) => void,
   ): void;
 
   /**
@@ -1235,13 +1235,13 @@ export interface AppSync {
    */
   updateResolver(
     args: UpdateResolverCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateResolverCommandOutput>;
   updateResolver(args: UpdateResolverCommandInput, cb: (err: any, data?: UpdateResolverCommandOutput) => void): void;
   updateResolver(
     args: UpdateResolverCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateResolverCommandOutput) => void
+    cb: (err: any, data?: UpdateResolverCommandOutput) => void,
   ): void;
 
   /**
@@ -1249,16 +1249,16 @@ export interface AppSync {
    */
   updateSourceApiAssociation(
     args: UpdateSourceApiAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSourceApiAssociationCommandOutput>;
   updateSourceApiAssociation(
     args: UpdateSourceApiAssociationCommandInput,
-    cb: (err: any, data?: UpdateSourceApiAssociationCommandOutput) => void
+    cb: (err: any, data?: UpdateSourceApiAssociationCommandOutput) => void,
   ): void;
   updateSourceApiAssociation(
     args: UpdateSourceApiAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSourceApiAssociationCommandOutput) => void
+    cb: (err: any, data?: UpdateSourceApiAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -1269,7 +1269,7 @@ export interface AppSync {
   updateType(
     args: UpdateTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTypeCommandOutput) => void
+    cb: (err: any, data?: UpdateTypeCommandOutput) => void,
   ): void;
 }
 

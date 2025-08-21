@@ -17,6 +17,6 @@ export const getNewSsoOidcToken = async (ssoToken: SSOToken, ssoRegion: string) 
       clientSecret: ssoToken.clientSecret,
       refreshToken: ssoToken.refreshToken,
       grantType: "refresh_token",
-    })
+    }),
   );
 };

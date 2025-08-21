@@ -149,16 +149,16 @@ export interface PrivateNetworks {
    */
   acknowledgeOrderReceipt(
     args: AcknowledgeOrderReceiptCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AcknowledgeOrderReceiptCommandOutput>;
   acknowledgeOrderReceipt(
     args: AcknowledgeOrderReceiptCommandInput,
-    cb: (err: any, data?: AcknowledgeOrderReceiptCommandOutput) => void
+    cb: (err: any, data?: AcknowledgeOrderReceiptCommandOutput) => void,
   ): void;
   acknowledgeOrderReceipt(
     args: AcknowledgeOrderReceiptCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AcknowledgeOrderReceiptCommandOutput) => void
+    cb: (err: any, data?: AcknowledgeOrderReceiptCommandOutput) => void,
   ): void;
 
   /**
@@ -166,16 +166,16 @@ export interface PrivateNetworks {
    */
   activateDeviceIdentifier(
     args: ActivateDeviceIdentifierCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ActivateDeviceIdentifierCommandOutput>;
   activateDeviceIdentifier(
     args: ActivateDeviceIdentifierCommandInput,
-    cb: (err: any, data?: ActivateDeviceIdentifierCommandOutput) => void
+    cb: (err: any, data?: ActivateDeviceIdentifierCommandOutput) => void,
   ): void;
   activateDeviceIdentifier(
     args: ActivateDeviceIdentifierCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ActivateDeviceIdentifierCommandOutput) => void
+    cb: (err: any, data?: ActivateDeviceIdentifierCommandOutput) => void,
   ): void;
 
   /**
@@ -183,16 +183,16 @@ export interface PrivateNetworks {
    */
   activateNetworkSite(
     args: ActivateNetworkSiteCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ActivateNetworkSiteCommandOutput>;
   activateNetworkSite(
     args: ActivateNetworkSiteCommandInput,
-    cb: (err: any, data?: ActivateNetworkSiteCommandOutput) => void
+    cb: (err: any, data?: ActivateNetworkSiteCommandOutput) => void,
   ): void;
   activateNetworkSite(
     args: ActivateNetworkSiteCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ActivateNetworkSiteCommandOutput) => void
+    cb: (err: any, data?: ActivateNetworkSiteCommandOutput) => void,
   ): void;
 
   /**
@@ -200,16 +200,16 @@ export interface PrivateNetworks {
    */
   configureAccessPoint(
     args: ConfigureAccessPointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ConfigureAccessPointCommandOutput>;
   configureAccessPoint(
     args: ConfigureAccessPointCommandInput,
-    cb: (err: any, data?: ConfigureAccessPointCommandOutput) => void
+    cb: (err: any, data?: ConfigureAccessPointCommandOutput) => void,
   ): void;
   configureAccessPoint(
     args: ConfigureAccessPointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ConfigureAccessPointCommandOutput) => void
+    cb: (err: any, data?: ConfigureAccessPointCommandOutput) => void,
   ): void;
 
   /**
@@ -220,7 +220,7 @@ export interface PrivateNetworks {
   createNetwork(
     args: CreateNetworkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateNetworkCommandOutput) => void
+    cb: (err: any, data?: CreateNetworkCommandOutput) => void,
   ): void;
 
   /**
@@ -228,16 +228,16 @@ export interface PrivateNetworks {
    */
   createNetworkSite(
     args: CreateNetworkSiteCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateNetworkSiteCommandOutput>;
   createNetworkSite(
     args: CreateNetworkSiteCommandInput,
-    cb: (err: any, data?: CreateNetworkSiteCommandOutput) => void
+    cb: (err: any, data?: CreateNetworkSiteCommandOutput) => void,
   ): void;
   createNetworkSite(
     args: CreateNetworkSiteCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateNetworkSiteCommandOutput) => void
+    cb: (err: any, data?: CreateNetworkSiteCommandOutput) => void,
   ): void;
 
   /**
@@ -245,16 +245,16 @@ export interface PrivateNetworks {
    */
   deactivateDeviceIdentifier(
     args: DeactivateDeviceIdentifierCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeactivateDeviceIdentifierCommandOutput>;
   deactivateDeviceIdentifier(
     args: DeactivateDeviceIdentifierCommandInput,
-    cb: (err: any, data?: DeactivateDeviceIdentifierCommandOutput) => void
+    cb: (err: any, data?: DeactivateDeviceIdentifierCommandOutput) => void,
   ): void;
   deactivateDeviceIdentifier(
     args: DeactivateDeviceIdentifierCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeactivateDeviceIdentifierCommandOutput) => void
+    cb: (err: any, data?: DeactivateDeviceIdentifierCommandOutput) => void,
   ): void;
 
   /**
@@ -265,7 +265,7 @@ export interface PrivateNetworks {
   deleteNetwork(
     args: DeleteNetworkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteNetworkCommandOutput) => void
+    cb: (err: any, data?: DeleteNetworkCommandOutput) => void,
   ): void;
 
   /**
@@ -273,16 +273,16 @@ export interface PrivateNetworks {
    */
   deleteNetworkSite(
     args: DeleteNetworkSiteCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteNetworkSiteCommandOutput>;
   deleteNetworkSite(
     args: DeleteNetworkSiteCommandInput,
-    cb: (err: any, data?: DeleteNetworkSiteCommandOutput) => void
+    cb: (err: any, data?: DeleteNetworkSiteCommandOutput) => void,
   ): void;
   deleteNetworkSite(
     args: DeleteNetworkSiteCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteNetworkSiteCommandOutput) => void
+    cb: (err: any, data?: DeleteNetworkSiteCommandOutput) => void,
   ): void;
 
   /**
@@ -290,16 +290,16 @@ export interface PrivateNetworks {
    */
   getDeviceIdentifier(
     args: GetDeviceIdentifierCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDeviceIdentifierCommandOutput>;
   getDeviceIdentifier(
     args: GetDeviceIdentifierCommandInput,
-    cb: (err: any, data?: GetDeviceIdentifierCommandOutput) => void
+    cb: (err: any, data?: GetDeviceIdentifierCommandOutput) => void,
   ): void;
   getDeviceIdentifier(
     args: GetDeviceIdentifierCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeviceIdentifierCommandOutput) => void
+    cb: (err: any, data?: GetDeviceIdentifierCommandOutput) => void,
   ): void;
 
   /**
@@ -310,7 +310,7 @@ export interface PrivateNetworks {
   getNetwork(
     args: GetNetworkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetNetworkCommandOutput) => void
+    cb: (err: any, data?: GetNetworkCommandOutput) => void,
   ): void;
 
   /**
@@ -318,16 +318,16 @@ export interface PrivateNetworks {
    */
   getNetworkResource(
     args: GetNetworkResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetNetworkResourceCommandOutput>;
   getNetworkResource(
     args: GetNetworkResourceCommandInput,
-    cb: (err: any, data?: GetNetworkResourceCommandOutput) => void
+    cb: (err: any, data?: GetNetworkResourceCommandOutput) => void,
   ): void;
   getNetworkResource(
     args: GetNetworkResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetNetworkResourceCommandOutput) => void
+    cb: (err: any, data?: GetNetworkResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -335,13 +335,13 @@ export interface PrivateNetworks {
    */
   getNetworkSite(
     args: GetNetworkSiteCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetNetworkSiteCommandOutput>;
   getNetworkSite(args: GetNetworkSiteCommandInput, cb: (err: any, data?: GetNetworkSiteCommandOutput) => void): void;
   getNetworkSite(
     args: GetNetworkSiteCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetNetworkSiteCommandOutput) => void
+    cb: (err: any, data?: GetNetworkSiteCommandOutput) => void,
   ): void;
 
   /**
@@ -352,7 +352,7 @@ export interface PrivateNetworks {
   getOrder(
     args: GetOrderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetOrderCommandOutput) => void
+    cb: (err: any, data?: GetOrderCommandOutput) => void,
   ): void;
 
   /**
@@ -360,16 +360,16 @@ export interface PrivateNetworks {
    */
   listDeviceIdentifiers(
     args: ListDeviceIdentifiersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDeviceIdentifiersCommandOutput>;
   listDeviceIdentifiers(
     args: ListDeviceIdentifiersCommandInput,
-    cb: (err: any, data?: ListDeviceIdentifiersCommandOutput) => void
+    cb: (err: any, data?: ListDeviceIdentifiersCommandOutput) => void,
   ): void;
   listDeviceIdentifiers(
     args: ListDeviceIdentifiersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDeviceIdentifiersCommandOutput) => void
+    cb: (err: any, data?: ListDeviceIdentifiersCommandOutput) => void,
   ): void;
 
   /**
@@ -377,16 +377,16 @@ export interface PrivateNetworks {
    */
   listNetworkResources(
     args: ListNetworkResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListNetworkResourcesCommandOutput>;
   listNetworkResources(
     args: ListNetworkResourcesCommandInput,
-    cb: (err: any, data?: ListNetworkResourcesCommandOutput) => void
+    cb: (err: any, data?: ListNetworkResourcesCommandOutput) => void,
   ): void;
   listNetworkResources(
     args: ListNetworkResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListNetworkResourcesCommandOutput) => void
+    cb: (err: any, data?: ListNetworkResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -398,7 +398,7 @@ export interface PrivateNetworks {
   listNetworks(
     args: ListNetworksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListNetworksCommandOutput) => void
+    cb: (err: any, data?: ListNetworksCommandOutput) => void,
   ): void;
 
   /**
@@ -406,16 +406,16 @@ export interface PrivateNetworks {
    */
   listNetworkSites(
     args: ListNetworkSitesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListNetworkSitesCommandOutput>;
   listNetworkSites(
     args: ListNetworkSitesCommandInput,
-    cb: (err: any, data?: ListNetworkSitesCommandOutput) => void
+    cb: (err: any, data?: ListNetworkSitesCommandOutput) => void,
   ): void;
   listNetworkSites(
     args: ListNetworkSitesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListNetworkSitesCommandOutput) => void
+    cb: (err: any, data?: ListNetworkSitesCommandOutput) => void,
   ): void;
 
   /**
@@ -426,7 +426,7 @@ export interface PrivateNetworks {
   listOrders(
     args: ListOrdersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOrdersCommandOutput) => void
+    cb: (err: any, data?: ListOrdersCommandOutput) => void,
   ): void;
 
   /**
@@ -434,16 +434,16 @@ export interface PrivateNetworks {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -459,16 +459,16 @@ export interface PrivateNetworks {
    */
   startNetworkResourceUpdate(
     args: StartNetworkResourceUpdateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartNetworkResourceUpdateCommandOutput>;
   startNetworkResourceUpdate(
     args: StartNetworkResourceUpdateCommandInput,
-    cb: (err: any, data?: StartNetworkResourceUpdateCommandOutput) => void
+    cb: (err: any, data?: StartNetworkResourceUpdateCommandOutput) => void,
   ): void;
   startNetworkResourceUpdate(
     args: StartNetworkResourceUpdateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartNetworkResourceUpdateCommandOutput) => void
+    cb: (err: any, data?: StartNetworkResourceUpdateCommandOutput) => void,
   ): void;
 
   /**
@@ -479,7 +479,7 @@ export interface PrivateNetworks {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -490,7 +490,7 @@ export interface PrivateNetworks {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -498,16 +498,16 @@ export interface PrivateNetworks {
    */
   updateNetworkSite(
     args: UpdateNetworkSiteCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateNetworkSiteCommandOutput>;
   updateNetworkSite(
     args: UpdateNetworkSiteCommandInput,
-    cb: (err: any, data?: UpdateNetworkSiteCommandOutput) => void
+    cb: (err: any, data?: UpdateNetworkSiteCommandOutput) => void,
   ): void;
   updateNetworkSite(
     args: UpdateNetworkSiteCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateNetworkSiteCommandOutput) => void
+    cb: (err: any, data?: UpdateNetworkSiteCommandOutput) => void,
   ): void;
 
   /**
@@ -515,16 +515,16 @@ export interface PrivateNetworks {
    */
   updateNetworkSitePlan(
     args: UpdateNetworkSitePlanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateNetworkSitePlanCommandOutput>;
   updateNetworkSitePlan(
     args: UpdateNetworkSitePlanCommandInput,
-    cb: (err: any, data?: UpdateNetworkSitePlanCommandOutput) => void
+    cb: (err: any, data?: UpdateNetworkSitePlanCommandOutput) => void,
   ): void;
   updateNetworkSitePlan(
     args: UpdateNetworkSitePlanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateNetworkSitePlanCommandOutput) => void
+    cb: (err: any, data?: UpdateNetworkSitePlanCommandOutput) => void,
   ): void;
 }
 

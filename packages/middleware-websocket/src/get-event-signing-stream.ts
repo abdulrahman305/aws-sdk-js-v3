@@ -10,7 +10,7 @@ import { fromHex } from "@smithy/util-hex-encoding";
 export const getEventSigningTransformStream = (
   initialSignature: string,
   messageSigner: MessageSigner,
-  eventStreamCodec: EventStreamCodec
+  eventStreamCodec: EventStreamCodec,
 ): TransformStream<Uint8Array, Uint8Array> => {
   let priorSignature = initialSignature;
   const transformer: Transformer<Uint8Array, Uint8Array> = {
@@ -31,7 +31,7 @@ export const getEventSigningTransformStream = (
           },
           {
             signingDate: now,
-          }
+          },
         );
         priorSignature = signedMessage.signature;
         const serializedSigned = eventStreamCodec.encode({

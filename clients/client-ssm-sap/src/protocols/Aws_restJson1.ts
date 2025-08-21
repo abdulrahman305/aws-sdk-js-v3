@@ -94,7 +94,7 @@ import { SsmSapServiceException as __BaseException } from "../models/SsmSapServi
  */
 export const se_DeleteResourcePermissionCommand = async (
   input: DeleteResourcePermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -107,7 +107,7 @@ export const se_DeleteResourcePermissionCommand = async (
       ActionType: [],
       ResourceArn: [],
       SourceResourceArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -118,7 +118,7 @@ export const se_DeleteResourcePermissionCommand = async (
  */
 export const se_DeregisterApplicationCommand = async (
   input: DeregisterApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -129,7 +129,7 @@ export const se_DeregisterApplicationCommand = async (
   body = JSON.stringify(
     take(input, {
       ApplicationId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -140,7 +140,7 @@ export const se_DeregisterApplicationCommand = async (
  */
 export const se_GetApplicationCommand = async (
   input: GetApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -153,7 +153,7 @@ export const se_GetApplicationCommand = async (
       AppRegistryArn: [],
       ApplicationArn: [],
       ApplicationId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -164,7 +164,7 @@ export const se_GetApplicationCommand = async (
  */
 export const se_GetComponentCommand = async (
   input: GetComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -176,7 +176,7 @@ export const se_GetComponentCommand = async (
     take(input, {
       ApplicationId: [],
       ComponentId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -187,7 +187,7 @@ export const se_GetComponentCommand = async (
  */
 export const se_GetDatabaseCommand = async (
   input: GetDatabaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -201,7 +201,7 @@ export const se_GetDatabaseCommand = async (
       ComponentId: [],
       DatabaseArn: [],
       DatabaseId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -212,7 +212,7 @@ export const se_GetDatabaseCommand = async (
  */
 export const se_GetOperationCommand = async (
   input: GetOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -223,7 +223,7 @@ export const se_GetOperationCommand = async (
   body = JSON.stringify(
     take(input, {
       OperationId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -234,7 +234,7 @@ export const se_GetOperationCommand = async (
  */
 export const se_GetResourcePermissionCommand = async (
   input: GetResourcePermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -246,7 +246,7 @@ export const se_GetResourcePermissionCommand = async (
     take(input, {
       ActionType: [],
       ResourceArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -257,7 +257,7 @@ export const se_GetResourcePermissionCommand = async (
  */
 export const se_ListApplicationsCommand = async (
   input: ListApplicationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -270,7 +270,7 @@ export const se_ListApplicationsCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -281,7 +281,7 @@ export const se_ListApplicationsCommand = async (
  */
 export const se_ListComponentsCommand = async (
   input: ListComponentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -294,7 +294,7 @@ export const se_ListComponentsCommand = async (
       ApplicationId: [],
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -305,7 +305,7 @@ export const se_ListComponentsCommand = async (
  */
 export const se_ListDatabasesCommand = async (
   input: ListDatabasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -319,7 +319,7 @@ export const se_ListDatabasesCommand = async (
       ComponentId: [],
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -330,7 +330,7 @@ export const se_ListDatabasesCommand = async (
  */
 export const se_ListOperationEventsCommand = async (
   input: ListOperationEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -344,7 +344,7 @@ export const se_ListOperationEventsCommand = async (
       MaxResults: [],
       NextToken: [],
       OperationId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -355,7 +355,7 @@ export const se_ListOperationEventsCommand = async (
  */
 export const se_ListOperationsCommand = async (
   input: ListOperationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -369,7 +369,7 @@ export const se_ListOperationsCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -380,7 +380,7 @@ export const se_ListOperationsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -396,7 +396,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutResourcePermissionCommand = async (
   input: PutResourcePermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -409,7 +409,7 @@ export const se_PutResourcePermissionCommand = async (
       ActionType: [],
       ResourceArn: [],
       SourceResourceArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -420,7 +420,7 @@ export const se_PutResourcePermissionCommand = async (
  */
 export const se_RegisterApplicationCommand = async (
   input: RegisterApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -438,7 +438,7 @@ export const se_RegisterApplicationCommand = async (
       SapInstanceNumber: [],
       Sid: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -449,7 +449,7 @@ export const se_RegisterApplicationCommand = async (
  */
 export const se_StartApplicationCommand = async (
   input: StartApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -460,7 +460,7 @@ export const se_StartApplicationCommand = async (
   body = JSON.stringify(
     take(input, {
       ApplicationId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -471,7 +471,7 @@ export const se_StartApplicationCommand = async (
  */
 export const se_StartApplicationRefreshCommand = async (
   input: StartApplicationRefreshCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -482,7 +482,7 @@ export const se_StartApplicationRefreshCommand = async (
   body = JSON.stringify(
     take(input, {
       ApplicationId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -493,7 +493,7 @@ export const se_StartApplicationRefreshCommand = async (
  */
 export const se_StopApplicationCommand = async (
   input: StopApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -506,7 +506,7 @@ export const se_StopApplicationCommand = async (
       ApplicationId: [],
       IncludeEc2InstanceShutdown: [],
       StopConnectedEntity: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -517,7 +517,7 @@ export const se_StopApplicationCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -529,7 +529,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -540,7 +540,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -562,7 +562,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateApplicationSettingsCommand = async (
   input: UpdateApplicationSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -577,7 +577,7 @@ export const se_UpdateApplicationSettingsCommand = async (
       CredentialsToAddOrUpdate: (_) => _json(_),
       CredentialsToRemove: (_) => _json(_),
       DatabaseArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -588,7 +588,7 @@ export const se_UpdateApplicationSettingsCommand = async (
  */
 export const de_DeleteResourcePermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResourcePermissionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -609,7 +609,7 @@ export const de_DeleteResourcePermissionCommand = async (
  */
 export const de_DeregisterApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -626,7 +626,7 @@ export const de_DeregisterApplicationCommand = async (
  */
 export const de_GetApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -648,7 +648,7 @@ export const de_GetApplicationCommand = async (
  */
 export const de_GetComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetComponentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -670,7 +670,7 @@ export const de_GetComponentCommand = async (
  */
 export const de_GetDatabaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDatabaseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -692,7 +692,7 @@ export const de_GetDatabaseCommand = async (
  */
 export const de_GetOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOperationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -713,7 +713,7 @@ export const de_GetOperationCommand = async (
  */
 export const de_GetResourcePermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourcePermissionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -734,7 +734,7 @@ export const de_GetResourcePermissionCommand = async (
  */
 export const de_ListApplicationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListApplicationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -756,7 +756,7 @@ export const de_ListApplicationsCommand = async (
  */
 export const de_ListComponentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListComponentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -778,7 +778,7 @@ export const de_ListComponentsCommand = async (
  */
 export const de_ListDatabasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDatabasesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -800,7 +800,7 @@ export const de_ListDatabasesCommand = async (
  */
 export const de_ListOperationEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOperationEventsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -822,7 +822,7 @@ export const de_ListOperationEventsCommand = async (
  */
 export const de_ListOperationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOperationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -844,7 +844,7 @@ export const de_ListOperationsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -865,7 +865,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutResourcePermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutResourcePermissionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -886,7 +886,7 @@ export const de_PutResourcePermissionCommand = async (
  */
 export const de_RegisterApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -908,7 +908,7 @@ export const de_RegisterApplicationCommand = async (
  */
 export const de_StartApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -929,7 +929,7 @@ export const de_StartApplicationCommand = async (
  */
 export const de_StartApplicationRefreshCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartApplicationRefreshCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -950,7 +950,7 @@ export const de_StartApplicationRefreshCommand = async (
  */
 export const de_StopApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -971,7 +971,7 @@ export const de_StopApplicationCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -988,7 +988,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1005,7 +1005,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateApplicationSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApplicationSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1080,7 +1080,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1100,7 +1100,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1120,7 +1120,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_UnauthorizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthorizedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1324,14 +1324,17 @@ const de_OperationList = (output: any, context: __SerdeContext): Operation[] => 
  * deserializeAws_restJson1OperationProperties
  */
 const de_OperationProperties = (output: any, context: __SerdeContext): Record<string, string> => {
-  return Object.entries(output).reduce((acc: Record<string, string>, [key, value]: [string, any]) => {
-    if (value === null) {
-      acc[key as string] = null as any;
+  return Object.entries(output).reduce(
+    (acc: Record<string, string>, [key, value]: [string, any]) => {
+      if (value === null) {
+        acc[key as string] = null as any;
+        return acc;
+      }
+      acc[key as string] = __expectString(value) as any;
       return acc;
-    }
-    acc[key as string] = __expectString(value) as any;
-    return acc;
-  }, {} as Record<string, string>);
+    },
+    {} as Record<string, string>,
+  );
 };
 
 // de_Resilience omitted.

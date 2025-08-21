@@ -13870,7 +13870,7 @@ export const ServerSideEncryptionRuleFilterSensitiveLog = (obj: ServerSideEncryp
   ...obj,
   ...(obj.ApplyServerSideEncryptionByDefault && {
     ApplyServerSideEncryptionByDefault: ServerSideEncryptionByDefaultFilterSensitiveLog(
-      obj.ApplyServerSideEncryptionByDefault
+      obj.ApplyServerSideEncryptionByDefault,
     ),
   }),
 });
@@ -13890,7 +13890,7 @@ export const GetBucketEncryptionOutputFilterSensitiveLog = (obj: GetBucketEncryp
   ...obj,
   ...(obj.ServerSideEncryptionConfiguration && {
     ServerSideEncryptionConfiguration: ServerSideEncryptionConfigurationFilterSensitiveLog(
-      obj.ServerSideEncryptionConfiguration
+      obj.ServerSideEncryptionConfiguration,
     ),
   }),
 });
@@ -13941,7 +13941,7 @@ export const InventoryConfigurationFilterSensitiveLog = (obj: InventoryConfigura
  * @internal
  */
 export const GetBucketInventoryConfigurationOutputFilterSensitiveLog = (
-  obj: GetBucketInventoryConfigurationOutput
+  obj: GetBucketInventoryConfigurationOutput,
 ): any => ({
   ...obj,
   ...(obj.InventoryConfiguration && {
@@ -14000,12 +14000,12 @@ export const HeadObjectRequestFilterSensitiveLog = (obj: HeadObjectRequest): any
  * @internal
  */
 export const ListBucketInventoryConfigurationsOutputFilterSensitiveLog = (
-  obj: ListBucketInventoryConfigurationsOutput
+  obj: ListBucketInventoryConfigurationsOutput,
 ): any => ({
   ...obj,
   ...(obj.InventoryConfigurationList && {
     InventoryConfigurationList: obj.InventoryConfigurationList.map((item) =>
-      InventoryConfigurationFilterSensitiveLog(item)
+      InventoryConfigurationFilterSensitiveLog(item),
     ),
   }),
 });
@@ -14025,7 +14025,7 @@ export const PutBucketEncryptionRequestFilterSensitiveLog = (obj: PutBucketEncry
   ...obj,
   ...(obj.ServerSideEncryptionConfiguration && {
     ServerSideEncryptionConfiguration: ServerSideEncryptionConfigurationFilterSensitiveLog(
-      obj.ServerSideEncryptionConfiguration
+      obj.ServerSideEncryptionConfiguration,
     ),
   }),
 });
@@ -14034,7 +14034,7 @@ export const PutBucketEncryptionRequestFilterSensitiveLog = (obj: PutBucketEncry
  * @internal
  */
 export const PutBucketInventoryConfigurationRequestFilterSensitiveLog = (
-  obj: PutBucketInventoryConfigurationRequest
+  obj: PutBucketInventoryConfigurationRequest,
 ): any => ({
   ...obj,
   ...(obj.InventoryConfiguration && {

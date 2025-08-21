@@ -1310,7 +1310,7 @@ export const ListResourceRequestsOutputFilterSensitiveLog = (obj: ListResourceRe
   ...obj,
   ...(obj.ResourceRequestStatusSummaries && {
     ResourceRequestStatusSummaries: obj.ResourceRequestStatusSummaries.map((item) =>
-      ProgressEventFilterSensitiveLog(item)
+      ProgressEventFilterSensitiveLog(item),
     ),
   }),
 });

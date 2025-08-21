@@ -68,7 +68,7 @@ const checkState = async (client: DeadlineClient, input: GetJobCommandInput): Pr
  */
 export const waitForJobCreateComplete = async (
   params: WaiterConfiguration<DeadlineClient>,
-  input: GetJobCommandInput
+  input: GetJobCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 1, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -80,7 +80,7 @@ export const waitForJobCreateComplete = async (
  */
 export const waitUntilJobCreateComplete = async (
   params: WaiterConfiguration<DeadlineClient>,
-  input: GetJobCommandInput
+  input: GetJobCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 1, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

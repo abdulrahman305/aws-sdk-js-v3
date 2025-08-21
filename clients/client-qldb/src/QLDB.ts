@@ -113,16 +113,16 @@ export interface QLDB {
    */
   cancelJournalKinesisStream(
     args: CancelJournalKinesisStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelJournalKinesisStreamCommandOutput>;
   cancelJournalKinesisStream(
     args: CancelJournalKinesisStreamCommandInput,
-    cb: (err: any, data?: CancelJournalKinesisStreamCommandOutput) => void
+    cb: (err: any, data?: CancelJournalKinesisStreamCommandOutput) => void,
   ): void;
   cancelJournalKinesisStream(
     args: CancelJournalKinesisStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelJournalKinesisStreamCommandOutput) => void
+    cb: (err: any, data?: CancelJournalKinesisStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -133,7 +133,7 @@ export interface QLDB {
   createLedger(
     args: CreateLedgerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateLedgerCommandOutput) => void
+    cb: (err: any, data?: CreateLedgerCommandOutput) => void,
   ): void;
 
   /**
@@ -144,7 +144,7 @@ export interface QLDB {
   deleteLedger(
     args: DeleteLedgerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLedgerCommandOutput) => void
+    cb: (err: any, data?: DeleteLedgerCommandOutput) => void,
   ): void;
 
   /**
@@ -152,16 +152,16 @@ export interface QLDB {
    */
   describeJournalKinesisStream(
     args: DescribeJournalKinesisStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeJournalKinesisStreamCommandOutput>;
   describeJournalKinesisStream(
     args: DescribeJournalKinesisStreamCommandInput,
-    cb: (err: any, data?: DescribeJournalKinesisStreamCommandOutput) => void
+    cb: (err: any, data?: DescribeJournalKinesisStreamCommandOutput) => void,
   ): void;
   describeJournalKinesisStream(
     args: DescribeJournalKinesisStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeJournalKinesisStreamCommandOutput) => void
+    cb: (err: any, data?: DescribeJournalKinesisStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -169,16 +169,16 @@ export interface QLDB {
    */
   describeJournalS3Export(
     args: DescribeJournalS3ExportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeJournalS3ExportCommandOutput>;
   describeJournalS3Export(
     args: DescribeJournalS3ExportCommandInput,
-    cb: (err: any, data?: DescribeJournalS3ExportCommandOutput) => void
+    cb: (err: any, data?: DescribeJournalS3ExportCommandOutput) => void,
   ): void;
   describeJournalS3Export(
     args: DescribeJournalS3ExportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeJournalS3ExportCommandOutput) => void
+    cb: (err: any, data?: DescribeJournalS3ExportCommandOutput) => void,
   ): void;
 
   /**
@@ -186,13 +186,13 @@ export interface QLDB {
    */
   describeLedger(
     args: DescribeLedgerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLedgerCommandOutput>;
   describeLedger(args: DescribeLedgerCommandInput, cb: (err: any, data?: DescribeLedgerCommandOutput) => void): void;
   describeLedger(
     args: DescribeLedgerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLedgerCommandOutput) => void
+    cb: (err: any, data?: DescribeLedgerCommandOutput) => void,
   ): void;
 
   /**
@@ -200,16 +200,16 @@ export interface QLDB {
    */
   exportJournalToS3(
     args: ExportJournalToS3CommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExportJournalToS3CommandOutput>;
   exportJournalToS3(
     args: ExportJournalToS3CommandInput,
-    cb: (err: any, data?: ExportJournalToS3CommandOutput) => void
+    cb: (err: any, data?: ExportJournalToS3CommandOutput) => void,
   ): void;
   exportJournalToS3(
     args: ExportJournalToS3CommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExportJournalToS3CommandOutput) => void
+    cb: (err: any, data?: ExportJournalToS3CommandOutput) => void,
   ): void;
 
   /**
@@ -220,7 +220,7 @@ export interface QLDB {
   getBlock(
     args: GetBlockCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBlockCommandOutput) => void
+    cb: (err: any, data?: GetBlockCommandOutput) => void,
   ): void;
 
   /**
@@ -231,7 +231,7 @@ export interface QLDB {
   getDigest(
     args: GetDigestCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDigestCommandOutput) => void
+    cb: (err: any, data?: GetDigestCommandOutput) => void,
   ): void;
 
   /**
@@ -242,7 +242,7 @@ export interface QLDB {
   getRevision(
     args: GetRevisionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRevisionCommandOutput) => void
+    cb: (err: any, data?: GetRevisionCommandOutput) => void,
   ): void;
 
   /**
@@ -250,16 +250,16 @@ export interface QLDB {
    */
   listJournalKinesisStreamsForLedger(
     args: ListJournalKinesisStreamsForLedgerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListJournalKinesisStreamsForLedgerCommandOutput>;
   listJournalKinesisStreamsForLedger(
     args: ListJournalKinesisStreamsForLedgerCommandInput,
-    cb: (err: any, data?: ListJournalKinesisStreamsForLedgerCommandOutput) => void
+    cb: (err: any, data?: ListJournalKinesisStreamsForLedgerCommandOutput) => void,
   ): void;
   listJournalKinesisStreamsForLedger(
     args: ListJournalKinesisStreamsForLedgerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListJournalKinesisStreamsForLedgerCommandOutput) => void
+    cb: (err: any, data?: ListJournalKinesisStreamsForLedgerCommandOutput) => void,
   ): void;
 
   /**
@@ -268,16 +268,16 @@ export interface QLDB {
   listJournalS3Exports(): Promise<ListJournalS3ExportsCommandOutput>;
   listJournalS3Exports(
     args: ListJournalS3ExportsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListJournalS3ExportsCommandOutput>;
   listJournalS3Exports(
     args: ListJournalS3ExportsCommandInput,
-    cb: (err: any, data?: ListJournalS3ExportsCommandOutput) => void
+    cb: (err: any, data?: ListJournalS3ExportsCommandOutput) => void,
   ): void;
   listJournalS3Exports(
     args: ListJournalS3ExportsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListJournalS3ExportsCommandOutput) => void
+    cb: (err: any, data?: ListJournalS3ExportsCommandOutput) => void,
   ): void;
 
   /**
@@ -285,16 +285,16 @@ export interface QLDB {
    */
   listJournalS3ExportsForLedger(
     args: ListJournalS3ExportsForLedgerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListJournalS3ExportsForLedgerCommandOutput>;
   listJournalS3ExportsForLedger(
     args: ListJournalS3ExportsForLedgerCommandInput,
-    cb: (err: any, data?: ListJournalS3ExportsForLedgerCommandOutput) => void
+    cb: (err: any, data?: ListJournalS3ExportsForLedgerCommandOutput) => void,
   ): void;
   listJournalS3ExportsForLedger(
     args: ListJournalS3ExportsForLedgerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListJournalS3ExportsForLedgerCommandOutput) => void
+    cb: (err: any, data?: ListJournalS3ExportsForLedgerCommandOutput) => void,
   ): void;
 
   /**
@@ -306,7 +306,7 @@ export interface QLDB {
   listLedgers(
     args: ListLedgersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLedgersCommandOutput) => void
+    cb: (err: any, data?: ListLedgersCommandOutput) => void,
   ): void;
 
   /**
@@ -314,16 +314,16 @@ export interface QLDB {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -331,16 +331,16 @@ export interface QLDB {
    */
   streamJournalToKinesis(
     args: StreamJournalToKinesisCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StreamJournalToKinesisCommandOutput>;
   streamJournalToKinesis(
     args: StreamJournalToKinesisCommandInput,
-    cb: (err: any, data?: StreamJournalToKinesisCommandOutput) => void
+    cb: (err: any, data?: StreamJournalToKinesisCommandOutput) => void,
   ): void;
   streamJournalToKinesis(
     args: StreamJournalToKinesisCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StreamJournalToKinesisCommandOutput) => void
+    cb: (err: any, data?: StreamJournalToKinesisCommandOutput) => void,
   ): void;
 
   /**
@@ -351,7 +351,7 @@ export interface QLDB {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -362,7 +362,7 @@ export interface QLDB {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -373,7 +373,7 @@ export interface QLDB {
   updateLedger(
     args: UpdateLedgerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateLedgerCommandOutput) => void
+    cb: (err: any, data?: UpdateLedgerCommandOutput) => void,
   ): void;
 
   /**
@@ -381,16 +381,16 @@ export interface QLDB {
    */
   updateLedgerPermissionsMode(
     args: UpdateLedgerPermissionsModeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateLedgerPermissionsModeCommandOutput>;
   updateLedgerPermissionsMode(
     args: UpdateLedgerPermissionsModeCommandInput,
-    cb: (err: any, data?: UpdateLedgerPermissionsModeCommandOutput) => void
+    cb: (err: any, data?: UpdateLedgerPermissionsModeCommandOutput) => void,
   ): void;
   updateLedgerPermissionsMode(
     args: UpdateLedgerPermissionsModeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateLedgerPermissionsModeCommandOutput) => void
+    cb: (err: any, data?: UpdateLedgerPermissionsModeCommandOutput) => void,
   ): void;
 }
 

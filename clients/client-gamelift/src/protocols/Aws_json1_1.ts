@@ -569,7 +569,7 @@ import {
  */
 export const se_AcceptMatchCommand = async (
   input: AcceptMatchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AcceptMatch");
   let body: any;
@@ -582,7 +582,7 @@ export const se_AcceptMatchCommand = async (
  */
 export const se_ClaimGameServerCommand = async (
   input: ClaimGameServerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ClaimGameServer");
   let body: any;
@@ -595,7 +595,7 @@ export const se_ClaimGameServerCommand = async (
  */
 export const se_CreateAliasCommand = async (
   input: CreateAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAlias");
   let body: any;
@@ -608,7 +608,7 @@ export const se_CreateAliasCommand = async (
  */
 export const se_CreateBuildCommand = async (
   input: CreateBuildCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateBuild");
   let body: any;
@@ -621,7 +621,7 @@ export const se_CreateBuildCommand = async (
  */
 export const se_CreateContainerGroupDefinitionCommand = async (
   input: CreateContainerGroupDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateContainerGroupDefinition");
   let body: any;
@@ -634,7 +634,7 @@ export const se_CreateContainerGroupDefinitionCommand = async (
  */
 export const se_CreateFleetCommand = async (
   input: CreateFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateFleet");
   let body: any;
@@ -647,7 +647,7 @@ export const se_CreateFleetCommand = async (
  */
 export const se_CreateFleetLocationsCommand = async (
   input: CreateFleetLocationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateFleetLocations");
   let body: any;
@@ -660,7 +660,7 @@ export const se_CreateFleetLocationsCommand = async (
  */
 export const se_CreateGameServerGroupCommand = async (
   input: CreateGameServerGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateGameServerGroup");
   let body: any;
@@ -673,7 +673,7 @@ export const se_CreateGameServerGroupCommand = async (
  */
 export const se_CreateGameSessionCommand = async (
   input: CreateGameSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateGameSession");
   let body: any;
@@ -686,7 +686,7 @@ export const se_CreateGameSessionCommand = async (
  */
 export const se_CreateGameSessionQueueCommand = async (
   input: CreateGameSessionQueueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateGameSessionQueue");
   let body: any;
@@ -699,7 +699,7 @@ export const se_CreateGameSessionQueueCommand = async (
  */
 export const se_CreateLocationCommand = async (
   input: CreateLocationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLocation");
   let body: any;
@@ -712,7 +712,7 @@ export const se_CreateLocationCommand = async (
  */
 export const se_CreateMatchmakingConfigurationCommand = async (
   input: CreateMatchmakingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateMatchmakingConfiguration");
   let body: any;
@@ -725,7 +725,7 @@ export const se_CreateMatchmakingConfigurationCommand = async (
  */
 export const se_CreateMatchmakingRuleSetCommand = async (
   input: CreateMatchmakingRuleSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateMatchmakingRuleSet");
   let body: any;
@@ -738,7 +738,7 @@ export const se_CreateMatchmakingRuleSetCommand = async (
  */
 export const se_CreatePlayerSessionCommand = async (
   input: CreatePlayerSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreatePlayerSession");
   let body: any;
@@ -751,7 +751,7 @@ export const se_CreatePlayerSessionCommand = async (
  */
 export const se_CreatePlayerSessionsCommand = async (
   input: CreatePlayerSessionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreatePlayerSessions");
   let body: any;
@@ -764,7 +764,7 @@ export const se_CreatePlayerSessionsCommand = async (
  */
 export const se_CreateScriptCommand = async (
   input: CreateScriptCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateScript");
   let body: any;
@@ -777,7 +777,7 @@ export const se_CreateScriptCommand = async (
  */
 export const se_CreateVpcPeeringAuthorizationCommand = async (
   input: CreateVpcPeeringAuthorizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateVpcPeeringAuthorization");
   let body: any;
@@ -790,7 +790,7 @@ export const se_CreateVpcPeeringAuthorizationCommand = async (
  */
 export const se_CreateVpcPeeringConnectionCommand = async (
   input: CreateVpcPeeringConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateVpcPeeringConnection");
   let body: any;
@@ -803,7 +803,7 @@ export const se_CreateVpcPeeringConnectionCommand = async (
  */
 export const se_DeleteAliasCommand = async (
   input: DeleteAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAlias");
   let body: any;
@@ -816,7 +816,7 @@ export const se_DeleteAliasCommand = async (
  */
 export const se_DeleteBuildCommand = async (
   input: DeleteBuildCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteBuild");
   let body: any;
@@ -829,7 +829,7 @@ export const se_DeleteBuildCommand = async (
  */
 export const se_DeleteContainerGroupDefinitionCommand = async (
   input: DeleteContainerGroupDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteContainerGroupDefinition");
   let body: any;
@@ -842,7 +842,7 @@ export const se_DeleteContainerGroupDefinitionCommand = async (
  */
 export const se_DeleteFleetCommand = async (
   input: DeleteFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteFleet");
   let body: any;
@@ -855,7 +855,7 @@ export const se_DeleteFleetCommand = async (
  */
 export const se_DeleteFleetLocationsCommand = async (
   input: DeleteFleetLocationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteFleetLocations");
   let body: any;
@@ -868,7 +868,7 @@ export const se_DeleteFleetLocationsCommand = async (
  */
 export const se_DeleteGameServerGroupCommand = async (
   input: DeleteGameServerGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteGameServerGroup");
   let body: any;
@@ -881,7 +881,7 @@ export const se_DeleteGameServerGroupCommand = async (
  */
 export const se_DeleteGameSessionQueueCommand = async (
   input: DeleteGameSessionQueueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteGameSessionQueue");
   let body: any;
@@ -894,7 +894,7 @@ export const se_DeleteGameSessionQueueCommand = async (
  */
 export const se_DeleteLocationCommand = async (
   input: DeleteLocationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteLocation");
   let body: any;
@@ -907,7 +907,7 @@ export const se_DeleteLocationCommand = async (
  */
 export const se_DeleteMatchmakingConfigurationCommand = async (
   input: DeleteMatchmakingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteMatchmakingConfiguration");
   let body: any;
@@ -920,7 +920,7 @@ export const se_DeleteMatchmakingConfigurationCommand = async (
  */
 export const se_DeleteMatchmakingRuleSetCommand = async (
   input: DeleteMatchmakingRuleSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteMatchmakingRuleSet");
   let body: any;
@@ -933,7 +933,7 @@ export const se_DeleteMatchmakingRuleSetCommand = async (
  */
 export const se_DeleteScalingPolicyCommand = async (
   input: DeleteScalingPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteScalingPolicy");
   let body: any;
@@ -946,7 +946,7 @@ export const se_DeleteScalingPolicyCommand = async (
  */
 export const se_DeleteScriptCommand = async (
   input: DeleteScriptCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteScript");
   let body: any;
@@ -959,7 +959,7 @@ export const se_DeleteScriptCommand = async (
  */
 export const se_DeleteVpcPeeringAuthorizationCommand = async (
   input: DeleteVpcPeeringAuthorizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteVpcPeeringAuthorization");
   let body: any;
@@ -972,7 +972,7 @@ export const se_DeleteVpcPeeringAuthorizationCommand = async (
  */
 export const se_DeleteVpcPeeringConnectionCommand = async (
   input: DeleteVpcPeeringConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteVpcPeeringConnection");
   let body: any;
@@ -985,7 +985,7 @@ export const se_DeleteVpcPeeringConnectionCommand = async (
  */
 export const se_DeregisterComputeCommand = async (
   input: DeregisterComputeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeregisterCompute");
   let body: any;
@@ -998,7 +998,7 @@ export const se_DeregisterComputeCommand = async (
  */
 export const se_DeregisterGameServerCommand = async (
   input: DeregisterGameServerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeregisterGameServer");
   let body: any;
@@ -1011,7 +1011,7 @@ export const se_DeregisterGameServerCommand = async (
  */
 export const se_DescribeAliasCommand = async (
   input: DescribeAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAlias");
   let body: any;
@@ -1024,7 +1024,7 @@ export const se_DescribeAliasCommand = async (
  */
 export const se_DescribeBuildCommand = async (
   input: DescribeBuildCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeBuild");
   let body: any;
@@ -1037,7 +1037,7 @@ export const se_DescribeBuildCommand = async (
  */
 export const se_DescribeComputeCommand = async (
   input: DescribeComputeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCompute");
   let body: any;
@@ -1050,7 +1050,7 @@ export const se_DescribeComputeCommand = async (
  */
 export const se_DescribeContainerGroupDefinitionCommand = async (
   input: DescribeContainerGroupDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeContainerGroupDefinition");
   let body: any;
@@ -1063,7 +1063,7 @@ export const se_DescribeContainerGroupDefinitionCommand = async (
  */
 export const se_DescribeEC2InstanceLimitsCommand = async (
   input: DescribeEC2InstanceLimitsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEC2InstanceLimits");
   let body: any;
@@ -1076,7 +1076,7 @@ export const se_DescribeEC2InstanceLimitsCommand = async (
  */
 export const se_DescribeFleetAttributesCommand = async (
   input: DescribeFleetAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFleetAttributes");
   let body: any;
@@ -1089,7 +1089,7 @@ export const se_DescribeFleetAttributesCommand = async (
  */
 export const se_DescribeFleetCapacityCommand = async (
   input: DescribeFleetCapacityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFleetCapacity");
   let body: any;
@@ -1102,7 +1102,7 @@ export const se_DescribeFleetCapacityCommand = async (
  */
 export const se_DescribeFleetEventsCommand = async (
   input: DescribeFleetEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFleetEvents");
   let body: any;
@@ -1115,7 +1115,7 @@ export const se_DescribeFleetEventsCommand = async (
  */
 export const se_DescribeFleetLocationAttributesCommand = async (
   input: DescribeFleetLocationAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFleetLocationAttributes");
   let body: any;
@@ -1128,7 +1128,7 @@ export const se_DescribeFleetLocationAttributesCommand = async (
  */
 export const se_DescribeFleetLocationCapacityCommand = async (
   input: DescribeFleetLocationCapacityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFleetLocationCapacity");
   let body: any;
@@ -1141,7 +1141,7 @@ export const se_DescribeFleetLocationCapacityCommand = async (
  */
 export const se_DescribeFleetLocationUtilizationCommand = async (
   input: DescribeFleetLocationUtilizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFleetLocationUtilization");
   let body: any;
@@ -1154,7 +1154,7 @@ export const se_DescribeFleetLocationUtilizationCommand = async (
  */
 export const se_DescribeFleetPortSettingsCommand = async (
   input: DescribeFleetPortSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFleetPortSettings");
   let body: any;
@@ -1167,7 +1167,7 @@ export const se_DescribeFleetPortSettingsCommand = async (
  */
 export const se_DescribeFleetUtilizationCommand = async (
   input: DescribeFleetUtilizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFleetUtilization");
   let body: any;
@@ -1180,7 +1180,7 @@ export const se_DescribeFleetUtilizationCommand = async (
  */
 export const se_DescribeGameServerCommand = async (
   input: DescribeGameServerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeGameServer");
   let body: any;
@@ -1193,7 +1193,7 @@ export const se_DescribeGameServerCommand = async (
  */
 export const se_DescribeGameServerGroupCommand = async (
   input: DescribeGameServerGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeGameServerGroup");
   let body: any;
@@ -1206,7 +1206,7 @@ export const se_DescribeGameServerGroupCommand = async (
  */
 export const se_DescribeGameServerInstancesCommand = async (
   input: DescribeGameServerInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeGameServerInstances");
   let body: any;
@@ -1219,7 +1219,7 @@ export const se_DescribeGameServerInstancesCommand = async (
  */
 export const se_DescribeGameSessionDetailsCommand = async (
   input: DescribeGameSessionDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeGameSessionDetails");
   let body: any;
@@ -1232,7 +1232,7 @@ export const se_DescribeGameSessionDetailsCommand = async (
  */
 export const se_DescribeGameSessionPlacementCommand = async (
   input: DescribeGameSessionPlacementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeGameSessionPlacement");
   let body: any;
@@ -1245,7 +1245,7 @@ export const se_DescribeGameSessionPlacementCommand = async (
  */
 export const se_DescribeGameSessionQueuesCommand = async (
   input: DescribeGameSessionQueuesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeGameSessionQueues");
   let body: any;
@@ -1258,7 +1258,7 @@ export const se_DescribeGameSessionQueuesCommand = async (
  */
 export const se_DescribeGameSessionsCommand = async (
   input: DescribeGameSessionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeGameSessions");
   let body: any;
@@ -1271,7 +1271,7 @@ export const se_DescribeGameSessionsCommand = async (
  */
 export const se_DescribeInstancesCommand = async (
   input: DescribeInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeInstances");
   let body: any;
@@ -1284,7 +1284,7 @@ export const se_DescribeInstancesCommand = async (
  */
 export const se_DescribeMatchmakingCommand = async (
   input: DescribeMatchmakingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeMatchmaking");
   let body: any;
@@ -1297,7 +1297,7 @@ export const se_DescribeMatchmakingCommand = async (
  */
 export const se_DescribeMatchmakingConfigurationsCommand = async (
   input: DescribeMatchmakingConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeMatchmakingConfigurations");
   let body: any;
@@ -1310,7 +1310,7 @@ export const se_DescribeMatchmakingConfigurationsCommand = async (
  */
 export const se_DescribeMatchmakingRuleSetsCommand = async (
   input: DescribeMatchmakingRuleSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeMatchmakingRuleSets");
   let body: any;
@@ -1323,7 +1323,7 @@ export const se_DescribeMatchmakingRuleSetsCommand = async (
  */
 export const se_DescribePlayerSessionsCommand = async (
   input: DescribePlayerSessionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribePlayerSessions");
   let body: any;
@@ -1336,7 +1336,7 @@ export const se_DescribePlayerSessionsCommand = async (
  */
 export const se_DescribeRuntimeConfigurationCommand = async (
   input: DescribeRuntimeConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeRuntimeConfiguration");
   let body: any;
@@ -1349,7 +1349,7 @@ export const se_DescribeRuntimeConfigurationCommand = async (
  */
 export const se_DescribeScalingPoliciesCommand = async (
   input: DescribeScalingPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeScalingPolicies");
   let body: any;
@@ -1362,7 +1362,7 @@ export const se_DescribeScalingPoliciesCommand = async (
  */
 export const se_DescribeScriptCommand = async (
   input: DescribeScriptCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeScript");
   let body: any;
@@ -1375,7 +1375,7 @@ export const se_DescribeScriptCommand = async (
  */
 export const se_DescribeVpcPeeringAuthorizationsCommand = async (
   input: DescribeVpcPeeringAuthorizationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeVpcPeeringAuthorizations");
   let body: any;
@@ -1388,7 +1388,7 @@ export const se_DescribeVpcPeeringAuthorizationsCommand = async (
  */
 export const se_DescribeVpcPeeringConnectionsCommand = async (
   input: DescribeVpcPeeringConnectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeVpcPeeringConnections");
   let body: any;
@@ -1401,7 +1401,7 @@ export const se_DescribeVpcPeeringConnectionsCommand = async (
  */
 export const se_GetComputeAccessCommand = async (
   input: GetComputeAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetComputeAccess");
   let body: any;
@@ -1414,7 +1414,7 @@ export const se_GetComputeAccessCommand = async (
  */
 export const se_GetComputeAuthTokenCommand = async (
   input: GetComputeAuthTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetComputeAuthToken");
   let body: any;
@@ -1427,7 +1427,7 @@ export const se_GetComputeAuthTokenCommand = async (
  */
 export const se_GetGameSessionLogUrlCommand = async (
   input: GetGameSessionLogUrlCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetGameSessionLogUrl");
   let body: any;
@@ -1440,7 +1440,7 @@ export const se_GetGameSessionLogUrlCommand = async (
  */
 export const se_GetInstanceAccessCommand = async (
   input: GetInstanceAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetInstanceAccess");
   let body: any;
@@ -1453,7 +1453,7 @@ export const se_GetInstanceAccessCommand = async (
  */
 export const se_ListAliasesCommand = async (
   input: ListAliasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAliases");
   let body: any;
@@ -1466,7 +1466,7 @@ export const se_ListAliasesCommand = async (
  */
 export const se_ListBuildsCommand = async (
   input: ListBuildsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListBuilds");
   let body: any;
@@ -1479,7 +1479,7 @@ export const se_ListBuildsCommand = async (
  */
 export const se_ListComputeCommand = async (
   input: ListComputeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListCompute");
   let body: any;
@@ -1492,7 +1492,7 @@ export const se_ListComputeCommand = async (
  */
 export const se_ListContainerGroupDefinitionsCommand = async (
   input: ListContainerGroupDefinitionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListContainerGroupDefinitions");
   let body: any;
@@ -1505,7 +1505,7 @@ export const se_ListContainerGroupDefinitionsCommand = async (
  */
 export const se_ListFleetsCommand = async (
   input: ListFleetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListFleets");
   let body: any;
@@ -1518,7 +1518,7 @@ export const se_ListFleetsCommand = async (
  */
 export const se_ListGameServerGroupsCommand = async (
   input: ListGameServerGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListGameServerGroups");
   let body: any;
@@ -1531,7 +1531,7 @@ export const se_ListGameServerGroupsCommand = async (
  */
 export const se_ListGameServersCommand = async (
   input: ListGameServersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListGameServers");
   let body: any;
@@ -1544,7 +1544,7 @@ export const se_ListGameServersCommand = async (
  */
 export const se_ListLocationsCommand = async (
   input: ListLocationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListLocations");
   let body: any;
@@ -1557,7 +1557,7 @@ export const se_ListLocationsCommand = async (
  */
 export const se_ListScriptsCommand = async (
   input: ListScriptsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListScripts");
   let body: any;
@@ -1570,7 +1570,7 @@ export const se_ListScriptsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -1583,7 +1583,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutScalingPolicyCommand = async (
   input: PutScalingPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutScalingPolicy");
   let body: any;
@@ -1596,7 +1596,7 @@ export const se_PutScalingPolicyCommand = async (
  */
 export const se_RegisterComputeCommand = async (
   input: RegisterComputeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RegisterCompute");
   let body: any;
@@ -1609,7 +1609,7 @@ export const se_RegisterComputeCommand = async (
  */
 export const se_RegisterGameServerCommand = async (
   input: RegisterGameServerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RegisterGameServer");
   let body: any;
@@ -1622,7 +1622,7 @@ export const se_RegisterGameServerCommand = async (
  */
 export const se_RequestUploadCredentialsCommand = async (
   input: RequestUploadCredentialsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RequestUploadCredentials");
   let body: any;
@@ -1635,7 +1635,7 @@ export const se_RequestUploadCredentialsCommand = async (
  */
 export const se_ResolveAliasCommand = async (
   input: ResolveAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ResolveAlias");
   let body: any;
@@ -1648,7 +1648,7 @@ export const se_ResolveAliasCommand = async (
  */
 export const se_ResumeGameServerGroupCommand = async (
   input: ResumeGameServerGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ResumeGameServerGroup");
   let body: any;
@@ -1661,7 +1661,7 @@ export const se_ResumeGameServerGroupCommand = async (
  */
 export const se_SearchGameSessionsCommand = async (
   input: SearchGameSessionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SearchGameSessions");
   let body: any;
@@ -1674,7 +1674,7 @@ export const se_SearchGameSessionsCommand = async (
  */
 export const se_StartFleetActionsCommand = async (
   input: StartFleetActionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartFleetActions");
   let body: any;
@@ -1687,7 +1687,7 @@ export const se_StartFleetActionsCommand = async (
  */
 export const se_StartGameSessionPlacementCommand = async (
   input: StartGameSessionPlacementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartGameSessionPlacement");
   let body: any;
@@ -1700,7 +1700,7 @@ export const se_StartGameSessionPlacementCommand = async (
  */
 export const se_StartMatchBackfillCommand = async (
   input: StartMatchBackfillCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartMatchBackfill");
   let body: any;
@@ -1713,7 +1713,7 @@ export const se_StartMatchBackfillCommand = async (
  */
 export const se_StartMatchmakingCommand = async (
   input: StartMatchmakingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartMatchmaking");
   let body: any;
@@ -1726,7 +1726,7 @@ export const se_StartMatchmakingCommand = async (
  */
 export const se_StopFleetActionsCommand = async (
   input: StopFleetActionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopFleetActions");
   let body: any;
@@ -1739,7 +1739,7 @@ export const se_StopFleetActionsCommand = async (
  */
 export const se_StopGameSessionPlacementCommand = async (
   input: StopGameSessionPlacementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopGameSessionPlacement");
   let body: any;
@@ -1752,7 +1752,7 @@ export const se_StopGameSessionPlacementCommand = async (
  */
 export const se_StopMatchmakingCommand = async (
   input: StopMatchmakingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopMatchmaking");
   let body: any;
@@ -1765,7 +1765,7 @@ export const se_StopMatchmakingCommand = async (
  */
 export const se_SuspendGameServerGroupCommand = async (
   input: SuspendGameServerGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SuspendGameServerGroup");
   let body: any;
@@ -1778,7 +1778,7 @@ export const se_SuspendGameServerGroupCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -1791,7 +1791,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -1804,7 +1804,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAliasCommand = async (
   input: UpdateAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateAlias");
   let body: any;
@@ -1817,7 +1817,7 @@ export const se_UpdateAliasCommand = async (
  */
 export const se_UpdateBuildCommand = async (
   input: UpdateBuildCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateBuild");
   let body: any;
@@ -1830,7 +1830,7 @@ export const se_UpdateBuildCommand = async (
  */
 export const se_UpdateFleetAttributesCommand = async (
   input: UpdateFleetAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateFleetAttributes");
   let body: any;
@@ -1843,7 +1843,7 @@ export const se_UpdateFleetAttributesCommand = async (
  */
 export const se_UpdateFleetCapacityCommand = async (
   input: UpdateFleetCapacityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateFleetCapacity");
   let body: any;
@@ -1856,7 +1856,7 @@ export const se_UpdateFleetCapacityCommand = async (
  */
 export const se_UpdateFleetPortSettingsCommand = async (
   input: UpdateFleetPortSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateFleetPortSettings");
   let body: any;
@@ -1869,7 +1869,7 @@ export const se_UpdateFleetPortSettingsCommand = async (
  */
 export const se_UpdateGameServerCommand = async (
   input: UpdateGameServerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateGameServer");
   let body: any;
@@ -1882,7 +1882,7 @@ export const se_UpdateGameServerCommand = async (
  */
 export const se_UpdateGameServerGroupCommand = async (
   input: UpdateGameServerGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateGameServerGroup");
   let body: any;
@@ -1895,7 +1895,7 @@ export const se_UpdateGameServerGroupCommand = async (
  */
 export const se_UpdateGameSessionCommand = async (
   input: UpdateGameSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateGameSession");
   let body: any;
@@ -1908,7 +1908,7 @@ export const se_UpdateGameSessionCommand = async (
  */
 export const se_UpdateGameSessionQueueCommand = async (
   input: UpdateGameSessionQueueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateGameSessionQueue");
   let body: any;
@@ -1921,7 +1921,7 @@ export const se_UpdateGameSessionQueueCommand = async (
  */
 export const se_UpdateMatchmakingConfigurationCommand = async (
   input: UpdateMatchmakingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateMatchmakingConfiguration");
   let body: any;
@@ -1934,7 +1934,7 @@ export const se_UpdateMatchmakingConfigurationCommand = async (
  */
 export const se_UpdateRuntimeConfigurationCommand = async (
   input: UpdateRuntimeConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRuntimeConfiguration");
   let body: any;
@@ -1947,7 +1947,7 @@ export const se_UpdateRuntimeConfigurationCommand = async (
  */
 export const se_UpdateScriptCommand = async (
   input: UpdateScriptCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateScript");
   let body: any;
@@ -1960,7 +1960,7 @@ export const se_UpdateScriptCommand = async (
  */
 export const se_ValidateMatchmakingRuleSetCommand = async (
   input: ValidateMatchmakingRuleSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ValidateMatchmakingRuleSet");
   let body: any;
@@ -1973,7 +1973,7 @@ export const se_ValidateMatchmakingRuleSetCommand = async (
  */
 export const de_AcceptMatchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptMatchCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1993,7 +1993,7 @@ export const de_AcceptMatchCommand = async (
  */
 export const de_ClaimGameServerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ClaimGameServerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2013,7 +2013,7 @@ export const de_ClaimGameServerCommand = async (
  */
 export const de_CreateAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2033,7 +2033,7 @@ export const de_CreateAliasCommand = async (
  */
 export const de_CreateBuildCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBuildCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2053,7 +2053,7 @@ export const de_CreateBuildCommand = async (
  */
 export const de_CreateContainerGroupDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateContainerGroupDefinitionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2073,7 +2073,7 @@ export const de_CreateContainerGroupDefinitionCommand = async (
  */
 export const de_CreateFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFleetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2093,7 +2093,7 @@ export const de_CreateFleetCommand = async (
  */
 export const de_CreateFleetLocationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFleetLocationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2113,7 +2113,7 @@ export const de_CreateFleetLocationsCommand = async (
  */
 export const de_CreateGameServerGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGameServerGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2133,7 +2133,7 @@ export const de_CreateGameServerGroupCommand = async (
  */
 export const de_CreateGameSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGameSessionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2153,7 +2153,7 @@ export const de_CreateGameSessionCommand = async (
  */
 export const de_CreateGameSessionQueueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGameSessionQueueCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2173,7 +2173,7 @@ export const de_CreateGameSessionQueueCommand = async (
  */
 export const de_CreateLocationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLocationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2193,7 +2193,7 @@ export const de_CreateLocationCommand = async (
  */
 export const de_CreateMatchmakingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMatchmakingConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2213,7 +2213,7 @@ export const de_CreateMatchmakingConfigurationCommand = async (
  */
 export const de_CreateMatchmakingRuleSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMatchmakingRuleSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2233,7 +2233,7 @@ export const de_CreateMatchmakingRuleSetCommand = async (
  */
 export const de_CreatePlayerSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePlayerSessionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2253,7 +2253,7 @@ export const de_CreatePlayerSessionCommand = async (
  */
 export const de_CreatePlayerSessionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePlayerSessionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2273,7 +2273,7 @@ export const de_CreatePlayerSessionsCommand = async (
  */
 export const de_CreateScriptCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateScriptCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2293,7 +2293,7 @@ export const de_CreateScriptCommand = async (
  */
 export const de_CreateVpcPeeringAuthorizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVpcPeeringAuthorizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2313,7 +2313,7 @@ export const de_CreateVpcPeeringAuthorizationCommand = async (
  */
 export const de_CreateVpcPeeringConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVpcPeeringConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2333,7 +2333,7 @@ export const de_CreateVpcPeeringConnectionCommand = async (
  */
 export const de_DeleteAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2350,7 +2350,7 @@ export const de_DeleteAliasCommand = async (
  */
 export const de_DeleteBuildCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBuildCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2367,7 +2367,7 @@ export const de_DeleteBuildCommand = async (
  */
 export const de_DeleteContainerGroupDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteContainerGroupDefinitionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2384,7 +2384,7 @@ export const de_DeleteContainerGroupDefinitionCommand = async (
  */
 export const de_DeleteFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFleetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2401,7 +2401,7 @@ export const de_DeleteFleetCommand = async (
  */
 export const de_DeleteFleetLocationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFleetLocationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2421,7 +2421,7 @@ export const de_DeleteFleetLocationsCommand = async (
  */
 export const de_DeleteGameServerGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGameServerGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2441,7 +2441,7 @@ export const de_DeleteGameServerGroupCommand = async (
  */
 export const de_DeleteGameSessionQueueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGameSessionQueueCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2461,7 +2461,7 @@ export const de_DeleteGameSessionQueueCommand = async (
  */
 export const de_DeleteLocationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLocationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2481,7 +2481,7 @@ export const de_DeleteLocationCommand = async (
  */
 export const de_DeleteMatchmakingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMatchmakingConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2501,7 +2501,7 @@ export const de_DeleteMatchmakingConfigurationCommand = async (
  */
 export const de_DeleteMatchmakingRuleSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMatchmakingRuleSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2521,7 +2521,7 @@ export const de_DeleteMatchmakingRuleSetCommand = async (
  */
 export const de_DeleteScalingPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteScalingPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2538,7 +2538,7 @@ export const de_DeleteScalingPolicyCommand = async (
  */
 export const de_DeleteScriptCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteScriptCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2555,7 +2555,7 @@ export const de_DeleteScriptCommand = async (
  */
 export const de_DeleteVpcPeeringAuthorizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVpcPeeringAuthorizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2575,7 +2575,7 @@ export const de_DeleteVpcPeeringAuthorizationCommand = async (
  */
 export const de_DeleteVpcPeeringConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVpcPeeringConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2595,7 +2595,7 @@ export const de_DeleteVpcPeeringConnectionCommand = async (
  */
 export const de_DeregisterComputeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterComputeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2615,7 +2615,7 @@ export const de_DeregisterComputeCommand = async (
  */
 export const de_DeregisterGameServerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterGameServerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2632,7 +2632,7 @@ export const de_DeregisterGameServerCommand = async (
  */
 export const de_DescribeAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2652,7 +2652,7 @@ export const de_DescribeAliasCommand = async (
  */
 export const de_DescribeBuildCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBuildCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2672,7 +2672,7 @@ export const de_DescribeBuildCommand = async (
  */
 export const de_DescribeComputeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeComputeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2692,7 +2692,7 @@ export const de_DescribeComputeCommand = async (
  */
 export const de_DescribeContainerGroupDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeContainerGroupDefinitionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2712,7 +2712,7 @@ export const de_DescribeContainerGroupDefinitionCommand = async (
  */
 export const de_DescribeEC2InstanceLimitsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEC2InstanceLimitsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2732,7 +2732,7 @@ export const de_DescribeEC2InstanceLimitsCommand = async (
  */
 export const de_DescribeFleetAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFleetAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2752,7 +2752,7 @@ export const de_DescribeFleetAttributesCommand = async (
  */
 export const de_DescribeFleetCapacityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFleetCapacityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2772,7 +2772,7 @@ export const de_DescribeFleetCapacityCommand = async (
  */
 export const de_DescribeFleetEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFleetEventsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2792,7 +2792,7 @@ export const de_DescribeFleetEventsCommand = async (
  */
 export const de_DescribeFleetLocationAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFleetLocationAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2812,7 +2812,7 @@ export const de_DescribeFleetLocationAttributesCommand = async (
  */
 export const de_DescribeFleetLocationCapacityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFleetLocationCapacityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2832,7 +2832,7 @@ export const de_DescribeFleetLocationCapacityCommand = async (
  */
 export const de_DescribeFleetLocationUtilizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFleetLocationUtilizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2852,7 +2852,7 @@ export const de_DescribeFleetLocationUtilizationCommand = async (
  */
 export const de_DescribeFleetPortSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFleetPortSettingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2872,7 +2872,7 @@ export const de_DescribeFleetPortSettingsCommand = async (
  */
 export const de_DescribeFleetUtilizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFleetUtilizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2892,7 +2892,7 @@ export const de_DescribeFleetUtilizationCommand = async (
  */
 export const de_DescribeGameServerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGameServerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2912,7 +2912,7 @@ export const de_DescribeGameServerCommand = async (
  */
 export const de_DescribeGameServerGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGameServerGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2932,7 +2932,7 @@ export const de_DescribeGameServerGroupCommand = async (
  */
 export const de_DescribeGameServerInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGameServerInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2952,7 +2952,7 @@ export const de_DescribeGameServerInstancesCommand = async (
  */
 export const de_DescribeGameSessionDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGameSessionDetailsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2972,7 +2972,7 @@ export const de_DescribeGameSessionDetailsCommand = async (
  */
 export const de_DescribeGameSessionPlacementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGameSessionPlacementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2992,7 +2992,7 @@ export const de_DescribeGameSessionPlacementCommand = async (
  */
 export const de_DescribeGameSessionQueuesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGameSessionQueuesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3012,7 +3012,7 @@ export const de_DescribeGameSessionQueuesCommand = async (
  */
 export const de_DescribeGameSessionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGameSessionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3032,7 +3032,7 @@ export const de_DescribeGameSessionsCommand = async (
  */
 export const de_DescribeInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3052,7 +3052,7 @@ export const de_DescribeInstancesCommand = async (
  */
 export const de_DescribeMatchmakingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeMatchmakingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3072,7 +3072,7 @@ export const de_DescribeMatchmakingCommand = async (
  */
 export const de_DescribeMatchmakingConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeMatchmakingConfigurationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3092,7 +3092,7 @@ export const de_DescribeMatchmakingConfigurationsCommand = async (
  */
 export const de_DescribeMatchmakingRuleSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeMatchmakingRuleSetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3112,7 +3112,7 @@ export const de_DescribeMatchmakingRuleSetsCommand = async (
  */
 export const de_DescribePlayerSessionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePlayerSessionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3132,7 +3132,7 @@ export const de_DescribePlayerSessionsCommand = async (
  */
 export const de_DescribeRuntimeConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRuntimeConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3152,7 +3152,7 @@ export const de_DescribeRuntimeConfigurationCommand = async (
  */
 export const de_DescribeScalingPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeScalingPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3172,7 +3172,7 @@ export const de_DescribeScalingPoliciesCommand = async (
  */
 export const de_DescribeScriptCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeScriptCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3192,7 +3192,7 @@ export const de_DescribeScriptCommand = async (
  */
 export const de_DescribeVpcPeeringAuthorizationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVpcPeeringAuthorizationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3212,7 +3212,7 @@ export const de_DescribeVpcPeeringAuthorizationsCommand = async (
  */
 export const de_DescribeVpcPeeringConnectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVpcPeeringConnectionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3232,7 +3232,7 @@ export const de_DescribeVpcPeeringConnectionsCommand = async (
  */
 export const de_GetComputeAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetComputeAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3252,7 +3252,7 @@ export const de_GetComputeAccessCommand = async (
  */
 export const de_GetComputeAuthTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetComputeAuthTokenCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3272,7 +3272,7 @@ export const de_GetComputeAuthTokenCommand = async (
  */
 export const de_GetGameSessionLogUrlCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGameSessionLogUrlCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3292,7 +3292,7 @@ export const de_GetGameSessionLogUrlCommand = async (
  */
 export const de_GetInstanceAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInstanceAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3312,7 +3312,7 @@ export const de_GetInstanceAccessCommand = async (
  */
 export const de_ListAliasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAliasesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3332,7 +3332,7 @@ export const de_ListAliasesCommand = async (
  */
 export const de_ListBuildsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBuildsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3352,7 +3352,7 @@ export const de_ListBuildsCommand = async (
  */
 export const de_ListComputeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListComputeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3372,7 +3372,7 @@ export const de_ListComputeCommand = async (
  */
 export const de_ListContainerGroupDefinitionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListContainerGroupDefinitionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3392,7 +3392,7 @@ export const de_ListContainerGroupDefinitionsCommand = async (
  */
 export const de_ListFleetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFleetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3412,7 +3412,7 @@ export const de_ListFleetsCommand = async (
  */
 export const de_ListGameServerGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGameServerGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3432,7 +3432,7 @@ export const de_ListGameServerGroupsCommand = async (
  */
 export const de_ListGameServersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGameServersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3452,7 +3452,7 @@ export const de_ListGameServersCommand = async (
  */
 export const de_ListLocationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLocationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3472,7 +3472,7 @@ export const de_ListLocationsCommand = async (
  */
 export const de_ListScriptsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListScriptsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3492,7 +3492,7 @@ export const de_ListScriptsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3512,7 +3512,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutScalingPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutScalingPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3532,7 +3532,7 @@ export const de_PutScalingPolicyCommand = async (
  */
 export const de_RegisterComputeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterComputeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3552,7 +3552,7 @@ export const de_RegisterComputeCommand = async (
  */
 export const de_RegisterGameServerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterGameServerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3572,7 +3572,7 @@ export const de_RegisterGameServerCommand = async (
  */
 export const de_RequestUploadCredentialsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestUploadCredentialsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3592,7 +3592,7 @@ export const de_RequestUploadCredentialsCommand = async (
  */
 export const de_ResolveAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResolveAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3612,7 +3612,7 @@ export const de_ResolveAliasCommand = async (
  */
 export const de_ResumeGameServerGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResumeGameServerGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3632,7 +3632,7 @@ export const de_ResumeGameServerGroupCommand = async (
  */
 export const de_SearchGameSessionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchGameSessionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3652,7 +3652,7 @@ export const de_SearchGameSessionsCommand = async (
  */
 export const de_StartFleetActionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartFleetActionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3672,7 +3672,7 @@ export const de_StartFleetActionsCommand = async (
  */
 export const de_StartGameSessionPlacementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartGameSessionPlacementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3692,7 +3692,7 @@ export const de_StartGameSessionPlacementCommand = async (
  */
 export const de_StartMatchBackfillCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartMatchBackfillCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3712,7 +3712,7 @@ export const de_StartMatchBackfillCommand = async (
  */
 export const de_StartMatchmakingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartMatchmakingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3732,7 +3732,7 @@ export const de_StartMatchmakingCommand = async (
  */
 export const de_StopFleetActionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopFleetActionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3752,7 +3752,7 @@ export const de_StopFleetActionsCommand = async (
  */
 export const de_StopGameSessionPlacementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopGameSessionPlacementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3772,7 +3772,7 @@ export const de_StopGameSessionPlacementCommand = async (
  */
 export const de_StopMatchmakingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopMatchmakingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3792,7 +3792,7 @@ export const de_StopMatchmakingCommand = async (
  */
 export const de_SuspendGameServerGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SuspendGameServerGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3812,7 +3812,7 @@ export const de_SuspendGameServerGroupCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3832,7 +3832,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3852,7 +3852,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3872,7 +3872,7 @@ export const de_UpdateAliasCommand = async (
  */
 export const de_UpdateBuildCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBuildCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3892,7 +3892,7 @@ export const de_UpdateBuildCommand = async (
  */
 export const de_UpdateFleetAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFleetAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3912,7 +3912,7 @@ export const de_UpdateFleetAttributesCommand = async (
  */
 export const de_UpdateFleetCapacityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFleetCapacityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3932,7 +3932,7 @@ export const de_UpdateFleetCapacityCommand = async (
  */
 export const de_UpdateFleetPortSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFleetPortSettingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3952,7 +3952,7 @@ export const de_UpdateFleetPortSettingsCommand = async (
  */
 export const de_UpdateGameServerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGameServerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3972,7 +3972,7 @@ export const de_UpdateGameServerCommand = async (
  */
 export const de_UpdateGameServerGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGameServerGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3992,7 +3992,7 @@ export const de_UpdateGameServerGroupCommand = async (
  */
 export const de_UpdateGameSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGameSessionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4012,7 +4012,7 @@ export const de_UpdateGameSessionCommand = async (
  */
 export const de_UpdateGameSessionQueueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGameSessionQueueCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4032,7 +4032,7 @@ export const de_UpdateGameSessionQueueCommand = async (
  */
 export const de_UpdateMatchmakingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMatchmakingConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4052,7 +4052,7 @@ export const de_UpdateMatchmakingConfigurationCommand = async (
  */
 export const de_UpdateRuntimeConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRuntimeConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4072,7 +4072,7 @@ export const de_UpdateRuntimeConfigurationCommand = async (
  */
 export const de_UpdateScriptCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateScriptCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4092,7 +4092,7 @@ export const de_UpdateScriptCommand = async (
  */
 export const de_ValidateMatchmakingRuleSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ValidateMatchmakingRuleSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4193,7 +4193,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_FleetCapacityExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FleetCapacityExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4209,7 +4209,7 @@ const de_FleetCapacityExceededExceptionRes = async (
  */
 const de_GameSessionFullExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GameSessionFullException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4225,7 +4225,7 @@ const de_GameSessionFullExceptionRes = async (
  */
 const de_IdempotentParameterMismatchExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IdempotentParameterMismatchException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4241,7 +4241,7 @@ const de_IdempotentParameterMismatchExceptionRes = async (
  */
 const de_InternalServiceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4257,7 +4257,7 @@ const de_InternalServiceExceptionRes = async (
  */
 const de_InvalidFleetStatusExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidFleetStatusException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4273,7 +4273,7 @@ const de_InvalidFleetStatusExceptionRes = async (
  */
 const de_InvalidGameSessionStatusExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidGameSessionStatusException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4289,7 +4289,7 @@ const de_InvalidGameSessionStatusExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4305,7 +4305,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4347,7 +4347,7 @@ const de_NotReadyExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_OutOfCapacityExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OutOfCapacityException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4363,7 +4363,7 @@ const de_OutOfCapacityExceptionRes = async (
  */
 const de_TaggingFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TaggingFailedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4379,7 +4379,7 @@ const de_TaggingFailedExceptionRes = async (
  */
 const de_TerminalRoutingStrategyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TerminalRoutingStrategyException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4395,7 +4395,7 @@ const de_TerminalRoutingStrategyExceptionRes = async (
  */
 const de_UnauthorizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthorizedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4411,7 +4411,7 @@ const de_UnauthorizedExceptionRes = async (
  */
 const de_UnsupportedRegionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedRegionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5199,7 +5199,7 @@ const de_CreateBuildOutput = (output: any, context: __SerdeContext): CreateBuild
  */
 const de_CreateContainerGroupDefinitionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateContainerGroupDefinitionOutput => {
   return take(output, {
     ContainerGroupDefinition: (_: any) => de_ContainerGroupDefinition(_, context),
@@ -5245,7 +5245,7 @@ const de_CreateGameSessionOutput = (output: any, context: __SerdeContext): Creat
  */
 const de_CreateMatchmakingConfigurationOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateMatchmakingConfigurationOutput => {
   return take(output, {
     Configuration: (_: any) => de_MatchmakingConfiguration(_, context),
@@ -5293,7 +5293,7 @@ const de_CreateScriptOutput = (output: any, context: __SerdeContext): CreateScri
  */
 const de_CreateVpcPeeringAuthorizationOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateVpcPeeringAuthorizationOutput => {
   return take(output, {
     VpcPeeringAuthorization: (_: any) => de_VpcPeeringAuthorization(_, context),
@@ -5359,7 +5359,7 @@ const de_DescribeComputeOutput = (output: any, context: __SerdeContext): Describ
  */
 const de_DescribeContainerGroupDefinitionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeContainerGroupDefinitionOutput => {
   return take(output, {
     ContainerGroupDefinition: (_: any) => de_ContainerGroupDefinition(_, context),
@@ -5425,7 +5425,7 @@ const de_DescribeGameServerOutput = (output: any, context: __SerdeContext): Desc
  */
 const de_DescribeGameSessionDetailsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeGameSessionDetailsOutput => {
   return take(output, {
     GameSessionDetails: (_: any) => de_GameSessionDetailList(_, context),
@@ -5438,7 +5438,7 @@ const de_DescribeGameSessionDetailsOutput = (
  */
 const de_DescribeGameSessionPlacementOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeGameSessionPlacementOutput => {
   return take(output, {
     GameSessionPlacement: (_: any) => de_GameSessionPlacement(_, context),
@@ -5472,7 +5472,7 @@ const de_DescribeInstancesOutput = (output: any, context: __SerdeContext): Descr
  */
 const de_DescribeMatchmakingConfigurationsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeMatchmakingConfigurationsOutput => {
   return take(output, {
     Configurations: (_: any) => de_MatchmakingConfigurationList(_, context),
@@ -5494,7 +5494,7 @@ const de_DescribeMatchmakingOutput = (output: any, context: __SerdeContext): Des
  */
 const de_DescribeMatchmakingRuleSetsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeMatchmakingRuleSetsOutput => {
   return take(output, {
     NextToken: __expectString,
@@ -5538,7 +5538,7 @@ const de_DescribeScriptOutput = (output: any, context: __SerdeContext): Describe
  */
 const de_DescribeVpcPeeringAuthorizationsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeVpcPeeringAuthorizationsOutput => {
   return take(output, {
     VpcPeeringAuthorizations: (_: any) => de_VpcPeeringAuthorizationList(_, context),
@@ -5926,7 +5926,7 @@ const de_ListComputeOutput = (output: any, context: __SerdeContext): ListCompute
  */
 const de_ListContainerGroupDefinitionsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListContainerGroupDefinitionsOutput => {
   return take(output, {
     ContainerGroupDefinitions: (_: any) => de_ContainerGroupDefinitionList(_, context),
@@ -6108,26 +6108,32 @@ const de_Player = (output: any, context: __SerdeContext): Player => {
  * deserializeAws_json1_1PlayerAttributeMap
  */
 const de_PlayerAttributeMap = (output: any, context: __SerdeContext): Record<string, AttributeValue> => {
-  return Object.entries(output).reduce((acc: Record<string, AttributeValue>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, AttributeValue>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_AttributeValue(value, context);
       return acc;
-    }
-    acc[key as string] = de_AttributeValue(value, context);
-    return acc;
-  }, {} as Record<string, AttributeValue>);
+    },
+    {} as Record<string, AttributeValue>,
+  );
 };
 
 /**
  * deserializeAws_json1_1PlayerAttributeStringDoubleMap
  */
 const de_PlayerAttributeStringDoubleMap = (output: any, context: __SerdeContext): Record<string, number> => {
-  return Object.entries(output).reduce((acc: Record<string, number>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, number>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = __limitedParseDouble(value) as any;
       return acc;
-    }
-    acc[key as string] = __limitedParseDouble(value) as any;
-    return acc;
-  }, {} as Record<string, number>);
+    },
+    {} as Record<string, number>,
+  );
 };
 
 // de_PlayerAttributeStringList omitted.
@@ -6463,7 +6469,7 @@ const de_UpdateGameSessionOutput = (output: any, context: __SerdeContext): Updat
  */
 const de_UpdateMatchmakingConfigurationOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateMatchmakingConfigurationOutput => {
   return take(output, {
     Configuration: (_: any) => de_MatchmakingConfiguration(_, context),
@@ -6532,7 +6538,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

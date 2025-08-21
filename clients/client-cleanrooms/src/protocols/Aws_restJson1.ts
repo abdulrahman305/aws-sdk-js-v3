@@ -315,7 +315,7 @@ import {
  */
 export const se_BatchGetCollaborationAnalysisTemplateCommand = async (
   input: BatchGetCollaborationAnalysisTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -327,7 +327,7 @@ export const se_BatchGetCollaborationAnalysisTemplateCommand = async (
   body = JSON.stringify(
     take(input, {
       analysisTemplateArns: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -338,7 +338,7 @@ export const se_BatchGetCollaborationAnalysisTemplateCommand = async (
  */
 export const se_BatchGetSchemaCommand = async (
   input: BatchGetSchemaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -350,7 +350,7 @@ export const se_BatchGetSchemaCommand = async (
   body = JSON.stringify(
     take(input, {
       names: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -361,7 +361,7 @@ export const se_BatchGetSchemaCommand = async (
  */
 export const se_BatchGetSchemaAnalysisRuleCommand = async (
   input: BatchGetSchemaAnalysisRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -373,7 +373,7 @@ export const se_BatchGetSchemaAnalysisRuleCommand = async (
   body = JSON.stringify(
     take(input, {
       schemaAnalysisRuleRequests: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -384,7 +384,7 @@ export const se_BatchGetSchemaAnalysisRuleCommand = async (
  */
 export const se_CreateAnalysisTemplateCommand = async (
   input: CreateAnalysisTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -401,7 +401,7 @@ export const se_CreateAnalysisTemplateCommand = async (
       name: [],
       source: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -412,7 +412,7 @@ export const se_CreateAnalysisTemplateCommand = async (
  */
 export const se_CreateCollaborationCommand = async (
   input: CreateCollaborationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -431,7 +431,7 @@ export const se_CreateCollaborationCommand = async (
       name: [],
       queryLogStatus: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -442,7 +442,7 @@ export const se_CreateCollaborationCommand = async (
  */
 export const se_CreateConfiguredAudienceModelAssociationCommand = async (
   input: CreateConfiguredAudienceModelAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -458,7 +458,7 @@ export const se_CreateConfiguredAudienceModelAssociationCommand = async (
       description: [],
       manageResourcePolicies: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -469,7 +469,7 @@ export const se_CreateConfiguredAudienceModelAssociationCommand = async (
  */
 export const se_CreateConfiguredTableCommand = async (
   input: CreateConfiguredTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -485,7 +485,7 @@ export const se_CreateConfiguredTableCommand = async (
       name: [],
       tableReference: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -496,7 +496,7 @@ export const se_CreateConfiguredTableCommand = async (
  */
 export const se_CreateConfiguredTableAnalysisRuleCommand = async (
   input: CreateConfiguredTableAnalysisRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -509,7 +509,7 @@ export const se_CreateConfiguredTableAnalysisRuleCommand = async (
     take(input, {
       analysisRulePolicy: (_) => _json(_),
       analysisRuleType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -520,7 +520,7 @@ export const se_CreateConfiguredTableAnalysisRuleCommand = async (
  */
 export const se_CreateConfiguredTableAssociationCommand = async (
   input: CreateConfiguredTableAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -536,7 +536,7 @@ export const se_CreateConfiguredTableAssociationCommand = async (
       name: [],
       roleArn: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -547,7 +547,7 @@ export const se_CreateConfiguredTableAssociationCommand = async (
  */
 export const se_CreateMembershipCommand = async (
   input: CreateMembershipCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -562,7 +562,7 @@ export const se_CreateMembershipCommand = async (
       paymentConfiguration: (_) => _json(_),
       queryLogStatus: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -573,7 +573,7 @@ export const se_CreateMembershipCommand = async (
  */
 export const se_CreatePrivacyBudgetTemplateCommand = async (
   input: CreatePrivacyBudgetTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -588,7 +588,7 @@ export const se_CreatePrivacyBudgetTemplateCommand = async (
       parameters: (_) => _json(_),
       privacyBudgetType: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -599,7 +599,7 @@ export const se_CreatePrivacyBudgetTemplateCommand = async (
  */
 export const se_DeleteAnalysisTemplateCommand = async (
   input: DeleteAnalysisTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -616,7 +616,7 @@ export const se_DeleteAnalysisTemplateCommand = async (
  */
 export const se_DeleteCollaborationCommand = async (
   input: DeleteCollaborationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -632,18 +632,18 @@ export const se_DeleteCollaborationCommand = async (
  */
 export const se_DeleteConfiguredAudienceModelAssociationCommand = async (
   input: DeleteConfiguredAudienceModelAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
   b.bp(
-    "/memberships/{membershipIdentifier}/configuredaudiencemodelassociations/{configuredAudienceModelAssociationIdentifier}"
+    "/memberships/{membershipIdentifier}/configuredaudiencemodelassociations/{configuredAudienceModelAssociationIdentifier}",
   );
   b.p(
     "configuredAudienceModelAssociationIdentifier",
     () => input.configuredAudienceModelAssociationIdentifier!,
     "{configuredAudienceModelAssociationIdentifier}",
-    false
+    false,
   );
   b.p("membershipIdentifier", () => input.membershipIdentifier!, "{membershipIdentifier}", false);
   let body: any;
@@ -656,7 +656,7 @@ export const se_DeleteConfiguredAudienceModelAssociationCommand = async (
  */
 export const se_DeleteConfiguredTableCommand = async (
   input: DeleteConfiguredTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -672,7 +672,7 @@ export const se_DeleteConfiguredTableCommand = async (
  */
 export const se_DeleteConfiguredTableAnalysisRuleCommand = async (
   input: DeleteConfiguredTableAnalysisRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -689,7 +689,7 @@ export const se_DeleteConfiguredTableAnalysisRuleCommand = async (
  */
 export const se_DeleteConfiguredTableAssociationCommand = async (
   input: DeleteConfiguredTableAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -698,7 +698,7 @@ export const se_DeleteConfiguredTableAssociationCommand = async (
     "configuredTableAssociationIdentifier",
     () => input.configuredTableAssociationIdentifier!,
     "{configuredTableAssociationIdentifier}",
-    false
+    false,
   );
   b.p("membershipIdentifier", () => input.membershipIdentifier!, "{membershipIdentifier}", false);
   let body: any;
@@ -711,7 +711,7 @@ export const se_DeleteConfiguredTableAssociationCommand = async (
  */
 export const se_DeleteMemberCommand = async (
   input: DeleteMemberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -728,7 +728,7 @@ export const se_DeleteMemberCommand = async (
  */
 export const se_DeleteMembershipCommand = async (
   input: DeleteMembershipCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -744,7 +744,7 @@ export const se_DeleteMembershipCommand = async (
  */
 export const se_DeletePrivacyBudgetTemplateCommand = async (
   input: DeletePrivacyBudgetTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -754,7 +754,7 @@ export const se_DeletePrivacyBudgetTemplateCommand = async (
     "privacyBudgetTemplateIdentifier",
     () => input.privacyBudgetTemplateIdentifier!,
     "{privacyBudgetTemplateIdentifier}",
-    false
+    false,
   );
   let body: any;
   b.m("DELETE").h(headers).b(body);
@@ -766,7 +766,7 @@ export const se_DeletePrivacyBudgetTemplateCommand = async (
  */
 export const se_GetAnalysisTemplateCommand = async (
   input: GetAnalysisTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -783,7 +783,7 @@ export const se_GetAnalysisTemplateCommand = async (
  */
 export const se_GetCollaborationCommand = async (
   input: GetCollaborationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -799,7 +799,7 @@ export const se_GetCollaborationCommand = async (
  */
 export const se_GetCollaborationAnalysisTemplateCommand = async (
   input: GetCollaborationAnalysisTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -816,19 +816,19 @@ export const se_GetCollaborationAnalysisTemplateCommand = async (
  */
 export const se_GetCollaborationConfiguredAudienceModelAssociationCommand = async (
   input: GetCollaborationConfiguredAudienceModelAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
   b.bp(
-    "/collaborations/{collaborationIdentifier}/configuredaudiencemodelassociations/{configuredAudienceModelAssociationIdentifier}"
+    "/collaborations/{collaborationIdentifier}/configuredaudiencemodelassociations/{configuredAudienceModelAssociationIdentifier}",
   );
   b.p("collaborationIdentifier", () => input.collaborationIdentifier!, "{collaborationIdentifier}", false);
   b.p(
     "configuredAudienceModelAssociationIdentifier",
     () => input.configuredAudienceModelAssociationIdentifier!,
     "{configuredAudienceModelAssociationIdentifier}",
-    false
+    false,
   );
   let body: any;
   b.m("GET").h(headers).b(body);
@@ -840,7 +840,7 @@ export const se_GetCollaborationConfiguredAudienceModelAssociationCommand = asyn
  */
 export const se_GetCollaborationPrivacyBudgetTemplateCommand = async (
   input: GetCollaborationPrivacyBudgetTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -850,7 +850,7 @@ export const se_GetCollaborationPrivacyBudgetTemplateCommand = async (
     "privacyBudgetTemplateIdentifier",
     () => input.privacyBudgetTemplateIdentifier!,
     "{privacyBudgetTemplateIdentifier}",
-    false
+    false,
   );
   let body: any;
   b.m("GET").h(headers).b(body);
@@ -862,18 +862,18 @@ export const se_GetCollaborationPrivacyBudgetTemplateCommand = async (
  */
 export const se_GetConfiguredAudienceModelAssociationCommand = async (
   input: GetConfiguredAudienceModelAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
   b.bp(
-    "/memberships/{membershipIdentifier}/configuredaudiencemodelassociations/{configuredAudienceModelAssociationIdentifier}"
+    "/memberships/{membershipIdentifier}/configuredaudiencemodelassociations/{configuredAudienceModelAssociationIdentifier}",
   );
   b.p(
     "configuredAudienceModelAssociationIdentifier",
     () => input.configuredAudienceModelAssociationIdentifier!,
     "{configuredAudienceModelAssociationIdentifier}",
-    false
+    false,
   );
   b.p("membershipIdentifier", () => input.membershipIdentifier!, "{membershipIdentifier}", false);
   let body: any;
@@ -886,7 +886,7 @@ export const se_GetConfiguredAudienceModelAssociationCommand = async (
  */
 export const se_GetConfiguredTableCommand = async (
   input: GetConfiguredTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -902,7 +902,7 @@ export const se_GetConfiguredTableCommand = async (
  */
 export const se_GetConfiguredTableAnalysisRuleCommand = async (
   input: GetConfiguredTableAnalysisRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -919,7 +919,7 @@ export const se_GetConfiguredTableAnalysisRuleCommand = async (
  */
 export const se_GetConfiguredTableAssociationCommand = async (
   input: GetConfiguredTableAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -928,7 +928,7 @@ export const se_GetConfiguredTableAssociationCommand = async (
     "configuredTableAssociationIdentifier",
     () => input.configuredTableAssociationIdentifier!,
     "{configuredTableAssociationIdentifier}",
-    false
+    false,
   );
   b.p("membershipIdentifier", () => input.membershipIdentifier!, "{membershipIdentifier}", false);
   let body: any;
@@ -941,7 +941,7 @@ export const se_GetConfiguredTableAssociationCommand = async (
  */
 export const se_GetMembershipCommand = async (
   input: GetMembershipCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -957,7 +957,7 @@ export const se_GetMembershipCommand = async (
  */
 export const se_GetPrivacyBudgetTemplateCommand = async (
   input: GetPrivacyBudgetTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -967,7 +967,7 @@ export const se_GetPrivacyBudgetTemplateCommand = async (
     "privacyBudgetTemplateIdentifier",
     () => input.privacyBudgetTemplateIdentifier!,
     "{privacyBudgetTemplateIdentifier}",
-    false
+    false,
   );
   let body: any;
   b.m("GET").h(headers).b(body);
@@ -979,7 +979,7 @@ export const se_GetPrivacyBudgetTemplateCommand = async (
  */
 export const se_GetProtectedQueryCommand = async (
   input: GetProtectedQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -996,7 +996,7 @@ export const se_GetProtectedQueryCommand = async (
  */
 export const se_GetSchemaCommand = async (
   input: GetSchemaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1013,7 +1013,7 @@ export const se_GetSchemaCommand = async (
  */
 export const se_GetSchemaAnalysisRuleCommand = async (
   input: GetSchemaAnalysisRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1031,7 +1031,7 @@ export const se_GetSchemaAnalysisRuleCommand = async (
  */
 export const se_ListAnalysisTemplatesCommand = async (
   input: ListAnalysisTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1051,7 +1051,7 @@ export const se_ListAnalysisTemplatesCommand = async (
  */
 export const se_ListCollaborationAnalysisTemplatesCommand = async (
   input: ListCollaborationAnalysisTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1071,7 +1071,7 @@ export const se_ListCollaborationAnalysisTemplatesCommand = async (
  */
 export const se_ListCollaborationConfiguredAudienceModelAssociationsCommand = async (
   input: ListCollaborationConfiguredAudienceModelAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1091,7 +1091,7 @@ export const se_ListCollaborationConfiguredAudienceModelAssociationsCommand = as
  */
 export const se_ListCollaborationPrivacyBudgetsCommand = async (
   input: ListCollaborationPrivacyBudgetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1112,7 +1112,7 @@ export const se_ListCollaborationPrivacyBudgetsCommand = async (
  */
 export const se_ListCollaborationPrivacyBudgetTemplatesCommand = async (
   input: ListCollaborationPrivacyBudgetTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1132,7 +1132,7 @@ export const se_ListCollaborationPrivacyBudgetTemplatesCommand = async (
  */
 export const se_ListCollaborationsCommand = async (
   input: ListCollaborationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1152,7 +1152,7 @@ export const se_ListCollaborationsCommand = async (
  */
 export const se_ListConfiguredAudienceModelAssociationsCommand = async (
   input: ListConfiguredAudienceModelAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1172,7 +1172,7 @@ export const se_ListConfiguredAudienceModelAssociationsCommand = async (
  */
 export const se_ListConfiguredTableAssociationsCommand = async (
   input: ListConfiguredTableAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1192,7 +1192,7 @@ export const se_ListConfiguredTableAssociationsCommand = async (
  */
 export const se_ListConfiguredTablesCommand = async (
   input: ListConfiguredTablesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1211,7 +1211,7 @@ export const se_ListConfiguredTablesCommand = async (
  */
 export const se_ListMembersCommand = async (
   input: ListMembersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1231,7 +1231,7 @@ export const se_ListMembersCommand = async (
  */
 export const se_ListMembershipsCommand = async (
   input: ListMembershipsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1251,7 +1251,7 @@ export const se_ListMembershipsCommand = async (
  */
 export const se_ListPrivacyBudgetsCommand = async (
   input: ListPrivacyBudgetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1272,7 +1272,7 @@ export const se_ListPrivacyBudgetsCommand = async (
  */
 export const se_ListPrivacyBudgetTemplatesCommand = async (
   input: ListPrivacyBudgetTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1292,7 +1292,7 @@ export const se_ListPrivacyBudgetTemplatesCommand = async (
  */
 export const se_ListProtectedQueriesCommand = async (
   input: ListProtectedQueriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1313,7 +1313,7 @@ export const se_ListProtectedQueriesCommand = async (
  */
 export const se_ListSchemasCommand = async (
   input: ListSchemasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1334,7 +1334,7 @@ export const se_ListSchemasCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1350,7 +1350,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PreviewPrivacyImpactCommand = async (
   input: PreviewPrivacyImpactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1362,7 +1362,7 @@ export const se_PreviewPrivacyImpactCommand = async (
   body = JSON.stringify(
     take(input, {
       parameters: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1373,7 +1373,7 @@ export const se_PreviewPrivacyImpactCommand = async (
  */
 export const se_StartProtectedQueryCommand = async (
   input: StartProtectedQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1387,7 +1387,7 @@ export const se_StartProtectedQueryCommand = async (
       resultConfiguration: (_) => _json(_),
       sqlParameters: (_) => _json(_),
       type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1398,7 +1398,7 @@ export const se_StartProtectedQueryCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1410,7 +1410,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1421,7 +1421,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1443,7 +1443,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAnalysisTemplateCommand = async (
   input: UpdateAnalysisTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1456,7 +1456,7 @@ export const se_UpdateAnalysisTemplateCommand = async (
   body = JSON.stringify(
     take(input, {
       description: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1467,7 +1467,7 @@ export const se_UpdateAnalysisTemplateCommand = async (
  */
 export const se_UpdateCollaborationCommand = async (
   input: UpdateCollaborationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1480,7 +1480,7 @@ export const se_UpdateCollaborationCommand = async (
     take(input, {
       description: [],
       name: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1491,20 +1491,20 @@ export const se_UpdateCollaborationCommand = async (
  */
 export const se_UpdateConfiguredAudienceModelAssociationCommand = async (
   input: UpdateConfiguredAudienceModelAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
     "content-type": "application/json",
   };
   b.bp(
-    "/memberships/{membershipIdentifier}/configuredaudiencemodelassociations/{configuredAudienceModelAssociationIdentifier}"
+    "/memberships/{membershipIdentifier}/configuredaudiencemodelassociations/{configuredAudienceModelAssociationIdentifier}",
   );
   b.p(
     "configuredAudienceModelAssociationIdentifier",
     () => input.configuredAudienceModelAssociationIdentifier!,
     "{configuredAudienceModelAssociationIdentifier}",
-    false
+    false,
   );
   b.p("membershipIdentifier", () => input.membershipIdentifier!, "{membershipIdentifier}", false);
   let body: any;
@@ -1512,7 +1512,7 @@ export const se_UpdateConfiguredAudienceModelAssociationCommand = async (
     take(input, {
       description: [],
       name: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1523,7 +1523,7 @@ export const se_UpdateConfiguredAudienceModelAssociationCommand = async (
  */
 export const se_UpdateConfiguredTableCommand = async (
   input: UpdateConfiguredTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1536,7 +1536,7 @@ export const se_UpdateConfiguredTableCommand = async (
     take(input, {
       description: [],
       name: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1547,7 +1547,7 @@ export const se_UpdateConfiguredTableCommand = async (
  */
 export const se_UpdateConfiguredTableAnalysisRuleCommand = async (
   input: UpdateConfiguredTableAnalysisRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1560,7 +1560,7 @@ export const se_UpdateConfiguredTableAnalysisRuleCommand = async (
   body = JSON.stringify(
     take(input, {
       analysisRulePolicy: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1571,7 +1571,7 @@ export const se_UpdateConfiguredTableAnalysisRuleCommand = async (
  */
 export const se_UpdateConfiguredTableAssociationCommand = async (
   input: UpdateConfiguredTableAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1582,7 +1582,7 @@ export const se_UpdateConfiguredTableAssociationCommand = async (
     "configuredTableAssociationIdentifier",
     () => input.configuredTableAssociationIdentifier!,
     "{configuredTableAssociationIdentifier}",
-    false
+    false,
   );
   b.p("membershipIdentifier", () => input.membershipIdentifier!, "{membershipIdentifier}", false);
   let body: any;
@@ -1590,7 +1590,7 @@ export const se_UpdateConfiguredTableAssociationCommand = async (
     take(input, {
       description: [],
       roleArn: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1601,7 +1601,7 @@ export const se_UpdateConfiguredTableAssociationCommand = async (
  */
 export const se_UpdateMembershipCommand = async (
   input: UpdateMembershipCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1614,7 +1614,7 @@ export const se_UpdateMembershipCommand = async (
     take(input, {
       defaultResultConfiguration: (_) => _json(_),
       queryLogStatus: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1625,7 +1625,7 @@ export const se_UpdateMembershipCommand = async (
  */
 export const se_UpdatePrivacyBudgetTemplateCommand = async (
   input: UpdatePrivacyBudgetTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1637,14 +1637,14 @@ export const se_UpdatePrivacyBudgetTemplateCommand = async (
     "privacyBudgetTemplateIdentifier",
     () => input.privacyBudgetTemplateIdentifier!,
     "{privacyBudgetTemplateIdentifier}",
-    false
+    false,
   );
   let body: any;
   body = JSON.stringify(
     take(input, {
       parameters: (_) => _json(_),
       privacyBudgetType: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1655,7 +1655,7 @@ export const se_UpdatePrivacyBudgetTemplateCommand = async (
  */
 export const se_UpdateProtectedQueryCommand = async (
   input: UpdateProtectedQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1668,7 +1668,7 @@ export const se_UpdateProtectedQueryCommand = async (
   body = JSON.stringify(
     take(input, {
       targetStatus: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1679,7 +1679,7 @@ export const se_UpdateProtectedQueryCommand = async (
  */
 export const de_BatchGetCollaborationAnalysisTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetCollaborationAnalysisTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1701,7 +1701,7 @@ export const de_BatchGetCollaborationAnalysisTemplateCommand = async (
  */
 export const de_BatchGetSchemaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetSchemaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1723,7 +1723,7 @@ export const de_BatchGetSchemaCommand = async (
  */
 export const de_BatchGetSchemaAnalysisRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetSchemaAnalysisRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1745,7 +1745,7 @@ export const de_BatchGetSchemaAnalysisRuleCommand = async (
  */
 export const de_CreateAnalysisTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAnalysisTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1766,7 +1766,7 @@ export const de_CreateAnalysisTemplateCommand = async (
  */
 export const de_CreateCollaborationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCollaborationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1787,7 +1787,7 @@ export const de_CreateCollaborationCommand = async (
  */
 export const de_CreateConfiguredAudienceModelAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConfiguredAudienceModelAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1808,7 +1808,7 @@ export const de_CreateConfiguredAudienceModelAssociationCommand = async (
  */
 export const de_CreateConfiguredTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConfiguredTableCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1829,7 +1829,7 @@ export const de_CreateConfiguredTableCommand = async (
  */
 export const de_CreateConfiguredTableAnalysisRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConfiguredTableAnalysisRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1850,7 +1850,7 @@ export const de_CreateConfiguredTableAnalysisRuleCommand = async (
  */
 export const de_CreateConfiguredTableAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConfiguredTableAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1871,7 +1871,7 @@ export const de_CreateConfiguredTableAssociationCommand = async (
  */
 export const de_CreateMembershipCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMembershipCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1892,7 +1892,7 @@ export const de_CreateMembershipCommand = async (
  */
 export const de_CreatePrivacyBudgetTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePrivacyBudgetTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1913,7 +1913,7 @@ export const de_CreatePrivacyBudgetTemplateCommand = async (
  */
 export const de_DeleteAnalysisTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAnalysisTemplateCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1930,7 +1930,7 @@ export const de_DeleteAnalysisTemplateCommand = async (
  */
 export const de_DeleteCollaborationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCollaborationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1947,7 +1947,7 @@ export const de_DeleteCollaborationCommand = async (
  */
 export const de_DeleteConfiguredAudienceModelAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConfiguredAudienceModelAssociationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1964,7 +1964,7 @@ export const de_DeleteConfiguredAudienceModelAssociationCommand = async (
  */
 export const de_DeleteConfiguredTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConfiguredTableCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1981,7 +1981,7 @@ export const de_DeleteConfiguredTableCommand = async (
  */
 export const de_DeleteConfiguredTableAnalysisRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConfiguredTableAnalysisRuleCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1998,7 +1998,7 @@ export const de_DeleteConfiguredTableAnalysisRuleCommand = async (
  */
 export const de_DeleteConfiguredTableAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConfiguredTableAssociationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2015,7 +2015,7 @@ export const de_DeleteConfiguredTableAssociationCommand = async (
  */
 export const de_DeleteMemberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMemberCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2032,7 +2032,7 @@ export const de_DeleteMemberCommand = async (
  */
 export const de_DeleteMembershipCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMembershipCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2049,7 +2049,7 @@ export const de_DeleteMembershipCommand = async (
  */
 export const de_DeletePrivacyBudgetTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePrivacyBudgetTemplateCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2066,7 +2066,7 @@ export const de_DeletePrivacyBudgetTemplateCommand = async (
  */
 export const de_GetAnalysisTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAnalysisTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2087,7 +2087,7 @@ export const de_GetAnalysisTemplateCommand = async (
  */
 export const de_GetCollaborationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCollaborationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2108,7 +2108,7 @@ export const de_GetCollaborationCommand = async (
  */
 export const de_GetCollaborationAnalysisTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCollaborationAnalysisTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2129,7 +2129,7 @@ export const de_GetCollaborationAnalysisTemplateCommand = async (
  */
 export const de_GetCollaborationConfiguredAudienceModelAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCollaborationConfiguredAudienceModelAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2151,7 +2151,7 @@ export const de_GetCollaborationConfiguredAudienceModelAssociationCommand = asyn
  */
 export const de_GetCollaborationPrivacyBudgetTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCollaborationPrivacyBudgetTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2172,7 +2172,7 @@ export const de_GetCollaborationPrivacyBudgetTemplateCommand = async (
  */
 export const de_GetConfiguredAudienceModelAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConfiguredAudienceModelAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2193,7 +2193,7 @@ export const de_GetConfiguredAudienceModelAssociationCommand = async (
  */
 export const de_GetConfiguredTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConfiguredTableCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2214,7 +2214,7 @@ export const de_GetConfiguredTableCommand = async (
  */
 export const de_GetConfiguredTableAnalysisRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConfiguredTableAnalysisRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2235,7 +2235,7 @@ export const de_GetConfiguredTableAnalysisRuleCommand = async (
  */
 export const de_GetConfiguredTableAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConfiguredTableAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2256,7 +2256,7 @@ export const de_GetConfiguredTableAssociationCommand = async (
  */
 export const de_GetMembershipCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMembershipCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2277,7 +2277,7 @@ export const de_GetMembershipCommand = async (
  */
 export const de_GetPrivacyBudgetTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPrivacyBudgetTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2298,7 +2298,7 @@ export const de_GetPrivacyBudgetTemplateCommand = async (
  */
 export const de_GetProtectedQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetProtectedQueryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2319,7 +2319,7 @@ export const de_GetProtectedQueryCommand = async (
  */
 export const de_GetSchemaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSchemaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2340,7 +2340,7 @@ export const de_GetSchemaCommand = async (
  */
 export const de_GetSchemaAnalysisRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSchemaAnalysisRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2361,7 +2361,7 @@ export const de_GetSchemaAnalysisRuleCommand = async (
  */
 export const de_ListAnalysisTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAnalysisTemplatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2383,7 +2383,7 @@ export const de_ListAnalysisTemplatesCommand = async (
  */
 export const de_ListCollaborationAnalysisTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCollaborationAnalysisTemplatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2405,7 +2405,7 @@ export const de_ListCollaborationAnalysisTemplatesCommand = async (
  */
 export const de_ListCollaborationConfiguredAudienceModelAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCollaborationConfiguredAudienceModelAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2428,7 +2428,7 @@ export const de_ListCollaborationConfiguredAudienceModelAssociationsCommand = as
  */
 export const de_ListCollaborationPrivacyBudgetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCollaborationPrivacyBudgetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2450,7 +2450,7 @@ export const de_ListCollaborationPrivacyBudgetsCommand = async (
  */
 export const de_ListCollaborationPrivacyBudgetTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCollaborationPrivacyBudgetTemplatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2472,7 +2472,7 @@ export const de_ListCollaborationPrivacyBudgetTemplatesCommand = async (
  */
 export const de_ListCollaborationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCollaborationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2494,7 +2494,7 @@ export const de_ListCollaborationsCommand = async (
  */
 export const de_ListConfiguredAudienceModelAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConfiguredAudienceModelAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2516,7 +2516,7 @@ export const de_ListConfiguredAudienceModelAssociationsCommand = async (
  */
 export const de_ListConfiguredTableAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConfiguredTableAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2538,7 +2538,7 @@ export const de_ListConfiguredTableAssociationsCommand = async (
  */
 export const de_ListConfiguredTablesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConfiguredTablesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2560,7 +2560,7 @@ export const de_ListConfiguredTablesCommand = async (
  */
 export const de_ListMembersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMembersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2582,7 +2582,7 @@ export const de_ListMembersCommand = async (
  */
 export const de_ListMembershipsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMembershipsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2604,7 +2604,7 @@ export const de_ListMembershipsCommand = async (
  */
 export const de_ListPrivacyBudgetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPrivacyBudgetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2626,7 +2626,7 @@ export const de_ListPrivacyBudgetsCommand = async (
  */
 export const de_ListPrivacyBudgetTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPrivacyBudgetTemplatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2648,7 +2648,7 @@ export const de_ListPrivacyBudgetTemplatesCommand = async (
  */
 export const de_ListProtectedQueriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProtectedQueriesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2670,7 +2670,7 @@ export const de_ListProtectedQueriesCommand = async (
  */
 export const de_ListSchemasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSchemasCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2692,7 +2692,7 @@ export const de_ListSchemasCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2713,7 +2713,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PreviewPrivacyImpactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PreviewPrivacyImpactCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2734,7 +2734,7 @@ export const de_PreviewPrivacyImpactCommand = async (
  */
 export const de_StartProtectedQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartProtectedQueryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2755,7 +2755,7 @@ export const de_StartProtectedQueryCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2772,7 +2772,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2789,7 +2789,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAnalysisTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAnalysisTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2810,7 +2810,7 @@ export const de_UpdateAnalysisTemplateCommand = async (
  */
 export const de_UpdateCollaborationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCollaborationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2831,7 +2831,7 @@ export const de_UpdateCollaborationCommand = async (
  */
 export const de_UpdateConfiguredAudienceModelAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConfiguredAudienceModelAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2852,7 +2852,7 @@ export const de_UpdateConfiguredAudienceModelAssociationCommand = async (
  */
 export const de_UpdateConfiguredTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConfiguredTableCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2873,7 +2873,7 @@ export const de_UpdateConfiguredTableCommand = async (
  */
 export const de_UpdateConfiguredTableAnalysisRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConfiguredTableAnalysisRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2894,7 +2894,7 @@ export const de_UpdateConfiguredTableAnalysisRuleCommand = async (
  */
 export const de_UpdateConfiguredTableAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConfiguredTableAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2915,7 +2915,7 @@ export const de_UpdateConfiguredTableAssociationCommand = async (
  */
 export const de_UpdateMembershipCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMembershipCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2936,7 +2936,7 @@ export const de_UpdateMembershipCommand = async (
  */
 export const de_UpdatePrivacyBudgetTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePrivacyBudgetTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2957,7 +2957,7 @@ export const de_UpdatePrivacyBudgetTemplateCommand = async (
  */
 export const de_UpdateProtectedQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProtectedQueryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3020,7 +3020,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3061,7 +3061,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3081,7 +3081,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3103,7 +3103,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3429,7 +3429,7 @@ const de_CollaborationAnalysisTemplate = (output: any, context: __SerdeContext):
  */
 const de_CollaborationAnalysisTemplateList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CollaborationAnalysisTemplate[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -3444,7 +3444,7 @@ const de_CollaborationAnalysisTemplateList = (
  */
 const de_CollaborationAnalysisTemplateSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CollaborationAnalysisTemplateSummary => {
   return take(output, {
     arn: __expectString,
@@ -3464,7 +3464,7 @@ const de_CollaborationAnalysisTemplateSummary = (
  */
 const de_CollaborationAnalysisTemplateSummaryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CollaborationAnalysisTemplateSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -3479,7 +3479,7 @@ const de_CollaborationAnalysisTemplateSummaryList = (
  */
 const de_CollaborationConfiguredAudienceModelAssociation = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CollaborationConfiguredAudienceModelAssociation => {
   return take(output, {
     arn: __expectString,
@@ -3500,7 +3500,7 @@ const de_CollaborationConfiguredAudienceModelAssociation = (
  */
 const de_CollaborationConfiguredAudienceModelAssociationSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CollaborationConfiguredAudienceModelAssociationSummary => {
   return take(output, {
     arn: __expectString,
@@ -3520,7 +3520,7 @@ const de_CollaborationConfiguredAudienceModelAssociationSummary = (
  */
 const de_CollaborationConfiguredAudienceModelAssociationSummaryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CollaborationConfiguredAudienceModelAssociationSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -3535,7 +3535,7 @@ const de_CollaborationConfiguredAudienceModelAssociationSummaryList = (
  */
 const de_CollaborationPrivacyBudgetSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CollaborationPrivacyBudgetSummary => {
   return take(output, {
     budget: (_: any) => _json(__expectUnion(_)),
@@ -3556,7 +3556,7 @@ const de_CollaborationPrivacyBudgetSummary = (
  */
 const de_CollaborationPrivacyBudgetSummaryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CollaborationPrivacyBudgetSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -3571,7 +3571,7 @@ const de_CollaborationPrivacyBudgetSummaryList = (
  */
 const de_CollaborationPrivacyBudgetTemplate = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CollaborationPrivacyBudgetTemplate => {
   return take(output, {
     arn: __expectString,
@@ -3592,7 +3592,7 @@ const de_CollaborationPrivacyBudgetTemplate = (
  */
 const de_CollaborationPrivacyBudgetTemplateSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CollaborationPrivacyBudgetTemplateSummary => {
   return take(output, {
     arn: __expectString,
@@ -3611,7 +3611,7 @@ const de_CollaborationPrivacyBudgetTemplateSummary = (
  */
 const de_CollaborationPrivacyBudgetTemplateSummaryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CollaborationPrivacyBudgetTemplateSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -3660,7 +3660,7 @@ const de_CollaborationSummaryList = (output: any, context: __SerdeContext): Coll
  */
 const de_ConfiguredAudienceModelAssociation = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ConfiguredAudienceModelAssociation => {
   return take(output, {
     arn: __expectString,
@@ -3683,7 +3683,7 @@ const de_ConfiguredAudienceModelAssociation = (
  */
 const de_ConfiguredAudienceModelAssociationSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ConfiguredAudienceModelAssociationSummary => {
   return take(output, {
     arn: __expectString,
@@ -3705,7 +3705,7 @@ const de_ConfiguredAudienceModelAssociationSummary = (
  */
 const de_ConfiguredAudienceModelAssociationSummaryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ConfiguredAudienceModelAssociationSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -3777,7 +3777,7 @@ const de_ConfiguredTableAssociation = (output: any, context: __SerdeContext): Co
  */
 const de_ConfiguredTableAssociationSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ConfiguredTableAssociationSummary => {
   return take(output, {
     arn: __expectString,
@@ -3796,7 +3796,7 @@ const de_ConfiguredTableAssociationSummary = (
  */
 const de_ConfiguredTableAssociationSummaryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ConfiguredTableAssociationSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -3867,7 +3867,7 @@ const de_DifferentialPrivacyParameters = (output: any, context: __SerdeContext):
  */
 const de_DifferentialPrivacySensitivityParameters = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DifferentialPrivacySensitivityParameters => {
   return take(output, {
     aggregationExpression: __expectString,
@@ -3883,7 +3883,7 @@ const de_DifferentialPrivacySensitivityParameters = (
  */
 const de_DifferentialPrivacySensitivityParametersList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DifferentialPrivacySensitivityParameters[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)

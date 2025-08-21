@@ -167,16 +167,16 @@ export interface FinspaceData {
    */
   associateUserToPermissionGroup(
     args: AssociateUserToPermissionGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateUserToPermissionGroupCommandOutput>;
   associateUserToPermissionGroup(
     args: AssociateUserToPermissionGroupCommandInput,
-    cb: (err: any, data?: AssociateUserToPermissionGroupCommandOutput) => void
+    cb: (err: any, data?: AssociateUserToPermissionGroupCommandOutput) => void,
   ): void;
   associateUserToPermissionGroup(
     args: AssociateUserToPermissionGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateUserToPermissionGroupCommandOutput) => void
+    cb: (err: any, data?: AssociateUserToPermissionGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -184,13 +184,13 @@ export interface FinspaceData {
    */
   createChangeset(
     args: CreateChangesetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateChangesetCommandOutput>;
   createChangeset(args: CreateChangesetCommandInput, cb: (err: any, data?: CreateChangesetCommandOutput) => void): void;
   createChangeset(
     args: CreateChangesetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateChangesetCommandOutput) => void
+    cb: (err: any, data?: CreateChangesetCommandOutput) => void,
   ): void;
 
   /**
@@ -201,7 +201,7 @@ export interface FinspaceData {
   createDataset(
     args: CreateDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDatasetCommandOutput) => void
+    cb: (err: any, data?: CreateDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -209,13 +209,13 @@ export interface FinspaceData {
    */
   createDataView(
     args: CreateDataViewCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDataViewCommandOutput>;
   createDataView(args: CreateDataViewCommandInput, cb: (err: any, data?: CreateDataViewCommandOutput) => void): void;
   createDataView(
     args: CreateDataViewCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDataViewCommandOutput) => void
+    cb: (err: any, data?: CreateDataViewCommandOutput) => void,
   ): void;
 
   /**
@@ -223,16 +223,16 @@ export interface FinspaceData {
    */
   createPermissionGroup(
     args: CreatePermissionGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePermissionGroupCommandOutput>;
   createPermissionGroup(
     args: CreatePermissionGroupCommandInput,
-    cb: (err: any, data?: CreatePermissionGroupCommandOutput) => void
+    cb: (err: any, data?: CreatePermissionGroupCommandOutput) => void,
   ): void;
   createPermissionGroup(
     args: CreatePermissionGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePermissionGroupCommandOutput) => void
+    cb: (err: any, data?: CreatePermissionGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -243,7 +243,7 @@ export interface FinspaceData {
   createUser(
     args: CreateUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateUserCommandOutput) => void
+    cb: (err: any, data?: CreateUserCommandOutput) => void,
   ): void;
 
   /**
@@ -254,7 +254,7 @@ export interface FinspaceData {
   deleteDataset(
     args: DeleteDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDatasetCommandOutput) => void
+    cb: (err: any, data?: DeleteDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -262,16 +262,16 @@ export interface FinspaceData {
    */
   deletePermissionGroup(
     args: DeletePermissionGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePermissionGroupCommandOutput>;
   deletePermissionGroup(
     args: DeletePermissionGroupCommandInput,
-    cb: (err: any, data?: DeletePermissionGroupCommandOutput) => void
+    cb: (err: any, data?: DeletePermissionGroupCommandOutput) => void,
   ): void;
   deletePermissionGroup(
     args: DeletePermissionGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePermissionGroupCommandOutput) => void
+    cb: (err: any, data?: DeletePermissionGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -282,7 +282,7 @@ export interface FinspaceData {
   disableUser(
     args: DisableUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableUserCommandOutput) => void
+    cb: (err: any, data?: DisableUserCommandOutput) => void,
   ): void;
 
   /**
@@ -290,16 +290,16 @@ export interface FinspaceData {
    */
   disassociateUserFromPermissionGroup(
     args: DisassociateUserFromPermissionGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateUserFromPermissionGroupCommandOutput>;
   disassociateUserFromPermissionGroup(
     args: DisassociateUserFromPermissionGroupCommandInput,
-    cb: (err: any, data?: DisassociateUserFromPermissionGroupCommandOutput) => void
+    cb: (err: any, data?: DisassociateUserFromPermissionGroupCommandOutput) => void,
   ): void;
   disassociateUserFromPermissionGroup(
     args: DisassociateUserFromPermissionGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateUserFromPermissionGroupCommandOutput) => void
+    cb: (err: any, data?: DisassociateUserFromPermissionGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -310,7 +310,7 @@ export interface FinspaceData {
   enableUser(
     args: EnableUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableUserCommandOutput) => void
+    cb: (err: any, data?: EnableUserCommandOutput) => void,
   ): void;
 
   /**
@@ -321,7 +321,7 @@ export interface FinspaceData {
   getChangeset(
     args: GetChangesetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetChangesetCommandOutput) => void
+    cb: (err: any, data?: GetChangesetCommandOutput) => void,
   ): void;
 
   /**
@@ -332,7 +332,7 @@ export interface FinspaceData {
   getDataset(
     args: GetDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDatasetCommandOutput) => void
+    cb: (err: any, data?: GetDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -343,7 +343,7 @@ export interface FinspaceData {
   getDataView(
     args: GetDataViewCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDataViewCommandOutput) => void
+    cb: (err: any, data?: GetDataViewCommandOutput) => void,
   ): void;
 
   /**
@@ -351,16 +351,16 @@ export interface FinspaceData {
    */
   getExternalDataViewAccessDetails(
     args: GetExternalDataViewAccessDetailsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetExternalDataViewAccessDetailsCommandOutput>;
   getExternalDataViewAccessDetails(
     args: GetExternalDataViewAccessDetailsCommandInput,
-    cb: (err: any, data?: GetExternalDataViewAccessDetailsCommandOutput) => void
+    cb: (err: any, data?: GetExternalDataViewAccessDetailsCommandOutput) => void,
   ): void;
   getExternalDataViewAccessDetails(
     args: GetExternalDataViewAccessDetailsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetExternalDataViewAccessDetailsCommandOutput) => void
+    cb: (err: any, data?: GetExternalDataViewAccessDetailsCommandOutput) => void,
   ): void;
 
   /**
@@ -368,16 +368,16 @@ export interface FinspaceData {
    */
   getPermissionGroup(
     args: GetPermissionGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPermissionGroupCommandOutput>;
   getPermissionGroup(
     args: GetPermissionGroupCommandInput,
-    cb: (err: any, data?: GetPermissionGroupCommandOutput) => void
+    cb: (err: any, data?: GetPermissionGroupCommandOutput) => void,
   ): void;
   getPermissionGroup(
     args: GetPermissionGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPermissionGroupCommandOutput) => void
+    cb: (err: any, data?: GetPermissionGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -385,16 +385,16 @@ export interface FinspaceData {
    */
   getProgrammaticAccessCredentials(
     args: GetProgrammaticAccessCredentialsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetProgrammaticAccessCredentialsCommandOutput>;
   getProgrammaticAccessCredentials(
     args: GetProgrammaticAccessCredentialsCommandInput,
-    cb: (err: any, data?: GetProgrammaticAccessCredentialsCommandOutput) => void
+    cb: (err: any, data?: GetProgrammaticAccessCredentialsCommandOutput) => void,
   ): void;
   getProgrammaticAccessCredentials(
     args: GetProgrammaticAccessCredentialsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetProgrammaticAccessCredentialsCommandOutput) => void
+    cb: (err: any, data?: GetProgrammaticAccessCredentialsCommandOutput) => void,
   ): void;
 
   /**
@@ -405,7 +405,7 @@ export interface FinspaceData {
   getUser(
     args: GetUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetUserCommandOutput) => void
+    cb: (err: any, data?: GetUserCommandOutput) => void,
   ): void;
 
   /**
@@ -414,16 +414,16 @@ export interface FinspaceData {
   getWorkingLocation(): Promise<GetWorkingLocationCommandOutput>;
   getWorkingLocation(
     args: GetWorkingLocationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetWorkingLocationCommandOutput>;
   getWorkingLocation(
     args: GetWorkingLocationCommandInput,
-    cb: (err: any, data?: GetWorkingLocationCommandOutput) => void
+    cb: (err: any, data?: GetWorkingLocationCommandOutput) => void,
   ): void;
   getWorkingLocation(
     args: GetWorkingLocationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWorkingLocationCommandOutput) => void
+    cb: (err: any, data?: GetWorkingLocationCommandOutput) => void,
   ): void;
 
   /**
@@ -431,13 +431,13 @@ export interface FinspaceData {
    */
   listChangesets(
     args: ListChangesetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListChangesetsCommandOutput>;
   listChangesets(args: ListChangesetsCommandInput, cb: (err: any, data?: ListChangesetsCommandOutput) => void): void;
   listChangesets(
     args: ListChangesetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListChangesetsCommandOutput) => void
+    cb: (err: any, data?: ListChangesetsCommandOutput) => void,
   ): void;
 
   /**
@@ -449,7 +449,7 @@ export interface FinspaceData {
   listDatasets(
     args: ListDatasetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDatasetsCommandOutput) => void
+    cb: (err: any, data?: ListDatasetsCommandOutput) => void,
   ): void;
 
   /**
@@ -460,7 +460,7 @@ export interface FinspaceData {
   listDataViews(
     args: ListDataViewsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDataViewsCommandOutput) => void
+    cb: (err: any, data?: ListDataViewsCommandOutput) => void,
   ): void;
 
   /**
@@ -468,16 +468,16 @@ export interface FinspaceData {
    */
   listPermissionGroups(
     args: ListPermissionGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPermissionGroupsCommandOutput>;
   listPermissionGroups(
     args: ListPermissionGroupsCommandInput,
-    cb: (err: any, data?: ListPermissionGroupsCommandOutput) => void
+    cb: (err: any, data?: ListPermissionGroupsCommandOutput) => void,
   ): void;
   listPermissionGroups(
     args: ListPermissionGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPermissionGroupsCommandOutput) => void
+    cb: (err: any, data?: ListPermissionGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -485,16 +485,16 @@ export interface FinspaceData {
    */
   listPermissionGroupsByUser(
     args: ListPermissionGroupsByUserCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPermissionGroupsByUserCommandOutput>;
   listPermissionGroupsByUser(
     args: ListPermissionGroupsByUserCommandInput,
-    cb: (err: any, data?: ListPermissionGroupsByUserCommandOutput) => void
+    cb: (err: any, data?: ListPermissionGroupsByUserCommandOutput) => void,
   ): void;
   listPermissionGroupsByUser(
     args: ListPermissionGroupsByUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPermissionGroupsByUserCommandOutput) => void
+    cb: (err: any, data?: ListPermissionGroupsByUserCommandOutput) => void,
   ): void;
 
   /**
@@ -505,7 +505,7 @@ export interface FinspaceData {
   listUsers(
     args: ListUsersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListUsersCommandOutput) => void
+    cb: (err: any, data?: ListUsersCommandOutput) => void,
   ): void;
 
   /**
@@ -513,16 +513,16 @@ export interface FinspaceData {
    */
   listUsersByPermissionGroup(
     args: ListUsersByPermissionGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListUsersByPermissionGroupCommandOutput>;
   listUsersByPermissionGroup(
     args: ListUsersByPermissionGroupCommandInput,
-    cb: (err: any, data?: ListUsersByPermissionGroupCommandOutput) => void
+    cb: (err: any, data?: ListUsersByPermissionGroupCommandOutput) => void,
   ): void;
   listUsersByPermissionGroup(
     args: ListUsersByPermissionGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListUsersByPermissionGroupCommandOutput) => void
+    cb: (err: any, data?: ListUsersByPermissionGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -530,16 +530,16 @@ export interface FinspaceData {
    */
   resetUserPassword(
     args: ResetUserPasswordCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ResetUserPasswordCommandOutput>;
   resetUserPassword(
     args: ResetUserPasswordCommandInput,
-    cb: (err: any, data?: ResetUserPasswordCommandOutput) => void
+    cb: (err: any, data?: ResetUserPasswordCommandOutput) => void,
   ): void;
   resetUserPassword(
     args: ResetUserPasswordCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ResetUserPasswordCommandOutput) => void
+    cb: (err: any, data?: ResetUserPasswordCommandOutput) => void,
   ): void;
 
   /**
@@ -547,13 +547,13 @@ export interface FinspaceData {
    */
   updateChangeset(
     args: UpdateChangesetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateChangesetCommandOutput>;
   updateChangeset(args: UpdateChangesetCommandInput, cb: (err: any, data?: UpdateChangesetCommandOutput) => void): void;
   updateChangeset(
     args: UpdateChangesetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateChangesetCommandOutput) => void
+    cb: (err: any, data?: UpdateChangesetCommandOutput) => void,
   ): void;
 
   /**
@@ -564,7 +564,7 @@ export interface FinspaceData {
   updateDataset(
     args: UpdateDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDatasetCommandOutput) => void
+    cb: (err: any, data?: UpdateDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -572,16 +572,16 @@ export interface FinspaceData {
    */
   updatePermissionGroup(
     args: UpdatePermissionGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePermissionGroupCommandOutput>;
   updatePermissionGroup(
     args: UpdatePermissionGroupCommandInput,
-    cb: (err: any, data?: UpdatePermissionGroupCommandOutput) => void
+    cb: (err: any, data?: UpdatePermissionGroupCommandOutput) => void,
   ): void;
   updatePermissionGroup(
     args: UpdatePermissionGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePermissionGroupCommandOutput) => void
+    cb: (err: any, data?: UpdatePermissionGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -592,7 +592,7 @@ export interface FinspaceData {
   updateUser(
     args: UpdateUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateUserCommandOutput) => void
+    cb: (err: any, data?: UpdateUserCommandOutput) => void,
   ): void;
 }
 

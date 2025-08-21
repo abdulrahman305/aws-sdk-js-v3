@@ -348,7 +348,7 @@ import { WAFRegionalServiceException as __BaseException } from "../models/WAFReg
  */
 export const se_AssociateWebACLCommand = async (
   input: AssociateWebACLCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateWebACL");
   let body: any;
@@ -361,7 +361,7 @@ export const se_AssociateWebACLCommand = async (
  */
 export const se_CreateByteMatchSetCommand = async (
   input: CreateByteMatchSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateByteMatchSet");
   let body: any;
@@ -374,7 +374,7 @@ export const se_CreateByteMatchSetCommand = async (
  */
 export const se_CreateGeoMatchSetCommand = async (
   input: CreateGeoMatchSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateGeoMatchSet");
   let body: any;
@@ -387,7 +387,7 @@ export const se_CreateGeoMatchSetCommand = async (
  */
 export const se_CreateIPSetCommand = async (
   input: CreateIPSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateIPSet");
   let body: any;
@@ -400,7 +400,7 @@ export const se_CreateIPSetCommand = async (
  */
 export const se_CreateRateBasedRuleCommand = async (
   input: CreateRateBasedRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateRateBasedRule");
   let body: any;
@@ -413,7 +413,7 @@ export const se_CreateRateBasedRuleCommand = async (
  */
 export const se_CreateRegexMatchSetCommand = async (
   input: CreateRegexMatchSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateRegexMatchSet");
   let body: any;
@@ -426,7 +426,7 @@ export const se_CreateRegexMatchSetCommand = async (
  */
 export const se_CreateRegexPatternSetCommand = async (
   input: CreateRegexPatternSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateRegexPatternSet");
   let body: any;
@@ -439,7 +439,7 @@ export const se_CreateRegexPatternSetCommand = async (
  */
 export const se_CreateRuleCommand = async (
   input: CreateRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateRule");
   let body: any;
@@ -452,7 +452,7 @@ export const se_CreateRuleCommand = async (
  */
 export const se_CreateRuleGroupCommand = async (
   input: CreateRuleGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateRuleGroup");
   let body: any;
@@ -465,7 +465,7 @@ export const se_CreateRuleGroupCommand = async (
  */
 export const se_CreateSizeConstraintSetCommand = async (
   input: CreateSizeConstraintSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateSizeConstraintSet");
   let body: any;
@@ -478,7 +478,7 @@ export const se_CreateSizeConstraintSetCommand = async (
  */
 export const se_CreateSqlInjectionMatchSetCommand = async (
   input: CreateSqlInjectionMatchSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateSqlInjectionMatchSet");
   let body: any;
@@ -491,7 +491,7 @@ export const se_CreateSqlInjectionMatchSetCommand = async (
  */
 export const se_CreateWebACLCommand = async (
   input: CreateWebACLCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateWebACL");
   let body: any;
@@ -504,7 +504,7 @@ export const se_CreateWebACLCommand = async (
  */
 export const se_CreateWebACLMigrationStackCommand = async (
   input: CreateWebACLMigrationStackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateWebACLMigrationStack");
   let body: any;
@@ -517,7 +517,7 @@ export const se_CreateWebACLMigrationStackCommand = async (
  */
 export const se_CreateXssMatchSetCommand = async (
   input: CreateXssMatchSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateXssMatchSet");
   let body: any;
@@ -530,7 +530,7 @@ export const se_CreateXssMatchSetCommand = async (
  */
 export const se_DeleteByteMatchSetCommand = async (
   input: DeleteByteMatchSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteByteMatchSet");
   let body: any;
@@ -543,7 +543,7 @@ export const se_DeleteByteMatchSetCommand = async (
  */
 export const se_DeleteGeoMatchSetCommand = async (
   input: DeleteGeoMatchSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteGeoMatchSet");
   let body: any;
@@ -556,7 +556,7 @@ export const se_DeleteGeoMatchSetCommand = async (
  */
 export const se_DeleteIPSetCommand = async (
   input: DeleteIPSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteIPSet");
   let body: any;
@@ -569,7 +569,7 @@ export const se_DeleteIPSetCommand = async (
  */
 export const se_DeleteLoggingConfigurationCommand = async (
   input: DeleteLoggingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteLoggingConfiguration");
   let body: any;
@@ -582,7 +582,7 @@ export const se_DeleteLoggingConfigurationCommand = async (
  */
 export const se_DeletePermissionPolicyCommand = async (
   input: DeletePermissionPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeletePermissionPolicy");
   let body: any;
@@ -595,7 +595,7 @@ export const se_DeletePermissionPolicyCommand = async (
  */
 export const se_DeleteRateBasedRuleCommand = async (
   input: DeleteRateBasedRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRateBasedRule");
   let body: any;
@@ -608,7 +608,7 @@ export const se_DeleteRateBasedRuleCommand = async (
  */
 export const se_DeleteRegexMatchSetCommand = async (
   input: DeleteRegexMatchSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRegexMatchSet");
   let body: any;
@@ -621,7 +621,7 @@ export const se_DeleteRegexMatchSetCommand = async (
  */
 export const se_DeleteRegexPatternSetCommand = async (
   input: DeleteRegexPatternSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRegexPatternSet");
   let body: any;
@@ -634,7 +634,7 @@ export const se_DeleteRegexPatternSetCommand = async (
  */
 export const se_DeleteRuleCommand = async (
   input: DeleteRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRule");
   let body: any;
@@ -647,7 +647,7 @@ export const se_DeleteRuleCommand = async (
  */
 export const se_DeleteRuleGroupCommand = async (
   input: DeleteRuleGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRuleGroup");
   let body: any;
@@ -660,7 +660,7 @@ export const se_DeleteRuleGroupCommand = async (
  */
 export const se_DeleteSizeConstraintSetCommand = async (
   input: DeleteSizeConstraintSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteSizeConstraintSet");
   let body: any;
@@ -673,7 +673,7 @@ export const se_DeleteSizeConstraintSetCommand = async (
  */
 export const se_DeleteSqlInjectionMatchSetCommand = async (
   input: DeleteSqlInjectionMatchSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteSqlInjectionMatchSet");
   let body: any;
@@ -686,7 +686,7 @@ export const se_DeleteSqlInjectionMatchSetCommand = async (
  */
 export const se_DeleteWebACLCommand = async (
   input: DeleteWebACLCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteWebACL");
   let body: any;
@@ -699,7 +699,7 @@ export const se_DeleteWebACLCommand = async (
  */
 export const se_DeleteXssMatchSetCommand = async (
   input: DeleteXssMatchSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteXssMatchSet");
   let body: any;
@@ -712,7 +712,7 @@ export const se_DeleteXssMatchSetCommand = async (
  */
 export const se_DisassociateWebACLCommand = async (
   input: DisassociateWebACLCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateWebACL");
   let body: any;
@@ -725,7 +725,7 @@ export const se_DisassociateWebACLCommand = async (
  */
 export const se_GetByteMatchSetCommand = async (
   input: GetByteMatchSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetByteMatchSet");
   let body: any;
@@ -738,7 +738,7 @@ export const se_GetByteMatchSetCommand = async (
  */
 export const se_GetChangeTokenCommand = async (
   input: GetChangeTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetChangeToken");
   let body: any;
@@ -751,7 +751,7 @@ export const se_GetChangeTokenCommand = async (
  */
 export const se_GetChangeTokenStatusCommand = async (
   input: GetChangeTokenStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetChangeTokenStatus");
   let body: any;
@@ -764,7 +764,7 @@ export const se_GetChangeTokenStatusCommand = async (
  */
 export const se_GetGeoMatchSetCommand = async (
   input: GetGeoMatchSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetGeoMatchSet");
   let body: any;
@@ -777,7 +777,7 @@ export const se_GetGeoMatchSetCommand = async (
  */
 export const se_GetIPSetCommand = async (
   input: GetIPSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetIPSet");
   let body: any;
@@ -790,7 +790,7 @@ export const se_GetIPSetCommand = async (
  */
 export const se_GetLoggingConfigurationCommand = async (
   input: GetLoggingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetLoggingConfiguration");
   let body: any;
@@ -803,7 +803,7 @@ export const se_GetLoggingConfigurationCommand = async (
  */
 export const se_GetPermissionPolicyCommand = async (
   input: GetPermissionPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetPermissionPolicy");
   let body: any;
@@ -816,7 +816,7 @@ export const se_GetPermissionPolicyCommand = async (
  */
 export const se_GetRateBasedRuleCommand = async (
   input: GetRateBasedRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRateBasedRule");
   let body: any;
@@ -829,7 +829,7 @@ export const se_GetRateBasedRuleCommand = async (
  */
 export const se_GetRateBasedRuleManagedKeysCommand = async (
   input: GetRateBasedRuleManagedKeysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRateBasedRuleManagedKeys");
   let body: any;
@@ -842,7 +842,7 @@ export const se_GetRateBasedRuleManagedKeysCommand = async (
  */
 export const se_GetRegexMatchSetCommand = async (
   input: GetRegexMatchSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRegexMatchSet");
   let body: any;
@@ -855,7 +855,7 @@ export const se_GetRegexMatchSetCommand = async (
  */
 export const se_GetRegexPatternSetCommand = async (
   input: GetRegexPatternSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRegexPatternSet");
   let body: any;
@@ -868,7 +868,7 @@ export const se_GetRegexPatternSetCommand = async (
  */
 export const se_GetRuleCommand = async (
   input: GetRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRule");
   let body: any;
@@ -881,7 +881,7 @@ export const se_GetRuleCommand = async (
  */
 export const se_GetRuleGroupCommand = async (
   input: GetRuleGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRuleGroup");
   let body: any;
@@ -894,7 +894,7 @@ export const se_GetRuleGroupCommand = async (
  */
 export const se_GetSampledRequestsCommand = async (
   input: GetSampledRequestsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSampledRequests");
   let body: any;
@@ -907,7 +907,7 @@ export const se_GetSampledRequestsCommand = async (
  */
 export const se_GetSizeConstraintSetCommand = async (
   input: GetSizeConstraintSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSizeConstraintSet");
   let body: any;
@@ -920,7 +920,7 @@ export const se_GetSizeConstraintSetCommand = async (
  */
 export const se_GetSqlInjectionMatchSetCommand = async (
   input: GetSqlInjectionMatchSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSqlInjectionMatchSet");
   let body: any;
@@ -933,7 +933,7 @@ export const se_GetSqlInjectionMatchSetCommand = async (
  */
 export const se_GetWebACLCommand = async (
   input: GetWebACLCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetWebACL");
   let body: any;
@@ -946,7 +946,7 @@ export const se_GetWebACLCommand = async (
  */
 export const se_GetWebACLForResourceCommand = async (
   input: GetWebACLForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetWebACLForResource");
   let body: any;
@@ -959,7 +959,7 @@ export const se_GetWebACLForResourceCommand = async (
  */
 export const se_GetXssMatchSetCommand = async (
   input: GetXssMatchSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetXssMatchSet");
   let body: any;
@@ -972,7 +972,7 @@ export const se_GetXssMatchSetCommand = async (
  */
 export const se_ListActivatedRulesInRuleGroupCommand = async (
   input: ListActivatedRulesInRuleGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListActivatedRulesInRuleGroup");
   let body: any;
@@ -985,7 +985,7 @@ export const se_ListActivatedRulesInRuleGroupCommand = async (
  */
 export const se_ListByteMatchSetsCommand = async (
   input: ListByteMatchSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListByteMatchSets");
   let body: any;
@@ -998,7 +998,7 @@ export const se_ListByteMatchSetsCommand = async (
  */
 export const se_ListGeoMatchSetsCommand = async (
   input: ListGeoMatchSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListGeoMatchSets");
   let body: any;
@@ -1011,7 +1011,7 @@ export const se_ListGeoMatchSetsCommand = async (
  */
 export const se_ListIPSetsCommand = async (
   input: ListIPSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListIPSets");
   let body: any;
@@ -1024,7 +1024,7 @@ export const se_ListIPSetsCommand = async (
  */
 export const se_ListLoggingConfigurationsCommand = async (
   input: ListLoggingConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListLoggingConfigurations");
   let body: any;
@@ -1037,7 +1037,7 @@ export const se_ListLoggingConfigurationsCommand = async (
  */
 export const se_ListRateBasedRulesCommand = async (
   input: ListRateBasedRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRateBasedRules");
   let body: any;
@@ -1050,7 +1050,7 @@ export const se_ListRateBasedRulesCommand = async (
  */
 export const se_ListRegexMatchSetsCommand = async (
   input: ListRegexMatchSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRegexMatchSets");
   let body: any;
@@ -1063,7 +1063,7 @@ export const se_ListRegexMatchSetsCommand = async (
  */
 export const se_ListRegexPatternSetsCommand = async (
   input: ListRegexPatternSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRegexPatternSets");
   let body: any;
@@ -1076,7 +1076,7 @@ export const se_ListRegexPatternSetsCommand = async (
  */
 export const se_ListResourcesForWebACLCommand = async (
   input: ListResourcesForWebACLCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListResourcesForWebACL");
   let body: any;
@@ -1089,7 +1089,7 @@ export const se_ListResourcesForWebACLCommand = async (
  */
 export const se_ListRuleGroupsCommand = async (
   input: ListRuleGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRuleGroups");
   let body: any;
@@ -1102,7 +1102,7 @@ export const se_ListRuleGroupsCommand = async (
  */
 export const se_ListRulesCommand = async (
   input: ListRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRules");
   let body: any;
@@ -1115,7 +1115,7 @@ export const se_ListRulesCommand = async (
  */
 export const se_ListSizeConstraintSetsCommand = async (
   input: ListSizeConstraintSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSizeConstraintSets");
   let body: any;
@@ -1128,7 +1128,7 @@ export const se_ListSizeConstraintSetsCommand = async (
  */
 export const se_ListSqlInjectionMatchSetsCommand = async (
   input: ListSqlInjectionMatchSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSqlInjectionMatchSets");
   let body: any;
@@ -1141,7 +1141,7 @@ export const se_ListSqlInjectionMatchSetsCommand = async (
  */
 export const se_ListSubscribedRuleGroupsCommand = async (
   input: ListSubscribedRuleGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSubscribedRuleGroups");
   let body: any;
@@ -1154,7 +1154,7 @@ export const se_ListSubscribedRuleGroupsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -1167,7 +1167,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListWebACLsCommand = async (
   input: ListWebACLsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListWebACLs");
   let body: any;
@@ -1180,7 +1180,7 @@ export const se_ListWebACLsCommand = async (
  */
 export const se_ListXssMatchSetsCommand = async (
   input: ListXssMatchSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListXssMatchSets");
   let body: any;
@@ -1193,7 +1193,7 @@ export const se_ListXssMatchSetsCommand = async (
  */
 export const se_PutLoggingConfigurationCommand = async (
   input: PutLoggingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutLoggingConfiguration");
   let body: any;
@@ -1206,7 +1206,7 @@ export const se_PutLoggingConfigurationCommand = async (
  */
 export const se_PutPermissionPolicyCommand = async (
   input: PutPermissionPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutPermissionPolicy");
   let body: any;
@@ -1219,7 +1219,7 @@ export const se_PutPermissionPolicyCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -1232,7 +1232,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -1245,7 +1245,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateByteMatchSetCommand = async (
   input: UpdateByteMatchSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateByteMatchSet");
   let body: any;
@@ -1258,7 +1258,7 @@ export const se_UpdateByteMatchSetCommand = async (
  */
 export const se_UpdateGeoMatchSetCommand = async (
   input: UpdateGeoMatchSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateGeoMatchSet");
   let body: any;
@@ -1271,7 +1271,7 @@ export const se_UpdateGeoMatchSetCommand = async (
  */
 export const se_UpdateIPSetCommand = async (
   input: UpdateIPSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateIPSet");
   let body: any;
@@ -1284,7 +1284,7 @@ export const se_UpdateIPSetCommand = async (
  */
 export const se_UpdateRateBasedRuleCommand = async (
   input: UpdateRateBasedRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRateBasedRule");
   let body: any;
@@ -1297,7 +1297,7 @@ export const se_UpdateRateBasedRuleCommand = async (
  */
 export const se_UpdateRegexMatchSetCommand = async (
   input: UpdateRegexMatchSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRegexMatchSet");
   let body: any;
@@ -1310,7 +1310,7 @@ export const se_UpdateRegexMatchSetCommand = async (
  */
 export const se_UpdateRegexPatternSetCommand = async (
   input: UpdateRegexPatternSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRegexPatternSet");
   let body: any;
@@ -1323,7 +1323,7 @@ export const se_UpdateRegexPatternSetCommand = async (
  */
 export const se_UpdateRuleCommand = async (
   input: UpdateRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRule");
   let body: any;
@@ -1336,7 +1336,7 @@ export const se_UpdateRuleCommand = async (
  */
 export const se_UpdateRuleGroupCommand = async (
   input: UpdateRuleGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRuleGroup");
   let body: any;
@@ -1349,7 +1349,7 @@ export const se_UpdateRuleGroupCommand = async (
  */
 export const se_UpdateSizeConstraintSetCommand = async (
   input: UpdateSizeConstraintSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSizeConstraintSet");
   let body: any;
@@ -1362,7 +1362,7 @@ export const se_UpdateSizeConstraintSetCommand = async (
  */
 export const se_UpdateSqlInjectionMatchSetCommand = async (
   input: UpdateSqlInjectionMatchSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSqlInjectionMatchSet");
   let body: any;
@@ -1375,7 +1375,7 @@ export const se_UpdateSqlInjectionMatchSetCommand = async (
  */
 export const se_UpdateWebACLCommand = async (
   input: UpdateWebACLCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateWebACL");
   let body: any;
@@ -1388,7 +1388,7 @@ export const se_UpdateWebACLCommand = async (
  */
 export const se_UpdateXssMatchSetCommand = async (
   input: UpdateXssMatchSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateXssMatchSet");
   let body: any;
@@ -1401,7 +1401,7 @@ export const se_UpdateXssMatchSetCommand = async (
  */
 export const de_AssociateWebACLCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateWebACLCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1421,7 +1421,7 @@ export const de_AssociateWebACLCommand = async (
  */
 export const de_CreateByteMatchSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateByteMatchSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1441,7 +1441,7 @@ export const de_CreateByteMatchSetCommand = async (
  */
 export const de_CreateGeoMatchSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGeoMatchSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1461,7 +1461,7 @@ export const de_CreateGeoMatchSetCommand = async (
  */
 export const de_CreateIPSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateIPSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1481,7 +1481,7 @@ export const de_CreateIPSetCommand = async (
  */
 export const de_CreateRateBasedRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRateBasedRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1501,7 +1501,7 @@ export const de_CreateRateBasedRuleCommand = async (
  */
 export const de_CreateRegexMatchSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRegexMatchSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1521,7 +1521,7 @@ export const de_CreateRegexMatchSetCommand = async (
  */
 export const de_CreateRegexPatternSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRegexPatternSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1541,7 +1541,7 @@ export const de_CreateRegexPatternSetCommand = async (
  */
 export const de_CreateRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1561,7 +1561,7 @@ export const de_CreateRuleCommand = async (
  */
 export const de_CreateRuleGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRuleGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1581,7 +1581,7 @@ export const de_CreateRuleGroupCommand = async (
  */
 export const de_CreateSizeConstraintSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSizeConstraintSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1601,7 +1601,7 @@ export const de_CreateSizeConstraintSetCommand = async (
  */
 export const de_CreateSqlInjectionMatchSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSqlInjectionMatchSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1621,7 +1621,7 @@ export const de_CreateSqlInjectionMatchSetCommand = async (
  */
 export const de_CreateWebACLCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWebACLCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1641,7 +1641,7 @@ export const de_CreateWebACLCommand = async (
  */
 export const de_CreateWebACLMigrationStackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWebACLMigrationStackCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1661,7 +1661,7 @@ export const de_CreateWebACLMigrationStackCommand = async (
  */
 export const de_CreateXssMatchSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateXssMatchSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1681,7 +1681,7 @@ export const de_CreateXssMatchSetCommand = async (
  */
 export const de_DeleteByteMatchSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteByteMatchSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1701,7 +1701,7 @@ export const de_DeleteByteMatchSetCommand = async (
  */
 export const de_DeleteGeoMatchSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGeoMatchSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1721,7 +1721,7 @@ export const de_DeleteGeoMatchSetCommand = async (
  */
 export const de_DeleteIPSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIPSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1741,7 +1741,7 @@ export const de_DeleteIPSetCommand = async (
  */
 export const de_DeleteLoggingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLoggingConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1761,7 +1761,7 @@ export const de_DeleteLoggingConfigurationCommand = async (
  */
 export const de_DeletePermissionPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePermissionPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1781,7 +1781,7 @@ export const de_DeletePermissionPolicyCommand = async (
  */
 export const de_DeleteRateBasedRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRateBasedRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1801,7 +1801,7 @@ export const de_DeleteRateBasedRuleCommand = async (
  */
 export const de_DeleteRegexMatchSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRegexMatchSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1821,7 +1821,7 @@ export const de_DeleteRegexMatchSetCommand = async (
  */
 export const de_DeleteRegexPatternSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRegexPatternSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1841,7 +1841,7 @@ export const de_DeleteRegexPatternSetCommand = async (
  */
 export const de_DeleteRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1861,7 +1861,7 @@ export const de_DeleteRuleCommand = async (
  */
 export const de_DeleteRuleGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRuleGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1881,7 +1881,7 @@ export const de_DeleteRuleGroupCommand = async (
  */
 export const de_DeleteSizeConstraintSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSizeConstraintSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1901,7 +1901,7 @@ export const de_DeleteSizeConstraintSetCommand = async (
  */
 export const de_DeleteSqlInjectionMatchSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSqlInjectionMatchSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1921,7 +1921,7 @@ export const de_DeleteSqlInjectionMatchSetCommand = async (
  */
 export const de_DeleteWebACLCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWebACLCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1941,7 +1941,7 @@ export const de_DeleteWebACLCommand = async (
  */
 export const de_DeleteXssMatchSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteXssMatchSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1961,7 +1961,7 @@ export const de_DeleteXssMatchSetCommand = async (
  */
 export const de_DisassociateWebACLCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateWebACLCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1981,7 +1981,7 @@ export const de_DisassociateWebACLCommand = async (
  */
 export const de_GetByteMatchSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetByteMatchSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2001,7 +2001,7 @@ export const de_GetByteMatchSetCommand = async (
  */
 export const de_GetChangeTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetChangeTokenCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2021,7 +2021,7 @@ export const de_GetChangeTokenCommand = async (
  */
 export const de_GetChangeTokenStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetChangeTokenStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2041,7 +2041,7 @@ export const de_GetChangeTokenStatusCommand = async (
  */
 export const de_GetGeoMatchSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGeoMatchSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2061,7 +2061,7 @@ export const de_GetGeoMatchSetCommand = async (
  */
 export const de_GetIPSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIPSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2081,7 +2081,7 @@ export const de_GetIPSetCommand = async (
  */
 export const de_GetLoggingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLoggingConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2101,7 +2101,7 @@ export const de_GetLoggingConfigurationCommand = async (
  */
 export const de_GetPermissionPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPermissionPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2121,7 +2121,7 @@ export const de_GetPermissionPolicyCommand = async (
  */
 export const de_GetRateBasedRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRateBasedRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2141,7 +2141,7 @@ export const de_GetRateBasedRuleCommand = async (
  */
 export const de_GetRateBasedRuleManagedKeysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRateBasedRuleManagedKeysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2161,7 +2161,7 @@ export const de_GetRateBasedRuleManagedKeysCommand = async (
  */
 export const de_GetRegexMatchSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRegexMatchSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2181,7 +2181,7 @@ export const de_GetRegexMatchSetCommand = async (
  */
 export const de_GetRegexPatternSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRegexPatternSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2201,7 +2201,7 @@ export const de_GetRegexPatternSetCommand = async (
  */
 export const de_GetRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2221,7 +2221,7 @@ export const de_GetRuleCommand = async (
  */
 export const de_GetRuleGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRuleGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2241,7 +2241,7 @@ export const de_GetRuleGroupCommand = async (
  */
 export const de_GetSampledRequestsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSampledRequestsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2261,7 +2261,7 @@ export const de_GetSampledRequestsCommand = async (
  */
 export const de_GetSizeConstraintSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSizeConstraintSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2281,7 +2281,7 @@ export const de_GetSizeConstraintSetCommand = async (
  */
 export const de_GetSqlInjectionMatchSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSqlInjectionMatchSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2301,7 +2301,7 @@ export const de_GetSqlInjectionMatchSetCommand = async (
  */
 export const de_GetWebACLCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWebACLCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2321,7 +2321,7 @@ export const de_GetWebACLCommand = async (
  */
 export const de_GetWebACLForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWebACLForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2341,7 +2341,7 @@ export const de_GetWebACLForResourceCommand = async (
  */
 export const de_GetXssMatchSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetXssMatchSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2361,7 +2361,7 @@ export const de_GetXssMatchSetCommand = async (
  */
 export const de_ListActivatedRulesInRuleGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListActivatedRulesInRuleGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2381,7 +2381,7 @@ export const de_ListActivatedRulesInRuleGroupCommand = async (
  */
 export const de_ListByteMatchSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListByteMatchSetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2401,7 +2401,7 @@ export const de_ListByteMatchSetsCommand = async (
  */
 export const de_ListGeoMatchSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGeoMatchSetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2421,7 +2421,7 @@ export const de_ListGeoMatchSetsCommand = async (
  */
 export const de_ListIPSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIPSetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2441,7 +2441,7 @@ export const de_ListIPSetsCommand = async (
  */
 export const de_ListLoggingConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLoggingConfigurationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2461,7 +2461,7 @@ export const de_ListLoggingConfigurationsCommand = async (
  */
 export const de_ListRateBasedRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRateBasedRulesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2481,7 +2481,7 @@ export const de_ListRateBasedRulesCommand = async (
  */
 export const de_ListRegexMatchSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRegexMatchSetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2501,7 +2501,7 @@ export const de_ListRegexMatchSetsCommand = async (
  */
 export const de_ListRegexPatternSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRegexPatternSetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2521,7 +2521,7 @@ export const de_ListRegexPatternSetsCommand = async (
  */
 export const de_ListResourcesForWebACLCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResourcesForWebACLCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2541,7 +2541,7 @@ export const de_ListResourcesForWebACLCommand = async (
  */
 export const de_ListRuleGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRuleGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2561,7 +2561,7 @@ export const de_ListRuleGroupsCommand = async (
  */
 export const de_ListRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRulesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2581,7 +2581,7 @@ export const de_ListRulesCommand = async (
  */
 export const de_ListSizeConstraintSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSizeConstraintSetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2601,7 +2601,7 @@ export const de_ListSizeConstraintSetsCommand = async (
  */
 export const de_ListSqlInjectionMatchSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSqlInjectionMatchSetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2621,7 +2621,7 @@ export const de_ListSqlInjectionMatchSetsCommand = async (
  */
 export const de_ListSubscribedRuleGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSubscribedRuleGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2641,7 +2641,7 @@ export const de_ListSubscribedRuleGroupsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2661,7 +2661,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListWebACLsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWebACLsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2681,7 +2681,7 @@ export const de_ListWebACLsCommand = async (
  */
 export const de_ListXssMatchSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListXssMatchSetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2701,7 +2701,7 @@ export const de_ListXssMatchSetsCommand = async (
  */
 export const de_PutLoggingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutLoggingConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2721,7 +2721,7 @@ export const de_PutLoggingConfigurationCommand = async (
  */
 export const de_PutPermissionPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutPermissionPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2741,7 +2741,7 @@ export const de_PutPermissionPolicyCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2761,7 +2761,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2781,7 +2781,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateByteMatchSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateByteMatchSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2801,7 +2801,7 @@ export const de_UpdateByteMatchSetCommand = async (
  */
 export const de_UpdateGeoMatchSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGeoMatchSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2821,7 +2821,7 @@ export const de_UpdateGeoMatchSetCommand = async (
  */
 export const de_UpdateIPSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateIPSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2841,7 +2841,7 @@ export const de_UpdateIPSetCommand = async (
  */
 export const de_UpdateRateBasedRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRateBasedRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2861,7 +2861,7 @@ export const de_UpdateRateBasedRuleCommand = async (
  */
 export const de_UpdateRegexMatchSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRegexMatchSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2881,7 +2881,7 @@ export const de_UpdateRegexMatchSetCommand = async (
  */
 export const de_UpdateRegexPatternSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRegexPatternSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2901,7 +2901,7 @@ export const de_UpdateRegexPatternSetCommand = async (
  */
 export const de_UpdateRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2921,7 +2921,7 @@ export const de_UpdateRuleCommand = async (
  */
 export const de_UpdateRuleGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRuleGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2941,7 +2941,7 @@ export const de_UpdateRuleGroupCommand = async (
  */
 export const de_UpdateSizeConstraintSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSizeConstraintSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2961,7 +2961,7 @@ export const de_UpdateSizeConstraintSetCommand = async (
  */
 export const de_UpdateSqlInjectionMatchSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSqlInjectionMatchSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2981,7 +2981,7 @@ export const de_UpdateSqlInjectionMatchSetCommand = async (
  */
 export const de_UpdateWebACLCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWebACLCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3001,7 +3001,7 @@ export const de_UpdateWebACLCommand = async (
  */
 export const de_UpdateXssMatchSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateXssMatchSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3101,7 +3101,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_WAFBadRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WAFBadRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3117,7 +3117,7 @@ const de_WAFBadRequestExceptionRes = async (
  */
 const de_WAFDisallowedNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WAFDisallowedNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3133,7 +3133,7 @@ const de_WAFDisallowedNameExceptionRes = async (
  */
 const de_WAFEntityMigrationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WAFEntityMigrationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3149,7 +3149,7 @@ const de_WAFEntityMigrationExceptionRes = async (
  */
 const de_WAFInternalErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WAFInternalErrorException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3165,7 +3165,7 @@ const de_WAFInternalErrorExceptionRes = async (
  */
 const de_WAFInvalidAccountExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WAFInvalidAccountException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3181,7 +3181,7 @@ const de_WAFInvalidAccountExceptionRes = async (
  */
 const de_WAFInvalidOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WAFInvalidOperationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3197,7 +3197,7 @@ const de_WAFInvalidOperationExceptionRes = async (
  */
 const de_WAFInvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WAFInvalidParameterException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3213,7 +3213,7 @@ const de_WAFInvalidParameterExceptionRes = async (
  */
 const de_WAFInvalidPermissionPolicyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WAFInvalidPermissionPolicyException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3229,7 +3229,7 @@ const de_WAFInvalidPermissionPolicyExceptionRes = async (
  */
 const de_WAFInvalidRegexPatternExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WAFInvalidRegexPatternException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3245,7 +3245,7 @@ const de_WAFInvalidRegexPatternExceptionRes = async (
  */
 const de_WAFLimitsExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WAFLimitsExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3261,7 +3261,7 @@ const de_WAFLimitsExceededExceptionRes = async (
  */
 const de_WAFNonEmptyEntityExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WAFNonEmptyEntityException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3277,7 +3277,7 @@ const de_WAFNonEmptyEntityExceptionRes = async (
  */
 const de_WAFNonexistentContainerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WAFNonexistentContainerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3293,7 +3293,7 @@ const de_WAFNonexistentContainerExceptionRes = async (
  */
 const de_WAFNonexistentItemExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WAFNonexistentItemException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3309,7 +3309,7 @@ const de_WAFNonexistentItemExceptionRes = async (
  */
 const de_WAFReferencedItemExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WAFReferencedItemException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3325,7 +3325,7 @@ const de_WAFReferencedItemExceptionRes = async (
  */
 const de_WAFServiceLinkedRoleErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WAFServiceLinkedRoleErrorException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3341,7 +3341,7 @@ const de_WAFServiceLinkedRoleErrorExceptionRes = async (
  */
 const de_WAFStaleDataExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WAFStaleDataException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3357,7 +3357,7 @@ const de_WAFStaleDataExceptionRes = async (
  */
 const de_WAFSubscriptionNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WAFSubscriptionNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3373,7 +3373,7 @@ const de_WAFSubscriptionNotFoundExceptionRes = async (
  */
 const de_WAFTagOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WAFTagOperationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3389,7 +3389,7 @@ const de_WAFTagOperationExceptionRes = async (
  */
 const de_WAFTagOperationInternalErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WAFTagOperationInternalErrorException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3405,7 +3405,7 @@ const de_WAFTagOperationInternalErrorExceptionRes = async (
  */
 const de_WAFUnavailableEntityExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WAFUnavailableEntityException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4170,7 +4170,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

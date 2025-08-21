@@ -4741,7 +4741,7 @@ export const DescribeStateMachineAliasOutputFilterSensitiveLog = (obj: DescribeS
  * @internal
  */
 export const DescribeStateMachineForExecutionOutputFilterSensitiveLog = (
-  obj: DescribeStateMachineForExecutionOutput
+  obj: DescribeStateMachineForExecutionOutput,
 ): any => ({
   ...obj,
   ...(obj.definition && { definition: SENSITIVE_STRING }),
@@ -4811,7 +4811,7 @@ export const LambdaFunctionFailedEventDetailsFilterSensitiveLog = (obj: LambdaFu
  * @internal
  */
 export const LambdaFunctionScheduledEventDetailsFilterSensitiveLog = (
-  obj: LambdaFunctionScheduledEventDetails
+  obj: LambdaFunctionScheduledEventDetails,
 ): any => ({
   ...obj,
   ...(obj.input && { input: SENSITIVE_STRING }),
@@ -4821,7 +4821,7 @@ export const LambdaFunctionScheduledEventDetailsFilterSensitiveLog = (
  * @internal
  */
 export const LambdaFunctionScheduleFailedEventDetailsFilterSensitiveLog = (
-  obj: LambdaFunctionScheduleFailedEventDetails
+  obj: LambdaFunctionScheduleFailedEventDetails,
 ): any => ({
   ...obj,
   ...(obj.error && { error: SENSITIVE_STRING }),
@@ -4832,7 +4832,7 @@ export const LambdaFunctionScheduleFailedEventDetailsFilterSensitiveLog = (
  * @internal
  */
 export const LambdaFunctionStartFailedEventDetailsFilterSensitiveLog = (
-  obj: LambdaFunctionStartFailedEventDetails
+  obj: LambdaFunctionStartFailedEventDetails,
 ): any => ({
   ...obj,
   ...(obj.error && { error: SENSITIVE_STRING }),
@@ -4843,7 +4843,7 @@ export const LambdaFunctionStartFailedEventDetailsFilterSensitiveLog = (
  * @internal
  */
 export const LambdaFunctionSucceededEventDetailsFilterSensitiveLog = (
-  obj: LambdaFunctionSucceededEventDetails
+  obj: LambdaFunctionSucceededEventDetails,
 ): any => ({
   ...obj,
   ...(obj.output && { output: SENSITIVE_STRING }),
@@ -4953,7 +4953,7 @@ export const HistoryEventFilterSensitiveLog = (obj: HistoryEvent): any => ({
   }),
   ...(obj.activityScheduleFailedEventDetails && {
     activityScheduleFailedEventDetails: ActivityScheduleFailedEventDetailsFilterSensitiveLog(
-      obj.activityScheduleFailedEventDetails
+      obj.activityScheduleFailedEventDetails,
     ),
   }),
   ...(obj.activityScheduledEventDetails && {
@@ -4994,7 +4994,7 @@ export const HistoryEventFilterSensitiveLog = (obj: HistoryEvent): any => ({
   }),
   ...(obj.executionSucceededEventDetails && {
     executionSucceededEventDetails: ExecutionSucceededEventDetailsFilterSensitiveLog(
-      obj.executionSucceededEventDetails
+      obj.executionSucceededEventDetails,
     ),
   }),
   ...(obj.executionAbortedEventDetails && {
@@ -5005,32 +5005,32 @@ export const HistoryEventFilterSensitiveLog = (obj: HistoryEvent): any => ({
   }),
   ...(obj.lambdaFunctionFailedEventDetails && {
     lambdaFunctionFailedEventDetails: LambdaFunctionFailedEventDetailsFilterSensitiveLog(
-      obj.lambdaFunctionFailedEventDetails
+      obj.lambdaFunctionFailedEventDetails,
     ),
   }),
   ...(obj.lambdaFunctionScheduleFailedEventDetails && {
     lambdaFunctionScheduleFailedEventDetails: LambdaFunctionScheduleFailedEventDetailsFilterSensitiveLog(
-      obj.lambdaFunctionScheduleFailedEventDetails
+      obj.lambdaFunctionScheduleFailedEventDetails,
     ),
   }),
   ...(obj.lambdaFunctionScheduledEventDetails && {
     lambdaFunctionScheduledEventDetails: LambdaFunctionScheduledEventDetailsFilterSensitiveLog(
-      obj.lambdaFunctionScheduledEventDetails
+      obj.lambdaFunctionScheduledEventDetails,
     ),
   }),
   ...(obj.lambdaFunctionStartFailedEventDetails && {
     lambdaFunctionStartFailedEventDetails: LambdaFunctionStartFailedEventDetailsFilterSensitiveLog(
-      obj.lambdaFunctionStartFailedEventDetails
+      obj.lambdaFunctionStartFailedEventDetails,
     ),
   }),
   ...(obj.lambdaFunctionSucceededEventDetails && {
     lambdaFunctionSucceededEventDetails: LambdaFunctionSucceededEventDetailsFilterSensitiveLog(
-      obj.lambdaFunctionSucceededEventDetails
+      obj.lambdaFunctionSucceededEventDetails,
     ),
   }),
   ...(obj.lambdaFunctionTimedOutEventDetails && {
     lambdaFunctionTimedOutEventDetails: LambdaFunctionTimedOutEventDetailsFilterSensitiveLog(
-      obj.lambdaFunctionTimedOutEventDetails
+      obj.lambdaFunctionTimedOutEventDetails,
     ),
   }),
   ...(obj.stateEnteredEventDetails && {
@@ -5167,7 +5167,7 @@ export const UpdateStateMachineAliasInputFilterSensitiveLog = (obj: UpdateStateM
  * @internal
  */
 export const ValidateStateMachineDefinitionInputFilterSensitiveLog = (
-  obj: ValidateStateMachineDefinitionInput
+  obj: ValidateStateMachineDefinitionInput,
 ): any => ({
   ...obj,
   ...(obj.definition && { definition: SENSITIVE_STRING }),

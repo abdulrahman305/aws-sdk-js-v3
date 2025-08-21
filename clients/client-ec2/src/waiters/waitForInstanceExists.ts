@@ -32,7 +32,7 @@ const checkState = async (client: EC2Client, input: DescribeInstancesCommandInpu
  */
 export const waitForInstanceExists = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeInstancesCommandInput
+  input: DescribeInstancesCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -44,7 +44,7 @@ export const waitForInstanceExists = async (
  */
 export const waitUntilInstanceExists = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeInstancesCommandInput
+  input: DescribeInstancesCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

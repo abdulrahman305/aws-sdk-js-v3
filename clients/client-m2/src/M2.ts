@@ -213,16 +213,16 @@ export interface M2 {
    */
   cancelBatchJobExecution(
     args: CancelBatchJobExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelBatchJobExecutionCommandOutput>;
   cancelBatchJobExecution(
     args: CancelBatchJobExecutionCommandInput,
-    cb: (err: any, data?: CancelBatchJobExecutionCommandOutput) => void
+    cb: (err: any, data?: CancelBatchJobExecutionCommandOutput) => void,
   ): void;
   cancelBatchJobExecution(
     args: CancelBatchJobExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelBatchJobExecutionCommandOutput) => void
+    cb: (err: any, data?: CancelBatchJobExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -230,16 +230,16 @@ export interface M2 {
    */
   createApplication(
     args: CreateApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateApplicationCommandOutput>;
   createApplication(
     args: CreateApplicationCommandInput,
-    cb: (err: any, data?: CreateApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationCommandOutput) => void,
   ): void;
   createApplication(
     args: CreateApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -247,16 +247,16 @@ export interface M2 {
    */
   createDataSetImportTask(
     args: CreateDataSetImportTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDataSetImportTaskCommandOutput>;
   createDataSetImportTask(
     args: CreateDataSetImportTaskCommandInput,
-    cb: (err: any, data?: CreateDataSetImportTaskCommandOutput) => void
+    cb: (err: any, data?: CreateDataSetImportTaskCommandOutput) => void,
   ): void;
   createDataSetImportTask(
     args: CreateDataSetImportTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDataSetImportTaskCommandOutput) => void
+    cb: (err: any, data?: CreateDataSetImportTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -264,16 +264,16 @@ export interface M2 {
    */
   createDeployment(
     args: CreateDeploymentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDeploymentCommandOutput>;
   createDeployment(
     args: CreateDeploymentCommandInput,
-    cb: (err: any, data?: CreateDeploymentCommandOutput) => void
+    cb: (err: any, data?: CreateDeploymentCommandOutput) => void,
   ): void;
   createDeployment(
     args: CreateDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDeploymentCommandOutput) => void
+    cb: (err: any, data?: CreateDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -281,16 +281,16 @@ export interface M2 {
    */
   createEnvironment(
     args: CreateEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEnvironmentCommandOutput>;
   createEnvironment(
     args: CreateEnvironmentCommandInput,
-    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void,
   ): void;
   createEnvironment(
     args: CreateEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -298,16 +298,16 @@ export interface M2 {
    */
   deleteApplication(
     args: DeleteApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApplicationCommandOutput>;
   deleteApplication(
     args: DeleteApplicationCommandInput,
-    cb: (err: any, data?: DeleteApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCommandOutput) => void,
   ): void;
   deleteApplication(
     args: DeleteApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -315,16 +315,16 @@ export interface M2 {
    */
   deleteApplicationFromEnvironment(
     args: DeleteApplicationFromEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApplicationFromEnvironmentCommandOutput>;
   deleteApplicationFromEnvironment(
     args: DeleteApplicationFromEnvironmentCommandInput,
-    cb: (err: any, data?: DeleteApplicationFromEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationFromEnvironmentCommandOutput) => void,
   ): void;
   deleteApplicationFromEnvironment(
     args: DeleteApplicationFromEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApplicationFromEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationFromEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -332,16 +332,16 @@ export interface M2 {
    */
   deleteEnvironment(
     args: DeleteEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEnvironmentCommandOutput>;
   deleteEnvironment(
     args: DeleteEnvironmentCommandInput,
-    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void,
   ): void;
   deleteEnvironment(
     args: DeleteEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -349,13 +349,13 @@ export interface M2 {
    */
   getApplication(
     args: GetApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetApplicationCommandOutput>;
   getApplication(args: GetApplicationCommandInput, cb: (err: any, data?: GetApplicationCommandOutput) => void): void;
   getApplication(
     args: GetApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApplicationCommandOutput) => void
+    cb: (err: any, data?: GetApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -363,16 +363,16 @@ export interface M2 {
    */
   getApplicationVersion(
     args: GetApplicationVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetApplicationVersionCommandOutput>;
   getApplicationVersion(
     args: GetApplicationVersionCommandInput,
-    cb: (err: any, data?: GetApplicationVersionCommandOutput) => void
+    cb: (err: any, data?: GetApplicationVersionCommandOutput) => void,
   ): void;
   getApplicationVersion(
     args: GetApplicationVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApplicationVersionCommandOutput) => void
+    cb: (err: any, data?: GetApplicationVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -380,16 +380,16 @@ export interface M2 {
    */
   getBatchJobExecution(
     args: GetBatchJobExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBatchJobExecutionCommandOutput>;
   getBatchJobExecution(
     args: GetBatchJobExecutionCommandInput,
-    cb: (err: any, data?: GetBatchJobExecutionCommandOutput) => void
+    cb: (err: any, data?: GetBatchJobExecutionCommandOutput) => void,
   ): void;
   getBatchJobExecution(
     args: GetBatchJobExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBatchJobExecutionCommandOutput) => void
+    cb: (err: any, data?: GetBatchJobExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -397,16 +397,16 @@ export interface M2 {
    */
   getDataSetDetails(
     args: GetDataSetDetailsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDataSetDetailsCommandOutput>;
   getDataSetDetails(
     args: GetDataSetDetailsCommandInput,
-    cb: (err: any, data?: GetDataSetDetailsCommandOutput) => void
+    cb: (err: any, data?: GetDataSetDetailsCommandOutput) => void,
   ): void;
   getDataSetDetails(
     args: GetDataSetDetailsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDataSetDetailsCommandOutput) => void
+    cb: (err: any, data?: GetDataSetDetailsCommandOutput) => void,
   ): void;
 
   /**
@@ -414,16 +414,16 @@ export interface M2 {
    */
   getDataSetImportTask(
     args: GetDataSetImportTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDataSetImportTaskCommandOutput>;
   getDataSetImportTask(
     args: GetDataSetImportTaskCommandInput,
-    cb: (err: any, data?: GetDataSetImportTaskCommandOutput) => void
+    cb: (err: any, data?: GetDataSetImportTaskCommandOutput) => void,
   ): void;
   getDataSetImportTask(
     args: GetDataSetImportTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDataSetImportTaskCommandOutput) => void
+    cb: (err: any, data?: GetDataSetImportTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -434,7 +434,7 @@ export interface M2 {
   getDeployment(
     args: GetDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeploymentCommandOutput) => void
+    cb: (err: any, data?: GetDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -442,13 +442,13 @@ export interface M2 {
    */
   getEnvironment(
     args: GetEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEnvironmentCommandOutput>;
   getEnvironment(args: GetEnvironmentCommandInput, cb: (err: any, data?: GetEnvironmentCommandOutput) => void): void;
   getEnvironment(
     args: GetEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEnvironmentCommandOutput) => void
+    cb: (err: any, data?: GetEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -457,16 +457,16 @@ export interface M2 {
   getSignedBluinsightsUrl(): Promise<GetSignedBluinsightsUrlCommandOutput>;
   getSignedBluinsightsUrl(
     args: GetSignedBluinsightsUrlCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSignedBluinsightsUrlCommandOutput>;
   getSignedBluinsightsUrl(
     args: GetSignedBluinsightsUrlCommandInput,
-    cb: (err: any, data?: GetSignedBluinsightsUrlCommandOutput) => void
+    cb: (err: any, data?: GetSignedBluinsightsUrlCommandOutput) => void,
   ): void;
   getSignedBluinsightsUrl(
     args: GetSignedBluinsightsUrlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSignedBluinsightsUrlCommandOutput) => void
+    cb: (err: any, data?: GetSignedBluinsightsUrlCommandOutput) => void,
   ): void;
 
   /**
@@ -475,16 +475,16 @@ export interface M2 {
   listApplications(): Promise<ListApplicationsCommandOutput>;
   listApplications(
     args: ListApplicationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApplicationsCommandOutput>;
   listApplications(
     args: ListApplicationsCommandInput,
-    cb: (err: any, data?: ListApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationsCommandOutput) => void,
   ): void;
   listApplications(
     args: ListApplicationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationsCommandOutput) => void,
   ): void;
 
   /**
@@ -492,16 +492,16 @@ export interface M2 {
    */
   listApplicationVersions(
     args: ListApplicationVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApplicationVersionsCommandOutput>;
   listApplicationVersions(
     args: ListApplicationVersionsCommandInput,
-    cb: (err: any, data?: ListApplicationVersionsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationVersionsCommandOutput) => void,
   ): void;
   listApplicationVersions(
     args: ListApplicationVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApplicationVersionsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -509,16 +509,16 @@ export interface M2 {
    */
   listBatchJobDefinitions(
     args: ListBatchJobDefinitionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListBatchJobDefinitionsCommandOutput>;
   listBatchJobDefinitions(
     args: ListBatchJobDefinitionsCommandInput,
-    cb: (err: any, data?: ListBatchJobDefinitionsCommandOutput) => void
+    cb: (err: any, data?: ListBatchJobDefinitionsCommandOutput) => void,
   ): void;
   listBatchJobDefinitions(
     args: ListBatchJobDefinitionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBatchJobDefinitionsCommandOutput) => void
+    cb: (err: any, data?: ListBatchJobDefinitionsCommandOutput) => void,
   ): void;
 
   /**
@@ -526,16 +526,16 @@ export interface M2 {
    */
   listBatchJobExecutions(
     args: ListBatchJobExecutionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListBatchJobExecutionsCommandOutput>;
   listBatchJobExecutions(
     args: ListBatchJobExecutionsCommandInput,
-    cb: (err: any, data?: ListBatchJobExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListBatchJobExecutionsCommandOutput) => void,
   ): void;
   listBatchJobExecutions(
     args: ListBatchJobExecutionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBatchJobExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListBatchJobExecutionsCommandOutput) => void,
   ): void;
 
   /**
@@ -543,16 +543,16 @@ export interface M2 {
    */
   listBatchJobRestartPoints(
     args: ListBatchJobRestartPointsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListBatchJobRestartPointsCommandOutput>;
   listBatchJobRestartPoints(
     args: ListBatchJobRestartPointsCommandInput,
-    cb: (err: any, data?: ListBatchJobRestartPointsCommandOutput) => void
+    cb: (err: any, data?: ListBatchJobRestartPointsCommandOutput) => void,
   ): void;
   listBatchJobRestartPoints(
     args: ListBatchJobRestartPointsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBatchJobRestartPointsCommandOutput) => void
+    cb: (err: any, data?: ListBatchJobRestartPointsCommandOutput) => void,
   ): void;
 
   /**
@@ -560,16 +560,16 @@ export interface M2 {
    */
   listDataSetImportHistory(
     args: ListDataSetImportHistoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDataSetImportHistoryCommandOutput>;
   listDataSetImportHistory(
     args: ListDataSetImportHistoryCommandInput,
-    cb: (err: any, data?: ListDataSetImportHistoryCommandOutput) => void
+    cb: (err: any, data?: ListDataSetImportHistoryCommandOutput) => void,
   ): void;
   listDataSetImportHistory(
     args: ListDataSetImportHistoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDataSetImportHistoryCommandOutput) => void
+    cb: (err: any, data?: ListDataSetImportHistoryCommandOutput) => void,
   ): void;
 
   /**
@@ -580,7 +580,7 @@ export interface M2 {
   listDataSets(
     args: ListDataSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDataSetsCommandOutput) => void
+    cb: (err: any, data?: ListDataSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -588,13 +588,13 @@ export interface M2 {
    */
   listDeployments(
     args: ListDeploymentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDeploymentsCommandOutput>;
   listDeployments(args: ListDeploymentsCommandInput, cb: (err: any, data?: ListDeploymentsCommandOutput) => void): void;
   listDeployments(
     args: ListDeploymentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDeploymentsCommandOutput) => void
+    cb: (err: any, data?: ListDeploymentsCommandOutput) => void,
   ): void;
 
   /**
@@ -603,16 +603,16 @@ export interface M2 {
   listEngineVersions(): Promise<ListEngineVersionsCommandOutput>;
   listEngineVersions(
     args: ListEngineVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEngineVersionsCommandOutput>;
   listEngineVersions(
     args: ListEngineVersionsCommandInput,
-    cb: (err: any, data?: ListEngineVersionsCommandOutput) => void
+    cb: (err: any, data?: ListEngineVersionsCommandOutput) => void,
   ): void;
   listEngineVersions(
     args: ListEngineVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEngineVersionsCommandOutput) => void
+    cb: (err: any, data?: ListEngineVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -621,16 +621,16 @@ export interface M2 {
   listEnvironments(): Promise<ListEnvironmentsCommandOutput>;
   listEnvironments(
     args: ListEnvironmentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEnvironmentsCommandOutput>;
   listEnvironments(
     args: ListEnvironmentsCommandInput,
-    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void,
   ): void;
   listEnvironments(
     args: ListEnvironmentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void,
   ): void;
 
   /**
@@ -638,16 +638,16 @@ export interface M2 {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -655,16 +655,16 @@ export interface M2 {
    */
   startApplication(
     args: StartApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartApplicationCommandOutput>;
   startApplication(
     args: StartApplicationCommandInput,
-    cb: (err: any, data?: StartApplicationCommandOutput) => void
+    cb: (err: any, data?: StartApplicationCommandOutput) => void,
   ): void;
   startApplication(
     args: StartApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartApplicationCommandOutput) => void
+    cb: (err: any, data?: StartApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -675,7 +675,7 @@ export interface M2 {
   startBatchJob(
     args: StartBatchJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartBatchJobCommandOutput) => void
+    cb: (err: any, data?: StartBatchJobCommandOutput) => void,
   ): void;
 
   /**
@@ -683,13 +683,13 @@ export interface M2 {
    */
   stopApplication(
     args: StopApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopApplicationCommandOutput>;
   stopApplication(args: StopApplicationCommandInput, cb: (err: any, data?: StopApplicationCommandOutput) => void): void;
   stopApplication(
     args: StopApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopApplicationCommandOutput) => void
+    cb: (err: any, data?: StopApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -700,7 +700,7 @@ export interface M2 {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -711,7 +711,7 @@ export interface M2 {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -719,16 +719,16 @@ export interface M2 {
    */
   updateApplication(
     args: UpdateApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApplicationCommandOutput>;
   updateApplication(
     args: UpdateApplicationCommandInput,
-    cb: (err: any, data?: UpdateApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationCommandOutput) => void,
   ): void;
   updateApplication(
     args: UpdateApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -736,16 +736,16 @@ export interface M2 {
    */
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEnvironmentCommandOutput>;
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
-    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void,
   ): void;
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void,
   ): void;
 }
 

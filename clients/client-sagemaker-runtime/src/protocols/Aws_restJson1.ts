@@ -50,7 +50,7 @@ import { SageMakerRuntimeServiceException as __BaseException } from "../models/S
  */
 export const se_InvokeEndpointCommand = async (
   input: InvokeEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -79,7 +79,7 @@ export const se_InvokeEndpointCommand = async (
  */
 export const se_InvokeEndpointAsyncCommand = async (
   input: InvokeEndpointAsyncCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -103,7 +103,7 @@ export const se_InvokeEndpointAsyncCommand = async (
  */
 export const se_InvokeEndpointWithResponseStreamCommand = async (
   input: InvokeEndpointWithResponseStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -130,7 +130,7 @@ export const se_InvokeEndpointWithResponseStreamCommand = async (
  */
 export const de_InvokeEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvokeEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -151,7 +151,7 @@ export const de_InvokeEndpointCommand = async (
  */
 export const de_InvokeEndpointAsyncCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvokeEndpointAsyncCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -174,7 +174,7 @@ export const de_InvokeEndpointAsyncCommand = async (
  */
 export const de_InvokeEndpointWithResponseStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): Promise<InvokeEndpointWithResponseStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -240,7 +240,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_InternalDependencyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalDependencyException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -277,7 +277,7 @@ const de_InternalFailureRes = async (parsedOutput: any, context: __SerdeContext)
  */
 const de_InternalStreamFailureRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalStreamFailure> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -317,7 +317,7 @@ const de_ModelErrorRes = async (parsedOutput: any, context: __SerdeContext): Pro
  */
 const de_ModelNotReadyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModelNotReadyException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -389,7 +389,7 @@ const de_ValidationErrorRes = async (parsedOutput: any, context: __SerdeContext)
  */
 const de_ResponseStream = (
   output: any,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): AsyncIterable<ResponseStream> => {
   return context.eventStreamMarshaller.deserialize(output, async (event) => {
     if (event["PayloadPart"] != null) {

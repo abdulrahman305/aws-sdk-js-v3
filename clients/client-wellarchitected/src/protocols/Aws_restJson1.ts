@@ -220,7 +220,7 @@ import { WellArchitectedServiceException as __BaseException } from "../models/We
  */
 export const se_AssociateLensesCommand = async (
   input: AssociateLensesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -232,7 +232,7 @@ export const se_AssociateLensesCommand = async (
   body = JSON.stringify(
     take(input, {
       LensAliases: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -243,7 +243,7 @@ export const se_AssociateLensesCommand = async (
  */
 export const se_AssociateProfilesCommand = async (
   input: AssociateProfilesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -255,7 +255,7 @@ export const se_AssociateProfilesCommand = async (
   body = JSON.stringify(
     take(input, {
       ProfileArns: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -266,7 +266,7 @@ export const se_AssociateProfilesCommand = async (
  */
 export const se_CreateLensShareCommand = async (
   input: CreateLensShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -279,7 +279,7 @@ export const se_CreateLensShareCommand = async (
     take(input, {
       ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
       SharedWith: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -290,7 +290,7 @@ export const se_CreateLensShareCommand = async (
  */
 export const se_CreateLensVersionCommand = async (
   input: CreateLensVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -304,7 +304,7 @@ export const se_CreateLensVersionCommand = async (
       ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
       IsMajorVersion: [],
       LensVersion: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -315,7 +315,7 @@ export const se_CreateLensVersionCommand = async (
  */
 export const se_CreateMilestoneCommand = async (
   input: CreateMilestoneCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -328,7 +328,7 @@ export const se_CreateMilestoneCommand = async (
     take(input, {
       ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
       MilestoneName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -339,7 +339,7 @@ export const se_CreateMilestoneCommand = async (
  */
 export const se_CreateProfileCommand = async (
   input: CreateProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -354,7 +354,7 @@ export const se_CreateProfileCommand = async (
       ProfileName: [],
       ProfileQuestions: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -365,7 +365,7 @@ export const se_CreateProfileCommand = async (
  */
 export const se_CreateProfileShareCommand = async (
   input: CreateProfileShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -378,7 +378,7 @@ export const se_CreateProfileShareCommand = async (
     take(input, {
       ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
       SharedWith: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -389,7 +389,7 @@ export const se_CreateProfileShareCommand = async (
  */
 export const se_CreateReviewTemplateCommand = async (
   input: CreateReviewTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -405,7 +405,7 @@ export const se_CreateReviewTemplateCommand = async (
       Notes: [],
       Tags: (_) => _json(_),
       TemplateName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -416,7 +416,7 @@ export const se_CreateReviewTemplateCommand = async (
  */
 export const se_CreateTemplateShareCommand = async (
   input: CreateTemplateShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -429,7 +429,7 @@ export const se_CreateTemplateShareCommand = async (
     take(input, {
       ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
       SharedWith: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -440,7 +440,7 @@ export const se_CreateTemplateShareCommand = async (
  */
 export const se_CreateWorkloadCommand = async (
   input: CreateWorkloadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -470,7 +470,7 @@ export const se_CreateWorkloadCommand = async (
       ReviewTemplateArns: (_) => _json(_),
       Tags: (_) => _json(_),
       WorkloadName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -481,7 +481,7 @@ export const se_CreateWorkloadCommand = async (
  */
 export const se_CreateWorkloadShareCommand = async (
   input: CreateWorkloadShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -495,7 +495,7 @@ export const se_CreateWorkloadShareCommand = async (
       ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
       PermissionType: [],
       SharedWith: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -506,7 +506,7 @@ export const se_CreateWorkloadShareCommand = async (
  */
 export const se_DeleteLensCommand = async (
   input: DeleteLensCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -526,7 +526,7 @@ export const se_DeleteLensCommand = async (
  */
 export const se_DeleteLensShareCommand = async (
   input: DeleteLensShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -546,7 +546,7 @@ export const se_DeleteLensShareCommand = async (
  */
 export const se_DeleteProfileCommand = async (
   input: DeleteProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -565,7 +565,7 @@ export const se_DeleteProfileCommand = async (
  */
 export const se_DeleteProfileShareCommand = async (
   input: DeleteProfileShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -585,7 +585,7 @@ export const se_DeleteProfileShareCommand = async (
  */
 export const se_DeleteReviewTemplateCommand = async (
   input: DeleteReviewTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -604,7 +604,7 @@ export const se_DeleteReviewTemplateCommand = async (
  */
 export const se_DeleteTemplateShareCommand = async (
   input: DeleteTemplateShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -624,7 +624,7 @@ export const se_DeleteTemplateShareCommand = async (
  */
 export const se_DeleteWorkloadCommand = async (
   input: DeleteWorkloadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -643,7 +643,7 @@ export const se_DeleteWorkloadCommand = async (
  */
 export const se_DeleteWorkloadShareCommand = async (
   input: DeleteWorkloadShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -663,7 +663,7 @@ export const se_DeleteWorkloadShareCommand = async (
  */
 export const se_DisassociateLensesCommand = async (
   input: DisassociateLensesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -675,7 +675,7 @@ export const se_DisassociateLensesCommand = async (
   body = JSON.stringify(
     take(input, {
       LensAliases: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -686,7 +686,7 @@ export const se_DisassociateLensesCommand = async (
  */
 export const se_DisassociateProfilesCommand = async (
   input: DisassociateProfilesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -698,7 +698,7 @@ export const se_DisassociateProfilesCommand = async (
   body = JSON.stringify(
     take(input, {
       ProfileArns: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -709,7 +709,7 @@ export const se_DisassociateProfilesCommand = async (
  */
 export const se_ExportLensCommand = async (
   input: ExportLensCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -728,7 +728,7 @@ export const se_ExportLensCommand = async (
  */
 export const se_GetAnswerCommand = async (
   input: GetAnswerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -749,7 +749,7 @@ export const se_GetAnswerCommand = async (
  */
 export const se_GetConsolidatedReportCommand = async (
   input: GetConsolidatedReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -770,7 +770,7 @@ export const se_GetConsolidatedReportCommand = async (
  */
 export const se_GetGlobalSettingsCommand = async (
   input: GetGlobalSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -788,7 +788,7 @@ export const se_GetGlobalSettingsCommand = async (
  */
 export const se_GetLensCommand = async (
   input: GetLensCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -807,7 +807,7 @@ export const se_GetLensCommand = async (
  */
 export const se_GetLensReviewCommand = async (
   input: GetLensReviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -827,7 +827,7 @@ export const se_GetLensReviewCommand = async (
  */
 export const se_GetLensReviewReportCommand = async (
   input: GetLensReviewReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -847,7 +847,7 @@ export const se_GetLensReviewReportCommand = async (
  */
 export const se_GetLensVersionDifferenceCommand = async (
   input: GetLensVersionDifferenceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -867,7 +867,7 @@ export const se_GetLensVersionDifferenceCommand = async (
  */
 export const se_GetMilestoneCommand = async (
   input: GetMilestoneCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -884,7 +884,7 @@ export const se_GetMilestoneCommand = async (
  */
 export const se_GetProfileCommand = async (
   input: GetProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -903,7 +903,7 @@ export const se_GetProfileCommand = async (
  */
 export const se_GetProfileTemplateCommand = async (
   input: GetProfileTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -921,7 +921,7 @@ export const se_GetProfileTemplateCommand = async (
  */
 export const se_GetReviewTemplateCommand = async (
   input: GetReviewTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -937,7 +937,7 @@ export const se_GetReviewTemplateCommand = async (
  */
 export const se_GetReviewTemplateAnswerCommand = async (
   input: GetReviewTemplateAnswerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -955,7 +955,7 @@ export const se_GetReviewTemplateAnswerCommand = async (
  */
 export const se_GetReviewTemplateLensReviewCommand = async (
   input: GetReviewTemplateLensReviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -972,7 +972,7 @@ export const se_GetReviewTemplateLensReviewCommand = async (
  */
 export const se_GetWorkloadCommand = async (
   input: GetWorkloadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -988,7 +988,7 @@ export const se_GetWorkloadCommand = async (
  */
 export const se_ImportLensCommand = async (
   input: ImportLensCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1002,7 +1002,7 @@ export const se_ImportLensCommand = async (
       JSONString: [],
       LensAlias: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1013,7 +1013,7 @@ export const se_ImportLensCommand = async (
  */
 export const se_ListAnswersCommand = async (
   input: ListAnswersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1037,7 +1037,7 @@ export const se_ListAnswersCommand = async (
  */
 export const se_ListCheckDetailsCommand = async (
   input: ListCheckDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1054,7 +1054,7 @@ export const se_ListCheckDetailsCommand = async (
       NextToken: [],
       PillarId: [],
       QuestionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1065,7 +1065,7 @@ export const se_ListCheckDetailsCommand = async (
  */
 export const se_ListCheckSummariesCommand = async (
   input: ListCheckSummariesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1082,7 +1082,7 @@ export const se_ListCheckSummariesCommand = async (
       NextToken: [],
       PillarId: [],
       QuestionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1093,7 +1093,7 @@ export const se_ListCheckSummariesCommand = async (
  */
 export const se_ListLensesCommand = async (
   input: ListLensesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1115,7 +1115,7 @@ export const se_ListLensesCommand = async (
  */
 export const se_ListLensReviewImprovementsCommand = async (
   input: ListLensReviewImprovementsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1139,7 +1139,7 @@ export const se_ListLensReviewImprovementsCommand = async (
  */
 export const se_ListLensReviewsCommand = async (
   input: ListLensReviewsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1160,7 +1160,7 @@ export const se_ListLensReviewsCommand = async (
  */
 export const se_ListLensSharesCommand = async (
   input: ListLensSharesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1182,7 +1182,7 @@ export const se_ListLensSharesCommand = async (
  */
 export const se_ListMilestonesCommand = async (
   input: ListMilestonesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1195,7 +1195,7 @@ export const se_ListMilestonesCommand = async (
     take(input, {
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1206,7 +1206,7 @@ export const se_ListMilestonesCommand = async (
  */
 export const se_ListNotificationsCommand = async (
   input: ListNotificationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1220,7 +1220,7 @@ export const se_ListNotificationsCommand = async (
       NextToken: [],
       ResourceArn: [],
       WorkloadId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1231,7 +1231,7 @@ export const se_ListNotificationsCommand = async (
  */
 export const se_ListProfileNotificationsCommand = async (
   input: ListProfileNotificationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1251,7 +1251,7 @@ export const se_ListProfileNotificationsCommand = async (
  */
 export const se_ListProfilesCommand = async (
   input: ListProfilesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1272,7 +1272,7 @@ export const se_ListProfilesCommand = async (
  */
 export const se_ListProfileSharesCommand = async (
   input: ListProfileSharesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1294,7 +1294,7 @@ export const se_ListProfileSharesCommand = async (
  */
 export const se_ListReviewTemplateAnswersCommand = async (
   input: ListReviewTemplateAnswersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1316,7 +1316,7 @@ export const se_ListReviewTemplateAnswersCommand = async (
  */
 export const se_ListReviewTemplatesCommand = async (
   input: ListReviewTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1335,7 +1335,7 @@ export const se_ListReviewTemplatesCommand = async (
  */
 export const se_ListShareInvitationsCommand = async (
   input: ListShareInvitationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1359,7 +1359,7 @@ export const se_ListShareInvitationsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1375,7 +1375,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTemplateSharesCommand = async (
   input: ListTemplateSharesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1397,7 +1397,7 @@ export const se_ListTemplateSharesCommand = async (
  */
 export const se_ListWorkloadsCommand = async (
   input: ListWorkloadsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1410,7 +1410,7 @@ export const se_ListWorkloadsCommand = async (
       MaxResults: [],
       NextToken: [],
       WorkloadNamePrefix: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1421,7 +1421,7 @@ export const se_ListWorkloadsCommand = async (
  */
 export const se_ListWorkloadSharesCommand = async (
   input: ListWorkloadSharesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1443,7 +1443,7 @@ export const se_ListWorkloadSharesCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1455,7 +1455,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1466,7 +1466,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1488,7 +1488,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAnswerCommand = async (
   input: UpdateAnswerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1506,7 +1506,7 @@ export const se_UpdateAnswerCommand = async (
       Notes: [],
       Reason: [],
       SelectedChoices: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1517,7 +1517,7 @@ export const se_UpdateAnswerCommand = async (
  */
 export const se_UpdateGlobalSettingsCommand = async (
   input: UpdateGlobalSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1530,7 +1530,7 @@ export const se_UpdateGlobalSettingsCommand = async (
       DiscoveryIntegrationStatus: [],
       JiraConfiguration: (_) => _json(_),
       OrganizationSharingStatus: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1541,7 +1541,7 @@ export const se_UpdateGlobalSettingsCommand = async (
  */
 export const se_UpdateIntegrationCommand = async (
   input: UpdateIntegrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1554,7 +1554,7 @@ export const se_UpdateIntegrationCommand = async (
     take(input, {
       ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
       IntegratingService: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1565,7 +1565,7 @@ export const se_UpdateIntegrationCommand = async (
  */
 export const se_UpdateLensReviewCommand = async (
   input: UpdateLensReviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1580,7 +1580,7 @@ export const se_UpdateLensReviewCommand = async (
       JiraConfiguration: (_) => _json(_),
       LensNotes: [],
       PillarNotes: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1591,7 +1591,7 @@ export const se_UpdateLensReviewCommand = async (
  */
 export const se_UpdateProfileCommand = async (
   input: UpdateProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1604,7 +1604,7 @@ export const se_UpdateProfileCommand = async (
     take(input, {
       ProfileDescription: [],
       ProfileQuestions: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1615,7 +1615,7 @@ export const se_UpdateProfileCommand = async (
  */
 export const se_UpdateReviewTemplateCommand = async (
   input: UpdateReviewTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1631,7 +1631,7 @@ export const se_UpdateReviewTemplateCommand = async (
       LensesToDisassociate: (_) => _json(_),
       Notes: [],
       TemplateName: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1642,7 +1642,7 @@ export const se_UpdateReviewTemplateCommand = async (
  */
 export const se_UpdateReviewTemplateAnswerCommand = async (
   input: UpdateReviewTemplateAnswerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1660,7 +1660,7 @@ export const se_UpdateReviewTemplateAnswerCommand = async (
       Notes: [],
       Reason: [],
       SelectedChoices: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1671,7 +1671,7 @@ export const se_UpdateReviewTemplateAnswerCommand = async (
  */
 export const se_UpdateReviewTemplateLensReviewCommand = async (
   input: UpdateReviewTemplateLensReviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1685,7 +1685,7 @@ export const se_UpdateReviewTemplateLensReviewCommand = async (
     take(input, {
       LensNotes: [],
       PillarNotes: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1696,7 +1696,7 @@ export const se_UpdateReviewTemplateLensReviewCommand = async (
  */
 export const se_UpdateShareInvitationCommand = async (
   input: UpdateShareInvitationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1708,7 +1708,7 @@ export const se_UpdateShareInvitationCommand = async (
   body = JSON.stringify(
     take(input, {
       ShareInvitationAction: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1719,7 +1719,7 @@ export const se_UpdateShareInvitationCommand = async (
  */
 export const se_UpdateWorkloadCommand = async (
   input: UpdateWorkloadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1747,7 +1747,7 @@ export const se_UpdateWorkloadCommand = async (
       PillarPriorities: (_) => _json(_),
       ReviewOwner: [],
       WorkloadName: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1758,7 +1758,7 @@ export const se_UpdateWorkloadCommand = async (
  */
 export const se_UpdateWorkloadShareCommand = async (
   input: UpdateWorkloadShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1771,7 +1771,7 @@ export const se_UpdateWorkloadShareCommand = async (
   body = JSON.stringify(
     take(input, {
       PermissionType: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1782,7 +1782,7 @@ export const se_UpdateWorkloadShareCommand = async (
  */
 export const se_UpgradeLensReviewCommand = async (
   input: UpgradeLensReviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1796,7 +1796,7 @@ export const se_UpgradeLensReviewCommand = async (
     take(input, {
       ClientRequestToken: [],
       MilestoneName: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1807,7 +1807,7 @@ export const se_UpgradeLensReviewCommand = async (
  */
 export const se_UpgradeProfileVersionCommand = async (
   input: UpgradeProfileVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1821,7 +1821,7 @@ export const se_UpgradeProfileVersionCommand = async (
     take(input, {
       ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
       MilestoneName: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1832,7 +1832,7 @@ export const se_UpgradeProfileVersionCommand = async (
  */
 export const se_UpgradeReviewTemplateLensReviewCommand = async (
   input: UpgradeReviewTemplateLensReviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1845,7 +1845,7 @@ export const se_UpgradeReviewTemplateLensReviewCommand = async (
   body = JSON.stringify(
     take(input, {
       ClientRequestToken: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1856,7 +1856,7 @@ export const se_UpgradeReviewTemplateLensReviewCommand = async (
  */
 export const de_AssociateLensesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateLensesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1873,7 +1873,7 @@ export const de_AssociateLensesCommand = async (
  */
 export const de_AssociateProfilesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateProfilesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1890,7 +1890,7 @@ export const de_AssociateProfilesCommand = async (
  */
 export const de_CreateLensShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLensShareCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1911,7 +1911,7 @@ export const de_CreateLensShareCommand = async (
  */
 export const de_CreateLensVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLensVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1933,7 +1933,7 @@ export const de_CreateLensVersionCommand = async (
  */
 export const de_CreateMilestoneCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMilestoneCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1955,7 +1955,7 @@ export const de_CreateMilestoneCommand = async (
  */
 export const de_CreateProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1977,7 +1977,7 @@ export const de_CreateProfileCommand = async (
  */
 export const de_CreateProfileShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateProfileShareCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1999,7 +1999,7 @@ export const de_CreateProfileShareCommand = async (
  */
 export const de_CreateReviewTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateReviewTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2020,7 +2020,7 @@ export const de_CreateReviewTemplateCommand = async (
  */
 export const de_CreateTemplateShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTemplateShareCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2042,7 +2042,7 @@ export const de_CreateTemplateShareCommand = async (
  */
 export const de_CreateWorkloadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorkloadCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2064,7 +2064,7 @@ export const de_CreateWorkloadCommand = async (
  */
 export const de_CreateWorkloadShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorkloadShareCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2086,7 +2086,7 @@ export const de_CreateWorkloadShareCommand = async (
  */
 export const de_DeleteLensCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLensCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2103,7 +2103,7 @@ export const de_DeleteLensCommand = async (
  */
 export const de_DeleteLensShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLensShareCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2120,7 +2120,7 @@ export const de_DeleteLensShareCommand = async (
  */
 export const de_DeleteProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2137,7 +2137,7 @@ export const de_DeleteProfileCommand = async (
  */
 export const de_DeleteProfileShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProfileShareCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2154,7 +2154,7 @@ export const de_DeleteProfileShareCommand = async (
  */
 export const de_DeleteReviewTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteReviewTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2171,7 +2171,7 @@ export const de_DeleteReviewTemplateCommand = async (
  */
 export const de_DeleteTemplateShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTemplateShareCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2188,7 +2188,7 @@ export const de_DeleteTemplateShareCommand = async (
  */
 export const de_DeleteWorkloadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorkloadCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2205,7 +2205,7 @@ export const de_DeleteWorkloadCommand = async (
  */
 export const de_DeleteWorkloadShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorkloadShareCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2222,7 +2222,7 @@ export const de_DeleteWorkloadShareCommand = async (
  */
 export const de_DisassociateLensesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateLensesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2239,7 +2239,7 @@ export const de_DisassociateLensesCommand = async (
  */
 export const de_DisassociateProfilesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateProfilesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2256,7 +2256,7 @@ export const de_DisassociateProfilesCommand = async (
  */
 export const de_ExportLensCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportLensCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2277,7 +2277,7 @@ export const de_ExportLensCommand = async (
  */
 export const de_GetAnswerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAnswerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2302,7 +2302,7 @@ export const de_GetAnswerCommand = async (
  */
 export const de_GetConsolidatedReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConsolidatedReportCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2325,7 +2325,7 @@ export const de_GetConsolidatedReportCommand = async (
  */
 export const de_GetGlobalSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGlobalSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2348,7 +2348,7 @@ export const de_GetGlobalSettingsCommand = async (
  */
 export const de_GetLensCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLensCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2369,7 +2369,7 @@ export const de_GetLensCommand = async (
  */
 export const de_GetLensReviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLensReviewCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2392,7 +2392,7 @@ export const de_GetLensReviewCommand = async (
  */
 export const de_GetLensReviewReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLensReviewReportCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2415,7 +2415,7 @@ export const de_GetLensReviewReportCommand = async (
  */
 export const de_GetLensVersionDifferenceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLensVersionDifferenceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2441,7 +2441,7 @@ export const de_GetLensVersionDifferenceCommand = async (
  */
 export const de_GetMilestoneCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMilestoneCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2463,7 +2463,7 @@ export const de_GetMilestoneCommand = async (
  */
 export const de_GetProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2484,7 +2484,7 @@ export const de_GetProfileCommand = async (
  */
 export const de_GetProfileTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetProfileTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2505,7 +2505,7 @@ export const de_GetProfileTemplateCommand = async (
  */
 export const de_GetReviewTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReviewTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2526,7 +2526,7 @@ export const de_GetReviewTemplateCommand = async (
  */
 export const de_GetReviewTemplateAnswerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReviewTemplateAnswerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2549,7 +2549,7 @@ export const de_GetReviewTemplateAnswerCommand = async (
  */
 export const de_GetReviewTemplateLensReviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReviewTemplateLensReviewCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2571,7 +2571,7 @@ export const de_GetReviewTemplateLensReviewCommand = async (
  */
 export const de_GetWorkloadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWorkloadCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2592,7 +2592,7 @@ export const de_GetWorkloadCommand = async (
  */
 export const de_ImportLensCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportLensCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2614,7 +2614,7 @@ export const de_ImportLensCommand = async (
  */
 export const de_ListAnswersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAnswersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2640,7 +2640,7 @@ export const de_ListAnswersCommand = async (
  */
 export const de_ListCheckDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCheckDetailsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2662,7 +2662,7 @@ export const de_ListCheckDetailsCommand = async (
  */
 export const de_ListCheckSummariesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCheckSummariesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2684,7 +2684,7 @@ export const de_ListCheckSummariesCommand = async (
  */
 export const de_ListLensesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLensesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2706,7 +2706,7 @@ export const de_ListLensesCommand = async (
  */
 export const de_ListLensReviewImprovementsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLensReviewImprovementsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2732,7 +2732,7 @@ export const de_ListLensReviewImprovementsCommand = async (
  */
 export const de_ListLensReviewsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLensReviewsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2756,7 +2756,7 @@ export const de_ListLensReviewsCommand = async (
  */
 export const de_ListLensSharesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLensSharesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2778,7 +2778,7 @@ export const de_ListLensSharesCommand = async (
  */
 export const de_ListMilestonesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMilestonesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2801,7 +2801,7 @@ export const de_ListMilestonesCommand = async (
  */
 export const de_ListNotificationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListNotificationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2823,7 +2823,7 @@ export const de_ListNotificationsCommand = async (
  */
 export const de_ListProfileNotificationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProfileNotificationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2845,7 +2845,7 @@ export const de_ListProfileNotificationsCommand = async (
  */
 export const de_ListProfilesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProfilesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2867,7 +2867,7 @@ export const de_ListProfilesCommand = async (
  */
 export const de_ListProfileSharesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProfileSharesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2889,7 +2889,7 @@ export const de_ListProfileSharesCommand = async (
  */
 export const de_ListReviewTemplateAnswersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReviewTemplateAnswersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2913,7 +2913,7 @@ export const de_ListReviewTemplateAnswersCommand = async (
  */
 export const de_ListReviewTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReviewTemplatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2935,7 +2935,7 @@ export const de_ListReviewTemplatesCommand = async (
  */
 export const de_ListShareInvitationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListShareInvitationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2957,7 +2957,7 @@ export const de_ListShareInvitationsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2978,7 +2978,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTemplateSharesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTemplateSharesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3001,7 +3001,7 @@ export const de_ListTemplateSharesCommand = async (
  */
 export const de_ListWorkloadsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkloadsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3023,7 +3023,7 @@ export const de_ListWorkloadsCommand = async (
  */
 export const de_ListWorkloadSharesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkloadSharesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3046,7 +3046,7 @@ export const de_ListWorkloadSharesCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3063,7 +3063,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3080,7 +3080,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAnswerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAnswerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3104,7 +3104,7 @@ export const de_UpdateAnswerCommand = async (
  */
 export const de_UpdateGlobalSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGlobalSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3121,7 +3121,7 @@ export const de_UpdateGlobalSettingsCommand = async (
  */
 export const de_UpdateIntegrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateIntegrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3138,7 +3138,7 @@ export const de_UpdateIntegrationCommand = async (
  */
 export const de_UpdateLensReviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLensReviewCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3160,7 +3160,7 @@ export const de_UpdateLensReviewCommand = async (
  */
 export const de_UpdateProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3181,7 +3181,7 @@ export const de_UpdateProfileCommand = async (
  */
 export const de_UpdateReviewTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateReviewTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3202,7 +3202,7 @@ export const de_UpdateReviewTemplateCommand = async (
  */
 export const de_UpdateReviewTemplateAnswerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateReviewTemplateAnswerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3225,7 +3225,7 @@ export const de_UpdateReviewTemplateAnswerCommand = async (
  */
 export const de_UpdateReviewTemplateLensReviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateReviewTemplateLensReviewCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3247,7 +3247,7 @@ export const de_UpdateReviewTemplateLensReviewCommand = async (
  */
 export const de_UpdateShareInvitationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateShareInvitationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3268,7 +3268,7 @@ export const de_UpdateShareInvitationCommand = async (
  */
 export const de_UpdateWorkloadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWorkloadCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3289,7 +3289,7 @@ export const de_UpdateWorkloadCommand = async (
  */
 export const de_UpdateWorkloadShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWorkloadShareCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3311,7 +3311,7 @@ export const de_UpdateWorkloadShareCommand = async (
  */
 export const de_UpgradeLensReviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpgradeLensReviewCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3328,7 +3328,7 @@ export const de_UpgradeLensReviewCommand = async (
  */
 export const de_UpgradeProfileVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpgradeProfileVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3345,7 +3345,7 @@ export const de_UpgradeProfileVersionCommand = async (
  */
 export const de_UpgradeReviewTemplateLensReviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpgradeReviewTemplateLensReviewCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3404,7 +3404,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3443,7 +3443,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3463,7 +3463,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3485,7 +3485,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

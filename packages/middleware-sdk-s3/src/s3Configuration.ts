@@ -67,7 +67,7 @@ export const resolveS3Config = <T>(
     session,
   }: {
     session: [() => PlaceholderS3Client, PlaceholderCreateSessionCommandCtor];
-  }
+  },
 ): T & S3ResolvedConfig => {
   const [s3ClientProvider, CreateSessionCommandCtor] = session;
   return {
@@ -83,8 +83,8 @@ export const resolveS3Config = <T>(
           new CreateSessionCommandCtor({
             Bucket: key,
             SessionMode: "ReadWrite",
-          })
-        )
+          }),
+        ),
       ),
     bucketEndpoint: input.bucketEndpoint ?? false,
   };

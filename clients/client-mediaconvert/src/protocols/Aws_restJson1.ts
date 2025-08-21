@@ -263,7 +263,7 @@ import { Policy, ReservationPlanSettings, ResourceTags, TooManyRequestsException
  */
 export const se_AssociateCertificateCommand = async (
   input: AssociateCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -274,7 +274,7 @@ export const se_AssociateCertificateCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [, , `Arn`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -285,7 +285,7 @@ export const se_AssociateCertificateCommand = async (
  */
 export const se_CancelJobCommand = async (
   input: CancelJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -301,7 +301,7 @@ export const se_CancelJobCommand = async (
  */
 export const se_CreateJobCommand = async (
   input: CreateJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -324,7 +324,7 @@ export const se_CreateJobCommand = async (
       statusUpdateInterval: [, , `StatusUpdateInterval`],
       tags: [, (_) => _json(_), `Tags`],
       userMetadata: [, (_) => _json(_), `UserMetadata`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -335,7 +335,7 @@ export const se_CreateJobCommand = async (
  */
 export const se_CreateJobTemplateCommand = async (
   input: CreateJobTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -355,7 +355,7 @@ export const se_CreateJobTemplateCommand = async (
       settings: [, (_) => se_JobTemplateSettings(_, context), `Settings`],
       statusUpdateInterval: [, , `StatusUpdateInterval`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -366,7 +366,7 @@ export const se_CreateJobTemplateCommand = async (
  */
 export const se_CreatePresetCommand = async (
   input: CreatePresetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -381,7 +381,7 @@ export const se_CreatePresetCommand = async (
       name: [, , `Name`],
       settings: [, (_) => se_PresetSettings(_, context), `Settings`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -392,7 +392,7 @@ export const se_CreatePresetCommand = async (
  */
 export const se_CreateQueueCommand = async (
   input: CreateQueueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -408,7 +408,7 @@ export const se_CreateQueueCommand = async (
       reservationPlanSettings: [, (_) => se_ReservationPlanSettings(_, context), `ReservationPlanSettings`],
       status: [, , `Status`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -419,7 +419,7 @@ export const se_CreateQueueCommand = async (
  */
 export const se_DeleteJobTemplateCommand = async (
   input: DeleteJobTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -435,7 +435,7 @@ export const se_DeleteJobTemplateCommand = async (
  */
 export const se_DeletePolicyCommand = async (
   input: DeletePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -453,7 +453,7 @@ export const se_DeletePolicyCommand = async (
  */
 export const se_DeletePresetCommand = async (
   input: DeletePresetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -469,7 +469,7 @@ export const se_DeletePresetCommand = async (
  */
 export const se_DeleteQueueCommand = async (
   input: DeleteQueueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -485,7 +485,7 @@ export const se_DeleteQueueCommand = async (
  */
 export const se_DescribeEndpointsCommand = async (
   input: DescribeEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -498,7 +498,7 @@ export const se_DescribeEndpointsCommand = async (
       maxResults: [, , `MaxResults`],
       mode: [, , `Mode`],
       nextToken: [, , `NextToken`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -509,7 +509,7 @@ export const se_DescribeEndpointsCommand = async (
  */
 export const se_DisassociateCertificateCommand = async (
   input: DisassociateCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -538,7 +538,7 @@ export const se_GetJobCommand = async (input: GetJobCommandInput, context: __Ser
  */
 export const se_GetJobTemplateCommand = async (
   input: GetJobTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -554,7 +554,7 @@ export const se_GetJobTemplateCommand = async (
  */
 export const se_GetPolicyCommand = async (
   input: GetPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -572,7 +572,7 @@ export const se_GetPolicyCommand = async (
  */
 export const se_GetPresetCommand = async (
   input: GetPresetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -588,7 +588,7 @@ export const se_GetPresetCommand = async (
  */
 export const se_GetQueueCommand = async (
   input: GetQueueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -604,7 +604,7 @@ export const se_GetQueueCommand = async (
  */
 export const se_ListJobsCommand = async (
   input: ListJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -626,7 +626,7 @@ export const se_ListJobsCommand = async (
  */
 export const se_ListJobTemplatesCommand = async (
   input: ListJobTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -648,7 +648,7 @@ export const se_ListJobTemplatesCommand = async (
  */
 export const se_ListPresetsCommand = async (
   input: ListPresetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -670,7 +670,7 @@ export const se_ListPresetsCommand = async (
  */
 export const se_ListQueuesCommand = async (
   input: ListQueuesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -691,7 +691,7 @@ export const se_ListQueuesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -707,7 +707,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutPolicyCommand = async (
   input: PutPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -718,7 +718,7 @@ export const se_PutPolicyCommand = async (
   body = JSON.stringify(
     take(input, {
       policy: [, (_) => se_Policy(_, context), `Policy`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -729,7 +729,7 @@ export const se_PutPolicyCommand = async (
  */
 export const se_SearchJobsCommand = async (
   input: SearchJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -752,7 +752,7 @@ export const se_SearchJobsCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -764,7 +764,7 @@ export const se_TagResourceCommand = async (
     take(input, {
       arn: [, , `Arn`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -775,7 +775,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -787,7 +787,7 @@ export const se_UntagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tagKeys: [, (_) => _json(_), `TagKeys`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -798,7 +798,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateJobTemplateCommand = async (
   input: UpdateJobTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -817,7 +817,7 @@ export const se_UpdateJobTemplateCommand = async (
       queue: [, , `Queue`],
       settings: [, (_) => se_JobTemplateSettings(_, context), `Settings`],
       statusUpdateInterval: [, , `StatusUpdateInterval`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -828,7 +828,7 @@ export const se_UpdateJobTemplateCommand = async (
  */
 export const se_UpdatePresetCommand = async (
   input: UpdatePresetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -842,7 +842,7 @@ export const se_UpdatePresetCommand = async (
       category: [, , `Category`],
       description: [, , `Description`],
       settings: [, (_) => se_PresetSettings(_, context), `Settings`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -853,7 +853,7 @@ export const se_UpdatePresetCommand = async (
  */
 export const se_UpdateQueueCommand = async (
   input: UpdateQueueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -867,7 +867,7 @@ export const se_UpdateQueueCommand = async (
       description: [, , `Description`],
       reservationPlanSettings: [, (_) => se_ReservationPlanSettings(_, context), `ReservationPlanSettings`],
       status: [, , `Status`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -878,7 +878,7 @@ export const se_UpdateQueueCommand = async (
  */
 export const de_AssociateCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateCertificateCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -895,7 +895,7 @@ export const de_AssociateCertificateCommand = async (
  */
 export const de_CancelJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelJobCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -912,7 +912,7 @@ export const de_CancelJobCommand = async (
  */
 export const de_CreateJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateJobCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -933,7 +933,7 @@ export const de_CreateJobCommand = async (
  */
 export const de_CreateJobTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateJobTemplateCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -954,7 +954,7 @@ export const de_CreateJobTemplateCommand = async (
  */
 export const de_CreatePresetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePresetCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -975,7 +975,7 @@ export const de_CreatePresetCommand = async (
  */
 export const de_CreateQueueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateQueueCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -996,7 +996,7 @@ export const de_CreateQueueCommand = async (
  */
 export const de_DeleteJobTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteJobTemplateCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1013,7 +1013,7 @@ export const de_DeleteJobTemplateCommand = async (
  */
 export const de_DeletePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1030,7 +1030,7 @@ export const de_DeletePolicyCommand = async (
  */
 export const de_DeletePresetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePresetCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1047,7 +1047,7 @@ export const de_DeletePresetCommand = async (
  */
 export const de_DeleteQueueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteQueueCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1064,7 +1064,7 @@ export const de_DeleteQueueCommand = async (
  */
 export const de_DescribeEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEndpointsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1086,7 +1086,7 @@ export const de_DescribeEndpointsCommand = async (
  */
 export const de_DisassociateCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateCertificateCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1103,7 +1103,7 @@ export const de_DisassociateCertificateCommand = async (
  */
 export const de_GetJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1124,7 +1124,7 @@ export const de_GetJobCommand = async (
  */
 export const de_GetJobTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetJobTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1145,7 +1145,7 @@ export const de_GetJobTemplateCommand = async (
  */
 export const de_GetPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1166,7 +1166,7 @@ export const de_GetPolicyCommand = async (
  */
 export const de_GetPresetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPresetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1187,7 +1187,7 @@ export const de_GetPresetCommand = async (
  */
 export const de_GetQueueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetQueueCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1208,7 +1208,7 @@ export const de_GetQueueCommand = async (
  */
 export const de_ListJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1230,7 +1230,7 @@ export const de_ListJobsCommand = async (
  */
 export const de_ListJobTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListJobTemplatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1252,7 +1252,7 @@ export const de_ListJobTemplatesCommand = async (
  */
 export const de_ListPresetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPresetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1274,7 +1274,7 @@ export const de_ListPresetsCommand = async (
  */
 export const de_ListQueuesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListQueuesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1296,7 +1296,7 @@ export const de_ListQueuesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1317,7 +1317,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1338,7 +1338,7 @@ export const de_PutPolicyCommand = async (
  */
 export const de_SearchJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1360,7 +1360,7 @@ export const de_SearchJobsCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1377,7 +1377,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1394,7 +1394,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateJobTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateJobTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1415,7 +1415,7 @@ export const de_UpdateJobTemplateCommand = async (
  */
 export const de_UpdatePresetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePresetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1436,7 +1436,7 @@ export const de_UpdatePresetCommand = async (
  */
 export const de_UpdateQueueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateQueueCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1547,7 +1547,7 @@ const de_ForbiddenExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_InternalServerErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1584,7 +1584,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2560,7 +2560,7 @@ const se_DashIsoGroupSettings = (input: DashIsoGroupSettings, context: __SerdeCo
  */
 const se_DashIsoImageBasedTrickPlaySettings = (
   input: DashIsoImageBasedTrickPlaySettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     intervalCadence: [, , `IntervalCadence`],
@@ -2775,7 +2775,7 @@ const se_EmbeddedSourceSettings = (input: EmbeddedSourceSettings, context: __Ser
  */
 const se_EsamManifestConfirmConditionNotification = (
   input: EsamManifestConfirmConditionNotification,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     mccXml: [, , `MccXml`],
@@ -3727,7 +3727,7 @@ const se_NielsenConfiguration = (input: NielsenConfiguration, context: __SerdeCo
  */
 const se_NielsenNonLinearWatermarkSettings = (
   input: NielsenNonLinearWatermarkSettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     activeWatermarkProcess: [, , `ActiveWatermarkProcess`],
@@ -3770,7 +3770,7 @@ const se_NoiseReducerFilterSettings = (input: NoiseReducerFilterSettings, contex
  */
 const se_NoiseReducerSpatialFilterSettings = (
   input: NoiseReducerSpatialFilterSettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     postFilterSharpenStrength: [, , `PostFilterSharpenStrength`],
@@ -3784,7 +3784,7 @@ const se_NoiseReducerSpatialFilterSettings = (
  */
 const se_NoiseReducerTemporalFilterSettings = (
   input: NoiseReducerTemporalFilterSettings,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     aggressiveMode: [, , `AggressiveMode`],
@@ -4547,7 +4547,7 @@ const de___listOfCmafAdditionalManifest = (output: any, context: __SerdeContext)
  */
 const de___listOfColorConversion3DLUTSetting = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ColorConversion3DLUTSetting[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -4867,39 +4867,48 @@ const de___listOfWarningGroup = (output: any, context: __SerdeContext): WarningG
  * deserializeAws_restJson1__mapOfAudioSelector
  */
 const de___mapOfAudioSelector = (output: any, context: __SerdeContext): Record<string, AudioSelector> => {
-  return Object.entries(output).reduce((acc: Record<string, AudioSelector>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, AudioSelector>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_AudioSelector(value, context);
       return acc;
-    }
-    acc[key as string] = de_AudioSelector(value, context);
-    return acc;
-  }, {} as Record<string, AudioSelector>);
+    },
+    {} as Record<string, AudioSelector>,
+  );
 };
 
 /**
  * deserializeAws_restJson1__mapOfAudioSelectorGroup
  */
 const de___mapOfAudioSelectorGroup = (output: any, context: __SerdeContext): Record<string, AudioSelectorGroup> => {
-  return Object.entries(output).reduce((acc: Record<string, AudioSelectorGroup>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, AudioSelectorGroup>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_AudioSelectorGroup(value, context);
       return acc;
-    }
-    acc[key as string] = de_AudioSelectorGroup(value, context);
-    return acc;
-  }, {} as Record<string, AudioSelectorGroup>);
+    },
+    {} as Record<string, AudioSelectorGroup>,
+  );
 };
 
 /**
  * deserializeAws_restJson1__mapOfCaptionSelector
  */
 const de___mapOfCaptionSelector = (output: any, context: __SerdeContext): Record<string, CaptionSelector> => {
-  return Object.entries(output).reduce((acc: Record<string, CaptionSelector>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, CaptionSelector>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_CaptionSelector(value, context);
       return acc;
-    }
-    acc[key as string] = de_CaptionSelector(value, context);
-    return acc;
-  }, {} as Record<string, CaptionSelector>);
+    },
+    {} as Record<string, CaptionSelector>,
+  );
 };
 
 /**
@@ -5548,7 +5557,7 @@ const de_DashIsoGroupSettings = (output: any, context: __SerdeContext): DashIsoG
  */
 const de_DashIsoImageBasedTrickPlaySettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DashIsoImageBasedTrickPlaySettings => {
   return take(output, {
     IntervalCadence: [, __expectString, `intervalCadence`],
@@ -5772,7 +5781,7 @@ const de_Endpoint = (output: any, context: __SerdeContext): Endpoint => {
  */
 const de_EsamManifestConfirmConditionNotification = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EsamManifestConfirmConditionNotification => {
   return take(output, {
     MccXml: [, __expectString, `mccXml`],
@@ -5803,7 +5812,7 @@ const de_EsamSettings = (output: any, context: __SerdeContext): EsamSettings => 
  */
 const de_EsamSignalProcessingNotification = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EsamSignalProcessingNotification => {
   return take(output, {
     SccXml: [, __expectString, `sccXml`],
@@ -6813,7 +6822,7 @@ const de_NielsenConfiguration = (output: any, context: __SerdeContext): NielsenC
  */
 const de_NielsenNonLinearWatermarkSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): NielsenNonLinearWatermarkSettings => {
   return take(output, {
     ActiveWatermarkProcess: [, __expectString, `activeWatermarkProcess`],
@@ -6856,7 +6865,7 @@ const de_NoiseReducerFilterSettings = (output: any, context: __SerdeContext): No
  */
 const de_NoiseReducerSpatialFilterSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): NoiseReducerSpatialFilterSettings => {
   return take(output, {
     PostFilterSharpenStrength: [, __expectInt32, `postFilterSharpenStrength`],
@@ -6870,7 +6879,7 @@ const de_NoiseReducerSpatialFilterSettings = (
  */
 const de_NoiseReducerTemporalFilterSettings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): NoiseReducerTemporalFilterSettings => {
   return take(output, {
     AggressiveMode: [, __expectInt32, `aggressiveMode`],

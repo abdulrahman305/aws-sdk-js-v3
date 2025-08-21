@@ -42,7 +42,7 @@ export namespace HttpPayloadTraitsWithMediaTypeServerInput {
    * @internal
    */
   export const validate: (
-    obj: Parameters<typeof HttpPayloadTraitsWithMediaTypeInputOutput.validate>[0]
+    obj: Parameters<typeof HttpPayloadTraitsWithMediaTypeInputOutput.validate>[0],
   ) => __ValidationFailure[] = HttpPayloadTraitsWithMediaTypeInputOutput.validate;
 }
 export interface HttpPayloadTraitsWithMediaTypeServerOutput extends HttpPayloadTraitsWithMediaTypeInputOutput {}
@@ -71,14 +71,14 @@ export const getHttpPayloadTraitsWithMediaTypeHandler = <Context>(
     HttpPayloadTraitsWithMediaTypeServerOutput,
     Context
   >,
-  customizer: __ValidationCustomizer<"HttpPayloadTraitsWithMediaType">
+  customizer: __ValidationCustomizer<"HttpPayloadTraitsWithMediaType">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "HttpPayloadTraitsWithMediaType">([
     new httpbinding.UriSpec<"RestJson", "HttpPayloadTraitsWithMediaType">(
       "POST",
       [{ type: "path_literal", value: "HttpPayloadTraitsWithMediaType" }],
       [],
-      { service: "RestJson", operation: "HttpPayloadTraitsWithMediaType" }
+      { service: "RestJson", operation: "HttpPayloadTraitsWithMediaType" },
     ),
   ]);
   return new HttpPayloadTraitsWithMediaTypeHandler(
@@ -86,7 +86,7 @@ export const getHttpPayloadTraitsWithMediaTypeHandler = <Context>(
     mux,
     new HttpPayloadTraitsWithMediaTypeSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -107,7 +107,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -153,7 +153,7 @@ export class HttpPayloadTraitsWithMediaTypeHandler<Context> implements __Service
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"HttpPayloadTraitsWithMediaType">;
   /**
@@ -178,7 +178,7 @@ export class HttpPayloadTraitsWithMediaTypeHandler<Context> implements __Service
       HttpPayloadTraitsWithMediaTypeErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"HttpPayloadTraitsWithMediaType">
+    validationCustomizer: __ValidationCustomizer<"HttpPayloadTraitsWithMediaType">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -190,7 +190,7 @@ export class HttpPayloadTraitsWithMediaTypeHandler<Context> implements __Service
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpPayloadTraitsWithMediaType. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpPayloadTraitsWithMediaType. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -202,7 +202,7 @@ export class HttpPayloadTraitsWithMediaTypeHandler<Context> implements __Service
       this.operation,
       this.serializeFrameworkException,
       HttpPayloadTraitsWithMediaTypeServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

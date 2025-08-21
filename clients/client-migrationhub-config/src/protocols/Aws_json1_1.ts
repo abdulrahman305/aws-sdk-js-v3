@@ -55,7 +55,7 @@ import {
  */
 export const se_CreateHomeRegionControlCommand = async (
   input: CreateHomeRegionControlCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateHomeRegionControl");
   let body: any;
@@ -68,7 +68,7 @@ export const se_CreateHomeRegionControlCommand = async (
  */
 export const se_DeleteHomeRegionControlCommand = async (
   input: DeleteHomeRegionControlCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteHomeRegionControl");
   let body: any;
@@ -81,7 +81,7 @@ export const se_DeleteHomeRegionControlCommand = async (
  */
 export const se_DescribeHomeRegionControlsCommand = async (
   input: DescribeHomeRegionControlsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeHomeRegionControls");
   let body: any;
@@ -94,7 +94,7 @@ export const se_DescribeHomeRegionControlsCommand = async (
  */
 export const se_GetHomeRegionCommand = async (
   input: GetHomeRegionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetHomeRegion");
   let body: any;
@@ -107,7 +107,7 @@ export const se_GetHomeRegionCommand = async (
  */
 export const de_CreateHomeRegionControlCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateHomeRegionControlCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -127,7 +127,7 @@ export const de_CreateHomeRegionControlCommand = async (
  */
 export const de_DeleteHomeRegionControlCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteHomeRegionControlCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -147,7 +147,7 @@ export const de_DeleteHomeRegionControlCommand = async (
  */
 export const de_DescribeHomeRegionControlsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeHomeRegionControlsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -167,7 +167,7 @@ export const de_DescribeHomeRegionControlsCommand = async (
  */
 export const de_GetHomeRegionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetHomeRegionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -225,7 +225,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -267,7 +267,7 @@ const de_InternalServerErrorRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InvalidInputExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidInputException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -283,7 +283,7 @@ const de_InvalidInputExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -335,7 +335,7 @@ const de_CreateHomeRegionControlResult = (output: any, context: __SerdeContext):
  */
 const de_DescribeHomeRegionControlsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeHomeRegionControlsResult => {
   return take(output, {
     HomeRegionControls: (_: any) => de_HomeRegionControls(_, context),
@@ -399,7 +399,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

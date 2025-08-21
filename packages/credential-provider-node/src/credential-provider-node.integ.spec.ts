@@ -33,7 +33,7 @@ jest.mock("@smithy/shared-ini-file-loader", () => {
             ...acc,
             [key.split("sso-session.")[1]]: value,
           }),
-          {}
+          {},
         );
     },
     async parseKnownFiles(init: SourceProfileInit): Promise<ParsedIniData> {
@@ -128,7 +128,7 @@ jest.mock("@smithy/node-http-handler", () => {
             SecretAccessKey: "CONTAINER_SECRET_ACCESS_KEY",
             Token: "CONTAINER_TOKEN",
             Expiration: "3000-01-01T00:00:00.000Z",
-          })
+          }),
         );
         body.push(null);
         return {
@@ -525,7 +525,7 @@ describe("credential-provider-node integration test", () => {
         expect.objectContaining({
           awsContainerCredentialsFullUri: process.env.AWS_CONTAINER_CREDENTIALS_FULL_URI,
           awsContainerAuthorizationToken: process.env.AWS_CONTAINER_AUTHORIZATION_TOKEN,
-        })
+        }),
       );
       spy.mockClear();
     });

@@ -114,7 +114,7 @@ describe("request handler initialization", () => {
     it("should init with instances", async () => {
       let instance: WebSocketFetchHandler;
       const handler = WebSocketFetchHandler.create(
-        (instance = new WebSocketFetchHandler({ connectionTimeout: 2_000 }))
+        (instance = new WebSocketFetchHandler({ connectionTimeout: 2_000 })),
       );
       const client = new TranscribeStreaming({
         requestHandler: handler,

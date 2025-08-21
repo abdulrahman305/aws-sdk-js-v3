@@ -160,7 +160,7 @@ import {
  */
 export const se_CreateAlarmModelCommand = async (
   input: CreateAlarmModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -180,7 +180,7 @@ export const se_CreateAlarmModelCommand = async (
       roleArn: [],
       severity: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -191,7 +191,7 @@ export const se_CreateAlarmModelCommand = async (
  */
 export const se_CreateDetectorModelCommand = async (
   input: CreateDetectorModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -208,7 +208,7 @@ export const se_CreateDetectorModelCommand = async (
       key: [],
       roleArn: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -219,7 +219,7 @@ export const se_CreateDetectorModelCommand = async (
  */
 export const se_CreateInputCommand = async (
   input: CreateInputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -233,7 +233,7 @@ export const se_CreateInputCommand = async (
       inputDescription: [],
       inputName: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -244,7 +244,7 @@ export const se_CreateInputCommand = async (
  */
 export const se_DeleteAlarmModelCommand = async (
   input: DeleteAlarmModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -260,7 +260,7 @@ export const se_DeleteAlarmModelCommand = async (
  */
 export const se_DeleteDetectorModelCommand = async (
   input: DeleteDetectorModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -276,7 +276,7 @@ export const se_DeleteDetectorModelCommand = async (
  */
 export const se_DeleteInputCommand = async (
   input: DeleteInputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -292,7 +292,7 @@ export const se_DeleteInputCommand = async (
  */
 export const se_DescribeAlarmModelCommand = async (
   input: DescribeAlarmModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -311,7 +311,7 @@ export const se_DescribeAlarmModelCommand = async (
  */
 export const se_DescribeDetectorModelCommand = async (
   input: DescribeDetectorModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -330,7 +330,7 @@ export const se_DescribeDetectorModelCommand = async (
  */
 export const se_DescribeDetectorModelAnalysisCommand = async (
   input: DescribeDetectorModelAnalysisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -346,7 +346,7 @@ export const se_DescribeDetectorModelAnalysisCommand = async (
  */
 export const se_DescribeInputCommand = async (
   input: DescribeInputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -362,7 +362,7 @@ export const se_DescribeInputCommand = async (
  */
 export const se_DescribeLoggingOptionsCommand = async (
   input: DescribeLoggingOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -380,7 +380,7 @@ export const se_DescribeLoggingOptionsCommand = async (
  */
 export const se_GetDetectorModelAnalysisResultsCommand = async (
   input: GetDetectorModelAnalysisResultsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -400,7 +400,7 @@ export const se_GetDetectorModelAnalysisResultsCommand = async (
  */
 export const se_ListAlarmModelsCommand = async (
   input: ListAlarmModelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -419,7 +419,7 @@ export const se_ListAlarmModelsCommand = async (
  */
 export const se_ListAlarmModelVersionsCommand = async (
   input: ListAlarmModelVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -439,7 +439,7 @@ export const se_ListAlarmModelVersionsCommand = async (
  */
 export const se_ListDetectorModelsCommand = async (
   input: ListDetectorModelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -458,7 +458,7 @@ export const se_ListDetectorModelsCommand = async (
  */
 export const se_ListDetectorModelVersionsCommand = async (
   input: ListDetectorModelVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -478,7 +478,7 @@ export const se_ListDetectorModelVersionsCommand = async (
  */
 export const se_ListInputRoutingsCommand = async (
   input: ListInputRoutingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -491,7 +491,7 @@ export const se_ListInputRoutingsCommand = async (
       inputIdentifier: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -502,7 +502,7 @@ export const se_ListInputRoutingsCommand = async (
  */
 export const se_ListInputsCommand = async (
   input: ListInputsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -521,7 +521,7 @@ export const se_ListInputsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -539,7 +539,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutLoggingOptionsCommand = async (
   input: PutLoggingOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -550,7 +550,7 @@ export const se_PutLoggingOptionsCommand = async (
   body = JSON.stringify(
     take(input, {
       loggingOptions: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -561,7 +561,7 @@ export const se_PutLoggingOptionsCommand = async (
  */
 export const se_StartDetectorModelAnalysisCommand = async (
   input: StartDetectorModelAnalysisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -572,7 +572,7 @@ export const se_StartDetectorModelAnalysisCommand = async (
   body = JSON.stringify(
     take(input, {
       detectorModelDefinition: (_) => se_DetectorModelDefinition(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -583,7 +583,7 @@ export const se_StartDetectorModelAnalysisCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -597,7 +597,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -608,7 +608,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -630,7 +630,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAlarmModelCommand = async (
   input: UpdateAlarmModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -648,7 +648,7 @@ export const se_UpdateAlarmModelCommand = async (
       alarmRule: (_) => _json(_),
       roleArn: [],
       severity: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -659,7 +659,7 @@ export const se_UpdateAlarmModelCommand = async (
  */
 export const se_UpdateDetectorModelCommand = async (
   input: UpdateDetectorModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -674,7 +674,7 @@ export const se_UpdateDetectorModelCommand = async (
       detectorModelDescription: [],
       evaluationMethod: [],
       roleArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -685,7 +685,7 @@ export const se_UpdateDetectorModelCommand = async (
  */
 export const se_UpdateInputCommand = async (
   input: UpdateInputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -698,7 +698,7 @@ export const se_UpdateInputCommand = async (
     take(input, {
       inputDefinition: (_) => _json(_),
       inputDescription: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -709,7 +709,7 @@ export const se_UpdateInputCommand = async (
  */
 export const de_CreateAlarmModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAlarmModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -734,7 +734,7 @@ export const de_CreateAlarmModelCommand = async (
  */
 export const de_CreateDetectorModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDetectorModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -755,7 +755,7 @@ export const de_CreateDetectorModelCommand = async (
  */
 export const de_CreateInputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateInputCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -776,7 +776,7 @@ export const de_CreateInputCommand = async (
  */
 export const de_DeleteAlarmModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAlarmModelCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -793,7 +793,7 @@ export const de_DeleteAlarmModelCommand = async (
  */
 export const de_DeleteDetectorModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDetectorModelCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -810,7 +810,7 @@ export const de_DeleteDetectorModelCommand = async (
  */
 export const de_DeleteInputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteInputCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -827,7 +827,7 @@ export const de_DeleteInputCommand = async (
  */
 export const de_DescribeAlarmModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAlarmModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -862,7 +862,7 @@ export const de_DescribeAlarmModelCommand = async (
  */
 export const de_DescribeDetectorModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDetectorModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -883,7 +883,7 @@ export const de_DescribeDetectorModelCommand = async (
  */
 export const de_DescribeDetectorModelAnalysisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDetectorModelAnalysisCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -904,7 +904,7 @@ export const de_DescribeDetectorModelAnalysisCommand = async (
  */
 export const de_DescribeInputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInputCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -925,7 +925,7 @@ export const de_DescribeInputCommand = async (
  */
 export const de_DescribeLoggingOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLoggingOptionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -946,7 +946,7 @@ export const de_DescribeLoggingOptionsCommand = async (
  */
 export const de_GetDetectorModelAnalysisResultsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDetectorModelAnalysisResultsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -968,7 +968,7 @@ export const de_GetDetectorModelAnalysisResultsCommand = async (
  */
 export const de_ListAlarmModelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAlarmModelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -990,7 +990,7 @@ export const de_ListAlarmModelsCommand = async (
  */
 export const de_ListAlarmModelVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAlarmModelVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1012,7 +1012,7 @@ export const de_ListAlarmModelVersionsCommand = async (
  */
 export const de_ListDetectorModelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDetectorModelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1034,7 +1034,7 @@ export const de_ListDetectorModelsCommand = async (
  */
 export const de_ListDetectorModelVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDetectorModelVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1056,7 +1056,7 @@ export const de_ListDetectorModelVersionsCommand = async (
  */
 export const de_ListInputRoutingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListInputRoutingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1078,7 +1078,7 @@ export const de_ListInputRoutingsCommand = async (
  */
 export const de_ListInputsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListInputsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1100,7 +1100,7 @@ export const de_ListInputsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1121,7 +1121,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutLoggingOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutLoggingOptionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1138,7 +1138,7 @@ export const de_PutLoggingOptionsCommand = async (
  */
 export const de_StartDetectorModelAnalysisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartDetectorModelAnalysisCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1159,7 +1159,7 @@ export const de_StartDetectorModelAnalysisCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1176,7 +1176,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1193,7 +1193,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAlarmModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAlarmModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1218,7 +1218,7 @@ export const de_UpdateAlarmModelCommand = async (
  */
 export const de_UpdateDetectorModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDetectorModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1239,7 +1239,7 @@ export const de_UpdateDetectorModelCommand = async (
  */
 export const de_UpdateInputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateInputCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1308,7 +1308,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_InternalFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalFailureException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1328,7 +1328,7 @@ const de_InternalFailureExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1348,7 +1348,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1368,7 +1368,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAlreadyExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1390,7 +1390,7 @@ const de_ResourceAlreadyExistsExceptionRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1410,7 +1410,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1430,7 +1430,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1467,7 +1467,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_UnsupportedOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedOperationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

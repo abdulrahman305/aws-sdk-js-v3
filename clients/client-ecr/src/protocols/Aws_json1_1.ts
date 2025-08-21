@@ -277,7 +277,7 @@ import {
  */
 export const se_BatchCheckLayerAvailabilityCommand = async (
   input: BatchCheckLayerAvailabilityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchCheckLayerAvailability");
   let body: any;
@@ -290,7 +290,7 @@ export const se_BatchCheckLayerAvailabilityCommand = async (
  */
 export const se_BatchDeleteImageCommand = async (
   input: BatchDeleteImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchDeleteImage");
   let body: any;
@@ -303,7 +303,7 @@ export const se_BatchDeleteImageCommand = async (
  */
 export const se_BatchGetImageCommand = async (
   input: BatchGetImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetImage");
   let body: any;
@@ -316,7 +316,7 @@ export const se_BatchGetImageCommand = async (
  */
 export const se_BatchGetRepositoryScanningConfigurationCommand = async (
   input: BatchGetRepositoryScanningConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetRepositoryScanningConfiguration");
   let body: any;
@@ -329,7 +329,7 @@ export const se_BatchGetRepositoryScanningConfigurationCommand = async (
  */
 export const se_CompleteLayerUploadCommand = async (
   input: CompleteLayerUploadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CompleteLayerUpload");
   let body: any;
@@ -342,7 +342,7 @@ export const se_CompleteLayerUploadCommand = async (
  */
 export const se_CreatePullThroughCacheRuleCommand = async (
   input: CreatePullThroughCacheRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreatePullThroughCacheRule");
   let body: any;
@@ -355,7 +355,7 @@ export const se_CreatePullThroughCacheRuleCommand = async (
  */
 export const se_CreateRepositoryCommand = async (
   input: CreateRepositoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateRepository");
   let body: any;
@@ -368,7 +368,7 @@ export const se_CreateRepositoryCommand = async (
  */
 export const se_DeleteLifecyclePolicyCommand = async (
   input: DeleteLifecyclePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteLifecyclePolicy");
   let body: any;
@@ -381,7 +381,7 @@ export const se_DeleteLifecyclePolicyCommand = async (
  */
 export const se_DeletePullThroughCacheRuleCommand = async (
   input: DeletePullThroughCacheRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeletePullThroughCacheRule");
   let body: any;
@@ -394,7 +394,7 @@ export const se_DeletePullThroughCacheRuleCommand = async (
  */
 export const se_DeleteRegistryPolicyCommand = async (
   input: DeleteRegistryPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRegistryPolicy");
   let body: any;
@@ -407,7 +407,7 @@ export const se_DeleteRegistryPolicyCommand = async (
  */
 export const se_DeleteRepositoryCommand = async (
   input: DeleteRepositoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRepository");
   let body: any;
@@ -420,7 +420,7 @@ export const se_DeleteRepositoryCommand = async (
  */
 export const se_DeleteRepositoryPolicyCommand = async (
   input: DeleteRepositoryPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRepositoryPolicy");
   let body: any;
@@ -433,7 +433,7 @@ export const se_DeleteRepositoryPolicyCommand = async (
  */
 export const se_DescribeImageReplicationStatusCommand = async (
   input: DescribeImageReplicationStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeImageReplicationStatus");
   let body: any;
@@ -446,7 +446,7 @@ export const se_DescribeImageReplicationStatusCommand = async (
  */
 export const se_DescribeImagesCommand = async (
   input: DescribeImagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeImages");
   let body: any;
@@ -459,7 +459,7 @@ export const se_DescribeImagesCommand = async (
  */
 export const se_DescribeImageScanFindingsCommand = async (
   input: DescribeImageScanFindingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeImageScanFindings");
   let body: any;
@@ -472,7 +472,7 @@ export const se_DescribeImageScanFindingsCommand = async (
  */
 export const se_DescribePullThroughCacheRulesCommand = async (
   input: DescribePullThroughCacheRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribePullThroughCacheRules");
   let body: any;
@@ -485,7 +485,7 @@ export const se_DescribePullThroughCacheRulesCommand = async (
  */
 export const se_DescribeRegistryCommand = async (
   input: DescribeRegistryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeRegistry");
   let body: any;
@@ -498,7 +498,7 @@ export const se_DescribeRegistryCommand = async (
  */
 export const se_DescribeRepositoriesCommand = async (
   input: DescribeRepositoriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeRepositories");
   let body: any;
@@ -511,7 +511,7 @@ export const se_DescribeRepositoriesCommand = async (
  */
 export const se_GetAuthorizationTokenCommand = async (
   input: GetAuthorizationTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAuthorizationToken");
   let body: any;
@@ -524,7 +524,7 @@ export const se_GetAuthorizationTokenCommand = async (
  */
 export const se_GetDownloadUrlForLayerCommand = async (
   input: GetDownloadUrlForLayerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDownloadUrlForLayer");
   let body: any;
@@ -537,7 +537,7 @@ export const se_GetDownloadUrlForLayerCommand = async (
  */
 export const se_GetLifecyclePolicyCommand = async (
   input: GetLifecyclePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetLifecyclePolicy");
   let body: any;
@@ -550,7 +550,7 @@ export const se_GetLifecyclePolicyCommand = async (
  */
 export const se_GetLifecyclePolicyPreviewCommand = async (
   input: GetLifecyclePolicyPreviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetLifecyclePolicyPreview");
   let body: any;
@@ -563,7 +563,7 @@ export const se_GetLifecyclePolicyPreviewCommand = async (
  */
 export const se_GetRegistryPolicyCommand = async (
   input: GetRegistryPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRegistryPolicy");
   let body: any;
@@ -576,7 +576,7 @@ export const se_GetRegistryPolicyCommand = async (
  */
 export const se_GetRegistryScanningConfigurationCommand = async (
   input: GetRegistryScanningConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRegistryScanningConfiguration");
   let body: any;
@@ -589,7 +589,7 @@ export const se_GetRegistryScanningConfigurationCommand = async (
  */
 export const se_GetRepositoryPolicyCommand = async (
   input: GetRepositoryPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRepositoryPolicy");
   let body: any;
@@ -602,7 +602,7 @@ export const se_GetRepositoryPolicyCommand = async (
  */
 export const se_InitiateLayerUploadCommand = async (
   input: InitiateLayerUploadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("InitiateLayerUpload");
   let body: any;
@@ -615,7 +615,7 @@ export const se_InitiateLayerUploadCommand = async (
  */
 export const se_ListImagesCommand = async (
   input: ListImagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListImages");
   let body: any;
@@ -628,7 +628,7 @@ export const se_ListImagesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -641,7 +641,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutImageCommand = async (
   input: PutImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutImage");
   let body: any;
@@ -654,7 +654,7 @@ export const se_PutImageCommand = async (
  */
 export const se_PutImageScanningConfigurationCommand = async (
   input: PutImageScanningConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutImageScanningConfiguration");
   let body: any;
@@ -667,7 +667,7 @@ export const se_PutImageScanningConfigurationCommand = async (
  */
 export const se_PutImageTagMutabilityCommand = async (
   input: PutImageTagMutabilityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutImageTagMutability");
   let body: any;
@@ -680,7 +680,7 @@ export const se_PutImageTagMutabilityCommand = async (
  */
 export const se_PutLifecyclePolicyCommand = async (
   input: PutLifecyclePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutLifecyclePolicy");
   let body: any;
@@ -693,7 +693,7 @@ export const se_PutLifecyclePolicyCommand = async (
  */
 export const se_PutRegistryPolicyCommand = async (
   input: PutRegistryPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutRegistryPolicy");
   let body: any;
@@ -706,7 +706,7 @@ export const se_PutRegistryPolicyCommand = async (
  */
 export const se_PutRegistryScanningConfigurationCommand = async (
   input: PutRegistryScanningConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutRegistryScanningConfiguration");
   let body: any;
@@ -719,7 +719,7 @@ export const se_PutRegistryScanningConfigurationCommand = async (
  */
 export const se_PutReplicationConfigurationCommand = async (
   input: PutReplicationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutReplicationConfiguration");
   let body: any;
@@ -732,7 +732,7 @@ export const se_PutReplicationConfigurationCommand = async (
  */
 export const se_SetRepositoryPolicyCommand = async (
   input: SetRepositoryPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SetRepositoryPolicy");
   let body: any;
@@ -745,7 +745,7 @@ export const se_SetRepositoryPolicyCommand = async (
  */
 export const se_StartImageScanCommand = async (
   input: StartImageScanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartImageScan");
   let body: any;
@@ -758,7 +758,7 @@ export const se_StartImageScanCommand = async (
  */
 export const se_StartLifecyclePolicyPreviewCommand = async (
   input: StartLifecyclePolicyPreviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartLifecyclePolicyPreview");
   let body: any;
@@ -771,7 +771,7 @@ export const se_StartLifecyclePolicyPreviewCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -784,7 +784,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -797,7 +797,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdatePullThroughCacheRuleCommand = async (
   input: UpdatePullThroughCacheRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdatePullThroughCacheRule");
   let body: any;
@@ -810,7 +810,7 @@ export const se_UpdatePullThroughCacheRuleCommand = async (
  */
 export const se_UploadLayerPartCommand = async (
   input: UploadLayerPartCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UploadLayerPart");
   let body: any;
@@ -823,7 +823,7 @@ export const se_UploadLayerPartCommand = async (
  */
 export const se_ValidatePullThroughCacheRuleCommand = async (
   input: ValidatePullThroughCacheRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ValidatePullThroughCacheRule");
   let body: any;
@@ -836,7 +836,7 @@ export const se_ValidatePullThroughCacheRuleCommand = async (
  */
 export const de_BatchCheckLayerAvailabilityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchCheckLayerAvailabilityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -856,7 +856,7 @@ export const de_BatchCheckLayerAvailabilityCommand = async (
  */
 export const de_BatchDeleteImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDeleteImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -876,7 +876,7 @@ export const de_BatchDeleteImageCommand = async (
  */
 export const de_BatchGetImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -896,7 +896,7 @@ export const de_BatchGetImageCommand = async (
  */
 export const de_BatchGetRepositoryScanningConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetRepositoryScanningConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -916,7 +916,7 @@ export const de_BatchGetRepositoryScanningConfigurationCommand = async (
  */
 export const de_CompleteLayerUploadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CompleteLayerUploadCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -936,7 +936,7 @@ export const de_CompleteLayerUploadCommand = async (
  */
 export const de_CreatePullThroughCacheRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePullThroughCacheRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -956,7 +956,7 @@ export const de_CreatePullThroughCacheRuleCommand = async (
  */
 export const de_CreateRepositoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRepositoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -976,7 +976,7 @@ export const de_CreateRepositoryCommand = async (
  */
 export const de_DeleteLifecyclePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLifecyclePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -996,7 +996,7 @@ export const de_DeleteLifecyclePolicyCommand = async (
  */
 export const de_DeletePullThroughCacheRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePullThroughCacheRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1016,7 +1016,7 @@ export const de_DeletePullThroughCacheRuleCommand = async (
  */
 export const de_DeleteRegistryPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRegistryPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1036,7 +1036,7 @@ export const de_DeleteRegistryPolicyCommand = async (
  */
 export const de_DeleteRepositoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRepositoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1056,7 +1056,7 @@ export const de_DeleteRepositoryCommand = async (
  */
 export const de_DeleteRepositoryPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRepositoryPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1076,7 +1076,7 @@ export const de_DeleteRepositoryPolicyCommand = async (
  */
 export const de_DescribeImageReplicationStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeImageReplicationStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1096,7 +1096,7 @@ export const de_DescribeImageReplicationStatusCommand = async (
  */
 export const de_DescribeImagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeImagesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1116,7 +1116,7 @@ export const de_DescribeImagesCommand = async (
  */
 export const de_DescribeImageScanFindingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeImageScanFindingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1136,7 +1136,7 @@ export const de_DescribeImageScanFindingsCommand = async (
  */
 export const de_DescribePullThroughCacheRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePullThroughCacheRulesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1156,7 +1156,7 @@ export const de_DescribePullThroughCacheRulesCommand = async (
  */
 export const de_DescribeRegistryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRegistryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1176,7 +1176,7 @@ export const de_DescribeRegistryCommand = async (
  */
 export const de_DescribeRepositoriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRepositoriesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1196,7 +1196,7 @@ export const de_DescribeRepositoriesCommand = async (
  */
 export const de_GetAuthorizationTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAuthorizationTokenCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1216,7 +1216,7 @@ export const de_GetAuthorizationTokenCommand = async (
  */
 export const de_GetDownloadUrlForLayerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDownloadUrlForLayerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1236,7 +1236,7 @@ export const de_GetDownloadUrlForLayerCommand = async (
  */
 export const de_GetLifecyclePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLifecyclePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1256,7 +1256,7 @@ export const de_GetLifecyclePolicyCommand = async (
  */
 export const de_GetLifecyclePolicyPreviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLifecyclePolicyPreviewCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1276,7 +1276,7 @@ export const de_GetLifecyclePolicyPreviewCommand = async (
  */
 export const de_GetRegistryPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRegistryPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1296,7 +1296,7 @@ export const de_GetRegistryPolicyCommand = async (
  */
 export const de_GetRegistryScanningConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRegistryScanningConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1316,7 +1316,7 @@ export const de_GetRegistryScanningConfigurationCommand = async (
  */
 export const de_GetRepositoryPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRepositoryPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1336,7 +1336,7 @@ export const de_GetRepositoryPolicyCommand = async (
  */
 export const de_InitiateLayerUploadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InitiateLayerUploadCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1356,7 +1356,7 @@ export const de_InitiateLayerUploadCommand = async (
  */
 export const de_ListImagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListImagesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1376,7 +1376,7 @@ export const de_ListImagesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1396,7 +1396,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1416,7 +1416,7 @@ export const de_PutImageCommand = async (
  */
 export const de_PutImageScanningConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutImageScanningConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1436,7 +1436,7 @@ export const de_PutImageScanningConfigurationCommand = async (
  */
 export const de_PutImageTagMutabilityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutImageTagMutabilityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1456,7 +1456,7 @@ export const de_PutImageTagMutabilityCommand = async (
  */
 export const de_PutLifecyclePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutLifecyclePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1476,7 +1476,7 @@ export const de_PutLifecyclePolicyCommand = async (
  */
 export const de_PutRegistryPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutRegistryPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1496,7 +1496,7 @@ export const de_PutRegistryPolicyCommand = async (
  */
 export const de_PutRegistryScanningConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutRegistryScanningConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1516,7 +1516,7 @@ export const de_PutRegistryScanningConfigurationCommand = async (
  */
 export const de_PutReplicationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutReplicationConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1536,7 +1536,7 @@ export const de_PutReplicationConfigurationCommand = async (
  */
 export const de_SetRepositoryPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetRepositoryPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1556,7 +1556,7 @@ export const de_SetRepositoryPolicyCommand = async (
  */
 export const de_StartImageScanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartImageScanCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1576,7 +1576,7 @@ export const de_StartImageScanCommand = async (
  */
 export const de_StartLifecyclePolicyPreviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartLifecyclePolicyPreviewCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1596,7 +1596,7 @@ export const de_StartLifecyclePolicyPreviewCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1616,7 +1616,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1636,7 +1636,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdatePullThroughCacheRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePullThroughCacheRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1656,7 +1656,7 @@ export const de_UpdatePullThroughCacheRuleCommand = async (
  */
 export const de_UploadLayerPartCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UploadLayerPartCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1676,7 +1676,7 @@ export const de_UploadLayerPartCommand = async (
  */
 export const de_ValidatePullThroughCacheRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ValidatePullThroughCacheRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1830,7 +1830,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_EmptyUploadExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EmptyUploadException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1846,7 +1846,7 @@ const de_EmptyUploadExceptionRes = async (
  */
 const de_ImageAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImageAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1862,7 +1862,7 @@ const de_ImageAlreadyExistsExceptionRes = async (
  */
 const de_ImageDigestDoesNotMatchExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImageDigestDoesNotMatchException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1878,7 +1878,7 @@ const de_ImageDigestDoesNotMatchExceptionRes = async (
  */
 const de_ImageNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImageNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1894,7 +1894,7 @@ const de_ImageNotFoundExceptionRes = async (
  */
 const de_ImageTagAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImageTagAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1910,7 +1910,7 @@ const de_ImageTagAlreadyExistsExceptionRes = async (
  */
 const de_InvalidLayerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidLayerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1926,7 +1926,7 @@ const de_InvalidLayerExceptionRes = async (
  */
 const de_InvalidLayerPartExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidLayerPartException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1942,7 +1942,7 @@ const de_InvalidLayerPartExceptionRes = async (
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1958,7 +1958,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_InvalidTagParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTagParameterException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1987,7 +1987,7 @@ const de_KmsExceptionRes = async (parsedOutput: any, context: __SerdeContext): P
  */
 const de_LayerAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LayerAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2003,7 +2003,7 @@ const de_LayerAlreadyExistsExceptionRes = async (
  */
 const de_LayerInaccessibleExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LayerInaccessibleException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2019,7 +2019,7 @@ const de_LayerInaccessibleExceptionRes = async (
  */
 const de_LayerPartTooSmallExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LayerPartTooSmallException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2035,7 +2035,7 @@ const de_LayerPartTooSmallExceptionRes = async (
  */
 const de_LayersNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LayersNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2051,7 +2051,7 @@ const de_LayersNotFoundExceptionRes = async (
  */
 const de_LifecyclePolicyNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LifecyclePolicyNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2067,7 +2067,7 @@ const de_LifecyclePolicyNotFoundExceptionRes = async (
  */
 const de_LifecyclePolicyPreviewInProgressExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LifecyclePolicyPreviewInProgressException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2083,7 +2083,7 @@ const de_LifecyclePolicyPreviewInProgressExceptionRes = async (
  */
 const de_LifecyclePolicyPreviewNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LifecyclePolicyPreviewNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2099,7 +2099,7 @@ const de_LifecyclePolicyPreviewNotFoundExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2115,7 +2115,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_PullThroughCacheRuleAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PullThroughCacheRuleAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2131,7 +2131,7 @@ const de_PullThroughCacheRuleAlreadyExistsExceptionRes = async (
  */
 const de_PullThroughCacheRuleNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PullThroughCacheRuleNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2147,7 +2147,7 @@ const de_PullThroughCacheRuleNotFoundExceptionRes = async (
  */
 const de_ReferencedImagesNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReferencedImagesNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2163,7 +2163,7 @@ const de_ReferencedImagesNotFoundExceptionRes = async (
  */
 const de_RegistryPolicyNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegistryPolicyNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2179,7 +2179,7 @@ const de_RegistryPolicyNotFoundExceptionRes = async (
  */
 const de_RepositoryAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RepositoryAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2195,7 +2195,7 @@ const de_RepositoryAlreadyExistsExceptionRes = async (
  */
 const de_RepositoryNotEmptyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RepositoryNotEmptyException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2211,7 +2211,7 @@ const de_RepositoryNotEmptyExceptionRes = async (
  */
 const de_RepositoryNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RepositoryNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2227,7 +2227,7 @@ const de_RepositoryNotFoundExceptionRes = async (
  */
 const de_RepositoryPolicyNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RepositoryPolicyNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2243,7 +2243,7 @@ const de_RepositoryPolicyNotFoundExceptionRes = async (
  */
 const de_ScanNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ScanNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2259,7 +2259,7 @@ const de_ScanNotFoundExceptionRes = async (
  */
 const de_SecretNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SecretNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2288,7 +2288,7 @@ const de_ServerExceptionRes = async (parsedOutput: any, context: __SerdeContext)
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2304,7 +2304,7 @@ const de_TooManyTagsExceptionRes = async (
  */
 const de_UnableToAccessSecretExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnableToAccessSecretException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2320,7 +2320,7 @@ const de_UnableToAccessSecretExceptionRes = async (
  */
 const de_UnableToDecryptSecretValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnableToDecryptSecretValueException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2336,7 +2336,7 @@ const de_UnableToDecryptSecretValueExceptionRes = async (
  */
 const de_UnableToGetUpstreamImageExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnableToGetUpstreamImageException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2352,7 +2352,7 @@ const de_UnableToGetUpstreamImageExceptionRes = async (
  */
 const de_UnableToGetUpstreamLayerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnableToGetUpstreamLayerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2368,7 +2368,7 @@ const de_UnableToGetUpstreamLayerExceptionRes = async (
  */
 const de_UnsupportedImageTypeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedImageTypeException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2384,7 +2384,7 @@ const de_UnsupportedImageTypeExceptionRes = async (
  */
 const de_UnsupportedUpstreamRegistryExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedUpstreamRegistryException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2400,7 +2400,7 @@ const de_UnsupportedUpstreamRegistryExceptionRes = async (
  */
 const de_UploadNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UploadNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2636,7 +2636,7 @@ const de_AwsEcrContainerImageDetails = (output: any, context: __SerdeContext): A
  */
 const de_CreatePullThroughCacheRuleResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreatePullThroughCacheRuleResponse => {
   return take(output, {
     createdAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -2715,7 +2715,7 @@ const de_DeleteLifecyclePolicyResponse = (output: any, context: __SerdeContext):
  */
 const de_DeletePullThroughCacheRuleResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeletePullThroughCacheRuleResponse => {
   return take(output, {
     createdAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -2746,7 +2746,7 @@ const de_DeleteRepositoryResponse = (output: any, context: __SerdeContext): Dele
  */
 const de_DescribeImageScanFindingsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeImageScanFindingsResponse => {
   return take(output, {
     imageId: _json,
@@ -2773,7 +2773,7 @@ const de_DescribeImagesResponse = (output: any, context: __SerdeContext): Descri
  */
 const de_DescribePullThroughCacheRulesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribePullThroughCacheRulesResponse => {
   return take(output, {
     nextToken: __expectString,
@@ -2850,7 +2850,7 @@ const de_GetAuthorizationTokenResponse = (output: any, context: __SerdeContext):
  */
 const de_GetLifecyclePolicyPreviewResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetLifecyclePolicyPreviewResponse => {
   return take(output, {
     lifecyclePolicyText: __expectString,
@@ -3267,7 +3267,7 @@ const de_ScoreDetails = (output: any, context: __SerdeContext): ScoreDetails => 
  */
 const de_UpdatePullThroughCacheRuleResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdatePullThroughCacheRuleResponse => {
   return take(output, {
     credentialArn: __expectString,
@@ -3307,7 +3307,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

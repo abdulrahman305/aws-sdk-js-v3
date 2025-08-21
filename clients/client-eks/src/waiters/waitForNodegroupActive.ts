@@ -36,7 +36,7 @@ const checkState = async (client: EKSClient, input: DescribeNodegroupCommandInpu
  */
 export const waitForNodegroupActive = async (
   params: WaiterConfiguration<EKSClient>,
-  input: DescribeNodegroupCommandInput
+  input: DescribeNodegroupCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -48,7 +48,7 @@ export const waitForNodegroupActive = async (
  */
 export const waitUntilNodegroupActive = async (
   params: WaiterConfiguration<EKSClient>,
-  input: DescribeNodegroupCommandInput
+  input: DescribeNodegroupCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

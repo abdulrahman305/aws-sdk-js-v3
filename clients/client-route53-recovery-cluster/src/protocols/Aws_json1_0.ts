@@ -52,7 +52,7 @@ import { Route53RecoveryClusterServiceException as __BaseException } from "../mo
  */
 export const se_GetRoutingControlStateCommand = async (
   input: GetRoutingControlStateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRoutingControlState");
   let body: any;
@@ -65,7 +65,7 @@ export const se_GetRoutingControlStateCommand = async (
  */
 export const se_ListRoutingControlsCommand = async (
   input: ListRoutingControlsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRoutingControls");
   let body: any;
@@ -78,7 +78,7 @@ export const se_ListRoutingControlsCommand = async (
  */
 export const se_UpdateRoutingControlStateCommand = async (
   input: UpdateRoutingControlStateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRoutingControlState");
   let body: any;
@@ -91,7 +91,7 @@ export const se_UpdateRoutingControlStateCommand = async (
  */
 export const se_UpdateRoutingControlStatesCommand = async (
   input: UpdateRoutingControlStatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRoutingControlStates");
   let body: any;
@@ -104,7 +104,7 @@ export const se_UpdateRoutingControlStatesCommand = async (
  */
 export const de_GetRoutingControlStateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRoutingControlStateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -124,7 +124,7 @@ export const de_GetRoutingControlStateCommand = async (
  */
 export const de_ListRoutingControlsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRoutingControlsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -144,7 +144,7 @@ export const de_ListRoutingControlsCommand = async (
  */
 export const de_UpdateRoutingControlStateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRoutingControlStateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -164,7 +164,7 @@ export const de_UpdateRoutingControlStateCommand = async (
  */
 export const de_UpdateRoutingControlStatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRoutingControlStatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -228,7 +228,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -257,7 +257,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_EndpointTemporarilyUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EndpointTemporarilyUnavailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -273,7 +273,7 @@ const de_EndpointTemporarilyUnavailableExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -289,7 +289,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -305,7 +305,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -406,7 +406,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

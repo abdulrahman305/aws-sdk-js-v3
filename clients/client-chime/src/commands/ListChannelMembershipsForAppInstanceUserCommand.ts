@@ -141,7 +141,7 @@ export class ListChannelMembershipsForAppInstanceUserCommand extends $Command
   .n("ChimeClient", "ListChannelMembershipsForAppInstanceUserCommand")
   .f(
     ListChannelMembershipsForAppInstanceUserRequestFilterSensitiveLog,
-    ListChannelMembershipsForAppInstanceUserResponseFilterSensitiveLog
+    ListChannelMembershipsForAppInstanceUserResponseFilterSensitiveLog,
   )
   .ser(se_ListChannelMembershipsForAppInstanceUserCommand)
   .de(de_ListChannelMembershipsForAppInstanceUserCommand)

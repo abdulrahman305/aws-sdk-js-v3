@@ -931,7 +931,7 @@ import { SecurityHubServiceException as __BaseException } from "../models/Securi
  */
 export const se_AcceptAdministratorInvitationCommand = async (
   input: AcceptAdministratorInvitationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -943,7 +943,7 @@ export const se_AcceptAdministratorInvitationCommand = async (
     take(input, {
       AdministratorId: [],
       InvitationId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -954,7 +954,7 @@ export const se_AcceptAdministratorInvitationCommand = async (
  */
 export const se_AcceptInvitationCommand = async (
   input: AcceptInvitationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -966,7 +966,7 @@ export const se_AcceptInvitationCommand = async (
     take(input, {
       InvitationId: [],
       MasterId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -977,7 +977,7 @@ export const se_AcceptInvitationCommand = async (
  */
 export const se_BatchDeleteAutomationRulesCommand = async (
   input: BatchDeleteAutomationRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -988,7 +988,7 @@ export const se_BatchDeleteAutomationRulesCommand = async (
   body = JSON.stringify(
     take(input, {
       AutomationRulesArns: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -999,7 +999,7 @@ export const se_BatchDeleteAutomationRulesCommand = async (
  */
 export const se_BatchDisableStandardsCommand = async (
   input: BatchDisableStandardsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1010,7 +1010,7 @@ export const se_BatchDisableStandardsCommand = async (
   body = JSON.stringify(
     take(input, {
       StandardsSubscriptionArns: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1021,7 +1021,7 @@ export const se_BatchDisableStandardsCommand = async (
  */
 export const se_BatchEnableStandardsCommand = async (
   input: BatchEnableStandardsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1032,7 +1032,7 @@ export const se_BatchEnableStandardsCommand = async (
   body = JSON.stringify(
     take(input, {
       StandardsSubscriptionRequests: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1043,7 +1043,7 @@ export const se_BatchEnableStandardsCommand = async (
  */
 export const se_BatchGetAutomationRulesCommand = async (
   input: BatchGetAutomationRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1054,7 +1054,7 @@ export const se_BatchGetAutomationRulesCommand = async (
   body = JSON.stringify(
     take(input, {
       AutomationRulesArns: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1065,7 +1065,7 @@ export const se_BatchGetAutomationRulesCommand = async (
  */
 export const se_BatchGetConfigurationPolicyAssociationsCommand = async (
   input: BatchGetConfigurationPolicyAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1076,7 +1076,7 @@ export const se_BatchGetConfigurationPolicyAssociationsCommand = async (
   body = JSON.stringify(
     take(input, {
       ConfigurationPolicyAssociationIdentifiers: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1087,7 +1087,7 @@ export const se_BatchGetConfigurationPolicyAssociationsCommand = async (
  */
 export const se_BatchGetSecurityControlsCommand = async (
   input: BatchGetSecurityControlsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1098,7 +1098,7 @@ export const se_BatchGetSecurityControlsCommand = async (
   body = JSON.stringify(
     take(input, {
       SecurityControlIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1109,7 +1109,7 @@ export const se_BatchGetSecurityControlsCommand = async (
  */
 export const se_BatchGetStandardsControlAssociationsCommand = async (
   input: BatchGetStandardsControlAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1120,7 +1120,7 @@ export const se_BatchGetStandardsControlAssociationsCommand = async (
   body = JSON.stringify(
     take(input, {
       StandardsControlAssociationIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1131,7 +1131,7 @@ export const se_BatchGetStandardsControlAssociationsCommand = async (
  */
 export const se_BatchImportFindingsCommand = async (
   input: BatchImportFindingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1142,7 +1142,7 @@ export const se_BatchImportFindingsCommand = async (
   body = JSON.stringify(
     take(input, {
       Findings: (_) => se_BatchImportFindingsRequestFindingList(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1153,7 +1153,7 @@ export const se_BatchImportFindingsCommand = async (
  */
 export const se_BatchUpdateAutomationRulesCommand = async (
   input: BatchUpdateAutomationRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1164,7 +1164,7 @@ export const se_BatchUpdateAutomationRulesCommand = async (
   body = JSON.stringify(
     take(input, {
       UpdateAutomationRulesRequestItems: (_) => se_UpdateAutomationRulesRequestItemsList(_, context),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1175,7 +1175,7 @@ export const se_BatchUpdateAutomationRulesCommand = async (
  */
 export const se_BatchUpdateFindingsCommand = async (
   input: BatchUpdateFindingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1195,7 +1195,7 @@ export const se_BatchUpdateFindingsCommand = async (
       UserDefinedFields: (_) => _json(_),
       VerificationState: [],
       Workflow: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1206,7 +1206,7 @@ export const se_BatchUpdateFindingsCommand = async (
  */
 export const se_BatchUpdateStandardsControlAssociationsCommand = async (
   input: BatchUpdateStandardsControlAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1217,7 +1217,7 @@ export const se_BatchUpdateStandardsControlAssociationsCommand = async (
   body = JSON.stringify(
     take(input, {
       StandardsControlAssociationUpdates: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1228,7 +1228,7 @@ export const se_BatchUpdateStandardsControlAssociationsCommand = async (
  */
 export const se_CreateActionTargetCommand = async (
   input: CreateActionTargetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1241,7 +1241,7 @@ export const se_CreateActionTargetCommand = async (
       Description: [],
       Id: [],
       Name: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1252,7 +1252,7 @@ export const se_CreateActionTargetCommand = async (
  */
 export const se_CreateAutomationRuleCommand = async (
   input: CreateAutomationRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1270,7 +1270,7 @@ export const se_CreateAutomationRuleCommand = async (
       RuleOrder: [],
       RuleStatus: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1281,7 +1281,7 @@ export const se_CreateAutomationRuleCommand = async (
  */
 export const se_CreateConfigurationPolicyCommand = async (
   input: CreateConfigurationPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1295,7 +1295,7 @@ export const se_CreateConfigurationPolicyCommand = async (
       Description: [],
       Name: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1306,7 +1306,7 @@ export const se_CreateConfigurationPolicyCommand = async (
  */
 export const se_CreateFindingAggregatorCommand = async (
   input: CreateFindingAggregatorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1318,7 +1318,7 @@ export const se_CreateFindingAggregatorCommand = async (
     take(input, {
       RegionLinkingMode: [],
       Regions: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1329,7 +1329,7 @@ export const se_CreateFindingAggregatorCommand = async (
  */
 export const se_CreateInsightCommand = async (
   input: CreateInsightCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1342,7 +1342,7 @@ export const se_CreateInsightCommand = async (
       Filters: (_) => se_AwsSecurityFindingFilters(_, context),
       GroupByAttribute: [],
       Name: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1353,7 +1353,7 @@ export const se_CreateInsightCommand = async (
  */
 export const se_CreateMembersCommand = async (
   input: CreateMembersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1364,7 +1364,7 @@ export const se_CreateMembersCommand = async (
   body = JSON.stringify(
     take(input, {
       AccountDetails: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1375,7 +1375,7 @@ export const se_CreateMembersCommand = async (
  */
 export const se_DeclineInvitationsCommand = async (
   input: DeclineInvitationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1386,7 +1386,7 @@ export const se_DeclineInvitationsCommand = async (
   body = JSON.stringify(
     take(input, {
       AccountIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1397,7 +1397,7 @@ export const se_DeclineInvitationsCommand = async (
  */
 export const se_DeleteActionTargetCommand = async (
   input: DeleteActionTargetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1413,7 +1413,7 @@ export const se_DeleteActionTargetCommand = async (
  */
 export const se_DeleteConfigurationPolicyCommand = async (
   input: DeleteConfigurationPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1429,7 +1429,7 @@ export const se_DeleteConfigurationPolicyCommand = async (
  */
 export const se_DeleteFindingAggregatorCommand = async (
   input: DeleteFindingAggregatorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1445,7 +1445,7 @@ export const se_DeleteFindingAggregatorCommand = async (
  */
 export const se_DeleteInsightCommand = async (
   input: DeleteInsightCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1461,7 +1461,7 @@ export const se_DeleteInsightCommand = async (
  */
 export const se_DeleteInvitationsCommand = async (
   input: DeleteInvitationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1472,7 +1472,7 @@ export const se_DeleteInvitationsCommand = async (
   body = JSON.stringify(
     take(input, {
       AccountIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1483,7 +1483,7 @@ export const se_DeleteInvitationsCommand = async (
  */
 export const se_DeleteMembersCommand = async (
   input: DeleteMembersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1494,7 +1494,7 @@ export const se_DeleteMembersCommand = async (
   body = JSON.stringify(
     take(input, {
       AccountIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1505,7 +1505,7 @@ export const se_DeleteMembersCommand = async (
  */
 export const se_DescribeActionTargetsCommand = async (
   input: DescribeActionTargetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1518,7 +1518,7 @@ export const se_DescribeActionTargetsCommand = async (
       ActionTargetArns: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1529,7 +1529,7 @@ export const se_DescribeActionTargetsCommand = async (
  */
 export const se_DescribeHubCommand = async (
   input: DescribeHubCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1547,7 +1547,7 @@ export const se_DescribeHubCommand = async (
  */
 export const se_DescribeOrganizationConfigurationCommand = async (
   input: DescribeOrganizationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1565,7 +1565,7 @@ export const se_DescribeOrganizationConfigurationCommand = async (
  */
 export const se_DescribeProductsCommand = async (
   input: DescribeProductsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1585,7 +1585,7 @@ export const se_DescribeProductsCommand = async (
  */
 export const se_DescribeStandardsCommand = async (
   input: DescribeStandardsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1604,7 +1604,7 @@ export const se_DescribeStandardsCommand = async (
  */
 export const se_DescribeStandardsControlsCommand = async (
   input: DescribeStandardsControlsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1624,7 +1624,7 @@ export const se_DescribeStandardsControlsCommand = async (
  */
 export const se_DisableImportFindingsForProductCommand = async (
   input: DisableImportFindingsForProductCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1640,7 +1640,7 @@ export const se_DisableImportFindingsForProductCommand = async (
  */
 export const se_DisableOrganizationAdminAccountCommand = async (
   input: DisableOrganizationAdminAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1651,7 +1651,7 @@ export const se_DisableOrganizationAdminAccountCommand = async (
   body = JSON.stringify(
     take(input, {
       AdminAccountId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1662,7 +1662,7 @@ export const se_DisableOrganizationAdminAccountCommand = async (
  */
 export const se_DisableSecurityHubCommand = async (
   input: DisableSecurityHubCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1680,7 +1680,7 @@ export const se_DisableSecurityHubCommand = async (
  */
 export const se_DisassociateFromAdministratorAccountCommand = async (
   input: DisassociateFromAdministratorAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1698,7 +1698,7 @@ export const se_DisassociateFromAdministratorAccountCommand = async (
  */
 export const se_DisassociateFromMasterAccountCommand = async (
   input: DisassociateFromMasterAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1716,7 +1716,7 @@ export const se_DisassociateFromMasterAccountCommand = async (
  */
 export const se_DisassociateMembersCommand = async (
   input: DisassociateMembersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1727,7 +1727,7 @@ export const se_DisassociateMembersCommand = async (
   body = JSON.stringify(
     take(input, {
       AccountIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1738,7 +1738,7 @@ export const se_DisassociateMembersCommand = async (
  */
 export const se_EnableImportFindingsForProductCommand = async (
   input: EnableImportFindingsForProductCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1749,7 +1749,7 @@ export const se_EnableImportFindingsForProductCommand = async (
   body = JSON.stringify(
     take(input, {
       ProductArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1760,7 +1760,7 @@ export const se_EnableImportFindingsForProductCommand = async (
  */
 export const se_EnableOrganizationAdminAccountCommand = async (
   input: EnableOrganizationAdminAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1771,7 +1771,7 @@ export const se_EnableOrganizationAdminAccountCommand = async (
   body = JSON.stringify(
     take(input, {
       AdminAccountId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1782,7 +1782,7 @@ export const se_EnableOrganizationAdminAccountCommand = async (
  */
 export const se_EnableSecurityHubCommand = async (
   input: EnableSecurityHubCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1795,7 +1795,7 @@ export const se_EnableSecurityHubCommand = async (
       ControlFindingGenerator: [],
       EnableDefaultStandards: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1806,7 +1806,7 @@ export const se_EnableSecurityHubCommand = async (
  */
 export const se_GetAdministratorAccountCommand = async (
   input: GetAdministratorAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1824,7 +1824,7 @@ export const se_GetAdministratorAccountCommand = async (
  */
 export const se_GetConfigurationPolicyCommand = async (
   input: GetConfigurationPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1840,7 +1840,7 @@ export const se_GetConfigurationPolicyCommand = async (
  */
 export const se_GetConfigurationPolicyAssociationCommand = async (
   input: GetConfigurationPolicyAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1851,7 +1851,7 @@ export const se_GetConfigurationPolicyAssociationCommand = async (
   body = JSON.stringify(
     take(input, {
       Target: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1862,7 +1862,7 @@ export const se_GetConfigurationPolicyAssociationCommand = async (
  */
 export const se_GetEnabledStandardsCommand = async (
   input: GetEnabledStandardsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1875,7 +1875,7 @@ export const se_GetEnabledStandardsCommand = async (
       MaxResults: [],
       NextToken: [],
       StandardsSubscriptionArns: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1886,7 +1886,7 @@ export const se_GetEnabledStandardsCommand = async (
  */
 export const se_GetFindingAggregatorCommand = async (
   input: GetFindingAggregatorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1902,7 +1902,7 @@ export const se_GetFindingAggregatorCommand = async (
  */
 export const se_GetFindingHistoryCommand = async (
   input: GetFindingHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1917,7 +1917,7 @@ export const se_GetFindingHistoryCommand = async (
       MaxResults: [],
       NextToken: [],
       StartTime: (_) => __serializeDateTime(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1928,7 +1928,7 @@ export const se_GetFindingHistoryCommand = async (
  */
 export const se_GetFindingsCommand = async (
   input: GetFindingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1942,7 +1942,7 @@ export const se_GetFindingsCommand = async (
       MaxResults: [],
       NextToken: [],
       SortCriteria: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1953,7 +1953,7 @@ export const se_GetFindingsCommand = async (
  */
 export const se_GetInsightResultsCommand = async (
   input: GetInsightResultsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1969,7 +1969,7 @@ export const se_GetInsightResultsCommand = async (
  */
 export const se_GetInsightsCommand = async (
   input: GetInsightsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1982,7 +1982,7 @@ export const se_GetInsightsCommand = async (
       InsightArns: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1993,7 +1993,7 @@ export const se_GetInsightsCommand = async (
  */
 export const se_GetInvitationsCountCommand = async (
   input: GetInvitationsCountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2011,7 +2011,7 @@ export const se_GetInvitationsCountCommand = async (
  */
 export const se_GetMasterAccountCommand = async (
   input: GetMasterAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2029,7 +2029,7 @@ export const se_GetMasterAccountCommand = async (
  */
 export const se_GetMembersCommand = async (
   input: GetMembersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2040,7 +2040,7 @@ export const se_GetMembersCommand = async (
   body = JSON.stringify(
     take(input, {
       AccountIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2051,7 +2051,7 @@ export const se_GetMembersCommand = async (
  */
 export const se_GetSecurityControlDefinitionCommand = async (
   input: GetSecurityControlDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2069,7 +2069,7 @@ export const se_GetSecurityControlDefinitionCommand = async (
  */
 export const se_InviteMembersCommand = async (
   input: InviteMembersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2080,7 +2080,7 @@ export const se_InviteMembersCommand = async (
   body = JSON.stringify(
     take(input, {
       AccountIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2091,7 +2091,7 @@ export const se_InviteMembersCommand = async (
  */
 export const se_ListAutomationRulesCommand = async (
   input: ListAutomationRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2110,7 +2110,7 @@ export const se_ListAutomationRulesCommand = async (
  */
 export const se_ListConfigurationPoliciesCommand = async (
   input: ListConfigurationPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2129,7 +2129,7 @@ export const se_ListConfigurationPoliciesCommand = async (
  */
 export const se_ListConfigurationPolicyAssociationsCommand = async (
   input: ListConfigurationPolicyAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2142,7 +2142,7 @@ export const se_ListConfigurationPolicyAssociationsCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2153,7 +2153,7 @@ export const se_ListConfigurationPolicyAssociationsCommand = async (
  */
 export const se_ListEnabledProductsForImportCommand = async (
   input: ListEnabledProductsForImportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2172,7 +2172,7 @@ export const se_ListEnabledProductsForImportCommand = async (
  */
 export const se_ListFindingAggregatorsCommand = async (
   input: ListFindingAggregatorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2191,7 +2191,7 @@ export const se_ListFindingAggregatorsCommand = async (
  */
 export const se_ListInvitationsCommand = async (
   input: ListInvitationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2210,7 +2210,7 @@ export const se_ListInvitationsCommand = async (
  */
 export const se_ListMembersCommand = async (
   input: ListMembersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2230,7 +2230,7 @@ export const se_ListMembersCommand = async (
  */
 export const se_ListOrganizationAdminAccountsCommand = async (
   input: ListOrganizationAdminAccountsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2249,7 +2249,7 @@ export const se_ListOrganizationAdminAccountsCommand = async (
  */
 export const se_ListSecurityControlDefinitionsCommand = async (
   input: ListSecurityControlDefinitionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2269,7 +2269,7 @@ export const se_ListSecurityControlDefinitionsCommand = async (
  */
 export const se_ListStandardsControlAssociationsCommand = async (
   input: ListStandardsControlAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2289,7 +2289,7 @@ export const se_ListStandardsControlAssociationsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2305,7 +2305,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_StartConfigurationPolicyAssociationCommand = async (
   input: StartConfigurationPolicyAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2317,7 +2317,7 @@ export const se_StartConfigurationPolicyAssociationCommand = async (
     take(input, {
       ConfigurationPolicyIdentifier: [],
       Target: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2328,7 +2328,7 @@ export const se_StartConfigurationPolicyAssociationCommand = async (
  */
 export const se_StartConfigurationPolicyDisassociationCommand = async (
   input: StartConfigurationPolicyDisassociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2340,7 +2340,7 @@ export const se_StartConfigurationPolicyDisassociationCommand = async (
     take(input, {
       ConfigurationPolicyIdentifier: [],
       Target: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2351,7 +2351,7 @@ export const se_StartConfigurationPolicyDisassociationCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2363,7 +2363,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2374,7 +2374,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2396,7 +2396,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateActionTargetCommand = async (
   input: UpdateActionTargetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2409,7 +2409,7 @@ export const se_UpdateActionTargetCommand = async (
     take(input, {
       Description: [],
       Name: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2420,7 +2420,7 @@ export const se_UpdateActionTargetCommand = async (
  */
 export const se_UpdateConfigurationPolicyCommand = async (
   input: UpdateConfigurationPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2435,7 +2435,7 @@ export const se_UpdateConfigurationPolicyCommand = async (
       Description: [],
       Name: [],
       UpdatedReason: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2446,7 +2446,7 @@ export const se_UpdateConfigurationPolicyCommand = async (
  */
 export const se_UpdateFindingAggregatorCommand = async (
   input: UpdateFindingAggregatorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2459,7 +2459,7 @@ export const se_UpdateFindingAggregatorCommand = async (
       FindingAggregatorArn: [],
       RegionLinkingMode: [],
       Regions: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2470,7 +2470,7 @@ export const se_UpdateFindingAggregatorCommand = async (
  */
 export const se_UpdateFindingsCommand = async (
   input: UpdateFindingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2483,7 +2483,7 @@ export const se_UpdateFindingsCommand = async (
       Filters: (_) => se_AwsSecurityFindingFilters(_, context),
       Note: (_) => _json(_),
       RecordState: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2494,7 +2494,7 @@ export const se_UpdateFindingsCommand = async (
  */
 export const se_UpdateInsightCommand = async (
   input: UpdateInsightCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2508,7 +2508,7 @@ export const se_UpdateInsightCommand = async (
       Filters: (_) => se_AwsSecurityFindingFilters(_, context),
       GroupByAttribute: [],
       Name: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2519,7 +2519,7 @@ export const se_UpdateInsightCommand = async (
  */
 export const se_UpdateOrganizationConfigurationCommand = async (
   input: UpdateOrganizationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2532,7 +2532,7 @@ export const se_UpdateOrganizationConfigurationCommand = async (
       AutoEnable: [],
       AutoEnableStandards: [],
       OrganizationConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2543,7 +2543,7 @@ export const se_UpdateOrganizationConfigurationCommand = async (
  */
 export const se_UpdateSecurityControlCommand = async (
   input: UpdateSecurityControlCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2556,7 +2556,7 @@ export const se_UpdateSecurityControlCommand = async (
       LastUpdateReason: [],
       Parameters: (_) => se_Parameters(_, context),
       SecurityControlId: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2567,7 +2567,7 @@ export const se_UpdateSecurityControlCommand = async (
  */
 export const se_UpdateSecurityHubConfigurationCommand = async (
   input: UpdateSecurityHubConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2579,7 +2579,7 @@ export const se_UpdateSecurityHubConfigurationCommand = async (
     take(input, {
       AutoEnableControls: [],
       ControlFindingGenerator: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2590,7 +2590,7 @@ export const se_UpdateSecurityHubConfigurationCommand = async (
  */
 export const se_UpdateStandardsControlCommand = async (
   input: UpdateStandardsControlCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2603,7 +2603,7 @@ export const se_UpdateStandardsControlCommand = async (
     take(input, {
       ControlStatus: [],
       DisabledReason: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2614,7 +2614,7 @@ export const se_UpdateStandardsControlCommand = async (
  */
 export const de_AcceptAdministratorInvitationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptAdministratorInvitationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2631,7 +2631,7 @@ export const de_AcceptAdministratorInvitationCommand = async (
  */
 export const de_AcceptInvitationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptInvitationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2648,7 +2648,7 @@ export const de_AcceptInvitationCommand = async (
  */
 export const de_BatchDeleteAutomationRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDeleteAutomationRulesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2670,7 +2670,7 @@ export const de_BatchDeleteAutomationRulesCommand = async (
  */
 export const de_BatchDisableStandardsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDisableStandardsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2691,7 +2691,7 @@ export const de_BatchDisableStandardsCommand = async (
  */
 export const de_BatchEnableStandardsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchEnableStandardsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2712,7 +2712,7 @@ export const de_BatchEnableStandardsCommand = async (
  */
 export const de_BatchGetAutomationRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetAutomationRulesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2734,7 +2734,7 @@ export const de_BatchGetAutomationRulesCommand = async (
  */
 export const de_BatchGetConfigurationPolicyAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetConfigurationPolicyAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2756,7 +2756,7 @@ export const de_BatchGetConfigurationPolicyAssociationsCommand = async (
  */
 export const de_BatchGetSecurityControlsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetSecurityControlsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2778,7 +2778,7 @@ export const de_BatchGetSecurityControlsCommand = async (
  */
 export const de_BatchGetStandardsControlAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetStandardsControlAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2800,7 +2800,7 @@ export const de_BatchGetStandardsControlAssociationsCommand = async (
  */
 export const de_BatchImportFindingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchImportFindingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2823,7 +2823,7 @@ export const de_BatchImportFindingsCommand = async (
  */
 export const de_BatchUpdateAutomationRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchUpdateAutomationRulesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2845,7 +2845,7 @@ export const de_BatchUpdateAutomationRulesCommand = async (
  */
 export const de_BatchUpdateFindingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchUpdateFindingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2867,7 +2867,7 @@ export const de_BatchUpdateFindingsCommand = async (
  */
 export const de_BatchUpdateStandardsControlAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchUpdateStandardsControlAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2888,7 +2888,7 @@ export const de_BatchUpdateStandardsControlAssociationsCommand = async (
  */
 export const de_CreateActionTargetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateActionTargetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2909,7 +2909,7 @@ export const de_CreateActionTargetCommand = async (
  */
 export const de_CreateAutomationRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAutomationRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2930,7 +2930,7 @@ export const de_CreateAutomationRuleCommand = async (
  */
 export const de_CreateConfigurationPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConfigurationPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2957,7 +2957,7 @@ export const de_CreateConfigurationPolicyCommand = async (
  */
 export const de_CreateFindingAggregatorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFindingAggregatorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2981,7 +2981,7 @@ export const de_CreateFindingAggregatorCommand = async (
  */
 export const de_CreateInsightCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateInsightCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3002,7 +3002,7 @@ export const de_CreateInsightCommand = async (
  */
 export const de_CreateMembersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMembersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3023,7 +3023,7 @@ export const de_CreateMembersCommand = async (
  */
 export const de_DeclineInvitationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeclineInvitationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3044,7 +3044,7 @@ export const de_DeclineInvitationsCommand = async (
  */
 export const de_DeleteActionTargetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteActionTargetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3065,7 +3065,7 @@ export const de_DeleteActionTargetCommand = async (
  */
 export const de_DeleteConfigurationPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConfigurationPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3082,7 +3082,7 @@ export const de_DeleteConfigurationPolicyCommand = async (
  */
 export const de_DeleteFindingAggregatorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFindingAggregatorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3099,7 +3099,7 @@ export const de_DeleteFindingAggregatorCommand = async (
  */
 export const de_DeleteInsightCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteInsightCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3120,7 +3120,7 @@ export const de_DeleteInsightCommand = async (
  */
 export const de_DeleteInvitationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteInvitationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3141,7 +3141,7 @@ export const de_DeleteInvitationsCommand = async (
  */
 export const de_DeleteMembersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMembersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3162,7 +3162,7 @@ export const de_DeleteMembersCommand = async (
  */
 export const de_DescribeActionTargetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeActionTargetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3184,7 +3184,7 @@ export const de_DescribeActionTargetsCommand = async (
  */
 export const de_DescribeHubCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeHubCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3208,7 +3208,7 @@ export const de_DescribeHubCommand = async (
  */
 export const de_DescribeOrganizationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeOrganizationConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3232,7 +3232,7 @@ export const de_DescribeOrganizationConfigurationCommand = async (
  */
 export const de_DescribeProductsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeProductsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3254,7 +3254,7 @@ export const de_DescribeProductsCommand = async (
  */
 export const de_DescribeStandardsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStandardsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3276,7 +3276,7 @@ export const de_DescribeStandardsCommand = async (
  */
 export const de_DescribeStandardsControlsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStandardsControlsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3298,7 +3298,7 @@ export const de_DescribeStandardsControlsCommand = async (
  */
 export const de_DisableImportFindingsForProductCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableImportFindingsForProductCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3315,7 +3315,7 @@ export const de_DisableImportFindingsForProductCommand = async (
  */
 export const de_DisableOrganizationAdminAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableOrganizationAdminAccountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3332,7 +3332,7 @@ export const de_DisableOrganizationAdminAccountCommand = async (
  */
 export const de_DisableSecurityHubCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableSecurityHubCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3349,7 +3349,7 @@ export const de_DisableSecurityHubCommand = async (
  */
 export const de_DisassociateFromAdministratorAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateFromAdministratorAccountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3366,7 +3366,7 @@ export const de_DisassociateFromAdministratorAccountCommand = async (
  */
 export const de_DisassociateFromMasterAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateFromMasterAccountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3383,7 +3383,7 @@ export const de_DisassociateFromMasterAccountCommand = async (
  */
 export const de_DisassociateMembersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateMembersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3400,7 +3400,7 @@ export const de_DisassociateMembersCommand = async (
  */
 export const de_EnableImportFindingsForProductCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableImportFindingsForProductCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3421,7 +3421,7 @@ export const de_EnableImportFindingsForProductCommand = async (
  */
 export const de_EnableOrganizationAdminAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableOrganizationAdminAccountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3438,7 +3438,7 @@ export const de_EnableOrganizationAdminAccountCommand = async (
  */
 export const de_EnableSecurityHubCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableSecurityHubCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3455,7 +3455,7 @@ export const de_EnableSecurityHubCommand = async (
  */
 export const de_GetAdministratorAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAdministratorAccountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3476,7 +3476,7 @@ export const de_GetAdministratorAccountCommand = async (
  */
 export const de_GetConfigurationPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConfigurationPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3503,7 +3503,7 @@ export const de_GetConfigurationPolicyCommand = async (
  */
 export const de_GetConfigurationPolicyAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConfigurationPolicyAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3530,7 +3530,7 @@ export const de_GetConfigurationPolicyAssociationCommand = async (
  */
 export const de_GetEnabledStandardsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEnabledStandardsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3552,7 +3552,7 @@ export const de_GetEnabledStandardsCommand = async (
  */
 export const de_GetFindingAggregatorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFindingAggregatorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3576,7 +3576,7 @@ export const de_GetFindingAggregatorCommand = async (
  */
 export const de_GetFindingHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFindingHistoryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3598,7 +3598,7 @@ export const de_GetFindingHistoryCommand = async (
  */
 export const de_GetFindingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFindingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3620,7 +3620,7 @@ export const de_GetFindingsCommand = async (
  */
 export const de_GetInsightResultsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInsightResultsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3641,7 +3641,7 @@ export const de_GetInsightResultsCommand = async (
  */
 export const de_GetInsightsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInsightsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3663,7 +3663,7 @@ export const de_GetInsightsCommand = async (
  */
 export const de_GetInvitationsCountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInvitationsCountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3684,7 +3684,7 @@ export const de_GetInvitationsCountCommand = async (
  */
 export const de_GetMasterAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMasterAccountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3705,7 +3705,7 @@ export const de_GetMasterAccountCommand = async (
  */
 export const de_GetMembersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMembersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3727,7 +3727,7 @@ export const de_GetMembersCommand = async (
  */
 export const de_GetSecurityControlDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSecurityControlDefinitionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3748,7 +3748,7 @@ export const de_GetSecurityControlDefinitionCommand = async (
  */
 export const de_InviteMembersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InviteMembersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3769,7 +3769,7 @@ export const de_InviteMembersCommand = async (
  */
 export const de_ListAutomationRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAutomationRulesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3791,7 +3791,7 @@ export const de_ListAutomationRulesCommand = async (
  */
 export const de_ListConfigurationPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConfigurationPoliciesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3813,7 +3813,7 @@ export const de_ListConfigurationPoliciesCommand = async (
  */
 export const de_ListConfigurationPolicyAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConfigurationPolicyAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3835,7 +3835,7 @@ export const de_ListConfigurationPolicyAssociationsCommand = async (
  */
 export const de_ListEnabledProductsForImportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEnabledProductsForImportCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3857,7 +3857,7 @@ export const de_ListEnabledProductsForImportCommand = async (
  */
 export const de_ListFindingAggregatorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFindingAggregatorsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3879,7 +3879,7 @@ export const de_ListFindingAggregatorsCommand = async (
  */
 export const de_ListInvitationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListInvitationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3901,7 +3901,7 @@ export const de_ListInvitationsCommand = async (
  */
 export const de_ListMembersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMembersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3923,7 +3923,7 @@ export const de_ListMembersCommand = async (
  */
 export const de_ListOrganizationAdminAccountsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOrganizationAdminAccountsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3945,7 +3945,7 @@ export const de_ListOrganizationAdminAccountsCommand = async (
  */
 export const de_ListSecurityControlDefinitionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSecurityControlDefinitionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3967,7 +3967,7 @@ export const de_ListSecurityControlDefinitionsCommand = async (
  */
 export const de_ListStandardsControlAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStandardsControlAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3989,7 +3989,7 @@ export const de_ListStandardsControlAssociationsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4010,7 +4010,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_StartConfigurationPolicyAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartConfigurationPolicyAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4037,7 +4037,7 @@ export const de_StartConfigurationPolicyAssociationCommand = async (
  */
 export const de_StartConfigurationPolicyDisassociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartConfigurationPolicyDisassociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4054,7 +4054,7 @@ export const de_StartConfigurationPolicyDisassociationCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4071,7 +4071,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4088,7 +4088,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateActionTargetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateActionTargetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4105,7 +4105,7 @@ export const de_UpdateActionTargetCommand = async (
  */
 export const de_UpdateConfigurationPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConfigurationPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4132,7 +4132,7 @@ export const de_UpdateConfigurationPolicyCommand = async (
  */
 export const de_UpdateFindingAggregatorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFindingAggregatorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4156,7 +4156,7 @@ export const de_UpdateFindingAggregatorCommand = async (
  */
 export const de_UpdateFindingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFindingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4173,7 +4173,7 @@ export const de_UpdateFindingsCommand = async (
  */
 export const de_UpdateInsightCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateInsightCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4190,7 +4190,7 @@ export const de_UpdateInsightCommand = async (
  */
 export const de_UpdateOrganizationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateOrganizationConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4207,7 +4207,7 @@ export const de_UpdateOrganizationConfigurationCommand = async (
  */
 export const de_UpdateSecurityControlCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSecurityControlCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4224,7 +4224,7 @@ export const de_UpdateSecurityControlCommand = async (
  */
 export const de_UpdateSecurityHubConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSecurityHubConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4241,7 +4241,7 @@ export const de_UpdateSecurityHubConfigurationCommand = async (
  */
 export const de_UpdateStandardsControlCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateStandardsControlCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4303,7 +4303,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4342,7 +4342,7 @@ const de_InternalExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InvalidAccessExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidAccessException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4363,7 +4363,7 @@ const de_InvalidAccessExceptionRes = async (
  */
 const de_InvalidInputExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidInputException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4384,7 +4384,7 @@ const de_InvalidInputExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4405,7 +4405,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceConflictExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceConflictException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4426,7 +4426,7 @@ const de_ResourceConflictExceptionRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4447,7 +4447,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4547,7 +4547,7 @@ const se_AutomationRulesAction = (input: AutomationRulesAction, context: __Serde
  */
 const se_AutomationRulesFindingFieldsUpdate = (
   input: AutomationRulesFindingFieldsUpdate,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Confidence: [],
@@ -5132,7 +5132,7 @@ const se_AwsEc2LaunchTemplateDataDetails = (input: AwsEc2LaunchTemplateDataDetai
  */
 const se_AwsEc2LaunchTemplateDataInstanceRequirementsDetails = (
   input: AwsEc2LaunchTemplateDataInstanceRequirementsDetails,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     AcceleratorCount: _json,
@@ -5164,7 +5164,7 @@ const se_AwsEc2LaunchTemplateDataInstanceRequirementsDetails = (
  */
 const se_AwsEc2LaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpuDetails = (
   input: AwsEc2LaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpuDetails,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Max: __serializeFloat,
@@ -5181,7 +5181,7 @@ const se_AwsEc2LaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpuDetails = (
  */
 const se_AwsEc2LaunchTemplateDataInstanceRequirementsTotalLocalStorageGBDetails = (
   input: AwsEc2LaunchTemplateDataInstanceRequirementsTotalLocalStorageGBDetails,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Max: __serializeFloat,
@@ -5767,7 +5767,7 @@ const se_AwsKmsKeyDetails = (input: AwsKmsKeyDetails, context: __SerdeContext): 
  */
 const se_AwsNetworkFirewallRuleGroupDetails = (
   input: AwsNetworkFirewallRuleGroupDetails,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Capacity: [],
@@ -6633,7 +6633,7 @@ const se_ParameterValue = (input: ParameterValue, context: __SerdeContext): any 
     IntegerList: (value) => ({ IntegerList: _json(value) }),
     String: (value) => ({ String: value }),
     StringList: (value) => ({ StringList: _json(value) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -6645,7 +6645,7 @@ const se_ParameterValue = (input: ParameterValue, context: __SerdeContext): any 
 const se_Policy = (input: Policy, context: __SerdeContext): any => {
   return Policy.visit(input, {
     SecurityHub: (value) => ({ SecurityHub: se_SecurityHubPolicy(value, context) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -6926,7 +6926,7 @@ const se_SecurityControlCustomParameter = (input: SecurityControlCustomParameter
  */
 const se_SecurityControlCustomParametersList = (
   input: SecurityControlCustomParameter[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -7071,7 +7071,7 @@ const se_UpdateAutomationRulesRequestItem = (input: UpdateAutomationRulesRequest
  */
 const se_UpdateAutomationRulesRequestItemsList = (
   input: UpdateAutomationRulesRequestItem[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -7256,7 +7256,7 @@ const de_AutomationRulesConfigList = (output: any, context: __SerdeContext): Aut
  */
 const de_AutomationRulesFindingFieldsUpdate = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AutomationRulesFindingFieldsUpdate => {
   return take(output, {
     Confidence: __expectInt32,
@@ -7871,7 +7871,7 @@ const de_AwsEc2LaunchTemplateDataDetails = (output: any, context: __SerdeContext
  */
 const de_AwsEc2LaunchTemplateDataInstanceRequirementsDetails = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AwsEc2LaunchTemplateDataInstanceRequirementsDetails => {
   return take(output, {
     AcceleratorCount: _json,
@@ -7904,7 +7904,7 @@ const de_AwsEc2LaunchTemplateDataInstanceRequirementsDetails = (
  */
 const de_AwsEc2LaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpuDetails = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AwsEc2LaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpuDetails => {
   return take(output, {
     Max: __limitedParseDouble,
@@ -7921,7 +7921,7 @@ const de_AwsEc2LaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpuDetails = (
  */
 const de_AwsEc2LaunchTemplateDataInstanceRequirementsTotalLocalStorageGBDetails = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AwsEc2LaunchTemplateDataInstanceRequirementsTotalLocalStorageGBDetails => {
   return take(output, {
     Max: __limitedParseDouble,
@@ -8507,7 +8507,7 @@ const de_AwsKmsKeyDetails = (output: any, context: __SerdeContext): AwsKmsKeyDet
  */
 const de_AwsNetworkFirewallRuleGroupDetails = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AwsNetworkFirewallRuleGroupDetails => {
   return take(output, {
     Capacity: __expectInt32,
@@ -9220,7 +9220,7 @@ const de_ConfigurationOptions = (output: any, context: __SerdeContext): Configur
  */
 const de_ConfigurationPolicyAssociationList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ConfigurationPolicyAssociationSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -9235,7 +9235,7 @@ const de_ConfigurationPolicyAssociationList = (
  */
 const de_ConfigurationPolicyAssociationSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ConfigurationPolicyAssociationSummary => {
   return take(output, {
     AssociationStatus: __expectString,
@@ -9253,7 +9253,7 @@ const de_ConfigurationPolicyAssociationSummary = (
  */
 const de_ConfigurationPolicyAssociationSummaryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ConfigurationPolicyAssociationSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -9635,26 +9635,32 @@ const de_ParameterDefinition = (output: any, context: __SerdeContext): Parameter
  * deserializeAws_restJson1ParameterDefinitions
  */
 const de_ParameterDefinitions = (output: any, context: __SerdeContext): Record<string, ParameterDefinition> => {
-  return Object.entries(output).reduce((acc: Record<string, ParameterDefinition>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, ParameterDefinition>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_ParameterDefinition(value, context);
       return acc;
-    }
-    acc[key as string] = de_ParameterDefinition(value, context);
-    return acc;
-  }, {} as Record<string, ParameterDefinition>);
+    },
+    {} as Record<string, ParameterDefinition>,
+  );
 };
 
 /**
  * deserializeAws_restJson1Parameters
  */
 const de_Parameters = (output: any, context: __SerdeContext): Record<string, ParameterConfiguration> => {
-  return Object.entries(output).reduce((acc: Record<string, ParameterConfiguration>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, ParameterConfiguration>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_ParameterConfiguration(value, context);
       return acc;
-    }
-    acc[key as string] = de_ParameterConfiguration(value, context);
-    return acc;
-  }, {} as Record<string, ParameterConfiguration>);
+    },
+    {} as Record<string, ParameterConfiguration>,
+  );
 };
 
 /**
@@ -10015,7 +10021,7 @@ const de_SecurityControlCustomParameter = (output: any, context: __SerdeContext)
  */
 const de_SecurityControlCustomParametersList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SecurityControlCustomParameter[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -10157,7 +10163,7 @@ const de_StandardsControl = (output: any, context: __SerdeContext): StandardsCon
  */
 const de_StandardsControlAssociationDetail = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StandardsControlAssociationDetail => {
   return take(output, {
     AssociationStatus: __expectString,
@@ -10178,7 +10184,7 @@ const de_StandardsControlAssociationDetail = (
  */
 const de_StandardsControlAssociationDetails = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StandardsControlAssociationDetail[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -10195,7 +10201,7 @@ const de_StandardsControlAssociationDetails = (
  */
 const de_StandardsControlAssociationSummaries = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StandardsControlAssociationSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -10210,7 +10216,7 @@ const de_StandardsControlAssociationSummaries = (
  */
 const de_StandardsControlAssociationSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StandardsControlAssociationSummary => {
   return take(output, {
     AssociationStatus: __expectString,

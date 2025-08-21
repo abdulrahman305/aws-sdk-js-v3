@@ -28,7 +28,7 @@ const checkState = async (client: DeadlineClient, input: GetQueueCommandInput): 
  */
 export const waitForQueueScheduling = async (
   params: WaiterConfiguration<DeadlineClient>,
-  input: GetQueueCommandInput
+  input: GetQueueCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 700 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -40,7 +40,7 @@ export const waitForQueueScheduling = async (
  */
 export const waitUntilQueueScheduling = async (
   params: WaiterConfiguration<DeadlineClient>,
-  input: GetQueueCommandInput
+  input: GetQueueCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 700 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

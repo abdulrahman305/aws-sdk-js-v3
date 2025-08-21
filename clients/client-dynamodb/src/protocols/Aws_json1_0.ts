@@ -375,7 +375,7 @@ import {
  */
 export const se_BatchExecuteStatementCommand = async (
   input: BatchExecuteStatementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchExecuteStatement");
   let body: any;
@@ -388,7 +388,7 @@ export const se_BatchExecuteStatementCommand = async (
  */
 export const se_BatchGetItemCommand = async (
   input: BatchGetItemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetItem");
   let body: any;
@@ -401,7 +401,7 @@ export const se_BatchGetItemCommand = async (
  */
 export const se_BatchWriteItemCommand = async (
   input: BatchWriteItemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchWriteItem");
   let body: any;
@@ -414,7 +414,7 @@ export const se_BatchWriteItemCommand = async (
  */
 export const se_CreateBackupCommand = async (
   input: CreateBackupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateBackup");
   let body: any;
@@ -427,7 +427,7 @@ export const se_CreateBackupCommand = async (
  */
 export const se_CreateGlobalTableCommand = async (
   input: CreateGlobalTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateGlobalTable");
   let body: any;
@@ -440,7 +440,7 @@ export const se_CreateGlobalTableCommand = async (
  */
 export const se_CreateTableCommand = async (
   input: CreateTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateTable");
   let body: any;
@@ -453,7 +453,7 @@ export const se_CreateTableCommand = async (
  */
 export const se_DeleteBackupCommand = async (
   input: DeleteBackupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteBackup");
   let body: any;
@@ -466,7 +466,7 @@ export const se_DeleteBackupCommand = async (
  */
 export const se_DeleteItemCommand = async (
   input: DeleteItemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteItem");
   let body: any;
@@ -479,7 +479,7 @@ export const se_DeleteItemCommand = async (
  */
 export const se_DeleteResourcePolicyCommand = async (
   input: DeleteResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteResourcePolicy");
   let body: any;
@@ -492,7 +492,7 @@ export const se_DeleteResourcePolicyCommand = async (
  */
 export const se_DeleteTableCommand = async (
   input: DeleteTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteTable");
   let body: any;
@@ -505,7 +505,7 @@ export const se_DeleteTableCommand = async (
  */
 export const se_DescribeBackupCommand = async (
   input: DescribeBackupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeBackup");
   let body: any;
@@ -518,7 +518,7 @@ export const se_DescribeBackupCommand = async (
  */
 export const se_DescribeContinuousBackupsCommand = async (
   input: DescribeContinuousBackupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeContinuousBackups");
   let body: any;
@@ -531,7 +531,7 @@ export const se_DescribeContinuousBackupsCommand = async (
  */
 export const se_DescribeContributorInsightsCommand = async (
   input: DescribeContributorInsightsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeContributorInsights");
   let body: any;
@@ -544,7 +544,7 @@ export const se_DescribeContributorInsightsCommand = async (
  */
 export const se_DescribeEndpointsCommand = async (
   input: DescribeEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEndpoints");
   let body: any;
@@ -557,7 +557,7 @@ export const se_DescribeEndpointsCommand = async (
  */
 export const se_DescribeExportCommand = async (
   input: DescribeExportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeExport");
   let body: any;
@@ -570,7 +570,7 @@ export const se_DescribeExportCommand = async (
  */
 export const se_DescribeGlobalTableCommand = async (
   input: DescribeGlobalTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeGlobalTable");
   let body: any;
@@ -583,7 +583,7 @@ export const se_DescribeGlobalTableCommand = async (
  */
 export const se_DescribeGlobalTableSettingsCommand = async (
   input: DescribeGlobalTableSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeGlobalTableSettings");
   let body: any;
@@ -596,7 +596,7 @@ export const se_DescribeGlobalTableSettingsCommand = async (
  */
 export const se_DescribeImportCommand = async (
   input: DescribeImportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeImport");
   let body: any;
@@ -609,7 +609,7 @@ export const se_DescribeImportCommand = async (
  */
 export const se_DescribeKinesisStreamingDestinationCommand = async (
   input: DescribeKinesisStreamingDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeKinesisStreamingDestination");
   let body: any;
@@ -622,7 +622,7 @@ export const se_DescribeKinesisStreamingDestinationCommand = async (
  */
 export const se_DescribeLimitsCommand = async (
   input: DescribeLimitsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeLimits");
   let body: any;
@@ -635,7 +635,7 @@ export const se_DescribeLimitsCommand = async (
  */
 export const se_DescribeTableCommand = async (
   input: DescribeTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTable");
   let body: any;
@@ -648,7 +648,7 @@ export const se_DescribeTableCommand = async (
  */
 export const se_DescribeTableReplicaAutoScalingCommand = async (
   input: DescribeTableReplicaAutoScalingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTableReplicaAutoScaling");
   let body: any;
@@ -661,7 +661,7 @@ export const se_DescribeTableReplicaAutoScalingCommand = async (
  */
 export const se_DescribeTimeToLiveCommand = async (
   input: DescribeTimeToLiveCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTimeToLive");
   let body: any;
@@ -674,7 +674,7 @@ export const se_DescribeTimeToLiveCommand = async (
  */
 export const se_DisableKinesisStreamingDestinationCommand = async (
   input: DisableKinesisStreamingDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisableKinesisStreamingDestination");
   let body: any;
@@ -687,7 +687,7 @@ export const se_DisableKinesisStreamingDestinationCommand = async (
  */
 export const se_EnableKinesisStreamingDestinationCommand = async (
   input: EnableKinesisStreamingDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EnableKinesisStreamingDestination");
   let body: any;
@@ -700,7 +700,7 @@ export const se_EnableKinesisStreamingDestinationCommand = async (
  */
 export const se_ExecuteStatementCommand = async (
   input: ExecuteStatementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ExecuteStatement");
   let body: any;
@@ -713,7 +713,7 @@ export const se_ExecuteStatementCommand = async (
  */
 export const se_ExecuteTransactionCommand = async (
   input: ExecuteTransactionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ExecuteTransaction");
   let body: any;
@@ -726,7 +726,7 @@ export const se_ExecuteTransactionCommand = async (
  */
 export const se_ExportTableToPointInTimeCommand = async (
   input: ExportTableToPointInTimeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ExportTableToPointInTime");
   let body: any;
@@ -739,7 +739,7 @@ export const se_ExportTableToPointInTimeCommand = async (
  */
 export const se_GetItemCommand = async (
   input: GetItemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetItem");
   let body: any;
@@ -752,7 +752,7 @@ export const se_GetItemCommand = async (
  */
 export const se_GetResourcePolicyCommand = async (
   input: GetResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetResourcePolicy");
   let body: any;
@@ -765,7 +765,7 @@ export const se_GetResourcePolicyCommand = async (
  */
 export const se_ImportTableCommand = async (
   input: ImportTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ImportTable");
   let body: any;
@@ -778,7 +778,7 @@ export const se_ImportTableCommand = async (
  */
 export const se_ListBackupsCommand = async (
   input: ListBackupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListBackups");
   let body: any;
@@ -791,7 +791,7 @@ export const se_ListBackupsCommand = async (
  */
 export const se_ListContributorInsightsCommand = async (
   input: ListContributorInsightsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListContributorInsights");
   let body: any;
@@ -804,7 +804,7 @@ export const se_ListContributorInsightsCommand = async (
  */
 export const se_ListExportsCommand = async (
   input: ListExportsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListExports");
   let body: any;
@@ -817,7 +817,7 @@ export const se_ListExportsCommand = async (
  */
 export const se_ListGlobalTablesCommand = async (
   input: ListGlobalTablesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListGlobalTables");
   let body: any;
@@ -830,7 +830,7 @@ export const se_ListGlobalTablesCommand = async (
  */
 export const se_ListImportsCommand = async (
   input: ListImportsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListImports");
   let body: any;
@@ -843,7 +843,7 @@ export const se_ListImportsCommand = async (
  */
 export const se_ListTablesCommand = async (
   input: ListTablesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTables");
   let body: any;
@@ -856,7 +856,7 @@ export const se_ListTablesCommand = async (
  */
 export const se_ListTagsOfResourceCommand = async (
   input: ListTagsOfResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsOfResource");
   let body: any;
@@ -869,7 +869,7 @@ export const se_ListTagsOfResourceCommand = async (
  */
 export const se_PutItemCommand = async (
   input: PutItemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutItem");
   let body: any;
@@ -882,7 +882,7 @@ export const se_PutItemCommand = async (
  */
 export const se_PutResourcePolicyCommand = async (
   input: PutResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutResourcePolicy");
   let body: any;
@@ -905,7 +905,7 @@ export const se_QueryCommand = async (input: QueryCommandInput, context: __Serde
  */
 export const se_RestoreTableFromBackupCommand = async (
   input: RestoreTableFromBackupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RestoreTableFromBackup");
   let body: any;
@@ -918,7 +918,7 @@ export const se_RestoreTableFromBackupCommand = async (
  */
 export const se_RestoreTableToPointInTimeCommand = async (
   input: RestoreTableToPointInTimeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RestoreTableToPointInTime");
   let body: any;
@@ -941,7 +941,7 @@ export const se_ScanCommand = async (input: ScanCommandInput, context: __SerdeCo
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -954,7 +954,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_TransactGetItemsCommand = async (
   input: TransactGetItemsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TransactGetItems");
   let body: any;
@@ -967,7 +967,7 @@ export const se_TransactGetItemsCommand = async (
  */
 export const se_TransactWriteItemsCommand = async (
   input: TransactWriteItemsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TransactWriteItems");
   let body: any;
@@ -980,7 +980,7 @@ export const se_TransactWriteItemsCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -993,7 +993,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateContinuousBackupsCommand = async (
   input: UpdateContinuousBackupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateContinuousBackups");
   let body: any;
@@ -1006,7 +1006,7 @@ export const se_UpdateContinuousBackupsCommand = async (
  */
 export const se_UpdateContributorInsightsCommand = async (
   input: UpdateContributorInsightsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateContributorInsights");
   let body: any;
@@ -1019,7 +1019,7 @@ export const se_UpdateContributorInsightsCommand = async (
  */
 export const se_UpdateGlobalTableCommand = async (
   input: UpdateGlobalTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateGlobalTable");
   let body: any;
@@ -1032,7 +1032,7 @@ export const se_UpdateGlobalTableCommand = async (
  */
 export const se_UpdateGlobalTableSettingsCommand = async (
   input: UpdateGlobalTableSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateGlobalTableSettings");
   let body: any;
@@ -1045,7 +1045,7 @@ export const se_UpdateGlobalTableSettingsCommand = async (
  */
 export const se_UpdateItemCommand = async (
   input: UpdateItemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateItem");
   let body: any;
@@ -1058,7 +1058,7 @@ export const se_UpdateItemCommand = async (
  */
 export const se_UpdateKinesisStreamingDestinationCommand = async (
   input: UpdateKinesisStreamingDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateKinesisStreamingDestination");
   let body: any;
@@ -1071,7 +1071,7 @@ export const se_UpdateKinesisStreamingDestinationCommand = async (
  */
 export const se_UpdateTableCommand = async (
   input: UpdateTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateTable");
   let body: any;
@@ -1084,7 +1084,7 @@ export const se_UpdateTableCommand = async (
  */
 export const se_UpdateTableReplicaAutoScalingCommand = async (
   input: UpdateTableReplicaAutoScalingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateTableReplicaAutoScaling");
   let body: any;
@@ -1097,7 +1097,7 @@ export const se_UpdateTableReplicaAutoScalingCommand = async (
  */
 export const se_UpdateTimeToLiveCommand = async (
   input: UpdateTimeToLiveCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateTimeToLive");
   let body: any;
@@ -1110,7 +1110,7 @@ export const se_UpdateTimeToLiveCommand = async (
  */
 export const de_BatchExecuteStatementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchExecuteStatementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1130,7 +1130,7 @@ export const de_BatchExecuteStatementCommand = async (
  */
 export const de_BatchGetItemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetItemCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1150,7 +1150,7 @@ export const de_BatchGetItemCommand = async (
  */
 export const de_BatchWriteItemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchWriteItemCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1170,7 +1170,7 @@ export const de_BatchWriteItemCommand = async (
  */
 export const de_CreateBackupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBackupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1190,7 +1190,7 @@ export const de_CreateBackupCommand = async (
  */
 export const de_CreateGlobalTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGlobalTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1210,7 +1210,7 @@ export const de_CreateGlobalTableCommand = async (
  */
 export const de_CreateTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1230,7 +1230,7 @@ export const de_CreateTableCommand = async (
  */
 export const de_DeleteBackupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBackupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1250,7 +1250,7 @@ export const de_DeleteBackupCommand = async (
  */
 export const de_DeleteItemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteItemCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1270,7 +1270,7 @@ export const de_DeleteItemCommand = async (
  */
 export const de_DeleteResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1290,7 +1290,7 @@ export const de_DeleteResourcePolicyCommand = async (
  */
 export const de_DeleteTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1310,7 +1310,7 @@ export const de_DeleteTableCommand = async (
  */
 export const de_DescribeBackupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBackupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1330,7 +1330,7 @@ export const de_DescribeBackupCommand = async (
  */
 export const de_DescribeContinuousBackupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeContinuousBackupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1350,7 +1350,7 @@ export const de_DescribeContinuousBackupsCommand = async (
  */
 export const de_DescribeContributorInsightsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeContributorInsightsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1370,7 +1370,7 @@ export const de_DescribeContributorInsightsCommand = async (
  */
 export const de_DescribeEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEndpointsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1390,7 +1390,7 @@ export const de_DescribeEndpointsCommand = async (
  */
 export const de_DescribeExportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeExportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1410,7 +1410,7 @@ export const de_DescribeExportCommand = async (
  */
 export const de_DescribeGlobalTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGlobalTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1430,7 +1430,7 @@ export const de_DescribeGlobalTableCommand = async (
  */
 export const de_DescribeGlobalTableSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGlobalTableSettingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1450,7 +1450,7 @@ export const de_DescribeGlobalTableSettingsCommand = async (
  */
 export const de_DescribeImportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeImportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1470,7 +1470,7 @@ export const de_DescribeImportCommand = async (
  */
 export const de_DescribeKinesisStreamingDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeKinesisStreamingDestinationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1490,7 +1490,7 @@ export const de_DescribeKinesisStreamingDestinationCommand = async (
  */
 export const de_DescribeLimitsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLimitsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1510,7 +1510,7 @@ export const de_DescribeLimitsCommand = async (
  */
 export const de_DescribeTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1530,7 +1530,7 @@ export const de_DescribeTableCommand = async (
  */
 export const de_DescribeTableReplicaAutoScalingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTableReplicaAutoScalingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1550,7 +1550,7 @@ export const de_DescribeTableReplicaAutoScalingCommand = async (
  */
 export const de_DescribeTimeToLiveCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTimeToLiveCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1570,7 +1570,7 @@ export const de_DescribeTimeToLiveCommand = async (
  */
 export const de_DisableKinesisStreamingDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableKinesisStreamingDestinationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1590,7 +1590,7 @@ export const de_DisableKinesisStreamingDestinationCommand = async (
  */
 export const de_EnableKinesisStreamingDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableKinesisStreamingDestinationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1610,7 +1610,7 @@ export const de_EnableKinesisStreamingDestinationCommand = async (
  */
 export const de_ExecuteStatementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteStatementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1630,7 +1630,7 @@ export const de_ExecuteStatementCommand = async (
  */
 export const de_ExecuteTransactionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteTransactionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1650,7 +1650,7 @@ export const de_ExecuteTransactionCommand = async (
  */
 export const de_ExportTableToPointInTimeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportTableToPointInTimeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1670,7 +1670,7 @@ export const de_ExportTableToPointInTimeCommand = async (
  */
 export const de_GetItemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetItemCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1690,7 +1690,7 @@ export const de_GetItemCommand = async (
  */
 export const de_GetResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1710,7 +1710,7 @@ export const de_GetResourcePolicyCommand = async (
  */
 export const de_ImportTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1730,7 +1730,7 @@ export const de_ImportTableCommand = async (
  */
 export const de_ListBackupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBackupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1750,7 +1750,7 @@ export const de_ListBackupsCommand = async (
  */
 export const de_ListContributorInsightsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListContributorInsightsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1770,7 +1770,7 @@ export const de_ListContributorInsightsCommand = async (
  */
 export const de_ListExportsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListExportsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1790,7 +1790,7 @@ export const de_ListExportsCommand = async (
  */
 export const de_ListGlobalTablesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGlobalTablesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1810,7 +1810,7 @@ export const de_ListGlobalTablesCommand = async (
  */
 export const de_ListImportsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListImportsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1830,7 +1830,7 @@ export const de_ListImportsCommand = async (
  */
 export const de_ListTablesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTablesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1850,7 +1850,7 @@ export const de_ListTablesCommand = async (
  */
 export const de_ListTagsOfResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsOfResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1870,7 +1870,7 @@ export const de_ListTagsOfResourceCommand = async (
  */
 export const de_PutItemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutItemCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1890,7 +1890,7 @@ export const de_PutItemCommand = async (
  */
 export const de_PutResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1927,7 +1927,7 @@ export const de_QueryCommand = async (output: __HttpResponse, context: __SerdeCo
  */
 export const de_RestoreTableFromBackupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreTableFromBackupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1947,7 +1947,7 @@ export const de_RestoreTableFromBackupCommand = async (
  */
 export const de_RestoreTableToPointInTimeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreTableToPointInTimeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1984,7 +1984,7 @@ export const de_ScanCommand = async (output: __HttpResponse, context: __SerdeCon
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2001,7 +2001,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_TransactGetItemsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TransactGetItemsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2021,7 +2021,7 @@ export const de_TransactGetItemsCommand = async (
  */
 export const de_TransactWriteItemsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TransactWriteItemsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2041,7 +2041,7 @@ export const de_TransactWriteItemsCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2058,7 +2058,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateContinuousBackupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateContinuousBackupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2078,7 +2078,7 @@ export const de_UpdateContinuousBackupsCommand = async (
  */
 export const de_UpdateContributorInsightsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateContributorInsightsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2098,7 +2098,7 @@ export const de_UpdateContributorInsightsCommand = async (
  */
 export const de_UpdateGlobalTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGlobalTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2118,7 +2118,7 @@ export const de_UpdateGlobalTableCommand = async (
  */
 export const de_UpdateGlobalTableSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGlobalTableSettingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2138,7 +2138,7 @@ export const de_UpdateGlobalTableSettingsCommand = async (
  */
 export const de_UpdateItemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateItemCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2158,7 +2158,7 @@ export const de_UpdateItemCommand = async (
  */
 export const de_UpdateKinesisStreamingDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateKinesisStreamingDestinationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2178,7 +2178,7 @@ export const de_UpdateKinesisStreamingDestinationCommand = async (
  */
 export const de_UpdateTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2198,7 +2198,7 @@ export const de_UpdateTableCommand = async (
  */
 export const de_UpdateTableReplicaAutoScalingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTableReplicaAutoScalingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2218,7 +2218,7 @@ export const de_UpdateTableReplicaAutoScalingCommand = async (
  */
 export const de_UpdateTimeToLiveCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTimeToLiveCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2357,7 +2357,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_BackupInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BackupInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2373,7 +2373,7 @@ const de_BackupInUseExceptionRes = async (
  */
 const de_BackupNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BackupNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2389,7 +2389,7 @@ const de_BackupNotFoundExceptionRes = async (
  */
 const de_ConditionalCheckFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConditionalCheckFailedException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ConditionalCheckFailedException(body, context);
@@ -2405,7 +2405,7 @@ const de_ConditionalCheckFailedExceptionRes = async (
  */
 const de_ContinuousBackupsUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ContinuousBackupsUnavailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2421,7 +2421,7 @@ const de_ContinuousBackupsUnavailableExceptionRes = async (
  */
 const de_DuplicateItemExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicateItemException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2437,7 +2437,7 @@ const de_DuplicateItemExceptionRes = async (
  */
 const de_ExportConflictExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportConflictException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2453,7 +2453,7 @@ const de_ExportConflictExceptionRes = async (
  */
 const de_ExportNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2469,7 +2469,7 @@ const de_ExportNotFoundExceptionRes = async (
  */
 const de_GlobalTableAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GlobalTableAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2485,7 +2485,7 @@ const de_GlobalTableAlreadyExistsExceptionRes = async (
  */
 const de_GlobalTableNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GlobalTableNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2501,7 +2501,7 @@ const de_GlobalTableNotFoundExceptionRes = async (
  */
 const de_IdempotentParameterMismatchExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IdempotentParameterMismatchException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2517,7 +2517,7 @@ const de_IdempotentParameterMismatchExceptionRes = async (
  */
 const de_ImportConflictExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportConflictException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2533,7 +2533,7 @@ const de_ImportConflictExceptionRes = async (
  */
 const de_ImportNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2549,7 +2549,7 @@ const de_ImportNotFoundExceptionRes = async (
  */
 const de_IndexNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IndexNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2578,7 +2578,7 @@ const de_InternalServerErrorRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InvalidEndpointExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidEndpointException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2594,7 +2594,7 @@ const de_InvalidEndpointExceptionRes = async (
  */
 const de_InvalidExportTimeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidExportTimeException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2610,7 +2610,7 @@ const de_InvalidExportTimeExceptionRes = async (
  */
 const de_InvalidRestoreTimeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRestoreTimeException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2626,7 +2626,7 @@ const de_InvalidRestoreTimeExceptionRes = async (
  */
 const de_ItemCollectionSizeLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ItemCollectionSizeLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2642,7 +2642,7 @@ const de_ItemCollectionSizeLimitExceededExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2658,7 +2658,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_PointInTimeRecoveryUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PointInTimeRecoveryUnavailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2674,7 +2674,7 @@ const de_PointInTimeRecoveryUnavailableExceptionRes = async (
  */
 const de_PolicyNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PolicyNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2690,7 +2690,7 @@ const de_PolicyNotFoundExceptionRes = async (
  */
 const de_ProvisionedThroughputExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ProvisionedThroughputExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2706,7 +2706,7 @@ const de_ProvisionedThroughputExceededExceptionRes = async (
  */
 const de_ReplicaAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplicaAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2722,7 +2722,7 @@ const de_ReplicaAlreadyExistsExceptionRes = async (
  */
 const de_ReplicaNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplicaNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2738,7 +2738,7 @@ const de_ReplicaNotFoundExceptionRes = async (
  */
 const de_RequestLimitExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestLimitExceeded> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2754,7 +2754,7 @@ const de_RequestLimitExceededRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2770,7 +2770,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2786,7 +2786,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_TableAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TableAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2815,7 +2815,7 @@ const de_TableInUseExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_TableNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TableNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2831,7 +2831,7 @@ const de_TableNotFoundExceptionRes = async (
  */
 const de_TransactionCanceledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TransactionCanceledException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TransactionCanceledException(body, context);
@@ -2847,7 +2847,7 @@ const de_TransactionCanceledExceptionRes = async (
  */
 const de_TransactionConflictExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TransactionConflictException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2863,7 +2863,7 @@ const de_TransactionConflictExceptionRes = async (
  */
 const de_TransactionInProgressExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TransactionInProgressException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2908,7 +2908,7 @@ const se_AttributeValue = (input: AttributeValue, context: __SerdeContext): any 
     NULL: (value) => ({ NULL: value }),
     S: (value) => ({ S: value }),
     SS: (value) => ({ SS: _json(value) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -2962,7 +2962,7 @@ const se_AutoScalingSettingsUpdate = (input: AutoScalingSettingsUpdate, context:
  */
 const se_AutoScalingTargetTrackingScalingPolicyConfigurationUpdate = (
   input: AutoScalingTargetTrackingScalingPolicyConfigurationUpdate,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     DisableScaleIn: [],
@@ -3308,7 +3308,7 @@ const se_GetItemInput = (input: GetItemInput, context: __SerdeContext): any => {
  */
 const se_GlobalSecondaryIndexAutoScalingUpdate = (
   input: GlobalSecondaryIndexAutoScalingUpdate,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     IndexName: [],
@@ -3321,7 +3321,7 @@ const se_GlobalSecondaryIndexAutoScalingUpdate = (
  */
 const se_GlobalSecondaryIndexAutoScalingUpdateList = (
   input: GlobalSecondaryIndexAutoScalingUpdate[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -3341,7 +3341,7 @@ const se_GlobalSecondaryIndexAutoScalingUpdateList = (
  */
 const se_GlobalTableGlobalSecondaryIndexSettingsUpdate = (
   input: GlobalTableGlobalSecondaryIndexSettingsUpdate,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     IndexName: [],
@@ -3355,7 +3355,7 @@ const se_GlobalTableGlobalSecondaryIndexSettingsUpdate = (
  */
 const se_GlobalTableGlobalSecondaryIndexSettingsUpdateList = (
   input: GlobalTableGlobalSecondaryIndexSettingsUpdate[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -3674,7 +3674,7 @@ const se_ReplicaAutoScalingUpdateList = (input: ReplicaAutoScalingUpdate[], cont
  */
 const se_ReplicaGlobalSecondaryIndexAutoScalingUpdate = (
   input: ReplicaGlobalSecondaryIndexAutoScalingUpdate,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     IndexName: [],
@@ -3687,7 +3687,7 @@ const se_ReplicaGlobalSecondaryIndexAutoScalingUpdate = (
  */
 const se_ReplicaGlobalSecondaryIndexAutoScalingUpdateList = (
   input: ReplicaGlobalSecondaryIndexAutoScalingUpdate[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -3703,7 +3703,7 @@ const se_ReplicaGlobalSecondaryIndexAutoScalingUpdateList = (
  */
 const se_ReplicaGlobalSecondaryIndexSettingsUpdate = (
   input: ReplicaGlobalSecondaryIndexSettingsUpdate,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     IndexName: [],
@@ -3717,7 +3717,7 @@ const se_ReplicaGlobalSecondaryIndexSettingsUpdate = (
  */
 const se_ReplicaGlobalSecondaryIndexSettingsUpdateList = (
   input: ReplicaGlobalSecondaryIndexSettingsUpdate[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -3964,7 +3964,7 @@ const se_UpdateItemInput = (input: UpdateItemInput, context: __SerdeContext): an
  */
 const se_UpdateTableReplicaAutoScalingInput = (
   input: UpdateTableReplicaAutoScalingInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     GlobalSecondaryIndexUpdates: (_) => se_GlobalSecondaryIndexAutoScalingUpdateList(_, context),
@@ -4016,13 +4016,16 @@ const de_ArchivalSummary = (output: any, context: __SerdeContext): ArchivalSumma
  * deserializeAws_json1_0AttributeMap
  */
 const de_AttributeMap = (output: any, context: __SerdeContext): Record<string, AttributeValue> => {
-  return Object.entries(output).reduce((acc: Record<string, AttributeValue>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, AttributeValue>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_AttributeValue(__expectUnion(value), context);
       return acc;
-    }
-    acc[key as string] = de_AttributeValue(__expectUnion(value), context);
-    return acc;
-  }, {} as Record<string, AttributeValue>);
+    },
+    {} as Record<string, AttributeValue>,
+  );
 };
 
 // de_AttributeNameList omitted.
@@ -4117,7 +4120,7 @@ const de_AutoScalingSettingsDescription = (output: any, context: __SerdeContext)
  */
 const de_AutoScalingTargetTrackingScalingPolicyConfigurationDescription = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AutoScalingTargetTrackingScalingPolicyConfigurationDescription => {
   return take(output, {
     DisableScaleIn: __expectBoolean,
@@ -4212,13 +4215,16 @@ const de_BatchGetItemOutput = (output: any, context: __SerdeContext): BatchGetIt
  * deserializeAws_json1_0BatchGetRequestMap
  */
 const de_BatchGetRequestMap = (output: any, context: __SerdeContext): Record<string, KeysAndAttributes> => {
-  return Object.entries(output).reduce((acc: Record<string, KeysAndAttributes>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, KeysAndAttributes>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_KeysAndAttributes(value, context);
       return acc;
-    }
-    acc[key as string] = de_KeysAndAttributes(value, context);
-    return acc;
-  }, {} as Record<string, KeysAndAttributes>);
+    },
+    {} as Record<string, KeysAndAttributes>,
+  );
 };
 
 /**
@@ -4226,7 +4232,7 @@ const de_BatchGetRequestMap = (output: any, context: __SerdeContext): Record<str
  */
 const de_BatchGetResponseMap = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Record<string, Record<string, AttributeValue>[]> => {
   return Object.entries(output).reduce(
     (acc: Record<string, Record<string, AttributeValue>[]>, [key, value]: [string, any]) => {
@@ -4236,7 +4242,7 @@ const de_BatchGetResponseMap = (
       acc[key as string] = de_ItemList(value, context);
       return acc;
     },
-    {} as Record<string, Record<string, AttributeValue>[]>
+    {} as Record<string, Record<string, AttributeValue>[]>,
   );
 };
 
@@ -4277,13 +4283,16 @@ const de_BatchWriteItemOutput = (output: any, context: __SerdeContext): BatchWri
  * deserializeAws_json1_0BatchWriteItemRequestMap
  */
 const de_BatchWriteItemRequestMap = (output: any, context: __SerdeContext): Record<string, WriteRequest[]> => {
-  return Object.entries(output).reduce((acc: Record<string, WriteRequest[]>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, WriteRequest[]>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_WriteRequests(value, context);
       return acc;
-    }
-    acc[key as string] = de_WriteRequests(value, context);
-    return acc;
-  }, {} as Record<string, WriteRequest[]>);
+    },
+    {} as Record<string, WriteRequest[]>,
+  );
 };
 
 /**
@@ -4491,7 +4500,7 @@ const de_DescribeContinuousBackupsOutput = (output: any, context: __SerdeContext
  */
 const de_DescribeContributorInsightsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeContributorInsightsOutput => {
   return take(output, {
     ContributorInsightsRuleList: _json,
@@ -4528,7 +4537,7 @@ const de_DescribeGlobalTableOutput = (output: any, context: __SerdeContext): Des
  */
 const de_DescribeGlobalTableSettingsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeGlobalTableSettingsOutput => {
   return take(output, {
     GlobalTableName: __expectString,
@@ -4563,7 +4572,7 @@ const de_DescribeTableOutput = (output: any, context: __SerdeContext): DescribeT
  */
 const de_DescribeTableReplicaAutoScalingOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTableReplicaAutoScalingOutput => {
   return take(output, {
     TableAutoScalingDescription: (_: any) => de_TableAutoScalingDescription(_, context),
@@ -4689,7 +4698,7 @@ const de_GlobalSecondaryIndexDescription = (output: any, context: __SerdeContext
  */
 const de_GlobalSecondaryIndexDescriptionList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GlobalSecondaryIndexDescription[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -4823,13 +4832,16 @@ const de_IncrementalExportSpecification = (output: any, context: __SerdeContext)
  * deserializeAws_json1_0ItemCollectionKeyAttributeMap
  */
 const de_ItemCollectionKeyAttributeMap = (output: any, context: __SerdeContext): Record<string, AttributeValue> => {
-  return Object.entries(output).reduce((acc: Record<string, AttributeValue>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, AttributeValue>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_AttributeValue(__expectUnion(value), context);
       return acc;
-    }
-    acc[key as string] = de_AttributeValue(__expectUnion(value), context);
-    return acc;
-  }, {} as Record<string, AttributeValue>);
+    },
+    {} as Record<string, AttributeValue>,
+  );
 };
 
 /**
@@ -4859,15 +4871,18 @@ const de_ItemCollectionMetricsMultiple = (output: any, context: __SerdeContext):
  */
 const de_ItemCollectionMetricsPerTable = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Record<string, ItemCollectionMetrics[]> => {
-  return Object.entries(output).reduce((acc: Record<string, ItemCollectionMetrics[]>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, ItemCollectionMetrics[]>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_ItemCollectionMetricsMultiple(value, context);
       return acc;
-    }
-    acc[key as string] = de_ItemCollectionMetricsMultiple(value, context);
-    return acc;
-  }, {} as Record<string, ItemCollectionMetrics[]>);
+    },
+    {} as Record<string, ItemCollectionMetrics[]>,
+  );
 };
 
 /**
@@ -4921,13 +4936,16 @@ const de_ItemResponseList = (output: any, context: __SerdeContext): ItemResponse
  * deserializeAws_json1_0Key
  */
 const de_Key = (output: any, context: __SerdeContext): Record<string, AttributeValue> => {
-  return Object.entries(output).reduce((acc: Record<string, AttributeValue>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, AttributeValue>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_AttributeValue(__expectUnion(value), context);
       return acc;
-    }
-    acc[key as string] = de_AttributeValue(__expectUnion(value), context);
-    return acc;
-  }, {} as Record<string, AttributeValue>);
+    },
+    {} as Record<string, AttributeValue>,
+  );
 };
 
 /**
@@ -5021,13 +5039,16 @@ const de_ListImportsOutput = (output: any, context: __SerdeContext): ListImports
  * deserializeAws_json1_0MapAttributeValue
  */
 const de_MapAttributeValue = (output: any, context: __SerdeContext): Record<string, AttributeValue> => {
-  return Object.entries(output).reduce((acc: Record<string, AttributeValue>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, AttributeValue>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_AttributeValue(__expectUnion(value), context);
       return acc;
-    }
-    acc[key as string] = de_AttributeValue(__expectUnion(value), context);
-    return acc;
-  }, {} as Record<string, AttributeValue>);
+    },
+    {} as Record<string, AttributeValue>,
+  );
 };
 
 // de_NonKeyAttributeNameList omitted.
@@ -5074,7 +5095,7 @@ const de_PointInTimeRecoveryDescription = (output: any, context: __SerdeContext)
  */
 const de_ProvisionedThroughputDescription = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ProvisionedThroughputDescription => {
   return take(output, {
     LastDecreaseDateTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -5093,13 +5114,16 @@ const de_ProvisionedThroughputDescription = (
  * deserializeAws_json1_0PutItemInputAttributeMap
  */
 const de_PutItemInputAttributeMap = (output: any, context: __SerdeContext): Record<string, AttributeValue> => {
-  return Object.entries(output).reduce((acc: Record<string, AttributeValue>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, AttributeValue>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_AttributeValue(__expectUnion(value), context);
       return acc;
-    }
-    acc[key as string] = de_AttributeValue(__expectUnion(value), context);
-    return acc;
-  }, {} as Record<string, AttributeValue>);
+    },
+    {} as Record<string, AttributeValue>,
+  );
 };
 
 /**
@@ -5159,7 +5183,7 @@ const de_ReplicaAutoScalingDescription = (output: any, context: __SerdeContext):
  */
 const de_ReplicaAutoScalingDescriptionList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReplicaAutoScalingDescription[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -5204,7 +5228,7 @@ const de_ReplicaDescriptionList = (output: any, context: __SerdeContext): Replic
  */
 const de_ReplicaGlobalSecondaryIndexAutoScalingDescription = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReplicaGlobalSecondaryIndexAutoScalingDescription => {
   return take(output, {
     IndexName: __expectString,
@@ -5219,7 +5243,7 @@ const de_ReplicaGlobalSecondaryIndexAutoScalingDescription = (
  */
 const de_ReplicaGlobalSecondaryIndexAutoScalingDescriptionList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReplicaGlobalSecondaryIndexAutoScalingDescription[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -5238,7 +5262,7 @@ const de_ReplicaGlobalSecondaryIndexAutoScalingDescriptionList = (
  */
 const de_ReplicaGlobalSecondaryIndexSettingsDescription = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReplicaGlobalSecondaryIndexSettingsDescription => {
   return take(output, {
     IndexName: __expectString,
@@ -5255,7 +5279,7 @@ const de_ReplicaGlobalSecondaryIndexSettingsDescription = (
  */
 const de_ReplicaGlobalSecondaryIndexSettingsDescriptionList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReplicaGlobalSecondaryIndexSettingsDescription[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -5353,13 +5377,16 @@ const de_ScanOutput = (output: any, context: __SerdeContext): ScanOutput => {
  * deserializeAws_json1_0SecondaryIndexesCapacityMap
  */
 const de_SecondaryIndexesCapacityMap = (output: any, context: __SerdeContext): Record<string, Capacity> => {
-  return Object.entries(output).reduce((acc: Record<string, Capacity>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, Capacity>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_Capacity(value, context);
       return acc;
-    }
-    acc[key as string] = de_Capacity(value, context);
-    return acc;
-  }, {} as Record<string, Capacity>);
+    },
+    {} as Record<string, Capacity>,
+  );
 };
 
 /**
@@ -5575,7 +5602,7 @@ const de_UpdateTableOutput = (output: any, context: __SerdeContext): UpdateTable
  */
 const de_UpdateTableReplicaAutoScalingOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateTableReplicaAutoScalingOutput => {
   return take(output, {
     TableAutoScalingDescription: (_: any) => de_TableAutoScalingDescription(_, context),
@@ -5624,7 +5651,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

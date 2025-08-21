@@ -68,16 +68,16 @@ export interface ManagedBlockchainQuery {
   batchGetTokenBalance(): Promise<BatchGetTokenBalanceCommandOutput>;
   batchGetTokenBalance(
     args: BatchGetTokenBalanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetTokenBalanceCommandOutput>;
   batchGetTokenBalance(
     args: BatchGetTokenBalanceCommandInput,
-    cb: (err: any, data?: BatchGetTokenBalanceCommandOutput) => void
+    cb: (err: any, data?: BatchGetTokenBalanceCommandOutput) => void,
   ): void;
   batchGetTokenBalance(
     args: BatchGetTokenBalanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetTokenBalanceCommandOutput) => void
+    cb: (err: any, data?: BatchGetTokenBalanceCommandOutput) => void,
   ): void;
 
   /**
@@ -85,16 +85,16 @@ export interface ManagedBlockchainQuery {
    */
   getAssetContract(
     args: GetAssetContractCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAssetContractCommandOutput>;
   getAssetContract(
     args: GetAssetContractCommandInput,
-    cb: (err: any, data?: GetAssetContractCommandOutput) => void
+    cb: (err: any, data?: GetAssetContractCommandOutput) => void,
   ): void;
   getAssetContract(
     args: GetAssetContractCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAssetContractCommandOutput) => void
+    cb: (err: any, data?: GetAssetContractCommandOutput) => void,
   ): void;
 
   /**
@@ -102,13 +102,13 @@ export interface ManagedBlockchainQuery {
    */
   getTokenBalance(
     args: GetTokenBalanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTokenBalanceCommandOutput>;
   getTokenBalance(args: GetTokenBalanceCommandInput, cb: (err: any, data?: GetTokenBalanceCommandOutput) => void): void;
   getTokenBalance(
     args: GetTokenBalanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTokenBalanceCommandOutput) => void
+    cb: (err: any, data?: GetTokenBalanceCommandOutput) => void,
   ): void;
 
   /**
@@ -116,13 +116,13 @@ export interface ManagedBlockchainQuery {
    */
   getTransaction(
     args: GetTransactionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTransactionCommandOutput>;
   getTransaction(args: GetTransactionCommandInput, cb: (err: any, data?: GetTransactionCommandOutput) => void): void;
   getTransaction(
     args: GetTransactionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTransactionCommandOutput) => void
+    cb: (err: any, data?: GetTransactionCommandOutput) => void,
   ): void;
 
   /**
@@ -130,16 +130,16 @@ export interface ManagedBlockchainQuery {
    */
   listAssetContracts(
     args: ListAssetContractsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAssetContractsCommandOutput>;
   listAssetContracts(
     args: ListAssetContractsCommandInput,
-    cb: (err: any, data?: ListAssetContractsCommandOutput) => void
+    cb: (err: any, data?: ListAssetContractsCommandOutput) => void,
   ): void;
   listAssetContracts(
     args: ListAssetContractsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAssetContractsCommandOutput) => void
+    cb: (err: any, data?: ListAssetContractsCommandOutput) => void,
   ): void;
 
   /**
@@ -147,16 +147,16 @@ export interface ManagedBlockchainQuery {
    */
   listFilteredTransactionEvents(
     args: ListFilteredTransactionEventsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFilteredTransactionEventsCommandOutput>;
   listFilteredTransactionEvents(
     args: ListFilteredTransactionEventsCommandInput,
-    cb: (err: any, data?: ListFilteredTransactionEventsCommandOutput) => void
+    cb: (err: any, data?: ListFilteredTransactionEventsCommandOutput) => void,
   ): void;
   listFilteredTransactionEvents(
     args: ListFilteredTransactionEventsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFilteredTransactionEventsCommandOutput) => void
+    cb: (err: any, data?: ListFilteredTransactionEventsCommandOutput) => void,
   ): void;
 
   /**
@@ -164,16 +164,16 @@ export interface ManagedBlockchainQuery {
    */
   listTokenBalances(
     args: ListTokenBalancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTokenBalancesCommandOutput>;
   listTokenBalances(
     args: ListTokenBalancesCommandInput,
-    cb: (err: any, data?: ListTokenBalancesCommandOutput) => void
+    cb: (err: any, data?: ListTokenBalancesCommandOutput) => void,
   ): void;
   listTokenBalances(
     args: ListTokenBalancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTokenBalancesCommandOutput) => void
+    cb: (err: any, data?: ListTokenBalancesCommandOutput) => void,
   ): void;
 
   /**
@@ -181,16 +181,16 @@ export interface ManagedBlockchainQuery {
    */
   listTransactionEvents(
     args: ListTransactionEventsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTransactionEventsCommandOutput>;
   listTransactionEvents(
     args: ListTransactionEventsCommandInput,
-    cb: (err: any, data?: ListTransactionEventsCommandOutput) => void
+    cb: (err: any, data?: ListTransactionEventsCommandOutput) => void,
   ): void;
   listTransactionEvents(
     args: ListTransactionEventsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTransactionEventsCommandOutput) => void
+    cb: (err: any, data?: ListTransactionEventsCommandOutput) => void,
   ): void;
 
   /**
@@ -198,16 +198,16 @@ export interface ManagedBlockchainQuery {
    */
   listTransactions(
     args: ListTransactionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTransactionsCommandOutput>;
   listTransactions(
     args: ListTransactionsCommandInput,
-    cb: (err: any, data?: ListTransactionsCommandOutput) => void
+    cb: (err: any, data?: ListTransactionsCommandOutput) => void,
   ): void;
   listTransactions(
     args: ListTransactionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTransactionsCommandOutput) => void
+    cb: (err: any, data?: ListTransactionsCommandOutput) => void,
   ): void;
 }
 

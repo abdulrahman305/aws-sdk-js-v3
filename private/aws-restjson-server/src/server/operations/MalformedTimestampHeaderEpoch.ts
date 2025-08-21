@@ -42,7 +42,7 @@ export namespace MalformedTimestampHeaderEpochServerInput {
    * @internal
    */
   export const validate: (
-    obj: Parameters<typeof MalformedTimestampHeaderEpochInput.validate>[0]
+    obj: Parameters<typeof MalformedTimestampHeaderEpochInput.validate>[0],
   ) => __ValidationFailure[] = MalformedTimestampHeaderEpochInput.validate;
 }
 export interface MalformedTimestampHeaderEpochServerOutput {}
@@ -67,14 +67,14 @@ export class MalformedTimestampHeaderEpochSerializer
 
 export const getMalformedTimestampHeaderEpochHandler = <Context>(
   operation: __Operation<MalformedTimestampHeaderEpochServerInput, MalformedTimestampHeaderEpochServerOutput, Context>,
-  customizer: __ValidationCustomizer<"MalformedTimestampHeaderEpoch">
+  customizer: __ValidationCustomizer<"MalformedTimestampHeaderEpoch">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "MalformedTimestampHeaderEpoch">([
     new httpbinding.UriSpec<"RestJson", "MalformedTimestampHeaderEpoch">(
       "POST",
       [{ type: "path_literal", value: "MalformedTimestampHeaderEpoch" }],
       [],
-      { service: "RestJson", operation: "MalformedTimestampHeaderEpoch" }
+      { service: "RestJson", operation: "MalformedTimestampHeaderEpoch" },
     ),
   ]);
   return new MalformedTimestampHeaderEpochHandler(
@@ -82,7 +82,7 @@ export const getMalformedTimestampHeaderEpochHandler = <Context>(
     mux,
     new MalformedTimestampHeaderEpochSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -103,7 +103,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -149,7 +149,7 @@ export class MalformedTimestampHeaderEpochHandler<Context> implements __ServiceH
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"MalformedTimestampHeaderEpoch">;
   /**
@@ -174,7 +174,7 @@ export class MalformedTimestampHeaderEpochHandler<Context> implements __ServiceH
       MalformedTimestampHeaderEpochErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"MalformedTimestampHeaderEpoch">
+    validationCustomizer: __ValidationCustomizer<"MalformedTimestampHeaderEpoch">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -186,7 +186,7 @@ export class MalformedTimestampHeaderEpochHandler<Context> implements __ServiceH
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedTimestampHeaderEpoch. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedTimestampHeaderEpoch. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -198,7 +198,7 @@ export class MalformedTimestampHeaderEpochHandler<Context> implements __ServiceH
       this.operation,
       this.serializeFrameworkException,
       MalformedTimestampHeaderEpochServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

@@ -114,7 +114,7 @@ export class XhrHttpHandler extends EventEmitter implements HttpHandler<XhrHttpH
 
   public async handle(
     request: HttpRequest,
-    { abortSignal }: HttpHandlerOptions = {}
+    { abortSignal }: HttpHandlerOptions = {},
   ): Promise<{ response: HttpResponse }> {
     if (!this.config) {
       this.config = await this.configProvider;
@@ -225,7 +225,7 @@ export class XhrHttpHandler extends EventEmitter implements HttpHandler<XhrHttpH
             abortError.name = "AbortError";
             reject(abortError);
           };
-        })
+        }),
       );
     }
     return Promise.race(raceOfPromises);

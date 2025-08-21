@@ -247,7 +247,7 @@ import {
  */
 export const se_CreateAnomalyMonitorCommand = async (
   input: CreateAnomalyMonitorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAnomalyMonitor");
   let body: any;
@@ -260,7 +260,7 @@ export const se_CreateAnomalyMonitorCommand = async (
  */
 export const se_CreateAnomalySubscriptionCommand = async (
   input: CreateAnomalySubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAnomalySubscription");
   let body: any;
@@ -273,7 +273,7 @@ export const se_CreateAnomalySubscriptionCommand = async (
  */
 export const se_CreateCostCategoryDefinitionCommand = async (
   input: CreateCostCategoryDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateCostCategoryDefinition");
   let body: any;
@@ -286,7 +286,7 @@ export const se_CreateCostCategoryDefinitionCommand = async (
  */
 export const se_DeleteAnomalyMonitorCommand = async (
   input: DeleteAnomalyMonitorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAnomalyMonitor");
   let body: any;
@@ -299,7 +299,7 @@ export const se_DeleteAnomalyMonitorCommand = async (
  */
 export const se_DeleteAnomalySubscriptionCommand = async (
   input: DeleteAnomalySubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAnomalySubscription");
   let body: any;
@@ -312,7 +312,7 @@ export const se_DeleteAnomalySubscriptionCommand = async (
  */
 export const se_DeleteCostCategoryDefinitionCommand = async (
   input: DeleteCostCategoryDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteCostCategoryDefinition");
   let body: any;
@@ -325,7 +325,7 @@ export const se_DeleteCostCategoryDefinitionCommand = async (
  */
 export const se_DescribeCostCategoryDefinitionCommand = async (
   input: DescribeCostCategoryDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCostCategoryDefinition");
   let body: any;
@@ -338,7 +338,7 @@ export const se_DescribeCostCategoryDefinitionCommand = async (
  */
 export const se_GetAnomaliesCommand = async (
   input: GetAnomaliesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAnomalies");
   let body: any;
@@ -351,7 +351,7 @@ export const se_GetAnomaliesCommand = async (
  */
 export const se_GetAnomalyMonitorsCommand = async (
   input: GetAnomalyMonitorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAnomalyMonitors");
   let body: any;
@@ -364,7 +364,7 @@ export const se_GetAnomalyMonitorsCommand = async (
  */
 export const se_GetAnomalySubscriptionsCommand = async (
   input: GetAnomalySubscriptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAnomalySubscriptions");
   let body: any;
@@ -377,7 +377,7 @@ export const se_GetAnomalySubscriptionsCommand = async (
  */
 export const se_GetApproximateUsageRecordsCommand = async (
   input: GetApproximateUsageRecordsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetApproximateUsageRecords");
   let body: any;
@@ -390,7 +390,7 @@ export const se_GetApproximateUsageRecordsCommand = async (
  */
 export const se_GetCostAndUsageCommand = async (
   input: GetCostAndUsageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetCostAndUsage");
   let body: any;
@@ -403,7 +403,7 @@ export const se_GetCostAndUsageCommand = async (
  */
 export const se_GetCostAndUsageWithResourcesCommand = async (
   input: GetCostAndUsageWithResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetCostAndUsageWithResources");
   let body: any;
@@ -416,7 +416,7 @@ export const se_GetCostAndUsageWithResourcesCommand = async (
  */
 export const se_GetCostCategoriesCommand = async (
   input: GetCostCategoriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetCostCategories");
   let body: any;
@@ -429,7 +429,7 @@ export const se_GetCostCategoriesCommand = async (
  */
 export const se_GetCostForecastCommand = async (
   input: GetCostForecastCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetCostForecast");
   let body: any;
@@ -442,7 +442,7 @@ export const se_GetCostForecastCommand = async (
  */
 export const se_GetDimensionValuesCommand = async (
   input: GetDimensionValuesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDimensionValues");
   let body: any;
@@ -455,7 +455,7 @@ export const se_GetDimensionValuesCommand = async (
  */
 export const se_GetReservationCoverageCommand = async (
   input: GetReservationCoverageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetReservationCoverage");
   let body: any;
@@ -468,7 +468,7 @@ export const se_GetReservationCoverageCommand = async (
  */
 export const se_GetReservationPurchaseRecommendationCommand = async (
   input: GetReservationPurchaseRecommendationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetReservationPurchaseRecommendation");
   let body: any;
@@ -481,7 +481,7 @@ export const se_GetReservationPurchaseRecommendationCommand = async (
  */
 export const se_GetReservationUtilizationCommand = async (
   input: GetReservationUtilizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetReservationUtilization");
   let body: any;
@@ -494,7 +494,7 @@ export const se_GetReservationUtilizationCommand = async (
  */
 export const se_GetRightsizingRecommendationCommand = async (
   input: GetRightsizingRecommendationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRightsizingRecommendation");
   let body: any;
@@ -507,7 +507,7 @@ export const se_GetRightsizingRecommendationCommand = async (
  */
 export const se_GetSavingsPlanPurchaseRecommendationDetailsCommand = async (
   input: GetSavingsPlanPurchaseRecommendationDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSavingsPlanPurchaseRecommendationDetails");
   let body: any;
@@ -520,7 +520,7 @@ export const se_GetSavingsPlanPurchaseRecommendationDetailsCommand = async (
  */
 export const se_GetSavingsPlansCoverageCommand = async (
   input: GetSavingsPlansCoverageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSavingsPlansCoverage");
   let body: any;
@@ -533,7 +533,7 @@ export const se_GetSavingsPlansCoverageCommand = async (
  */
 export const se_GetSavingsPlansPurchaseRecommendationCommand = async (
   input: GetSavingsPlansPurchaseRecommendationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSavingsPlansPurchaseRecommendation");
   let body: any;
@@ -546,7 +546,7 @@ export const se_GetSavingsPlansPurchaseRecommendationCommand = async (
  */
 export const se_GetSavingsPlansUtilizationCommand = async (
   input: GetSavingsPlansUtilizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSavingsPlansUtilization");
   let body: any;
@@ -559,7 +559,7 @@ export const se_GetSavingsPlansUtilizationCommand = async (
  */
 export const se_GetSavingsPlansUtilizationDetailsCommand = async (
   input: GetSavingsPlansUtilizationDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSavingsPlansUtilizationDetails");
   let body: any;
@@ -572,7 +572,7 @@ export const se_GetSavingsPlansUtilizationDetailsCommand = async (
  */
 export const se_GetTagsCommand = async (
   input: GetTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetTags");
   let body: any;
@@ -585,7 +585,7 @@ export const se_GetTagsCommand = async (
  */
 export const se_GetUsageForecastCommand = async (
   input: GetUsageForecastCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetUsageForecast");
   let body: any;
@@ -598,7 +598,7 @@ export const se_GetUsageForecastCommand = async (
  */
 export const se_ListCostAllocationTagBackfillHistoryCommand = async (
   input: ListCostAllocationTagBackfillHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListCostAllocationTagBackfillHistory");
   let body: any;
@@ -611,7 +611,7 @@ export const se_ListCostAllocationTagBackfillHistoryCommand = async (
  */
 export const se_ListCostAllocationTagsCommand = async (
   input: ListCostAllocationTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListCostAllocationTags");
   let body: any;
@@ -624,7 +624,7 @@ export const se_ListCostAllocationTagsCommand = async (
  */
 export const se_ListCostCategoryDefinitionsCommand = async (
   input: ListCostCategoryDefinitionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListCostCategoryDefinitions");
   let body: any;
@@ -637,7 +637,7 @@ export const se_ListCostCategoryDefinitionsCommand = async (
  */
 export const se_ListSavingsPlansPurchaseRecommendationGenerationCommand = async (
   input: ListSavingsPlansPurchaseRecommendationGenerationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSavingsPlansPurchaseRecommendationGeneration");
   let body: any;
@@ -650,7 +650,7 @@ export const se_ListSavingsPlansPurchaseRecommendationGenerationCommand = async 
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -663,7 +663,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ProvideAnomalyFeedbackCommand = async (
   input: ProvideAnomalyFeedbackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ProvideAnomalyFeedback");
   let body: any;
@@ -676,7 +676,7 @@ export const se_ProvideAnomalyFeedbackCommand = async (
  */
 export const se_StartCostAllocationTagBackfillCommand = async (
   input: StartCostAllocationTagBackfillCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartCostAllocationTagBackfill");
   let body: any;
@@ -689,7 +689,7 @@ export const se_StartCostAllocationTagBackfillCommand = async (
  */
 export const se_StartSavingsPlansPurchaseRecommendationGenerationCommand = async (
   input: StartSavingsPlansPurchaseRecommendationGenerationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartSavingsPlansPurchaseRecommendationGeneration");
   let body: any;
@@ -702,7 +702,7 @@ export const se_StartSavingsPlansPurchaseRecommendationGenerationCommand = async
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -715,7 +715,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -728,7 +728,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAnomalyMonitorCommand = async (
   input: UpdateAnomalyMonitorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateAnomalyMonitor");
   let body: any;
@@ -741,7 +741,7 @@ export const se_UpdateAnomalyMonitorCommand = async (
  */
 export const se_UpdateAnomalySubscriptionCommand = async (
   input: UpdateAnomalySubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateAnomalySubscription");
   let body: any;
@@ -754,7 +754,7 @@ export const se_UpdateAnomalySubscriptionCommand = async (
  */
 export const se_UpdateCostAllocationTagsStatusCommand = async (
   input: UpdateCostAllocationTagsStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateCostAllocationTagsStatus");
   let body: any;
@@ -767,7 +767,7 @@ export const se_UpdateCostAllocationTagsStatusCommand = async (
  */
 export const se_UpdateCostCategoryDefinitionCommand = async (
   input: UpdateCostCategoryDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateCostCategoryDefinition");
   let body: any;
@@ -780,7 +780,7 @@ export const se_UpdateCostCategoryDefinitionCommand = async (
  */
 export const de_CreateAnomalyMonitorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAnomalyMonitorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -800,7 +800,7 @@ export const de_CreateAnomalyMonitorCommand = async (
  */
 export const de_CreateAnomalySubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAnomalySubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -820,7 +820,7 @@ export const de_CreateAnomalySubscriptionCommand = async (
  */
 export const de_CreateCostCategoryDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCostCategoryDefinitionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -840,7 +840,7 @@ export const de_CreateCostCategoryDefinitionCommand = async (
  */
 export const de_DeleteAnomalyMonitorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAnomalyMonitorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -860,7 +860,7 @@ export const de_DeleteAnomalyMonitorCommand = async (
  */
 export const de_DeleteAnomalySubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAnomalySubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -880,7 +880,7 @@ export const de_DeleteAnomalySubscriptionCommand = async (
  */
 export const de_DeleteCostCategoryDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCostCategoryDefinitionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -900,7 +900,7 @@ export const de_DeleteCostCategoryDefinitionCommand = async (
  */
 export const de_DescribeCostCategoryDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCostCategoryDefinitionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -920,7 +920,7 @@ export const de_DescribeCostCategoryDefinitionCommand = async (
  */
 export const de_GetAnomaliesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAnomaliesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -940,7 +940,7 @@ export const de_GetAnomaliesCommand = async (
  */
 export const de_GetAnomalyMonitorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAnomalyMonitorsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -960,7 +960,7 @@ export const de_GetAnomalyMonitorsCommand = async (
  */
 export const de_GetAnomalySubscriptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAnomalySubscriptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -980,7 +980,7 @@ export const de_GetAnomalySubscriptionsCommand = async (
  */
 export const de_GetApproximateUsageRecordsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApproximateUsageRecordsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1000,7 +1000,7 @@ export const de_GetApproximateUsageRecordsCommand = async (
  */
 export const de_GetCostAndUsageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCostAndUsageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1020,7 +1020,7 @@ export const de_GetCostAndUsageCommand = async (
  */
 export const de_GetCostAndUsageWithResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCostAndUsageWithResourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1040,7 +1040,7 @@ export const de_GetCostAndUsageWithResourcesCommand = async (
  */
 export const de_GetCostCategoriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCostCategoriesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1060,7 +1060,7 @@ export const de_GetCostCategoriesCommand = async (
  */
 export const de_GetCostForecastCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCostForecastCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1080,7 +1080,7 @@ export const de_GetCostForecastCommand = async (
  */
 export const de_GetDimensionValuesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDimensionValuesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1100,7 +1100,7 @@ export const de_GetDimensionValuesCommand = async (
  */
 export const de_GetReservationCoverageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReservationCoverageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1120,7 +1120,7 @@ export const de_GetReservationCoverageCommand = async (
  */
 export const de_GetReservationPurchaseRecommendationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReservationPurchaseRecommendationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1140,7 +1140,7 @@ export const de_GetReservationPurchaseRecommendationCommand = async (
  */
 export const de_GetReservationUtilizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReservationUtilizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1160,7 +1160,7 @@ export const de_GetReservationUtilizationCommand = async (
  */
 export const de_GetRightsizingRecommendationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRightsizingRecommendationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1180,7 +1180,7 @@ export const de_GetRightsizingRecommendationCommand = async (
  */
 export const de_GetSavingsPlanPurchaseRecommendationDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSavingsPlanPurchaseRecommendationDetailsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1200,7 +1200,7 @@ export const de_GetSavingsPlanPurchaseRecommendationDetailsCommand = async (
  */
 export const de_GetSavingsPlansCoverageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSavingsPlansCoverageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1220,7 +1220,7 @@ export const de_GetSavingsPlansCoverageCommand = async (
  */
 export const de_GetSavingsPlansPurchaseRecommendationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSavingsPlansPurchaseRecommendationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1240,7 +1240,7 @@ export const de_GetSavingsPlansPurchaseRecommendationCommand = async (
  */
 export const de_GetSavingsPlansUtilizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSavingsPlansUtilizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1260,7 +1260,7 @@ export const de_GetSavingsPlansUtilizationCommand = async (
  */
 export const de_GetSavingsPlansUtilizationDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSavingsPlansUtilizationDetailsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1280,7 +1280,7 @@ export const de_GetSavingsPlansUtilizationDetailsCommand = async (
  */
 export const de_GetTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1300,7 +1300,7 @@ export const de_GetTagsCommand = async (
  */
 export const de_GetUsageForecastCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetUsageForecastCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1320,7 +1320,7 @@ export const de_GetUsageForecastCommand = async (
  */
 export const de_ListCostAllocationTagBackfillHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCostAllocationTagBackfillHistoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1340,7 +1340,7 @@ export const de_ListCostAllocationTagBackfillHistoryCommand = async (
  */
 export const de_ListCostAllocationTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCostAllocationTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1360,7 +1360,7 @@ export const de_ListCostAllocationTagsCommand = async (
  */
 export const de_ListCostCategoryDefinitionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCostCategoryDefinitionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1380,7 +1380,7 @@ export const de_ListCostCategoryDefinitionsCommand = async (
  */
 export const de_ListSavingsPlansPurchaseRecommendationGenerationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSavingsPlansPurchaseRecommendationGenerationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1400,7 +1400,7 @@ export const de_ListSavingsPlansPurchaseRecommendationGenerationCommand = async 
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1420,7 +1420,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ProvideAnomalyFeedbackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ProvideAnomalyFeedbackCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1440,7 +1440,7 @@ export const de_ProvideAnomalyFeedbackCommand = async (
  */
 export const de_StartCostAllocationTagBackfillCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartCostAllocationTagBackfillCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1460,7 +1460,7 @@ export const de_StartCostAllocationTagBackfillCommand = async (
  */
 export const de_StartSavingsPlansPurchaseRecommendationGenerationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartSavingsPlansPurchaseRecommendationGenerationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1480,7 +1480,7 @@ export const de_StartSavingsPlansPurchaseRecommendationGenerationCommand = async
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1500,7 +1500,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1520,7 +1520,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAnomalyMonitorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAnomalyMonitorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1540,7 +1540,7 @@ export const de_UpdateAnomalyMonitorCommand = async (
  */
 export const de_UpdateAnomalySubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAnomalySubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1560,7 +1560,7 @@ export const de_UpdateAnomalySubscriptionCommand = async (
  */
 export const de_UpdateCostAllocationTagsStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCostAllocationTagsStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1580,7 +1580,7 @@ export const de_UpdateCostAllocationTagsStatusCommand = async (
  */
 export const de_UpdateCostCategoryDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCostCategoryDefinitionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1659,7 +1659,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_BackfillLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BackfillLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1675,7 +1675,7 @@ const de_BackfillLimitExceededExceptionRes = async (
  */
 const de_BillExpirationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BillExpirationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1691,7 +1691,7 @@ const de_BillExpirationExceptionRes = async (
  */
 const de_DataUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DataUnavailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1707,7 +1707,7 @@ const de_DataUnavailableExceptionRes = async (
  */
 const de_GenerationExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GenerationExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1723,7 +1723,7 @@ const de_GenerationExistsExceptionRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1739,7 +1739,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1755,7 +1755,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_RequestChangedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestChangedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1771,7 +1771,7 @@ const de_RequestChangedExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1787,7 +1787,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1803,7 +1803,7 @@ const de_ServiceQuotaExceededExceptionRes = async (
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1819,7 +1819,7 @@ const de_TooManyTagsExceptionRes = async (
  */
 const de_UnknownMonitorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnknownMonitorException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1835,7 +1835,7 @@ const de_UnknownMonitorExceptionRes = async (
  */
 const de_UnknownSubscriptionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnknownSubscriptionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1851,7 +1851,7 @@ const de_UnknownSubscriptionExceptionRes = async (
  */
 const de_UnresolvableUsageUnitExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnresolvableUsageUnitException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1967,7 +1967,7 @@ const se_CreateAnomalySubscriptionRequest = (input: CreateAnomalySubscriptionReq
  */
 const se_CreateCostCategoryDefinitionRequest = (
   input: CreateCostCategoryDefinitionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     DefaultValue: [],
@@ -2058,7 +2058,7 @@ const se_GetCostAndUsageRequest = (input: GetCostAndUsageRequest, context: __Ser
  */
 const se_GetCostAndUsageWithResourcesRequest = (
   input: GetCostAndUsageWithResourcesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Filter: (_) => se_Expression(_, context),
@@ -2135,7 +2135,7 @@ const se_GetReservationCoverageRequest = (input: GetReservationCoverageRequest, 
  */
 const se_GetReservationPurchaseRecommendationRequest = (
   input: GetReservationPurchaseRecommendationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     AccountId: [],
@@ -2171,7 +2171,7 @@ const se_GetReservationUtilizationRequest = (input: GetReservationUtilizationReq
  */
 const se_GetRightsizingRecommendationRequest = (
   input: GetRightsizingRecommendationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Configuration: _json,
@@ -2205,7 +2205,7 @@ const se_GetSavingsPlansCoverageRequest = (input: GetSavingsPlansCoverageRequest
  */
 const se_GetSavingsPlansPurchaseRecommendationRequest = (
   input: GetSavingsPlansPurchaseRecommendationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     AccountScope: [],
@@ -2224,7 +2224,7 @@ const se_GetSavingsPlansPurchaseRecommendationRequest = (
  */
 const se_GetSavingsPlansUtilizationDetailsRequest = (
   input: GetSavingsPlansUtilizationDetailsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     DataType: _json,
@@ -2241,7 +2241,7 @@ const se_GetSavingsPlansUtilizationDetailsRequest = (
  */
 const se_GetSavingsPlansUtilizationRequest = (
   input: GetSavingsPlansUtilizationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Filter: (_) => se_Expression(_, context),
@@ -2368,7 +2368,7 @@ const se_UpdateAnomalySubscriptionRequest = (input: UpdateAnomalySubscriptionReq
  */
 const se_UpdateCostCategoryDefinitionRequest = (
   input: UpdateCostCategoryDefinitionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     CostCategoryArn: [],
@@ -2600,7 +2600,7 @@ const de_CostCategoryRulesList = (output: any, context: __SerdeContext): CostCat
  */
 const de_DescribeCostCategoryDefinitionResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeCostCategoryDefinitionResponse => {
   return take(output, {
     CostCategory: (_: any) => de_CostCategory(_, context),
@@ -2956,7 +2956,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

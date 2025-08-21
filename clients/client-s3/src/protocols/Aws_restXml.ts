@@ -450,7 +450,7 @@ import { S3ServiceException as __BaseException } from "../models/S3ServiceExcept
  */
 export const se_AbortMultipartUploadCommand = async (
   input: AbortMultipartUploadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -474,7 +474,7 @@ export const se_AbortMultipartUploadCommand = async (
  */
 export const se_CompleteMultipartUploadCommand = async (
   input: CompleteMultipartUploadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -513,7 +513,7 @@ export const se_CompleteMultipartUploadCommand = async (
  */
 export const se_CopyObjectCommand = async (
   input: CopyObjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -577,7 +577,7 @@ export const se_CopyObjectCommand = async (
  */
 export const se_CreateBucketCommand = async (
   input: CreateBucketCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -610,7 +610,7 @@ export const se_CreateBucketCommand = async (
  */
 export const se_CreateMultipartUploadCommand = async (
   input: CreateMultipartUploadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -663,7 +663,7 @@ export const se_CreateMultipartUploadCommand = async (
  */
 export const se_CreateSessionCommand = async (
   input: CreateSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -684,7 +684,7 @@ export const se_CreateSessionCommand = async (
  */
 export const se_DeleteBucketCommand = async (
   input: DeleteBucketCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -702,7 +702,7 @@ export const se_DeleteBucketCommand = async (
  */
 export const se_DeleteBucketAnalyticsConfigurationCommand = async (
   input: DeleteBucketAnalyticsConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -724,7 +724,7 @@ export const se_DeleteBucketAnalyticsConfigurationCommand = async (
  */
 export const se_DeleteBucketCorsCommand = async (
   input: DeleteBucketCorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -745,7 +745,7 @@ export const se_DeleteBucketCorsCommand = async (
  */
 export const se_DeleteBucketEncryptionCommand = async (
   input: DeleteBucketEncryptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -766,7 +766,7 @@ export const se_DeleteBucketEncryptionCommand = async (
  */
 export const se_DeleteBucketIntelligentTieringConfigurationCommand = async (
   input: DeleteBucketIntelligentTieringConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -786,7 +786,7 @@ export const se_DeleteBucketIntelligentTieringConfigurationCommand = async (
  */
 export const se_DeleteBucketInventoryConfigurationCommand = async (
   input: DeleteBucketInventoryConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -808,7 +808,7 @@ export const se_DeleteBucketInventoryConfigurationCommand = async (
  */
 export const se_DeleteBucketLifecycleCommand = async (
   input: DeleteBucketLifecycleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -829,7 +829,7 @@ export const se_DeleteBucketLifecycleCommand = async (
  */
 export const se_DeleteBucketMetricsConfigurationCommand = async (
   input: DeleteBucketMetricsConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -851,7 +851,7 @@ export const se_DeleteBucketMetricsConfigurationCommand = async (
  */
 export const se_DeleteBucketOwnershipControlsCommand = async (
   input: DeleteBucketOwnershipControlsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -872,7 +872,7 @@ export const se_DeleteBucketOwnershipControlsCommand = async (
  */
 export const se_DeleteBucketPolicyCommand = async (
   input: DeleteBucketPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -893,7 +893,7 @@ export const se_DeleteBucketPolicyCommand = async (
  */
 export const se_DeleteBucketReplicationCommand = async (
   input: DeleteBucketReplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -914,7 +914,7 @@ export const se_DeleteBucketReplicationCommand = async (
  */
 export const se_DeleteBucketTaggingCommand = async (
   input: DeleteBucketTaggingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -935,7 +935,7 @@ export const se_DeleteBucketTaggingCommand = async (
  */
 export const se_DeleteBucketWebsiteCommand = async (
   input: DeleteBucketWebsiteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -956,7 +956,7 @@ export const se_DeleteBucketWebsiteCommand = async (
  */
 export const se_DeleteObjectCommand = async (
   input: DeleteObjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -982,7 +982,7 @@ export const se_DeleteObjectCommand = async (
  */
 export const se_DeleteObjectsCommand = async (
   input: DeleteObjectsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1015,7 +1015,7 @@ export const se_DeleteObjectsCommand = async (
  */
 export const se_DeleteObjectTaggingCommand = async (
   input: DeleteObjectTaggingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1038,7 +1038,7 @@ export const se_DeleteObjectTaggingCommand = async (
  */
 export const se_DeletePublicAccessBlockCommand = async (
   input: DeletePublicAccessBlockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1059,7 +1059,7 @@ export const se_DeletePublicAccessBlockCommand = async (
  */
 export const se_GetBucketAccelerateConfigurationCommand = async (
   input: GetBucketAccelerateConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1081,7 +1081,7 @@ export const se_GetBucketAccelerateConfigurationCommand = async (
  */
 export const se_GetBucketAclCommand = async (
   input: GetBucketAclCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1102,7 +1102,7 @@ export const se_GetBucketAclCommand = async (
  */
 export const se_GetBucketAnalyticsConfigurationCommand = async (
   input: GetBucketAnalyticsConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1125,7 +1125,7 @@ export const se_GetBucketAnalyticsConfigurationCommand = async (
  */
 export const se_GetBucketCorsCommand = async (
   input: GetBucketCorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1146,7 +1146,7 @@ export const se_GetBucketCorsCommand = async (
  */
 export const se_GetBucketEncryptionCommand = async (
   input: GetBucketEncryptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1167,7 +1167,7 @@ export const se_GetBucketEncryptionCommand = async (
  */
 export const se_GetBucketIntelligentTieringConfigurationCommand = async (
   input: GetBucketIntelligentTieringConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1188,7 +1188,7 @@ export const se_GetBucketIntelligentTieringConfigurationCommand = async (
  */
 export const se_GetBucketInventoryConfigurationCommand = async (
   input: GetBucketInventoryConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1211,7 +1211,7 @@ export const se_GetBucketInventoryConfigurationCommand = async (
  */
 export const se_GetBucketLifecycleConfigurationCommand = async (
   input: GetBucketLifecycleConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1232,7 +1232,7 @@ export const se_GetBucketLifecycleConfigurationCommand = async (
  */
 export const se_GetBucketLocationCommand = async (
   input: GetBucketLocationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1253,7 +1253,7 @@ export const se_GetBucketLocationCommand = async (
  */
 export const se_GetBucketLoggingCommand = async (
   input: GetBucketLoggingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1274,7 +1274,7 @@ export const se_GetBucketLoggingCommand = async (
  */
 export const se_GetBucketMetricsConfigurationCommand = async (
   input: GetBucketMetricsConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1297,7 +1297,7 @@ export const se_GetBucketMetricsConfigurationCommand = async (
  */
 export const se_GetBucketNotificationConfigurationCommand = async (
   input: GetBucketNotificationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1318,7 +1318,7 @@ export const se_GetBucketNotificationConfigurationCommand = async (
  */
 export const se_GetBucketOwnershipControlsCommand = async (
   input: GetBucketOwnershipControlsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1339,7 +1339,7 @@ export const se_GetBucketOwnershipControlsCommand = async (
  */
 export const se_GetBucketPolicyCommand = async (
   input: GetBucketPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1360,7 +1360,7 @@ export const se_GetBucketPolicyCommand = async (
  */
 export const se_GetBucketPolicyStatusCommand = async (
   input: GetBucketPolicyStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1381,7 +1381,7 @@ export const se_GetBucketPolicyStatusCommand = async (
  */
 export const se_GetBucketReplicationCommand = async (
   input: GetBucketReplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1402,7 +1402,7 @@ export const se_GetBucketReplicationCommand = async (
  */
 export const se_GetBucketRequestPaymentCommand = async (
   input: GetBucketRequestPaymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1423,7 +1423,7 @@ export const se_GetBucketRequestPaymentCommand = async (
  */
 export const se_GetBucketTaggingCommand = async (
   input: GetBucketTaggingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1444,7 +1444,7 @@ export const se_GetBucketTaggingCommand = async (
  */
 export const se_GetBucketVersioningCommand = async (
   input: GetBucketVersioningCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1465,7 +1465,7 @@ export const se_GetBucketVersioningCommand = async (
  */
 export const se_GetBucketWebsiteCommand = async (
   input: GetBucketWebsiteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1486,7 +1486,7 @@ export const se_GetBucketWebsiteCommand = async (
  */
 export const se_GetObjectCommand = async (
   input: GetObjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1526,7 +1526,7 @@ export const se_GetObjectCommand = async (
  */
 export const se_GetObjectAclCommand = async (
   input: GetObjectAclCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1550,7 +1550,7 @@ export const se_GetObjectAclCommand = async (
  */
 export const se_GetObjectAttributesCommand = async (
   input: GetObjectAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1583,7 +1583,7 @@ export const se_GetObjectAttributesCommand = async (
  */
 export const se_GetObjectLegalHoldCommand = async (
   input: GetObjectLegalHoldCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1607,7 +1607,7 @@ export const se_GetObjectLegalHoldCommand = async (
  */
 export const se_GetObjectLockConfigurationCommand = async (
   input: GetObjectLockConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1628,7 +1628,7 @@ export const se_GetObjectLockConfigurationCommand = async (
  */
 export const se_GetObjectRetentionCommand = async (
   input: GetObjectRetentionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1652,7 +1652,7 @@ export const se_GetObjectRetentionCommand = async (
  */
 export const se_GetObjectTaggingCommand = async (
   input: GetObjectTaggingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1676,7 +1676,7 @@ export const se_GetObjectTaggingCommand = async (
  */
 export const se_GetObjectTorrentCommand = async (
   input: GetObjectTorrentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1699,7 +1699,7 @@ export const se_GetObjectTorrentCommand = async (
  */
 export const se_GetPublicAccessBlockCommand = async (
   input: GetPublicAccessBlockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1720,7 +1720,7 @@ export const se_GetPublicAccessBlockCommand = async (
  */
 export const se_HeadBucketCommand = async (
   input: HeadBucketCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1738,7 +1738,7 @@ export const se_HeadBucketCommand = async (
  */
 export const se_HeadObjectCommand = async (
   input: HeadObjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1771,7 +1771,7 @@ export const se_HeadObjectCommand = async (
  */
 export const se_ListBucketAnalyticsConfigurationsCommand = async (
   input: ListBucketAnalyticsConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1794,7 +1794,7 @@ export const se_ListBucketAnalyticsConfigurationsCommand = async (
  */
 export const se_ListBucketIntelligentTieringConfigurationsCommand = async (
   input: ListBucketIntelligentTieringConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1815,7 +1815,7 @@ export const se_ListBucketIntelligentTieringConfigurationsCommand = async (
  */
 export const se_ListBucketInventoryConfigurationsCommand = async (
   input: ListBucketInventoryConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1838,7 +1838,7 @@ export const se_ListBucketInventoryConfigurationsCommand = async (
  */
 export const se_ListBucketMetricsConfigurationsCommand = async (
   input: ListBucketMetricsConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1861,7 +1861,7 @@ export const se_ListBucketMetricsConfigurationsCommand = async (
  */
 export const se_ListBucketsCommand = async (
   input: ListBucketsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1882,7 +1882,7 @@ export const se_ListBucketsCommand = async (
  */
 export const se_ListDirectoryBucketsCommand = async (
   input: ListDirectoryBucketsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1902,7 +1902,7 @@ export const se_ListDirectoryBucketsCommand = async (
  */
 export const se_ListMultipartUploadsCommand = async (
   input: ListMultipartUploadsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1930,7 +1930,7 @@ export const se_ListMultipartUploadsCommand = async (
  */
 export const se_ListObjectsCommand = async (
   input: ListObjectsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1960,7 +1960,7 @@ export const se_ListObjectsCommand = async (
  */
 export const se_ListObjectsV2Command = async (
   input: ListObjectsV2CommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1993,7 +1993,7 @@ export const se_ListObjectsV2Command = async (
  */
 export const se_ListObjectVersionsCommand = async (
   input: ListObjectVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2025,7 +2025,7 @@ export const se_ListObjectVersionsCommand = async (
  */
 export const se_ListPartsCommand = async (
   input: ListPartsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2054,7 +2054,7 @@ export const se_ListPartsCommand = async (
  */
 export const se_PutBucketAccelerateConfigurationCommand = async (
   input: PutBucketAccelerateConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2084,7 +2084,7 @@ export const se_PutBucketAccelerateConfigurationCommand = async (
  */
 export const se_PutBucketAclCommand = async (
   input: PutBucketAclCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2121,7 +2121,7 @@ export const se_PutBucketAclCommand = async (
  */
 export const se_PutBucketAnalyticsConfigurationCommand = async (
   input: PutBucketAnalyticsConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2151,7 +2151,7 @@ export const se_PutBucketAnalyticsConfigurationCommand = async (
  */
 export const se_PutBucketCorsCommand = async (
   input: PutBucketCorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2182,7 +2182,7 @@ export const se_PutBucketCorsCommand = async (
  */
 export const se_PutBucketEncryptionCommand = async (
   input: PutBucketEncryptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2213,7 +2213,7 @@ export const se_PutBucketEncryptionCommand = async (
  */
 export const se_PutBucketIntelligentTieringConfigurationCommand = async (
   input: PutBucketIntelligentTieringConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2242,7 +2242,7 @@ export const se_PutBucketIntelligentTieringConfigurationCommand = async (
  */
 export const se_PutBucketInventoryConfigurationCommand = async (
   input: PutBucketInventoryConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2272,7 +2272,7 @@ export const se_PutBucketInventoryConfigurationCommand = async (
  */
 export const se_PutBucketLifecycleConfigurationCommand = async (
   input: PutBucketLifecycleConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2303,7 +2303,7 @@ export const se_PutBucketLifecycleConfigurationCommand = async (
  */
 export const se_PutBucketLoggingCommand = async (
   input: PutBucketLoggingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2334,7 +2334,7 @@ export const se_PutBucketLoggingCommand = async (
  */
 export const se_PutBucketMetricsConfigurationCommand = async (
   input: PutBucketMetricsConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2364,7 +2364,7 @@ export const se_PutBucketMetricsConfigurationCommand = async (
  */
 export const se_PutBucketNotificationConfigurationCommand = async (
   input: PutBucketNotificationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2394,7 +2394,7 @@ export const se_PutBucketNotificationConfigurationCommand = async (
  */
 export const se_PutBucketOwnershipControlsCommand = async (
   input: PutBucketOwnershipControlsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2424,7 +2424,7 @@ export const se_PutBucketOwnershipControlsCommand = async (
  */
 export const se_PutBucketPolicyCommand = async (
   input: PutBucketPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2454,7 +2454,7 @@ export const se_PutBucketPolicyCommand = async (
  */
 export const se_PutBucketReplicationCommand = async (
   input: PutBucketReplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2486,7 +2486,7 @@ export const se_PutBucketReplicationCommand = async (
  */
 export const se_PutBucketRequestPaymentCommand = async (
   input: PutBucketRequestPaymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2517,7 +2517,7 @@ export const se_PutBucketRequestPaymentCommand = async (
  */
 export const se_PutBucketTaggingCommand = async (
   input: PutBucketTaggingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2548,7 +2548,7 @@ export const se_PutBucketTaggingCommand = async (
  */
 export const se_PutBucketVersioningCommand = async (
   input: PutBucketVersioningCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2580,7 +2580,7 @@ export const se_PutBucketVersioningCommand = async (
  */
 export const se_PutBucketWebsiteCommand = async (
   input: PutBucketWebsiteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2611,7 +2611,7 @@ export const se_PutBucketWebsiteCommand = async (
  */
 export const se_PutObjectCommand = async (
   input: PutObjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2675,7 +2675,7 @@ export const se_PutObjectCommand = async (
  */
 export const se_PutObjectAclCommand = async (
   input: PutObjectAclCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2715,7 +2715,7 @@ export const se_PutObjectAclCommand = async (
  */
 export const se_PutObjectLegalHoldCommand = async (
   input: PutObjectLegalHoldCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2750,7 +2750,7 @@ export const se_PutObjectLegalHoldCommand = async (
  */
 export const se_PutObjectLockConfigurationCommand = async (
   input: PutObjectLockConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2783,7 +2783,7 @@ export const se_PutObjectLockConfigurationCommand = async (
  */
 export const se_PutObjectRetentionCommand = async (
   input: PutObjectRetentionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2819,7 +2819,7 @@ export const se_PutObjectRetentionCommand = async (
  */
 export const se_PutObjectTaggingCommand = async (
   input: PutObjectTaggingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2853,7 +2853,7 @@ export const se_PutObjectTaggingCommand = async (
  */
 export const se_PutPublicAccessBlockCommand = async (
   input: PutPublicAccessBlockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2884,7 +2884,7 @@ export const se_PutPublicAccessBlockCommand = async (
  */
 export const se_RestoreObjectCommand = async (
   input: RestoreObjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2917,7 +2917,7 @@ export const se_RestoreObjectCommand = async (
  */
 export const se_SelectObjectContentCommand = async (
   input: SelectObjectContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2962,7 +2962,7 @@ export const se_SelectObjectContentCommand = async (
  */
 export const se_UploadPartCommand = async (
   input: UploadPartCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3003,7 +3003,7 @@ export const se_UploadPartCommand = async (
  */
 export const se_UploadPartCopyCommand = async (
   input: UploadPartCopyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3041,7 +3041,7 @@ export const se_UploadPartCopyCommand = async (
  */
 export const se_WriteGetObjectResponseCommand = async (
   input: WriteGetObjectResponseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3122,7 +3122,7 @@ export const se_WriteGetObjectResponseCommand = async (
  */
 export const de_AbortMultipartUploadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AbortMultipartUploadCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3140,7 +3140,7 @@ export const de_AbortMultipartUploadCommand = async (
  */
 export const de_CompleteMultipartUploadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CompleteMultipartUploadCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3187,7 +3187,7 @@ export const de_CompleteMultipartUploadCommand = async (
  */
 export const de_CopyObjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopyObjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3215,7 +3215,7 @@ export const de_CopyObjectCommand = async (
  */
 export const de_CreateBucketCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBucketCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3233,7 +3233,7 @@ export const de_CreateBucketCommand = async (
  */
 export const de_CreateMultipartUploadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMultipartUploadCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3272,7 +3272,7 @@ export const de_CreateMultipartUploadCommand = async (
  */
 export const de_CreateSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3292,7 +3292,7 @@ export const de_CreateSessionCommand = async (
  */
 export const de_DeleteBucketCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBucketCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3309,7 +3309,7 @@ export const de_DeleteBucketCommand = async (
  */
 export const de_DeleteBucketAnalyticsConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBucketAnalyticsConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3326,7 +3326,7 @@ export const de_DeleteBucketAnalyticsConfigurationCommand = async (
  */
 export const de_DeleteBucketCorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBucketCorsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3343,7 +3343,7 @@ export const de_DeleteBucketCorsCommand = async (
  */
 export const de_DeleteBucketEncryptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBucketEncryptionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3360,7 +3360,7 @@ export const de_DeleteBucketEncryptionCommand = async (
  */
 export const de_DeleteBucketIntelligentTieringConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBucketIntelligentTieringConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3377,7 +3377,7 @@ export const de_DeleteBucketIntelligentTieringConfigurationCommand = async (
  */
 export const de_DeleteBucketInventoryConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBucketInventoryConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3394,7 +3394,7 @@ export const de_DeleteBucketInventoryConfigurationCommand = async (
  */
 export const de_DeleteBucketLifecycleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBucketLifecycleCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3411,7 +3411,7 @@ export const de_DeleteBucketLifecycleCommand = async (
  */
 export const de_DeleteBucketMetricsConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBucketMetricsConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3428,7 +3428,7 @@ export const de_DeleteBucketMetricsConfigurationCommand = async (
  */
 export const de_DeleteBucketOwnershipControlsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBucketOwnershipControlsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3445,7 +3445,7 @@ export const de_DeleteBucketOwnershipControlsCommand = async (
  */
 export const de_DeleteBucketPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBucketPolicyCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3462,7 +3462,7 @@ export const de_DeleteBucketPolicyCommand = async (
  */
 export const de_DeleteBucketReplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBucketReplicationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3479,7 +3479,7 @@ export const de_DeleteBucketReplicationCommand = async (
  */
 export const de_DeleteBucketTaggingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBucketTaggingCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3496,7 +3496,7 @@ export const de_DeleteBucketTaggingCommand = async (
  */
 export const de_DeleteBucketWebsiteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBucketWebsiteCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3513,7 +3513,7 @@ export const de_DeleteBucketWebsiteCommand = async (
  */
 export const de_DeleteObjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteObjectCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3533,7 +3533,7 @@ export const de_DeleteObjectCommand = async (
  */
 export const de_DeleteObjectsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteObjectsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3561,7 +3561,7 @@ export const de_DeleteObjectsCommand = async (
  */
 export const de_DeleteObjectTaggingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteObjectTaggingCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3579,7 +3579,7 @@ export const de_DeleteObjectTaggingCommand = async (
  */
 export const de_DeletePublicAccessBlockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePublicAccessBlockCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3596,7 +3596,7 @@ export const de_DeletePublicAccessBlockCommand = async (
  */
 export const de_GetBucketAccelerateConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketAccelerateConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3617,7 +3617,7 @@ export const de_GetBucketAccelerateConfigurationCommand = async (
  */
 export const de_GetBucketAclCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketAclCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3642,7 +3642,7 @@ export const de_GetBucketAclCommand = async (
  */
 export const de_GetBucketAnalyticsConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketAnalyticsConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3660,7 +3660,7 @@ export const de_GetBucketAnalyticsConfigurationCommand = async (
  */
 export const de_GetBucketCorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketCorsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3682,7 +3682,7 @@ export const de_GetBucketCorsCommand = async (
  */
 export const de_GetBucketEncryptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketEncryptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3700,7 +3700,7 @@ export const de_GetBucketEncryptionCommand = async (
  */
 export const de_GetBucketIntelligentTieringConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketIntelligentTieringConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3718,7 +3718,7 @@ export const de_GetBucketIntelligentTieringConfigurationCommand = async (
  */
 export const de_GetBucketInventoryConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketInventoryConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3736,7 +3736,7 @@ export const de_GetBucketInventoryConfigurationCommand = async (
  */
 export const de_GetBucketLifecycleConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketLifecycleConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3758,7 +3758,7 @@ export const de_GetBucketLifecycleConfigurationCommand = async (
  */
 export const de_GetBucketLocationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketLocationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3778,7 +3778,7 @@ export const de_GetBucketLocationCommand = async (
  */
 export const de_GetBucketLoggingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketLoggingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3798,7 +3798,7 @@ export const de_GetBucketLoggingCommand = async (
  */
 export const de_GetBucketMetricsConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketMetricsConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3816,7 +3816,7 @@ export const de_GetBucketMetricsConfigurationCommand = async (
  */
 export const de_GetBucketNotificationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketNotificationConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3851,7 +3851,7 @@ export const de_GetBucketNotificationConfigurationCommand = async (
  */
 export const de_GetBucketOwnershipControlsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketOwnershipControlsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3869,7 +3869,7 @@ export const de_GetBucketOwnershipControlsCommand = async (
  */
 export const de_GetBucketPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3887,7 +3887,7 @@ export const de_GetBucketPolicyCommand = async (
  */
 export const de_GetBucketPolicyStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketPolicyStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3905,7 +3905,7 @@ export const de_GetBucketPolicyStatusCommand = async (
  */
 export const de_GetBucketReplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketReplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3923,7 +3923,7 @@ export const de_GetBucketReplicationCommand = async (
  */
 export const de_GetBucketRequestPaymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketRequestPaymentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3943,7 +3943,7 @@ export const de_GetBucketRequestPaymentCommand = async (
  */
 export const de_GetBucketTaggingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketTaggingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3965,7 +3965,7 @@ export const de_GetBucketTaggingCommand = async (
  */
 export const de_GetBucketVersioningCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketVersioningCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3988,7 +3988,7 @@ export const de_GetBucketVersioningCommand = async (
  */
 export const de_GetBucketWebsiteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketWebsiteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4019,7 +4019,7 @@ export const de_GetBucketWebsiteCommand = async (
  */
 export const de_GetObjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<GetObjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4085,7 +4085,7 @@ export const de_GetObjectCommand = async (
  */
 export const de_GetObjectAclCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetObjectAclCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4111,7 +4111,7 @@ export const de_GetObjectAclCommand = async (
  */
 export const de_GetObjectAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetObjectAttributesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4147,7 +4147,7 @@ export const de_GetObjectAttributesCommand = async (
  */
 export const de_GetObjectLegalHoldCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetObjectLegalHoldCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4165,7 +4165,7 @@ export const de_GetObjectLegalHoldCommand = async (
  */
 export const de_GetObjectLockConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetObjectLockConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4183,7 +4183,7 @@ export const de_GetObjectLockConfigurationCommand = async (
  */
 export const de_GetObjectRetentionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetObjectRetentionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4201,7 +4201,7 @@ export const de_GetObjectRetentionCommand = async (
  */
 export const de_GetObjectTaggingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetObjectTaggingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4224,7 +4224,7 @@ export const de_GetObjectTaggingCommand = async (
  */
 export const de_GetObjectTorrentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<GetObjectTorrentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4244,7 +4244,7 @@ export const de_GetObjectTorrentCommand = async (
  */
 export const de_GetPublicAccessBlockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPublicAccessBlockCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4262,7 +4262,7 @@ export const de_GetPublicAccessBlockCommand = async (
  */
 export const de_HeadBucketCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HeadBucketCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4283,7 +4283,7 @@ export const de_HeadBucketCommand = async (
  */
 export const de_HeadObjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HeadObjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4346,7 +4346,7 @@ export const de_HeadObjectCommand = async (
  */
 export const de_ListBucketAnalyticsConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBucketAnalyticsConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4377,7 +4377,7 @@ export const de_ListBucketAnalyticsConfigurationsCommand = async (
  */
 export const de_ListBucketIntelligentTieringConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBucketIntelligentTieringConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4408,7 +4408,7 @@ export const de_ListBucketIntelligentTieringConfigurationsCommand = async (
  */
 export const de_ListBucketInventoryConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBucketInventoryConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4439,7 +4439,7 @@ export const de_ListBucketInventoryConfigurationsCommand = async (
  */
 export const de_ListBucketMetricsConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBucketMetricsConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4470,7 +4470,7 @@ export const de_ListBucketMetricsConfigurationsCommand = async (
  */
 export const de_ListBucketsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBucketsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4495,7 +4495,7 @@ export const de_ListBucketsCommand = async (
  */
 export const de_ListDirectoryBucketsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDirectoryBucketsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4520,7 +4520,7 @@ export const de_ListDirectoryBucketsCommand = async (
  */
 export const de_ListMultipartUploadsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMultipartUploadsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4578,7 +4578,7 @@ export const de_ListMultipartUploadsCommand = async (
  */
 export const de_ListObjectsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListObjectsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4630,7 +4630,7 @@ export const de_ListObjectsCommand = async (
  */
 export const de_ListObjectsV2Command = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListObjectsV2CommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4688,7 +4688,7 @@ export const de_ListObjectsV2Command = async (
  */
 export const de_ListObjectVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListObjectVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4751,7 +4751,7 @@ export const de_ListObjectVersionsCommand = async (
  */
 export const de_ListPartsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPartsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4812,7 +4812,7 @@ export const de_ListPartsCommand = async (
  */
 export const de_PutBucketAccelerateConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketAccelerateConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4829,7 +4829,7 @@ export const de_PutBucketAccelerateConfigurationCommand = async (
  */
 export const de_PutBucketAclCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketAclCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4846,7 +4846,7 @@ export const de_PutBucketAclCommand = async (
  */
 export const de_PutBucketAnalyticsConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketAnalyticsConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4863,7 +4863,7 @@ export const de_PutBucketAnalyticsConfigurationCommand = async (
  */
 export const de_PutBucketCorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketCorsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4880,7 +4880,7 @@ export const de_PutBucketCorsCommand = async (
  */
 export const de_PutBucketEncryptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketEncryptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4897,7 +4897,7 @@ export const de_PutBucketEncryptionCommand = async (
  */
 export const de_PutBucketIntelligentTieringConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketIntelligentTieringConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4914,7 +4914,7 @@ export const de_PutBucketIntelligentTieringConfigurationCommand = async (
  */
 export const de_PutBucketInventoryConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketInventoryConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4931,7 +4931,7 @@ export const de_PutBucketInventoryConfigurationCommand = async (
  */
 export const de_PutBucketLifecycleConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketLifecycleConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4948,7 +4948,7 @@ export const de_PutBucketLifecycleConfigurationCommand = async (
  */
 export const de_PutBucketLoggingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketLoggingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4965,7 +4965,7 @@ export const de_PutBucketLoggingCommand = async (
  */
 export const de_PutBucketMetricsConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketMetricsConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4982,7 +4982,7 @@ export const de_PutBucketMetricsConfigurationCommand = async (
  */
 export const de_PutBucketNotificationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketNotificationConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4999,7 +4999,7 @@ export const de_PutBucketNotificationConfigurationCommand = async (
  */
 export const de_PutBucketOwnershipControlsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketOwnershipControlsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5016,7 +5016,7 @@ export const de_PutBucketOwnershipControlsCommand = async (
  */
 export const de_PutBucketPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5033,7 +5033,7 @@ export const de_PutBucketPolicyCommand = async (
  */
 export const de_PutBucketReplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketReplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5050,7 +5050,7 @@ export const de_PutBucketReplicationCommand = async (
  */
 export const de_PutBucketRequestPaymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketRequestPaymentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5067,7 +5067,7 @@ export const de_PutBucketRequestPaymentCommand = async (
  */
 export const de_PutBucketTaggingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketTaggingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5084,7 +5084,7 @@ export const de_PutBucketTaggingCommand = async (
  */
 export const de_PutBucketVersioningCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketVersioningCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5101,7 +5101,7 @@ export const de_PutBucketVersioningCommand = async (
  */
 export const de_PutBucketWebsiteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketWebsiteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5118,7 +5118,7 @@ export const de_PutBucketWebsiteCommand = async (
  */
 export const de_PutObjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutObjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5149,7 +5149,7 @@ export const de_PutObjectCommand = async (
  */
 export const de_PutObjectAclCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutObjectAclCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5167,7 +5167,7 @@ export const de_PutObjectAclCommand = async (
  */
 export const de_PutObjectLegalHoldCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutObjectLegalHoldCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5185,7 +5185,7 @@ export const de_PutObjectLegalHoldCommand = async (
  */
 export const de_PutObjectLockConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutObjectLockConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5203,7 +5203,7 @@ export const de_PutObjectLockConfigurationCommand = async (
  */
 export const de_PutObjectRetentionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutObjectRetentionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5221,7 +5221,7 @@ export const de_PutObjectRetentionCommand = async (
  */
 export const de_PutObjectTaggingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutObjectTaggingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5239,7 +5239,7 @@ export const de_PutObjectTaggingCommand = async (
  */
 export const de_PutPublicAccessBlockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutPublicAccessBlockCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5256,7 +5256,7 @@ export const de_PutPublicAccessBlockCommand = async (
  */
 export const de_RestoreObjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreObjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5275,7 +5275,7 @@ export const de_RestoreObjectCommand = async (
  */
 export const de_SelectObjectContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): Promise<SelectObjectContentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5293,7 +5293,7 @@ export const de_SelectObjectContentCommand = async (
  */
 export const de_UploadPartCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UploadPartCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5321,7 +5321,7 @@ export const de_UploadPartCommand = async (
  */
 export const de_UploadPartCopyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UploadPartCopyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5346,7 +5346,7 @@ export const de_UploadPartCopyCommand = async (
  */
 export const de_WriteGetObjectResponseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WriteGetObjectResponseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5424,7 +5424,7 @@ const de_BucketAlreadyExistsRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_BucketAlreadyOwnedByYouRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BucketAlreadyOwnedByYou> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -5511,7 +5511,7 @@ const de_NotFoundRes = async (parsedOutput: any, context: __SerdeContext): Promi
  */
 const de_ObjectAlreadyInActiveTierErrorRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ObjectAlreadyInActiveTierError> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -5527,7 +5527,7 @@ const de_ObjectAlreadyInActiveTierErrorRes = async (
  */
 const de_ObjectNotInActiveTierErrorRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ObjectNotInActiveTierError> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -5543,7 +5543,7 @@ const de_ObjectNotInActiveTierErrorRes = async (
  */
 const de_SelectObjectContentEventStream = (
   output: any,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): AsyncIterable<SelectObjectContentEventStream> => {
   return context.eventStreamMarshaller.deserialize(output, async (event) => {
     if (event["Records"] != null) {
@@ -6411,7 +6411,7 @@ const se_LifecycleRule = (input: LifecycleRule, context: __SerdeContext): any =>
   }
   bn.l(input, "Transitions", "Transition", () => se_TransitionList(input[_Tr]!, context));
   bn.l(input, "NoncurrentVersionTransitions", "NoncurrentVersionTransition", () =>
-    se_NoncurrentVersionTransitionList(input[_NVT]!, context)
+    se_NoncurrentVersionTransitionList(input[_NVT]!, context),
   );
   if (input[_NVE] != null) {
     bn.c(se_NoncurrentVersionExpiration(input[_NVE], context).n(_NVE));
@@ -6659,7 +6659,7 @@ const se_NotificationConfiguration = (input: NotificationConfiguration, context:
   bn.l(input, "TopicConfigurations", "TopicConfiguration", () => se_TopicConfigurationList(input[_TCop]!, context));
   bn.l(input, "QueueConfigurations", "QueueConfiguration", () => se_QueueConfigurationList(input[_QCu]!, context));
   bn.l(input, "LambdaFunctionConfigurations", "CloudFunctionConfiguration", () =>
-    se_LambdaFunctionConfigurationList(input[_LFC]!, context)
+    se_LambdaFunctionConfigurationList(input[_LFC]!, context),
   );
   if (input[_EBC] != null) {
     bn.c(se_EventBridgeConfiguration(input[_EBC], context).n(_EBC));
@@ -7190,7 +7190,7 @@ const se_ServerSideEncryptionByDefault = (input: ServerSideEncryptionByDefault, 
  */
 const se_ServerSideEncryptionConfiguration = (
   input: ServerSideEncryptionConfiguration,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_SSEC);
   bn.l(input, "Rules", "Rule", () => se_ServerSideEncryptionRules(input[_Rul]!, context));
@@ -8248,7 +8248,7 @@ const de_IntelligentTieringConfiguration = (output: any, context: __SerdeContext
  */
 const de_IntelligentTieringConfigurationList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): IntelligentTieringConfiguration[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -9368,7 +9368,7 @@ const de_ServerSideEncryptionByDefault = (output: any, context: __SerdeContext):
  */
 const de_ServerSideEncryptionConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServerSideEncryptionConfiguration => {
   const contents: any = {};
   if (output.Rule === "") {

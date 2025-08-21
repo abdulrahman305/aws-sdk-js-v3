@@ -20,7 +20,7 @@ describe(getChecksumAlgorithmForRequest.name, () => {
 
     it("returns MD5 if requestChecksumRequired is set", () => {
       expect(getChecksumAlgorithmForRequest({}, { ...mockOptions, requestChecksumRequired: true })).toEqual(
-        ChecksumAlgorithm.MD5
+        ChecksumAlgorithm.MD5,
       );
     });
 
@@ -37,7 +37,7 @@ describe(getChecksumAlgorithmForRequest.name, () => {
       getChecksumAlgorithmForRequest(mockInput, mockOptions);
     }).toThrowError(
       `The checksum algorithm "${unsupportedAlgo}" is not supported by the client.` +
-        ` Select one of ${CLIENT_SUPPORTED_ALGORITHMS}.`
+        ` Select one of ${CLIENT_SUPPORTED_ALGORITHMS}.`,
     );
   });
 

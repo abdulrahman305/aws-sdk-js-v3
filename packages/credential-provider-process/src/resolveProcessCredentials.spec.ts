@@ -31,7 +31,7 @@ describe(resolveProcessCredentials.name, () => {
 
   it("throws Error if profileName is not available", async () => {
     const expectedError = new CredentialsProviderError(
-      `Profile ${mockProfileName} could not be found in shared credentials file.`
+      `Profile ${mockProfileName} could not be found in shared credentials file.`,
     );
     try {
       await resolveProcessCredentials(mockProfileName, {});
@@ -45,7 +45,7 @@ describe(resolveProcessCredentials.name, () => {
 
   it("throws Error if profile does not have value for credential_process", async () => {
     const expectedError = new CredentialsProviderError(
-      `Profile ${mockProfileName} did not contain credential_process.`
+      `Profile ${mockProfileName} did not contain credential_process.`,
     );
     try {
       await resolveProcessCredentials(mockProfileName, { [mockProfileName]: {} });
@@ -74,7 +74,7 @@ describe(resolveProcessCredentials.name, () => {
 
   it("throws Error if process credentials returns invalid JSON", async () => {
     const expectedError = new CredentialsProviderError(
-      `Profile ${mockProfileName} credential_process returned invalid JSON.`
+      `Profile ${mockProfileName} credential_process returned invalid JSON.`,
     );
     mockExecPromise.mockResolvedValue({ stdout: "not a valid JSON" });
 

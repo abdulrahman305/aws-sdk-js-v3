@@ -26,5 +26,5 @@ export const paginateDescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociat
   DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsCommand,
   "NextToken",
   "NextToken",
-  "MaxResults"
+  "MaxResults",
 );

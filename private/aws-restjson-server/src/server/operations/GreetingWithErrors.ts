@@ -82,14 +82,14 @@ export class GreetingWithErrorsSerializer
 
 export const getGreetingWithErrorsHandler = <Context>(
   operation: __Operation<GreetingWithErrorsServerInput, GreetingWithErrorsServerOutput, Context>,
-  customizer: __ValidationCustomizer<"GreetingWithErrors">
+  customizer: __ValidationCustomizer<"GreetingWithErrors">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "GreetingWithErrors">([
     new httpbinding.UriSpec<"RestJson", "GreetingWithErrors">(
       "PUT",
       [{ type: "path_literal", value: "GreetingWithErrors" }],
       [],
-      { service: "RestJson", operation: "GreetingWithErrors" }
+      { service: "RestJson", operation: "GreetingWithErrors" },
     ),
   ]);
   return new GreetingWithErrorsHandler(
@@ -97,7 +97,7 @@ export const getGreetingWithErrorsHandler = <Context>(
     mux,
     new GreetingWithErrorsSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -118,7 +118,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -160,7 +160,7 @@ export class GreetingWithErrorsHandler<Context> implements __ServiceHandler<Cont
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"GreetingWithErrors">;
   /**
@@ -177,7 +177,7 @@ export class GreetingWithErrorsHandler<Context> implements __ServiceHandler<Cont
     mux: __Mux<"RestJson", "GreetingWithErrors">,
     serializer: __OperationSerializer<RestJsonService<Context>, "GreetingWithErrors", GreetingWithErrorsErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"GreetingWithErrors">
+    validationCustomizer: __ValidationCustomizer<"GreetingWithErrors">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -189,7 +189,7 @@ export class GreetingWithErrorsHandler<Context> implements __ServiceHandler<Cont
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.GreetingWithErrors. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.GreetingWithErrors. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -201,7 +201,7 @@ export class GreetingWithErrorsHandler<Context> implements __ServiceHandler<Cont
       this.operation,
       this.serializeFrameworkException,
       GreetingWithErrorsServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

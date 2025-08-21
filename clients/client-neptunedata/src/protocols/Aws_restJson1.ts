@@ -210,7 +210,7 @@ import { NeptunedataServiceException as __BaseException } from "../models/Neptun
  */
 export const se_CancelGremlinQueryCommand = async (
   input: CancelGremlinQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -226,7 +226,7 @@ export const se_CancelGremlinQueryCommand = async (
  */
 export const se_CancelLoaderJobCommand = async (
   input: CancelLoaderJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -242,7 +242,7 @@ export const se_CancelLoaderJobCommand = async (
  */
 export const se_CancelMLDataProcessingJobCommand = async (
   input: CancelMLDataProcessingJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -262,7 +262,7 @@ export const se_CancelMLDataProcessingJobCommand = async (
  */
 export const se_CancelMLModelTrainingJobCommand = async (
   input: CancelMLModelTrainingJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -282,7 +282,7 @@ export const se_CancelMLModelTrainingJobCommand = async (
  */
 export const se_CancelMLModelTransformJobCommand = async (
   input: CancelMLModelTransformJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -302,7 +302,7 @@ export const se_CancelMLModelTransformJobCommand = async (
  */
 export const se_CancelOpenCypherQueryCommand = async (
   input: CancelOpenCypherQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -321,7 +321,7 @@ export const se_CancelOpenCypherQueryCommand = async (
  */
 export const se_CreateMLEndpointCommand = async (
   input: CreateMLEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -340,7 +340,7 @@ export const se_CreateMLEndpointCommand = async (
       neptuneIamRoleArn: [],
       update: [],
       volumeEncryptionKMSKey: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -351,7 +351,7 @@ export const se_CreateMLEndpointCommand = async (
  */
 export const se_DeleteMLEndpointCommand = async (
   input: DeleteMLEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -371,7 +371,7 @@ export const se_DeleteMLEndpointCommand = async (
  */
 export const se_DeletePropertygraphStatisticsCommand = async (
   input: DeletePropertygraphStatisticsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -389,7 +389,7 @@ export const se_DeletePropertygraphStatisticsCommand = async (
  */
 export const se_DeleteSparqlStatisticsCommand = async (
   input: DeleteSparqlStatisticsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -407,7 +407,7 @@ export const se_DeleteSparqlStatisticsCommand = async (
  */
 export const se_ExecuteFastResetCommand = async (
   input: ExecuteFastResetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -419,7 +419,7 @@ export const se_ExecuteFastResetCommand = async (
     take(input, {
       action: [],
       token: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -430,7 +430,7 @@ export const se_ExecuteFastResetCommand = async (
  */
 export const se_ExecuteGremlinExplainQueryCommand = async (
   input: ExecuteGremlinExplainQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -441,7 +441,7 @@ export const se_ExecuteGremlinExplainQueryCommand = async (
   body = JSON.stringify(
     take(input, {
       gremlin: [, , `gremlinQuery`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -452,7 +452,7 @@ export const se_ExecuteGremlinExplainQueryCommand = async (
  */
 export const se_ExecuteGremlinProfileQueryCommand = async (
   input: ExecuteGremlinProfileQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -467,7 +467,7 @@ export const se_ExecuteGremlinProfileQueryCommand = async (
       "profile.indexOps": [, , `indexOps`],
       "profile.results": [, , `results`],
       "profile.serializer": [, , `serializer`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -478,7 +478,7 @@ export const se_ExecuteGremlinProfileQueryCommand = async (
  */
 export const se_ExecuteGremlinQueryCommand = async (
   input: ExecuteGremlinQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -490,7 +490,7 @@ export const se_ExecuteGremlinQueryCommand = async (
   body = JSON.stringify(
     take(input, {
       gremlin: [, , `gremlinQuery`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -501,7 +501,7 @@ export const se_ExecuteGremlinQueryCommand = async (
  */
 export const se_ExecuteOpenCypherExplainQueryCommand = async (
   input: ExecuteOpenCypherExplainQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -514,7 +514,7 @@ export const se_ExecuteOpenCypherExplainQueryCommand = async (
       explain: [, , `explainMode`],
       query: [, , `openCypherQuery`],
       parameters: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -525,7 +525,7 @@ export const se_ExecuteOpenCypherExplainQueryCommand = async (
  */
 export const se_ExecuteOpenCypherQueryCommand = async (
   input: ExecuteOpenCypherQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -537,7 +537,7 @@ export const se_ExecuteOpenCypherQueryCommand = async (
     take(input, {
       query: [, , `openCypherQuery`],
       parameters: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -548,7 +548,7 @@ export const se_ExecuteOpenCypherQueryCommand = async (
  */
 export const se_GetEngineStatusCommand = async (
   input: GetEngineStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -566,7 +566,7 @@ export const se_GetEngineStatusCommand = async (
  */
 export const se_GetGremlinQueryStatusCommand = async (
   input: GetGremlinQueryStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -582,7 +582,7 @@ export const se_GetGremlinQueryStatusCommand = async (
  */
 export const se_GetLoaderJobStatusCommand = async (
   input: GetLoaderJobStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -604,7 +604,7 @@ export const se_GetLoaderJobStatusCommand = async (
  */
 export const se_GetMLDataProcessingJobCommand = async (
   input: GetMLDataProcessingJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -623,7 +623,7 @@ export const se_GetMLDataProcessingJobCommand = async (
  */
 export const se_GetMLEndpointCommand = async (
   input: GetMLEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -642,7 +642,7 @@ export const se_GetMLEndpointCommand = async (
  */
 export const se_GetMLModelTrainingJobCommand = async (
   input: GetMLModelTrainingJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -661,7 +661,7 @@ export const se_GetMLModelTrainingJobCommand = async (
  */
 export const se_GetMLModelTransformJobCommand = async (
   input: GetMLModelTransformJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -680,7 +680,7 @@ export const se_GetMLModelTransformJobCommand = async (
  */
 export const se_GetOpenCypherQueryStatusCommand = async (
   input: GetOpenCypherQueryStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -696,7 +696,7 @@ export const se_GetOpenCypherQueryStatusCommand = async (
  */
 export const se_GetPropertygraphStatisticsCommand = async (
   input: GetPropertygraphStatisticsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -714,7 +714,7 @@ export const se_GetPropertygraphStatisticsCommand = async (
  */
 export const se_GetPropertygraphStreamCommand = async (
   input: GetPropertygraphStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -737,7 +737,7 @@ export const se_GetPropertygraphStreamCommand = async (
  */
 export const se_GetPropertygraphSummaryCommand = async (
   input: GetPropertygraphSummaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -755,7 +755,7 @@ export const se_GetPropertygraphSummaryCommand = async (
  */
 export const se_GetRDFGraphSummaryCommand = async (
   input: GetRDFGraphSummaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -773,7 +773,7 @@ export const se_GetRDFGraphSummaryCommand = async (
  */
 export const se_GetSparqlStatisticsCommand = async (
   input: GetSparqlStatisticsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -791,7 +791,7 @@ export const se_GetSparqlStatisticsCommand = async (
  */
 export const se_GetSparqlStreamCommand = async (
   input: GetSparqlStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -814,7 +814,7 @@ export const se_GetSparqlStreamCommand = async (
  */
 export const se_ListGremlinQueriesCommand = async (
   input: ListGremlinQueriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -832,7 +832,7 @@ export const se_ListGremlinQueriesCommand = async (
  */
 export const se_ListLoaderJobsCommand = async (
   input: ListLoaderJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -851,7 +851,7 @@ export const se_ListLoaderJobsCommand = async (
  */
 export const se_ListMLDataProcessingJobsCommand = async (
   input: ListMLDataProcessingJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -870,7 +870,7 @@ export const se_ListMLDataProcessingJobsCommand = async (
  */
 export const se_ListMLEndpointsCommand = async (
   input: ListMLEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -889,7 +889,7 @@ export const se_ListMLEndpointsCommand = async (
  */
 export const se_ListMLModelTrainingJobsCommand = async (
   input: ListMLModelTrainingJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -908,7 +908,7 @@ export const se_ListMLModelTrainingJobsCommand = async (
  */
 export const se_ListMLModelTransformJobsCommand = async (
   input: ListMLModelTransformJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -927,7 +927,7 @@ export const se_ListMLModelTransformJobsCommand = async (
  */
 export const se_ListOpenCypherQueriesCommand = async (
   input: ListOpenCypherQueriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -945,7 +945,7 @@ export const se_ListOpenCypherQueriesCommand = async (
  */
 export const se_ManagePropertygraphStatisticsCommand = async (
   input: ManagePropertygraphStatisticsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -956,7 +956,7 @@ export const se_ManagePropertygraphStatisticsCommand = async (
   body = JSON.stringify(
     take(input, {
       mode: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -967,7 +967,7 @@ export const se_ManagePropertygraphStatisticsCommand = async (
  */
 export const se_ManageSparqlStatisticsCommand = async (
   input: ManageSparqlStatisticsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -978,7 +978,7 @@ export const se_ManageSparqlStatisticsCommand = async (
   body = JSON.stringify(
     take(input, {
       mode: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -989,7 +989,7 @@ export const se_ManageSparqlStatisticsCommand = async (
  */
 export const se_StartLoaderJobCommand = async (
   input: StartLoaderJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1011,7 +1011,7 @@ export const se_StartLoaderJobCommand = async (
       source: [],
       updateSingleCardinalityProperties: [],
       userProvidedEdgeIds: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1022,7 +1022,7 @@ export const se_StartLoaderJobCommand = async (
  */
 export const se_StartMLDataProcessingJobCommand = async (
   input: StartMLDataProcessingJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1047,7 +1047,7 @@ export const se_StartMLDataProcessingJobCommand = async (
       securityGroupIds: (_) => _json(_),
       subnets: (_) => _json(_),
       volumeEncryptionKMSKey: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1058,7 +1058,7 @@ export const se_StartMLDataProcessingJobCommand = async (
  */
 export const se_StartMLModelTrainingJobCommand = async (
   input: StartMLModelTrainingJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1086,7 +1086,7 @@ export const se_StartMLModelTrainingJobCommand = async (
       trainingInstanceVolumeSizeInGB: [],
       trainingTimeOutInSeconds: [],
       volumeEncryptionKMSKey: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1097,7 +1097,7 @@ export const se_StartMLModelTrainingJobCommand = async (
  */
 export const se_StartMLModelTransformJobCommand = async (
   input: StartMLModelTransformJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1121,7 +1121,7 @@ export const se_StartMLModelTransformJobCommand = async (
       subnets: (_) => _json(_),
       trainingJobName: [],
       volumeEncryptionKMSKey: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1132,7 +1132,7 @@ export const se_StartMLModelTransformJobCommand = async (
  */
 export const de_CancelGremlinQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelGremlinQueryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1153,7 +1153,7 @@ export const de_CancelGremlinQueryCommand = async (
  */
 export const de_CancelLoaderJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelLoaderJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1174,7 +1174,7 @@ export const de_CancelLoaderJobCommand = async (
  */
 export const de_CancelMLDataProcessingJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelMLDataProcessingJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1195,7 +1195,7 @@ export const de_CancelMLDataProcessingJobCommand = async (
  */
 export const de_CancelMLModelTrainingJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelMLModelTrainingJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1216,7 +1216,7 @@ export const de_CancelMLModelTrainingJobCommand = async (
  */
 export const de_CancelMLModelTransformJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelMLModelTransformJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1237,7 +1237,7 @@ export const de_CancelMLModelTransformJobCommand = async (
  */
 export const de_CancelOpenCypherQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelOpenCypherQueryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1259,7 +1259,7 @@ export const de_CancelOpenCypherQueryCommand = async (
  */
 export const de_CreateMLEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMLEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1282,7 +1282,7 @@ export const de_CreateMLEndpointCommand = async (
  */
 export const de_DeleteMLEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMLEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1303,7 +1303,7 @@ export const de_DeleteMLEndpointCommand = async (
  */
 export const de_DeletePropertygraphStatisticsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePropertygraphStatisticsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1328,7 +1328,7 @@ export const de_DeletePropertygraphStatisticsCommand = async (
  */
 export const de_DeleteSparqlStatisticsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSparqlStatisticsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1353,7 +1353,7 @@ export const de_DeleteSparqlStatisticsCommand = async (
  */
 export const de_ExecuteFastResetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteFastResetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1375,7 +1375,7 @@ export const de_ExecuteFastResetCommand = async (
  */
 export const de_ExecuteGremlinExplainQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteGremlinExplainQueryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1393,7 +1393,7 @@ export const de_ExecuteGremlinExplainQueryCommand = async (
  */
 export const de_ExecuteGremlinProfileQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteGremlinProfileQueryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1411,7 +1411,7 @@ export const de_ExecuteGremlinProfileQueryCommand = async (
  */
 export const de_ExecuteGremlinQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteGremlinQueryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1435,7 +1435,7 @@ export const de_ExecuteGremlinQueryCommand = async (
  */
 export const de_ExecuteOpenCypherExplainQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteOpenCypherExplainQueryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1453,7 +1453,7 @@ export const de_ExecuteOpenCypherExplainQueryCommand = async (
  */
 export const de_ExecuteOpenCypherQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteOpenCypherQueryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1474,7 +1474,7 @@ export const de_ExecuteOpenCypherQueryCommand = async (
  */
 export const de_GetEngineStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEngineStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1507,7 +1507,7 @@ export const de_GetEngineStatusCommand = async (
  */
 export const de_GetGremlinQueryStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGremlinQueryStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1530,7 +1530,7 @@ export const de_GetGremlinQueryStatusCommand = async (
  */
 export const de_GetLoaderJobStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLoaderJobStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1552,7 +1552,7 @@ export const de_GetLoaderJobStatusCommand = async (
  */
 export const de_GetMLDataProcessingJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMLDataProcessingJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1575,7 +1575,7 @@ export const de_GetMLDataProcessingJobCommand = async (
  */
 export const de_GetMLEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMLEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1599,7 +1599,7 @@ export const de_GetMLEndpointCommand = async (
  */
 export const de_GetMLModelTrainingJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMLModelTrainingJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1625,7 +1625,7 @@ export const de_GetMLModelTrainingJobCommand = async (
  */
 export const de_GetMLModelTransformJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMLModelTransformJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1650,7 +1650,7 @@ export const de_GetMLModelTransformJobCommand = async (
  */
 export const de_GetOpenCypherQueryStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOpenCypherQueryStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1673,7 +1673,7 @@ export const de_GetOpenCypherQueryStatusCommand = async (
  */
 export const de_GetPropertygraphStatisticsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPropertygraphStatisticsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1695,7 +1695,7 @@ export const de_GetPropertygraphStatisticsCommand = async (
  */
 export const de_GetPropertygraphStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPropertygraphStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1720,7 +1720,7 @@ export const de_GetPropertygraphStreamCommand = async (
  */
 export const de_GetPropertygraphSummaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPropertygraphSummaryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1744,7 +1744,7 @@ export const de_GetPropertygraphSummaryCommand = async (
  */
 export const de_GetRDFGraphSummaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRDFGraphSummaryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1768,7 +1768,7 @@ export const de_GetRDFGraphSummaryCommand = async (
  */
 export const de_GetSparqlStatisticsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSparqlStatisticsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1790,7 +1790,7 @@ export const de_GetSparqlStatisticsCommand = async (
  */
 export const de_GetSparqlStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSparqlStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1815,7 +1815,7 @@ export const de_GetSparqlStreamCommand = async (
  */
 export const de_ListGremlinQueriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGremlinQueriesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1838,7 +1838,7 @@ export const de_ListGremlinQueriesCommand = async (
  */
 export const de_ListLoaderJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLoaderJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1860,7 +1860,7 @@ export const de_ListLoaderJobsCommand = async (
  */
 export const de_ListMLDataProcessingJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMLDataProcessingJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1881,7 +1881,7 @@ export const de_ListMLDataProcessingJobsCommand = async (
  */
 export const de_ListMLEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMLEndpointsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1902,7 +1902,7 @@ export const de_ListMLEndpointsCommand = async (
  */
 export const de_ListMLModelTrainingJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMLModelTrainingJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1923,7 +1923,7 @@ export const de_ListMLModelTrainingJobsCommand = async (
  */
 export const de_ListMLModelTransformJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMLModelTransformJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1944,7 +1944,7 @@ export const de_ListMLModelTransformJobsCommand = async (
  */
 export const de_ListOpenCypherQueriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOpenCypherQueriesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1967,7 +1967,7 @@ export const de_ListOpenCypherQueriesCommand = async (
  */
 export const de_ManagePropertygraphStatisticsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ManagePropertygraphStatisticsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1989,7 +1989,7 @@ export const de_ManagePropertygraphStatisticsCommand = async (
  */
 export const de_ManageSparqlStatisticsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ManageSparqlStatisticsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2011,7 +2011,7 @@ export const de_ManageSparqlStatisticsCommand = async (
  */
 export const de_StartLoaderJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartLoaderJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2033,7 +2033,7 @@ export const de_StartLoaderJobCommand = async (
  */
 export const de_StartMLDataProcessingJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartMLDataProcessingJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2056,7 +2056,7 @@ export const de_StartMLDataProcessingJobCommand = async (
  */
 export const de_StartMLModelTrainingJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartMLModelTrainingJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2079,7 +2079,7 @@ export const de_StartMLModelTrainingJobCommand = async (
  */
 export const de_StartMLModelTransformJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartMLModelTransformJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2225,7 +2225,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2266,7 +2266,7 @@ const de_BadRequestExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_BulkLoadIdNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BulkLoadIdNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2288,7 +2288,7 @@ const de_BulkLoadIdNotFoundExceptionRes = async (
  */
 const de_CancelledByUserExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelledByUserException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2310,7 +2310,7 @@ const de_CancelledByUserExceptionRes = async (
  */
 const de_ClientTimeoutExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ClientTimeoutException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2332,7 +2332,7 @@ const de_ClientTimeoutExceptionRes = async (
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2354,7 +2354,7 @@ const de_ConcurrentModificationExceptionRes = async (
  */
 const de_ConstraintViolationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConstraintViolationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2376,7 +2376,7 @@ const de_ConstraintViolationExceptionRes = async (
  */
 const de_ExpiredStreamExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExpiredStreamException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2398,7 +2398,7 @@ const de_ExpiredStreamExceptionRes = async (
  */
 const de_FailureByQueryExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FailureByQueryException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2420,7 +2420,7 @@ const de_FailureByQueryExceptionRes = async (
  */
 const de_IllegalArgumentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IllegalArgumentException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2442,7 +2442,7 @@ const de_IllegalArgumentExceptionRes = async (
  */
 const de_InternalFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalFailureException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2464,7 +2464,7 @@ const de_InternalFailureExceptionRes = async (
  */
 const de_InvalidArgumentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidArgumentException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2486,7 +2486,7 @@ const de_InvalidArgumentExceptionRes = async (
  */
 const de_InvalidNumericDataExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNumericDataException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2508,7 +2508,7 @@ const de_InvalidNumericDataExceptionRes = async (
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2530,7 +2530,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_LoadUrlAccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LoadUrlAccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2552,7 +2552,7 @@ const de_LoadUrlAccessDeniedExceptionRes = async (
  */
 const de_MalformedQueryExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedQueryException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2574,7 +2574,7 @@ const de_MalformedQueryExceptionRes = async (
  */
 const de_MemoryLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MemoryLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2596,7 +2596,7 @@ const de_MemoryLimitExceededExceptionRes = async (
  */
 const de_MethodNotAllowedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MethodNotAllowedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2618,7 +2618,7 @@ const de_MethodNotAllowedExceptionRes = async (
  */
 const de_MissingParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MissingParameterException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2640,7 +2640,7 @@ const de_MissingParameterExceptionRes = async (
  */
 const de_MLResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MLResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2681,7 +2681,7 @@ const de_ParsingExceptionRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_PreconditionsFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PreconditionsFailedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2703,7 +2703,7 @@ const de_PreconditionsFailedExceptionRes = async (
  */
 const de_QueryLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<QueryLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2744,7 +2744,7 @@ const de_QueryLimitExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_QueryTooLargeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<QueryTooLargeException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2766,7 +2766,7 @@ const de_QueryTooLargeExceptionRes = async (
  */
 const de_ReadOnlyViolationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReadOnlyViolationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2807,7 +2807,7 @@ const de_S3ExceptionRes = async (parsedOutput: any, context: __SerdeContext): Pr
  */
 const de_ServerShutdownExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServerShutdownException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2829,7 +2829,7 @@ const de_ServerShutdownExceptionRes = async (
  */
 const de_StatisticsNotAvailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StatisticsNotAvailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2851,7 +2851,7 @@ const de_StatisticsNotAvailableExceptionRes = async (
  */
 const de_StreamRecordsNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StreamRecordsNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2892,7 +2892,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_TimeLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TimeLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2914,7 +2914,7 @@ const de_TimeLimitExceededExceptionRes = async (
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2936,7 +2936,7 @@ const de_TooManyRequestsExceptionRes = async (
  */
 const de_UnsupportedOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedOperationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2969,13 +2969,16 @@ const de_UnsupportedOperationExceptionRes = async (
  * deserializeAws_restJson1DocumentValuedMap
  */
 const de_DocumentValuedMap = (output: any, context: __SerdeContext): Record<string, __DocumentType> => {
-  return Object.entries(output).reduce((acc: Record<string, __DocumentType>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, __DocumentType>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_Document(value, context);
       return acc;
-    }
-    acc[key as string] = de_Document(value, context);
-    return acc;
-  }, {} as Record<string, __DocumentType>);
+    },
+    {} as Record<string, __DocumentType>,
+  );
 };
 
 // de_EdgeLabels omitted.

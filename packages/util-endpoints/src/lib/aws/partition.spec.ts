@@ -83,7 +83,7 @@ describe("partition", () => {
     });
     expect(() => partition("non-existant-region")).toThrow(
       "Provided region was not found in the partition array or regex," +
-        " and default partition with id 'aws' doesn't exist."
+        " and default partition with id 'aws' doesn't exist.",
     );
   });
 
@@ -91,7 +91,7 @@ describe("partition", () => {
     const copy = JSON.parse(
       JSON.stringify({
         partitions: [MOCK_DEFAULT_PARTITION, MOCK_PARTITION],
-      })
+      }),
     );
     setPartitionInfo(copy);
     const testRegion = "mock-region-12345";

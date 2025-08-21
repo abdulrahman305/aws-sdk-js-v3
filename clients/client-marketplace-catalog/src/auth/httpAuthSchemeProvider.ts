@@ -41,7 +41,7 @@ export interface MarketplaceCatalogHttpAuthSchemeParametersProvider
 export const defaultMarketplaceCatalogHttpAuthSchemeParametersProvider = async (
   config: MarketplaceCatalogClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<MarketplaceCatalogHttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -82,7 +82,7 @@ export interface MarketplaceCatalogHttpAuthSchemeProvider
  * @internal
  */
 export const defaultMarketplaceCatalogHttpAuthSchemeProvider: MarketplaceCatalogHttpAuthSchemeProvider = (
-  authParameters
+  authParameters,
 ) => {
   const options: HttpAuthOption[] = [];
   switch (authParameters.operation) {
@@ -131,7 +131,7 @@ export interface HttpAuthSchemeResolvedConfig extends AwsSdkSigV4AuthResolvedCon
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved
+  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved,
 ): T & HttpAuthSchemeResolvedConfig => {
   const config_0 = resolveAwsSdkSigV4Config(config);
   return {

@@ -160,7 +160,7 @@ import { SnowballServiceException as __BaseException } from "../models/SnowballS
  */
 export const se_CancelClusterCommand = async (
   input: CancelClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CancelCluster");
   let body: any;
@@ -173,7 +173,7 @@ export const se_CancelClusterCommand = async (
  */
 export const se_CancelJobCommand = async (
   input: CancelJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CancelJob");
   let body: any;
@@ -186,7 +186,7 @@ export const se_CancelJobCommand = async (
  */
 export const se_CreateAddressCommand = async (
   input: CreateAddressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAddress");
   let body: any;
@@ -199,7 +199,7 @@ export const se_CreateAddressCommand = async (
  */
 export const se_CreateClusterCommand = async (
   input: CreateClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateCluster");
   let body: any;
@@ -212,7 +212,7 @@ export const se_CreateClusterCommand = async (
  */
 export const se_CreateJobCommand = async (
   input: CreateJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateJob");
   let body: any;
@@ -225,7 +225,7 @@ export const se_CreateJobCommand = async (
  */
 export const se_CreateLongTermPricingCommand = async (
   input: CreateLongTermPricingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLongTermPricing");
   let body: any;
@@ -238,7 +238,7 @@ export const se_CreateLongTermPricingCommand = async (
  */
 export const se_CreateReturnShippingLabelCommand = async (
   input: CreateReturnShippingLabelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateReturnShippingLabel");
   let body: any;
@@ -251,7 +251,7 @@ export const se_CreateReturnShippingLabelCommand = async (
  */
 export const se_DescribeAddressCommand = async (
   input: DescribeAddressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAddress");
   let body: any;
@@ -264,7 +264,7 @@ export const se_DescribeAddressCommand = async (
  */
 export const se_DescribeAddressesCommand = async (
   input: DescribeAddressesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAddresses");
   let body: any;
@@ -277,7 +277,7 @@ export const se_DescribeAddressesCommand = async (
  */
 export const se_DescribeClusterCommand = async (
   input: DescribeClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCluster");
   let body: any;
@@ -290,7 +290,7 @@ export const se_DescribeClusterCommand = async (
  */
 export const se_DescribeJobCommand = async (
   input: DescribeJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeJob");
   let body: any;
@@ -303,7 +303,7 @@ export const se_DescribeJobCommand = async (
  */
 export const se_DescribeReturnShippingLabelCommand = async (
   input: DescribeReturnShippingLabelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeReturnShippingLabel");
   let body: any;
@@ -316,7 +316,7 @@ export const se_DescribeReturnShippingLabelCommand = async (
  */
 export const se_GetJobManifestCommand = async (
   input: GetJobManifestCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetJobManifest");
   let body: any;
@@ -329,7 +329,7 @@ export const se_GetJobManifestCommand = async (
  */
 export const se_GetJobUnlockCodeCommand = async (
   input: GetJobUnlockCodeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetJobUnlockCode");
   let body: any;
@@ -342,7 +342,7 @@ export const se_GetJobUnlockCodeCommand = async (
  */
 export const se_GetSnowballUsageCommand = async (
   input: GetSnowballUsageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSnowballUsage");
   let body: any;
@@ -355,7 +355,7 @@ export const se_GetSnowballUsageCommand = async (
  */
 export const se_GetSoftwareUpdatesCommand = async (
   input: GetSoftwareUpdatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSoftwareUpdates");
   let body: any;
@@ -368,7 +368,7 @@ export const se_GetSoftwareUpdatesCommand = async (
  */
 export const se_ListClusterJobsCommand = async (
   input: ListClusterJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListClusterJobs");
   let body: any;
@@ -381,7 +381,7 @@ export const se_ListClusterJobsCommand = async (
  */
 export const se_ListClustersCommand = async (
   input: ListClustersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListClusters");
   let body: any;
@@ -394,7 +394,7 @@ export const se_ListClustersCommand = async (
  */
 export const se_ListCompatibleImagesCommand = async (
   input: ListCompatibleImagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListCompatibleImages");
   let body: any;
@@ -407,7 +407,7 @@ export const se_ListCompatibleImagesCommand = async (
  */
 export const se_ListJobsCommand = async (
   input: ListJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListJobs");
   let body: any;
@@ -420,7 +420,7 @@ export const se_ListJobsCommand = async (
  */
 export const se_ListLongTermPricingCommand = async (
   input: ListLongTermPricingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListLongTermPricing");
   let body: any;
@@ -433,7 +433,7 @@ export const se_ListLongTermPricingCommand = async (
  */
 export const se_ListPickupLocationsCommand = async (
   input: ListPickupLocationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPickupLocations");
   let body: any;
@@ -446,7 +446,7 @@ export const se_ListPickupLocationsCommand = async (
  */
 export const se_ListServiceVersionsCommand = async (
   input: ListServiceVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListServiceVersions");
   let body: any;
@@ -459,7 +459,7 @@ export const se_ListServiceVersionsCommand = async (
  */
 export const se_UpdateClusterCommand = async (
   input: UpdateClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateCluster");
   let body: any;
@@ -472,7 +472,7 @@ export const se_UpdateClusterCommand = async (
  */
 export const se_UpdateJobCommand = async (
   input: UpdateJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateJob");
   let body: any;
@@ -485,7 +485,7 @@ export const se_UpdateJobCommand = async (
  */
 export const se_UpdateJobShipmentStateCommand = async (
   input: UpdateJobShipmentStateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateJobShipmentState");
   let body: any;
@@ -498,7 +498,7 @@ export const se_UpdateJobShipmentStateCommand = async (
  */
 export const se_UpdateLongTermPricingCommand = async (
   input: UpdateLongTermPricingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateLongTermPricing");
   let body: any;
@@ -511,7 +511,7 @@ export const se_UpdateLongTermPricingCommand = async (
  */
 export const de_CancelClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -531,7 +531,7 @@ export const de_CancelClusterCommand = async (
  */
 export const de_CancelJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -551,7 +551,7 @@ export const de_CancelJobCommand = async (
  */
 export const de_CreateAddressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAddressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -571,7 +571,7 @@ export const de_CreateAddressCommand = async (
  */
 export const de_CreateClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -591,7 +591,7 @@ export const de_CreateClusterCommand = async (
  */
 export const de_CreateJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -611,7 +611,7 @@ export const de_CreateJobCommand = async (
  */
 export const de_CreateLongTermPricingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLongTermPricingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -631,7 +631,7 @@ export const de_CreateLongTermPricingCommand = async (
  */
 export const de_CreateReturnShippingLabelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateReturnShippingLabelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -651,7 +651,7 @@ export const de_CreateReturnShippingLabelCommand = async (
  */
 export const de_DescribeAddressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAddressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -671,7 +671,7 @@ export const de_DescribeAddressCommand = async (
  */
 export const de_DescribeAddressesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAddressesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -691,7 +691,7 @@ export const de_DescribeAddressesCommand = async (
  */
 export const de_DescribeClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -711,7 +711,7 @@ export const de_DescribeClusterCommand = async (
  */
 export const de_DescribeJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -731,7 +731,7 @@ export const de_DescribeJobCommand = async (
  */
 export const de_DescribeReturnShippingLabelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReturnShippingLabelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -751,7 +751,7 @@ export const de_DescribeReturnShippingLabelCommand = async (
  */
 export const de_GetJobManifestCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetJobManifestCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -771,7 +771,7 @@ export const de_GetJobManifestCommand = async (
  */
 export const de_GetJobUnlockCodeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetJobUnlockCodeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -791,7 +791,7 @@ export const de_GetJobUnlockCodeCommand = async (
  */
 export const de_GetSnowballUsageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSnowballUsageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -811,7 +811,7 @@ export const de_GetSnowballUsageCommand = async (
  */
 export const de_GetSoftwareUpdatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSoftwareUpdatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -831,7 +831,7 @@ export const de_GetSoftwareUpdatesCommand = async (
  */
 export const de_ListClusterJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListClusterJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -851,7 +851,7 @@ export const de_ListClusterJobsCommand = async (
  */
 export const de_ListClustersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListClustersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -871,7 +871,7 @@ export const de_ListClustersCommand = async (
  */
 export const de_ListCompatibleImagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCompatibleImagesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -891,7 +891,7 @@ export const de_ListCompatibleImagesCommand = async (
  */
 export const de_ListJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -911,7 +911,7 @@ export const de_ListJobsCommand = async (
  */
 export const de_ListLongTermPricingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLongTermPricingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -931,7 +931,7 @@ export const de_ListLongTermPricingCommand = async (
  */
 export const de_ListPickupLocationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPickupLocationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -951,7 +951,7 @@ export const de_ListPickupLocationsCommand = async (
  */
 export const de_ListServiceVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServiceVersionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -971,7 +971,7 @@ export const de_ListServiceVersionsCommand = async (
  */
 export const de_UpdateClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -991,7 +991,7 @@ export const de_UpdateClusterCommand = async (
  */
 export const de_UpdateJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1011,7 +1011,7 @@ export const de_UpdateJobCommand = async (
  */
 export const de_UpdateJobShipmentStateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateJobShipmentStateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1031,7 +1031,7 @@ export const de_UpdateJobShipmentStateCommand = async (
  */
 export const de_UpdateLongTermPricingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLongTermPricingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1104,7 +1104,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ClusterLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ClusterLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1133,7 +1133,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_Ec2RequestFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<Ec2RequestFailedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1149,7 +1149,7 @@ const de_Ec2RequestFailedExceptionRes = async (
  */
 const de_InvalidAddressExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidAddressException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1165,7 +1165,7 @@ const de_InvalidAddressExceptionRes = async (
  */
 const de_InvalidInputCombinationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidInputCombinationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1181,7 +1181,7 @@ const de_InvalidInputCombinationExceptionRes = async (
  */
 const de_InvalidJobStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidJobStateException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1197,7 +1197,7 @@ const de_InvalidJobStateExceptionRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1213,7 +1213,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_InvalidResourceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidResourceException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1229,7 +1229,7 @@ const de_InvalidResourceExceptionRes = async (
  */
 const de_KMSRequestFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KMSRequestFailedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1245,7 +1245,7 @@ const de_KMSRequestFailedExceptionRes = async (
  */
 const de_ReturnShippingLabelAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReturnShippingLabelAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1261,7 +1261,7 @@ const de_ReturnShippingLabelAlreadyExistsExceptionRes = async (
  */
 const de_UnsupportedAddressExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedAddressException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1614,7 +1614,7 @@ const de_DescribeJobResult = (output: any, context: __SerdeContext): DescribeJob
  */
 const de_DescribeReturnShippingLabelResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeReturnShippingLabelResult => {
   return take(output, {
     ExpirationDate: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -1918,7 +1918,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

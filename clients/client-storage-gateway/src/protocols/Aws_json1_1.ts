@@ -389,7 +389,7 @@ import { StorageGatewayServiceException as __BaseException } from "../models/Sto
  */
 export const se_ActivateGatewayCommand = async (
   input: ActivateGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ActivateGateway");
   let body: any;
@@ -402,7 +402,7 @@ export const se_ActivateGatewayCommand = async (
  */
 export const se_AddCacheCommand = async (
   input: AddCacheCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AddCache");
   let body: any;
@@ -415,7 +415,7 @@ export const se_AddCacheCommand = async (
  */
 export const se_AddTagsToResourceCommand = async (
   input: AddTagsToResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AddTagsToResource");
   let body: any;
@@ -428,7 +428,7 @@ export const se_AddTagsToResourceCommand = async (
  */
 export const se_AddUploadBufferCommand = async (
   input: AddUploadBufferCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AddUploadBuffer");
   let body: any;
@@ -441,7 +441,7 @@ export const se_AddUploadBufferCommand = async (
  */
 export const se_AddWorkingStorageCommand = async (
   input: AddWorkingStorageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AddWorkingStorage");
   let body: any;
@@ -454,7 +454,7 @@ export const se_AddWorkingStorageCommand = async (
  */
 export const se_AssignTapePoolCommand = async (
   input: AssignTapePoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssignTapePool");
   let body: any;
@@ -467,7 +467,7 @@ export const se_AssignTapePoolCommand = async (
  */
 export const se_AssociateFileSystemCommand = async (
   input: AssociateFileSystemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateFileSystem");
   let body: any;
@@ -480,7 +480,7 @@ export const se_AssociateFileSystemCommand = async (
  */
 export const se_AttachVolumeCommand = async (
   input: AttachVolumeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AttachVolume");
   let body: any;
@@ -493,7 +493,7 @@ export const se_AttachVolumeCommand = async (
  */
 export const se_CancelArchivalCommand = async (
   input: CancelArchivalCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CancelArchival");
   let body: any;
@@ -506,7 +506,7 @@ export const se_CancelArchivalCommand = async (
  */
 export const se_CancelRetrievalCommand = async (
   input: CancelRetrievalCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CancelRetrieval");
   let body: any;
@@ -519,7 +519,7 @@ export const se_CancelRetrievalCommand = async (
  */
 export const se_CreateCachediSCSIVolumeCommand = async (
   input: CreateCachediSCSIVolumeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateCachediSCSIVolume");
   let body: any;
@@ -532,7 +532,7 @@ export const se_CreateCachediSCSIVolumeCommand = async (
  */
 export const se_CreateNFSFileShareCommand = async (
   input: CreateNFSFileShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateNFSFileShare");
   let body: any;
@@ -545,7 +545,7 @@ export const se_CreateNFSFileShareCommand = async (
  */
 export const se_CreateSMBFileShareCommand = async (
   input: CreateSMBFileShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateSMBFileShare");
   let body: any;
@@ -558,7 +558,7 @@ export const se_CreateSMBFileShareCommand = async (
  */
 export const se_CreateSnapshotCommand = async (
   input: CreateSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateSnapshot");
   let body: any;
@@ -571,7 +571,7 @@ export const se_CreateSnapshotCommand = async (
  */
 export const se_CreateSnapshotFromVolumeRecoveryPointCommand = async (
   input: CreateSnapshotFromVolumeRecoveryPointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateSnapshotFromVolumeRecoveryPoint");
   let body: any;
@@ -584,7 +584,7 @@ export const se_CreateSnapshotFromVolumeRecoveryPointCommand = async (
  */
 export const se_CreateStorediSCSIVolumeCommand = async (
   input: CreateStorediSCSIVolumeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateStorediSCSIVolume");
   let body: any;
@@ -597,7 +597,7 @@ export const se_CreateStorediSCSIVolumeCommand = async (
  */
 export const se_CreateTapePoolCommand = async (
   input: CreateTapePoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateTapePool");
   let body: any;
@@ -610,7 +610,7 @@ export const se_CreateTapePoolCommand = async (
  */
 export const se_CreateTapesCommand = async (
   input: CreateTapesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateTapes");
   let body: any;
@@ -623,7 +623,7 @@ export const se_CreateTapesCommand = async (
  */
 export const se_CreateTapeWithBarcodeCommand = async (
   input: CreateTapeWithBarcodeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateTapeWithBarcode");
   let body: any;
@@ -636,7 +636,7 @@ export const se_CreateTapeWithBarcodeCommand = async (
  */
 export const se_DeleteAutomaticTapeCreationPolicyCommand = async (
   input: DeleteAutomaticTapeCreationPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAutomaticTapeCreationPolicy");
   let body: any;
@@ -649,7 +649,7 @@ export const se_DeleteAutomaticTapeCreationPolicyCommand = async (
  */
 export const se_DeleteBandwidthRateLimitCommand = async (
   input: DeleteBandwidthRateLimitCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteBandwidthRateLimit");
   let body: any;
@@ -662,7 +662,7 @@ export const se_DeleteBandwidthRateLimitCommand = async (
  */
 export const se_DeleteChapCredentialsCommand = async (
   input: DeleteChapCredentialsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteChapCredentials");
   let body: any;
@@ -675,7 +675,7 @@ export const se_DeleteChapCredentialsCommand = async (
  */
 export const se_DeleteFileShareCommand = async (
   input: DeleteFileShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteFileShare");
   let body: any;
@@ -688,7 +688,7 @@ export const se_DeleteFileShareCommand = async (
  */
 export const se_DeleteGatewayCommand = async (
   input: DeleteGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteGateway");
   let body: any;
@@ -701,7 +701,7 @@ export const se_DeleteGatewayCommand = async (
  */
 export const se_DeleteSnapshotScheduleCommand = async (
   input: DeleteSnapshotScheduleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteSnapshotSchedule");
   let body: any;
@@ -714,7 +714,7 @@ export const se_DeleteSnapshotScheduleCommand = async (
  */
 export const se_DeleteTapeCommand = async (
   input: DeleteTapeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteTape");
   let body: any;
@@ -727,7 +727,7 @@ export const se_DeleteTapeCommand = async (
  */
 export const se_DeleteTapeArchiveCommand = async (
   input: DeleteTapeArchiveCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteTapeArchive");
   let body: any;
@@ -740,7 +740,7 @@ export const se_DeleteTapeArchiveCommand = async (
  */
 export const se_DeleteTapePoolCommand = async (
   input: DeleteTapePoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteTapePool");
   let body: any;
@@ -753,7 +753,7 @@ export const se_DeleteTapePoolCommand = async (
  */
 export const se_DeleteVolumeCommand = async (
   input: DeleteVolumeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteVolume");
   let body: any;
@@ -766,7 +766,7 @@ export const se_DeleteVolumeCommand = async (
  */
 export const se_DescribeAvailabilityMonitorTestCommand = async (
   input: DescribeAvailabilityMonitorTestCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAvailabilityMonitorTest");
   let body: any;
@@ -779,7 +779,7 @@ export const se_DescribeAvailabilityMonitorTestCommand = async (
  */
 export const se_DescribeBandwidthRateLimitCommand = async (
   input: DescribeBandwidthRateLimitCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeBandwidthRateLimit");
   let body: any;
@@ -792,7 +792,7 @@ export const se_DescribeBandwidthRateLimitCommand = async (
  */
 export const se_DescribeBandwidthRateLimitScheduleCommand = async (
   input: DescribeBandwidthRateLimitScheduleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeBandwidthRateLimitSchedule");
   let body: any;
@@ -805,7 +805,7 @@ export const se_DescribeBandwidthRateLimitScheduleCommand = async (
  */
 export const se_DescribeCacheCommand = async (
   input: DescribeCacheCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCache");
   let body: any;
@@ -818,7 +818,7 @@ export const se_DescribeCacheCommand = async (
  */
 export const se_DescribeCachediSCSIVolumesCommand = async (
   input: DescribeCachediSCSIVolumesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCachediSCSIVolumes");
   let body: any;
@@ -831,7 +831,7 @@ export const se_DescribeCachediSCSIVolumesCommand = async (
  */
 export const se_DescribeChapCredentialsCommand = async (
   input: DescribeChapCredentialsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeChapCredentials");
   let body: any;
@@ -844,7 +844,7 @@ export const se_DescribeChapCredentialsCommand = async (
  */
 export const se_DescribeFileSystemAssociationsCommand = async (
   input: DescribeFileSystemAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFileSystemAssociations");
   let body: any;
@@ -857,7 +857,7 @@ export const se_DescribeFileSystemAssociationsCommand = async (
  */
 export const se_DescribeGatewayInformationCommand = async (
   input: DescribeGatewayInformationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeGatewayInformation");
   let body: any;
@@ -870,7 +870,7 @@ export const se_DescribeGatewayInformationCommand = async (
  */
 export const se_DescribeMaintenanceStartTimeCommand = async (
   input: DescribeMaintenanceStartTimeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeMaintenanceStartTime");
   let body: any;
@@ -883,7 +883,7 @@ export const se_DescribeMaintenanceStartTimeCommand = async (
  */
 export const se_DescribeNFSFileSharesCommand = async (
   input: DescribeNFSFileSharesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeNFSFileShares");
   let body: any;
@@ -896,7 +896,7 @@ export const se_DescribeNFSFileSharesCommand = async (
  */
 export const se_DescribeSMBFileSharesCommand = async (
   input: DescribeSMBFileSharesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeSMBFileShares");
   let body: any;
@@ -909,7 +909,7 @@ export const se_DescribeSMBFileSharesCommand = async (
  */
 export const se_DescribeSMBSettingsCommand = async (
   input: DescribeSMBSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeSMBSettings");
   let body: any;
@@ -922,7 +922,7 @@ export const se_DescribeSMBSettingsCommand = async (
  */
 export const se_DescribeSnapshotScheduleCommand = async (
   input: DescribeSnapshotScheduleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeSnapshotSchedule");
   let body: any;
@@ -935,7 +935,7 @@ export const se_DescribeSnapshotScheduleCommand = async (
  */
 export const se_DescribeStorediSCSIVolumesCommand = async (
   input: DescribeStorediSCSIVolumesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeStorediSCSIVolumes");
   let body: any;
@@ -948,7 +948,7 @@ export const se_DescribeStorediSCSIVolumesCommand = async (
  */
 export const se_DescribeTapeArchivesCommand = async (
   input: DescribeTapeArchivesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTapeArchives");
   let body: any;
@@ -961,7 +961,7 @@ export const se_DescribeTapeArchivesCommand = async (
  */
 export const se_DescribeTapeRecoveryPointsCommand = async (
   input: DescribeTapeRecoveryPointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTapeRecoveryPoints");
   let body: any;
@@ -974,7 +974,7 @@ export const se_DescribeTapeRecoveryPointsCommand = async (
  */
 export const se_DescribeTapesCommand = async (
   input: DescribeTapesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTapes");
   let body: any;
@@ -987,7 +987,7 @@ export const se_DescribeTapesCommand = async (
  */
 export const se_DescribeUploadBufferCommand = async (
   input: DescribeUploadBufferCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeUploadBuffer");
   let body: any;
@@ -1000,7 +1000,7 @@ export const se_DescribeUploadBufferCommand = async (
  */
 export const se_DescribeVTLDevicesCommand = async (
   input: DescribeVTLDevicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeVTLDevices");
   let body: any;
@@ -1013,7 +1013,7 @@ export const se_DescribeVTLDevicesCommand = async (
  */
 export const se_DescribeWorkingStorageCommand = async (
   input: DescribeWorkingStorageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeWorkingStorage");
   let body: any;
@@ -1026,7 +1026,7 @@ export const se_DescribeWorkingStorageCommand = async (
  */
 export const se_DetachVolumeCommand = async (
   input: DetachVolumeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DetachVolume");
   let body: any;
@@ -1039,7 +1039,7 @@ export const se_DetachVolumeCommand = async (
  */
 export const se_DisableGatewayCommand = async (
   input: DisableGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisableGateway");
   let body: any;
@@ -1052,7 +1052,7 @@ export const se_DisableGatewayCommand = async (
  */
 export const se_DisassociateFileSystemCommand = async (
   input: DisassociateFileSystemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateFileSystem");
   let body: any;
@@ -1065,7 +1065,7 @@ export const se_DisassociateFileSystemCommand = async (
  */
 export const se_JoinDomainCommand = async (
   input: JoinDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("JoinDomain");
   let body: any;
@@ -1078,7 +1078,7 @@ export const se_JoinDomainCommand = async (
  */
 export const se_ListAutomaticTapeCreationPoliciesCommand = async (
   input: ListAutomaticTapeCreationPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAutomaticTapeCreationPolicies");
   let body: any;
@@ -1091,7 +1091,7 @@ export const se_ListAutomaticTapeCreationPoliciesCommand = async (
  */
 export const se_ListFileSharesCommand = async (
   input: ListFileSharesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListFileShares");
   let body: any;
@@ -1104,7 +1104,7 @@ export const se_ListFileSharesCommand = async (
  */
 export const se_ListFileSystemAssociationsCommand = async (
   input: ListFileSystemAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListFileSystemAssociations");
   let body: any;
@@ -1117,7 +1117,7 @@ export const se_ListFileSystemAssociationsCommand = async (
  */
 export const se_ListGatewaysCommand = async (
   input: ListGatewaysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListGateways");
   let body: any;
@@ -1130,7 +1130,7 @@ export const se_ListGatewaysCommand = async (
  */
 export const se_ListLocalDisksCommand = async (
   input: ListLocalDisksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListLocalDisks");
   let body: any;
@@ -1143,7 +1143,7 @@ export const se_ListLocalDisksCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -1156,7 +1156,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTapePoolsCommand = async (
   input: ListTapePoolsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTapePools");
   let body: any;
@@ -1169,7 +1169,7 @@ export const se_ListTapePoolsCommand = async (
  */
 export const se_ListTapesCommand = async (
   input: ListTapesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTapes");
   let body: any;
@@ -1182,7 +1182,7 @@ export const se_ListTapesCommand = async (
  */
 export const se_ListVolumeInitiatorsCommand = async (
   input: ListVolumeInitiatorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListVolumeInitiators");
   let body: any;
@@ -1195,7 +1195,7 @@ export const se_ListVolumeInitiatorsCommand = async (
  */
 export const se_ListVolumeRecoveryPointsCommand = async (
   input: ListVolumeRecoveryPointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListVolumeRecoveryPoints");
   let body: any;
@@ -1208,7 +1208,7 @@ export const se_ListVolumeRecoveryPointsCommand = async (
  */
 export const se_ListVolumesCommand = async (
   input: ListVolumesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListVolumes");
   let body: any;
@@ -1221,7 +1221,7 @@ export const se_ListVolumesCommand = async (
  */
 export const se_NotifyWhenUploadedCommand = async (
   input: NotifyWhenUploadedCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("NotifyWhenUploaded");
   let body: any;
@@ -1234,7 +1234,7 @@ export const se_NotifyWhenUploadedCommand = async (
  */
 export const se_RefreshCacheCommand = async (
   input: RefreshCacheCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RefreshCache");
   let body: any;
@@ -1247,7 +1247,7 @@ export const se_RefreshCacheCommand = async (
  */
 export const se_RemoveTagsFromResourceCommand = async (
   input: RemoveTagsFromResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RemoveTagsFromResource");
   let body: any;
@@ -1260,7 +1260,7 @@ export const se_RemoveTagsFromResourceCommand = async (
  */
 export const se_ResetCacheCommand = async (
   input: ResetCacheCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ResetCache");
   let body: any;
@@ -1273,7 +1273,7 @@ export const se_ResetCacheCommand = async (
  */
 export const se_RetrieveTapeArchiveCommand = async (
   input: RetrieveTapeArchiveCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RetrieveTapeArchive");
   let body: any;
@@ -1286,7 +1286,7 @@ export const se_RetrieveTapeArchiveCommand = async (
  */
 export const se_RetrieveTapeRecoveryPointCommand = async (
   input: RetrieveTapeRecoveryPointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RetrieveTapeRecoveryPoint");
   let body: any;
@@ -1299,7 +1299,7 @@ export const se_RetrieveTapeRecoveryPointCommand = async (
  */
 export const se_SetLocalConsolePasswordCommand = async (
   input: SetLocalConsolePasswordCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SetLocalConsolePassword");
   let body: any;
@@ -1312,7 +1312,7 @@ export const se_SetLocalConsolePasswordCommand = async (
  */
 export const se_SetSMBGuestPasswordCommand = async (
   input: SetSMBGuestPasswordCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SetSMBGuestPassword");
   let body: any;
@@ -1325,7 +1325,7 @@ export const se_SetSMBGuestPasswordCommand = async (
  */
 export const se_ShutdownGatewayCommand = async (
   input: ShutdownGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ShutdownGateway");
   let body: any;
@@ -1338,7 +1338,7 @@ export const se_ShutdownGatewayCommand = async (
  */
 export const se_StartAvailabilityMonitorTestCommand = async (
   input: StartAvailabilityMonitorTestCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartAvailabilityMonitorTest");
   let body: any;
@@ -1351,7 +1351,7 @@ export const se_StartAvailabilityMonitorTestCommand = async (
  */
 export const se_StartGatewayCommand = async (
   input: StartGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartGateway");
   let body: any;
@@ -1364,7 +1364,7 @@ export const se_StartGatewayCommand = async (
  */
 export const se_UpdateAutomaticTapeCreationPolicyCommand = async (
   input: UpdateAutomaticTapeCreationPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateAutomaticTapeCreationPolicy");
   let body: any;
@@ -1377,7 +1377,7 @@ export const se_UpdateAutomaticTapeCreationPolicyCommand = async (
  */
 export const se_UpdateBandwidthRateLimitCommand = async (
   input: UpdateBandwidthRateLimitCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateBandwidthRateLimit");
   let body: any;
@@ -1390,7 +1390,7 @@ export const se_UpdateBandwidthRateLimitCommand = async (
  */
 export const se_UpdateBandwidthRateLimitScheduleCommand = async (
   input: UpdateBandwidthRateLimitScheduleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateBandwidthRateLimitSchedule");
   let body: any;
@@ -1403,7 +1403,7 @@ export const se_UpdateBandwidthRateLimitScheduleCommand = async (
  */
 export const se_UpdateChapCredentialsCommand = async (
   input: UpdateChapCredentialsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateChapCredentials");
   let body: any;
@@ -1416,7 +1416,7 @@ export const se_UpdateChapCredentialsCommand = async (
  */
 export const se_UpdateFileSystemAssociationCommand = async (
   input: UpdateFileSystemAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateFileSystemAssociation");
   let body: any;
@@ -1429,7 +1429,7 @@ export const se_UpdateFileSystemAssociationCommand = async (
  */
 export const se_UpdateGatewayInformationCommand = async (
   input: UpdateGatewayInformationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateGatewayInformation");
   let body: any;
@@ -1442,7 +1442,7 @@ export const se_UpdateGatewayInformationCommand = async (
  */
 export const se_UpdateGatewaySoftwareNowCommand = async (
   input: UpdateGatewaySoftwareNowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateGatewaySoftwareNow");
   let body: any;
@@ -1455,7 +1455,7 @@ export const se_UpdateGatewaySoftwareNowCommand = async (
  */
 export const se_UpdateMaintenanceStartTimeCommand = async (
   input: UpdateMaintenanceStartTimeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateMaintenanceStartTime");
   let body: any;
@@ -1468,7 +1468,7 @@ export const se_UpdateMaintenanceStartTimeCommand = async (
  */
 export const se_UpdateNFSFileShareCommand = async (
   input: UpdateNFSFileShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateNFSFileShare");
   let body: any;
@@ -1481,7 +1481,7 @@ export const se_UpdateNFSFileShareCommand = async (
  */
 export const se_UpdateSMBFileShareCommand = async (
   input: UpdateSMBFileShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSMBFileShare");
   let body: any;
@@ -1494,7 +1494,7 @@ export const se_UpdateSMBFileShareCommand = async (
  */
 export const se_UpdateSMBFileShareVisibilityCommand = async (
   input: UpdateSMBFileShareVisibilityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSMBFileShareVisibility");
   let body: any;
@@ -1507,7 +1507,7 @@ export const se_UpdateSMBFileShareVisibilityCommand = async (
  */
 export const se_UpdateSMBLocalGroupsCommand = async (
   input: UpdateSMBLocalGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSMBLocalGroups");
   let body: any;
@@ -1520,7 +1520,7 @@ export const se_UpdateSMBLocalGroupsCommand = async (
  */
 export const se_UpdateSMBSecurityStrategyCommand = async (
   input: UpdateSMBSecurityStrategyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSMBSecurityStrategy");
   let body: any;
@@ -1533,7 +1533,7 @@ export const se_UpdateSMBSecurityStrategyCommand = async (
  */
 export const se_UpdateSnapshotScheduleCommand = async (
   input: UpdateSnapshotScheduleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSnapshotSchedule");
   let body: any;
@@ -1546,7 +1546,7 @@ export const se_UpdateSnapshotScheduleCommand = async (
  */
 export const se_UpdateVTLDeviceTypeCommand = async (
   input: UpdateVTLDeviceTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateVTLDeviceType");
   let body: any;
@@ -1559,7 +1559,7 @@ export const se_UpdateVTLDeviceTypeCommand = async (
  */
 export const de_ActivateGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ActivateGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1579,7 +1579,7 @@ export const de_ActivateGatewayCommand = async (
  */
 export const de_AddCacheCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddCacheCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1599,7 +1599,7 @@ export const de_AddCacheCommand = async (
  */
 export const de_AddTagsToResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddTagsToResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1619,7 +1619,7 @@ export const de_AddTagsToResourceCommand = async (
  */
 export const de_AddUploadBufferCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddUploadBufferCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1639,7 +1639,7 @@ export const de_AddUploadBufferCommand = async (
  */
 export const de_AddWorkingStorageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddWorkingStorageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1659,7 +1659,7 @@ export const de_AddWorkingStorageCommand = async (
  */
 export const de_AssignTapePoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssignTapePoolCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1679,7 +1679,7 @@ export const de_AssignTapePoolCommand = async (
  */
 export const de_AssociateFileSystemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateFileSystemCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1699,7 +1699,7 @@ export const de_AssociateFileSystemCommand = async (
  */
 export const de_AttachVolumeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachVolumeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1719,7 +1719,7 @@ export const de_AttachVolumeCommand = async (
  */
 export const de_CancelArchivalCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelArchivalCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1739,7 +1739,7 @@ export const de_CancelArchivalCommand = async (
  */
 export const de_CancelRetrievalCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelRetrievalCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1759,7 +1759,7 @@ export const de_CancelRetrievalCommand = async (
  */
 export const de_CreateCachediSCSIVolumeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCachediSCSIVolumeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1779,7 +1779,7 @@ export const de_CreateCachediSCSIVolumeCommand = async (
  */
 export const de_CreateNFSFileShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateNFSFileShareCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1799,7 +1799,7 @@ export const de_CreateNFSFileShareCommand = async (
  */
 export const de_CreateSMBFileShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSMBFileShareCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1819,7 +1819,7 @@ export const de_CreateSMBFileShareCommand = async (
  */
 export const de_CreateSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1839,7 +1839,7 @@ export const de_CreateSnapshotCommand = async (
  */
 export const de_CreateSnapshotFromVolumeRecoveryPointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSnapshotFromVolumeRecoveryPointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1859,7 +1859,7 @@ export const de_CreateSnapshotFromVolumeRecoveryPointCommand = async (
  */
 export const de_CreateStorediSCSIVolumeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStorediSCSIVolumeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1879,7 +1879,7 @@ export const de_CreateStorediSCSIVolumeCommand = async (
  */
 export const de_CreateTapePoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTapePoolCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1899,7 +1899,7 @@ export const de_CreateTapePoolCommand = async (
  */
 export const de_CreateTapesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTapesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1919,7 +1919,7 @@ export const de_CreateTapesCommand = async (
  */
 export const de_CreateTapeWithBarcodeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTapeWithBarcodeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1939,7 +1939,7 @@ export const de_CreateTapeWithBarcodeCommand = async (
  */
 export const de_DeleteAutomaticTapeCreationPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAutomaticTapeCreationPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1959,7 +1959,7 @@ export const de_DeleteAutomaticTapeCreationPolicyCommand = async (
  */
 export const de_DeleteBandwidthRateLimitCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBandwidthRateLimitCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1979,7 +1979,7 @@ export const de_DeleteBandwidthRateLimitCommand = async (
  */
 export const de_DeleteChapCredentialsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteChapCredentialsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1999,7 +1999,7 @@ export const de_DeleteChapCredentialsCommand = async (
  */
 export const de_DeleteFileShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFileShareCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2019,7 +2019,7 @@ export const de_DeleteFileShareCommand = async (
  */
 export const de_DeleteGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2039,7 +2039,7 @@ export const de_DeleteGatewayCommand = async (
  */
 export const de_DeleteSnapshotScheduleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSnapshotScheduleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2059,7 +2059,7 @@ export const de_DeleteSnapshotScheduleCommand = async (
  */
 export const de_DeleteTapeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTapeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2079,7 +2079,7 @@ export const de_DeleteTapeCommand = async (
  */
 export const de_DeleteTapeArchiveCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTapeArchiveCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2099,7 +2099,7 @@ export const de_DeleteTapeArchiveCommand = async (
  */
 export const de_DeleteTapePoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTapePoolCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2119,7 +2119,7 @@ export const de_DeleteTapePoolCommand = async (
  */
 export const de_DeleteVolumeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVolumeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2139,7 +2139,7 @@ export const de_DeleteVolumeCommand = async (
  */
 export const de_DescribeAvailabilityMonitorTestCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAvailabilityMonitorTestCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2159,7 +2159,7 @@ export const de_DescribeAvailabilityMonitorTestCommand = async (
  */
 export const de_DescribeBandwidthRateLimitCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBandwidthRateLimitCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2179,7 +2179,7 @@ export const de_DescribeBandwidthRateLimitCommand = async (
  */
 export const de_DescribeBandwidthRateLimitScheduleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBandwidthRateLimitScheduleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2199,7 +2199,7 @@ export const de_DescribeBandwidthRateLimitScheduleCommand = async (
  */
 export const de_DescribeCacheCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCacheCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2219,7 +2219,7 @@ export const de_DescribeCacheCommand = async (
  */
 export const de_DescribeCachediSCSIVolumesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCachediSCSIVolumesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2239,7 +2239,7 @@ export const de_DescribeCachediSCSIVolumesCommand = async (
  */
 export const de_DescribeChapCredentialsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeChapCredentialsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2259,7 +2259,7 @@ export const de_DescribeChapCredentialsCommand = async (
  */
 export const de_DescribeFileSystemAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFileSystemAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2279,7 +2279,7 @@ export const de_DescribeFileSystemAssociationsCommand = async (
  */
 export const de_DescribeGatewayInformationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGatewayInformationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2299,7 +2299,7 @@ export const de_DescribeGatewayInformationCommand = async (
  */
 export const de_DescribeMaintenanceStartTimeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeMaintenanceStartTimeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2319,7 +2319,7 @@ export const de_DescribeMaintenanceStartTimeCommand = async (
  */
 export const de_DescribeNFSFileSharesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeNFSFileSharesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2339,7 +2339,7 @@ export const de_DescribeNFSFileSharesCommand = async (
  */
 export const de_DescribeSMBFileSharesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSMBFileSharesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2359,7 +2359,7 @@ export const de_DescribeSMBFileSharesCommand = async (
  */
 export const de_DescribeSMBSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSMBSettingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2379,7 +2379,7 @@ export const de_DescribeSMBSettingsCommand = async (
  */
 export const de_DescribeSnapshotScheduleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSnapshotScheduleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2399,7 +2399,7 @@ export const de_DescribeSnapshotScheduleCommand = async (
  */
 export const de_DescribeStorediSCSIVolumesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStorediSCSIVolumesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2419,7 +2419,7 @@ export const de_DescribeStorediSCSIVolumesCommand = async (
  */
 export const de_DescribeTapeArchivesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTapeArchivesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2439,7 +2439,7 @@ export const de_DescribeTapeArchivesCommand = async (
  */
 export const de_DescribeTapeRecoveryPointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTapeRecoveryPointsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2459,7 +2459,7 @@ export const de_DescribeTapeRecoveryPointsCommand = async (
  */
 export const de_DescribeTapesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTapesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2479,7 +2479,7 @@ export const de_DescribeTapesCommand = async (
  */
 export const de_DescribeUploadBufferCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeUploadBufferCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2499,7 +2499,7 @@ export const de_DescribeUploadBufferCommand = async (
  */
 export const de_DescribeVTLDevicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVTLDevicesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2519,7 +2519,7 @@ export const de_DescribeVTLDevicesCommand = async (
  */
 export const de_DescribeWorkingStorageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWorkingStorageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2539,7 +2539,7 @@ export const de_DescribeWorkingStorageCommand = async (
  */
 export const de_DetachVolumeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachVolumeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2559,7 +2559,7 @@ export const de_DetachVolumeCommand = async (
  */
 export const de_DisableGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2579,7 +2579,7 @@ export const de_DisableGatewayCommand = async (
  */
 export const de_DisassociateFileSystemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateFileSystemCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2599,7 +2599,7 @@ export const de_DisassociateFileSystemCommand = async (
  */
 export const de_JoinDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<JoinDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2619,7 +2619,7 @@ export const de_JoinDomainCommand = async (
  */
 export const de_ListAutomaticTapeCreationPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAutomaticTapeCreationPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2639,7 +2639,7 @@ export const de_ListAutomaticTapeCreationPoliciesCommand = async (
  */
 export const de_ListFileSharesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFileSharesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2659,7 +2659,7 @@ export const de_ListFileSharesCommand = async (
  */
 export const de_ListFileSystemAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFileSystemAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2679,7 +2679,7 @@ export const de_ListFileSystemAssociationsCommand = async (
  */
 export const de_ListGatewaysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGatewaysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2699,7 +2699,7 @@ export const de_ListGatewaysCommand = async (
  */
 export const de_ListLocalDisksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLocalDisksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2719,7 +2719,7 @@ export const de_ListLocalDisksCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2739,7 +2739,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTapePoolsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTapePoolsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2759,7 +2759,7 @@ export const de_ListTapePoolsCommand = async (
  */
 export const de_ListTapesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTapesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2779,7 +2779,7 @@ export const de_ListTapesCommand = async (
  */
 export const de_ListVolumeInitiatorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVolumeInitiatorsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2799,7 +2799,7 @@ export const de_ListVolumeInitiatorsCommand = async (
  */
 export const de_ListVolumeRecoveryPointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVolumeRecoveryPointsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2819,7 +2819,7 @@ export const de_ListVolumeRecoveryPointsCommand = async (
  */
 export const de_ListVolumesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVolumesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2839,7 +2839,7 @@ export const de_ListVolumesCommand = async (
  */
 export const de_NotifyWhenUploadedCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotifyWhenUploadedCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2859,7 +2859,7 @@ export const de_NotifyWhenUploadedCommand = async (
  */
 export const de_RefreshCacheCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RefreshCacheCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2879,7 +2879,7 @@ export const de_RefreshCacheCommand = async (
  */
 export const de_RemoveTagsFromResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveTagsFromResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2899,7 +2899,7 @@ export const de_RemoveTagsFromResourceCommand = async (
  */
 export const de_ResetCacheCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetCacheCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2919,7 +2919,7 @@ export const de_ResetCacheCommand = async (
  */
 export const de_RetrieveTapeArchiveCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RetrieveTapeArchiveCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2939,7 +2939,7 @@ export const de_RetrieveTapeArchiveCommand = async (
  */
 export const de_RetrieveTapeRecoveryPointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RetrieveTapeRecoveryPointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2959,7 +2959,7 @@ export const de_RetrieveTapeRecoveryPointCommand = async (
  */
 export const de_SetLocalConsolePasswordCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetLocalConsolePasswordCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2979,7 +2979,7 @@ export const de_SetLocalConsolePasswordCommand = async (
  */
 export const de_SetSMBGuestPasswordCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetSMBGuestPasswordCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2999,7 +2999,7 @@ export const de_SetSMBGuestPasswordCommand = async (
  */
 export const de_ShutdownGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ShutdownGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3019,7 +3019,7 @@ export const de_ShutdownGatewayCommand = async (
  */
 export const de_StartAvailabilityMonitorTestCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartAvailabilityMonitorTestCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3039,7 +3039,7 @@ export const de_StartAvailabilityMonitorTestCommand = async (
  */
 export const de_StartGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3059,7 +3059,7 @@ export const de_StartGatewayCommand = async (
  */
 export const de_UpdateAutomaticTapeCreationPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAutomaticTapeCreationPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3079,7 +3079,7 @@ export const de_UpdateAutomaticTapeCreationPolicyCommand = async (
  */
 export const de_UpdateBandwidthRateLimitCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBandwidthRateLimitCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3099,7 +3099,7 @@ export const de_UpdateBandwidthRateLimitCommand = async (
  */
 export const de_UpdateBandwidthRateLimitScheduleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBandwidthRateLimitScheduleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3119,7 +3119,7 @@ export const de_UpdateBandwidthRateLimitScheduleCommand = async (
  */
 export const de_UpdateChapCredentialsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateChapCredentialsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3139,7 +3139,7 @@ export const de_UpdateChapCredentialsCommand = async (
  */
 export const de_UpdateFileSystemAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFileSystemAssociationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3159,7 +3159,7 @@ export const de_UpdateFileSystemAssociationCommand = async (
  */
 export const de_UpdateGatewayInformationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGatewayInformationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3179,7 +3179,7 @@ export const de_UpdateGatewayInformationCommand = async (
  */
 export const de_UpdateGatewaySoftwareNowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGatewaySoftwareNowCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3199,7 +3199,7 @@ export const de_UpdateGatewaySoftwareNowCommand = async (
  */
 export const de_UpdateMaintenanceStartTimeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMaintenanceStartTimeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3219,7 +3219,7 @@ export const de_UpdateMaintenanceStartTimeCommand = async (
  */
 export const de_UpdateNFSFileShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateNFSFileShareCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3239,7 +3239,7 @@ export const de_UpdateNFSFileShareCommand = async (
  */
 export const de_UpdateSMBFileShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSMBFileShareCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3259,7 +3259,7 @@ export const de_UpdateSMBFileShareCommand = async (
  */
 export const de_UpdateSMBFileShareVisibilityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSMBFileShareVisibilityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3279,7 +3279,7 @@ export const de_UpdateSMBFileShareVisibilityCommand = async (
  */
 export const de_UpdateSMBLocalGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSMBLocalGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3299,7 +3299,7 @@ export const de_UpdateSMBLocalGroupsCommand = async (
  */
 export const de_UpdateSMBSecurityStrategyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSMBSecurityStrategyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3319,7 +3319,7 @@ export const de_UpdateSMBSecurityStrategyCommand = async (
  */
 export const de_UpdateSnapshotScheduleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSnapshotScheduleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3339,7 +3339,7 @@ export const de_UpdateSnapshotScheduleCommand = async (
  */
 export const de_UpdateVTLDeviceTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVTLDeviceTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3401,7 +3401,7 @@ const de_InternalServerErrorRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InvalidGatewayRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidGatewayRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3417,7 +3417,7 @@ const de_InvalidGatewayRequestExceptionRes = async (
  */
 const de_ServiceUnavailableErrorRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableError> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3774,7 +3774,7 @@ const de_CachediSCSIVolumes = (output: any, context: __SerdeContext): CachediSCS
  */
 const de_DescribeAvailabilityMonitorTestOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeAvailabilityMonitorTestOutput => {
   return take(output, {
     GatewayARN: __expectString,
@@ -3792,7 +3792,7 @@ const de_DescribeAvailabilityMonitorTestOutput = (
  */
 const de_DescribeCachediSCSIVolumesOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeCachediSCSIVolumesOutput => {
   return take(output, {
     CachediSCSIVolumes: (_: any) => de_CachediSCSIVolumes(_, context),
@@ -3835,7 +3835,7 @@ const de_DescribeCacheOutput = (output: any, context: __SerdeContext): DescribeC
  */
 const de_DescribeStorediSCSIVolumesOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeStorediSCSIVolumesOutput => {
   return take(output, {
     StorediSCSIVolumes: (_: any) => de_StorediSCSIVolumes(_, context),
@@ -3857,7 +3857,7 @@ const de_DescribeTapeArchivesOutput = (output: any, context: __SerdeContext): De
  */
 const de_DescribeTapeRecoveryPointsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTapeRecoveryPointsOutput => {
   return take(output, {
     GatewayARN: __expectString,
@@ -4237,7 +4237,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

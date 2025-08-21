@@ -77,13 +77,13 @@ export interface SimSpaceWeaver {
    */
   createSnapshot(
     args: CreateSnapshotCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSnapshotCommandOutput>;
   createSnapshot(args: CreateSnapshotCommandInput, cb: (err: any, data?: CreateSnapshotCommandOutput) => void): void;
   createSnapshot(
     args: CreateSnapshotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSnapshotCommandOutput) => void
+    cb: (err: any, data?: CreateSnapshotCommandOutput) => void,
   ): void;
 
   /**
@@ -94,7 +94,7 @@ export interface SimSpaceWeaver {
   deleteApp(
     args: DeleteAppCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAppCommandOutput) => void
+    cb: (err: any, data?: DeleteAppCommandOutput) => void,
   ): void;
 
   /**
@@ -102,16 +102,16 @@ export interface SimSpaceWeaver {
    */
   deleteSimulation(
     args: DeleteSimulationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSimulationCommandOutput>;
   deleteSimulation(
     args: DeleteSimulationCommandInput,
-    cb: (err: any, data?: DeleteSimulationCommandOutput) => void
+    cb: (err: any, data?: DeleteSimulationCommandOutput) => void,
   ): void;
   deleteSimulation(
     args: DeleteSimulationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSimulationCommandOutput) => void
+    cb: (err: any, data?: DeleteSimulationCommandOutput) => void,
   ): void;
 
   /**
@@ -122,7 +122,7 @@ export interface SimSpaceWeaver {
   describeApp(
     args: DescribeAppCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAppCommandOutput) => void
+    cb: (err: any, data?: DescribeAppCommandOutput) => void,
   ): void;
 
   /**
@@ -130,16 +130,16 @@ export interface SimSpaceWeaver {
    */
   describeSimulation(
     args: DescribeSimulationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSimulationCommandOutput>;
   describeSimulation(
     args: DescribeSimulationCommandInput,
-    cb: (err: any, data?: DescribeSimulationCommandOutput) => void
+    cb: (err: any, data?: DescribeSimulationCommandOutput) => void,
   ): void;
   describeSimulation(
     args: DescribeSimulationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSimulationCommandOutput) => void
+    cb: (err: any, data?: DescribeSimulationCommandOutput) => void,
   ): void;
 
   /**
@@ -150,7 +150,7 @@ export interface SimSpaceWeaver {
   listApps(
     args: ListAppsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAppsCommandOutput) => void
+    cb: (err: any, data?: ListAppsCommandOutput) => void,
   ): void;
 
   /**
@@ -159,13 +159,13 @@ export interface SimSpaceWeaver {
   listSimulations(): Promise<ListSimulationsCommandOutput>;
   listSimulations(
     args: ListSimulationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSimulationsCommandOutput>;
   listSimulations(args: ListSimulationsCommandInput, cb: (err: any, data?: ListSimulationsCommandOutput) => void): void;
   listSimulations(
     args: ListSimulationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSimulationsCommandOutput) => void
+    cb: (err: any, data?: ListSimulationsCommandOutput) => void,
   ): void;
 
   /**
@@ -173,16 +173,16 @@ export interface SimSpaceWeaver {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -193,7 +193,7 @@ export interface SimSpaceWeaver {
   startApp(
     args: StartAppCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartAppCommandOutput) => void
+    cb: (err: any, data?: StartAppCommandOutput) => void,
   ): void;
 
   /**
@@ -204,7 +204,7 @@ export interface SimSpaceWeaver {
   startClock(
     args: StartClockCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartClockCommandOutput) => void
+    cb: (err: any, data?: StartClockCommandOutput) => void,
   ): void;
 
   /**
@@ -212,13 +212,13 @@ export interface SimSpaceWeaver {
    */
   startSimulation(
     args: StartSimulationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartSimulationCommandOutput>;
   startSimulation(args: StartSimulationCommandInput, cb: (err: any, data?: StartSimulationCommandOutput) => void): void;
   startSimulation(
     args: StartSimulationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartSimulationCommandOutput) => void
+    cb: (err: any, data?: StartSimulationCommandOutput) => void,
   ): void;
 
   /**
@@ -229,7 +229,7 @@ export interface SimSpaceWeaver {
   stopApp(
     args: StopAppCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopAppCommandOutput) => void
+    cb: (err: any, data?: StopAppCommandOutput) => void,
   ): void;
 
   /**
@@ -240,7 +240,7 @@ export interface SimSpaceWeaver {
   stopClock(
     args: StopClockCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopClockCommandOutput) => void
+    cb: (err: any, data?: StopClockCommandOutput) => void,
   ): void;
 
   /**
@@ -248,13 +248,13 @@ export interface SimSpaceWeaver {
    */
   stopSimulation(
     args: StopSimulationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopSimulationCommandOutput>;
   stopSimulation(args: StopSimulationCommandInput, cb: (err: any, data?: StopSimulationCommandOutput) => void): void;
   stopSimulation(
     args: StopSimulationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopSimulationCommandOutput) => void
+    cb: (err: any, data?: StopSimulationCommandOutput) => void,
   ): void;
 
   /**
@@ -265,7 +265,7 @@ export interface SimSpaceWeaver {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -276,7 +276,7 @@ export interface SimSpaceWeaver {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 }
 

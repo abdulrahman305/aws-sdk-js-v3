@@ -54,7 +54,7 @@ export interface Repostspace {
   createSpace(
     args: CreateSpaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSpaceCommandOutput) => void
+    cb: (err: any, data?: CreateSpaceCommandOutput) => void,
   ): void;
 
   /**
@@ -65,7 +65,7 @@ export interface Repostspace {
   deleteSpace(
     args: DeleteSpaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSpaceCommandOutput) => void
+    cb: (err: any, data?: DeleteSpaceCommandOutput) => void,
   ): void;
 
   /**
@@ -73,13 +73,13 @@ export interface Repostspace {
    */
   deregisterAdmin(
     args: DeregisterAdminCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterAdminCommandOutput>;
   deregisterAdmin(args: DeregisterAdminCommandInput, cb: (err: any, data?: DeregisterAdminCommandOutput) => void): void;
   deregisterAdmin(
     args: DeregisterAdminCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterAdminCommandOutput) => void
+    cb: (err: any, data?: DeregisterAdminCommandOutput) => void,
   ): void;
 
   /**
@@ -90,7 +90,7 @@ export interface Repostspace {
   getSpace(
     args: GetSpaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSpaceCommandOutput) => void
+    cb: (err: any, data?: GetSpaceCommandOutput) => void,
   ): void;
 
   /**
@@ -102,7 +102,7 @@ export interface Repostspace {
   listSpaces(
     args: ListSpacesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSpacesCommandOutput) => void
+    cb: (err: any, data?: ListSpacesCommandOutput) => void,
   ): void;
 
   /**
@@ -110,16 +110,16 @@ export interface Repostspace {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -130,7 +130,7 @@ export interface Repostspace {
   registerAdmin(
     args: RegisterAdminCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterAdminCommandOutput) => void
+    cb: (err: any, data?: RegisterAdminCommandOutput) => void,
   ): void;
 
   /**
@@ -141,7 +141,7 @@ export interface Repostspace {
   sendInvites(
     args: SendInvitesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendInvitesCommandOutput) => void
+    cb: (err: any, data?: SendInvitesCommandOutput) => void,
   ): void;
 
   /**
@@ -152,7 +152,7 @@ export interface Repostspace {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -163,7 +163,7 @@ export interface Repostspace {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -174,7 +174,7 @@ export interface Repostspace {
   updateSpace(
     args: UpdateSpaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSpaceCommandOutput) => void
+    cb: (err: any, data?: UpdateSpaceCommandOutput) => void,
   ): void;
 }
 

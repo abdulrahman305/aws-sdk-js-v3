@@ -46,7 +46,7 @@ import {
  */
 export const se_GetServiceSettingsCommand = async (
   input: GetServiceSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -64,7 +64,7 @@ export const se_GetServiceSettingsCommand = async (
  */
 export const se_ListLinuxSubscriptionInstancesCommand = async (
   input: ListLinuxSubscriptionInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -77,7 +77,7 @@ export const se_ListLinuxSubscriptionInstancesCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -88,7 +88,7 @@ export const se_ListLinuxSubscriptionInstancesCommand = async (
  */
 export const se_ListLinuxSubscriptionsCommand = async (
   input: ListLinuxSubscriptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -101,7 +101,7 @@ export const se_ListLinuxSubscriptionsCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -112,7 +112,7 @@ export const se_ListLinuxSubscriptionsCommand = async (
  */
 export const se_UpdateServiceSettingsCommand = async (
   input: UpdateServiceSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -125,7 +125,7 @@ export const se_UpdateServiceSettingsCommand = async (
       AllowUpdate: [],
       LinuxSubscriptionsDiscovery: [],
       LinuxSubscriptionsDiscoverySettings: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -136,7 +136,7 @@ export const se_UpdateServiceSettingsCommand = async (
  */
 export const de_GetServiceSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -161,7 +161,7 @@ export const de_GetServiceSettingsCommand = async (
  */
 export const de_ListLinuxSubscriptionInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLinuxSubscriptionInstancesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -183,7 +183,7 @@ export const de_ListLinuxSubscriptionInstancesCommand = async (
  */
 export const de_ListLinuxSubscriptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLinuxSubscriptionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -205,7 +205,7 @@ export const de_ListLinuxSubscriptionsCommand = async (
  */
 export const de_UpdateServiceSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServiceSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -260,7 +260,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

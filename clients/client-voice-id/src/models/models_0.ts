@@ -2769,7 +2769,7 @@ export const FraudsterRegistrationJobFilterSensitiveLog = (obj: FraudsterRegistr
  * @internal
  */
 export const DescribeFraudsterRegistrationJobResponseFilterSensitiveLog = (
-  obj: DescribeFraudsterRegistrationJobResponse
+  obj: DescribeFraudsterRegistrationJobResponse,
 ): any => ({
   ...obj,
   ...(obj.Job && { Job: FraudsterRegistrationJobFilterSensitiveLog(obj.Job) }),
@@ -2811,7 +2811,7 @@ export const SpeakerEnrollmentJobFilterSensitiveLog = (obj: SpeakerEnrollmentJob
  * @internal
  */
 export const DescribeSpeakerEnrollmentJobResponseFilterSensitiveLog = (
-  obj: DescribeSpeakerEnrollmentJobResponse
+  obj: DescribeSpeakerEnrollmentJobResponse,
 ): any => ({
   ...obj,
   ...(obj.Job && { Job: SpeakerEnrollmentJobFilterSensitiveLog(obj.Job) }),
@@ -2891,7 +2891,7 @@ export const FraudsterRegistrationJobSummaryFilterSensitiveLog = (obj: Fraudster
  * @internal
  */
 export const ListFraudsterRegistrationJobsResponseFilterSensitiveLog = (
-  obj: ListFraudsterRegistrationJobsResponse
+  obj: ListFraudsterRegistrationJobsResponse,
 ): any => ({
   ...obj,
   ...(obj.JobSummaries && {
@@ -2982,7 +2982,7 @@ export const OptOutSpeakerResponseFilterSensitiveLog = (obj: OptOutSpeakerRespon
  * @internal
  */
 export const StartFraudsterRegistrationJobRequestFilterSensitiveLog = (
-  obj: StartFraudsterRegistrationJobRequest
+  obj: StartFraudsterRegistrationJobRequest,
 ): any => ({
   ...obj,
   ...(obj.JobName && { JobName: SENSITIVE_STRING }),
@@ -2992,7 +2992,7 @@ export const StartFraudsterRegistrationJobRequestFilterSensitiveLog = (
  * @internal
  */
 export const StartFraudsterRegistrationJobResponseFilterSensitiveLog = (
-  obj: StartFraudsterRegistrationJobResponse
+  obj: StartFraudsterRegistrationJobResponse,
 ): any => ({
   ...obj,
   ...(obj.Job && { Job: FraudsterRegistrationJobFilterSensitiveLog(obj.Job) }),

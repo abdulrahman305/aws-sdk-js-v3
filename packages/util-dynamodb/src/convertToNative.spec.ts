@@ -159,7 +159,7 @@ describe("convertToNative", () => {
     it(`testing list with options.wrapNumbers=true`, () => {
       const input = [{ N: "1.01" }, { N: "9007199254740996" }];
       expect(convertToNative({ L: input as AttributeValue[] }, { wrapNumbers: true })).toEqual(
-        input.map((item) => ({ value: item.N }))
+        input.map((item) => ({ value: item.N })),
       );
     });
   });
@@ -216,14 +216,20 @@ describe("convertToNative", () => {
     });
 
     it(`testing map with big objects`, () => {
-      const input = Array.from(Array(100000).keys()).reduce((acc, index) => {
-        acc[index] = { N: "1.00" };
-        return acc;
-      }, {} as Record<string, any>);
-      const output = Array.from(Array(100000).keys()).reduce((acc, index) => {
-        acc[index] = 1;
-        return acc;
-      }, {} as Record<string, number>);
+      const input = Array.from(Array(100000).keys()).reduce(
+        (acc, index) => {
+          acc[index] = { N: "1.00" };
+          return acc;
+        },
+        {} as Record<string, any>,
+      );
+      const output = Array.from(Array(100000).keys()).reduce(
+        (acc, index) => {
+          acc[index] = 1;
+          return acc;
+        },
+        {} as Record<string, number>,
+      );
       expect(convertToNative({ M: input })).toEqual(output);
     });
   });
@@ -238,7 +244,7 @@ describe("convertToNative", () => {
 
       it("with options.wrapNumbers=true", () => {
         expect(convertToNative({ NS: input }, { wrapNumbers: true })).toEqual(
-          new Set(input.map((numString) => ({ value: numString })))
+          new Set(input.map((numString) => ({ value: numString }))),
         );
       });
     });

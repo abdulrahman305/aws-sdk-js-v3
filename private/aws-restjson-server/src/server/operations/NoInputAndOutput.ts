@@ -60,14 +60,14 @@ export class NoInputAndOutputSerializer
 
 export const getNoInputAndOutputHandler = <Context>(
   operation: __Operation<NoInputAndOutputServerInput, NoInputAndOutputServerOutput, Context>,
-  customizer: __ValidationCustomizer<"NoInputAndOutput">
+  customizer: __ValidationCustomizer<"NoInputAndOutput">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "NoInputAndOutput">([
     new httpbinding.UriSpec<"RestJson", "NoInputAndOutput">(
       "POST",
       [{ type: "path_literal", value: "NoInputAndOutputOutput" }],
       [],
-      { service: "RestJson", operation: "NoInputAndOutput" }
+      { service: "RestJson", operation: "NoInputAndOutput" },
     ),
   ]);
   return new NoInputAndOutputHandler(
@@ -75,7 +75,7 @@ export const getNoInputAndOutputHandler = <Context>(
     mux,
     new NoInputAndOutputSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -96,7 +96,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -138,7 +138,7 @@ export class NoInputAndOutputHandler<Context> implements __ServiceHandler<Contex
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"NoInputAndOutput">;
   /**
@@ -155,7 +155,7 @@ export class NoInputAndOutputHandler<Context> implements __ServiceHandler<Contex
     mux: __Mux<"RestJson", "NoInputAndOutput">,
     serializer: __OperationSerializer<RestJsonService<Context>, "NoInputAndOutput", NoInputAndOutputErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"NoInputAndOutput">
+    validationCustomizer: __ValidationCustomizer<"NoInputAndOutput">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -167,7 +167,7 @@ export class NoInputAndOutputHandler<Context> implements __ServiceHandler<Contex
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.NoInputAndOutput. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.NoInputAndOutput. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -179,7 +179,7 @@ export class NoInputAndOutputHandler<Context> implements __ServiceHandler<Contex
       this.operation,
       this.serializeFrameworkException,
       NoInputAndOutputServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

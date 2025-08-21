@@ -65,14 +65,14 @@ export class HttpPrefixHeadersSerializer
 
 export const getHttpPrefixHeadersHandler = <Context>(
   operation: __Operation<HttpPrefixHeadersServerInput, HttpPrefixHeadersServerOutput, Context>,
-  customizer: __ValidationCustomizer<"HttpPrefixHeaders">
+  customizer: __ValidationCustomizer<"HttpPrefixHeaders">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "HttpPrefixHeaders">([
     new httpbinding.UriSpec<"RestJson", "HttpPrefixHeaders">(
       "GET",
       [{ type: "path_literal", value: "HttpPrefixHeaders" }],
       [],
-      { service: "RestJson", operation: "HttpPrefixHeaders" }
+      { service: "RestJson", operation: "HttpPrefixHeaders" },
     ),
   ]);
   return new HttpPrefixHeadersHandler(
@@ -80,7 +80,7 @@ export const getHttpPrefixHeadersHandler = <Context>(
     mux,
     new HttpPrefixHeadersSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -101,7 +101,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -143,7 +143,7 @@ export class HttpPrefixHeadersHandler<Context> implements __ServiceHandler<Conte
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"HttpPrefixHeaders">;
   /**
@@ -160,7 +160,7 @@ export class HttpPrefixHeadersHandler<Context> implements __ServiceHandler<Conte
     mux: __Mux<"RestJson", "HttpPrefixHeaders">,
     serializer: __OperationSerializer<RestJsonService<Context>, "HttpPrefixHeaders", HttpPrefixHeadersErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"HttpPrefixHeaders">
+    validationCustomizer: __ValidationCustomizer<"HttpPrefixHeaders">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -172,7 +172,7 @@ export class HttpPrefixHeadersHandler<Context> implements __ServiceHandler<Conte
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpPrefixHeaders. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpPrefixHeaders. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -184,7 +184,7 @@ export class HttpPrefixHeadersHandler<Context> implements __ServiceHandler<Conte
       this.operation,
       this.serializeFrameworkException,
       HttpPrefixHeadersServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

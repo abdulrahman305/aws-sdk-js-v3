@@ -231,7 +231,7 @@ import {
  */
 export const se_AddLFTagsToResourceCommand = async (
   input: AddLFTagsToResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -244,7 +244,7 @@ export const se_AddLFTagsToResourceCommand = async (
       CatalogId: [],
       LFTags: (_) => _json(_),
       Resource: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -255,7 +255,7 @@ export const se_AddLFTagsToResourceCommand = async (
  */
 export const se_AssumeDecoratedRoleWithSAMLCommand = async (
   input: AssumeDecoratedRoleWithSAMLCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -269,7 +269,7 @@ export const se_AssumeDecoratedRoleWithSAMLCommand = async (
       PrincipalArn: [],
       RoleArn: [],
       SAMLAssertion: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -280,7 +280,7 @@ export const se_AssumeDecoratedRoleWithSAMLCommand = async (
  */
 export const se_BatchGrantPermissionsCommand = async (
   input: BatchGrantPermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -292,7 +292,7 @@ export const se_BatchGrantPermissionsCommand = async (
     take(input, {
       CatalogId: [],
       Entries: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -303,7 +303,7 @@ export const se_BatchGrantPermissionsCommand = async (
  */
 export const se_BatchRevokePermissionsCommand = async (
   input: BatchRevokePermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -315,7 +315,7 @@ export const se_BatchRevokePermissionsCommand = async (
     take(input, {
       CatalogId: [],
       Entries: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -326,7 +326,7 @@ export const se_BatchRevokePermissionsCommand = async (
  */
 export const se_CancelTransactionCommand = async (
   input: CancelTransactionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -337,7 +337,7 @@ export const se_CancelTransactionCommand = async (
   body = JSON.stringify(
     take(input, {
       TransactionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -348,7 +348,7 @@ export const se_CancelTransactionCommand = async (
  */
 export const se_CommitTransactionCommand = async (
   input: CommitTransactionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -359,7 +359,7 @@ export const se_CommitTransactionCommand = async (
   body = JSON.stringify(
     take(input, {
       TransactionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -370,7 +370,7 @@ export const se_CommitTransactionCommand = async (
  */
 export const se_CreateDataCellsFilterCommand = async (
   input: CreateDataCellsFilterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -381,7 +381,7 @@ export const se_CreateDataCellsFilterCommand = async (
   body = JSON.stringify(
     take(input, {
       TableData: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -392,7 +392,7 @@ export const se_CreateDataCellsFilterCommand = async (
  */
 export const se_CreateLakeFormationIdentityCenterConfigurationCommand = async (
   input: CreateLakeFormationIdentityCenterConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -406,7 +406,7 @@ export const se_CreateLakeFormationIdentityCenterConfigurationCommand = async (
       ExternalFiltering: (_) => _json(_),
       InstanceArn: [],
       ShareRecipients: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -417,7 +417,7 @@ export const se_CreateLakeFormationIdentityCenterConfigurationCommand = async (
  */
 export const se_CreateLakeFormationOptInCommand = async (
   input: CreateLakeFormationOptInCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -429,7 +429,7 @@ export const se_CreateLakeFormationOptInCommand = async (
     take(input, {
       Principal: (_) => _json(_),
       Resource: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -440,7 +440,7 @@ export const se_CreateLakeFormationOptInCommand = async (
  */
 export const se_CreateLFTagCommand = async (
   input: CreateLFTagCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -453,7 +453,7 @@ export const se_CreateLFTagCommand = async (
       CatalogId: [],
       TagKey: [],
       TagValues: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -464,7 +464,7 @@ export const se_CreateLFTagCommand = async (
  */
 export const se_DeleteDataCellsFilterCommand = async (
   input: DeleteDataCellsFilterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -478,7 +478,7 @@ export const se_DeleteDataCellsFilterCommand = async (
       Name: [],
       TableCatalogId: [],
       TableName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -489,7 +489,7 @@ export const se_DeleteDataCellsFilterCommand = async (
  */
 export const se_DeleteLakeFormationIdentityCenterConfigurationCommand = async (
   input: DeleteLakeFormationIdentityCenterConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -500,7 +500,7 @@ export const se_DeleteLakeFormationIdentityCenterConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       CatalogId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -511,7 +511,7 @@ export const se_DeleteLakeFormationIdentityCenterConfigurationCommand = async (
  */
 export const se_DeleteLakeFormationOptInCommand = async (
   input: DeleteLakeFormationOptInCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -523,7 +523,7 @@ export const se_DeleteLakeFormationOptInCommand = async (
     take(input, {
       Principal: (_) => _json(_),
       Resource: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -534,7 +534,7 @@ export const se_DeleteLakeFormationOptInCommand = async (
  */
 export const se_DeleteLFTagCommand = async (
   input: DeleteLFTagCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -546,7 +546,7 @@ export const se_DeleteLFTagCommand = async (
     take(input, {
       CatalogId: [],
       TagKey: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -557,7 +557,7 @@ export const se_DeleteLFTagCommand = async (
  */
 export const se_DeleteObjectsOnCancelCommand = async (
   input: DeleteObjectsOnCancelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -572,7 +572,7 @@ export const se_DeleteObjectsOnCancelCommand = async (
       Objects: (_) => _json(_),
       TableName: [],
       TransactionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -583,7 +583,7 @@ export const se_DeleteObjectsOnCancelCommand = async (
  */
 export const se_DeregisterResourceCommand = async (
   input: DeregisterResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -594,7 +594,7 @@ export const se_DeregisterResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       ResourceArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -605,7 +605,7 @@ export const se_DeregisterResourceCommand = async (
  */
 export const se_DescribeLakeFormationIdentityCenterConfigurationCommand = async (
   input: DescribeLakeFormationIdentityCenterConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -616,7 +616,7 @@ export const se_DescribeLakeFormationIdentityCenterConfigurationCommand = async 
   body = JSON.stringify(
     take(input, {
       CatalogId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -627,7 +627,7 @@ export const se_DescribeLakeFormationIdentityCenterConfigurationCommand = async 
  */
 export const se_DescribeResourceCommand = async (
   input: DescribeResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -638,7 +638,7 @@ export const se_DescribeResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       ResourceArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -649,7 +649,7 @@ export const se_DescribeResourceCommand = async (
  */
 export const se_DescribeTransactionCommand = async (
   input: DescribeTransactionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -660,7 +660,7 @@ export const se_DescribeTransactionCommand = async (
   body = JSON.stringify(
     take(input, {
       TransactionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -671,7 +671,7 @@ export const se_DescribeTransactionCommand = async (
  */
 export const se_ExtendTransactionCommand = async (
   input: ExtendTransactionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -682,7 +682,7 @@ export const se_ExtendTransactionCommand = async (
   body = JSON.stringify(
     take(input, {
       TransactionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -693,7 +693,7 @@ export const se_ExtendTransactionCommand = async (
  */
 export const se_GetDataCellsFilterCommand = async (
   input: GetDataCellsFilterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -707,7 +707,7 @@ export const se_GetDataCellsFilterCommand = async (
       Name: [],
       TableCatalogId: [],
       TableName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -718,7 +718,7 @@ export const se_GetDataCellsFilterCommand = async (
  */
 export const se_GetDataLakePrincipalCommand = async (
   input: GetDataLakePrincipalCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -736,7 +736,7 @@ export const se_GetDataLakePrincipalCommand = async (
  */
 export const se_GetDataLakeSettingsCommand = async (
   input: GetDataLakeSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -747,7 +747,7 @@ export const se_GetDataLakeSettingsCommand = async (
   body = JSON.stringify(
     take(input, {
       CatalogId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -758,7 +758,7 @@ export const se_GetDataLakeSettingsCommand = async (
  */
 export const se_GetEffectivePermissionsForPathCommand = async (
   input: GetEffectivePermissionsForPathCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -772,7 +772,7 @@ export const se_GetEffectivePermissionsForPathCommand = async (
       MaxResults: [],
       NextToken: [],
       ResourceArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -783,7 +783,7 @@ export const se_GetEffectivePermissionsForPathCommand = async (
  */
 export const se_GetLFTagCommand = async (
   input: GetLFTagCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -795,7 +795,7 @@ export const se_GetLFTagCommand = async (
     take(input, {
       CatalogId: [],
       TagKey: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -806,7 +806,7 @@ export const se_GetLFTagCommand = async (
  */
 export const se_GetQueryStateCommand = async (
   input: GetQueryStateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -817,7 +817,7 @@ export const se_GetQueryStateCommand = async (
   body = JSON.stringify(
     take(input, {
       QueryId: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -836,7 +836,7 @@ export const se_GetQueryStateCommand = async (
  */
 export const se_GetQueryStatisticsCommand = async (
   input: GetQueryStatisticsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -847,7 +847,7 @@ export const se_GetQueryStatisticsCommand = async (
   body = JSON.stringify(
     take(input, {
       QueryId: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -866,7 +866,7 @@ export const se_GetQueryStatisticsCommand = async (
  */
 export const se_GetResourceLFTagsCommand = async (
   input: GetResourceLFTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -879,7 +879,7 @@ export const se_GetResourceLFTagsCommand = async (
       CatalogId: [],
       Resource: (_) => _json(_),
       ShowAssignedLFTags: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -890,7 +890,7 @@ export const se_GetResourceLFTagsCommand = async (
  */
 export const se_GetTableObjectsCommand = async (
   input: GetTableObjectsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -908,7 +908,7 @@ export const se_GetTableObjectsCommand = async (
       QueryAsOfTime: (_) => _.getTime() / 1_000,
       TableName: [],
       TransactionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -919,7 +919,7 @@ export const se_GetTableObjectsCommand = async (
  */
 export const se_GetTemporaryGluePartitionCredentialsCommand = async (
   input: GetTemporaryGluePartitionCredentialsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -935,7 +935,7 @@ export const se_GetTemporaryGluePartitionCredentialsCommand = async (
       Permissions: (_) => _json(_),
       SupportedPermissionTypes: (_) => _json(_),
       TableArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -946,7 +946,7 @@ export const se_GetTemporaryGluePartitionCredentialsCommand = async (
  */
 export const se_GetTemporaryGlueTableCredentialsCommand = async (
   input: GetTemporaryGlueTableCredentialsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -963,7 +963,7 @@ export const se_GetTemporaryGlueTableCredentialsCommand = async (
       S3Path: [],
       SupportedPermissionTypes: (_) => _json(_),
       TableArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -974,7 +974,7 @@ export const se_GetTemporaryGlueTableCredentialsCommand = async (
  */
 export const se_GetWorkUnitResultsCommand = async (
   input: GetWorkUnitResultsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -987,7 +987,7 @@ export const se_GetWorkUnitResultsCommand = async (
       QueryId: [],
       WorkUnitId: [],
       WorkUnitToken: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1006,7 +1006,7 @@ export const se_GetWorkUnitResultsCommand = async (
  */
 export const se_GetWorkUnitsCommand = async (
   input: GetWorkUnitsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1019,7 +1019,7 @@ export const se_GetWorkUnitsCommand = async (
       NextToken: [],
       PageSize: [],
       QueryId: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1038,7 +1038,7 @@ export const se_GetWorkUnitsCommand = async (
  */
 export const se_GrantPermissionsCommand = async (
   input: GrantPermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1053,7 +1053,7 @@ export const se_GrantPermissionsCommand = async (
       PermissionsWithGrantOption: (_) => _json(_),
       Principal: (_) => _json(_),
       Resource: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1064,7 +1064,7 @@ export const se_GrantPermissionsCommand = async (
  */
 export const se_ListDataCellsFilterCommand = async (
   input: ListDataCellsFilterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1077,7 +1077,7 @@ export const se_ListDataCellsFilterCommand = async (
       MaxResults: [],
       NextToken: [],
       Table: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1088,7 +1088,7 @@ export const se_ListDataCellsFilterCommand = async (
  */
 export const se_ListLakeFormationOptInsCommand = async (
   input: ListLakeFormationOptInsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1102,7 +1102,7 @@ export const se_ListLakeFormationOptInsCommand = async (
       NextToken: [],
       Principal: (_) => _json(_),
       Resource: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1113,7 +1113,7 @@ export const se_ListLakeFormationOptInsCommand = async (
  */
 export const se_ListLFTagsCommand = async (
   input: ListLFTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1127,7 +1127,7 @@ export const se_ListLFTagsCommand = async (
       MaxResults: [],
       NextToken: [],
       ResourceShareType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1138,7 +1138,7 @@ export const se_ListLFTagsCommand = async (
  */
 export const se_ListPermissionsCommand = async (
   input: ListPermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1155,7 +1155,7 @@ export const se_ListPermissionsCommand = async (
       Principal: (_) => _json(_),
       Resource: (_) => _json(_),
       ResourceType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1166,7 +1166,7 @@ export const se_ListPermissionsCommand = async (
  */
 export const se_ListResourcesCommand = async (
   input: ListResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1179,7 +1179,7 @@ export const se_ListResourcesCommand = async (
       FilterConditionList: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1190,7 +1190,7 @@ export const se_ListResourcesCommand = async (
  */
 export const se_ListTableStorageOptimizersCommand = async (
   input: ListTableStorageOptimizersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1206,7 +1206,7 @@ export const se_ListTableStorageOptimizersCommand = async (
       NextToken: [],
       StorageOptimizerType: [],
       TableName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1217,7 +1217,7 @@ export const se_ListTableStorageOptimizersCommand = async (
  */
 export const se_ListTransactionsCommand = async (
   input: ListTransactionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1231,7 +1231,7 @@ export const se_ListTransactionsCommand = async (
       MaxResults: [],
       NextToken: [],
       StatusFilter: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1242,7 +1242,7 @@ export const se_ListTransactionsCommand = async (
  */
 export const se_PutDataLakeSettingsCommand = async (
   input: PutDataLakeSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1254,7 +1254,7 @@ export const se_PutDataLakeSettingsCommand = async (
     take(input, {
       CatalogId: [],
       DataLakeSettings: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1265,7 +1265,7 @@ export const se_PutDataLakeSettingsCommand = async (
  */
 export const se_RegisterResourceCommand = async (
   input: RegisterResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1280,7 +1280,7 @@ export const se_RegisterResourceCommand = async (
       RoleArn: [],
       UseServiceLinkedRole: [],
       WithFederation: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1291,7 +1291,7 @@ export const se_RegisterResourceCommand = async (
  */
 export const se_RemoveLFTagsFromResourceCommand = async (
   input: RemoveLFTagsFromResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1304,7 +1304,7 @@ export const se_RemoveLFTagsFromResourceCommand = async (
       CatalogId: [],
       LFTags: (_) => _json(_),
       Resource: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1315,7 +1315,7 @@ export const se_RemoveLFTagsFromResourceCommand = async (
  */
 export const se_RevokePermissionsCommand = async (
   input: RevokePermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1330,7 +1330,7 @@ export const se_RevokePermissionsCommand = async (
       PermissionsWithGrantOption: (_) => _json(_),
       Principal: (_) => _json(_),
       Resource: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1341,7 +1341,7 @@ export const se_RevokePermissionsCommand = async (
  */
 export const se_SearchDatabasesByLFTagsCommand = async (
   input: SearchDatabasesByLFTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1355,7 +1355,7 @@ export const se_SearchDatabasesByLFTagsCommand = async (
       Expression: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1366,7 +1366,7 @@ export const se_SearchDatabasesByLFTagsCommand = async (
  */
 export const se_SearchTablesByLFTagsCommand = async (
   input: SearchTablesByLFTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1380,7 +1380,7 @@ export const se_SearchTablesByLFTagsCommand = async (
       Expression: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1391,7 +1391,7 @@ export const se_SearchTablesByLFTagsCommand = async (
  */
 export const se_StartQueryPlanningCommand = async (
   input: StartQueryPlanningCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1403,7 +1403,7 @@ export const se_StartQueryPlanningCommand = async (
     take(input, {
       QueryPlanningContext: (_) => se_QueryPlanningContext(_, context),
       QueryString: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1422,7 +1422,7 @@ export const se_StartQueryPlanningCommand = async (
  */
 export const se_StartTransactionCommand = async (
   input: StartTransactionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1433,7 +1433,7 @@ export const se_StartTransactionCommand = async (
   body = JSON.stringify(
     take(input, {
       TransactionType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1444,7 +1444,7 @@ export const se_StartTransactionCommand = async (
  */
 export const se_UpdateDataCellsFilterCommand = async (
   input: UpdateDataCellsFilterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1455,7 +1455,7 @@ export const se_UpdateDataCellsFilterCommand = async (
   body = JSON.stringify(
     take(input, {
       TableData: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1466,7 +1466,7 @@ export const se_UpdateDataCellsFilterCommand = async (
  */
 export const se_UpdateLakeFormationIdentityCenterConfigurationCommand = async (
   input: UpdateLakeFormationIdentityCenterConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1480,7 +1480,7 @@ export const se_UpdateLakeFormationIdentityCenterConfigurationCommand = async (
       CatalogId: [],
       ExternalFiltering: (_) => _json(_),
       ShareRecipients: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1491,7 +1491,7 @@ export const se_UpdateLakeFormationIdentityCenterConfigurationCommand = async (
  */
 export const se_UpdateLFTagCommand = async (
   input: UpdateLFTagCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1505,7 +1505,7 @@ export const se_UpdateLFTagCommand = async (
       TagKey: [],
       TagValuesToAdd: (_) => _json(_),
       TagValuesToDelete: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1516,7 +1516,7 @@ export const se_UpdateLFTagCommand = async (
  */
 export const se_UpdateResourceCommand = async (
   input: UpdateResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1530,7 +1530,7 @@ export const se_UpdateResourceCommand = async (
       ResourceArn: [],
       RoleArn: [],
       WithFederation: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1541,7 +1541,7 @@ export const se_UpdateResourceCommand = async (
  */
 export const se_UpdateTableObjectsCommand = async (
   input: UpdateTableObjectsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1556,7 +1556,7 @@ export const se_UpdateTableObjectsCommand = async (
       TableName: [],
       TransactionId: [],
       WriteOperations: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1567,7 +1567,7 @@ export const se_UpdateTableObjectsCommand = async (
  */
 export const se_UpdateTableStorageOptimizerCommand = async (
   input: UpdateTableStorageOptimizerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1581,7 +1581,7 @@ export const se_UpdateTableStorageOptimizerCommand = async (
       DatabaseName: [],
       StorageOptimizerConfig: (_) => _json(_),
       TableName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1592,7 +1592,7 @@ export const se_UpdateTableStorageOptimizerCommand = async (
  */
 export const de_AddLFTagsToResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddLFTagsToResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1613,7 +1613,7 @@ export const de_AddLFTagsToResourceCommand = async (
  */
 export const de_AssumeDecoratedRoleWithSAMLCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssumeDecoratedRoleWithSAMLCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1637,7 +1637,7 @@ export const de_AssumeDecoratedRoleWithSAMLCommand = async (
  */
 export const de_BatchGrantPermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGrantPermissionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1658,7 +1658,7 @@ export const de_BatchGrantPermissionsCommand = async (
  */
 export const de_BatchRevokePermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchRevokePermissionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1679,7 +1679,7 @@ export const de_BatchRevokePermissionsCommand = async (
  */
 export const de_CancelTransactionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelTransactionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1696,7 +1696,7 @@ export const de_CancelTransactionCommand = async (
  */
 export const de_CommitTransactionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CommitTransactionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1717,7 +1717,7 @@ export const de_CommitTransactionCommand = async (
  */
 export const de_CreateDataCellsFilterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDataCellsFilterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1734,7 +1734,7 @@ export const de_CreateDataCellsFilterCommand = async (
  */
 export const de_CreateLakeFormationIdentityCenterConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLakeFormationIdentityCenterConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1755,7 +1755,7 @@ export const de_CreateLakeFormationIdentityCenterConfigurationCommand = async (
  */
 export const de_CreateLakeFormationOptInCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLakeFormationOptInCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1772,7 +1772,7 @@ export const de_CreateLakeFormationOptInCommand = async (
  */
 export const de_CreateLFTagCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLFTagCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1789,7 +1789,7 @@ export const de_CreateLFTagCommand = async (
  */
 export const de_DeleteDataCellsFilterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDataCellsFilterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1806,7 +1806,7 @@ export const de_DeleteDataCellsFilterCommand = async (
  */
 export const de_DeleteLakeFormationIdentityCenterConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLakeFormationIdentityCenterConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1823,7 +1823,7 @@ export const de_DeleteLakeFormationIdentityCenterConfigurationCommand = async (
  */
 export const de_DeleteLakeFormationOptInCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLakeFormationOptInCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1840,7 +1840,7 @@ export const de_DeleteLakeFormationOptInCommand = async (
  */
 export const de_DeleteLFTagCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLFTagCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1857,7 +1857,7 @@ export const de_DeleteLFTagCommand = async (
  */
 export const de_DeleteObjectsOnCancelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteObjectsOnCancelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1874,7 +1874,7 @@ export const de_DeleteObjectsOnCancelCommand = async (
  */
 export const de_DeregisterResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1891,7 +1891,7 @@ export const de_DeregisterResourceCommand = async (
  */
 export const de_DescribeLakeFormationIdentityCenterConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLakeFormationIdentityCenterConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1917,7 +1917,7 @@ export const de_DescribeLakeFormationIdentityCenterConfigurationCommand = async 
  */
 export const de_DescribeResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1938,7 +1938,7 @@ export const de_DescribeResourceCommand = async (
  */
 export const de_DescribeTransactionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTransactionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1959,7 +1959,7 @@ export const de_DescribeTransactionCommand = async (
  */
 export const de_ExtendTransactionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExtendTransactionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1976,7 +1976,7 @@ export const de_ExtendTransactionCommand = async (
  */
 export const de_GetDataCellsFilterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDataCellsFilterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1997,7 +1997,7 @@ export const de_GetDataCellsFilterCommand = async (
  */
 export const de_GetDataLakePrincipalCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDataLakePrincipalCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2018,7 +2018,7 @@ export const de_GetDataLakePrincipalCommand = async (
  */
 export const de_GetDataLakeSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDataLakeSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2039,7 +2039,7 @@ export const de_GetDataLakeSettingsCommand = async (
  */
 export const de_GetEffectivePermissionsForPathCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEffectivePermissionsForPathCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2061,7 +2061,7 @@ export const de_GetEffectivePermissionsForPathCommand = async (
  */
 export const de_GetLFTagCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLFTagCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2084,7 +2084,7 @@ export const de_GetLFTagCommand = async (
  */
 export const de_GetQueryStateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetQueryStateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2106,7 +2106,7 @@ export const de_GetQueryStateCommand = async (
  */
 export const de_GetQueryStatisticsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetQueryStatisticsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2129,7 +2129,7 @@ export const de_GetQueryStatisticsCommand = async (
  */
 export const de_GetResourceLFTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourceLFTagsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2152,7 +2152,7 @@ export const de_GetResourceLFTagsCommand = async (
  */
 export const de_GetTableObjectsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTableObjectsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2174,7 +2174,7 @@ export const de_GetTableObjectsCommand = async (
  */
 export const de_GetTemporaryGluePartitionCredentialsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTemporaryGluePartitionCredentialsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2198,7 +2198,7 @@ export const de_GetTemporaryGluePartitionCredentialsCommand = async (
  */
 export const de_GetTemporaryGlueTableCredentialsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTemporaryGlueTableCredentialsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2223,7 +2223,7 @@ export const de_GetTemporaryGlueTableCredentialsCommand = async (
  */
 export const de_GetWorkUnitResultsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<GetWorkUnitResultsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2242,7 +2242,7 @@ export const de_GetWorkUnitResultsCommand = async (
  */
 export const de_GetWorkUnitsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWorkUnitsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2265,7 +2265,7 @@ export const de_GetWorkUnitsCommand = async (
  */
 export const de_GrantPermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GrantPermissionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2282,7 +2282,7 @@ export const de_GrantPermissionsCommand = async (
  */
 export const de_ListDataCellsFilterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDataCellsFilterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2304,7 +2304,7 @@ export const de_ListDataCellsFilterCommand = async (
  */
 export const de_ListLakeFormationOptInsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLakeFormationOptInsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2326,7 +2326,7 @@ export const de_ListLakeFormationOptInsCommand = async (
  */
 export const de_ListLFTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLFTagsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2348,7 +2348,7 @@ export const de_ListLFTagsCommand = async (
  */
 export const de_ListPermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPermissionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2370,7 +2370,7 @@ export const de_ListPermissionsCommand = async (
  */
 export const de_ListResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2392,7 +2392,7 @@ export const de_ListResourcesCommand = async (
  */
 export const de_ListTableStorageOptimizersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTableStorageOptimizersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2414,7 +2414,7 @@ export const de_ListTableStorageOptimizersCommand = async (
  */
 export const de_ListTransactionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTransactionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2436,7 +2436,7 @@ export const de_ListTransactionsCommand = async (
  */
 export const de_PutDataLakeSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutDataLakeSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2453,7 +2453,7 @@ export const de_PutDataLakeSettingsCommand = async (
  */
 export const de_RegisterResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2470,7 +2470,7 @@ export const de_RegisterResourceCommand = async (
  */
 export const de_RemoveLFTagsFromResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveLFTagsFromResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2491,7 +2491,7 @@ export const de_RemoveLFTagsFromResourceCommand = async (
  */
 export const de_RevokePermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RevokePermissionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2508,7 +2508,7 @@ export const de_RevokePermissionsCommand = async (
  */
 export const de_SearchDatabasesByLFTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchDatabasesByLFTagsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2530,7 +2530,7 @@ export const de_SearchDatabasesByLFTagsCommand = async (
  */
 export const de_SearchTablesByLFTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchTablesByLFTagsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2552,7 +2552,7 @@ export const de_SearchTablesByLFTagsCommand = async (
  */
 export const de_StartQueryPlanningCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartQueryPlanningCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2573,7 +2573,7 @@ export const de_StartQueryPlanningCommand = async (
  */
 export const de_StartTransactionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartTransactionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2594,7 +2594,7 @@ export const de_StartTransactionCommand = async (
  */
 export const de_UpdateDataCellsFilterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDataCellsFilterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2611,7 +2611,7 @@ export const de_UpdateDataCellsFilterCommand = async (
  */
 export const de_UpdateLakeFormationIdentityCenterConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLakeFormationIdentityCenterConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2628,7 +2628,7 @@ export const de_UpdateLakeFormationIdentityCenterConfigurationCommand = async (
  */
 export const de_UpdateLFTagCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLFTagCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2645,7 +2645,7 @@ export const de_UpdateLFTagCommand = async (
  */
 export const de_UpdateResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2662,7 +2662,7 @@ export const de_UpdateResourceCommand = async (
  */
 export const de_UpdateTableObjectsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTableObjectsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2679,7 +2679,7 @@ export const de_UpdateTableObjectsCommand = async (
  */
 export const de_UpdateTableStorageOptimizerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTableStorageOptimizerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2775,7 +2775,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2795,7 +2795,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_AlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AlreadyExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2815,7 +2815,7 @@ const de_AlreadyExistsExceptionRes = async (
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2835,7 +2835,7 @@ const de_ConcurrentModificationExceptionRes = async (
  */
 const de_EntityNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EntityNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2872,7 +2872,7 @@ const de_ExpiredExceptionRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_GlueEncryptionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GlueEncryptionException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2892,7 +2892,7 @@ const de_GlueEncryptionExceptionRes = async (
  */
 const de_InternalServiceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2912,7 +2912,7 @@ const de_InternalServiceExceptionRes = async (
  */
 const de_InvalidInputExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidInputException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2932,7 +2932,7 @@ const de_InvalidInputExceptionRes = async (
  */
 const de_OperationTimeoutExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationTimeoutException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2952,7 +2952,7 @@ const de_OperationTimeoutExceptionRes = async (
  */
 const de_PermissionTypeMismatchExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PermissionTypeMismatchException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2972,7 +2972,7 @@ const de_PermissionTypeMismatchExceptionRes = async (
  */
 const de_ResourceNotReadyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotReadyException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2992,7 +2992,7 @@ const de_ResourceNotReadyExceptionRes = async (
  */
 const de_ResourceNumberLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNumberLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3012,7 +3012,7 @@ const de_ResourceNumberLimitExceededExceptionRes = async (
  */
 const de_StatisticsNotReadyYetExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StatisticsNotReadyYetException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3049,7 +3049,7 @@ const de_ThrottledExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_TransactionCanceledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TransactionCanceledException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3069,7 +3069,7 @@ const de_TransactionCanceledExceptionRes = async (
  */
 const de_TransactionCommitInProgressExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TransactionCommitInProgressException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3089,7 +3089,7 @@ const de_TransactionCommitInProgressExceptionRes = async (
  */
 const de_TransactionCommittedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TransactionCommittedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3109,7 +3109,7 @@ const de_TransactionCommittedExceptionRes = async (
  */
 const de_WorkUnitsNotReadyYetExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WorkUnitsNotReadyYetException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

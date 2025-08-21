@@ -139,7 +139,7 @@ import {
  */
 export const se_BatchDescribeEntitiesCommand = async (
   input: BatchDescribeEntitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -150,7 +150,7 @@ export const se_BatchDescribeEntitiesCommand = async (
   body = JSON.stringify(
     take(input, {
       EntityRequestList: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -161,7 +161,7 @@ export const se_BatchDescribeEntitiesCommand = async (
  */
 export const se_CancelChangeSetCommand = async (
   input: CancelChangeSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -180,7 +180,7 @@ export const se_CancelChangeSetCommand = async (
  */
 export const se_DeleteResourcePolicyCommand = async (
   input: DeleteResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -198,7 +198,7 @@ export const se_DeleteResourcePolicyCommand = async (
  */
 export const se_DescribeChangeSetCommand = async (
   input: DescribeChangeSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -217,7 +217,7 @@ export const se_DescribeChangeSetCommand = async (
  */
 export const se_DescribeEntityCommand = async (
   input: DescribeEntityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -236,7 +236,7 @@ export const se_DescribeEntityCommand = async (
  */
 export const se_GetResourcePolicyCommand = async (
   input: GetResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -254,7 +254,7 @@ export const se_GetResourcePolicyCommand = async (
  */
 export const se_ListChangeSetsCommand = async (
   input: ListChangeSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -269,7 +269,7 @@ export const se_ListChangeSetsCommand = async (
       MaxResults: [],
       NextToken: [],
       Sort: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -280,7 +280,7 @@ export const se_ListChangeSetsCommand = async (
  */
 export const se_ListEntitiesCommand = async (
   input: ListEntitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -299,7 +299,7 @@ export const se_ListEntitiesCommand = async (
       NextToken: [],
       OwnershipType: [],
       Sort: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -310,7 +310,7 @@ export const se_ListEntitiesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -321,7 +321,7 @@ export const se_ListTagsForResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       ResourceArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -332,7 +332,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutResourcePolicyCommand = async (
   input: PutResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -344,7 +344,7 @@ export const se_PutResourcePolicyCommand = async (
     take(input, {
       Policy: [],
       ResourceArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -355,7 +355,7 @@ export const se_PutResourcePolicyCommand = async (
  */
 export const se_StartChangeSetCommand = async (
   input: StartChangeSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -371,7 +371,7 @@ export const se_StartChangeSetCommand = async (
       ChangeSetTags: (_) => _json(_),
       ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
       Intent: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -382,7 +382,7 @@ export const se_StartChangeSetCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -394,7 +394,7 @@ export const se_TagResourceCommand = async (
     take(input, {
       ResourceArn: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -405,7 +405,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -417,7 +417,7 @@ export const se_UntagResourceCommand = async (
     take(input, {
       ResourceArn: [],
       TagKeys: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -428,7 +428,7 @@ export const se_UntagResourceCommand = async (
  */
 export const de_BatchDescribeEntitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDescribeEntitiesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -450,7 +450,7 @@ export const de_BatchDescribeEntitiesCommand = async (
  */
 export const de_CancelChangeSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelChangeSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -472,7 +472,7 @@ export const de_CancelChangeSetCommand = async (
  */
 export const de_DeleteResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResourcePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -489,7 +489,7 @@ export const de_DeleteResourcePolicyCommand = async (
  */
 export const de_DescribeChangeSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeChangeSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -519,7 +519,7 @@ export const de_DescribeChangeSetCommand = async (
  */
 export const de_DescribeEntityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEntityCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -545,7 +545,7 @@ export const de_DescribeEntityCommand = async (
  */
 export const de_GetResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourcePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -566,7 +566,7 @@ export const de_GetResourcePolicyCommand = async (
  */
 export const de_ListChangeSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListChangeSetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -588,7 +588,7 @@ export const de_ListChangeSetsCommand = async (
  */
 export const de_ListEntitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEntitiesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -610,7 +610,7 @@ export const de_ListEntitiesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -632,7 +632,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutResourcePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -649,7 +649,7 @@ export const de_PutResourcePolicyCommand = async (
  */
 export const de_StartChangeSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartChangeSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -671,7 +671,7 @@ export const de_StartChangeSetCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -688,7 +688,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -750,7 +750,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -770,7 +770,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_InternalServiceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -790,7 +790,7 @@ const de_InternalServiceExceptionRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -810,7 +810,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -830,7 +830,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ResourceNotSupportedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotSupportedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -850,7 +850,7 @@ const de_ResourceNotSupportedExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1194,13 +1194,16 @@ const de_EntityDetail = (output: any, context: __SerdeContext): EntityDetail => 
  * deserializeAws_restJson1EntityDetails
  */
 const de_EntityDetails = (output: any, context: __SerdeContext): Record<string, EntityDetail> => {
-  return Object.entries(output).reduce((acc: Record<string, EntityDetail>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, EntityDetail>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_EntityDetail(value, context);
       return acc;
-    }
-    acc[key as string] = de_EntityDetail(value, context);
-    return acc;
-  }, {} as Record<string, EntityDetail>);
+    },
+    {} as Record<string, EntityDetail>,
+  );
 };
 
 // de_EntitySummary omitted.

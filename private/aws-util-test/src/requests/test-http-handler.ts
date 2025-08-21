@@ -99,7 +99,7 @@ export class TestHttpHandler implements HttpHandler {
    */
   public async handle(
     request: HttpRequest,
-    handlerOptions?: HttpHandlerOptions
+    handlerOptions?: HttpHandlerOptions,
   ): Promise<RequestHandlerOutput<HttpResponse>> {
     const m = this.matcher;
 

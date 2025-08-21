@@ -28,7 +28,7 @@ export type HttpAuthRuntimeConfig = Partial<{
  * @internal
  */
 export const getHttpAuthExtensionConfiguration = (
-  runtimeConfig: HttpAuthRuntimeConfig
+  runtimeConfig: HttpAuthRuntimeConfig,
 ): HttpAuthExtensionConfiguration => {
   const _httpAuthSchemes = runtimeConfig.httpAuthSchemes!;
   let _httpAuthSchemeProvider = runtimeConfig.httpAuthSchemeProvider!;

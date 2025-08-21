@@ -480,7 +480,7 @@ import { ServiceCatalogServiceException as __BaseException } from "../models/Ser
  */
 export const se_AcceptPortfolioShareCommand = async (
   input: AcceptPortfolioShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AcceptPortfolioShare");
   let body: any;
@@ -493,7 +493,7 @@ export const se_AcceptPortfolioShareCommand = async (
  */
 export const se_AssociateBudgetWithResourceCommand = async (
   input: AssociateBudgetWithResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateBudgetWithResource");
   let body: any;
@@ -506,7 +506,7 @@ export const se_AssociateBudgetWithResourceCommand = async (
  */
 export const se_AssociatePrincipalWithPortfolioCommand = async (
   input: AssociatePrincipalWithPortfolioCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociatePrincipalWithPortfolio");
   let body: any;
@@ -519,7 +519,7 @@ export const se_AssociatePrincipalWithPortfolioCommand = async (
  */
 export const se_AssociateProductWithPortfolioCommand = async (
   input: AssociateProductWithPortfolioCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateProductWithPortfolio");
   let body: any;
@@ -532,7 +532,7 @@ export const se_AssociateProductWithPortfolioCommand = async (
  */
 export const se_AssociateServiceActionWithProvisioningArtifactCommand = async (
   input: AssociateServiceActionWithProvisioningArtifactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateServiceActionWithProvisioningArtifact");
   let body: any;
@@ -545,7 +545,7 @@ export const se_AssociateServiceActionWithProvisioningArtifactCommand = async (
  */
 export const se_AssociateTagOptionWithResourceCommand = async (
   input: AssociateTagOptionWithResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateTagOptionWithResource");
   let body: any;
@@ -558,7 +558,7 @@ export const se_AssociateTagOptionWithResourceCommand = async (
  */
 export const se_BatchAssociateServiceActionWithProvisioningArtifactCommand = async (
   input: BatchAssociateServiceActionWithProvisioningArtifactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchAssociateServiceActionWithProvisioningArtifact");
   let body: any;
@@ -571,7 +571,7 @@ export const se_BatchAssociateServiceActionWithProvisioningArtifactCommand = asy
  */
 export const se_BatchDisassociateServiceActionFromProvisioningArtifactCommand = async (
   input: BatchDisassociateServiceActionFromProvisioningArtifactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchDisassociateServiceActionFromProvisioningArtifact");
   let body: any;
@@ -584,7 +584,7 @@ export const se_BatchDisassociateServiceActionFromProvisioningArtifactCommand = 
  */
 export const se_CopyProductCommand = async (
   input: CopyProductCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CopyProduct");
   let body: any;
@@ -597,7 +597,7 @@ export const se_CopyProductCommand = async (
  */
 export const se_CreateConstraintCommand = async (
   input: CreateConstraintCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateConstraint");
   let body: any;
@@ -610,7 +610,7 @@ export const se_CreateConstraintCommand = async (
  */
 export const se_CreatePortfolioCommand = async (
   input: CreatePortfolioCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreatePortfolio");
   let body: any;
@@ -623,7 +623,7 @@ export const se_CreatePortfolioCommand = async (
  */
 export const se_CreatePortfolioShareCommand = async (
   input: CreatePortfolioShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreatePortfolioShare");
   let body: any;
@@ -636,7 +636,7 @@ export const se_CreatePortfolioShareCommand = async (
  */
 export const se_CreateProductCommand = async (
   input: CreateProductCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateProduct");
   let body: any;
@@ -649,7 +649,7 @@ export const se_CreateProductCommand = async (
  */
 export const se_CreateProvisionedProductPlanCommand = async (
   input: CreateProvisionedProductPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateProvisionedProductPlan");
   let body: any;
@@ -662,7 +662,7 @@ export const se_CreateProvisionedProductPlanCommand = async (
  */
 export const se_CreateProvisioningArtifactCommand = async (
   input: CreateProvisioningArtifactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateProvisioningArtifact");
   let body: any;
@@ -675,7 +675,7 @@ export const se_CreateProvisioningArtifactCommand = async (
  */
 export const se_CreateServiceActionCommand = async (
   input: CreateServiceActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateServiceAction");
   let body: any;
@@ -688,7 +688,7 @@ export const se_CreateServiceActionCommand = async (
  */
 export const se_CreateTagOptionCommand = async (
   input: CreateTagOptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateTagOption");
   let body: any;
@@ -701,7 +701,7 @@ export const se_CreateTagOptionCommand = async (
  */
 export const se_DeleteConstraintCommand = async (
   input: DeleteConstraintCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteConstraint");
   let body: any;
@@ -714,7 +714,7 @@ export const se_DeleteConstraintCommand = async (
  */
 export const se_DeletePortfolioCommand = async (
   input: DeletePortfolioCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeletePortfolio");
   let body: any;
@@ -727,7 +727,7 @@ export const se_DeletePortfolioCommand = async (
  */
 export const se_DeletePortfolioShareCommand = async (
   input: DeletePortfolioShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeletePortfolioShare");
   let body: any;
@@ -740,7 +740,7 @@ export const se_DeletePortfolioShareCommand = async (
  */
 export const se_DeleteProductCommand = async (
   input: DeleteProductCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteProduct");
   let body: any;
@@ -753,7 +753,7 @@ export const se_DeleteProductCommand = async (
  */
 export const se_DeleteProvisionedProductPlanCommand = async (
   input: DeleteProvisionedProductPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteProvisionedProductPlan");
   let body: any;
@@ -766,7 +766,7 @@ export const se_DeleteProvisionedProductPlanCommand = async (
  */
 export const se_DeleteProvisioningArtifactCommand = async (
   input: DeleteProvisioningArtifactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteProvisioningArtifact");
   let body: any;
@@ -779,7 +779,7 @@ export const se_DeleteProvisioningArtifactCommand = async (
  */
 export const se_DeleteServiceActionCommand = async (
   input: DeleteServiceActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteServiceAction");
   let body: any;
@@ -792,7 +792,7 @@ export const se_DeleteServiceActionCommand = async (
  */
 export const se_DeleteTagOptionCommand = async (
   input: DeleteTagOptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteTagOption");
   let body: any;
@@ -805,7 +805,7 @@ export const se_DeleteTagOptionCommand = async (
  */
 export const se_DescribeConstraintCommand = async (
   input: DescribeConstraintCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeConstraint");
   let body: any;
@@ -818,7 +818,7 @@ export const se_DescribeConstraintCommand = async (
  */
 export const se_DescribeCopyProductStatusCommand = async (
   input: DescribeCopyProductStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCopyProductStatus");
   let body: any;
@@ -831,7 +831,7 @@ export const se_DescribeCopyProductStatusCommand = async (
  */
 export const se_DescribePortfolioCommand = async (
   input: DescribePortfolioCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribePortfolio");
   let body: any;
@@ -844,7 +844,7 @@ export const se_DescribePortfolioCommand = async (
  */
 export const se_DescribePortfolioSharesCommand = async (
   input: DescribePortfolioSharesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribePortfolioShares");
   let body: any;
@@ -857,7 +857,7 @@ export const se_DescribePortfolioSharesCommand = async (
  */
 export const se_DescribePortfolioShareStatusCommand = async (
   input: DescribePortfolioShareStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribePortfolioShareStatus");
   let body: any;
@@ -870,7 +870,7 @@ export const se_DescribePortfolioShareStatusCommand = async (
  */
 export const se_DescribeProductCommand = async (
   input: DescribeProductCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeProduct");
   let body: any;
@@ -883,7 +883,7 @@ export const se_DescribeProductCommand = async (
  */
 export const se_DescribeProductAsAdminCommand = async (
   input: DescribeProductAsAdminCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeProductAsAdmin");
   let body: any;
@@ -896,7 +896,7 @@ export const se_DescribeProductAsAdminCommand = async (
  */
 export const se_DescribeProductViewCommand = async (
   input: DescribeProductViewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeProductView");
   let body: any;
@@ -909,7 +909,7 @@ export const se_DescribeProductViewCommand = async (
  */
 export const se_DescribeProvisionedProductCommand = async (
   input: DescribeProvisionedProductCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeProvisionedProduct");
   let body: any;
@@ -922,7 +922,7 @@ export const se_DescribeProvisionedProductCommand = async (
  */
 export const se_DescribeProvisionedProductPlanCommand = async (
   input: DescribeProvisionedProductPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeProvisionedProductPlan");
   let body: any;
@@ -935,7 +935,7 @@ export const se_DescribeProvisionedProductPlanCommand = async (
  */
 export const se_DescribeProvisioningArtifactCommand = async (
   input: DescribeProvisioningArtifactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeProvisioningArtifact");
   let body: any;
@@ -948,7 +948,7 @@ export const se_DescribeProvisioningArtifactCommand = async (
  */
 export const se_DescribeProvisioningParametersCommand = async (
   input: DescribeProvisioningParametersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeProvisioningParameters");
   let body: any;
@@ -961,7 +961,7 @@ export const se_DescribeProvisioningParametersCommand = async (
  */
 export const se_DescribeRecordCommand = async (
   input: DescribeRecordCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeRecord");
   let body: any;
@@ -974,7 +974,7 @@ export const se_DescribeRecordCommand = async (
  */
 export const se_DescribeServiceActionCommand = async (
   input: DescribeServiceActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeServiceAction");
   let body: any;
@@ -987,7 +987,7 @@ export const se_DescribeServiceActionCommand = async (
  */
 export const se_DescribeServiceActionExecutionParametersCommand = async (
   input: DescribeServiceActionExecutionParametersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeServiceActionExecutionParameters");
   let body: any;
@@ -1000,7 +1000,7 @@ export const se_DescribeServiceActionExecutionParametersCommand = async (
  */
 export const se_DescribeTagOptionCommand = async (
   input: DescribeTagOptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTagOption");
   let body: any;
@@ -1013,7 +1013,7 @@ export const se_DescribeTagOptionCommand = async (
  */
 export const se_DisableAWSOrganizationsAccessCommand = async (
   input: DisableAWSOrganizationsAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisableAWSOrganizationsAccess");
   let body: any;
@@ -1026,7 +1026,7 @@ export const se_DisableAWSOrganizationsAccessCommand = async (
  */
 export const se_DisassociateBudgetFromResourceCommand = async (
   input: DisassociateBudgetFromResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateBudgetFromResource");
   let body: any;
@@ -1039,7 +1039,7 @@ export const se_DisassociateBudgetFromResourceCommand = async (
  */
 export const se_DisassociatePrincipalFromPortfolioCommand = async (
   input: DisassociatePrincipalFromPortfolioCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociatePrincipalFromPortfolio");
   let body: any;
@@ -1052,7 +1052,7 @@ export const se_DisassociatePrincipalFromPortfolioCommand = async (
  */
 export const se_DisassociateProductFromPortfolioCommand = async (
   input: DisassociateProductFromPortfolioCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateProductFromPortfolio");
   let body: any;
@@ -1065,7 +1065,7 @@ export const se_DisassociateProductFromPortfolioCommand = async (
  */
 export const se_DisassociateServiceActionFromProvisioningArtifactCommand = async (
   input: DisassociateServiceActionFromProvisioningArtifactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateServiceActionFromProvisioningArtifact");
   let body: any;
@@ -1078,7 +1078,7 @@ export const se_DisassociateServiceActionFromProvisioningArtifactCommand = async
  */
 export const se_DisassociateTagOptionFromResourceCommand = async (
   input: DisassociateTagOptionFromResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateTagOptionFromResource");
   let body: any;
@@ -1091,7 +1091,7 @@ export const se_DisassociateTagOptionFromResourceCommand = async (
  */
 export const se_EnableAWSOrganizationsAccessCommand = async (
   input: EnableAWSOrganizationsAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EnableAWSOrganizationsAccess");
   let body: any;
@@ -1104,7 +1104,7 @@ export const se_EnableAWSOrganizationsAccessCommand = async (
  */
 export const se_ExecuteProvisionedProductPlanCommand = async (
   input: ExecuteProvisionedProductPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ExecuteProvisionedProductPlan");
   let body: any;
@@ -1117,7 +1117,7 @@ export const se_ExecuteProvisionedProductPlanCommand = async (
  */
 export const se_ExecuteProvisionedProductServiceActionCommand = async (
   input: ExecuteProvisionedProductServiceActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ExecuteProvisionedProductServiceAction");
   let body: any;
@@ -1130,7 +1130,7 @@ export const se_ExecuteProvisionedProductServiceActionCommand = async (
  */
 export const se_GetAWSOrganizationsAccessStatusCommand = async (
   input: GetAWSOrganizationsAccessStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAWSOrganizationsAccessStatus");
   let body: any;
@@ -1143,7 +1143,7 @@ export const se_GetAWSOrganizationsAccessStatusCommand = async (
  */
 export const se_GetProvisionedProductOutputsCommand = async (
   input: GetProvisionedProductOutputsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetProvisionedProductOutputs");
   let body: any;
@@ -1156,7 +1156,7 @@ export const se_GetProvisionedProductOutputsCommand = async (
  */
 export const se_ImportAsProvisionedProductCommand = async (
   input: ImportAsProvisionedProductCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ImportAsProvisionedProduct");
   let body: any;
@@ -1169,7 +1169,7 @@ export const se_ImportAsProvisionedProductCommand = async (
  */
 export const se_ListAcceptedPortfolioSharesCommand = async (
   input: ListAcceptedPortfolioSharesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAcceptedPortfolioShares");
   let body: any;
@@ -1182,7 +1182,7 @@ export const se_ListAcceptedPortfolioSharesCommand = async (
  */
 export const se_ListBudgetsForResourceCommand = async (
   input: ListBudgetsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListBudgetsForResource");
   let body: any;
@@ -1195,7 +1195,7 @@ export const se_ListBudgetsForResourceCommand = async (
  */
 export const se_ListConstraintsForPortfolioCommand = async (
   input: ListConstraintsForPortfolioCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListConstraintsForPortfolio");
   let body: any;
@@ -1208,7 +1208,7 @@ export const se_ListConstraintsForPortfolioCommand = async (
  */
 export const se_ListLaunchPathsCommand = async (
   input: ListLaunchPathsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListLaunchPaths");
   let body: any;
@@ -1221,7 +1221,7 @@ export const se_ListLaunchPathsCommand = async (
  */
 export const se_ListOrganizationPortfolioAccessCommand = async (
   input: ListOrganizationPortfolioAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListOrganizationPortfolioAccess");
   let body: any;
@@ -1234,7 +1234,7 @@ export const se_ListOrganizationPortfolioAccessCommand = async (
  */
 export const se_ListPortfolioAccessCommand = async (
   input: ListPortfolioAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPortfolioAccess");
   let body: any;
@@ -1247,7 +1247,7 @@ export const se_ListPortfolioAccessCommand = async (
  */
 export const se_ListPortfoliosCommand = async (
   input: ListPortfoliosCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPortfolios");
   let body: any;
@@ -1260,7 +1260,7 @@ export const se_ListPortfoliosCommand = async (
  */
 export const se_ListPortfoliosForProductCommand = async (
   input: ListPortfoliosForProductCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPortfoliosForProduct");
   let body: any;
@@ -1273,7 +1273,7 @@ export const se_ListPortfoliosForProductCommand = async (
  */
 export const se_ListPrincipalsForPortfolioCommand = async (
   input: ListPrincipalsForPortfolioCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPrincipalsForPortfolio");
   let body: any;
@@ -1286,7 +1286,7 @@ export const se_ListPrincipalsForPortfolioCommand = async (
  */
 export const se_ListProvisionedProductPlansCommand = async (
   input: ListProvisionedProductPlansCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListProvisionedProductPlans");
   let body: any;
@@ -1299,7 +1299,7 @@ export const se_ListProvisionedProductPlansCommand = async (
  */
 export const se_ListProvisioningArtifactsCommand = async (
   input: ListProvisioningArtifactsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListProvisioningArtifacts");
   let body: any;
@@ -1312,7 +1312,7 @@ export const se_ListProvisioningArtifactsCommand = async (
  */
 export const se_ListProvisioningArtifactsForServiceActionCommand = async (
   input: ListProvisioningArtifactsForServiceActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListProvisioningArtifactsForServiceAction");
   let body: any;
@@ -1325,7 +1325,7 @@ export const se_ListProvisioningArtifactsForServiceActionCommand = async (
  */
 export const se_ListRecordHistoryCommand = async (
   input: ListRecordHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRecordHistory");
   let body: any;
@@ -1338,7 +1338,7 @@ export const se_ListRecordHistoryCommand = async (
  */
 export const se_ListResourcesForTagOptionCommand = async (
   input: ListResourcesForTagOptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListResourcesForTagOption");
   let body: any;
@@ -1351,7 +1351,7 @@ export const se_ListResourcesForTagOptionCommand = async (
  */
 export const se_ListServiceActionsCommand = async (
   input: ListServiceActionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListServiceActions");
   let body: any;
@@ -1364,7 +1364,7 @@ export const se_ListServiceActionsCommand = async (
  */
 export const se_ListServiceActionsForProvisioningArtifactCommand = async (
   input: ListServiceActionsForProvisioningArtifactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListServiceActionsForProvisioningArtifact");
   let body: any;
@@ -1377,7 +1377,7 @@ export const se_ListServiceActionsForProvisioningArtifactCommand = async (
  */
 export const se_ListStackInstancesForProvisionedProductCommand = async (
   input: ListStackInstancesForProvisionedProductCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListStackInstancesForProvisionedProduct");
   let body: any;
@@ -1390,7 +1390,7 @@ export const se_ListStackInstancesForProvisionedProductCommand = async (
  */
 export const se_ListTagOptionsCommand = async (
   input: ListTagOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagOptions");
   let body: any;
@@ -1403,7 +1403,7 @@ export const se_ListTagOptionsCommand = async (
  */
 export const se_NotifyProvisionProductEngineWorkflowResultCommand = async (
   input: NotifyProvisionProductEngineWorkflowResultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("NotifyProvisionProductEngineWorkflowResult");
   let body: any;
@@ -1416,7 +1416,7 @@ export const se_NotifyProvisionProductEngineWorkflowResultCommand = async (
  */
 export const se_NotifyTerminateProvisionedProductEngineWorkflowResultCommand = async (
   input: NotifyTerminateProvisionedProductEngineWorkflowResultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("NotifyTerminateProvisionedProductEngineWorkflowResult");
   let body: any;
@@ -1429,7 +1429,7 @@ export const se_NotifyTerminateProvisionedProductEngineWorkflowResultCommand = a
  */
 export const se_NotifyUpdateProvisionedProductEngineWorkflowResultCommand = async (
   input: NotifyUpdateProvisionedProductEngineWorkflowResultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("NotifyUpdateProvisionedProductEngineWorkflowResult");
   let body: any;
@@ -1442,7 +1442,7 @@ export const se_NotifyUpdateProvisionedProductEngineWorkflowResultCommand = asyn
  */
 export const se_ProvisionProductCommand = async (
   input: ProvisionProductCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ProvisionProduct");
   let body: any;
@@ -1455,7 +1455,7 @@ export const se_ProvisionProductCommand = async (
  */
 export const se_RejectPortfolioShareCommand = async (
   input: RejectPortfolioShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RejectPortfolioShare");
   let body: any;
@@ -1468,7 +1468,7 @@ export const se_RejectPortfolioShareCommand = async (
  */
 export const se_ScanProvisionedProductsCommand = async (
   input: ScanProvisionedProductsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ScanProvisionedProducts");
   let body: any;
@@ -1481,7 +1481,7 @@ export const se_ScanProvisionedProductsCommand = async (
  */
 export const se_SearchProductsCommand = async (
   input: SearchProductsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SearchProducts");
   let body: any;
@@ -1494,7 +1494,7 @@ export const se_SearchProductsCommand = async (
  */
 export const se_SearchProductsAsAdminCommand = async (
   input: SearchProductsAsAdminCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SearchProductsAsAdmin");
   let body: any;
@@ -1507,7 +1507,7 @@ export const se_SearchProductsAsAdminCommand = async (
  */
 export const se_SearchProvisionedProductsCommand = async (
   input: SearchProvisionedProductsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SearchProvisionedProducts");
   let body: any;
@@ -1520,7 +1520,7 @@ export const se_SearchProvisionedProductsCommand = async (
  */
 export const se_TerminateProvisionedProductCommand = async (
   input: TerminateProvisionedProductCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TerminateProvisionedProduct");
   let body: any;
@@ -1533,7 +1533,7 @@ export const se_TerminateProvisionedProductCommand = async (
  */
 export const se_UpdateConstraintCommand = async (
   input: UpdateConstraintCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateConstraint");
   let body: any;
@@ -1546,7 +1546,7 @@ export const se_UpdateConstraintCommand = async (
  */
 export const se_UpdatePortfolioCommand = async (
   input: UpdatePortfolioCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdatePortfolio");
   let body: any;
@@ -1559,7 +1559,7 @@ export const se_UpdatePortfolioCommand = async (
  */
 export const se_UpdatePortfolioShareCommand = async (
   input: UpdatePortfolioShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdatePortfolioShare");
   let body: any;
@@ -1572,7 +1572,7 @@ export const se_UpdatePortfolioShareCommand = async (
  */
 export const se_UpdateProductCommand = async (
   input: UpdateProductCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateProduct");
   let body: any;
@@ -1585,7 +1585,7 @@ export const se_UpdateProductCommand = async (
  */
 export const se_UpdateProvisionedProductCommand = async (
   input: UpdateProvisionedProductCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateProvisionedProduct");
   let body: any;
@@ -1598,7 +1598,7 @@ export const se_UpdateProvisionedProductCommand = async (
  */
 export const se_UpdateProvisionedProductPropertiesCommand = async (
   input: UpdateProvisionedProductPropertiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateProvisionedProductProperties");
   let body: any;
@@ -1611,7 +1611,7 @@ export const se_UpdateProvisionedProductPropertiesCommand = async (
  */
 export const se_UpdateProvisioningArtifactCommand = async (
   input: UpdateProvisioningArtifactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateProvisioningArtifact");
   let body: any;
@@ -1624,7 +1624,7 @@ export const se_UpdateProvisioningArtifactCommand = async (
  */
 export const se_UpdateServiceActionCommand = async (
   input: UpdateServiceActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateServiceAction");
   let body: any;
@@ -1637,7 +1637,7 @@ export const se_UpdateServiceActionCommand = async (
  */
 export const se_UpdateTagOptionCommand = async (
   input: UpdateTagOptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateTagOption");
   let body: any;
@@ -1650,7 +1650,7 @@ export const se_UpdateTagOptionCommand = async (
  */
 export const de_AcceptPortfolioShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptPortfolioShareCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1670,7 +1670,7 @@ export const de_AcceptPortfolioShareCommand = async (
  */
 export const de_AssociateBudgetWithResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateBudgetWithResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1690,7 +1690,7 @@ export const de_AssociateBudgetWithResourceCommand = async (
  */
 export const de_AssociatePrincipalWithPortfolioCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociatePrincipalWithPortfolioCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1710,7 +1710,7 @@ export const de_AssociatePrincipalWithPortfolioCommand = async (
  */
 export const de_AssociateProductWithPortfolioCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateProductWithPortfolioCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1730,7 +1730,7 @@ export const de_AssociateProductWithPortfolioCommand = async (
  */
 export const de_AssociateServiceActionWithProvisioningArtifactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateServiceActionWithProvisioningArtifactCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1750,7 +1750,7 @@ export const de_AssociateServiceActionWithProvisioningArtifactCommand = async (
  */
 export const de_AssociateTagOptionWithResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateTagOptionWithResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1770,7 +1770,7 @@ export const de_AssociateTagOptionWithResourceCommand = async (
  */
 export const de_BatchAssociateServiceActionWithProvisioningArtifactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchAssociateServiceActionWithProvisioningArtifactCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1790,7 +1790,7 @@ export const de_BatchAssociateServiceActionWithProvisioningArtifactCommand = asy
  */
 export const de_BatchDisassociateServiceActionFromProvisioningArtifactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDisassociateServiceActionFromProvisioningArtifactCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1810,7 +1810,7 @@ export const de_BatchDisassociateServiceActionFromProvisioningArtifactCommand = 
  */
 export const de_CopyProductCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopyProductCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1830,7 +1830,7 @@ export const de_CopyProductCommand = async (
  */
 export const de_CreateConstraintCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConstraintCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1850,7 +1850,7 @@ export const de_CreateConstraintCommand = async (
  */
 export const de_CreatePortfolioCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePortfolioCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1870,7 +1870,7 @@ export const de_CreatePortfolioCommand = async (
  */
 export const de_CreatePortfolioShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePortfolioShareCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1890,7 +1890,7 @@ export const de_CreatePortfolioShareCommand = async (
  */
 export const de_CreateProductCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateProductCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1910,7 +1910,7 @@ export const de_CreateProductCommand = async (
  */
 export const de_CreateProvisionedProductPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateProvisionedProductPlanCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1930,7 +1930,7 @@ export const de_CreateProvisionedProductPlanCommand = async (
  */
 export const de_CreateProvisioningArtifactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateProvisioningArtifactCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1950,7 +1950,7 @@ export const de_CreateProvisioningArtifactCommand = async (
  */
 export const de_CreateServiceActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateServiceActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1970,7 +1970,7 @@ export const de_CreateServiceActionCommand = async (
  */
 export const de_CreateTagOptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTagOptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1990,7 +1990,7 @@ export const de_CreateTagOptionCommand = async (
  */
 export const de_DeleteConstraintCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConstraintCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2010,7 +2010,7 @@ export const de_DeleteConstraintCommand = async (
  */
 export const de_DeletePortfolioCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePortfolioCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2030,7 +2030,7 @@ export const de_DeletePortfolioCommand = async (
  */
 export const de_DeletePortfolioShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePortfolioShareCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2050,7 +2050,7 @@ export const de_DeletePortfolioShareCommand = async (
  */
 export const de_DeleteProductCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProductCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2070,7 +2070,7 @@ export const de_DeleteProductCommand = async (
  */
 export const de_DeleteProvisionedProductPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProvisionedProductPlanCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2090,7 +2090,7 @@ export const de_DeleteProvisionedProductPlanCommand = async (
  */
 export const de_DeleteProvisioningArtifactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProvisioningArtifactCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2110,7 +2110,7 @@ export const de_DeleteProvisioningArtifactCommand = async (
  */
 export const de_DeleteServiceActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServiceActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2130,7 +2130,7 @@ export const de_DeleteServiceActionCommand = async (
  */
 export const de_DeleteTagOptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTagOptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2150,7 +2150,7 @@ export const de_DeleteTagOptionCommand = async (
  */
 export const de_DescribeConstraintCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConstraintCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2170,7 +2170,7 @@ export const de_DescribeConstraintCommand = async (
  */
 export const de_DescribeCopyProductStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCopyProductStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2190,7 +2190,7 @@ export const de_DescribeCopyProductStatusCommand = async (
  */
 export const de_DescribePortfolioCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePortfolioCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2210,7 +2210,7 @@ export const de_DescribePortfolioCommand = async (
  */
 export const de_DescribePortfolioSharesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePortfolioSharesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2230,7 +2230,7 @@ export const de_DescribePortfolioSharesCommand = async (
  */
 export const de_DescribePortfolioShareStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePortfolioShareStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2250,7 +2250,7 @@ export const de_DescribePortfolioShareStatusCommand = async (
  */
 export const de_DescribeProductCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeProductCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2270,7 +2270,7 @@ export const de_DescribeProductCommand = async (
  */
 export const de_DescribeProductAsAdminCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeProductAsAdminCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2290,7 +2290,7 @@ export const de_DescribeProductAsAdminCommand = async (
  */
 export const de_DescribeProductViewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeProductViewCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2310,7 +2310,7 @@ export const de_DescribeProductViewCommand = async (
  */
 export const de_DescribeProvisionedProductCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeProvisionedProductCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2330,7 +2330,7 @@ export const de_DescribeProvisionedProductCommand = async (
  */
 export const de_DescribeProvisionedProductPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeProvisionedProductPlanCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2350,7 +2350,7 @@ export const de_DescribeProvisionedProductPlanCommand = async (
  */
 export const de_DescribeProvisioningArtifactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeProvisioningArtifactCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2370,7 +2370,7 @@ export const de_DescribeProvisioningArtifactCommand = async (
  */
 export const de_DescribeProvisioningParametersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeProvisioningParametersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2390,7 +2390,7 @@ export const de_DescribeProvisioningParametersCommand = async (
  */
 export const de_DescribeRecordCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRecordCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2410,7 +2410,7 @@ export const de_DescribeRecordCommand = async (
  */
 export const de_DescribeServiceActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeServiceActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2430,7 +2430,7 @@ export const de_DescribeServiceActionCommand = async (
  */
 export const de_DescribeServiceActionExecutionParametersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeServiceActionExecutionParametersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2450,7 +2450,7 @@ export const de_DescribeServiceActionExecutionParametersCommand = async (
  */
 export const de_DescribeTagOptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTagOptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2470,7 +2470,7 @@ export const de_DescribeTagOptionCommand = async (
  */
 export const de_DisableAWSOrganizationsAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableAWSOrganizationsAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2490,7 +2490,7 @@ export const de_DisableAWSOrganizationsAccessCommand = async (
  */
 export const de_DisassociateBudgetFromResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateBudgetFromResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2510,7 +2510,7 @@ export const de_DisassociateBudgetFromResourceCommand = async (
  */
 export const de_DisassociatePrincipalFromPortfolioCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociatePrincipalFromPortfolioCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2530,7 +2530,7 @@ export const de_DisassociatePrincipalFromPortfolioCommand = async (
  */
 export const de_DisassociateProductFromPortfolioCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateProductFromPortfolioCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2550,7 +2550,7 @@ export const de_DisassociateProductFromPortfolioCommand = async (
  */
 export const de_DisassociateServiceActionFromProvisioningArtifactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateServiceActionFromProvisioningArtifactCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2570,7 +2570,7 @@ export const de_DisassociateServiceActionFromProvisioningArtifactCommand = async
  */
 export const de_DisassociateTagOptionFromResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateTagOptionFromResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2590,7 +2590,7 @@ export const de_DisassociateTagOptionFromResourceCommand = async (
  */
 export const de_EnableAWSOrganizationsAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableAWSOrganizationsAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2610,7 +2610,7 @@ export const de_EnableAWSOrganizationsAccessCommand = async (
  */
 export const de_ExecuteProvisionedProductPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteProvisionedProductPlanCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2630,7 +2630,7 @@ export const de_ExecuteProvisionedProductPlanCommand = async (
  */
 export const de_ExecuteProvisionedProductServiceActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteProvisionedProductServiceActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2650,7 +2650,7 @@ export const de_ExecuteProvisionedProductServiceActionCommand = async (
  */
 export const de_GetAWSOrganizationsAccessStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAWSOrganizationsAccessStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2670,7 +2670,7 @@ export const de_GetAWSOrganizationsAccessStatusCommand = async (
  */
 export const de_GetProvisionedProductOutputsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetProvisionedProductOutputsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2690,7 +2690,7 @@ export const de_GetProvisionedProductOutputsCommand = async (
  */
 export const de_ImportAsProvisionedProductCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportAsProvisionedProductCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2710,7 +2710,7 @@ export const de_ImportAsProvisionedProductCommand = async (
  */
 export const de_ListAcceptedPortfolioSharesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAcceptedPortfolioSharesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2730,7 +2730,7 @@ export const de_ListAcceptedPortfolioSharesCommand = async (
  */
 export const de_ListBudgetsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBudgetsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2750,7 +2750,7 @@ export const de_ListBudgetsForResourceCommand = async (
  */
 export const de_ListConstraintsForPortfolioCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConstraintsForPortfolioCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2770,7 +2770,7 @@ export const de_ListConstraintsForPortfolioCommand = async (
  */
 export const de_ListLaunchPathsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLaunchPathsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2790,7 +2790,7 @@ export const de_ListLaunchPathsCommand = async (
  */
 export const de_ListOrganizationPortfolioAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOrganizationPortfolioAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2810,7 +2810,7 @@ export const de_ListOrganizationPortfolioAccessCommand = async (
  */
 export const de_ListPortfolioAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPortfolioAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2830,7 +2830,7 @@ export const de_ListPortfolioAccessCommand = async (
  */
 export const de_ListPortfoliosCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPortfoliosCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2850,7 +2850,7 @@ export const de_ListPortfoliosCommand = async (
  */
 export const de_ListPortfoliosForProductCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPortfoliosForProductCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2870,7 +2870,7 @@ export const de_ListPortfoliosForProductCommand = async (
  */
 export const de_ListPrincipalsForPortfolioCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPrincipalsForPortfolioCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2890,7 +2890,7 @@ export const de_ListPrincipalsForPortfolioCommand = async (
  */
 export const de_ListProvisionedProductPlansCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProvisionedProductPlansCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2910,7 +2910,7 @@ export const de_ListProvisionedProductPlansCommand = async (
  */
 export const de_ListProvisioningArtifactsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProvisioningArtifactsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2930,7 +2930,7 @@ export const de_ListProvisioningArtifactsCommand = async (
  */
 export const de_ListProvisioningArtifactsForServiceActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProvisioningArtifactsForServiceActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2950,7 +2950,7 @@ export const de_ListProvisioningArtifactsForServiceActionCommand = async (
  */
 export const de_ListRecordHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRecordHistoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2970,7 +2970,7 @@ export const de_ListRecordHistoryCommand = async (
  */
 export const de_ListResourcesForTagOptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResourcesForTagOptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2990,7 +2990,7 @@ export const de_ListResourcesForTagOptionCommand = async (
  */
 export const de_ListServiceActionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServiceActionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3010,7 +3010,7 @@ export const de_ListServiceActionsCommand = async (
  */
 export const de_ListServiceActionsForProvisioningArtifactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServiceActionsForProvisioningArtifactCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3030,7 +3030,7 @@ export const de_ListServiceActionsForProvisioningArtifactCommand = async (
  */
 export const de_ListStackInstancesForProvisionedProductCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStackInstancesForProvisionedProductCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3050,7 +3050,7 @@ export const de_ListStackInstancesForProvisionedProductCommand = async (
  */
 export const de_ListTagOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3070,7 +3070,7 @@ export const de_ListTagOptionsCommand = async (
  */
 export const de_NotifyProvisionProductEngineWorkflowResultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotifyProvisionProductEngineWorkflowResultCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3090,7 +3090,7 @@ export const de_NotifyProvisionProductEngineWorkflowResultCommand = async (
  */
 export const de_NotifyTerminateProvisionedProductEngineWorkflowResultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotifyTerminateProvisionedProductEngineWorkflowResultCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3110,7 +3110,7 @@ export const de_NotifyTerminateProvisionedProductEngineWorkflowResultCommand = a
  */
 export const de_NotifyUpdateProvisionedProductEngineWorkflowResultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotifyUpdateProvisionedProductEngineWorkflowResultCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3130,7 +3130,7 @@ export const de_NotifyUpdateProvisionedProductEngineWorkflowResultCommand = asyn
  */
 export const de_ProvisionProductCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ProvisionProductCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3150,7 +3150,7 @@ export const de_ProvisionProductCommand = async (
  */
 export const de_RejectPortfolioShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RejectPortfolioShareCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3170,7 +3170,7 @@ export const de_RejectPortfolioShareCommand = async (
  */
 export const de_ScanProvisionedProductsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ScanProvisionedProductsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3190,7 +3190,7 @@ export const de_ScanProvisionedProductsCommand = async (
  */
 export const de_SearchProductsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchProductsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3210,7 +3210,7 @@ export const de_SearchProductsCommand = async (
  */
 export const de_SearchProductsAsAdminCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchProductsAsAdminCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3230,7 +3230,7 @@ export const de_SearchProductsAsAdminCommand = async (
  */
 export const de_SearchProvisionedProductsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchProvisionedProductsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3250,7 +3250,7 @@ export const de_SearchProvisionedProductsCommand = async (
  */
 export const de_TerminateProvisionedProductCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TerminateProvisionedProductCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3270,7 +3270,7 @@ export const de_TerminateProvisionedProductCommand = async (
  */
 export const de_UpdateConstraintCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConstraintCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3290,7 +3290,7 @@ export const de_UpdateConstraintCommand = async (
  */
 export const de_UpdatePortfolioCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePortfolioCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3310,7 +3310,7 @@ export const de_UpdatePortfolioCommand = async (
  */
 export const de_UpdatePortfolioShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePortfolioShareCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3330,7 +3330,7 @@ export const de_UpdatePortfolioShareCommand = async (
  */
 export const de_UpdateProductCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProductCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3350,7 +3350,7 @@ export const de_UpdateProductCommand = async (
  */
 export const de_UpdateProvisionedProductCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProvisionedProductCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3370,7 +3370,7 @@ export const de_UpdateProvisionedProductCommand = async (
  */
 export const de_UpdateProvisionedProductPropertiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProvisionedProductPropertiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3390,7 +3390,7 @@ export const de_UpdateProvisionedProductPropertiesCommand = async (
  */
 export const de_UpdateProvisioningArtifactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProvisioningArtifactCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3410,7 +3410,7 @@ export const de_UpdateProvisioningArtifactCommand = async (
  */
 export const de_UpdateServiceActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServiceActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3430,7 +3430,7 @@ export const de_UpdateServiceActionCommand = async (
  */
 export const de_UpdateTagOptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTagOptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3494,7 +3494,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_DuplicateResourceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicateResourceException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3510,7 +3510,7 @@ const de_DuplicateResourceExceptionRes = async (
  */
 const de_InvalidParametersExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParametersException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3526,7 +3526,7 @@ const de_InvalidParametersExceptionRes = async (
  */
 const de_InvalidStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidStateException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3542,7 +3542,7 @@ const de_InvalidStateExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3558,7 +3558,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_OperationNotSupportedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationNotSupportedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3574,7 +3574,7 @@ const de_OperationNotSupportedExceptionRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3590,7 +3590,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3606,7 +3606,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_TagOptionNotMigratedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagOptionNotMigratedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3634,7 +3634,7 @@ const de_TagOptionNotMigratedExceptionRes = async (
  */
 const se_AssociateServiceActionWithProvisioningArtifactInput = (
   input: AssociateServiceActionWithProvisioningArtifactInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     AcceptLanguage: [],
@@ -3727,7 +3727,7 @@ const se_CreateProductInput = (input: CreateProductInput, context: __SerdeContex
  */
 const se_CreateProvisionedProductPlanInput = (
   input: CreateProvisionedProductPlanInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     AcceptLanguage: [],
@@ -3842,7 +3842,7 @@ const se_DeleteServiceActionInput = (input: DeleteServiceActionInput, context: _
  */
 const se_DisassociateServiceActionFromProvisioningArtifactInput = (
   input: DisassociateServiceActionFromProvisioningArtifactInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     AcceptLanguage: [],
@@ -3864,7 +3864,7 @@ const se_DisassociateServiceActionFromProvisioningArtifactInput = (
  */
 const se_ExecuteProvisionedProductPlanInput = (
   input: ExecuteProvisionedProductPlanInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     AcceptLanguage: [],
@@ -3878,7 +3878,7 @@ const se_ExecuteProvisionedProductPlanInput = (
  */
 const se_ExecuteProvisionedProductServiceActionInput = (
   input: ExecuteProvisionedProductServiceActionInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     AcceptLanguage: [],
@@ -3958,7 +3958,7 @@ const se_ImportAsProvisionedProductInput = (input: ImportAsProvisionedProductInp
  */
 const se_NotifyProvisionProductEngineWorkflowResultInput = (
   input: NotifyProvisionProductEngineWorkflowResultInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     FailureReason: [],
@@ -3976,7 +3976,7 @@ const se_NotifyProvisionProductEngineWorkflowResultInput = (
  */
 const se_NotifyTerminateProvisionedProductEngineWorkflowResultInput = (
   input: NotifyTerminateProvisionedProductEngineWorkflowResultInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     FailureReason: [],
@@ -3992,7 +3992,7 @@ const se_NotifyTerminateProvisionedProductEngineWorkflowResultInput = (
  */
 const se_NotifyUpdateProvisionedProductEngineWorkflowResultInput = (
   input: NotifyUpdateProvisionedProductEngineWorkflowResultInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     FailureReason: [],
@@ -4137,7 +4137,7 @@ const se_UpdateProvisionedProductInput = (input: UpdateProvisionedProductInput, 
  */
 const se_UpdateProvisionedProductPropertiesInput = (
   input: UpdateProvisionedProductPropertiesInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     AcceptLanguage: [],
@@ -4231,7 +4231,7 @@ const de_CreateProductOutput = (output: any, context: __SerdeContext): CreatePro
  */
 const de_CreateProvisioningArtifactOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateProvisioningArtifactOutput => {
   return take(output, {
     Info: _json,
@@ -4320,7 +4320,7 @@ const de_DescribeProductViewOutput = (output: any, context: __SerdeContext): Des
  */
 const de_DescribeProvisionedProductOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeProvisionedProductOutput => {
   return take(output, {
     CloudWatchDashboards: _json,
@@ -4333,7 +4333,7 @@ const de_DescribeProvisionedProductOutput = (
  */
 const de_DescribeProvisionedProductPlanOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeProvisionedProductPlanOutput => {
   return take(output, {
     NextPageToken: __expectString,
@@ -4347,7 +4347,7 @@ const de_DescribeProvisionedProductPlanOutput = (
  */
 const de_DescribeProvisioningArtifactOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeProvisioningArtifactOutput => {
   return take(output, {
     Info: _json,
@@ -4397,7 +4397,7 @@ const de_DescribeRecordOutput = (output: any, context: __SerdeContext): Describe
  */
 const de_ExecuteProvisionedProductPlanOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ExecuteProvisionedProductPlanOutput => {
   return take(output, {
     RecordDetail: (_: any) => de_RecordDetail(_, context),
@@ -4409,7 +4409,7 @@ const de_ExecuteProvisionedProductPlanOutput = (
  */
 const de_ExecuteProvisionedProductServiceActionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ExecuteProvisionedProductServiceActionOutput => {
   return take(output, {
     RecordDetail: (_: any) => de_RecordDetail(_, context),
@@ -4435,7 +4435,7 @@ const de_ExecuteProvisionedProductServiceActionOutput = (
  */
 const de_ImportAsProvisionedProductOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ImportAsProvisionedProductOutput => {
   return take(output, {
     RecordDetail: (_: any) => de_RecordDetail(_, context),
@@ -4474,7 +4474,7 @@ const de_LastSync = (output: any, context: __SerdeContext): LastSync => {
  */
 const de_ListAcceptedPortfolioSharesOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListAcceptedPortfolioSharesOutput => {
   return take(output, {
     NextPageToken: __expectString,
@@ -4521,7 +4521,7 @@ const de_ListPortfoliosOutput = (output: any, context: __SerdeContext): ListPort
  */
 const de_ListProvisioningArtifactsForServiceActionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListProvisioningArtifactsForServiceActionOutput => {
   return take(output, {
     NextPageToken: __expectString,
@@ -5057,7 +5057,7 @@ const de_SourceConnectionDetail = (output: any, context: __SerdeContext): Source
  */
 const de_TerminateProvisionedProductOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TerminateProvisionedProductOutput => {
   return take(output, {
     RecordDetail: (_: any) => de_RecordDetail(_, context),
@@ -5104,7 +5104,7 @@ const de_UpdateProvisionedProductOutput = (output: any, context: __SerdeContext)
  */
 const de_UpdateProvisioningArtifactOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateProvisioningArtifactOutput => {
   return take(output, {
     Info: _json,
@@ -5143,7 +5143,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

@@ -135,16 +135,16 @@ export interface AppIntegrations {
    */
   createApplication(
     args: CreateApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateApplicationCommandOutput>;
   createApplication(
     args: CreateApplicationCommandInput,
-    cb: (err: any, data?: CreateApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationCommandOutput) => void,
   ): void;
   createApplication(
     args: CreateApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -152,16 +152,16 @@ export interface AppIntegrations {
    */
   createDataIntegration(
     args: CreateDataIntegrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDataIntegrationCommandOutput>;
   createDataIntegration(
     args: CreateDataIntegrationCommandInput,
-    cb: (err: any, data?: CreateDataIntegrationCommandOutput) => void
+    cb: (err: any, data?: CreateDataIntegrationCommandOutput) => void,
   ): void;
   createDataIntegration(
     args: CreateDataIntegrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDataIntegrationCommandOutput) => void
+    cb: (err: any, data?: CreateDataIntegrationCommandOutput) => void,
   ): void;
 
   /**
@@ -169,16 +169,16 @@ export interface AppIntegrations {
    */
   createEventIntegration(
     args: CreateEventIntegrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEventIntegrationCommandOutput>;
   createEventIntegration(
     args: CreateEventIntegrationCommandInput,
-    cb: (err: any, data?: CreateEventIntegrationCommandOutput) => void
+    cb: (err: any, data?: CreateEventIntegrationCommandOutput) => void,
   ): void;
   createEventIntegration(
     args: CreateEventIntegrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEventIntegrationCommandOutput) => void
+    cb: (err: any, data?: CreateEventIntegrationCommandOutput) => void,
   ): void;
 
   /**
@@ -186,16 +186,16 @@ export interface AppIntegrations {
    */
   deleteApplication(
     args: DeleteApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApplicationCommandOutput>;
   deleteApplication(
     args: DeleteApplicationCommandInput,
-    cb: (err: any, data?: DeleteApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCommandOutput) => void,
   ): void;
   deleteApplication(
     args: DeleteApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -203,16 +203,16 @@ export interface AppIntegrations {
    */
   deleteDataIntegration(
     args: DeleteDataIntegrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDataIntegrationCommandOutput>;
   deleteDataIntegration(
     args: DeleteDataIntegrationCommandInput,
-    cb: (err: any, data?: DeleteDataIntegrationCommandOutput) => void
+    cb: (err: any, data?: DeleteDataIntegrationCommandOutput) => void,
   ): void;
   deleteDataIntegration(
     args: DeleteDataIntegrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDataIntegrationCommandOutput) => void
+    cb: (err: any, data?: DeleteDataIntegrationCommandOutput) => void,
   ): void;
 
   /**
@@ -220,16 +220,16 @@ export interface AppIntegrations {
    */
   deleteEventIntegration(
     args: DeleteEventIntegrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEventIntegrationCommandOutput>;
   deleteEventIntegration(
     args: DeleteEventIntegrationCommandInput,
-    cb: (err: any, data?: DeleteEventIntegrationCommandOutput) => void
+    cb: (err: any, data?: DeleteEventIntegrationCommandOutput) => void,
   ): void;
   deleteEventIntegration(
     args: DeleteEventIntegrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEventIntegrationCommandOutput) => void
+    cb: (err: any, data?: DeleteEventIntegrationCommandOutput) => void,
   ): void;
 
   /**
@@ -237,13 +237,13 @@ export interface AppIntegrations {
    */
   getApplication(
     args: GetApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetApplicationCommandOutput>;
   getApplication(args: GetApplicationCommandInput, cb: (err: any, data?: GetApplicationCommandOutput) => void): void;
   getApplication(
     args: GetApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApplicationCommandOutput) => void
+    cb: (err: any, data?: GetApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -251,16 +251,16 @@ export interface AppIntegrations {
    */
   getDataIntegration(
     args: GetDataIntegrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDataIntegrationCommandOutput>;
   getDataIntegration(
     args: GetDataIntegrationCommandInput,
-    cb: (err: any, data?: GetDataIntegrationCommandOutput) => void
+    cb: (err: any, data?: GetDataIntegrationCommandOutput) => void,
   ): void;
   getDataIntegration(
     args: GetDataIntegrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDataIntegrationCommandOutput) => void
+    cb: (err: any, data?: GetDataIntegrationCommandOutput) => void,
   ): void;
 
   /**
@@ -268,16 +268,16 @@ export interface AppIntegrations {
    */
   getEventIntegration(
     args: GetEventIntegrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEventIntegrationCommandOutput>;
   getEventIntegration(
     args: GetEventIntegrationCommandInput,
-    cb: (err: any, data?: GetEventIntegrationCommandOutput) => void
+    cb: (err: any, data?: GetEventIntegrationCommandOutput) => void,
   ): void;
   getEventIntegration(
     args: GetEventIntegrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEventIntegrationCommandOutput) => void
+    cb: (err: any, data?: GetEventIntegrationCommandOutput) => void,
   ): void;
 
   /**
@@ -285,16 +285,16 @@ export interface AppIntegrations {
    */
   listApplicationAssociations(
     args: ListApplicationAssociationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApplicationAssociationsCommandOutput>;
   listApplicationAssociations(
     args: ListApplicationAssociationsCommandInput,
-    cb: (err: any, data?: ListApplicationAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationAssociationsCommandOutput) => void,
   ): void;
   listApplicationAssociations(
     args: ListApplicationAssociationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApplicationAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationAssociationsCommandOutput) => void,
   ): void;
 
   /**
@@ -303,16 +303,16 @@ export interface AppIntegrations {
   listApplications(): Promise<ListApplicationsCommandOutput>;
   listApplications(
     args: ListApplicationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApplicationsCommandOutput>;
   listApplications(
     args: ListApplicationsCommandInput,
-    cb: (err: any, data?: ListApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationsCommandOutput) => void,
   ): void;
   listApplications(
     args: ListApplicationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationsCommandOutput) => void,
   ): void;
 
   /**
@@ -320,16 +320,16 @@ export interface AppIntegrations {
    */
   listDataIntegrationAssociations(
     args: ListDataIntegrationAssociationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDataIntegrationAssociationsCommandOutput>;
   listDataIntegrationAssociations(
     args: ListDataIntegrationAssociationsCommandInput,
-    cb: (err: any, data?: ListDataIntegrationAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListDataIntegrationAssociationsCommandOutput) => void,
   ): void;
   listDataIntegrationAssociations(
     args: ListDataIntegrationAssociationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDataIntegrationAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListDataIntegrationAssociationsCommandOutput) => void,
   ): void;
 
   /**
@@ -338,16 +338,16 @@ export interface AppIntegrations {
   listDataIntegrations(): Promise<ListDataIntegrationsCommandOutput>;
   listDataIntegrations(
     args: ListDataIntegrationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDataIntegrationsCommandOutput>;
   listDataIntegrations(
     args: ListDataIntegrationsCommandInput,
-    cb: (err: any, data?: ListDataIntegrationsCommandOutput) => void
+    cb: (err: any, data?: ListDataIntegrationsCommandOutput) => void,
   ): void;
   listDataIntegrations(
     args: ListDataIntegrationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDataIntegrationsCommandOutput) => void
+    cb: (err: any, data?: ListDataIntegrationsCommandOutput) => void,
   ): void;
 
   /**
@@ -355,16 +355,16 @@ export interface AppIntegrations {
    */
   listEventIntegrationAssociations(
     args: ListEventIntegrationAssociationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEventIntegrationAssociationsCommandOutput>;
   listEventIntegrationAssociations(
     args: ListEventIntegrationAssociationsCommandInput,
-    cb: (err: any, data?: ListEventIntegrationAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListEventIntegrationAssociationsCommandOutput) => void,
   ): void;
   listEventIntegrationAssociations(
     args: ListEventIntegrationAssociationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEventIntegrationAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListEventIntegrationAssociationsCommandOutput) => void,
   ): void;
 
   /**
@@ -373,16 +373,16 @@ export interface AppIntegrations {
   listEventIntegrations(): Promise<ListEventIntegrationsCommandOutput>;
   listEventIntegrations(
     args: ListEventIntegrationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEventIntegrationsCommandOutput>;
   listEventIntegrations(
     args: ListEventIntegrationsCommandInput,
-    cb: (err: any, data?: ListEventIntegrationsCommandOutput) => void
+    cb: (err: any, data?: ListEventIntegrationsCommandOutput) => void,
   ): void;
   listEventIntegrations(
     args: ListEventIntegrationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEventIntegrationsCommandOutput) => void
+    cb: (err: any, data?: ListEventIntegrationsCommandOutput) => void,
   ): void;
 
   /**
@@ -390,16 +390,16 @@ export interface AppIntegrations {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -410,7 +410,7 @@ export interface AppIntegrations {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -421,7 +421,7 @@ export interface AppIntegrations {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -429,16 +429,16 @@ export interface AppIntegrations {
    */
   updateApplication(
     args: UpdateApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApplicationCommandOutput>;
   updateApplication(
     args: UpdateApplicationCommandInput,
-    cb: (err: any, data?: UpdateApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationCommandOutput) => void,
   ): void;
   updateApplication(
     args: UpdateApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -446,16 +446,16 @@ export interface AppIntegrations {
    */
   updateDataIntegration(
     args: UpdateDataIntegrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDataIntegrationCommandOutput>;
   updateDataIntegration(
     args: UpdateDataIntegrationCommandInput,
-    cb: (err: any, data?: UpdateDataIntegrationCommandOutput) => void
+    cb: (err: any, data?: UpdateDataIntegrationCommandOutput) => void,
   ): void;
   updateDataIntegration(
     args: UpdateDataIntegrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDataIntegrationCommandOutput) => void
+    cb: (err: any, data?: UpdateDataIntegrationCommandOutput) => void,
   ): void;
 
   /**
@@ -463,16 +463,16 @@ export interface AppIntegrations {
    */
   updateEventIntegration(
     args: UpdateEventIntegrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEventIntegrationCommandOutput>;
   updateEventIntegration(
     args: UpdateEventIntegrationCommandInput,
-    cb: (err: any, data?: UpdateEventIntegrationCommandOutput) => void
+    cb: (err: any, data?: UpdateEventIntegrationCommandOutput) => void,
   ): void;
   updateEventIntegration(
     args: UpdateEventIntegrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEventIntegrationCommandOutput) => void
+    cb: (err: any, data?: UpdateEventIntegrationCommandOutput) => void,
   ): void;
 }
 

@@ -268,7 +268,7 @@ import {
  */
 export const se_AcceptGrantCommand = async (
   input: AcceptGrantCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AcceptGrant");
   let body: any;
@@ -281,7 +281,7 @@ export const se_AcceptGrantCommand = async (
  */
 export const se_CheckInLicenseCommand = async (
   input: CheckInLicenseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CheckInLicense");
   let body: any;
@@ -294,7 +294,7 @@ export const se_CheckInLicenseCommand = async (
  */
 export const se_CheckoutBorrowLicenseCommand = async (
   input: CheckoutBorrowLicenseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CheckoutBorrowLicense");
   let body: any;
@@ -307,7 +307,7 @@ export const se_CheckoutBorrowLicenseCommand = async (
  */
 export const se_CheckoutLicenseCommand = async (
   input: CheckoutLicenseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CheckoutLicense");
   let body: any;
@@ -320,7 +320,7 @@ export const se_CheckoutLicenseCommand = async (
  */
 export const se_CreateGrantCommand = async (
   input: CreateGrantCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateGrant");
   let body: any;
@@ -333,7 +333,7 @@ export const se_CreateGrantCommand = async (
  */
 export const se_CreateGrantVersionCommand = async (
   input: CreateGrantVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateGrantVersion");
   let body: any;
@@ -346,7 +346,7 @@ export const se_CreateGrantVersionCommand = async (
  */
 export const se_CreateLicenseCommand = async (
   input: CreateLicenseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLicense");
   let body: any;
@@ -359,7 +359,7 @@ export const se_CreateLicenseCommand = async (
  */
 export const se_CreateLicenseConfigurationCommand = async (
   input: CreateLicenseConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLicenseConfiguration");
   let body: any;
@@ -372,7 +372,7 @@ export const se_CreateLicenseConfigurationCommand = async (
  */
 export const se_CreateLicenseConversionTaskForResourceCommand = async (
   input: CreateLicenseConversionTaskForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLicenseConversionTaskForResource");
   let body: any;
@@ -385,7 +385,7 @@ export const se_CreateLicenseConversionTaskForResourceCommand = async (
  */
 export const se_CreateLicenseManagerReportGeneratorCommand = async (
   input: CreateLicenseManagerReportGeneratorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLicenseManagerReportGenerator");
   let body: any;
@@ -398,7 +398,7 @@ export const se_CreateLicenseManagerReportGeneratorCommand = async (
  */
 export const se_CreateLicenseVersionCommand = async (
   input: CreateLicenseVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLicenseVersion");
   let body: any;
@@ -411,7 +411,7 @@ export const se_CreateLicenseVersionCommand = async (
  */
 export const se_CreateTokenCommand = async (
   input: CreateTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateToken");
   let body: any;
@@ -424,7 +424,7 @@ export const se_CreateTokenCommand = async (
  */
 export const se_DeleteGrantCommand = async (
   input: DeleteGrantCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteGrant");
   let body: any;
@@ -437,7 +437,7 @@ export const se_DeleteGrantCommand = async (
  */
 export const se_DeleteLicenseCommand = async (
   input: DeleteLicenseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteLicense");
   let body: any;
@@ -450,7 +450,7 @@ export const se_DeleteLicenseCommand = async (
  */
 export const se_DeleteLicenseConfigurationCommand = async (
   input: DeleteLicenseConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteLicenseConfiguration");
   let body: any;
@@ -463,7 +463,7 @@ export const se_DeleteLicenseConfigurationCommand = async (
  */
 export const se_DeleteLicenseManagerReportGeneratorCommand = async (
   input: DeleteLicenseManagerReportGeneratorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteLicenseManagerReportGenerator");
   let body: any;
@@ -476,7 +476,7 @@ export const se_DeleteLicenseManagerReportGeneratorCommand = async (
  */
 export const se_DeleteTokenCommand = async (
   input: DeleteTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteToken");
   let body: any;
@@ -489,7 +489,7 @@ export const se_DeleteTokenCommand = async (
  */
 export const se_ExtendLicenseConsumptionCommand = async (
   input: ExtendLicenseConsumptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ExtendLicenseConsumption");
   let body: any;
@@ -502,7 +502,7 @@ export const se_ExtendLicenseConsumptionCommand = async (
  */
 export const se_GetAccessTokenCommand = async (
   input: GetAccessTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAccessToken");
   let body: any;
@@ -515,7 +515,7 @@ export const se_GetAccessTokenCommand = async (
  */
 export const se_GetGrantCommand = async (
   input: GetGrantCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetGrant");
   let body: any;
@@ -528,7 +528,7 @@ export const se_GetGrantCommand = async (
  */
 export const se_GetLicenseCommand = async (
   input: GetLicenseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetLicense");
   let body: any;
@@ -541,7 +541,7 @@ export const se_GetLicenseCommand = async (
  */
 export const se_GetLicenseConfigurationCommand = async (
   input: GetLicenseConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetLicenseConfiguration");
   let body: any;
@@ -554,7 +554,7 @@ export const se_GetLicenseConfigurationCommand = async (
  */
 export const se_GetLicenseConversionTaskCommand = async (
   input: GetLicenseConversionTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetLicenseConversionTask");
   let body: any;
@@ -567,7 +567,7 @@ export const se_GetLicenseConversionTaskCommand = async (
  */
 export const se_GetLicenseManagerReportGeneratorCommand = async (
   input: GetLicenseManagerReportGeneratorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetLicenseManagerReportGenerator");
   let body: any;
@@ -580,7 +580,7 @@ export const se_GetLicenseManagerReportGeneratorCommand = async (
  */
 export const se_GetLicenseUsageCommand = async (
   input: GetLicenseUsageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetLicenseUsage");
   let body: any;
@@ -593,7 +593,7 @@ export const se_GetLicenseUsageCommand = async (
  */
 export const se_GetServiceSettingsCommand = async (
   input: GetServiceSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetServiceSettings");
   let body: any;
@@ -606,7 +606,7 @@ export const se_GetServiceSettingsCommand = async (
  */
 export const se_ListAssociationsForLicenseConfigurationCommand = async (
   input: ListAssociationsForLicenseConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAssociationsForLicenseConfiguration");
   let body: any;
@@ -619,7 +619,7 @@ export const se_ListAssociationsForLicenseConfigurationCommand = async (
  */
 export const se_ListDistributedGrantsCommand = async (
   input: ListDistributedGrantsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDistributedGrants");
   let body: any;
@@ -632,7 +632,7 @@ export const se_ListDistributedGrantsCommand = async (
  */
 export const se_ListFailuresForLicenseConfigurationOperationsCommand = async (
   input: ListFailuresForLicenseConfigurationOperationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListFailuresForLicenseConfigurationOperations");
   let body: any;
@@ -645,7 +645,7 @@ export const se_ListFailuresForLicenseConfigurationOperationsCommand = async (
  */
 export const se_ListLicenseConfigurationsCommand = async (
   input: ListLicenseConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListLicenseConfigurations");
   let body: any;
@@ -658,7 +658,7 @@ export const se_ListLicenseConfigurationsCommand = async (
  */
 export const se_ListLicenseConversionTasksCommand = async (
   input: ListLicenseConversionTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListLicenseConversionTasks");
   let body: any;
@@ -671,7 +671,7 @@ export const se_ListLicenseConversionTasksCommand = async (
  */
 export const se_ListLicenseManagerReportGeneratorsCommand = async (
   input: ListLicenseManagerReportGeneratorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListLicenseManagerReportGenerators");
   let body: any;
@@ -684,7 +684,7 @@ export const se_ListLicenseManagerReportGeneratorsCommand = async (
  */
 export const se_ListLicensesCommand = async (
   input: ListLicensesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListLicenses");
   let body: any;
@@ -697,7 +697,7 @@ export const se_ListLicensesCommand = async (
  */
 export const se_ListLicenseSpecificationsForResourceCommand = async (
   input: ListLicenseSpecificationsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListLicenseSpecificationsForResource");
   let body: any;
@@ -710,7 +710,7 @@ export const se_ListLicenseSpecificationsForResourceCommand = async (
  */
 export const se_ListLicenseVersionsCommand = async (
   input: ListLicenseVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListLicenseVersions");
   let body: any;
@@ -723,7 +723,7 @@ export const se_ListLicenseVersionsCommand = async (
  */
 export const se_ListReceivedGrantsCommand = async (
   input: ListReceivedGrantsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListReceivedGrants");
   let body: any;
@@ -736,7 +736,7 @@ export const se_ListReceivedGrantsCommand = async (
  */
 export const se_ListReceivedGrantsForOrganizationCommand = async (
   input: ListReceivedGrantsForOrganizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListReceivedGrantsForOrganization");
   let body: any;
@@ -749,7 +749,7 @@ export const se_ListReceivedGrantsForOrganizationCommand = async (
  */
 export const se_ListReceivedLicensesCommand = async (
   input: ListReceivedLicensesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListReceivedLicenses");
   let body: any;
@@ -762,7 +762,7 @@ export const se_ListReceivedLicensesCommand = async (
  */
 export const se_ListReceivedLicensesForOrganizationCommand = async (
   input: ListReceivedLicensesForOrganizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListReceivedLicensesForOrganization");
   let body: any;
@@ -775,7 +775,7 @@ export const se_ListReceivedLicensesForOrganizationCommand = async (
  */
 export const se_ListResourceInventoryCommand = async (
   input: ListResourceInventoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListResourceInventory");
   let body: any;
@@ -788,7 +788,7 @@ export const se_ListResourceInventoryCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -801,7 +801,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTokensCommand = async (
   input: ListTokensCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTokens");
   let body: any;
@@ -814,7 +814,7 @@ export const se_ListTokensCommand = async (
  */
 export const se_ListUsageForLicenseConfigurationCommand = async (
   input: ListUsageForLicenseConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListUsageForLicenseConfiguration");
   let body: any;
@@ -827,7 +827,7 @@ export const se_ListUsageForLicenseConfigurationCommand = async (
  */
 export const se_RejectGrantCommand = async (
   input: RejectGrantCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RejectGrant");
   let body: any;
@@ -840,7 +840,7 @@ export const se_RejectGrantCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -853,7 +853,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -866,7 +866,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateLicenseConfigurationCommand = async (
   input: UpdateLicenseConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateLicenseConfiguration");
   let body: any;
@@ -879,7 +879,7 @@ export const se_UpdateLicenseConfigurationCommand = async (
  */
 export const se_UpdateLicenseManagerReportGeneratorCommand = async (
   input: UpdateLicenseManagerReportGeneratorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateLicenseManagerReportGenerator");
   let body: any;
@@ -892,7 +892,7 @@ export const se_UpdateLicenseManagerReportGeneratorCommand = async (
  */
 export const se_UpdateLicenseSpecificationsForResourceCommand = async (
   input: UpdateLicenseSpecificationsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateLicenseSpecificationsForResource");
   let body: any;
@@ -905,7 +905,7 @@ export const se_UpdateLicenseSpecificationsForResourceCommand = async (
  */
 export const se_UpdateServiceSettingsCommand = async (
   input: UpdateServiceSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateServiceSettings");
   let body: any;
@@ -918,7 +918,7 @@ export const se_UpdateServiceSettingsCommand = async (
  */
 export const de_AcceptGrantCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptGrantCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -938,7 +938,7 @@ export const de_AcceptGrantCommand = async (
  */
 export const de_CheckInLicenseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CheckInLicenseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -958,7 +958,7 @@ export const de_CheckInLicenseCommand = async (
  */
 export const de_CheckoutBorrowLicenseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CheckoutBorrowLicenseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -978,7 +978,7 @@ export const de_CheckoutBorrowLicenseCommand = async (
  */
 export const de_CheckoutLicenseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CheckoutLicenseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -998,7 +998,7 @@ export const de_CheckoutLicenseCommand = async (
  */
 export const de_CreateGrantCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGrantCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1018,7 +1018,7 @@ export const de_CreateGrantCommand = async (
  */
 export const de_CreateGrantVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGrantVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1038,7 +1038,7 @@ export const de_CreateGrantVersionCommand = async (
  */
 export const de_CreateLicenseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLicenseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1058,7 +1058,7 @@ export const de_CreateLicenseCommand = async (
  */
 export const de_CreateLicenseConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLicenseConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1078,7 +1078,7 @@ export const de_CreateLicenseConfigurationCommand = async (
  */
 export const de_CreateLicenseConversionTaskForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLicenseConversionTaskForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1098,7 +1098,7 @@ export const de_CreateLicenseConversionTaskForResourceCommand = async (
  */
 export const de_CreateLicenseManagerReportGeneratorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLicenseManagerReportGeneratorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1118,7 +1118,7 @@ export const de_CreateLicenseManagerReportGeneratorCommand = async (
  */
 export const de_CreateLicenseVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLicenseVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1138,7 +1138,7 @@ export const de_CreateLicenseVersionCommand = async (
  */
 export const de_CreateTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTokenCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1158,7 +1158,7 @@ export const de_CreateTokenCommand = async (
  */
 export const de_DeleteGrantCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGrantCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1178,7 +1178,7 @@ export const de_DeleteGrantCommand = async (
  */
 export const de_DeleteLicenseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLicenseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1198,7 +1198,7 @@ export const de_DeleteLicenseCommand = async (
  */
 export const de_DeleteLicenseConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLicenseConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1218,7 +1218,7 @@ export const de_DeleteLicenseConfigurationCommand = async (
  */
 export const de_DeleteLicenseManagerReportGeneratorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLicenseManagerReportGeneratorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1238,7 +1238,7 @@ export const de_DeleteLicenseManagerReportGeneratorCommand = async (
  */
 export const de_DeleteTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTokenCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1258,7 +1258,7 @@ export const de_DeleteTokenCommand = async (
  */
 export const de_ExtendLicenseConsumptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExtendLicenseConsumptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1278,7 +1278,7 @@ export const de_ExtendLicenseConsumptionCommand = async (
  */
 export const de_GetAccessTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccessTokenCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1298,7 +1298,7 @@ export const de_GetAccessTokenCommand = async (
  */
 export const de_GetGrantCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGrantCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1318,7 +1318,7 @@ export const de_GetGrantCommand = async (
  */
 export const de_GetLicenseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLicenseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1338,7 +1338,7 @@ export const de_GetLicenseCommand = async (
  */
 export const de_GetLicenseConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLicenseConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1358,7 +1358,7 @@ export const de_GetLicenseConfigurationCommand = async (
  */
 export const de_GetLicenseConversionTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLicenseConversionTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1378,7 +1378,7 @@ export const de_GetLicenseConversionTaskCommand = async (
  */
 export const de_GetLicenseManagerReportGeneratorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLicenseManagerReportGeneratorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1398,7 +1398,7 @@ export const de_GetLicenseManagerReportGeneratorCommand = async (
  */
 export const de_GetLicenseUsageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLicenseUsageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1418,7 +1418,7 @@ export const de_GetLicenseUsageCommand = async (
  */
 export const de_GetServiceSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceSettingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1438,7 +1438,7 @@ export const de_GetServiceSettingsCommand = async (
  */
 export const de_ListAssociationsForLicenseConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssociationsForLicenseConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1458,7 +1458,7 @@ export const de_ListAssociationsForLicenseConfigurationCommand = async (
  */
 export const de_ListDistributedGrantsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDistributedGrantsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1478,7 +1478,7 @@ export const de_ListDistributedGrantsCommand = async (
  */
 export const de_ListFailuresForLicenseConfigurationOperationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFailuresForLicenseConfigurationOperationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1498,7 +1498,7 @@ export const de_ListFailuresForLicenseConfigurationOperationsCommand = async (
  */
 export const de_ListLicenseConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLicenseConfigurationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1518,7 +1518,7 @@ export const de_ListLicenseConfigurationsCommand = async (
  */
 export const de_ListLicenseConversionTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLicenseConversionTasksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1538,7 +1538,7 @@ export const de_ListLicenseConversionTasksCommand = async (
  */
 export const de_ListLicenseManagerReportGeneratorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLicenseManagerReportGeneratorsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1558,7 +1558,7 @@ export const de_ListLicenseManagerReportGeneratorsCommand = async (
  */
 export const de_ListLicensesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLicensesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1578,7 +1578,7 @@ export const de_ListLicensesCommand = async (
  */
 export const de_ListLicenseSpecificationsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLicenseSpecificationsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1598,7 +1598,7 @@ export const de_ListLicenseSpecificationsForResourceCommand = async (
  */
 export const de_ListLicenseVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLicenseVersionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1618,7 +1618,7 @@ export const de_ListLicenseVersionsCommand = async (
  */
 export const de_ListReceivedGrantsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReceivedGrantsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1638,7 +1638,7 @@ export const de_ListReceivedGrantsCommand = async (
  */
 export const de_ListReceivedGrantsForOrganizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReceivedGrantsForOrganizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1658,7 +1658,7 @@ export const de_ListReceivedGrantsForOrganizationCommand = async (
  */
 export const de_ListReceivedLicensesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReceivedLicensesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1678,7 +1678,7 @@ export const de_ListReceivedLicensesCommand = async (
  */
 export const de_ListReceivedLicensesForOrganizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReceivedLicensesForOrganizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1698,7 +1698,7 @@ export const de_ListReceivedLicensesForOrganizationCommand = async (
  */
 export const de_ListResourceInventoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResourceInventoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1718,7 +1718,7 @@ export const de_ListResourceInventoryCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1738,7 +1738,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTokensCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTokensCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1758,7 +1758,7 @@ export const de_ListTokensCommand = async (
  */
 export const de_ListUsageForLicenseConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListUsageForLicenseConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1778,7 +1778,7 @@ export const de_ListUsageForLicenseConfigurationCommand = async (
  */
 export const de_RejectGrantCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RejectGrantCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1798,7 +1798,7 @@ export const de_RejectGrantCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1818,7 +1818,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1838,7 +1838,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateLicenseConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLicenseConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1858,7 +1858,7 @@ export const de_UpdateLicenseConfigurationCommand = async (
  */
 export const de_UpdateLicenseManagerReportGeneratorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLicenseManagerReportGeneratorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1878,7 +1878,7 @@ export const de_UpdateLicenseManagerReportGeneratorCommand = async (
  */
 export const de_UpdateLicenseSpecificationsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLicenseSpecificationsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1898,7 +1898,7 @@ export const de_UpdateLicenseSpecificationsForResourceCommand = async (
  */
 export const de_UpdateServiceSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServiceSettingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1989,7 +1989,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2005,7 +2005,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_AuthorizationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AuthorizationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2034,7 +2034,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_EntitlementNotAllowedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EntitlementNotAllowedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2050,7 +2050,7 @@ const de_EntitlementNotAllowedExceptionRes = async (
  */
 const de_FailedDependencyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FailedDependencyException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2066,7 +2066,7 @@ const de_FailedDependencyExceptionRes = async (
  */
 const de_FilterLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FilterLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2082,7 +2082,7 @@ const de_FilterLimitExceededExceptionRes = async (
  */
 const de_InvalidParameterValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterValueException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2098,7 +2098,7 @@ const de_InvalidParameterValueExceptionRes = async (
  */
 const de_InvalidResourceStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidResourceStateException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2114,7 +2114,7 @@ const de_InvalidResourceStateExceptionRes = async (
  */
 const de_LicenseUsageExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LicenseUsageException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2130,7 +2130,7 @@ const de_LicenseUsageExceptionRes = async (
  */
 const de_NoEntitlementsAllowedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoEntitlementsAllowedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2146,7 +2146,7 @@ const de_NoEntitlementsAllowedExceptionRes = async (
  */
 const de_RateLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RateLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2175,7 +2175,7 @@ const de_RedirectExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ResourceLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2191,7 +2191,7 @@ const de_ResourceLimitExceededExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2207,7 +2207,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServerInternalExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServerInternalException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2223,7 +2223,7 @@ const de_ServerInternalExceptionRes = async (
  */
 const de_UnsupportedDigitalSignatureMethodExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedDigitalSignatureMethodException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2538,7 +2538,7 @@ const de_GetLicenseConfigurationResponse = (output: any, context: __SerdeContext
  */
 const de_GetLicenseConversionTaskResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetLicenseConversionTaskResponse => {
   return take(output, {
     DestinationLicenseContext: _json,
@@ -2619,7 +2619,7 @@ const de_LicenseConfigurationAssociation = (output: any, context: __SerdeContext
  */
 const de_LicenseConfigurationAssociations = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LicenseConfigurationAssociation[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -2741,7 +2741,7 @@ const de_LicenseOperationFailureList = (output: any, context: __SerdeContext): L
  */
 const de_ListAssociationsForLicenseConfigurationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListAssociationsForLicenseConfigurationResponse => {
   return take(output, {
     LicenseConfigurationAssociations: (_: any) => de_LicenseConfigurationAssociations(_, context),
@@ -2756,7 +2756,7 @@ const de_ListAssociationsForLicenseConfigurationResponse = (
  */
 const de_ListFailuresForLicenseConfigurationOperationsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListFailuresForLicenseConfigurationOperationsResponse => {
   return take(output, {
     LicenseOperationFailureList: (_: any) => de_LicenseOperationFailureList(_, context),
@@ -2769,7 +2769,7 @@ const de_ListFailuresForLicenseConfigurationOperationsResponse = (
  */
 const de_ListLicenseConfigurationsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListLicenseConfigurationsResponse => {
   return take(output, {
     LicenseConfigurations: (_: any) => de_LicenseConfigurations(_, context),
@@ -2782,7 +2782,7 @@ const de_ListLicenseConfigurationsResponse = (
  */
 const de_ListLicenseConversionTasksResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListLicenseConversionTasksResponse => {
   return take(output, {
     LicenseConversionTasks: (_: any) => de_LicenseConversionTasks(_, context),
@@ -2817,7 +2817,7 @@ const de_ListLicenseConversionTasksResponse = (
  */
 const de_ListUsageForLicenseConfigurationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListUsageForLicenseConfigurationResponse => {
   return take(output, {
     LicenseConfigurationUsageList: (_: any) => de_LicenseConfigurationUsageList(_, context),
@@ -2925,7 +2925,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

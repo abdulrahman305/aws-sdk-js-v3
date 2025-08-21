@@ -39,7 +39,7 @@ const checkState = async (client: ECRClient, input: DescribeImageScanFindingsCom
  */
 export const waitForImageScanComplete = async (
   params: WaiterConfiguration<ECRClient>,
-  input: DescribeImageScanFindingsCommandInput
+  input: DescribeImageScanFindingsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -51,7 +51,7 @@ export const waitForImageScanComplete = async (
  */
 export const waitUntilImageScanComplete = async (
   params: WaiterConfiguration<ECRClient>,
-  input: DescribeImageScanFindingsCommandInput
+  input: DescribeImageScanFindingsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

@@ -65,14 +65,14 @@ export class AllQueryStringTypesSerializer
 
 export const getAllQueryStringTypesHandler = <Context>(
   operation: __Operation<AllQueryStringTypesServerInput, AllQueryStringTypesServerOutput, Context>,
-  customizer: __ValidationCustomizer<"AllQueryStringTypes">
+  customizer: __ValidationCustomizer<"AllQueryStringTypes">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "AllQueryStringTypes">([
     new httpbinding.UriSpec<"RestJson", "AllQueryStringTypes">(
       "GET",
       [{ type: "path_literal", value: "AllQueryStringTypesInput" }],
       [],
-      { service: "RestJson", operation: "AllQueryStringTypes" }
+      { service: "RestJson", operation: "AllQueryStringTypes" },
     ),
   ]);
   return new AllQueryStringTypesHandler(
@@ -80,7 +80,7 @@ export const getAllQueryStringTypesHandler = <Context>(
     mux,
     new AllQueryStringTypesSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -101,7 +101,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -143,7 +143,7 @@ export class AllQueryStringTypesHandler<Context> implements __ServiceHandler<Con
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"AllQueryStringTypes">;
   /**
@@ -160,7 +160,7 @@ export class AllQueryStringTypesHandler<Context> implements __ServiceHandler<Con
     mux: __Mux<"RestJson", "AllQueryStringTypes">,
     serializer: __OperationSerializer<RestJsonService<Context>, "AllQueryStringTypes", AllQueryStringTypesErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"AllQueryStringTypes">
+    validationCustomizer: __ValidationCustomizer<"AllQueryStringTypes">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -172,7 +172,7 @@ export class AllQueryStringTypesHandler<Context> implements __ServiceHandler<Con
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.AllQueryStringTypes. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.AllQueryStringTypes. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -184,7 +184,7 @@ export class AllQueryStringTypesHandler<Context> implements __ServiceHandler<Con
       this.operation,
       this.serializeFrameworkException,
       AllQueryStringTypesServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

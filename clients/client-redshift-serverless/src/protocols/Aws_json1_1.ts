@@ -285,7 +285,7 @@ import { RedshiftServerlessServiceException as __BaseException } from "../models
  */
 export const se_ConvertRecoveryPointToSnapshotCommand = async (
   input: ConvertRecoveryPointToSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ConvertRecoveryPointToSnapshot");
   let body: any;
@@ -298,7 +298,7 @@ export const se_ConvertRecoveryPointToSnapshotCommand = async (
  */
 export const se_CreateCustomDomainAssociationCommand = async (
   input: CreateCustomDomainAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateCustomDomainAssociation");
   let body: any;
@@ -311,7 +311,7 @@ export const se_CreateCustomDomainAssociationCommand = async (
  */
 export const se_CreateEndpointAccessCommand = async (
   input: CreateEndpointAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateEndpointAccess");
   let body: any;
@@ -324,7 +324,7 @@ export const se_CreateEndpointAccessCommand = async (
  */
 export const se_CreateNamespaceCommand = async (
   input: CreateNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateNamespace");
   let body: any;
@@ -337,7 +337,7 @@ export const se_CreateNamespaceCommand = async (
  */
 export const se_CreateScheduledActionCommand = async (
   input: CreateScheduledActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateScheduledAction");
   let body: any;
@@ -350,7 +350,7 @@ export const se_CreateScheduledActionCommand = async (
  */
 export const se_CreateSnapshotCommand = async (
   input: CreateSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateSnapshot");
   let body: any;
@@ -363,7 +363,7 @@ export const se_CreateSnapshotCommand = async (
  */
 export const se_CreateSnapshotCopyConfigurationCommand = async (
   input: CreateSnapshotCopyConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateSnapshotCopyConfiguration");
   let body: any;
@@ -376,7 +376,7 @@ export const se_CreateSnapshotCopyConfigurationCommand = async (
  */
 export const se_CreateUsageLimitCommand = async (
   input: CreateUsageLimitCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateUsageLimit");
   let body: any;
@@ -389,7 +389,7 @@ export const se_CreateUsageLimitCommand = async (
  */
 export const se_CreateWorkgroupCommand = async (
   input: CreateWorkgroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateWorkgroup");
   let body: any;
@@ -402,7 +402,7 @@ export const se_CreateWorkgroupCommand = async (
  */
 export const se_DeleteCustomDomainAssociationCommand = async (
   input: DeleteCustomDomainAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteCustomDomainAssociation");
   let body: any;
@@ -415,7 +415,7 @@ export const se_DeleteCustomDomainAssociationCommand = async (
  */
 export const se_DeleteEndpointAccessCommand = async (
   input: DeleteEndpointAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteEndpointAccess");
   let body: any;
@@ -428,7 +428,7 @@ export const se_DeleteEndpointAccessCommand = async (
  */
 export const se_DeleteNamespaceCommand = async (
   input: DeleteNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteNamespace");
   let body: any;
@@ -441,7 +441,7 @@ export const se_DeleteNamespaceCommand = async (
  */
 export const se_DeleteResourcePolicyCommand = async (
   input: DeleteResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteResourcePolicy");
   let body: any;
@@ -454,7 +454,7 @@ export const se_DeleteResourcePolicyCommand = async (
  */
 export const se_DeleteScheduledActionCommand = async (
   input: DeleteScheduledActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteScheduledAction");
   let body: any;
@@ -467,7 +467,7 @@ export const se_DeleteScheduledActionCommand = async (
  */
 export const se_DeleteSnapshotCommand = async (
   input: DeleteSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteSnapshot");
   let body: any;
@@ -480,7 +480,7 @@ export const se_DeleteSnapshotCommand = async (
  */
 export const se_DeleteSnapshotCopyConfigurationCommand = async (
   input: DeleteSnapshotCopyConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteSnapshotCopyConfiguration");
   let body: any;
@@ -493,7 +493,7 @@ export const se_DeleteSnapshotCopyConfigurationCommand = async (
  */
 export const se_DeleteUsageLimitCommand = async (
   input: DeleteUsageLimitCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteUsageLimit");
   let body: any;
@@ -506,7 +506,7 @@ export const se_DeleteUsageLimitCommand = async (
  */
 export const se_DeleteWorkgroupCommand = async (
   input: DeleteWorkgroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteWorkgroup");
   let body: any;
@@ -519,7 +519,7 @@ export const se_DeleteWorkgroupCommand = async (
  */
 export const se_GetCredentialsCommand = async (
   input: GetCredentialsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetCredentials");
   let body: any;
@@ -532,7 +532,7 @@ export const se_GetCredentialsCommand = async (
  */
 export const se_GetCustomDomainAssociationCommand = async (
   input: GetCustomDomainAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetCustomDomainAssociation");
   let body: any;
@@ -545,7 +545,7 @@ export const se_GetCustomDomainAssociationCommand = async (
  */
 export const se_GetEndpointAccessCommand = async (
   input: GetEndpointAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetEndpointAccess");
   let body: any;
@@ -558,7 +558,7 @@ export const se_GetEndpointAccessCommand = async (
  */
 export const se_GetNamespaceCommand = async (
   input: GetNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetNamespace");
   let body: any;
@@ -571,7 +571,7 @@ export const se_GetNamespaceCommand = async (
  */
 export const se_GetRecoveryPointCommand = async (
   input: GetRecoveryPointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRecoveryPoint");
   let body: any;
@@ -584,7 +584,7 @@ export const se_GetRecoveryPointCommand = async (
  */
 export const se_GetResourcePolicyCommand = async (
   input: GetResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetResourcePolicy");
   let body: any;
@@ -597,7 +597,7 @@ export const se_GetResourcePolicyCommand = async (
  */
 export const se_GetScheduledActionCommand = async (
   input: GetScheduledActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetScheduledAction");
   let body: any;
@@ -610,7 +610,7 @@ export const se_GetScheduledActionCommand = async (
  */
 export const se_GetSnapshotCommand = async (
   input: GetSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSnapshot");
   let body: any;
@@ -623,7 +623,7 @@ export const se_GetSnapshotCommand = async (
  */
 export const se_GetTableRestoreStatusCommand = async (
   input: GetTableRestoreStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetTableRestoreStatus");
   let body: any;
@@ -636,7 +636,7 @@ export const se_GetTableRestoreStatusCommand = async (
  */
 export const se_GetUsageLimitCommand = async (
   input: GetUsageLimitCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetUsageLimit");
   let body: any;
@@ -649,7 +649,7 @@ export const se_GetUsageLimitCommand = async (
  */
 export const se_GetWorkgroupCommand = async (
   input: GetWorkgroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetWorkgroup");
   let body: any;
@@ -662,7 +662,7 @@ export const se_GetWorkgroupCommand = async (
  */
 export const se_ListCustomDomainAssociationsCommand = async (
   input: ListCustomDomainAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListCustomDomainAssociations");
   let body: any;
@@ -675,7 +675,7 @@ export const se_ListCustomDomainAssociationsCommand = async (
  */
 export const se_ListEndpointAccessCommand = async (
   input: ListEndpointAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListEndpointAccess");
   let body: any;
@@ -688,7 +688,7 @@ export const se_ListEndpointAccessCommand = async (
  */
 export const se_ListNamespacesCommand = async (
   input: ListNamespacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListNamespaces");
   let body: any;
@@ -701,7 +701,7 @@ export const se_ListNamespacesCommand = async (
  */
 export const se_ListRecoveryPointsCommand = async (
   input: ListRecoveryPointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRecoveryPoints");
   let body: any;
@@ -714,7 +714,7 @@ export const se_ListRecoveryPointsCommand = async (
  */
 export const se_ListScheduledActionsCommand = async (
   input: ListScheduledActionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListScheduledActions");
   let body: any;
@@ -727,7 +727,7 @@ export const se_ListScheduledActionsCommand = async (
  */
 export const se_ListSnapshotCopyConfigurationsCommand = async (
   input: ListSnapshotCopyConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSnapshotCopyConfigurations");
   let body: any;
@@ -740,7 +740,7 @@ export const se_ListSnapshotCopyConfigurationsCommand = async (
  */
 export const se_ListSnapshotsCommand = async (
   input: ListSnapshotsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSnapshots");
   let body: any;
@@ -753,7 +753,7 @@ export const se_ListSnapshotsCommand = async (
  */
 export const se_ListTableRestoreStatusCommand = async (
   input: ListTableRestoreStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTableRestoreStatus");
   let body: any;
@@ -766,7 +766,7 @@ export const se_ListTableRestoreStatusCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -779,7 +779,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListUsageLimitsCommand = async (
   input: ListUsageLimitsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListUsageLimits");
   let body: any;
@@ -792,7 +792,7 @@ export const se_ListUsageLimitsCommand = async (
  */
 export const se_ListWorkgroupsCommand = async (
   input: ListWorkgroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListWorkgroups");
   let body: any;
@@ -805,7 +805,7 @@ export const se_ListWorkgroupsCommand = async (
  */
 export const se_PutResourcePolicyCommand = async (
   input: PutResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutResourcePolicy");
   let body: any;
@@ -818,7 +818,7 @@ export const se_PutResourcePolicyCommand = async (
  */
 export const se_RestoreFromRecoveryPointCommand = async (
   input: RestoreFromRecoveryPointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RestoreFromRecoveryPoint");
   let body: any;
@@ -831,7 +831,7 @@ export const se_RestoreFromRecoveryPointCommand = async (
  */
 export const se_RestoreFromSnapshotCommand = async (
   input: RestoreFromSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RestoreFromSnapshot");
   let body: any;
@@ -844,7 +844,7 @@ export const se_RestoreFromSnapshotCommand = async (
  */
 export const se_RestoreTableFromRecoveryPointCommand = async (
   input: RestoreTableFromRecoveryPointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RestoreTableFromRecoveryPoint");
   let body: any;
@@ -857,7 +857,7 @@ export const se_RestoreTableFromRecoveryPointCommand = async (
  */
 export const se_RestoreTableFromSnapshotCommand = async (
   input: RestoreTableFromSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RestoreTableFromSnapshot");
   let body: any;
@@ -870,7 +870,7 @@ export const se_RestoreTableFromSnapshotCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -883,7 +883,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -896,7 +896,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateCustomDomainAssociationCommand = async (
   input: UpdateCustomDomainAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateCustomDomainAssociation");
   let body: any;
@@ -909,7 +909,7 @@ export const se_UpdateCustomDomainAssociationCommand = async (
  */
 export const se_UpdateEndpointAccessCommand = async (
   input: UpdateEndpointAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateEndpointAccess");
   let body: any;
@@ -922,7 +922,7 @@ export const se_UpdateEndpointAccessCommand = async (
  */
 export const se_UpdateNamespaceCommand = async (
   input: UpdateNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateNamespace");
   let body: any;
@@ -935,7 +935,7 @@ export const se_UpdateNamespaceCommand = async (
  */
 export const se_UpdateScheduledActionCommand = async (
   input: UpdateScheduledActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateScheduledAction");
   let body: any;
@@ -948,7 +948,7 @@ export const se_UpdateScheduledActionCommand = async (
  */
 export const se_UpdateSnapshotCommand = async (
   input: UpdateSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSnapshot");
   let body: any;
@@ -961,7 +961,7 @@ export const se_UpdateSnapshotCommand = async (
  */
 export const se_UpdateSnapshotCopyConfigurationCommand = async (
   input: UpdateSnapshotCopyConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSnapshotCopyConfiguration");
   let body: any;
@@ -974,7 +974,7 @@ export const se_UpdateSnapshotCopyConfigurationCommand = async (
  */
 export const se_UpdateUsageLimitCommand = async (
   input: UpdateUsageLimitCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateUsageLimit");
   let body: any;
@@ -987,7 +987,7 @@ export const se_UpdateUsageLimitCommand = async (
  */
 export const se_UpdateWorkgroupCommand = async (
   input: UpdateWorkgroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateWorkgroup");
   let body: any;
@@ -1000,7 +1000,7 @@ export const se_UpdateWorkgroupCommand = async (
  */
 export const de_ConvertRecoveryPointToSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConvertRecoveryPointToSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1020,7 +1020,7 @@ export const de_ConvertRecoveryPointToSnapshotCommand = async (
  */
 export const de_CreateCustomDomainAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCustomDomainAssociationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1040,7 +1040,7 @@ export const de_CreateCustomDomainAssociationCommand = async (
  */
 export const de_CreateEndpointAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEndpointAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1060,7 +1060,7 @@ export const de_CreateEndpointAccessCommand = async (
  */
 export const de_CreateNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateNamespaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1080,7 +1080,7 @@ export const de_CreateNamespaceCommand = async (
  */
 export const de_CreateScheduledActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateScheduledActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1100,7 +1100,7 @@ export const de_CreateScheduledActionCommand = async (
  */
 export const de_CreateSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1120,7 +1120,7 @@ export const de_CreateSnapshotCommand = async (
  */
 export const de_CreateSnapshotCopyConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSnapshotCopyConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1140,7 +1140,7 @@ export const de_CreateSnapshotCopyConfigurationCommand = async (
  */
 export const de_CreateUsageLimitCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateUsageLimitCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1160,7 +1160,7 @@ export const de_CreateUsageLimitCommand = async (
  */
 export const de_CreateWorkgroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorkgroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1180,7 +1180,7 @@ export const de_CreateWorkgroupCommand = async (
  */
 export const de_DeleteCustomDomainAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCustomDomainAssociationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1200,7 +1200,7 @@ export const de_DeleteCustomDomainAssociationCommand = async (
  */
 export const de_DeleteEndpointAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEndpointAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1220,7 +1220,7 @@ export const de_DeleteEndpointAccessCommand = async (
  */
 export const de_DeleteNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteNamespaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1240,7 +1240,7 @@ export const de_DeleteNamespaceCommand = async (
  */
 export const de_DeleteResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1260,7 +1260,7 @@ export const de_DeleteResourcePolicyCommand = async (
  */
 export const de_DeleteScheduledActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteScheduledActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1280,7 +1280,7 @@ export const de_DeleteScheduledActionCommand = async (
  */
 export const de_DeleteSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1300,7 +1300,7 @@ export const de_DeleteSnapshotCommand = async (
  */
 export const de_DeleteSnapshotCopyConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSnapshotCopyConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1320,7 +1320,7 @@ export const de_DeleteSnapshotCopyConfigurationCommand = async (
  */
 export const de_DeleteUsageLimitCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteUsageLimitCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1340,7 +1340,7 @@ export const de_DeleteUsageLimitCommand = async (
  */
 export const de_DeleteWorkgroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorkgroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1360,7 +1360,7 @@ export const de_DeleteWorkgroupCommand = async (
  */
 export const de_GetCredentialsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCredentialsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1380,7 +1380,7 @@ export const de_GetCredentialsCommand = async (
  */
 export const de_GetCustomDomainAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCustomDomainAssociationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1400,7 +1400,7 @@ export const de_GetCustomDomainAssociationCommand = async (
  */
 export const de_GetEndpointAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEndpointAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1420,7 +1420,7 @@ export const de_GetEndpointAccessCommand = async (
  */
 export const de_GetNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetNamespaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1440,7 +1440,7 @@ export const de_GetNamespaceCommand = async (
  */
 export const de_GetRecoveryPointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRecoveryPointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1460,7 +1460,7 @@ export const de_GetRecoveryPointCommand = async (
  */
 export const de_GetResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1480,7 +1480,7 @@ export const de_GetResourcePolicyCommand = async (
  */
 export const de_GetScheduledActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetScheduledActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1500,7 +1500,7 @@ export const de_GetScheduledActionCommand = async (
  */
 export const de_GetSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1520,7 +1520,7 @@ export const de_GetSnapshotCommand = async (
  */
 export const de_GetTableRestoreStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTableRestoreStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1540,7 +1540,7 @@ export const de_GetTableRestoreStatusCommand = async (
  */
 export const de_GetUsageLimitCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetUsageLimitCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1560,7 +1560,7 @@ export const de_GetUsageLimitCommand = async (
  */
 export const de_GetWorkgroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWorkgroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1580,7 +1580,7 @@ export const de_GetWorkgroupCommand = async (
  */
 export const de_ListCustomDomainAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCustomDomainAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1600,7 +1600,7 @@ export const de_ListCustomDomainAssociationsCommand = async (
  */
 export const de_ListEndpointAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEndpointAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1620,7 +1620,7 @@ export const de_ListEndpointAccessCommand = async (
  */
 export const de_ListNamespacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListNamespacesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1640,7 +1640,7 @@ export const de_ListNamespacesCommand = async (
  */
 export const de_ListRecoveryPointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRecoveryPointsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1660,7 +1660,7 @@ export const de_ListRecoveryPointsCommand = async (
  */
 export const de_ListScheduledActionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListScheduledActionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1680,7 +1680,7 @@ export const de_ListScheduledActionsCommand = async (
  */
 export const de_ListSnapshotCopyConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSnapshotCopyConfigurationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1700,7 +1700,7 @@ export const de_ListSnapshotCopyConfigurationsCommand = async (
  */
 export const de_ListSnapshotsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSnapshotsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1720,7 +1720,7 @@ export const de_ListSnapshotsCommand = async (
  */
 export const de_ListTableRestoreStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTableRestoreStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1740,7 +1740,7 @@ export const de_ListTableRestoreStatusCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1760,7 +1760,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListUsageLimitsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListUsageLimitsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1780,7 +1780,7 @@ export const de_ListUsageLimitsCommand = async (
  */
 export const de_ListWorkgroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkgroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1800,7 +1800,7 @@ export const de_ListWorkgroupsCommand = async (
  */
 export const de_PutResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1820,7 +1820,7 @@ export const de_PutResourcePolicyCommand = async (
  */
 export const de_RestoreFromRecoveryPointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreFromRecoveryPointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1840,7 +1840,7 @@ export const de_RestoreFromRecoveryPointCommand = async (
  */
 export const de_RestoreFromSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreFromSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1860,7 +1860,7 @@ export const de_RestoreFromSnapshotCommand = async (
  */
 export const de_RestoreTableFromRecoveryPointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreTableFromRecoveryPointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1880,7 +1880,7 @@ export const de_RestoreTableFromRecoveryPointCommand = async (
  */
 export const de_RestoreTableFromSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreTableFromSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1900,7 +1900,7 @@ export const de_RestoreTableFromSnapshotCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1920,7 +1920,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1940,7 +1940,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateCustomDomainAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCustomDomainAssociationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1960,7 +1960,7 @@ export const de_UpdateCustomDomainAssociationCommand = async (
  */
 export const de_UpdateEndpointAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEndpointAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1980,7 +1980,7 @@ export const de_UpdateEndpointAccessCommand = async (
  */
 export const de_UpdateNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateNamespaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2000,7 +2000,7 @@ export const de_UpdateNamespaceCommand = async (
  */
 export const de_UpdateScheduledActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateScheduledActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2020,7 +2020,7 @@ export const de_UpdateScheduledActionCommand = async (
  */
 export const de_UpdateSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2040,7 +2040,7 @@ export const de_UpdateSnapshotCommand = async (
  */
 export const de_UpdateSnapshotCopyConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSnapshotCopyConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2060,7 +2060,7 @@ export const de_UpdateSnapshotCopyConfigurationCommand = async (
  */
 export const de_UpdateUsageLimitCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateUsageLimitCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2080,7 +2080,7 @@ export const de_UpdateUsageLimitCommand = async (
  */
 export const de_UpdateWorkgroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWorkgroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2150,7 +2150,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2179,7 +2179,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InsufficientCapacityExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InsufficientCapacityException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2195,7 +2195,7 @@ const de_InsufficientCapacityExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2211,7 +2211,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_InvalidPaginationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPaginationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2227,7 +2227,7 @@ const de_InvalidPaginationExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2243,7 +2243,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2272,7 +2272,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2443,7 +2443,7 @@ const se_Schedule = (input: Schedule, context: __SerdeContext): any => {
   return Schedule.visit(input, {
     at: (value) => ({ at: value.getTime() / 1_000 }),
     cron: (value) => ({ cron: value }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -2534,7 +2534,7 @@ const de_AssociationList = (output: any, context: __SerdeContext): Association[]
  */
 const de_ConvertRecoveryPointToSnapshotResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ConvertRecoveryPointToSnapshotResponse => {
   return take(output, {
     snapshot: (_: any) => de_Snapshot(_, context),
@@ -2546,7 +2546,7 @@ const de_ConvertRecoveryPointToSnapshotResponse = (
  */
 const de_CreateCustomDomainAssociationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateCustomDomainAssociationResponse => {
   return take(output, {
     customDomainCertificateArn: __expectString,
@@ -2709,7 +2709,7 @@ const de_GetCredentialsResponse = (output: any, context: __SerdeContext): GetCre
  */
 const de_GetCustomDomainAssociationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetCustomDomainAssociationResponse => {
   return take(output, {
     customDomainCertificateArn: __expectString,
@@ -2799,7 +2799,7 @@ const de_GetWorkgroupResponse = (output: any, context: __SerdeContext): GetWorkg
  */
 const de_ListCustomDomainAssociationsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListCustomDomainAssociationsResponse => {
   return take(output, {
     associations: (_: any) => de_AssociationList(_, context),
@@ -2963,7 +2963,7 @@ const de_RecoveryPointList = (output: any, context: __SerdeContext): RecoveryPoi
  */
 const de_RestoreFromRecoveryPointResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RestoreFromRecoveryPointResponse => {
   return take(output, {
     namespace: (_: any) => de_Namespace(_, context),
@@ -2987,7 +2987,7 @@ const de_RestoreFromSnapshotResponse = (output: any, context: __SerdeContext): R
  */
 const de_RestoreTableFromRecoveryPointResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RestoreTableFromRecoveryPointResponse => {
   return take(output, {
     tableRestoreStatus: (_: any) => de_TableRestoreStatus(_, context),
@@ -2999,7 +2999,7 @@ const de_RestoreTableFromRecoveryPointResponse = (
  */
 const de_RestoreTableFromSnapshotResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RestoreTableFromSnapshotResponse => {
   return take(output, {
     tableRestoreStatus: (_: any) => de_TableRestoreStatus(_, context),
@@ -3151,7 +3151,7 @@ const de_TableRestoreStatusList = (output: any, context: __SerdeContext): TableR
  */
 const de_UpdateCustomDomainAssociationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateCustomDomainAssociationResponse => {
   return take(output, {
     customDomainCertificateArn: __expectString,
@@ -3285,7 +3285,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

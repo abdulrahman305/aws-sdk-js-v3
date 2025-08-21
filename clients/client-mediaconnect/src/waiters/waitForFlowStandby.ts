@@ -50,7 +50,7 @@ const checkState = async (client: MediaConnectClient, input: DescribeFlowCommand
  */
 export const waitForFlowStandby = async (
   params: WaiterConfiguration<MediaConnectClient>,
-  input: DescribeFlowCommandInput
+  input: DescribeFlowCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -62,7 +62,7 @@ export const waitForFlowStandby = async (
  */
 export const waitUntilFlowStandby = async (
   params: WaiterConfiguration<MediaConnectClient>,
-  input: DescribeFlowCommandInput
+  input: DescribeFlowCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

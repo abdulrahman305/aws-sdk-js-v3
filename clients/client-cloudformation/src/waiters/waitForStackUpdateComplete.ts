@@ -81,7 +81,7 @@ const checkState = async (client: CloudFormationClient, input: DescribeStacksCom
  */
 export const waitForStackUpdateComplete = async (
   params: WaiterConfiguration<CloudFormationClient>,
-  input: DescribeStacksCommandInput
+  input: DescribeStacksCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -93,7 +93,7 @@ export const waitForStackUpdateComplete = async (
  */
 export const waitUntilStackUpdateComplete = async (
   params: WaiterConfiguration<CloudFormationClient>,
-  input: DescribeStacksCommandInput
+  input: DescribeStacksCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

@@ -10913,7 +10913,7 @@ export const MaintenanceWindowTargetFilterSensitiveLog = (obj: MaintenanceWindow
  * @internal
  */
 export const DescribeMaintenanceWindowTargetsResultFilterSensitiveLog = (
-  obj: DescribeMaintenanceWindowTargetsResult
+  obj: DescribeMaintenanceWindowTargetsResult,
 ): any => ({
   ...obj,
   ...(obj.Targets && { Targets: obj.Targets.map((item) => MaintenanceWindowTargetFilterSensitiveLog(item)) }),
@@ -10923,7 +10923,7 @@ export const DescribeMaintenanceWindowTargetsResultFilterSensitiveLog = (
  * @internal
  */
 export const MaintenanceWindowTaskParameterValueExpressionFilterSensitiveLog = (
-  obj: MaintenanceWindowTaskParameterValueExpression
+  obj: MaintenanceWindowTaskParameterValueExpression,
 ): any => ({
   ...obj,
   ...(obj.Values && { Values: SENSITIVE_STRING }),
@@ -10942,7 +10942,7 @@ export const MaintenanceWindowTaskFilterSensitiveLog = (obj: MaintenanceWindowTa
  * @internal
  */
 export const DescribeMaintenanceWindowTasksResultFilterSensitiveLog = (
-  obj: DescribeMaintenanceWindowTasksResult
+  obj: DescribeMaintenanceWindowTasksResult,
 ): any => ({
   ...obj,
   ...(obj.Tasks && { Tasks: obj.Tasks.map((item) => MaintenanceWindowTaskFilterSensitiveLog(item)) }),
@@ -10960,7 +10960,7 @@ export const BaselineOverrideFilterSensitiveLog = (obj: BaselineOverride): any =
  * @internal
  */
 export const GetDeployablePatchSnapshotForInstanceRequestFilterSensitiveLog = (
-  obj: GetDeployablePatchSnapshotForInstanceRequest
+  obj: GetDeployablePatchSnapshotForInstanceRequest,
 ): any => ({
   ...obj,
 });
@@ -10977,7 +10977,7 @@ export const GetMaintenanceWindowResultFilterSensitiveLog = (obj: GetMaintenance
  * @internal
  */
 export const GetMaintenanceWindowExecutionTaskResultFilterSensitiveLog = (
-  obj: GetMaintenanceWindowExecutionTaskResult
+  obj: GetMaintenanceWindowExecutionTaskResult,
 ): any => ({
   ...obj,
   ...(obj.TaskParameters && { TaskParameters: SENSITIVE_STRING }),
@@ -10987,7 +10987,7 @@ export const GetMaintenanceWindowExecutionTaskResultFilterSensitiveLog = (
  * @internal
  */
 export const GetMaintenanceWindowExecutionTaskInvocationResultFilterSensitiveLog = (
-  obj: GetMaintenanceWindowExecutionTaskInvocationResult
+  obj: GetMaintenanceWindowExecutionTaskInvocationResult,
 ): any => ({
   ...obj,
   ...(obj.Parameters && { Parameters: SENSITIVE_STRING }),
@@ -11006,7 +11006,7 @@ export const MaintenanceWindowLambdaParametersFilterSensitiveLog = (obj: Mainten
  * @internal
  */
 export const MaintenanceWindowRunCommandParametersFilterSensitiveLog = (
-  obj: MaintenanceWindowRunCommandParameters
+  obj: MaintenanceWindowRunCommandParameters,
 ): any => ({
   ...obj,
   ...(obj.Parameters && { Parameters: SENSITIVE_STRING }),
@@ -11016,7 +11016,7 @@ export const MaintenanceWindowRunCommandParametersFilterSensitiveLog = (
  * @internal
  */
 export const MaintenanceWindowStepFunctionsParametersFilterSensitiveLog = (
-  obj: MaintenanceWindowStepFunctionsParameters
+  obj: MaintenanceWindowStepFunctionsParameters,
 ): any => ({
   ...obj,
   ...(obj.Input && { Input: SENSITIVE_STRING }),
@@ -11026,7 +11026,7 @@ export const MaintenanceWindowStepFunctionsParametersFilterSensitiveLog = (
  * @internal
  */
 export const MaintenanceWindowTaskInvocationParametersFilterSensitiveLog = (
-  obj: MaintenanceWindowTaskInvocationParameters
+  obj: MaintenanceWindowTaskInvocationParameters,
 ): any => ({
   ...obj,
   ...(obj.RunCommand && { RunCommand: MaintenanceWindowRunCommandParametersFilterSensitiveLog(obj.RunCommand) }),
@@ -11150,7 +11150,7 @@ export const PutParameterRequestFilterSensitiveLog = (obj: PutParameterRequest):
  * @internal
  */
 export const RegisterTargetWithMaintenanceWindowRequestFilterSensitiveLog = (
-  obj: RegisterTargetWithMaintenanceWindowRequest
+  obj: RegisterTargetWithMaintenanceWindowRequest,
 ): any => ({
   ...obj,
   ...(obj.OwnerInformation && { OwnerInformation: SENSITIVE_STRING }),
@@ -11161,7 +11161,7 @@ export const RegisterTargetWithMaintenanceWindowRequestFilterSensitiveLog = (
  * @internal
  */
 export const RegisterTaskWithMaintenanceWindowRequestFilterSensitiveLog = (
-  obj: RegisterTaskWithMaintenanceWindowRequest
+  obj: RegisterTaskWithMaintenanceWindowRequest,
 ): any => ({
   ...obj,
   ...(obj.TaskParameters && { TaskParameters: SENSITIVE_STRING }),

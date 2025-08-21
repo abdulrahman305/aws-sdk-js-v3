@@ -66,7 +66,7 @@ export interface OAM {
   createLink(
     args: CreateLinkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateLinkCommandOutput) => void
+    cb: (err: any, data?: CreateLinkCommandOutput) => void,
   ): void;
 
   /**
@@ -77,7 +77,7 @@ export interface OAM {
   createSink(
     args: CreateSinkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSinkCommandOutput) => void
+    cb: (err: any, data?: CreateSinkCommandOutput) => void,
   ): void;
 
   /**
@@ -88,7 +88,7 @@ export interface OAM {
   deleteLink(
     args: DeleteLinkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLinkCommandOutput) => void
+    cb: (err: any, data?: DeleteLinkCommandOutput) => void,
   ): void;
 
   /**
@@ -99,7 +99,7 @@ export interface OAM {
   deleteSink(
     args: DeleteSinkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSinkCommandOutput) => void
+    cb: (err: any, data?: DeleteSinkCommandOutput) => void,
   ): void;
 
   /**
@@ -110,7 +110,7 @@ export interface OAM {
   getLink(
     args: GetLinkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLinkCommandOutput) => void
+    cb: (err: any, data?: GetLinkCommandOutput) => void,
   ): void;
 
   /**
@@ -121,7 +121,7 @@ export interface OAM {
   getSink(
     args: GetSinkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSinkCommandOutput) => void
+    cb: (err: any, data?: GetSinkCommandOutput) => void,
   ): void;
 
   /**
@@ -132,7 +132,7 @@ export interface OAM {
   getSinkPolicy(
     args: GetSinkPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSinkPolicyCommandOutput) => void
+    cb: (err: any, data?: GetSinkPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -140,16 +140,16 @@ export interface OAM {
    */
   listAttachedLinks(
     args: ListAttachedLinksCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAttachedLinksCommandOutput>;
   listAttachedLinks(
     args: ListAttachedLinksCommandInput,
-    cb: (err: any, data?: ListAttachedLinksCommandOutput) => void
+    cb: (err: any, data?: ListAttachedLinksCommandOutput) => void,
   ): void;
   listAttachedLinks(
     args: ListAttachedLinksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAttachedLinksCommandOutput) => void
+    cb: (err: any, data?: ListAttachedLinksCommandOutput) => void,
   ): void;
 
   /**
@@ -161,7 +161,7 @@ export interface OAM {
   listLinks(
     args: ListLinksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLinksCommandOutput) => void
+    cb: (err: any, data?: ListLinksCommandOutput) => void,
   ): void;
 
   /**
@@ -173,7 +173,7 @@ export interface OAM {
   listSinks(
     args: ListSinksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSinksCommandOutput) => void
+    cb: (err: any, data?: ListSinksCommandOutput) => void,
   ): void;
 
   /**
@@ -181,16 +181,16 @@ export interface OAM {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -201,7 +201,7 @@ export interface OAM {
   putSinkPolicy(
     args: PutSinkPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutSinkPolicyCommandOutput) => void
+    cb: (err: any, data?: PutSinkPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -212,7 +212,7 @@ export interface OAM {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -223,7 +223,7 @@ export interface OAM {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -234,7 +234,7 @@ export interface OAM {
   updateLink(
     args: UpdateLinkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateLinkCommandOutput) => void
+    cb: (err: any, data?: UpdateLinkCommandOutput) => void,
   ): void;
 }
 

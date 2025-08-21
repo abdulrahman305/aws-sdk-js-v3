@@ -19,16 +19,16 @@ export interface EKSAuth {
    */
   assumeRoleForPodIdentity(
     args: AssumeRoleForPodIdentityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssumeRoleForPodIdentityCommandOutput>;
   assumeRoleForPodIdentity(
     args: AssumeRoleForPodIdentityCommandInput,
-    cb: (err: any, data?: AssumeRoleForPodIdentityCommandOutput) => void
+    cb: (err: any, data?: AssumeRoleForPodIdentityCommandOutput) => void,
   ): void;
   assumeRoleForPodIdentity(
     args: AssumeRoleForPodIdentityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssumeRoleForPodIdentityCommandOutput) => void
+    cb: (err: any, data?: AssumeRoleForPodIdentityCommandOutput) => void,
   ): void;
 }
 

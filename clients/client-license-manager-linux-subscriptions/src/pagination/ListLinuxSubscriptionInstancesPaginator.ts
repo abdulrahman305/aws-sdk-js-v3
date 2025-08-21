@@ -26,5 +26,5 @@ export const paginateListLinuxSubscriptionInstances: (
   ListLinuxSubscriptionInstancesCommand,
   "NextToken",
   "NextToken",
-  "MaxResults"
+  "MaxResults",
 );

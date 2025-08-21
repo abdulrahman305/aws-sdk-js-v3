@@ -90,7 +90,7 @@ import { Route53ProfilesServiceException as __BaseException } from "../models/Ro
  */
 export const se_AssociateProfileCommand = async (
   input: AssociateProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -104,7 +104,7 @@ export const se_AssociateProfileCommand = async (
       ProfileId: [],
       ResourceId: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -115,7 +115,7 @@ export const se_AssociateProfileCommand = async (
  */
 export const se_AssociateResourceToProfileCommand = async (
   input: AssociateResourceToProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -129,7 +129,7 @@ export const se_AssociateResourceToProfileCommand = async (
       ProfileId: [],
       ResourceArn: [],
       ResourceProperties: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -140,7 +140,7 @@ export const se_AssociateResourceToProfileCommand = async (
  */
 export const se_CreateProfileCommand = async (
   input: CreateProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -153,7 +153,7 @@ export const se_CreateProfileCommand = async (
       ClientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       Name: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -164,7 +164,7 @@ export const se_CreateProfileCommand = async (
  */
 export const se_DeleteProfileCommand = async (
   input: DeleteProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -180,7 +180,7 @@ export const se_DeleteProfileCommand = async (
  */
 export const se_DisassociateProfileCommand = async (
   input: DisassociateProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -197,7 +197,7 @@ export const se_DisassociateProfileCommand = async (
  */
 export const se_DisassociateResourceFromProfileCommand = async (
   input: DisassociateResourceFromProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -214,7 +214,7 @@ export const se_DisassociateResourceFromProfileCommand = async (
  */
 export const se_GetProfileCommand = async (
   input: GetProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -230,7 +230,7 @@ export const se_GetProfileCommand = async (
  */
 export const se_GetProfileAssociationCommand = async (
   input: GetProfileAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -246,7 +246,7 @@ export const se_GetProfileAssociationCommand = async (
  */
 export const se_GetProfileResourceAssociationCommand = async (
   input: GetProfileResourceAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -255,7 +255,7 @@ export const se_GetProfileResourceAssociationCommand = async (
     "ProfileResourceAssociationId",
     () => input.ProfileResourceAssociationId!,
     "{ProfileResourceAssociationId}",
-    false
+    false,
   );
   let body: any;
   b.m("GET").h(headers).b(body);
@@ -267,7 +267,7 @@ export const se_GetProfileResourceAssociationCommand = async (
  */
 export const se_ListProfileAssociationsCommand = async (
   input: ListProfileAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -288,7 +288,7 @@ export const se_ListProfileAssociationsCommand = async (
  */
 export const se_ListProfileResourceAssociationsCommand = async (
   input: ListProfileResourceAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -309,7 +309,7 @@ export const se_ListProfileResourceAssociationsCommand = async (
  */
 export const se_ListProfilesCommand = async (
   input: ListProfilesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -328,7 +328,7 @@ export const se_ListProfilesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -344,7 +344,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -356,7 +356,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -367,7 +367,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -389,7 +389,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateProfileResourceAssociationCommand = async (
   input: UpdateProfileResourceAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -400,14 +400,14 @@ export const se_UpdateProfileResourceAssociationCommand = async (
     "ProfileResourceAssociationId",
     () => input.ProfileResourceAssociationId!,
     "{ProfileResourceAssociationId}",
-    false
+    false,
   );
   let body: any;
   body = JSON.stringify(
     take(input, {
       Name: [],
       ResourceProperties: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -418,7 +418,7 @@ export const se_UpdateProfileResourceAssociationCommand = async (
  */
 export const de_AssociateProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -439,7 +439,7 @@ export const de_AssociateProfileCommand = async (
  */
 export const de_AssociateResourceToProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateResourceToProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -460,7 +460,7 @@ export const de_AssociateResourceToProfileCommand = async (
  */
 export const de_CreateProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -481,7 +481,7 @@ export const de_CreateProfileCommand = async (
  */
 export const de_DeleteProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -502,7 +502,7 @@ export const de_DeleteProfileCommand = async (
  */
 export const de_DisassociateProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -523,7 +523,7 @@ export const de_DisassociateProfileCommand = async (
  */
 export const de_DisassociateResourceFromProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateResourceFromProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -544,7 +544,7 @@ export const de_DisassociateResourceFromProfileCommand = async (
  */
 export const de_GetProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -565,7 +565,7 @@ export const de_GetProfileCommand = async (
  */
 export const de_GetProfileAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetProfileAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -586,7 +586,7 @@ export const de_GetProfileAssociationCommand = async (
  */
 export const de_GetProfileResourceAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetProfileResourceAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -607,7 +607,7 @@ export const de_GetProfileResourceAssociationCommand = async (
  */
 export const de_ListProfileAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProfileAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -629,7 +629,7 @@ export const de_ListProfileAssociationsCommand = async (
  */
 export const de_ListProfileResourceAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProfileResourceAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -651,7 +651,7 @@ export const de_ListProfileResourceAssociationsCommand = async (
  */
 export const de_ListProfilesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProfilesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -673,7 +673,7 @@ export const de_ListProfilesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -694,7 +694,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -711,7 +711,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -728,7 +728,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateProfileResourceAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProfileResourceAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -800,7 +800,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -837,7 +837,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServiceErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -857,7 +857,7 @@ const de_InternalServiceErrorExceptionRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -877,7 +877,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -898,7 +898,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -919,7 +919,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -940,7 +940,7 @@ const de_ResourceExistsExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

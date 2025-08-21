@@ -230,7 +230,7 @@ import {
  */
 export const se_DeleteRecommendationPreferencesCommand = async (
   input: DeleteRecommendationPreferencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRecommendationPreferences");
   let body: any;
@@ -243,7 +243,7 @@ export const se_DeleteRecommendationPreferencesCommand = async (
  */
 export const se_DescribeRecommendationExportJobsCommand = async (
   input: DescribeRecommendationExportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeRecommendationExportJobs");
   let body: any;
@@ -256,7 +256,7 @@ export const se_DescribeRecommendationExportJobsCommand = async (
  */
 export const se_ExportAutoScalingGroupRecommendationsCommand = async (
   input: ExportAutoScalingGroupRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ExportAutoScalingGroupRecommendations");
   let body: any;
@@ -269,7 +269,7 @@ export const se_ExportAutoScalingGroupRecommendationsCommand = async (
  */
 export const se_ExportEBSVolumeRecommendationsCommand = async (
   input: ExportEBSVolumeRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ExportEBSVolumeRecommendations");
   let body: any;
@@ -282,7 +282,7 @@ export const se_ExportEBSVolumeRecommendationsCommand = async (
  */
 export const se_ExportEC2InstanceRecommendationsCommand = async (
   input: ExportEC2InstanceRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ExportEC2InstanceRecommendations");
   let body: any;
@@ -295,7 +295,7 @@ export const se_ExportEC2InstanceRecommendationsCommand = async (
  */
 export const se_ExportECSServiceRecommendationsCommand = async (
   input: ExportECSServiceRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ExportECSServiceRecommendations");
   let body: any;
@@ -308,7 +308,7 @@ export const se_ExportECSServiceRecommendationsCommand = async (
  */
 export const se_ExportLambdaFunctionRecommendationsCommand = async (
   input: ExportLambdaFunctionRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ExportLambdaFunctionRecommendations");
   let body: any;
@@ -321,7 +321,7 @@ export const se_ExportLambdaFunctionRecommendationsCommand = async (
  */
 export const se_ExportLicenseRecommendationsCommand = async (
   input: ExportLicenseRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ExportLicenseRecommendations");
   let body: any;
@@ -334,7 +334,7 @@ export const se_ExportLicenseRecommendationsCommand = async (
  */
 export const se_GetAutoScalingGroupRecommendationsCommand = async (
   input: GetAutoScalingGroupRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAutoScalingGroupRecommendations");
   let body: any;
@@ -347,7 +347,7 @@ export const se_GetAutoScalingGroupRecommendationsCommand = async (
  */
 export const se_GetEBSVolumeRecommendationsCommand = async (
   input: GetEBSVolumeRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetEBSVolumeRecommendations");
   let body: any;
@@ -360,7 +360,7 @@ export const se_GetEBSVolumeRecommendationsCommand = async (
  */
 export const se_GetEC2InstanceRecommendationsCommand = async (
   input: GetEC2InstanceRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetEC2InstanceRecommendations");
   let body: any;
@@ -373,7 +373,7 @@ export const se_GetEC2InstanceRecommendationsCommand = async (
  */
 export const se_GetEC2RecommendationProjectedMetricsCommand = async (
   input: GetEC2RecommendationProjectedMetricsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetEC2RecommendationProjectedMetrics");
   let body: any;
@@ -386,7 +386,7 @@ export const se_GetEC2RecommendationProjectedMetricsCommand = async (
  */
 export const se_GetECSServiceRecommendationProjectedMetricsCommand = async (
   input: GetECSServiceRecommendationProjectedMetricsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetECSServiceRecommendationProjectedMetrics");
   let body: any;
@@ -399,7 +399,7 @@ export const se_GetECSServiceRecommendationProjectedMetricsCommand = async (
  */
 export const se_GetECSServiceRecommendationsCommand = async (
   input: GetECSServiceRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetECSServiceRecommendations");
   let body: any;
@@ -412,7 +412,7 @@ export const se_GetECSServiceRecommendationsCommand = async (
  */
 export const se_GetEffectiveRecommendationPreferencesCommand = async (
   input: GetEffectiveRecommendationPreferencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetEffectiveRecommendationPreferences");
   let body: any;
@@ -425,7 +425,7 @@ export const se_GetEffectiveRecommendationPreferencesCommand = async (
  */
 export const se_GetEnrollmentStatusCommand = async (
   input: GetEnrollmentStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetEnrollmentStatus");
   let body: any;
@@ -438,7 +438,7 @@ export const se_GetEnrollmentStatusCommand = async (
  */
 export const se_GetEnrollmentStatusesForOrganizationCommand = async (
   input: GetEnrollmentStatusesForOrganizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetEnrollmentStatusesForOrganization");
   let body: any;
@@ -451,7 +451,7 @@ export const se_GetEnrollmentStatusesForOrganizationCommand = async (
  */
 export const se_GetLambdaFunctionRecommendationsCommand = async (
   input: GetLambdaFunctionRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetLambdaFunctionRecommendations");
   let body: any;
@@ -464,7 +464,7 @@ export const se_GetLambdaFunctionRecommendationsCommand = async (
  */
 export const se_GetLicenseRecommendationsCommand = async (
   input: GetLicenseRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetLicenseRecommendations");
   let body: any;
@@ -477,7 +477,7 @@ export const se_GetLicenseRecommendationsCommand = async (
  */
 export const se_GetRecommendationPreferencesCommand = async (
   input: GetRecommendationPreferencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRecommendationPreferences");
   let body: any;
@@ -490,7 +490,7 @@ export const se_GetRecommendationPreferencesCommand = async (
  */
 export const se_GetRecommendationSummariesCommand = async (
   input: GetRecommendationSummariesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRecommendationSummaries");
   let body: any;
@@ -503,7 +503,7 @@ export const se_GetRecommendationSummariesCommand = async (
  */
 export const se_PutRecommendationPreferencesCommand = async (
   input: PutRecommendationPreferencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutRecommendationPreferences");
   let body: any;
@@ -516,7 +516,7 @@ export const se_PutRecommendationPreferencesCommand = async (
  */
 export const se_UpdateEnrollmentStatusCommand = async (
   input: UpdateEnrollmentStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateEnrollmentStatus");
   let body: any;
@@ -529,7 +529,7 @@ export const se_UpdateEnrollmentStatusCommand = async (
  */
 export const de_DeleteRecommendationPreferencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRecommendationPreferencesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -549,7 +549,7 @@ export const de_DeleteRecommendationPreferencesCommand = async (
  */
 export const de_DescribeRecommendationExportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRecommendationExportJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -569,7 +569,7 @@ export const de_DescribeRecommendationExportJobsCommand = async (
  */
 export const de_ExportAutoScalingGroupRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportAutoScalingGroupRecommendationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -589,7 +589,7 @@ export const de_ExportAutoScalingGroupRecommendationsCommand = async (
  */
 export const de_ExportEBSVolumeRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportEBSVolumeRecommendationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -609,7 +609,7 @@ export const de_ExportEBSVolumeRecommendationsCommand = async (
  */
 export const de_ExportEC2InstanceRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportEC2InstanceRecommendationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -629,7 +629,7 @@ export const de_ExportEC2InstanceRecommendationsCommand = async (
  */
 export const de_ExportECSServiceRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportECSServiceRecommendationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -649,7 +649,7 @@ export const de_ExportECSServiceRecommendationsCommand = async (
  */
 export const de_ExportLambdaFunctionRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportLambdaFunctionRecommendationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -669,7 +669,7 @@ export const de_ExportLambdaFunctionRecommendationsCommand = async (
  */
 export const de_ExportLicenseRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportLicenseRecommendationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -689,7 +689,7 @@ export const de_ExportLicenseRecommendationsCommand = async (
  */
 export const de_GetAutoScalingGroupRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAutoScalingGroupRecommendationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -709,7 +709,7 @@ export const de_GetAutoScalingGroupRecommendationsCommand = async (
  */
 export const de_GetEBSVolumeRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEBSVolumeRecommendationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -729,7 +729,7 @@ export const de_GetEBSVolumeRecommendationsCommand = async (
  */
 export const de_GetEC2InstanceRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEC2InstanceRecommendationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -749,7 +749,7 @@ export const de_GetEC2InstanceRecommendationsCommand = async (
  */
 export const de_GetEC2RecommendationProjectedMetricsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEC2RecommendationProjectedMetricsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -769,7 +769,7 @@ export const de_GetEC2RecommendationProjectedMetricsCommand = async (
  */
 export const de_GetECSServiceRecommendationProjectedMetricsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetECSServiceRecommendationProjectedMetricsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -789,7 +789,7 @@ export const de_GetECSServiceRecommendationProjectedMetricsCommand = async (
  */
 export const de_GetECSServiceRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetECSServiceRecommendationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -809,7 +809,7 @@ export const de_GetECSServiceRecommendationsCommand = async (
  */
 export const de_GetEffectiveRecommendationPreferencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEffectiveRecommendationPreferencesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -829,7 +829,7 @@ export const de_GetEffectiveRecommendationPreferencesCommand = async (
  */
 export const de_GetEnrollmentStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEnrollmentStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -849,7 +849,7 @@ export const de_GetEnrollmentStatusCommand = async (
  */
 export const de_GetEnrollmentStatusesForOrganizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEnrollmentStatusesForOrganizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -869,7 +869,7 @@ export const de_GetEnrollmentStatusesForOrganizationCommand = async (
  */
 export const de_GetLambdaFunctionRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLambdaFunctionRecommendationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -889,7 +889,7 @@ export const de_GetLambdaFunctionRecommendationsCommand = async (
  */
 export const de_GetLicenseRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLicenseRecommendationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -909,7 +909,7 @@ export const de_GetLicenseRecommendationsCommand = async (
  */
 export const de_GetRecommendationPreferencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRecommendationPreferencesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -929,7 +929,7 @@ export const de_GetRecommendationPreferencesCommand = async (
  */
 export const de_GetRecommendationSummariesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRecommendationSummariesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -949,7 +949,7 @@ export const de_GetRecommendationSummariesCommand = async (
  */
 export const de_PutRecommendationPreferencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutRecommendationPreferencesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -969,7 +969,7 @@ export const de_PutRecommendationPreferencesCommand = async (
  */
 export const de_UpdateEnrollmentStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEnrollmentStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1036,7 +1036,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1052,7 +1052,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1068,7 +1068,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_InvalidParameterValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterValueException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1084,7 +1084,7 @@ const de_InvalidParameterValueExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1100,7 +1100,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_MissingAuthenticationTokenRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MissingAuthenticationToken> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1116,7 +1116,7 @@ const de_MissingAuthenticationTokenRes = async (
  */
 const de_OptInRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OptInRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1132,7 +1132,7 @@ const de_OptInRequiredExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1148,7 +1148,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1241,7 +1241,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const se_GetEC2RecommendationProjectedMetricsRequest = (
   input: GetEC2RecommendationProjectedMetricsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     endTime: (_) => _.getTime() / 1_000,
@@ -1258,7 +1258,7 @@ const se_GetEC2RecommendationProjectedMetricsRequest = (
  */
 const se_GetECSServiceRecommendationProjectedMetricsRequest = (
   input: GetECSServiceRecommendationProjectedMetricsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     endTime: (_) => _.getTime() / 1_000,
@@ -1362,7 +1362,7 @@ const de_AccountEnrollmentStatuses = (output: any, context: __SerdeContext): Acc
  */
 const de_AutoScalingGroupEstimatedMonthlySavings = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AutoScalingGroupEstimatedMonthlySavings => {
   return take(output, {
     currency: __expectString,
@@ -1396,7 +1396,7 @@ const de_AutoScalingGroupRecommendation = (output: any, context: __SerdeContext)
  */
 const de_AutoScalingGroupRecommendationOption = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AutoScalingGroupRecommendationOption => {
   return take(output, {
     configuration: _json,
@@ -1415,7 +1415,7 @@ const de_AutoScalingGroupRecommendationOption = (
  */
 const de_AutoScalingGroupRecommendationOptions = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AutoScalingGroupRecommendationOption[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -1442,7 +1442,7 @@ const de_AutoScalingGroupRecommendations = (output: any, context: __SerdeContext
  */
 const de_AutoScalingGroupSavingsOpportunityAfterDiscounts = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AutoScalingGroupSavingsOpportunityAfterDiscounts => {
   return take(output, {
     estimatedMonthlySavings: (_: any) => de_AutoScalingGroupEstimatedMonthlySavings(_, context),
@@ -1471,7 +1471,7 @@ const de_AutoScalingGroupSavingsOpportunityAfterDiscounts = (
  */
 const de_DescribeRecommendationExportJobsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeRecommendationExportJobsResponse => {
   return take(output, {
     nextToken: __expectString,
@@ -1498,7 +1498,7 @@ const de_EBSEstimatedMonthlySavings = (output: any, context: __SerdeContext): EB
  */
 const de_EBSSavingsOpportunityAfterDiscounts = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EBSSavingsOpportunityAfterDiscounts => {
   return take(output, {
     estimatedMonthlySavings: (_: any) => de_EBSEstimatedMonthlySavings(_, context),
@@ -1548,7 +1548,7 @@ const de_ECSEstimatedMonthlySavings = (output: any, context: __SerdeContext): EC
  */
 const de_ECSSavingsOpportunityAfterDiscounts = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ECSSavingsOpportunityAfterDiscounts => {
   return take(output, {
     estimatedMonthlySavings: (_: any) => de_ECSEstimatedMonthlySavings(_, context),
@@ -1585,7 +1585,7 @@ const de_ECSServiceProjectedMetrics = (output: any, context: __SerdeContext): EC
  */
 const de_ECSServiceProjectedUtilizationMetric = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ECSServiceProjectedUtilizationMetric => {
   return take(output, {
     lowerBoundValue: __limitedParseDouble,
@@ -1600,7 +1600,7 @@ const de_ECSServiceProjectedUtilizationMetric = (
  */
 const de_ECSServiceProjectedUtilizationMetrics = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ECSServiceProjectedUtilizationMetric[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -1676,7 +1676,7 @@ const de_ECSServiceRecommendations = (output: any, context: __SerdeContext): ECS
  */
 const de_ECSServiceRecommendedOptionProjectedMetric = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ECSServiceRecommendedOptionProjectedMetric => {
   return take(output, {
     projectedMetrics: (_: any) => de_ECSServiceProjectedMetrics(_, context),
@@ -1690,7 +1690,7 @@ const de_ECSServiceRecommendedOptionProjectedMetric = (
  */
 const de_ECSServiceRecommendedOptionProjectedMetrics = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ECSServiceRecommendedOptionProjectedMetric[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -1762,7 +1762,7 @@ const de_EstimatedMonthlySavings = (output: any, context: __SerdeContext): Estim
  */
 const de_GetAutoScalingGroupRecommendationsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetAutoScalingGroupRecommendationsResponse => {
   return take(output, {
     autoScalingGroupRecommendations: (_: any) => de_AutoScalingGroupRecommendations(_, context),
@@ -1776,7 +1776,7 @@ const de_GetAutoScalingGroupRecommendationsResponse = (
  */
 const de_GetEBSVolumeRecommendationsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetEBSVolumeRecommendationsResponse => {
   return take(output, {
     errors: _json,
@@ -1790,7 +1790,7 @@ const de_GetEBSVolumeRecommendationsResponse = (
  */
 const de_GetEC2InstanceRecommendationsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetEC2InstanceRecommendationsResponse => {
   return take(output, {
     errors: _json,
@@ -1804,7 +1804,7 @@ const de_GetEC2InstanceRecommendationsResponse = (
  */
 const de_GetEC2RecommendationProjectedMetricsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetEC2RecommendationProjectedMetricsResponse => {
   return take(output, {
     recommendedOptionProjectedMetrics: (_: any) => de_RecommendedOptionProjectedMetrics(_, context),
@@ -1816,7 +1816,7 @@ const de_GetEC2RecommendationProjectedMetricsResponse = (
  */
 const de_GetECSServiceRecommendationProjectedMetricsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetECSServiceRecommendationProjectedMetricsResponse => {
   return take(output, {
     recommendedOptionProjectedMetrics: (_: any) => de_ECSServiceRecommendedOptionProjectedMetrics(_, context),
@@ -1828,7 +1828,7 @@ const de_GetECSServiceRecommendationProjectedMetricsResponse = (
  */
 const de_GetECSServiceRecommendationsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetECSServiceRecommendationsResponse => {
   return take(output, {
     ecsServiceRecommendations: (_: any) => de_ECSServiceRecommendations(_, context),
@@ -1844,7 +1844,7 @@ const de_GetECSServiceRecommendationsResponse = (
  */
 const de_GetEnrollmentStatusesForOrganizationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetEnrollmentStatusesForOrganizationResponse => {
   return take(output, {
     accountEnrollmentStatuses: (_: any) => de_AccountEnrollmentStatuses(_, context),
@@ -1870,7 +1870,7 @@ const de_GetEnrollmentStatusResponse = (output: any, context: __SerdeContext): G
  */
 const de_GetLambdaFunctionRecommendationsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetLambdaFunctionRecommendationsResponse => {
   return take(output, {
     lambdaFunctionRecommendations: (_: any) => de_LambdaFunctionRecommendations(_, context),
@@ -1883,7 +1883,7 @@ const de_GetLambdaFunctionRecommendationsResponse = (
  */
 const de_GetLicenseRecommendationsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetLicenseRecommendationsResponse => {
   return take(output, {
     errors: _json,
@@ -1903,7 +1903,7 @@ const de_GetLicenseRecommendationsResponse = (
  */
 const de_GetRecommendationSummariesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetRecommendationSummariesResponse => {
   return take(output, {
     nextToken: __expectString,
@@ -2016,7 +2016,7 @@ const de_InstanceRecommendations = (output: any, context: __SerdeContext): Insta
  */
 const de_InstanceSavingsOpportunityAfterDiscounts = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InstanceSavingsOpportunityAfterDiscounts => {
   return take(output, {
     estimatedMonthlySavings: (_: any) => de_InstanceEstimatedMonthlySavings(_, context),
@@ -2045,7 +2045,7 @@ const de_LambdaEstimatedMonthlySavings = (output: any, context: __SerdeContext):
  */
 const de_LambdaFunctionMemoryProjectedMetric = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LambdaFunctionMemoryProjectedMetric => {
   return take(output, {
     name: __expectString,
@@ -2059,7 +2059,7 @@ const de_LambdaFunctionMemoryProjectedMetric = (
  */
 const de_LambdaFunctionMemoryProjectedMetrics = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LambdaFunctionMemoryProjectedMetric[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -2074,7 +2074,7 @@ const de_LambdaFunctionMemoryProjectedMetrics = (
  */
 const de_LambdaFunctionMemoryRecommendationOption = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LambdaFunctionMemoryRecommendationOption => {
   return take(output, {
     memorySize: __expectInt32,
@@ -2090,7 +2090,7 @@ const de_LambdaFunctionMemoryRecommendationOption = (
  */
 const de_LambdaFunctionMemoryRecommendationOptions = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LambdaFunctionMemoryRecommendationOption[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -2152,7 +2152,7 @@ const de_LambdaFunctionUtilizationMetric = (output: any, context: __SerdeContext
  */
 const de_LambdaFunctionUtilizationMetrics = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LambdaFunctionUtilizationMetric[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -2169,7 +2169,7 @@ const de_LambdaFunctionUtilizationMetrics = (
  */
 const de_LambdaSavingsOpportunityAfterDiscounts = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LambdaSavingsOpportunityAfterDiscounts => {
   return take(output, {
     estimatedMonthlySavings: (_: any) => de_LambdaEstimatedMonthlySavings(_, context),
@@ -2400,7 +2400,7 @@ const de_RecommendationSummary = (output: any, context: __SerdeContext): Recomme
  */
 const de_RecommendedOptionProjectedMetric = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RecommendedOptionProjectedMetric => {
   return take(output, {
     projectedMetrics: (_: any) => de_ProjectedMetrics(_, context),
@@ -2414,7 +2414,7 @@ const de_RecommendedOptionProjectedMetric = (
  */
 const de_RecommendedOptionProjectedMetrics = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RecommendedOptionProjectedMetric[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -2590,7 +2590,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

@@ -5,7 +5,7 @@ fastify.addContentTypeParser(
   { parseAs: "buffer", bodyLimit: Infinity },
   async function parser(request, payload) {
     return payload;
-  }
+  },
 );
 
 fastify.get("/", (request, reply) => {

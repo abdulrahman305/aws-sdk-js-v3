@@ -11,7 +11,7 @@ export interface RetryableProvider<T> {
 export const retryWrapper = <T>(
   toRetry: RetryableProvider<T>,
   maxRetries: number,
-  delayMs: number
+  delayMs: number,
 ): RetryableProvider<T> => {
   return async () => {
     for (let i = 0; i < maxRetries; ++i) {

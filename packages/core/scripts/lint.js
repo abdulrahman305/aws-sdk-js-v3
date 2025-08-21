@@ -54,7 +54,7 @@ for (const submodule of submodules) {
  * This is a compatibility redirect for contexts that do not understand package.json exports field.
  */
 module.exports = require("./dist-cjs/submodules/${submodule}/index.js");
-`
+`,
       );
     }
   }
@@ -77,8 +77,8 @@ const walk = require("../../../scripts/utils/walk");
       ...new Set(
         [...(sourceCode.toString().match(/(from |import\()"(.*?)";/g) || [])]
           .map((_) => _.replace(/from "/g, "").replace(/";$/, ""))
-          .filter((_) => _.startsWith("."))
-      )
+          .filter((_) => _.startsWith(".")),
+      ),
     );
 
     for (const i of relativeImports) {
@@ -87,7 +87,7 @@ const walk = require("../../../scripts/utils/walk");
         errors.push(
           `relative import ${i} in ${item
             .split("packages/")
-            .pop()} crosses submodule boundaries. Use @scope/package/submodule import instead.`
+            .pop()} crosses submodule boundaries. Use @scope/package/submodule import instead.`,
         );
       }
     }

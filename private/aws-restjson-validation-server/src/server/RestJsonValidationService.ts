@@ -118,7 +118,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -154,11 +154,11 @@ export class RestJsonValidationServiceHandler<Context> implements __ServiceHandl
   private readonly service: RestJsonValidationService<Context>;
   private readonly mux: __Mux<"RestJsonValidation", RestJsonValidationServiceOperations>;
   private readonly serializerFactory: <T extends RestJsonValidationServiceOperations>(
-    operation: T
+    operation: T,
   ) => __OperationSerializer<RestJsonValidationService<Context>, T, __ServiceException>;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<RestJsonValidationServiceOperations>;
   /**
@@ -174,10 +174,10 @@ export class RestJsonValidationServiceHandler<Context> implements __ServiceHandl
     service: RestJsonValidationService<Context>,
     mux: __Mux<"RestJsonValidation", RestJsonValidationServiceOperations>,
     serializerFactory: <T extends RestJsonValidationServiceOperations>(
-      op: T
+      op: T,
     ) => __OperationSerializer<RestJsonValidationService<Context>, T, __ServiceException>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<RestJsonValidationServiceOperations>
+    validationCustomizer: __ValidationCustomizer<RestJsonValidationServiceOperations>,
   ) {
     this.service = service;
     this.mux = mux;
@@ -200,7 +200,7 @@ export class RestJsonValidationServiceHandler<Context> implements __ServiceHandl
           this.service.MalformedEnum,
           this.serializeFrameworkException,
           MalformedEnumServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedLength": {
@@ -212,7 +212,7 @@ export class RestJsonValidationServiceHandler<Context> implements __ServiceHandl
           this.service.MalformedLength,
           this.serializeFrameworkException,
           MalformedLengthServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedLengthOverride": {
@@ -224,7 +224,7 @@ export class RestJsonValidationServiceHandler<Context> implements __ServiceHandl
           this.service.MalformedLengthOverride,
           this.serializeFrameworkException,
           MalformedLengthOverrideServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedLengthQueryString": {
@@ -236,7 +236,7 @@ export class RestJsonValidationServiceHandler<Context> implements __ServiceHandl
           this.service.MalformedLengthQueryString,
           this.serializeFrameworkException,
           MalformedLengthQueryStringServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedPattern": {
@@ -248,7 +248,7 @@ export class RestJsonValidationServiceHandler<Context> implements __ServiceHandl
           this.service.MalformedPattern,
           this.serializeFrameworkException,
           MalformedPatternServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedPatternOverride": {
@@ -260,7 +260,7 @@ export class RestJsonValidationServiceHandler<Context> implements __ServiceHandl
           this.service.MalformedPatternOverride,
           this.serializeFrameworkException,
           MalformedPatternOverrideServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedRange": {
@@ -272,7 +272,7 @@ export class RestJsonValidationServiceHandler<Context> implements __ServiceHandl
           this.service.MalformedRange,
           this.serializeFrameworkException,
           MalformedRangeServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedRangeOverride": {
@@ -284,7 +284,7 @@ export class RestJsonValidationServiceHandler<Context> implements __ServiceHandl
           this.service.MalformedRangeOverride,
           this.serializeFrameworkException,
           MalformedRangeOverrideServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedRequired": {
@@ -296,7 +296,7 @@ export class RestJsonValidationServiceHandler<Context> implements __ServiceHandl
           this.service.MalformedRequired,
           this.serializeFrameworkException,
           MalformedRequiredServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedUniqueItems": {
@@ -308,7 +308,7 @@ export class RestJsonValidationServiceHandler<Context> implements __ServiceHandl
           this.service.MalformedUniqueItems,
           this.serializeFrameworkException,
           MalformedUniqueItemsServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "RecursiveStructures": {
@@ -320,7 +320,7 @@ export class RestJsonValidationServiceHandler<Context> implements __ServiceHandl
           this.service.RecursiveStructures,
           this.serializeFrameworkException,
           RecursiveStructuresServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "SensitiveValidation": {
@@ -332,7 +332,7 @@ export class RestJsonValidationServiceHandler<Context> implements __ServiceHandl
           this.service.SensitiveValidation,
           this.serializeFrameworkException,
           SensitiveValidationServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
     }
@@ -340,84 +340,84 @@ export class RestJsonValidationServiceHandler<Context> implements __ServiceHandl
 }
 
 export const getRestJsonValidationServiceHandler = <Context>(
-  service: RestJsonValidationService<Context>
+  service: RestJsonValidationService<Context>,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJsonValidation", keyof RestJsonValidationService<Context>>([
     new httpbinding.UriSpec<"RestJsonValidation", "MalformedEnum">(
       "POST",
       [{ type: "path_literal", value: "MalformedEnum" }],
       [],
-      { service: "RestJsonValidation", operation: "MalformedEnum" }
+      { service: "RestJsonValidation", operation: "MalformedEnum" },
     ),
     new httpbinding.UriSpec<"RestJsonValidation", "MalformedLength">(
       "POST",
       [{ type: "path_literal", value: "MalformedLength" }],
       [],
-      { service: "RestJsonValidation", operation: "MalformedLength" }
+      { service: "RestJsonValidation", operation: "MalformedLength" },
     ),
     new httpbinding.UriSpec<"RestJsonValidation", "MalformedLengthOverride">(
       "POST",
       [{ type: "path_literal", value: "MalformedLengthOverride" }],
       [],
-      { service: "RestJsonValidation", operation: "MalformedLengthOverride" }
+      { service: "RestJsonValidation", operation: "MalformedLengthOverride" },
     ),
     new httpbinding.UriSpec<"RestJsonValidation", "MalformedLengthQueryString">(
       "POST",
       [{ type: "path_literal", value: "MalformedLengthQueryString" }],
       [],
-      { service: "RestJsonValidation", operation: "MalformedLengthQueryString" }
+      { service: "RestJsonValidation", operation: "MalformedLengthQueryString" },
     ),
     new httpbinding.UriSpec<"RestJsonValidation", "MalformedPattern">(
       "POST",
       [{ type: "path_literal", value: "MalformedPattern" }],
       [],
-      { service: "RestJsonValidation", operation: "MalformedPattern" }
+      { service: "RestJsonValidation", operation: "MalformedPattern" },
     ),
     new httpbinding.UriSpec<"RestJsonValidation", "MalformedPatternOverride">(
       "POST",
       [{ type: "path_literal", value: "MalformedPatternOverride" }],
       [],
-      { service: "RestJsonValidation", operation: "MalformedPatternOverride" }
+      { service: "RestJsonValidation", operation: "MalformedPatternOverride" },
     ),
     new httpbinding.UriSpec<"RestJsonValidation", "MalformedRange">(
       "POST",
       [{ type: "path_literal", value: "MalformedRange" }],
       [],
-      { service: "RestJsonValidation", operation: "MalformedRange" }
+      { service: "RestJsonValidation", operation: "MalformedRange" },
     ),
     new httpbinding.UriSpec<"RestJsonValidation", "MalformedRangeOverride">(
       "POST",
       [{ type: "path_literal", value: "MalformedRangeOverride" }],
       [],
-      { service: "RestJsonValidation", operation: "MalformedRangeOverride" }
+      { service: "RestJsonValidation", operation: "MalformedRangeOverride" },
     ),
     new httpbinding.UriSpec<"RestJsonValidation", "MalformedRequired">(
       "POST",
       [{ type: "path_literal", value: "MalformedRequired" }],
       [{ type: "query", key: "stringInQuery" }],
-      { service: "RestJsonValidation", operation: "MalformedRequired" }
+      { service: "RestJsonValidation", operation: "MalformedRequired" },
     ),
     new httpbinding.UriSpec<"RestJsonValidation", "MalformedUniqueItems">(
       "POST",
       [{ type: "path_literal", value: "MalformedUniqueItems" }],
       [],
-      { service: "RestJsonValidation", operation: "MalformedUniqueItems" }
+      { service: "RestJsonValidation", operation: "MalformedUniqueItems" },
     ),
     new httpbinding.UriSpec<"RestJsonValidation", "RecursiveStructures">(
       "POST",
       [{ type: "path_literal", value: "RecursiveStructures" }],
       [],
-      { service: "RestJsonValidation", operation: "RecursiveStructures" }
+      { service: "RestJsonValidation", operation: "RecursiveStructures" },
     ),
     new httpbinding.UriSpec<"RestJsonValidation", "SensitiveValidation">(
       "POST",
       [{ type: "path_literal", value: "SensitiveValidation" }],
       [],
-      { service: "RestJsonValidation", operation: "SensitiveValidation" }
+      { service: "RestJsonValidation", operation: "SensitiveValidation" },
     ),
   ]);
   const serFn: (
-    op: RestJsonValidationServiceOperations
+    op: RestJsonValidationServiceOperations,
   ) => __OperationSerializer<
     RestJsonValidationService<Context>,
     RestJsonValidationServiceOperations,

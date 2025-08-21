@@ -57,7 +57,7 @@ describe("bucketEndpointMiddleware", () => {
       const handler = bucketEndpointMiddleware(
         resolveBucketEndpointConfig({
           ...previouslyResolvedConfig,
-        })
+        }),
       )(next, {} as any);
       await handler({ input, request });
       expect(mockBucketHostname).toBeCalled();
@@ -85,7 +85,7 @@ describe("bucketEndpointMiddleware", () => {
           useDualstackEndpoint: () => Promise.resolve(true),
           forcePathStyle: true,
           isCustomEndpoint: true,
-        })
+        }),
       )(next, {} as any);
       await handler({ input, request });
       expect(mockBucketHostname).toBeCalled();
@@ -118,7 +118,7 @@ describe("bucketEndpointMiddleware", () => {
       const handler = bucketEndpointMiddleware(
         resolveBucketEndpointConfig({
           ...previouslyResolvedConfig,
-        })
+        }),
       )(next, {} as any);
       await handler({
         input: { Bucket: "myendpoint-123456789012.s3-accesspoint.us-west-2.amazonaws.com" },
@@ -152,7 +152,7 @@ describe("bucketEndpointMiddleware", () => {
         resolveBucketEndpointConfig({
           ...previouslyResolvedConfig,
           region: () => Promise.resolve("fips-us-foo-1"),
-        })
+        }),
       )(next, {} as any);
       await handler({
         input: { Bucket: "myendpoint-123456789012.s3-accesspoint.us-west-2.amazonaws.com" },
@@ -167,7 +167,7 @@ describe("bucketEndpointMiddleware", () => {
       const handler = bucketEndpointMiddleware(
         resolveBucketEndpointConfig({
           ...previouslyResolvedConfig,
-        })
+        }),
       )(next, {} as any);
       await handler({
         input: { Bucket: "myendpoint-123456789012.s3-accesspoint.us-west-2.amazonaws.com" },
@@ -192,7 +192,7 @@ describe("bucketEndpointMiddleware", () => {
       const handler = bucketEndpointMiddleware(
         resolveBucketEndpointConfig({
           ...previouslyResolvedConfig,
-        })
+        }),
       )(next, handlerContext);
       await handler({
         input: { Bucket: "Bucket" },

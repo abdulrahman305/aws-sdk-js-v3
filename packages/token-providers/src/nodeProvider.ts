@@ -25,5 +25,5 @@ export const nodeProvider = (init: FromSsoInit = {}): TokenIdentityProvider =>
       throw new TokenProviderError("Could not load token from any providers", false);
     }),
     (token) => token.expiration !== undefined && token.expiration.getTime() - Date.now() < 300000,
-    (token) => token.expiration !== undefined
+    (token) => token.expiration !== undefined,
   );

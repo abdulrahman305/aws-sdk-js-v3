@@ -38,7 +38,7 @@ import {
  */
 export const se_UploadArchiveCommand = async (
   input: UploadArchiveCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -62,7 +62,7 @@ export const se_UploadArchiveCommand = async (
  */
 export const se_UploadMultipartPartCommand = async (
   input: UploadMultipartPartCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -87,7 +87,7 @@ export const se_UploadMultipartPartCommand = async (
  */
 export const de_UploadArchiveCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UploadArchiveCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -107,7 +107,7 @@ export const de_UploadArchiveCommand = async (
  */
 export const de_UploadMultipartPartCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UploadMultipartPartCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -161,7 +161,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_InvalidParameterValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterValueException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -183,7 +183,7 @@ const de_InvalidParameterValueExceptionRes = async (
  */
 const de_MissingParameterValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MissingParameterValueException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -205,7 +205,7 @@ const de_MissingParameterValueExceptionRes = async (
  */
 const de_RequestTimeoutExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestTimeoutException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -227,7 +227,7 @@ const de_RequestTimeoutExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -249,7 +249,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

@@ -99,7 +99,7 @@ import { SchemasServiceException as __BaseException } from "../models/SchemasSer
  */
 export const se_CreateDiscovererCommand = async (
   input: CreateDiscovererCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -113,7 +113,7 @@ export const se_CreateDiscovererCommand = async (
       Description: [],
       SourceArn: [],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -124,7 +124,7 @@ export const se_CreateDiscovererCommand = async (
  */
 export const se_CreateRegistryCommand = async (
   input: CreateRegistryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -137,7 +137,7 @@ export const se_CreateRegistryCommand = async (
     take(input, {
       Description: [],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -148,7 +148,7 @@ export const se_CreateRegistryCommand = async (
  */
 export const se_CreateSchemaCommand = async (
   input: CreateSchemaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -164,7 +164,7 @@ export const se_CreateSchemaCommand = async (
       Description: [],
       tags: [, (_) => _json(_), `Tags`],
       Type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -175,7 +175,7 @@ export const se_CreateSchemaCommand = async (
  */
 export const se_DeleteDiscovererCommand = async (
   input: DeleteDiscovererCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -191,7 +191,7 @@ export const se_DeleteDiscovererCommand = async (
  */
 export const se_DeleteRegistryCommand = async (
   input: DeleteRegistryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -207,7 +207,7 @@ export const se_DeleteRegistryCommand = async (
  */
 export const se_DeleteResourcePolicyCommand = async (
   input: DeleteResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -225,7 +225,7 @@ export const se_DeleteResourcePolicyCommand = async (
  */
 export const se_DeleteSchemaCommand = async (
   input: DeleteSchemaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -242,7 +242,7 @@ export const se_DeleteSchemaCommand = async (
  */
 export const se_DeleteSchemaVersionCommand = async (
   input: DeleteSchemaVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -260,7 +260,7 @@ export const se_DeleteSchemaVersionCommand = async (
  */
 export const se_DescribeCodeBindingCommand = async (
   input: DescribeCodeBindingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -281,7 +281,7 @@ export const se_DescribeCodeBindingCommand = async (
  */
 export const se_DescribeDiscovererCommand = async (
   input: DescribeDiscovererCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -297,7 +297,7 @@ export const se_DescribeDiscovererCommand = async (
  */
 export const se_DescribeRegistryCommand = async (
   input: DescribeRegistryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -313,7 +313,7 @@ export const se_DescribeRegistryCommand = async (
  */
 export const se_DescribeSchemaCommand = async (
   input: DescribeSchemaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -333,7 +333,7 @@ export const se_DescribeSchemaCommand = async (
  */
 export const se_ExportSchemaCommand = async (
   input: ExportSchemaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -354,7 +354,7 @@ export const se_ExportSchemaCommand = async (
  */
 export const se_GetCodeBindingSourceCommand = async (
   input: GetCodeBindingSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -375,7 +375,7 @@ export const se_GetCodeBindingSourceCommand = async (
  */
 export const se_GetDiscoveredSchemaCommand = async (
   input: GetDiscoveredSchemaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -387,7 +387,7 @@ export const se_GetDiscoveredSchemaCommand = async (
     take(input, {
       Events: (_) => _json(_),
       Type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -398,7 +398,7 @@ export const se_GetDiscoveredSchemaCommand = async (
  */
 export const se_GetResourcePolicyCommand = async (
   input: GetResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -416,7 +416,7 @@ export const se_GetResourcePolicyCommand = async (
  */
 export const se_ListDiscoverersCommand = async (
   input: ListDiscoverersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -437,7 +437,7 @@ export const se_ListDiscoverersCommand = async (
  */
 export const se_ListRegistriesCommand = async (
   input: ListRegistriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -458,7 +458,7 @@ export const se_ListRegistriesCommand = async (
  */
 export const se_ListSchemasCommand = async (
   input: ListSchemasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -479,7 +479,7 @@ export const se_ListSchemasCommand = async (
  */
 export const se_ListSchemaVersionsCommand = async (
   input: ListSchemaVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -500,7 +500,7 @@ export const se_ListSchemaVersionsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -516,7 +516,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutCodeBindingCommand = async (
   input: PutCodeBindingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -537,7 +537,7 @@ export const se_PutCodeBindingCommand = async (
  */
 export const se_PutResourcePolicyCommand = async (
   input: PutResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -552,7 +552,7 @@ export const se_PutResourcePolicyCommand = async (
     take(input, {
       Policy: (_) => __LazyJsonString.fromObject(_),
       RevisionId: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -563,7 +563,7 @@ export const se_PutResourcePolicyCommand = async (
  */
 export const se_SearchSchemasCommand = async (
   input: SearchSchemasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -584,7 +584,7 @@ export const se_SearchSchemasCommand = async (
  */
 export const se_StartDiscovererCommand = async (
   input: StartDiscovererCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -600,7 +600,7 @@ export const se_StartDiscovererCommand = async (
  */
 export const se_StopDiscovererCommand = async (
   input: StopDiscovererCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -616,7 +616,7 @@ export const se_StopDiscovererCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -628,7 +628,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -639,7 +639,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -661,7 +661,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateDiscovererCommand = async (
   input: UpdateDiscovererCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -674,7 +674,7 @@ export const se_UpdateDiscovererCommand = async (
     take(input, {
       CrossAccount: [],
       Description: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -685,7 +685,7 @@ export const se_UpdateDiscovererCommand = async (
  */
 export const se_UpdateRegistryCommand = async (
   input: UpdateRegistryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -697,7 +697,7 @@ export const se_UpdateRegistryCommand = async (
   body = JSON.stringify(
     take(input, {
       Description: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -708,7 +708,7 @@ export const se_UpdateRegistryCommand = async (
  */
 export const se_UpdateSchemaCommand = async (
   input: UpdateSchemaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -724,7 +724,7 @@ export const se_UpdateSchemaCommand = async (
       Content: [],
       Description: [],
       Type: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -735,7 +735,7 @@ export const se_UpdateSchemaCommand = async (
  */
 export const de_CreateDiscovererCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDiscovererCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -762,7 +762,7 @@ export const de_CreateDiscovererCommand = async (
  */
 export const de_CreateRegistryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRegistryCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -786,7 +786,7 @@ export const de_CreateRegistryCommand = async (
  */
 export const de_CreateSchemaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSchemaCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -814,7 +814,7 @@ export const de_CreateSchemaCommand = async (
  */
 export const de_DeleteDiscovererCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDiscovererCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -831,7 +831,7 @@ export const de_DeleteDiscovererCommand = async (
  */
 export const de_DeleteRegistryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRegistryCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -848,7 +848,7 @@ export const de_DeleteRegistryCommand = async (
  */
 export const de_DeleteResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResourcePolicyCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -865,7 +865,7 @@ export const de_DeleteResourcePolicyCommand = async (
  */
 export const de_DeleteSchemaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSchemaCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -882,7 +882,7 @@ export const de_DeleteSchemaCommand = async (
  */
 export const de_DeleteSchemaVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSchemaVersionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -899,7 +899,7 @@ export const de_DeleteSchemaVersionCommand = async (
  */
 export const de_DescribeCodeBindingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCodeBindingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -923,7 +923,7 @@ export const de_DescribeCodeBindingCommand = async (
  */
 export const de_DescribeDiscovererCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDiscovererCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -950,7 +950,7 @@ export const de_DescribeDiscovererCommand = async (
  */
 export const de_DescribeRegistryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRegistryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -974,7 +974,7 @@ export const de_DescribeRegistryCommand = async (
  */
 export const de_DescribeSchemaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSchemaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1003,7 +1003,7 @@ export const de_DescribeSchemaCommand = async (
  */
 export const de_ExportSchemaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportSchemaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1028,7 +1028,7 @@ export const de_ExportSchemaCommand = async (
  */
 export const de_GetCodeBindingSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCodeBindingSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1046,7 +1046,7 @@ export const de_GetCodeBindingSourceCommand = async (
  */
 export const de_GetDiscoveredSchemaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDiscoveredSchemaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1067,7 +1067,7 @@ export const de_GetDiscoveredSchemaCommand = async (
  */
 export const de_GetResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourcePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1089,7 +1089,7 @@ export const de_GetResourcePolicyCommand = async (
  */
 export const de_ListDiscoverersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDiscoverersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1111,7 +1111,7 @@ export const de_ListDiscoverersCommand = async (
  */
 export const de_ListRegistriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRegistriesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1133,7 +1133,7 @@ export const de_ListRegistriesCommand = async (
  */
 export const de_ListSchemasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSchemasCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1155,7 +1155,7 @@ export const de_ListSchemasCommand = async (
  */
 export const de_ListSchemaVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSchemaVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1177,7 +1177,7 @@ export const de_ListSchemaVersionsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1198,7 +1198,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutCodeBindingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutCodeBindingCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1222,7 +1222,7 @@ export const de_PutCodeBindingCommand = async (
  */
 export const de_PutResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutResourcePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1244,7 +1244,7 @@ export const de_PutResourcePolicyCommand = async (
  */
 export const de_SearchSchemasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchSchemasCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1266,7 +1266,7 @@ export const de_SearchSchemasCommand = async (
  */
 export const de_StartDiscovererCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartDiscovererCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1288,7 +1288,7 @@ export const de_StartDiscovererCommand = async (
  */
 export const de_StopDiscovererCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopDiscovererCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1310,7 +1310,7 @@ export const de_StopDiscovererCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1327,7 +1327,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1344,7 +1344,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateDiscovererCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDiscovererCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1371,7 +1371,7 @@ export const de_UpdateDiscovererCommand = async (
  */
 export const de_UpdateRegistryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRegistryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1395,7 +1395,7 @@ export const de_UpdateRegistryCommand = async (
  */
 export const de_UpdateSchemaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSchemaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1546,7 +1546,7 @@ const de_GoneExceptionRes = async (parsedOutput: any, context: __SerdeContext): 
  */
 const de_InternalServerErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1585,7 +1585,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_PreconditionFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PreconditionFailedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1606,7 +1606,7 @@ const de_PreconditionFailedExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1627,7 +1627,7 @@ const de_ServiceUnavailableExceptionRes = async (
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1648,7 +1648,7 @@ const de_TooManyRequestsExceptionRes = async (
  */
 const de_UnauthorizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthorizedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

@@ -19,16 +19,16 @@ export interface ConnectContactLens {
    */
   listRealtimeContactAnalysisSegments(
     args: ListRealtimeContactAnalysisSegmentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRealtimeContactAnalysisSegmentsCommandOutput>;
   listRealtimeContactAnalysisSegments(
     args: ListRealtimeContactAnalysisSegmentsCommandInput,
-    cb: (err: any, data?: ListRealtimeContactAnalysisSegmentsCommandOutput) => void
+    cb: (err: any, data?: ListRealtimeContactAnalysisSegmentsCommandOutput) => void,
   ): void;
   listRealtimeContactAnalysisSegments(
     args: ListRealtimeContactAnalysisSegmentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRealtimeContactAnalysisSegmentsCommandOutput) => void
+    cb: (err: any, data?: ListRealtimeContactAnalysisSegmentsCommandOutput) => void,
   ): void;
 }
 

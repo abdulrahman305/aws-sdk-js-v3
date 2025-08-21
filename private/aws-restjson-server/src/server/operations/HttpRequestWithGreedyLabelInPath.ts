@@ -42,7 +42,7 @@ export namespace HttpRequestWithGreedyLabelInPathServerInput {
    * @internal
    */
   export const validate: (
-    obj: Parameters<typeof HttpRequestWithGreedyLabelInPathInput.validate>[0]
+    obj: Parameters<typeof HttpRequestWithGreedyLabelInPathInput.validate>[0],
   ) => __ValidationFailure[] = HttpRequestWithGreedyLabelInPathInput.validate;
 }
 export interface HttpRequestWithGreedyLabelInPathServerOutput {}
@@ -75,7 +75,7 @@ export const getHttpRequestWithGreedyLabelInPathHandler = <Context>(
     HttpRequestWithGreedyLabelInPathServerOutput,
     Context
   >,
-  customizer: __ValidationCustomizer<"HttpRequestWithGreedyLabelInPath">
+  customizer: __ValidationCustomizer<"HttpRequestWithGreedyLabelInPath">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "HttpRequestWithGreedyLabelInPath">([
     new httpbinding.UriSpec<"RestJson", "HttpRequestWithGreedyLabelInPath">(
@@ -88,7 +88,7 @@ export const getHttpRequestWithGreedyLabelInPathHandler = <Context>(
         { type: "greedy" },
       ],
       [],
-      { service: "RestJson", operation: "HttpRequestWithGreedyLabelInPath" }
+      { service: "RestJson", operation: "HttpRequestWithGreedyLabelInPath" },
     ),
   ]);
   return new HttpRequestWithGreedyLabelInPathHandler(
@@ -96,7 +96,7 @@ export const getHttpRequestWithGreedyLabelInPathHandler = <Context>(
     mux,
     new HttpRequestWithGreedyLabelInPathSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -117,7 +117,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -163,7 +163,7 @@ export class HttpRequestWithGreedyLabelInPathHandler<Context> implements __Servi
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"HttpRequestWithGreedyLabelInPath">;
   /**
@@ -188,7 +188,7 @@ export class HttpRequestWithGreedyLabelInPathHandler<Context> implements __Servi
       HttpRequestWithGreedyLabelInPathErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"HttpRequestWithGreedyLabelInPath">
+    validationCustomizer: __ValidationCustomizer<"HttpRequestWithGreedyLabelInPath">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -200,7 +200,7 @@ export class HttpRequestWithGreedyLabelInPathHandler<Context> implements __Servi
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpRequestWithGreedyLabelInPath. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpRequestWithGreedyLabelInPath. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -212,7 +212,7 @@ export class HttpRequestWithGreedyLabelInPathHandler<Context> implements __Servi
       this.operation,
       this.serializeFrameworkException,
       HttpRequestWithGreedyLabelInPathServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

@@ -291,16 +291,16 @@ export interface CodeDeploy {
    */
   addTagsToOnPremisesInstances(
     args: AddTagsToOnPremisesInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AddTagsToOnPremisesInstancesCommandOutput>;
   addTagsToOnPremisesInstances(
     args: AddTagsToOnPremisesInstancesCommandInput,
-    cb: (err: any, data?: AddTagsToOnPremisesInstancesCommandOutput) => void
+    cb: (err: any, data?: AddTagsToOnPremisesInstancesCommandOutput) => void,
   ): void;
   addTagsToOnPremisesInstances(
     args: AddTagsToOnPremisesInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddTagsToOnPremisesInstancesCommandOutput) => void
+    cb: (err: any, data?: AddTagsToOnPremisesInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -308,16 +308,16 @@ export interface CodeDeploy {
    */
   batchGetApplicationRevisions(
     args: BatchGetApplicationRevisionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetApplicationRevisionsCommandOutput>;
   batchGetApplicationRevisions(
     args: BatchGetApplicationRevisionsCommandInput,
-    cb: (err: any, data?: BatchGetApplicationRevisionsCommandOutput) => void
+    cb: (err: any, data?: BatchGetApplicationRevisionsCommandOutput) => void,
   ): void;
   batchGetApplicationRevisions(
     args: BatchGetApplicationRevisionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetApplicationRevisionsCommandOutput) => void
+    cb: (err: any, data?: BatchGetApplicationRevisionsCommandOutput) => void,
   ): void;
 
   /**
@@ -325,16 +325,16 @@ export interface CodeDeploy {
    */
   batchGetApplications(
     args: BatchGetApplicationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetApplicationsCommandOutput>;
   batchGetApplications(
     args: BatchGetApplicationsCommandInput,
-    cb: (err: any, data?: BatchGetApplicationsCommandOutput) => void
+    cb: (err: any, data?: BatchGetApplicationsCommandOutput) => void,
   ): void;
   batchGetApplications(
     args: BatchGetApplicationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetApplicationsCommandOutput) => void
+    cb: (err: any, data?: BatchGetApplicationsCommandOutput) => void,
   ): void;
 
   /**
@@ -342,16 +342,16 @@ export interface CodeDeploy {
    */
   batchGetDeploymentGroups(
     args: BatchGetDeploymentGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetDeploymentGroupsCommandOutput>;
   batchGetDeploymentGroups(
     args: BatchGetDeploymentGroupsCommandInput,
-    cb: (err: any, data?: BatchGetDeploymentGroupsCommandOutput) => void
+    cb: (err: any, data?: BatchGetDeploymentGroupsCommandOutput) => void,
   ): void;
   batchGetDeploymentGroups(
     args: BatchGetDeploymentGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetDeploymentGroupsCommandOutput) => void
+    cb: (err: any, data?: BatchGetDeploymentGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -359,16 +359,16 @@ export interface CodeDeploy {
    */
   batchGetDeploymentInstances(
     args: BatchGetDeploymentInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetDeploymentInstancesCommandOutput>;
   batchGetDeploymentInstances(
     args: BatchGetDeploymentInstancesCommandInput,
-    cb: (err: any, data?: BatchGetDeploymentInstancesCommandOutput) => void
+    cb: (err: any, data?: BatchGetDeploymentInstancesCommandOutput) => void,
   ): void;
   batchGetDeploymentInstances(
     args: BatchGetDeploymentInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetDeploymentInstancesCommandOutput) => void
+    cb: (err: any, data?: BatchGetDeploymentInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -376,16 +376,16 @@ export interface CodeDeploy {
    */
   batchGetDeployments(
     args: BatchGetDeploymentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetDeploymentsCommandOutput>;
   batchGetDeployments(
     args: BatchGetDeploymentsCommandInput,
-    cb: (err: any, data?: BatchGetDeploymentsCommandOutput) => void
+    cb: (err: any, data?: BatchGetDeploymentsCommandOutput) => void,
   ): void;
   batchGetDeployments(
     args: BatchGetDeploymentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetDeploymentsCommandOutput) => void
+    cb: (err: any, data?: BatchGetDeploymentsCommandOutput) => void,
   ): void;
 
   /**
@@ -393,16 +393,16 @@ export interface CodeDeploy {
    */
   batchGetDeploymentTargets(
     args: BatchGetDeploymentTargetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetDeploymentTargetsCommandOutput>;
   batchGetDeploymentTargets(
     args: BatchGetDeploymentTargetsCommandInput,
-    cb: (err: any, data?: BatchGetDeploymentTargetsCommandOutput) => void
+    cb: (err: any, data?: BatchGetDeploymentTargetsCommandOutput) => void,
   ): void;
   batchGetDeploymentTargets(
     args: BatchGetDeploymentTargetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetDeploymentTargetsCommandOutput) => void
+    cb: (err: any, data?: BatchGetDeploymentTargetsCommandOutput) => void,
   ): void;
 
   /**
@@ -410,16 +410,16 @@ export interface CodeDeploy {
    */
   batchGetOnPremisesInstances(
     args: BatchGetOnPremisesInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetOnPremisesInstancesCommandOutput>;
   batchGetOnPremisesInstances(
     args: BatchGetOnPremisesInstancesCommandInput,
-    cb: (err: any, data?: BatchGetOnPremisesInstancesCommandOutput) => void
+    cb: (err: any, data?: BatchGetOnPremisesInstancesCommandOutput) => void,
   ): void;
   batchGetOnPremisesInstances(
     args: BatchGetOnPremisesInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetOnPremisesInstancesCommandOutput) => void
+    cb: (err: any, data?: BatchGetOnPremisesInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -428,16 +428,16 @@ export interface CodeDeploy {
   continueDeployment(): Promise<ContinueDeploymentCommandOutput>;
   continueDeployment(
     args: ContinueDeploymentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ContinueDeploymentCommandOutput>;
   continueDeployment(
     args: ContinueDeploymentCommandInput,
-    cb: (err: any, data?: ContinueDeploymentCommandOutput) => void
+    cb: (err: any, data?: ContinueDeploymentCommandOutput) => void,
   ): void;
   continueDeployment(
     args: ContinueDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ContinueDeploymentCommandOutput) => void
+    cb: (err: any, data?: ContinueDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -445,16 +445,16 @@ export interface CodeDeploy {
    */
   createApplication(
     args: CreateApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateApplicationCommandOutput>;
   createApplication(
     args: CreateApplicationCommandInput,
-    cb: (err: any, data?: CreateApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationCommandOutput) => void,
   ): void;
   createApplication(
     args: CreateApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -462,16 +462,16 @@ export interface CodeDeploy {
    */
   createDeployment(
     args: CreateDeploymentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDeploymentCommandOutput>;
   createDeployment(
     args: CreateDeploymentCommandInput,
-    cb: (err: any, data?: CreateDeploymentCommandOutput) => void
+    cb: (err: any, data?: CreateDeploymentCommandOutput) => void,
   ): void;
   createDeployment(
     args: CreateDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDeploymentCommandOutput) => void
+    cb: (err: any, data?: CreateDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -479,16 +479,16 @@ export interface CodeDeploy {
    */
   createDeploymentConfig(
     args: CreateDeploymentConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDeploymentConfigCommandOutput>;
   createDeploymentConfig(
     args: CreateDeploymentConfigCommandInput,
-    cb: (err: any, data?: CreateDeploymentConfigCommandOutput) => void
+    cb: (err: any, data?: CreateDeploymentConfigCommandOutput) => void,
   ): void;
   createDeploymentConfig(
     args: CreateDeploymentConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDeploymentConfigCommandOutput) => void
+    cb: (err: any, data?: CreateDeploymentConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -496,16 +496,16 @@ export interface CodeDeploy {
    */
   createDeploymentGroup(
     args: CreateDeploymentGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDeploymentGroupCommandOutput>;
   createDeploymentGroup(
     args: CreateDeploymentGroupCommandInput,
-    cb: (err: any, data?: CreateDeploymentGroupCommandOutput) => void
+    cb: (err: any, data?: CreateDeploymentGroupCommandOutput) => void,
   ): void;
   createDeploymentGroup(
     args: CreateDeploymentGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDeploymentGroupCommandOutput) => void
+    cb: (err: any, data?: CreateDeploymentGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -513,16 +513,16 @@ export interface CodeDeploy {
    */
   deleteApplication(
     args: DeleteApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApplicationCommandOutput>;
   deleteApplication(
     args: DeleteApplicationCommandInput,
-    cb: (err: any, data?: DeleteApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCommandOutput) => void,
   ): void;
   deleteApplication(
     args: DeleteApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -530,16 +530,16 @@ export interface CodeDeploy {
    */
   deleteDeploymentConfig(
     args: DeleteDeploymentConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDeploymentConfigCommandOutput>;
   deleteDeploymentConfig(
     args: DeleteDeploymentConfigCommandInput,
-    cb: (err: any, data?: DeleteDeploymentConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteDeploymentConfigCommandOutput) => void,
   ): void;
   deleteDeploymentConfig(
     args: DeleteDeploymentConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDeploymentConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteDeploymentConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -547,16 +547,16 @@ export interface CodeDeploy {
    */
   deleteDeploymentGroup(
     args: DeleteDeploymentGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDeploymentGroupCommandOutput>;
   deleteDeploymentGroup(
     args: DeleteDeploymentGroupCommandInput,
-    cb: (err: any, data?: DeleteDeploymentGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteDeploymentGroupCommandOutput) => void,
   ): void;
   deleteDeploymentGroup(
     args: DeleteDeploymentGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDeploymentGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteDeploymentGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -565,16 +565,16 @@ export interface CodeDeploy {
   deleteGitHubAccountToken(): Promise<DeleteGitHubAccountTokenCommandOutput>;
   deleteGitHubAccountToken(
     args: DeleteGitHubAccountTokenCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteGitHubAccountTokenCommandOutput>;
   deleteGitHubAccountToken(
     args: DeleteGitHubAccountTokenCommandInput,
-    cb: (err: any, data?: DeleteGitHubAccountTokenCommandOutput) => void
+    cb: (err: any, data?: DeleteGitHubAccountTokenCommandOutput) => void,
   ): void;
   deleteGitHubAccountToken(
     args: DeleteGitHubAccountTokenCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteGitHubAccountTokenCommandOutput) => void
+    cb: (err: any, data?: DeleteGitHubAccountTokenCommandOutput) => void,
   ): void;
 
   /**
@@ -583,16 +583,16 @@ export interface CodeDeploy {
   deleteResourcesByExternalId(): Promise<DeleteResourcesByExternalIdCommandOutput>;
   deleteResourcesByExternalId(
     args: DeleteResourcesByExternalIdCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResourcesByExternalIdCommandOutput>;
   deleteResourcesByExternalId(
     args: DeleteResourcesByExternalIdCommandInput,
-    cb: (err: any, data?: DeleteResourcesByExternalIdCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcesByExternalIdCommandOutput) => void,
   ): void;
   deleteResourcesByExternalId(
     args: DeleteResourcesByExternalIdCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResourcesByExternalIdCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcesByExternalIdCommandOutput) => void,
   ): void;
 
   /**
@@ -600,16 +600,16 @@ export interface CodeDeploy {
    */
   deregisterOnPremisesInstance(
     args: DeregisterOnPremisesInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterOnPremisesInstanceCommandOutput>;
   deregisterOnPremisesInstance(
     args: DeregisterOnPremisesInstanceCommandInput,
-    cb: (err: any, data?: DeregisterOnPremisesInstanceCommandOutput) => void
+    cb: (err: any, data?: DeregisterOnPremisesInstanceCommandOutput) => void,
   ): void;
   deregisterOnPremisesInstance(
     args: DeregisterOnPremisesInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterOnPremisesInstanceCommandOutput) => void
+    cb: (err: any, data?: DeregisterOnPremisesInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -617,13 +617,13 @@ export interface CodeDeploy {
    */
   getApplication(
     args: GetApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetApplicationCommandOutput>;
   getApplication(args: GetApplicationCommandInput, cb: (err: any, data?: GetApplicationCommandOutput) => void): void;
   getApplication(
     args: GetApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApplicationCommandOutput) => void
+    cb: (err: any, data?: GetApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -631,16 +631,16 @@ export interface CodeDeploy {
    */
   getApplicationRevision(
     args: GetApplicationRevisionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetApplicationRevisionCommandOutput>;
   getApplicationRevision(
     args: GetApplicationRevisionCommandInput,
-    cb: (err: any, data?: GetApplicationRevisionCommandOutput) => void
+    cb: (err: any, data?: GetApplicationRevisionCommandOutput) => void,
   ): void;
   getApplicationRevision(
     args: GetApplicationRevisionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApplicationRevisionCommandOutput) => void
+    cb: (err: any, data?: GetApplicationRevisionCommandOutput) => void,
   ): void;
 
   /**
@@ -651,7 +651,7 @@ export interface CodeDeploy {
   getDeployment(
     args: GetDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeploymentCommandOutput) => void
+    cb: (err: any, data?: GetDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -659,16 +659,16 @@ export interface CodeDeploy {
    */
   getDeploymentConfig(
     args: GetDeploymentConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDeploymentConfigCommandOutput>;
   getDeploymentConfig(
     args: GetDeploymentConfigCommandInput,
-    cb: (err: any, data?: GetDeploymentConfigCommandOutput) => void
+    cb: (err: any, data?: GetDeploymentConfigCommandOutput) => void,
   ): void;
   getDeploymentConfig(
     args: GetDeploymentConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeploymentConfigCommandOutput) => void
+    cb: (err: any, data?: GetDeploymentConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -676,16 +676,16 @@ export interface CodeDeploy {
    */
   getDeploymentGroup(
     args: GetDeploymentGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDeploymentGroupCommandOutput>;
   getDeploymentGroup(
     args: GetDeploymentGroupCommandInput,
-    cb: (err: any, data?: GetDeploymentGroupCommandOutput) => void
+    cb: (err: any, data?: GetDeploymentGroupCommandOutput) => void,
   ): void;
   getDeploymentGroup(
     args: GetDeploymentGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeploymentGroupCommandOutput) => void
+    cb: (err: any, data?: GetDeploymentGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -693,16 +693,16 @@ export interface CodeDeploy {
    */
   getDeploymentInstance(
     args: GetDeploymentInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDeploymentInstanceCommandOutput>;
   getDeploymentInstance(
     args: GetDeploymentInstanceCommandInput,
-    cb: (err: any, data?: GetDeploymentInstanceCommandOutput) => void
+    cb: (err: any, data?: GetDeploymentInstanceCommandOutput) => void,
   ): void;
   getDeploymentInstance(
     args: GetDeploymentInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeploymentInstanceCommandOutput) => void
+    cb: (err: any, data?: GetDeploymentInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -710,16 +710,16 @@ export interface CodeDeploy {
    */
   getDeploymentTarget(
     args: GetDeploymentTargetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDeploymentTargetCommandOutput>;
   getDeploymentTarget(
     args: GetDeploymentTargetCommandInput,
-    cb: (err: any, data?: GetDeploymentTargetCommandOutput) => void
+    cb: (err: any, data?: GetDeploymentTargetCommandOutput) => void,
   ): void;
   getDeploymentTarget(
     args: GetDeploymentTargetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeploymentTargetCommandOutput) => void
+    cb: (err: any, data?: GetDeploymentTargetCommandOutput) => void,
   ): void;
 
   /**
@@ -727,16 +727,16 @@ export interface CodeDeploy {
    */
   getOnPremisesInstance(
     args: GetOnPremisesInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetOnPremisesInstanceCommandOutput>;
   getOnPremisesInstance(
     args: GetOnPremisesInstanceCommandInput,
-    cb: (err: any, data?: GetOnPremisesInstanceCommandOutput) => void
+    cb: (err: any, data?: GetOnPremisesInstanceCommandOutput) => void,
   ): void;
   getOnPremisesInstance(
     args: GetOnPremisesInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetOnPremisesInstanceCommandOutput) => void
+    cb: (err: any, data?: GetOnPremisesInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -744,16 +744,16 @@ export interface CodeDeploy {
    */
   listApplicationRevisions(
     args: ListApplicationRevisionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApplicationRevisionsCommandOutput>;
   listApplicationRevisions(
     args: ListApplicationRevisionsCommandInput,
-    cb: (err: any, data?: ListApplicationRevisionsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationRevisionsCommandOutput) => void,
   ): void;
   listApplicationRevisions(
     args: ListApplicationRevisionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApplicationRevisionsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationRevisionsCommandOutput) => void,
   ): void;
 
   /**
@@ -762,16 +762,16 @@ export interface CodeDeploy {
   listApplications(): Promise<ListApplicationsCommandOutput>;
   listApplications(
     args: ListApplicationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApplicationsCommandOutput>;
   listApplications(
     args: ListApplicationsCommandInput,
-    cb: (err: any, data?: ListApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationsCommandOutput) => void,
   ): void;
   listApplications(
     args: ListApplicationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationsCommandOutput) => void,
   ): void;
 
   /**
@@ -780,16 +780,16 @@ export interface CodeDeploy {
   listDeploymentConfigs(): Promise<ListDeploymentConfigsCommandOutput>;
   listDeploymentConfigs(
     args: ListDeploymentConfigsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDeploymentConfigsCommandOutput>;
   listDeploymentConfigs(
     args: ListDeploymentConfigsCommandInput,
-    cb: (err: any, data?: ListDeploymentConfigsCommandOutput) => void
+    cb: (err: any, data?: ListDeploymentConfigsCommandOutput) => void,
   ): void;
   listDeploymentConfigs(
     args: ListDeploymentConfigsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDeploymentConfigsCommandOutput) => void
+    cb: (err: any, data?: ListDeploymentConfigsCommandOutput) => void,
   ): void;
 
   /**
@@ -797,16 +797,16 @@ export interface CodeDeploy {
    */
   listDeploymentGroups(
     args: ListDeploymentGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDeploymentGroupsCommandOutput>;
   listDeploymentGroups(
     args: ListDeploymentGroupsCommandInput,
-    cb: (err: any, data?: ListDeploymentGroupsCommandOutput) => void
+    cb: (err: any, data?: ListDeploymentGroupsCommandOutput) => void,
   ): void;
   listDeploymentGroups(
     args: ListDeploymentGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDeploymentGroupsCommandOutput) => void
+    cb: (err: any, data?: ListDeploymentGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -814,16 +814,16 @@ export interface CodeDeploy {
    */
   listDeploymentInstances(
     args: ListDeploymentInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDeploymentInstancesCommandOutput>;
   listDeploymentInstances(
     args: ListDeploymentInstancesCommandInput,
-    cb: (err: any, data?: ListDeploymentInstancesCommandOutput) => void
+    cb: (err: any, data?: ListDeploymentInstancesCommandOutput) => void,
   ): void;
   listDeploymentInstances(
     args: ListDeploymentInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDeploymentInstancesCommandOutput) => void
+    cb: (err: any, data?: ListDeploymentInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -832,13 +832,13 @@ export interface CodeDeploy {
   listDeployments(): Promise<ListDeploymentsCommandOutput>;
   listDeployments(
     args: ListDeploymentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDeploymentsCommandOutput>;
   listDeployments(args: ListDeploymentsCommandInput, cb: (err: any, data?: ListDeploymentsCommandOutput) => void): void;
   listDeployments(
     args: ListDeploymentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDeploymentsCommandOutput) => void
+    cb: (err: any, data?: ListDeploymentsCommandOutput) => void,
   ): void;
 
   /**
@@ -846,16 +846,16 @@ export interface CodeDeploy {
    */
   listDeploymentTargets(
     args: ListDeploymentTargetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDeploymentTargetsCommandOutput>;
   listDeploymentTargets(
     args: ListDeploymentTargetsCommandInput,
-    cb: (err: any, data?: ListDeploymentTargetsCommandOutput) => void
+    cb: (err: any, data?: ListDeploymentTargetsCommandOutput) => void,
   ): void;
   listDeploymentTargets(
     args: ListDeploymentTargetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDeploymentTargetsCommandOutput) => void
+    cb: (err: any, data?: ListDeploymentTargetsCommandOutput) => void,
   ): void;
 
   /**
@@ -864,16 +864,16 @@ export interface CodeDeploy {
   listGitHubAccountTokenNames(): Promise<ListGitHubAccountTokenNamesCommandOutput>;
   listGitHubAccountTokenNames(
     args: ListGitHubAccountTokenNamesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListGitHubAccountTokenNamesCommandOutput>;
   listGitHubAccountTokenNames(
     args: ListGitHubAccountTokenNamesCommandInput,
-    cb: (err: any, data?: ListGitHubAccountTokenNamesCommandOutput) => void
+    cb: (err: any, data?: ListGitHubAccountTokenNamesCommandOutput) => void,
   ): void;
   listGitHubAccountTokenNames(
     args: ListGitHubAccountTokenNamesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListGitHubAccountTokenNamesCommandOutput) => void
+    cb: (err: any, data?: ListGitHubAccountTokenNamesCommandOutput) => void,
   ): void;
 
   /**
@@ -882,16 +882,16 @@ export interface CodeDeploy {
   listOnPremisesInstances(): Promise<ListOnPremisesInstancesCommandOutput>;
   listOnPremisesInstances(
     args: ListOnPremisesInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListOnPremisesInstancesCommandOutput>;
   listOnPremisesInstances(
     args: ListOnPremisesInstancesCommandInput,
-    cb: (err: any, data?: ListOnPremisesInstancesCommandOutput) => void
+    cb: (err: any, data?: ListOnPremisesInstancesCommandOutput) => void,
   ): void;
   listOnPremisesInstances(
     args: ListOnPremisesInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOnPremisesInstancesCommandOutput) => void
+    cb: (err: any, data?: ListOnPremisesInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -899,16 +899,16 @@ export interface CodeDeploy {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -917,16 +917,16 @@ export interface CodeDeploy {
   putLifecycleEventHookExecutionStatus(): Promise<PutLifecycleEventHookExecutionStatusCommandOutput>;
   putLifecycleEventHookExecutionStatus(
     args: PutLifecycleEventHookExecutionStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutLifecycleEventHookExecutionStatusCommandOutput>;
   putLifecycleEventHookExecutionStatus(
     args: PutLifecycleEventHookExecutionStatusCommandInput,
-    cb: (err: any, data?: PutLifecycleEventHookExecutionStatusCommandOutput) => void
+    cb: (err: any, data?: PutLifecycleEventHookExecutionStatusCommandOutput) => void,
   ): void;
   putLifecycleEventHookExecutionStatus(
     args: PutLifecycleEventHookExecutionStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutLifecycleEventHookExecutionStatusCommandOutput) => void
+    cb: (err: any, data?: PutLifecycleEventHookExecutionStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -934,16 +934,16 @@ export interface CodeDeploy {
    */
   registerApplicationRevision(
     args: RegisterApplicationRevisionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterApplicationRevisionCommandOutput>;
   registerApplicationRevision(
     args: RegisterApplicationRevisionCommandInput,
-    cb: (err: any, data?: RegisterApplicationRevisionCommandOutput) => void
+    cb: (err: any, data?: RegisterApplicationRevisionCommandOutput) => void,
   ): void;
   registerApplicationRevision(
     args: RegisterApplicationRevisionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterApplicationRevisionCommandOutput) => void
+    cb: (err: any, data?: RegisterApplicationRevisionCommandOutput) => void,
   ): void;
 
   /**
@@ -951,16 +951,16 @@ export interface CodeDeploy {
    */
   registerOnPremisesInstance(
     args: RegisterOnPremisesInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterOnPremisesInstanceCommandOutput>;
   registerOnPremisesInstance(
     args: RegisterOnPremisesInstanceCommandInput,
-    cb: (err: any, data?: RegisterOnPremisesInstanceCommandOutput) => void
+    cb: (err: any, data?: RegisterOnPremisesInstanceCommandOutput) => void,
   ): void;
   registerOnPremisesInstance(
     args: RegisterOnPremisesInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterOnPremisesInstanceCommandOutput) => void
+    cb: (err: any, data?: RegisterOnPremisesInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -968,16 +968,16 @@ export interface CodeDeploy {
    */
   removeTagsFromOnPremisesInstances(
     args: RemoveTagsFromOnPremisesInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveTagsFromOnPremisesInstancesCommandOutput>;
   removeTagsFromOnPremisesInstances(
     args: RemoveTagsFromOnPremisesInstancesCommandInput,
-    cb: (err: any, data?: RemoveTagsFromOnPremisesInstancesCommandOutput) => void
+    cb: (err: any, data?: RemoveTagsFromOnPremisesInstancesCommandOutput) => void,
   ): void;
   removeTagsFromOnPremisesInstances(
     args: RemoveTagsFromOnPremisesInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveTagsFromOnPremisesInstancesCommandOutput) => void
+    cb: (err: any, data?: RemoveTagsFromOnPremisesInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -986,16 +986,16 @@ export interface CodeDeploy {
   skipWaitTimeForInstanceTermination(): Promise<SkipWaitTimeForInstanceTerminationCommandOutput>;
   skipWaitTimeForInstanceTermination(
     args: SkipWaitTimeForInstanceTerminationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SkipWaitTimeForInstanceTerminationCommandOutput>;
   skipWaitTimeForInstanceTermination(
     args: SkipWaitTimeForInstanceTerminationCommandInput,
-    cb: (err: any, data?: SkipWaitTimeForInstanceTerminationCommandOutput) => void
+    cb: (err: any, data?: SkipWaitTimeForInstanceTerminationCommandOutput) => void,
   ): void;
   skipWaitTimeForInstanceTermination(
     args: SkipWaitTimeForInstanceTerminationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SkipWaitTimeForInstanceTerminationCommandOutput) => void
+    cb: (err: any, data?: SkipWaitTimeForInstanceTerminationCommandOutput) => void,
   ): void;
 
   /**
@@ -1003,13 +1003,13 @@ export interface CodeDeploy {
    */
   stopDeployment(
     args: StopDeploymentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopDeploymentCommandOutput>;
   stopDeployment(args: StopDeploymentCommandInput, cb: (err: any, data?: StopDeploymentCommandOutput) => void): void;
   stopDeployment(
     args: StopDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopDeploymentCommandOutput) => void
+    cb: (err: any, data?: StopDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -1020,7 +1020,7 @@ export interface CodeDeploy {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1031,7 +1031,7 @@ export interface CodeDeploy {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1040,16 +1040,16 @@ export interface CodeDeploy {
   updateApplication(): Promise<UpdateApplicationCommandOutput>;
   updateApplication(
     args: UpdateApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApplicationCommandOutput>;
   updateApplication(
     args: UpdateApplicationCommandInput,
-    cb: (err: any, data?: UpdateApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationCommandOutput) => void,
   ): void;
   updateApplication(
     args: UpdateApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -1057,16 +1057,16 @@ export interface CodeDeploy {
    */
   updateDeploymentGroup(
     args: UpdateDeploymentGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDeploymentGroupCommandOutput>;
   updateDeploymentGroup(
     args: UpdateDeploymentGroupCommandInput,
-    cb: (err: any, data?: UpdateDeploymentGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateDeploymentGroupCommandOutput) => void,
   ): void;
   updateDeploymentGroup(
     args: UpdateDeploymentGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDeploymentGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateDeploymentGroupCommandOutput) => void,
   ): void;
 }
 

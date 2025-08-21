@@ -60,7 +60,7 @@ const checkState = async (client: OmicsClient, input: GetVariantImportJobCommand
  */
 export const waitForVariantImportJobCreated = async (
   params: WaiterConfiguration<OmicsClient>,
-  input: GetVariantImportJobCommandInput
+  input: GetVariantImportJobCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 600 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -72,7 +72,7 @@ export const waitForVariantImportJobCreated = async (
  */
 export const waitUntilVariantImportJobCreated = async (
   params: WaiterConfiguration<OmicsClient>,
-  input: GetVariantImportJobCommandInput
+  input: GetVariantImportJobCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 600 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

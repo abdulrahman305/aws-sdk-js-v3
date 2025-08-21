@@ -187,7 +187,7 @@ import {
  */
 export const se_DescribeEntitiesDetectionV2JobCommand = async (
   input: DescribeEntitiesDetectionV2JobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEntitiesDetectionV2Job");
   let body: any;
@@ -200,7 +200,7 @@ export const se_DescribeEntitiesDetectionV2JobCommand = async (
  */
 export const se_DescribeICD10CMInferenceJobCommand = async (
   input: DescribeICD10CMInferenceJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeICD10CMInferenceJob");
   let body: any;
@@ -213,7 +213,7 @@ export const se_DescribeICD10CMInferenceJobCommand = async (
  */
 export const se_DescribePHIDetectionJobCommand = async (
   input: DescribePHIDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribePHIDetectionJob");
   let body: any;
@@ -226,7 +226,7 @@ export const se_DescribePHIDetectionJobCommand = async (
  */
 export const se_DescribeRxNormInferenceJobCommand = async (
   input: DescribeRxNormInferenceJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeRxNormInferenceJob");
   let body: any;
@@ -239,7 +239,7 @@ export const se_DescribeRxNormInferenceJobCommand = async (
  */
 export const se_DescribeSNOMEDCTInferenceJobCommand = async (
   input: DescribeSNOMEDCTInferenceJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeSNOMEDCTInferenceJob");
   let body: any;
@@ -252,7 +252,7 @@ export const se_DescribeSNOMEDCTInferenceJobCommand = async (
  */
 export const se_DetectEntitiesCommand = async (
   input: DetectEntitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DetectEntities");
   let body: any;
@@ -265,7 +265,7 @@ export const se_DetectEntitiesCommand = async (
  */
 export const se_DetectEntitiesV2Command = async (
   input: DetectEntitiesV2CommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DetectEntitiesV2");
   let body: any;
@@ -278,7 +278,7 @@ export const se_DetectEntitiesV2Command = async (
  */
 export const se_DetectPHICommand = async (
   input: DetectPHICommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DetectPHI");
   let body: any;
@@ -291,7 +291,7 @@ export const se_DetectPHICommand = async (
  */
 export const se_InferICD10CMCommand = async (
   input: InferICD10CMCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("InferICD10CM");
   let body: any;
@@ -304,7 +304,7 @@ export const se_InferICD10CMCommand = async (
  */
 export const se_InferRxNormCommand = async (
   input: InferRxNormCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("InferRxNorm");
   let body: any;
@@ -317,7 +317,7 @@ export const se_InferRxNormCommand = async (
  */
 export const se_InferSNOMEDCTCommand = async (
   input: InferSNOMEDCTCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("InferSNOMEDCT");
   let body: any;
@@ -330,7 +330,7 @@ export const se_InferSNOMEDCTCommand = async (
  */
 export const se_ListEntitiesDetectionV2JobsCommand = async (
   input: ListEntitiesDetectionV2JobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListEntitiesDetectionV2Jobs");
   let body: any;
@@ -343,7 +343,7 @@ export const se_ListEntitiesDetectionV2JobsCommand = async (
  */
 export const se_ListICD10CMInferenceJobsCommand = async (
   input: ListICD10CMInferenceJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListICD10CMInferenceJobs");
   let body: any;
@@ -356,7 +356,7 @@ export const se_ListICD10CMInferenceJobsCommand = async (
  */
 export const se_ListPHIDetectionJobsCommand = async (
   input: ListPHIDetectionJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPHIDetectionJobs");
   let body: any;
@@ -369,7 +369,7 @@ export const se_ListPHIDetectionJobsCommand = async (
  */
 export const se_ListRxNormInferenceJobsCommand = async (
   input: ListRxNormInferenceJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRxNormInferenceJobs");
   let body: any;
@@ -382,7 +382,7 @@ export const se_ListRxNormInferenceJobsCommand = async (
  */
 export const se_ListSNOMEDCTInferenceJobsCommand = async (
   input: ListSNOMEDCTInferenceJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSNOMEDCTInferenceJobs");
   let body: any;
@@ -395,7 +395,7 @@ export const se_ListSNOMEDCTInferenceJobsCommand = async (
  */
 export const se_StartEntitiesDetectionV2JobCommand = async (
   input: StartEntitiesDetectionV2JobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartEntitiesDetectionV2Job");
   let body: any;
@@ -408,7 +408,7 @@ export const se_StartEntitiesDetectionV2JobCommand = async (
  */
 export const se_StartICD10CMInferenceJobCommand = async (
   input: StartICD10CMInferenceJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartICD10CMInferenceJob");
   let body: any;
@@ -421,7 +421,7 @@ export const se_StartICD10CMInferenceJobCommand = async (
  */
 export const se_StartPHIDetectionJobCommand = async (
   input: StartPHIDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartPHIDetectionJob");
   let body: any;
@@ -434,7 +434,7 @@ export const se_StartPHIDetectionJobCommand = async (
  */
 export const se_StartRxNormInferenceJobCommand = async (
   input: StartRxNormInferenceJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartRxNormInferenceJob");
   let body: any;
@@ -447,7 +447,7 @@ export const se_StartRxNormInferenceJobCommand = async (
  */
 export const se_StartSNOMEDCTInferenceJobCommand = async (
   input: StartSNOMEDCTInferenceJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartSNOMEDCTInferenceJob");
   let body: any;
@@ -460,7 +460,7 @@ export const se_StartSNOMEDCTInferenceJobCommand = async (
  */
 export const se_StopEntitiesDetectionV2JobCommand = async (
   input: StopEntitiesDetectionV2JobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopEntitiesDetectionV2Job");
   let body: any;
@@ -473,7 +473,7 @@ export const se_StopEntitiesDetectionV2JobCommand = async (
  */
 export const se_StopICD10CMInferenceJobCommand = async (
   input: StopICD10CMInferenceJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopICD10CMInferenceJob");
   let body: any;
@@ -486,7 +486,7 @@ export const se_StopICD10CMInferenceJobCommand = async (
  */
 export const se_StopPHIDetectionJobCommand = async (
   input: StopPHIDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopPHIDetectionJob");
   let body: any;
@@ -499,7 +499,7 @@ export const se_StopPHIDetectionJobCommand = async (
  */
 export const se_StopRxNormInferenceJobCommand = async (
   input: StopRxNormInferenceJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopRxNormInferenceJob");
   let body: any;
@@ -512,7 +512,7 @@ export const se_StopRxNormInferenceJobCommand = async (
  */
 export const se_StopSNOMEDCTInferenceJobCommand = async (
   input: StopSNOMEDCTInferenceJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopSNOMEDCTInferenceJob");
   let body: any;
@@ -525,7 +525,7 @@ export const se_StopSNOMEDCTInferenceJobCommand = async (
  */
 export const de_DescribeEntitiesDetectionV2JobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEntitiesDetectionV2JobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -545,7 +545,7 @@ export const de_DescribeEntitiesDetectionV2JobCommand = async (
  */
 export const de_DescribeICD10CMInferenceJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeICD10CMInferenceJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -565,7 +565,7 @@ export const de_DescribeICD10CMInferenceJobCommand = async (
  */
 export const de_DescribePHIDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePHIDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -585,7 +585,7 @@ export const de_DescribePHIDetectionJobCommand = async (
  */
 export const de_DescribeRxNormInferenceJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRxNormInferenceJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -605,7 +605,7 @@ export const de_DescribeRxNormInferenceJobCommand = async (
  */
 export const de_DescribeSNOMEDCTInferenceJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSNOMEDCTInferenceJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -625,7 +625,7 @@ export const de_DescribeSNOMEDCTInferenceJobCommand = async (
  */
 export const de_DetectEntitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetectEntitiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -645,7 +645,7 @@ export const de_DetectEntitiesCommand = async (
  */
 export const de_DetectEntitiesV2Command = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetectEntitiesV2CommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -665,7 +665,7 @@ export const de_DetectEntitiesV2Command = async (
  */
 export const de_DetectPHICommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetectPHICommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -685,7 +685,7 @@ export const de_DetectPHICommand = async (
  */
 export const de_InferICD10CMCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InferICD10CMCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -705,7 +705,7 @@ export const de_InferICD10CMCommand = async (
  */
 export const de_InferRxNormCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InferRxNormCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -725,7 +725,7 @@ export const de_InferRxNormCommand = async (
  */
 export const de_InferSNOMEDCTCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InferSNOMEDCTCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -745,7 +745,7 @@ export const de_InferSNOMEDCTCommand = async (
  */
 export const de_ListEntitiesDetectionV2JobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEntitiesDetectionV2JobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -765,7 +765,7 @@ export const de_ListEntitiesDetectionV2JobsCommand = async (
  */
 export const de_ListICD10CMInferenceJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListICD10CMInferenceJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -785,7 +785,7 @@ export const de_ListICD10CMInferenceJobsCommand = async (
  */
 export const de_ListPHIDetectionJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPHIDetectionJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -805,7 +805,7 @@ export const de_ListPHIDetectionJobsCommand = async (
  */
 export const de_ListRxNormInferenceJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRxNormInferenceJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -825,7 +825,7 @@ export const de_ListRxNormInferenceJobsCommand = async (
  */
 export const de_ListSNOMEDCTInferenceJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSNOMEDCTInferenceJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -845,7 +845,7 @@ export const de_ListSNOMEDCTInferenceJobsCommand = async (
  */
 export const de_StartEntitiesDetectionV2JobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartEntitiesDetectionV2JobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -865,7 +865,7 @@ export const de_StartEntitiesDetectionV2JobCommand = async (
  */
 export const de_StartICD10CMInferenceJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartICD10CMInferenceJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -885,7 +885,7 @@ export const de_StartICD10CMInferenceJobCommand = async (
  */
 export const de_StartPHIDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartPHIDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -905,7 +905,7 @@ export const de_StartPHIDetectionJobCommand = async (
  */
 export const de_StartRxNormInferenceJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartRxNormInferenceJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -925,7 +925,7 @@ export const de_StartRxNormInferenceJobCommand = async (
  */
 export const de_StartSNOMEDCTInferenceJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartSNOMEDCTInferenceJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -945,7 +945,7 @@ export const de_StartSNOMEDCTInferenceJobCommand = async (
  */
 export const de_StopEntitiesDetectionV2JobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopEntitiesDetectionV2JobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -965,7 +965,7 @@ export const de_StopEntitiesDetectionV2JobCommand = async (
  */
 export const de_StopICD10CMInferenceJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopICD10CMInferenceJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -985,7 +985,7 @@ export const de_StopICD10CMInferenceJobCommand = async (
  */
 export const de_StopPHIDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopPHIDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1005,7 +1005,7 @@ export const de_StopPHIDetectionJobCommand = async (
  */
 export const de_StopRxNormInferenceJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopRxNormInferenceJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1025,7 +1025,7 @@ export const de_StopRxNormInferenceJobCommand = async (
  */
 export const de_StopSNOMEDCTInferenceJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopSNOMEDCTInferenceJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1089,7 +1089,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1105,7 +1105,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_InvalidEncodingExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidEncodingException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1121,7 +1121,7 @@ const de_InvalidEncodingExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1137,7 +1137,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1153,7 +1153,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1169,7 +1169,7 @@ const de_ServiceUnavailableExceptionRes = async (
  */
 const de_TextSizeLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TextSizeLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1185,7 +1185,7 @@ const de_TextSizeLimitExceededExceptionRes = async (
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1250,7 +1250,7 @@ const se_ComprehendMedicalAsyncJobFilter = (input: ComprehendMedicalAsyncJobFilt
  */
 const se_ListEntitiesDetectionV2JobsRequest = (
   input: ListEntitiesDetectionV2JobsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Filter: (_) => se_ComprehendMedicalAsyncJobFilter(_, context),
@@ -1310,7 +1310,7 @@ const se_ListSNOMEDCTInferenceJobsRequest = (input: ListSNOMEDCTInferenceJobsReq
  */
 const se_StartEntitiesDetectionV2JobRequest = (
   input: StartEntitiesDetectionV2JobRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
@@ -1430,7 +1430,7 @@ const de_AttributeList = (output: any, context: __SerdeContext): Attribute[] => 
  */
 const de_ComprehendMedicalAsyncJobProperties = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ComprehendMedicalAsyncJobProperties => {
   return take(output, {
     DataAccessRoleArn: __expectString,
@@ -1455,7 +1455,7 @@ const de_ComprehendMedicalAsyncJobProperties = (
  */
 const de_ComprehendMedicalAsyncJobPropertiesList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ComprehendMedicalAsyncJobProperties[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -1470,7 +1470,7 @@ const de_ComprehendMedicalAsyncJobPropertiesList = (
  */
 const de_DescribeEntitiesDetectionV2JobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeEntitiesDetectionV2JobResponse => {
   return take(output, {
     ComprehendMedicalAsyncJobProperties: (_: any) => de_ComprehendMedicalAsyncJobProperties(_, context),
@@ -1482,7 +1482,7 @@ const de_DescribeEntitiesDetectionV2JobResponse = (
  */
 const de_DescribeICD10CMInferenceJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeICD10CMInferenceJobResponse => {
   return take(output, {
     ComprehendMedicalAsyncJobProperties: (_: any) => de_ComprehendMedicalAsyncJobProperties(_, context),
@@ -1503,7 +1503,7 @@ const de_DescribePHIDetectionJobResponse = (output: any, context: __SerdeContext
  */
 const de_DescribeRxNormInferenceJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeRxNormInferenceJobResponse => {
   return take(output, {
     ComprehendMedicalAsyncJobProperties: (_: any) => de_ComprehendMedicalAsyncJobProperties(_, context),
@@ -1515,7 +1515,7 @@ const de_DescribeRxNormInferenceJobResponse = (
  */
 const de_DescribeSNOMEDCTInferenceJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeSNOMEDCTInferenceJobResponse => {
   return take(output, {
     ComprehendMedicalAsyncJobProperties: (_: any) => de_ComprehendMedicalAsyncJobProperties(_, context),
@@ -1739,7 +1739,7 @@ const de_InferSNOMEDCTResponse = (output: any, context: __SerdeContext): InferSN
  */
 const de_ListEntitiesDetectionV2JobsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListEntitiesDetectionV2JobsResponse => {
   return take(output, {
     ComprehendMedicalAsyncJobPropertiesList: (_: any) => de_ComprehendMedicalAsyncJobPropertiesList(_, context),
@@ -1752,7 +1752,7 @@ const de_ListEntitiesDetectionV2JobsResponse = (
  */
 const de_ListICD10CMInferenceJobsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListICD10CMInferenceJobsResponse => {
   return take(output, {
     ComprehendMedicalAsyncJobPropertiesList: (_: any) => de_ComprehendMedicalAsyncJobPropertiesList(_, context),
@@ -1785,7 +1785,7 @@ const de_ListRxNormInferenceJobsResponse = (output: any, context: __SerdeContext
  */
 const de_ListSNOMEDCTInferenceJobsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListSNOMEDCTInferenceJobsResponse => {
   return take(output, {
     ComprehendMedicalAsyncJobPropertiesList: (_: any) => de_ComprehendMedicalAsyncJobPropertiesList(_, context),
@@ -2098,7 +2098,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

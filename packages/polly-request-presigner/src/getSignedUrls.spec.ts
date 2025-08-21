@@ -62,7 +62,7 @@ describe("getSignedUrl", () => {
       {
         relation: "before",
         toMiddleware: "presignInterceptMiddleware",
-      }
+      },
     );
     const command = new SynthesizeSpeechCommand({
       Text: "hello world, this is alex",

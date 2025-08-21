@@ -137,7 +137,7 @@ const checkState = async (client: CloudFormationClient, input: DescribeStacksCom
  */
 export const waitForStackDeleteComplete = async (
   params: WaiterConfiguration<CloudFormationClient>,
-  input: DescribeStacksCommandInput
+  input: DescribeStacksCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -149,7 +149,7 @@ export const waitForStackDeleteComplete = async (
  */
 export const waitUntilStackDeleteComplete = async (
   params: WaiterConfiguration<CloudFormationClient>,
-  input: DescribeStacksCommandInput
+  input: DescribeStacksCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

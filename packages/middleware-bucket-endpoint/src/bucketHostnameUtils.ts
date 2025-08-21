@@ -33,7 +33,7 @@ export interface ArnHostnameParams extends Omit<BucketHostnameParams, "bucketNam
 }
 
 export const isBucketNameOptions = (
-  options: BucketHostnameParams | ArnHostnameParams
+  options: BucketHostnameParams | ArnHostnameParams,
 ): options is BucketHostnameParams => typeof options.bucketName === "string";
 
 /**
@@ -124,7 +124,7 @@ export const validateRegion = (
     clientRegion: string;
     clientSigningRegion: string;
     useFipsEndpoint: boolean;
-  }
+  },
 ) => {
   if (region === "") {
     throw new Error("ARN region is empty");
@@ -203,7 +203,7 @@ export const validateCustomEndpoint = (options: {
  * @returns Access Point Name and optional Outpost ID.
  */
 export const getArnResources = (
-  resource: string
+  resource: string,
 ): {
   accesspointName: string;
   outpostId?: string;
@@ -220,7 +220,7 @@ export const getArnResources = (
     // Parse outpost ARN
     if (!rest[0] || rest[1] !== "accesspoint" || !rest[2] || rest.length !== 3) {
       throw new Error(
-        `Outpost ARN should have resource outpost${delimiter}{outpostId}${delimiter}accesspoint${delimiter}{accesspointName}`
+        `Outpost ARN should have resource outpost${delimiter}{outpostId}${delimiter}accesspoint${delimiter}{accesspointName}`,
       );
     }
     const [outpostId, _, accesspointName] = rest;

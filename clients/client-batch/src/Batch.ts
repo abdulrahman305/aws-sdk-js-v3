@@ -150,7 +150,7 @@ export interface Batch {
   cancelJob(
     args: CancelJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelJobCommandOutput) => void
+    cb: (err: any, data?: CancelJobCommandOutput) => void,
   ): void;
 
   /**
@@ -158,16 +158,16 @@ export interface Batch {
    */
   createComputeEnvironment(
     args: CreateComputeEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateComputeEnvironmentCommandOutput>;
   createComputeEnvironment(
     args: CreateComputeEnvironmentCommandInput,
-    cb: (err: any, data?: CreateComputeEnvironmentCommandOutput) => void
+    cb: (err: any, data?: CreateComputeEnvironmentCommandOutput) => void,
   ): void;
   createComputeEnvironment(
     args: CreateComputeEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateComputeEnvironmentCommandOutput) => void
+    cb: (err: any, data?: CreateComputeEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -175,13 +175,13 @@ export interface Batch {
    */
   createJobQueue(
     args: CreateJobQueueCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateJobQueueCommandOutput>;
   createJobQueue(args: CreateJobQueueCommandInput, cb: (err: any, data?: CreateJobQueueCommandOutput) => void): void;
   createJobQueue(
     args: CreateJobQueueCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateJobQueueCommandOutput) => void
+    cb: (err: any, data?: CreateJobQueueCommandOutput) => void,
   ): void;
 
   /**
@@ -189,16 +189,16 @@ export interface Batch {
    */
   createSchedulingPolicy(
     args: CreateSchedulingPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSchedulingPolicyCommandOutput>;
   createSchedulingPolicy(
     args: CreateSchedulingPolicyCommandInput,
-    cb: (err: any, data?: CreateSchedulingPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateSchedulingPolicyCommandOutput) => void,
   ): void;
   createSchedulingPolicy(
     args: CreateSchedulingPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSchedulingPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateSchedulingPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -206,16 +206,16 @@ export interface Batch {
    */
   deleteComputeEnvironment(
     args: DeleteComputeEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteComputeEnvironmentCommandOutput>;
   deleteComputeEnvironment(
     args: DeleteComputeEnvironmentCommandInput,
-    cb: (err: any, data?: DeleteComputeEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteComputeEnvironmentCommandOutput) => void,
   ): void;
   deleteComputeEnvironment(
     args: DeleteComputeEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteComputeEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteComputeEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -223,13 +223,13 @@ export interface Batch {
    */
   deleteJobQueue(
     args: DeleteJobQueueCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteJobQueueCommandOutput>;
   deleteJobQueue(args: DeleteJobQueueCommandInput, cb: (err: any, data?: DeleteJobQueueCommandOutput) => void): void;
   deleteJobQueue(
     args: DeleteJobQueueCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteJobQueueCommandOutput) => void
+    cb: (err: any, data?: DeleteJobQueueCommandOutput) => void,
   ): void;
 
   /**
@@ -237,16 +237,16 @@ export interface Batch {
    */
   deleteSchedulingPolicy(
     args: DeleteSchedulingPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSchedulingPolicyCommandOutput>;
   deleteSchedulingPolicy(
     args: DeleteSchedulingPolicyCommandInput,
-    cb: (err: any, data?: DeleteSchedulingPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteSchedulingPolicyCommandOutput) => void,
   ): void;
   deleteSchedulingPolicy(
     args: DeleteSchedulingPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSchedulingPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteSchedulingPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -254,16 +254,16 @@ export interface Batch {
    */
   deregisterJobDefinition(
     args: DeregisterJobDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterJobDefinitionCommandOutput>;
   deregisterJobDefinition(
     args: DeregisterJobDefinitionCommandInput,
-    cb: (err: any, data?: DeregisterJobDefinitionCommandOutput) => void
+    cb: (err: any, data?: DeregisterJobDefinitionCommandOutput) => void,
   ): void;
   deregisterJobDefinition(
     args: DeregisterJobDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterJobDefinitionCommandOutput) => void
+    cb: (err: any, data?: DeregisterJobDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -272,16 +272,16 @@ export interface Batch {
   describeComputeEnvironments(): Promise<DescribeComputeEnvironmentsCommandOutput>;
   describeComputeEnvironments(
     args: DescribeComputeEnvironmentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeComputeEnvironmentsCommandOutput>;
   describeComputeEnvironments(
     args: DescribeComputeEnvironmentsCommandInput,
-    cb: (err: any, data?: DescribeComputeEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: DescribeComputeEnvironmentsCommandOutput) => void,
   ): void;
   describeComputeEnvironments(
     args: DescribeComputeEnvironmentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeComputeEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: DescribeComputeEnvironmentsCommandOutput) => void,
   ): void;
 
   /**
@@ -290,16 +290,16 @@ export interface Batch {
   describeJobDefinitions(): Promise<DescribeJobDefinitionsCommandOutput>;
   describeJobDefinitions(
     args: DescribeJobDefinitionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeJobDefinitionsCommandOutput>;
   describeJobDefinitions(
     args: DescribeJobDefinitionsCommandInput,
-    cb: (err: any, data?: DescribeJobDefinitionsCommandOutput) => void
+    cb: (err: any, data?: DescribeJobDefinitionsCommandOutput) => void,
   ): void;
   describeJobDefinitions(
     args: DescribeJobDefinitionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeJobDefinitionsCommandOutput) => void
+    cb: (err: any, data?: DescribeJobDefinitionsCommandOutput) => void,
   ): void;
 
   /**
@@ -308,16 +308,16 @@ export interface Batch {
   describeJobQueues(): Promise<DescribeJobQueuesCommandOutput>;
   describeJobQueues(
     args: DescribeJobQueuesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeJobQueuesCommandOutput>;
   describeJobQueues(
     args: DescribeJobQueuesCommandInput,
-    cb: (err: any, data?: DescribeJobQueuesCommandOutput) => void
+    cb: (err: any, data?: DescribeJobQueuesCommandOutput) => void,
   ): void;
   describeJobQueues(
     args: DescribeJobQueuesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeJobQueuesCommandOutput) => void
+    cb: (err: any, data?: DescribeJobQueuesCommandOutput) => void,
   ): void;
 
   /**
@@ -328,7 +328,7 @@ export interface Batch {
   describeJobs(
     args: DescribeJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeJobsCommandOutput) => void
+    cb: (err: any, data?: DescribeJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -336,16 +336,16 @@ export interface Batch {
    */
   describeSchedulingPolicies(
     args: DescribeSchedulingPoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSchedulingPoliciesCommandOutput>;
   describeSchedulingPolicies(
     args: DescribeSchedulingPoliciesCommandInput,
-    cb: (err: any, data?: DescribeSchedulingPoliciesCommandOutput) => void
+    cb: (err: any, data?: DescribeSchedulingPoliciesCommandOutput) => void,
   ): void;
   describeSchedulingPolicies(
     args: DescribeSchedulingPoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSchedulingPoliciesCommandOutput) => void
+    cb: (err: any, data?: DescribeSchedulingPoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -353,16 +353,16 @@ export interface Batch {
    */
   getJobQueueSnapshot(
     args: GetJobQueueSnapshotCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetJobQueueSnapshotCommandOutput>;
   getJobQueueSnapshot(
     args: GetJobQueueSnapshotCommandInput,
-    cb: (err: any, data?: GetJobQueueSnapshotCommandOutput) => void
+    cb: (err: any, data?: GetJobQueueSnapshotCommandOutput) => void,
   ): void;
   getJobQueueSnapshot(
     args: GetJobQueueSnapshotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetJobQueueSnapshotCommandOutput) => void
+    cb: (err: any, data?: GetJobQueueSnapshotCommandOutput) => void,
   ): void;
 
   /**
@@ -374,7 +374,7 @@ export interface Batch {
   listJobs(
     args: ListJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListJobsCommandOutput) => void
+    cb: (err: any, data?: ListJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -383,16 +383,16 @@ export interface Batch {
   listSchedulingPolicies(): Promise<ListSchedulingPoliciesCommandOutput>;
   listSchedulingPolicies(
     args: ListSchedulingPoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSchedulingPoliciesCommandOutput>;
   listSchedulingPolicies(
     args: ListSchedulingPoliciesCommandInput,
-    cb: (err: any, data?: ListSchedulingPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListSchedulingPoliciesCommandOutput) => void,
   ): void;
   listSchedulingPolicies(
     args: ListSchedulingPoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSchedulingPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListSchedulingPoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -400,16 +400,16 @@ export interface Batch {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -417,16 +417,16 @@ export interface Batch {
    */
   registerJobDefinition(
     args: RegisterJobDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterJobDefinitionCommandOutput>;
   registerJobDefinition(
     args: RegisterJobDefinitionCommandInput,
-    cb: (err: any, data?: RegisterJobDefinitionCommandOutput) => void
+    cb: (err: any, data?: RegisterJobDefinitionCommandOutput) => void,
   ): void;
   registerJobDefinition(
     args: RegisterJobDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterJobDefinitionCommandOutput) => void
+    cb: (err: any, data?: RegisterJobDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -437,7 +437,7 @@ export interface Batch {
   submitJob(
     args: SubmitJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SubmitJobCommandOutput) => void
+    cb: (err: any, data?: SubmitJobCommandOutput) => void,
   ): void;
 
   /**
@@ -448,7 +448,7 @@ export interface Batch {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -459,7 +459,7 @@ export interface Batch {
   terminateJob(
     args: TerminateJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TerminateJobCommandOutput) => void
+    cb: (err: any, data?: TerminateJobCommandOutput) => void,
   ): void;
 
   /**
@@ -470,7 +470,7 @@ export interface Batch {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -478,16 +478,16 @@ export interface Batch {
    */
   updateComputeEnvironment(
     args: UpdateComputeEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateComputeEnvironmentCommandOutput>;
   updateComputeEnvironment(
     args: UpdateComputeEnvironmentCommandInput,
-    cb: (err: any, data?: UpdateComputeEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateComputeEnvironmentCommandOutput) => void,
   ): void;
   updateComputeEnvironment(
     args: UpdateComputeEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateComputeEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateComputeEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -495,13 +495,13 @@ export interface Batch {
    */
   updateJobQueue(
     args: UpdateJobQueueCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateJobQueueCommandOutput>;
   updateJobQueue(args: UpdateJobQueueCommandInput, cb: (err: any, data?: UpdateJobQueueCommandOutput) => void): void;
   updateJobQueue(
     args: UpdateJobQueueCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateJobQueueCommandOutput) => void
+    cb: (err: any, data?: UpdateJobQueueCommandOutput) => void,
   ): void;
 
   /**
@@ -509,16 +509,16 @@ export interface Batch {
    */
   updateSchedulingPolicy(
     args: UpdateSchedulingPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSchedulingPolicyCommandOutput>;
   updateSchedulingPolicy(
     args: UpdateSchedulingPolicyCommandInput,
-    cb: (err: any, data?: UpdateSchedulingPolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateSchedulingPolicyCommandOutput) => void,
   ): void;
   updateSchedulingPolicy(
     args: UpdateSchedulingPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSchedulingPolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateSchedulingPolicyCommandOutput) => void,
   ): void;
 }
 

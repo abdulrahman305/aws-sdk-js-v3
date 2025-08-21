@@ -59,7 +59,7 @@ export class JsonEnumsSerializer implements __OperationSerializer<RestJsonServic
 
 export const getJsonEnumsHandler = <Context>(
   operation: __Operation<JsonEnumsServerInput, JsonEnumsServerOutput, Context>,
-  customizer: __ValidationCustomizer<"JsonEnums">
+  customizer: __ValidationCustomizer<"JsonEnums">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "JsonEnums">([
     new httpbinding.UriSpec<"RestJson", "JsonEnums">("PUT", [{ type: "path_literal", value: "JsonEnums" }], [], {
@@ -87,7 +87,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -125,7 +125,7 @@ export class JsonEnumsHandler<Context> implements __ServiceHandler<Context> {
   private readonly serializer: __OperationSerializer<RestJsonService<Context>, "JsonEnums", JsonEnumsErrors>;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"JsonEnums">;
   /**
@@ -142,7 +142,7 @@ export class JsonEnumsHandler<Context> implements __ServiceHandler<Context> {
     mux: __Mux<"RestJson", "JsonEnums">,
     serializer: __OperationSerializer<RestJsonService<Context>, "JsonEnums", JsonEnumsErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"JsonEnums">
+    validationCustomizer: __ValidationCustomizer<"JsonEnums">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -154,7 +154,7 @@ export class JsonEnumsHandler<Context> implements __ServiceHandler<Context> {
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.JsonEnums. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.JsonEnums. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -166,7 +166,7 @@ export class JsonEnumsHandler<Context> implements __ServiceHandler<Context> {
       this.operation,
       this.serializeFrameworkException,
       JsonEnumsServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

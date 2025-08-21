@@ -3610,7 +3610,7 @@ export const CreateNodeFromTemplateJobRequestFilterSensitiveLog = (obj: CreateNo
  * @internal
  */
 export const DescribeNodeFromTemplateJobResponseFilterSensitiveLog = (
-  obj: DescribeNodeFromTemplateJobResponse
+  obj: DescribeNodeFromTemplateJobResponse,
 ): any => ({
   ...obj,
   ...(obj.TemplateParameters && { TemplateParameters: SENSITIVE_STRING }),

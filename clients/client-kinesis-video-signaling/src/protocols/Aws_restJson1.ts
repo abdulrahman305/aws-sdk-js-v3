@@ -39,7 +39,7 @@ import {
  */
 export const se_GetIceServerConfigCommand = async (
   input: GetIceServerConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -53,7 +53,7 @@ export const se_GetIceServerConfigCommand = async (
       ClientId: [],
       Service: [],
       Username: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -64,7 +64,7 @@ export const se_GetIceServerConfigCommand = async (
  */
 export const se_SendAlexaOfferToMasterCommand = async (
   input: SendAlexaOfferToMasterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -77,7 +77,7 @@ export const se_SendAlexaOfferToMasterCommand = async (
       ChannelARN: [],
       MessagePayload: [],
       SenderClientId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -88,7 +88,7 @@ export const se_SendAlexaOfferToMasterCommand = async (
  */
 export const de_GetIceServerConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIceServerConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -109,7 +109,7 @@ export const de_GetIceServerConfigCommand = async (
  */
 export const de_SendAlexaOfferToMasterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendAlexaOfferToMasterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -169,7 +169,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_ClientLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ClientLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -189,7 +189,7 @@ const de_ClientLimitExceededExceptionRes = async (
  */
 const de_InvalidArgumentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidArgumentException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -209,7 +209,7 @@ const de_InvalidArgumentExceptionRes = async (
  */
 const de_InvalidClientExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidClientException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -229,7 +229,7 @@ const de_InvalidClientExceptionRes = async (
  */
 const de_NotAuthorizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotAuthorizedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -249,7 +249,7 @@ const de_NotAuthorizedExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -269,7 +269,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_SessionExpiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SessionExpiredException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

@@ -253,7 +253,7 @@ import { ResiliencehubServiceException as __BaseException } from "../models/Resi
  */
 export const se_AddDraftAppVersionResourceMappingsCommand = async (
   input: AddDraftAppVersionResourceMappingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -265,7 +265,7 @@ export const se_AddDraftAppVersionResourceMappingsCommand = async (
     take(input, {
       appArn: [],
       resourceMappings: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -276,7 +276,7 @@ export const se_AddDraftAppVersionResourceMappingsCommand = async (
  */
 export const se_BatchUpdateRecommendationStatusCommand = async (
   input: BatchUpdateRecommendationStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -288,7 +288,7 @@ export const se_BatchUpdateRecommendationStatusCommand = async (
     take(input, {
       appArn: [],
       requestEntries: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -299,7 +299,7 @@ export const se_BatchUpdateRecommendationStatusCommand = async (
  */
 export const se_CreateAppCommand = async (
   input: CreateAppCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -317,7 +317,7 @@ export const se_CreateAppCommand = async (
       permissionModel: (_) => _json(_),
       policyArn: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -328,7 +328,7 @@ export const se_CreateAppCommand = async (
  */
 export const se_CreateAppVersionAppComponentCommand = async (
   input: CreateAppVersionAppComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -344,7 +344,7 @@ export const se_CreateAppVersionAppComponentCommand = async (
       id: [],
       name: [],
       type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -355,7 +355,7 @@ export const se_CreateAppVersionAppComponentCommand = async (
  */
 export const se_CreateAppVersionResourceCommand = async (
   input: CreateAppVersionResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -375,7 +375,7 @@ export const se_CreateAppVersionResourceCommand = async (
       physicalResourceId: [],
       resourceName: [],
       resourceType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -386,7 +386,7 @@ export const se_CreateAppVersionResourceCommand = async (
  */
 export const se_CreateRecommendationTemplateCommand = async (
   input: CreateRecommendationTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -404,7 +404,7 @@ export const se_CreateRecommendationTemplateCommand = async (
       recommendationIds: (_) => _json(_),
       recommendationTypes: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -415,7 +415,7 @@ export const se_CreateRecommendationTemplateCommand = async (
  */
 export const se_CreateResiliencyPolicyCommand = async (
   input: CreateResiliencyPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -432,7 +432,7 @@ export const se_CreateResiliencyPolicyCommand = async (
       policyName: [],
       tags: (_) => _json(_),
       tier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -443,7 +443,7 @@ export const se_CreateResiliencyPolicyCommand = async (
  */
 export const se_DeleteAppCommand = async (
   input: DeleteAppCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -456,7 +456,7 @@ export const se_DeleteAppCommand = async (
       appArn: [],
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       forceDelete: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -467,7 +467,7 @@ export const se_DeleteAppCommand = async (
  */
 export const se_DeleteAppAssessmentCommand = async (
   input: DeleteAppAssessmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -479,7 +479,7 @@ export const se_DeleteAppAssessmentCommand = async (
     take(input, {
       assessmentArn: [],
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -490,7 +490,7 @@ export const se_DeleteAppAssessmentCommand = async (
  */
 export const se_DeleteAppInputSourceCommand = async (
   input: DeleteAppInputSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -505,7 +505,7 @@ export const se_DeleteAppInputSourceCommand = async (
       eksSourceClusterNamespace: (_) => _json(_),
       sourceArn: [],
       terraformSource: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -516,7 +516,7 @@ export const se_DeleteAppInputSourceCommand = async (
  */
 export const se_DeleteAppVersionAppComponentCommand = async (
   input: DeleteAppVersionAppComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -529,7 +529,7 @@ export const se_DeleteAppVersionAppComponentCommand = async (
       appArn: [],
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       id: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -540,7 +540,7 @@ export const se_DeleteAppVersionAppComponentCommand = async (
  */
 export const se_DeleteAppVersionResourceCommand = async (
   input: DeleteAppVersionResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -557,7 +557,7 @@ export const se_DeleteAppVersionResourceCommand = async (
       logicalResourceId: (_) => _json(_),
       physicalResourceId: [],
       resourceName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -568,7 +568,7 @@ export const se_DeleteAppVersionResourceCommand = async (
  */
 export const se_DeleteRecommendationTemplateCommand = async (
   input: DeleteRecommendationTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -580,7 +580,7 @@ export const se_DeleteRecommendationTemplateCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       recommendationTemplateArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -591,7 +591,7 @@ export const se_DeleteRecommendationTemplateCommand = async (
  */
 export const se_DeleteResiliencyPolicyCommand = async (
   input: DeleteResiliencyPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -603,7 +603,7 @@ export const se_DeleteResiliencyPolicyCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       policyArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -614,7 +614,7 @@ export const se_DeleteResiliencyPolicyCommand = async (
  */
 export const se_DescribeAppCommand = async (
   input: DescribeAppCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -625,7 +625,7 @@ export const se_DescribeAppCommand = async (
   body = JSON.stringify(
     take(input, {
       appArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -636,7 +636,7 @@ export const se_DescribeAppCommand = async (
  */
 export const se_DescribeAppAssessmentCommand = async (
   input: DescribeAppAssessmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -647,7 +647,7 @@ export const se_DescribeAppAssessmentCommand = async (
   body = JSON.stringify(
     take(input, {
       assessmentArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -658,7 +658,7 @@ export const se_DescribeAppAssessmentCommand = async (
  */
 export const se_DescribeAppVersionCommand = async (
   input: DescribeAppVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -670,7 +670,7 @@ export const se_DescribeAppVersionCommand = async (
     take(input, {
       appArn: [],
       appVersion: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -681,7 +681,7 @@ export const se_DescribeAppVersionCommand = async (
  */
 export const se_DescribeAppVersionAppComponentCommand = async (
   input: DescribeAppVersionAppComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -694,7 +694,7 @@ export const se_DescribeAppVersionAppComponentCommand = async (
       appArn: [],
       appVersion: [],
       id: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -705,7 +705,7 @@ export const se_DescribeAppVersionAppComponentCommand = async (
  */
 export const se_DescribeAppVersionResourceCommand = async (
   input: DescribeAppVersionResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -722,7 +722,7 @@ export const se_DescribeAppVersionResourceCommand = async (
       logicalResourceId: (_) => _json(_),
       physicalResourceId: [],
       resourceName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -733,7 +733,7 @@ export const se_DescribeAppVersionResourceCommand = async (
  */
 export const se_DescribeAppVersionResourcesResolutionStatusCommand = async (
   input: DescribeAppVersionResourcesResolutionStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -746,7 +746,7 @@ export const se_DescribeAppVersionResourcesResolutionStatusCommand = async (
       appArn: [],
       appVersion: [],
       resolutionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -757,7 +757,7 @@ export const se_DescribeAppVersionResourcesResolutionStatusCommand = async (
  */
 export const se_DescribeAppVersionTemplateCommand = async (
   input: DescribeAppVersionTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -769,7 +769,7 @@ export const se_DescribeAppVersionTemplateCommand = async (
     take(input, {
       appArn: [],
       appVersion: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -780,7 +780,7 @@ export const se_DescribeAppVersionTemplateCommand = async (
  */
 export const se_DescribeDraftAppVersionResourcesImportStatusCommand = async (
   input: DescribeDraftAppVersionResourcesImportStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -791,7 +791,7 @@ export const se_DescribeDraftAppVersionResourcesImportStatusCommand = async (
   body = JSON.stringify(
     take(input, {
       appArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -802,7 +802,7 @@ export const se_DescribeDraftAppVersionResourcesImportStatusCommand = async (
  */
 export const se_DescribeResiliencyPolicyCommand = async (
   input: DescribeResiliencyPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -813,7 +813,7 @@ export const se_DescribeResiliencyPolicyCommand = async (
   body = JSON.stringify(
     take(input, {
       policyArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -824,7 +824,7 @@ export const se_DescribeResiliencyPolicyCommand = async (
  */
 export const se_ImportResourcesToDraftAppVersionCommand = async (
   input: ImportResourcesToDraftAppVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -839,7 +839,7 @@ export const se_ImportResourcesToDraftAppVersionCommand = async (
       importStrategy: [],
       sourceArns: (_) => _json(_),
       terraformSources: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -850,7 +850,7 @@ export const se_ImportResourcesToDraftAppVersionCommand = async (
  */
 export const se_ListAlarmRecommendationsCommand = async (
   input: ListAlarmRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -863,7 +863,7 @@ export const se_ListAlarmRecommendationsCommand = async (
       assessmentArn: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -874,7 +874,7 @@ export const se_ListAlarmRecommendationsCommand = async (
  */
 export const se_ListAppAssessmentComplianceDriftsCommand = async (
   input: ListAppAssessmentComplianceDriftsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -887,7 +887,7 @@ export const se_ListAppAssessmentComplianceDriftsCommand = async (
       assessmentArn: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -898,7 +898,7 @@ export const se_ListAppAssessmentComplianceDriftsCommand = async (
  */
 export const se_ListAppAssessmentResourceDriftsCommand = async (
   input: ListAppAssessmentResourceDriftsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -911,7 +911,7 @@ export const se_ListAppAssessmentResourceDriftsCommand = async (
       assessmentArn: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -922,7 +922,7 @@ export const se_ListAppAssessmentResourceDriftsCommand = async (
  */
 export const se_ListAppAssessmentsCommand = async (
   input: ListAppAssessmentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -947,7 +947,7 @@ export const se_ListAppAssessmentsCommand = async (
  */
 export const se_ListAppComponentCompliancesCommand = async (
   input: ListAppComponentCompliancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -960,7 +960,7 @@ export const se_ListAppComponentCompliancesCommand = async (
       assessmentArn: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -971,7 +971,7 @@ export const se_ListAppComponentCompliancesCommand = async (
  */
 export const se_ListAppComponentRecommendationsCommand = async (
   input: ListAppComponentRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -984,7 +984,7 @@ export const se_ListAppComponentRecommendationsCommand = async (
       assessmentArn: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -995,7 +995,7 @@ export const se_ListAppComponentRecommendationsCommand = async (
  */
 export const se_ListAppInputSourcesCommand = async (
   input: ListAppInputSourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1009,7 +1009,7 @@ export const se_ListAppInputSourcesCommand = async (
       appVersion: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1020,7 +1020,7 @@ export const se_ListAppInputSourcesCommand = async (
  */
 export const se_ListAppsCommand = async (
   input: ListAppsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1044,7 +1044,7 @@ export const se_ListAppsCommand = async (
  */
 export const se_ListAppVersionAppComponentsCommand = async (
   input: ListAppVersionAppComponentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1058,7 +1058,7 @@ export const se_ListAppVersionAppComponentsCommand = async (
       appVersion: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1069,7 +1069,7 @@ export const se_ListAppVersionAppComponentsCommand = async (
  */
 export const se_ListAppVersionResourceMappingsCommand = async (
   input: ListAppVersionResourceMappingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1083,7 +1083,7 @@ export const se_ListAppVersionResourceMappingsCommand = async (
       appVersion: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1094,7 +1094,7 @@ export const se_ListAppVersionResourceMappingsCommand = async (
  */
 export const se_ListAppVersionResourcesCommand = async (
   input: ListAppVersionResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1109,7 +1109,7 @@ export const se_ListAppVersionResourcesCommand = async (
       maxResults: [],
       nextToken: [],
       resolutionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1120,7 +1120,7 @@ export const se_ListAppVersionResourcesCommand = async (
  */
 export const se_ListAppVersionsCommand = async (
   input: ListAppVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1135,7 +1135,7 @@ export const se_ListAppVersionsCommand = async (
       maxResults: [],
       nextToken: [],
       startTime: (_) => _.getTime() / 1_000,
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1146,7 +1146,7 @@ export const se_ListAppVersionsCommand = async (
  */
 export const se_ListRecommendationTemplatesCommand = async (
   input: ListRecommendationTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1170,7 +1170,7 @@ export const se_ListRecommendationTemplatesCommand = async (
  */
 export const se_ListResiliencyPoliciesCommand = async (
   input: ListResiliencyPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1190,7 +1190,7 @@ export const se_ListResiliencyPoliciesCommand = async (
  */
 export const se_ListSopRecommendationsCommand = async (
   input: ListSopRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1203,7 +1203,7 @@ export const se_ListSopRecommendationsCommand = async (
       assessmentArn: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1214,7 +1214,7 @@ export const se_ListSopRecommendationsCommand = async (
  */
 export const se_ListSuggestedResiliencyPoliciesCommand = async (
   input: ListSuggestedResiliencyPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1233,7 +1233,7 @@ export const se_ListSuggestedResiliencyPoliciesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1249,7 +1249,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTestRecommendationsCommand = async (
   input: ListTestRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1262,7 +1262,7 @@ export const se_ListTestRecommendationsCommand = async (
       assessmentArn: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1273,7 +1273,7 @@ export const se_ListTestRecommendationsCommand = async (
  */
 export const se_ListUnsupportedAppVersionResourcesCommand = async (
   input: ListUnsupportedAppVersionResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1288,7 +1288,7 @@ export const se_ListUnsupportedAppVersionResourcesCommand = async (
       maxResults: [],
       nextToken: [],
       resolutionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1299,7 +1299,7 @@ export const se_ListUnsupportedAppVersionResourcesCommand = async (
  */
 export const se_PublishAppVersionCommand = async (
   input: PublishAppVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1311,7 +1311,7 @@ export const se_PublishAppVersionCommand = async (
     take(input, {
       appArn: [],
       versionName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1322,7 +1322,7 @@ export const se_PublishAppVersionCommand = async (
  */
 export const se_PutDraftAppVersionTemplateCommand = async (
   input: PutDraftAppVersionTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1334,7 +1334,7 @@ export const se_PutDraftAppVersionTemplateCommand = async (
     take(input, {
       appArn: [],
       appTemplateBody: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1345,7 +1345,7 @@ export const se_PutDraftAppVersionTemplateCommand = async (
  */
 export const se_RemoveDraftAppVersionResourceMappingsCommand = async (
   input: RemoveDraftAppVersionResourceMappingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1362,7 +1362,7 @@ export const se_RemoveDraftAppVersionResourceMappingsCommand = async (
       resourceGroupNames: (_) => _json(_),
       resourceNames: (_) => _json(_),
       terraformSourceNames: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1373,7 +1373,7 @@ export const se_RemoveDraftAppVersionResourceMappingsCommand = async (
  */
 export const se_ResolveAppVersionResourcesCommand = async (
   input: ResolveAppVersionResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1385,7 +1385,7 @@ export const se_ResolveAppVersionResourcesCommand = async (
     take(input, {
       appArn: [],
       appVersion: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1396,7 +1396,7 @@ export const se_ResolveAppVersionResourcesCommand = async (
  */
 export const se_StartAppAssessmentCommand = async (
   input: StartAppAssessmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1411,7 +1411,7 @@ export const se_StartAppAssessmentCommand = async (
       assessmentName: [],
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1422,7 +1422,7 @@ export const se_StartAppAssessmentCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1434,7 +1434,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1445,7 +1445,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1467,7 +1467,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAppCommand = async (
   input: UpdateAppCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1484,7 +1484,7 @@ export const se_UpdateAppCommand = async (
       eventSubscriptions: (_) => _json(_),
       permissionModel: (_) => _json(_),
       policyArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1495,7 +1495,7 @@ export const se_UpdateAppCommand = async (
  */
 export const se_UpdateAppVersionCommand = async (
   input: UpdateAppVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1507,7 +1507,7 @@ export const se_UpdateAppVersionCommand = async (
     take(input, {
       additionalInfo: (_) => _json(_),
       appArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1518,7 +1518,7 @@ export const se_UpdateAppVersionCommand = async (
  */
 export const se_UpdateAppVersionAppComponentCommand = async (
   input: UpdateAppVersionAppComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1533,7 +1533,7 @@ export const se_UpdateAppVersionAppComponentCommand = async (
       id: [],
       name: [],
       type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1544,7 +1544,7 @@ export const se_UpdateAppVersionAppComponentCommand = async (
  */
 export const se_UpdateAppVersionResourceCommand = async (
   input: UpdateAppVersionResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1564,7 +1564,7 @@ export const se_UpdateAppVersionResourceCommand = async (
       physicalResourceId: [],
       resourceName: [],
       resourceType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1575,7 +1575,7 @@ export const se_UpdateAppVersionResourceCommand = async (
  */
 export const se_UpdateResiliencyPolicyCommand = async (
   input: UpdateResiliencyPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1591,7 +1591,7 @@ export const se_UpdateResiliencyPolicyCommand = async (
       policyDescription: [],
       policyName: [],
       tier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1602,7 +1602,7 @@ export const se_UpdateResiliencyPolicyCommand = async (
  */
 export const de_AddDraftAppVersionResourceMappingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddDraftAppVersionResourceMappingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1625,7 +1625,7 @@ export const de_AddDraftAppVersionResourceMappingsCommand = async (
  */
 export const de_BatchUpdateRecommendationStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchUpdateRecommendationStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1648,7 +1648,7 @@ export const de_BatchUpdateRecommendationStatusCommand = async (
  */
 export const de_CreateAppCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAppCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1669,7 +1669,7 @@ export const de_CreateAppCommand = async (
  */
 export const de_CreateAppVersionAppComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAppVersionAppComponentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1692,7 +1692,7 @@ export const de_CreateAppVersionAppComponentCommand = async (
  */
 export const de_CreateAppVersionResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAppVersionResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1715,7 +1715,7 @@ export const de_CreateAppVersionResourceCommand = async (
  */
 export const de_CreateRecommendationTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRecommendationTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1736,7 +1736,7 @@ export const de_CreateRecommendationTemplateCommand = async (
  */
 export const de_CreateResiliencyPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateResiliencyPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1757,7 +1757,7 @@ export const de_CreateResiliencyPolicyCommand = async (
  */
 export const de_DeleteAppCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAppCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1778,7 +1778,7 @@ export const de_DeleteAppCommand = async (
  */
 export const de_DeleteAppAssessmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAppAssessmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1800,7 +1800,7 @@ export const de_DeleteAppAssessmentCommand = async (
  */
 export const de_DeleteAppInputSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAppInputSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1822,7 +1822,7 @@ export const de_DeleteAppInputSourceCommand = async (
  */
 export const de_DeleteAppVersionAppComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAppVersionAppComponentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1845,7 +1845,7 @@ export const de_DeleteAppVersionAppComponentCommand = async (
  */
 export const de_DeleteAppVersionResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAppVersionResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1868,7 +1868,7 @@ export const de_DeleteAppVersionResourceCommand = async (
  */
 export const de_DeleteRecommendationTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRecommendationTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1890,7 +1890,7 @@ export const de_DeleteRecommendationTemplateCommand = async (
  */
 export const de_DeleteResiliencyPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResiliencyPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1911,7 +1911,7 @@ export const de_DeleteResiliencyPolicyCommand = async (
  */
 export const de_DescribeAppCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAppCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1932,7 +1932,7 @@ export const de_DescribeAppCommand = async (
  */
 export const de_DescribeAppAssessmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAppAssessmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1953,7 +1953,7 @@ export const de_DescribeAppAssessmentCommand = async (
  */
 export const de_DescribeAppVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAppVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1976,7 +1976,7 @@ export const de_DescribeAppVersionCommand = async (
  */
 export const de_DescribeAppVersionAppComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAppVersionAppComponentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1999,7 +1999,7 @@ export const de_DescribeAppVersionAppComponentCommand = async (
  */
 export const de_DescribeAppVersionResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAppVersionResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2022,7 +2022,7 @@ export const de_DescribeAppVersionResourceCommand = async (
  */
 export const de_DescribeAppVersionResourcesResolutionStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAppVersionResourcesResolutionStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2047,7 +2047,7 @@ export const de_DescribeAppVersionResourcesResolutionStatusCommand = async (
  */
 export const de_DescribeAppVersionTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAppVersionTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2070,7 +2070,7 @@ export const de_DescribeAppVersionTemplateCommand = async (
  */
 export const de_DescribeDraftAppVersionResourcesImportStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDraftAppVersionResourcesImportStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2095,7 +2095,7 @@ export const de_DescribeDraftAppVersionResourcesImportStatusCommand = async (
  */
 export const de_DescribeResiliencyPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeResiliencyPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2116,7 +2116,7 @@ export const de_DescribeResiliencyPolicyCommand = async (
  */
 export const de_ImportResourcesToDraftAppVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportResourcesToDraftAppVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2142,7 +2142,7 @@ export const de_ImportResourcesToDraftAppVersionCommand = async (
  */
 export const de_ListAlarmRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAlarmRecommendationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2164,7 +2164,7 @@ export const de_ListAlarmRecommendationsCommand = async (
  */
 export const de_ListAppAssessmentComplianceDriftsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAppAssessmentComplianceDriftsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2186,7 +2186,7 @@ export const de_ListAppAssessmentComplianceDriftsCommand = async (
  */
 export const de_ListAppAssessmentResourceDriftsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAppAssessmentResourceDriftsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2208,7 +2208,7 @@ export const de_ListAppAssessmentResourceDriftsCommand = async (
  */
 export const de_ListAppAssessmentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAppAssessmentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2230,7 +2230,7 @@ export const de_ListAppAssessmentsCommand = async (
  */
 export const de_ListAppComponentCompliancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAppComponentCompliancesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2252,7 +2252,7 @@ export const de_ListAppComponentCompliancesCommand = async (
  */
 export const de_ListAppComponentRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAppComponentRecommendationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2274,7 +2274,7 @@ export const de_ListAppComponentRecommendationsCommand = async (
  */
 export const de_ListAppInputSourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAppInputSourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2296,7 +2296,7 @@ export const de_ListAppInputSourcesCommand = async (
  */
 export const de_ListAppsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAppsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2318,7 +2318,7 @@ export const de_ListAppsCommand = async (
  */
 export const de_ListAppVersionAppComponentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAppVersionAppComponentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2342,7 +2342,7 @@ export const de_ListAppVersionAppComponentsCommand = async (
  */
 export const de_ListAppVersionResourceMappingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAppVersionResourceMappingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2364,7 +2364,7 @@ export const de_ListAppVersionResourceMappingsCommand = async (
  */
 export const de_ListAppVersionResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAppVersionResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2387,7 +2387,7 @@ export const de_ListAppVersionResourcesCommand = async (
  */
 export const de_ListAppVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAppVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2409,7 +2409,7 @@ export const de_ListAppVersionsCommand = async (
  */
 export const de_ListRecommendationTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRecommendationTemplatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2431,7 +2431,7 @@ export const de_ListRecommendationTemplatesCommand = async (
  */
 export const de_ListResiliencyPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResiliencyPoliciesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2453,7 +2453,7 @@ export const de_ListResiliencyPoliciesCommand = async (
  */
 export const de_ListSopRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSopRecommendationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2475,7 +2475,7 @@ export const de_ListSopRecommendationsCommand = async (
  */
 export const de_ListSuggestedResiliencyPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSuggestedResiliencyPoliciesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2497,7 +2497,7 @@ export const de_ListSuggestedResiliencyPoliciesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2518,7 +2518,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTestRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTestRecommendationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2540,7 +2540,7 @@ export const de_ListTestRecommendationsCommand = async (
  */
 export const de_ListUnsupportedAppVersionResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListUnsupportedAppVersionResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2563,7 +2563,7 @@ export const de_ListUnsupportedAppVersionResourcesCommand = async (
  */
 export const de_PublishAppVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PublishAppVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2587,7 +2587,7 @@ export const de_PublishAppVersionCommand = async (
  */
 export const de_PutDraftAppVersionTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutDraftAppVersionTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2609,7 +2609,7 @@ export const de_PutDraftAppVersionTemplateCommand = async (
  */
 export const de_RemoveDraftAppVersionResourceMappingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveDraftAppVersionResourceMappingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2631,7 +2631,7 @@ export const de_RemoveDraftAppVersionResourceMappingsCommand = async (
  */
 export const de_ResolveAppVersionResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResolveAppVersionResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2655,7 +2655,7 @@ export const de_ResolveAppVersionResourcesCommand = async (
  */
 export const de_StartAppAssessmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartAppAssessmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2676,7 +2676,7 @@ export const de_StartAppAssessmentCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2693,7 +2693,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2710,7 +2710,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAppCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAppCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2731,7 +2731,7 @@ export const de_UpdateAppCommand = async (
  */
 export const de_UpdateAppVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAppVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2754,7 +2754,7 @@ export const de_UpdateAppVersionCommand = async (
  */
 export const de_UpdateAppVersionAppComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAppVersionAppComponentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2777,7 +2777,7 @@ export const de_UpdateAppVersionAppComponentCommand = async (
  */
 export const de_UpdateAppVersionResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAppVersionResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2800,7 +2800,7 @@ export const de_UpdateAppVersionResourceCommand = async (
  */
 export const de_UpdateResiliencyPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateResiliencyPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2863,7 +2863,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2902,7 +2902,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2922,7 +2922,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2944,7 +2944,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3327,15 +3327,18 @@ const de_Cost = (output: any, context: __SerdeContext): Cost => {
  */
 const de_DisruptionResiliencyScore = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Partial<Record<DisruptionType, number>> => {
-  return Object.entries(output).reduce((acc: Partial<Record<DisruptionType, number>>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Partial<Record<DisruptionType, number>>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as DisruptionType] = __limitedParseDouble(value) as any;
       return acc;
-    }
-    acc[key as DisruptionType] = __limitedParseDouble(value) as any;
-    return acc;
-  }, {} as Partial<Record<DisruptionType, number>>);
+    },
+    {} as Partial<Record<DisruptionType, number>>,
+  );
 };
 
 // de_EksNamespaceList omitted.
@@ -3485,7 +3488,7 @@ const de_ScoringComponentResiliencyScore = (output: any, context: __SerdeContext
  */
 const de_ScoringComponentResiliencyScores = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Partial<Record<ResiliencyScoreType, ScoringComponentResiliencyScore>> => {
   return Object.entries(output).reduce(
     (acc: Partial<Record<ResiliencyScoreType, ScoringComponentResiliencyScore>>, [key, value]: [string, any]) => {
@@ -3495,7 +3498,7 @@ const de_ScoringComponentResiliencyScores = (
       acc[key as ResiliencyScoreType] = de_ScoringComponentResiliencyScore(value, context);
       return acc;
     },
-    {} as Partial<Record<ResiliencyScoreType, ScoringComponentResiliencyScore>>
+    {} as Partial<Record<ResiliencyScoreType, ScoringComponentResiliencyScore>>,
   );
 };
 

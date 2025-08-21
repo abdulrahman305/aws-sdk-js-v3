@@ -41,7 +41,7 @@ describe("util-stream", () => {
         Payload: Buffer.from(
           JSON.stringify({
             hello: "world",
-          })
+          }),
         ),
       });
     });

@@ -42,7 +42,7 @@ export namespace OmitsSerializingEmptyListsServerInput {
    * @internal
    */
   export const validate: (
-    obj: Parameters<typeof OmitsSerializingEmptyListsInput.validate>[0]
+    obj: Parameters<typeof OmitsSerializingEmptyListsInput.validate>[0],
   ) => __ValidationFailure[] = OmitsSerializingEmptyListsInput.validate;
 }
 export interface OmitsSerializingEmptyListsServerOutput {}
@@ -50,8 +50,7 @@ export interface OmitsSerializingEmptyListsServerOutput {}
 export type OmitsSerializingEmptyListsErrors = never;
 
 export class OmitsSerializingEmptyListsSerializer
-  implements
-    __OperationSerializer<RestJsonService<any>, "OmitsSerializingEmptyLists", OmitsSerializingEmptyListsErrors>
+  implements __OperationSerializer<RestJsonService<any>, "OmitsSerializingEmptyLists", OmitsSerializingEmptyListsErrors>
 {
   serialize = serializeOmitsSerializingEmptyListsResponse;
   deserialize = deserializeOmitsSerializingEmptyListsRequest;
@@ -67,14 +66,14 @@ export class OmitsSerializingEmptyListsSerializer
 
 export const getOmitsSerializingEmptyListsHandler = <Context>(
   operation: __Operation<OmitsSerializingEmptyListsServerInput, OmitsSerializingEmptyListsServerOutput, Context>,
-  customizer: __ValidationCustomizer<"OmitsSerializingEmptyLists">
+  customizer: __ValidationCustomizer<"OmitsSerializingEmptyLists">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "OmitsSerializingEmptyLists">([
     new httpbinding.UriSpec<"RestJson", "OmitsSerializingEmptyLists">(
       "POST",
       [{ type: "path_literal", value: "OmitsSerializingEmptyLists" }],
       [],
-      { service: "RestJson", operation: "OmitsSerializingEmptyLists" }
+      { service: "RestJson", operation: "OmitsSerializingEmptyLists" },
     ),
   ]);
   return new OmitsSerializingEmptyListsHandler(
@@ -82,7 +81,7 @@ export const getOmitsSerializingEmptyListsHandler = <Context>(
     mux,
     new OmitsSerializingEmptyListsSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -103,7 +102,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -149,7 +148,7 @@ export class OmitsSerializingEmptyListsHandler<Context> implements __ServiceHand
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"OmitsSerializingEmptyLists">;
   /**
@@ -170,7 +169,7 @@ export class OmitsSerializingEmptyListsHandler<Context> implements __ServiceHand
       OmitsSerializingEmptyListsErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"OmitsSerializingEmptyLists">
+    validationCustomizer: __ValidationCustomizer<"OmitsSerializingEmptyLists">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -182,7 +181,7 @@ export class OmitsSerializingEmptyListsHandler<Context> implements __ServiceHand
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.OmitsSerializingEmptyLists. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.OmitsSerializingEmptyLists. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -194,7 +193,7 @@ export class OmitsSerializingEmptyListsHandler<Context> implements __ServiceHand
       this.operation,
       this.serializeFrameworkException,
       OmitsSerializingEmptyListsServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

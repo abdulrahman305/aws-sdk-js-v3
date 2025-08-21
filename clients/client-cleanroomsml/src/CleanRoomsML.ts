@@ -159,16 +159,16 @@ export interface CleanRoomsML {
    */
   createAudienceModel(
     args: CreateAudienceModelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAudienceModelCommandOutput>;
   createAudienceModel(
     args: CreateAudienceModelCommandInput,
-    cb: (err: any, data?: CreateAudienceModelCommandOutput) => void
+    cb: (err: any, data?: CreateAudienceModelCommandOutput) => void,
   ): void;
   createAudienceModel(
     args: CreateAudienceModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAudienceModelCommandOutput) => void
+    cb: (err: any, data?: CreateAudienceModelCommandOutput) => void,
   ): void;
 
   /**
@@ -176,16 +176,16 @@ export interface CleanRoomsML {
    */
   createConfiguredAudienceModel(
     args: CreateConfiguredAudienceModelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateConfiguredAudienceModelCommandOutput>;
   createConfiguredAudienceModel(
     args: CreateConfiguredAudienceModelCommandInput,
-    cb: (err: any, data?: CreateConfiguredAudienceModelCommandOutput) => void
+    cb: (err: any, data?: CreateConfiguredAudienceModelCommandOutput) => void,
   ): void;
   createConfiguredAudienceModel(
     args: CreateConfiguredAudienceModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateConfiguredAudienceModelCommandOutput) => void
+    cb: (err: any, data?: CreateConfiguredAudienceModelCommandOutput) => void,
   ): void;
 
   /**
@@ -193,16 +193,16 @@ export interface CleanRoomsML {
    */
   createTrainingDataset(
     args: CreateTrainingDatasetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateTrainingDatasetCommandOutput>;
   createTrainingDataset(
     args: CreateTrainingDatasetCommandInput,
-    cb: (err: any, data?: CreateTrainingDatasetCommandOutput) => void
+    cb: (err: any, data?: CreateTrainingDatasetCommandOutput) => void,
   ): void;
   createTrainingDataset(
     args: CreateTrainingDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTrainingDatasetCommandOutput) => void
+    cb: (err: any, data?: CreateTrainingDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -210,16 +210,16 @@ export interface CleanRoomsML {
    */
   deleteAudienceGenerationJob(
     args: DeleteAudienceGenerationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAudienceGenerationJobCommandOutput>;
   deleteAudienceGenerationJob(
     args: DeleteAudienceGenerationJobCommandInput,
-    cb: (err: any, data?: DeleteAudienceGenerationJobCommandOutput) => void
+    cb: (err: any, data?: DeleteAudienceGenerationJobCommandOutput) => void,
   ): void;
   deleteAudienceGenerationJob(
     args: DeleteAudienceGenerationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAudienceGenerationJobCommandOutput) => void
+    cb: (err: any, data?: DeleteAudienceGenerationJobCommandOutput) => void,
   ): void;
 
   /**
@@ -227,16 +227,16 @@ export interface CleanRoomsML {
    */
   deleteAudienceModel(
     args: DeleteAudienceModelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAudienceModelCommandOutput>;
   deleteAudienceModel(
     args: DeleteAudienceModelCommandInput,
-    cb: (err: any, data?: DeleteAudienceModelCommandOutput) => void
+    cb: (err: any, data?: DeleteAudienceModelCommandOutput) => void,
   ): void;
   deleteAudienceModel(
     args: DeleteAudienceModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAudienceModelCommandOutput) => void
+    cb: (err: any, data?: DeleteAudienceModelCommandOutput) => void,
   ): void;
 
   /**
@@ -244,16 +244,16 @@ export interface CleanRoomsML {
    */
   deleteConfiguredAudienceModel(
     args: DeleteConfiguredAudienceModelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConfiguredAudienceModelCommandOutput>;
   deleteConfiguredAudienceModel(
     args: DeleteConfiguredAudienceModelCommandInput,
-    cb: (err: any, data?: DeleteConfiguredAudienceModelCommandOutput) => void
+    cb: (err: any, data?: DeleteConfiguredAudienceModelCommandOutput) => void,
   ): void;
   deleteConfiguredAudienceModel(
     args: DeleteConfiguredAudienceModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConfiguredAudienceModelCommandOutput) => void
+    cb: (err: any, data?: DeleteConfiguredAudienceModelCommandOutput) => void,
   ): void;
 
   /**
@@ -261,16 +261,16 @@ export interface CleanRoomsML {
    */
   deleteConfiguredAudienceModelPolicy(
     args: DeleteConfiguredAudienceModelPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConfiguredAudienceModelPolicyCommandOutput>;
   deleteConfiguredAudienceModelPolicy(
     args: DeleteConfiguredAudienceModelPolicyCommandInput,
-    cb: (err: any, data?: DeleteConfiguredAudienceModelPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteConfiguredAudienceModelPolicyCommandOutput) => void,
   ): void;
   deleteConfiguredAudienceModelPolicy(
     args: DeleteConfiguredAudienceModelPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConfiguredAudienceModelPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteConfiguredAudienceModelPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -278,16 +278,16 @@ export interface CleanRoomsML {
    */
   deleteTrainingDataset(
     args: DeleteTrainingDatasetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteTrainingDatasetCommandOutput>;
   deleteTrainingDataset(
     args: DeleteTrainingDatasetCommandInput,
-    cb: (err: any, data?: DeleteTrainingDatasetCommandOutput) => void
+    cb: (err: any, data?: DeleteTrainingDatasetCommandOutput) => void,
   ): void;
   deleteTrainingDataset(
     args: DeleteTrainingDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTrainingDatasetCommandOutput) => void
+    cb: (err: any, data?: DeleteTrainingDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -295,16 +295,16 @@ export interface CleanRoomsML {
    */
   getAudienceGenerationJob(
     args: GetAudienceGenerationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAudienceGenerationJobCommandOutput>;
   getAudienceGenerationJob(
     args: GetAudienceGenerationJobCommandInput,
-    cb: (err: any, data?: GetAudienceGenerationJobCommandOutput) => void
+    cb: (err: any, data?: GetAudienceGenerationJobCommandOutput) => void,
   ): void;
   getAudienceGenerationJob(
     args: GetAudienceGenerationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAudienceGenerationJobCommandOutput) => void
+    cb: (err: any, data?: GetAudienceGenerationJobCommandOutput) => void,
   ): void;
 
   /**
@@ -312,16 +312,16 @@ export interface CleanRoomsML {
    */
   getAudienceModel(
     args: GetAudienceModelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAudienceModelCommandOutput>;
   getAudienceModel(
     args: GetAudienceModelCommandInput,
-    cb: (err: any, data?: GetAudienceModelCommandOutput) => void
+    cb: (err: any, data?: GetAudienceModelCommandOutput) => void,
   ): void;
   getAudienceModel(
     args: GetAudienceModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAudienceModelCommandOutput) => void
+    cb: (err: any, data?: GetAudienceModelCommandOutput) => void,
   ): void;
 
   /**
@@ -329,16 +329,16 @@ export interface CleanRoomsML {
    */
   getConfiguredAudienceModel(
     args: GetConfiguredAudienceModelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetConfiguredAudienceModelCommandOutput>;
   getConfiguredAudienceModel(
     args: GetConfiguredAudienceModelCommandInput,
-    cb: (err: any, data?: GetConfiguredAudienceModelCommandOutput) => void
+    cb: (err: any, data?: GetConfiguredAudienceModelCommandOutput) => void,
   ): void;
   getConfiguredAudienceModel(
     args: GetConfiguredAudienceModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetConfiguredAudienceModelCommandOutput) => void
+    cb: (err: any, data?: GetConfiguredAudienceModelCommandOutput) => void,
   ): void;
 
   /**
@@ -346,16 +346,16 @@ export interface CleanRoomsML {
    */
   getConfiguredAudienceModelPolicy(
     args: GetConfiguredAudienceModelPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetConfiguredAudienceModelPolicyCommandOutput>;
   getConfiguredAudienceModelPolicy(
     args: GetConfiguredAudienceModelPolicyCommandInput,
-    cb: (err: any, data?: GetConfiguredAudienceModelPolicyCommandOutput) => void
+    cb: (err: any, data?: GetConfiguredAudienceModelPolicyCommandOutput) => void,
   ): void;
   getConfiguredAudienceModelPolicy(
     args: GetConfiguredAudienceModelPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetConfiguredAudienceModelPolicyCommandOutput) => void
+    cb: (err: any, data?: GetConfiguredAudienceModelPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -363,16 +363,16 @@ export interface CleanRoomsML {
    */
   getTrainingDataset(
     args: GetTrainingDatasetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTrainingDatasetCommandOutput>;
   getTrainingDataset(
     args: GetTrainingDatasetCommandInput,
-    cb: (err: any, data?: GetTrainingDatasetCommandOutput) => void
+    cb: (err: any, data?: GetTrainingDatasetCommandOutput) => void,
   ): void;
   getTrainingDataset(
     args: GetTrainingDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTrainingDatasetCommandOutput) => void
+    cb: (err: any, data?: GetTrainingDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -381,16 +381,16 @@ export interface CleanRoomsML {
   listAudienceExportJobs(): Promise<ListAudienceExportJobsCommandOutput>;
   listAudienceExportJobs(
     args: ListAudienceExportJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAudienceExportJobsCommandOutput>;
   listAudienceExportJobs(
     args: ListAudienceExportJobsCommandInput,
-    cb: (err: any, data?: ListAudienceExportJobsCommandOutput) => void
+    cb: (err: any, data?: ListAudienceExportJobsCommandOutput) => void,
   ): void;
   listAudienceExportJobs(
     args: ListAudienceExportJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAudienceExportJobsCommandOutput) => void
+    cb: (err: any, data?: ListAudienceExportJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -399,16 +399,16 @@ export interface CleanRoomsML {
   listAudienceGenerationJobs(): Promise<ListAudienceGenerationJobsCommandOutput>;
   listAudienceGenerationJobs(
     args: ListAudienceGenerationJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAudienceGenerationJobsCommandOutput>;
   listAudienceGenerationJobs(
     args: ListAudienceGenerationJobsCommandInput,
-    cb: (err: any, data?: ListAudienceGenerationJobsCommandOutput) => void
+    cb: (err: any, data?: ListAudienceGenerationJobsCommandOutput) => void,
   ): void;
   listAudienceGenerationJobs(
     args: ListAudienceGenerationJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAudienceGenerationJobsCommandOutput) => void
+    cb: (err: any, data?: ListAudienceGenerationJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -417,16 +417,16 @@ export interface CleanRoomsML {
   listAudienceModels(): Promise<ListAudienceModelsCommandOutput>;
   listAudienceModels(
     args: ListAudienceModelsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAudienceModelsCommandOutput>;
   listAudienceModels(
     args: ListAudienceModelsCommandInput,
-    cb: (err: any, data?: ListAudienceModelsCommandOutput) => void
+    cb: (err: any, data?: ListAudienceModelsCommandOutput) => void,
   ): void;
   listAudienceModels(
     args: ListAudienceModelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAudienceModelsCommandOutput) => void
+    cb: (err: any, data?: ListAudienceModelsCommandOutput) => void,
   ): void;
 
   /**
@@ -435,16 +435,16 @@ export interface CleanRoomsML {
   listConfiguredAudienceModels(): Promise<ListConfiguredAudienceModelsCommandOutput>;
   listConfiguredAudienceModels(
     args: ListConfiguredAudienceModelsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListConfiguredAudienceModelsCommandOutput>;
   listConfiguredAudienceModels(
     args: ListConfiguredAudienceModelsCommandInput,
-    cb: (err: any, data?: ListConfiguredAudienceModelsCommandOutput) => void
+    cb: (err: any, data?: ListConfiguredAudienceModelsCommandOutput) => void,
   ): void;
   listConfiguredAudienceModels(
     args: ListConfiguredAudienceModelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListConfiguredAudienceModelsCommandOutput) => void
+    cb: (err: any, data?: ListConfiguredAudienceModelsCommandOutput) => void,
   ): void;
 
   /**
@@ -452,16 +452,16 @@ export interface CleanRoomsML {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -470,16 +470,16 @@ export interface CleanRoomsML {
   listTrainingDatasets(): Promise<ListTrainingDatasetsCommandOutput>;
   listTrainingDatasets(
     args: ListTrainingDatasetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTrainingDatasetsCommandOutput>;
   listTrainingDatasets(
     args: ListTrainingDatasetsCommandInput,
-    cb: (err: any, data?: ListTrainingDatasetsCommandOutput) => void
+    cb: (err: any, data?: ListTrainingDatasetsCommandOutput) => void,
   ): void;
   listTrainingDatasets(
     args: ListTrainingDatasetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTrainingDatasetsCommandOutput) => void
+    cb: (err: any, data?: ListTrainingDatasetsCommandOutput) => void,
   ): void;
 
   /**
@@ -487,16 +487,16 @@ export interface CleanRoomsML {
    */
   putConfiguredAudienceModelPolicy(
     args: PutConfiguredAudienceModelPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutConfiguredAudienceModelPolicyCommandOutput>;
   putConfiguredAudienceModelPolicy(
     args: PutConfiguredAudienceModelPolicyCommandInput,
-    cb: (err: any, data?: PutConfiguredAudienceModelPolicyCommandOutput) => void
+    cb: (err: any, data?: PutConfiguredAudienceModelPolicyCommandOutput) => void,
   ): void;
   putConfiguredAudienceModelPolicy(
     args: PutConfiguredAudienceModelPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutConfiguredAudienceModelPolicyCommandOutput) => void
+    cb: (err: any, data?: PutConfiguredAudienceModelPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -504,16 +504,16 @@ export interface CleanRoomsML {
    */
   startAudienceExportJob(
     args: StartAudienceExportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartAudienceExportJobCommandOutput>;
   startAudienceExportJob(
     args: StartAudienceExportJobCommandInput,
-    cb: (err: any, data?: StartAudienceExportJobCommandOutput) => void
+    cb: (err: any, data?: StartAudienceExportJobCommandOutput) => void,
   ): void;
   startAudienceExportJob(
     args: StartAudienceExportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartAudienceExportJobCommandOutput) => void
+    cb: (err: any, data?: StartAudienceExportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -521,16 +521,16 @@ export interface CleanRoomsML {
    */
   startAudienceGenerationJob(
     args: StartAudienceGenerationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartAudienceGenerationJobCommandOutput>;
   startAudienceGenerationJob(
     args: StartAudienceGenerationJobCommandInput,
-    cb: (err: any, data?: StartAudienceGenerationJobCommandOutput) => void
+    cb: (err: any, data?: StartAudienceGenerationJobCommandOutput) => void,
   ): void;
   startAudienceGenerationJob(
     args: StartAudienceGenerationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartAudienceGenerationJobCommandOutput) => void
+    cb: (err: any, data?: StartAudienceGenerationJobCommandOutput) => void,
   ): void;
 
   /**
@@ -541,7 +541,7 @@ export interface CleanRoomsML {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -552,7 +552,7 @@ export interface CleanRoomsML {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -560,16 +560,16 @@ export interface CleanRoomsML {
    */
   updateConfiguredAudienceModel(
     args: UpdateConfiguredAudienceModelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateConfiguredAudienceModelCommandOutput>;
   updateConfiguredAudienceModel(
     args: UpdateConfiguredAudienceModelCommandInput,
-    cb: (err: any, data?: UpdateConfiguredAudienceModelCommandOutput) => void
+    cb: (err: any, data?: UpdateConfiguredAudienceModelCommandOutput) => void,
   ): void;
   updateConfiguredAudienceModel(
     args: UpdateConfiguredAudienceModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateConfiguredAudienceModelCommandOutput) => void
+    cb: (err: any, data?: UpdateConfiguredAudienceModelCommandOutput) => void,
   ): void;
 }
 

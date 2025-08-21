@@ -139,7 +139,7 @@ import {
  */
 export const se_AssociateGatewayToServerCommand = async (
   input: AssociateGatewayToServerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateGatewayToServer");
   let body: any;
@@ -152,7 +152,7 @@ export const se_AssociateGatewayToServerCommand = async (
  */
 export const se_CreateGatewayCommand = async (
   input: CreateGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateGateway");
   let body: any;
@@ -165,7 +165,7 @@ export const se_CreateGatewayCommand = async (
  */
 export const se_DeleteGatewayCommand = async (
   input: DeleteGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteGateway");
   let body: any;
@@ -178,7 +178,7 @@ export const se_DeleteGatewayCommand = async (
  */
 export const se_DeleteHypervisorCommand = async (
   input: DeleteHypervisorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteHypervisor");
   let body: any;
@@ -191,7 +191,7 @@ export const se_DeleteHypervisorCommand = async (
  */
 export const se_DisassociateGatewayFromServerCommand = async (
   input: DisassociateGatewayFromServerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateGatewayFromServer");
   let body: any;
@@ -204,7 +204,7 @@ export const se_DisassociateGatewayFromServerCommand = async (
  */
 export const se_GetBandwidthRateLimitScheduleCommand = async (
   input: GetBandwidthRateLimitScheduleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetBandwidthRateLimitSchedule");
   let body: any;
@@ -217,7 +217,7 @@ export const se_GetBandwidthRateLimitScheduleCommand = async (
  */
 export const se_GetGatewayCommand = async (
   input: GetGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetGateway");
   let body: any;
@@ -230,7 +230,7 @@ export const se_GetGatewayCommand = async (
  */
 export const se_GetHypervisorCommand = async (
   input: GetHypervisorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetHypervisor");
   let body: any;
@@ -243,7 +243,7 @@ export const se_GetHypervisorCommand = async (
  */
 export const se_GetHypervisorPropertyMappingsCommand = async (
   input: GetHypervisorPropertyMappingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetHypervisorPropertyMappings");
   let body: any;
@@ -256,7 +256,7 @@ export const se_GetHypervisorPropertyMappingsCommand = async (
  */
 export const se_GetVirtualMachineCommand = async (
   input: GetVirtualMachineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetVirtualMachine");
   let body: any;
@@ -269,7 +269,7 @@ export const se_GetVirtualMachineCommand = async (
  */
 export const se_ImportHypervisorConfigurationCommand = async (
   input: ImportHypervisorConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ImportHypervisorConfiguration");
   let body: any;
@@ -282,7 +282,7 @@ export const se_ImportHypervisorConfigurationCommand = async (
  */
 export const se_ListGatewaysCommand = async (
   input: ListGatewaysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListGateways");
   let body: any;
@@ -295,7 +295,7 @@ export const se_ListGatewaysCommand = async (
  */
 export const se_ListHypervisorsCommand = async (
   input: ListHypervisorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListHypervisors");
   let body: any;
@@ -308,7 +308,7 @@ export const se_ListHypervisorsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -321,7 +321,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListVirtualMachinesCommand = async (
   input: ListVirtualMachinesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListVirtualMachines");
   let body: any;
@@ -334,7 +334,7 @@ export const se_ListVirtualMachinesCommand = async (
  */
 export const se_PutBandwidthRateLimitScheduleCommand = async (
   input: PutBandwidthRateLimitScheduleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutBandwidthRateLimitSchedule");
   let body: any;
@@ -347,7 +347,7 @@ export const se_PutBandwidthRateLimitScheduleCommand = async (
  */
 export const se_PutHypervisorPropertyMappingsCommand = async (
   input: PutHypervisorPropertyMappingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutHypervisorPropertyMappings");
   let body: any;
@@ -360,7 +360,7 @@ export const se_PutHypervisorPropertyMappingsCommand = async (
  */
 export const se_PutMaintenanceStartTimeCommand = async (
   input: PutMaintenanceStartTimeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutMaintenanceStartTime");
   let body: any;
@@ -373,7 +373,7 @@ export const se_PutMaintenanceStartTimeCommand = async (
  */
 export const se_StartVirtualMachinesMetadataSyncCommand = async (
   input: StartVirtualMachinesMetadataSyncCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartVirtualMachinesMetadataSync");
   let body: any;
@@ -386,7 +386,7 @@ export const se_StartVirtualMachinesMetadataSyncCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -399,7 +399,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_TestHypervisorConfigurationCommand = async (
   input: TestHypervisorConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TestHypervisorConfiguration");
   let body: any;
@@ -412,7 +412,7 @@ export const se_TestHypervisorConfigurationCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -425,7 +425,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateGatewayInformationCommand = async (
   input: UpdateGatewayInformationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateGatewayInformation");
   let body: any;
@@ -438,7 +438,7 @@ export const se_UpdateGatewayInformationCommand = async (
  */
 export const se_UpdateGatewaySoftwareNowCommand = async (
   input: UpdateGatewaySoftwareNowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateGatewaySoftwareNow");
   let body: any;
@@ -451,7 +451,7 @@ export const se_UpdateGatewaySoftwareNowCommand = async (
  */
 export const se_UpdateHypervisorCommand = async (
   input: UpdateHypervisorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateHypervisor");
   let body: any;
@@ -464,7 +464,7 @@ export const se_UpdateHypervisorCommand = async (
  */
 export const de_AssociateGatewayToServerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateGatewayToServerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -484,7 +484,7 @@ export const de_AssociateGatewayToServerCommand = async (
  */
 export const de_CreateGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -504,7 +504,7 @@ export const de_CreateGatewayCommand = async (
  */
 export const de_DeleteGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -524,7 +524,7 @@ export const de_DeleteGatewayCommand = async (
  */
 export const de_DeleteHypervisorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteHypervisorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -544,7 +544,7 @@ export const de_DeleteHypervisorCommand = async (
  */
 export const de_DisassociateGatewayFromServerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateGatewayFromServerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -564,7 +564,7 @@ export const de_DisassociateGatewayFromServerCommand = async (
  */
 export const de_GetBandwidthRateLimitScheduleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBandwidthRateLimitScheduleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -584,7 +584,7 @@ export const de_GetBandwidthRateLimitScheduleCommand = async (
  */
 export const de_GetGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -604,7 +604,7 @@ export const de_GetGatewayCommand = async (
  */
 export const de_GetHypervisorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetHypervisorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -624,7 +624,7 @@ export const de_GetHypervisorCommand = async (
  */
 export const de_GetHypervisorPropertyMappingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetHypervisorPropertyMappingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -644,7 +644,7 @@ export const de_GetHypervisorPropertyMappingsCommand = async (
  */
 export const de_GetVirtualMachineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVirtualMachineCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -664,7 +664,7 @@ export const de_GetVirtualMachineCommand = async (
  */
 export const de_ImportHypervisorConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportHypervisorConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -684,7 +684,7 @@ export const de_ImportHypervisorConfigurationCommand = async (
  */
 export const de_ListGatewaysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGatewaysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -704,7 +704,7 @@ export const de_ListGatewaysCommand = async (
  */
 export const de_ListHypervisorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListHypervisorsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -724,7 +724,7 @@ export const de_ListHypervisorsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -744,7 +744,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListVirtualMachinesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVirtualMachinesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -764,7 +764,7 @@ export const de_ListVirtualMachinesCommand = async (
  */
 export const de_PutBandwidthRateLimitScheduleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBandwidthRateLimitScheduleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -784,7 +784,7 @@ export const de_PutBandwidthRateLimitScheduleCommand = async (
  */
 export const de_PutHypervisorPropertyMappingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutHypervisorPropertyMappingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -804,7 +804,7 @@ export const de_PutHypervisorPropertyMappingsCommand = async (
  */
 export const de_PutMaintenanceStartTimeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutMaintenanceStartTimeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -824,7 +824,7 @@ export const de_PutMaintenanceStartTimeCommand = async (
  */
 export const de_StartVirtualMachinesMetadataSyncCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartVirtualMachinesMetadataSyncCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -844,7 +844,7 @@ export const de_StartVirtualMachinesMetadataSyncCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -864,7 +864,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_TestHypervisorConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TestHypervisorConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -884,7 +884,7 @@ export const de_TestHypervisorConfigurationCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -904,7 +904,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateGatewayInformationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGatewayInformationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -924,7 +924,7 @@ export const de_UpdateGatewayInformationCommand = async (
  */
 export const de_UpdateGatewaySoftwareNowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGatewaySoftwareNowCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -944,7 +944,7 @@ export const de_UpdateGatewaySoftwareNowCommand = async (
  */
 export const de_UpdateHypervisorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateHypervisorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1002,7 +1002,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1031,7 +1031,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1047,7 +1047,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1390,7 +1390,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

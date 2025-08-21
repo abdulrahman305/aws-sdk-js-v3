@@ -149,13 +149,13 @@ export interface AppTest {
    */
   createTestCase(
     args: CreateTestCaseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateTestCaseCommandOutput>;
   createTestCase(args: CreateTestCaseCommandInput, cb: (err: any, data?: CreateTestCaseCommandOutput) => void): void;
   createTestCase(
     args: CreateTestCaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTestCaseCommandOutput) => void
+    cb: (err: any, data?: CreateTestCaseCommandOutput) => void,
   ): void;
 
   /**
@@ -163,16 +163,16 @@ export interface AppTest {
    */
   createTestConfiguration(
     args: CreateTestConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateTestConfigurationCommandOutput>;
   createTestConfiguration(
     args: CreateTestConfigurationCommandInput,
-    cb: (err: any, data?: CreateTestConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateTestConfigurationCommandOutput) => void,
   ): void;
   createTestConfiguration(
     args: CreateTestConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTestConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateTestConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -180,13 +180,13 @@ export interface AppTest {
    */
   createTestSuite(
     args: CreateTestSuiteCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateTestSuiteCommandOutput>;
   createTestSuite(args: CreateTestSuiteCommandInput, cb: (err: any, data?: CreateTestSuiteCommandOutput) => void): void;
   createTestSuite(
     args: CreateTestSuiteCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTestSuiteCommandOutput) => void
+    cb: (err: any, data?: CreateTestSuiteCommandOutput) => void,
   ): void;
 
   /**
@@ -194,13 +194,13 @@ export interface AppTest {
    */
   deleteTestCase(
     args: DeleteTestCaseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteTestCaseCommandOutput>;
   deleteTestCase(args: DeleteTestCaseCommandInput, cb: (err: any, data?: DeleteTestCaseCommandOutput) => void): void;
   deleteTestCase(
     args: DeleteTestCaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTestCaseCommandOutput) => void
+    cb: (err: any, data?: DeleteTestCaseCommandOutput) => void,
   ): void;
 
   /**
@@ -208,16 +208,16 @@ export interface AppTest {
    */
   deleteTestConfiguration(
     args: DeleteTestConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteTestConfigurationCommandOutput>;
   deleteTestConfiguration(
     args: DeleteTestConfigurationCommandInput,
-    cb: (err: any, data?: DeleteTestConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteTestConfigurationCommandOutput) => void,
   ): void;
   deleteTestConfiguration(
     args: DeleteTestConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTestConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteTestConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -228,7 +228,7 @@ export interface AppTest {
   deleteTestRun(
     args: DeleteTestRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTestRunCommandOutput) => void
+    cb: (err: any, data?: DeleteTestRunCommandOutput) => void,
   ): void;
 
   /**
@@ -236,13 +236,13 @@ export interface AppTest {
    */
   deleteTestSuite(
     args: DeleteTestSuiteCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteTestSuiteCommandOutput>;
   deleteTestSuite(args: DeleteTestSuiteCommandInput, cb: (err: any, data?: DeleteTestSuiteCommandOutput) => void): void;
   deleteTestSuite(
     args: DeleteTestSuiteCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTestSuiteCommandOutput) => void
+    cb: (err: any, data?: DeleteTestSuiteCommandOutput) => void,
   ): void;
 
   /**
@@ -253,7 +253,7 @@ export interface AppTest {
   getTestCase(
     args: GetTestCaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTestCaseCommandOutput) => void
+    cb: (err: any, data?: GetTestCaseCommandOutput) => void,
   ): void;
 
   /**
@@ -261,16 +261,16 @@ export interface AppTest {
    */
   getTestConfiguration(
     args: GetTestConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTestConfigurationCommandOutput>;
   getTestConfiguration(
     args: GetTestConfigurationCommandInput,
-    cb: (err: any, data?: GetTestConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetTestConfigurationCommandOutput) => void,
   ): void;
   getTestConfiguration(
     args: GetTestConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTestConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetTestConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -278,13 +278,13 @@ export interface AppTest {
    */
   getTestRunStep(
     args: GetTestRunStepCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTestRunStepCommandOutput>;
   getTestRunStep(args: GetTestRunStepCommandInput, cb: (err: any, data?: GetTestRunStepCommandOutput) => void): void;
   getTestRunStep(
     args: GetTestRunStepCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTestRunStepCommandOutput) => void
+    cb: (err: any, data?: GetTestRunStepCommandOutput) => void,
   ): void;
 
   /**
@@ -295,7 +295,7 @@ export interface AppTest {
   getTestSuite(
     args: GetTestSuiteCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTestSuiteCommandOutput) => void
+    cb: (err: any, data?: GetTestSuiteCommandOutput) => void,
   ): void;
 
   /**
@@ -303,16 +303,16 @@ export interface AppTest {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -324,7 +324,7 @@ export interface AppTest {
   listTestCases(
     args: ListTestCasesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTestCasesCommandOutput) => void
+    cb: (err: any, data?: ListTestCasesCommandOutput) => void,
   ): void;
 
   /**
@@ -333,16 +333,16 @@ export interface AppTest {
   listTestConfigurations(): Promise<ListTestConfigurationsCommandOutput>;
   listTestConfigurations(
     args: ListTestConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTestConfigurationsCommandOutput>;
   listTestConfigurations(
     args: ListTestConfigurationsCommandInput,
-    cb: (err: any, data?: ListTestConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListTestConfigurationsCommandOutput) => void,
   ): void;
   listTestConfigurations(
     args: ListTestConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTestConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListTestConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -354,7 +354,7 @@ export interface AppTest {
   listTestRuns(
     args: ListTestRunsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTestRunsCommandOutput) => void
+    cb: (err: any, data?: ListTestRunsCommandOutput) => void,
   ): void;
 
   /**
@@ -362,16 +362,16 @@ export interface AppTest {
    */
   listTestRunSteps(
     args: ListTestRunStepsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTestRunStepsCommandOutput>;
   listTestRunSteps(
     args: ListTestRunStepsCommandInput,
-    cb: (err: any, data?: ListTestRunStepsCommandOutput) => void
+    cb: (err: any, data?: ListTestRunStepsCommandOutput) => void,
   ): void;
   listTestRunSteps(
     args: ListTestRunStepsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTestRunStepsCommandOutput) => void
+    cb: (err: any, data?: ListTestRunStepsCommandOutput) => void,
   ): void;
 
   /**
@@ -379,16 +379,16 @@ export interface AppTest {
    */
   listTestRunTestCases(
     args: ListTestRunTestCasesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTestRunTestCasesCommandOutput>;
   listTestRunTestCases(
     args: ListTestRunTestCasesCommandInput,
-    cb: (err: any, data?: ListTestRunTestCasesCommandOutput) => void
+    cb: (err: any, data?: ListTestRunTestCasesCommandOutput) => void,
   ): void;
   listTestRunTestCases(
     args: ListTestRunTestCasesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTestRunTestCasesCommandOutput) => void
+    cb: (err: any, data?: ListTestRunTestCasesCommandOutput) => void,
   ): void;
 
   /**
@@ -397,13 +397,13 @@ export interface AppTest {
   listTestSuites(): Promise<ListTestSuitesCommandOutput>;
   listTestSuites(
     args: ListTestSuitesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTestSuitesCommandOutput>;
   listTestSuites(args: ListTestSuitesCommandInput, cb: (err: any, data?: ListTestSuitesCommandOutput) => void): void;
   listTestSuites(
     args: ListTestSuitesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTestSuitesCommandOutput) => void
+    cb: (err: any, data?: ListTestSuitesCommandOutput) => void,
   ): void;
 
   /**
@@ -414,7 +414,7 @@ export interface AppTest {
   startTestRun(
     args: StartTestRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartTestRunCommandOutput) => void
+    cb: (err: any, data?: StartTestRunCommandOutput) => void,
   ): void;
 
   /**
@@ -425,7 +425,7 @@ export interface AppTest {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -436,7 +436,7 @@ export interface AppTest {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -444,13 +444,13 @@ export interface AppTest {
    */
   updateTestCase(
     args: UpdateTestCaseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateTestCaseCommandOutput>;
   updateTestCase(args: UpdateTestCaseCommandInput, cb: (err: any, data?: UpdateTestCaseCommandOutput) => void): void;
   updateTestCase(
     args: UpdateTestCaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTestCaseCommandOutput) => void
+    cb: (err: any, data?: UpdateTestCaseCommandOutput) => void,
   ): void;
 
   /**
@@ -458,16 +458,16 @@ export interface AppTest {
    */
   updateTestConfiguration(
     args: UpdateTestConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateTestConfigurationCommandOutput>;
   updateTestConfiguration(
     args: UpdateTestConfigurationCommandInput,
-    cb: (err: any, data?: UpdateTestConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateTestConfigurationCommandOutput) => void,
   ): void;
   updateTestConfiguration(
     args: UpdateTestConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTestConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateTestConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -475,13 +475,13 @@ export interface AppTest {
    */
   updateTestSuite(
     args: UpdateTestSuiteCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateTestSuiteCommandOutput>;
   updateTestSuite(args: UpdateTestSuiteCommandInput, cb: (err: any, data?: UpdateTestSuiteCommandOutput) => void): void;
   updateTestSuite(
     args: UpdateTestSuiteCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTestSuiteCommandOutput) => void
+    cb: (err: any, data?: UpdateTestSuiteCommandOutput) => void,
   ): void;
 }
 

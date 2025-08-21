@@ -40,7 +40,7 @@ describe("XmlNode", () => {
   it("accepts attributes on outer elements", () => {
     const node = new XmlNode("xml", [new XmlNode("out", [new XmlNode("c")]).addAttribute("a", "b")]).addAttribute(
       "xmlns",
-      "abc"
+      "abc",
     );
     expect(node.toString()).toBe('<xml xmlns="abc"><out a="b"><c/></out></xml>');
   });

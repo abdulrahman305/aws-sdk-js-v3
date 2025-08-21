@@ -50,7 +50,7 @@ describe(isAssumeRoleProfile.name, () => {
           ...getMockSourceProfileKeyValues(),
           ...getMockProviderProfileKeyValues(),
           [key]: value,
-        })
+        }),
       ).toEqual(false);
     });
   });
@@ -65,10 +65,10 @@ describe(isAssumeRoleProfile.name, () => {
             ...getMockSourceProfileKeyValues(),
             ...getMockProviderProfileKeyValues(),
             [key]: value,
-          })
+          }),
         ).toEqual(false);
       });
-    }
+    },
   );
 
   it("returns true for AssumeRoleWithSourceProfile", () => {
@@ -141,7 +141,7 @@ describe(resolveAssumeRoleCredentials.name, () => {
       `Detected a cycle attempting to resolve credentials for profile` +
         ` ${mockProfileName}. Profiles visited: ` +
         Object.keys({ mockProfileName: true }).join(", "),
-      false
+      false,
     );
 
     try {
@@ -224,7 +224,7 @@ describe(resolveAssumeRoleCredentials.name, () => {
 
     const expectedError = new CredentialsProviderError(
       `Profile ${mockProfileName} requires multi-factor authentication, but no MFA code callback was provided.`,
-      false
+      false,
     );
     try {
       await resolveAssumeRoleCredentials(mockProfileName, mockProfilesWithCredSource, {

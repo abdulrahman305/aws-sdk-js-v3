@@ -103,7 +103,7 @@ import {
  */
 export const se_CreateTemplateCommand = async (
   input: CreateTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -118,7 +118,7 @@ export const se_CreateTemplateCommand = async (
       templateDescription: [],
       templateName: [],
       templateSource: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -129,7 +129,7 @@ export const se_CreateTemplateCommand = async (
  */
 export const se_CreateWorkflowCommand = async (
   input: CreateWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -146,7 +146,7 @@ export const se_CreateWorkflowCommand = async (
       stepTargets: (_) => _json(_),
       tags: (_) => _json(_),
       templateId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -157,7 +157,7 @@ export const se_CreateWorkflowCommand = async (
  */
 export const se_CreateWorkflowStepCommand = async (
   input: CreateWorkflowStepCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -177,7 +177,7 @@ export const se_CreateWorkflowStepCommand = async (
       stepTarget: (_) => _json(_),
       workflowId: [],
       workflowStepAutomationConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -188,7 +188,7 @@ export const se_CreateWorkflowStepCommand = async (
  */
 export const se_CreateWorkflowStepGroupCommand = async (
   input: CreateWorkflowStepGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -203,7 +203,7 @@ export const se_CreateWorkflowStepGroupCommand = async (
       next: (_) => _json(_),
       previous: (_) => _json(_),
       workflowId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -214,7 +214,7 @@ export const se_CreateWorkflowStepGroupCommand = async (
  */
 export const se_DeleteTemplateCommand = async (
   input: DeleteTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -230,7 +230,7 @@ export const se_DeleteTemplateCommand = async (
  */
 export const se_DeleteWorkflowCommand = async (
   input: DeleteWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -246,7 +246,7 @@ export const se_DeleteWorkflowCommand = async (
  */
 export const se_DeleteWorkflowStepCommand = async (
   input: DeleteWorkflowStepCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -266,7 +266,7 @@ export const se_DeleteWorkflowStepCommand = async (
  */
 export const se_DeleteWorkflowStepGroupCommand = async (
   input: DeleteWorkflowStepGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -285,7 +285,7 @@ export const se_DeleteWorkflowStepGroupCommand = async (
  */
 export const se_GetTemplateCommand = async (
   input: GetTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -301,7 +301,7 @@ export const se_GetTemplateCommand = async (
  */
 export const se_GetTemplateStepCommand = async (
   input: GetTemplateStepCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -321,7 +321,7 @@ export const se_GetTemplateStepCommand = async (
  */
 export const se_GetTemplateStepGroupCommand = async (
   input: GetTemplateStepGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -338,7 +338,7 @@ export const se_GetTemplateStepGroupCommand = async (
  */
 export const se_GetWorkflowCommand = async (
   input: GetWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -354,7 +354,7 @@ export const se_GetWorkflowCommand = async (
  */
 export const se_GetWorkflowStepCommand = async (
   input: GetWorkflowStepCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -374,7 +374,7 @@ export const se_GetWorkflowStepCommand = async (
  */
 export const se_GetWorkflowStepGroupCommand = async (
   input: GetWorkflowStepGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -393,7 +393,7 @@ export const se_GetWorkflowStepGroupCommand = async (
  */
 export const se_ListPluginsCommand = async (
   input: ListPluginsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -412,7 +412,7 @@ export const se_ListPluginsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -428,7 +428,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTemplatesCommand = async (
   input: ListTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -448,7 +448,7 @@ export const se_ListTemplatesCommand = async (
  */
 export const se_ListTemplateStepGroupsCommand = async (
   input: ListTemplateStepGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -468,7 +468,7 @@ export const se_ListTemplateStepGroupsCommand = async (
  */
 export const se_ListTemplateStepsCommand = async (
   input: ListTemplateStepsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -489,7 +489,7 @@ export const se_ListTemplateStepsCommand = async (
  */
 export const se_ListWorkflowsCommand = async (
   input: ListWorkflowsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -512,7 +512,7 @@ export const se_ListWorkflowsCommand = async (
  */
 export const se_ListWorkflowStepGroupsCommand = async (
   input: ListWorkflowStepGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -532,7 +532,7 @@ export const se_ListWorkflowStepGroupsCommand = async (
  */
 export const se_ListWorkflowStepsCommand = async (
   input: ListWorkflowStepsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -553,7 +553,7 @@ export const se_ListWorkflowStepsCommand = async (
  */
 export const se_RetryWorkflowStepCommand = async (
   input: RetryWorkflowStepCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -573,7 +573,7 @@ export const se_RetryWorkflowStepCommand = async (
  */
 export const se_StartWorkflowCommand = async (
   input: StartWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -589,7 +589,7 @@ export const se_StartWorkflowCommand = async (
  */
 export const se_StopWorkflowCommand = async (
   input: StopWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -605,7 +605,7 @@ export const se_StopWorkflowCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -617,7 +617,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -628,7 +628,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -650,7 +650,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateTemplateCommand = async (
   input: UpdateTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -664,7 +664,7 @@ export const se_UpdateTemplateCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       templateDescription: [],
       templateName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -675,7 +675,7 @@ export const se_UpdateTemplateCommand = async (
  */
 export const se_UpdateWorkflowCommand = async (
   input: UpdateWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -690,7 +690,7 @@ export const se_UpdateWorkflowCommand = async (
       inputParameters: (_) => _json(_),
       name: [],
       stepTargets: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -701,7 +701,7 @@ export const se_UpdateWorkflowCommand = async (
  */
 export const se_UpdateWorkflowStepCommand = async (
   input: UpdateWorkflowStepCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -723,7 +723,7 @@ export const se_UpdateWorkflowStepCommand = async (
       stepTarget: (_) => _json(_),
       workflowId: [],
       workflowStepAutomationConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -734,7 +734,7 @@ export const se_UpdateWorkflowStepCommand = async (
  */
 export const se_UpdateWorkflowStepGroupCommand = async (
   input: UpdateWorkflowStepGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -752,7 +752,7 @@ export const se_UpdateWorkflowStepGroupCommand = async (
       name: [],
       next: (_) => _json(_),
       previous: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -763,7 +763,7 @@ export const se_UpdateWorkflowStepGroupCommand = async (
  */
 export const de_CreateTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -786,7 +786,7 @@ export const de_CreateTemplateCommand = async (
  */
 export const de_CreateWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorkflowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -817,7 +817,7 @@ export const de_CreateWorkflowCommand = async (
  */
 export const de_CreateWorkflowStepCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorkflowStepCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -841,7 +841,7 @@ export const de_CreateWorkflowStepCommand = async (
  */
 export const de_CreateWorkflowStepGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorkflowStepGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -869,7 +869,7 @@ export const de_CreateWorkflowStepGroupCommand = async (
  */
 export const de_DeleteTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -886,7 +886,7 @@ export const de_DeleteTemplateCommand = async (
  */
 export const de_DeleteWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorkflowCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -909,7 +909,7 @@ export const de_DeleteWorkflowCommand = async (
  */
 export const de_DeleteWorkflowStepCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorkflowStepCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -926,7 +926,7 @@ export const de_DeleteWorkflowStepCommand = async (
  */
 export const de_DeleteWorkflowStepGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorkflowStepGroupCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -943,7 +943,7 @@ export const de_DeleteWorkflowStepGroupCommand = async (
  */
 export const de_GetTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -975,7 +975,7 @@ export const de_GetTemplateCommand = async (
  */
 export const de_GetTemplateStepCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTemplateStepCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1006,7 +1006,7 @@ export const de_GetTemplateStepCommand = async (
  */
 export const de_GetTemplateStepGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTemplateStepGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1036,7 +1036,7 @@ export const de_GetTemplateStepGroupCommand = async (
  */
 export const de_GetWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWorkflowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1076,7 +1076,7 @@ export const de_GetWorkflowCommand = async (
  */
 export const de_GetWorkflowStepCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWorkflowStepCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1117,7 +1117,7 @@ export const de_GetWorkflowStepCommand = async (
  */
 export const de_GetWorkflowStepGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWorkflowStepGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1149,7 +1149,7 @@ export const de_GetWorkflowStepGroupCommand = async (
  */
 export const de_ListPluginsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPluginsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1171,7 +1171,7 @@ export const de_ListPluginsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1192,7 +1192,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTemplatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1214,7 +1214,7 @@ export const de_ListTemplatesCommand = async (
  */
 export const de_ListTemplateStepGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTemplateStepGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1236,7 +1236,7 @@ export const de_ListTemplateStepGroupsCommand = async (
  */
 export const de_ListTemplateStepsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTemplateStepsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1258,7 +1258,7 @@ export const de_ListTemplateStepsCommand = async (
  */
 export const de_ListWorkflowsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkflowsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1280,7 +1280,7 @@ export const de_ListWorkflowsCommand = async (
  */
 export const de_ListWorkflowStepGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkflowStepGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1302,7 +1302,7 @@ export const de_ListWorkflowStepGroupsCommand = async (
  */
 export const de_ListWorkflowStepsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkflowStepsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1324,7 +1324,7 @@ export const de_ListWorkflowStepsCommand = async (
  */
 export const de_RetryWorkflowStepCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RetryWorkflowStepCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1348,7 +1348,7 @@ export const de_RetryWorkflowStepCommand = async (
  */
 export const de_StartWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartWorkflowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1373,7 +1373,7 @@ export const de_StartWorkflowCommand = async (
  */
 export const de_StopWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopWorkflowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1398,7 +1398,7 @@ export const de_StopWorkflowCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1415,7 +1415,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1432,7 +1432,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1455,7 +1455,7 @@ export const de_UpdateTemplateCommand = async (
  */
 export const de_UpdateWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWorkflowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1487,7 +1487,7 @@ export const de_UpdateWorkflowCommand = async (
  */
 export const de_UpdateWorkflowStepCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWorkflowStepCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1511,7 +1511,7 @@ export const de_UpdateWorkflowStepCommand = async (
  */
 export const de_UpdateWorkflowStepGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWorkflowStepGroupCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1578,7 +1578,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1615,7 +1615,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1635,7 +1635,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

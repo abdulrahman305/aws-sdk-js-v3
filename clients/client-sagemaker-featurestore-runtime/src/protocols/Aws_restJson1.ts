@@ -43,7 +43,7 @@ import { SageMakerFeatureStoreRuntimeServiceException as __BaseException } from 
  */
 export const se_BatchGetRecordCommand = async (
   input: BatchGetRecordCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -55,7 +55,7 @@ export const se_BatchGetRecordCommand = async (
     take(input, {
       ExpirationTimeResponse: [],
       Identifiers: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -66,7 +66,7 @@ export const se_BatchGetRecordCommand = async (
  */
 export const se_DeleteRecordCommand = async (
   input: DeleteRecordCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -88,7 +88,7 @@ export const se_DeleteRecordCommand = async (
  */
 export const se_GetRecordCommand = async (
   input: GetRecordCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -109,7 +109,7 @@ export const se_GetRecordCommand = async (
  */
 export const se_PutRecordCommand = async (
   input: PutRecordCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -123,7 +123,7 @@ export const se_PutRecordCommand = async (
       Record: (_) => _json(_),
       TargetStores: (_) => _json(_),
       TtlDuration: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -134,7 +134,7 @@ export const se_PutRecordCommand = async (
  */
 export const de_BatchGetRecordCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetRecordCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -157,7 +157,7 @@ export const de_BatchGetRecordCommand = async (
  */
 export const de_DeleteRecordCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRecordCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -174,7 +174,7 @@ export const de_DeleteRecordCommand = async (
  */
 export const de_GetRecordCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRecordCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -196,7 +196,7 @@ export const de_GetRecordCommand = async (
  */
 export const de_PutRecordCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutRecordCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);

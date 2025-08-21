@@ -73,14 +73,14 @@ export const getMalformedAcceptWithGenericStringHandler = <Context>(
     MalformedAcceptWithGenericStringServerOutput,
     Context
   >,
-  customizer: __ValidationCustomizer<"MalformedAcceptWithGenericString">
+  customizer: __ValidationCustomizer<"MalformedAcceptWithGenericString">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "MalformedAcceptWithGenericString">([
     new httpbinding.UriSpec<"RestJson", "MalformedAcceptWithGenericString">(
       "POST",
       [{ type: "path_literal", value: "MalformedAcceptWithGenericString" }],
       [],
-      { service: "RestJson", operation: "MalformedAcceptWithGenericString" }
+      { service: "RestJson", operation: "MalformedAcceptWithGenericString" },
     ),
   ]);
   return new MalformedAcceptWithGenericStringHandler(
@@ -88,7 +88,7 @@ export const getMalformedAcceptWithGenericStringHandler = <Context>(
     mux,
     new MalformedAcceptWithGenericStringSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -109,7 +109,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -155,7 +155,7 @@ export class MalformedAcceptWithGenericStringHandler<Context> implements __Servi
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"MalformedAcceptWithGenericString">;
   /**
@@ -180,7 +180,7 @@ export class MalformedAcceptWithGenericStringHandler<Context> implements __Servi
       MalformedAcceptWithGenericStringErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"MalformedAcceptWithGenericString">
+    validationCustomizer: __ValidationCustomizer<"MalformedAcceptWithGenericString">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -192,7 +192,7 @@ export class MalformedAcceptWithGenericStringHandler<Context> implements __Servi
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedAcceptWithGenericString. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedAcceptWithGenericString. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -204,7 +204,7 @@ export class MalformedAcceptWithGenericStringHandler<Context> implements __Servi
       this.operation,
       this.serializeFrameworkException,
       MalformedAcceptWithGenericStringServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

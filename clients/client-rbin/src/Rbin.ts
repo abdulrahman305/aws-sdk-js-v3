@@ -44,7 +44,7 @@ export interface Rbin {
   createRule(
     args: CreateRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRuleCommandOutput) => void
+    cb: (err: any, data?: CreateRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -55,7 +55,7 @@ export interface Rbin {
   deleteRule(
     args: DeleteRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -66,7 +66,7 @@ export interface Rbin {
   getRule(
     args: GetRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRuleCommandOutput) => void
+    cb: (err: any, data?: GetRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -77,7 +77,7 @@ export interface Rbin {
   listRules(
     args: ListRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRulesCommandOutput) => void
+    cb: (err: any, data?: ListRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -85,16 +85,16 @@ export interface Rbin {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -105,7 +105,7 @@ export interface Rbin {
   lockRule(
     args: LockRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: LockRuleCommandOutput) => void
+    cb: (err: any, data?: LockRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -116,7 +116,7 @@ export interface Rbin {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -127,7 +127,7 @@ export interface Rbin {
   unlockRule(
     args: UnlockRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UnlockRuleCommandOutput) => void
+    cb: (err: any, data?: UnlockRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -138,7 +138,7 @@ export interface Rbin {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -149,7 +149,7 @@ export interface Rbin {
   updateRule(
     args: UpdateRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRuleCommandOutput) => void
+    cb: (err: any, data?: UpdateRuleCommandOutput) => void,
   ): void;
 }
 

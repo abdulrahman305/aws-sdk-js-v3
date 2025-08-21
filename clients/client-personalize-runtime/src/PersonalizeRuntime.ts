@@ -32,16 +32,16 @@ export interface PersonalizeRuntime {
   getActionRecommendations(): Promise<GetActionRecommendationsCommandOutput>;
   getActionRecommendations(
     args: GetActionRecommendationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetActionRecommendationsCommandOutput>;
   getActionRecommendations(
     args: GetActionRecommendationsCommandInput,
-    cb: (err: any, data?: GetActionRecommendationsCommandOutput) => void
+    cb: (err: any, data?: GetActionRecommendationsCommandOutput) => void,
   ): void;
   getActionRecommendations(
     args: GetActionRecommendationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetActionRecommendationsCommandOutput) => void
+    cb: (err: any, data?: GetActionRecommendationsCommandOutput) => void,
   ): void;
 
   /**
@@ -49,16 +49,16 @@ export interface PersonalizeRuntime {
    */
   getPersonalizedRanking(
     args: GetPersonalizedRankingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPersonalizedRankingCommandOutput>;
   getPersonalizedRanking(
     args: GetPersonalizedRankingCommandInput,
-    cb: (err: any, data?: GetPersonalizedRankingCommandOutput) => void
+    cb: (err: any, data?: GetPersonalizedRankingCommandOutput) => void,
   ): void;
   getPersonalizedRanking(
     args: GetPersonalizedRankingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPersonalizedRankingCommandOutput) => void
+    cb: (err: any, data?: GetPersonalizedRankingCommandOutput) => void,
   ): void;
 
   /**
@@ -67,16 +67,16 @@ export interface PersonalizeRuntime {
   getRecommendations(): Promise<GetRecommendationsCommandOutput>;
   getRecommendations(
     args: GetRecommendationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRecommendationsCommandOutput>;
   getRecommendations(
     args: GetRecommendationsCommandInput,
-    cb: (err: any, data?: GetRecommendationsCommandOutput) => void
+    cb: (err: any, data?: GetRecommendationsCommandOutput) => void,
   ): void;
   getRecommendations(
     args: GetRecommendationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRecommendationsCommandOutput) => void
+    cb: (err: any, data?: GetRecommendationsCommandOutput) => void,
   ): void;
 }
 

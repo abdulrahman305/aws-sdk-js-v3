@@ -9,7 +9,7 @@ import {
 
 const checkState = async (
   client: CloudFormationClient,
-  input: DescribeTypeRegistrationCommandInput
+  input: DescribeTypeRegistrationCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -42,7 +42,7 @@ const checkState = async (
  */
 export const waitForTypeRegistrationComplete = async (
   params: WaiterConfiguration<CloudFormationClient>,
-  input: DescribeTypeRegistrationCommandInput
+  input: DescribeTypeRegistrationCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -54,7 +54,7 @@ export const waitForTypeRegistrationComplete = async (
  */
 export const waitUntilTypeRegistrationComplete = async (
   params: WaiterConfiguration<CloudFormationClient>,
-  input: DescribeTypeRegistrationCommandInput
+  input: DescribeTypeRegistrationCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

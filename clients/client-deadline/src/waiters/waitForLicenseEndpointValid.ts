@@ -36,7 +36,7 @@ const checkState = async (client: DeadlineClient, input: GetLicenseEndpointComma
  */
 export const waitForLicenseEndpointValid = async (
   params: WaiterConfiguration<DeadlineClient>,
-  input: GetLicenseEndpointCommandInput
+  input: GetLicenseEndpointCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 1140 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -48,7 +48,7 @@ export const waitForLicenseEndpointValid = async (
  */
 export const waitUntilLicenseEndpointValid = async (
   params: WaiterConfiguration<DeadlineClient>,
-  input: GetLicenseEndpointCommandInput
+  input: GetLicenseEndpointCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 1140 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

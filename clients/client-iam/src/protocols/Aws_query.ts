@@ -735,7 +735,7 @@ import {
  */
 export const se_AddClientIDToOpenIDConnectProviderCommand = async (
   input: AddClientIDToOpenIDConnectProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -752,7 +752,7 @@ export const se_AddClientIDToOpenIDConnectProviderCommand = async (
  */
 export const se_AddRoleToInstanceProfileCommand = async (
   input: AddRoleToInstanceProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -769,7 +769,7 @@ export const se_AddRoleToInstanceProfileCommand = async (
  */
 export const se_AddUserToGroupCommand = async (
   input: AddUserToGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -786,7 +786,7 @@ export const se_AddUserToGroupCommand = async (
  */
 export const se_AttachGroupPolicyCommand = async (
   input: AttachGroupPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -803,7 +803,7 @@ export const se_AttachGroupPolicyCommand = async (
  */
 export const se_AttachRolePolicyCommand = async (
   input: AttachRolePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -820,7 +820,7 @@ export const se_AttachRolePolicyCommand = async (
  */
 export const se_AttachUserPolicyCommand = async (
   input: AttachUserPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -837,7 +837,7 @@ export const se_AttachUserPolicyCommand = async (
  */
 export const se_ChangePasswordCommand = async (
   input: ChangePasswordCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -854,7 +854,7 @@ export const se_ChangePasswordCommand = async (
  */
 export const se_CreateAccessKeyCommand = async (
   input: CreateAccessKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -871,7 +871,7 @@ export const se_CreateAccessKeyCommand = async (
  */
 export const se_CreateAccountAliasCommand = async (
   input: CreateAccountAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -888,7 +888,7 @@ export const se_CreateAccountAliasCommand = async (
  */
 export const se_CreateGroupCommand = async (
   input: CreateGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -905,7 +905,7 @@ export const se_CreateGroupCommand = async (
  */
 export const se_CreateInstanceProfileCommand = async (
   input: CreateInstanceProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -922,7 +922,7 @@ export const se_CreateInstanceProfileCommand = async (
  */
 export const se_CreateLoginProfileCommand = async (
   input: CreateLoginProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -939,7 +939,7 @@ export const se_CreateLoginProfileCommand = async (
  */
 export const se_CreateOpenIDConnectProviderCommand = async (
   input: CreateOpenIDConnectProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -956,7 +956,7 @@ export const se_CreateOpenIDConnectProviderCommand = async (
  */
 export const se_CreatePolicyCommand = async (
   input: CreatePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -973,7 +973,7 @@ export const se_CreatePolicyCommand = async (
  */
 export const se_CreatePolicyVersionCommand = async (
   input: CreatePolicyVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -990,7 +990,7 @@ export const se_CreatePolicyVersionCommand = async (
  */
 export const se_CreateRoleCommand = async (
   input: CreateRoleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1007,7 +1007,7 @@ export const se_CreateRoleCommand = async (
  */
 export const se_CreateSAMLProviderCommand = async (
   input: CreateSAMLProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1024,7 +1024,7 @@ export const se_CreateSAMLProviderCommand = async (
  */
 export const se_CreateServiceLinkedRoleCommand = async (
   input: CreateServiceLinkedRoleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1041,7 +1041,7 @@ export const se_CreateServiceLinkedRoleCommand = async (
  */
 export const se_CreateServiceSpecificCredentialCommand = async (
   input: CreateServiceSpecificCredentialCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1058,7 +1058,7 @@ export const se_CreateServiceSpecificCredentialCommand = async (
  */
 export const se_CreateUserCommand = async (
   input: CreateUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1075,7 +1075,7 @@ export const se_CreateUserCommand = async (
  */
 export const se_CreateVirtualMFADeviceCommand = async (
   input: CreateVirtualMFADeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1092,7 +1092,7 @@ export const se_CreateVirtualMFADeviceCommand = async (
  */
 export const se_DeactivateMFADeviceCommand = async (
   input: DeactivateMFADeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1109,7 +1109,7 @@ export const se_DeactivateMFADeviceCommand = async (
  */
 export const se_DeleteAccessKeyCommand = async (
   input: DeleteAccessKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1126,7 +1126,7 @@ export const se_DeleteAccessKeyCommand = async (
  */
 export const se_DeleteAccountAliasCommand = async (
   input: DeleteAccountAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1143,7 +1143,7 @@ export const se_DeleteAccountAliasCommand = async (
  */
 export const se_DeleteAccountPasswordPolicyCommand = async (
   input: DeleteAccountPasswordPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -1158,7 +1158,7 @@ export const se_DeleteAccountPasswordPolicyCommand = async (
  */
 export const se_DeleteGroupCommand = async (
   input: DeleteGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1175,7 +1175,7 @@ export const se_DeleteGroupCommand = async (
  */
 export const se_DeleteGroupPolicyCommand = async (
   input: DeleteGroupPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1192,7 +1192,7 @@ export const se_DeleteGroupPolicyCommand = async (
  */
 export const se_DeleteInstanceProfileCommand = async (
   input: DeleteInstanceProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1209,7 +1209,7 @@ export const se_DeleteInstanceProfileCommand = async (
  */
 export const se_DeleteLoginProfileCommand = async (
   input: DeleteLoginProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1226,7 +1226,7 @@ export const se_DeleteLoginProfileCommand = async (
  */
 export const se_DeleteOpenIDConnectProviderCommand = async (
   input: DeleteOpenIDConnectProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1243,7 +1243,7 @@ export const se_DeleteOpenIDConnectProviderCommand = async (
  */
 export const se_DeletePolicyCommand = async (
   input: DeletePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1260,7 +1260,7 @@ export const se_DeletePolicyCommand = async (
  */
 export const se_DeletePolicyVersionCommand = async (
   input: DeletePolicyVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1277,7 +1277,7 @@ export const se_DeletePolicyVersionCommand = async (
  */
 export const se_DeleteRoleCommand = async (
   input: DeleteRoleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1294,7 +1294,7 @@ export const se_DeleteRoleCommand = async (
  */
 export const se_DeleteRolePermissionsBoundaryCommand = async (
   input: DeleteRolePermissionsBoundaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1311,7 +1311,7 @@ export const se_DeleteRolePermissionsBoundaryCommand = async (
  */
 export const se_DeleteRolePolicyCommand = async (
   input: DeleteRolePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1328,7 +1328,7 @@ export const se_DeleteRolePolicyCommand = async (
  */
 export const se_DeleteSAMLProviderCommand = async (
   input: DeleteSAMLProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1345,7 +1345,7 @@ export const se_DeleteSAMLProviderCommand = async (
  */
 export const se_DeleteServerCertificateCommand = async (
   input: DeleteServerCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1362,7 +1362,7 @@ export const se_DeleteServerCertificateCommand = async (
  */
 export const se_DeleteServiceLinkedRoleCommand = async (
   input: DeleteServiceLinkedRoleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1379,7 +1379,7 @@ export const se_DeleteServiceLinkedRoleCommand = async (
  */
 export const se_DeleteServiceSpecificCredentialCommand = async (
   input: DeleteServiceSpecificCredentialCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1396,7 +1396,7 @@ export const se_DeleteServiceSpecificCredentialCommand = async (
  */
 export const se_DeleteSigningCertificateCommand = async (
   input: DeleteSigningCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1413,7 +1413,7 @@ export const se_DeleteSigningCertificateCommand = async (
  */
 export const se_DeleteSSHPublicKeyCommand = async (
   input: DeleteSSHPublicKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1430,7 +1430,7 @@ export const se_DeleteSSHPublicKeyCommand = async (
  */
 export const se_DeleteUserCommand = async (
   input: DeleteUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1447,7 +1447,7 @@ export const se_DeleteUserCommand = async (
  */
 export const se_DeleteUserPermissionsBoundaryCommand = async (
   input: DeleteUserPermissionsBoundaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1464,7 +1464,7 @@ export const se_DeleteUserPermissionsBoundaryCommand = async (
  */
 export const se_DeleteUserPolicyCommand = async (
   input: DeleteUserPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1481,7 +1481,7 @@ export const se_DeleteUserPolicyCommand = async (
  */
 export const se_DeleteVirtualMFADeviceCommand = async (
   input: DeleteVirtualMFADeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1498,7 +1498,7 @@ export const se_DeleteVirtualMFADeviceCommand = async (
  */
 export const se_DetachGroupPolicyCommand = async (
   input: DetachGroupPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1515,7 +1515,7 @@ export const se_DetachGroupPolicyCommand = async (
  */
 export const se_DetachRolePolicyCommand = async (
   input: DetachRolePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1532,7 +1532,7 @@ export const se_DetachRolePolicyCommand = async (
  */
 export const se_DetachUserPolicyCommand = async (
   input: DetachUserPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1549,7 +1549,7 @@ export const se_DetachUserPolicyCommand = async (
  */
 export const se_EnableMFADeviceCommand = async (
   input: EnableMFADeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1566,7 +1566,7 @@ export const se_EnableMFADeviceCommand = async (
  */
 export const se_GenerateCredentialReportCommand = async (
   input: GenerateCredentialReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -1581,7 +1581,7 @@ export const se_GenerateCredentialReportCommand = async (
  */
 export const se_GenerateOrganizationsAccessReportCommand = async (
   input: GenerateOrganizationsAccessReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1598,7 +1598,7 @@ export const se_GenerateOrganizationsAccessReportCommand = async (
  */
 export const se_GenerateServiceLastAccessedDetailsCommand = async (
   input: GenerateServiceLastAccessedDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1615,7 +1615,7 @@ export const se_GenerateServiceLastAccessedDetailsCommand = async (
  */
 export const se_GetAccessKeyLastUsedCommand = async (
   input: GetAccessKeyLastUsedCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1632,7 +1632,7 @@ export const se_GetAccessKeyLastUsedCommand = async (
  */
 export const se_GetAccountAuthorizationDetailsCommand = async (
   input: GetAccountAuthorizationDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1649,7 +1649,7 @@ export const se_GetAccountAuthorizationDetailsCommand = async (
  */
 export const se_GetAccountPasswordPolicyCommand = async (
   input: GetAccountPasswordPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -1664,7 +1664,7 @@ export const se_GetAccountPasswordPolicyCommand = async (
  */
 export const se_GetAccountSummaryCommand = async (
   input: GetAccountSummaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -1679,7 +1679,7 @@ export const se_GetAccountSummaryCommand = async (
  */
 export const se_GetContextKeysForCustomPolicyCommand = async (
   input: GetContextKeysForCustomPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1696,7 +1696,7 @@ export const se_GetContextKeysForCustomPolicyCommand = async (
  */
 export const se_GetContextKeysForPrincipalPolicyCommand = async (
   input: GetContextKeysForPrincipalPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1713,7 +1713,7 @@ export const se_GetContextKeysForPrincipalPolicyCommand = async (
  */
 export const se_GetCredentialReportCommand = async (
   input: GetCredentialReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -1728,7 +1728,7 @@ export const se_GetCredentialReportCommand = async (
  */
 export const se_GetGroupCommand = async (
   input: GetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1745,7 +1745,7 @@ export const se_GetGroupCommand = async (
  */
 export const se_GetGroupPolicyCommand = async (
   input: GetGroupPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1762,7 +1762,7 @@ export const se_GetGroupPolicyCommand = async (
  */
 export const se_GetInstanceProfileCommand = async (
   input: GetInstanceProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1779,7 +1779,7 @@ export const se_GetInstanceProfileCommand = async (
  */
 export const se_GetLoginProfileCommand = async (
   input: GetLoginProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1796,7 +1796,7 @@ export const se_GetLoginProfileCommand = async (
  */
 export const se_GetMFADeviceCommand = async (
   input: GetMFADeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1813,7 +1813,7 @@ export const se_GetMFADeviceCommand = async (
  */
 export const se_GetOpenIDConnectProviderCommand = async (
   input: GetOpenIDConnectProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1830,7 +1830,7 @@ export const se_GetOpenIDConnectProviderCommand = async (
  */
 export const se_GetOrganizationsAccessReportCommand = async (
   input: GetOrganizationsAccessReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1847,7 +1847,7 @@ export const se_GetOrganizationsAccessReportCommand = async (
  */
 export const se_GetPolicyCommand = async (
   input: GetPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1864,7 +1864,7 @@ export const se_GetPolicyCommand = async (
  */
 export const se_GetPolicyVersionCommand = async (
   input: GetPolicyVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1881,7 +1881,7 @@ export const se_GetPolicyVersionCommand = async (
  */
 export const se_GetRoleCommand = async (
   input: GetRoleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1898,7 +1898,7 @@ export const se_GetRoleCommand = async (
  */
 export const se_GetRolePolicyCommand = async (
   input: GetRolePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1915,7 +1915,7 @@ export const se_GetRolePolicyCommand = async (
  */
 export const se_GetSAMLProviderCommand = async (
   input: GetSAMLProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1932,7 +1932,7 @@ export const se_GetSAMLProviderCommand = async (
  */
 export const se_GetServerCertificateCommand = async (
   input: GetServerCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1949,7 +1949,7 @@ export const se_GetServerCertificateCommand = async (
  */
 export const se_GetServiceLastAccessedDetailsCommand = async (
   input: GetServiceLastAccessedDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1966,7 +1966,7 @@ export const se_GetServiceLastAccessedDetailsCommand = async (
  */
 export const se_GetServiceLastAccessedDetailsWithEntitiesCommand = async (
   input: GetServiceLastAccessedDetailsWithEntitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1983,7 +1983,7 @@ export const se_GetServiceLastAccessedDetailsWithEntitiesCommand = async (
  */
 export const se_GetServiceLinkedRoleDeletionStatusCommand = async (
   input: GetServiceLinkedRoleDeletionStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2000,7 +2000,7 @@ export const se_GetServiceLinkedRoleDeletionStatusCommand = async (
  */
 export const se_GetSSHPublicKeyCommand = async (
   input: GetSSHPublicKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2017,7 +2017,7 @@ export const se_GetSSHPublicKeyCommand = async (
  */
 export const se_GetUserCommand = async (
   input: GetUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2034,7 +2034,7 @@ export const se_GetUserCommand = async (
  */
 export const se_GetUserPolicyCommand = async (
   input: GetUserPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2051,7 +2051,7 @@ export const se_GetUserPolicyCommand = async (
  */
 export const se_ListAccessKeysCommand = async (
   input: ListAccessKeysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2068,7 +2068,7 @@ export const se_ListAccessKeysCommand = async (
  */
 export const se_ListAccountAliasesCommand = async (
   input: ListAccountAliasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2085,7 +2085,7 @@ export const se_ListAccountAliasesCommand = async (
  */
 export const se_ListAttachedGroupPoliciesCommand = async (
   input: ListAttachedGroupPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2102,7 +2102,7 @@ export const se_ListAttachedGroupPoliciesCommand = async (
  */
 export const se_ListAttachedRolePoliciesCommand = async (
   input: ListAttachedRolePoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2119,7 +2119,7 @@ export const se_ListAttachedRolePoliciesCommand = async (
  */
 export const se_ListAttachedUserPoliciesCommand = async (
   input: ListAttachedUserPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2136,7 +2136,7 @@ export const se_ListAttachedUserPoliciesCommand = async (
  */
 export const se_ListEntitiesForPolicyCommand = async (
   input: ListEntitiesForPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2153,7 +2153,7 @@ export const se_ListEntitiesForPolicyCommand = async (
  */
 export const se_ListGroupPoliciesCommand = async (
   input: ListGroupPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2170,7 +2170,7 @@ export const se_ListGroupPoliciesCommand = async (
  */
 export const se_ListGroupsCommand = async (
   input: ListGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2187,7 +2187,7 @@ export const se_ListGroupsCommand = async (
  */
 export const se_ListGroupsForUserCommand = async (
   input: ListGroupsForUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2204,7 +2204,7 @@ export const se_ListGroupsForUserCommand = async (
  */
 export const se_ListInstanceProfilesCommand = async (
   input: ListInstanceProfilesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2221,7 +2221,7 @@ export const se_ListInstanceProfilesCommand = async (
  */
 export const se_ListInstanceProfilesForRoleCommand = async (
   input: ListInstanceProfilesForRoleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2238,7 +2238,7 @@ export const se_ListInstanceProfilesForRoleCommand = async (
  */
 export const se_ListInstanceProfileTagsCommand = async (
   input: ListInstanceProfileTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2255,7 +2255,7 @@ export const se_ListInstanceProfileTagsCommand = async (
  */
 export const se_ListMFADevicesCommand = async (
   input: ListMFADevicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2272,7 +2272,7 @@ export const se_ListMFADevicesCommand = async (
  */
 export const se_ListMFADeviceTagsCommand = async (
   input: ListMFADeviceTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2289,7 +2289,7 @@ export const se_ListMFADeviceTagsCommand = async (
  */
 export const se_ListOpenIDConnectProvidersCommand = async (
   input: ListOpenIDConnectProvidersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2306,7 +2306,7 @@ export const se_ListOpenIDConnectProvidersCommand = async (
  */
 export const se_ListOpenIDConnectProviderTagsCommand = async (
   input: ListOpenIDConnectProviderTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2323,7 +2323,7 @@ export const se_ListOpenIDConnectProviderTagsCommand = async (
  */
 export const se_ListPoliciesCommand = async (
   input: ListPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2340,7 +2340,7 @@ export const se_ListPoliciesCommand = async (
  */
 export const se_ListPoliciesGrantingServiceAccessCommand = async (
   input: ListPoliciesGrantingServiceAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2357,7 +2357,7 @@ export const se_ListPoliciesGrantingServiceAccessCommand = async (
  */
 export const se_ListPolicyTagsCommand = async (
   input: ListPolicyTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2374,7 +2374,7 @@ export const se_ListPolicyTagsCommand = async (
  */
 export const se_ListPolicyVersionsCommand = async (
   input: ListPolicyVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2391,7 +2391,7 @@ export const se_ListPolicyVersionsCommand = async (
  */
 export const se_ListRolePoliciesCommand = async (
   input: ListRolePoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2408,7 +2408,7 @@ export const se_ListRolePoliciesCommand = async (
  */
 export const se_ListRolesCommand = async (
   input: ListRolesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2425,7 +2425,7 @@ export const se_ListRolesCommand = async (
  */
 export const se_ListRoleTagsCommand = async (
   input: ListRoleTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2442,7 +2442,7 @@ export const se_ListRoleTagsCommand = async (
  */
 export const se_ListSAMLProvidersCommand = async (
   input: ListSAMLProvidersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2459,7 +2459,7 @@ export const se_ListSAMLProvidersCommand = async (
  */
 export const se_ListSAMLProviderTagsCommand = async (
   input: ListSAMLProviderTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2476,7 +2476,7 @@ export const se_ListSAMLProviderTagsCommand = async (
  */
 export const se_ListServerCertificatesCommand = async (
   input: ListServerCertificatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2493,7 +2493,7 @@ export const se_ListServerCertificatesCommand = async (
  */
 export const se_ListServerCertificateTagsCommand = async (
   input: ListServerCertificateTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2510,7 +2510,7 @@ export const se_ListServerCertificateTagsCommand = async (
  */
 export const se_ListServiceSpecificCredentialsCommand = async (
   input: ListServiceSpecificCredentialsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2527,7 +2527,7 @@ export const se_ListServiceSpecificCredentialsCommand = async (
  */
 export const se_ListSigningCertificatesCommand = async (
   input: ListSigningCertificatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2544,7 +2544,7 @@ export const se_ListSigningCertificatesCommand = async (
  */
 export const se_ListSSHPublicKeysCommand = async (
   input: ListSSHPublicKeysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2561,7 +2561,7 @@ export const se_ListSSHPublicKeysCommand = async (
  */
 export const se_ListUserPoliciesCommand = async (
   input: ListUserPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2578,7 +2578,7 @@ export const se_ListUserPoliciesCommand = async (
  */
 export const se_ListUsersCommand = async (
   input: ListUsersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2595,7 +2595,7 @@ export const se_ListUsersCommand = async (
  */
 export const se_ListUserTagsCommand = async (
   input: ListUserTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2612,7 +2612,7 @@ export const se_ListUserTagsCommand = async (
  */
 export const se_ListVirtualMFADevicesCommand = async (
   input: ListVirtualMFADevicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2629,7 +2629,7 @@ export const se_ListVirtualMFADevicesCommand = async (
  */
 export const se_PutGroupPolicyCommand = async (
   input: PutGroupPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2646,7 +2646,7 @@ export const se_PutGroupPolicyCommand = async (
  */
 export const se_PutRolePermissionsBoundaryCommand = async (
   input: PutRolePermissionsBoundaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2663,7 +2663,7 @@ export const se_PutRolePermissionsBoundaryCommand = async (
  */
 export const se_PutRolePolicyCommand = async (
   input: PutRolePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2680,7 +2680,7 @@ export const se_PutRolePolicyCommand = async (
  */
 export const se_PutUserPermissionsBoundaryCommand = async (
   input: PutUserPermissionsBoundaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2697,7 +2697,7 @@ export const se_PutUserPermissionsBoundaryCommand = async (
  */
 export const se_PutUserPolicyCommand = async (
   input: PutUserPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2714,7 +2714,7 @@ export const se_PutUserPolicyCommand = async (
  */
 export const se_RemoveClientIDFromOpenIDConnectProviderCommand = async (
   input: RemoveClientIDFromOpenIDConnectProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2731,7 +2731,7 @@ export const se_RemoveClientIDFromOpenIDConnectProviderCommand = async (
  */
 export const se_RemoveRoleFromInstanceProfileCommand = async (
   input: RemoveRoleFromInstanceProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2748,7 +2748,7 @@ export const se_RemoveRoleFromInstanceProfileCommand = async (
  */
 export const se_RemoveUserFromGroupCommand = async (
   input: RemoveUserFromGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2765,7 +2765,7 @@ export const se_RemoveUserFromGroupCommand = async (
  */
 export const se_ResetServiceSpecificCredentialCommand = async (
   input: ResetServiceSpecificCredentialCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2782,7 +2782,7 @@ export const se_ResetServiceSpecificCredentialCommand = async (
  */
 export const se_ResyncMFADeviceCommand = async (
   input: ResyncMFADeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2799,7 +2799,7 @@ export const se_ResyncMFADeviceCommand = async (
  */
 export const se_SetDefaultPolicyVersionCommand = async (
   input: SetDefaultPolicyVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2816,7 +2816,7 @@ export const se_SetDefaultPolicyVersionCommand = async (
  */
 export const se_SetSecurityTokenServicePreferencesCommand = async (
   input: SetSecurityTokenServicePreferencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2833,7 +2833,7 @@ export const se_SetSecurityTokenServicePreferencesCommand = async (
  */
 export const se_SimulateCustomPolicyCommand = async (
   input: SimulateCustomPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2850,7 +2850,7 @@ export const se_SimulateCustomPolicyCommand = async (
  */
 export const se_SimulatePrincipalPolicyCommand = async (
   input: SimulatePrincipalPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2867,7 +2867,7 @@ export const se_SimulatePrincipalPolicyCommand = async (
  */
 export const se_TagInstanceProfileCommand = async (
   input: TagInstanceProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2884,7 +2884,7 @@ export const se_TagInstanceProfileCommand = async (
  */
 export const se_TagMFADeviceCommand = async (
   input: TagMFADeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2901,7 +2901,7 @@ export const se_TagMFADeviceCommand = async (
  */
 export const se_TagOpenIDConnectProviderCommand = async (
   input: TagOpenIDConnectProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2918,7 +2918,7 @@ export const se_TagOpenIDConnectProviderCommand = async (
  */
 export const se_TagPolicyCommand = async (
   input: TagPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2935,7 +2935,7 @@ export const se_TagPolicyCommand = async (
  */
 export const se_TagRoleCommand = async (
   input: TagRoleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2952,7 +2952,7 @@ export const se_TagRoleCommand = async (
  */
 export const se_TagSAMLProviderCommand = async (
   input: TagSAMLProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2969,7 +2969,7 @@ export const se_TagSAMLProviderCommand = async (
  */
 export const se_TagServerCertificateCommand = async (
   input: TagServerCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2986,7 +2986,7 @@ export const se_TagServerCertificateCommand = async (
  */
 export const se_TagUserCommand = async (
   input: TagUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3003,7 +3003,7 @@ export const se_TagUserCommand = async (
  */
 export const se_UntagInstanceProfileCommand = async (
   input: UntagInstanceProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3020,7 +3020,7 @@ export const se_UntagInstanceProfileCommand = async (
  */
 export const se_UntagMFADeviceCommand = async (
   input: UntagMFADeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3037,7 +3037,7 @@ export const se_UntagMFADeviceCommand = async (
  */
 export const se_UntagOpenIDConnectProviderCommand = async (
   input: UntagOpenIDConnectProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3054,7 +3054,7 @@ export const se_UntagOpenIDConnectProviderCommand = async (
  */
 export const se_UntagPolicyCommand = async (
   input: UntagPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3071,7 +3071,7 @@ export const se_UntagPolicyCommand = async (
  */
 export const se_UntagRoleCommand = async (
   input: UntagRoleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3088,7 +3088,7 @@ export const se_UntagRoleCommand = async (
  */
 export const se_UntagSAMLProviderCommand = async (
   input: UntagSAMLProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3105,7 +3105,7 @@ export const se_UntagSAMLProviderCommand = async (
  */
 export const se_UntagServerCertificateCommand = async (
   input: UntagServerCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3122,7 +3122,7 @@ export const se_UntagServerCertificateCommand = async (
  */
 export const se_UntagUserCommand = async (
   input: UntagUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3139,7 +3139,7 @@ export const se_UntagUserCommand = async (
  */
 export const se_UpdateAccessKeyCommand = async (
   input: UpdateAccessKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3156,7 +3156,7 @@ export const se_UpdateAccessKeyCommand = async (
  */
 export const se_UpdateAccountPasswordPolicyCommand = async (
   input: UpdateAccountPasswordPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3173,7 +3173,7 @@ export const se_UpdateAccountPasswordPolicyCommand = async (
  */
 export const se_UpdateAssumeRolePolicyCommand = async (
   input: UpdateAssumeRolePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3190,7 +3190,7 @@ export const se_UpdateAssumeRolePolicyCommand = async (
  */
 export const se_UpdateGroupCommand = async (
   input: UpdateGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3207,7 +3207,7 @@ export const se_UpdateGroupCommand = async (
  */
 export const se_UpdateLoginProfileCommand = async (
   input: UpdateLoginProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3224,7 +3224,7 @@ export const se_UpdateLoginProfileCommand = async (
  */
 export const se_UpdateOpenIDConnectProviderThumbprintCommand = async (
   input: UpdateOpenIDConnectProviderThumbprintCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3241,7 +3241,7 @@ export const se_UpdateOpenIDConnectProviderThumbprintCommand = async (
  */
 export const se_UpdateRoleCommand = async (
   input: UpdateRoleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3258,7 +3258,7 @@ export const se_UpdateRoleCommand = async (
  */
 export const se_UpdateRoleDescriptionCommand = async (
   input: UpdateRoleDescriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3275,7 +3275,7 @@ export const se_UpdateRoleDescriptionCommand = async (
  */
 export const se_UpdateSAMLProviderCommand = async (
   input: UpdateSAMLProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3292,7 +3292,7 @@ export const se_UpdateSAMLProviderCommand = async (
  */
 export const se_UpdateServerCertificateCommand = async (
   input: UpdateServerCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3309,7 +3309,7 @@ export const se_UpdateServerCertificateCommand = async (
  */
 export const se_UpdateServiceSpecificCredentialCommand = async (
   input: UpdateServiceSpecificCredentialCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3326,7 +3326,7 @@ export const se_UpdateServiceSpecificCredentialCommand = async (
  */
 export const se_UpdateSigningCertificateCommand = async (
   input: UpdateSigningCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3343,7 +3343,7 @@ export const se_UpdateSigningCertificateCommand = async (
  */
 export const se_UpdateSSHPublicKeyCommand = async (
   input: UpdateSSHPublicKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3360,7 +3360,7 @@ export const se_UpdateSSHPublicKeyCommand = async (
  */
 export const se_UpdateUserCommand = async (
   input: UpdateUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3377,7 +3377,7 @@ export const se_UpdateUserCommand = async (
  */
 export const se_UploadServerCertificateCommand = async (
   input: UploadServerCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3394,7 +3394,7 @@ export const se_UploadServerCertificateCommand = async (
  */
 export const se_UploadSigningCertificateCommand = async (
   input: UploadSigningCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3411,7 +3411,7 @@ export const se_UploadSigningCertificateCommand = async (
  */
 export const se_UploadSSHPublicKeyCommand = async (
   input: UploadSSHPublicKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3428,7 +3428,7 @@ export const se_UploadSSHPublicKeyCommand = async (
  */
 export const de_AddClientIDToOpenIDConnectProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddClientIDToOpenIDConnectProviderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3445,7 +3445,7 @@ export const de_AddClientIDToOpenIDConnectProviderCommand = async (
  */
 export const de_AddRoleToInstanceProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddRoleToInstanceProfileCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3462,7 +3462,7 @@ export const de_AddRoleToInstanceProfileCommand = async (
  */
 export const de_AddUserToGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddUserToGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3479,7 +3479,7 @@ export const de_AddUserToGroupCommand = async (
  */
 export const de_AttachGroupPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachGroupPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3496,7 +3496,7 @@ export const de_AttachGroupPolicyCommand = async (
  */
 export const de_AttachRolePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachRolePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3513,7 +3513,7 @@ export const de_AttachRolePolicyCommand = async (
  */
 export const de_AttachUserPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachUserPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3530,7 +3530,7 @@ export const de_AttachUserPolicyCommand = async (
  */
 export const de_ChangePasswordCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ChangePasswordCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3547,7 +3547,7 @@ export const de_ChangePasswordCommand = async (
  */
 export const de_CreateAccessKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAccessKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3567,7 +3567,7 @@ export const de_CreateAccessKeyCommand = async (
  */
 export const de_CreateAccountAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAccountAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3584,7 +3584,7 @@ export const de_CreateAccountAliasCommand = async (
  */
 export const de_CreateGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3604,7 +3604,7 @@ export const de_CreateGroupCommand = async (
  */
 export const de_CreateInstanceProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateInstanceProfileCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3624,7 +3624,7 @@ export const de_CreateInstanceProfileCommand = async (
  */
 export const de_CreateLoginProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLoginProfileCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3644,7 +3644,7 @@ export const de_CreateLoginProfileCommand = async (
  */
 export const de_CreateOpenIDConnectProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateOpenIDConnectProviderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3664,7 +3664,7 @@ export const de_CreateOpenIDConnectProviderCommand = async (
  */
 export const de_CreatePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3684,7 +3684,7 @@ export const de_CreatePolicyCommand = async (
  */
 export const de_CreatePolicyVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePolicyVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3704,7 +3704,7 @@ export const de_CreatePolicyVersionCommand = async (
  */
 export const de_CreateRoleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRoleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3724,7 +3724,7 @@ export const de_CreateRoleCommand = async (
  */
 export const de_CreateSAMLProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSAMLProviderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3744,7 +3744,7 @@ export const de_CreateSAMLProviderCommand = async (
  */
 export const de_CreateServiceLinkedRoleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateServiceLinkedRoleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3764,7 +3764,7 @@ export const de_CreateServiceLinkedRoleCommand = async (
  */
 export const de_CreateServiceSpecificCredentialCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateServiceSpecificCredentialCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3784,7 +3784,7 @@ export const de_CreateServiceSpecificCredentialCommand = async (
  */
 export const de_CreateUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateUserCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3804,7 +3804,7 @@ export const de_CreateUserCommand = async (
  */
 export const de_CreateVirtualMFADeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVirtualMFADeviceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3824,7 +3824,7 @@ export const de_CreateVirtualMFADeviceCommand = async (
  */
 export const de_DeactivateMFADeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeactivateMFADeviceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3841,7 +3841,7 @@ export const de_DeactivateMFADeviceCommand = async (
  */
 export const de_DeleteAccessKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAccessKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3858,7 +3858,7 @@ export const de_DeleteAccessKeyCommand = async (
  */
 export const de_DeleteAccountAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAccountAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3875,7 +3875,7 @@ export const de_DeleteAccountAliasCommand = async (
  */
 export const de_DeleteAccountPasswordPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAccountPasswordPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3892,7 +3892,7 @@ export const de_DeleteAccountPasswordPolicyCommand = async (
  */
 export const de_DeleteGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3909,7 +3909,7 @@ export const de_DeleteGroupCommand = async (
  */
 export const de_DeleteGroupPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGroupPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3926,7 +3926,7 @@ export const de_DeleteGroupPolicyCommand = async (
  */
 export const de_DeleteInstanceProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteInstanceProfileCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3943,7 +3943,7 @@ export const de_DeleteInstanceProfileCommand = async (
  */
 export const de_DeleteLoginProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLoginProfileCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3960,7 +3960,7 @@ export const de_DeleteLoginProfileCommand = async (
  */
 export const de_DeleteOpenIDConnectProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteOpenIDConnectProviderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3977,7 +3977,7 @@ export const de_DeleteOpenIDConnectProviderCommand = async (
  */
 export const de_DeletePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3994,7 +3994,7 @@ export const de_DeletePolicyCommand = async (
  */
 export const de_DeletePolicyVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePolicyVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4011,7 +4011,7 @@ export const de_DeletePolicyVersionCommand = async (
  */
 export const de_DeleteRoleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRoleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4028,7 +4028,7 @@ export const de_DeleteRoleCommand = async (
  */
 export const de_DeleteRolePermissionsBoundaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRolePermissionsBoundaryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4045,7 +4045,7 @@ export const de_DeleteRolePermissionsBoundaryCommand = async (
  */
 export const de_DeleteRolePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRolePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4062,7 +4062,7 @@ export const de_DeleteRolePolicyCommand = async (
  */
 export const de_DeleteSAMLProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSAMLProviderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4079,7 +4079,7 @@ export const de_DeleteSAMLProviderCommand = async (
  */
 export const de_DeleteServerCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServerCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4096,7 +4096,7 @@ export const de_DeleteServerCertificateCommand = async (
  */
 export const de_DeleteServiceLinkedRoleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServiceLinkedRoleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4116,7 +4116,7 @@ export const de_DeleteServiceLinkedRoleCommand = async (
  */
 export const de_DeleteServiceSpecificCredentialCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServiceSpecificCredentialCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4133,7 +4133,7 @@ export const de_DeleteServiceSpecificCredentialCommand = async (
  */
 export const de_DeleteSigningCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSigningCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4150,7 +4150,7 @@ export const de_DeleteSigningCertificateCommand = async (
  */
 export const de_DeleteSSHPublicKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSSHPublicKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4167,7 +4167,7 @@ export const de_DeleteSSHPublicKeyCommand = async (
  */
 export const de_DeleteUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteUserCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4184,7 +4184,7 @@ export const de_DeleteUserCommand = async (
  */
 export const de_DeleteUserPermissionsBoundaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteUserPermissionsBoundaryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4201,7 +4201,7 @@ export const de_DeleteUserPermissionsBoundaryCommand = async (
  */
 export const de_DeleteUserPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteUserPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4218,7 +4218,7 @@ export const de_DeleteUserPolicyCommand = async (
  */
 export const de_DeleteVirtualMFADeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVirtualMFADeviceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4235,7 +4235,7 @@ export const de_DeleteVirtualMFADeviceCommand = async (
  */
 export const de_DetachGroupPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachGroupPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4252,7 +4252,7 @@ export const de_DetachGroupPolicyCommand = async (
  */
 export const de_DetachRolePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachRolePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4269,7 +4269,7 @@ export const de_DetachRolePolicyCommand = async (
  */
 export const de_DetachUserPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachUserPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4286,7 +4286,7 @@ export const de_DetachUserPolicyCommand = async (
  */
 export const de_EnableMFADeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableMFADeviceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4303,7 +4303,7 @@ export const de_EnableMFADeviceCommand = async (
  */
 export const de_GenerateCredentialReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GenerateCredentialReportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4323,7 +4323,7 @@ export const de_GenerateCredentialReportCommand = async (
  */
 export const de_GenerateOrganizationsAccessReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GenerateOrganizationsAccessReportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4343,7 +4343,7 @@ export const de_GenerateOrganizationsAccessReportCommand = async (
  */
 export const de_GenerateServiceLastAccessedDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GenerateServiceLastAccessedDetailsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4363,7 +4363,7 @@ export const de_GenerateServiceLastAccessedDetailsCommand = async (
  */
 export const de_GetAccessKeyLastUsedCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccessKeyLastUsedCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4383,7 +4383,7 @@ export const de_GetAccessKeyLastUsedCommand = async (
  */
 export const de_GetAccountAuthorizationDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccountAuthorizationDetailsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4403,7 +4403,7 @@ export const de_GetAccountAuthorizationDetailsCommand = async (
  */
 export const de_GetAccountPasswordPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccountPasswordPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4423,7 +4423,7 @@ export const de_GetAccountPasswordPolicyCommand = async (
  */
 export const de_GetAccountSummaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccountSummaryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4443,7 +4443,7 @@ export const de_GetAccountSummaryCommand = async (
  */
 export const de_GetContextKeysForCustomPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContextKeysForCustomPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4463,7 +4463,7 @@ export const de_GetContextKeysForCustomPolicyCommand = async (
  */
 export const de_GetContextKeysForPrincipalPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContextKeysForPrincipalPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4483,7 +4483,7 @@ export const de_GetContextKeysForPrincipalPolicyCommand = async (
  */
 export const de_GetCredentialReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCredentialReportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4503,7 +4503,7 @@ export const de_GetCredentialReportCommand = async (
  */
 export const de_GetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4523,7 +4523,7 @@ export const de_GetGroupCommand = async (
  */
 export const de_GetGroupPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGroupPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4543,7 +4543,7 @@ export const de_GetGroupPolicyCommand = async (
  */
 export const de_GetInstanceProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInstanceProfileCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4563,7 +4563,7 @@ export const de_GetInstanceProfileCommand = async (
  */
 export const de_GetLoginProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLoginProfileCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4583,7 +4583,7 @@ export const de_GetLoginProfileCommand = async (
  */
 export const de_GetMFADeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMFADeviceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4603,7 +4603,7 @@ export const de_GetMFADeviceCommand = async (
  */
 export const de_GetOpenIDConnectProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOpenIDConnectProviderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4623,7 +4623,7 @@ export const de_GetOpenIDConnectProviderCommand = async (
  */
 export const de_GetOrganizationsAccessReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOrganizationsAccessReportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4643,7 +4643,7 @@ export const de_GetOrganizationsAccessReportCommand = async (
  */
 export const de_GetPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4663,7 +4663,7 @@ export const de_GetPolicyCommand = async (
  */
 export const de_GetPolicyVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPolicyVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4683,7 +4683,7 @@ export const de_GetPolicyVersionCommand = async (
  */
 export const de_GetRoleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRoleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4703,7 +4703,7 @@ export const de_GetRoleCommand = async (
  */
 export const de_GetRolePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRolePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4723,7 +4723,7 @@ export const de_GetRolePolicyCommand = async (
  */
 export const de_GetSAMLProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSAMLProviderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4743,7 +4743,7 @@ export const de_GetSAMLProviderCommand = async (
  */
 export const de_GetServerCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServerCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4763,7 +4763,7 @@ export const de_GetServerCertificateCommand = async (
  */
 export const de_GetServiceLastAccessedDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceLastAccessedDetailsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4783,7 +4783,7 @@ export const de_GetServiceLastAccessedDetailsCommand = async (
  */
 export const de_GetServiceLastAccessedDetailsWithEntitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceLastAccessedDetailsWithEntitiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4792,7 +4792,7 @@ export const de_GetServiceLastAccessedDetailsWithEntitiesCommand = async (
   let contents: any = {};
   contents = de_GetServiceLastAccessedDetailsWithEntitiesResponse(
     data.GetServiceLastAccessedDetailsWithEntitiesResult,
-    context
+    context,
   );
   const response: GetServiceLastAccessedDetailsWithEntitiesCommandOutput = {
     $metadata: deserializeMetadata(output),
@@ -4806,7 +4806,7 @@ export const de_GetServiceLastAccessedDetailsWithEntitiesCommand = async (
  */
 export const de_GetServiceLinkedRoleDeletionStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceLinkedRoleDeletionStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4826,7 +4826,7 @@ export const de_GetServiceLinkedRoleDeletionStatusCommand = async (
  */
 export const de_GetSSHPublicKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSSHPublicKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4846,7 +4846,7 @@ export const de_GetSSHPublicKeyCommand = async (
  */
 export const de_GetUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetUserCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4866,7 +4866,7 @@ export const de_GetUserCommand = async (
  */
 export const de_GetUserPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetUserPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4886,7 +4886,7 @@ export const de_GetUserPolicyCommand = async (
  */
 export const de_ListAccessKeysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAccessKeysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4906,7 +4906,7 @@ export const de_ListAccessKeysCommand = async (
  */
 export const de_ListAccountAliasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAccountAliasesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4926,7 +4926,7 @@ export const de_ListAccountAliasesCommand = async (
  */
 export const de_ListAttachedGroupPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAttachedGroupPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4946,7 +4946,7 @@ export const de_ListAttachedGroupPoliciesCommand = async (
  */
 export const de_ListAttachedRolePoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAttachedRolePoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4966,7 +4966,7 @@ export const de_ListAttachedRolePoliciesCommand = async (
  */
 export const de_ListAttachedUserPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAttachedUserPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4986,7 +4986,7 @@ export const de_ListAttachedUserPoliciesCommand = async (
  */
 export const de_ListEntitiesForPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEntitiesForPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5006,7 +5006,7 @@ export const de_ListEntitiesForPolicyCommand = async (
  */
 export const de_ListGroupPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGroupPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5026,7 +5026,7 @@ export const de_ListGroupPoliciesCommand = async (
  */
 export const de_ListGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5046,7 +5046,7 @@ export const de_ListGroupsCommand = async (
  */
 export const de_ListGroupsForUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGroupsForUserCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5066,7 +5066,7 @@ export const de_ListGroupsForUserCommand = async (
  */
 export const de_ListInstanceProfilesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListInstanceProfilesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5086,7 +5086,7 @@ export const de_ListInstanceProfilesCommand = async (
  */
 export const de_ListInstanceProfilesForRoleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListInstanceProfilesForRoleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5106,7 +5106,7 @@ export const de_ListInstanceProfilesForRoleCommand = async (
  */
 export const de_ListInstanceProfileTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListInstanceProfileTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5126,7 +5126,7 @@ export const de_ListInstanceProfileTagsCommand = async (
  */
 export const de_ListMFADevicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMFADevicesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5146,7 +5146,7 @@ export const de_ListMFADevicesCommand = async (
  */
 export const de_ListMFADeviceTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMFADeviceTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5166,7 +5166,7 @@ export const de_ListMFADeviceTagsCommand = async (
  */
 export const de_ListOpenIDConnectProvidersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOpenIDConnectProvidersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5186,7 +5186,7 @@ export const de_ListOpenIDConnectProvidersCommand = async (
  */
 export const de_ListOpenIDConnectProviderTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOpenIDConnectProviderTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5206,7 +5206,7 @@ export const de_ListOpenIDConnectProviderTagsCommand = async (
  */
 export const de_ListPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5226,7 +5226,7 @@ export const de_ListPoliciesCommand = async (
  */
 export const de_ListPoliciesGrantingServiceAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPoliciesGrantingServiceAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5246,7 +5246,7 @@ export const de_ListPoliciesGrantingServiceAccessCommand = async (
  */
 export const de_ListPolicyTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPolicyTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5266,7 +5266,7 @@ export const de_ListPolicyTagsCommand = async (
  */
 export const de_ListPolicyVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPolicyVersionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5286,7 +5286,7 @@ export const de_ListPolicyVersionsCommand = async (
  */
 export const de_ListRolePoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRolePoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5306,7 +5306,7 @@ export const de_ListRolePoliciesCommand = async (
  */
 export const de_ListRolesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRolesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5326,7 +5326,7 @@ export const de_ListRolesCommand = async (
  */
 export const de_ListRoleTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRoleTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5346,7 +5346,7 @@ export const de_ListRoleTagsCommand = async (
  */
 export const de_ListSAMLProvidersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSAMLProvidersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5366,7 +5366,7 @@ export const de_ListSAMLProvidersCommand = async (
  */
 export const de_ListSAMLProviderTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSAMLProviderTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5386,7 +5386,7 @@ export const de_ListSAMLProviderTagsCommand = async (
  */
 export const de_ListServerCertificatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServerCertificatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5406,7 +5406,7 @@ export const de_ListServerCertificatesCommand = async (
  */
 export const de_ListServerCertificateTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServerCertificateTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5426,7 +5426,7 @@ export const de_ListServerCertificateTagsCommand = async (
  */
 export const de_ListServiceSpecificCredentialsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServiceSpecificCredentialsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5446,7 +5446,7 @@ export const de_ListServiceSpecificCredentialsCommand = async (
  */
 export const de_ListSigningCertificatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSigningCertificatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5466,7 +5466,7 @@ export const de_ListSigningCertificatesCommand = async (
  */
 export const de_ListSSHPublicKeysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSSHPublicKeysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5486,7 +5486,7 @@ export const de_ListSSHPublicKeysCommand = async (
  */
 export const de_ListUserPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListUserPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5506,7 +5506,7 @@ export const de_ListUserPoliciesCommand = async (
  */
 export const de_ListUsersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListUsersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5526,7 +5526,7 @@ export const de_ListUsersCommand = async (
  */
 export const de_ListUserTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListUserTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5546,7 +5546,7 @@ export const de_ListUserTagsCommand = async (
  */
 export const de_ListVirtualMFADevicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVirtualMFADevicesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5566,7 +5566,7 @@ export const de_ListVirtualMFADevicesCommand = async (
  */
 export const de_PutGroupPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutGroupPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5583,7 +5583,7 @@ export const de_PutGroupPolicyCommand = async (
  */
 export const de_PutRolePermissionsBoundaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutRolePermissionsBoundaryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5600,7 +5600,7 @@ export const de_PutRolePermissionsBoundaryCommand = async (
  */
 export const de_PutRolePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutRolePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5617,7 +5617,7 @@ export const de_PutRolePolicyCommand = async (
  */
 export const de_PutUserPermissionsBoundaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutUserPermissionsBoundaryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5634,7 +5634,7 @@ export const de_PutUserPermissionsBoundaryCommand = async (
  */
 export const de_PutUserPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutUserPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5651,7 +5651,7 @@ export const de_PutUserPolicyCommand = async (
  */
 export const de_RemoveClientIDFromOpenIDConnectProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveClientIDFromOpenIDConnectProviderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5668,7 +5668,7 @@ export const de_RemoveClientIDFromOpenIDConnectProviderCommand = async (
  */
 export const de_RemoveRoleFromInstanceProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveRoleFromInstanceProfileCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5685,7 +5685,7 @@ export const de_RemoveRoleFromInstanceProfileCommand = async (
  */
 export const de_RemoveUserFromGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveUserFromGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5702,7 +5702,7 @@ export const de_RemoveUserFromGroupCommand = async (
  */
 export const de_ResetServiceSpecificCredentialCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetServiceSpecificCredentialCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5722,7 +5722,7 @@ export const de_ResetServiceSpecificCredentialCommand = async (
  */
 export const de_ResyncMFADeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResyncMFADeviceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5739,7 +5739,7 @@ export const de_ResyncMFADeviceCommand = async (
  */
 export const de_SetDefaultPolicyVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetDefaultPolicyVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5756,7 +5756,7 @@ export const de_SetDefaultPolicyVersionCommand = async (
  */
 export const de_SetSecurityTokenServicePreferencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetSecurityTokenServicePreferencesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5773,7 +5773,7 @@ export const de_SetSecurityTokenServicePreferencesCommand = async (
  */
 export const de_SimulateCustomPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SimulateCustomPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5793,7 +5793,7 @@ export const de_SimulateCustomPolicyCommand = async (
  */
 export const de_SimulatePrincipalPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SimulatePrincipalPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5813,7 +5813,7 @@ export const de_SimulatePrincipalPolicyCommand = async (
  */
 export const de_TagInstanceProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagInstanceProfileCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5830,7 +5830,7 @@ export const de_TagInstanceProfileCommand = async (
  */
 export const de_TagMFADeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagMFADeviceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5847,7 +5847,7 @@ export const de_TagMFADeviceCommand = async (
  */
 export const de_TagOpenIDConnectProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagOpenIDConnectProviderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5864,7 +5864,7 @@ export const de_TagOpenIDConnectProviderCommand = async (
  */
 export const de_TagPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5881,7 +5881,7 @@ export const de_TagPolicyCommand = async (
  */
 export const de_TagRoleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagRoleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5898,7 +5898,7 @@ export const de_TagRoleCommand = async (
  */
 export const de_TagSAMLProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagSAMLProviderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5915,7 +5915,7 @@ export const de_TagSAMLProviderCommand = async (
  */
 export const de_TagServerCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagServerCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5932,7 +5932,7 @@ export const de_TagServerCertificateCommand = async (
  */
 export const de_TagUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagUserCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5949,7 +5949,7 @@ export const de_TagUserCommand = async (
  */
 export const de_UntagInstanceProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagInstanceProfileCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5966,7 +5966,7 @@ export const de_UntagInstanceProfileCommand = async (
  */
 export const de_UntagMFADeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagMFADeviceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5983,7 +5983,7 @@ export const de_UntagMFADeviceCommand = async (
  */
 export const de_UntagOpenIDConnectProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagOpenIDConnectProviderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6000,7 +6000,7 @@ export const de_UntagOpenIDConnectProviderCommand = async (
  */
 export const de_UntagPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6017,7 +6017,7 @@ export const de_UntagPolicyCommand = async (
  */
 export const de_UntagRoleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagRoleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6034,7 +6034,7 @@ export const de_UntagRoleCommand = async (
  */
 export const de_UntagSAMLProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagSAMLProviderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6051,7 +6051,7 @@ export const de_UntagSAMLProviderCommand = async (
  */
 export const de_UntagServerCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagServerCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6068,7 +6068,7 @@ export const de_UntagServerCertificateCommand = async (
  */
 export const de_UntagUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagUserCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6085,7 +6085,7 @@ export const de_UntagUserCommand = async (
  */
 export const de_UpdateAccessKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAccessKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6102,7 +6102,7 @@ export const de_UpdateAccessKeyCommand = async (
  */
 export const de_UpdateAccountPasswordPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAccountPasswordPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6119,7 +6119,7 @@ export const de_UpdateAccountPasswordPolicyCommand = async (
  */
 export const de_UpdateAssumeRolePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAssumeRolePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6136,7 +6136,7 @@ export const de_UpdateAssumeRolePolicyCommand = async (
  */
 export const de_UpdateGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6153,7 +6153,7 @@ export const de_UpdateGroupCommand = async (
  */
 export const de_UpdateLoginProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLoginProfileCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6170,7 +6170,7 @@ export const de_UpdateLoginProfileCommand = async (
  */
 export const de_UpdateOpenIDConnectProviderThumbprintCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateOpenIDConnectProviderThumbprintCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6187,7 +6187,7 @@ export const de_UpdateOpenIDConnectProviderThumbprintCommand = async (
  */
 export const de_UpdateRoleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRoleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6207,7 +6207,7 @@ export const de_UpdateRoleCommand = async (
  */
 export const de_UpdateRoleDescriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRoleDescriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6227,7 +6227,7 @@ export const de_UpdateRoleDescriptionCommand = async (
  */
 export const de_UpdateSAMLProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSAMLProviderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6247,7 +6247,7 @@ export const de_UpdateSAMLProviderCommand = async (
  */
 export const de_UpdateServerCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServerCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6264,7 +6264,7 @@ export const de_UpdateServerCertificateCommand = async (
  */
 export const de_UpdateServiceSpecificCredentialCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServiceSpecificCredentialCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6281,7 +6281,7 @@ export const de_UpdateServiceSpecificCredentialCommand = async (
  */
 export const de_UpdateSigningCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSigningCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6298,7 +6298,7 @@ export const de_UpdateSigningCertificateCommand = async (
  */
 export const de_UpdateSSHPublicKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSSHPublicKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6315,7 +6315,7 @@ export const de_UpdateSSHPublicKeyCommand = async (
  */
 export const de_UpdateUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateUserCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6332,7 +6332,7 @@ export const de_UpdateUserCommand = async (
  */
 export const de_UploadServerCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UploadServerCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6352,7 +6352,7 @@ export const de_UploadServerCertificateCommand = async (
  */
 export const de_UploadSigningCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UploadSigningCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6372,7 +6372,7 @@ export const de_UploadSigningCertificateCommand = async (
  */
 export const de_UploadSSHPublicKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UploadSSHPublicKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6496,7 +6496,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ConcurrentModificationException(body.Error, context);
@@ -6512,7 +6512,7 @@ const de_ConcurrentModificationExceptionRes = async (
  */
 const de_CredentialReportExpiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CredentialReportExpiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CredentialReportExpiredException(body.Error, context);
@@ -6528,7 +6528,7 @@ const de_CredentialReportExpiredExceptionRes = async (
  */
 const de_CredentialReportNotPresentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CredentialReportNotPresentException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CredentialReportNotPresentException(body.Error, context);
@@ -6544,7 +6544,7 @@ const de_CredentialReportNotPresentExceptionRes = async (
  */
 const de_CredentialReportNotReadyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CredentialReportNotReadyException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CredentialReportNotReadyException(body.Error, context);
@@ -6560,7 +6560,7 @@ const de_CredentialReportNotReadyExceptionRes = async (
  */
 const de_DeleteConflictExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConflictException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DeleteConflictException(body.Error, context);
@@ -6576,7 +6576,7 @@ const de_DeleteConflictExceptionRes = async (
  */
 const de_DuplicateCertificateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicateCertificateException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DuplicateCertificateException(body.Error, context);
@@ -6592,7 +6592,7 @@ const de_DuplicateCertificateExceptionRes = async (
  */
 const de_DuplicateSSHPublicKeyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicateSSHPublicKeyException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DuplicateSSHPublicKeyException(body.Error, context);
@@ -6608,7 +6608,7 @@ const de_DuplicateSSHPublicKeyExceptionRes = async (
  */
 const de_EntityAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EntityAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_EntityAlreadyExistsException(body.Error, context);
@@ -6624,7 +6624,7 @@ const de_EntityAlreadyExistsExceptionRes = async (
  */
 const de_EntityTemporarilyUnmodifiableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EntityTemporarilyUnmodifiableException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_EntityTemporarilyUnmodifiableException(body.Error, context);
@@ -6640,7 +6640,7 @@ const de_EntityTemporarilyUnmodifiableExceptionRes = async (
  */
 const de_InvalidAuthenticationCodeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidAuthenticationCodeException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidAuthenticationCodeException(body.Error, context);
@@ -6656,7 +6656,7 @@ const de_InvalidAuthenticationCodeExceptionRes = async (
  */
 const de_InvalidCertificateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidCertificateException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidCertificateException(body.Error, context);
@@ -6672,7 +6672,7 @@ const de_InvalidCertificateExceptionRes = async (
  */
 const de_InvalidInputExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidInputException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidInputException(body.Error, context);
@@ -6688,7 +6688,7 @@ const de_InvalidInputExceptionRes = async (
  */
 const de_InvalidPublicKeyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPublicKeyException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidPublicKeyException(body.Error, context);
@@ -6704,7 +6704,7 @@ const de_InvalidPublicKeyExceptionRes = async (
  */
 const de_InvalidUserTypeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidUserTypeException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidUserTypeException(body.Error, context);
@@ -6720,7 +6720,7 @@ const de_InvalidUserTypeExceptionRes = async (
  */
 const de_KeyPairMismatchExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KeyPairMismatchException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_KeyPairMismatchException(body.Error, context);
@@ -6736,7 +6736,7 @@ const de_KeyPairMismatchExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_LimitExceededException(body.Error, context);
@@ -6752,7 +6752,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_MalformedCertificateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedCertificateException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_MalformedCertificateException(body.Error, context);
@@ -6768,7 +6768,7 @@ const de_MalformedCertificateExceptionRes = async (
  */
 const de_MalformedPolicyDocumentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedPolicyDocumentException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_MalformedPolicyDocumentException(body.Error, context);
@@ -6784,7 +6784,7 @@ const de_MalformedPolicyDocumentExceptionRes = async (
  */
 const de_NoSuchEntityExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchEntityException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_NoSuchEntityException(body.Error, context);
@@ -6800,7 +6800,7 @@ const de_NoSuchEntityExceptionRes = async (
  */
 const de_OpenIdIdpCommunicationErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OpenIdIdpCommunicationErrorException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_OpenIdIdpCommunicationErrorException(body.Error, context);
@@ -6816,7 +6816,7 @@ const de_OpenIdIdpCommunicationErrorExceptionRes = async (
  */
 const de_PasswordPolicyViolationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PasswordPolicyViolationException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_PasswordPolicyViolationException(body.Error, context);
@@ -6832,7 +6832,7 @@ const de_PasswordPolicyViolationExceptionRes = async (
  */
 const de_PolicyEvaluationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PolicyEvaluationException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_PolicyEvaluationException(body.Error, context);
@@ -6848,7 +6848,7 @@ const de_PolicyEvaluationExceptionRes = async (
  */
 const de_PolicyNotAttachableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PolicyNotAttachableException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_PolicyNotAttachableException(body.Error, context);
@@ -6864,7 +6864,7 @@ const de_PolicyNotAttachableExceptionRes = async (
  */
 const de_ReportGenerationLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReportGenerationLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ReportGenerationLimitExceededException(body.Error, context);
@@ -6880,7 +6880,7 @@ const de_ReportGenerationLimitExceededExceptionRes = async (
  */
 const de_ServiceFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceFailureException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ServiceFailureException(body.Error, context);
@@ -6896,7 +6896,7 @@ const de_ServiceFailureExceptionRes = async (
  */
 const de_ServiceNotSupportedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceNotSupportedException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ServiceNotSupportedException(body.Error, context);
@@ -6912,7 +6912,7 @@ const de_ServiceNotSupportedExceptionRes = async (
  */
 const de_UnmodifiableEntityExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnmodifiableEntityException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_UnmodifiableEntityException(body.Error, context);
@@ -6928,7 +6928,7 @@ const de_UnmodifiableEntityExceptionRes = async (
  */
 const de_UnrecognizedPublicKeyEncodingExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnrecognizedPublicKeyEncodingException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_UnrecognizedPublicKeyEncodingException(body.Error, context);
@@ -6960,7 +6960,7 @@ const se_ActionNameListType = (input: string[], context: __SerdeContext): any =>
  */
 const se_AddClientIDToOpenIDConnectProviderRequest = (
   input: AddClientIDToOpenIDConnectProviderRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_OIDCPA] != null) {
@@ -7213,7 +7213,7 @@ const se_CreateLoginProfileRequest = (input: CreateLoginProfileRequest, context:
  */
 const se_CreateOpenIDConnectProviderRequest = (
   input: CreateOpenIDConnectProviderRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_U] != null) {
@@ -7381,7 +7381,7 @@ const se_CreateServiceLinkedRoleRequest = (input: CreateServiceLinkedRoleRequest
  */
 const se_CreateServiceSpecificCredentialRequest = (
   input: CreateServiceSpecificCredentialRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_UN] != null) {
@@ -7535,7 +7535,7 @@ const se_DeleteLoginProfileRequest = (input: DeleteLoginProfileRequest, context:
  */
 const se_DeleteOpenIDConnectProviderRequest = (
   input: DeleteOpenIDConnectProviderRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_OIDCPA] != null) {
@@ -7574,7 +7574,7 @@ const se_DeletePolicyVersionRequest = (input: DeletePolicyVersionRequest, contex
  */
 const se_DeleteRolePermissionsBoundaryRequest = (
   input: DeleteRolePermissionsBoundaryRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_RN] != null) {
@@ -7646,7 +7646,7 @@ const se_DeleteServiceLinkedRoleRequest = (input: DeleteServiceLinkedRoleRequest
  */
 const se_DeleteServiceSpecificCredentialRequest = (
   input: DeleteServiceSpecificCredentialRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_UN] != null) {
@@ -7691,7 +7691,7 @@ const se_DeleteSSHPublicKeyRequest = (input: DeleteSSHPublicKeyRequest, context:
  */
 const se_DeleteUserPermissionsBoundaryRequest = (
   input: DeleteUserPermissionsBoundaryRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_UN] != null) {
@@ -7819,7 +7819,7 @@ const se_entityListType = (input: EntityType[], context: __SerdeContext): any =>
  */
 const se_GenerateOrganizationsAccessReportRequest = (
   input: GenerateOrganizationsAccessReportRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_EP] != null) {
@@ -7836,7 +7836,7 @@ const se_GenerateOrganizationsAccessReportRequest = (
  */
 const se_GenerateServiceLastAccessedDetailsRequest = (
   input: GenerateServiceLastAccessedDetailsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Ar] != null) {
@@ -7864,7 +7864,7 @@ const se_GetAccessKeyLastUsedRequest = (input: GetAccessKeyLastUsedRequest, cont
  */
 const se_GetAccountAuthorizationDetailsRequest = (
   input: GetAccountAuthorizationDetailsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_F] != null) {
@@ -7891,7 +7891,7 @@ const se_GetAccountAuthorizationDetailsRequest = (
  */
 const se_GetContextKeysForCustomPolicyRequest = (
   input: GetContextKeysForCustomPolicyRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_PIL] != null) {
@@ -7912,7 +7912,7 @@ const se_GetContextKeysForCustomPolicyRequest = (
  */
 const se_GetContextKeysForPrincipalPolicyRequest = (
   input: GetContextKeysForPrincipalPolicyRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_PSA] != null) {
@@ -8014,7 +8014,7 @@ const se_GetOpenIDConnectProviderRequest = (input: GetOpenIDConnectProviderReque
  */
 const se_GetOrganizationsAccessReportRequest = (
   input: GetOrganizationsAccessReportRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_JI] != null) {
@@ -8109,7 +8109,7 @@ const se_GetServerCertificateRequest = (input: GetServerCertificateRequest, cont
  */
 const se_GetServiceLastAccessedDetailsRequest = (
   input: GetServiceLastAccessedDetailsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_JI] != null) {
@@ -8129,7 +8129,7 @@ const se_GetServiceLastAccessedDetailsRequest = (
  */
 const se_GetServiceLastAccessedDetailsWithEntitiesRequest = (
   input: GetServiceLastAccessedDetailsWithEntitiesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_JI] != null) {
@@ -8152,7 +8152,7 @@ const se_GetServiceLastAccessedDetailsWithEntitiesRequest = (
  */
 const se_GetServiceLinkedRoleDeletionStatusRequest = (
   input: GetServiceLinkedRoleDeletionStatusRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DTI] != null) {
@@ -8376,7 +8376,7 @@ const se_ListGroupsRequest = (input: ListGroupsRequest, context: __SerdeContext)
  */
 const se_ListInstanceProfilesForRoleRequest = (
   input: ListInstanceProfilesForRoleRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_RN] != null) {
@@ -8464,7 +8464,7 @@ const se_ListMFADeviceTagsRequest = (input: ListMFADeviceTagsRequest, context: _
  */
 const se_ListOpenIDConnectProvidersRequest = (
   input: ListOpenIDConnectProvidersRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   return entries;
@@ -8475,7 +8475,7 @@ const se_ListOpenIDConnectProvidersRequest = (
  */
 const se_ListOpenIDConnectProviderTagsRequest = (
   input: ListOpenIDConnectProviderTagsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_OIDCPA] != null) {
@@ -8495,7 +8495,7 @@ const se_ListOpenIDConnectProviderTagsRequest = (
  */
 const se_ListPoliciesGrantingServiceAccessRequest = (
   input: ListPoliciesGrantingServiceAccessRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_M] != null) {
@@ -8692,7 +8692,7 @@ const se_ListServerCertificateTagsRequest = (input: ListServerCertificateTagsReq
  */
 const se_ListServiceSpecificCredentialsRequest = (
   input: ListServiceSpecificCredentialsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_UN] != null) {
@@ -8828,7 +8828,7 @@ const se_PutGroupPolicyRequest = (input: PutGroupPolicyRequest, context: __Serde
  */
 const se_PutRolePermissionsBoundaryRequest = (
   input: PutRolePermissionsBoundaryRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_RN] != null) {
@@ -8862,7 +8862,7 @@ const se_PutRolePolicyRequest = (input: PutRolePolicyRequest, context: __SerdeCo
  */
 const se_PutUserPermissionsBoundaryRequest = (
   input: PutUserPermissionsBoundaryRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_UN] != null) {
@@ -8896,7 +8896,7 @@ const se_PutUserPolicyRequest = (input: PutUserPolicyRequest, context: __SerdeCo
  */
 const se_RemoveClientIDFromOpenIDConnectProviderRequest = (
   input: RemoveClientIDFromOpenIDConnectProviderRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_OIDCPA] != null) {
@@ -8913,7 +8913,7 @@ const se_RemoveClientIDFromOpenIDConnectProviderRequest = (
  */
 const se_RemoveRoleFromInstanceProfileRequest = (
   input: RemoveRoleFromInstanceProfileRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IPN] != null) {
@@ -8944,7 +8944,7 @@ const se_RemoveUserFromGroupRequest = (input: RemoveUserFromGroupRequest, contex
  */
 const se_ResetServiceSpecificCredentialRequest = (
   input: ResetServiceSpecificCredentialRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_UN] != null) {
@@ -9027,7 +9027,7 @@ const se_SetDefaultPolicyVersionRequest = (input: SetDefaultPolicyVersionRequest
  */
 const se_SetSecurityTokenServicePreferencesRequest = (
   input: SetSecurityTokenServicePreferencesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_GETV] != null) {
@@ -9487,7 +9487,7 @@ const se_UntagMFADeviceRequest = (input: UntagMFADeviceRequest, context: __Serde
  */
 const se_UntagOpenIDConnectProviderRequest = (
   input: UntagOpenIDConnectProviderRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_OIDCPA] != null) {
@@ -9633,7 +9633,7 @@ const se_UpdateAccessKeyRequest = (input: UpdateAccessKeyRequest, context: __Ser
  */
 const se_UpdateAccountPasswordPolicyRequest = (
   input: UpdateAccountPasswordPolicyRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_MPL] != null) {
@@ -9719,7 +9719,7 @@ const se_UpdateLoginProfileRequest = (input: UpdateLoginProfileRequest, context:
  */
 const se_UpdateOpenIDConnectProviderThumbprintRequest = (
   input: UpdateOpenIDConnectProviderThumbprintRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_OIDCPA] != null) {
@@ -9805,7 +9805,7 @@ const se_UpdateServerCertificateRequest = (input: UpdateServerCertificateRequest
  */
 const se_UpdateServiceSpecificCredentialRequest = (
   input: UpdateServiceSpecificCredentialRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_UN] != null) {
@@ -10207,7 +10207,7 @@ const de_CreateLoginProfileResponse = (output: any, context: __SerdeContext): Cr
  */
 const de_CreateOpenIDConnectProviderResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateOpenIDConnectProviderResponse => {
   const contents: any = {};
   if (output[_OIDCPA] != null) {
@@ -10286,7 +10286,7 @@ const de_CreateServiceLinkedRoleResponse = (output: any, context: __SerdeContext
  */
 const de_CreateServiceSpecificCredentialResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateServiceSpecificCredentialResponse => {
   const contents: any = {};
   if (output[_SSC] != null) {
@@ -10322,7 +10322,7 @@ const de_CreateVirtualMFADeviceResponse = (output: any, context: __SerdeContext)
  */
 const de_CredentialReportExpiredException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CredentialReportExpiredException => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -10336,7 +10336,7 @@ const de_CredentialReportExpiredException = (
  */
 const de_CredentialReportNotPresentException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CredentialReportNotPresentException => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -10350,7 +10350,7 @@ const de_CredentialReportNotPresentException = (
  */
 const de_CredentialReportNotReadyException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CredentialReportNotReadyException => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -10483,7 +10483,7 @@ const de_EntityInfo = (output: any, context: __SerdeContext): EntityInfo => {
  */
 const de_EntityTemporarilyUnmodifiableException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EntityTemporarilyUnmodifiableException => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -10511,7 +10511,7 @@ const de_ErrorDetails = (output: any, context: __SerdeContext): ErrorDetails => 
  */
 const de_EvalDecisionDetailsType = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Record<string, PolicyEvaluationDecisionType> => {
   return output.reduce((acc: any, pair: any) => {
     if (pair["value"] === null) {
@@ -10581,7 +10581,7 @@ const de_EvaluationResultsListType = (output: any, context: __SerdeContext): Eva
  */
 const de_GenerateCredentialReportResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GenerateCredentialReportResponse => {
   const contents: any = {};
   if (output[_Sta] != null) {
@@ -10598,7 +10598,7 @@ const de_GenerateCredentialReportResponse = (
  */
 const de_GenerateOrganizationsAccessReportResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GenerateOrganizationsAccessReportResponse => {
   const contents: any = {};
   if (output[_JI] != null) {
@@ -10612,7 +10612,7 @@ const de_GenerateOrganizationsAccessReportResponse = (
  */
 const de_GenerateServiceLastAccessedDetailsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GenerateServiceLastAccessedDetailsResponse => {
   const contents: any = {};
   if (output[_JI] != null) {
@@ -10640,7 +10640,7 @@ const de_GetAccessKeyLastUsedResponse = (output: any, context: __SerdeContext): 
  */
 const de_GetAccountAuthorizationDetailsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetAccountAuthorizationDetailsResponse => {
   const contents: any = {};
   if (output.UserDetailList === "") {
@@ -10677,7 +10677,7 @@ const de_GetAccountAuthorizationDetailsResponse = (
  */
 const de_GetAccountPasswordPolicyResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetAccountPasswordPolicyResponse => {
   const contents: any = {};
   if (output[_PPa] != null) {
@@ -10817,7 +10817,7 @@ const de_GetMFADeviceResponse = (output: any, context: __SerdeContext): GetMFADe
  */
 const de_GetOpenIDConnectProviderResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetOpenIDConnectProviderResponse => {
   const contents: any = {};
   if (output[_U] != null) {
@@ -10849,7 +10849,7 @@ const de_GetOpenIDConnectProviderResponse = (
  */
 const de_GetOrganizationsAccessReportResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetOrganizationsAccessReportResponse => {
   const contents: any = {};
   if (output[_JS] != null) {
@@ -10972,7 +10972,7 @@ const de_GetServerCertificateResponse = (output: any, context: __SerdeContext): 
  */
 const de_GetServiceLastAccessedDetailsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetServiceLastAccessedDetailsResponse => {
   const contents: any = {};
   if (output[_JS] != null) {
@@ -11009,7 +11009,7 @@ const de_GetServiceLastAccessedDetailsResponse = (
  */
 const de_GetServiceLastAccessedDetailsWithEntitiesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetServiceLastAccessedDetailsWithEntitiesResponse => {
   const contents: any = {};
   if (output[_JS] != null) {
@@ -11043,7 +11043,7 @@ const de_GetServiceLastAccessedDetailsWithEntitiesResponse = (
  */
 const de_GetServiceLinkedRoleDeletionStatusResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetServiceLinkedRoleDeletionStatusResponse => {
   const contents: any = {};
   if (output[_St] != null) {
@@ -11232,7 +11232,7 @@ const de_instanceProfileListType = (output: any, context: __SerdeContext): Insta
  */
 const de_InvalidAuthenticationCodeException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidAuthenticationCodeException => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -11350,7 +11350,7 @@ const de_ListAccountAliasesResponse = (output: any, context: __SerdeContext): Li
  */
 const de_ListAttachedGroupPoliciesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListAttachedGroupPoliciesResponse => {
   const contents: any = {};
   if (output.AttachedPolicies === "") {
@@ -11372,7 +11372,7 @@ const de_ListAttachedGroupPoliciesResponse = (
  */
 const de_ListAttachedRolePoliciesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListAttachedRolePoliciesResponse => {
   const contents: any = {};
   if (output.AttachedPolicies === "") {
@@ -11394,7 +11394,7 @@ const de_ListAttachedRolePoliciesResponse = (
  */
 const de_ListAttachedUserPoliciesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListAttachedUserPoliciesResponse => {
   const contents: any = {};
   if (output.AttachedPolicies === "") {
@@ -11502,7 +11502,7 @@ const de_ListGroupsResponse = (output: any, context: __SerdeContext): ListGroups
  */
 const de_ListInstanceProfilesForRoleResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListInstanceProfilesForRoleResponse => {
   const contents: any = {};
   if (output.InstanceProfiles === "") {
@@ -11600,7 +11600,7 @@ const de_ListMFADeviceTagsResponse = (output: any, context: __SerdeContext): Lis
  */
 const de_ListOpenIDConnectProvidersResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListOpenIDConnectProvidersResponse => {
   const contents: any = {};
   if (output.OpenIDConnectProviderList === "") {
@@ -11616,7 +11616,7 @@ const de_ListOpenIDConnectProvidersResponse = (
  */
 const de_ListOpenIDConnectProviderTagsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListOpenIDConnectProviderTagsResponse => {
   const contents: any = {};
   if (output.Tags === "") {
@@ -11638,7 +11638,7 @@ const de_ListOpenIDConnectProviderTagsResponse = (
  */
 const de_ListPoliciesGrantingServiceAccessEntry = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListPoliciesGrantingServiceAccessEntry => {
   const contents: any = {};
   if (output[_SNer] != null) {
@@ -11657,7 +11657,7 @@ const de_ListPoliciesGrantingServiceAccessEntry = (
  */
 const de_ListPoliciesGrantingServiceAccessResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListPoliciesGrantingServiceAccessResponse => {
   const contents: any = {};
   if (output.PoliciesGrantingServiceAccess === "") {
@@ -11665,7 +11665,7 @@ const de_ListPoliciesGrantingServiceAccessResponse = (
   } else if (output[_PGSA] != null && output[_PGSA][_me] != null) {
     contents[_PGSA] = de_listPolicyGrantingServiceAccessResponseListType(
       __getArrayIfSingleItem(output[_PGSA][_me]),
-      context
+      context,
     );
   }
   if (output[_IT] != null) {
@@ -11701,7 +11701,7 @@ const de_ListPoliciesResponse = (output: any, context: __SerdeContext): ListPoli
  */
 const de_listPolicyGrantingServiceAccessResponseListType = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListPoliciesGrantingServiceAccessEntry[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -11861,7 +11861,7 @@ const de_ListServerCertificatesResponse = (output: any, context: __SerdeContext)
  */
 const de_ListServerCertificateTagsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListServerCertificateTagsResponse => {
   const contents: any = {};
   if (output.Tags === "") {
@@ -11883,7 +11883,7 @@ const de_ListServerCertificateTagsResponse = (
  */
 const de_ListServiceSpecificCredentialsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListServiceSpecificCredentialsResponse => {
   const contents: any = {};
   if (output.ServiceSpecificCredentials === "") {
@@ -12041,7 +12041,7 @@ const de_MalformedCertificateException = (output: any, context: __SerdeContext):
  */
 const de_MalformedPolicyDocumentException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MalformedPolicyDocumentException => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -12173,7 +12173,7 @@ const de_OpenIDConnectProviderListType = (output: any, context: __SerdeContext):
  */
 const de_OpenIdIdpCommunicationErrorException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): OpenIdIdpCommunicationErrorException => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -12236,7 +12236,7 @@ const de_PasswordPolicy = (output: any, context: __SerdeContext): PasswordPolicy
  */
 const de_PasswordPolicyViolationException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PasswordPolicyViolationException => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -12250,7 +12250,7 @@ const de_PasswordPolicyViolationException = (
  */
 const de_PermissionsBoundaryDecisionDetail = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PermissionsBoundaryDecisionDetail => {
   const contents: any = {};
   if (output[_ABPB] != null) {
@@ -12380,7 +12380,7 @@ const de_PolicyGrantingServiceAccess = (output: any, context: __SerdeContext): P
  */
 const de_policyGrantingServiceAccessListType = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PolicyGrantingServiceAccess[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -12536,7 +12536,7 @@ const de_Position = (output: any, context: __SerdeContext): Position => {
  */
 const de_ReportGenerationLimitExceededException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReportGenerationLimitExceededException => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -12550,7 +12550,7 @@ const de_ReportGenerationLimitExceededException = (
  */
 const de_ResetServiceSpecificCredentialResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResetServiceSpecificCredentialResponse => {
   const contents: any = {};
   if (output[_SSC] != null) {
@@ -12945,7 +12945,7 @@ const de_ServiceSpecificCredential = (output: any, context: __SerdeContext): Ser
  */
 const de_ServiceSpecificCredentialMetadata = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServiceSpecificCredentialMetadata => {
   const contents: any = {};
   if (output[_UN] != null) {
@@ -12974,7 +12974,7 @@ const de_ServiceSpecificCredentialMetadata = (
  */
 const de_ServiceSpecificCredentialsListType = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServiceSpecificCredentialMetadata[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -13209,7 +13209,7 @@ const de_UnmodifiableEntityException = (output: any, context: __SerdeContext): U
  */
 const de_UnrecognizedPublicKeyEncodingException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UnrecognizedPublicKeyEncodingException => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -13269,7 +13269,7 @@ const de_UploadServerCertificateResponse = (output: any, context: __SerdeContext
  */
 const de_UploadSigningCertificateResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UploadSigningCertificateResponse => {
   const contents: any = {};
   if (output[_Cert] != null) {
@@ -13448,7 +13448,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

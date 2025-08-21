@@ -41,7 +41,7 @@ export interface Inspector2HttpAuthSchemeParametersProvider
 export const defaultInspector2HttpAuthSchemeParametersProvider = async (
   config: Inspector2ClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<Inspector2HttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -128,7 +128,7 @@ export interface HttpAuthSchemeResolvedConfig extends AwsSdkSigV4AuthResolvedCon
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved
+  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved,
 ): T & HttpAuthSchemeResolvedConfig => {
   const config_0 = resolveAwsSdkSigV4Config(config);
   return {

@@ -52,7 +52,7 @@ const checkState = async (client: LexModelsV2Client, input: DescribeBotCommandIn
  */
 export const waitForBotAvailable = async (
   params: WaiterConfiguration<LexModelsV2Client>,
-  input: DescribeBotCommandInput
+  input: DescribeBotCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -64,7 +64,7 @@ export const waitForBotAvailable = async (
  */
 export const waitUntilBotAvailable = async (
   params: WaiterConfiguration<LexModelsV2Client>,
-  input: DescribeBotCommandInput
+  input: DescribeBotCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

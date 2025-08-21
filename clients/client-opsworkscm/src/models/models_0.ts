@@ -1991,7 +1991,7 @@ export const CreateServerResponseFilterSensitiveLog = (obj: CreateServerResponse
  * @internal
  */
 export const DescribeNodeAssociationStatusResponseFilterSensitiveLog = (
-  obj: DescribeNodeAssociationStatusResponse
+  obj: DescribeNodeAssociationStatusResponse,
 ): any => ({
   ...obj,
   ...(obj.EngineAttributes && {
@@ -2030,7 +2030,7 @@ export const ExportServerEngineAttributeRequestFilterSensitiveLog = (obj: Export
  * @internal
  */
 export const ExportServerEngineAttributeResponseFilterSensitiveLog = (
-  obj: ExportServerEngineAttributeResponse
+  obj: ExportServerEngineAttributeResponse,
 ): any => ({
   ...obj,
   ...(obj.EngineAttribute && { EngineAttribute: EngineAttributeFilterSensitiveLog(obj.EngineAttribute) }),
@@ -2074,7 +2074,7 @@ export const UpdateServerResponseFilterSensitiveLog = (obj: UpdateServerResponse
  * @internal
  */
 export const UpdateServerEngineAttributesResponseFilterSensitiveLog = (
-  obj: UpdateServerEngineAttributesResponse
+  obj: UpdateServerEngineAttributesResponse,
 ): any => ({
   ...obj,
   ...(obj.Server && { Server: ServerFilterSensitiveLog(obj.Server) }),

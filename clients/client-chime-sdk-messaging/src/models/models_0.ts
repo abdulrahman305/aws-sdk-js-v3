@@ -3673,7 +3673,7 @@ export const BatchChannelMembershipsFilterSensitiveLog = (obj: BatchChannelMembe
  * @internal
  */
 export const BatchCreateChannelMembershipResponseFilterSensitiveLog = (
-  obj: BatchCreateChannelMembershipResponse
+  obj: BatchCreateChannelMembershipResponse,
 ): any => ({
   ...obj,
   ...(obj.BatchChannelMemberships && {
@@ -3764,9 +3764,10 @@ export const ChannelMessageCallbackFilterSensitiveLog = (obj: ChannelMessageCall
   ...(obj.MessageAttributes && {
     MessageAttributes: Object.entries(obj.MessageAttributes).reduce(
       (acc: any, [key, value]: [string, MessageAttributeValue]) => (
-        (acc[key] = MessageAttributeValueFilterSensitiveLog(value)), acc
+        (acc[key] = MessageAttributeValueFilterSensitiveLog(value)),
+        acc
       ),
-      {}
+      {},
     ),
   }),
   ...(obj.ContentType && { ContentType: SENSITIVE_STRING }),
@@ -3811,7 +3812,7 @@ export const ChannelSummaryFilterSensitiveLog = (obj: ChannelSummary): any => ({
  * @internal
  */
 export const ChannelMembershipForAppInstanceUserSummaryFilterSensitiveLog = (
-  obj: ChannelMembershipForAppInstanceUserSummary
+  obj: ChannelMembershipForAppInstanceUserSummary,
 ): any => ({
   ...obj,
   ...(obj.ChannelSummary && { ChannelSummary: ChannelSummaryFilterSensitiveLog(obj.ChannelSummary) }),
@@ -3854,9 +3855,10 @@ export const ChannelMessageFilterSensitiveLog = (obj: ChannelMessage): any => ({
   ...(obj.MessageAttributes && {
     MessageAttributes: Object.entries(obj.MessageAttributes).reduce(
       (acc: any, [key, value]: [string, MessageAttributeValue]) => (
-        (acc[key] = MessageAttributeValueFilterSensitiveLog(value)), acc
+        (acc[key] = MessageAttributeValueFilterSensitiveLog(value)),
+        acc
       ),
-      {}
+      {},
     ),
   }),
   ...(obj.ContentType && { ContentType: SENSITIVE_STRING }),
@@ -3873,9 +3875,10 @@ export const ChannelMessageSummaryFilterSensitiveLog = (obj: ChannelMessageSumma
   ...(obj.MessageAttributes && {
     MessageAttributes: Object.entries(obj.MessageAttributes).reduce(
       (acc: any, [key, value]: [string, MessageAttributeValue]) => (
-        (acc[key] = MessageAttributeValueFilterSensitiveLog(value)), acc
+        (acc[key] = MessageAttributeValueFilterSensitiveLog(value)),
+        acc
       ),
-      {}
+      {},
     ),
   }),
   ...(obj.ContentType && { ContentType: SENSITIVE_STRING }),
@@ -3885,7 +3888,7 @@ export const ChannelMessageSummaryFilterSensitiveLog = (obj: ChannelMessageSumma
  * @internal
  */
 export const ChannelModeratedByAppInstanceUserSummaryFilterSensitiveLog = (
-  obj: ChannelModeratedByAppInstanceUserSummary
+  obj: ChannelModeratedByAppInstanceUserSummary,
 ): any => ({
   ...obj,
   ...(obj.ChannelSummary && { ChannelSummary: ChannelSummaryFilterSensitiveLog(obj.ChannelSummary) }),
@@ -4000,7 +4003,7 @@ export const DescribeChannelMembershipResponseFilterSensitiveLog = (obj: Describ
  * @internal
  */
 export const DescribeChannelMembershipForAppInstanceUserResponseFilterSensitiveLog = (
-  obj: DescribeChannelMembershipForAppInstanceUserResponse
+  obj: DescribeChannelMembershipForAppInstanceUserResponse,
 ): any => ({
   ...obj,
   ...(obj.ChannelMembership && {
@@ -4012,7 +4015,7 @@ export const DescribeChannelMembershipForAppInstanceUserResponseFilterSensitiveL
  * @internal
  */
 export const DescribeChannelModeratedByAppInstanceUserResponseFilterSensitiveLog = (
-  obj: DescribeChannelModeratedByAppInstanceUserResponse
+  obj: DescribeChannelModeratedByAppInstanceUserResponse,
 ): any => ({
   ...obj,
   ...(obj.Channel && { Channel: ChannelModeratedByAppInstanceUserSummaryFilterSensitiveLog(obj.Channel) }),
@@ -4030,7 +4033,7 @@ export const DescribeChannelModeratorResponseFilterSensitiveLog = (obj: Describe
  * @internal
  */
 export const GetChannelMembershipPreferencesResponseFilterSensitiveLog = (
-  obj: GetChannelMembershipPreferencesResponse
+  obj: GetChannelMembershipPreferencesResponse,
 ): any => ({
   ...obj,
   ...(obj.Member && { Member: IdentityFilterSensitiveLog(obj.Member) }),
@@ -4102,7 +4105,7 @@ export const ListChannelMembershipsResponseFilterSensitiveLog = (obj: ListChanne
  * @internal
  */
 export const ListChannelMembershipsForAppInstanceUserRequestFilterSensitiveLog = (
-  obj: ListChannelMembershipsForAppInstanceUserRequest
+  obj: ListChannelMembershipsForAppInstanceUserRequest,
 ): any => ({
   ...obj,
   ...(obj.NextToken && { NextToken: SENSITIVE_STRING }),
@@ -4112,12 +4115,12 @@ export const ListChannelMembershipsForAppInstanceUserRequestFilterSensitiveLog =
  * @internal
  */
 export const ListChannelMembershipsForAppInstanceUserResponseFilterSensitiveLog = (
-  obj: ListChannelMembershipsForAppInstanceUserResponse
+  obj: ListChannelMembershipsForAppInstanceUserResponse,
 ): any => ({
   ...obj,
   ...(obj.ChannelMemberships && {
     ChannelMemberships: obj.ChannelMemberships.map((item) =>
-      ChannelMembershipForAppInstanceUserSummaryFilterSensitiveLog(item)
+      ChannelMembershipForAppInstanceUserSummaryFilterSensitiveLog(item),
     ),
   }),
   ...(obj.NextToken && { NextToken: SENSITIVE_STRING }),
@@ -4182,7 +4185,7 @@ export const ListChannelsResponseFilterSensitiveLog = (obj: ListChannelsResponse
  * @internal
  */
 export const ListChannelsAssociatedWithChannelFlowRequestFilterSensitiveLog = (
-  obj: ListChannelsAssociatedWithChannelFlowRequest
+  obj: ListChannelsAssociatedWithChannelFlowRequest,
 ): any => ({
   ...obj,
   ...(obj.NextToken && { NextToken: SENSITIVE_STRING }),
@@ -4192,7 +4195,7 @@ export const ListChannelsAssociatedWithChannelFlowRequestFilterSensitiveLog = (
  * @internal
  */
 export const ListChannelsAssociatedWithChannelFlowResponseFilterSensitiveLog = (
-  obj: ListChannelsAssociatedWithChannelFlowResponse
+  obj: ListChannelsAssociatedWithChannelFlowResponse,
 ): any => ({
   ...obj,
   ...(obj.Channels && {
@@ -4205,7 +4208,7 @@ export const ListChannelsAssociatedWithChannelFlowResponseFilterSensitiveLog = (
  * @internal
  */
 export const ListChannelsModeratedByAppInstanceUserRequestFilterSensitiveLog = (
-  obj: ListChannelsModeratedByAppInstanceUserRequest
+  obj: ListChannelsModeratedByAppInstanceUserRequest,
 ): any => ({
   ...obj,
   ...(obj.NextToken && { NextToken: SENSITIVE_STRING }),
@@ -4215,7 +4218,7 @@ export const ListChannelsModeratedByAppInstanceUserRequestFilterSensitiveLog = (
  * @internal
  */
 export const ListChannelsModeratedByAppInstanceUserResponseFilterSensitiveLog = (
-  obj: ListChannelsModeratedByAppInstanceUserResponse
+  obj: ListChannelsModeratedByAppInstanceUserResponse,
 ): any => ({
   ...obj,
   ...(obj.Channels && {
@@ -4252,7 +4255,7 @@ export const ListTagsForResourceResponseFilterSensitiveLog = (obj: ListTagsForRe
  * @internal
  */
 export const PutChannelMembershipPreferencesRequestFilterSensitiveLog = (
-  obj: PutChannelMembershipPreferencesRequest
+  obj: PutChannelMembershipPreferencesRequest,
 ): any => ({
   ...obj,
   ...(obj.Preferences && { Preferences: ChannelMembershipPreferencesFilterSensitiveLog(obj.Preferences) }),
@@ -4262,7 +4265,7 @@ export const PutChannelMembershipPreferencesRequestFilterSensitiveLog = (
  * @internal
  */
 export const PutChannelMembershipPreferencesResponseFilterSensitiveLog = (
-  obj: PutChannelMembershipPreferencesResponse
+  obj: PutChannelMembershipPreferencesResponse,
 ): any => ({
   ...obj,
   ...(obj.Member && { Member: IdentityFilterSensitiveLog(obj.Member) }),
@@ -4300,9 +4303,10 @@ export const SendChannelMessageRequestFilterSensitiveLog = (obj: SendChannelMess
   ...(obj.MessageAttributes && {
     MessageAttributes: Object.entries(obj.MessageAttributes).reduce(
       (acc: any, [key, value]: [string, MessageAttributeValue]) => (
-        (acc[key] = MessageAttributeValueFilterSensitiveLog(value)), acc
+        (acc[key] = MessageAttributeValueFilterSensitiveLog(value)),
+        acc
       ),
-      {}
+      {},
     ),
   }),
   ...(obj.ContentType && { ContentType: SENSITIVE_STRING }),

@@ -97,16 +97,16 @@ export interface WorkSpacesThinClient {
    */
   createEnvironment(
     args: CreateEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEnvironmentCommandOutput>;
   createEnvironment(
     args: CreateEnvironmentCommandInput,
-    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void,
   ): void;
   createEnvironment(
     args: CreateEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -117,7 +117,7 @@ export interface WorkSpacesThinClient {
   deleteDevice(
     args: DeleteDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDeviceCommandOutput) => void
+    cb: (err: any, data?: DeleteDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -125,16 +125,16 @@ export interface WorkSpacesThinClient {
    */
   deleteEnvironment(
     args: DeleteEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEnvironmentCommandOutput>;
   deleteEnvironment(
     args: DeleteEnvironmentCommandInput,
-    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void,
   ): void;
   deleteEnvironment(
     args: DeleteEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -142,16 +142,16 @@ export interface WorkSpacesThinClient {
    */
   deregisterDevice(
     args: DeregisterDeviceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterDeviceCommandOutput>;
   deregisterDevice(
     args: DeregisterDeviceCommandInput,
-    cb: (err: any, data?: DeregisterDeviceCommandOutput) => void
+    cb: (err: any, data?: DeregisterDeviceCommandOutput) => void,
   ): void;
   deregisterDevice(
     args: DeregisterDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterDeviceCommandOutput) => void
+    cb: (err: any, data?: DeregisterDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -162,7 +162,7 @@ export interface WorkSpacesThinClient {
   getDevice(
     args: GetDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeviceCommandOutput) => void
+    cb: (err: any, data?: GetDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -170,13 +170,13 @@ export interface WorkSpacesThinClient {
    */
   getEnvironment(
     args: GetEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEnvironmentCommandOutput>;
   getEnvironment(args: GetEnvironmentCommandInput, cb: (err: any, data?: GetEnvironmentCommandOutput) => void): void;
   getEnvironment(
     args: GetEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEnvironmentCommandOutput) => void
+    cb: (err: any, data?: GetEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -184,13 +184,13 @@ export interface WorkSpacesThinClient {
    */
   getSoftwareSet(
     args: GetSoftwareSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSoftwareSetCommandOutput>;
   getSoftwareSet(args: GetSoftwareSetCommandInput, cb: (err: any, data?: GetSoftwareSetCommandOutput) => void): void;
   getSoftwareSet(
     args: GetSoftwareSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSoftwareSetCommandOutput) => void
+    cb: (err: any, data?: GetSoftwareSetCommandOutput) => void,
   ): void;
 
   /**
@@ -202,7 +202,7 @@ export interface WorkSpacesThinClient {
   listDevices(
     args: ListDevicesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDevicesCommandOutput) => void
+    cb: (err: any, data?: ListDevicesCommandOutput) => void,
   ): void;
 
   /**
@@ -211,16 +211,16 @@ export interface WorkSpacesThinClient {
   listEnvironments(): Promise<ListEnvironmentsCommandOutput>;
   listEnvironments(
     args: ListEnvironmentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEnvironmentsCommandOutput>;
   listEnvironments(
     args: ListEnvironmentsCommandInput,
-    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void,
   ): void;
   listEnvironments(
     args: ListEnvironmentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void,
   ): void;
 
   /**
@@ -229,16 +229,16 @@ export interface WorkSpacesThinClient {
   listSoftwareSets(): Promise<ListSoftwareSetsCommandOutput>;
   listSoftwareSets(
     args: ListSoftwareSetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSoftwareSetsCommandOutput>;
   listSoftwareSets(
     args: ListSoftwareSetsCommandInput,
-    cb: (err: any, data?: ListSoftwareSetsCommandOutput) => void
+    cb: (err: any, data?: ListSoftwareSetsCommandOutput) => void,
   ): void;
   listSoftwareSets(
     args: ListSoftwareSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSoftwareSetsCommandOutput) => void
+    cb: (err: any, data?: ListSoftwareSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -246,16 +246,16 @@ export interface WorkSpacesThinClient {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -266,7 +266,7 @@ export interface WorkSpacesThinClient {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -277,7 +277,7 @@ export interface WorkSpacesThinClient {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -288,7 +288,7 @@ export interface WorkSpacesThinClient {
   updateDevice(
     args: UpdateDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDeviceCommandOutput) => void
+    cb: (err: any, data?: UpdateDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -296,16 +296,16 @@ export interface WorkSpacesThinClient {
    */
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEnvironmentCommandOutput>;
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
-    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void,
   ): void;
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -313,16 +313,16 @@ export interface WorkSpacesThinClient {
    */
   updateSoftwareSet(
     args: UpdateSoftwareSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSoftwareSetCommandOutput>;
   updateSoftwareSet(
     args: UpdateSoftwareSetCommandInput,
-    cb: (err: any, data?: UpdateSoftwareSetCommandOutput) => void
+    cb: (err: any, data?: UpdateSoftwareSetCommandOutput) => void,
   ): void;
   updateSoftwareSet(
     args: UpdateSoftwareSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSoftwareSetCommandOutput) => void
+    cb: (err: any, data?: UpdateSoftwareSetCommandOutput) => void,
   ): void;
 }
 

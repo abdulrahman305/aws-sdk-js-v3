@@ -228,7 +228,7 @@ import {
  */
 export const se_CreateMediaCapturePipelineCommand = async (
   input: CreateMediaCapturePipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -245,7 +245,7 @@ export const se_CreateMediaCapturePipelineCommand = async (
       SourceArn: [],
       SourceType: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -256,7 +256,7 @@ export const se_CreateMediaCapturePipelineCommand = async (
  */
 export const se_CreateMediaConcatenationPipelineCommand = async (
   input: CreateMediaConcatenationPipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -270,7 +270,7 @@ export const se_CreateMediaConcatenationPipelineCommand = async (
       Sinks: (_) => _json(_),
       Sources: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -281,7 +281,7 @@ export const se_CreateMediaConcatenationPipelineCommand = async (
  */
 export const se_CreateMediaInsightsPipelineCommand = async (
   input: CreateMediaInsightsPipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -299,7 +299,7 @@ export const se_CreateMediaInsightsPipelineCommand = async (
       MediaInsightsRuntimeMetadata: (_) => _json(_),
       S3RecordingSinkRuntimeConfiguration: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -310,7 +310,7 @@ export const se_CreateMediaInsightsPipelineCommand = async (
  */
 export const se_CreateMediaInsightsPipelineConfigurationCommand = async (
   input: CreateMediaInsightsPipelineConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -326,7 +326,7 @@ export const se_CreateMediaInsightsPipelineConfigurationCommand = async (
       RealTimeAlertConfiguration: (_) => _json(_),
       ResourceAccessRoleArn: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -337,7 +337,7 @@ export const se_CreateMediaInsightsPipelineConfigurationCommand = async (
  */
 export const se_CreateMediaLiveConnectorPipelineCommand = async (
   input: CreateMediaLiveConnectorPipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -351,7 +351,7 @@ export const se_CreateMediaLiveConnectorPipelineCommand = async (
       Sinks: (_) => _json(_),
       Sources: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -362,7 +362,7 @@ export const se_CreateMediaLiveConnectorPipelineCommand = async (
  */
 export const se_CreateMediaPipelineKinesisVideoStreamPoolCommand = async (
   input: CreateMediaPipelineKinesisVideoStreamPoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -376,7 +376,7 @@ export const se_CreateMediaPipelineKinesisVideoStreamPoolCommand = async (
       PoolName: [],
       StreamConfiguration: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -387,7 +387,7 @@ export const se_CreateMediaPipelineKinesisVideoStreamPoolCommand = async (
  */
 export const se_CreateMediaStreamPipelineCommand = async (
   input: CreateMediaStreamPipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -401,7 +401,7 @@ export const se_CreateMediaStreamPipelineCommand = async (
       Sinks: (_) => _json(_),
       Sources: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -412,7 +412,7 @@ export const se_CreateMediaStreamPipelineCommand = async (
  */
 export const se_DeleteMediaCapturePipelineCommand = async (
   input: DeleteMediaCapturePipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -428,7 +428,7 @@ export const se_DeleteMediaCapturePipelineCommand = async (
  */
 export const se_DeleteMediaInsightsPipelineConfigurationCommand = async (
   input: DeleteMediaInsightsPipelineConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -444,7 +444,7 @@ export const se_DeleteMediaInsightsPipelineConfigurationCommand = async (
  */
 export const se_DeleteMediaPipelineCommand = async (
   input: DeleteMediaPipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -460,7 +460,7 @@ export const se_DeleteMediaPipelineCommand = async (
  */
 export const se_DeleteMediaPipelineKinesisVideoStreamPoolCommand = async (
   input: DeleteMediaPipelineKinesisVideoStreamPoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -476,7 +476,7 @@ export const se_DeleteMediaPipelineKinesisVideoStreamPoolCommand = async (
  */
 export const se_GetMediaCapturePipelineCommand = async (
   input: GetMediaCapturePipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -492,7 +492,7 @@ export const se_GetMediaCapturePipelineCommand = async (
  */
 export const se_GetMediaInsightsPipelineConfigurationCommand = async (
   input: GetMediaInsightsPipelineConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -508,7 +508,7 @@ export const se_GetMediaInsightsPipelineConfigurationCommand = async (
  */
 export const se_GetMediaPipelineCommand = async (
   input: GetMediaPipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -524,7 +524,7 @@ export const se_GetMediaPipelineCommand = async (
  */
 export const se_GetMediaPipelineKinesisVideoStreamPoolCommand = async (
   input: GetMediaPipelineKinesisVideoStreamPoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -540,7 +540,7 @@ export const se_GetMediaPipelineKinesisVideoStreamPoolCommand = async (
  */
 export const se_GetSpeakerSearchTaskCommand = async (
   input: GetSpeakerSearchTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -557,7 +557,7 @@ export const se_GetSpeakerSearchTaskCommand = async (
  */
 export const se_GetVoiceToneAnalysisTaskCommand = async (
   input: GetVoiceToneAnalysisTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -574,7 +574,7 @@ export const se_GetVoiceToneAnalysisTaskCommand = async (
  */
 export const se_ListMediaCapturePipelinesCommand = async (
   input: ListMediaCapturePipelinesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -593,7 +593,7 @@ export const se_ListMediaCapturePipelinesCommand = async (
  */
 export const se_ListMediaInsightsPipelineConfigurationsCommand = async (
   input: ListMediaInsightsPipelineConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -612,7 +612,7 @@ export const se_ListMediaInsightsPipelineConfigurationsCommand = async (
  */
 export const se_ListMediaPipelineKinesisVideoStreamPoolsCommand = async (
   input: ListMediaPipelineKinesisVideoStreamPoolsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -631,7 +631,7 @@ export const se_ListMediaPipelineKinesisVideoStreamPoolsCommand = async (
  */
 export const se_ListMediaPipelinesCommand = async (
   input: ListMediaPipelinesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -650,7 +650,7 @@ export const se_ListMediaPipelinesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -668,7 +668,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_StartSpeakerSearchTaskCommand = async (
   input: StartSpeakerSearchTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -685,7 +685,7 @@ export const se_StartSpeakerSearchTaskCommand = async (
       ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
       KinesisVideoStreamSourceTaskConfiguration: (_) => _json(_),
       VoiceProfileDomainArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -696,7 +696,7 @@ export const se_StartSpeakerSearchTaskCommand = async (
  */
 export const se_StartVoiceToneAnalysisTaskCommand = async (
   input: StartVoiceToneAnalysisTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -713,7 +713,7 @@ export const se_StartVoiceToneAnalysisTaskCommand = async (
       ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
       KinesisVideoStreamSourceTaskConfiguration: (_) => _json(_),
       LanguageCode: [],
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -724,7 +724,7 @@ export const se_StartVoiceToneAnalysisTaskCommand = async (
  */
 export const se_StopSpeakerSearchTaskCommand = async (
   input: StopSpeakerSearchTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -744,7 +744,7 @@ export const se_StopSpeakerSearchTaskCommand = async (
  */
 export const se_StopVoiceToneAnalysisTaskCommand = async (
   input: StopVoiceToneAnalysisTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -764,7 +764,7 @@ export const se_StopVoiceToneAnalysisTaskCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -779,7 +779,7 @@ export const se_TagResourceCommand = async (
     take(input, {
       ResourceARN: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -790,7 +790,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -805,7 +805,7 @@ export const se_UntagResourceCommand = async (
     take(input, {
       ResourceARN: [],
       TagKeys: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -816,7 +816,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateMediaInsightsPipelineConfigurationCommand = async (
   input: UpdateMediaInsightsPipelineConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -830,7 +830,7 @@ export const se_UpdateMediaInsightsPipelineConfigurationCommand = async (
       Elements: (_) => _json(_),
       RealTimeAlertConfiguration: (_) => _json(_),
       ResourceAccessRoleArn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -841,7 +841,7 @@ export const se_UpdateMediaInsightsPipelineConfigurationCommand = async (
  */
 export const se_UpdateMediaInsightsPipelineStatusCommand = async (
   input: UpdateMediaInsightsPipelineStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -853,7 +853,7 @@ export const se_UpdateMediaInsightsPipelineStatusCommand = async (
   body = JSON.stringify(
     take(input, {
       UpdateStatus: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -864,7 +864,7 @@ export const se_UpdateMediaInsightsPipelineStatusCommand = async (
  */
 export const se_UpdateMediaPipelineKinesisVideoStreamPoolCommand = async (
   input: UpdateMediaPipelineKinesisVideoStreamPoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -876,7 +876,7 @@ export const se_UpdateMediaPipelineKinesisVideoStreamPoolCommand = async (
   body = JSON.stringify(
     take(input, {
       StreamConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -887,7 +887,7 @@ export const se_UpdateMediaPipelineKinesisVideoStreamPoolCommand = async (
  */
 export const de_CreateMediaCapturePipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMediaCapturePipelineCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -908,7 +908,7 @@ export const de_CreateMediaCapturePipelineCommand = async (
  */
 export const de_CreateMediaConcatenationPipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMediaConcatenationPipelineCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -929,7 +929,7 @@ export const de_CreateMediaConcatenationPipelineCommand = async (
  */
 export const de_CreateMediaInsightsPipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMediaInsightsPipelineCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -950,7 +950,7 @@ export const de_CreateMediaInsightsPipelineCommand = async (
  */
 export const de_CreateMediaInsightsPipelineConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMediaInsightsPipelineConfigurationCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -971,7 +971,7 @@ export const de_CreateMediaInsightsPipelineConfigurationCommand = async (
  */
 export const de_CreateMediaLiveConnectorPipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMediaLiveConnectorPipelineCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -992,7 +992,7 @@ export const de_CreateMediaLiveConnectorPipelineCommand = async (
  */
 export const de_CreateMediaPipelineKinesisVideoStreamPoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMediaPipelineKinesisVideoStreamPoolCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1013,7 +1013,7 @@ export const de_CreateMediaPipelineKinesisVideoStreamPoolCommand = async (
  */
 export const de_CreateMediaStreamPipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMediaStreamPipelineCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1034,7 +1034,7 @@ export const de_CreateMediaStreamPipelineCommand = async (
  */
 export const de_DeleteMediaCapturePipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMediaCapturePipelineCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1051,7 +1051,7 @@ export const de_DeleteMediaCapturePipelineCommand = async (
  */
 export const de_DeleteMediaInsightsPipelineConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMediaInsightsPipelineConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1068,7 +1068,7 @@ export const de_DeleteMediaInsightsPipelineConfigurationCommand = async (
  */
 export const de_DeleteMediaPipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMediaPipelineCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1085,7 +1085,7 @@ export const de_DeleteMediaPipelineCommand = async (
  */
 export const de_DeleteMediaPipelineKinesisVideoStreamPoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMediaPipelineKinesisVideoStreamPoolCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1102,7 +1102,7 @@ export const de_DeleteMediaPipelineKinesisVideoStreamPoolCommand = async (
  */
 export const de_GetMediaCapturePipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMediaCapturePipelineCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1123,7 +1123,7 @@ export const de_GetMediaCapturePipelineCommand = async (
  */
 export const de_GetMediaInsightsPipelineConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMediaInsightsPipelineConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1144,7 +1144,7 @@ export const de_GetMediaInsightsPipelineConfigurationCommand = async (
  */
 export const de_GetMediaPipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMediaPipelineCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1165,7 +1165,7 @@ export const de_GetMediaPipelineCommand = async (
  */
 export const de_GetMediaPipelineKinesisVideoStreamPoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMediaPipelineKinesisVideoStreamPoolCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1186,7 +1186,7 @@ export const de_GetMediaPipelineKinesisVideoStreamPoolCommand = async (
  */
 export const de_GetSpeakerSearchTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSpeakerSearchTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1207,7 +1207,7 @@ export const de_GetSpeakerSearchTaskCommand = async (
  */
 export const de_GetVoiceToneAnalysisTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVoiceToneAnalysisTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1228,7 +1228,7 @@ export const de_GetVoiceToneAnalysisTaskCommand = async (
  */
 export const de_ListMediaCapturePipelinesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMediaCapturePipelinesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1250,7 +1250,7 @@ export const de_ListMediaCapturePipelinesCommand = async (
  */
 export const de_ListMediaInsightsPipelineConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMediaInsightsPipelineConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1272,7 +1272,7 @@ export const de_ListMediaInsightsPipelineConfigurationsCommand = async (
  */
 export const de_ListMediaPipelineKinesisVideoStreamPoolsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMediaPipelineKinesisVideoStreamPoolsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1294,7 +1294,7 @@ export const de_ListMediaPipelineKinesisVideoStreamPoolsCommand = async (
  */
 export const de_ListMediaPipelinesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMediaPipelinesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1316,7 +1316,7 @@ export const de_ListMediaPipelinesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1337,7 +1337,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_StartSpeakerSearchTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartSpeakerSearchTaskCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1358,7 +1358,7 @@ export const de_StartSpeakerSearchTaskCommand = async (
  */
 export const de_StartVoiceToneAnalysisTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartVoiceToneAnalysisTaskCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1379,7 +1379,7 @@ export const de_StartVoiceToneAnalysisTaskCommand = async (
  */
 export const de_StopSpeakerSearchTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopSpeakerSearchTaskCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1396,7 +1396,7 @@ export const de_StopSpeakerSearchTaskCommand = async (
  */
 export const de_StopVoiceToneAnalysisTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopVoiceToneAnalysisTaskCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1413,7 +1413,7 @@ export const de_StopVoiceToneAnalysisTaskCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1430,7 +1430,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1447,7 +1447,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateMediaInsightsPipelineConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMediaInsightsPipelineConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1468,7 +1468,7 @@ export const de_UpdateMediaInsightsPipelineConfigurationCommand = async (
  */
 export const de_UpdateMediaInsightsPipelineStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMediaInsightsPipelineStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1485,7 +1485,7 @@ export const de_UpdateMediaInsightsPipelineStatusCommand = async (
  */
 export const de_UpdateMediaPipelineKinesisVideoStreamPoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMediaPipelineKinesisVideoStreamPoolCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1630,7 +1630,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ResourceLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1652,7 +1652,7 @@ const de_ResourceLimitExceededExceptionRes = async (
  */
 const de_ServiceFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceFailureException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1674,7 +1674,7 @@ const de_ServiceFailureExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1696,7 +1696,7 @@ const de_ServiceUnavailableExceptionRes = async (
  */
 const de_ThrottledClientExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ThrottledClientException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1718,7 +1718,7 @@ const de_ThrottledClientExceptionRes = async (
  */
 const de_UnauthorizedClientExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthorizedClientException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1814,7 +1814,7 @@ const se_FragmentSelector = (input: FragmentSelector, context: __SerdeContext): 
  */
 const se_KinesisVideoStreamRecordingSourceRuntimeConfiguration = (
   input: KinesisVideoStreamRecordingSourceRuntimeConfiguration,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     FragmentSelector: (_) => se_FragmentSelector(_, context),
@@ -1999,7 +1999,7 @@ const de_FragmentSelector = (output: any, context: __SerdeContext): FragmentSele
  */
 const de_KinesisVideoStreamPoolConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): KinesisVideoStreamPoolConfiguration => {
   return take(output, {
     CreatedTimestamp: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
@@ -2022,7 +2022,7 @@ const de_KinesisVideoStreamPoolConfiguration = (
  */
 const de_KinesisVideoStreamRecordingSourceRuntimeConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): KinesisVideoStreamRecordingSourceRuntimeConfiguration => {
   return take(output, {
     FragmentSelector: (_: any) => de_FragmentSelector(_, context),
@@ -2107,7 +2107,7 @@ const de_MediaInsightsPipeline = (output: any, context: __SerdeContext): MediaIn
  */
 const de_MediaInsightsPipelineConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MediaInsightsPipelineConfiguration => {
   return take(output, {
     CreatedTimestamp: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),

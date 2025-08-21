@@ -11035,9 +11035,10 @@ export const CreateAssetTypeOutputFilterSensitiveLog = (obj: CreateAssetTypeOutp
   ...(obj.formsOutput && {
     formsOutput: Object.entries(obj.formsOutput).reduce(
       (acc: any, [key, value]: [string, FormEntryOutput]) => (
-        (acc[key] = FormEntryOutputFilterSensitiveLog(value)), acc
+        (acc[key] = FormEntryOutputFilterSensitiveLog(value)),
+        acc
       ),
-      {}
+      {},
     ),
   }),
 });
@@ -11051,9 +11052,10 @@ export const GetAssetTypeOutputFilterSensitiveLog = (obj: GetAssetTypeOutput): a
   ...(obj.formsOutput && {
     formsOutput: Object.entries(obj.formsOutput).reduce(
       (acc: any, [key, value]: [string, FormEntryOutput]) => (
-        (acc[key] = FormEntryOutputFilterSensitiveLog(value)), acc
+        (acc[key] = FormEntryOutputFilterSensitiveLog(value)),
+        acc
       ),
-      {}
+      {},
     ),
   }),
 });
@@ -11067,9 +11069,10 @@ export const AssetTypeItemFilterSensitiveLog = (obj: AssetTypeItem): any => ({
   ...(obj.formsOutput && {
     formsOutput: Object.entries(obj.formsOutput).reduce(
       (acc: any, [key, value]: [string, FormEntryOutput]) => (
-        (acc[key] = FormEntryOutputFilterSensitiveLog(value)), acc
+        (acc[key] = FormEntryOutputFilterSensitiveLog(value)),
+        acc
       ),
-      {}
+      {},
     ),
   }),
 });
@@ -11524,7 +11527,7 @@ export const GetSubscriptionOutputFilterSensitiveLog = (obj: GetSubscriptionOutp
  * @internal
  */
 export const GetSubscriptionRequestDetailsOutputFilterSensitiveLog = (
-  obj: GetSubscriptionRequestDetailsOutput
+  obj: GetSubscriptionRequestDetailsOutput,
 ): any => ({
   ...obj,
   ...(obj.requestReason && { requestReason: SENSITIVE_STRING }),

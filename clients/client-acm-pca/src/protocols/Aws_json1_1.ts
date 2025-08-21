@@ -162,7 +162,7 @@ import {
  */
 export const se_CreateCertificateAuthorityCommand = async (
   input: CreateCertificateAuthorityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateCertificateAuthority");
   let body: any;
@@ -175,7 +175,7 @@ export const se_CreateCertificateAuthorityCommand = async (
  */
 export const se_CreateCertificateAuthorityAuditReportCommand = async (
   input: CreateCertificateAuthorityAuditReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateCertificateAuthorityAuditReport");
   let body: any;
@@ -188,7 +188,7 @@ export const se_CreateCertificateAuthorityAuditReportCommand = async (
  */
 export const se_CreatePermissionCommand = async (
   input: CreatePermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreatePermission");
   let body: any;
@@ -201,7 +201,7 @@ export const se_CreatePermissionCommand = async (
  */
 export const se_DeleteCertificateAuthorityCommand = async (
   input: DeleteCertificateAuthorityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteCertificateAuthority");
   let body: any;
@@ -214,7 +214,7 @@ export const se_DeleteCertificateAuthorityCommand = async (
  */
 export const se_DeletePermissionCommand = async (
   input: DeletePermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeletePermission");
   let body: any;
@@ -227,7 +227,7 @@ export const se_DeletePermissionCommand = async (
  */
 export const se_DeletePolicyCommand = async (
   input: DeletePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeletePolicy");
   let body: any;
@@ -240,7 +240,7 @@ export const se_DeletePolicyCommand = async (
  */
 export const se_DescribeCertificateAuthorityCommand = async (
   input: DescribeCertificateAuthorityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCertificateAuthority");
   let body: any;
@@ -253,7 +253,7 @@ export const se_DescribeCertificateAuthorityCommand = async (
  */
 export const se_DescribeCertificateAuthorityAuditReportCommand = async (
   input: DescribeCertificateAuthorityAuditReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCertificateAuthorityAuditReport");
   let body: any;
@@ -266,7 +266,7 @@ export const se_DescribeCertificateAuthorityAuditReportCommand = async (
  */
 export const se_GetCertificateCommand = async (
   input: GetCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetCertificate");
   let body: any;
@@ -279,7 +279,7 @@ export const se_GetCertificateCommand = async (
  */
 export const se_GetCertificateAuthorityCertificateCommand = async (
   input: GetCertificateAuthorityCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetCertificateAuthorityCertificate");
   let body: any;
@@ -292,7 +292,7 @@ export const se_GetCertificateAuthorityCertificateCommand = async (
  */
 export const se_GetCertificateAuthorityCsrCommand = async (
   input: GetCertificateAuthorityCsrCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetCertificateAuthorityCsr");
   let body: any;
@@ -305,7 +305,7 @@ export const se_GetCertificateAuthorityCsrCommand = async (
  */
 export const se_GetPolicyCommand = async (
   input: GetPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetPolicy");
   let body: any;
@@ -318,7 +318,7 @@ export const se_GetPolicyCommand = async (
  */
 export const se_ImportCertificateAuthorityCertificateCommand = async (
   input: ImportCertificateAuthorityCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ImportCertificateAuthorityCertificate");
   let body: any;
@@ -331,7 +331,7 @@ export const se_ImportCertificateAuthorityCertificateCommand = async (
  */
 export const se_IssueCertificateCommand = async (
   input: IssueCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("IssueCertificate");
   let body: any;
@@ -344,7 +344,7 @@ export const se_IssueCertificateCommand = async (
  */
 export const se_ListCertificateAuthoritiesCommand = async (
   input: ListCertificateAuthoritiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListCertificateAuthorities");
   let body: any;
@@ -357,7 +357,7 @@ export const se_ListCertificateAuthoritiesCommand = async (
  */
 export const se_ListPermissionsCommand = async (
   input: ListPermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPermissions");
   let body: any;
@@ -370,7 +370,7 @@ export const se_ListPermissionsCommand = async (
  */
 export const se_ListTagsCommand = async (
   input: ListTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTags");
   let body: any;
@@ -383,7 +383,7 @@ export const se_ListTagsCommand = async (
  */
 export const se_PutPolicyCommand = async (
   input: PutPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutPolicy");
   let body: any;
@@ -396,7 +396,7 @@ export const se_PutPolicyCommand = async (
  */
 export const se_RestoreCertificateAuthorityCommand = async (
   input: RestoreCertificateAuthorityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RestoreCertificateAuthority");
   let body: any;
@@ -409,7 +409,7 @@ export const se_RestoreCertificateAuthorityCommand = async (
  */
 export const se_RevokeCertificateCommand = async (
   input: RevokeCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RevokeCertificate");
   let body: any;
@@ -422,7 +422,7 @@ export const se_RevokeCertificateCommand = async (
  */
 export const se_TagCertificateAuthorityCommand = async (
   input: TagCertificateAuthorityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagCertificateAuthority");
   let body: any;
@@ -435,7 +435,7 @@ export const se_TagCertificateAuthorityCommand = async (
  */
 export const se_UntagCertificateAuthorityCommand = async (
   input: UntagCertificateAuthorityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagCertificateAuthority");
   let body: any;
@@ -448,7 +448,7 @@ export const se_UntagCertificateAuthorityCommand = async (
  */
 export const se_UpdateCertificateAuthorityCommand = async (
   input: UpdateCertificateAuthorityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateCertificateAuthority");
   let body: any;
@@ -461,7 +461,7 @@ export const se_UpdateCertificateAuthorityCommand = async (
  */
 export const de_CreateCertificateAuthorityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCertificateAuthorityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -481,7 +481,7 @@ export const de_CreateCertificateAuthorityCommand = async (
  */
 export const de_CreateCertificateAuthorityAuditReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCertificateAuthorityAuditReportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -501,7 +501,7 @@ export const de_CreateCertificateAuthorityAuditReportCommand = async (
  */
 export const de_CreatePermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePermissionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -518,7 +518,7 @@ export const de_CreatePermissionCommand = async (
  */
 export const de_DeleteCertificateAuthorityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCertificateAuthorityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -535,7 +535,7 @@ export const de_DeleteCertificateAuthorityCommand = async (
  */
 export const de_DeletePermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePermissionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -552,7 +552,7 @@ export const de_DeletePermissionCommand = async (
  */
 export const de_DeletePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -569,7 +569,7 @@ export const de_DeletePolicyCommand = async (
  */
 export const de_DescribeCertificateAuthorityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCertificateAuthorityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -589,7 +589,7 @@ export const de_DescribeCertificateAuthorityCommand = async (
  */
 export const de_DescribeCertificateAuthorityAuditReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCertificateAuthorityAuditReportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -609,7 +609,7 @@ export const de_DescribeCertificateAuthorityAuditReportCommand = async (
  */
 export const de_GetCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -629,7 +629,7 @@ export const de_GetCertificateCommand = async (
  */
 export const de_GetCertificateAuthorityCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCertificateAuthorityCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -649,7 +649,7 @@ export const de_GetCertificateAuthorityCertificateCommand = async (
  */
 export const de_GetCertificateAuthorityCsrCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCertificateAuthorityCsrCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -669,7 +669,7 @@ export const de_GetCertificateAuthorityCsrCommand = async (
  */
 export const de_GetPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -689,7 +689,7 @@ export const de_GetPolicyCommand = async (
  */
 export const de_ImportCertificateAuthorityCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportCertificateAuthorityCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -706,7 +706,7 @@ export const de_ImportCertificateAuthorityCertificateCommand = async (
  */
 export const de_IssueCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IssueCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -726,7 +726,7 @@ export const de_IssueCertificateCommand = async (
  */
 export const de_ListCertificateAuthoritiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCertificateAuthoritiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -746,7 +746,7 @@ export const de_ListCertificateAuthoritiesCommand = async (
  */
 export const de_ListPermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPermissionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -766,7 +766,7 @@ export const de_ListPermissionsCommand = async (
  */
 export const de_ListTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -786,7 +786,7 @@ export const de_ListTagsCommand = async (
  */
 export const de_PutPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -803,7 +803,7 @@ export const de_PutPolicyCommand = async (
  */
 export const de_RestoreCertificateAuthorityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreCertificateAuthorityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -820,7 +820,7 @@ export const de_RestoreCertificateAuthorityCommand = async (
  */
 export const de_RevokeCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RevokeCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -837,7 +837,7 @@ export const de_RevokeCertificateCommand = async (
  */
 export const de_TagCertificateAuthorityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagCertificateAuthorityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -854,7 +854,7 @@ export const de_TagCertificateAuthorityCommand = async (
  */
 export const de_UntagCertificateAuthorityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagCertificateAuthorityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -871,7 +871,7 @@ export const de_UntagCertificateAuthorityCommand = async (
  */
 export const de_UpdateCertificateAuthorityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCertificateAuthorityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -965,7 +965,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_CertificateMismatchExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CertificateMismatchException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -981,7 +981,7 @@ const de_CertificateMismatchExceptionRes = async (
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -997,7 +997,7 @@ const de_ConcurrentModificationExceptionRes = async (
  */
 const de_InvalidArgsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidArgsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1026,7 +1026,7 @@ const de_InvalidArnExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1042,7 +1042,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_InvalidPolicyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPolicyException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1058,7 +1058,7 @@ const de_InvalidPolicyExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1074,7 +1074,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_InvalidStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidStateException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1103,7 +1103,7 @@ const de_InvalidTagExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1119,7 +1119,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_LockoutPreventedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LockoutPreventedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1135,7 +1135,7 @@ const de_LockoutPreventedExceptionRes = async (
  */
 const de_MalformedCertificateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedCertificateException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1151,7 +1151,7 @@ const de_MalformedCertificateExceptionRes = async (
  */
 const de_MalformedCSRExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedCSRException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1167,7 +1167,7 @@ const de_MalformedCSRExceptionRes = async (
  */
 const de_PermissionAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PermissionAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1183,7 +1183,7 @@ const de_PermissionAlreadyExistsExceptionRes = async (
  */
 const de_RequestAlreadyProcessedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestAlreadyProcessedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1199,7 +1199,7 @@ const de_RequestAlreadyProcessedExceptionRes = async (
  */
 const de_RequestFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestFailedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1215,7 +1215,7 @@ const de_RequestFailedExceptionRes = async (
  */
 const de_RequestInProgressExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestInProgressException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1231,7 +1231,7 @@ const de_RequestInProgressExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1247,7 +1247,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1329,7 +1329,7 @@ const de_TooManyTagsExceptionRes = async (
  */
 const se_ImportCertificateAuthorityCertificateRequest = (
   input: ImportCertificateAuthorityCertificateRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Certificate: context.base64Encoder,
@@ -1464,7 +1464,7 @@ const de_CertificateAuthority = (output: any, context: __SerdeContext): Certific
  */
 const de_DescribeCertificateAuthorityAuditReportResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeCertificateAuthorityAuditReportResponse => {
   return take(output, {
     AuditReportStatus: __expectString,
@@ -1479,7 +1479,7 @@ const de_DescribeCertificateAuthorityAuditReportResponse = (
  */
 const de_DescribeCertificateAuthorityResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeCertificateAuthorityResponse => {
   return take(output, {
     CertificateAuthority: (_: any) => de_CertificateAuthority(_, context),
@@ -1523,7 +1523,7 @@ const de_DescribeCertificateAuthorityResponse = (
  */
 const de_ListCertificateAuthoritiesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListCertificateAuthoritiesResponse => {
   return take(output, {
     CertificateAuthorities: (_: any) => de_CertificateAuthorities(_, context),
@@ -1615,7 +1615,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

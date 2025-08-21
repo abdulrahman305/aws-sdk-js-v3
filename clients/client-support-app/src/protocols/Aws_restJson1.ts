@@ -66,7 +66,7 @@ import { SupportAppServiceException as __BaseException } from "../models/Support
  */
 export const se_CreateSlackChannelConfigurationCommand = async (
   input: CreateSlackChannelConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -84,7 +84,7 @@ export const se_CreateSlackChannelConfigurationCommand = async (
       notifyOnCreateOrReopenCase: [],
       notifyOnResolveCase: [],
       teamId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -95,7 +95,7 @@ export const se_CreateSlackChannelConfigurationCommand = async (
  */
 export const se_DeleteAccountAliasCommand = async (
   input: DeleteAccountAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -113,7 +113,7 @@ export const se_DeleteAccountAliasCommand = async (
  */
 export const se_DeleteSlackChannelConfigurationCommand = async (
   input: DeleteSlackChannelConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -125,7 +125,7 @@ export const se_DeleteSlackChannelConfigurationCommand = async (
     take(input, {
       channelId: [],
       teamId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -136,7 +136,7 @@ export const se_DeleteSlackChannelConfigurationCommand = async (
  */
 export const se_DeleteSlackWorkspaceConfigurationCommand = async (
   input: DeleteSlackWorkspaceConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -147,7 +147,7 @@ export const se_DeleteSlackWorkspaceConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       teamId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -158,7 +158,7 @@ export const se_DeleteSlackWorkspaceConfigurationCommand = async (
  */
 export const se_GetAccountAliasCommand = async (
   input: GetAccountAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -176,7 +176,7 @@ export const se_GetAccountAliasCommand = async (
  */
 export const se_ListSlackChannelConfigurationsCommand = async (
   input: ListSlackChannelConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -187,7 +187,7 @@ export const se_ListSlackChannelConfigurationsCommand = async (
   body = JSON.stringify(
     take(input, {
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -198,7 +198,7 @@ export const se_ListSlackChannelConfigurationsCommand = async (
  */
 export const se_ListSlackWorkspaceConfigurationsCommand = async (
   input: ListSlackWorkspaceConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -209,7 +209,7 @@ export const se_ListSlackWorkspaceConfigurationsCommand = async (
   body = JSON.stringify(
     take(input, {
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -220,7 +220,7 @@ export const se_ListSlackWorkspaceConfigurationsCommand = async (
  */
 export const se_PutAccountAliasCommand = async (
   input: PutAccountAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -231,7 +231,7 @@ export const se_PutAccountAliasCommand = async (
   body = JSON.stringify(
     take(input, {
       accountAlias: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -242,7 +242,7 @@ export const se_PutAccountAliasCommand = async (
  */
 export const se_RegisterSlackWorkspaceForOrganizationCommand = async (
   input: RegisterSlackWorkspaceForOrganizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -253,7 +253,7 @@ export const se_RegisterSlackWorkspaceForOrganizationCommand = async (
   body = JSON.stringify(
     take(input, {
       teamId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -264,7 +264,7 @@ export const se_RegisterSlackWorkspaceForOrganizationCommand = async (
  */
 export const se_UpdateSlackChannelConfigurationCommand = async (
   input: UpdateSlackChannelConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -282,7 +282,7 @@ export const se_UpdateSlackChannelConfigurationCommand = async (
       notifyOnCreateOrReopenCase: [],
       notifyOnResolveCase: [],
       teamId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -293,7 +293,7 @@ export const se_UpdateSlackChannelConfigurationCommand = async (
  */
 export const de_CreateSlackChannelConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSlackChannelConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -310,7 +310,7 @@ export const de_CreateSlackChannelConfigurationCommand = async (
  */
 export const de_DeleteAccountAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAccountAliasCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -327,7 +327,7 @@ export const de_DeleteAccountAliasCommand = async (
  */
 export const de_DeleteSlackChannelConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSlackChannelConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -344,7 +344,7 @@ export const de_DeleteSlackChannelConfigurationCommand = async (
  */
 export const de_DeleteSlackWorkspaceConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSlackWorkspaceConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -361,7 +361,7 @@ export const de_DeleteSlackWorkspaceConfigurationCommand = async (
  */
 export const de_GetAccountAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccountAliasCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -382,7 +382,7 @@ export const de_GetAccountAliasCommand = async (
  */
 export const de_ListSlackChannelConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSlackChannelConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -404,7 +404,7 @@ export const de_ListSlackChannelConfigurationsCommand = async (
  */
 export const de_ListSlackWorkspaceConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSlackWorkspaceConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -426,7 +426,7 @@ export const de_ListSlackWorkspaceConfigurationsCommand = async (
  */
 export const de_PutAccountAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAccountAliasCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -443,7 +443,7 @@ export const de_PutAccountAliasCommand = async (
  */
 export const de_RegisterSlackWorkspaceForOrganizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterSlackWorkspaceForOrganizationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -466,7 +466,7 @@ export const de_RegisterSlackWorkspaceForOrganizationCommand = async (
  */
 export const de_UpdateSlackChannelConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSlackChannelConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -533,7 +533,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -570,7 +570,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -590,7 +590,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -610,7 +610,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

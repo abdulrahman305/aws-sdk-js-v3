@@ -56,7 +56,7 @@ import { ResourceGroupsTaggingAPIServiceException as __BaseException } from "../
  */
 export const se_DescribeReportCreationCommand = async (
   input: DescribeReportCreationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeReportCreation");
   let body: any;
@@ -69,7 +69,7 @@ export const se_DescribeReportCreationCommand = async (
  */
 export const se_GetComplianceSummaryCommand = async (
   input: GetComplianceSummaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetComplianceSummary");
   let body: any;
@@ -82,7 +82,7 @@ export const se_GetComplianceSummaryCommand = async (
  */
 export const se_GetResourcesCommand = async (
   input: GetResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetResources");
   let body: any;
@@ -95,7 +95,7 @@ export const se_GetResourcesCommand = async (
  */
 export const se_GetTagKeysCommand = async (
   input: GetTagKeysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetTagKeys");
   let body: any;
@@ -108,7 +108,7 @@ export const se_GetTagKeysCommand = async (
  */
 export const se_GetTagValuesCommand = async (
   input: GetTagValuesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetTagValues");
   let body: any;
@@ -121,7 +121,7 @@ export const se_GetTagValuesCommand = async (
  */
 export const se_StartReportCreationCommand = async (
   input: StartReportCreationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartReportCreation");
   let body: any;
@@ -134,7 +134,7 @@ export const se_StartReportCreationCommand = async (
  */
 export const se_TagResourcesCommand = async (
   input: TagResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResources");
   let body: any;
@@ -147,7 +147,7 @@ export const se_TagResourcesCommand = async (
  */
 export const se_UntagResourcesCommand = async (
   input: UntagResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResources");
   let body: any;
@@ -160,7 +160,7 @@ export const se_UntagResourcesCommand = async (
  */
 export const de_DescribeReportCreationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReportCreationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -180,7 +180,7 @@ export const de_DescribeReportCreationCommand = async (
  */
 export const de_GetComplianceSummaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetComplianceSummaryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -200,7 +200,7 @@ export const de_GetComplianceSummaryCommand = async (
  */
 export const de_GetResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -220,7 +220,7 @@ export const de_GetResourcesCommand = async (
  */
 export const de_GetTagKeysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTagKeysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -240,7 +240,7 @@ export const de_GetTagKeysCommand = async (
  */
 export const de_GetTagValuesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTagValuesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -260,7 +260,7 @@ export const de_GetTagValuesCommand = async (
  */
 export const de_StartReportCreationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartReportCreationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -280,7 +280,7 @@ export const de_StartReportCreationCommand = async (
  */
 export const de_TagResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -300,7 +300,7 @@ export const de_TagResourcesCommand = async (
  */
 export const de_UntagResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -358,7 +358,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -374,7 +374,7 @@ const de_ConcurrentModificationExceptionRes = async (
  */
 const de_ConstraintViolationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConstraintViolationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -390,7 +390,7 @@ const de_ConstraintViolationExceptionRes = async (
  */
 const de_InternalServiceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -406,7 +406,7 @@ const de_InternalServiceExceptionRes = async (
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -422,7 +422,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_PaginationTokenExpiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PaginationTokenExpiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -554,7 +554,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

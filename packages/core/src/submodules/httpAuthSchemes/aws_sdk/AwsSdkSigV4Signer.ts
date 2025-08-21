@@ -54,17 +54,17 @@ interface AwsSdkSigV4Exception extends ServiceException {
  * @internal
  */
 const validateSigningProperties = async (
-  signingProperties: Record<string, unknown>
+  signingProperties: Record<string, unknown>,
 ): Promise<AwsSdkSigV4AuthSigningProperties> => {
   const context = throwSigningPropertyError(
     "context",
-    signingProperties.context as HandlerExecutionContext | undefined
+    signingProperties.context as HandlerExecutionContext | undefined,
   );
   const config = throwSigningPropertyError("config", signingProperties.config as AwsSdkSigV4Config | undefined);
   const authScheme = context.endpointV2?.properties?.authSchemes?.[0];
   const signerFunction = throwSigningPropertyError(
     "signer",
-    config.signer as ((authScheme?: AuthScheme) => Promise<RequestSigner>) | undefined
+    config.signer as ((authScheme?: AuthScheme) => Promise<RequestSigner>) | undefined,
   );
   const signer = await signerFunction(authScheme);
   const signingRegion: string | undefined = signingProperties?.signingRegion as string | undefined;
@@ -87,7 +87,7 @@ export class AwsSdkSigV4Signer implements HttpSigner {
      * `identity` is bound in {@link resolveAWSSDKSigV4Config}
      */
     identity: AwsCredentialIdentity,
-    signingProperties: Record<string, unknown>
+    signingProperties: Record<string, unknown>,
   ): Promise<IHttpRequest> {
     if (!HttpRequest.isInstance(httpRequest)) {
       throw new Error("The request is not an instance of `HttpRequest` and cannot be signed");

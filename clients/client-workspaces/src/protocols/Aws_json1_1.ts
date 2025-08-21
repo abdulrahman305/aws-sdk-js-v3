@@ -445,7 +445,7 @@ import { WorkSpacesServiceException as __BaseException } from "../models/WorkSpa
  */
 export const se_AcceptAccountLinkInvitationCommand = async (
   input: AcceptAccountLinkInvitationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AcceptAccountLinkInvitation");
   let body: any;
@@ -458,7 +458,7 @@ export const se_AcceptAccountLinkInvitationCommand = async (
  */
 export const se_AssociateConnectionAliasCommand = async (
   input: AssociateConnectionAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateConnectionAlias");
   let body: any;
@@ -471,7 +471,7 @@ export const se_AssociateConnectionAliasCommand = async (
  */
 export const se_AssociateIpGroupsCommand = async (
   input: AssociateIpGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateIpGroups");
   let body: any;
@@ -484,7 +484,7 @@ export const se_AssociateIpGroupsCommand = async (
  */
 export const se_AssociateWorkspaceApplicationCommand = async (
   input: AssociateWorkspaceApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateWorkspaceApplication");
   let body: any;
@@ -497,7 +497,7 @@ export const se_AssociateWorkspaceApplicationCommand = async (
  */
 export const se_AuthorizeIpRulesCommand = async (
   input: AuthorizeIpRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AuthorizeIpRules");
   let body: any;
@@ -510,7 +510,7 @@ export const se_AuthorizeIpRulesCommand = async (
  */
 export const se_CopyWorkspaceImageCommand = async (
   input: CopyWorkspaceImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CopyWorkspaceImage");
   let body: any;
@@ -523,7 +523,7 @@ export const se_CopyWorkspaceImageCommand = async (
  */
 export const se_CreateAccountLinkInvitationCommand = async (
   input: CreateAccountLinkInvitationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAccountLinkInvitation");
   let body: any;
@@ -536,7 +536,7 @@ export const se_CreateAccountLinkInvitationCommand = async (
  */
 export const se_CreateConnectClientAddInCommand = async (
   input: CreateConnectClientAddInCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateConnectClientAddIn");
   let body: any;
@@ -549,7 +549,7 @@ export const se_CreateConnectClientAddInCommand = async (
  */
 export const se_CreateConnectionAliasCommand = async (
   input: CreateConnectionAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateConnectionAlias");
   let body: any;
@@ -562,7 +562,7 @@ export const se_CreateConnectionAliasCommand = async (
  */
 export const se_CreateIpGroupCommand = async (
   input: CreateIpGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateIpGroup");
   let body: any;
@@ -575,7 +575,7 @@ export const se_CreateIpGroupCommand = async (
  */
 export const se_CreateStandbyWorkspacesCommand = async (
   input: CreateStandbyWorkspacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateStandbyWorkspaces");
   let body: any;
@@ -588,7 +588,7 @@ export const se_CreateStandbyWorkspacesCommand = async (
  */
 export const se_CreateTagsCommand = async (
   input: CreateTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateTags");
   let body: any;
@@ -601,7 +601,7 @@ export const se_CreateTagsCommand = async (
  */
 export const se_CreateUpdatedWorkspaceImageCommand = async (
   input: CreateUpdatedWorkspaceImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateUpdatedWorkspaceImage");
   let body: any;
@@ -614,7 +614,7 @@ export const se_CreateUpdatedWorkspaceImageCommand = async (
  */
 export const se_CreateWorkspaceBundleCommand = async (
   input: CreateWorkspaceBundleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateWorkspaceBundle");
   let body: any;
@@ -627,7 +627,7 @@ export const se_CreateWorkspaceBundleCommand = async (
  */
 export const se_CreateWorkspaceImageCommand = async (
   input: CreateWorkspaceImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateWorkspaceImage");
   let body: any;
@@ -640,7 +640,7 @@ export const se_CreateWorkspaceImageCommand = async (
  */
 export const se_CreateWorkspacesCommand = async (
   input: CreateWorkspacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateWorkspaces");
   let body: any;
@@ -653,7 +653,7 @@ export const se_CreateWorkspacesCommand = async (
  */
 export const se_DeleteAccountLinkInvitationCommand = async (
   input: DeleteAccountLinkInvitationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAccountLinkInvitation");
   let body: any;
@@ -666,7 +666,7 @@ export const se_DeleteAccountLinkInvitationCommand = async (
  */
 export const se_DeleteClientBrandingCommand = async (
   input: DeleteClientBrandingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteClientBranding");
   let body: any;
@@ -679,7 +679,7 @@ export const se_DeleteClientBrandingCommand = async (
  */
 export const se_DeleteConnectClientAddInCommand = async (
   input: DeleteConnectClientAddInCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteConnectClientAddIn");
   let body: any;
@@ -692,7 +692,7 @@ export const se_DeleteConnectClientAddInCommand = async (
  */
 export const se_DeleteConnectionAliasCommand = async (
   input: DeleteConnectionAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteConnectionAlias");
   let body: any;
@@ -705,7 +705,7 @@ export const se_DeleteConnectionAliasCommand = async (
  */
 export const se_DeleteIpGroupCommand = async (
   input: DeleteIpGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteIpGroup");
   let body: any;
@@ -718,7 +718,7 @@ export const se_DeleteIpGroupCommand = async (
  */
 export const se_DeleteTagsCommand = async (
   input: DeleteTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteTags");
   let body: any;
@@ -731,7 +731,7 @@ export const se_DeleteTagsCommand = async (
  */
 export const se_DeleteWorkspaceBundleCommand = async (
   input: DeleteWorkspaceBundleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteWorkspaceBundle");
   let body: any;
@@ -744,7 +744,7 @@ export const se_DeleteWorkspaceBundleCommand = async (
  */
 export const se_DeleteWorkspaceImageCommand = async (
   input: DeleteWorkspaceImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteWorkspaceImage");
   let body: any;
@@ -757,7 +757,7 @@ export const se_DeleteWorkspaceImageCommand = async (
  */
 export const se_DeployWorkspaceApplicationsCommand = async (
   input: DeployWorkspaceApplicationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeployWorkspaceApplications");
   let body: any;
@@ -770,7 +770,7 @@ export const se_DeployWorkspaceApplicationsCommand = async (
  */
 export const se_DeregisterWorkspaceDirectoryCommand = async (
   input: DeregisterWorkspaceDirectoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeregisterWorkspaceDirectory");
   let body: any;
@@ -783,7 +783,7 @@ export const se_DeregisterWorkspaceDirectoryCommand = async (
  */
 export const se_DescribeAccountCommand = async (
   input: DescribeAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAccount");
   let body: any;
@@ -796,7 +796,7 @@ export const se_DescribeAccountCommand = async (
  */
 export const se_DescribeAccountModificationsCommand = async (
   input: DescribeAccountModificationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAccountModifications");
   let body: any;
@@ -809,7 +809,7 @@ export const se_DescribeAccountModificationsCommand = async (
  */
 export const se_DescribeApplicationAssociationsCommand = async (
   input: DescribeApplicationAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeApplicationAssociations");
   let body: any;
@@ -822,7 +822,7 @@ export const se_DescribeApplicationAssociationsCommand = async (
  */
 export const se_DescribeApplicationsCommand = async (
   input: DescribeApplicationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeApplications");
   let body: any;
@@ -835,7 +835,7 @@ export const se_DescribeApplicationsCommand = async (
  */
 export const se_DescribeBundleAssociationsCommand = async (
   input: DescribeBundleAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeBundleAssociations");
   let body: any;
@@ -848,7 +848,7 @@ export const se_DescribeBundleAssociationsCommand = async (
  */
 export const se_DescribeClientBrandingCommand = async (
   input: DescribeClientBrandingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeClientBranding");
   let body: any;
@@ -861,7 +861,7 @@ export const se_DescribeClientBrandingCommand = async (
  */
 export const se_DescribeClientPropertiesCommand = async (
   input: DescribeClientPropertiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeClientProperties");
   let body: any;
@@ -874,7 +874,7 @@ export const se_DescribeClientPropertiesCommand = async (
  */
 export const se_DescribeConnectClientAddInsCommand = async (
   input: DescribeConnectClientAddInsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeConnectClientAddIns");
   let body: any;
@@ -887,7 +887,7 @@ export const se_DescribeConnectClientAddInsCommand = async (
  */
 export const se_DescribeConnectionAliasesCommand = async (
   input: DescribeConnectionAliasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeConnectionAliases");
   let body: any;
@@ -900,7 +900,7 @@ export const se_DescribeConnectionAliasesCommand = async (
  */
 export const se_DescribeConnectionAliasPermissionsCommand = async (
   input: DescribeConnectionAliasPermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeConnectionAliasPermissions");
   let body: any;
@@ -913,7 +913,7 @@ export const se_DescribeConnectionAliasPermissionsCommand = async (
  */
 export const se_DescribeImageAssociationsCommand = async (
   input: DescribeImageAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeImageAssociations");
   let body: any;
@@ -926,7 +926,7 @@ export const se_DescribeImageAssociationsCommand = async (
  */
 export const se_DescribeIpGroupsCommand = async (
   input: DescribeIpGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeIpGroups");
   let body: any;
@@ -939,7 +939,7 @@ export const se_DescribeIpGroupsCommand = async (
  */
 export const se_DescribeTagsCommand = async (
   input: DescribeTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTags");
   let body: any;
@@ -952,7 +952,7 @@ export const se_DescribeTagsCommand = async (
  */
 export const se_DescribeWorkspaceAssociationsCommand = async (
   input: DescribeWorkspaceAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeWorkspaceAssociations");
   let body: any;
@@ -965,7 +965,7 @@ export const se_DescribeWorkspaceAssociationsCommand = async (
  */
 export const se_DescribeWorkspaceBundlesCommand = async (
   input: DescribeWorkspaceBundlesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeWorkspaceBundles");
   let body: any;
@@ -978,7 +978,7 @@ export const se_DescribeWorkspaceBundlesCommand = async (
  */
 export const se_DescribeWorkspaceDirectoriesCommand = async (
   input: DescribeWorkspaceDirectoriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeWorkspaceDirectories");
   let body: any;
@@ -991,7 +991,7 @@ export const se_DescribeWorkspaceDirectoriesCommand = async (
  */
 export const se_DescribeWorkspaceImagePermissionsCommand = async (
   input: DescribeWorkspaceImagePermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeWorkspaceImagePermissions");
   let body: any;
@@ -1004,7 +1004,7 @@ export const se_DescribeWorkspaceImagePermissionsCommand = async (
  */
 export const se_DescribeWorkspaceImagesCommand = async (
   input: DescribeWorkspaceImagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeWorkspaceImages");
   let body: any;
@@ -1017,7 +1017,7 @@ export const se_DescribeWorkspaceImagesCommand = async (
  */
 export const se_DescribeWorkspacesCommand = async (
   input: DescribeWorkspacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeWorkspaces");
   let body: any;
@@ -1030,7 +1030,7 @@ export const se_DescribeWorkspacesCommand = async (
  */
 export const se_DescribeWorkspacesConnectionStatusCommand = async (
   input: DescribeWorkspacesConnectionStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeWorkspacesConnectionStatus");
   let body: any;
@@ -1043,7 +1043,7 @@ export const se_DescribeWorkspacesConnectionStatusCommand = async (
  */
 export const se_DescribeWorkspaceSnapshotsCommand = async (
   input: DescribeWorkspaceSnapshotsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeWorkspaceSnapshots");
   let body: any;
@@ -1056,7 +1056,7 @@ export const se_DescribeWorkspaceSnapshotsCommand = async (
  */
 export const se_DisassociateConnectionAliasCommand = async (
   input: DisassociateConnectionAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateConnectionAlias");
   let body: any;
@@ -1069,7 +1069,7 @@ export const se_DisassociateConnectionAliasCommand = async (
  */
 export const se_DisassociateIpGroupsCommand = async (
   input: DisassociateIpGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateIpGroups");
   let body: any;
@@ -1082,7 +1082,7 @@ export const se_DisassociateIpGroupsCommand = async (
  */
 export const se_DisassociateWorkspaceApplicationCommand = async (
   input: DisassociateWorkspaceApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateWorkspaceApplication");
   let body: any;
@@ -1095,7 +1095,7 @@ export const se_DisassociateWorkspaceApplicationCommand = async (
  */
 export const se_GetAccountLinkCommand = async (
   input: GetAccountLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAccountLink");
   let body: any;
@@ -1108,7 +1108,7 @@ export const se_GetAccountLinkCommand = async (
  */
 export const se_ImportClientBrandingCommand = async (
   input: ImportClientBrandingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ImportClientBranding");
   let body: any;
@@ -1121,7 +1121,7 @@ export const se_ImportClientBrandingCommand = async (
  */
 export const se_ImportWorkspaceImageCommand = async (
   input: ImportWorkspaceImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ImportWorkspaceImage");
   let body: any;
@@ -1134,7 +1134,7 @@ export const se_ImportWorkspaceImageCommand = async (
  */
 export const se_ListAccountLinksCommand = async (
   input: ListAccountLinksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAccountLinks");
   let body: any;
@@ -1147,7 +1147,7 @@ export const se_ListAccountLinksCommand = async (
  */
 export const se_ListAvailableManagementCidrRangesCommand = async (
   input: ListAvailableManagementCidrRangesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAvailableManagementCidrRanges");
   let body: any;
@@ -1160,7 +1160,7 @@ export const se_ListAvailableManagementCidrRangesCommand = async (
  */
 export const se_MigrateWorkspaceCommand = async (
   input: MigrateWorkspaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("MigrateWorkspace");
   let body: any;
@@ -1173,7 +1173,7 @@ export const se_MigrateWorkspaceCommand = async (
  */
 export const se_ModifyAccountCommand = async (
   input: ModifyAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ModifyAccount");
   let body: any;
@@ -1186,7 +1186,7 @@ export const se_ModifyAccountCommand = async (
  */
 export const se_ModifyCertificateBasedAuthPropertiesCommand = async (
   input: ModifyCertificateBasedAuthPropertiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ModifyCertificateBasedAuthProperties");
   let body: any;
@@ -1199,7 +1199,7 @@ export const se_ModifyCertificateBasedAuthPropertiesCommand = async (
  */
 export const se_ModifyClientPropertiesCommand = async (
   input: ModifyClientPropertiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ModifyClientProperties");
   let body: any;
@@ -1212,7 +1212,7 @@ export const se_ModifyClientPropertiesCommand = async (
  */
 export const se_ModifySamlPropertiesCommand = async (
   input: ModifySamlPropertiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ModifySamlProperties");
   let body: any;
@@ -1225,7 +1225,7 @@ export const se_ModifySamlPropertiesCommand = async (
  */
 export const se_ModifySelfservicePermissionsCommand = async (
   input: ModifySelfservicePermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ModifySelfservicePermissions");
   let body: any;
@@ -1238,7 +1238,7 @@ export const se_ModifySelfservicePermissionsCommand = async (
  */
 export const se_ModifyWorkspaceAccessPropertiesCommand = async (
   input: ModifyWorkspaceAccessPropertiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ModifyWorkspaceAccessProperties");
   let body: any;
@@ -1251,7 +1251,7 @@ export const se_ModifyWorkspaceAccessPropertiesCommand = async (
  */
 export const se_ModifyWorkspaceCreationPropertiesCommand = async (
   input: ModifyWorkspaceCreationPropertiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ModifyWorkspaceCreationProperties");
   let body: any;
@@ -1264,7 +1264,7 @@ export const se_ModifyWorkspaceCreationPropertiesCommand = async (
  */
 export const se_ModifyWorkspacePropertiesCommand = async (
   input: ModifyWorkspacePropertiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ModifyWorkspaceProperties");
   let body: any;
@@ -1277,7 +1277,7 @@ export const se_ModifyWorkspacePropertiesCommand = async (
  */
 export const se_ModifyWorkspaceStateCommand = async (
   input: ModifyWorkspaceStateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ModifyWorkspaceState");
   let body: any;
@@ -1290,7 +1290,7 @@ export const se_ModifyWorkspaceStateCommand = async (
  */
 export const se_RebootWorkspacesCommand = async (
   input: RebootWorkspacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RebootWorkspaces");
   let body: any;
@@ -1303,7 +1303,7 @@ export const se_RebootWorkspacesCommand = async (
  */
 export const se_RebuildWorkspacesCommand = async (
   input: RebuildWorkspacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RebuildWorkspaces");
   let body: any;
@@ -1316,7 +1316,7 @@ export const se_RebuildWorkspacesCommand = async (
  */
 export const se_RegisterWorkspaceDirectoryCommand = async (
   input: RegisterWorkspaceDirectoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RegisterWorkspaceDirectory");
   let body: any;
@@ -1329,7 +1329,7 @@ export const se_RegisterWorkspaceDirectoryCommand = async (
  */
 export const se_RejectAccountLinkInvitationCommand = async (
   input: RejectAccountLinkInvitationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RejectAccountLinkInvitation");
   let body: any;
@@ -1342,7 +1342,7 @@ export const se_RejectAccountLinkInvitationCommand = async (
  */
 export const se_RestoreWorkspaceCommand = async (
   input: RestoreWorkspaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RestoreWorkspace");
   let body: any;
@@ -1355,7 +1355,7 @@ export const se_RestoreWorkspaceCommand = async (
  */
 export const se_RevokeIpRulesCommand = async (
   input: RevokeIpRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RevokeIpRules");
   let body: any;
@@ -1368,7 +1368,7 @@ export const se_RevokeIpRulesCommand = async (
  */
 export const se_StartWorkspacesCommand = async (
   input: StartWorkspacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartWorkspaces");
   let body: any;
@@ -1381,7 +1381,7 @@ export const se_StartWorkspacesCommand = async (
  */
 export const se_StopWorkspacesCommand = async (
   input: StopWorkspacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopWorkspaces");
   let body: any;
@@ -1394,7 +1394,7 @@ export const se_StopWorkspacesCommand = async (
  */
 export const se_TerminateWorkspacesCommand = async (
   input: TerminateWorkspacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TerminateWorkspaces");
   let body: any;
@@ -1407,7 +1407,7 @@ export const se_TerminateWorkspacesCommand = async (
  */
 export const se_UpdateConnectClientAddInCommand = async (
   input: UpdateConnectClientAddInCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateConnectClientAddIn");
   let body: any;
@@ -1420,7 +1420,7 @@ export const se_UpdateConnectClientAddInCommand = async (
  */
 export const se_UpdateConnectionAliasPermissionCommand = async (
   input: UpdateConnectionAliasPermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateConnectionAliasPermission");
   let body: any;
@@ -1433,7 +1433,7 @@ export const se_UpdateConnectionAliasPermissionCommand = async (
  */
 export const se_UpdateRulesOfIpGroupCommand = async (
   input: UpdateRulesOfIpGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRulesOfIpGroup");
   let body: any;
@@ -1446,7 +1446,7 @@ export const se_UpdateRulesOfIpGroupCommand = async (
  */
 export const se_UpdateWorkspaceBundleCommand = async (
   input: UpdateWorkspaceBundleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateWorkspaceBundle");
   let body: any;
@@ -1459,7 +1459,7 @@ export const se_UpdateWorkspaceBundleCommand = async (
  */
 export const se_UpdateWorkspaceImagePermissionCommand = async (
   input: UpdateWorkspaceImagePermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateWorkspaceImagePermission");
   let body: any;
@@ -1472,7 +1472,7 @@ export const se_UpdateWorkspaceImagePermissionCommand = async (
  */
 export const de_AcceptAccountLinkInvitationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptAccountLinkInvitationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1492,7 +1492,7 @@ export const de_AcceptAccountLinkInvitationCommand = async (
  */
 export const de_AssociateConnectionAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateConnectionAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1512,7 +1512,7 @@ export const de_AssociateConnectionAliasCommand = async (
  */
 export const de_AssociateIpGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateIpGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1532,7 +1532,7 @@ export const de_AssociateIpGroupsCommand = async (
  */
 export const de_AssociateWorkspaceApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateWorkspaceApplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1552,7 +1552,7 @@ export const de_AssociateWorkspaceApplicationCommand = async (
  */
 export const de_AuthorizeIpRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AuthorizeIpRulesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1572,7 +1572,7 @@ export const de_AuthorizeIpRulesCommand = async (
  */
 export const de_CopyWorkspaceImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopyWorkspaceImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1592,7 +1592,7 @@ export const de_CopyWorkspaceImageCommand = async (
  */
 export const de_CreateAccountLinkInvitationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAccountLinkInvitationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1612,7 +1612,7 @@ export const de_CreateAccountLinkInvitationCommand = async (
  */
 export const de_CreateConnectClientAddInCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConnectClientAddInCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1632,7 +1632,7 @@ export const de_CreateConnectClientAddInCommand = async (
  */
 export const de_CreateConnectionAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConnectionAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1652,7 +1652,7 @@ export const de_CreateConnectionAliasCommand = async (
  */
 export const de_CreateIpGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateIpGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1672,7 +1672,7 @@ export const de_CreateIpGroupCommand = async (
  */
 export const de_CreateStandbyWorkspacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStandbyWorkspacesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1692,7 +1692,7 @@ export const de_CreateStandbyWorkspacesCommand = async (
  */
 export const de_CreateTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1712,7 +1712,7 @@ export const de_CreateTagsCommand = async (
  */
 export const de_CreateUpdatedWorkspaceImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateUpdatedWorkspaceImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1732,7 +1732,7 @@ export const de_CreateUpdatedWorkspaceImageCommand = async (
  */
 export const de_CreateWorkspaceBundleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorkspaceBundleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1752,7 +1752,7 @@ export const de_CreateWorkspaceBundleCommand = async (
  */
 export const de_CreateWorkspaceImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorkspaceImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1772,7 +1772,7 @@ export const de_CreateWorkspaceImageCommand = async (
  */
 export const de_CreateWorkspacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorkspacesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1792,7 +1792,7 @@ export const de_CreateWorkspacesCommand = async (
  */
 export const de_DeleteAccountLinkInvitationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAccountLinkInvitationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1812,7 +1812,7 @@ export const de_DeleteAccountLinkInvitationCommand = async (
  */
 export const de_DeleteClientBrandingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteClientBrandingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1832,7 +1832,7 @@ export const de_DeleteClientBrandingCommand = async (
  */
 export const de_DeleteConnectClientAddInCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConnectClientAddInCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1852,7 +1852,7 @@ export const de_DeleteConnectClientAddInCommand = async (
  */
 export const de_DeleteConnectionAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConnectionAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1872,7 +1872,7 @@ export const de_DeleteConnectionAliasCommand = async (
  */
 export const de_DeleteIpGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIpGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1892,7 +1892,7 @@ export const de_DeleteIpGroupCommand = async (
  */
 export const de_DeleteTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1912,7 +1912,7 @@ export const de_DeleteTagsCommand = async (
  */
 export const de_DeleteWorkspaceBundleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorkspaceBundleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1932,7 +1932,7 @@ export const de_DeleteWorkspaceBundleCommand = async (
  */
 export const de_DeleteWorkspaceImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorkspaceImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1952,7 +1952,7 @@ export const de_DeleteWorkspaceImageCommand = async (
  */
 export const de_DeployWorkspaceApplicationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeployWorkspaceApplicationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1972,7 +1972,7 @@ export const de_DeployWorkspaceApplicationsCommand = async (
  */
 export const de_DeregisterWorkspaceDirectoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterWorkspaceDirectoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1992,7 +1992,7 @@ export const de_DeregisterWorkspaceDirectoryCommand = async (
  */
 export const de_DescribeAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAccountCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2012,7 +2012,7 @@ export const de_DescribeAccountCommand = async (
  */
 export const de_DescribeAccountModificationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAccountModificationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2032,7 +2032,7 @@ export const de_DescribeAccountModificationsCommand = async (
  */
 export const de_DescribeApplicationAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeApplicationAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2052,7 +2052,7 @@ export const de_DescribeApplicationAssociationsCommand = async (
  */
 export const de_DescribeApplicationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeApplicationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2072,7 +2072,7 @@ export const de_DescribeApplicationsCommand = async (
  */
 export const de_DescribeBundleAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBundleAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2092,7 +2092,7 @@ export const de_DescribeBundleAssociationsCommand = async (
  */
 export const de_DescribeClientBrandingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeClientBrandingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2112,7 +2112,7 @@ export const de_DescribeClientBrandingCommand = async (
  */
 export const de_DescribeClientPropertiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeClientPropertiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2132,7 +2132,7 @@ export const de_DescribeClientPropertiesCommand = async (
  */
 export const de_DescribeConnectClientAddInsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConnectClientAddInsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2152,7 +2152,7 @@ export const de_DescribeConnectClientAddInsCommand = async (
  */
 export const de_DescribeConnectionAliasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConnectionAliasesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2172,7 +2172,7 @@ export const de_DescribeConnectionAliasesCommand = async (
  */
 export const de_DescribeConnectionAliasPermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConnectionAliasPermissionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2192,7 +2192,7 @@ export const de_DescribeConnectionAliasPermissionsCommand = async (
  */
 export const de_DescribeImageAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeImageAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2212,7 +2212,7 @@ export const de_DescribeImageAssociationsCommand = async (
  */
 export const de_DescribeIpGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeIpGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2232,7 +2232,7 @@ export const de_DescribeIpGroupsCommand = async (
  */
 export const de_DescribeTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2252,7 +2252,7 @@ export const de_DescribeTagsCommand = async (
  */
 export const de_DescribeWorkspaceAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWorkspaceAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2272,7 +2272,7 @@ export const de_DescribeWorkspaceAssociationsCommand = async (
  */
 export const de_DescribeWorkspaceBundlesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWorkspaceBundlesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2292,7 +2292,7 @@ export const de_DescribeWorkspaceBundlesCommand = async (
  */
 export const de_DescribeWorkspaceDirectoriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWorkspaceDirectoriesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2312,7 +2312,7 @@ export const de_DescribeWorkspaceDirectoriesCommand = async (
  */
 export const de_DescribeWorkspaceImagePermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWorkspaceImagePermissionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2332,7 +2332,7 @@ export const de_DescribeWorkspaceImagePermissionsCommand = async (
  */
 export const de_DescribeWorkspaceImagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWorkspaceImagesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2352,7 +2352,7 @@ export const de_DescribeWorkspaceImagesCommand = async (
  */
 export const de_DescribeWorkspacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWorkspacesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2372,7 +2372,7 @@ export const de_DescribeWorkspacesCommand = async (
  */
 export const de_DescribeWorkspacesConnectionStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWorkspacesConnectionStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2392,7 +2392,7 @@ export const de_DescribeWorkspacesConnectionStatusCommand = async (
  */
 export const de_DescribeWorkspaceSnapshotsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWorkspaceSnapshotsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2412,7 +2412,7 @@ export const de_DescribeWorkspaceSnapshotsCommand = async (
  */
 export const de_DisassociateConnectionAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateConnectionAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2432,7 +2432,7 @@ export const de_DisassociateConnectionAliasCommand = async (
  */
 export const de_DisassociateIpGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateIpGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2452,7 +2452,7 @@ export const de_DisassociateIpGroupsCommand = async (
  */
 export const de_DisassociateWorkspaceApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateWorkspaceApplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2472,7 +2472,7 @@ export const de_DisassociateWorkspaceApplicationCommand = async (
  */
 export const de_GetAccountLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccountLinkCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2492,7 +2492,7 @@ export const de_GetAccountLinkCommand = async (
  */
 export const de_ImportClientBrandingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportClientBrandingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2512,7 +2512,7 @@ export const de_ImportClientBrandingCommand = async (
  */
 export const de_ImportWorkspaceImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportWorkspaceImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2532,7 +2532,7 @@ export const de_ImportWorkspaceImageCommand = async (
  */
 export const de_ListAccountLinksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAccountLinksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2552,7 +2552,7 @@ export const de_ListAccountLinksCommand = async (
  */
 export const de_ListAvailableManagementCidrRangesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAvailableManagementCidrRangesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2572,7 +2572,7 @@ export const de_ListAvailableManagementCidrRangesCommand = async (
  */
 export const de_MigrateWorkspaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MigrateWorkspaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2592,7 +2592,7 @@ export const de_MigrateWorkspaceCommand = async (
  */
 export const de_ModifyAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyAccountCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2612,7 +2612,7 @@ export const de_ModifyAccountCommand = async (
  */
 export const de_ModifyCertificateBasedAuthPropertiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyCertificateBasedAuthPropertiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2632,7 +2632,7 @@ export const de_ModifyCertificateBasedAuthPropertiesCommand = async (
  */
 export const de_ModifyClientPropertiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyClientPropertiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2652,7 +2652,7 @@ export const de_ModifyClientPropertiesCommand = async (
  */
 export const de_ModifySamlPropertiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifySamlPropertiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2672,7 +2672,7 @@ export const de_ModifySamlPropertiesCommand = async (
  */
 export const de_ModifySelfservicePermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifySelfservicePermissionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2692,7 +2692,7 @@ export const de_ModifySelfservicePermissionsCommand = async (
  */
 export const de_ModifyWorkspaceAccessPropertiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyWorkspaceAccessPropertiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2712,7 +2712,7 @@ export const de_ModifyWorkspaceAccessPropertiesCommand = async (
  */
 export const de_ModifyWorkspaceCreationPropertiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyWorkspaceCreationPropertiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2732,7 +2732,7 @@ export const de_ModifyWorkspaceCreationPropertiesCommand = async (
  */
 export const de_ModifyWorkspacePropertiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyWorkspacePropertiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2752,7 +2752,7 @@ export const de_ModifyWorkspacePropertiesCommand = async (
  */
 export const de_ModifyWorkspaceStateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyWorkspaceStateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2772,7 +2772,7 @@ export const de_ModifyWorkspaceStateCommand = async (
  */
 export const de_RebootWorkspacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RebootWorkspacesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2792,7 +2792,7 @@ export const de_RebootWorkspacesCommand = async (
  */
 export const de_RebuildWorkspacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RebuildWorkspacesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2812,7 +2812,7 @@ export const de_RebuildWorkspacesCommand = async (
  */
 export const de_RegisterWorkspaceDirectoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterWorkspaceDirectoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2832,7 +2832,7 @@ export const de_RegisterWorkspaceDirectoryCommand = async (
  */
 export const de_RejectAccountLinkInvitationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RejectAccountLinkInvitationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2852,7 +2852,7 @@ export const de_RejectAccountLinkInvitationCommand = async (
  */
 export const de_RestoreWorkspaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreWorkspaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2872,7 +2872,7 @@ export const de_RestoreWorkspaceCommand = async (
  */
 export const de_RevokeIpRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RevokeIpRulesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2892,7 +2892,7 @@ export const de_RevokeIpRulesCommand = async (
  */
 export const de_StartWorkspacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartWorkspacesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2912,7 +2912,7 @@ export const de_StartWorkspacesCommand = async (
  */
 export const de_StopWorkspacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopWorkspacesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2932,7 +2932,7 @@ export const de_StopWorkspacesCommand = async (
  */
 export const de_TerminateWorkspacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TerminateWorkspacesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2952,7 +2952,7 @@ export const de_TerminateWorkspacesCommand = async (
  */
 export const de_UpdateConnectClientAddInCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConnectClientAddInCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2972,7 +2972,7 @@ export const de_UpdateConnectClientAddInCommand = async (
  */
 export const de_UpdateConnectionAliasPermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConnectionAliasPermissionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2992,7 +2992,7 @@ export const de_UpdateConnectionAliasPermissionCommand = async (
  */
 export const de_UpdateRulesOfIpGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRulesOfIpGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3012,7 +3012,7 @@ export const de_UpdateRulesOfIpGroupCommand = async (
  */
 export const de_UpdateWorkspaceBundleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWorkspaceBundleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3032,7 +3032,7 @@ export const de_UpdateWorkspaceBundleCommand = async (
  */
 export const de_UpdateWorkspaceImagePermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWorkspaceImagePermissionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3138,7 +3138,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3154,7 +3154,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_ApplicationNotSupportedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApplicationNotSupportedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3170,7 +3170,7 @@ const de_ApplicationNotSupportedExceptionRes = async (
  */
 const de_ComputeNotCompatibleExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ComputeNotCompatibleException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3199,7 +3199,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_IncompatibleApplicationsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IncompatibleApplicationsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3215,7 +3215,7 @@ const de_IncompatibleApplicationsExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3231,7 +3231,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_InvalidParameterValuesExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterValuesException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3247,7 +3247,7 @@ const de_InvalidParameterValuesExceptionRes = async (
  */
 const de_InvalidResourceStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidResourceStateException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3263,7 +3263,7 @@ const de_InvalidResourceStateExceptionRes = async (
  */
 const de_OperatingSystemNotCompatibleExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperatingSystemNotCompatibleException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3279,7 +3279,7 @@ const de_OperatingSystemNotCompatibleExceptionRes = async (
  */
 const de_OperationInProgressExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationInProgressException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3295,7 +3295,7 @@ const de_OperationInProgressExceptionRes = async (
  */
 const de_OperationNotSupportedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationNotSupportedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3311,7 +3311,7 @@ const de_OperationNotSupportedExceptionRes = async (
  */
 const de_ResourceAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3327,7 +3327,7 @@ const de_ResourceAlreadyExistsExceptionRes = async (
  */
 const de_ResourceAssociatedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAssociatedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3343,7 +3343,7 @@ const de_ResourceAssociatedExceptionRes = async (
  */
 const de_ResourceCreationFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceCreationFailedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3359,7 +3359,7 @@ const de_ResourceCreationFailedExceptionRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3375,7 +3375,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_ResourceLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3391,7 +3391,7 @@ const de_ResourceLimitExceededExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3407,7 +3407,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ResourceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceUnavailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3423,7 +3423,7 @@ const de_ResourceUnavailableExceptionRes = async (
  */
 const de_UnsupportedNetworkConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedNetworkConfigurationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3439,7 +3439,7 @@ const de_UnsupportedNetworkConfigurationExceptionRes = async (
  */
 const de_UnsupportedWorkspaceConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedWorkspaceConfigurationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3468,7 +3468,7 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_WorkspacesDefaultRoleNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WorkspacesDefaultRoleNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3538,7 +3538,7 @@ const de_WorkspacesDefaultRoleNotFoundExceptionRes = async (
  */
 const se_DefaultImportClientBrandingAttributes = (
   input: DefaultImportClientBrandingAttributes,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     ForgotPasswordLink: [],
@@ -3649,7 +3649,7 @@ const se_ImportClientBrandingRequest = (input: ImportClientBrandingRequest, cont
  */
 const se_IosImportClientBrandingAttributes = (
   input: IosImportClientBrandingAttributes,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     ForgotPasswordLink: [],
@@ -3846,7 +3846,7 @@ const de_ApplicationResourceAssociation = (output: any, context: __SerdeContext)
  */
 const de_ApplicationResourceAssociationList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ApplicationResourceAssociation[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -3865,7 +3865,7 @@ const de_ApplicationResourceAssociationList = (
  */
 const de_AssociateWorkspaceApplicationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AssociateWorkspaceApplicationResult => {
   return take(output, {
     Association: (_: any) => de_WorkspaceResourceAssociation(_, context),
@@ -4035,7 +4035,7 @@ const de_DataReplicationSettings = (output: any, context: __SerdeContext): DataR
  */
 const de_DeployWorkspaceApplicationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeployWorkspaceApplicationsResult => {
   return take(output, {
     Deployment: (_: any) => de_WorkSpaceApplicationDeployment(_, context),
@@ -4049,7 +4049,7 @@ const de_DeployWorkspaceApplicationsResult = (
  */
 const de_DescribeAccountModificationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeAccountModificationsResult => {
   return take(output, {
     AccountModifications: (_: any) => de_AccountModificationList(_, context),
@@ -4064,7 +4064,7 @@ const de_DescribeAccountModificationsResult = (
  */
 const de_DescribeApplicationAssociationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeApplicationAssociationsResult => {
   return take(output, {
     Associations: (_: any) => de_ApplicationResourceAssociationList(_, context),
@@ -4087,7 +4087,7 @@ const de_DescribeApplicationsResult = (output: any, context: __SerdeContext): De
  */
 const de_DescribeBundleAssociationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeBundleAssociationsResult => {
   return take(output, {
     Associations: (_: any) => de_BundleResourceAssociationList(_, context),
@@ -4122,7 +4122,7 @@ const de_DescribeImageAssociationsResult = (output: any, context: __SerdeContext
  */
 const de_DescribeWorkspaceAssociationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeWorkspaceAssociationsResult => {
   return take(output, {
     Associations: (_: any) => de_WorkspaceResourceAssociationList(_, context),
@@ -4158,7 +4158,7 @@ const de_DescribeWorkspaceImagesResult = (output: any, context: __SerdeContext):
  */
 const de_DescribeWorkspacesConnectionStatusResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeWorkspacesConnectionStatusResult => {
   return take(output, {
     NextToken: __expectString,
@@ -4171,7 +4171,7 @@ const de_DescribeWorkspacesConnectionStatusResult = (
  */
 const de_DescribeWorkspaceSnapshotsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeWorkspaceSnapshotsResult => {
   return take(output, {
     RebuildSnapshots: (_: any) => de_SnapshotList(_, context),
@@ -4200,7 +4200,7 @@ const de_DescribeWorkspacesResult = (output: any, context: __SerdeContext): Desc
  */
 const de_DisassociateWorkspaceApplicationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DisassociateWorkspaceApplicationResult => {
   return take(output, {
     Association: (_: any) => de_WorkspaceResourceAssociation(_, context),
@@ -4658,7 +4658,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

@@ -65,14 +65,14 @@ export class IgnoreQueryParamsInResponseSerializer
 
 export const getIgnoreQueryParamsInResponseHandler = <Context>(
   operation: __Operation<IgnoreQueryParamsInResponseServerInput, IgnoreQueryParamsInResponseServerOutput, Context>,
-  customizer: __ValidationCustomizer<"IgnoreQueryParamsInResponse">
+  customizer: __ValidationCustomizer<"IgnoreQueryParamsInResponse">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "IgnoreQueryParamsInResponse">([
     new httpbinding.UriSpec<"RestJson", "IgnoreQueryParamsInResponse">(
       "GET",
       [{ type: "path_literal", value: "IgnoreQueryParamsInResponse" }],
       [],
-      { service: "RestJson", operation: "IgnoreQueryParamsInResponse" }
+      { service: "RestJson", operation: "IgnoreQueryParamsInResponse" },
     ),
   ]);
   return new IgnoreQueryParamsInResponseHandler(
@@ -80,7 +80,7 @@ export const getIgnoreQueryParamsInResponseHandler = <Context>(
     mux,
     new IgnoreQueryParamsInResponseSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -101,7 +101,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -147,7 +147,7 @@ export class IgnoreQueryParamsInResponseHandler<Context> implements __ServiceHan
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"IgnoreQueryParamsInResponse">;
   /**
@@ -168,7 +168,7 @@ export class IgnoreQueryParamsInResponseHandler<Context> implements __ServiceHan
       IgnoreQueryParamsInResponseErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"IgnoreQueryParamsInResponse">
+    validationCustomizer: __ValidationCustomizer<"IgnoreQueryParamsInResponse">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -180,7 +180,7 @@ export class IgnoreQueryParamsInResponseHandler<Context> implements __ServiceHan
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.IgnoreQueryParamsInResponse. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.IgnoreQueryParamsInResponse. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -192,7 +192,7 @@ export class IgnoreQueryParamsInResponseHandler<Context> implements __ServiceHan
       this.operation,
       this.serializeFrameworkException,
       IgnoreQueryParamsInResponseServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

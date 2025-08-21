@@ -62,16 +62,16 @@ export interface PinpointSMSVoice {
   createConfigurationSet(): Promise<CreateConfigurationSetCommandOutput>;
   createConfigurationSet(
     args: CreateConfigurationSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateConfigurationSetCommandOutput>;
   createConfigurationSet(
     args: CreateConfigurationSetCommandInput,
-    cb: (err: any, data?: CreateConfigurationSetCommandOutput) => void
+    cb: (err: any, data?: CreateConfigurationSetCommandOutput) => void,
   ): void;
   createConfigurationSet(
     args: CreateConfigurationSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateConfigurationSetCommandOutput) => void
+    cb: (err: any, data?: CreateConfigurationSetCommandOutput) => void,
   ): void;
 
   /**
@@ -79,16 +79,16 @@ export interface PinpointSMSVoice {
    */
   createConfigurationSetEventDestination(
     args: CreateConfigurationSetEventDestinationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateConfigurationSetEventDestinationCommandOutput>;
   createConfigurationSetEventDestination(
     args: CreateConfigurationSetEventDestinationCommandInput,
-    cb: (err: any, data?: CreateConfigurationSetEventDestinationCommandOutput) => void
+    cb: (err: any, data?: CreateConfigurationSetEventDestinationCommandOutput) => void,
   ): void;
   createConfigurationSetEventDestination(
     args: CreateConfigurationSetEventDestinationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateConfigurationSetEventDestinationCommandOutput) => void
+    cb: (err: any, data?: CreateConfigurationSetEventDestinationCommandOutput) => void,
   ): void;
 
   /**
@@ -96,16 +96,16 @@ export interface PinpointSMSVoice {
    */
   deleteConfigurationSet(
     args: DeleteConfigurationSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConfigurationSetCommandOutput>;
   deleteConfigurationSet(
     args: DeleteConfigurationSetCommandInput,
-    cb: (err: any, data?: DeleteConfigurationSetCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigurationSetCommandOutput) => void,
   ): void;
   deleteConfigurationSet(
     args: DeleteConfigurationSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConfigurationSetCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigurationSetCommandOutput) => void,
   ): void;
 
   /**
@@ -113,16 +113,16 @@ export interface PinpointSMSVoice {
    */
   deleteConfigurationSetEventDestination(
     args: DeleteConfigurationSetEventDestinationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConfigurationSetEventDestinationCommandOutput>;
   deleteConfigurationSetEventDestination(
     args: DeleteConfigurationSetEventDestinationCommandInput,
-    cb: (err: any, data?: DeleteConfigurationSetEventDestinationCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigurationSetEventDestinationCommandOutput) => void,
   ): void;
   deleteConfigurationSetEventDestination(
     args: DeleteConfigurationSetEventDestinationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConfigurationSetEventDestinationCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigurationSetEventDestinationCommandOutput) => void,
   ): void;
 
   /**
@@ -130,16 +130,16 @@ export interface PinpointSMSVoice {
    */
   getConfigurationSetEventDestinations(
     args: GetConfigurationSetEventDestinationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetConfigurationSetEventDestinationsCommandOutput>;
   getConfigurationSetEventDestinations(
     args: GetConfigurationSetEventDestinationsCommandInput,
-    cb: (err: any, data?: GetConfigurationSetEventDestinationsCommandOutput) => void
+    cb: (err: any, data?: GetConfigurationSetEventDestinationsCommandOutput) => void,
   ): void;
   getConfigurationSetEventDestinations(
     args: GetConfigurationSetEventDestinationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetConfigurationSetEventDestinationsCommandOutput) => void
+    cb: (err: any, data?: GetConfigurationSetEventDestinationsCommandOutput) => void,
   ): void;
 
   /**
@@ -148,16 +148,16 @@ export interface PinpointSMSVoice {
   listConfigurationSets(): Promise<ListConfigurationSetsCommandOutput>;
   listConfigurationSets(
     args: ListConfigurationSetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListConfigurationSetsCommandOutput>;
   listConfigurationSets(
     args: ListConfigurationSetsCommandInput,
-    cb: (err: any, data?: ListConfigurationSetsCommandOutput) => void
+    cb: (err: any, data?: ListConfigurationSetsCommandOutput) => void,
   ): void;
   listConfigurationSets(
     args: ListConfigurationSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListConfigurationSetsCommandOutput) => void
+    cb: (err: any, data?: ListConfigurationSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -166,16 +166,16 @@ export interface PinpointSMSVoice {
   sendVoiceMessage(): Promise<SendVoiceMessageCommandOutput>;
   sendVoiceMessage(
     args: SendVoiceMessageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SendVoiceMessageCommandOutput>;
   sendVoiceMessage(
     args: SendVoiceMessageCommandInput,
-    cb: (err: any, data?: SendVoiceMessageCommandOutput) => void
+    cb: (err: any, data?: SendVoiceMessageCommandOutput) => void,
   ): void;
   sendVoiceMessage(
     args: SendVoiceMessageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendVoiceMessageCommandOutput) => void
+    cb: (err: any, data?: SendVoiceMessageCommandOutput) => void,
   ): void;
 
   /**
@@ -183,16 +183,16 @@ export interface PinpointSMSVoice {
    */
   updateConfigurationSetEventDestination(
     args: UpdateConfigurationSetEventDestinationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateConfigurationSetEventDestinationCommandOutput>;
   updateConfigurationSetEventDestination(
     args: UpdateConfigurationSetEventDestinationCommandInput,
-    cb: (err: any, data?: UpdateConfigurationSetEventDestinationCommandOutput) => void
+    cb: (err: any, data?: UpdateConfigurationSetEventDestinationCommandOutput) => void,
   ): void;
   updateConfigurationSetEventDestination(
     args: UpdateConfigurationSetEventDestinationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateConfigurationSetEventDestinationCommandOutput) => void
+    cb: (err: any, data?: UpdateConfigurationSetEventDestinationCommandOutput) => void,
   ): void;
 }
 

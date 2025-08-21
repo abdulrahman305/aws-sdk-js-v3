@@ -89,7 +89,7 @@ import {
  */
 export const se_ActivatePipelineCommand = async (
   input: ActivatePipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ActivatePipeline");
   let body: any;
@@ -102,7 +102,7 @@ export const se_ActivatePipelineCommand = async (
  */
 export const se_AddTagsCommand = async (
   input: AddTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AddTags");
   let body: any;
@@ -115,7 +115,7 @@ export const se_AddTagsCommand = async (
  */
 export const se_CreatePipelineCommand = async (
   input: CreatePipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreatePipeline");
   let body: any;
@@ -128,7 +128,7 @@ export const se_CreatePipelineCommand = async (
  */
 export const se_DeactivatePipelineCommand = async (
   input: DeactivatePipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeactivatePipeline");
   let body: any;
@@ -141,7 +141,7 @@ export const se_DeactivatePipelineCommand = async (
  */
 export const se_DeletePipelineCommand = async (
   input: DeletePipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeletePipeline");
   let body: any;
@@ -154,7 +154,7 @@ export const se_DeletePipelineCommand = async (
  */
 export const se_DescribeObjectsCommand = async (
   input: DescribeObjectsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeObjects");
   let body: any;
@@ -167,7 +167,7 @@ export const se_DescribeObjectsCommand = async (
  */
 export const se_DescribePipelinesCommand = async (
   input: DescribePipelinesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribePipelines");
   let body: any;
@@ -180,7 +180,7 @@ export const se_DescribePipelinesCommand = async (
  */
 export const se_EvaluateExpressionCommand = async (
   input: EvaluateExpressionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EvaluateExpression");
   let body: any;
@@ -193,7 +193,7 @@ export const se_EvaluateExpressionCommand = async (
  */
 export const se_GetPipelineDefinitionCommand = async (
   input: GetPipelineDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetPipelineDefinition");
   let body: any;
@@ -206,7 +206,7 @@ export const se_GetPipelineDefinitionCommand = async (
  */
 export const se_ListPipelinesCommand = async (
   input: ListPipelinesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPipelines");
   let body: any;
@@ -219,7 +219,7 @@ export const se_ListPipelinesCommand = async (
  */
 export const se_PollForTaskCommand = async (
   input: PollForTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PollForTask");
   let body: any;
@@ -232,7 +232,7 @@ export const se_PollForTaskCommand = async (
  */
 export const se_PutPipelineDefinitionCommand = async (
   input: PutPipelineDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutPipelineDefinition");
   let body: any;
@@ -245,7 +245,7 @@ export const se_PutPipelineDefinitionCommand = async (
  */
 export const se_QueryObjectsCommand = async (
   input: QueryObjectsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("QueryObjects");
   let body: any;
@@ -258,7 +258,7 @@ export const se_QueryObjectsCommand = async (
  */
 export const se_RemoveTagsCommand = async (
   input: RemoveTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RemoveTags");
   let body: any;
@@ -271,7 +271,7 @@ export const se_RemoveTagsCommand = async (
  */
 export const se_ReportTaskProgressCommand = async (
   input: ReportTaskProgressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ReportTaskProgress");
   let body: any;
@@ -284,7 +284,7 @@ export const se_ReportTaskProgressCommand = async (
  */
 export const se_ReportTaskRunnerHeartbeatCommand = async (
   input: ReportTaskRunnerHeartbeatCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ReportTaskRunnerHeartbeat");
   let body: any;
@@ -297,7 +297,7 @@ export const se_ReportTaskRunnerHeartbeatCommand = async (
  */
 export const se_SetStatusCommand = async (
   input: SetStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SetStatus");
   let body: any;
@@ -310,7 +310,7 @@ export const se_SetStatusCommand = async (
  */
 export const se_SetTaskStatusCommand = async (
   input: SetTaskStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SetTaskStatus");
   let body: any;
@@ -323,7 +323,7 @@ export const se_SetTaskStatusCommand = async (
  */
 export const se_ValidatePipelineDefinitionCommand = async (
   input: ValidatePipelineDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ValidatePipelineDefinition");
   let body: any;
@@ -336,7 +336,7 @@ export const se_ValidatePipelineDefinitionCommand = async (
  */
 export const de_ActivatePipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ActivatePipelineCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -356,7 +356,7 @@ export const de_ActivatePipelineCommand = async (
  */
 export const de_AddTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -376,7 +376,7 @@ export const de_AddTagsCommand = async (
  */
 export const de_CreatePipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePipelineCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -396,7 +396,7 @@ export const de_CreatePipelineCommand = async (
  */
 export const de_DeactivatePipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeactivatePipelineCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -416,7 +416,7 @@ export const de_DeactivatePipelineCommand = async (
  */
 export const de_DeletePipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePipelineCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -433,7 +433,7 @@ export const de_DeletePipelineCommand = async (
  */
 export const de_DescribeObjectsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeObjectsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -453,7 +453,7 @@ export const de_DescribeObjectsCommand = async (
  */
 export const de_DescribePipelinesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePipelinesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -473,7 +473,7 @@ export const de_DescribePipelinesCommand = async (
  */
 export const de_EvaluateExpressionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EvaluateExpressionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -493,7 +493,7 @@ export const de_EvaluateExpressionCommand = async (
  */
 export const de_GetPipelineDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPipelineDefinitionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -513,7 +513,7 @@ export const de_GetPipelineDefinitionCommand = async (
  */
 export const de_ListPipelinesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPipelinesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -533,7 +533,7 @@ export const de_ListPipelinesCommand = async (
  */
 export const de_PollForTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PollForTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -553,7 +553,7 @@ export const de_PollForTaskCommand = async (
  */
 export const de_PutPipelineDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutPipelineDefinitionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -573,7 +573,7 @@ export const de_PutPipelineDefinitionCommand = async (
  */
 export const de_QueryObjectsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<QueryObjectsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -593,7 +593,7 @@ export const de_QueryObjectsCommand = async (
  */
 export const de_RemoveTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -613,7 +613,7 @@ export const de_RemoveTagsCommand = async (
  */
 export const de_ReportTaskProgressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReportTaskProgressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -633,7 +633,7 @@ export const de_ReportTaskProgressCommand = async (
  */
 export const de_ReportTaskRunnerHeartbeatCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReportTaskRunnerHeartbeatCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -653,7 +653,7 @@ export const de_ReportTaskRunnerHeartbeatCommand = async (
  */
 export const de_SetStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -670,7 +670,7 @@ export const de_SetStatusCommand = async (
  */
 export const de_SetTaskStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetTaskStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -690,7 +690,7 @@ export const de_SetTaskStatusCommand = async (
  */
 export const de_ValidatePipelineDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ValidatePipelineDefinitionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -745,7 +745,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_InternalServiceErrorRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceError> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -761,7 +761,7 @@ const de_InternalServiceErrorRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -777,7 +777,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_PipelineDeletedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PipelineDeletedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -793,7 +793,7 @@ const de_PipelineDeletedExceptionRes = async (
  */
 const de_PipelineNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PipelineNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -809,7 +809,7 @@ const de_PipelineNotFoundExceptionRes = async (
  */
 const de_TaskNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TaskNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1015,7 +1015,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

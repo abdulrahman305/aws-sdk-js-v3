@@ -42,7 +42,7 @@ describe(regionRedirectMiddleware.name, () => {
         Code: "PermanentRedirect",
         $metadata: { httpStatusCode: 301 },
         $response: { headers: { "x-amz-bucket-region": redirectRegion } },
-      })
+      }),
     );
     // Ensure that context.__s3RegionRedirect is not set
     expect(context.__s3RegionRedirect).toBeUndefined();

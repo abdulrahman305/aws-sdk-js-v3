@@ -164,7 +164,7 @@ export class UpdateReplicationConfigurationTemplateCommand extends $Command
   .n("DrsClient", "UpdateReplicationConfigurationTemplateCommand")
   .f(
     UpdateReplicationConfigurationTemplateRequestFilterSensitiveLog,
-    ReplicationConfigurationTemplateFilterSensitiveLog
+    ReplicationConfigurationTemplateFilterSensitiveLog,
   )
   .ser(se_UpdateReplicationConfigurationTemplateCommand)
   .de(de_UpdateReplicationConfigurationTemplateCommand)

@@ -451,7 +451,7 @@ import { PinpointServiceException as __BaseException } from "../models/PinpointS
  */
 export const se_CreateAppCommand = async (
   input: CreateAppCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -475,7 +475,7 @@ export const se_CreateAppCommand = async (
  */
 export const se_CreateCampaignCommand = async (
   input: CreateCampaignCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -500,7 +500,7 @@ export const se_CreateCampaignCommand = async (
  */
 export const se_CreateEmailTemplateCommand = async (
   input: CreateEmailTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -525,7 +525,7 @@ export const se_CreateEmailTemplateCommand = async (
  */
 export const se_CreateExportJobCommand = async (
   input: CreateExportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -550,7 +550,7 @@ export const se_CreateExportJobCommand = async (
  */
 export const se_CreateImportJobCommand = async (
   input: CreateImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -575,7 +575,7 @@ export const se_CreateImportJobCommand = async (
  */
 export const se_CreateInAppTemplateCommand = async (
   input: CreateInAppTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -600,7 +600,7 @@ export const se_CreateInAppTemplateCommand = async (
  */
 export const se_CreateJourneyCommand = async (
   input: CreateJourneyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -625,7 +625,7 @@ export const se_CreateJourneyCommand = async (
  */
 export const se_CreatePushTemplateCommand = async (
   input: CreatePushTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -650,7 +650,7 @@ export const se_CreatePushTemplateCommand = async (
  */
 export const se_CreateRecommenderConfigurationCommand = async (
   input: CreateRecommenderConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -674,7 +674,7 @@ export const se_CreateRecommenderConfigurationCommand = async (
  */
 export const se_CreateSegmentCommand = async (
   input: CreateSegmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -699,7 +699,7 @@ export const se_CreateSegmentCommand = async (
  */
 export const se_CreateSmsTemplateCommand = async (
   input: CreateSmsTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -724,7 +724,7 @@ export const se_CreateSmsTemplateCommand = async (
  */
 export const se_CreateVoiceTemplateCommand = async (
   input: CreateVoiceTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -749,7 +749,7 @@ export const se_CreateVoiceTemplateCommand = async (
  */
 export const se_DeleteAdmChannelCommand = async (
   input: DeleteAdmChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -765,7 +765,7 @@ export const se_DeleteAdmChannelCommand = async (
  */
 export const se_DeleteApnsChannelCommand = async (
   input: DeleteApnsChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -781,7 +781,7 @@ export const se_DeleteApnsChannelCommand = async (
  */
 export const se_DeleteApnsSandboxChannelCommand = async (
   input: DeleteApnsSandboxChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -797,7 +797,7 @@ export const se_DeleteApnsSandboxChannelCommand = async (
  */
 export const se_DeleteApnsVoipChannelCommand = async (
   input: DeleteApnsVoipChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -813,7 +813,7 @@ export const se_DeleteApnsVoipChannelCommand = async (
  */
 export const se_DeleteApnsVoipSandboxChannelCommand = async (
   input: DeleteApnsVoipSandboxChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -829,7 +829,7 @@ export const se_DeleteApnsVoipSandboxChannelCommand = async (
  */
 export const se_DeleteAppCommand = async (
   input: DeleteAppCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -845,7 +845,7 @@ export const se_DeleteAppCommand = async (
  */
 export const se_DeleteBaiduChannelCommand = async (
   input: DeleteBaiduChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -861,7 +861,7 @@ export const se_DeleteBaiduChannelCommand = async (
  */
 export const se_DeleteCampaignCommand = async (
   input: DeleteCampaignCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -878,7 +878,7 @@ export const se_DeleteCampaignCommand = async (
  */
 export const se_DeleteEmailChannelCommand = async (
   input: DeleteEmailChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -894,7 +894,7 @@ export const se_DeleteEmailChannelCommand = async (
  */
 export const se_DeleteEmailTemplateCommand = async (
   input: DeleteEmailTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -913,7 +913,7 @@ export const se_DeleteEmailTemplateCommand = async (
  */
 export const se_DeleteEndpointCommand = async (
   input: DeleteEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -930,7 +930,7 @@ export const se_DeleteEndpointCommand = async (
  */
 export const se_DeleteEventStreamCommand = async (
   input: DeleteEventStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -946,7 +946,7 @@ export const se_DeleteEventStreamCommand = async (
  */
 export const se_DeleteGcmChannelCommand = async (
   input: DeleteGcmChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -962,7 +962,7 @@ export const se_DeleteGcmChannelCommand = async (
  */
 export const se_DeleteInAppTemplateCommand = async (
   input: DeleteInAppTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -981,7 +981,7 @@ export const se_DeleteInAppTemplateCommand = async (
  */
 export const se_DeleteJourneyCommand = async (
   input: DeleteJourneyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -998,7 +998,7 @@ export const se_DeleteJourneyCommand = async (
  */
 export const se_DeletePushTemplateCommand = async (
   input: DeletePushTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1017,7 +1017,7 @@ export const se_DeletePushTemplateCommand = async (
  */
 export const se_DeleteRecommenderConfigurationCommand = async (
   input: DeleteRecommenderConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1033,7 +1033,7 @@ export const se_DeleteRecommenderConfigurationCommand = async (
  */
 export const se_DeleteSegmentCommand = async (
   input: DeleteSegmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1050,7 +1050,7 @@ export const se_DeleteSegmentCommand = async (
  */
 export const se_DeleteSmsChannelCommand = async (
   input: DeleteSmsChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1066,7 +1066,7 @@ export const se_DeleteSmsChannelCommand = async (
  */
 export const se_DeleteSmsTemplateCommand = async (
   input: DeleteSmsTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1085,7 +1085,7 @@ export const se_DeleteSmsTemplateCommand = async (
  */
 export const se_DeleteUserEndpointsCommand = async (
   input: DeleteUserEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1102,7 +1102,7 @@ export const se_DeleteUserEndpointsCommand = async (
  */
 export const se_DeleteVoiceChannelCommand = async (
   input: DeleteVoiceChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1118,7 +1118,7 @@ export const se_DeleteVoiceChannelCommand = async (
  */
 export const se_DeleteVoiceTemplateCommand = async (
   input: DeleteVoiceTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1137,7 +1137,7 @@ export const se_DeleteVoiceTemplateCommand = async (
  */
 export const se_GetAdmChannelCommand = async (
   input: GetAdmChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1153,7 +1153,7 @@ export const se_GetAdmChannelCommand = async (
  */
 export const se_GetApnsChannelCommand = async (
   input: GetApnsChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1169,7 +1169,7 @@ export const se_GetApnsChannelCommand = async (
  */
 export const se_GetApnsSandboxChannelCommand = async (
   input: GetApnsSandboxChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1185,7 +1185,7 @@ export const se_GetApnsSandboxChannelCommand = async (
  */
 export const se_GetApnsVoipChannelCommand = async (
   input: GetApnsVoipChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1201,7 +1201,7 @@ export const se_GetApnsVoipChannelCommand = async (
  */
 export const se_GetApnsVoipSandboxChannelCommand = async (
   input: GetApnsVoipSandboxChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1230,7 +1230,7 @@ export const se_GetAppCommand = async (input: GetAppCommandInput, context: __Ser
  */
 export const se_GetApplicationDateRangeKpiCommand = async (
   input: GetApplicationDateRangeKpiCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1253,7 +1253,7 @@ export const se_GetApplicationDateRangeKpiCommand = async (
  */
 export const se_GetApplicationSettingsCommand = async (
   input: GetApplicationSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1269,7 +1269,7 @@ export const se_GetApplicationSettingsCommand = async (
  */
 export const se_GetAppsCommand = async (
   input: GetAppsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1288,7 +1288,7 @@ export const se_GetAppsCommand = async (
  */
 export const se_GetBaiduChannelCommand = async (
   input: GetBaiduChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1304,7 +1304,7 @@ export const se_GetBaiduChannelCommand = async (
  */
 export const se_GetCampaignCommand = async (
   input: GetCampaignCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1321,7 +1321,7 @@ export const se_GetCampaignCommand = async (
  */
 export const se_GetCampaignActivitiesCommand = async (
   input: GetCampaignActivitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1342,7 +1342,7 @@ export const se_GetCampaignActivitiesCommand = async (
  */
 export const se_GetCampaignDateRangeKpiCommand = async (
   input: GetCampaignDateRangeKpiCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1366,7 +1366,7 @@ export const se_GetCampaignDateRangeKpiCommand = async (
  */
 export const se_GetCampaignsCommand = async (
   input: GetCampaignsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1386,7 +1386,7 @@ export const se_GetCampaignsCommand = async (
  */
 export const se_GetCampaignVersionCommand = async (
   input: GetCampaignVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1404,7 +1404,7 @@ export const se_GetCampaignVersionCommand = async (
  */
 export const se_GetCampaignVersionsCommand = async (
   input: GetCampaignVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1425,7 +1425,7 @@ export const se_GetCampaignVersionsCommand = async (
  */
 export const se_GetChannelsCommand = async (
   input: GetChannelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1441,7 +1441,7 @@ export const se_GetChannelsCommand = async (
  */
 export const se_GetEmailChannelCommand = async (
   input: GetEmailChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1457,7 +1457,7 @@ export const se_GetEmailChannelCommand = async (
  */
 export const se_GetEmailTemplateCommand = async (
   input: GetEmailTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1476,7 +1476,7 @@ export const se_GetEmailTemplateCommand = async (
  */
 export const se_GetEndpointCommand = async (
   input: GetEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1493,7 +1493,7 @@ export const se_GetEndpointCommand = async (
  */
 export const se_GetEventStreamCommand = async (
   input: GetEventStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1509,7 +1509,7 @@ export const se_GetEventStreamCommand = async (
  */
 export const se_GetExportJobCommand = async (
   input: GetExportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1526,7 +1526,7 @@ export const se_GetExportJobCommand = async (
  */
 export const se_GetExportJobsCommand = async (
   input: GetExportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1546,7 +1546,7 @@ export const se_GetExportJobsCommand = async (
  */
 export const se_GetGcmChannelCommand = async (
   input: GetGcmChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1562,7 +1562,7 @@ export const se_GetGcmChannelCommand = async (
  */
 export const se_GetImportJobCommand = async (
   input: GetImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1579,7 +1579,7 @@ export const se_GetImportJobCommand = async (
  */
 export const se_GetImportJobsCommand = async (
   input: GetImportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1599,7 +1599,7 @@ export const se_GetImportJobsCommand = async (
  */
 export const se_GetInAppMessagesCommand = async (
   input: GetInAppMessagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1616,7 +1616,7 @@ export const se_GetInAppMessagesCommand = async (
  */
 export const se_GetInAppTemplateCommand = async (
   input: GetInAppTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1635,7 +1635,7 @@ export const se_GetInAppTemplateCommand = async (
  */
 export const se_GetJourneyCommand = async (
   input: GetJourneyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1652,7 +1652,7 @@ export const se_GetJourneyCommand = async (
  */
 export const se_GetJourneyDateRangeKpiCommand = async (
   input: GetJourneyDateRangeKpiCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1676,7 +1676,7 @@ export const se_GetJourneyDateRangeKpiCommand = async (
  */
 export const se_GetJourneyExecutionActivityMetricsCommand = async (
   input: GetJourneyExecutionActivityMetricsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1698,7 +1698,7 @@ export const se_GetJourneyExecutionActivityMetricsCommand = async (
  */
 export const se_GetJourneyExecutionMetricsCommand = async (
   input: GetJourneyExecutionMetricsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1719,7 +1719,7 @@ export const se_GetJourneyExecutionMetricsCommand = async (
  */
 export const se_GetJourneyRunExecutionActivityMetricsCommand = async (
   input: GetJourneyRunExecutionActivityMetricsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1742,7 +1742,7 @@ export const se_GetJourneyRunExecutionActivityMetricsCommand = async (
  */
 export const se_GetJourneyRunExecutionMetricsCommand = async (
   input: GetJourneyRunExecutionMetricsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1764,7 +1764,7 @@ export const se_GetJourneyRunExecutionMetricsCommand = async (
  */
 export const se_GetJourneyRunsCommand = async (
   input: GetJourneyRunsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1785,7 +1785,7 @@ export const se_GetJourneyRunsCommand = async (
  */
 export const se_GetPushTemplateCommand = async (
   input: GetPushTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1804,7 +1804,7 @@ export const se_GetPushTemplateCommand = async (
  */
 export const se_GetRecommenderConfigurationCommand = async (
   input: GetRecommenderConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1820,7 +1820,7 @@ export const se_GetRecommenderConfigurationCommand = async (
  */
 export const se_GetRecommenderConfigurationsCommand = async (
   input: GetRecommenderConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1839,7 +1839,7 @@ export const se_GetRecommenderConfigurationsCommand = async (
  */
 export const se_GetSegmentCommand = async (
   input: GetSegmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1856,7 +1856,7 @@ export const se_GetSegmentCommand = async (
  */
 export const se_GetSegmentExportJobsCommand = async (
   input: GetSegmentExportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1877,7 +1877,7 @@ export const se_GetSegmentExportJobsCommand = async (
  */
 export const se_GetSegmentImportJobsCommand = async (
   input: GetSegmentImportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1898,7 +1898,7 @@ export const se_GetSegmentImportJobsCommand = async (
  */
 export const se_GetSegmentsCommand = async (
   input: GetSegmentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1918,7 +1918,7 @@ export const se_GetSegmentsCommand = async (
  */
 export const se_GetSegmentVersionCommand = async (
   input: GetSegmentVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1936,7 +1936,7 @@ export const se_GetSegmentVersionCommand = async (
  */
 export const se_GetSegmentVersionsCommand = async (
   input: GetSegmentVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1957,7 +1957,7 @@ export const se_GetSegmentVersionsCommand = async (
  */
 export const se_GetSmsChannelCommand = async (
   input: GetSmsChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1973,7 +1973,7 @@ export const se_GetSmsChannelCommand = async (
  */
 export const se_GetSmsTemplateCommand = async (
   input: GetSmsTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1992,7 +1992,7 @@ export const se_GetSmsTemplateCommand = async (
  */
 export const se_GetUserEndpointsCommand = async (
   input: GetUserEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2009,7 +2009,7 @@ export const se_GetUserEndpointsCommand = async (
  */
 export const se_GetVoiceChannelCommand = async (
   input: GetVoiceChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2025,7 +2025,7 @@ export const se_GetVoiceChannelCommand = async (
  */
 export const se_GetVoiceTemplateCommand = async (
   input: GetVoiceTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2044,7 +2044,7 @@ export const se_GetVoiceTemplateCommand = async (
  */
 export const se_ListJourneysCommand = async (
   input: ListJourneysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2064,7 +2064,7 @@ export const se_ListJourneysCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2080,7 +2080,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTemplatesCommand = async (
   input: ListTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2101,7 +2101,7 @@ export const se_ListTemplatesCommand = async (
  */
 export const se_ListTemplateVersionsCommand = async (
   input: ListTemplateVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2122,7 +2122,7 @@ export const se_ListTemplateVersionsCommand = async (
  */
 export const se_PhoneNumberValidateCommand = async (
   input: PhoneNumberValidateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2146,7 +2146,7 @@ export const se_PhoneNumberValidateCommand = async (
  */
 export const se_PutEventsCommand = async (
   input: PutEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2171,7 +2171,7 @@ export const se_PutEventsCommand = async (
  */
 export const se_PutEventStreamCommand = async (
   input: PutEventStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2196,7 +2196,7 @@ export const se_PutEventStreamCommand = async (
  */
 export const se_RemoveAttributesCommand = async (
   input: RemoveAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2222,7 +2222,7 @@ export const se_RemoveAttributesCommand = async (
  */
 export const se_SendMessagesCommand = async (
   input: SendMessagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2247,7 +2247,7 @@ export const se_SendMessagesCommand = async (
  */
 export const se_SendOTPMessageCommand = async (
   input: SendOTPMessageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2272,7 +2272,7 @@ export const se_SendOTPMessageCommand = async (
  */
 export const se_SendUsersMessagesCommand = async (
   input: SendUsersMessagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2297,7 +2297,7 @@ export const se_SendUsersMessagesCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2322,7 +2322,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2344,7 +2344,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAdmChannelCommand = async (
   input: UpdateAdmChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2369,7 +2369,7 @@ export const se_UpdateAdmChannelCommand = async (
  */
 export const se_UpdateApnsChannelCommand = async (
   input: UpdateApnsChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2394,7 +2394,7 @@ export const se_UpdateApnsChannelCommand = async (
  */
 export const se_UpdateApnsSandboxChannelCommand = async (
   input: UpdateApnsSandboxChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2419,7 +2419,7 @@ export const se_UpdateApnsSandboxChannelCommand = async (
  */
 export const se_UpdateApnsVoipChannelCommand = async (
   input: UpdateApnsVoipChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2444,7 +2444,7 @@ export const se_UpdateApnsVoipChannelCommand = async (
  */
 export const se_UpdateApnsVoipSandboxChannelCommand = async (
   input: UpdateApnsVoipSandboxChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2469,7 +2469,7 @@ export const se_UpdateApnsVoipSandboxChannelCommand = async (
  */
 export const se_UpdateApplicationSettingsCommand = async (
   input: UpdateApplicationSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2494,7 +2494,7 @@ export const se_UpdateApplicationSettingsCommand = async (
  */
 export const se_UpdateBaiduChannelCommand = async (
   input: UpdateBaiduChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2519,7 +2519,7 @@ export const se_UpdateBaiduChannelCommand = async (
  */
 export const se_UpdateCampaignCommand = async (
   input: UpdateCampaignCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2545,7 +2545,7 @@ export const se_UpdateCampaignCommand = async (
  */
 export const se_UpdateEmailChannelCommand = async (
   input: UpdateEmailChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2570,7 +2570,7 @@ export const se_UpdateEmailChannelCommand = async (
  */
 export const se_UpdateEmailTemplateCommand = async (
   input: UpdateEmailTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2599,7 +2599,7 @@ export const se_UpdateEmailTemplateCommand = async (
  */
 export const se_UpdateEndpointCommand = async (
   input: UpdateEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2625,7 +2625,7 @@ export const se_UpdateEndpointCommand = async (
  */
 export const se_UpdateEndpointsBatchCommand = async (
   input: UpdateEndpointsBatchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2650,7 +2650,7 @@ export const se_UpdateEndpointsBatchCommand = async (
  */
 export const se_UpdateGcmChannelCommand = async (
   input: UpdateGcmChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2675,7 +2675,7 @@ export const se_UpdateGcmChannelCommand = async (
  */
 export const se_UpdateInAppTemplateCommand = async (
   input: UpdateInAppTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2704,7 +2704,7 @@ export const se_UpdateInAppTemplateCommand = async (
  */
 export const se_UpdateJourneyCommand = async (
   input: UpdateJourneyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2730,7 +2730,7 @@ export const se_UpdateJourneyCommand = async (
  */
 export const se_UpdateJourneyStateCommand = async (
   input: UpdateJourneyStateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2756,7 +2756,7 @@ export const se_UpdateJourneyStateCommand = async (
  */
 export const se_UpdatePushTemplateCommand = async (
   input: UpdatePushTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2785,7 +2785,7 @@ export const se_UpdatePushTemplateCommand = async (
  */
 export const se_UpdateRecommenderConfigurationCommand = async (
   input: UpdateRecommenderConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2810,7 +2810,7 @@ export const se_UpdateRecommenderConfigurationCommand = async (
  */
 export const se_UpdateSegmentCommand = async (
   input: UpdateSegmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2836,7 +2836,7 @@ export const se_UpdateSegmentCommand = async (
  */
 export const se_UpdateSmsChannelCommand = async (
   input: UpdateSmsChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2861,7 +2861,7 @@ export const se_UpdateSmsChannelCommand = async (
  */
 export const se_UpdateSmsTemplateCommand = async (
   input: UpdateSmsTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2890,7 +2890,7 @@ export const se_UpdateSmsTemplateCommand = async (
  */
 export const se_UpdateTemplateActiveVersionCommand = async (
   input: UpdateTemplateActiveVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2916,7 +2916,7 @@ export const se_UpdateTemplateActiveVersionCommand = async (
  */
 export const se_UpdateVoiceChannelCommand = async (
   input: UpdateVoiceChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2941,7 +2941,7 @@ export const se_UpdateVoiceChannelCommand = async (
  */
 export const se_UpdateVoiceTemplateCommand = async (
   input: UpdateVoiceTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2970,7 +2970,7 @@ export const se_UpdateVoiceTemplateCommand = async (
  */
 export const se_VerifyOTPMessageCommand = async (
   input: VerifyOTPMessageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2995,7 +2995,7 @@ export const se_VerifyOTPMessageCommand = async (
  */
 export const de_CreateAppCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAppCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3013,7 +3013,7 @@ export const de_CreateAppCommand = async (
  */
 export const de_CreateCampaignCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCampaignCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3031,7 +3031,7 @@ export const de_CreateCampaignCommand = async (
  */
 export const de_CreateEmailTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEmailTemplateCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3049,7 +3049,7 @@ export const de_CreateEmailTemplateCommand = async (
  */
 export const de_CreateExportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateExportJobCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3067,7 +3067,7 @@ export const de_CreateExportJobCommand = async (
  */
 export const de_CreateImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateImportJobCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3085,7 +3085,7 @@ export const de_CreateImportJobCommand = async (
  */
 export const de_CreateInAppTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateInAppTemplateCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3103,7 +3103,7 @@ export const de_CreateInAppTemplateCommand = async (
  */
 export const de_CreateJourneyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateJourneyCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3121,7 +3121,7 @@ export const de_CreateJourneyCommand = async (
  */
 export const de_CreatePushTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePushTemplateCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3139,7 +3139,7 @@ export const de_CreatePushTemplateCommand = async (
  */
 export const de_CreateRecommenderConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRecommenderConfigurationCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3157,7 +3157,7 @@ export const de_CreateRecommenderConfigurationCommand = async (
  */
 export const de_CreateSegmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSegmentCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3175,7 +3175,7 @@ export const de_CreateSegmentCommand = async (
  */
 export const de_CreateSmsTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSmsTemplateCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3193,7 +3193,7 @@ export const de_CreateSmsTemplateCommand = async (
  */
 export const de_CreateVoiceTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVoiceTemplateCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3211,7 +3211,7 @@ export const de_CreateVoiceTemplateCommand = async (
  */
 export const de_DeleteAdmChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAdmChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3229,7 +3229,7 @@ export const de_DeleteAdmChannelCommand = async (
  */
 export const de_DeleteApnsChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteApnsChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3247,7 +3247,7 @@ export const de_DeleteApnsChannelCommand = async (
  */
 export const de_DeleteApnsSandboxChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteApnsSandboxChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3265,7 +3265,7 @@ export const de_DeleteApnsSandboxChannelCommand = async (
  */
 export const de_DeleteApnsVoipChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteApnsVoipChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3283,7 +3283,7 @@ export const de_DeleteApnsVoipChannelCommand = async (
  */
 export const de_DeleteApnsVoipSandboxChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteApnsVoipSandboxChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3301,7 +3301,7 @@ export const de_DeleteApnsVoipSandboxChannelCommand = async (
  */
 export const de_DeleteAppCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAppCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3319,7 +3319,7 @@ export const de_DeleteAppCommand = async (
  */
 export const de_DeleteBaiduChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBaiduChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3337,7 +3337,7 @@ export const de_DeleteBaiduChannelCommand = async (
  */
 export const de_DeleteCampaignCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCampaignCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3355,7 +3355,7 @@ export const de_DeleteCampaignCommand = async (
  */
 export const de_DeleteEmailChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEmailChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3373,7 +3373,7 @@ export const de_DeleteEmailChannelCommand = async (
  */
 export const de_DeleteEmailTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEmailTemplateCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3391,7 +3391,7 @@ export const de_DeleteEmailTemplateCommand = async (
  */
 export const de_DeleteEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEndpointCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3409,7 +3409,7 @@ export const de_DeleteEndpointCommand = async (
  */
 export const de_DeleteEventStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEventStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3427,7 +3427,7 @@ export const de_DeleteEventStreamCommand = async (
  */
 export const de_DeleteGcmChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGcmChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3445,7 +3445,7 @@ export const de_DeleteGcmChannelCommand = async (
  */
 export const de_DeleteInAppTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteInAppTemplateCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3463,7 +3463,7 @@ export const de_DeleteInAppTemplateCommand = async (
  */
 export const de_DeleteJourneyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteJourneyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3481,7 +3481,7 @@ export const de_DeleteJourneyCommand = async (
  */
 export const de_DeletePushTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePushTemplateCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3499,7 +3499,7 @@ export const de_DeletePushTemplateCommand = async (
  */
 export const de_DeleteRecommenderConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRecommenderConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3517,7 +3517,7 @@ export const de_DeleteRecommenderConfigurationCommand = async (
  */
 export const de_DeleteSegmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSegmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3535,7 +3535,7 @@ export const de_DeleteSegmentCommand = async (
  */
 export const de_DeleteSmsChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSmsChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3553,7 +3553,7 @@ export const de_DeleteSmsChannelCommand = async (
  */
 export const de_DeleteSmsTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSmsTemplateCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3571,7 +3571,7 @@ export const de_DeleteSmsTemplateCommand = async (
  */
 export const de_DeleteUserEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteUserEndpointsCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3589,7 +3589,7 @@ export const de_DeleteUserEndpointsCommand = async (
  */
 export const de_DeleteVoiceChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVoiceChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3607,7 +3607,7 @@ export const de_DeleteVoiceChannelCommand = async (
  */
 export const de_DeleteVoiceTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVoiceTemplateCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3625,7 +3625,7 @@ export const de_DeleteVoiceTemplateCommand = async (
  */
 export const de_GetAdmChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAdmChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3643,7 +3643,7 @@ export const de_GetAdmChannelCommand = async (
  */
 export const de_GetApnsChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApnsChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3661,7 +3661,7 @@ export const de_GetApnsChannelCommand = async (
  */
 export const de_GetApnsSandboxChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApnsSandboxChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3679,7 +3679,7 @@ export const de_GetApnsSandboxChannelCommand = async (
  */
 export const de_GetApnsVoipChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApnsVoipChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3697,7 +3697,7 @@ export const de_GetApnsVoipChannelCommand = async (
  */
 export const de_GetApnsVoipSandboxChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApnsVoipSandboxChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3715,7 +3715,7 @@ export const de_GetApnsVoipSandboxChannelCommand = async (
  */
 export const de_GetAppCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAppCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3733,7 +3733,7 @@ export const de_GetAppCommand = async (
  */
 export const de_GetApplicationDateRangeKpiCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApplicationDateRangeKpiCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3751,7 +3751,7 @@ export const de_GetApplicationDateRangeKpiCommand = async (
  */
 export const de_GetApplicationSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApplicationSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3769,7 +3769,7 @@ export const de_GetApplicationSettingsCommand = async (
  */
 export const de_GetAppsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAppsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3787,7 +3787,7 @@ export const de_GetAppsCommand = async (
  */
 export const de_GetBaiduChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBaiduChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3805,7 +3805,7 @@ export const de_GetBaiduChannelCommand = async (
  */
 export const de_GetCampaignCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCampaignCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3823,7 +3823,7 @@ export const de_GetCampaignCommand = async (
  */
 export const de_GetCampaignActivitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCampaignActivitiesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3841,7 +3841,7 @@ export const de_GetCampaignActivitiesCommand = async (
  */
 export const de_GetCampaignDateRangeKpiCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCampaignDateRangeKpiCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3859,7 +3859,7 @@ export const de_GetCampaignDateRangeKpiCommand = async (
  */
 export const de_GetCampaignsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCampaignsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3877,7 +3877,7 @@ export const de_GetCampaignsCommand = async (
  */
 export const de_GetCampaignVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCampaignVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3895,7 +3895,7 @@ export const de_GetCampaignVersionCommand = async (
  */
 export const de_GetCampaignVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCampaignVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3913,7 +3913,7 @@ export const de_GetCampaignVersionsCommand = async (
  */
 export const de_GetChannelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetChannelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3931,7 +3931,7 @@ export const de_GetChannelsCommand = async (
  */
 export const de_GetEmailChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEmailChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3949,7 +3949,7 @@ export const de_GetEmailChannelCommand = async (
  */
 export const de_GetEmailTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEmailTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3967,7 +3967,7 @@ export const de_GetEmailTemplateCommand = async (
  */
 export const de_GetEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3985,7 +3985,7 @@ export const de_GetEndpointCommand = async (
  */
 export const de_GetEventStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEventStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4003,7 +4003,7 @@ export const de_GetEventStreamCommand = async (
  */
 export const de_GetExportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetExportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4021,7 +4021,7 @@ export const de_GetExportJobCommand = async (
  */
 export const de_GetExportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetExportJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4039,7 +4039,7 @@ export const de_GetExportJobsCommand = async (
  */
 export const de_GetGcmChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGcmChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4057,7 +4057,7 @@ export const de_GetGcmChannelCommand = async (
  */
 export const de_GetImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4075,7 +4075,7 @@ export const de_GetImportJobCommand = async (
  */
 export const de_GetImportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetImportJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4093,7 +4093,7 @@ export const de_GetImportJobsCommand = async (
  */
 export const de_GetInAppMessagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInAppMessagesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4111,7 +4111,7 @@ export const de_GetInAppMessagesCommand = async (
  */
 export const de_GetInAppTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInAppTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4129,7 +4129,7 @@ export const de_GetInAppTemplateCommand = async (
  */
 export const de_GetJourneyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetJourneyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4147,7 +4147,7 @@ export const de_GetJourneyCommand = async (
  */
 export const de_GetJourneyDateRangeKpiCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetJourneyDateRangeKpiCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4165,7 +4165,7 @@ export const de_GetJourneyDateRangeKpiCommand = async (
  */
 export const de_GetJourneyExecutionActivityMetricsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetJourneyExecutionActivityMetricsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4183,7 +4183,7 @@ export const de_GetJourneyExecutionActivityMetricsCommand = async (
  */
 export const de_GetJourneyExecutionMetricsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetJourneyExecutionMetricsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4201,7 +4201,7 @@ export const de_GetJourneyExecutionMetricsCommand = async (
  */
 export const de_GetJourneyRunExecutionActivityMetricsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetJourneyRunExecutionActivityMetricsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4219,7 +4219,7 @@ export const de_GetJourneyRunExecutionActivityMetricsCommand = async (
  */
 export const de_GetJourneyRunExecutionMetricsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetJourneyRunExecutionMetricsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4237,7 +4237,7 @@ export const de_GetJourneyRunExecutionMetricsCommand = async (
  */
 export const de_GetJourneyRunsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetJourneyRunsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4255,7 +4255,7 @@ export const de_GetJourneyRunsCommand = async (
  */
 export const de_GetPushTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPushTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4273,7 +4273,7 @@ export const de_GetPushTemplateCommand = async (
  */
 export const de_GetRecommenderConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRecommenderConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4291,7 +4291,7 @@ export const de_GetRecommenderConfigurationCommand = async (
  */
 export const de_GetRecommenderConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRecommenderConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4309,7 +4309,7 @@ export const de_GetRecommenderConfigurationsCommand = async (
  */
 export const de_GetSegmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSegmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4327,7 +4327,7 @@ export const de_GetSegmentCommand = async (
  */
 export const de_GetSegmentExportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSegmentExportJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4345,7 +4345,7 @@ export const de_GetSegmentExportJobsCommand = async (
  */
 export const de_GetSegmentImportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSegmentImportJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4363,7 +4363,7 @@ export const de_GetSegmentImportJobsCommand = async (
  */
 export const de_GetSegmentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSegmentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4381,7 +4381,7 @@ export const de_GetSegmentsCommand = async (
  */
 export const de_GetSegmentVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSegmentVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4399,7 +4399,7 @@ export const de_GetSegmentVersionCommand = async (
  */
 export const de_GetSegmentVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSegmentVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4417,7 +4417,7 @@ export const de_GetSegmentVersionsCommand = async (
  */
 export const de_GetSmsChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSmsChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4435,7 +4435,7 @@ export const de_GetSmsChannelCommand = async (
  */
 export const de_GetSmsTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSmsTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4453,7 +4453,7 @@ export const de_GetSmsTemplateCommand = async (
  */
 export const de_GetUserEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetUserEndpointsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4471,7 +4471,7 @@ export const de_GetUserEndpointsCommand = async (
  */
 export const de_GetVoiceChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVoiceChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4489,7 +4489,7 @@ export const de_GetVoiceChannelCommand = async (
  */
 export const de_GetVoiceTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVoiceTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4507,7 +4507,7 @@ export const de_GetVoiceTemplateCommand = async (
  */
 export const de_ListJourneysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListJourneysCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4525,7 +4525,7 @@ export const de_ListJourneysCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4543,7 +4543,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTemplatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4561,7 +4561,7 @@ export const de_ListTemplatesCommand = async (
  */
 export const de_ListTemplateVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTemplateVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4579,7 +4579,7 @@ export const de_ListTemplateVersionsCommand = async (
  */
 export const de_PhoneNumberValidateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PhoneNumberValidateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4597,7 +4597,7 @@ export const de_PhoneNumberValidateCommand = async (
  */
 export const de_PutEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutEventsCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4615,7 +4615,7 @@ export const de_PutEventsCommand = async (
  */
 export const de_PutEventStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutEventStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4633,7 +4633,7 @@ export const de_PutEventStreamCommand = async (
  */
 export const de_RemoveAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveAttributesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4651,7 +4651,7 @@ export const de_RemoveAttributesCommand = async (
  */
 export const de_SendMessagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendMessagesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4669,7 +4669,7 @@ export const de_SendMessagesCommand = async (
  */
 export const de_SendOTPMessageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendOTPMessageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4687,7 +4687,7 @@ export const de_SendOTPMessageCommand = async (
  */
 export const de_SendUsersMessagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendUsersMessagesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4705,7 +4705,7 @@ export const de_SendUsersMessagesCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4722,7 +4722,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4739,7 +4739,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAdmChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAdmChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4757,7 +4757,7 @@ export const de_UpdateAdmChannelCommand = async (
  */
 export const de_UpdateApnsChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApnsChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4775,7 +4775,7 @@ export const de_UpdateApnsChannelCommand = async (
  */
 export const de_UpdateApnsSandboxChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApnsSandboxChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4793,7 +4793,7 @@ export const de_UpdateApnsSandboxChannelCommand = async (
  */
 export const de_UpdateApnsVoipChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApnsVoipChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4811,7 +4811,7 @@ export const de_UpdateApnsVoipChannelCommand = async (
  */
 export const de_UpdateApnsVoipSandboxChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApnsVoipSandboxChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4829,7 +4829,7 @@ export const de_UpdateApnsVoipSandboxChannelCommand = async (
  */
 export const de_UpdateApplicationSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApplicationSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4847,7 +4847,7 @@ export const de_UpdateApplicationSettingsCommand = async (
  */
 export const de_UpdateBaiduChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBaiduChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4865,7 +4865,7 @@ export const de_UpdateBaiduChannelCommand = async (
  */
 export const de_UpdateCampaignCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCampaignCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4883,7 +4883,7 @@ export const de_UpdateCampaignCommand = async (
  */
 export const de_UpdateEmailChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEmailChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4901,7 +4901,7 @@ export const de_UpdateEmailChannelCommand = async (
  */
 export const de_UpdateEmailTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEmailTemplateCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4919,7 +4919,7 @@ export const de_UpdateEmailTemplateCommand = async (
  */
 export const de_UpdateEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEndpointCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4937,7 +4937,7 @@ export const de_UpdateEndpointCommand = async (
  */
 export const de_UpdateEndpointsBatchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEndpointsBatchCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4955,7 +4955,7 @@ export const de_UpdateEndpointsBatchCommand = async (
  */
 export const de_UpdateGcmChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGcmChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4973,7 +4973,7 @@ export const de_UpdateGcmChannelCommand = async (
  */
 export const de_UpdateInAppTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateInAppTemplateCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4991,7 +4991,7 @@ export const de_UpdateInAppTemplateCommand = async (
  */
 export const de_UpdateJourneyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateJourneyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5009,7 +5009,7 @@ export const de_UpdateJourneyCommand = async (
  */
 export const de_UpdateJourneyStateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateJourneyStateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5027,7 +5027,7 @@ export const de_UpdateJourneyStateCommand = async (
  */
 export const de_UpdatePushTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePushTemplateCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5045,7 +5045,7 @@ export const de_UpdatePushTemplateCommand = async (
  */
 export const de_UpdateRecommenderConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRecommenderConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5063,7 +5063,7 @@ export const de_UpdateRecommenderConfigurationCommand = async (
  */
 export const de_UpdateSegmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSegmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5081,7 +5081,7 @@ export const de_UpdateSegmentCommand = async (
  */
 export const de_UpdateSmsChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSmsChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5099,7 +5099,7 @@ export const de_UpdateSmsChannelCommand = async (
  */
 export const de_UpdateSmsTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSmsTemplateCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5117,7 +5117,7 @@ export const de_UpdateSmsTemplateCommand = async (
  */
 export const de_UpdateTemplateActiveVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTemplateActiveVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5135,7 +5135,7 @@ export const de_UpdateTemplateActiveVersionCommand = async (
  */
 export const de_UpdateVoiceChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVoiceChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5153,7 +5153,7 @@ export const de_UpdateVoiceChannelCommand = async (
  */
 export const de_UpdateVoiceTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVoiceTemplateCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5171,7 +5171,7 @@ export const de_UpdateVoiceTemplateCommand = async (
  */
 export const de_VerifyOTPMessageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<VerifyOTPMessageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5288,7 +5288,7 @@ const de_ForbiddenExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_InternalServerErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -5309,7 +5309,7 @@ const de_InternalServerErrorExceptionRes = async (
  */
 const de_MethodNotAllowedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MethodNotAllowedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -5348,7 +5348,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_PayloadTooLargeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PayloadTooLargeException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -5369,7 +5369,7 @@ const de_PayloadTooLargeExceptionRes = async (
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -7032,13 +7032,16 @@ const de_ListOfTreatmentResource = (output: any, context: __SerdeContext): Treat
  * deserializeAws_restJson1MapOf__double
  */
 const de_MapOf__double = (output: any, context: __SerdeContext): Record<string, number> => {
-  return Object.entries(output).reduce((acc: Record<string, number>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, number>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = __limitedParseDouble(value) as any;
       return acc;
-    }
-    acc[key as string] = __limitedParseDouble(value) as any;
-    return acc;
-  }, {} as Record<string, number>);
+    },
+    {} as Record<string, number>,
+  );
 };
 
 // de_MapOf__integer omitted.
@@ -7049,13 +7052,16 @@ const de_MapOf__double = (output: any, context: __SerdeContext): Record<string, 
  * deserializeAws_restJson1MapOfActivity
  */
 const de_MapOfActivity = (output: any, context: __SerdeContext): Record<string, Activity> => {
-  return Object.entries(output).reduce((acc: Record<string, Activity>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, Activity>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_Activity(value, context);
       return acc;
-    }
-    acc[key as string] = de_Activity(value, context);
-    return acc;
-  }, {} as Record<string, Activity>);
+    },
+    {} as Record<string, Activity>,
+  );
 };
 
 // de_MapOfAttributeDimension omitted.
@@ -7080,13 +7086,16 @@ const de_MapOfActivity = (output: any, context: __SerdeContext): Record<string, 
  * deserializeAws_restJson1MapOfMetricDimension
  */
 const de_MapOfMetricDimension = (output: any, context: __SerdeContext): Record<string, MetricDimension> => {
-  return Object.entries(output).reduce((acc: Record<string, MetricDimension>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, MetricDimension>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_MetricDimension(value, context);
       return acc;
-    }
-    acc[key as string] = de_MetricDimension(value, context);
-    return acc;
-  }, {} as Record<string, MetricDimension>);
+    },
+    {} as Record<string, MetricDimension>,
+  );
 };
 
 // de_Message omitted.
@@ -7147,7 +7156,7 @@ const de_MultiConditionalSplitActivity = (output: any, context: __SerdeContext):
  */
 const de_PushNotificationTemplateResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PushNotificationTemplateResponse => {
   return take(output, {
     ADM: _json,

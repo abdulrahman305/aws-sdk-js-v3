@@ -119,7 +119,7 @@ const validateOutpostsArn = (
     useArnRegion,
     useFipsEndpoint,
     useDualstackEndpoint,
-  }: ValidateOutpostsArnOptions
+  }: ValidateOutpostsArnOptions,
 ) => {
   const { service, partition, accountId, region } = arn;
   validateOutpostService(service);
@@ -136,7 +136,7 @@ const validateOutpostsArn = (
 };
 
 const parseOutpostsAccessPointArnResource = (
-  resource: string
+  resource: string,
 ): {
   outpostId: string;
   accesspointName: string;
@@ -152,7 +152,7 @@ const parseOutpostsAccessPointArnResource = (
 };
 
 const parseOutpostBucketArnResource = (
-  resource: string
+  resource: string,
 ): {
   outpostId: string;
   bucketName: string;
@@ -163,7 +163,7 @@ const parseOutpostBucketArnResource = (
     // Parse outpost ARN
     if (!rest[0] || rest[1] !== "bucket" || !rest[2] || rest.length !== 3) {
       throw new Error(
-        `Outpost Bucket ARN should have resource outpost${delimiter}{outpostId}${delimiter}bucket${delimiter}{bucketName}`
+        `Outpost Bucket ARN should have resource outpost${delimiter}{outpostId}${delimiter}bucket${delimiter}{bucketName}`,
       );
     }
     const [outpostId, _, bucketName] = rest;

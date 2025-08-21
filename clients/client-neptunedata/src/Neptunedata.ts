@@ -271,16 +271,16 @@ export interface Neptunedata {
    */
   cancelGremlinQuery(
     args: CancelGremlinQueryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelGremlinQueryCommandOutput>;
   cancelGremlinQuery(
     args: CancelGremlinQueryCommandInput,
-    cb: (err: any, data?: CancelGremlinQueryCommandOutput) => void
+    cb: (err: any, data?: CancelGremlinQueryCommandOutput) => void,
   ): void;
   cancelGremlinQuery(
     args: CancelGremlinQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelGremlinQueryCommandOutput) => void
+    cb: (err: any, data?: CancelGremlinQueryCommandOutput) => void,
   ): void;
 
   /**
@@ -288,13 +288,13 @@ export interface Neptunedata {
    */
   cancelLoaderJob(
     args: CancelLoaderJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelLoaderJobCommandOutput>;
   cancelLoaderJob(args: CancelLoaderJobCommandInput, cb: (err: any, data?: CancelLoaderJobCommandOutput) => void): void;
   cancelLoaderJob(
     args: CancelLoaderJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelLoaderJobCommandOutput) => void
+    cb: (err: any, data?: CancelLoaderJobCommandOutput) => void,
   ): void;
 
   /**
@@ -302,16 +302,16 @@ export interface Neptunedata {
    */
   cancelMLDataProcessingJob(
     args: CancelMLDataProcessingJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelMLDataProcessingJobCommandOutput>;
   cancelMLDataProcessingJob(
     args: CancelMLDataProcessingJobCommandInput,
-    cb: (err: any, data?: CancelMLDataProcessingJobCommandOutput) => void
+    cb: (err: any, data?: CancelMLDataProcessingJobCommandOutput) => void,
   ): void;
   cancelMLDataProcessingJob(
     args: CancelMLDataProcessingJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelMLDataProcessingJobCommandOutput) => void
+    cb: (err: any, data?: CancelMLDataProcessingJobCommandOutput) => void,
   ): void;
 
   /**
@@ -319,16 +319,16 @@ export interface Neptunedata {
    */
   cancelMLModelTrainingJob(
     args: CancelMLModelTrainingJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelMLModelTrainingJobCommandOutput>;
   cancelMLModelTrainingJob(
     args: CancelMLModelTrainingJobCommandInput,
-    cb: (err: any, data?: CancelMLModelTrainingJobCommandOutput) => void
+    cb: (err: any, data?: CancelMLModelTrainingJobCommandOutput) => void,
   ): void;
   cancelMLModelTrainingJob(
     args: CancelMLModelTrainingJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelMLModelTrainingJobCommandOutput) => void
+    cb: (err: any, data?: CancelMLModelTrainingJobCommandOutput) => void,
   ): void;
 
   /**
@@ -336,16 +336,16 @@ export interface Neptunedata {
    */
   cancelMLModelTransformJob(
     args: CancelMLModelTransformJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelMLModelTransformJobCommandOutput>;
   cancelMLModelTransformJob(
     args: CancelMLModelTransformJobCommandInput,
-    cb: (err: any, data?: CancelMLModelTransformJobCommandOutput) => void
+    cb: (err: any, data?: CancelMLModelTransformJobCommandOutput) => void,
   ): void;
   cancelMLModelTransformJob(
     args: CancelMLModelTransformJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelMLModelTransformJobCommandOutput) => void
+    cb: (err: any, data?: CancelMLModelTransformJobCommandOutput) => void,
   ): void;
 
   /**
@@ -353,16 +353,16 @@ export interface Neptunedata {
    */
   cancelOpenCypherQuery(
     args: CancelOpenCypherQueryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelOpenCypherQueryCommandOutput>;
   cancelOpenCypherQuery(
     args: CancelOpenCypherQueryCommandInput,
-    cb: (err: any, data?: CancelOpenCypherQueryCommandOutput) => void
+    cb: (err: any, data?: CancelOpenCypherQueryCommandOutput) => void,
   ): void;
   cancelOpenCypherQuery(
     args: CancelOpenCypherQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelOpenCypherQueryCommandOutput) => void
+    cb: (err: any, data?: CancelOpenCypherQueryCommandOutput) => void,
   ): void;
 
   /**
@@ -371,16 +371,16 @@ export interface Neptunedata {
   createMLEndpoint(): Promise<CreateMLEndpointCommandOutput>;
   createMLEndpoint(
     args: CreateMLEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateMLEndpointCommandOutput>;
   createMLEndpoint(
     args: CreateMLEndpointCommandInput,
-    cb: (err: any, data?: CreateMLEndpointCommandOutput) => void
+    cb: (err: any, data?: CreateMLEndpointCommandOutput) => void,
   ): void;
   createMLEndpoint(
     args: CreateMLEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMLEndpointCommandOutput) => void
+    cb: (err: any, data?: CreateMLEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -388,16 +388,16 @@ export interface Neptunedata {
    */
   deleteMLEndpoint(
     args: DeleteMLEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteMLEndpointCommandOutput>;
   deleteMLEndpoint(
     args: DeleteMLEndpointCommandInput,
-    cb: (err: any, data?: DeleteMLEndpointCommandOutput) => void
+    cb: (err: any, data?: DeleteMLEndpointCommandOutput) => void,
   ): void;
   deleteMLEndpoint(
     args: DeleteMLEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMLEndpointCommandOutput) => void
+    cb: (err: any, data?: DeleteMLEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -406,16 +406,16 @@ export interface Neptunedata {
   deletePropertygraphStatistics(): Promise<DeletePropertygraphStatisticsCommandOutput>;
   deletePropertygraphStatistics(
     args: DeletePropertygraphStatisticsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePropertygraphStatisticsCommandOutput>;
   deletePropertygraphStatistics(
     args: DeletePropertygraphStatisticsCommandInput,
-    cb: (err: any, data?: DeletePropertygraphStatisticsCommandOutput) => void
+    cb: (err: any, data?: DeletePropertygraphStatisticsCommandOutput) => void,
   ): void;
   deletePropertygraphStatistics(
     args: DeletePropertygraphStatisticsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePropertygraphStatisticsCommandOutput) => void
+    cb: (err: any, data?: DeletePropertygraphStatisticsCommandOutput) => void,
   ): void;
 
   /**
@@ -424,16 +424,16 @@ export interface Neptunedata {
   deleteSparqlStatistics(): Promise<DeleteSparqlStatisticsCommandOutput>;
   deleteSparqlStatistics(
     args: DeleteSparqlStatisticsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSparqlStatisticsCommandOutput>;
   deleteSparqlStatistics(
     args: DeleteSparqlStatisticsCommandInput,
-    cb: (err: any, data?: DeleteSparqlStatisticsCommandOutput) => void
+    cb: (err: any, data?: DeleteSparqlStatisticsCommandOutput) => void,
   ): void;
   deleteSparqlStatistics(
     args: DeleteSparqlStatisticsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSparqlStatisticsCommandOutput) => void
+    cb: (err: any, data?: DeleteSparqlStatisticsCommandOutput) => void,
   ): void;
 
   /**
@@ -441,16 +441,16 @@ export interface Neptunedata {
    */
   executeFastReset(
     args: ExecuteFastResetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExecuteFastResetCommandOutput>;
   executeFastReset(
     args: ExecuteFastResetCommandInput,
-    cb: (err: any, data?: ExecuteFastResetCommandOutput) => void
+    cb: (err: any, data?: ExecuteFastResetCommandOutput) => void,
   ): void;
   executeFastReset(
     args: ExecuteFastResetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExecuteFastResetCommandOutput) => void
+    cb: (err: any, data?: ExecuteFastResetCommandOutput) => void,
   ): void;
 
   /**
@@ -458,16 +458,16 @@ export interface Neptunedata {
    */
   executeGremlinExplainQuery(
     args: ExecuteGremlinExplainQueryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExecuteGremlinExplainQueryCommandOutput>;
   executeGremlinExplainQuery(
     args: ExecuteGremlinExplainQueryCommandInput,
-    cb: (err: any, data?: ExecuteGremlinExplainQueryCommandOutput) => void
+    cb: (err: any, data?: ExecuteGremlinExplainQueryCommandOutput) => void,
   ): void;
   executeGremlinExplainQuery(
     args: ExecuteGremlinExplainQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExecuteGremlinExplainQueryCommandOutput) => void
+    cb: (err: any, data?: ExecuteGremlinExplainQueryCommandOutput) => void,
   ): void;
 
   /**
@@ -475,16 +475,16 @@ export interface Neptunedata {
    */
   executeGremlinProfileQuery(
     args: ExecuteGremlinProfileQueryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExecuteGremlinProfileQueryCommandOutput>;
   executeGremlinProfileQuery(
     args: ExecuteGremlinProfileQueryCommandInput,
-    cb: (err: any, data?: ExecuteGremlinProfileQueryCommandOutput) => void
+    cb: (err: any, data?: ExecuteGremlinProfileQueryCommandOutput) => void,
   ): void;
   executeGremlinProfileQuery(
     args: ExecuteGremlinProfileQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExecuteGremlinProfileQueryCommandOutput) => void
+    cb: (err: any, data?: ExecuteGremlinProfileQueryCommandOutput) => void,
   ): void;
 
   /**
@@ -492,16 +492,16 @@ export interface Neptunedata {
    */
   executeGremlinQuery(
     args: ExecuteGremlinQueryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExecuteGremlinQueryCommandOutput>;
   executeGremlinQuery(
     args: ExecuteGremlinQueryCommandInput,
-    cb: (err: any, data?: ExecuteGremlinQueryCommandOutput) => void
+    cb: (err: any, data?: ExecuteGremlinQueryCommandOutput) => void,
   ): void;
   executeGremlinQuery(
     args: ExecuteGremlinQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExecuteGremlinQueryCommandOutput) => void
+    cb: (err: any, data?: ExecuteGremlinQueryCommandOutput) => void,
   ): void;
 
   /**
@@ -509,16 +509,16 @@ export interface Neptunedata {
    */
   executeOpenCypherExplainQuery(
     args: ExecuteOpenCypherExplainQueryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExecuteOpenCypherExplainQueryCommandOutput>;
   executeOpenCypherExplainQuery(
     args: ExecuteOpenCypherExplainQueryCommandInput,
-    cb: (err: any, data?: ExecuteOpenCypherExplainQueryCommandOutput) => void
+    cb: (err: any, data?: ExecuteOpenCypherExplainQueryCommandOutput) => void,
   ): void;
   executeOpenCypherExplainQuery(
     args: ExecuteOpenCypherExplainQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExecuteOpenCypherExplainQueryCommandOutput) => void
+    cb: (err: any, data?: ExecuteOpenCypherExplainQueryCommandOutput) => void,
   ): void;
 
   /**
@@ -526,16 +526,16 @@ export interface Neptunedata {
    */
   executeOpenCypherQuery(
     args: ExecuteOpenCypherQueryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExecuteOpenCypherQueryCommandOutput>;
   executeOpenCypherQuery(
     args: ExecuteOpenCypherQueryCommandInput,
-    cb: (err: any, data?: ExecuteOpenCypherQueryCommandOutput) => void
+    cb: (err: any, data?: ExecuteOpenCypherQueryCommandOutput) => void,
   ): void;
   executeOpenCypherQuery(
     args: ExecuteOpenCypherQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExecuteOpenCypherQueryCommandOutput) => void
+    cb: (err: any, data?: ExecuteOpenCypherQueryCommandOutput) => void,
   ): void;
 
   /**
@@ -544,13 +544,13 @@ export interface Neptunedata {
   getEngineStatus(): Promise<GetEngineStatusCommandOutput>;
   getEngineStatus(
     args: GetEngineStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEngineStatusCommandOutput>;
   getEngineStatus(args: GetEngineStatusCommandInput, cb: (err: any, data?: GetEngineStatusCommandOutput) => void): void;
   getEngineStatus(
     args: GetEngineStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEngineStatusCommandOutput) => void
+    cb: (err: any, data?: GetEngineStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -558,16 +558,16 @@ export interface Neptunedata {
    */
   getGremlinQueryStatus(
     args: GetGremlinQueryStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetGremlinQueryStatusCommandOutput>;
   getGremlinQueryStatus(
     args: GetGremlinQueryStatusCommandInput,
-    cb: (err: any, data?: GetGremlinQueryStatusCommandOutput) => void
+    cb: (err: any, data?: GetGremlinQueryStatusCommandOutput) => void,
   ): void;
   getGremlinQueryStatus(
     args: GetGremlinQueryStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetGremlinQueryStatusCommandOutput) => void
+    cb: (err: any, data?: GetGremlinQueryStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -575,16 +575,16 @@ export interface Neptunedata {
    */
   getLoaderJobStatus(
     args: GetLoaderJobStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetLoaderJobStatusCommandOutput>;
   getLoaderJobStatus(
     args: GetLoaderJobStatusCommandInput,
-    cb: (err: any, data?: GetLoaderJobStatusCommandOutput) => void
+    cb: (err: any, data?: GetLoaderJobStatusCommandOutput) => void,
   ): void;
   getLoaderJobStatus(
     args: GetLoaderJobStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLoaderJobStatusCommandOutput) => void
+    cb: (err: any, data?: GetLoaderJobStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -592,16 +592,16 @@ export interface Neptunedata {
    */
   getMLDataProcessingJob(
     args: GetMLDataProcessingJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMLDataProcessingJobCommandOutput>;
   getMLDataProcessingJob(
     args: GetMLDataProcessingJobCommandInput,
-    cb: (err: any, data?: GetMLDataProcessingJobCommandOutput) => void
+    cb: (err: any, data?: GetMLDataProcessingJobCommandOutput) => void,
   ): void;
   getMLDataProcessingJob(
     args: GetMLDataProcessingJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMLDataProcessingJobCommandOutput) => void
+    cb: (err: any, data?: GetMLDataProcessingJobCommandOutput) => void,
   ): void;
 
   /**
@@ -612,7 +612,7 @@ export interface Neptunedata {
   getMLEndpoint(
     args: GetMLEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMLEndpointCommandOutput) => void
+    cb: (err: any, data?: GetMLEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -620,16 +620,16 @@ export interface Neptunedata {
    */
   getMLModelTrainingJob(
     args: GetMLModelTrainingJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMLModelTrainingJobCommandOutput>;
   getMLModelTrainingJob(
     args: GetMLModelTrainingJobCommandInput,
-    cb: (err: any, data?: GetMLModelTrainingJobCommandOutput) => void
+    cb: (err: any, data?: GetMLModelTrainingJobCommandOutput) => void,
   ): void;
   getMLModelTrainingJob(
     args: GetMLModelTrainingJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMLModelTrainingJobCommandOutput) => void
+    cb: (err: any, data?: GetMLModelTrainingJobCommandOutput) => void,
   ): void;
 
   /**
@@ -637,16 +637,16 @@ export interface Neptunedata {
    */
   getMLModelTransformJob(
     args: GetMLModelTransformJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMLModelTransformJobCommandOutput>;
   getMLModelTransformJob(
     args: GetMLModelTransformJobCommandInput,
-    cb: (err: any, data?: GetMLModelTransformJobCommandOutput) => void
+    cb: (err: any, data?: GetMLModelTransformJobCommandOutput) => void,
   ): void;
   getMLModelTransformJob(
     args: GetMLModelTransformJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMLModelTransformJobCommandOutput) => void
+    cb: (err: any, data?: GetMLModelTransformJobCommandOutput) => void,
   ): void;
 
   /**
@@ -654,16 +654,16 @@ export interface Neptunedata {
    */
   getOpenCypherQueryStatus(
     args: GetOpenCypherQueryStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetOpenCypherQueryStatusCommandOutput>;
   getOpenCypherQueryStatus(
     args: GetOpenCypherQueryStatusCommandInput,
-    cb: (err: any, data?: GetOpenCypherQueryStatusCommandOutput) => void
+    cb: (err: any, data?: GetOpenCypherQueryStatusCommandOutput) => void,
   ): void;
   getOpenCypherQueryStatus(
     args: GetOpenCypherQueryStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetOpenCypherQueryStatusCommandOutput) => void
+    cb: (err: any, data?: GetOpenCypherQueryStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -672,16 +672,16 @@ export interface Neptunedata {
   getPropertygraphStatistics(): Promise<GetPropertygraphStatisticsCommandOutput>;
   getPropertygraphStatistics(
     args: GetPropertygraphStatisticsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPropertygraphStatisticsCommandOutput>;
   getPropertygraphStatistics(
     args: GetPropertygraphStatisticsCommandInput,
-    cb: (err: any, data?: GetPropertygraphStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetPropertygraphStatisticsCommandOutput) => void,
   ): void;
   getPropertygraphStatistics(
     args: GetPropertygraphStatisticsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPropertygraphStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetPropertygraphStatisticsCommandOutput) => void,
   ): void;
 
   /**
@@ -690,16 +690,16 @@ export interface Neptunedata {
   getPropertygraphStream(): Promise<GetPropertygraphStreamCommandOutput>;
   getPropertygraphStream(
     args: GetPropertygraphStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPropertygraphStreamCommandOutput>;
   getPropertygraphStream(
     args: GetPropertygraphStreamCommandInput,
-    cb: (err: any, data?: GetPropertygraphStreamCommandOutput) => void
+    cb: (err: any, data?: GetPropertygraphStreamCommandOutput) => void,
   ): void;
   getPropertygraphStream(
     args: GetPropertygraphStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPropertygraphStreamCommandOutput) => void
+    cb: (err: any, data?: GetPropertygraphStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -708,16 +708,16 @@ export interface Neptunedata {
   getPropertygraphSummary(): Promise<GetPropertygraphSummaryCommandOutput>;
   getPropertygraphSummary(
     args: GetPropertygraphSummaryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPropertygraphSummaryCommandOutput>;
   getPropertygraphSummary(
     args: GetPropertygraphSummaryCommandInput,
-    cb: (err: any, data?: GetPropertygraphSummaryCommandOutput) => void
+    cb: (err: any, data?: GetPropertygraphSummaryCommandOutput) => void,
   ): void;
   getPropertygraphSummary(
     args: GetPropertygraphSummaryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPropertygraphSummaryCommandOutput) => void
+    cb: (err: any, data?: GetPropertygraphSummaryCommandOutput) => void,
   ): void;
 
   /**
@@ -726,16 +726,16 @@ export interface Neptunedata {
   getRDFGraphSummary(): Promise<GetRDFGraphSummaryCommandOutput>;
   getRDFGraphSummary(
     args: GetRDFGraphSummaryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRDFGraphSummaryCommandOutput>;
   getRDFGraphSummary(
     args: GetRDFGraphSummaryCommandInput,
-    cb: (err: any, data?: GetRDFGraphSummaryCommandOutput) => void
+    cb: (err: any, data?: GetRDFGraphSummaryCommandOutput) => void,
   ): void;
   getRDFGraphSummary(
     args: GetRDFGraphSummaryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRDFGraphSummaryCommandOutput) => void
+    cb: (err: any, data?: GetRDFGraphSummaryCommandOutput) => void,
   ): void;
 
   /**
@@ -744,16 +744,16 @@ export interface Neptunedata {
   getSparqlStatistics(): Promise<GetSparqlStatisticsCommandOutput>;
   getSparqlStatistics(
     args: GetSparqlStatisticsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSparqlStatisticsCommandOutput>;
   getSparqlStatistics(
     args: GetSparqlStatisticsCommandInput,
-    cb: (err: any, data?: GetSparqlStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetSparqlStatisticsCommandOutput) => void,
   ): void;
   getSparqlStatistics(
     args: GetSparqlStatisticsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSparqlStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetSparqlStatisticsCommandOutput) => void,
   ): void;
 
   /**
@@ -762,13 +762,13 @@ export interface Neptunedata {
   getSparqlStream(): Promise<GetSparqlStreamCommandOutput>;
   getSparqlStream(
     args: GetSparqlStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSparqlStreamCommandOutput>;
   getSparqlStream(args: GetSparqlStreamCommandInput, cb: (err: any, data?: GetSparqlStreamCommandOutput) => void): void;
   getSparqlStream(
     args: GetSparqlStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSparqlStreamCommandOutput) => void
+    cb: (err: any, data?: GetSparqlStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -777,16 +777,16 @@ export interface Neptunedata {
   listGremlinQueries(): Promise<ListGremlinQueriesCommandOutput>;
   listGremlinQueries(
     args: ListGremlinQueriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListGremlinQueriesCommandOutput>;
   listGremlinQueries(
     args: ListGremlinQueriesCommandInput,
-    cb: (err: any, data?: ListGremlinQueriesCommandOutput) => void
+    cb: (err: any, data?: ListGremlinQueriesCommandOutput) => void,
   ): void;
   listGremlinQueries(
     args: ListGremlinQueriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListGremlinQueriesCommandOutput) => void
+    cb: (err: any, data?: ListGremlinQueriesCommandOutput) => void,
   ): void;
 
   /**
@@ -795,13 +795,13 @@ export interface Neptunedata {
   listLoaderJobs(): Promise<ListLoaderJobsCommandOutput>;
   listLoaderJobs(
     args: ListLoaderJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListLoaderJobsCommandOutput>;
   listLoaderJobs(args: ListLoaderJobsCommandInput, cb: (err: any, data?: ListLoaderJobsCommandOutput) => void): void;
   listLoaderJobs(
     args: ListLoaderJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLoaderJobsCommandOutput) => void
+    cb: (err: any, data?: ListLoaderJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -810,16 +810,16 @@ export interface Neptunedata {
   listMLDataProcessingJobs(): Promise<ListMLDataProcessingJobsCommandOutput>;
   listMLDataProcessingJobs(
     args: ListMLDataProcessingJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMLDataProcessingJobsCommandOutput>;
   listMLDataProcessingJobs(
     args: ListMLDataProcessingJobsCommandInput,
-    cb: (err: any, data?: ListMLDataProcessingJobsCommandOutput) => void
+    cb: (err: any, data?: ListMLDataProcessingJobsCommandOutput) => void,
   ): void;
   listMLDataProcessingJobs(
     args: ListMLDataProcessingJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMLDataProcessingJobsCommandOutput) => void
+    cb: (err: any, data?: ListMLDataProcessingJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -828,13 +828,13 @@ export interface Neptunedata {
   listMLEndpoints(): Promise<ListMLEndpointsCommandOutput>;
   listMLEndpoints(
     args: ListMLEndpointsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMLEndpointsCommandOutput>;
   listMLEndpoints(args: ListMLEndpointsCommandInput, cb: (err: any, data?: ListMLEndpointsCommandOutput) => void): void;
   listMLEndpoints(
     args: ListMLEndpointsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMLEndpointsCommandOutput) => void
+    cb: (err: any, data?: ListMLEndpointsCommandOutput) => void,
   ): void;
 
   /**
@@ -843,16 +843,16 @@ export interface Neptunedata {
   listMLModelTrainingJobs(): Promise<ListMLModelTrainingJobsCommandOutput>;
   listMLModelTrainingJobs(
     args: ListMLModelTrainingJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMLModelTrainingJobsCommandOutput>;
   listMLModelTrainingJobs(
     args: ListMLModelTrainingJobsCommandInput,
-    cb: (err: any, data?: ListMLModelTrainingJobsCommandOutput) => void
+    cb: (err: any, data?: ListMLModelTrainingJobsCommandOutput) => void,
   ): void;
   listMLModelTrainingJobs(
     args: ListMLModelTrainingJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMLModelTrainingJobsCommandOutput) => void
+    cb: (err: any, data?: ListMLModelTrainingJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -861,16 +861,16 @@ export interface Neptunedata {
   listMLModelTransformJobs(): Promise<ListMLModelTransformJobsCommandOutput>;
   listMLModelTransformJobs(
     args: ListMLModelTransformJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMLModelTransformJobsCommandOutput>;
   listMLModelTransformJobs(
     args: ListMLModelTransformJobsCommandInput,
-    cb: (err: any, data?: ListMLModelTransformJobsCommandOutput) => void
+    cb: (err: any, data?: ListMLModelTransformJobsCommandOutput) => void,
   ): void;
   listMLModelTransformJobs(
     args: ListMLModelTransformJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMLModelTransformJobsCommandOutput) => void
+    cb: (err: any, data?: ListMLModelTransformJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -879,16 +879,16 @@ export interface Neptunedata {
   listOpenCypherQueries(): Promise<ListOpenCypherQueriesCommandOutput>;
   listOpenCypherQueries(
     args: ListOpenCypherQueriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListOpenCypherQueriesCommandOutput>;
   listOpenCypherQueries(
     args: ListOpenCypherQueriesCommandInput,
-    cb: (err: any, data?: ListOpenCypherQueriesCommandOutput) => void
+    cb: (err: any, data?: ListOpenCypherQueriesCommandOutput) => void,
   ): void;
   listOpenCypherQueries(
     args: ListOpenCypherQueriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOpenCypherQueriesCommandOutput) => void
+    cb: (err: any, data?: ListOpenCypherQueriesCommandOutput) => void,
   ): void;
 
   /**
@@ -897,16 +897,16 @@ export interface Neptunedata {
   managePropertygraphStatistics(): Promise<ManagePropertygraphStatisticsCommandOutput>;
   managePropertygraphStatistics(
     args: ManagePropertygraphStatisticsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ManagePropertygraphStatisticsCommandOutput>;
   managePropertygraphStatistics(
     args: ManagePropertygraphStatisticsCommandInput,
-    cb: (err: any, data?: ManagePropertygraphStatisticsCommandOutput) => void
+    cb: (err: any, data?: ManagePropertygraphStatisticsCommandOutput) => void,
   ): void;
   managePropertygraphStatistics(
     args: ManagePropertygraphStatisticsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ManagePropertygraphStatisticsCommandOutput) => void
+    cb: (err: any, data?: ManagePropertygraphStatisticsCommandOutput) => void,
   ): void;
 
   /**
@@ -915,16 +915,16 @@ export interface Neptunedata {
   manageSparqlStatistics(): Promise<ManageSparqlStatisticsCommandOutput>;
   manageSparqlStatistics(
     args: ManageSparqlStatisticsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ManageSparqlStatisticsCommandOutput>;
   manageSparqlStatistics(
     args: ManageSparqlStatisticsCommandInput,
-    cb: (err: any, data?: ManageSparqlStatisticsCommandOutput) => void
+    cb: (err: any, data?: ManageSparqlStatisticsCommandOutput) => void,
   ): void;
   manageSparqlStatistics(
     args: ManageSparqlStatisticsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ManageSparqlStatisticsCommandOutput) => void
+    cb: (err: any, data?: ManageSparqlStatisticsCommandOutput) => void,
   ): void;
 
   /**
@@ -932,13 +932,13 @@ export interface Neptunedata {
    */
   startLoaderJob(
     args: StartLoaderJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartLoaderJobCommandOutput>;
   startLoaderJob(args: StartLoaderJobCommandInput, cb: (err: any, data?: StartLoaderJobCommandOutput) => void): void;
   startLoaderJob(
     args: StartLoaderJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartLoaderJobCommandOutput) => void
+    cb: (err: any, data?: StartLoaderJobCommandOutput) => void,
   ): void;
 
   /**
@@ -946,16 +946,16 @@ export interface Neptunedata {
    */
   startMLDataProcessingJob(
     args: StartMLDataProcessingJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartMLDataProcessingJobCommandOutput>;
   startMLDataProcessingJob(
     args: StartMLDataProcessingJobCommandInput,
-    cb: (err: any, data?: StartMLDataProcessingJobCommandOutput) => void
+    cb: (err: any, data?: StartMLDataProcessingJobCommandOutput) => void,
   ): void;
   startMLDataProcessingJob(
     args: StartMLDataProcessingJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartMLDataProcessingJobCommandOutput) => void
+    cb: (err: any, data?: StartMLDataProcessingJobCommandOutput) => void,
   ): void;
 
   /**
@@ -963,16 +963,16 @@ export interface Neptunedata {
    */
   startMLModelTrainingJob(
     args: StartMLModelTrainingJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartMLModelTrainingJobCommandOutput>;
   startMLModelTrainingJob(
     args: StartMLModelTrainingJobCommandInput,
-    cb: (err: any, data?: StartMLModelTrainingJobCommandOutput) => void
+    cb: (err: any, data?: StartMLModelTrainingJobCommandOutput) => void,
   ): void;
   startMLModelTrainingJob(
     args: StartMLModelTrainingJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartMLModelTrainingJobCommandOutput) => void
+    cb: (err: any, data?: StartMLModelTrainingJobCommandOutput) => void,
   ): void;
 
   /**
@@ -980,16 +980,16 @@ export interface Neptunedata {
    */
   startMLModelTransformJob(
     args: StartMLModelTransformJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartMLModelTransformJobCommandOutput>;
   startMLModelTransformJob(
     args: StartMLModelTransformJobCommandInput,
-    cb: (err: any, data?: StartMLModelTransformJobCommandOutput) => void
+    cb: (err: any, data?: StartMLModelTransformJobCommandOutput) => void,
   ): void;
   startMLModelTransformJob(
     args: StartMLModelTransformJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartMLModelTransformJobCommandOutput) => void
+    cb: (err: any, data?: StartMLModelTransformJobCommandOutput) => void,
   ): void;
 }
 

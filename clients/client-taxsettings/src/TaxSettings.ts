@@ -55,16 +55,16 @@ export interface TaxSettings {
    */
   batchDeleteTaxRegistration(
     args: BatchDeleteTaxRegistrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDeleteTaxRegistrationCommandOutput>;
   batchDeleteTaxRegistration(
     args: BatchDeleteTaxRegistrationCommandInput,
-    cb: (err: any, data?: BatchDeleteTaxRegistrationCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteTaxRegistrationCommandOutput) => void,
   ): void;
   batchDeleteTaxRegistration(
     args: BatchDeleteTaxRegistrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDeleteTaxRegistrationCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteTaxRegistrationCommandOutput) => void,
   ): void;
 
   /**
@@ -72,16 +72,16 @@ export interface TaxSettings {
    */
   batchPutTaxRegistration(
     args: BatchPutTaxRegistrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchPutTaxRegistrationCommandOutput>;
   batchPutTaxRegistration(
     args: BatchPutTaxRegistrationCommandInput,
-    cb: (err: any, data?: BatchPutTaxRegistrationCommandOutput) => void
+    cb: (err: any, data?: BatchPutTaxRegistrationCommandOutput) => void,
   ): void;
   batchPutTaxRegistration(
     args: BatchPutTaxRegistrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchPutTaxRegistrationCommandOutput) => void
+    cb: (err: any, data?: BatchPutTaxRegistrationCommandOutput) => void,
   ): void;
 
   /**
@@ -90,16 +90,16 @@ export interface TaxSettings {
   deleteTaxRegistration(): Promise<DeleteTaxRegistrationCommandOutput>;
   deleteTaxRegistration(
     args: DeleteTaxRegistrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteTaxRegistrationCommandOutput>;
   deleteTaxRegistration(
     args: DeleteTaxRegistrationCommandInput,
-    cb: (err: any, data?: DeleteTaxRegistrationCommandOutput) => void
+    cb: (err: any, data?: DeleteTaxRegistrationCommandOutput) => void,
   ): void;
   deleteTaxRegistration(
     args: DeleteTaxRegistrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTaxRegistrationCommandOutput) => void
+    cb: (err: any, data?: DeleteTaxRegistrationCommandOutput) => void,
   ): void;
 
   /**
@@ -108,16 +108,16 @@ export interface TaxSettings {
   getTaxRegistration(): Promise<GetTaxRegistrationCommandOutput>;
   getTaxRegistration(
     args: GetTaxRegistrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTaxRegistrationCommandOutput>;
   getTaxRegistration(
     args: GetTaxRegistrationCommandInput,
-    cb: (err: any, data?: GetTaxRegistrationCommandOutput) => void
+    cb: (err: any, data?: GetTaxRegistrationCommandOutput) => void,
   ): void;
   getTaxRegistration(
     args: GetTaxRegistrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTaxRegistrationCommandOutput) => void
+    cb: (err: any, data?: GetTaxRegistrationCommandOutput) => void,
   ): void;
 
   /**
@@ -125,16 +125,16 @@ export interface TaxSettings {
    */
   getTaxRegistrationDocument(
     args: GetTaxRegistrationDocumentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTaxRegistrationDocumentCommandOutput>;
   getTaxRegistrationDocument(
     args: GetTaxRegistrationDocumentCommandInput,
-    cb: (err: any, data?: GetTaxRegistrationDocumentCommandOutput) => void
+    cb: (err: any, data?: GetTaxRegistrationDocumentCommandOutput) => void,
   ): void;
   getTaxRegistrationDocument(
     args: GetTaxRegistrationDocumentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTaxRegistrationDocumentCommandOutput) => void
+    cb: (err: any, data?: GetTaxRegistrationDocumentCommandOutput) => void,
   ): void;
 
   /**
@@ -143,16 +143,16 @@ export interface TaxSettings {
   listTaxRegistrations(): Promise<ListTaxRegistrationsCommandOutput>;
   listTaxRegistrations(
     args: ListTaxRegistrationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTaxRegistrationsCommandOutput>;
   listTaxRegistrations(
     args: ListTaxRegistrationsCommandInput,
-    cb: (err: any, data?: ListTaxRegistrationsCommandOutput) => void
+    cb: (err: any, data?: ListTaxRegistrationsCommandOutput) => void,
   ): void;
   listTaxRegistrations(
     args: ListTaxRegistrationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTaxRegistrationsCommandOutput) => void
+    cb: (err: any, data?: ListTaxRegistrationsCommandOutput) => void,
   ): void;
 
   /**
@@ -160,16 +160,16 @@ export interface TaxSettings {
    */
   putTaxRegistration(
     args: PutTaxRegistrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutTaxRegistrationCommandOutput>;
   putTaxRegistration(
     args: PutTaxRegistrationCommandInput,
-    cb: (err: any, data?: PutTaxRegistrationCommandOutput) => void
+    cb: (err: any, data?: PutTaxRegistrationCommandOutput) => void,
   ): void;
   putTaxRegistration(
     args: PutTaxRegistrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutTaxRegistrationCommandOutput) => void
+    cb: (err: any, data?: PutTaxRegistrationCommandOutput) => void,
   ): void;
 }
 

@@ -166,7 +166,7 @@ import {
  */
 export const se_CreateAccessPointCommand = async (
   input: CreateAccessPointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -181,7 +181,7 @@ export const se_CreateAccessPointCommand = async (
       PosixUser: (_) => _json(_),
       RootDirectory: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -192,7 +192,7 @@ export const se_CreateAccessPointCommand = async (
  */
 export const se_CreateFileSystemCommand = async (
   input: CreateFileSystemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -211,7 +211,7 @@ export const se_CreateFileSystemCommand = async (
       ProvisionedThroughputInMibps: (_) => __serializeFloat(_),
       Tags: (_) => _json(_),
       ThroughputMode: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -222,7 +222,7 @@ export const se_CreateFileSystemCommand = async (
  */
 export const se_CreateMountTargetCommand = async (
   input: CreateMountTargetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -236,7 +236,7 @@ export const se_CreateMountTargetCommand = async (
       IpAddress: [],
       SecurityGroups: (_) => _json(_),
       SubnetId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -247,7 +247,7 @@ export const se_CreateMountTargetCommand = async (
  */
 export const se_CreateReplicationConfigurationCommand = async (
   input: CreateReplicationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -259,7 +259,7 @@ export const se_CreateReplicationConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       Destinations: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -270,7 +270,7 @@ export const se_CreateReplicationConfigurationCommand = async (
  */
 export const se_CreateTagsCommand = async (
   input: CreateTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -282,7 +282,7 @@ export const se_CreateTagsCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -293,7 +293,7 @@ export const se_CreateTagsCommand = async (
  */
 export const se_DeleteAccessPointCommand = async (
   input: DeleteAccessPointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -309,7 +309,7 @@ export const se_DeleteAccessPointCommand = async (
  */
 export const se_DeleteFileSystemCommand = async (
   input: DeleteFileSystemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -325,7 +325,7 @@ export const se_DeleteFileSystemCommand = async (
  */
 export const se_DeleteFileSystemPolicyCommand = async (
   input: DeleteFileSystemPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -341,7 +341,7 @@ export const se_DeleteFileSystemPolicyCommand = async (
  */
 export const se_DeleteMountTargetCommand = async (
   input: DeleteMountTargetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -357,7 +357,7 @@ export const se_DeleteMountTargetCommand = async (
  */
 export const se_DeleteReplicationConfigurationCommand = async (
   input: DeleteReplicationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -373,7 +373,7 @@ export const se_DeleteReplicationConfigurationCommand = async (
  */
 export const se_DeleteTagsCommand = async (
   input: DeleteTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -385,7 +385,7 @@ export const se_DeleteTagsCommand = async (
   body = JSON.stringify(
     take(input, {
       TagKeys: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -396,7 +396,7 @@ export const se_DeleteTagsCommand = async (
  */
 export const se_DescribeAccessPointsCommand = async (
   input: DescribeAccessPointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -417,7 +417,7 @@ export const se_DescribeAccessPointsCommand = async (
  */
 export const se_DescribeAccountPreferencesCommand = async (
   input: DescribeAccountPreferencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -429,7 +429,7 @@ export const se_DescribeAccountPreferencesCommand = async (
     take(input, {
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("GET").h(headers).b(body);
   return b.build();
@@ -440,7 +440,7 @@ export const se_DescribeAccountPreferencesCommand = async (
  */
 export const se_DescribeBackupPolicyCommand = async (
   input: DescribeBackupPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -456,7 +456,7 @@ export const se_DescribeBackupPolicyCommand = async (
  */
 export const se_DescribeFileSystemPolicyCommand = async (
   input: DescribeFileSystemPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -472,7 +472,7 @@ export const se_DescribeFileSystemPolicyCommand = async (
  */
 export const se_DescribeFileSystemsCommand = async (
   input: DescribeFileSystemsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -493,7 +493,7 @@ export const se_DescribeFileSystemsCommand = async (
  */
 export const se_DescribeLifecycleConfigurationCommand = async (
   input: DescribeLifecycleConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -509,7 +509,7 @@ export const se_DescribeLifecycleConfigurationCommand = async (
  */
 export const se_DescribeMountTargetsCommand = async (
   input: DescribeMountTargetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -531,7 +531,7 @@ export const se_DescribeMountTargetsCommand = async (
  */
 export const se_DescribeMountTargetSecurityGroupsCommand = async (
   input: DescribeMountTargetSecurityGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -547,7 +547,7 @@ export const se_DescribeMountTargetSecurityGroupsCommand = async (
  */
 export const se_DescribeReplicationConfigurationsCommand = async (
   input: DescribeReplicationConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -567,7 +567,7 @@ export const se_DescribeReplicationConfigurationsCommand = async (
  */
 export const se_DescribeTagsCommand = async (
   input: DescribeTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -587,7 +587,7 @@ export const se_DescribeTagsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -607,7 +607,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ModifyMountTargetSecurityGroupsCommand = async (
   input: ModifyMountTargetSecurityGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -619,7 +619,7 @@ export const se_ModifyMountTargetSecurityGroupsCommand = async (
   body = JSON.stringify(
     take(input, {
       SecurityGroups: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -630,7 +630,7 @@ export const se_ModifyMountTargetSecurityGroupsCommand = async (
  */
 export const se_PutAccountPreferencesCommand = async (
   input: PutAccountPreferencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -641,7 +641,7 @@ export const se_PutAccountPreferencesCommand = async (
   body = JSON.stringify(
     take(input, {
       ResourceIdType: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -652,7 +652,7 @@ export const se_PutAccountPreferencesCommand = async (
  */
 export const se_PutBackupPolicyCommand = async (
   input: PutBackupPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -664,7 +664,7 @@ export const se_PutBackupPolicyCommand = async (
   body = JSON.stringify(
     take(input, {
       BackupPolicy: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -675,7 +675,7 @@ export const se_PutBackupPolicyCommand = async (
  */
 export const se_PutFileSystemPolicyCommand = async (
   input: PutFileSystemPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -688,7 +688,7 @@ export const se_PutFileSystemPolicyCommand = async (
     take(input, {
       BypassPolicyLockoutSafetyCheck: [],
       Policy: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -699,7 +699,7 @@ export const se_PutFileSystemPolicyCommand = async (
  */
 export const se_PutLifecycleConfigurationCommand = async (
   input: PutLifecycleConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -711,7 +711,7 @@ export const se_PutLifecycleConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       LifecyclePolicies: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -722,7 +722,7 @@ export const se_PutLifecycleConfigurationCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -734,7 +734,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -745,7 +745,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -767,7 +767,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateFileSystemCommand = async (
   input: UpdateFileSystemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -780,7 +780,7 @@ export const se_UpdateFileSystemCommand = async (
     take(input, {
       ProvisionedThroughputInMibps: (_) => __serializeFloat(_),
       ThroughputMode: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -791,7 +791,7 @@ export const se_UpdateFileSystemCommand = async (
  */
 export const se_UpdateFileSystemProtectionCommand = async (
   input: UpdateFileSystemProtectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -803,7 +803,7 @@ export const se_UpdateFileSystemProtectionCommand = async (
   body = JSON.stringify(
     take(input, {
       ReplicationOverwriteProtection: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -814,7 +814,7 @@ export const se_UpdateFileSystemProtectionCommand = async (
  */
 export const de_CreateAccessPointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAccessPointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -844,7 +844,7 @@ export const de_CreateAccessPointCommand = async (
  */
 export const de_CreateFileSystemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFileSystemCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -882,7 +882,7 @@ export const de_CreateFileSystemCommand = async (
  */
 export const de_CreateMountTargetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMountTargetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -912,7 +912,7 @@ export const de_CreateMountTargetCommand = async (
  */
 export const de_CreateReplicationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateReplicationConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -938,7 +938,7 @@ export const de_CreateReplicationConfigurationCommand = async (
  */
 export const de_CreateTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTagsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -955,7 +955,7 @@ export const de_CreateTagsCommand = async (
  */
 export const de_DeleteAccessPointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAccessPointCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -972,7 +972,7 @@ export const de_DeleteAccessPointCommand = async (
  */
 export const de_DeleteFileSystemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFileSystemCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -989,7 +989,7 @@ export const de_DeleteFileSystemCommand = async (
  */
 export const de_DeleteFileSystemPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFileSystemPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1006,7 +1006,7 @@ export const de_DeleteFileSystemPolicyCommand = async (
  */
 export const de_DeleteMountTargetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMountTargetCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1023,7 +1023,7 @@ export const de_DeleteMountTargetCommand = async (
  */
 export const de_DeleteReplicationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteReplicationConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1040,7 +1040,7 @@ export const de_DeleteReplicationConfigurationCommand = async (
  */
 export const de_DeleteTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTagsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1057,7 +1057,7 @@ export const de_DeleteTagsCommand = async (
  */
 export const de_DescribeAccessPointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAccessPointsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1079,7 +1079,7 @@ export const de_DescribeAccessPointsCommand = async (
  */
 export const de_DescribeAccountPreferencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAccountPreferencesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1101,7 +1101,7 @@ export const de_DescribeAccountPreferencesCommand = async (
  */
 export const de_DescribeBackupPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBackupPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1122,7 +1122,7 @@ export const de_DescribeBackupPolicyCommand = async (
  */
 export const de_DescribeFileSystemPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFileSystemPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1144,7 +1144,7 @@ export const de_DescribeFileSystemPolicyCommand = async (
  */
 export const de_DescribeFileSystemsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFileSystemsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1167,7 +1167,7 @@ export const de_DescribeFileSystemsCommand = async (
  */
 export const de_DescribeLifecycleConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLifecycleConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1188,7 +1188,7 @@ export const de_DescribeLifecycleConfigurationCommand = async (
  */
 export const de_DescribeMountTargetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeMountTargetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1211,7 +1211,7 @@ export const de_DescribeMountTargetsCommand = async (
  */
 export const de_DescribeMountTargetSecurityGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeMountTargetSecurityGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1232,7 +1232,7 @@ export const de_DescribeMountTargetSecurityGroupsCommand = async (
  */
 export const de_DescribeReplicationConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReplicationConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1254,7 +1254,7 @@ export const de_DescribeReplicationConfigurationsCommand = async (
  */
 export const de_DescribeTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTagsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1277,7 +1277,7 @@ export const de_DescribeTagsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1299,7 +1299,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ModifyMountTargetSecurityGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyMountTargetSecurityGroupsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1316,7 +1316,7 @@ export const de_ModifyMountTargetSecurityGroupsCommand = async (
  */
 export const de_PutAccountPreferencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAccountPreferencesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1337,7 +1337,7 @@ export const de_PutAccountPreferencesCommand = async (
  */
 export const de_PutBackupPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBackupPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1358,7 +1358,7 @@ export const de_PutBackupPolicyCommand = async (
  */
 export const de_PutFileSystemPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutFileSystemPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1380,7 +1380,7 @@ export const de_PutFileSystemPolicyCommand = async (
  */
 export const de_PutLifecycleConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutLifecycleConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1401,7 +1401,7 @@ export const de_PutLifecycleConfigurationCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1418,7 +1418,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1435,7 +1435,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateFileSystemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFileSystemCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1473,7 +1473,7 @@ export const de_UpdateFileSystemCommand = async (
  */
 export const de_UpdateFileSystemProtectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFileSystemProtectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1611,7 +1611,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessPointAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessPointAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1633,7 +1633,7 @@ const de_AccessPointAlreadyExistsRes = async (
  */
 const de_AccessPointLimitExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessPointLimitExceeded> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1672,7 +1672,7 @@ const de_AccessPointNotFoundRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_AvailabilityZonesMismatchRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AvailabilityZonesMismatch> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1747,7 +1747,7 @@ const de_DependencyTimeoutRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_FileSystemAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FileSystemAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1787,7 +1787,7 @@ const de_FileSystemInUseRes = async (parsedOutput: any, context: __SerdeContext)
  */
 const de_FileSystemLimitExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FileSystemLimitExceeded> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1826,7 +1826,7 @@ const de_FileSystemNotFoundRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_IncorrectFileSystemLifeCycleStateRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IncorrectFileSystemLifeCycleState> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1847,7 +1847,7 @@ const de_IncorrectFileSystemLifeCycleStateRes = async (
  */
 const de_IncorrectMountTargetStateRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IncorrectMountTargetState> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1868,7 +1868,7 @@ const de_IncorrectMountTargetStateRes = async (
  */
 const de_InsufficientThroughputCapacityRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InsufficientThroughputCapacity> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1907,7 +1907,7 @@ const de_InternalServerErrorRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InvalidPolicyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPolicyException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1982,7 +1982,7 @@ const de_MountTargetNotFoundRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_NetworkInterfaceLimitExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NetworkInterfaceLimitExceeded> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2003,7 +2003,7 @@ const de_NetworkInterfaceLimitExceededRes = async (
  */
 const de_NoFreeAddressesInSubnetRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoFreeAddressesInSubnet> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2042,7 +2042,7 @@ const de_PolicyNotFoundRes = async (parsedOutput: any, context: __SerdeContext):
  */
 const de_ReplicationAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplicationAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2081,7 +2081,7 @@ const de_ReplicationNotFoundRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_SecurityGroupLimitExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SecurityGroupLimitExceeded> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2102,7 +2102,7 @@ const de_SecurityGroupLimitExceededRes = async (
  */
 const de_SecurityGroupNotFoundRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SecurityGroupNotFound> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2159,7 +2159,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_ThroughputLimitExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ThroughputLimitExceeded> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2198,7 +2198,7 @@ const de_TooManyRequestsRes = async (parsedOutput: any, context: __SerdeContext)
  */
 const de_UnsupportedAvailabilityZoneRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedAvailabilityZone> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2358,7 +2358,7 @@ const de_FileSystemSize = (output: any, context: __SerdeContext): FileSystemSize
  */
 const de_ReplicationConfigurationDescription = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReplicationConfigurationDescription => {
   return take(output, {
     CreationTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -2375,7 +2375,7 @@ const de_ReplicationConfigurationDescription = (
  */
 const de_ReplicationConfigurationDescriptions = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReplicationConfigurationDescription[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)

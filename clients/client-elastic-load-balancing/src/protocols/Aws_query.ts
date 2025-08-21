@@ -237,7 +237,7 @@ import {
  */
 export const se_AddTagsCommand = async (
   input: AddTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -254,7 +254,7 @@ export const se_AddTagsCommand = async (
  */
 export const se_ApplySecurityGroupsToLoadBalancerCommand = async (
   input: ApplySecurityGroupsToLoadBalancerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -271,7 +271,7 @@ export const se_ApplySecurityGroupsToLoadBalancerCommand = async (
  */
 export const se_AttachLoadBalancerToSubnetsCommand = async (
   input: AttachLoadBalancerToSubnetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -288,7 +288,7 @@ export const se_AttachLoadBalancerToSubnetsCommand = async (
  */
 export const se_ConfigureHealthCheckCommand = async (
   input: ConfigureHealthCheckCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -305,7 +305,7 @@ export const se_ConfigureHealthCheckCommand = async (
  */
 export const se_CreateAppCookieStickinessPolicyCommand = async (
   input: CreateAppCookieStickinessPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -322,7 +322,7 @@ export const se_CreateAppCookieStickinessPolicyCommand = async (
  */
 export const se_CreateLBCookieStickinessPolicyCommand = async (
   input: CreateLBCookieStickinessPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -339,7 +339,7 @@ export const se_CreateLBCookieStickinessPolicyCommand = async (
  */
 export const se_CreateLoadBalancerCommand = async (
   input: CreateLoadBalancerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -356,7 +356,7 @@ export const se_CreateLoadBalancerCommand = async (
  */
 export const se_CreateLoadBalancerListenersCommand = async (
   input: CreateLoadBalancerListenersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -373,7 +373,7 @@ export const se_CreateLoadBalancerListenersCommand = async (
  */
 export const se_CreateLoadBalancerPolicyCommand = async (
   input: CreateLoadBalancerPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -390,7 +390,7 @@ export const se_CreateLoadBalancerPolicyCommand = async (
  */
 export const se_DeleteLoadBalancerCommand = async (
   input: DeleteLoadBalancerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -407,7 +407,7 @@ export const se_DeleteLoadBalancerCommand = async (
  */
 export const se_DeleteLoadBalancerListenersCommand = async (
   input: DeleteLoadBalancerListenersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -424,7 +424,7 @@ export const se_DeleteLoadBalancerListenersCommand = async (
  */
 export const se_DeleteLoadBalancerPolicyCommand = async (
   input: DeleteLoadBalancerPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -441,7 +441,7 @@ export const se_DeleteLoadBalancerPolicyCommand = async (
  */
 export const se_DeregisterInstancesFromLoadBalancerCommand = async (
   input: DeregisterInstancesFromLoadBalancerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -458,7 +458,7 @@ export const se_DeregisterInstancesFromLoadBalancerCommand = async (
  */
 export const se_DescribeAccountLimitsCommand = async (
   input: DescribeAccountLimitsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -475,7 +475,7 @@ export const se_DescribeAccountLimitsCommand = async (
  */
 export const se_DescribeInstanceHealthCommand = async (
   input: DescribeInstanceHealthCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -492,7 +492,7 @@ export const se_DescribeInstanceHealthCommand = async (
  */
 export const se_DescribeLoadBalancerAttributesCommand = async (
   input: DescribeLoadBalancerAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -509,7 +509,7 @@ export const se_DescribeLoadBalancerAttributesCommand = async (
  */
 export const se_DescribeLoadBalancerPoliciesCommand = async (
   input: DescribeLoadBalancerPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -526,7 +526,7 @@ export const se_DescribeLoadBalancerPoliciesCommand = async (
  */
 export const se_DescribeLoadBalancerPolicyTypesCommand = async (
   input: DescribeLoadBalancerPolicyTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -543,7 +543,7 @@ export const se_DescribeLoadBalancerPolicyTypesCommand = async (
  */
 export const se_DescribeLoadBalancersCommand = async (
   input: DescribeLoadBalancersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -560,7 +560,7 @@ export const se_DescribeLoadBalancersCommand = async (
  */
 export const se_DescribeTagsCommand = async (
   input: DescribeTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -577,7 +577,7 @@ export const se_DescribeTagsCommand = async (
  */
 export const se_DetachLoadBalancerFromSubnetsCommand = async (
   input: DetachLoadBalancerFromSubnetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -594,7 +594,7 @@ export const se_DetachLoadBalancerFromSubnetsCommand = async (
  */
 export const se_DisableAvailabilityZonesForLoadBalancerCommand = async (
   input: DisableAvailabilityZonesForLoadBalancerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -611,7 +611,7 @@ export const se_DisableAvailabilityZonesForLoadBalancerCommand = async (
  */
 export const se_EnableAvailabilityZonesForLoadBalancerCommand = async (
   input: EnableAvailabilityZonesForLoadBalancerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -628,7 +628,7 @@ export const se_EnableAvailabilityZonesForLoadBalancerCommand = async (
  */
 export const se_ModifyLoadBalancerAttributesCommand = async (
   input: ModifyLoadBalancerAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -645,7 +645,7 @@ export const se_ModifyLoadBalancerAttributesCommand = async (
  */
 export const se_RegisterInstancesWithLoadBalancerCommand = async (
   input: RegisterInstancesWithLoadBalancerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -662,7 +662,7 @@ export const se_RegisterInstancesWithLoadBalancerCommand = async (
  */
 export const se_RemoveTagsCommand = async (
   input: RemoveTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -679,7 +679,7 @@ export const se_RemoveTagsCommand = async (
  */
 export const se_SetLoadBalancerListenerSSLCertificateCommand = async (
   input: SetLoadBalancerListenerSSLCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -696,7 +696,7 @@ export const se_SetLoadBalancerListenerSSLCertificateCommand = async (
  */
 export const se_SetLoadBalancerPoliciesForBackendServerCommand = async (
   input: SetLoadBalancerPoliciesForBackendServerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -713,7 +713,7 @@ export const se_SetLoadBalancerPoliciesForBackendServerCommand = async (
  */
 export const se_SetLoadBalancerPoliciesOfListenerCommand = async (
   input: SetLoadBalancerPoliciesOfListenerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -730,7 +730,7 @@ export const se_SetLoadBalancerPoliciesOfListenerCommand = async (
  */
 export const de_AddTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -750,7 +750,7 @@ export const de_AddTagsCommand = async (
  */
 export const de_ApplySecurityGroupsToLoadBalancerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApplySecurityGroupsToLoadBalancerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -770,7 +770,7 @@ export const de_ApplySecurityGroupsToLoadBalancerCommand = async (
  */
 export const de_AttachLoadBalancerToSubnetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachLoadBalancerToSubnetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -790,7 +790,7 @@ export const de_AttachLoadBalancerToSubnetsCommand = async (
  */
 export const de_ConfigureHealthCheckCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConfigureHealthCheckCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -810,7 +810,7 @@ export const de_ConfigureHealthCheckCommand = async (
  */
 export const de_CreateAppCookieStickinessPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAppCookieStickinessPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -830,7 +830,7 @@ export const de_CreateAppCookieStickinessPolicyCommand = async (
  */
 export const de_CreateLBCookieStickinessPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLBCookieStickinessPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -850,7 +850,7 @@ export const de_CreateLBCookieStickinessPolicyCommand = async (
  */
 export const de_CreateLoadBalancerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLoadBalancerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -870,7 +870,7 @@ export const de_CreateLoadBalancerCommand = async (
  */
 export const de_CreateLoadBalancerListenersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLoadBalancerListenersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -890,7 +890,7 @@ export const de_CreateLoadBalancerListenersCommand = async (
  */
 export const de_CreateLoadBalancerPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLoadBalancerPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -910,7 +910,7 @@ export const de_CreateLoadBalancerPolicyCommand = async (
  */
 export const de_DeleteLoadBalancerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLoadBalancerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -930,7 +930,7 @@ export const de_DeleteLoadBalancerCommand = async (
  */
 export const de_DeleteLoadBalancerListenersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLoadBalancerListenersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -950,7 +950,7 @@ export const de_DeleteLoadBalancerListenersCommand = async (
  */
 export const de_DeleteLoadBalancerPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLoadBalancerPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -970,7 +970,7 @@ export const de_DeleteLoadBalancerPolicyCommand = async (
  */
 export const de_DeregisterInstancesFromLoadBalancerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterInstancesFromLoadBalancerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -990,7 +990,7 @@ export const de_DeregisterInstancesFromLoadBalancerCommand = async (
  */
 export const de_DescribeAccountLimitsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAccountLimitsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1010,7 +1010,7 @@ export const de_DescribeAccountLimitsCommand = async (
  */
 export const de_DescribeInstanceHealthCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInstanceHealthCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1030,7 +1030,7 @@ export const de_DescribeInstanceHealthCommand = async (
  */
 export const de_DescribeLoadBalancerAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLoadBalancerAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1050,7 +1050,7 @@ export const de_DescribeLoadBalancerAttributesCommand = async (
  */
 export const de_DescribeLoadBalancerPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLoadBalancerPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1070,7 +1070,7 @@ export const de_DescribeLoadBalancerPoliciesCommand = async (
  */
 export const de_DescribeLoadBalancerPolicyTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLoadBalancerPolicyTypesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1090,7 +1090,7 @@ export const de_DescribeLoadBalancerPolicyTypesCommand = async (
  */
 export const de_DescribeLoadBalancersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLoadBalancersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1110,7 +1110,7 @@ export const de_DescribeLoadBalancersCommand = async (
  */
 export const de_DescribeTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1130,7 +1130,7 @@ export const de_DescribeTagsCommand = async (
  */
 export const de_DetachLoadBalancerFromSubnetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachLoadBalancerFromSubnetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1150,7 +1150,7 @@ export const de_DetachLoadBalancerFromSubnetsCommand = async (
  */
 export const de_DisableAvailabilityZonesForLoadBalancerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableAvailabilityZonesForLoadBalancerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1170,7 +1170,7 @@ export const de_DisableAvailabilityZonesForLoadBalancerCommand = async (
  */
 export const de_EnableAvailabilityZonesForLoadBalancerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableAvailabilityZonesForLoadBalancerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1190,7 +1190,7 @@ export const de_EnableAvailabilityZonesForLoadBalancerCommand = async (
  */
 export const de_ModifyLoadBalancerAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyLoadBalancerAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1210,7 +1210,7 @@ export const de_ModifyLoadBalancerAttributesCommand = async (
  */
 export const de_RegisterInstancesWithLoadBalancerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterInstancesWithLoadBalancerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1230,7 +1230,7 @@ export const de_RegisterInstancesWithLoadBalancerCommand = async (
  */
 export const de_RemoveTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1250,7 +1250,7 @@ export const de_RemoveTagsCommand = async (
  */
 export const de_SetLoadBalancerListenerSSLCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetLoadBalancerListenerSSLCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1270,7 +1270,7 @@ export const de_SetLoadBalancerListenerSSLCertificateCommand = async (
  */
 export const de_SetLoadBalancerPoliciesForBackendServerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetLoadBalancerPoliciesForBackendServerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1279,7 +1279,7 @@ export const de_SetLoadBalancerPoliciesForBackendServerCommand = async (
   let contents: any = {};
   contents = de_SetLoadBalancerPoliciesForBackendServerOutput(
     data.SetLoadBalancerPoliciesForBackendServerResult,
-    context
+    context,
   );
   const response: SetLoadBalancerPoliciesForBackendServerCommandOutput = {
     $metadata: deserializeMetadata(output),
@@ -1293,7 +1293,7 @@ export const de_SetLoadBalancerPoliciesForBackendServerCommand = async (
  */
 export const de_SetLoadBalancerPoliciesOfListenerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetLoadBalancerPoliciesOfListenerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1399,7 +1399,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessPointNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessPointNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_AccessPointNotFoundException(body.Error, context);
@@ -1415,7 +1415,7 @@ const de_AccessPointNotFoundExceptionRes = async (
  */
 const de_CertificateNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CertificateNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CertificateNotFoundException(body.Error, context);
@@ -1431,7 +1431,7 @@ const de_CertificateNotFoundExceptionRes = async (
  */
 const de_DependencyThrottleExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DependencyThrottleException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DependencyThrottleException(body.Error, context);
@@ -1447,7 +1447,7 @@ const de_DependencyThrottleExceptionRes = async (
  */
 const de_DuplicateAccessPointNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicateAccessPointNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DuplicateAccessPointNameException(body.Error, context);
@@ -1463,7 +1463,7 @@ const de_DuplicateAccessPointNameExceptionRes = async (
  */
 const de_DuplicateListenerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicateListenerException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DuplicateListenerException(body.Error, context);
@@ -1479,7 +1479,7 @@ const de_DuplicateListenerExceptionRes = async (
  */
 const de_DuplicatePolicyNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicatePolicyNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DuplicatePolicyNameException(body.Error, context);
@@ -1495,7 +1495,7 @@ const de_DuplicatePolicyNameExceptionRes = async (
  */
 const de_DuplicateTagKeysExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicateTagKeysException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DuplicateTagKeysException(body.Error, context);
@@ -1511,7 +1511,7 @@ const de_DuplicateTagKeysExceptionRes = async (
  */
 const de_InvalidConfigurationRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidConfigurationRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidConfigurationRequestException(body.Error, context);
@@ -1527,7 +1527,7 @@ const de_InvalidConfigurationRequestExceptionRes = async (
  */
 const de_InvalidEndPointExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidEndPointException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidEndPointException(body.Error, context);
@@ -1543,7 +1543,7 @@ const de_InvalidEndPointExceptionRes = async (
  */
 const de_InvalidSchemeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSchemeException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidSchemeException(body.Error, context);
@@ -1559,7 +1559,7 @@ const de_InvalidSchemeExceptionRes = async (
  */
 const de_InvalidSecurityGroupExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSecurityGroupException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidSecurityGroupException(body.Error, context);
@@ -1575,7 +1575,7 @@ const de_InvalidSecurityGroupExceptionRes = async (
  */
 const de_InvalidSubnetExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSubnetException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidSubnetException(body.Error, context);
@@ -1591,7 +1591,7 @@ const de_InvalidSubnetExceptionRes = async (
  */
 const de_ListenerNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListenerNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ListenerNotFoundException(body.Error, context);
@@ -1607,7 +1607,7 @@ const de_ListenerNotFoundExceptionRes = async (
  */
 const de_LoadBalancerAttributeNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LoadBalancerAttributeNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_LoadBalancerAttributeNotFoundException(body.Error, context);
@@ -1623,7 +1623,7 @@ const de_LoadBalancerAttributeNotFoundExceptionRes = async (
  */
 const de_OperationNotPermittedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationNotPermittedException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_OperationNotPermittedException(body.Error, context);
@@ -1639,7 +1639,7 @@ const de_OperationNotPermittedExceptionRes = async (
  */
 const de_PolicyNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PolicyNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_PolicyNotFoundException(body.Error, context);
@@ -1655,7 +1655,7 @@ const de_PolicyNotFoundExceptionRes = async (
  */
 const de_PolicyTypeNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PolicyTypeNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_PolicyTypeNotFoundException(body.Error, context);
@@ -1671,7 +1671,7 @@ const de_PolicyTypeNotFoundExceptionRes = async (
  */
 const de_SubnetNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SubnetNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_SubnetNotFoundException(body.Error, context);
@@ -1687,7 +1687,7 @@ const de_SubnetNotFoundExceptionRes = async (
  */
 const de_TooManyAccessPointsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyAccessPointsException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TooManyAccessPointsException(body.Error, context);
@@ -1703,7 +1703,7 @@ const de_TooManyAccessPointsExceptionRes = async (
  */
 const de_TooManyPoliciesExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyPoliciesException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TooManyPoliciesException(body.Error, context);
@@ -1719,7 +1719,7 @@ const de_TooManyPoliciesExceptionRes = async (
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TooManyTagsException(body.Error, context);
@@ -1735,7 +1735,7 @@ const de_TooManyTagsExceptionRes = async (
  */
 const de_UnsupportedProtocolExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedProtocolException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_UnsupportedProtocolException(body.Error, context);
@@ -1853,7 +1853,7 @@ const se_AddTagsInput = (input: AddTagsInput, context: __SerdeContext): any => {
  */
 const se_ApplySecurityGroupsToLoadBalancerInput = (
   input: ApplySecurityGroupsToLoadBalancerInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LBN] != null) {
@@ -2021,7 +2021,7 @@ const se_CreateAccessPointInput = (input: CreateAccessPointInput, context: __Ser
  */
 const se_CreateAppCookieStickinessPolicyInput = (
   input: CreateAppCookieStickinessPolicyInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LBN] != null) {
@@ -2041,7 +2041,7 @@ const se_CreateAppCookieStickinessPolicyInput = (
  */
 const se_CreateLBCookieStickinessPolicyInput = (
   input: CreateLBCookieStickinessPolicyInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LBN] != null) {
@@ -2246,7 +2246,7 @@ const se_DescribeEndPointStateInput = (input: DescribeEndPointStateInput, contex
  */
 const se_DescribeLoadBalancerAttributesInput = (
   input: DescribeLoadBalancerAttributesInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LBN] != null) {
@@ -2260,7 +2260,7 @@ const se_DescribeLoadBalancerAttributesInput = (
  */
 const se_DescribeLoadBalancerPoliciesInput = (
   input: DescribeLoadBalancerPoliciesInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LBN] != null) {
@@ -2284,7 +2284,7 @@ const se_DescribeLoadBalancerPoliciesInput = (
  */
 const se_DescribeLoadBalancerPolicyTypesInput = (
   input: DescribeLoadBalancerPolicyTypesInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_PTNo] != null) {
@@ -2323,7 +2323,7 @@ const se_DescribeTagsInput = (input: DescribeTagsInput, context: __SerdeContext)
  */
 const se_DetachLoadBalancerFromSubnetsInput = (
   input: DetachLoadBalancerFromSubnetsInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LBN] != null) {
@@ -2520,7 +2520,7 @@ const se_LoadBalancerNamesMax20 = (input: string[], context: __SerdeContext): an
  */
 const se_ModifyLoadBalancerAttributesInput = (
   input: ModifyLoadBalancerAttributesInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LBN] != null) {
@@ -2708,7 +2708,7 @@ const se_SecurityGroups = (input: string[], context: __SerdeContext): any => {
  */
 const se_SetLoadBalancerListenerSSLCertificateInput = (
   input: SetLoadBalancerListenerSSLCertificateInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LBN] != null) {
@@ -2728,7 +2728,7 @@ const se_SetLoadBalancerListenerSSLCertificateInput = (
  */
 const se_SetLoadBalancerPoliciesForBackendServerInput = (
   input: SetLoadBalancerPoliciesForBackendServerInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LBN] != null) {
@@ -2755,7 +2755,7 @@ const se_SetLoadBalancerPoliciesForBackendServerInput = (
  */
 const se_SetLoadBalancerPoliciesOfListenerInput = (
   input: SetLoadBalancerPoliciesOfListenerInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LBN] != null) {
@@ -2963,7 +2963,7 @@ const de_AppCookieStickinessPolicy = (output: any, context: __SerdeContext): App
  */
 const de_ApplySecurityGroupsToLoadBalancerOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ApplySecurityGroupsToLoadBalancerOutput => {
   const contents: any = {};
   if (output.SecurityGroups === "") {
@@ -2979,7 +2979,7 @@ const de_ApplySecurityGroupsToLoadBalancerOutput = (
  */
 const de_AttachLoadBalancerToSubnetsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AttachLoadBalancerToSubnetsOutput => {
   const contents: any = {};
   if (output.Subnets === "") {
@@ -3091,7 +3091,7 @@ const de_CreateAccessPointOutput = (output: any, context: __SerdeContext): Creat
  */
 const de_CreateAppCookieStickinessPolicyOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateAppCookieStickinessPolicyOutput => {
   const contents: any = {};
   return contents;
@@ -3102,7 +3102,7 @@ const de_CreateAppCookieStickinessPolicyOutput = (
  */
 const de_CreateLBCookieStickinessPolicyOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateLBCookieStickinessPolicyOutput => {
   const contents: any = {};
   return contents;
@@ -3113,7 +3113,7 @@ const de_CreateLBCookieStickinessPolicyOutput = (
  */
 const de_CreateLoadBalancerListenerOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateLoadBalancerListenerOutput => {
   const contents: any = {};
   return contents;
@@ -3151,7 +3151,7 @@ const de_DeleteAccessPointOutput = (output: any, context: __SerdeContext): Delet
  */
 const de_DeleteLoadBalancerListenerOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteLoadBalancerListenerOutput => {
   const contents: any = {};
   return contents;
@@ -3239,7 +3239,7 @@ const de_DescribeEndPointStateOutput = (output: any, context: __SerdeContext): D
  */
 const de_DescribeLoadBalancerAttributesOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeLoadBalancerAttributesOutput => {
   const contents: any = {};
   if (output[_LBA] != null) {
@@ -3253,7 +3253,7 @@ const de_DescribeLoadBalancerAttributesOutput = (
  */
 const de_DescribeLoadBalancerPoliciesOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeLoadBalancerPoliciesOutput => {
   const contents: any = {};
   if (output.PolicyDescriptions === "") {
@@ -3269,7 +3269,7 @@ const de_DescribeLoadBalancerPoliciesOutput = (
  */
 const de_DescribeLoadBalancerPolicyTypesOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeLoadBalancerPolicyTypesOutput => {
   const contents: any = {};
   if (output.PolicyTypeDescriptions === "") {
@@ -3298,7 +3298,7 @@ const de_DescribeTagsOutput = (output: any, context: __SerdeContext): DescribeTa
  */
 const de_DetachLoadBalancerFromSubnetsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DetachLoadBalancerFromSubnetsOutput => {
   const contents: any = {};
   if (output.Subnets === "") {
@@ -3314,7 +3314,7 @@ const de_DetachLoadBalancerFromSubnetsOutput = (
  */
 const de_DuplicateAccessPointNameException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DuplicateAccessPointNameException => {
   const contents: any = {};
   if (output[_Me] != null) {
@@ -3437,7 +3437,7 @@ const de_InstanceStates = (output: any, context: __SerdeContext): InstanceState[
  */
 const de_InvalidConfigurationRequestException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidConfigurationRequestException => {
   const contents: any = {};
   if (output[_Me] != null) {
@@ -3606,7 +3606,7 @@ const de_ListenerNotFoundException = (output: any, context: __SerdeContext): Lis
  */
 const de_LoadBalancerAttributeNotFoundException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LoadBalancerAttributeNotFoundException => {
   const contents: any = {};
   if (output[_Me] != null) {
@@ -3724,7 +3724,7 @@ const de_LoadBalancerDescriptions = (output: any, context: __SerdeContext): Load
  */
 const de_ModifyLoadBalancerAttributesOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyLoadBalancerAttributesOutput => {
   const contents: any = {};
   if (output[_LBN] != null) {
@@ -3972,7 +3972,7 @@ const de_SecurityGroups = (output: any, context: __SerdeContext): string[] => {
  */
 const de_SetLoadBalancerListenerSSLCertificateOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SetLoadBalancerListenerSSLCertificateOutput => {
   const contents: any = {};
   return contents;
@@ -3983,7 +3983,7 @@ const de_SetLoadBalancerListenerSSLCertificateOutput = (
  */
 const de_SetLoadBalancerPoliciesForBackendServerOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SetLoadBalancerPoliciesForBackendServerOutput => {
   const contents: any = {};
   return contents;
@@ -3994,7 +3994,7 @@ const de_SetLoadBalancerPoliciesForBackendServerOutput = (
  */
 const de_SetLoadBalancerPoliciesOfListenerOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SetLoadBalancerPoliciesOfListenerOutput => {
   const contents: any = {};
   return contents;
@@ -4150,7 +4150,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

@@ -5793,7 +5793,7 @@ export const ListDistributionsResultFilterSensitiveLog = (obj: ListDistributions
  * @internal
  */
 export const ListDistributionsByRealtimeLogConfigResultFilterSensitiveLog = (
-  obj: ListDistributionsByRealtimeLogConfigResult
+  obj: ListDistributionsByRealtimeLogConfigResult,
 ): any => ({
   ...obj,
 });
@@ -5851,7 +5851,7 @@ export const UpdateDistributionResultFilterSensitiveLog = (obj: UpdateDistributi
  * @internal
  */
 export const UpdateDistributionWithStagingConfigResultFilterSensitiveLog = (
-  obj: UpdateDistributionWithStagingConfigResult
+  obj: UpdateDistributionWithStagingConfigResult,
 ): any => ({
   ...obj,
   ...(obj.Distribution && { Distribution: DistributionFilterSensitiveLog(obj.Distribution) }),

@@ -204,7 +204,7 @@ describe("bucketHostname", () => {
           });
           expect(bucketEndpoint).toBe(true);
           expect(hostname).toBe(
-            `myendpoint-123456789012.s3-accesspoint${dualstackEndpoint ? ".dualstack" : ""}.us-west-2.amazonaws.com`
+            `myendpoint-123456789012.s3-accesspoint${dualstackEndpoint ? ".dualstack" : ""}.us-west-2.amazonaws.com`,
           );
         });
 
@@ -219,7 +219,7 @@ describe("bucketHostname", () => {
           });
           expect(bucketEndpoint).toBe(true);
           expect(hostname).toBe(
-            `myendpoint-123456789012.s3-accesspoint${dualstackEndpoint ? ".dualstack" : ""}.us-east-1.amazonaws.com`
+            `myendpoint-123456789012.s3-accesspoint${dualstackEndpoint ? ".dualstack" : ""}.us-east-1.amazonaws.com`,
           );
         });
       });
@@ -392,7 +392,7 @@ describe("bucketHostname", () => {
             clientRegion,
             clientPartition,
             fipsEndpoint: true,
-          })
+          }),
         ).toThrowError();
       });
 
@@ -406,7 +406,7 @@ describe("bucketHostname", () => {
             clientPartition,
             useArnRegion: true,
             fipsEndpoint: true,
-          })
+          }),
         ).toThrowError();
       });
     });
@@ -485,7 +485,7 @@ describe("bucketHostname", () => {
           isCustomEndpoint: false,
           clientRegion: "us-east-1",
           useArnRegion: true,
-        }).signingRegion
+        }).signingRegion,
       ).toBe("us-west-2");
     });
   });
@@ -528,7 +528,7 @@ describe("bucketHostname", () => {
           disableMultiregionAccessPoints: true,
           clientRegion: region,
           isCustomEndpoint: false,
-        })
+        }),
       ).toThrow("SDK is attempting to use a MRAP ARN. Please enable to feature.");
     });
 
@@ -540,7 +540,7 @@ describe("bucketHostname", () => {
           dualstackEndpoint: true,
           clientRegion: region,
           isCustomEndpoint: false,
-        })
+        }),
       ).toThrow("Dualstack endpoint is not supported with Outpost or Multi-region Access Point ARN.");
     });
 
@@ -552,7 +552,7 @@ describe("bucketHostname", () => {
           accelerateEndpoint: true,
           clientRegion: region,
           isCustomEndpoint: false,
-        })
+        }),
       ).toThrow("Accelerate endpoint is not supported when bucket is an ARN");
     });
 
@@ -564,7 +564,7 @@ describe("bucketHostname", () => {
           disableMultiregionAccessPoints: true,
           clientRegion: region,
           isCustomEndpoint: false,
-        })
+        }),
       ).toThrow("");
     });
 
@@ -681,7 +681,7 @@ describe("bucketHostname", () => {
       expect(() => {
         bucketHostname({
           bucketName: parseArn(
-            "arn:aws:s3-outposts:us-east-1:123456789012:outpost:op-01234567890123456:accesspoint:myaccesspoint"
+            "arn:aws:s3-outposts:us-east-1:123456789012:outpost:op-01234567890123456:accesspoint:myaccesspoint",
           ),
           baseHostname: "s3.us-west-2.amazonaws.com",
           isCustomEndpoint: false,
@@ -694,7 +694,7 @@ describe("bucketHostname", () => {
       expect(() => {
         bucketHostname({
           bucketName: parseArn(
-            "arn:aws-cn:s3-outposts:cn-north-1:123456789012:outpost:op-01234567890123456:accesspoint:myaccesspoint"
+            "arn:aws-cn:s3-outposts:cn-north-1:123456789012:outpost:op-01234567890123456:accesspoint:myaccesspoint",
           ),
           baseHostname: "s3.us-west-2.amazonaws.com",
           isCustomEndpoint: false,
@@ -712,7 +712,7 @@ describe("bucketHostname", () => {
         expect(() => {
           bucketHostname({
             bucketName: parseArn(
-              "arn:aws-us-gov:s3-outposts:us-gov-east-1:123456789012:outpost:op-01234567890123456:accesspoint:myaccesspoint"
+              "arn:aws-us-gov:s3-outposts:us-gov-east-1:123456789012:outpost:op-01234567890123456:accesspoint:myaccesspoint",
             ),
             baseHostname: `s3.${clientRegion}.amazonaws.com`,
             isCustomEndpoint: false,
@@ -725,7 +725,7 @@ describe("bucketHostname", () => {
         expect(() => {
           bucketHostname({
             bucketName: parseArn(
-              "arn:aws-us-gov:s3-outposts:fips-us-gov-east-1:123456789012:outpost:op-01234567890123456:accesspoint:myaccesspoint"
+              "arn:aws-us-gov:s3-outposts:fips-us-gov-east-1:123456789012:outpost:op-01234567890123456:accesspoint:myaccesspoint",
             ),
             baseHostname: `s3.${clientRegion}.amazonaws.com`,
             isCustomEndpoint: false,
@@ -740,7 +740,7 @@ describe("bucketHostname", () => {
       it("should allow if region is not fips", () => {
         const { bucketEndpoint, hostname } = bucketHostname({
           bucketName: parseArn(
-            "arn:aws-us-gov:s3-outposts:us-gov-east-1:123456789012:outpost:op-01234567890123456:accesspoint:myaccesspoint"
+            "arn:aws-us-gov:s3-outposts:us-gov-east-1:123456789012:outpost:op-01234567890123456:accesspoint:myaccesspoint",
           ),
           baseHostname: "s3.fips-us-gov-east-1.amazonaws.com",
           isCustomEndpoint: false,
@@ -750,7 +750,7 @@ describe("bucketHostname", () => {
         });
         expect(bucketEndpoint).toBe(true);
         expect(hostname).toBe(
-          "myaccesspoint-123456789012.op-01234567890123456.s3-outposts.us-gov-east-1.amazonaws.com"
+          "myaccesspoint-123456789012.op-01234567890123456.s3-outposts.us-gov-east-1.amazonaws.com",
         );
       });
     });
@@ -764,7 +764,7 @@ describe("bucketHostname", () => {
           expect(() => {
             bucketHostname({
               bucketName: parseArn(
-                "arn:aws:s3-outposts:us-west-2:123456789012:outpost:op-01234567890123456:accesspoint:myaccesspoint"
+                "arn:aws:s3-outposts:us-west-2:123456789012:outpost:op-01234567890123456:accesspoint:myaccesspoint",
               ),
               baseHostname,
               isCustomEndpoint,
@@ -785,7 +785,7 @@ describe("bucketHostname", () => {
           expect(() => {
             bucketHostname({
               bucketName: parseArn(
-                "arn:aws:s3-outposts:us-west-2:123456789012:outpost:op-01234567890123456:accesspoint:myaccesspoint"
+                "arn:aws:s3-outposts:us-west-2:123456789012:outpost:op-01234567890123456:accesspoint:myaccesspoint",
               ),
               baseHostname,
               isCustomEndpoint,
@@ -854,7 +854,7 @@ describe("bucketHostname", () => {
 
     it("should return correct signing region and signing service", () => {
       const bucketArn = parseArn(
-        "arn:aws:s3-outposts:us-west-2:123456789012:outpost:op-01234567890123456:accesspoint:myaccesspoint"
+        "arn:aws:s3-outposts:us-west-2:123456789012:outpost:op-01234567890123456:accesspoint:myaccesspoint",
       );
       const { signingRegion, signingService } = bucketHostname({
         bucketName: bucketArn,
@@ -937,7 +937,7 @@ describe("bucketHostname", () => {
           clientRegion: string,
           useArnRegion: boolean,
           expectedEndpoint: string,
-          clientPartition?: string
+          clientPartition?: string,
         ][] = [
           [
             "arn:aws:s3-object-lambda:us-west-2:1123456789012:accesspoint/mybanner",
@@ -993,7 +993,7 @@ describe("bucketHostname", () => {
           clientRegion: string,
           useArnRegion: boolean,
           expectedError: string,
-          clientPartition?: string
+          clientPartition?: string,
         ][] = [
           [
             "arn:aws:s3-object-lambda:us-east-1:123456789012:accesspoint/mybanner",

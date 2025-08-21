@@ -68,7 +68,7 @@ export interface BCMDataExports {
   createExport(
     args: CreateExportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateExportCommandOutput) => void
+    cb: (err: any, data?: CreateExportCommandOutput) => void,
   ): void;
 
   /**
@@ -79,7 +79,7 @@ export interface BCMDataExports {
   deleteExport(
     args: DeleteExportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteExportCommandOutput) => void
+    cb: (err: any, data?: DeleteExportCommandOutput) => void,
   ): void;
 
   /**
@@ -90,7 +90,7 @@ export interface BCMDataExports {
   getExecution(
     args: GetExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetExecutionCommandOutput) => void
+    cb: (err: any, data?: GetExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -101,7 +101,7 @@ export interface BCMDataExports {
   getExport(
     args: GetExportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetExportCommandOutput) => void
+    cb: (err: any, data?: GetExportCommandOutput) => void,
   ): void;
 
   /**
@@ -112,7 +112,7 @@ export interface BCMDataExports {
   getTable(
     args: GetTableCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTableCommandOutput) => void
+    cb: (err: any, data?: GetTableCommandOutput) => void,
   ): void;
 
   /**
@@ -120,13 +120,13 @@ export interface BCMDataExports {
    */
   listExecutions(
     args: ListExecutionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListExecutionsCommandOutput>;
   listExecutions(args: ListExecutionsCommandInput, cb: (err: any, data?: ListExecutionsCommandOutput) => void): void;
   listExecutions(
     args: ListExecutionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListExecutionsCommandOutput) => void,
   ): void;
 
   /**
@@ -138,7 +138,7 @@ export interface BCMDataExports {
   listExports(
     args: ListExportsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListExportsCommandOutput) => void
+    cb: (err: any, data?: ListExportsCommandOutput) => void,
   ): void;
 
   /**
@@ -150,7 +150,7 @@ export interface BCMDataExports {
   listTables(
     args: ListTablesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTablesCommandOutput) => void
+    cb: (err: any, data?: ListTablesCommandOutput) => void,
   ): void;
 
   /**
@@ -158,16 +158,16 @@ export interface BCMDataExports {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -178,7 +178,7 @@ export interface BCMDataExports {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -189,7 +189,7 @@ export interface BCMDataExports {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -200,7 +200,7 @@ export interface BCMDataExports {
   updateExport(
     args: UpdateExportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateExportCommandOutput) => void
+    cb: (err: any, data?: UpdateExportCommandOutput) => void,
   ): void;
 }
 

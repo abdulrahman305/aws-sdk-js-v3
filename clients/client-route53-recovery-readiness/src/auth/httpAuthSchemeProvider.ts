@@ -44,7 +44,7 @@ export interface Route53RecoveryReadinessHttpAuthSchemeParametersProvider
 export const defaultRoute53RecoveryReadinessHttpAuthSchemeParametersProvider = async (
   config: Route53RecoveryReadinessClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<Route53RecoveryReadinessHttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -57,7 +57,7 @@ export const defaultRoute53RecoveryReadinessHttpAuthSchemeParametersProvider = a
 };
 
 function createAwsAuthSigv4HttpAuthOption(
-  authParameters: Route53RecoveryReadinessHttpAuthSchemeParameters
+  authParameters: Route53RecoveryReadinessHttpAuthSchemeParameters,
 ): HttpAuthOption {
   return {
     schemeId: "aws.auth#sigv4",
@@ -87,7 +87,7 @@ export interface Route53RecoveryReadinessHttpAuthSchemeProvider
  * @internal
  */
 export const defaultRoute53RecoveryReadinessHttpAuthSchemeProvider: Route53RecoveryReadinessHttpAuthSchemeProvider = (
-  authParameters
+  authParameters,
 ) => {
   const options: HttpAuthOption[] = [];
   switch (authParameters.operation) {
@@ -136,7 +136,7 @@ export interface HttpAuthSchemeResolvedConfig extends AwsSdkSigV4AuthResolvedCon
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved
+  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved,
 ): T & HttpAuthSchemeResolvedConfig => {
   const config_0 = resolveAwsSdkSigV4Config(config);
   return {

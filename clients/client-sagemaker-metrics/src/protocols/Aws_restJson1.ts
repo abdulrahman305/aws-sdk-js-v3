@@ -27,7 +27,7 @@ import { SageMakerMetricsServiceException as __BaseException } from "../models/S
  */
 export const se_BatchPutMetricsCommand = async (
   input: BatchPutMetricsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -39,7 +39,7 @@ export const se_BatchPutMetricsCommand = async (
     take(input, {
       MetricData: (_) => se_RawMetricDataList(_, context),
       TrialComponentName: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -50,7 +50,7 @@ export const se_BatchPutMetricsCommand = async (
  */
 export const de_BatchPutMetricsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchPutMetricsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);

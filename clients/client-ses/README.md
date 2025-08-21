@@ -120,7 +120,7 @@ client.send(command).then(
   },
   (error) => {
     // error handling.
-  }
+  },
 );
 ```
 

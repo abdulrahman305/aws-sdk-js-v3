@@ -108,7 +108,7 @@ import {
  */
 export const se_GetPreferencesCommand = async (
   input: GetPreferencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetPreferences");
   let body: any;
@@ -121,7 +121,7 @@ export const se_GetPreferencesCommand = async (
  */
 export const se_GetRecommendationCommand = async (
   input: GetRecommendationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRecommendation");
   let body: any;
@@ -134,7 +134,7 @@ export const se_GetRecommendationCommand = async (
  */
 export const se_ListEnrollmentStatusesCommand = async (
   input: ListEnrollmentStatusesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListEnrollmentStatuses");
   let body: any;
@@ -147,7 +147,7 @@ export const se_ListEnrollmentStatusesCommand = async (
  */
 export const se_ListRecommendationsCommand = async (
   input: ListRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRecommendations");
   let body: any;
@@ -160,7 +160,7 @@ export const se_ListRecommendationsCommand = async (
  */
 export const se_ListRecommendationSummariesCommand = async (
   input: ListRecommendationSummariesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRecommendationSummaries");
   let body: any;
@@ -173,7 +173,7 @@ export const se_ListRecommendationSummariesCommand = async (
  */
 export const se_UpdateEnrollmentStatusCommand = async (
   input: UpdateEnrollmentStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateEnrollmentStatus");
   let body: any;
@@ -186,7 +186,7 @@ export const se_UpdateEnrollmentStatusCommand = async (
  */
 export const se_UpdatePreferencesCommand = async (
   input: UpdatePreferencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdatePreferences");
   let body: any;
@@ -199,7 +199,7 @@ export const se_UpdatePreferencesCommand = async (
  */
 export const de_GetPreferencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPreferencesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -219,7 +219,7 @@ export const de_GetPreferencesCommand = async (
  */
 export const de_GetRecommendationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRecommendationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -239,7 +239,7 @@ export const de_GetRecommendationCommand = async (
  */
 export const de_ListEnrollmentStatusesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEnrollmentStatusesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -259,7 +259,7 @@ export const de_ListEnrollmentStatusesCommand = async (
  */
 export const de_ListRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRecommendationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -279,7 +279,7 @@ export const de_ListRecommendationsCommand = async (
  */
 export const de_ListRecommendationSummariesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRecommendationSummariesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -299,7 +299,7 @@ export const de_ListRecommendationSummariesCommand = async (
  */
 export const de_UpdateEnrollmentStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEnrollmentStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -319,7 +319,7 @@ export const de_UpdateEnrollmentStatusCommand = async (
  */
 export const de_UpdatePreferencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePreferencesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -374,7 +374,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -390,7 +390,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -406,7 +406,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -512,7 +512,7 @@ const de_AccountEnrollmentStatuses = (output: any, context: __SerdeContext): Acc
  */
 const de_BlockStoragePerformanceConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BlockStoragePerformanceConfiguration => {
   return take(output, {
     iops: __limitedParseDouble,
@@ -737,7 +737,7 @@ const de_ListRecommendationsResponse = (output: any, context: __SerdeContext): L
  */
 const de_ListRecommendationSummariesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListRecommendationSummariesResponse => {
   return take(output, {
     currencyCode: __expectString,
@@ -853,7 +853,7 @@ const de_RedshiftReservedInstances = (output: any, context: __SerdeContext): Red
  */
 const de_ReservedInstancesCostCalculation = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReservedInstancesCostCalculation => {
   return take(output, {
     pricing: (_: any) => de_ReservedInstancesPricing(_, context),
@@ -1070,7 +1070,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

@@ -26,8 +26,9 @@ for (const client of clientList) {
   // this may also work with dynamic async import() in a beforeAll() block,
   // but needs more effort than using synchronous require().
   try {
-    defaultEndpointResolver =
-      require(`@aws-sdk/client-${serviceName}/src/endpoint/endpointResolver`).defaultEndpointResolver;
+    defaultEndpointResolver = require(
+      `@aws-sdk/client-${serviceName}/src/endpoint/endpointResolver`,
+    ).defaultEndpointResolver;
     namespace = require(`@aws-sdk/client-${serviceName}`);
     model = require(path.join(root, "codegen", "sdk-codegen", "aws-models", serviceName + ".json"));
   } catch (e) {
@@ -58,7 +59,7 @@ function runTestCases(
   { testCases }: { testCases: EndpointTestCase[] },
   service: ServiceNamespace,
   defaultEndpointResolver: (endpointParams: EndpointParameters) => EndpointV2,
-  serviceId: string
+  serviceId: string,
 ) {
   for (const testCase of testCases) {
     runTestCase(testCase, service, defaultEndpointResolver, serviceId);
@@ -69,7 +70,7 @@ async function runTestCase(
   testCase: EndpointTestCase,
   service: ServiceNamespace,
   defaultEndpointResolver: (endpointParams: EndpointParameters) => EndpointV2,
-  serviceId: string
+  serviceId: string,
 ) {
   const { documentation, params = {}, expect: expectation, operationInputs } = testCase;
 

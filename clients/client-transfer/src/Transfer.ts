@@ -344,7 +344,7 @@ export interface Transfer {
   createAccess(
     args: CreateAccessCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAccessCommandOutput) => void
+    cb: (err: any, data?: CreateAccessCommandOutput) => void,
   ): void;
 
   /**
@@ -352,13 +352,13 @@ export interface Transfer {
    */
   createAgreement(
     args: CreateAgreementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAgreementCommandOutput>;
   createAgreement(args: CreateAgreementCommandInput, cb: (err: any, data?: CreateAgreementCommandOutput) => void): void;
   createAgreement(
     args: CreateAgreementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAgreementCommandOutput) => void
+    cb: (err: any, data?: CreateAgreementCommandOutput) => void,
   ): void;
 
   /**
@@ -366,13 +366,13 @@ export interface Transfer {
    */
   createConnector(
     args: CreateConnectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateConnectorCommandOutput>;
   createConnector(args: CreateConnectorCommandInput, cb: (err: any, data?: CreateConnectorCommandOutput) => void): void;
   createConnector(
     args: CreateConnectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateConnectorCommandOutput) => void
+    cb: (err: any, data?: CreateConnectorCommandOutput) => void,
   ): void;
 
   /**
@@ -383,7 +383,7 @@ export interface Transfer {
   createProfile(
     args: CreateProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateProfileCommandOutput) => void
+    cb: (err: any, data?: CreateProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -395,7 +395,7 @@ export interface Transfer {
   createServer(
     args: CreateServerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateServerCommandOutput) => void
+    cb: (err: any, data?: CreateServerCommandOutput) => void,
   ): void;
 
   /**
@@ -406,7 +406,7 @@ export interface Transfer {
   createUser(
     args: CreateUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateUserCommandOutput) => void
+    cb: (err: any, data?: CreateUserCommandOutput) => void,
   ): void;
 
   /**
@@ -414,13 +414,13 @@ export interface Transfer {
    */
   createWorkflow(
     args: CreateWorkflowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateWorkflowCommandOutput>;
   createWorkflow(args: CreateWorkflowCommandInput, cb: (err: any, data?: CreateWorkflowCommandOutput) => void): void;
   createWorkflow(
     args: CreateWorkflowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateWorkflowCommandOutput) => void
+    cb: (err: any, data?: CreateWorkflowCommandOutput) => void,
   ): void;
 
   /**
@@ -431,7 +431,7 @@ export interface Transfer {
   deleteAccess(
     args: DeleteAccessCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAccessCommandOutput) => void
+    cb: (err: any, data?: DeleteAccessCommandOutput) => void,
   ): void;
 
   /**
@@ -439,13 +439,13 @@ export interface Transfer {
    */
   deleteAgreement(
     args: DeleteAgreementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAgreementCommandOutput>;
   deleteAgreement(args: DeleteAgreementCommandInput, cb: (err: any, data?: DeleteAgreementCommandOutput) => void): void;
   deleteAgreement(
     args: DeleteAgreementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAgreementCommandOutput) => void
+    cb: (err: any, data?: DeleteAgreementCommandOutput) => void,
   ): void;
 
   /**
@@ -453,16 +453,16 @@ export interface Transfer {
    */
   deleteCertificate(
     args: DeleteCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCertificateCommandOutput>;
   deleteCertificate(
     args: DeleteCertificateCommandInput,
-    cb: (err: any, data?: DeleteCertificateCommandOutput) => void
+    cb: (err: any, data?: DeleteCertificateCommandOutput) => void,
   ): void;
   deleteCertificate(
     args: DeleteCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCertificateCommandOutput) => void
+    cb: (err: any, data?: DeleteCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -470,13 +470,13 @@ export interface Transfer {
    */
   deleteConnector(
     args: DeleteConnectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConnectorCommandOutput>;
   deleteConnector(args: DeleteConnectorCommandInput, cb: (err: any, data?: DeleteConnectorCommandOutput) => void): void;
   deleteConnector(
     args: DeleteConnectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConnectorCommandOutput) => void
+    cb: (err: any, data?: DeleteConnectorCommandOutput) => void,
   ): void;
 
   /**
@@ -487,7 +487,7 @@ export interface Transfer {
   deleteHostKey(
     args: DeleteHostKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteHostKeyCommandOutput) => void
+    cb: (err: any, data?: DeleteHostKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -498,7 +498,7 @@ export interface Transfer {
   deleteProfile(
     args: DeleteProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -509,7 +509,7 @@ export interface Transfer {
   deleteServer(
     args: DeleteServerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteServerCommandOutput) => void
+    cb: (err: any, data?: DeleteServerCommandOutput) => void,
   ): void;
 
   /**
@@ -517,16 +517,16 @@ export interface Transfer {
    */
   deleteSshPublicKey(
     args: DeleteSshPublicKeyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSshPublicKeyCommandOutput>;
   deleteSshPublicKey(
     args: DeleteSshPublicKeyCommandInput,
-    cb: (err: any, data?: DeleteSshPublicKeyCommandOutput) => void
+    cb: (err: any, data?: DeleteSshPublicKeyCommandOutput) => void,
   ): void;
   deleteSshPublicKey(
     args: DeleteSshPublicKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSshPublicKeyCommandOutput) => void
+    cb: (err: any, data?: DeleteSshPublicKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -537,7 +537,7 @@ export interface Transfer {
   deleteUser(
     args: DeleteUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteUserCommandOutput) => void
+    cb: (err: any, data?: DeleteUserCommandOutput) => void,
   ): void;
 
   /**
@@ -545,13 +545,13 @@ export interface Transfer {
    */
   deleteWorkflow(
     args: DeleteWorkflowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteWorkflowCommandOutput>;
   deleteWorkflow(args: DeleteWorkflowCommandInput, cb: (err: any, data?: DeleteWorkflowCommandOutput) => void): void;
   deleteWorkflow(
     args: DeleteWorkflowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteWorkflowCommandOutput) => void
+    cb: (err: any, data?: DeleteWorkflowCommandOutput) => void,
   ): void;
 
   /**
@@ -559,13 +559,13 @@ export interface Transfer {
    */
   describeAccess(
     args: DescribeAccessCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAccessCommandOutput>;
   describeAccess(args: DescribeAccessCommandInput, cb: (err: any, data?: DescribeAccessCommandOutput) => void): void;
   describeAccess(
     args: DescribeAccessCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAccessCommandOutput) => void
+    cb: (err: any, data?: DescribeAccessCommandOutput) => void,
   ): void;
 
   /**
@@ -573,16 +573,16 @@ export interface Transfer {
    */
   describeAgreement(
     args: DescribeAgreementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAgreementCommandOutput>;
   describeAgreement(
     args: DescribeAgreementCommandInput,
-    cb: (err: any, data?: DescribeAgreementCommandOutput) => void
+    cb: (err: any, data?: DescribeAgreementCommandOutput) => void,
   ): void;
   describeAgreement(
     args: DescribeAgreementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAgreementCommandOutput) => void
+    cb: (err: any, data?: DescribeAgreementCommandOutput) => void,
   ): void;
 
   /**
@@ -590,16 +590,16 @@ export interface Transfer {
    */
   describeCertificate(
     args: DescribeCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeCertificateCommandOutput>;
   describeCertificate(
     args: DescribeCertificateCommandInput,
-    cb: (err: any, data?: DescribeCertificateCommandOutput) => void
+    cb: (err: any, data?: DescribeCertificateCommandOutput) => void,
   ): void;
   describeCertificate(
     args: DescribeCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeCertificateCommandOutput) => void
+    cb: (err: any, data?: DescribeCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -607,16 +607,16 @@ export interface Transfer {
    */
   describeConnector(
     args: DescribeConnectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConnectorCommandOutput>;
   describeConnector(
     args: DescribeConnectorCommandInput,
-    cb: (err: any, data?: DescribeConnectorCommandOutput) => void
+    cb: (err: any, data?: DescribeConnectorCommandOutput) => void,
   ): void;
   describeConnector(
     args: DescribeConnectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConnectorCommandOutput) => void
+    cb: (err: any, data?: DescribeConnectorCommandOutput) => void,
   ): void;
 
   /**
@@ -624,16 +624,16 @@ export interface Transfer {
    */
   describeExecution(
     args: DescribeExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeExecutionCommandOutput>;
   describeExecution(
     args: DescribeExecutionCommandInput,
-    cb: (err: any, data?: DescribeExecutionCommandOutput) => void
+    cb: (err: any, data?: DescribeExecutionCommandOutput) => void,
   ): void;
   describeExecution(
     args: DescribeExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeExecutionCommandOutput) => void
+    cb: (err: any, data?: DescribeExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -641,13 +641,13 @@ export interface Transfer {
    */
   describeHostKey(
     args: DescribeHostKeyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeHostKeyCommandOutput>;
   describeHostKey(args: DescribeHostKeyCommandInput, cb: (err: any, data?: DescribeHostKeyCommandOutput) => void): void;
   describeHostKey(
     args: DescribeHostKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeHostKeyCommandOutput) => void
+    cb: (err: any, data?: DescribeHostKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -655,13 +655,13 @@ export interface Transfer {
    */
   describeProfile(
     args: DescribeProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeProfileCommandOutput>;
   describeProfile(args: DescribeProfileCommandInput, cb: (err: any, data?: DescribeProfileCommandOutput) => void): void;
   describeProfile(
     args: DescribeProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeProfileCommandOutput) => void
+    cb: (err: any, data?: DescribeProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -669,16 +669,16 @@ export interface Transfer {
    */
   describeSecurityPolicy(
     args: DescribeSecurityPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSecurityPolicyCommandOutput>;
   describeSecurityPolicy(
     args: DescribeSecurityPolicyCommandInput,
-    cb: (err: any, data?: DescribeSecurityPolicyCommandOutput) => void
+    cb: (err: any, data?: DescribeSecurityPolicyCommandOutput) => void,
   ): void;
   describeSecurityPolicy(
     args: DescribeSecurityPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSecurityPolicyCommandOutput) => void
+    cb: (err: any, data?: DescribeSecurityPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -686,13 +686,13 @@ export interface Transfer {
    */
   describeServer(
     args: DescribeServerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeServerCommandOutput>;
   describeServer(args: DescribeServerCommandInput, cb: (err: any, data?: DescribeServerCommandOutput) => void): void;
   describeServer(
     args: DescribeServerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeServerCommandOutput) => void
+    cb: (err: any, data?: DescribeServerCommandOutput) => void,
   ): void;
 
   /**
@@ -703,7 +703,7 @@ export interface Transfer {
   describeUser(
     args: DescribeUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeUserCommandOutput) => void
+    cb: (err: any, data?: DescribeUserCommandOutput) => void,
   ): void;
 
   /**
@@ -711,16 +711,16 @@ export interface Transfer {
    */
   describeWorkflow(
     args: DescribeWorkflowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeWorkflowCommandOutput>;
   describeWorkflow(
     args: DescribeWorkflowCommandInput,
-    cb: (err: any, data?: DescribeWorkflowCommandOutput) => void
+    cb: (err: any, data?: DescribeWorkflowCommandOutput) => void,
   ): void;
   describeWorkflow(
     args: DescribeWorkflowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeWorkflowCommandOutput) => void
+    cb: (err: any, data?: DescribeWorkflowCommandOutput) => void,
   ): void;
 
   /**
@@ -728,16 +728,16 @@ export interface Transfer {
    */
   importCertificate(
     args: ImportCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ImportCertificateCommandOutput>;
   importCertificate(
     args: ImportCertificateCommandInput,
-    cb: (err: any, data?: ImportCertificateCommandOutput) => void
+    cb: (err: any, data?: ImportCertificateCommandOutput) => void,
   ): void;
   importCertificate(
     args: ImportCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportCertificateCommandOutput) => void
+    cb: (err: any, data?: ImportCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -748,7 +748,7 @@ export interface Transfer {
   importHostKey(
     args: ImportHostKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportHostKeyCommandOutput) => void
+    cb: (err: any, data?: ImportHostKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -756,16 +756,16 @@ export interface Transfer {
    */
   importSshPublicKey(
     args: ImportSshPublicKeyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ImportSshPublicKeyCommandOutput>;
   importSshPublicKey(
     args: ImportSshPublicKeyCommandInput,
-    cb: (err: any, data?: ImportSshPublicKeyCommandOutput) => void
+    cb: (err: any, data?: ImportSshPublicKeyCommandOutput) => void,
   ): void;
   importSshPublicKey(
     args: ImportSshPublicKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportSshPublicKeyCommandOutput) => void
+    cb: (err: any, data?: ImportSshPublicKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -776,7 +776,7 @@ export interface Transfer {
   listAccesses(
     args: ListAccessesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAccessesCommandOutput) => void
+    cb: (err: any, data?: ListAccessesCommandOutput) => void,
   ): void;
 
   /**
@@ -784,13 +784,13 @@ export interface Transfer {
    */
   listAgreements(
     args: ListAgreementsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAgreementsCommandOutput>;
   listAgreements(args: ListAgreementsCommandInput, cb: (err: any, data?: ListAgreementsCommandOutput) => void): void;
   listAgreements(
     args: ListAgreementsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAgreementsCommandOutput) => void
+    cb: (err: any, data?: ListAgreementsCommandOutput) => void,
   ): void;
 
   /**
@@ -799,16 +799,16 @@ export interface Transfer {
   listCertificates(): Promise<ListCertificatesCommandOutput>;
   listCertificates(
     args: ListCertificatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCertificatesCommandOutput>;
   listCertificates(
     args: ListCertificatesCommandInput,
-    cb: (err: any, data?: ListCertificatesCommandOutput) => void
+    cb: (err: any, data?: ListCertificatesCommandOutput) => void,
   ): void;
   listCertificates(
     args: ListCertificatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCertificatesCommandOutput) => void
+    cb: (err: any, data?: ListCertificatesCommandOutput) => void,
   ): void;
 
   /**
@@ -817,13 +817,13 @@ export interface Transfer {
   listConnectors(): Promise<ListConnectorsCommandOutput>;
   listConnectors(
     args: ListConnectorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListConnectorsCommandOutput>;
   listConnectors(args: ListConnectorsCommandInput, cb: (err: any, data?: ListConnectorsCommandOutput) => void): void;
   listConnectors(
     args: ListConnectorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListConnectorsCommandOutput) => void
+    cb: (err: any, data?: ListConnectorsCommandOutput) => void,
   ): void;
 
   /**
@@ -831,13 +831,13 @@ export interface Transfer {
    */
   listExecutions(
     args: ListExecutionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListExecutionsCommandOutput>;
   listExecutions(args: ListExecutionsCommandInput, cb: (err: any, data?: ListExecutionsCommandOutput) => void): void;
   listExecutions(
     args: ListExecutionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListExecutionsCommandOutput) => void,
   ): void;
 
   /**
@@ -848,7 +848,7 @@ export interface Transfer {
   listHostKeys(
     args: ListHostKeysCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListHostKeysCommandOutput) => void
+    cb: (err: any, data?: ListHostKeysCommandOutput) => void,
   ): void;
 
   /**
@@ -860,7 +860,7 @@ export interface Transfer {
   listProfiles(
     args: ListProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProfilesCommandOutput) => void
+    cb: (err: any, data?: ListProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -869,16 +869,16 @@ export interface Transfer {
   listSecurityPolicies(): Promise<ListSecurityPoliciesCommandOutput>;
   listSecurityPolicies(
     args: ListSecurityPoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSecurityPoliciesCommandOutput>;
   listSecurityPolicies(
     args: ListSecurityPoliciesCommandInput,
-    cb: (err: any, data?: ListSecurityPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListSecurityPoliciesCommandOutput) => void,
   ): void;
   listSecurityPolicies(
     args: ListSecurityPoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSecurityPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListSecurityPoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -890,7 +890,7 @@ export interface Transfer {
   listServers(
     args: ListServersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServersCommandOutput) => void
+    cb: (err: any, data?: ListServersCommandOutput) => void,
   ): void;
 
   /**
@@ -898,16 +898,16 @@ export interface Transfer {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -918,7 +918,7 @@ export interface Transfer {
   listUsers(
     args: ListUsersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListUsersCommandOutput) => void
+    cb: (err: any, data?: ListUsersCommandOutput) => void,
   ): void;
 
   /**
@@ -930,7 +930,7 @@ export interface Transfer {
   listWorkflows(
     args: ListWorkflowsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWorkflowsCommandOutput) => void
+    cb: (err: any, data?: ListWorkflowsCommandOutput) => void,
   ): void;
 
   /**
@@ -938,16 +938,16 @@ export interface Transfer {
    */
   sendWorkflowStepState(
     args: SendWorkflowStepStateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SendWorkflowStepStateCommandOutput>;
   sendWorkflowStepState(
     args: SendWorkflowStepStateCommandInput,
-    cb: (err: any, data?: SendWorkflowStepStateCommandOutput) => void
+    cb: (err: any, data?: SendWorkflowStepStateCommandOutput) => void,
   ): void;
   sendWorkflowStepState(
     args: SendWorkflowStepStateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendWorkflowStepStateCommandOutput) => void
+    cb: (err: any, data?: SendWorkflowStepStateCommandOutput) => void,
   ): void;
 
   /**
@@ -955,16 +955,16 @@ export interface Transfer {
    */
   startDirectoryListing(
     args: StartDirectoryListingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartDirectoryListingCommandOutput>;
   startDirectoryListing(
     args: StartDirectoryListingCommandInput,
-    cb: (err: any, data?: StartDirectoryListingCommandOutput) => void
+    cb: (err: any, data?: StartDirectoryListingCommandOutput) => void,
   ): void;
   startDirectoryListing(
     args: StartDirectoryListingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartDirectoryListingCommandOutput) => void
+    cb: (err: any, data?: StartDirectoryListingCommandOutput) => void,
   ): void;
 
   /**
@@ -972,16 +972,16 @@ export interface Transfer {
    */
   startFileTransfer(
     args: StartFileTransferCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartFileTransferCommandOutput>;
   startFileTransfer(
     args: StartFileTransferCommandInput,
-    cb: (err: any, data?: StartFileTransferCommandOutput) => void
+    cb: (err: any, data?: StartFileTransferCommandOutput) => void,
   ): void;
   startFileTransfer(
     args: StartFileTransferCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartFileTransferCommandOutput) => void
+    cb: (err: any, data?: StartFileTransferCommandOutput) => void,
   ): void;
 
   /**
@@ -992,7 +992,7 @@ export interface Transfer {
   startServer(
     args: StartServerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartServerCommandOutput) => void
+    cb: (err: any, data?: StartServerCommandOutput) => void,
   ): void;
 
   /**
@@ -1003,7 +1003,7 @@ export interface Transfer {
   stopServer(
     args: StopServerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopServerCommandOutput) => void
+    cb: (err: any, data?: StopServerCommandOutput) => void,
   ): void;
 
   /**
@@ -1014,7 +1014,7 @@ export interface Transfer {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1022,13 +1022,13 @@ export interface Transfer {
    */
   testConnection(
     args: TestConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<TestConnectionCommandOutput>;
   testConnection(args: TestConnectionCommandInput, cb: (err: any, data?: TestConnectionCommandOutput) => void): void;
   testConnection(
     args: TestConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TestConnectionCommandOutput) => void
+    cb: (err: any, data?: TestConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -1036,16 +1036,16 @@ export interface Transfer {
    */
   testIdentityProvider(
     args: TestIdentityProviderCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<TestIdentityProviderCommandOutput>;
   testIdentityProvider(
     args: TestIdentityProviderCommandInput,
-    cb: (err: any, data?: TestIdentityProviderCommandOutput) => void
+    cb: (err: any, data?: TestIdentityProviderCommandOutput) => void,
   ): void;
   testIdentityProvider(
     args: TestIdentityProviderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TestIdentityProviderCommandOutput) => void
+    cb: (err: any, data?: TestIdentityProviderCommandOutput) => void,
   ): void;
 
   /**
@@ -1056,7 +1056,7 @@ export interface Transfer {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1067,7 +1067,7 @@ export interface Transfer {
   updateAccess(
     args: UpdateAccessCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAccessCommandOutput) => void
+    cb: (err: any, data?: UpdateAccessCommandOutput) => void,
   ): void;
 
   /**
@@ -1075,13 +1075,13 @@ export interface Transfer {
    */
   updateAgreement(
     args: UpdateAgreementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAgreementCommandOutput>;
   updateAgreement(args: UpdateAgreementCommandInput, cb: (err: any, data?: UpdateAgreementCommandOutput) => void): void;
   updateAgreement(
     args: UpdateAgreementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAgreementCommandOutput) => void
+    cb: (err: any, data?: UpdateAgreementCommandOutput) => void,
   ): void;
 
   /**
@@ -1089,16 +1089,16 @@ export interface Transfer {
    */
   updateCertificate(
     args: UpdateCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateCertificateCommandOutput>;
   updateCertificate(
     args: UpdateCertificateCommandInput,
-    cb: (err: any, data?: UpdateCertificateCommandOutput) => void
+    cb: (err: any, data?: UpdateCertificateCommandOutput) => void,
   ): void;
   updateCertificate(
     args: UpdateCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateCertificateCommandOutput) => void
+    cb: (err: any, data?: UpdateCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -1106,13 +1106,13 @@ export interface Transfer {
    */
   updateConnector(
     args: UpdateConnectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateConnectorCommandOutput>;
   updateConnector(args: UpdateConnectorCommandInput, cb: (err: any, data?: UpdateConnectorCommandOutput) => void): void;
   updateConnector(
     args: UpdateConnectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateConnectorCommandOutput) => void
+    cb: (err: any, data?: UpdateConnectorCommandOutput) => void,
   ): void;
 
   /**
@@ -1123,7 +1123,7 @@ export interface Transfer {
   updateHostKey(
     args: UpdateHostKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateHostKeyCommandOutput) => void
+    cb: (err: any, data?: UpdateHostKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -1134,7 +1134,7 @@ export interface Transfer {
   updateProfile(
     args: UpdateProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -1145,7 +1145,7 @@ export interface Transfer {
   updateServer(
     args: UpdateServerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateServerCommandOutput) => void
+    cb: (err: any, data?: UpdateServerCommandOutput) => void,
   ): void;
 
   /**
@@ -1156,7 +1156,7 @@ export interface Transfer {
   updateUser(
     args: UpdateUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateUserCommandOutput) => void
+    cb: (err: any, data?: UpdateUserCommandOutput) => void,
   ): void;
 }
 

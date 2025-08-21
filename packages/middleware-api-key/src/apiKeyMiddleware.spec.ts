@@ -12,7 +12,7 @@ describe("getApiKeyPlugin", () => {
       {
         in: HttpAuthLocation.QUERY,
         name: "key",
-      }
+      },
     );
     const mockApplied = jest.fn();
     const mockOther = jest.fn();
@@ -53,7 +53,7 @@ describe(apiKeyMiddleware.name, () => {
         {
           in: HttpAuthLocation.QUERY,
           name: "key",
-        }
+        },
       );
 
       const handler = middleware(mockNextHandler, {});
@@ -74,7 +74,7 @@ describe(apiKeyMiddleware.name, () => {
           in: HttpAuthLocation.HEADER,
           name: "auth",
           scheme: "scheme",
-        }
+        },
       );
 
       const handler = middleware(mockNextHandler, {});
@@ -93,7 +93,7 @@ describe(apiKeyMiddleware.name, () => {
         {
           in: HttpAuthLocation.HEADER,
           name: "Authorization",
-        }
+        },
       );
 
       const handler = middleware(mockNextHandler, {});
@@ -114,7 +114,7 @@ describe(apiKeyMiddleware.name, () => {
         {
           in: HttpAuthLocation.HEADER,
           name: "Authorization",
-        }
+        },
       );
 
       const handler = middleware(mockNextHandler, {});
@@ -137,7 +137,7 @@ describe(apiKeyMiddleware.name, () => {
           in: HttpAuthLocation.HEADER,
           name: "Authorization",
           scheme: "ExampleScheme",
-        }
+        },
       );
       const handler = middleware(mockNextHandler, {});
 

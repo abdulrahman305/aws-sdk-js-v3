@@ -70,7 +70,7 @@ describe("getSignedUrl", () => {
         dateLessThan,
         privateKey,
         passphrase,
-      })
+      }),
     );
     if (!result.query) {
       throw new Error("query parameter is undefined");
@@ -86,7 +86,7 @@ describe("getSignedUrl", () => {
         dateLessThan,
         privateKey,
         passphrase,
-      })
+      }),
     );
     if (!result.query) {
       throw new Error("query parameter is undefined");
@@ -243,13 +243,13 @@ describe("getSignedUrl", () => {
       getSignedUrl({
         ...baseArgs,
         ipAddress: "10.0.0.0/32",
-      })
+      }),
     ).toBeTruthy();
     expect(
       getSignedUrl({
         ...baseArgs,
         ipAddress: "10.0.0.0",
-      })
+      }),
     ).toBeTruthy();
   });
   it("should throw an error when the ip address is invalid", () => {
@@ -264,37 +264,37 @@ describe("getSignedUrl", () => {
       getSignedUrl({
         ...baseArgs,
         ipAddress: "10.0.0.0/",
-      })
+      }),
     ).toThrow('IP address "10.0.0.0/" is invalid due to missing ip or mask part of CIDR.');
     expect(() =>
       getSignedUrl({
         ...baseArgs,
         ipAddress: "/32",
-      })
+      }),
     ).toThrow('IP address "/32" is invalid due to missing ip or mask part of CIDR.');
     expect(() =>
       getSignedUrl({
         ...baseArgs,
         ipAddress: "10.0.0.0/-1",
-      })
+      }),
     ).toThrow('IP address "10.0.0.0/-1" is invalid due to invalid mask.');
     expect(() =>
       getSignedUrl({
         ...baseArgs,
         ipAddress: "10.0.0.0/33",
-      })
+      }),
     ).toThrow('IP address "10.0.0.0/33" is invalid due to invalid mask.');
     expect(() =>
       getSignedUrl({
         ...baseArgs,
         ipAddress: "10.0.0.-1",
-      })
+      }),
     ).toThrow('IP address "10.0.0.-1" is invalid due to invalid IP octets.');
     expect(() =>
       getSignedUrl({
         ...baseArgs,
         ipAddress: "10.0.0.256",
-      })
+      }),
     ).toThrow('IP address "10.0.0.256" is invalid due to invalid IP octets.');
   });
   it("should sign a RTMP URL", () => {
@@ -320,7 +320,7 @@ describe("getSignedUrl", () => {
     });
     const signature = createSignature(policyStr);
     expect(result).toBe(
-      `private-content/private.jpeg?Expires=${epochDateLessThan}&Key-Pair-Id=${keyPairId}&Signature=${signature}`
+      `private-content/private.jpeg?Expires=${epochDateLessThan}&Key-Pair-Id=${keyPairId}&Signature=${signature}`,
     );
     expect(verifySignature(denormalizeBase64(signature), policyStr)).toBeTruthy();
   });
@@ -366,13 +366,13 @@ describe("getSignedCookies", () => {
       getSignedCookies({
         ...baseArgs,
         ipAddress: "10.0.0.0/32",
-      })
+      }),
     ).toBeTruthy();
     expect(
       getSignedCookies({
         ...baseArgs,
         ipAddress: "10.0.0.0",
-      })
+      }),
     ).toBeTruthy();
   });
   it("should throw an error when the ip address is invalid", () => {
@@ -387,37 +387,37 @@ describe("getSignedCookies", () => {
       getSignedCookies({
         ...baseArgs,
         ipAddress: "10.0.0.0/",
-      })
+      }),
     ).toThrow('IP address "10.0.0.0/" is invalid due to missing ip or mask part of CIDR.');
     expect(() =>
       getSignedCookies({
         ...baseArgs,
         ipAddress: "/32",
-      })
+      }),
     ).toThrow('IP address "/32" is invalid due to missing ip or mask part of CIDR.');
     expect(() =>
       getSignedCookies({
         ...baseArgs,
         ipAddress: "10.0.0.0/-1",
-      })
+      }),
     ).toThrow('IP address "10.0.0.0/-1" is invalid due to invalid mask.');
     expect(() =>
       getSignedCookies({
         ...baseArgs,
         ipAddress: "10.0.0.0/33",
-      })
+      }),
     ).toThrow('IP address "10.0.0.0/33" is invalid due to invalid mask.');
     expect(() =>
       getSignedCookies({
         ...baseArgs,
         ipAddress: "10.0.0.-1",
-      })
+      }),
     ).toThrow('IP address "10.0.0.-1" is invalid due to invalid IP octets.');
     expect(() =>
       getSignedCookies({
         ...baseArgs,
         ipAddress: "10.0.0.256",
-      })
+      }),
     ).toThrow('IP address "10.0.0.256" is invalid due to invalid IP octets.');
   });
   it("should be able sign cookies that contain a URL with wildcards", () => {

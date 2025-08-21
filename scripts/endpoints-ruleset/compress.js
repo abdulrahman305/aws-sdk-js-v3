@@ -75,7 +75,7 @@ ${selectedAlgorithm.toCodeString("export const ruleSet: RuleSetObject = $;")}
       fs.writeFileSync(
         path.join(tempFolder, "s3.js"),
         new PatternDetection(data).toCodeString("module.exports = $;"),
-        "utf-8"
+        "utf-8",
       );
       fs.writeFileSync(path.join(tempFolder, "s3.json"), JSON.stringify(data, null, 2), "utf-8");
     }

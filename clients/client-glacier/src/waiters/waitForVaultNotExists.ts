@@ -24,7 +24,7 @@ const checkState = async (client: GlacierClient, input: DescribeVaultCommandInpu
  */
 export const waitForVaultNotExists = async (
   params: WaiterConfiguration<GlacierClient>,
-  input: DescribeVaultCommandInput
+  input: DescribeVaultCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -36,7 +36,7 @@ export const waitForVaultNotExists = async (
  */
 export const waitUntilVaultNotExists = async (
   params: WaiterConfiguration<GlacierClient>,
-  input: DescribeVaultCommandInput
+  input: DescribeVaultCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

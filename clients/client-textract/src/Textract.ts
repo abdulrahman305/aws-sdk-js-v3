@@ -151,13 +151,13 @@ export interface Textract {
    */
   analyzeDocument(
     args: AnalyzeDocumentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AnalyzeDocumentCommandOutput>;
   analyzeDocument(args: AnalyzeDocumentCommandInput, cb: (err: any, data?: AnalyzeDocumentCommandOutput) => void): void;
   analyzeDocument(
     args: AnalyzeDocumentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AnalyzeDocumentCommandOutput) => void
+    cb: (err: any, data?: AnalyzeDocumentCommandOutput) => void,
   ): void;
 
   /**
@@ -165,13 +165,13 @@ export interface Textract {
    */
   analyzeExpense(
     args: AnalyzeExpenseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AnalyzeExpenseCommandOutput>;
   analyzeExpense(args: AnalyzeExpenseCommandInput, cb: (err: any, data?: AnalyzeExpenseCommandOutput) => void): void;
   analyzeExpense(
     args: AnalyzeExpenseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AnalyzeExpenseCommandOutput) => void
+    cb: (err: any, data?: AnalyzeExpenseCommandOutput) => void,
   ): void;
 
   /**
@@ -182,7 +182,7 @@ export interface Textract {
   analyzeID(
     args: AnalyzeIDCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AnalyzeIDCommandOutput) => void
+    cb: (err: any, data?: AnalyzeIDCommandOutput) => void,
   ): void;
 
   /**
@@ -193,7 +193,7 @@ export interface Textract {
   createAdapter(
     args: CreateAdapterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAdapterCommandOutput) => void
+    cb: (err: any, data?: CreateAdapterCommandOutput) => void,
   ): void;
 
   /**
@@ -201,16 +201,16 @@ export interface Textract {
    */
   createAdapterVersion(
     args: CreateAdapterVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAdapterVersionCommandOutput>;
   createAdapterVersion(
     args: CreateAdapterVersionCommandInput,
-    cb: (err: any, data?: CreateAdapterVersionCommandOutput) => void
+    cb: (err: any, data?: CreateAdapterVersionCommandOutput) => void,
   ): void;
   createAdapterVersion(
     args: CreateAdapterVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAdapterVersionCommandOutput) => void
+    cb: (err: any, data?: CreateAdapterVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -221,7 +221,7 @@ export interface Textract {
   deleteAdapter(
     args: DeleteAdapterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAdapterCommandOutput) => void
+    cb: (err: any, data?: DeleteAdapterCommandOutput) => void,
   ): void;
 
   /**
@@ -229,16 +229,16 @@ export interface Textract {
    */
   deleteAdapterVersion(
     args: DeleteAdapterVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAdapterVersionCommandOutput>;
   deleteAdapterVersion(
     args: DeleteAdapterVersionCommandInput,
-    cb: (err: any, data?: DeleteAdapterVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteAdapterVersionCommandOutput) => void,
   ): void;
   deleteAdapterVersion(
     args: DeleteAdapterVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAdapterVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteAdapterVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -246,16 +246,16 @@ export interface Textract {
    */
   detectDocumentText(
     args: DetectDocumentTextCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DetectDocumentTextCommandOutput>;
   detectDocumentText(
     args: DetectDocumentTextCommandInput,
-    cb: (err: any, data?: DetectDocumentTextCommandOutput) => void
+    cb: (err: any, data?: DetectDocumentTextCommandOutput) => void,
   ): void;
   detectDocumentText(
     args: DetectDocumentTextCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DetectDocumentTextCommandOutput) => void
+    cb: (err: any, data?: DetectDocumentTextCommandOutput) => void,
   ): void;
 
   /**
@@ -266,7 +266,7 @@ export interface Textract {
   getAdapter(
     args: GetAdapterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAdapterCommandOutput) => void
+    cb: (err: any, data?: GetAdapterCommandOutput) => void,
   ): void;
 
   /**
@@ -274,16 +274,16 @@ export interface Textract {
    */
   getAdapterVersion(
     args: GetAdapterVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAdapterVersionCommandOutput>;
   getAdapterVersion(
     args: GetAdapterVersionCommandInput,
-    cb: (err: any, data?: GetAdapterVersionCommandOutput) => void
+    cb: (err: any, data?: GetAdapterVersionCommandOutput) => void,
   ): void;
   getAdapterVersion(
     args: GetAdapterVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAdapterVersionCommandOutput) => void
+    cb: (err: any, data?: GetAdapterVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -291,16 +291,16 @@ export interface Textract {
    */
   getDocumentAnalysis(
     args: GetDocumentAnalysisCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDocumentAnalysisCommandOutput>;
   getDocumentAnalysis(
     args: GetDocumentAnalysisCommandInput,
-    cb: (err: any, data?: GetDocumentAnalysisCommandOutput) => void
+    cb: (err: any, data?: GetDocumentAnalysisCommandOutput) => void,
   ): void;
   getDocumentAnalysis(
     args: GetDocumentAnalysisCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDocumentAnalysisCommandOutput) => void
+    cb: (err: any, data?: GetDocumentAnalysisCommandOutput) => void,
   ): void;
 
   /**
@@ -308,16 +308,16 @@ export interface Textract {
    */
   getDocumentTextDetection(
     args: GetDocumentTextDetectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDocumentTextDetectionCommandOutput>;
   getDocumentTextDetection(
     args: GetDocumentTextDetectionCommandInput,
-    cb: (err: any, data?: GetDocumentTextDetectionCommandOutput) => void
+    cb: (err: any, data?: GetDocumentTextDetectionCommandOutput) => void,
   ): void;
   getDocumentTextDetection(
     args: GetDocumentTextDetectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDocumentTextDetectionCommandOutput) => void
+    cb: (err: any, data?: GetDocumentTextDetectionCommandOutput) => void,
   ): void;
 
   /**
@@ -325,16 +325,16 @@ export interface Textract {
    */
   getExpenseAnalysis(
     args: GetExpenseAnalysisCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetExpenseAnalysisCommandOutput>;
   getExpenseAnalysis(
     args: GetExpenseAnalysisCommandInput,
-    cb: (err: any, data?: GetExpenseAnalysisCommandOutput) => void
+    cb: (err: any, data?: GetExpenseAnalysisCommandOutput) => void,
   ): void;
   getExpenseAnalysis(
     args: GetExpenseAnalysisCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetExpenseAnalysisCommandOutput) => void
+    cb: (err: any, data?: GetExpenseAnalysisCommandOutput) => void,
   ): void;
 
   /**
@@ -342,16 +342,16 @@ export interface Textract {
    */
   getLendingAnalysis(
     args: GetLendingAnalysisCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetLendingAnalysisCommandOutput>;
   getLendingAnalysis(
     args: GetLendingAnalysisCommandInput,
-    cb: (err: any, data?: GetLendingAnalysisCommandOutput) => void
+    cb: (err: any, data?: GetLendingAnalysisCommandOutput) => void,
   ): void;
   getLendingAnalysis(
     args: GetLendingAnalysisCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLendingAnalysisCommandOutput) => void
+    cb: (err: any, data?: GetLendingAnalysisCommandOutput) => void,
   ): void;
 
   /**
@@ -359,16 +359,16 @@ export interface Textract {
    */
   getLendingAnalysisSummary(
     args: GetLendingAnalysisSummaryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetLendingAnalysisSummaryCommandOutput>;
   getLendingAnalysisSummary(
     args: GetLendingAnalysisSummaryCommandInput,
-    cb: (err: any, data?: GetLendingAnalysisSummaryCommandOutput) => void
+    cb: (err: any, data?: GetLendingAnalysisSummaryCommandOutput) => void,
   ): void;
   getLendingAnalysisSummary(
     args: GetLendingAnalysisSummaryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLendingAnalysisSummaryCommandOutput) => void
+    cb: (err: any, data?: GetLendingAnalysisSummaryCommandOutput) => void,
   ): void;
 
   /**
@@ -380,7 +380,7 @@ export interface Textract {
   listAdapters(
     args: ListAdaptersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAdaptersCommandOutput) => void
+    cb: (err: any, data?: ListAdaptersCommandOutput) => void,
   ): void;
 
   /**
@@ -389,16 +389,16 @@ export interface Textract {
   listAdapterVersions(): Promise<ListAdapterVersionsCommandOutput>;
   listAdapterVersions(
     args: ListAdapterVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAdapterVersionsCommandOutput>;
   listAdapterVersions(
     args: ListAdapterVersionsCommandInput,
-    cb: (err: any, data?: ListAdapterVersionsCommandOutput) => void
+    cb: (err: any, data?: ListAdapterVersionsCommandOutput) => void,
   ): void;
   listAdapterVersions(
     args: ListAdapterVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAdapterVersionsCommandOutput) => void
+    cb: (err: any, data?: ListAdapterVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -406,16 +406,16 @@ export interface Textract {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -423,16 +423,16 @@ export interface Textract {
    */
   startDocumentAnalysis(
     args: StartDocumentAnalysisCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartDocumentAnalysisCommandOutput>;
   startDocumentAnalysis(
     args: StartDocumentAnalysisCommandInput,
-    cb: (err: any, data?: StartDocumentAnalysisCommandOutput) => void
+    cb: (err: any, data?: StartDocumentAnalysisCommandOutput) => void,
   ): void;
   startDocumentAnalysis(
     args: StartDocumentAnalysisCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartDocumentAnalysisCommandOutput) => void
+    cb: (err: any, data?: StartDocumentAnalysisCommandOutput) => void,
   ): void;
 
   /**
@@ -440,16 +440,16 @@ export interface Textract {
    */
   startDocumentTextDetection(
     args: StartDocumentTextDetectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartDocumentTextDetectionCommandOutput>;
   startDocumentTextDetection(
     args: StartDocumentTextDetectionCommandInput,
-    cb: (err: any, data?: StartDocumentTextDetectionCommandOutput) => void
+    cb: (err: any, data?: StartDocumentTextDetectionCommandOutput) => void,
   ): void;
   startDocumentTextDetection(
     args: StartDocumentTextDetectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartDocumentTextDetectionCommandOutput) => void
+    cb: (err: any, data?: StartDocumentTextDetectionCommandOutput) => void,
   ): void;
 
   /**
@@ -457,16 +457,16 @@ export interface Textract {
    */
   startExpenseAnalysis(
     args: StartExpenseAnalysisCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartExpenseAnalysisCommandOutput>;
   startExpenseAnalysis(
     args: StartExpenseAnalysisCommandInput,
-    cb: (err: any, data?: StartExpenseAnalysisCommandOutput) => void
+    cb: (err: any, data?: StartExpenseAnalysisCommandOutput) => void,
   ): void;
   startExpenseAnalysis(
     args: StartExpenseAnalysisCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartExpenseAnalysisCommandOutput) => void
+    cb: (err: any, data?: StartExpenseAnalysisCommandOutput) => void,
   ): void;
 
   /**
@@ -474,16 +474,16 @@ export interface Textract {
    */
   startLendingAnalysis(
     args: StartLendingAnalysisCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartLendingAnalysisCommandOutput>;
   startLendingAnalysis(
     args: StartLendingAnalysisCommandInput,
-    cb: (err: any, data?: StartLendingAnalysisCommandOutput) => void
+    cb: (err: any, data?: StartLendingAnalysisCommandOutput) => void,
   ): void;
   startLendingAnalysis(
     args: StartLendingAnalysisCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartLendingAnalysisCommandOutput) => void
+    cb: (err: any, data?: StartLendingAnalysisCommandOutput) => void,
   ): void;
 
   /**
@@ -494,7 +494,7 @@ export interface Textract {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -505,7 +505,7 @@ export interface Textract {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -516,7 +516,7 @@ export interface Textract {
   updateAdapter(
     args: UpdateAdapterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAdapterCommandOutput) => void
+    cb: (err: any, data?: UpdateAdapterCommandOutput) => void,
   ): void;
 }
 

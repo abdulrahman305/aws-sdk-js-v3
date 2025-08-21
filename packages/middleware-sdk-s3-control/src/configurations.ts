@@ -49,7 +49,7 @@ export interface S3ControlResolvedConfig {
 }
 
 export function resolveS3ControlConfig<T>(
-  input: T & PreviouslyResolved & S3ControlInputConfig
+  input: T & PreviouslyResolved & S3ControlInputConfig,
 ): T & S3ControlResolvedConfig {
   const { useArnRegion = false } = input;
   return {

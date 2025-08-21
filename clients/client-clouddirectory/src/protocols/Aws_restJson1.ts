@@ -284,7 +284,7 @@ import {
  */
 export const se_AddFacetToObjectCommand = async (
   input: AddFacetToObjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -298,7 +298,7 @@ export const se_AddFacetToObjectCommand = async (
       ObjectAttributeList: (_) => se_AttributeKeyAndValueList(_, context),
       ObjectReference: (_) => _json(_),
       SchemaFacet: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -309,7 +309,7 @@ export const se_AddFacetToObjectCommand = async (
  */
 export const se_ApplySchemaCommand = async (
   input: ApplySchemaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -321,7 +321,7 @@ export const se_ApplySchemaCommand = async (
   body = JSON.stringify(
     take(input, {
       PublishedSchemaArn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -332,7 +332,7 @@ export const se_ApplySchemaCommand = async (
  */
 export const se_AttachObjectCommand = async (
   input: AttachObjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -346,7 +346,7 @@ export const se_AttachObjectCommand = async (
       ChildReference: (_) => _json(_),
       LinkName: [],
       ParentReference: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -357,7 +357,7 @@ export const se_AttachObjectCommand = async (
  */
 export const se_AttachPolicyCommand = async (
   input: AttachPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -370,7 +370,7 @@ export const se_AttachPolicyCommand = async (
     take(input, {
       ObjectReference: (_) => _json(_),
       PolicyReference: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -381,7 +381,7 @@ export const se_AttachPolicyCommand = async (
  */
 export const se_AttachToIndexCommand = async (
   input: AttachToIndexCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -394,7 +394,7 @@ export const se_AttachToIndexCommand = async (
     take(input, {
       IndexReference: (_) => _json(_),
       TargetReference: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -405,7 +405,7 @@ export const se_AttachToIndexCommand = async (
  */
 export const se_AttachTypedLinkCommand = async (
   input: AttachTypedLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -420,7 +420,7 @@ export const se_AttachTypedLinkCommand = async (
       SourceObjectReference: (_) => _json(_),
       TargetObjectReference: (_) => _json(_),
       TypedLinkFacet: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -431,7 +431,7 @@ export const se_AttachTypedLinkCommand = async (
  */
 export const se_BatchReadCommand = async (
   input: BatchReadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -444,7 +444,7 @@ export const se_BatchReadCommand = async (
   body = JSON.stringify(
     take(input, {
       Operations: (_) => se_BatchReadOperationList(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -455,7 +455,7 @@ export const se_BatchReadCommand = async (
  */
 export const se_BatchWriteCommand = async (
   input: BatchWriteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -467,7 +467,7 @@ export const se_BatchWriteCommand = async (
   body = JSON.stringify(
     take(input, {
       Operations: (_) => se_BatchWriteOperationList(_, context),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -478,7 +478,7 @@ export const se_BatchWriteCommand = async (
  */
 export const se_CreateDirectoryCommand = async (
   input: CreateDirectoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -490,7 +490,7 @@ export const se_CreateDirectoryCommand = async (
   body = JSON.stringify(
     take(input, {
       Name: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -501,7 +501,7 @@ export const se_CreateDirectoryCommand = async (
  */
 export const se_CreateFacetCommand = async (
   input: CreateFacetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -516,7 +516,7 @@ export const se_CreateFacetCommand = async (
       FacetStyle: [],
       Name: [],
       ObjectType: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -527,7 +527,7 @@ export const se_CreateFacetCommand = async (
  */
 export const se_CreateIndexCommand = async (
   input: CreateIndexCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -542,7 +542,7 @@ export const se_CreateIndexCommand = async (
       LinkName: [],
       OrderedIndexedAttributeList: (_) => _json(_),
       ParentReference: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -553,7 +553,7 @@ export const se_CreateIndexCommand = async (
  */
 export const se_CreateObjectCommand = async (
   input: CreateObjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -568,7 +568,7 @@ export const se_CreateObjectCommand = async (
       ObjectAttributeList: (_) => se_AttributeKeyAndValueList(_, context),
       ParentReference: (_) => _json(_),
       SchemaFacets: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -579,7 +579,7 @@ export const se_CreateObjectCommand = async (
  */
 export const se_CreateSchemaCommand = async (
   input: CreateSchemaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -590,7 +590,7 @@ export const se_CreateSchemaCommand = async (
   body = JSON.stringify(
     take(input, {
       Name: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -601,7 +601,7 @@ export const se_CreateSchemaCommand = async (
  */
 export const se_CreateTypedLinkFacetCommand = async (
   input: CreateTypedLinkFacetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -613,7 +613,7 @@ export const se_CreateTypedLinkFacetCommand = async (
   body = JSON.stringify(
     take(input, {
       Facet: (_) => se_TypedLinkFacet(_, context),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -624,7 +624,7 @@ export const se_CreateTypedLinkFacetCommand = async (
  */
 export const se_DeleteDirectoryCommand = async (
   input: DeleteDirectoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -641,7 +641,7 @@ export const se_DeleteDirectoryCommand = async (
  */
 export const se_DeleteFacetCommand = async (
   input: DeleteFacetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -653,7 +653,7 @@ export const se_DeleteFacetCommand = async (
   body = JSON.stringify(
     take(input, {
       Name: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -664,7 +664,7 @@ export const se_DeleteFacetCommand = async (
  */
 export const se_DeleteObjectCommand = async (
   input: DeleteObjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -676,7 +676,7 @@ export const se_DeleteObjectCommand = async (
   body = JSON.stringify(
     take(input, {
       ObjectReference: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -687,7 +687,7 @@ export const se_DeleteObjectCommand = async (
  */
 export const se_DeleteSchemaCommand = async (
   input: DeleteSchemaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -704,7 +704,7 @@ export const se_DeleteSchemaCommand = async (
  */
 export const se_DeleteTypedLinkFacetCommand = async (
   input: DeleteTypedLinkFacetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -716,7 +716,7 @@ export const se_DeleteTypedLinkFacetCommand = async (
   body = JSON.stringify(
     take(input, {
       Name: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -727,7 +727,7 @@ export const se_DeleteTypedLinkFacetCommand = async (
  */
 export const se_DetachFromIndexCommand = async (
   input: DetachFromIndexCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -740,7 +740,7 @@ export const se_DetachFromIndexCommand = async (
     take(input, {
       IndexReference: (_) => _json(_),
       TargetReference: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -751,7 +751,7 @@ export const se_DetachFromIndexCommand = async (
  */
 export const se_DetachObjectCommand = async (
   input: DetachObjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -764,7 +764,7 @@ export const se_DetachObjectCommand = async (
     take(input, {
       LinkName: [],
       ParentReference: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -775,7 +775,7 @@ export const se_DetachObjectCommand = async (
  */
 export const se_DetachPolicyCommand = async (
   input: DetachPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -788,7 +788,7 @@ export const se_DetachPolicyCommand = async (
     take(input, {
       ObjectReference: (_) => _json(_),
       PolicyReference: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -799,7 +799,7 @@ export const se_DetachPolicyCommand = async (
  */
 export const se_DetachTypedLinkCommand = async (
   input: DetachTypedLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -811,7 +811,7 @@ export const se_DetachTypedLinkCommand = async (
   body = JSON.stringify(
     take(input, {
       TypedLinkSpecifier: (_) => se_TypedLinkSpecifier(_, context),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -822,7 +822,7 @@ export const se_DetachTypedLinkCommand = async (
  */
 export const se_DisableDirectoryCommand = async (
   input: DisableDirectoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -839,7 +839,7 @@ export const se_DisableDirectoryCommand = async (
  */
 export const se_EnableDirectoryCommand = async (
   input: EnableDirectoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -856,7 +856,7 @@ export const se_EnableDirectoryCommand = async (
  */
 export const se_GetAppliedSchemaVersionCommand = async (
   input: GetAppliedSchemaVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -867,7 +867,7 @@ export const se_GetAppliedSchemaVersionCommand = async (
   body = JSON.stringify(
     take(input, {
       SchemaArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -878,7 +878,7 @@ export const se_GetAppliedSchemaVersionCommand = async (
  */
 export const se_GetDirectoryCommand = async (
   input: GetDirectoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -895,7 +895,7 @@ export const se_GetDirectoryCommand = async (
  */
 export const se_GetFacetCommand = async (
   input: GetFacetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -907,7 +907,7 @@ export const se_GetFacetCommand = async (
   body = JSON.stringify(
     take(input, {
       Name: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -918,7 +918,7 @@ export const se_GetFacetCommand = async (
  */
 export const se_GetLinkAttributesCommand = async (
   input: GetLinkAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -932,7 +932,7 @@ export const se_GetLinkAttributesCommand = async (
       AttributeNames: (_) => _json(_),
       ConsistencyLevel: [],
       TypedLinkSpecifier: (_) => se_TypedLinkSpecifier(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -943,7 +943,7 @@ export const se_GetLinkAttributesCommand = async (
  */
 export const se_GetObjectAttributesCommand = async (
   input: GetObjectAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -958,7 +958,7 @@ export const se_GetObjectAttributesCommand = async (
       AttributeNames: (_) => _json(_),
       ObjectReference: (_) => _json(_),
       SchemaFacet: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -969,7 +969,7 @@ export const se_GetObjectAttributesCommand = async (
  */
 export const se_GetObjectInformationCommand = async (
   input: GetObjectInformationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -982,7 +982,7 @@ export const se_GetObjectInformationCommand = async (
   body = JSON.stringify(
     take(input, {
       ObjectReference: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -993,7 +993,7 @@ export const se_GetObjectInformationCommand = async (
  */
 export const se_GetSchemaAsJsonCommand = async (
   input: GetSchemaAsJsonCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1010,7 +1010,7 @@ export const se_GetSchemaAsJsonCommand = async (
  */
 export const se_GetTypedLinkFacetInformationCommand = async (
   input: GetTypedLinkFacetInformationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1022,7 +1022,7 @@ export const se_GetTypedLinkFacetInformationCommand = async (
   body = JSON.stringify(
     take(input, {
       Name: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1033,7 +1033,7 @@ export const se_GetTypedLinkFacetInformationCommand = async (
  */
 export const se_ListAppliedSchemaArnsCommand = async (
   input: ListAppliedSchemaArnsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1047,7 +1047,7 @@ export const se_ListAppliedSchemaArnsCommand = async (
       MaxResults: [],
       NextToken: [],
       SchemaArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1058,7 +1058,7 @@ export const se_ListAppliedSchemaArnsCommand = async (
  */
 export const se_ListAttachedIndicesCommand = async (
   input: ListAttachedIndicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1073,7 +1073,7 @@ export const se_ListAttachedIndicesCommand = async (
       MaxResults: [],
       NextToken: [],
       TargetReference: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1084,7 +1084,7 @@ export const se_ListAttachedIndicesCommand = async (
  */
 export const se_ListDevelopmentSchemaArnsCommand = async (
   input: ListDevelopmentSchemaArnsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1096,7 +1096,7 @@ export const se_ListDevelopmentSchemaArnsCommand = async (
     take(input, {
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1107,7 +1107,7 @@ export const se_ListDevelopmentSchemaArnsCommand = async (
  */
 export const se_ListDirectoriesCommand = async (
   input: ListDirectoriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1120,7 +1120,7 @@ export const se_ListDirectoriesCommand = async (
       MaxResults: [],
       NextToken: [],
       state: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1131,7 +1131,7 @@ export const se_ListDirectoriesCommand = async (
  */
 export const se_ListFacetAttributesCommand = async (
   input: ListFacetAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1145,7 +1145,7 @@ export const se_ListFacetAttributesCommand = async (
       MaxResults: [],
       Name: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1156,7 +1156,7 @@ export const se_ListFacetAttributesCommand = async (
  */
 export const se_ListFacetNamesCommand = async (
   input: ListFacetNamesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1169,7 +1169,7 @@ export const se_ListFacetNamesCommand = async (
     take(input, {
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1180,7 +1180,7 @@ export const se_ListFacetNamesCommand = async (
  */
 export const se_ListIncomingTypedLinksCommand = async (
   input: ListIncomingTypedLinksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1197,7 +1197,7 @@ export const se_ListIncomingTypedLinksCommand = async (
       MaxResults: [],
       NextToken: [],
       ObjectReference: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1208,7 +1208,7 @@ export const se_ListIncomingTypedLinksCommand = async (
  */
 export const se_ListIndexCommand = async (
   input: ListIndexCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1224,7 +1224,7 @@ export const se_ListIndexCommand = async (
       MaxResults: [],
       NextToken: [],
       RangesOnIndexedValues: (_) => se_ObjectAttributeRangeList(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1235,7 +1235,7 @@ export const se_ListIndexCommand = async (
  */
 export const se_ListManagedSchemaArnsCommand = async (
   input: ListManagedSchemaArnsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1248,7 +1248,7 @@ export const se_ListManagedSchemaArnsCommand = async (
       MaxResults: [],
       NextToken: [],
       SchemaArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1259,7 +1259,7 @@ export const se_ListManagedSchemaArnsCommand = async (
  */
 export const se_ListObjectAttributesCommand = async (
   input: ListObjectAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1275,7 +1275,7 @@ export const se_ListObjectAttributesCommand = async (
       MaxResults: [],
       NextToken: [],
       ObjectReference: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1286,7 +1286,7 @@ export const se_ListObjectAttributesCommand = async (
  */
 export const se_ListObjectChildrenCommand = async (
   input: ListObjectChildrenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1301,7 +1301,7 @@ export const se_ListObjectChildrenCommand = async (
       MaxResults: [],
       NextToken: [],
       ObjectReference: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1312,7 +1312,7 @@ export const se_ListObjectChildrenCommand = async (
  */
 export const se_ListObjectParentPathsCommand = async (
   input: ListObjectParentPathsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1326,7 +1326,7 @@ export const se_ListObjectParentPathsCommand = async (
       MaxResults: [],
       NextToken: [],
       ObjectReference: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1337,7 +1337,7 @@ export const se_ListObjectParentPathsCommand = async (
  */
 export const se_ListObjectParentsCommand = async (
   input: ListObjectParentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1353,7 +1353,7 @@ export const se_ListObjectParentsCommand = async (
       MaxResults: [],
       NextToken: [],
       ObjectReference: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1364,7 +1364,7 @@ export const se_ListObjectParentsCommand = async (
  */
 export const se_ListObjectPoliciesCommand = async (
   input: ListObjectPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1379,7 +1379,7 @@ export const se_ListObjectPoliciesCommand = async (
       MaxResults: [],
       NextToken: [],
       ObjectReference: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1390,7 +1390,7 @@ export const se_ListObjectPoliciesCommand = async (
  */
 export const se_ListOutgoingTypedLinksCommand = async (
   input: ListOutgoingTypedLinksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1407,7 +1407,7 @@ export const se_ListOutgoingTypedLinksCommand = async (
       MaxResults: [],
       NextToken: [],
       ObjectReference: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1418,7 +1418,7 @@ export const se_ListOutgoingTypedLinksCommand = async (
  */
 export const se_ListPolicyAttachmentsCommand = async (
   input: ListPolicyAttachmentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1433,7 +1433,7 @@ export const se_ListPolicyAttachmentsCommand = async (
       MaxResults: [],
       NextToken: [],
       PolicyReference: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1444,7 +1444,7 @@ export const se_ListPolicyAttachmentsCommand = async (
  */
 export const se_ListPublishedSchemaArnsCommand = async (
   input: ListPublishedSchemaArnsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1457,7 +1457,7 @@ export const se_ListPublishedSchemaArnsCommand = async (
       MaxResults: [],
       NextToken: [],
       SchemaArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1468,7 +1468,7 @@ export const se_ListPublishedSchemaArnsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1481,7 +1481,7 @@ export const se_ListTagsForResourceCommand = async (
       MaxResults: [],
       NextToken: [],
       ResourceArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1492,7 +1492,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTypedLinkFacetAttributesCommand = async (
   input: ListTypedLinkFacetAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1506,7 +1506,7 @@ export const se_ListTypedLinkFacetAttributesCommand = async (
       MaxResults: [],
       Name: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1517,7 +1517,7 @@ export const se_ListTypedLinkFacetAttributesCommand = async (
  */
 export const se_ListTypedLinkFacetNamesCommand = async (
   input: ListTypedLinkFacetNamesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1530,7 +1530,7 @@ export const se_ListTypedLinkFacetNamesCommand = async (
     take(input, {
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1541,7 +1541,7 @@ export const se_ListTypedLinkFacetNamesCommand = async (
  */
 export const se_LookupPolicyCommand = async (
   input: LookupPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1555,7 +1555,7 @@ export const se_LookupPolicyCommand = async (
       MaxResults: [],
       NextToken: [],
       ObjectReference: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1566,7 +1566,7 @@ export const se_LookupPolicyCommand = async (
  */
 export const se_PublishSchemaCommand = async (
   input: PublishSchemaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1580,7 +1580,7 @@ export const se_PublishSchemaCommand = async (
       MinorVersion: [],
       Name: [],
       Version: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1591,7 +1591,7 @@ export const se_PublishSchemaCommand = async (
  */
 export const se_PutSchemaFromJsonCommand = async (
   input: PutSchemaFromJsonCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1603,7 +1603,7 @@ export const se_PutSchemaFromJsonCommand = async (
   body = JSON.stringify(
     take(input, {
       Document: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1614,7 +1614,7 @@ export const se_PutSchemaFromJsonCommand = async (
  */
 export const se_RemoveFacetFromObjectCommand = async (
   input: RemoveFacetFromObjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1627,7 +1627,7 @@ export const se_RemoveFacetFromObjectCommand = async (
     take(input, {
       ObjectReference: (_) => _json(_),
       SchemaFacet: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1638,7 +1638,7 @@ export const se_RemoveFacetFromObjectCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1650,7 +1650,7 @@ export const se_TagResourceCommand = async (
     take(input, {
       ResourceArn: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1661,7 +1661,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1673,7 +1673,7 @@ export const se_UntagResourceCommand = async (
     take(input, {
       ResourceArn: [],
       TagKeys: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1684,7 +1684,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateFacetCommand = async (
   input: UpdateFacetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1698,7 +1698,7 @@ export const se_UpdateFacetCommand = async (
       AttributeUpdates: (_) => se_FacetAttributeUpdateList(_, context),
       Name: [],
       ObjectType: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1709,7 +1709,7 @@ export const se_UpdateFacetCommand = async (
  */
 export const se_UpdateLinkAttributesCommand = async (
   input: UpdateLinkAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1722,7 +1722,7 @@ export const se_UpdateLinkAttributesCommand = async (
     take(input, {
       AttributeUpdates: (_) => se_LinkAttributeUpdateList(_, context),
       TypedLinkSpecifier: (_) => se_TypedLinkSpecifier(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1733,7 +1733,7 @@ export const se_UpdateLinkAttributesCommand = async (
  */
 export const se_UpdateObjectAttributesCommand = async (
   input: UpdateObjectAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1746,7 +1746,7 @@ export const se_UpdateObjectAttributesCommand = async (
     take(input, {
       AttributeUpdates: (_) => se_ObjectAttributeUpdateList(_, context),
       ObjectReference: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1757,7 +1757,7 @@ export const se_UpdateObjectAttributesCommand = async (
  */
 export const se_UpdateSchemaCommand = async (
   input: UpdateSchemaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1769,7 +1769,7 @@ export const se_UpdateSchemaCommand = async (
   body = JSON.stringify(
     take(input, {
       Name: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1780,7 +1780,7 @@ export const se_UpdateSchemaCommand = async (
  */
 export const se_UpdateTypedLinkFacetCommand = async (
   input: UpdateTypedLinkFacetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1794,7 +1794,7 @@ export const se_UpdateTypedLinkFacetCommand = async (
       AttributeUpdates: (_) => se_TypedLinkFacetAttributeUpdateList(_, context),
       IdentityAttributeOrder: (_) => _json(_),
       Name: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1805,7 +1805,7 @@ export const se_UpdateTypedLinkFacetCommand = async (
  */
 export const se_UpgradeAppliedSchemaCommand = async (
   input: UpgradeAppliedSchemaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1818,7 +1818,7 @@ export const se_UpgradeAppliedSchemaCommand = async (
       DirectoryArn: [],
       DryRun: [],
       PublishedSchemaArn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1829,7 +1829,7 @@ export const se_UpgradeAppliedSchemaCommand = async (
  */
 export const se_UpgradePublishedSchemaCommand = async (
   input: UpgradePublishedSchemaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1843,7 +1843,7 @@ export const se_UpgradePublishedSchemaCommand = async (
       DryRun: [],
       MinorVersion: [],
       PublishedSchemaArn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1854,7 +1854,7 @@ export const se_UpgradePublishedSchemaCommand = async (
  */
 export const de_AddFacetToObjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddFacetToObjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1871,7 +1871,7 @@ export const de_AddFacetToObjectCommand = async (
  */
 export const de_ApplySchemaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApplySchemaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1893,7 +1893,7 @@ export const de_ApplySchemaCommand = async (
  */
 export const de_AttachObjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachObjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1914,7 +1914,7 @@ export const de_AttachObjectCommand = async (
  */
 export const de_AttachPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1931,7 +1931,7 @@ export const de_AttachPolicyCommand = async (
  */
 export const de_AttachToIndexCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachToIndexCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1952,7 +1952,7 @@ export const de_AttachToIndexCommand = async (
  */
 export const de_AttachTypedLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachTypedLinkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1973,7 +1973,7 @@ export const de_AttachTypedLinkCommand = async (
  */
 export const de_BatchReadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchReadCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1994,7 +1994,7 @@ export const de_BatchReadCommand = async (
  */
 export const de_BatchWriteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchWriteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2015,7 +2015,7 @@ export const de_BatchWriteCommand = async (
  */
 export const de_CreateDirectoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDirectoryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2039,7 +2039,7 @@ export const de_CreateDirectoryCommand = async (
  */
 export const de_CreateFacetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFacetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2056,7 +2056,7 @@ export const de_CreateFacetCommand = async (
  */
 export const de_CreateIndexCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateIndexCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2077,7 +2077,7 @@ export const de_CreateIndexCommand = async (
  */
 export const de_CreateObjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateObjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2098,7 +2098,7 @@ export const de_CreateObjectCommand = async (
  */
 export const de_CreateSchemaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSchemaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2119,7 +2119,7 @@ export const de_CreateSchemaCommand = async (
  */
 export const de_CreateTypedLinkFacetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTypedLinkFacetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2136,7 +2136,7 @@ export const de_CreateTypedLinkFacetCommand = async (
  */
 export const de_DeleteDirectoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDirectoryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2157,7 +2157,7 @@ export const de_DeleteDirectoryCommand = async (
  */
 export const de_DeleteFacetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFacetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2174,7 +2174,7 @@ export const de_DeleteFacetCommand = async (
  */
 export const de_DeleteObjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteObjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2191,7 +2191,7 @@ export const de_DeleteObjectCommand = async (
  */
 export const de_DeleteSchemaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSchemaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2212,7 +2212,7 @@ export const de_DeleteSchemaCommand = async (
  */
 export const de_DeleteTypedLinkFacetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTypedLinkFacetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2229,7 +2229,7 @@ export const de_DeleteTypedLinkFacetCommand = async (
  */
 export const de_DetachFromIndexCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachFromIndexCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2250,7 +2250,7 @@ export const de_DetachFromIndexCommand = async (
  */
 export const de_DetachObjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachObjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2271,7 +2271,7 @@ export const de_DetachObjectCommand = async (
  */
 export const de_DetachPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2288,7 +2288,7 @@ export const de_DetachPolicyCommand = async (
  */
 export const de_DetachTypedLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachTypedLinkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2305,7 +2305,7 @@ export const de_DetachTypedLinkCommand = async (
  */
 export const de_DisableDirectoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableDirectoryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2326,7 +2326,7 @@ export const de_DisableDirectoryCommand = async (
  */
 export const de_EnableDirectoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableDirectoryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2347,7 +2347,7 @@ export const de_EnableDirectoryCommand = async (
  */
 export const de_GetAppliedSchemaVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAppliedSchemaVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2368,7 +2368,7 @@ export const de_GetAppliedSchemaVersionCommand = async (
  */
 export const de_GetDirectoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDirectoryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2389,7 +2389,7 @@ export const de_GetDirectoryCommand = async (
  */
 export const de_GetFacetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFacetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2410,7 +2410,7 @@ export const de_GetFacetCommand = async (
  */
 export const de_GetLinkAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLinkAttributesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2431,7 +2431,7 @@ export const de_GetLinkAttributesCommand = async (
  */
 export const de_GetObjectAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetObjectAttributesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2452,7 +2452,7 @@ export const de_GetObjectAttributesCommand = async (
  */
 export const de_GetObjectInformationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetObjectInformationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2474,7 +2474,7 @@ export const de_GetObjectInformationCommand = async (
  */
 export const de_GetSchemaAsJsonCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSchemaAsJsonCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2496,7 +2496,7 @@ export const de_GetSchemaAsJsonCommand = async (
  */
 export const de_GetTypedLinkFacetInformationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTypedLinkFacetInformationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2517,7 +2517,7 @@ export const de_GetTypedLinkFacetInformationCommand = async (
  */
 export const de_ListAppliedSchemaArnsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAppliedSchemaArnsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2539,7 +2539,7 @@ export const de_ListAppliedSchemaArnsCommand = async (
  */
 export const de_ListAttachedIndicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAttachedIndicesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2561,7 +2561,7 @@ export const de_ListAttachedIndicesCommand = async (
  */
 export const de_ListDevelopmentSchemaArnsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDevelopmentSchemaArnsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2583,7 +2583,7 @@ export const de_ListDevelopmentSchemaArnsCommand = async (
  */
 export const de_ListDirectoriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDirectoriesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2605,7 +2605,7 @@ export const de_ListDirectoriesCommand = async (
  */
 export const de_ListFacetAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFacetAttributesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2627,7 +2627,7 @@ export const de_ListFacetAttributesCommand = async (
  */
 export const de_ListFacetNamesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFacetNamesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2649,7 +2649,7 @@ export const de_ListFacetNamesCommand = async (
  */
 export const de_ListIncomingTypedLinksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIncomingTypedLinksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2671,7 +2671,7 @@ export const de_ListIncomingTypedLinksCommand = async (
  */
 export const de_ListIndexCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIndexCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2693,7 +2693,7 @@ export const de_ListIndexCommand = async (
  */
 export const de_ListManagedSchemaArnsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListManagedSchemaArnsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2715,7 +2715,7 @@ export const de_ListManagedSchemaArnsCommand = async (
  */
 export const de_ListObjectAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListObjectAttributesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2737,7 +2737,7 @@ export const de_ListObjectAttributesCommand = async (
  */
 export const de_ListObjectChildrenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListObjectChildrenCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2759,7 +2759,7 @@ export const de_ListObjectChildrenCommand = async (
  */
 export const de_ListObjectParentPathsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListObjectParentPathsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2781,7 +2781,7 @@ export const de_ListObjectParentPathsCommand = async (
  */
 export const de_ListObjectParentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListObjectParentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2804,7 +2804,7 @@ export const de_ListObjectParentsCommand = async (
  */
 export const de_ListObjectPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListObjectPoliciesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2826,7 +2826,7 @@ export const de_ListObjectPoliciesCommand = async (
  */
 export const de_ListOutgoingTypedLinksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOutgoingTypedLinksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2848,7 +2848,7 @@ export const de_ListOutgoingTypedLinksCommand = async (
  */
 export const de_ListPolicyAttachmentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPolicyAttachmentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2870,7 +2870,7 @@ export const de_ListPolicyAttachmentsCommand = async (
  */
 export const de_ListPublishedSchemaArnsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPublishedSchemaArnsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2892,7 +2892,7 @@ export const de_ListPublishedSchemaArnsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2914,7 +2914,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTypedLinkFacetAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTypedLinkFacetAttributesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2936,7 +2936,7 @@ export const de_ListTypedLinkFacetAttributesCommand = async (
  */
 export const de_ListTypedLinkFacetNamesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTypedLinkFacetNamesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2958,7 +2958,7 @@ export const de_ListTypedLinkFacetNamesCommand = async (
  */
 export const de_LookupPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LookupPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2980,7 +2980,7 @@ export const de_LookupPolicyCommand = async (
  */
 export const de_PublishSchemaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PublishSchemaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3001,7 +3001,7 @@ export const de_PublishSchemaCommand = async (
  */
 export const de_PutSchemaFromJsonCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutSchemaFromJsonCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3022,7 +3022,7 @@ export const de_PutSchemaFromJsonCommand = async (
  */
 export const de_RemoveFacetFromObjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveFacetFromObjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3039,7 +3039,7 @@ export const de_RemoveFacetFromObjectCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3056,7 +3056,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3073,7 +3073,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateFacetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFacetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3090,7 +3090,7 @@ export const de_UpdateFacetCommand = async (
  */
 export const de_UpdateLinkAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLinkAttributesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3107,7 +3107,7 @@ export const de_UpdateLinkAttributesCommand = async (
  */
 export const de_UpdateObjectAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateObjectAttributesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3128,7 +3128,7 @@ export const de_UpdateObjectAttributesCommand = async (
  */
 export const de_UpdateSchemaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSchemaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3149,7 +3149,7 @@ export const de_UpdateSchemaCommand = async (
  */
 export const de_UpdateTypedLinkFacetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTypedLinkFacetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3166,7 +3166,7 @@ export const de_UpdateTypedLinkFacetCommand = async (
  */
 export const de_UpgradeAppliedSchemaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpgradeAppliedSchemaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3188,7 +3188,7 @@ export const de_UpgradeAppliedSchemaCommand = async (
  */
 export const de_UpgradePublishedSchemaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpgradePublishedSchemaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3335,7 +3335,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3374,7 +3374,7 @@ const de_BatchWriteExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_CannotListParentOfRootExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CannotListParentOfRootException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3394,7 +3394,7 @@ const de_CannotListParentOfRootExceptionRes = async (
  */
 const de_DirectoryAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DirectoryAlreadyExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3414,7 +3414,7 @@ const de_DirectoryAlreadyExistsExceptionRes = async (
  */
 const de_DirectoryDeletedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DirectoryDeletedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3434,7 +3434,7 @@ const de_DirectoryDeletedExceptionRes = async (
  */
 const de_DirectoryNotDisabledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DirectoryNotDisabledException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3454,7 +3454,7 @@ const de_DirectoryNotDisabledExceptionRes = async (
  */
 const de_DirectoryNotEnabledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DirectoryNotEnabledException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3474,7 +3474,7 @@ const de_DirectoryNotEnabledExceptionRes = async (
  */
 const de_FacetAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FacetAlreadyExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3511,7 +3511,7 @@ const de_FacetInUseExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_FacetNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FacetNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3531,7 +3531,7 @@ const de_FacetNotFoundExceptionRes = async (
  */
 const de_FacetValidationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FacetValidationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3551,7 +3551,7 @@ const de_FacetValidationExceptionRes = async (
  */
 const de_IncompatibleSchemaExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IncompatibleSchemaException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3571,7 +3571,7 @@ const de_IncompatibleSchemaExceptionRes = async (
  */
 const de_IndexedAttributeMissingExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IndexedAttributeMissingException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3591,7 +3591,7 @@ const de_IndexedAttributeMissingExceptionRes = async (
  */
 const de_InternalServiceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3628,7 +3628,7 @@ const de_InvalidArnExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InvalidAttachmentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidAttachmentException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3648,7 +3648,7 @@ const de_InvalidAttachmentExceptionRes = async (
  */
 const de_InvalidFacetUpdateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidFacetUpdateException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3668,7 +3668,7 @@ const de_InvalidFacetUpdateExceptionRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3688,7 +3688,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_InvalidRuleExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRuleException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3708,7 +3708,7 @@ const de_InvalidRuleExceptionRes = async (
  */
 const de_InvalidSchemaDocExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSchemaDocException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3728,7 +3728,7 @@ const de_InvalidSchemaDocExceptionRes = async (
  */
 const de_InvalidTaggingRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTaggingRequestException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3748,7 +3748,7 @@ const de_InvalidTaggingRequestExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3768,7 +3768,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_LinkNameAlreadyInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LinkNameAlreadyInUseException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3839,7 +3839,7 @@ const de_NotPolicyExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_ObjectAlreadyDetachedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ObjectAlreadyDetachedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3859,7 +3859,7 @@ const de_ObjectAlreadyDetachedExceptionRes = async (
  */
 const de_ObjectNotDetachedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ObjectNotDetachedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3879,7 +3879,7 @@ const de_ObjectNotDetachedExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3899,7 +3899,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_RetryableConflictExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RetryableConflictException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3919,7 +3919,7 @@ const de_RetryableConflictExceptionRes = async (
  */
 const de_SchemaAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SchemaAlreadyExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3939,7 +3939,7 @@ const de_SchemaAlreadyExistsExceptionRes = async (
  */
 const de_SchemaAlreadyPublishedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SchemaAlreadyPublishedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3959,7 +3959,7 @@ const de_SchemaAlreadyPublishedExceptionRes = async (
  */
 const de_StillContainsLinksExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StillContainsLinksException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3979,7 +3979,7 @@ const de_StillContainsLinksExceptionRes = async (
  */
 const de_UnsupportedIndexTypeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedIndexTypeException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4446,7 +4446,7 @@ const se_TypedAttributeValue = (input: TypedAttributeValue, context: __SerdeCont
     DatetimeValue: (value) => ({ DatetimeValue: value.getTime() / 1_000 }),
     NumberValue: (value) => ({ NumberValue: value }),
     StringValue: (value) => ({ StringValue: value }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -4649,7 +4649,7 @@ const de_BatchGetLinkAttributesResponse = (output: any, context: __SerdeContext)
  */
 const de_BatchGetObjectAttributesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchGetObjectAttributesResponse => {
   return take(output, {
     Attributes: (_: any) => de_AttributeKeyAndValueList(_, context),
@@ -4663,7 +4663,7 @@ const de_BatchGetObjectAttributesResponse = (
  */
 const de_BatchListAttachedIndicesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchListAttachedIndicesResponse => {
   return take(output, {
     IndexAttachments: (_: any) => de_IndexAttachmentList(_, context),
@@ -4676,7 +4676,7 @@ const de_BatchListAttachedIndicesResponse = (
  */
 const de_BatchListIncomingTypedLinksResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchListIncomingTypedLinksResponse => {
   return take(output, {
     LinkSpecifiers: (_: any) => de_TypedLinkSpecifierList(_, context),
@@ -4699,7 +4699,7 @@ const de_BatchListIndexResponse = (output: any, context: __SerdeContext): BatchL
  */
 const de_BatchListObjectAttributesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchListObjectAttributesResponse => {
   return take(output, {
     Attributes: (_: any) => de_AttributeKeyAndValueList(_, context),
@@ -4720,7 +4720,7 @@ const de_BatchListObjectAttributesResponse = (
  */
 const de_BatchListOutgoingTypedLinksResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchListOutgoingTypedLinksResponse => {
   return take(output, {
     NextToken: __expectString,

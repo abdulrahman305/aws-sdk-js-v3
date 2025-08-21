@@ -42,7 +42,7 @@ export namespace MalformedContentTypeWithPayloadServerInput {
    * @internal
    */
   export const validate: (
-    obj: Parameters<typeof MalformedContentTypeWithPayloadInput.validate>[0]
+    obj: Parameters<typeof MalformedContentTypeWithPayloadInput.validate>[0],
   ) => __ValidationFailure[] = MalformedContentTypeWithPayloadInput.validate;
 }
 export interface MalformedContentTypeWithPayloadServerOutput {}
@@ -75,14 +75,14 @@ export const getMalformedContentTypeWithPayloadHandler = <Context>(
     MalformedContentTypeWithPayloadServerOutput,
     Context
   >,
-  customizer: __ValidationCustomizer<"MalformedContentTypeWithPayload">
+  customizer: __ValidationCustomizer<"MalformedContentTypeWithPayload">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "MalformedContentTypeWithPayload">([
     new httpbinding.UriSpec<"RestJson", "MalformedContentTypeWithPayload">(
       "POST",
       [{ type: "path_literal", value: "MalformedContentTypeWithPayload" }],
       [],
-      { service: "RestJson", operation: "MalformedContentTypeWithPayload" }
+      { service: "RestJson", operation: "MalformedContentTypeWithPayload" },
     ),
   ]);
   return new MalformedContentTypeWithPayloadHandler(
@@ -90,7 +90,7 @@ export const getMalformedContentTypeWithPayloadHandler = <Context>(
     mux,
     new MalformedContentTypeWithPayloadSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -111,7 +111,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -157,7 +157,7 @@ export class MalformedContentTypeWithPayloadHandler<Context> implements __Servic
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"MalformedContentTypeWithPayload">;
   /**
@@ -182,7 +182,7 @@ export class MalformedContentTypeWithPayloadHandler<Context> implements __Servic
       MalformedContentTypeWithPayloadErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"MalformedContentTypeWithPayload">
+    validationCustomizer: __ValidationCustomizer<"MalformedContentTypeWithPayload">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -194,7 +194,7 @@ export class MalformedContentTypeWithPayloadHandler<Context> implements __Servic
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedContentTypeWithPayload. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedContentTypeWithPayload. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -206,7 +206,7 @@ export class MalformedContentTypeWithPayloadHandler<Context> implements __Servic
       this.operation,
       this.serializeFrameworkException,
       MalformedContentTypeWithPayloadServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

@@ -2383,7 +2383,7 @@ export const UpdateMaintenanceWindowResultFilterSensitiveLog = (obj: UpdateMaint
  * @internal
  */
 export const UpdateMaintenanceWindowTargetRequestFilterSensitiveLog = (
-  obj: UpdateMaintenanceWindowTargetRequest
+  obj: UpdateMaintenanceWindowTargetRequest,
 ): any => ({
   ...obj,
   ...(obj.OwnerInformation && { OwnerInformation: SENSITIVE_STRING }),
@@ -2394,7 +2394,7 @@ export const UpdateMaintenanceWindowTargetRequestFilterSensitiveLog = (
  * @internal
  */
 export const UpdateMaintenanceWindowTargetResultFilterSensitiveLog = (
-  obj: UpdateMaintenanceWindowTargetResult
+  obj: UpdateMaintenanceWindowTargetResult,
 ): any => ({
   ...obj,
   ...(obj.OwnerInformation && { OwnerInformation: SENSITIVE_STRING }),

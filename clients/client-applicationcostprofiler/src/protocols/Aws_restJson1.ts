@@ -64,7 +64,7 @@ import {
  */
 export const se_DeleteReportDefinitionCommand = async (
   input: DeleteReportDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -80,7 +80,7 @@ export const se_DeleteReportDefinitionCommand = async (
  */
 export const se_GetReportDefinitionCommand = async (
   input: GetReportDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -96,7 +96,7 @@ export const se_GetReportDefinitionCommand = async (
  */
 export const se_ImportApplicationUsageCommand = async (
   input: ImportApplicationUsageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -107,7 +107,7 @@ export const se_ImportApplicationUsageCommand = async (
   body = JSON.stringify(
     take(input, {
       sourceS3Location: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -118,7 +118,7 @@ export const se_ImportApplicationUsageCommand = async (
  */
 export const se_ListReportDefinitionsCommand = async (
   input: ListReportDefinitionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -137,7 +137,7 @@ export const se_ListReportDefinitionsCommand = async (
  */
 export const se_PutReportDefinitionCommand = async (
   input: PutReportDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -152,7 +152,7 @@ export const se_PutReportDefinitionCommand = async (
       reportDescription: [],
       reportFrequency: [],
       reportId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -163,7 +163,7 @@ export const se_PutReportDefinitionCommand = async (
  */
 export const se_UpdateReportDefinitionCommand = async (
   input: UpdateReportDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -178,7 +178,7 @@ export const se_UpdateReportDefinitionCommand = async (
       format: [],
       reportDescription: [],
       reportFrequency: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -189,7 +189,7 @@ export const se_UpdateReportDefinitionCommand = async (
  */
 export const de_DeleteReportDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteReportDefinitionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -210,7 +210,7 @@ export const de_DeleteReportDefinitionCommand = async (
  */
 export const de_GetReportDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReportDefinitionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -237,7 +237,7 @@ export const de_GetReportDefinitionCommand = async (
  */
 export const de_ImportApplicationUsageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportApplicationUsageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -258,7 +258,7 @@ export const de_ImportApplicationUsageCommand = async (
  */
 export const de_ListReportDefinitionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReportDefinitionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -280,7 +280,7 @@ export const de_ListReportDefinitionsCommand = async (
  */
 export const de_PutReportDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutReportDefinitionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -301,7 +301,7 @@ export const de_PutReportDefinitionCommand = async (
  */
 export const de_UpdateReportDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateReportDefinitionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -358,7 +358,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -378,7 +378,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -398,7 +398,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

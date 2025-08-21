@@ -9556,18 +9556,18 @@ export const DataSetFilterSensitiveLog = (obj: DataSet): any => ({
   ...(obj.PhysicalTableMap && {
     PhysicalTableMap: Object.entries(obj.PhysicalTableMap).reduce(
       (acc: any, [key, value]: [string, PhysicalTable]) => ((acc[key] = value), acc),
-      {}
+      {},
     ),
   }),
   ...(obj.LogicalTableMap && {
     LogicalTableMap: Object.entries(obj.LogicalTableMap).reduce(
       (acc: any, [key, value]: [string, LogicalTable]) => ((acc[key] = LogicalTableFilterSensitiveLog(value)), acc),
-      {}
+      {},
     ),
   }),
   ...(obj.RowLevelPermissionTagConfiguration && {
     RowLevelPermissionTagConfiguration: RowLevelPermissionTagConfigurationFilterSensitiveLog(
-      obj.RowLevelPermissionTagConfiguration
+      obj.RowLevelPermissionTagConfiguration,
     ),
   }),
 });
@@ -9583,7 +9583,7 @@ export const DescribeAnalysisDefinitionResponseFilterSensitiveLog = (obj: Descri
  * @internal
  */
 export const DescribeAssetBundleExportJobResponseFilterSensitiveLog = (
-  obj: DescribeAssetBundleExportJobResponse
+  obj: DescribeAssetBundleExportJobResponse,
 ): any => ({
   ...obj,
   ...(obj.DownloadUrl && { DownloadUrl: SENSITIVE_STRING }),
@@ -9593,7 +9593,7 @@ export const DescribeAssetBundleExportJobResponseFilterSensitiveLog = (
  * @internal
  */
 export const DescribeAssetBundleImportJobResponseFilterSensitiveLog = (
-  obj: DescribeAssetBundleImportJobResponse
+  obj: DescribeAssetBundleImportJobResponse,
 ): any => ({
   ...obj,
   ...(obj.AssetBundleImportSource && {
@@ -9605,7 +9605,7 @@ export const DescribeAssetBundleImportJobResponseFilterSensitiveLog = (
  * @internal
  */
 export const DescribeDashboardDefinitionResponseFilterSensitiveLog = (
-  obj: DescribeDashboardDefinitionResponse
+  obj: DescribeDashboardDefinitionResponse,
 ): any => ({
   ...obj,
 });
@@ -9622,7 +9622,7 @@ export const SnapshotConfigurationFilterSensitiveLog = (obj: SnapshotConfigurati
  * @internal
  */
 export const DescribeDashboardSnapshotJobResponseFilterSensitiveLog = (
-  obj: DescribeDashboardSnapshotJobResponse
+  obj: DescribeDashboardSnapshotJobResponse,
 ): any => ({
   ...obj,
 });
@@ -9638,7 +9638,7 @@ export const SnapshotJobResultFilterSensitiveLog = (obj: SnapshotJobResult): any
  * @internal
  */
 export const DescribeDashboardSnapshotJobResultResponseFilterSensitiveLog = (
-  obj: DescribeDashboardSnapshotJobResultResponse
+  obj: DescribeDashboardSnapshotJobResultResponse,
 ): any => ({
   ...obj,
 });
@@ -9677,7 +9677,7 @@ export const SessionTagFilterSensitiveLog = (obj: SessionTag): any => ({
  * @internal
  */
 export const GenerateEmbedUrlForAnonymousUserRequestFilterSensitiveLog = (
-  obj: GenerateEmbedUrlForAnonymousUserRequest
+  obj: GenerateEmbedUrlForAnonymousUserRequest,
 ): any => ({
   ...obj,
   ...(obj.SessionTags && { SessionTags: obj.SessionTags.map((item) => SessionTagFilterSensitiveLog(item)) }),
@@ -9687,7 +9687,7 @@ export const GenerateEmbedUrlForAnonymousUserRequestFilterSensitiveLog = (
  * @internal
  */
 export const GenerateEmbedUrlForAnonymousUserResponseFilterSensitiveLog = (
-  obj: GenerateEmbedUrlForAnonymousUserResponse
+  obj: GenerateEmbedUrlForAnonymousUserResponse,
 ): any => ({
   ...obj,
   ...(obj.EmbedUrl && { EmbedUrl: SENSITIVE_STRING }),
@@ -9697,7 +9697,7 @@ export const GenerateEmbedUrlForAnonymousUserResponseFilterSensitiveLog = (
  * @internal
  */
 export const GenerateEmbedUrlForRegisteredUserResponseFilterSensitiveLog = (
-  obj: GenerateEmbedUrlForRegisteredUserResponse
+  obj: GenerateEmbedUrlForRegisteredUserResponse,
 ): any => ({
   ...obj,
   ...(obj.EmbedUrl && { EmbedUrl: SENSITIVE_STRING }),

@@ -673,16 +673,16 @@ export interface IoTWireless {
    */
   associateAwsAccountWithPartnerAccount(
     args: AssociateAwsAccountWithPartnerAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateAwsAccountWithPartnerAccountCommandOutput>;
   associateAwsAccountWithPartnerAccount(
     args: AssociateAwsAccountWithPartnerAccountCommandInput,
-    cb: (err: any, data?: AssociateAwsAccountWithPartnerAccountCommandOutput) => void
+    cb: (err: any, data?: AssociateAwsAccountWithPartnerAccountCommandOutput) => void,
   ): void;
   associateAwsAccountWithPartnerAccount(
     args: AssociateAwsAccountWithPartnerAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateAwsAccountWithPartnerAccountCommandOutput) => void
+    cb: (err: any, data?: AssociateAwsAccountWithPartnerAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -690,16 +690,16 @@ export interface IoTWireless {
    */
   associateMulticastGroupWithFuotaTask(
     args: AssociateMulticastGroupWithFuotaTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateMulticastGroupWithFuotaTaskCommandOutput>;
   associateMulticastGroupWithFuotaTask(
     args: AssociateMulticastGroupWithFuotaTaskCommandInput,
-    cb: (err: any, data?: AssociateMulticastGroupWithFuotaTaskCommandOutput) => void
+    cb: (err: any, data?: AssociateMulticastGroupWithFuotaTaskCommandOutput) => void,
   ): void;
   associateMulticastGroupWithFuotaTask(
     args: AssociateMulticastGroupWithFuotaTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateMulticastGroupWithFuotaTaskCommandOutput) => void
+    cb: (err: any, data?: AssociateMulticastGroupWithFuotaTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -707,16 +707,16 @@ export interface IoTWireless {
    */
   associateWirelessDeviceWithFuotaTask(
     args: AssociateWirelessDeviceWithFuotaTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateWirelessDeviceWithFuotaTaskCommandOutput>;
   associateWirelessDeviceWithFuotaTask(
     args: AssociateWirelessDeviceWithFuotaTaskCommandInput,
-    cb: (err: any, data?: AssociateWirelessDeviceWithFuotaTaskCommandOutput) => void
+    cb: (err: any, data?: AssociateWirelessDeviceWithFuotaTaskCommandOutput) => void,
   ): void;
   associateWirelessDeviceWithFuotaTask(
     args: AssociateWirelessDeviceWithFuotaTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateWirelessDeviceWithFuotaTaskCommandOutput) => void
+    cb: (err: any, data?: AssociateWirelessDeviceWithFuotaTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -724,16 +724,16 @@ export interface IoTWireless {
    */
   associateWirelessDeviceWithMulticastGroup(
     args: AssociateWirelessDeviceWithMulticastGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateWirelessDeviceWithMulticastGroupCommandOutput>;
   associateWirelessDeviceWithMulticastGroup(
     args: AssociateWirelessDeviceWithMulticastGroupCommandInput,
-    cb: (err: any, data?: AssociateWirelessDeviceWithMulticastGroupCommandOutput) => void
+    cb: (err: any, data?: AssociateWirelessDeviceWithMulticastGroupCommandOutput) => void,
   ): void;
   associateWirelessDeviceWithMulticastGroup(
     args: AssociateWirelessDeviceWithMulticastGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateWirelessDeviceWithMulticastGroupCommandOutput) => void
+    cb: (err: any, data?: AssociateWirelessDeviceWithMulticastGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -741,16 +741,16 @@ export interface IoTWireless {
    */
   associateWirelessDeviceWithThing(
     args: AssociateWirelessDeviceWithThingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateWirelessDeviceWithThingCommandOutput>;
   associateWirelessDeviceWithThing(
     args: AssociateWirelessDeviceWithThingCommandInput,
-    cb: (err: any, data?: AssociateWirelessDeviceWithThingCommandOutput) => void
+    cb: (err: any, data?: AssociateWirelessDeviceWithThingCommandOutput) => void,
   ): void;
   associateWirelessDeviceWithThing(
     args: AssociateWirelessDeviceWithThingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateWirelessDeviceWithThingCommandOutput) => void
+    cb: (err: any, data?: AssociateWirelessDeviceWithThingCommandOutput) => void,
   ): void;
 
   /**
@@ -758,16 +758,16 @@ export interface IoTWireless {
    */
   associateWirelessGatewayWithCertificate(
     args: AssociateWirelessGatewayWithCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateWirelessGatewayWithCertificateCommandOutput>;
   associateWirelessGatewayWithCertificate(
     args: AssociateWirelessGatewayWithCertificateCommandInput,
-    cb: (err: any, data?: AssociateWirelessGatewayWithCertificateCommandOutput) => void
+    cb: (err: any, data?: AssociateWirelessGatewayWithCertificateCommandOutput) => void,
   ): void;
   associateWirelessGatewayWithCertificate(
     args: AssociateWirelessGatewayWithCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateWirelessGatewayWithCertificateCommandOutput) => void
+    cb: (err: any, data?: AssociateWirelessGatewayWithCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -775,16 +775,16 @@ export interface IoTWireless {
    */
   associateWirelessGatewayWithThing(
     args: AssociateWirelessGatewayWithThingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateWirelessGatewayWithThingCommandOutput>;
   associateWirelessGatewayWithThing(
     args: AssociateWirelessGatewayWithThingCommandInput,
-    cb: (err: any, data?: AssociateWirelessGatewayWithThingCommandOutput) => void
+    cb: (err: any, data?: AssociateWirelessGatewayWithThingCommandOutput) => void,
   ): void;
   associateWirelessGatewayWithThing(
     args: AssociateWirelessGatewayWithThingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateWirelessGatewayWithThingCommandOutput) => void
+    cb: (err: any, data?: AssociateWirelessGatewayWithThingCommandOutput) => void,
   ): void;
 
   /**
@@ -792,16 +792,16 @@ export interface IoTWireless {
    */
   cancelMulticastGroupSession(
     args: CancelMulticastGroupSessionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelMulticastGroupSessionCommandOutput>;
   cancelMulticastGroupSession(
     args: CancelMulticastGroupSessionCommandInput,
-    cb: (err: any, data?: CancelMulticastGroupSessionCommandOutput) => void
+    cb: (err: any, data?: CancelMulticastGroupSessionCommandOutput) => void,
   ): void;
   cancelMulticastGroupSession(
     args: CancelMulticastGroupSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelMulticastGroupSessionCommandOutput) => void
+    cb: (err: any, data?: CancelMulticastGroupSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -809,16 +809,16 @@ export interface IoTWireless {
    */
   createDestination(
     args: CreateDestinationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDestinationCommandOutput>;
   createDestination(
     args: CreateDestinationCommandInput,
-    cb: (err: any, data?: CreateDestinationCommandOutput) => void
+    cb: (err: any, data?: CreateDestinationCommandOutput) => void,
   ): void;
   createDestination(
     args: CreateDestinationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDestinationCommandOutput) => void
+    cb: (err: any, data?: CreateDestinationCommandOutput) => void,
   ): void;
 
   /**
@@ -827,16 +827,16 @@ export interface IoTWireless {
   createDeviceProfile(): Promise<CreateDeviceProfileCommandOutput>;
   createDeviceProfile(
     args: CreateDeviceProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDeviceProfileCommandOutput>;
   createDeviceProfile(
     args: CreateDeviceProfileCommandInput,
-    cb: (err: any, data?: CreateDeviceProfileCommandOutput) => void
+    cb: (err: any, data?: CreateDeviceProfileCommandOutput) => void,
   ): void;
   createDeviceProfile(
     args: CreateDeviceProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDeviceProfileCommandOutput) => void
+    cb: (err: any, data?: CreateDeviceProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -844,13 +844,13 @@ export interface IoTWireless {
    */
   createFuotaTask(
     args: CreateFuotaTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateFuotaTaskCommandOutput>;
   createFuotaTask(args: CreateFuotaTaskCommandInput, cb: (err: any, data?: CreateFuotaTaskCommandOutput) => void): void;
   createFuotaTask(
     args: CreateFuotaTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateFuotaTaskCommandOutput) => void
+    cb: (err: any, data?: CreateFuotaTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -858,16 +858,16 @@ export interface IoTWireless {
    */
   createMulticastGroup(
     args: CreateMulticastGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateMulticastGroupCommandOutput>;
   createMulticastGroup(
     args: CreateMulticastGroupCommandInput,
-    cb: (err: any, data?: CreateMulticastGroupCommandOutput) => void
+    cb: (err: any, data?: CreateMulticastGroupCommandOutput) => void,
   ): void;
   createMulticastGroup(
     args: CreateMulticastGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMulticastGroupCommandOutput) => void
+    cb: (err: any, data?: CreateMulticastGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -875,16 +875,16 @@ export interface IoTWireless {
    */
   createNetworkAnalyzerConfiguration(
     args: CreateNetworkAnalyzerConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateNetworkAnalyzerConfigurationCommandOutput>;
   createNetworkAnalyzerConfiguration(
     args: CreateNetworkAnalyzerConfigurationCommandInput,
-    cb: (err: any, data?: CreateNetworkAnalyzerConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateNetworkAnalyzerConfigurationCommandOutput) => void,
   ): void;
   createNetworkAnalyzerConfiguration(
     args: CreateNetworkAnalyzerConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateNetworkAnalyzerConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateNetworkAnalyzerConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -893,16 +893,16 @@ export interface IoTWireless {
   createServiceProfile(): Promise<CreateServiceProfileCommandOutput>;
   createServiceProfile(
     args: CreateServiceProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateServiceProfileCommandOutput>;
   createServiceProfile(
     args: CreateServiceProfileCommandInput,
-    cb: (err: any, data?: CreateServiceProfileCommandOutput) => void
+    cb: (err: any, data?: CreateServiceProfileCommandOutput) => void,
   ): void;
   createServiceProfile(
     args: CreateServiceProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateServiceProfileCommandOutput) => void
+    cb: (err: any, data?: CreateServiceProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -910,16 +910,16 @@ export interface IoTWireless {
    */
   createWirelessDevice(
     args: CreateWirelessDeviceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateWirelessDeviceCommandOutput>;
   createWirelessDevice(
     args: CreateWirelessDeviceCommandInput,
-    cb: (err: any, data?: CreateWirelessDeviceCommandOutput) => void
+    cb: (err: any, data?: CreateWirelessDeviceCommandOutput) => void,
   ): void;
   createWirelessDevice(
     args: CreateWirelessDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateWirelessDeviceCommandOutput) => void
+    cb: (err: any, data?: CreateWirelessDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -927,16 +927,16 @@ export interface IoTWireless {
    */
   createWirelessGateway(
     args: CreateWirelessGatewayCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateWirelessGatewayCommandOutput>;
   createWirelessGateway(
     args: CreateWirelessGatewayCommandInput,
-    cb: (err: any, data?: CreateWirelessGatewayCommandOutput) => void
+    cb: (err: any, data?: CreateWirelessGatewayCommandOutput) => void,
   ): void;
   createWirelessGateway(
     args: CreateWirelessGatewayCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateWirelessGatewayCommandOutput) => void
+    cb: (err: any, data?: CreateWirelessGatewayCommandOutput) => void,
   ): void;
 
   /**
@@ -944,16 +944,16 @@ export interface IoTWireless {
    */
   createWirelessGatewayTask(
     args: CreateWirelessGatewayTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateWirelessGatewayTaskCommandOutput>;
   createWirelessGatewayTask(
     args: CreateWirelessGatewayTaskCommandInput,
-    cb: (err: any, data?: CreateWirelessGatewayTaskCommandOutput) => void
+    cb: (err: any, data?: CreateWirelessGatewayTaskCommandOutput) => void,
   ): void;
   createWirelessGatewayTask(
     args: CreateWirelessGatewayTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateWirelessGatewayTaskCommandOutput) => void
+    cb: (err: any, data?: CreateWirelessGatewayTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -961,16 +961,16 @@ export interface IoTWireless {
    */
   createWirelessGatewayTaskDefinition(
     args: CreateWirelessGatewayTaskDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateWirelessGatewayTaskDefinitionCommandOutput>;
   createWirelessGatewayTaskDefinition(
     args: CreateWirelessGatewayTaskDefinitionCommandInput,
-    cb: (err: any, data?: CreateWirelessGatewayTaskDefinitionCommandOutput) => void
+    cb: (err: any, data?: CreateWirelessGatewayTaskDefinitionCommandOutput) => void,
   ): void;
   createWirelessGatewayTaskDefinition(
     args: CreateWirelessGatewayTaskDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateWirelessGatewayTaskDefinitionCommandOutput) => void
+    cb: (err: any, data?: CreateWirelessGatewayTaskDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -978,16 +978,16 @@ export interface IoTWireless {
    */
   deleteDestination(
     args: DeleteDestinationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDestinationCommandOutput>;
   deleteDestination(
     args: DeleteDestinationCommandInput,
-    cb: (err: any, data?: DeleteDestinationCommandOutput) => void
+    cb: (err: any, data?: DeleteDestinationCommandOutput) => void,
   ): void;
   deleteDestination(
     args: DeleteDestinationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDestinationCommandOutput) => void
+    cb: (err: any, data?: DeleteDestinationCommandOutput) => void,
   ): void;
 
   /**
@@ -995,16 +995,16 @@ export interface IoTWireless {
    */
   deleteDeviceProfile(
     args: DeleteDeviceProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDeviceProfileCommandOutput>;
   deleteDeviceProfile(
     args: DeleteDeviceProfileCommandInput,
-    cb: (err: any, data?: DeleteDeviceProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteDeviceProfileCommandOutput) => void,
   ): void;
   deleteDeviceProfile(
     args: DeleteDeviceProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDeviceProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteDeviceProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -1012,13 +1012,13 @@ export interface IoTWireless {
    */
   deleteFuotaTask(
     args: DeleteFuotaTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteFuotaTaskCommandOutput>;
   deleteFuotaTask(args: DeleteFuotaTaskCommandInput, cb: (err: any, data?: DeleteFuotaTaskCommandOutput) => void): void;
   deleteFuotaTask(
     args: DeleteFuotaTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFuotaTaskCommandOutput) => void
+    cb: (err: any, data?: DeleteFuotaTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -1026,16 +1026,16 @@ export interface IoTWireless {
    */
   deleteMulticastGroup(
     args: DeleteMulticastGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteMulticastGroupCommandOutput>;
   deleteMulticastGroup(
     args: DeleteMulticastGroupCommandInput,
-    cb: (err: any, data?: DeleteMulticastGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteMulticastGroupCommandOutput) => void,
   ): void;
   deleteMulticastGroup(
     args: DeleteMulticastGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMulticastGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteMulticastGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1043,16 +1043,16 @@ export interface IoTWireless {
    */
   deleteNetworkAnalyzerConfiguration(
     args: DeleteNetworkAnalyzerConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteNetworkAnalyzerConfigurationCommandOutput>;
   deleteNetworkAnalyzerConfiguration(
     args: DeleteNetworkAnalyzerConfigurationCommandInput,
-    cb: (err: any, data?: DeleteNetworkAnalyzerConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteNetworkAnalyzerConfigurationCommandOutput) => void,
   ): void;
   deleteNetworkAnalyzerConfiguration(
     args: DeleteNetworkAnalyzerConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteNetworkAnalyzerConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteNetworkAnalyzerConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1060,16 +1060,16 @@ export interface IoTWireless {
    */
   deleteQueuedMessages(
     args: DeleteQueuedMessagesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteQueuedMessagesCommandOutput>;
   deleteQueuedMessages(
     args: DeleteQueuedMessagesCommandInput,
-    cb: (err: any, data?: DeleteQueuedMessagesCommandOutput) => void
+    cb: (err: any, data?: DeleteQueuedMessagesCommandOutput) => void,
   ): void;
   deleteQueuedMessages(
     args: DeleteQueuedMessagesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteQueuedMessagesCommandOutput) => void
+    cb: (err: any, data?: DeleteQueuedMessagesCommandOutput) => void,
   ): void;
 
   /**
@@ -1077,16 +1077,16 @@ export interface IoTWireless {
    */
   deleteServiceProfile(
     args: DeleteServiceProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteServiceProfileCommandOutput>;
   deleteServiceProfile(
     args: DeleteServiceProfileCommandInput,
-    cb: (err: any, data?: DeleteServiceProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteServiceProfileCommandOutput) => void,
   ): void;
   deleteServiceProfile(
     args: DeleteServiceProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteServiceProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteServiceProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -1094,16 +1094,16 @@ export interface IoTWireless {
    */
   deleteWirelessDevice(
     args: DeleteWirelessDeviceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteWirelessDeviceCommandOutput>;
   deleteWirelessDevice(
     args: DeleteWirelessDeviceCommandInput,
-    cb: (err: any, data?: DeleteWirelessDeviceCommandOutput) => void
+    cb: (err: any, data?: DeleteWirelessDeviceCommandOutput) => void,
   ): void;
   deleteWirelessDevice(
     args: DeleteWirelessDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteWirelessDeviceCommandOutput) => void
+    cb: (err: any, data?: DeleteWirelessDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -1111,16 +1111,16 @@ export interface IoTWireless {
    */
   deleteWirelessDeviceImportTask(
     args: DeleteWirelessDeviceImportTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteWirelessDeviceImportTaskCommandOutput>;
   deleteWirelessDeviceImportTask(
     args: DeleteWirelessDeviceImportTaskCommandInput,
-    cb: (err: any, data?: DeleteWirelessDeviceImportTaskCommandOutput) => void
+    cb: (err: any, data?: DeleteWirelessDeviceImportTaskCommandOutput) => void,
   ): void;
   deleteWirelessDeviceImportTask(
     args: DeleteWirelessDeviceImportTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteWirelessDeviceImportTaskCommandOutput) => void
+    cb: (err: any, data?: DeleteWirelessDeviceImportTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -1128,16 +1128,16 @@ export interface IoTWireless {
    */
   deleteWirelessGateway(
     args: DeleteWirelessGatewayCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteWirelessGatewayCommandOutput>;
   deleteWirelessGateway(
     args: DeleteWirelessGatewayCommandInput,
-    cb: (err: any, data?: DeleteWirelessGatewayCommandOutput) => void
+    cb: (err: any, data?: DeleteWirelessGatewayCommandOutput) => void,
   ): void;
   deleteWirelessGateway(
     args: DeleteWirelessGatewayCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteWirelessGatewayCommandOutput) => void
+    cb: (err: any, data?: DeleteWirelessGatewayCommandOutput) => void,
   ): void;
 
   /**
@@ -1145,16 +1145,16 @@ export interface IoTWireless {
    */
   deleteWirelessGatewayTask(
     args: DeleteWirelessGatewayTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteWirelessGatewayTaskCommandOutput>;
   deleteWirelessGatewayTask(
     args: DeleteWirelessGatewayTaskCommandInput,
-    cb: (err: any, data?: DeleteWirelessGatewayTaskCommandOutput) => void
+    cb: (err: any, data?: DeleteWirelessGatewayTaskCommandOutput) => void,
   ): void;
   deleteWirelessGatewayTask(
     args: DeleteWirelessGatewayTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteWirelessGatewayTaskCommandOutput) => void
+    cb: (err: any, data?: DeleteWirelessGatewayTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -1162,16 +1162,16 @@ export interface IoTWireless {
    */
   deleteWirelessGatewayTaskDefinition(
     args: DeleteWirelessGatewayTaskDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteWirelessGatewayTaskDefinitionCommandOutput>;
   deleteWirelessGatewayTaskDefinition(
     args: DeleteWirelessGatewayTaskDefinitionCommandInput,
-    cb: (err: any, data?: DeleteWirelessGatewayTaskDefinitionCommandOutput) => void
+    cb: (err: any, data?: DeleteWirelessGatewayTaskDefinitionCommandOutput) => void,
   ): void;
   deleteWirelessGatewayTaskDefinition(
     args: DeleteWirelessGatewayTaskDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteWirelessGatewayTaskDefinitionCommandOutput) => void
+    cb: (err: any, data?: DeleteWirelessGatewayTaskDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -1179,16 +1179,16 @@ export interface IoTWireless {
    */
   deregisterWirelessDevice(
     args: DeregisterWirelessDeviceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterWirelessDeviceCommandOutput>;
   deregisterWirelessDevice(
     args: DeregisterWirelessDeviceCommandInput,
-    cb: (err: any, data?: DeregisterWirelessDeviceCommandOutput) => void
+    cb: (err: any, data?: DeregisterWirelessDeviceCommandOutput) => void,
   ): void;
   deregisterWirelessDevice(
     args: DeregisterWirelessDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterWirelessDeviceCommandOutput) => void
+    cb: (err: any, data?: DeregisterWirelessDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -1196,16 +1196,16 @@ export interface IoTWireless {
    */
   disassociateAwsAccountFromPartnerAccount(
     args: DisassociateAwsAccountFromPartnerAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateAwsAccountFromPartnerAccountCommandOutput>;
   disassociateAwsAccountFromPartnerAccount(
     args: DisassociateAwsAccountFromPartnerAccountCommandInput,
-    cb: (err: any, data?: DisassociateAwsAccountFromPartnerAccountCommandOutput) => void
+    cb: (err: any, data?: DisassociateAwsAccountFromPartnerAccountCommandOutput) => void,
   ): void;
   disassociateAwsAccountFromPartnerAccount(
     args: DisassociateAwsAccountFromPartnerAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateAwsAccountFromPartnerAccountCommandOutput) => void
+    cb: (err: any, data?: DisassociateAwsAccountFromPartnerAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -1213,16 +1213,16 @@ export interface IoTWireless {
    */
   disassociateMulticastGroupFromFuotaTask(
     args: DisassociateMulticastGroupFromFuotaTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateMulticastGroupFromFuotaTaskCommandOutput>;
   disassociateMulticastGroupFromFuotaTask(
     args: DisassociateMulticastGroupFromFuotaTaskCommandInput,
-    cb: (err: any, data?: DisassociateMulticastGroupFromFuotaTaskCommandOutput) => void
+    cb: (err: any, data?: DisassociateMulticastGroupFromFuotaTaskCommandOutput) => void,
   ): void;
   disassociateMulticastGroupFromFuotaTask(
     args: DisassociateMulticastGroupFromFuotaTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateMulticastGroupFromFuotaTaskCommandOutput) => void
+    cb: (err: any, data?: DisassociateMulticastGroupFromFuotaTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -1230,16 +1230,16 @@ export interface IoTWireless {
    */
   disassociateWirelessDeviceFromFuotaTask(
     args: DisassociateWirelessDeviceFromFuotaTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateWirelessDeviceFromFuotaTaskCommandOutput>;
   disassociateWirelessDeviceFromFuotaTask(
     args: DisassociateWirelessDeviceFromFuotaTaskCommandInput,
-    cb: (err: any, data?: DisassociateWirelessDeviceFromFuotaTaskCommandOutput) => void
+    cb: (err: any, data?: DisassociateWirelessDeviceFromFuotaTaskCommandOutput) => void,
   ): void;
   disassociateWirelessDeviceFromFuotaTask(
     args: DisassociateWirelessDeviceFromFuotaTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateWirelessDeviceFromFuotaTaskCommandOutput) => void
+    cb: (err: any, data?: DisassociateWirelessDeviceFromFuotaTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -1247,16 +1247,16 @@ export interface IoTWireless {
    */
   disassociateWirelessDeviceFromMulticastGroup(
     args: DisassociateWirelessDeviceFromMulticastGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateWirelessDeviceFromMulticastGroupCommandOutput>;
   disassociateWirelessDeviceFromMulticastGroup(
     args: DisassociateWirelessDeviceFromMulticastGroupCommandInput,
-    cb: (err: any, data?: DisassociateWirelessDeviceFromMulticastGroupCommandOutput) => void
+    cb: (err: any, data?: DisassociateWirelessDeviceFromMulticastGroupCommandOutput) => void,
   ): void;
   disassociateWirelessDeviceFromMulticastGroup(
     args: DisassociateWirelessDeviceFromMulticastGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateWirelessDeviceFromMulticastGroupCommandOutput) => void
+    cb: (err: any, data?: DisassociateWirelessDeviceFromMulticastGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1264,16 +1264,16 @@ export interface IoTWireless {
    */
   disassociateWirelessDeviceFromThing(
     args: DisassociateWirelessDeviceFromThingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateWirelessDeviceFromThingCommandOutput>;
   disassociateWirelessDeviceFromThing(
     args: DisassociateWirelessDeviceFromThingCommandInput,
-    cb: (err: any, data?: DisassociateWirelessDeviceFromThingCommandOutput) => void
+    cb: (err: any, data?: DisassociateWirelessDeviceFromThingCommandOutput) => void,
   ): void;
   disassociateWirelessDeviceFromThing(
     args: DisassociateWirelessDeviceFromThingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateWirelessDeviceFromThingCommandOutput) => void
+    cb: (err: any, data?: DisassociateWirelessDeviceFromThingCommandOutput) => void,
   ): void;
 
   /**
@@ -1281,16 +1281,16 @@ export interface IoTWireless {
    */
   disassociateWirelessGatewayFromCertificate(
     args: DisassociateWirelessGatewayFromCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateWirelessGatewayFromCertificateCommandOutput>;
   disassociateWirelessGatewayFromCertificate(
     args: DisassociateWirelessGatewayFromCertificateCommandInput,
-    cb: (err: any, data?: DisassociateWirelessGatewayFromCertificateCommandOutput) => void
+    cb: (err: any, data?: DisassociateWirelessGatewayFromCertificateCommandOutput) => void,
   ): void;
   disassociateWirelessGatewayFromCertificate(
     args: DisassociateWirelessGatewayFromCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateWirelessGatewayFromCertificateCommandOutput) => void
+    cb: (err: any, data?: DisassociateWirelessGatewayFromCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -1298,16 +1298,16 @@ export interface IoTWireless {
    */
   disassociateWirelessGatewayFromThing(
     args: DisassociateWirelessGatewayFromThingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateWirelessGatewayFromThingCommandOutput>;
   disassociateWirelessGatewayFromThing(
     args: DisassociateWirelessGatewayFromThingCommandInput,
-    cb: (err: any, data?: DisassociateWirelessGatewayFromThingCommandOutput) => void
+    cb: (err: any, data?: DisassociateWirelessGatewayFromThingCommandOutput) => void,
   ): void;
   disassociateWirelessGatewayFromThing(
     args: DisassociateWirelessGatewayFromThingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateWirelessGatewayFromThingCommandOutput) => void
+    cb: (err: any, data?: DisassociateWirelessGatewayFromThingCommandOutput) => void,
   ): void;
 
   /**
@@ -1315,13 +1315,13 @@ export interface IoTWireless {
    */
   getDestination(
     args: GetDestinationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDestinationCommandOutput>;
   getDestination(args: GetDestinationCommandInput, cb: (err: any, data?: GetDestinationCommandOutput) => void): void;
   getDestination(
     args: GetDestinationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDestinationCommandOutput) => void
+    cb: (err: any, data?: GetDestinationCommandOutput) => void,
   ): void;
 
   /**
@@ -1329,16 +1329,16 @@ export interface IoTWireless {
    */
   getDeviceProfile(
     args: GetDeviceProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDeviceProfileCommandOutput>;
   getDeviceProfile(
     args: GetDeviceProfileCommandInput,
-    cb: (err: any, data?: GetDeviceProfileCommandOutput) => void
+    cb: (err: any, data?: GetDeviceProfileCommandOutput) => void,
   ): void;
   getDeviceProfile(
     args: GetDeviceProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeviceProfileCommandOutput) => void
+    cb: (err: any, data?: GetDeviceProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -1347,16 +1347,16 @@ export interface IoTWireless {
   getEventConfigurationByResourceTypes(): Promise<GetEventConfigurationByResourceTypesCommandOutput>;
   getEventConfigurationByResourceTypes(
     args: GetEventConfigurationByResourceTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEventConfigurationByResourceTypesCommandOutput>;
   getEventConfigurationByResourceTypes(
     args: GetEventConfigurationByResourceTypesCommandInput,
-    cb: (err: any, data?: GetEventConfigurationByResourceTypesCommandOutput) => void
+    cb: (err: any, data?: GetEventConfigurationByResourceTypesCommandOutput) => void,
   ): void;
   getEventConfigurationByResourceTypes(
     args: GetEventConfigurationByResourceTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEventConfigurationByResourceTypesCommandOutput) => void
+    cb: (err: any, data?: GetEventConfigurationByResourceTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -1367,7 +1367,7 @@ export interface IoTWireless {
   getFuotaTask(
     args: GetFuotaTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFuotaTaskCommandOutput) => void
+    cb: (err: any, data?: GetFuotaTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -1376,16 +1376,16 @@ export interface IoTWireless {
   getLogLevelsByResourceTypes(): Promise<GetLogLevelsByResourceTypesCommandOutput>;
   getLogLevelsByResourceTypes(
     args: GetLogLevelsByResourceTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetLogLevelsByResourceTypesCommandOutput>;
   getLogLevelsByResourceTypes(
     args: GetLogLevelsByResourceTypesCommandInput,
-    cb: (err: any, data?: GetLogLevelsByResourceTypesCommandOutput) => void
+    cb: (err: any, data?: GetLogLevelsByResourceTypesCommandOutput) => void,
   ): void;
   getLogLevelsByResourceTypes(
     args: GetLogLevelsByResourceTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLogLevelsByResourceTypesCommandOutput) => void
+    cb: (err: any, data?: GetLogLevelsByResourceTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -1394,16 +1394,16 @@ export interface IoTWireless {
   getMetricConfiguration(): Promise<GetMetricConfigurationCommandOutput>;
   getMetricConfiguration(
     args: GetMetricConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMetricConfigurationCommandOutput>;
   getMetricConfiguration(
     args: GetMetricConfigurationCommandInput,
-    cb: (err: any, data?: GetMetricConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetMetricConfigurationCommandOutput) => void,
   ): void;
   getMetricConfiguration(
     args: GetMetricConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMetricConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetMetricConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1415,7 +1415,7 @@ export interface IoTWireless {
   getMetrics(
     args: GetMetricsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMetricsCommandOutput) => void
+    cb: (err: any, data?: GetMetricsCommandOutput) => void,
   ): void;
 
   /**
@@ -1423,16 +1423,16 @@ export interface IoTWireless {
    */
   getMulticastGroup(
     args: GetMulticastGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMulticastGroupCommandOutput>;
   getMulticastGroup(
     args: GetMulticastGroupCommandInput,
-    cb: (err: any, data?: GetMulticastGroupCommandOutput) => void
+    cb: (err: any, data?: GetMulticastGroupCommandOutput) => void,
   ): void;
   getMulticastGroup(
     args: GetMulticastGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMulticastGroupCommandOutput) => void
+    cb: (err: any, data?: GetMulticastGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1440,16 +1440,16 @@ export interface IoTWireless {
    */
   getMulticastGroupSession(
     args: GetMulticastGroupSessionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMulticastGroupSessionCommandOutput>;
   getMulticastGroupSession(
     args: GetMulticastGroupSessionCommandInput,
-    cb: (err: any, data?: GetMulticastGroupSessionCommandOutput) => void
+    cb: (err: any, data?: GetMulticastGroupSessionCommandOutput) => void,
   ): void;
   getMulticastGroupSession(
     args: GetMulticastGroupSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMulticastGroupSessionCommandOutput) => void
+    cb: (err: any, data?: GetMulticastGroupSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -1457,16 +1457,16 @@ export interface IoTWireless {
    */
   getNetworkAnalyzerConfiguration(
     args: GetNetworkAnalyzerConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetNetworkAnalyzerConfigurationCommandOutput>;
   getNetworkAnalyzerConfiguration(
     args: GetNetworkAnalyzerConfigurationCommandInput,
-    cb: (err: any, data?: GetNetworkAnalyzerConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetNetworkAnalyzerConfigurationCommandOutput) => void,
   ): void;
   getNetworkAnalyzerConfiguration(
     args: GetNetworkAnalyzerConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetNetworkAnalyzerConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetNetworkAnalyzerConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1474,16 +1474,16 @@ export interface IoTWireless {
    */
   getPartnerAccount(
     args: GetPartnerAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPartnerAccountCommandOutput>;
   getPartnerAccount(
     args: GetPartnerAccountCommandInput,
-    cb: (err: any, data?: GetPartnerAccountCommandOutput) => void
+    cb: (err: any, data?: GetPartnerAccountCommandOutput) => void,
   ): void;
   getPartnerAccount(
     args: GetPartnerAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPartnerAccountCommandOutput) => void
+    cb: (err: any, data?: GetPartnerAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -1494,7 +1494,7 @@ export interface IoTWireless {
   getPosition(
     args: GetPositionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPositionCommandOutput) => void
+    cb: (err: any, data?: GetPositionCommandOutput) => void,
   ): void;
 
   /**
@@ -1502,16 +1502,16 @@ export interface IoTWireless {
    */
   getPositionConfiguration(
     args: GetPositionConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPositionConfigurationCommandOutput>;
   getPositionConfiguration(
     args: GetPositionConfigurationCommandInput,
-    cb: (err: any, data?: GetPositionConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetPositionConfigurationCommandOutput) => void,
   ): void;
   getPositionConfiguration(
     args: GetPositionConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPositionConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetPositionConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1520,16 +1520,16 @@ export interface IoTWireless {
   getPositionEstimate(): Promise<GetPositionEstimateCommandOutput>;
   getPositionEstimate(
     args: GetPositionEstimateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPositionEstimateCommandOutput>;
   getPositionEstimate(
     args: GetPositionEstimateCommandInput,
-    cb: (err: any, data?: GetPositionEstimateCommandOutput) => void
+    cb: (err: any, data?: GetPositionEstimateCommandOutput) => void,
   ): void;
   getPositionEstimate(
     args: GetPositionEstimateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPositionEstimateCommandOutput) => void
+    cb: (err: any, data?: GetPositionEstimateCommandOutput) => void,
   ): void;
 
   /**
@@ -1537,16 +1537,16 @@ export interface IoTWireless {
    */
   getResourceEventConfiguration(
     args: GetResourceEventConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResourceEventConfigurationCommandOutput>;
   getResourceEventConfiguration(
     args: GetResourceEventConfigurationCommandInput,
-    cb: (err: any, data?: GetResourceEventConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetResourceEventConfigurationCommandOutput) => void,
   ): void;
   getResourceEventConfiguration(
     args: GetResourceEventConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourceEventConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetResourceEventConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1554,16 +1554,16 @@ export interface IoTWireless {
    */
   getResourceLogLevel(
     args: GetResourceLogLevelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResourceLogLevelCommandOutput>;
   getResourceLogLevel(
     args: GetResourceLogLevelCommandInput,
-    cb: (err: any, data?: GetResourceLogLevelCommandOutput) => void
+    cb: (err: any, data?: GetResourceLogLevelCommandOutput) => void,
   ): void;
   getResourceLogLevel(
     args: GetResourceLogLevelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourceLogLevelCommandOutput) => void
+    cb: (err: any, data?: GetResourceLogLevelCommandOutput) => void,
   ): void;
 
   /**
@@ -1571,16 +1571,16 @@ export interface IoTWireless {
    */
   getResourcePosition(
     args: GetResourcePositionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResourcePositionCommandOutput>;
   getResourcePosition(
     args: GetResourcePositionCommandInput,
-    cb: (err: any, data?: GetResourcePositionCommandOutput) => void
+    cb: (err: any, data?: GetResourcePositionCommandOutput) => void,
   ): void;
   getResourcePosition(
     args: GetResourcePositionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourcePositionCommandOutput) => void
+    cb: (err: any, data?: GetResourcePositionCommandOutput) => void,
   ): void;
 
   /**
@@ -1589,16 +1589,16 @@ export interface IoTWireless {
   getServiceEndpoint(): Promise<GetServiceEndpointCommandOutput>;
   getServiceEndpoint(
     args: GetServiceEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetServiceEndpointCommandOutput>;
   getServiceEndpoint(
     args: GetServiceEndpointCommandInput,
-    cb: (err: any, data?: GetServiceEndpointCommandOutput) => void
+    cb: (err: any, data?: GetServiceEndpointCommandOutput) => void,
   ): void;
   getServiceEndpoint(
     args: GetServiceEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetServiceEndpointCommandOutput) => void
+    cb: (err: any, data?: GetServiceEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -1606,16 +1606,16 @@ export interface IoTWireless {
    */
   getServiceProfile(
     args: GetServiceProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetServiceProfileCommandOutput>;
   getServiceProfile(
     args: GetServiceProfileCommandInput,
-    cb: (err: any, data?: GetServiceProfileCommandOutput) => void
+    cb: (err: any, data?: GetServiceProfileCommandOutput) => void,
   ): void;
   getServiceProfile(
     args: GetServiceProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetServiceProfileCommandOutput) => void
+    cb: (err: any, data?: GetServiceProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -1623,16 +1623,16 @@ export interface IoTWireless {
    */
   getWirelessDevice(
     args: GetWirelessDeviceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetWirelessDeviceCommandOutput>;
   getWirelessDevice(
     args: GetWirelessDeviceCommandInput,
-    cb: (err: any, data?: GetWirelessDeviceCommandOutput) => void
+    cb: (err: any, data?: GetWirelessDeviceCommandOutput) => void,
   ): void;
   getWirelessDevice(
     args: GetWirelessDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWirelessDeviceCommandOutput) => void
+    cb: (err: any, data?: GetWirelessDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -1640,16 +1640,16 @@ export interface IoTWireless {
    */
   getWirelessDeviceImportTask(
     args: GetWirelessDeviceImportTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetWirelessDeviceImportTaskCommandOutput>;
   getWirelessDeviceImportTask(
     args: GetWirelessDeviceImportTaskCommandInput,
-    cb: (err: any, data?: GetWirelessDeviceImportTaskCommandOutput) => void
+    cb: (err: any, data?: GetWirelessDeviceImportTaskCommandOutput) => void,
   ): void;
   getWirelessDeviceImportTask(
     args: GetWirelessDeviceImportTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWirelessDeviceImportTaskCommandOutput) => void
+    cb: (err: any, data?: GetWirelessDeviceImportTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -1657,16 +1657,16 @@ export interface IoTWireless {
    */
   getWirelessDeviceStatistics(
     args: GetWirelessDeviceStatisticsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetWirelessDeviceStatisticsCommandOutput>;
   getWirelessDeviceStatistics(
     args: GetWirelessDeviceStatisticsCommandInput,
-    cb: (err: any, data?: GetWirelessDeviceStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetWirelessDeviceStatisticsCommandOutput) => void,
   ): void;
   getWirelessDeviceStatistics(
     args: GetWirelessDeviceStatisticsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWirelessDeviceStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetWirelessDeviceStatisticsCommandOutput) => void,
   ): void;
 
   /**
@@ -1674,16 +1674,16 @@ export interface IoTWireless {
    */
   getWirelessGateway(
     args: GetWirelessGatewayCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetWirelessGatewayCommandOutput>;
   getWirelessGateway(
     args: GetWirelessGatewayCommandInput,
-    cb: (err: any, data?: GetWirelessGatewayCommandOutput) => void
+    cb: (err: any, data?: GetWirelessGatewayCommandOutput) => void,
   ): void;
   getWirelessGateway(
     args: GetWirelessGatewayCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWirelessGatewayCommandOutput) => void
+    cb: (err: any, data?: GetWirelessGatewayCommandOutput) => void,
   ): void;
 
   /**
@@ -1691,16 +1691,16 @@ export interface IoTWireless {
    */
   getWirelessGatewayCertificate(
     args: GetWirelessGatewayCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetWirelessGatewayCertificateCommandOutput>;
   getWirelessGatewayCertificate(
     args: GetWirelessGatewayCertificateCommandInput,
-    cb: (err: any, data?: GetWirelessGatewayCertificateCommandOutput) => void
+    cb: (err: any, data?: GetWirelessGatewayCertificateCommandOutput) => void,
   ): void;
   getWirelessGatewayCertificate(
     args: GetWirelessGatewayCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWirelessGatewayCertificateCommandOutput) => void
+    cb: (err: any, data?: GetWirelessGatewayCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -1708,16 +1708,16 @@ export interface IoTWireless {
    */
   getWirelessGatewayFirmwareInformation(
     args: GetWirelessGatewayFirmwareInformationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetWirelessGatewayFirmwareInformationCommandOutput>;
   getWirelessGatewayFirmwareInformation(
     args: GetWirelessGatewayFirmwareInformationCommandInput,
-    cb: (err: any, data?: GetWirelessGatewayFirmwareInformationCommandOutput) => void
+    cb: (err: any, data?: GetWirelessGatewayFirmwareInformationCommandOutput) => void,
   ): void;
   getWirelessGatewayFirmwareInformation(
     args: GetWirelessGatewayFirmwareInformationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWirelessGatewayFirmwareInformationCommandOutput) => void
+    cb: (err: any, data?: GetWirelessGatewayFirmwareInformationCommandOutput) => void,
   ): void;
 
   /**
@@ -1725,16 +1725,16 @@ export interface IoTWireless {
    */
   getWirelessGatewayStatistics(
     args: GetWirelessGatewayStatisticsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetWirelessGatewayStatisticsCommandOutput>;
   getWirelessGatewayStatistics(
     args: GetWirelessGatewayStatisticsCommandInput,
-    cb: (err: any, data?: GetWirelessGatewayStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetWirelessGatewayStatisticsCommandOutput) => void,
   ): void;
   getWirelessGatewayStatistics(
     args: GetWirelessGatewayStatisticsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWirelessGatewayStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetWirelessGatewayStatisticsCommandOutput) => void,
   ): void;
 
   /**
@@ -1742,16 +1742,16 @@ export interface IoTWireless {
    */
   getWirelessGatewayTask(
     args: GetWirelessGatewayTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetWirelessGatewayTaskCommandOutput>;
   getWirelessGatewayTask(
     args: GetWirelessGatewayTaskCommandInput,
-    cb: (err: any, data?: GetWirelessGatewayTaskCommandOutput) => void
+    cb: (err: any, data?: GetWirelessGatewayTaskCommandOutput) => void,
   ): void;
   getWirelessGatewayTask(
     args: GetWirelessGatewayTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWirelessGatewayTaskCommandOutput) => void
+    cb: (err: any, data?: GetWirelessGatewayTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -1759,16 +1759,16 @@ export interface IoTWireless {
    */
   getWirelessGatewayTaskDefinition(
     args: GetWirelessGatewayTaskDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetWirelessGatewayTaskDefinitionCommandOutput>;
   getWirelessGatewayTaskDefinition(
     args: GetWirelessGatewayTaskDefinitionCommandInput,
-    cb: (err: any, data?: GetWirelessGatewayTaskDefinitionCommandOutput) => void
+    cb: (err: any, data?: GetWirelessGatewayTaskDefinitionCommandOutput) => void,
   ): void;
   getWirelessGatewayTaskDefinition(
     args: GetWirelessGatewayTaskDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWirelessGatewayTaskDefinitionCommandOutput) => void
+    cb: (err: any, data?: GetWirelessGatewayTaskDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -1777,16 +1777,16 @@ export interface IoTWireless {
   listDestinations(): Promise<ListDestinationsCommandOutput>;
   listDestinations(
     args: ListDestinationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDestinationsCommandOutput>;
   listDestinations(
     args: ListDestinationsCommandInput,
-    cb: (err: any, data?: ListDestinationsCommandOutput) => void
+    cb: (err: any, data?: ListDestinationsCommandOutput) => void,
   ): void;
   listDestinations(
     args: ListDestinationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDestinationsCommandOutput) => void
+    cb: (err: any, data?: ListDestinationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1795,16 +1795,16 @@ export interface IoTWireless {
   listDeviceProfiles(): Promise<ListDeviceProfilesCommandOutput>;
   listDeviceProfiles(
     args: ListDeviceProfilesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDeviceProfilesCommandOutput>;
   listDeviceProfiles(
     args: ListDeviceProfilesCommandInput,
-    cb: (err: any, data?: ListDeviceProfilesCommandOutput) => void
+    cb: (err: any, data?: ListDeviceProfilesCommandOutput) => void,
   ): void;
   listDeviceProfiles(
     args: ListDeviceProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDeviceProfilesCommandOutput) => void
+    cb: (err: any, data?: ListDeviceProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -1812,16 +1812,16 @@ export interface IoTWireless {
    */
   listDevicesForWirelessDeviceImportTask(
     args: ListDevicesForWirelessDeviceImportTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDevicesForWirelessDeviceImportTaskCommandOutput>;
   listDevicesForWirelessDeviceImportTask(
     args: ListDevicesForWirelessDeviceImportTaskCommandInput,
-    cb: (err: any, data?: ListDevicesForWirelessDeviceImportTaskCommandOutput) => void
+    cb: (err: any, data?: ListDevicesForWirelessDeviceImportTaskCommandOutput) => void,
   ): void;
   listDevicesForWirelessDeviceImportTask(
     args: ListDevicesForWirelessDeviceImportTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDevicesForWirelessDeviceImportTaskCommandOutput) => void
+    cb: (err: any, data?: ListDevicesForWirelessDeviceImportTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -1829,16 +1829,16 @@ export interface IoTWireless {
    */
   listEventConfigurations(
     args: ListEventConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEventConfigurationsCommandOutput>;
   listEventConfigurations(
     args: ListEventConfigurationsCommandInput,
-    cb: (err: any, data?: ListEventConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListEventConfigurationsCommandOutput) => void,
   ): void;
   listEventConfigurations(
     args: ListEventConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEventConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListEventConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1847,13 +1847,13 @@ export interface IoTWireless {
   listFuotaTasks(): Promise<ListFuotaTasksCommandOutput>;
   listFuotaTasks(
     args: ListFuotaTasksCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFuotaTasksCommandOutput>;
   listFuotaTasks(args: ListFuotaTasksCommandInput, cb: (err: any, data?: ListFuotaTasksCommandOutput) => void): void;
   listFuotaTasks(
     args: ListFuotaTasksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFuotaTasksCommandOutput) => void
+    cb: (err: any, data?: ListFuotaTasksCommandOutput) => void,
   ): void;
 
   /**
@@ -1862,16 +1862,16 @@ export interface IoTWireless {
   listMulticastGroups(): Promise<ListMulticastGroupsCommandOutput>;
   listMulticastGroups(
     args: ListMulticastGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMulticastGroupsCommandOutput>;
   listMulticastGroups(
     args: ListMulticastGroupsCommandInput,
-    cb: (err: any, data?: ListMulticastGroupsCommandOutput) => void
+    cb: (err: any, data?: ListMulticastGroupsCommandOutput) => void,
   ): void;
   listMulticastGroups(
     args: ListMulticastGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMulticastGroupsCommandOutput) => void
+    cb: (err: any, data?: ListMulticastGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -1879,16 +1879,16 @@ export interface IoTWireless {
    */
   listMulticastGroupsByFuotaTask(
     args: ListMulticastGroupsByFuotaTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMulticastGroupsByFuotaTaskCommandOutput>;
   listMulticastGroupsByFuotaTask(
     args: ListMulticastGroupsByFuotaTaskCommandInput,
-    cb: (err: any, data?: ListMulticastGroupsByFuotaTaskCommandOutput) => void
+    cb: (err: any, data?: ListMulticastGroupsByFuotaTaskCommandOutput) => void,
   ): void;
   listMulticastGroupsByFuotaTask(
     args: ListMulticastGroupsByFuotaTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMulticastGroupsByFuotaTaskCommandOutput) => void
+    cb: (err: any, data?: ListMulticastGroupsByFuotaTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -1897,16 +1897,16 @@ export interface IoTWireless {
   listNetworkAnalyzerConfigurations(): Promise<ListNetworkAnalyzerConfigurationsCommandOutput>;
   listNetworkAnalyzerConfigurations(
     args: ListNetworkAnalyzerConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListNetworkAnalyzerConfigurationsCommandOutput>;
   listNetworkAnalyzerConfigurations(
     args: ListNetworkAnalyzerConfigurationsCommandInput,
-    cb: (err: any, data?: ListNetworkAnalyzerConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListNetworkAnalyzerConfigurationsCommandOutput) => void,
   ): void;
   listNetworkAnalyzerConfigurations(
     args: ListNetworkAnalyzerConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListNetworkAnalyzerConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListNetworkAnalyzerConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1915,16 +1915,16 @@ export interface IoTWireless {
   listPartnerAccounts(): Promise<ListPartnerAccountsCommandOutput>;
   listPartnerAccounts(
     args: ListPartnerAccountsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPartnerAccountsCommandOutput>;
   listPartnerAccounts(
     args: ListPartnerAccountsCommandInput,
-    cb: (err: any, data?: ListPartnerAccountsCommandOutput) => void
+    cb: (err: any, data?: ListPartnerAccountsCommandOutput) => void,
   ): void;
   listPartnerAccounts(
     args: ListPartnerAccountsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPartnerAccountsCommandOutput) => void
+    cb: (err: any, data?: ListPartnerAccountsCommandOutput) => void,
   ): void;
 
   /**
@@ -1933,16 +1933,16 @@ export interface IoTWireless {
   listPositionConfigurations(): Promise<ListPositionConfigurationsCommandOutput>;
   listPositionConfigurations(
     args: ListPositionConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPositionConfigurationsCommandOutput>;
   listPositionConfigurations(
     args: ListPositionConfigurationsCommandInput,
-    cb: (err: any, data?: ListPositionConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListPositionConfigurationsCommandOutput) => void,
   ): void;
   listPositionConfigurations(
     args: ListPositionConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPositionConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListPositionConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1950,16 +1950,16 @@ export interface IoTWireless {
    */
   listQueuedMessages(
     args: ListQueuedMessagesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListQueuedMessagesCommandOutput>;
   listQueuedMessages(
     args: ListQueuedMessagesCommandInput,
-    cb: (err: any, data?: ListQueuedMessagesCommandOutput) => void
+    cb: (err: any, data?: ListQueuedMessagesCommandOutput) => void,
   ): void;
   listQueuedMessages(
     args: ListQueuedMessagesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListQueuedMessagesCommandOutput) => void
+    cb: (err: any, data?: ListQueuedMessagesCommandOutput) => void,
   ): void;
 
   /**
@@ -1968,16 +1968,16 @@ export interface IoTWireless {
   listServiceProfiles(): Promise<ListServiceProfilesCommandOutput>;
   listServiceProfiles(
     args: ListServiceProfilesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListServiceProfilesCommandOutput>;
   listServiceProfiles(
     args: ListServiceProfilesCommandInput,
-    cb: (err: any, data?: ListServiceProfilesCommandOutput) => void
+    cb: (err: any, data?: ListServiceProfilesCommandOutput) => void,
   ): void;
   listServiceProfiles(
     args: ListServiceProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServiceProfilesCommandOutput) => void
+    cb: (err: any, data?: ListServiceProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -1985,16 +1985,16 @@ export interface IoTWireless {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -2003,16 +2003,16 @@ export interface IoTWireless {
   listWirelessDeviceImportTasks(): Promise<ListWirelessDeviceImportTasksCommandOutput>;
   listWirelessDeviceImportTasks(
     args: ListWirelessDeviceImportTasksCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListWirelessDeviceImportTasksCommandOutput>;
   listWirelessDeviceImportTasks(
     args: ListWirelessDeviceImportTasksCommandInput,
-    cb: (err: any, data?: ListWirelessDeviceImportTasksCommandOutput) => void
+    cb: (err: any, data?: ListWirelessDeviceImportTasksCommandOutput) => void,
   ): void;
   listWirelessDeviceImportTasks(
     args: ListWirelessDeviceImportTasksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWirelessDeviceImportTasksCommandOutput) => void
+    cb: (err: any, data?: ListWirelessDeviceImportTasksCommandOutput) => void,
   ): void;
 
   /**
@@ -2021,16 +2021,16 @@ export interface IoTWireless {
   listWirelessDevices(): Promise<ListWirelessDevicesCommandOutput>;
   listWirelessDevices(
     args: ListWirelessDevicesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListWirelessDevicesCommandOutput>;
   listWirelessDevices(
     args: ListWirelessDevicesCommandInput,
-    cb: (err: any, data?: ListWirelessDevicesCommandOutput) => void
+    cb: (err: any, data?: ListWirelessDevicesCommandOutput) => void,
   ): void;
   listWirelessDevices(
     args: ListWirelessDevicesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWirelessDevicesCommandOutput) => void
+    cb: (err: any, data?: ListWirelessDevicesCommandOutput) => void,
   ): void;
 
   /**
@@ -2039,16 +2039,16 @@ export interface IoTWireless {
   listWirelessGateways(): Promise<ListWirelessGatewaysCommandOutput>;
   listWirelessGateways(
     args: ListWirelessGatewaysCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListWirelessGatewaysCommandOutput>;
   listWirelessGateways(
     args: ListWirelessGatewaysCommandInput,
-    cb: (err: any, data?: ListWirelessGatewaysCommandOutput) => void
+    cb: (err: any, data?: ListWirelessGatewaysCommandOutput) => void,
   ): void;
   listWirelessGateways(
     args: ListWirelessGatewaysCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWirelessGatewaysCommandOutput) => void
+    cb: (err: any, data?: ListWirelessGatewaysCommandOutput) => void,
   ): void;
 
   /**
@@ -2057,16 +2057,16 @@ export interface IoTWireless {
   listWirelessGatewayTaskDefinitions(): Promise<ListWirelessGatewayTaskDefinitionsCommandOutput>;
   listWirelessGatewayTaskDefinitions(
     args: ListWirelessGatewayTaskDefinitionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListWirelessGatewayTaskDefinitionsCommandOutput>;
   listWirelessGatewayTaskDefinitions(
     args: ListWirelessGatewayTaskDefinitionsCommandInput,
-    cb: (err: any, data?: ListWirelessGatewayTaskDefinitionsCommandOutput) => void
+    cb: (err: any, data?: ListWirelessGatewayTaskDefinitionsCommandOutput) => void,
   ): void;
   listWirelessGatewayTaskDefinitions(
     args: ListWirelessGatewayTaskDefinitionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWirelessGatewayTaskDefinitionsCommandOutput) => void
+    cb: (err: any, data?: ListWirelessGatewayTaskDefinitionsCommandOutput) => void,
   ): void;
 
   /**
@@ -2074,16 +2074,16 @@ export interface IoTWireless {
    */
   putPositionConfiguration(
     args: PutPositionConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutPositionConfigurationCommandOutput>;
   putPositionConfiguration(
     args: PutPositionConfigurationCommandInput,
-    cb: (err: any, data?: PutPositionConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutPositionConfigurationCommandOutput) => void,
   ): void;
   putPositionConfiguration(
     args: PutPositionConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutPositionConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutPositionConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -2091,16 +2091,16 @@ export interface IoTWireless {
    */
   putResourceLogLevel(
     args: PutResourceLogLevelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutResourceLogLevelCommandOutput>;
   putResourceLogLevel(
     args: PutResourceLogLevelCommandInput,
-    cb: (err: any, data?: PutResourceLogLevelCommandOutput) => void
+    cb: (err: any, data?: PutResourceLogLevelCommandOutput) => void,
   ): void;
   putResourceLogLevel(
     args: PutResourceLogLevelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutResourceLogLevelCommandOutput) => void
+    cb: (err: any, data?: PutResourceLogLevelCommandOutput) => void,
   ): void;
 
   /**
@@ -2109,16 +2109,16 @@ export interface IoTWireless {
   resetAllResourceLogLevels(): Promise<ResetAllResourceLogLevelsCommandOutput>;
   resetAllResourceLogLevels(
     args: ResetAllResourceLogLevelsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ResetAllResourceLogLevelsCommandOutput>;
   resetAllResourceLogLevels(
     args: ResetAllResourceLogLevelsCommandInput,
-    cb: (err: any, data?: ResetAllResourceLogLevelsCommandOutput) => void
+    cb: (err: any, data?: ResetAllResourceLogLevelsCommandOutput) => void,
   ): void;
   resetAllResourceLogLevels(
     args: ResetAllResourceLogLevelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ResetAllResourceLogLevelsCommandOutput) => void
+    cb: (err: any, data?: ResetAllResourceLogLevelsCommandOutput) => void,
   ): void;
 
   /**
@@ -2126,16 +2126,16 @@ export interface IoTWireless {
    */
   resetResourceLogLevel(
     args: ResetResourceLogLevelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ResetResourceLogLevelCommandOutput>;
   resetResourceLogLevel(
     args: ResetResourceLogLevelCommandInput,
-    cb: (err: any, data?: ResetResourceLogLevelCommandOutput) => void
+    cb: (err: any, data?: ResetResourceLogLevelCommandOutput) => void,
   ): void;
   resetResourceLogLevel(
     args: ResetResourceLogLevelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ResetResourceLogLevelCommandOutput) => void
+    cb: (err: any, data?: ResetResourceLogLevelCommandOutput) => void,
   ): void;
 
   /**
@@ -2143,16 +2143,16 @@ export interface IoTWireless {
    */
   sendDataToMulticastGroup(
     args: SendDataToMulticastGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SendDataToMulticastGroupCommandOutput>;
   sendDataToMulticastGroup(
     args: SendDataToMulticastGroupCommandInput,
-    cb: (err: any, data?: SendDataToMulticastGroupCommandOutput) => void
+    cb: (err: any, data?: SendDataToMulticastGroupCommandOutput) => void,
   ): void;
   sendDataToMulticastGroup(
     args: SendDataToMulticastGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendDataToMulticastGroupCommandOutput) => void
+    cb: (err: any, data?: SendDataToMulticastGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -2160,16 +2160,16 @@ export interface IoTWireless {
    */
   sendDataToWirelessDevice(
     args: SendDataToWirelessDeviceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SendDataToWirelessDeviceCommandOutput>;
   sendDataToWirelessDevice(
     args: SendDataToWirelessDeviceCommandInput,
-    cb: (err: any, data?: SendDataToWirelessDeviceCommandOutput) => void
+    cb: (err: any, data?: SendDataToWirelessDeviceCommandOutput) => void,
   ): void;
   sendDataToWirelessDevice(
     args: SendDataToWirelessDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendDataToWirelessDeviceCommandOutput) => void
+    cb: (err: any, data?: SendDataToWirelessDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -2177,16 +2177,16 @@ export interface IoTWireless {
    */
   startBulkAssociateWirelessDeviceWithMulticastGroup(
     args: StartBulkAssociateWirelessDeviceWithMulticastGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartBulkAssociateWirelessDeviceWithMulticastGroupCommandOutput>;
   startBulkAssociateWirelessDeviceWithMulticastGroup(
     args: StartBulkAssociateWirelessDeviceWithMulticastGroupCommandInput,
-    cb: (err: any, data?: StartBulkAssociateWirelessDeviceWithMulticastGroupCommandOutput) => void
+    cb: (err: any, data?: StartBulkAssociateWirelessDeviceWithMulticastGroupCommandOutput) => void,
   ): void;
   startBulkAssociateWirelessDeviceWithMulticastGroup(
     args: StartBulkAssociateWirelessDeviceWithMulticastGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartBulkAssociateWirelessDeviceWithMulticastGroupCommandOutput) => void
+    cb: (err: any, data?: StartBulkAssociateWirelessDeviceWithMulticastGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -2194,16 +2194,16 @@ export interface IoTWireless {
    */
   startBulkDisassociateWirelessDeviceFromMulticastGroup(
     args: StartBulkDisassociateWirelessDeviceFromMulticastGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartBulkDisassociateWirelessDeviceFromMulticastGroupCommandOutput>;
   startBulkDisassociateWirelessDeviceFromMulticastGroup(
     args: StartBulkDisassociateWirelessDeviceFromMulticastGroupCommandInput,
-    cb: (err: any, data?: StartBulkDisassociateWirelessDeviceFromMulticastGroupCommandOutput) => void
+    cb: (err: any, data?: StartBulkDisassociateWirelessDeviceFromMulticastGroupCommandOutput) => void,
   ): void;
   startBulkDisassociateWirelessDeviceFromMulticastGroup(
     args: StartBulkDisassociateWirelessDeviceFromMulticastGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartBulkDisassociateWirelessDeviceFromMulticastGroupCommandOutput) => void
+    cb: (err: any, data?: StartBulkDisassociateWirelessDeviceFromMulticastGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -2211,13 +2211,13 @@ export interface IoTWireless {
    */
   startFuotaTask(
     args: StartFuotaTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartFuotaTaskCommandOutput>;
   startFuotaTask(args: StartFuotaTaskCommandInput, cb: (err: any, data?: StartFuotaTaskCommandOutput) => void): void;
   startFuotaTask(
     args: StartFuotaTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartFuotaTaskCommandOutput) => void
+    cb: (err: any, data?: StartFuotaTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -2225,16 +2225,16 @@ export interface IoTWireless {
    */
   startMulticastGroupSession(
     args: StartMulticastGroupSessionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartMulticastGroupSessionCommandOutput>;
   startMulticastGroupSession(
     args: StartMulticastGroupSessionCommandInput,
-    cb: (err: any, data?: StartMulticastGroupSessionCommandOutput) => void
+    cb: (err: any, data?: StartMulticastGroupSessionCommandOutput) => void,
   ): void;
   startMulticastGroupSession(
     args: StartMulticastGroupSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartMulticastGroupSessionCommandOutput) => void
+    cb: (err: any, data?: StartMulticastGroupSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -2242,16 +2242,16 @@ export interface IoTWireless {
    */
   startSingleWirelessDeviceImportTask(
     args: StartSingleWirelessDeviceImportTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartSingleWirelessDeviceImportTaskCommandOutput>;
   startSingleWirelessDeviceImportTask(
     args: StartSingleWirelessDeviceImportTaskCommandInput,
-    cb: (err: any, data?: StartSingleWirelessDeviceImportTaskCommandOutput) => void
+    cb: (err: any, data?: StartSingleWirelessDeviceImportTaskCommandOutput) => void,
   ): void;
   startSingleWirelessDeviceImportTask(
     args: StartSingleWirelessDeviceImportTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartSingleWirelessDeviceImportTaskCommandOutput) => void
+    cb: (err: any, data?: StartSingleWirelessDeviceImportTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -2259,16 +2259,16 @@ export interface IoTWireless {
    */
   startWirelessDeviceImportTask(
     args: StartWirelessDeviceImportTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartWirelessDeviceImportTaskCommandOutput>;
   startWirelessDeviceImportTask(
     args: StartWirelessDeviceImportTaskCommandInput,
-    cb: (err: any, data?: StartWirelessDeviceImportTaskCommandOutput) => void
+    cb: (err: any, data?: StartWirelessDeviceImportTaskCommandOutput) => void,
   ): void;
   startWirelessDeviceImportTask(
     args: StartWirelessDeviceImportTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartWirelessDeviceImportTaskCommandOutput) => void
+    cb: (err: any, data?: StartWirelessDeviceImportTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -2279,7 +2279,7 @@ export interface IoTWireless {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -2287,16 +2287,16 @@ export interface IoTWireless {
    */
   testWirelessDevice(
     args: TestWirelessDeviceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<TestWirelessDeviceCommandOutput>;
   testWirelessDevice(
     args: TestWirelessDeviceCommandInput,
-    cb: (err: any, data?: TestWirelessDeviceCommandOutput) => void
+    cb: (err: any, data?: TestWirelessDeviceCommandOutput) => void,
   ): void;
   testWirelessDevice(
     args: TestWirelessDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TestWirelessDeviceCommandOutput) => void
+    cb: (err: any, data?: TestWirelessDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -2307,7 +2307,7 @@ export interface IoTWireless {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -2315,16 +2315,16 @@ export interface IoTWireless {
    */
   updateDestination(
     args: UpdateDestinationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDestinationCommandOutput>;
   updateDestination(
     args: UpdateDestinationCommandInput,
-    cb: (err: any, data?: UpdateDestinationCommandOutput) => void
+    cb: (err: any, data?: UpdateDestinationCommandOutput) => void,
   ): void;
   updateDestination(
     args: UpdateDestinationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDestinationCommandOutput) => void
+    cb: (err: any, data?: UpdateDestinationCommandOutput) => void,
   ): void;
 
   /**
@@ -2333,16 +2333,16 @@ export interface IoTWireless {
   updateEventConfigurationByResourceTypes(): Promise<UpdateEventConfigurationByResourceTypesCommandOutput>;
   updateEventConfigurationByResourceTypes(
     args: UpdateEventConfigurationByResourceTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEventConfigurationByResourceTypesCommandOutput>;
   updateEventConfigurationByResourceTypes(
     args: UpdateEventConfigurationByResourceTypesCommandInput,
-    cb: (err: any, data?: UpdateEventConfigurationByResourceTypesCommandOutput) => void
+    cb: (err: any, data?: UpdateEventConfigurationByResourceTypesCommandOutput) => void,
   ): void;
   updateEventConfigurationByResourceTypes(
     args: UpdateEventConfigurationByResourceTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEventConfigurationByResourceTypesCommandOutput) => void
+    cb: (err: any, data?: UpdateEventConfigurationByResourceTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -2350,13 +2350,13 @@ export interface IoTWireless {
    */
   updateFuotaTask(
     args: UpdateFuotaTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateFuotaTaskCommandOutput>;
   updateFuotaTask(args: UpdateFuotaTaskCommandInput, cb: (err: any, data?: UpdateFuotaTaskCommandOutput) => void): void;
   updateFuotaTask(
     args: UpdateFuotaTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFuotaTaskCommandOutput) => void
+    cb: (err: any, data?: UpdateFuotaTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -2365,16 +2365,16 @@ export interface IoTWireless {
   updateLogLevelsByResourceTypes(): Promise<UpdateLogLevelsByResourceTypesCommandOutput>;
   updateLogLevelsByResourceTypes(
     args: UpdateLogLevelsByResourceTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateLogLevelsByResourceTypesCommandOutput>;
   updateLogLevelsByResourceTypes(
     args: UpdateLogLevelsByResourceTypesCommandInput,
-    cb: (err: any, data?: UpdateLogLevelsByResourceTypesCommandOutput) => void
+    cb: (err: any, data?: UpdateLogLevelsByResourceTypesCommandOutput) => void,
   ): void;
   updateLogLevelsByResourceTypes(
     args: UpdateLogLevelsByResourceTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateLogLevelsByResourceTypesCommandOutput) => void
+    cb: (err: any, data?: UpdateLogLevelsByResourceTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -2383,16 +2383,16 @@ export interface IoTWireless {
   updateMetricConfiguration(): Promise<UpdateMetricConfigurationCommandOutput>;
   updateMetricConfiguration(
     args: UpdateMetricConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateMetricConfigurationCommandOutput>;
   updateMetricConfiguration(
     args: UpdateMetricConfigurationCommandInput,
-    cb: (err: any, data?: UpdateMetricConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateMetricConfigurationCommandOutput) => void,
   ): void;
   updateMetricConfiguration(
     args: UpdateMetricConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMetricConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateMetricConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -2400,16 +2400,16 @@ export interface IoTWireless {
    */
   updateMulticastGroup(
     args: UpdateMulticastGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateMulticastGroupCommandOutput>;
   updateMulticastGroup(
     args: UpdateMulticastGroupCommandInput,
-    cb: (err: any, data?: UpdateMulticastGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateMulticastGroupCommandOutput) => void,
   ): void;
   updateMulticastGroup(
     args: UpdateMulticastGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMulticastGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateMulticastGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -2417,16 +2417,16 @@ export interface IoTWireless {
    */
   updateNetworkAnalyzerConfiguration(
     args: UpdateNetworkAnalyzerConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateNetworkAnalyzerConfigurationCommandOutput>;
   updateNetworkAnalyzerConfiguration(
     args: UpdateNetworkAnalyzerConfigurationCommandInput,
-    cb: (err: any, data?: UpdateNetworkAnalyzerConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateNetworkAnalyzerConfigurationCommandOutput) => void,
   ): void;
   updateNetworkAnalyzerConfiguration(
     args: UpdateNetworkAnalyzerConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateNetworkAnalyzerConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateNetworkAnalyzerConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -2434,16 +2434,16 @@ export interface IoTWireless {
    */
   updatePartnerAccount(
     args: UpdatePartnerAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePartnerAccountCommandOutput>;
   updatePartnerAccount(
     args: UpdatePartnerAccountCommandInput,
-    cb: (err: any, data?: UpdatePartnerAccountCommandOutput) => void
+    cb: (err: any, data?: UpdatePartnerAccountCommandOutput) => void,
   ): void;
   updatePartnerAccount(
     args: UpdatePartnerAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePartnerAccountCommandOutput) => void
+    cb: (err: any, data?: UpdatePartnerAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -2451,13 +2451,13 @@ export interface IoTWireless {
    */
   updatePosition(
     args: UpdatePositionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePositionCommandOutput>;
   updatePosition(args: UpdatePositionCommandInput, cb: (err: any, data?: UpdatePositionCommandOutput) => void): void;
   updatePosition(
     args: UpdatePositionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePositionCommandOutput) => void
+    cb: (err: any, data?: UpdatePositionCommandOutput) => void,
   ): void;
 
   /**
@@ -2465,16 +2465,16 @@ export interface IoTWireless {
    */
   updateResourceEventConfiguration(
     args: UpdateResourceEventConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateResourceEventConfigurationCommandOutput>;
   updateResourceEventConfiguration(
     args: UpdateResourceEventConfigurationCommandInput,
-    cb: (err: any, data?: UpdateResourceEventConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateResourceEventConfigurationCommandOutput) => void,
   ): void;
   updateResourceEventConfiguration(
     args: UpdateResourceEventConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateResourceEventConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateResourceEventConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -2482,16 +2482,16 @@ export interface IoTWireless {
    */
   updateResourcePosition(
     args: UpdateResourcePositionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateResourcePositionCommandOutput>;
   updateResourcePosition(
     args: UpdateResourcePositionCommandInput,
-    cb: (err: any, data?: UpdateResourcePositionCommandOutput) => void
+    cb: (err: any, data?: UpdateResourcePositionCommandOutput) => void,
   ): void;
   updateResourcePosition(
     args: UpdateResourcePositionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateResourcePositionCommandOutput) => void
+    cb: (err: any, data?: UpdateResourcePositionCommandOutput) => void,
   ): void;
 
   /**
@@ -2499,16 +2499,16 @@ export interface IoTWireless {
    */
   updateWirelessDevice(
     args: UpdateWirelessDeviceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateWirelessDeviceCommandOutput>;
   updateWirelessDevice(
     args: UpdateWirelessDeviceCommandInput,
-    cb: (err: any, data?: UpdateWirelessDeviceCommandOutput) => void
+    cb: (err: any, data?: UpdateWirelessDeviceCommandOutput) => void,
   ): void;
   updateWirelessDevice(
     args: UpdateWirelessDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateWirelessDeviceCommandOutput) => void
+    cb: (err: any, data?: UpdateWirelessDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -2516,16 +2516,16 @@ export interface IoTWireless {
    */
   updateWirelessDeviceImportTask(
     args: UpdateWirelessDeviceImportTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateWirelessDeviceImportTaskCommandOutput>;
   updateWirelessDeviceImportTask(
     args: UpdateWirelessDeviceImportTaskCommandInput,
-    cb: (err: any, data?: UpdateWirelessDeviceImportTaskCommandOutput) => void
+    cb: (err: any, data?: UpdateWirelessDeviceImportTaskCommandOutput) => void,
   ): void;
   updateWirelessDeviceImportTask(
     args: UpdateWirelessDeviceImportTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateWirelessDeviceImportTaskCommandOutput) => void
+    cb: (err: any, data?: UpdateWirelessDeviceImportTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -2533,16 +2533,16 @@ export interface IoTWireless {
    */
   updateWirelessGateway(
     args: UpdateWirelessGatewayCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateWirelessGatewayCommandOutput>;
   updateWirelessGateway(
     args: UpdateWirelessGatewayCommandInput,
-    cb: (err: any, data?: UpdateWirelessGatewayCommandOutput) => void
+    cb: (err: any, data?: UpdateWirelessGatewayCommandOutput) => void,
   ): void;
   updateWirelessGateway(
     args: UpdateWirelessGatewayCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateWirelessGatewayCommandOutput) => void
+    cb: (err: any, data?: UpdateWirelessGatewayCommandOutput) => void,
   ): void;
 }
 

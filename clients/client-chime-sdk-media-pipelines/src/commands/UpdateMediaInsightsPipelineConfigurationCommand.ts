@@ -310,7 +310,7 @@ export class UpdateMediaInsightsPipelineConfigurationCommand extends $Command
   .n("ChimeSDKMediaPipelinesClient", "UpdateMediaInsightsPipelineConfigurationCommand")
   .f(
     UpdateMediaInsightsPipelineConfigurationRequestFilterSensitiveLog,
-    UpdateMediaInsightsPipelineConfigurationResponseFilterSensitiveLog
+    UpdateMediaInsightsPipelineConfigurationResponseFilterSensitiveLog,
   )
   .ser(se_UpdateMediaInsightsPipelineConfigurationCommand)
   .de(de_UpdateMediaInsightsPipelineConfigurationCommand)

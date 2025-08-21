@@ -286,7 +286,7 @@ export interface Nimble {
   acceptEulas(
     args: AcceptEulasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AcceptEulasCommandOutput) => void
+    cb: (err: any, data?: AcceptEulasCommandOutput) => void,
   ): void;
 
   /**
@@ -294,16 +294,16 @@ export interface Nimble {
    */
   createLaunchProfile(
     args: CreateLaunchProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateLaunchProfileCommandOutput>;
   createLaunchProfile(
     args: CreateLaunchProfileCommandInput,
-    cb: (err: any, data?: CreateLaunchProfileCommandOutput) => void
+    cb: (err: any, data?: CreateLaunchProfileCommandOutput) => void,
   ): void;
   createLaunchProfile(
     args: CreateLaunchProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateLaunchProfileCommandOutput) => void
+    cb: (err: any, data?: CreateLaunchProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -311,16 +311,16 @@ export interface Nimble {
    */
   createStreamingImage(
     args: CreateStreamingImageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateStreamingImageCommandOutput>;
   createStreamingImage(
     args: CreateStreamingImageCommandInput,
-    cb: (err: any, data?: CreateStreamingImageCommandOutput) => void
+    cb: (err: any, data?: CreateStreamingImageCommandOutput) => void,
   ): void;
   createStreamingImage(
     args: CreateStreamingImageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateStreamingImageCommandOutput) => void
+    cb: (err: any, data?: CreateStreamingImageCommandOutput) => void,
   ): void;
 
   /**
@@ -328,16 +328,16 @@ export interface Nimble {
    */
   createStreamingSession(
     args: CreateStreamingSessionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateStreamingSessionCommandOutput>;
   createStreamingSession(
     args: CreateStreamingSessionCommandInput,
-    cb: (err: any, data?: CreateStreamingSessionCommandOutput) => void
+    cb: (err: any, data?: CreateStreamingSessionCommandOutput) => void,
   ): void;
   createStreamingSession(
     args: CreateStreamingSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateStreamingSessionCommandOutput) => void
+    cb: (err: any, data?: CreateStreamingSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -345,16 +345,16 @@ export interface Nimble {
    */
   createStreamingSessionStream(
     args: CreateStreamingSessionStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateStreamingSessionStreamCommandOutput>;
   createStreamingSessionStream(
     args: CreateStreamingSessionStreamCommandInput,
-    cb: (err: any, data?: CreateStreamingSessionStreamCommandOutput) => void
+    cb: (err: any, data?: CreateStreamingSessionStreamCommandOutput) => void,
   ): void;
   createStreamingSessionStream(
     args: CreateStreamingSessionStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateStreamingSessionStreamCommandOutput) => void
+    cb: (err: any, data?: CreateStreamingSessionStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -365,7 +365,7 @@ export interface Nimble {
   createStudio(
     args: CreateStudioCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateStudioCommandOutput) => void
+    cb: (err: any, data?: CreateStudioCommandOutput) => void,
   ): void;
 
   /**
@@ -373,16 +373,16 @@ export interface Nimble {
    */
   createStudioComponent(
     args: CreateStudioComponentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateStudioComponentCommandOutput>;
   createStudioComponent(
     args: CreateStudioComponentCommandInput,
-    cb: (err: any, data?: CreateStudioComponentCommandOutput) => void
+    cb: (err: any, data?: CreateStudioComponentCommandOutput) => void,
   ): void;
   createStudioComponent(
     args: CreateStudioComponentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateStudioComponentCommandOutput) => void
+    cb: (err: any, data?: CreateStudioComponentCommandOutput) => void,
   ): void;
 
   /**
@@ -390,16 +390,16 @@ export interface Nimble {
    */
   deleteLaunchProfile(
     args: DeleteLaunchProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteLaunchProfileCommandOutput>;
   deleteLaunchProfile(
     args: DeleteLaunchProfileCommandInput,
-    cb: (err: any, data?: DeleteLaunchProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteLaunchProfileCommandOutput) => void,
   ): void;
   deleteLaunchProfile(
     args: DeleteLaunchProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLaunchProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteLaunchProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -407,16 +407,16 @@ export interface Nimble {
    */
   deleteLaunchProfileMember(
     args: DeleteLaunchProfileMemberCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteLaunchProfileMemberCommandOutput>;
   deleteLaunchProfileMember(
     args: DeleteLaunchProfileMemberCommandInput,
-    cb: (err: any, data?: DeleteLaunchProfileMemberCommandOutput) => void
+    cb: (err: any, data?: DeleteLaunchProfileMemberCommandOutput) => void,
   ): void;
   deleteLaunchProfileMember(
     args: DeleteLaunchProfileMemberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLaunchProfileMemberCommandOutput) => void
+    cb: (err: any, data?: DeleteLaunchProfileMemberCommandOutput) => void,
   ): void;
 
   /**
@@ -424,16 +424,16 @@ export interface Nimble {
    */
   deleteStreamingImage(
     args: DeleteStreamingImageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteStreamingImageCommandOutput>;
   deleteStreamingImage(
     args: DeleteStreamingImageCommandInput,
-    cb: (err: any, data?: DeleteStreamingImageCommandOutput) => void
+    cb: (err: any, data?: DeleteStreamingImageCommandOutput) => void,
   ): void;
   deleteStreamingImage(
     args: DeleteStreamingImageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteStreamingImageCommandOutput) => void
+    cb: (err: any, data?: DeleteStreamingImageCommandOutput) => void,
   ): void;
 
   /**
@@ -441,16 +441,16 @@ export interface Nimble {
    */
   deleteStreamingSession(
     args: DeleteStreamingSessionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteStreamingSessionCommandOutput>;
   deleteStreamingSession(
     args: DeleteStreamingSessionCommandInput,
-    cb: (err: any, data?: DeleteStreamingSessionCommandOutput) => void
+    cb: (err: any, data?: DeleteStreamingSessionCommandOutput) => void,
   ): void;
   deleteStreamingSession(
     args: DeleteStreamingSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteStreamingSessionCommandOutput) => void
+    cb: (err: any, data?: DeleteStreamingSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -461,7 +461,7 @@ export interface Nimble {
   deleteStudio(
     args: DeleteStudioCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteStudioCommandOutput) => void
+    cb: (err: any, data?: DeleteStudioCommandOutput) => void,
   ): void;
 
   /**
@@ -469,16 +469,16 @@ export interface Nimble {
    */
   deleteStudioComponent(
     args: DeleteStudioComponentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteStudioComponentCommandOutput>;
   deleteStudioComponent(
     args: DeleteStudioComponentCommandInput,
-    cb: (err: any, data?: DeleteStudioComponentCommandOutput) => void
+    cb: (err: any, data?: DeleteStudioComponentCommandOutput) => void,
   ): void;
   deleteStudioComponent(
     args: DeleteStudioComponentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteStudioComponentCommandOutput) => void
+    cb: (err: any, data?: DeleteStudioComponentCommandOutput) => void,
   ): void;
 
   /**
@@ -486,16 +486,16 @@ export interface Nimble {
    */
   deleteStudioMember(
     args: DeleteStudioMemberCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteStudioMemberCommandOutput>;
   deleteStudioMember(
     args: DeleteStudioMemberCommandInput,
-    cb: (err: any, data?: DeleteStudioMemberCommandOutput) => void
+    cb: (err: any, data?: DeleteStudioMemberCommandOutput) => void,
   ): void;
   deleteStudioMember(
     args: DeleteStudioMemberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteStudioMemberCommandOutput) => void
+    cb: (err: any, data?: DeleteStudioMemberCommandOutput) => void,
   ): void;
 
   /**
@@ -506,7 +506,7 @@ export interface Nimble {
   getEula(
     args: GetEulaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEulaCommandOutput) => void
+    cb: (err: any, data?: GetEulaCommandOutput) => void,
   ): void;
 
   /**
@@ -514,16 +514,16 @@ export interface Nimble {
    */
   getLaunchProfile(
     args: GetLaunchProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetLaunchProfileCommandOutput>;
   getLaunchProfile(
     args: GetLaunchProfileCommandInput,
-    cb: (err: any, data?: GetLaunchProfileCommandOutput) => void
+    cb: (err: any, data?: GetLaunchProfileCommandOutput) => void,
   ): void;
   getLaunchProfile(
     args: GetLaunchProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLaunchProfileCommandOutput) => void
+    cb: (err: any, data?: GetLaunchProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -531,16 +531,16 @@ export interface Nimble {
    */
   getLaunchProfileDetails(
     args: GetLaunchProfileDetailsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetLaunchProfileDetailsCommandOutput>;
   getLaunchProfileDetails(
     args: GetLaunchProfileDetailsCommandInput,
-    cb: (err: any, data?: GetLaunchProfileDetailsCommandOutput) => void
+    cb: (err: any, data?: GetLaunchProfileDetailsCommandOutput) => void,
   ): void;
   getLaunchProfileDetails(
     args: GetLaunchProfileDetailsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLaunchProfileDetailsCommandOutput) => void
+    cb: (err: any, data?: GetLaunchProfileDetailsCommandOutput) => void,
   ): void;
 
   /**
@@ -548,16 +548,16 @@ export interface Nimble {
    */
   getLaunchProfileInitialization(
     args: GetLaunchProfileInitializationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetLaunchProfileInitializationCommandOutput>;
   getLaunchProfileInitialization(
     args: GetLaunchProfileInitializationCommandInput,
-    cb: (err: any, data?: GetLaunchProfileInitializationCommandOutput) => void
+    cb: (err: any, data?: GetLaunchProfileInitializationCommandOutput) => void,
   ): void;
   getLaunchProfileInitialization(
     args: GetLaunchProfileInitializationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLaunchProfileInitializationCommandOutput) => void
+    cb: (err: any, data?: GetLaunchProfileInitializationCommandOutput) => void,
   ): void;
 
   /**
@@ -565,16 +565,16 @@ export interface Nimble {
    */
   getLaunchProfileMember(
     args: GetLaunchProfileMemberCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetLaunchProfileMemberCommandOutput>;
   getLaunchProfileMember(
     args: GetLaunchProfileMemberCommandInput,
-    cb: (err: any, data?: GetLaunchProfileMemberCommandOutput) => void
+    cb: (err: any, data?: GetLaunchProfileMemberCommandOutput) => void,
   ): void;
   getLaunchProfileMember(
     args: GetLaunchProfileMemberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLaunchProfileMemberCommandOutput) => void
+    cb: (err: any, data?: GetLaunchProfileMemberCommandOutput) => void,
   ): void;
 
   /**
@@ -582,16 +582,16 @@ export interface Nimble {
    */
   getStreamingImage(
     args: GetStreamingImageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetStreamingImageCommandOutput>;
   getStreamingImage(
     args: GetStreamingImageCommandInput,
-    cb: (err: any, data?: GetStreamingImageCommandOutput) => void
+    cb: (err: any, data?: GetStreamingImageCommandOutput) => void,
   ): void;
   getStreamingImage(
     args: GetStreamingImageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetStreamingImageCommandOutput) => void
+    cb: (err: any, data?: GetStreamingImageCommandOutput) => void,
   ): void;
 
   /**
@@ -599,16 +599,16 @@ export interface Nimble {
    */
   getStreamingSession(
     args: GetStreamingSessionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetStreamingSessionCommandOutput>;
   getStreamingSession(
     args: GetStreamingSessionCommandInput,
-    cb: (err: any, data?: GetStreamingSessionCommandOutput) => void
+    cb: (err: any, data?: GetStreamingSessionCommandOutput) => void,
   ): void;
   getStreamingSession(
     args: GetStreamingSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetStreamingSessionCommandOutput) => void
+    cb: (err: any, data?: GetStreamingSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -616,16 +616,16 @@ export interface Nimble {
    */
   getStreamingSessionBackup(
     args: GetStreamingSessionBackupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetStreamingSessionBackupCommandOutput>;
   getStreamingSessionBackup(
     args: GetStreamingSessionBackupCommandInput,
-    cb: (err: any, data?: GetStreamingSessionBackupCommandOutput) => void
+    cb: (err: any, data?: GetStreamingSessionBackupCommandOutput) => void,
   ): void;
   getStreamingSessionBackup(
     args: GetStreamingSessionBackupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetStreamingSessionBackupCommandOutput) => void
+    cb: (err: any, data?: GetStreamingSessionBackupCommandOutput) => void,
   ): void;
 
   /**
@@ -633,16 +633,16 @@ export interface Nimble {
    */
   getStreamingSessionStream(
     args: GetStreamingSessionStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetStreamingSessionStreamCommandOutput>;
   getStreamingSessionStream(
     args: GetStreamingSessionStreamCommandInput,
-    cb: (err: any, data?: GetStreamingSessionStreamCommandOutput) => void
+    cb: (err: any, data?: GetStreamingSessionStreamCommandOutput) => void,
   ): void;
   getStreamingSessionStream(
     args: GetStreamingSessionStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetStreamingSessionStreamCommandOutput) => void
+    cb: (err: any, data?: GetStreamingSessionStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -653,7 +653,7 @@ export interface Nimble {
   getStudio(
     args: GetStudioCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetStudioCommandOutput) => void
+    cb: (err: any, data?: GetStudioCommandOutput) => void,
   ): void;
 
   /**
@@ -661,16 +661,16 @@ export interface Nimble {
    */
   getStudioComponent(
     args: GetStudioComponentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetStudioComponentCommandOutput>;
   getStudioComponent(
     args: GetStudioComponentCommandInput,
-    cb: (err: any, data?: GetStudioComponentCommandOutput) => void
+    cb: (err: any, data?: GetStudioComponentCommandOutput) => void,
   ): void;
   getStudioComponent(
     args: GetStudioComponentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetStudioComponentCommandOutput) => void
+    cb: (err: any, data?: GetStudioComponentCommandOutput) => void,
   ): void;
 
   /**
@@ -678,13 +678,13 @@ export interface Nimble {
    */
   getStudioMember(
     args: GetStudioMemberCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetStudioMemberCommandOutput>;
   getStudioMember(args: GetStudioMemberCommandInput, cb: (err: any, data?: GetStudioMemberCommandOutput) => void): void;
   getStudioMember(
     args: GetStudioMemberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetStudioMemberCommandOutput) => void
+    cb: (err: any, data?: GetStudioMemberCommandOutput) => void,
   ): void;
 
   /**
@@ -692,16 +692,16 @@ export interface Nimble {
    */
   listEulaAcceptances(
     args: ListEulaAcceptancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEulaAcceptancesCommandOutput>;
   listEulaAcceptances(
     args: ListEulaAcceptancesCommandInput,
-    cb: (err: any, data?: ListEulaAcceptancesCommandOutput) => void
+    cb: (err: any, data?: ListEulaAcceptancesCommandOutput) => void,
   ): void;
   listEulaAcceptances(
     args: ListEulaAcceptancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEulaAcceptancesCommandOutput) => void
+    cb: (err: any, data?: ListEulaAcceptancesCommandOutput) => void,
   ): void;
 
   /**
@@ -713,7 +713,7 @@ export interface Nimble {
   listEulas(
     args: ListEulasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEulasCommandOutput) => void
+    cb: (err: any, data?: ListEulasCommandOutput) => void,
   ): void;
 
   /**
@@ -721,16 +721,16 @@ export interface Nimble {
    */
   listLaunchProfileMembers(
     args: ListLaunchProfileMembersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListLaunchProfileMembersCommandOutput>;
   listLaunchProfileMembers(
     args: ListLaunchProfileMembersCommandInput,
-    cb: (err: any, data?: ListLaunchProfileMembersCommandOutput) => void
+    cb: (err: any, data?: ListLaunchProfileMembersCommandOutput) => void,
   ): void;
   listLaunchProfileMembers(
     args: ListLaunchProfileMembersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLaunchProfileMembersCommandOutput) => void
+    cb: (err: any, data?: ListLaunchProfileMembersCommandOutput) => void,
   ): void;
 
   /**
@@ -738,16 +738,16 @@ export interface Nimble {
    */
   listLaunchProfiles(
     args: ListLaunchProfilesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListLaunchProfilesCommandOutput>;
   listLaunchProfiles(
     args: ListLaunchProfilesCommandInput,
-    cb: (err: any, data?: ListLaunchProfilesCommandOutput) => void
+    cb: (err: any, data?: ListLaunchProfilesCommandOutput) => void,
   ): void;
   listLaunchProfiles(
     args: ListLaunchProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLaunchProfilesCommandOutput) => void
+    cb: (err: any, data?: ListLaunchProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -755,16 +755,16 @@ export interface Nimble {
    */
   listStreamingImages(
     args: ListStreamingImagesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListStreamingImagesCommandOutput>;
   listStreamingImages(
     args: ListStreamingImagesCommandInput,
-    cb: (err: any, data?: ListStreamingImagesCommandOutput) => void
+    cb: (err: any, data?: ListStreamingImagesCommandOutput) => void,
   ): void;
   listStreamingImages(
     args: ListStreamingImagesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStreamingImagesCommandOutput) => void
+    cb: (err: any, data?: ListStreamingImagesCommandOutput) => void,
   ): void;
 
   /**
@@ -772,16 +772,16 @@ export interface Nimble {
    */
   listStreamingSessionBackups(
     args: ListStreamingSessionBackupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListStreamingSessionBackupsCommandOutput>;
   listStreamingSessionBackups(
     args: ListStreamingSessionBackupsCommandInput,
-    cb: (err: any, data?: ListStreamingSessionBackupsCommandOutput) => void
+    cb: (err: any, data?: ListStreamingSessionBackupsCommandOutput) => void,
   ): void;
   listStreamingSessionBackups(
     args: ListStreamingSessionBackupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStreamingSessionBackupsCommandOutput) => void
+    cb: (err: any, data?: ListStreamingSessionBackupsCommandOutput) => void,
   ): void;
 
   /**
@@ -789,16 +789,16 @@ export interface Nimble {
    */
   listStreamingSessions(
     args: ListStreamingSessionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListStreamingSessionsCommandOutput>;
   listStreamingSessions(
     args: ListStreamingSessionsCommandInput,
-    cb: (err: any, data?: ListStreamingSessionsCommandOutput) => void
+    cb: (err: any, data?: ListStreamingSessionsCommandOutput) => void,
   ): void;
   listStreamingSessions(
     args: ListStreamingSessionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStreamingSessionsCommandOutput) => void
+    cb: (err: any, data?: ListStreamingSessionsCommandOutput) => void,
   ): void;
 
   /**
@@ -806,16 +806,16 @@ export interface Nimble {
    */
   listStudioComponents(
     args: ListStudioComponentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListStudioComponentsCommandOutput>;
   listStudioComponents(
     args: ListStudioComponentsCommandInput,
-    cb: (err: any, data?: ListStudioComponentsCommandOutput) => void
+    cb: (err: any, data?: ListStudioComponentsCommandOutput) => void,
   ): void;
   listStudioComponents(
     args: ListStudioComponentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStudioComponentsCommandOutput) => void
+    cb: (err: any, data?: ListStudioComponentsCommandOutput) => void,
   ): void;
 
   /**
@@ -823,16 +823,16 @@ export interface Nimble {
    */
   listStudioMembers(
     args: ListStudioMembersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListStudioMembersCommandOutput>;
   listStudioMembers(
     args: ListStudioMembersCommandInput,
-    cb: (err: any, data?: ListStudioMembersCommandOutput) => void
+    cb: (err: any, data?: ListStudioMembersCommandOutput) => void,
   ): void;
   listStudioMembers(
     args: ListStudioMembersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStudioMembersCommandOutput) => void
+    cb: (err: any, data?: ListStudioMembersCommandOutput) => void,
   ): void;
 
   /**
@@ -844,7 +844,7 @@ export interface Nimble {
   listStudios(
     args: ListStudiosCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStudiosCommandOutput) => void
+    cb: (err: any, data?: ListStudiosCommandOutput) => void,
   ): void;
 
   /**
@@ -852,16 +852,16 @@ export interface Nimble {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -869,16 +869,16 @@ export interface Nimble {
    */
   putLaunchProfileMembers(
     args: PutLaunchProfileMembersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutLaunchProfileMembersCommandOutput>;
   putLaunchProfileMembers(
     args: PutLaunchProfileMembersCommandInput,
-    cb: (err: any, data?: PutLaunchProfileMembersCommandOutput) => void
+    cb: (err: any, data?: PutLaunchProfileMembersCommandOutput) => void,
   ): void;
   putLaunchProfileMembers(
     args: PutLaunchProfileMembersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutLaunchProfileMembersCommandOutput) => void
+    cb: (err: any, data?: PutLaunchProfileMembersCommandOutput) => void,
   ): void;
 
   /**
@@ -886,16 +886,16 @@ export interface Nimble {
    */
   putStudioMembers(
     args: PutStudioMembersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutStudioMembersCommandOutput>;
   putStudioMembers(
     args: PutStudioMembersCommandInput,
-    cb: (err: any, data?: PutStudioMembersCommandOutput) => void
+    cb: (err: any, data?: PutStudioMembersCommandOutput) => void,
   ): void;
   putStudioMembers(
     args: PutStudioMembersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutStudioMembersCommandOutput) => void
+    cb: (err: any, data?: PutStudioMembersCommandOutput) => void,
   ): void;
 
   /**
@@ -903,16 +903,16 @@ export interface Nimble {
    */
   startStreamingSession(
     args: StartStreamingSessionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartStreamingSessionCommandOutput>;
   startStreamingSession(
     args: StartStreamingSessionCommandInput,
-    cb: (err: any, data?: StartStreamingSessionCommandOutput) => void
+    cb: (err: any, data?: StartStreamingSessionCommandOutput) => void,
   ): void;
   startStreamingSession(
     args: StartStreamingSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartStreamingSessionCommandOutput) => void
+    cb: (err: any, data?: StartStreamingSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -920,16 +920,16 @@ export interface Nimble {
    */
   startStudioSSOConfigurationRepair(
     args: StartStudioSSOConfigurationRepairCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartStudioSSOConfigurationRepairCommandOutput>;
   startStudioSSOConfigurationRepair(
     args: StartStudioSSOConfigurationRepairCommandInput,
-    cb: (err: any, data?: StartStudioSSOConfigurationRepairCommandOutput) => void
+    cb: (err: any, data?: StartStudioSSOConfigurationRepairCommandOutput) => void,
   ): void;
   startStudioSSOConfigurationRepair(
     args: StartStudioSSOConfigurationRepairCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartStudioSSOConfigurationRepairCommandOutput) => void
+    cb: (err: any, data?: StartStudioSSOConfigurationRepairCommandOutput) => void,
   ): void;
 
   /**
@@ -937,16 +937,16 @@ export interface Nimble {
    */
   stopStreamingSession(
     args: StopStreamingSessionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopStreamingSessionCommandOutput>;
   stopStreamingSession(
     args: StopStreamingSessionCommandInput,
-    cb: (err: any, data?: StopStreamingSessionCommandOutput) => void
+    cb: (err: any, data?: StopStreamingSessionCommandOutput) => void,
   ): void;
   stopStreamingSession(
     args: StopStreamingSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopStreamingSessionCommandOutput) => void
+    cb: (err: any, data?: StopStreamingSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -957,7 +957,7 @@ export interface Nimble {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -968,7 +968,7 @@ export interface Nimble {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -976,16 +976,16 @@ export interface Nimble {
    */
   updateLaunchProfile(
     args: UpdateLaunchProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateLaunchProfileCommandOutput>;
   updateLaunchProfile(
     args: UpdateLaunchProfileCommandInput,
-    cb: (err: any, data?: UpdateLaunchProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateLaunchProfileCommandOutput) => void,
   ): void;
   updateLaunchProfile(
     args: UpdateLaunchProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateLaunchProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateLaunchProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -993,16 +993,16 @@ export interface Nimble {
    */
   updateLaunchProfileMember(
     args: UpdateLaunchProfileMemberCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateLaunchProfileMemberCommandOutput>;
   updateLaunchProfileMember(
     args: UpdateLaunchProfileMemberCommandInput,
-    cb: (err: any, data?: UpdateLaunchProfileMemberCommandOutput) => void
+    cb: (err: any, data?: UpdateLaunchProfileMemberCommandOutput) => void,
   ): void;
   updateLaunchProfileMember(
     args: UpdateLaunchProfileMemberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateLaunchProfileMemberCommandOutput) => void
+    cb: (err: any, data?: UpdateLaunchProfileMemberCommandOutput) => void,
   ): void;
 
   /**
@@ -1010,16 +1010,16 @@ export interface Nimble {
    */
   updateStreamingImage(
     args: UpdateStreamingImageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateStreamingImageCommandOutput>;
   updateStreamingImage(
     args: UpdateStreamingImageCommandInput,
-    cb: (err: any, data?: UpdateStreamingImageCommandOutput) => void
+    cb: (err: any, data?: UpdateStreamingImageCommandOutput) => void,
   ): void;
   updateStreamingImage(
     args: UpdateStreamingImageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateStreamingImageCommandOutput) => void
+    cb: (err: any, data?: UpdateStreamingImageCommandOutput) => void,
   ): void;
 
   /**
@@ -1030,7 +1030,7 @@ export interface Nimble {
   updateStudio(
     args: UpdateStudioCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateStudioCommandOutput) => void
+    cb: (err: any, data?: UpdateStudioCommandOutput) => void,
   ): void;
 
   /**
@@ -1038,16 +1038,16 @@ export interface Nimble {
    */
   updateStudioComponent(
     args: UpdateStudioComponentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateStudioComponentCommandOutput>;
   updateStudioComponent(
     args: UpdateStudioComponentCommandInput,
-    cb: (err: any, data?: UpdateStudioComponentCommandOutput) => void
+    cb: (err: any, data?: UpdateStudioComponentCommandOutput) => void,
   ): void;
   updateStudioComponent(
     args: UpdateStudioComponentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateStudioComponentCommandOutput) => void
+    cb: (err: any, data?: UpdateStudioComponentCommandOutput) => void,
   ): void;
 }
 

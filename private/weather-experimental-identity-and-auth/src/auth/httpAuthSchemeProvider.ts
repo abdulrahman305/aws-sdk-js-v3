@@ -43,7 +43,7 @@ export interface WeatherHttpAuthSchemeParametersProvider
 export const defaultWeatherHttpAuthSchemeParametersProvider = async (
   config: WeatherClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<WeatherHttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -236,7 +236,7 @@ export interface HttpAuthSchemeResolvedConfig {
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig
+  config: T & HttpAuthSchemeInputConfig,
 ): T & HttpAuthSchemeResolvedConfig => {
   const apiKey = memoizeIdentityProvider(config.apiKey, isIdentityExpired, doesIdentityRequireRefresh);
   const credentials = memoizeIdentityProvider(config.credentials, isIdentityExpired, doesIdentityRequireRefresh);

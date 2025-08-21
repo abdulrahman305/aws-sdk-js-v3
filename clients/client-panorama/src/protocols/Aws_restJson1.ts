@@ -163,7 +163,7 @@ import { PanoramaServiceException as __BaseException } from "../models/PanoramaS
  */
 export const se_CreateApplicationInstanceCommand = async (
   input: CreateApplicationInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -181,7 +181,7 @@ export const se_CreateApplicationInstanceCommand = async (
       Name: [],
       RuntimeRoleArn: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -192,7 +192,7 @@ export const se_CreateApplicationInstanceCommand = async (
  */
 export const se_CreateJobForDevicesCommand = async (
   input: CreateJobForDevicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -205,7 +205,7 @@ export const se_CreateJobForDevicesCommand = async (
       DeviceIds: (_) => _json(_),
       DeviceJobConfig: (_) => _json(_),
       JobType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -216,7 +216,7 @@ export const se_CreateJobForDevicesCommand = async (
  */
 export const se_CreateNodeFromTemplateJobCommand = async (
   input: CreateNodeFromTemplateJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -233,7 +233,7 @@ export const se_CreateNodeFromTemplateJobCommand = async (
       OutputPackageVersion: [],
       TemplateParameters: (_) => _json(_),
       TemplateType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -244,7 +244,7 @@ export const se_CreateNodeFromTemplateJobCommand = async (
  */
 export const se_CreatePackageCommand = async (
   input: CreatePackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -256,7 +256,7 @@ export const se_CreatePackageCommand = async (
     take(input, {
       PackageName: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -267,7 +267,7 @@ export const se_CreatePackageCommand = async (
  */
 export const se_CreatePackageImportJobCommand = async (
   input: CreatePackageImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -282,7 +282,7 @@ export const se_CreatePackageImportJobCommand = async (
       JobTags: (_) => _json(_),
       JobType: [],
       OutputConfig: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -293,7 +293,7 @@ export const se_CreatePackageImportJobCommand = async (
  */
 export const se_DeleteDeviceCommand = async (
   input: DeleteDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -309,7 +309,7 @@ export const se_DeleteDeviceCommand = async (
  */
 export const se_DeletePackageCommand = async (
   input: DeletePackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -328,7 +328,7 @@ export const se_DeletePackageCommand = async (
  */
 export const se_DeregisterPackageVersionCommand = async (
   input: DeregisterPackageVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -350,7 +350,7 @@ export const se_DeregisterPackageVersionCommand = async (
  */
 export const se_DescribeApplicationInstanceCommand = async (
   input: DescribeApplicationInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -366,7 +366,7 @@ export const se_DescribeApplicationInstanceCommand = async (
  */
 export const se_DescribeApplicationInstanceDetailsCommand = async (
   input: DescribeApplicationInstanceDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -382,7 +382,7 @@ export const se_DescribeApplicationInstanceDetailsCommand = async (
  */
 export const se_DescribeDeviceCommand = async (
   input: DescribeDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -398,7 +398,7 @@ export const se_DescribeDeviceCommand = async (
  */
 export const se_DescribeDeviceJobCommand = async (
   input: DescribeDeviceJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -414,7 +414,7 @@ export const se_DescribeDeviceJobCommand = async (
  */
 export const se_DescribeNodeCommand = async (
   input: DescribeNodeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -433,7 +433,7 @@ export const se_DescribeNodeCommand = async (
  */
 export const se_DescribeNodeFromTemplateJobCommand = async (
   input: DescribeNodeFromTemplateJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -449,7 +449,7 @@ export const se_DescribeNodeFromTemplateJobCommand = async (
  */
 export const se_DescribePackageCommand = async (
   input: DescribePackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -465,7 +465,7 @@ export const se_DescribePackageCommand = async (
  */
 export const se_DescribePackageImportJobCommand = async (
   input: DescribePackageImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -481,7 +481,7 @@ export const se_DescribePackageImportJobCommand = async (
  */
 export const se_DescribePackageVersionCommand = async (
   input: DescribePackageVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -502,7 +502,7 @@ export const se_DescribePackageVersionCommand = async (
  */
 export const se_ListApplicationInstanceDependenciesCommand = async (
   input: ListApplicationInstanceDependenciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -522,7 +522,7 @@ export const se_ListApplicationInstanceDependenciesCommand = async (
  */
 export const se_ListApplicationInstanceNodeInstancesCommand = async (
   input: ListApplicationInstanceNodeInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -542,7 +542,7 @@ export const se_ListApplicationInstanceNodeInstancesCommand = async (
  */
 export const se_ListApplicationInstancesCommand = async (
   input: ListApplicationInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -563,7 +563,7 @@ export const se_ListApplicationInstancesCommand = async (
  */
 export const se_ListDevicesCommand = async (
   input: ListDevicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -586,7 +586,7 @@ export const se_ListDevicesCommand = async (
  */
 export const se_ListDevicesJobsCommand = async (
   input: ListDevicesJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -606,7 +606,7 @@ export const se_ListDevicesJobsCommand = async (
  */
 export const se_ListNodeFromTemplateJobsCommand = async (
   input: ListNodeFromTemplateJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -625,7 +625,7 @@ export const se_ListNodeFromTemplateJobsCommand = async (
  */
 export const se_ListNodesCommand = async (
   input: ListNodesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -649,7 +649,7 @@ export const se_ListNodesCommand = async (
  */
 export const se_ListPackageImportJobsCommand = async (
   input: ListPackageImportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -668,7 +668,7 @@ export const se_ListPackageImportJobsCommand = async (
  */
 export const se_ListPackagesCommand = async (
   input: ListPackagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -687,7 +687,7 @@ export const se_ListPackagesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -703,7 +703,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ProvisionDeviceCommand = async (
   input: ProvisionDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -717,7 +717,7 @@ export const se_ProvisionDeviceCommand = async (
       Name: [],
       NetworkingConfiguration: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -728,7 +728,7 @@ export const se_ProvisionDeviceCommand = async (
  */
 export const se_RegisterPackageVersionCommand = async (
   input: RegisterPackageVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -743,7 +743,7 @@ export const se_RegisterPackageVersionCommand = async (
     take(input, {
       MarkLatest: [],
       OwnerAccount: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -754,7 +754,7 @@ export const se_RegisterPackageVersionCommand = async (
  */
 export const se_RemoveApplicationInstanceCommand = async (
   input: RemoveApplicationInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -770,7 +770,7 @@ export const se_RemoveApplicationInstanceCommand = async (
  */
 export const se_SignalApplicationInstanceNodeInstancesCommand = async (
   input: SignalApplicationInstanceNodeInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -782,7 +782,7 @@ export const se_SignalApplicationInstanceNodeInstancesCommand = async (
   body = JSON.stringify(
     take(input, {
       NodeSignals: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -793,7 +793,7 @@ export const se_SignalApplicationInstanceNodeInstancesCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -805,7 +805,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -816,7 +816,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -838,7 +838,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateDeviceMetadataCommand = async (
   input: UpdateDeviceMetadataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -850,7 +850,7 @@ export const se_UpdateDeviceMetadataCommand = async (
   body = JSON.stringify(
     take(input, {
       Description: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -861,7 +861,7 @@ export const se_UpdateDeviceMetadataCommand = async (
  */
 export const de_CreateApplicationInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateApplicationInstanceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -882,7 +882,7 @@ export const de_CreateApplicationInstanceCommand = async (
  */
 export const de_CreateJobForDevicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateJobForDevicesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -903,7 +903,7 @@ export const de_CreateJobForDevicesCommand = async (
  */
 export const de_CreateNodeFromTemplateJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateNodeFromTemplateJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -924,7 +924,7 @@ export const de_CreateNodeFromTemplateJobCommand = async (
  */
 export const de_CreatePackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePackageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -947,7 +947,7 @@ export const de_CreatePackageCommand = async (
  */
 export const de_CreatePackageImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePackageImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -968,7 +968,7 @@ export const de_CreatePackageImportJobCommand = async (
  */
 export const de_DeleteDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -989,7 +989,7 @@ export const de_DeleteDeviceCommand = async (
  */
 export const de_DeletePackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePackageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1006,7 +1006,7 @@ export const de_DeletePackageCommand = async (
  */
 export const de_DeregisterPackageVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterPackageVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1023,7 +1023,7 @@ export const de_DeregisterPackageVersionCommand = async (
  */
 export const de_DescribeApplicationInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeApplicationInstanceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1058,7 +1058,7 @@ export const de_DescribeApplicationInstanceCommand = async (
  */
 export const de_DescribeApplicationInstanceDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeApplicationInstanceDetailsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1086,7 +1086,7 @@ export const de_DescribeApplicationInstanceDetailsCommand = async (
  */
 export const de_DescribeDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1126,7 +1126,7 @@ export const de_DescribeDeviceCommand = async (
  */
 export const de_DescribeDeviceJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDeviceJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1155,7 +1155,7 @@ export const de_DescribeDeviceJobCommand = async (
  */
 export const de_DescribeNodeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeNodeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1189,7 +1189,7 @@ export const de_DescribeNodeCommand = async (
  */
 export const de_DescribeNodeFromTemplateJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeNodeFromTemplateJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1221,7 +1221,7 @@ export const de_DescribeNodeFromTemplateJobCommand = async (
  */
 export const de_DescribePackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePackageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1249,7 +1249,7 @@ export const de_DescribePackageCommand = async (
  */
 export const de_DescribePackageImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePackageImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1280,7 +1280,7 @@ export const de_DescribePackageImportJobCommand = async (
  */
 export const de_DescribePackageVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePackageVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1310,7 +1310,7 @@ export const de_DescribePackageVersionCommand = async (
  */
 export const de_ListApplicationInstanceDependenciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListApplicationInstanceDependenciesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1332,7 +1332,7 @@ export const de_ListApplicationInstanceDependenciesCommand = async (
  */
 export const de_ListApplicationInstanceNodeInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListApplicationInstanceNodeInstancesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1354,7 +1354,7 @@ export const de_ListApplicationInstanceNodeInstancesCommand = async (
  */
 export const de_ListApplicationInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListApplicationInstancesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1376,7 +1376,7 @@ export const de_ListApplicationInstancesCommand = async (
  */
 export const de_ListDevicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDevicesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1398,7 +1398,7 @@ export const de_ListDevicesCommand = async (
  */
 export const de_ListDevicesJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDevicesJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1420,7 +1420,7 @@ export const de_ListDevicesJobsCommand = async (
  */
 export const de_ListNodeFromTemplateJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListNodeFromTemplateJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1442,7 +1442,7 @@ export const de_ListNodeFromTemplateJobsCommand = async (
  */
 export const de_ListNodesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListNodesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1464,7 +1464,7 @@ export const de_ListNodesCommand = async (
  */
 export const de_ListPackageImportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPackageImportJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1486,7 +1486,7 @@ export const de_ListPackageImportJobsCommand = async (
  */
 export const de_ListPackagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPackagesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1508,7 +1508,7 @@ export const de_ListPackagesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1529,7 +1529,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ProvisionDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ProvisionDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1554,7 +1554,7 @@ export const de_ProvisionDeviceCommand = async (
  */
 export const de_RegisterPackageVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterPackageVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1571,7 +1571,7 @@ export const de_RegisterPackageVersionCommand = async (
  */
 export const de_RemoveApplicationInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveApplicationInstanceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1588,7 +1588,7 @@ export const de_RemoveApplicationInstanceCommand = async (
  */
 export const de_SignalApplicationInstanceNodeInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SignalApplicationInstanceNodeInstancesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1609,7 +1609,7 @@ export const de_SignalApplicationInstanceNodeInstancesCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1626,7 +1626,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1643,7 +1643,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateDeviceMetadataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDeviceMetadataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1703,7 +1703,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1744,7 +1744,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({
     [_RAS]: [() => void 0 !== parsedOutput.headers[_ra], () => __strictParseInt32(parsedOutput.headers[_ra])],
@@ -1766,7 +1766,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1788,7 +1788,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

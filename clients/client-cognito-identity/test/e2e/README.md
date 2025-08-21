@@ -12,7 +12,6 @@ has backend resources to test against. Follow steps bellow to create them:
    It outputs `IdentityPoolId`.
 
 1. Create a IAM Role
-
    1. If you create the Identity Pool with AWS console and allow creating roles on your behalf, you can skip this step
 
    1. Command line:

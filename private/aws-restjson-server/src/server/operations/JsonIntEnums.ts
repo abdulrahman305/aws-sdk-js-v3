@@ -61,7 +61,7 @@ export class JsonIntEnumsSerializer
 
 export const getJsonIntEnumsHandler = <Context>(
   operation: __Operation<JsonIntEnumsServerInput, JsonIntEnumsServerOutput, Context>,
-  customizer: __ValidationCustomizer<"JsonIntEnums">
+  customizer: __ValidationCustomizer<"JsonIntEnums">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "JsonIntEnums">([
     new httpbinding.UriSpec<"RestJson", "JsonIntEnums">("PUT", [{ type: "path_literal", value: "JsonIntEnums" }], [], {
@@ -89,7 +89,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -127,7 +127,7 @@ export class JsonIntEnumsHandler<Context> implements __ServiceHandler<Context> {
   private readonly serializer: __OperationSerializer<RestJsonService<Context>, "JsonIntEnums", JsonIntEnumsErrors>;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"JsonIntEnums">;
   /**
@@ -144,7 +144,7 @@ export class JsonIntEnumsHandler<Context> implements __ServiceHandler<Context> {
     mux: __Mux<"RestJson", "JsonIntEnums">,
     serializer: __OperationSerializer<RestJsonService<Context>, "JsonIntEnums", JsonIntEnumsErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"JsonIntEnums">
+    validationCustomizer: __ValidationCustomizer<"JsonIntEnums">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -156,7 +156,7 @@ export class JsonIntEnumsHandler<Context> implements __ServiceHandler<Context> {
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.JsonIntEnums. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.JsonIntEnums. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -168,7 +168,7 @@ export class JsonIntEnumsHandler<Context> implements __ServiceHandler<Context> {
       this.operation,
       this.serializeFrameworkException,
       JsonIntEnumsServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

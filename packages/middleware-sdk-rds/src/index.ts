@@ -47,13 +47,13 @@ interface PreviouslyResolved {
 export function crossRegionPresignedUrlMiddleware(options: PreviouslyResolved): InitializeMiddleware<any, any> {
   return <Output extends MetadataBearer>(
       next: InitializeHandler<any, Output>,
-      context: HandlerExecutionContext
+      context: HandlerExecutionContext,
     ): InitializeHandler<any, Output> =>
     async (args: InitializeHandlerArguments<any>): Promise<InitializeHandlerOutput<Output>> => {
       const { input } = args;
       const region = await options.region();
       const sourceIdKey = Object.keys(sourceIdToCommandKeyMap).filter((sourceKeyId) =>
-        input.hasOwnProperty(sourceKeyId)
+        input.hasOwnProperty(sourceKeyId),
       )[0];
       // Source id is optional.
       if (!sourceIdKey) return next(args);

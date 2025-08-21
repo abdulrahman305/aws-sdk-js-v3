@@ -71,7 +71,7 @@ import {
  */
 export const se_CancelZonalShiftCommand = async (
   input: CancelZonalShiftCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -87,7 +87,7 @@ export const se_CancelZonalShiftCommand = async (
  */
 export const se_CreatePracticeRunConfigurationCommand = async (
   input: CreatePracticeRunConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -102,7 +102,7 @@ export const se_CreatePracticeRunConfigurationCommand = async (
       blockingAlarms: (_) => _json(_),
       outcomeAlarms: (_) => _json(_),
       resourceIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -113,7 +113,7 @@ export const se_CreatePracticeRunConfigurationCommand = async (
  */
 export const se_DeletePracticeRunConfigurationCommand = async (
   input: DeletePracticeRunConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -129,7 +129,7 @@ export const se_DeletePracticeRunConfigurationCommand = async (
  */
 export const se_GetManagedResourceCommand = async (
   input: GetManagedResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -145,7 +145,7 @@ export const se_GetManagedResourceCommand = async (
  */
 export const se_ListAutoshiftsCommand = async (
   input: ListAutoshiftsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -165,7 +165,7 @@ export const se_ListAutoshiftsCommand = async (
  */
 export const se_ListManagedResourcesCommand = async (
   input: ListManagedResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -184,7 +184,7 @@ export const se_ListManagedResourcesCommand = async (
  */
 export const se_ListZonalShiftsCommand = async (
   input: ListZonalShiftsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -205,7 +205,7 @@ export const se_ListZonalShiftsCommand = async (
  */
 export const se_StartZonalShiftCommand = async (
   input: StartZonalShiftCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -219,7 +219,7 @@ export const se_StartZonalShiftCommand = async (
       comment: [],
       expiresIn: [],
       resourceIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -230,7 +230,7 @@ export const se_StartZonalShiftCommand = async (
  */
 export const se_UpdatePracticeRunConfigurationCommand = async (
   input: UpdatePracticeRunConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -245,7 +245,7 @@ export const se_UpdatePracticeRunConfigurationCommand = async (
       blockedWindows: (_) => _json(_),
       blockingAlarms: (_) => _json(_),
       outcomeAlarms: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -256,7 +256,7 @@ export const se_UpdatePracticeRunConfigurationCommand = async (
  */
 export const se_UpdateZonalAutoshiftConfigurationCommand = async (
   input: UpdateZonalAutoshiftConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -268,7 +268,7 @@ export const se_UpdateZonalAutoshiftConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       zonalAutoshiftStatus: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -279,7 +279,7 @@ export const se_UpdateZonalAutoshiftConfigurationCommand = async (
  */
 export const se_UpdateZonalShiftCommand = async (
   input: UpdateZonalShiftCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -292,7 +292,7 @@ export const se_UpdateZonalShiftCommand = async (
     take(input, {
       comment: [],
       expiresIn: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -303,7 +303,7 @@ export const se_UpdateZonalShiftCommand = async (
  */
 export const de_CancelZonalShiftCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelZonalShiftCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -330,7 +330,7 @@ export const de_CancelZonalShiftCommand = async (
  */
 export const de_CreatePracticeRunConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePracticeRunConfigurationCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -354,7 +354,7 @@ export const de_CreatePracticeRunConfigurationCommand = async (
  */
 export const de_DeletePracticeRunConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePracticeRunConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -377,7 +377,7 @@ export const de_DeletePracticeRunConfigurationCommand = async (
  */
 export const de_GetManagedResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetManagedResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -404,7 +404,7 @@ export const de_GetManagedResourceCommand = async (
  */
 export const de_ListAutoshiftsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAutoshiftsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -426,7 +426,7 @@ export const de_ListAutoshiftsCommand = async (
  */
 export const de_ListManagedResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListManagedResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -448,7 +448,7 @@ export const de_ListManagedResourcesCommand = async (
  */
 export const de_ListZonalShiftsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListZonalShiftsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -470,7 +470,7 @@ export const de_ListZonalShiftsCommand = async (
  */
 export const de_StartZonalShiftCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartZonalShiftCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -497,7 +497,7 @@ export const de_StartZonalShiftCommand = async (
  */
 export const de_UpdatePracticeRunConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePracticeRunConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -521,7 +521,7 @@ export const de_UpdatePracticeRunConfigurationCommand = async (
  */
 export const de_UpdateZonalAutoshiftConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateZonalAutoshiftConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -543,7 +543,7 @@ export const de_UpdateZonalAutoshiftConfigurationCommand = async (
  */
 export const de_UpdateZonalShiftCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateZonalShiftCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -609,7 +609,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -648,7 +648,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -668,7 +668,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -730,13 +730,16 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
  * deserializeAws_restJson1AppliedWeights
  */
 const de_AppliedWeights = (output: any, context: __SerdeContext): Record<string, number> => {
-  return Object.entries(output).reduce((acc: Record<string, number>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, number>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = __limitedParseFloat32(value) as any;
       return acc;
-    }
-    acc[key as string] = __limitedParseFloat32(value) as any;
-    return acc;
-  }, {} as Record<string, number>);
+    },
+    {} as Record<string, number>,
+  );
 };
 
 /**

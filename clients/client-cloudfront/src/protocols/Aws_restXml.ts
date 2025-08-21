@@ -680,7 +680,7 @@ import {
  */
 export const se_AssociateAliasCommand = async (
   input: AssociateAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -699,7 +699,7 @@ export const se_AssociateAliasCommand = async (
  */
 export const se_CopyDistributionCommand = async (
   input: CopyDistributionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -729,7 +729,7 @@ export const se_CopyDistributionCommand = async (
  */
 export const se_CreateCachePolicyCommand = async (
   input: CreateCachePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -753,7 +753,7 @@ export const se_CreateCachePolicyCommand = async (
  */
 export const se_CreateCloudFrontOriginAccessIdentityCommand = async (
   input: CreateCloudFrontOriginAccessIdentityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -777,7 +777,7 @@ export const se_CreateCloudFrontOriginAccessIdentityCommand = async (
  */
 export const se_CreateContinuousDeploymentPolicyCommand = async (
   input: CreateContinuousDeploymentPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -801,7 +801,7 @@ export const se_CreateContinuousDeploymentPolicyCommand = async (
  */
 export const se_CreateDistributionCommand = async (
   input: CreateDistributionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -825,7 +825,7 @@ export const se_CreateDistributionCommand = async (
  */
 export const se_CreateDistributionWithTagsCommand = async (
   input: CreateDistributionWithTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -852,7 +852,7 @@ export const se_CreateDistributionWithTagsCommand = async (
  */
 export const se_CreateFieldLevelEncryptionConfigCommand = async (
   input: CreateFieldLevelEncryptionConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -876,7 +876,7 @@ export const se_CreateFieldLevelEncryptionConfigCommand = async (
  */
 export const se_CreateFieldLevelEncryptionProfileCommand = async (
   input: CreateFieldLevelEncryptionProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -900,7 +900,7 @@ export const se_CreateFieldLevelEncryptionProfileCommand = async (
  */
 export const se_CreateFunctionCommand = async (
   input: CreateFunctionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -930,7 +930,7 @@ export const se_CreateFunctionCommand = async (
  */
 export const se_CreateInvalidationCommand = async (
   input: CreateInvalidationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -955,7 +955,7 @@ export const se_CreateInvalidationCommand = async (
  */
 export const se_CreateKeyGroupCommand = async (
   input: CreateKeyGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -979,7 +979,7 @@ export const se_CreateKeyGroupCommand = async (
  */
 export const se_CreateKeyValueStoreCommand = async (
   input: CreateKeyValueStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1009,7 +1009,7 @@ export const se_CreateKeyValueStoreCommand = async (
  */
 export const se_CreateMonitoringSubscriptionCommand = async (
   input: CreateMonitoringSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1034,7 +1034,7 @@ export const se_CreateMonitoringSubscriptionCommand = async (
  */
 export const se_CreateOriginAccessControlCommand = async (
   input: CreateOriginAccessControlCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1058,7 +1058,7 @@ export const se_CreateOriginAccessControlCommand = async (
  */
 export const se_CreateOriginRequestPolicyCommand = async (
   input: CreateOriginRequestPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1082,7 +1082,7 @@ export const se_CreateOriginRequestPolicyCommand = async (
  */
 export const se_CreatePublicKeyCommand = async (
   input: CreatePublicKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1106,7 +1106,7 @@ export const se_CreatePublicKeyCommand = async (
  */
 export const se_CreateRealtimeLogConfigCommand = async (
   input: CreateRealtimeLogConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1135,7 +1135,7 @@ export const se_CreateRealtimeLogConfigCommand = async (
  */
 export const se_CreateResponseHeadersPolicyCommand = async (
   input: CreateResponseHeadersPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1159,7 +1159,7 @@ export const se_CreateResponseHeadersPolicyCommand = async (
  */
 export const se_CreateStreamingDistributionCommand = async (
   input: CreateStreamingDistributionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1183,7 +1183,7 @@ export const se_CreateStreamingDistributionCommand = async (
  */
 export const se_CreateStreamingDistributionWithTagsCommand = async (
   input: CreateStreamingDistributionWithTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1210,7 +1210,7 @@ export const se_CreateStreamingDistributionWithTagsCommand = async (
  */
 export const se_DeleteCachePolicyCommand = async (
   input: DeleteCachePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1228,7 +1228,7 @@ export const se_DeleteCachePolicyCommand = async (
  */
 export const se_DeleteCloudFrontOriginAccessIdentityCommand = async (
   input: DeleteCloudFrontOriginAccessIdentityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1246,7 +1246,7 @@ export const se_DeleteCloudFrontOriginAccessIdentityCommand = async (
  */
 export const se_DeleteContinuousDeploymentPolicyCommand = async (
   input: DeleteContinuousDeploymentPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1264,7 +1264,7 @@ export const se_DeleteContinuousDeploymentPolicyCommand = async (
  */
 export const se_DeleteDistributionCommand = async (
   input: DeleteDistributionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1282,7 +1282,7 @@ export const se_DeleteDistributionCommand = async (
  */
 export const se_DeleteFieldLevelEncryptionConfigCommand = async (
   input: DeleteFieldLevelEncryptionConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1300,7 +1300,7 @@ export const se_DeleteFieldLevelEncryptionConfigCommand = async (
  */
 export const se_DeleteFieldLevelEncryptionProfileCommand = async (
   input: DeleteFieldLevelEncryptionProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1318,7 +1318,7 @@ export const se_DeleteFieldLevelEncryptionProfileCommand = async (
  */
 export const se_DeleteFunctionCommand = async (
   input: DeleteFunctionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1336,7 +1336,7 @@ export const se_DeleteFunctionCommand = async (
  */
 export const se_DeleteKeyGroupCommand = async (
   input: DeleteKeyGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1354,7 +1354,7 @@ export const se_DeleteKeyGroupCommand = async (
  */
 export const se_DeleteKeyValueStoreCommand = async (
   input: DeleteKeyValueStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1372,7 +1372,7 @@ export const se_DeleteKeyValueStoreCommand = async (
  */
 export const se_DeleteMonitoringSubscriptionCommand = async (
   input: DeleteMonitoringSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1388,7 +1388,7 @@ export const se_DeleteMonitoringSubscriptionCommand = async (
  */
 export const se_DeleteOriginAccessControlCommand = async (
   input: DeleteOriginAccessControlCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1406,7 +1406,7 @@ export const se_DeleteOriginAccessControlCommand = async (
  */
 export const se_DeleteOriginRequestPolicyCommand = async (
   input: DeleteOriginRequestPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1424,7 +1424,7 @@ export const se_DeleteOriginRequestPolicyCommand = async (
  */
 export const se_DeletePublicKeyCommand = async (
   input: DeletePublicKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1442,7 +1442,7 @@ export const se_DeletePublicKeyCommand = async (
  */
 export const se_DeleteRealtimeLogConfigCommand = async (
   input: DeleteRealtimeLogConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1469,7 +1469,7 @@ export const se_DeleteRealtimeLogConfigCommand = async (
  */
 export const se_DeleteResponseHeadersPolicyCommand = async (
   input: DeleteResponseHeadersPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1487,7 +1487,7 @@ export const se_DeleteResponseHeadersPolicyCommand = async (
  */
 export const se_DeleteStreamingDistributionCommand = async (
   input: DeleteStreamingDistributionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1505,7 +1505,7 @@ export const se_DeleteStreamingDistributionCommand = async (
  */
 export const se_DescribeFunctionCommand = async (
   input: DescribeFunctionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1524,7 +1524,7 @@ export const se_DescribeFunctionCommand = async (
  */
 export const se_DescribeKeyValueStoreCommand = async (
   input: DescribeKeyValueStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1540,7 +1540,7 @@ export const se_DescribeKeyValueStoreCommand = async (
  */
 export const se_GetCachePolicyCommand = async (
   input: GetCachePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1556,7 +1556,7 @@ export const se_GetCachePolicyCommand = async (
  */
 export const se_GetCachePolicyConfigCommand = async (
   input: GetCachePolicyConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1572,7 +1572,7 @@ export const se_GetCachePolicyConfigCommand = async (
  */
 export const se_GetCloudFrontOriginAccessIdentityCommand = async (
   input: GetCloudFrontOriginAccessIdentityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1588,7 +1588,7 @@ export const se_GetCloudFrontOriginAccessIdentityCommand = async (
  */
 export const se_GetCloudFrontOriginAccessIdentityConfigCommand = async (
   input: GetCloudFrontOriginAccessIdentityConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1604,7 +1604,7 @@ export const se_GetCloudFrontOriginAccessIdentityConfigCommand = async (
  */
 export const se_GetContinuousDeploymentPolicyCommand = async (
   input: GetContinuousDeploymentPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1620,7 +1620,7 @@ export const se_GetContinuousDeploymentPolicyCommand = async (
  */
 export const se_GetContinuousDeploymentPolicyConfigCommand = async (
   input: GetContinuousDeploymentPolicyConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1636,7 +1636,7 @@ export const se_GetContinuousDeploymentPolicyConfigCommand = async (
  */
 export const se_GetDistributionCommand = async (
   input: GetDistributionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1652,7 +1652,7 @@ export const se_GetDistributionCommand = async (
  */
 export const se_GetDistributionConfigCommand = async (
   input: GetDistributionConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1668,7 +1668,7 @@ export const se_GetDistributionConfigCommand = async (
  */
 export const se_GetFieldLevelEncryptionCommand = async (
   input: GetFieldLevelEncryptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1684,7 +1684,7 @@ export const se_GetFieldLevelEncryptionCommand = async (
  */
 export const se_GetFieldLevelEncryptionConfigCommand = async (
   input: GetFieldLevelEncryptionConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1700,7 +1700,7 @@ export const se_GetFieldLevelEncryptionConfigCommand = async (
  */
 export const se_GetFieldLevelEncryptionProfileCommand = async (
   input: GetFieldLevelEncryptionProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1716,7 +1716,7 @@ export const se_GetFieldLevelEncryptionProfileCommand = async (
  */
 export const se_GetFieldLevelEncryptionProfileConfigCommand = async (
   input: GetFieldLevelEncryptionProfileConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1732,7 +1732,7 @@ export const se_GetFieldLevelEncryptionProfileConfigCommand = async (
  */
 export const se_GetFunctionCommand = async (
   input: GetFunctionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1751,7 +1751,7 @@ export const se_GetFunctionCommand = async (
  */
 export const se_GetInvalidationCommand = async (
   input: GetInvalidationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1768,7 +1768,7 @@ export const se_GetInvalidationCommand = async (
  */
 export const se_GetKeyGroupCommand = async (
   input: GetKeyGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1784,7 +1784,7 @@ export const se_GetKeyGroupCommand = async (
  */
 export const se_GetKeyGroupConfigCommand = async (
   input: GetKeyGroupConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1800,7 +1800,7 @@ export const se_GetKeyGroupConfigCommand = async (
  */
 export const se_GetMonitoringSubscriptionCommand = async (
   input: GetMonitoringSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1816,7 +1816,7 @@ export const se_GetMonitoringSubscriptionCommand = async (
  */
 export const se_GetOriginAccessControlCommand = async (
   input: GetOriginAccessControlCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1832,7 +1832,7 @@ export const se_GetOriginAccessControlCommand = async (
  */
 export const se_GetOriginAccessControlConfigCommand = async (
   input: GetOriginAccessControlConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1848,7 +1848,7 @@ export const se_GetOriginAccessControlConfigCommand = async (
  */
 export const se_GetOriginRequestPolicyCommand = async (
   input: GetOriginRequestPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1864,7 +1864,7 @@ export const se_GetOriginRequestPolicyCommand = async (
  */
 export const se_GetOriginRequestPolicyConfigCommand = async (
   input: GetOriginRequestPolicyConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1880,7 +1880,7 @@ export const se_GetOriginRequestPolicyConfigCommand = async (
  */
 export const se_GetPublicKeyCommand = async (
   input: GetPublicKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1896,7 +1896,7 @@ export const se_GetPublicKeyCommand = async (
  */
 export const se_GetPublicKeyConfigCommand = async (
   input: GetPublicKeyConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1912,7 +1912,7 @@ export const se_GetPublicKeyConfigCommand = async (
  */
 export const se_GetRealtimeLogConfigCommand = async (
   input: GetRealtimeLogConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1939,7 +1939,7 @@ export const se_GetRealtimeLogConfigCommand = async (
  */
 export const se_GetResponseHeadersPolicyCommand = async (
   input: GetResponseHeadersPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1955,7 +1955,7 @@ export const se_GetResponseHeadersPolicyCommand = async (
  */
 export const se_GetResponseHeadersPolicyConfigCommand = async (
   input: GetResponseHeadersPolicyConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1971,7 +1971,7 @@ export const se_GetResponseHeadersPolicyConfigCommand = async (
  */
 export const se_GetStreamingDistributionCommand = async (
   input: GetStreamingDistributionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1987,7 +1987,7 @@ export const se_GetStreamingDistributionCommand = async (
  */
 export const se_GetStreamingDistributionConfigCommand = async (
   input: GetStreamingDistributionConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2003,7 +2003,7 @@ export const se_GetStreamingDistributionConfigCommand = async (
  */
 export const se_ListCachePoliciesCommand = async (
   input: ListCachePoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2023,7 +2023,7 @@ export const se_ListCachePoliciesCommand = async (
  */
 export const se_ListCloudFrontOriginAccessIdentitiesCommand = async (
   input: ListCloudFrontOriginAccessIdentitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2042,7 +2042,7 @@ export const se_ListCloudFrontOriginAccessIdentitiesCommand = async (
  */
 export const se_ListConflictingAliasesCommand = async (
   input: ListConflictingAliasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2063,7 +2063,7 @@ export const se_ListConflictingAliasesCommand = async (
  */
 export const se_ListContinuousDeploymentPoliciesCommand = async (
   input: ListContinuousDeploymentPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2082,7 +2082,7 @@ export const se_ListContinuousDeploymentPoliciesCommand = async (
  */
 export const se_ListDistributionsCommand = async (
   input: ListDistributionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2101,7 +2101,7 @@ export const se_ListDistributionsCommand = async (
  */
 export const se_ListDistributionsByCachePolicyIdCommand = async (
   input: ListDistributionsByCachePolicyIdCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2121,7 +2121,7 @@ export const se_ListDistributionsByCachePolicyIdCommand = async (
  */
 export const se_ListDistributionsByKeyGroupCommand = async (
   input: ListDistributionsByKeyGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2141,7 +2141,7 @@ export const se_ListDistributionsByKeyGroupCommand = async (
  */
 export const se_ListDistributionsByOriginRequestPolicyIdCommand = async (
   input: ListDistributionsByOriginRequestPolicyIdCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2161,7 +2161,7 @@ export const se_ListDistributionsByOriginRequestPolicyIdCommand = async (
  */
 export const se_ListDistributionsByRealtimeLogConfigCommand = async (
   input: ListDistributionsByRealtimeLogConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2194,7 +2194,7 @@ export const se_ListDistributionsByRealtimeLogConfigCommand = async (
  */
 export const se_ListDistributionsByResponseHeadersPolicyIdCommand = async (
   input: ListDistributionsByResponseHeadersPolicyIdCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2214,7 +2214,7 @@ export const se_ListDistributionsByResponseHeadersPolicyIdCommand = async (
  */
 export const se_ListDistributionsByWebACLIdCommand = async (
   input: ListDistributionsByWebACLIdCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2234,7 +2234,7 @@ export const se_ListDistributionsByWebACLIdCommand = async (
  */
 export const se_ListFieldLevelEncryptionConfigsCommand = async (
   input: ListFieldLevelEncryptionConfigsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2253,7 +2253,7 @@ export const se_ListFieldLevelEncryptionConfigsCommand = async (
  */
 export const se_ListFieldLevelEncryptionProfilesCommand = async (
   input: ListFieldLevelEncryptionProfilesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2272,7 +2272,7 @@ export const se_ListFieldLevelEncryptionProfilesCommand = async (
  */
 export const se_ListFunctionsCommand = async (
   input: ListFunctionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2292,7 +2292,7 @@ export const se_ListFunctionsCommand = async (
  */
 export const se_ListInvalidationsCommand = async (
   input: ListInvalidationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2312,7 +2312,7 @@ export const se_ListInvalidationsCommand = async (
  */
 export const se_ListKeyGroupsCommand = async (
   input: ListKeyGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2331,7 +2331,7 @@ export const se_ListKeyGroupsCommand = async (
  */
 export const se_ListKeyValueStoresCommand = async (
   input: ListKeyValueStoresCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2351,7 +2351,7 @@ export const se_ListKeyValueStoresCommand = async (
  */
 export const se_ListOriginAccessControlsCommand = async (
   input: ListOriginAccessControlsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2370,7 +2370,7 @@ export const se_ListOriginAccessControlsCommand = async (
  */
 export const se_ListOriginRequestPoliciesCommand = async (
   input: ListOriginRequestPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2390,7 +2390,7 @@ export const se_ListOriginRequestPoliciesCommand = async (
  */
 export const se_ListPublicKeysCommand = async (
   input: ListPublicKeysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2409,7 +2409,7 @@ export const se_ListPublicKeysCommand = async (
  */
 export const se_ListRealtimeLogConfigsCommand = async (
   input: ListRealtimeLogConfigsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2428,7 +2428,7 @@ export const se_ListRealtimeLogConfigsCommand = async (
  */
 export const se_ListResponseHeadersPoliciesCommand = async (
   input: ListResponseHeadersPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2448,7 +2448,7 @@ export const se_ListResponseHeadersPoliciesCommand = async (
  */
 export const se_ListStreamingDistributionsCommand = async (
   input: ListStreamingDistributionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2467,7 +2467,7 @@ export const se_ListStreamingDistributionsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2485,7 +2485,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PublishFunctionCommand = async (
   input: PublishFunctionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2503,7 +2503,7 @@ export const se_PublishFunctionCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2531,7 +2531,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_TestFunctionCommand = async (
   input: TestFunctionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2560,7 +2560,7 @@ export const se_TestFunctionCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2588,7 +2588,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateCachePolicyCommand = async (
   input: UpdateCachePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2614,7 +2614,7 @@ export const se_UpdateCachePolicyCommand = async (
  */
 export const se_UpdateCloudFrontOriginAccessIdentityCommand = async (
   input: UpdateCloudFrontOriginAccessIdentityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2640,7 +2640,7 @@ export const se_UpdateCloudFrontOriginAccessIdentityCommand = async (
  */
 export const se_UpdateContinuousDeploymentPolicyCommand = async (
   input: UpdateContinuousDeploymentPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2666,7 +2666,7 @@ export const se_UpdateContinuousDeploymentPolicyCommand = async (
  */
 export const se_UpdateDistributionCommand = async (
   input: UpdateDistributionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2692,7 +2692,7 @@ export const se_UpdateDistributionCommand = async (
  */
 export const se_UpdateDistributionWithStagingConfigCommand = async (
   input: UpdateDistributionWithStagingConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2713,7 +2713,7 @@ export const se_UpdateDistributionWithStagingConfigCommand = async (
  */
 export const se_UpdateFieldLevelEncryptionConfigCommand = async (
   input: UpdateFieldLevelEncryptionConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2739,7 +2739,7 @@ export const se_UpdateFieldLevelEncryptionConfigCommand = async (
  */
 export const se_UpdateFieldLevelEncryptionProfileCommand = async (
   input: UpdateFieldLevelEncryptionProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2765,7 +2765,7 @@ export const se_UpdateFieldLevelEncryptionProfileCommand = async (
  */
 export const se_UpdateFunctionCommand = async (
   input: UpdateFunctionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2794,7 +2794,7 @@ export const se_UpdateFunctionCommand = async (
  */
 export const se_UpdateKeyGroupCommand = async (
   input: UpdateKeyGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2820,7 +2820,7 @@ export const se_UpdateKeyGroupCommand = async (
  */
 export const se_UpdateKeyValueStoreCommand = async (
   input: UpdateKeyValueStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2846,7 +2846,7 @@ export const se_UpdateKeyValueStoreCommand = async (
  */
 export const se_UpdateOriginAccessControlCommand = async (
   input: UpdateOriginAccessControlCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2872,7 +2872,7 @@ export const se_UpdateOriginAccessControlCommand = async (
  */
 export const se_UpdateOriginRequestPolicyCommand = async (
   input: UpdateOriginRequestPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2898,7 +2898,7 @@ export const se_UpdateOriginRequestPolicyCommand = async (
  */
 export const se_UpdatePublicKeyCommand = async (
   input: UpdatePublicKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2924,7 +2924,7 @@ export const se_UpdatePublicKeyCommand = async (
  */
 export const se_UpdateRealtimeLogConfigCommand = async (
   input: UpdateRealtimeLogConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2956,7 +2956,7 @@ export const se_UpdateRealtimeLogConfigCommand = async (
  */
 export const se_UpdateResponseHeadersPolicyCommand = async (
   input: UpdateResponseHeadersPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2982,7 +2982,7 @@ export const se_UpdateResponseHeadersPolicyCommand = async (
  */
 export const se_UpdateStreamingDistributionCommand = async (
   input: UpdateStreamingDistributionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3008,7 +3008,7 @@ export const se_UpdateStreamingDistributionCommand = async (
  */
 export const de_AssociateAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateAliasCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3025,7 +3025,7 @@ export const de_AssociateAliasCommand = async (
  */
 export const de_CopyDistributionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopyDistributionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3045,7 +3045,7 @@ export const de_CopyDistributionCommand = async (
  */
 export const de_CreateCachePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCachePolicyCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3065,7 +3065,7 @@ export const de_CreateCachePolicyCommand = async (
  */
 export const de_CreateCloudFrontOriginAccessIdentityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCloudFrontOriginAccessIdentityCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3085,7 +3085,7 @@ export const de_CreateCloudFrontOriginAccessIdentityCommand = async (
  */
 export const de_CreateContinuousDeploymentPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateContinuousDeploymentPolicyCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3105,7 +3105,7 @@ export const de_CreateContinuousDeploymentPolicyCommand = async (
  */
 export const de_CreateDistributionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDistributionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3125,7 +3125,7 @@ export const de_CreateDistributionCommand = async (
  */
 export const de_CreateDistributionWithTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDistributionWithTagsCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3145,7 +3145,7 @@ export const de_CreateDistributionWithTagsCommand = async (
  */
 export const de_CreateFieldLevelEncryptionConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFieldLevelEncryptionConfigCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3165,7 +3165,7 @@ export const de_CreateFieldLevelEncryptionConfigCommand = async (
  */
 export const de_CreateFieldLevelEncryptionProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFieldLevelEncryptionProfileCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3185,7 +3185,7 @@ export const de_CreateFieldLevelEncryptionProfileCommand = async (
  */
 export const de_CreateFunctionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFunctionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3205,7 +3205,7 @@ export const de_CreateFunctionCommand = async (
  */
 export const de_CreateInvalidationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateInvalidationCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3224,7 +3224,7 @@ export const de_CreateInvalidationCommand = async (
  */
 export const de_CreateKeyGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateKeyGroupCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3244,7 +3244,7 @@ export const de_CreateKeyGroupCommand = async (
  */
 export const de_CreateKeyValueStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateKeyValueStoreCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3264,7 +3264,7 @@ export const de_CreateKeyValueStoreCommand = async (
  */
 export const de_CreateMonitoringSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMonitoringSubscriptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3282,7 +3282,7 @@ export const de_CreateMonitoringSubscriptionCommand = async (
  */
 export const de_CreateOriginAccessControlCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateOriginAccessControlCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3302,7 +3302,7 @@ export const de_CreateOriginAccessControlCommand = async (
  */
 export const de_CreateOriginRequestPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateOriginRequestPolicyCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3322,7 +3322,7 @@ export const de_CreateOriginRequestPolicyCommand = async (
  */
 export const de_CreatePublicKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePublicKeyCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3342,7 +3342,7 @@ export const de_CreatePublicKeyCommand = async (
  */
 export const de_CreateRealtimeLogConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRealtimeLogConfigCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3362,7 +3362,7 @@ export const de_CreateRealtimeLogConfigCommand = async (
  */
 export const de_CreateResponseHeadersPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateResponseHeadersPolicyCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3382,7 +3382,7 @@ export const de_CreateResponseHeadersPolicyCommand = async (
  */
 export const de_CreateStreamingDistributionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStreamingDistributionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3402,7 +3402,7 @@ export const de_CreateStreamingDistributionCommand = async (
  */
 export const de_CreateStreamingDistributionWithTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStreamingDistributionWithTagsCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3422,7 +3422,7 @@ export const de_CreateStreamingDistributionWithTagsCommand = async (
  */
 export const de_DeleteCachePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCachePolicyCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3439,7 +3439,7 @@ export const de_DeleteCachePolicyCommand = async (
  */
 export const de_DeleteCloudFrontOriginAccessIdentityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCloudFrontOriginAccessIdentityCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3456,7 +3456,7 @@ export const de_DeleteCloudFrontOriginAccessIdentityCommand = async (
  */
 export const de_DeleteContinuousDeploymentPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteContinuousDeploymentPolicyCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3473,7 +3473,7 @@ export const de_DeleteContinuousDeploymentPolicyCommand = async (
  */
 export const de_DeleteDistributionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDistributionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3490,7 +3490,7 @@ export const de_DeleteDistributionCommand = async (
  */
 export const de_DeleteFieldLevelEncryptionConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFieldLevelEncryptionConfigCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3507,7 +3507,7 @@ export const de_DeleteFieldLevelEncryptionConfigCommand = async (
  */
 export const de_DeleteFieldLevelEncryptionProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFieldLevelEncryptionProfileCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3524,7 +3524,7 @@ export const de_DeleteFieldLevelEncryptionProfileCommand = async (
  */
 export const de_DeleteFunctionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFunctionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3541,7 +3541,7 @@ export const de_DeleteFunctionCommand = async (
  */
 export const de_DeleteKeyGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteKeyGroupCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3558,7 +3558,7 @@ export const de_DeleteKeyGroupCommand = async (
  */
 export const de_DeleteKeyValueStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteKeyValueStoreCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3575,7 +3575,7 @@ export const de_DeleteKeyValueStoreCommand = async (
  */
 export const de_DeleteMonitoringSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMonitoringSubscriptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3592,7 +3592,7 @@ export const de_DeleteMonitoringSubscriptionCommand = async (
  */
 export const de_DeleteOriginAccessControlCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteOriginAccessControlCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3609,7 +3609,7 @@ export const de_DeleteOriginAccessControlCommand = async (
  */
 export const de_DeleteOriginRequestPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteOriginRequestPolicyCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3626,7 +3626,7 @@ export const de_DeleteOriginRequestPolicyCommand = async (
  */
 export const de_DeletePublicKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePublicKeyCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3643,7 +3643,7 @@ export const de_DeletePublicKeyCommand = async (
  */
 export const de_DeleteRealtimeLogConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRealtimeLogConfigCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3660,7 +3660,7 @@ export const de_DeleteRealtimeLogConfigCommand = async (
  */
 export const de_DeleteResponseHeadersPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResponseHeadersPolicyCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3677,7 +3677,7 @@ export const de_DeleteResponseHeadersPolicyCommand = async (
  */
 export const de_DeleteStreamingDistributionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStreamingDistributionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3694,7 +3694,7 @@ export const de_DeleteStreamingDistributionCommand = async (
  */
 export const de_DescribeFunctionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFunctionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3713,7 +3713,7 @@ export const de_DescribeFunctionCommand = async (
  */
 export const de_DescribeKeyValueStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeKeyValueStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3732,7 +3732,7 @@ export const de_DescribeKeyValueStoreCommand = async (
  */
 export const de_GetCachePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCachePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3751,7 +3751,7 @@ export const de_GetCachePolicyCommand = async (
  */
 export const de_GetCachePolicyConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCachePolicyConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3770,7 +3770,7 @@ export const de_GetCachePolicyConfigCommand = async (
  */
 export const de_GetCloudFrontOriginAccessIdentityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCloudFrontOriginAccessIdentityCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3789,7 +3789,7 @@ export const de_GetCloudFrontOriginAccessIdentityCommand = async (
  */
 export const de_GetCloudFrontOriginAccessIdentityConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCloudFrontOriginAccessIdentityConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3808,7 +3808,7 @@ export const de_GetCloudFrontOriginAccessIdentityConfigCommand = async (
  */
 export const de_GetContinuousDeploymentPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContinuousDeploymentPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3827,7 +3827,7 @@ export const de_GetContinuousDeploymentPolicyCommand = async (
  */
 export const de_GetContinuousDeploymentPolicyConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContinuousDeploymentPolicyConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3846,7 +3846,7 @@ export const de_GetContinuousDeploymentPolicyConfigCommand = async (
  */
 export const de_GetDistributionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDistributionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3865,7 +3865,7 @@ export const de_GetDistributionCommand = async (
  */
 export const de_GetDistributionConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDistributionConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3884,7 +3884,7 @@ export const de_GetDistributionConfigCommand = async (
  */
 export const de_GetFieldLevelEncryptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFieldLevelEncryptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3903,7 +3903,7 @@ export const de_GetFieldLevelEncryptionCommand = async (
  */
 export const de_GetFieldLevelEncryptionConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFieldLevelEncryptionConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3922,7 +3922,7 @@ export const de_GetFieldLevelEncryptionConfigCommand = async (
  */
 export const de_GetFieldLevelEncryptionProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFieldLevelEncryptionProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3941,7 +3941,7 @@ export const de_GetFieldLevelEncryptionProfileCommand = async (
  */
 export const de_GetFieldLevelEncryptionProfileConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFieldLevelEncryptionProfileConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3960,7 +3960,7 @@ export const de_GetFieldLevelEncryptionProfileConfigCommand = async (
  */
 export const de_GetFunctionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFunctionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3980,7 +3980,7 @@ export const de_GetFunctionCommand = async (
  */
 export const de_GetInvalidationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInvalidationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3998,7 +3998,7 @@ export const de_GetInvalidationCommand = async (
  */
 export const de_GetKeyGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetKeyGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4017,7 +4017,7 @@ export const de_GetKeyGroupCommand = async (
  */
 export const de_GetKeyGroupConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetKeyGroupConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4036,7 +4036,7 @@ export const de_GetKeyGroupConfigCommand = async (
  */
 export const de_GetMonitoringSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMonitoringSubscriptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4054,7 +4054,7 @@ export const de_GetMonitoringSubscriptionCommand = async (
  */
 export const de_GetOriginAccessControlCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOriginAccessControlCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4073,7 +4073,7 @@ export const de_GetOriginAccessControlCommand = async (
  */
 export const de_GetOriginAccessControlConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOriginAccessControlConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4092,7 +4092,7 @@ export const de_GetOriginAccessControlConfigCommand = async (
  */
 export const de_GetOriginRequestPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOriginRequestPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4111,7 +4111,7 @@ export const de_GetOriginRequestPolicyCommand = async (
  */
 export const de_GetOriginRequestPolicyConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOriginRequestPolicyConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4130,7 +4130,7 @@ export const de_GetOriginRequestPolicyConfigCommand = async (
  */
 export const de_GetPublicKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPublicKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4149,7 +4149,7 @@ export const de_GetPublicKeyCommand = async (
  */
 export const de_GetPublicKeyConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPublicKeyConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4168,7 +4168,7 @@ export const de_GetPublicKeyConfigCommand = async (
  */
 export const de_GetRealtimeLogConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRealtimeLogConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4188,7 +4188,7 @@ export const de_GetRealtimeLogConfigCommand = async (
  */
 export const de_GetResponseHeadersPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResponseHeadersPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4207,7 +4207,7 @@ export const de_GetResponseHeadersPolicyCommand = async (
  */
 export const de_GetResponseHeadersPolicyConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResponseHeadersPolicyConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4226,7 +4226,7 @@ export const de_GetResponseHeadersPolicyConfigCommand = async (
  */
 export const de_GetStreamingDistributionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStreamingDistributionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4245,7 +4245,7 @@ export const de_GetStreamingDistributionCommand = async (
  */
 export const de_GetStreamingDistributionConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStreamingDistributionConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4264,7 +4264,7 @@ export const de_GetStreamingDistributionConfigCommand = async (
  */
 export const de_ListCachePoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCachePoliciesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4282,7 +4282,7 @@ export const de_ListCachePoliciesCommand = async (
  */
 export const de_ListCloudFrontOriginAccessIdentitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCloudFrontOriginAccessIdentitiesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4300,7 +4300,7 @@ export const de_ListCloudFrontOriginAccessIdentitiesCommand = async (
  */
 export const de_ListConflictingAliasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConflictingAliasesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4318,7 +4318,7 @@ export const de_ListConflictingAliasesCommand = async (
  */
 export const de_ListContinuousDeploymentPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListContinuousDeploymentPoliciesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4336,7 +4336,7 @@ export const de_ListContinuousDeploymentPoliciesCommand = async (
  */
 export const de_ListDistributionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDistributionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4354,7 +4354,7 @@ export const de_ListDistributionsCommand = async (
  */
 export const de_ListDistributionsByCachePolicyIdCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDistributionsByCachePolicyIdCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4372,7 +4372,7 @@ export const de_ListDistributionsByCachePolicyIdCommand = async (
  */
 export const de_ListDistributionsByKeyGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDistributionsByKeyGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4390,7 +4390,7 @@ export const de_ListDistributionsByKeyGroupCommand = async (
  */
 export const de_ListDistributionsByOriginRequestPolicyIdCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDistributionsByOriginRequestPolicyIdCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4408,7 +4408,7 @@ export const de_ListDistributionsByOriginRequestPolicyIdCommand = async (
  */
 export const de_ListDistributionsByRealtimeLogConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDistributionsByRealtimeLogConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4426,7 +4426,7 @@ export const de_ListDistributionsByRealtimeLogConfigCommand = async (
  */
 export const de_ListDistributionsByResponseHeadersPolicyIdCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDistributionsByResponseHeadersPolicyIdCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4444,7 +4444,7 @@ export const de_ListDistributionsByResponseHeadersPolicyIdCommand = async (
  */
 export const de_ListDistributionsByWebACLIdCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDistributionsByWebACLIdCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4462,7 +4462,7 @@ export const de_ListDistributionsByWebACLIdCommand = async (
  */
 export const de_ListFieldLevelEncryptionConfigsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFieldLevelEncryptionConfigsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4480,7 +4480,7 @@ export const de_ListFieldLevelEncryptionConfigsCommand = async (
  */
 export const de_ListFieldLevelEncryptionProfilesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFieldLevelEncryptionProfilesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4498,7 +4498,7 @@ export const de_ListFieldLevelEncryptionProfilesCommand = async (
  */
 export const de_ListFunctionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFunctionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4516,7 +4516,7 @@ export const de_ListFunctionsCommand = async (
  */
 export const de_ListInvalidationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListInvalidationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4534,7 +4534,7 @@ export const de_ListInvalidationsCommand = async (
  */
 export const de_ListKeyGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListKeyGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4552,7 +4552,7 @@ export const de_ListKeyGroupsCommand = async (
  */
 export const de_ListKeyValueStoresCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListKeyValueStoresCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4570,7 +4570,7 @@ export const de_ListKeyValueStoresCommand = async (
  */
 export const de_ListOriginAccessControlsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOriginAccessControlsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4588,7 +4588,7 @@ export const de_ListOriginAccessControlsCommand = async (
  */
 export const de_ListOriginRequestPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOriginRequestPoliciesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4606,7 +4606,7 @@ export const de_ListOriginRequestPoliciesCommand = async (
  */
 export const de_ListPublicKeysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPublicKeysCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4624,7 +4624,7 @@ export const de_ListPublicKeysCommand = async (
  */
 export const de_ListRealtimeLogConfigsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRealtimeLogConfigsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4642,7 +4642,7 @@ export const de_ListRealtimeLogConfigsCommand = async (
  */
 export const de_ListResponseHeadersPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResponseHeadersPoliciesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4660,7 +4660,7 @@ export const de_ListResponseHeadersPoliciesCommand = async (
  */
 export const de_ListStreamingDistributionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStreamingDistributionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4678,7 +4678,7 @@ export const de_ListStreamingDistributionsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4696,7 +4696,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PublishFunctionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PublishFunctionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4714,7 +4714,7 @@ export const de_PublishFunctionCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4731,7 +4731,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_TestFunctionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TestFunctionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4749,7 +4749,7 @@ export const de_TestFunctionCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4766,7 +4766,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateCachePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCachePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4785,7 +4785,7 @@ export const de_UpdateCachePolicyCommand = async (
  */
 export const de_UpdateCloudFrontOriginAccessIdentityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCloudFrontOriginAccessIdentityCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4804,7 +4804,7 @@ export const de_UpdateCloudFrontOriginAccessIdentityCommand = async (
  */
 export const de_UpdateContinuousDeploymentPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateContinuousDeploymentPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4823,7 +4823,7 @@ export const de_UpdateContinuousDeploymentPolicyCommand = async (
  */
 export const de_UpdateDistributionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDistributionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4842,7 +4842,7 @@ export const de_UpdateDistributionCommand = async (
  */
 export const de_UpdateDistributionWithStagingConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDistributionWithStagingConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4861,7 +4861,7 @@ export const de_UpdateDistributionWithStagingConfigCommand = async (
  */
 export const de_UpdateFieldLevelEncryptionConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFieldLevelEncryptionConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4880,7 +4880,7 @@ export const de_UpdateFieldLevelEncryptionConfigCommand = async (
  */
 export const de_UpdateFieldLevelEncryptionProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFieldLevelEncryptionProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4899,7 +4899,7 @@ export const de_UpdateFieldLevelEncryptionProfileCommand = async (
  */
 export const de_UpdateFunctionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFunctionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4918,7 +4918,7 @@ export const de_UpdateFunctionCommand = async (
  */
 export const de_UpdateKeyGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateKeyGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4937,7 +4937,7 @@ export const de_UpdateKeyGroupCommand = async (
  */
 export const de_UpdateKeyValueStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateKeyValueStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4956,7 +4956,7 @@ export const de_UpdateKeyValueStoreCommand = async (
  */
 export const de_UpdateOriginAccessControlCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateOriginAccessControlCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4975,7 +4975,7 @@ export const de_UpdateOriginAccessControlCommand = async (
  */
 export const de_UpdateOriginRequestPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateOriginRequestPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4994,7 +4994,7 @@ export const de_UpdateOriginRequestPolicyCommand = async (
  */
 export const de_UpdatePublicKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePublicKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5013,7 +5013,7 @@ export const de_UpdatePublicKeyCommand = async (
  */
 export const de_UpdateRealtimeLogConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRealtimeLogConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5033,7 +5033,7 @@ export const de_UpdateRealtimeLogConfigCommand = async (
  */
 export const de_UpdateResponseHeadersPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateResponseHeadersPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5052,7 +5052,7 @@ export const de_UpdateResponseHeadersPolicyCommand = async (
  */
 export const de_UpdateStreamingDistributionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateStreamingDistributionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5571,7 +5571,7 @@ const de_BatchTooLargeRes = async (parsedOutput: any, context: __SerdeContext): 
  */
 const de_CachePolicyAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CachePolicyAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5606,7 +5606,7 @@ const de_CachePolicyInUseRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_CannotChangeImmutablePublicKeyFieldsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CannotChangeImmutablePublicKeyFields> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5625,7 +5625,7 @@ const de_CannotChangeImmutablePublicKeyFieldsRes = async (
  */
 const de_CannotDeleteEntityWhileInUseRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CannotDeleteEntityWhileInUse> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5644,7 +5644,7 @@ const de_CannotDeleteEntityWhileInUseRes = async (
  */
 const de_CloudFrontOriginAccessIdentityAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CloudFrontOriginAccessIdentityAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5663,7 +5663,7 @@ const de_CloudFrontOriginAccessIdentityAlreadyExistsRes = async (
  */
 const de_CloudFrontOriginAccessIdentityInUseRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CloudFrontOriginAccessIdentityInUse> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5698,7 +5698,7 @@ const de_CNAMEAlreadyExistsRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_ContinuousDeploymentPolicyAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ContinuousDeploymentPolicyAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5717,7 +5717,7 @@ const de_ContinuousDeploymentPolicyAlreadyExistsRes = async (
  */
 const de_ContinuousDeploymentPolicyInUseRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ContinuousDeploymentPolicyInUse> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5736,7 +5736,7 @@ const de_ContinuousDeploymentPolicyInUseRes = async (
  */
 const de_DistributionAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DistributionAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5755,7 +5755,7 @@ const de_DistributionAlreadyExistsRes = async (
  */
 const de_DistributionNotDisabledRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DistributionNotDisabled> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5822,7 +5822,7 @@ const de_EntityNotFoundRes = async (parsedOutput: any, context: __SerdeContext):
  */
 const de_EntitySizeLimitExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EntitySizeLimitExceeded> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5841,7 +5841,7 @@ const de_EntitySizeLimitExceededRes = async (
  */
 const de_FieldLevelEncryptionConfigAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FieldLevelEncryptionConfigAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5860,7 +5860,7 @@ const de_FieldLevelEncryptionConfigAlreadyExistsRes = async (
  */
 const de_FieldLevelEncryptionConfigInUseRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FieldLevelEncryptionConfigInUse> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5879,7 +5879,7 @@ const de_FieldLevelEncryptionConfigInUseRes = async (
  */
 const de_FieldLevelEncryptionProfileAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FieldLevelEncryptionProfileAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5898,7 +5898,7 @@ const de_FieldLevelEncryptionProfileAlreadyExistsRes = async (
  */
 const de_FieldLevelEncryptionProfileInUseRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FieldLevelEncryptionProfileInUse> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5917,7 +5917,7 @@ const de_FieldLevelEncryptionProfileInUseRes = async (
  */
 const de_FieldLevelEncryptionProfileSizeExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FieldLevelEncryptionProfileSizeExceeded> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5936,7 +5936,7 @@ const de_FieldLevelEncryptionProfileSizeExceededRes = async (
  */
 const de_FunctionAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FunctionAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5971,7 +5971,7 @@ const de_FunctionInUseRes = async (parsedOutput: any, context: __SerdeContext): 
  */
 const de_FunctionSizeLimitExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FunctionSizeLimitExceeded> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6006,7 +6006,7 @@ const de_IllegalDeleteRes = async (parsedOutput: any, context: __SerdeContext): 
  */
 const de_IllegalFieldLevelEncryptionConfigAssociationWithCacheBehaviorRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IllegalFieldLevelEncryptionConfigAssociationWithCacheBehavior> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6025,7 +6025,7 @@ const de_IllegalFieldLevelEncryptionConfigAssociationWithCacheBehaviorRes = asyn
  */
 const de_IllegalOriginAccessConfigurationRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IllegalOriginAccessConfiguration> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6060,7 +6060,7 @@ const de_IllegalUpdateRes = async (parsedOutput: any, context: __SerdeContext): 
  */
 const de_InconsistentQuantitiesRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InconsistentQuantities> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6095,7 +6095,7 @@ const de_InvalidArgumentRes = async (parsedOutput: any, context: __SerdeContext)
  */
 const de_InvalidDefaultRootObjectRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDefaultRootObject> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6114,7 +6114,7 @@ const de_InvalidDefaultRootObjectRes = async (
  */
 const de_InvalidDomainNameForOriginAccessControlRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDomainNameForOriginAccessControl> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6149,7 +6149,7 @@ const de_InvalidErrorCodeRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_InvalidForwardCookiesRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidForwardCookies> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6168,7 +6168,7 @@ const de_InvalidForwardCookiesRes = async (
  */
 const de_InvalidFunctionAssociationRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidFunctionAssociation> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6187,7 +6187,7 @@ const de_InvalidFunctionAssociationRes = async (
  */
 const de_InvalidGeoRestrictionParameterRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidGeoRestrictionParameter> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6206,7 +6206,7 @@ const de_InvalidGeoRestrictionParameterRes = async (
  */
 const de_InvalidHeadersForS3OriginRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidHeadersForS3Origin> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6225,7 +6225,7 @@ const de_InvalidHeadersForS3OriginRes = async (
  */
 const de_InvalidIfMatchVersionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidIfMatchVersion> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6244,7 +6244,7 @@ const de_InvalidIfMatchVersionRes = async (
  */
 const de_InvalidLambdaFunctionAssociationRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidLambdaFunctionAssociation> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6279,7 +6279,7 @@ const de_InvalidLocationCodeRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InvalidMinimumProtocolVersionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidMinimumProtocolVersion> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6314,7 +6314,7 @@ const de_InvalidOriginRes = async (parsedOutput: any, context: __SerdeContext): 
  */
 const de_InvalidOriginAccessControlRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidOriginAccessControl> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6333,7 +6333,7 @@ const de_InvalidOriginAccessControlRes = async (
  */
 const de_InvalidOriginAccessIdentityRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidOriginAccessIdentity> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6352,7 +6352,7 @@ const de_InvalidOriginAccessIdentityRes = async (
  */
 const de_InvalidOriginKeepaliveTimeoutRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidOriginKeepaliveTimeout> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6371,7 +6371,7 @@ const de_InvalidOriginKeepaliveTimeoutRes = async (
  */
 const de_InvalidOriginReadTimeoutRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidOriginReadTimeout> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6390,7 +6390,7 @@ const de_InvalidOriginReadTimeoutRes = async (
  */
 const de_InvalidProtocolSettingsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidProtocolSettings> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6409,7 +6409,7 @@ const de_InvalidProtocolSettingsRes = async (
  */
 const de_InvalidQueryStringParametersRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidQueryStringParameters> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6444,7 +6444,7 @@ const de_InvalidRelativePathRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InvalidRequiredProtocolRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequiredProtocol> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6511,7 +6511,7 @@ const de_InvalidTTLOrderRes = async (parsedOutput: any, context: __SerdeContext)
  */
 const de_InvalidViewerCertificateRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidViewerCertificate> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6546,7 +6546,7 @@ const de_InvalidWebACLIdRes = async (parsedOutput: any, context: __SerdeContext)
  */
 const de_KeyGroupAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KeyGroupAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6581,7 +6581,7 @@ const de_MissingBodyRes = async (parsedOutput: any, context: __SerdeContext): Pr
  */
 const de_MonitoringSubscriptionAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MonitoringSubscriptionAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6616,7 +6616,7 @@ const de_NoSuchCachePolicyRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_NoSuchCloudFrontOriginAccessIdentityRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchCloudFrontOriginAccessIdentity> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6635,7 +6635,7 @@ const de_NoSuchCloudFrontOriginAccessIdentityRes = async (
  */
 const de_NoSuchContinuousDeploymentPolicyRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchContinuousDeploymentPolicy> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6670,7 +6670,7 @@ const de_NoSuchDistributionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_NoSuchFieldLevelEncryptionConfigRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchFieldLevelEncryptionConfig> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6689,7 +6689,7 @@ const de_NoSuchFieldLevelEncryptionConfigRes = async (
  */
 const de_NoSuchFieldLevelEncryptionProfileRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchFieldLevelEncryptionProfile> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6708,7 +6708,7 @@ const de_NoSuchFieldLevelEncryptionProfileRes = async (
  */
 const de_NoSuchFunctionExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchFunctionExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6743,7 +6743,7 @@ const de_NoSuchInvalidationRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_NoSuchMonitoringSubscriptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchMonitoringSubscription> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6778,7 +6778,7 @@ const de_NoSuchOriginRes = async (parsedOutput: any, context: __SerdeContext): P
  */
 const de_NoSuchOriginAccessControlRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchOriginAccessControl> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6797,7 +6797,7 @@ const de_NoSuchOriginAccessControlRes = async (
  */
 const de_NoSuchOriginRequestPolicyRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchOriginRequestPolicy> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6832,7 +6832,7 @@ const de_NoSuchPublicKeyRes = async (parsedOutput: any, context: __SerdeContext)
  */
 const de_NoSuchRealtimeLogConfigRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchRealtimeLogConfig> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6867,7 +6867,7 @@ const de_NoSuchResourceRes = async (parsedOutput: any, context: __SerdeContext):
  */
 const de_NoSuchResponseHeadersPolicyRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchResponseHeadersPolicy> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6886,7 +6886,7 @@ const de_NoSuchResponseHeadersPolicyRes = async (
  */
 const de_NoSuchStreamingDistributionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchStreamingDistribution> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6905,7 +6905,7 @@ const de_NoSuchStreamingDistributionRes = async (
  */
 const de_OriginAccessControlAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OriginAccessControlAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6924,7 +6924,7 @@ const de_OriginAccessControlAlreadyExistsRes = async (
  */
 const de_OriginAccessControlInUseRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OriginAccessControlInUse> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6943,7 +6943,7 @@ const de_OriginAccessControlInUseRes = async (
  */
 const de_OriginRequestPolicyAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OriginRequestPolicyAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6962,7 +6962,7 @@ const de_OriginRequestPolicyAlreadyExistsRes = async (
  */
 const de_OriginRequestPolicyInUseRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OriginRequestPolicyInUse> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -6997,7 +6997,7 @@ const de_PreconditionFailedRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_PublicKeyAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PublicKeyAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7032,7 +7032,7 @@ const de_PublicKeyInUseRes = async (parsedOutput: any, context: __SerdeContext):
  */
 const de_QueryArgProfileEmptyRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<QueryArgProfileEmpty> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7051,7 +7051,7 @@ const de_QueryArgProfileEmptyRes = async (
  */
 const de_RealtimeLogConfigAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RealtimeLogConfigAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7070,7 +7070,7 @@ const de_RealtimeLogConfigAlreadyExistsRes = async (
  */
 const de_RealtimeLogConfigInUseRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RealtimeLogConfigInUse> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7089,7 +7089,7 @@ const de_RealtimeLogConfigInUseRes = async (
  */
 const de_RealtimeLogConfigOwnerMismatchRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RealtimeLogConfigOwnerMismatch> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7124,7 +7124,7 @@ const de_ResourceInUseRes = async (parsedOutput: any, context: __SerdeContext): 
  */
 const de_ResponseHeadersPolicyAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResponseHeadersPolicyAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7143,7 +7143,7 @@ const de_ResponseHeadersPolicyAlreadyExistsRes = async (
  */
 const de_ResponseHeadersPolicyInUseRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResponseHeadersPolicyInUse> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7162,7 +7162,7 @@ const de_ResponseHeadersPolicyInUseRes = async (
  */
 const de_StagingDistributionInUseRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StagingDistributionInUse> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7181,7 +7181,7 @@ const de_StagingDistributionInUseRes = async (
  */
 const de_StreamingDistributionAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StreamingDistributionAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7200,7 +7200,7 @@ const de_StreamingDistributionAlreadyExistsRes = async (
  */
 const de_StreamingDistributionNotDisabledRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StreamingDistributionNotDisabled> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7235,7 +7235,7 @@ const de_TestFunctionFailedRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_TooLongCSPInResponseHeadersPolicyRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooLongCSPInResponseHeadersPolicy> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7254,7 +7254,7 @@ const de_TooLongCSPInResponseHeadersPolicyRes = async (
  */
 const de_TooManyCacheBehaviorsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyCacheBehaviors> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7273,7 +7273,7 @@ const de_TooManyCacheBehaviorsRes = async (
  */
 const de_TooManyCachePoliciesRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyCachePolicies> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7308,7 +7308,7 @@ const de_TooManyCertificatesRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_TooManyCloudFrontOriginAccessIdentitiesRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyCloudFrontOriginAccessIdentities> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7327,7 +7327,7 @@ const de_TooManyCloudFrontOriginAccessIdentitiesRes = async (
  */
 const de_TooManyContinuousDeploymentPoliciesRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyContinuousDeploymentPolicies> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7346,7 +7346,7 @@ const de_TooManyContinuousDeploymentPoliciesRes = async (
  */
 const de_TooManyCookieNamesInWhiteListRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyCookieNamesInWhiteList> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7365,7 +7365,7 @@ const de_TooManyCookieNamesInWhiteListRes = async (
  */
 const de_TooManyCookiesInCachePolicyRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyCookiesInCachePolicy> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7384,7 +7384,7 @@ const de_TooManyCookiesInCachePolicyRes = async (
  */
 const de_TooManyCookiesInOriginRequestPolicyRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyCookiesInOriginRequestPolicy> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7403,7 +7403,7 @@ const de_TooManyCookiesInOriginRequestPolicyRes = async (
  */
 const de_TooManyCustomHeadersInResponseHeadersPolicyRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyCustomHeadersInResponseHeadersPolicy> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7422,7 +7422,7 @@ const de_TooManyCustomHeadersInResponseHeadersPolicyRes = async (
  */
 const de_TooManyDistributionCNAMEsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyDistributionCNAMEs> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7441,7 +7441,7 @@ const de_TooManyDistributionCNAMEsRes = async (
  */
 const de_TooManyDistributionsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyDistributions> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7460,7 +7460,7 @@ const de_TooManyDistributionsRes = async (
  */
 const de_TooManyDistributionsAssociatedToCachePolicyRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyDistributionsAssociatedToCachePolicy> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7479,7 +7479,7 @@ const de_TooManyDistributionsAssociatedToCachePolicyRes = async (
  */
 const de_TooManyDistributionsAssociatedToFieldLevelEncryptionConfigRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyDistributionsAssociatedToFieldLevelEncryptionConfig> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7498,7 +7498,7 @@ const de_TooManyDistributionsAssociatedToFieldLevelEncryptionConfigRes = async (
  */
 const de_TooManyDistributionsAssociatedToKeyGroupRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyDistributionsAssociatedToKeyGroup> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7517,7 +7517,7 @@ const de_TooManyDistributionsAssociatedToKeyGroupRes = async (
  */
 const de_TooManyDistributionsAssociatedToOriginAccessControlRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyDistributionsAssociatedToOriginAccessControl> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7536,7 +7536,7 @@ const de_TooManyDistributionsAssociatedToOriginAccessControlRes = async (
  */
 const de_TooManyDistributionsAssociatedToOriginRequestPolicyRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyDistributionsAssociatedToOriginRequestPolicy> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7555,7 +7555,7 @@ const de_TooManyDistributionsAssociatedToOriginRequestPolicyRes = async (
  */
 const de_TooManyDistributionsAssociatedToResponseHeadersPolicyRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyDistributionsAssociatedToResponseHeadersPolicy> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7574,7 +7574,7 @@ const de_TooManyDistributionsAssociatedToResponseHeadersPolicyRes = async (
  */
 const de_TooManyDistributionsWithFunctionAssociationsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyDistributionsWithFunctionAssociations> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7593,7 +7593,7 @@ const de_TooManyDistributionsWithFunctionAssociationsRes = async (
  */
 const de_TooManyDistributionsWithLambdaAssociationsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyDistributionsWithLambdaAssociations> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7612,7 +7612,7 @@ const de_TooManyDistributionsWithLambdaAssociationsRes = async (
  */
 const de_TooManyDistributionsWithSingleFunctionARNRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyDistributionsWithSingleFunctionARN> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7631,7 +7631,7 @@ const de_TooManyDistributionsWithSingleFunctionARNRes = async (
  */
 const de_TooManyFieldLevelEncryptionConfigsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyFieldLevelEncryptionConfigs> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7650,7 +7650,7 @@ const de_TooManyFieldLevelEncryptionConfigsRes = async (
  */
 const de_TooManyFieldLevelEncryptionContentTypeProfilesRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyFieldLevelEncryptionContentTypeProfiles> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7669,7 +7669,7 @@ const de_TooManyFieldLevelEncryptionContentTypeProfilesRes = async (
  */
 const de_TooManyFieldLevelEncryptionEncryptionEntitiesRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyFieldLevelEncryptionEncryptionEntities> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7688,7 +7688,7 @@ const de_TooManyFieldLevelEncryptionEncryptionEntitiesRes = async (
  */
 const de_TooManyFieldLevelEncryptionFieldPatternsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyFieldLevelEncryptionFieldPatterns> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7707,7 +7707,7 @@ const de_TooManyFieldLevelEncryptionFieldPatternsRes = async (
  */
 const de_TooManyFieldLevelEncryptionProfilesRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyFieldLevelEncryptionProfiles> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7726,7 +7726,7 @@ const de_TooManyFieldLevelEncryptionProfilesRes = async (
  */
 const de_TooManyFieldLevelEncryptionQueryArgProfilesRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyFieldLevelEncryptionQueryArgProfiles> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7745,7 +7745,7 @@ const de_TooManyFieldLevelEncryptionQueryArgProfilesRes = async (
  */
 const de_TooManyFunctionAssociationsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyFunctionAssociations> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7780,7 +7780,7 @@ const de_TooManyFunctionsRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_TooManyHeadersInCachePolicyRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyHeadersInCachePolicy> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7799,7 +7799,7 @@ const de_TooManyHeadersInCachePolicyRes = async (
  */
 const de_TooManyHeadersInForwardedValuesRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyHeadersInForwardedValues> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7818,7 +7818,7 @@ const de_TooManyHeadersInForwardedValuesRes = async (
  */
 const de_TooManyHeadersInOriginRequestPolicyRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyHeadersInOriginRequestPolicy> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7837,7 +7837,7 @@ const de_TooManyHeadersInOriginRequestPolicyRes = async (
  */
 const de_TooManyInvalidationsInProgressRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyInvalidationsInProgress> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7872,7 +7872,7 @@ const de_TooManyKeyGroupsRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_TooManyKeyGroupsAssociatedToDistributionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyKeyGroupsAssociatedToDistribution> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7891,7 +7891,7 @@ const de_TooManyKeyGroupsAssociatedToDistributionRes = async (
  */
 const de_TooManyLambdaFunctionAssociationsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyLambdaFunctionAssociations> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7910,7 +7910,7 @@ const de_TooManyLambdaFunctionAssociationsRes = async (
  */
 const de_TooManyOriginAccessControlsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyOriginAccessControls> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7929,7 +7929,7 @@ const de_TooManyOriginAccessControlsRes = async (
  */
 const de_TooManyOriginCustomHeadersRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyOriginCustomHeaders> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7948,7 +7948,7 @@ const de_TooManyOriginCustomHeadersRes = async (
  */
 const de_TooManyOriginGroupsPerDistributionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyOriginGroupsPerDistribution> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -7967,7 +7967,7 @@ const de_TooManyOriginGroupsPerDistributionRes = async (
  */
 const de_TooManyOriginRequestPoliciesRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyOriginRequestPolicies> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -8018,7 +8018,7 @@ const de_TooManyPublicKeysRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_TooManyPublicKeysInKeyGroupRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyPublicKeysInKeyGroup> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -8037,7 +8037,7 @@ const de_TooManyPublicKeysInKeyGroupRes = async (
  */
 const de_TooManyQueryStringParametersRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyQueryStringParameters> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -8056,7 +8056,7 @@ const de_TooManyQueryStringParametersRes = async (
  */
 const de_TooManyQueryStringsInCachePolicyRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyQueryStringsInCachePolicy> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -8075,7 +8075,7 @@ const de_TooManyQueryStringsInCachePolicyRes = async (
  */
 const de_TooManyQueryStringsInOriginRequestPolicyRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyQueryStringsInOriginRequestPolicy> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -8094,7 +8094,7 @@ const de_TooManyQueryStringsInOriginRequestPolicyRes = async (
  */
 const de_TooManyRealtimeLogConfigsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRealtimeLogConfigs> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -8113,7 +8113,7 @@ const de_TooManyRealtimeLogConfigsRes = async (
  */
 const de_TooManyRemoveHeadersInResponseHeadersPolicyRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRemoveHeadersInResponseHeadersPolicy> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -8132,7 +8132,7 @@ const de_TooManyRemoveHeadersInResponseHeadersPolicyRes = async (
  */
 const de_TooManyResponseHeadersPoliciesRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyResponseHeadersPolicies> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -8151,7 +8151,7 @@ const de_TooManyResponseHeadersPoliciesRes = async (
  */
 const de_TooManyStreamingDistributionCNAMEsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyStreamingDistributionCNAMEs> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -8170,7 +8170,7 @@ const de_TooManyStreamingDistributionCNAMEsRes = async (
  */
 const de_TooManyStreamingDistributionsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyStreamingDistributions> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -8189,7 +8189,7 @@ const de_TooManyStreamingDistributionsRes = async (
  */
 const de_TooManyTrustedSignersRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTrustedSigners> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -8208,7 +8208,7 @@ const de_TooManyTrustedSignersRes = async (
  */
 const de_TrustedKeyGroupDoesNotExistRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TrustedKeyGroupDoesNotExist> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -8227,7 +8227,7 @@ const de_TrustedKeyGroupDoesNotExistRes = async (
  */
 const de_TrustedSignerDoesNotExistRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TrustedSignerDoesNotExist> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -8246,7 +8246,7 @@ const de_TrustedSignerDoesNotExistRes = async (
  */
 const de_UnsupportedOperationRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedOperation> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -8277,7 +8277,7 @@ const se_AccessControlAllowHeadersList = (input: string[], context: __SerdeConte
  */
 const se_AccessControlAllowMethodsList = (
   input: ResponseHeadersPolicyAccessControlAllowMethodsValues[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -8534,7 +8534,7 @@ const se_CachePolicyQueryStringsConfig = (input: CachePolicyQueryStringsConfig, 
  */
 const se_CloudFrontOriginAccessIdentityConfig = (
   input: CloudFrontOriginAccessIdentityConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_CFOAIC);
   if (input[_CR] != null) {
@@ -8621,7 +8621,7 @@ const se_ContinuousDeploymentPolicyConfig = (input: ContinuousDeploymentPolicyCo
  */
 const se_ContinuousDeploymentSingleHeaderConfig = (
   input: ContinuousDeploymentSingleHeaderConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_CDSHC);
   if (input[_H] != null) {
@@ -8638,7 +8638,7 @@ const se_ContinuousDeploymentSingleHeaderConfig = (
  */
 const se_ContinuousDeploymentSingleWeightConfig = (
   input: ContinuousDeploymentSingleWeightConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_CDSWC);
   if (input[_W] != null) {
@@ -8995,7 +8995,7 @@ const se_FieldLevelEncryptionConfig = (input: FieldLevelEncryptionConfig, contex
  */
 const se_FieldLevelEncryptionProfileConfig = (
   input: FieldLevelEncryptionProfileConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_FLEPC);
   if (input[_N] != null) {
@@ -9583,7 +9583,7 @@ const se_OriginRequestPolicyHeadersConfig = (input: OriginRequestPolicyHeadersCo
  */
 const se_OriginRequestPolicyQueryStringsConfig = (
   input: OriginRequestPolicyQueryStringsConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_ORPQSC);
   if (input[_QSB] != null) {
@@ -9636,7 +9636,7 @@ const se_OriginSslProtocols = (input: OriginSslProtocols, context: __SerdeContex
  */
 const se_ParametersInCacheKeyAndForwardedToOrigin = (
   input: ParametersInCacheKeyAndForwardedToOrigin,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_PICKAFTO);
   if (input[_EAEG] != null) {
@@ -9818,7 +9818,7 @@ const se_QueryStringNamesList = (input: string[], context: __SerdeContext): any 
  */
 const se_RealtimeMetricsSubscriptionConfig = (
   input: RealtimeMetricsSubscriptionConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_RMSC);
   bn.cc(input, _RMSS);
@@ -9830,7 +9830,7 @@ const se_RealtimeMetricsSubscriptionConfig = (
  */
 const se_ResponseHeadersPolicyAccessControlAllowHeaders = (
   input: ResponseHeadersPolicyAccessControlAllowHeaders,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_RHPACAH);
   if (input[_Q] != null) {
@@ -9845,7 +9845,7 @@ const se_ResponseHeadersPolicyAccessControlAllowHeaders = (
  */
 const se_ResponseHeadersPolicyAccessControlAllowMethods = (
   input: ResponseHeadersPolicyAccessControlAllowMethods,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_RHPACAM);
   if (input[_Q] != null) {
@@ -9860,7 +9860,7 @@ const se_ResponseHeadersPolicyAccessControlAllowMethods = (
  */
 const se_ResponseHeadersPolicyAccessControlAllowOrigins = (
   input: ResponseHeadersPolicyAccessControlAllowOrigins,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_RHPACAO);
   if (input[_Q] != null) {
@@ -9875,7 +9875,7 @@ const se_ResponseHeadersPolicyAccessControlAllowOrigins = (
  */
 const se_ResponseHeadersPolicyAccessControlExposeHeaders = (
   input: ResponseHeadersPolicyAccessControlExposeHeaders,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_RHPACEH);
   if (input[_Q] != null) {
@@ -9919,7 +9919,7 @@ const se_ResponseHeadersPolicyConfig = (input: ResponseHeadersPolicyConfig, cont
  */
 const se_ResponseHeadersPolicyContentSecurityPolicy = (
   input: ResponseHeadersPolicyContentSecurityPolicy,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_RHPCSP);
   if (input[_Ov] != null) {
@@ -9936,7 +9936,7 @@ const se_ResponseHeadersPolicyContentSecurityPolicy = (
  */
 const se_ResponseHeadersPolicyContentTypeOptions = (
   input: ResponseHeadersPolicyContentTypeOptions,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_RHPCTO);
   if (input[_Ov] != null) {
@@ -9979,7 +9979,7 @@ const se_ResponseHeadersPolicyCorsConfig = (input: ResponseHeadersPolicyCorsConf
  */
 const se_ResponseHeadersPolicyCustomHeader = (
   input: ResponseHeadersPolicyCustomHeader,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_RHPCH);
   if (input[_H] != null) {
@@ -9999,7 +9999,7 @@ const se_ResponseHeadersPolicyCustomHeader = (
  */
 const se_ResponseHeadersPolicyCustomHeaderList = (
   input: ResponseHeadersPolicyCustomHeader[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -10014,7 +10014,7 @@ const se_ResponseHeadersPolicyCustomHeaderList = (
  */
 const se_ResponseHeadersPolicyCustomHeadersConfig = (
   input: ResponseHeadersPolicyCustomHeadersConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_RHPCHC);
   if (input[_Q] != null) {
@@ -10029,7 +10029,7 @@ const se_ResponseHeadersPolicyCustomHeadersConfig = (
  */
 const se_ResponseHeadersPolicyFrameOptions = (
   input: ResponseHeadersPolicyFrameOptions,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_RHPFO);
   if (input[_Ov] != null) {
@@ -10046,7 +10046,7 @@ const se_ResponseHeadersPolicyFrameOptions = (
  */
 const se_ResponseHeadersPolicyReferrerPolicy = (
   input: ResponseHeadersPolicyReferrerPolicy,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_RHPRP);
   if (input[_Ov] != null) {
@@ -10063,7 +10063,7 @@ const se_ResponseHeadersPolicyReferrerPolicy = (
  */
 const se_ResponseHeadersPolicyRemoveHeader = (
   input: ResponseHeadersPolicyRemoveHeader,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_RHPRH);
   if (input[_H] != null) {
@@ -10077,7 +10077,7 @@ const se_ResponseHeadersPolicyRemoveHeader = (
  */
 const se_ResponseHeadersPolicyRemoveHeaderList = (
   input: ResponseHeadersPolicyRemoveHeader[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -10092,7 +10092,7 @@ const se_ResponseHeadersPolicyRemoveHeaderList = (
  */
 const se_ResponseHeadersPolicyRemoveHeadersConfig = (
   input: ResponseHeadersPolicyRemoveHeadersConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_RHPRHC);
   if (input[_Q] != null) {
@@ -10107,7 +10107,7 @@ const se_ResponseHeadersPolicyRemoveHeadersConfig = (
  */
 const se_ResponseHeadersPolicySecurityHeadersConfig = (
   input: ResponseHeadersPolicySecurityHeadersConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_RHPSHC);
   if (input[_XSSP] != null) {
@@ -10136,7 +10136,7 @@ const se_ResponseHeadersPolicySecurityHeadersConfig = (
  */
 const se_ResponseHeadersPolicyServerTimingHeadersConfig = (
   input: ResponseHeadersPolicyServerTimingHeadersConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_RHPSTHC);
   if (input[_E] != null) {
@@ -10153,7 +10153,7 @@ const se_ResponseHeadersPolicyServerTimingHeadersConfig = (
  */
 const se_ResponseHeadersPolicyStrictTransportSecurity = (
   input: ResponseHeadersPolicyStrictTransportSecurity,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_RHPSTS);
   if (input[_Ov] != null) {
@@ -10176,7 +10176,7 @@ const se_ResponseHeadersPolicyStrictTransportSecurity = (
  */
 const se_ResponseHeadersPolicyXSSProtection = (
   input: ResponseHeadersPolicyXSSProtection,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_RHPXSSP);
   if (input[_Ov] != null) {
@@ -10339,7 +10339,7 @@ const se_StreamingDistributionConfig = (input: StreamingDistributionConfig, cont
  */
 const se_StreamingDistributionConfigWithTags = (
   input: StreamingDistributionConfigWithTags,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_SDCWT);
   if (input[_SDC] != null) {
@@ -10522,7 +10522,7 @@ const de_AccessControlAllowHeadersList = (output: any, context: __SerdeContext):
  */
 const de_AccessControlAllowMethodsList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResponseHeadersPolicyAccessControlAllowMethodsValues[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -10935,7 +10935,7 @@ const de_CloudFrontOriginAccessIdentity = (output: any, context: __SerdeContext)
  */
 const de_CloudFrontOriginAccessIdentityConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CloudFrontOriginAccessIdentityConfig => {
   const contents: any = {};
   if (output[_CR] != null) {
@@ -10952,7 +10952,7 @@ const de_CloudFrontOriginAccessIdentityConfig = (
  */
 const de_CloudFrontOriginAccessIdentityList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CloudFrontOriginAccessIdentityList => {
   const contents: any = {};
   if (output[_M] != null) {
@@ -10983,7 +10983,7 @@ const de_CloudFrontOriginAccessIdentityList = (
  */
 const de_CloudFrontOriginAccessIdentitySummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CloudFrontOriginAccessIdentitySummary => {
   const contents: any = {};
   if (output[_Id] != null) {
@@ -11003,7 +11003,7 @@ const de_CloudFrontOriginAccessIdentitySummary = (
  */
 const de_CloudFrontOriginAccessIdentitySummaryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CloudFrontOriginAccessIdentitySummary[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -11142,7 +11142,7 @@ const de_ContinuousDeploymentPolicy = (output: any, context: __SerdeContext): Co
  */
 const de_ContinuousDeploymentPolicyConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ContinuousDeploymentPolicyConfig => {
   const contents: any = {};
   if (output[_SDDN] != null) {
@@ -11184,7 +11184,7 @@ const de_ContinuousDeploymentPolicyList = (output: any, context: __SerdeContext)
  */
 const de_ContinuousDeploymentPolicySummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ContinuousDeploymentPolicySummary => {
   const contents: any = {};
   if (output[_CDP] != null) {
@@ -11198,7 +11198,7 @@ const de_ContinuousDeploymentPolicySummary = (
  */
 const de_ContinuousDeploymentPolicySummaryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ContinuousDeploymentPolicySummary[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -11212,7 +11212,7 @@ const de_ContinuousDeploymentPolicySummaryList = (
  */
 const de_ContinuousDeploymentSingleHeaderConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ContinuousDeploymentSingleHeaderConfig => {
   const contents: any = {};
   if (output[_H] != null) {
@@ -11229,7 +11229,7 @@ const de_ContinuousDeploymentSingleHeaderConfig = (
  */
 const de_ContinuousDeploymentSingleWeightConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ContinuousDeploymentSingleWeightConfig => {
   const contents: any = {};
   if (output[_W] != null) {
@@ -11839,7 +11839,7 @@ const de_FieldLevelEncryptionProfile = (output: any, context: __SerdeContext): F
  */
 const de_FieldLevelEncryptionProfileConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): FieldLevelEncryptionProfileConfig => {
   const contents: any = {};
   if (output[_N] != null) {
@@ -11884,7 +11884,7 @@ const de_FieldLevelEncryptionProfileList = (output: any, context: __SerdeContext
  */
 const de_FieldLevelEncryptionProfileSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): FieldLevelEncryptionProfileSummary => {
   const contents: any = {};
   if (output[_Id] != null) {
@@ -11910,7 +11910,7 @@ const de_FieldLevelEncryptionProfileSummary = (
  */
 const de_FieldLevelEncryptionProfileSummaryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): FieldLevelEncryptionProfileSummary[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -12943,7 +12943,7 @@ const de_OriginRequestPolicyConfig = (output: any, context: __SerdeContext): Ori
  */
 const de_OriginRequestPolicyCookiesConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): OriginRequestPolicyCookiesConfig => {
   const contents: any = {};
   if (output[_CBo] != null) {
@@ -12960,7 +12960,7 @@ const de_OriginRequestPolicyCookiesConfig = (
  */
 const de_OriginRequestPolicyHeadersConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): OriginRequestPolicyHeadersConfig => {
   const contents: any = {};
   if (output[_HB] != null) {
@@ -12999,7 +12999,7 @@ const de_OriginRequestPolicyList = (output: any, context: __SerdeContext): Origi
  */
 const de_OriginRequestPolicyQueryStringsConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): OriginRequestPolicyQueryStringsConfig => {
   const contents: any = {};
   if (output[_QSB] != null) {
@@ -13087,7 +13087,7 @@ const de_OriginSslProtocols = (output: any, context: __SerdeContext): OriginSslP
  */
 const de_ParametersInCacheKeyAndForwardedToOrigin = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ParametersInCacheKeyAndForwardedToOrigin => {
   const contents: any = {};
   if (output[_EAEG] != null) {
@@ -13416,7 +13416,7 @@ const de_RealtimeLogConfigs = (output: any, context: __SerdeContext): RealtimeLo
  */
 const de_RealtimeMetricsSubscriptionConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RealtimeMetricsSubscriptionConfig => {
   const contents: any = {};
   if (output[_RMSS] != null) {
@@ -13447,7 +13447,7 @@ const de_ResponseHeadersPolicy = (output: any, context: __SerdeContext): Respons
  */
 const de_ResponseHeadersPolicyAccessControlAllowHeaders = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResponseHeadersPolicyAccessControlAllowHeaders => {
   const contents: any = {};
   if (output[_Q] != null) {
@@ -13466,7 +13466,7 @@ const de_ResponseHeadersPolicyAccessControlAllowHeaders = (
  */
 const de_ResponseHeadersPolicyAccessControlAllowMethods = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResponseHeadersPolicyAccessControlAllowMethods => {
   const contents: any = {};
   if (output[_Q] != null) {
@@ -13485,7 +13485,7 @@ const de_ResponseHeadersPolicyAccessControlAllowMethods = (
  */
 const de_ResponseHeadersPolicyAccessControlAllowOrigins = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResponseHeadersPolicyAccessControlAllowOrigins => {
   const contents: any = {};
   if (output[_Q] != null) {
@@ -13504,7 +13504,7 @@ const de_ResponseHeadersPolicyAccessControlAllowOrigins = (
  */
 const de_ResponseHeadersPolicyAccessControlExposeHeaders = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResponseHeadersPolicyAccessControlExposeHeaders => {
   const contents: any = {};
   if (output[_Q] != null) {
@@ -13552,7 +13552,7 @@ const de_ResponseHeadersPolicyConfig = (output: any, context: __SerdeContext): R
  */
 const de_ResponseHeadersPolicyContentSecurityPolicy = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResponseHeadersPolicyContentSecurityPolicy => {
   const contents: any = {};
   if (output[_Ov] != null) {
@@ -13569,7 +13569,7 @@ const de_ResponseHeadersPolicyContentSecurityPolicy = (
  */
 const de_ResponseHeadersPolicyContentTypeOptions = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResponseHeadersPolicyContentTypeOptions => {
   const contents: any = {};
   if (output[_Ov] != null) {
@@ -13612,7 +13612,7 @@ const de_ResponseHeadersPolicyCorsConfig = (output: any, context: __SerdeContext
  */
 const de_ResponseHeadersPolicyCustomHeader = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResponseHeadersPolicyCustomHeader => {
   const contents: any = {};
   if (output[_H] != null) {
@@ -13632,7 +13632,7 @@ const de_ResponseHeadersPolicyCustomHeader = (
  */
 const de_ResponseHeadersPolicyCustomHeaderList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResponseHeadersPolicyCustomHeader[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -13646,7 +13646,7 @@ const de_ResponseHeadersPolicyCustomHeaderList = (
  */
 const de_ResponseHeadersPolicyCustomHeadersConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResponseHeadersPolicyCustomHeadersConfig => {
   const contents: any = {};
   if (output[_Q] != null) {
@@ -13665,7 +13665,7 @@ const de_ResponseHeadersPolicyCustomHeadersConfig = (
  */
 const de_ResponseHeadersPolicyFrameOptions = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResponseHeadersPolicyFrameOptions => {
   const contents: any = {};
   if (output[_Ov] != null) {
@@ -13704,7 +13704,7 @@ const de_ResponseHeadersPolicyList = (output: any, context: __SerdeContext): Res
  */
 const de_ResponseHeadersPolicyReferrerPolicy = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResponseHeadersPolicyReferrerPolicy => {
   const contents: any = {};
   if (output[_Ov] != null) {
@@ -13721,7 +13721,7 @@ const de_ResponseHeadersPolicyReferrerPolicy = (
  */
 const de_ResponseHeadersPolicyRemoveHeader = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResponseHeadersPolicyRemoveHeader => {
   const contents: any = {};
   if (output[_H] != null) {
@@ -13735,7 +13735,7 @@ const de_ResponseHeadersPolicyRemoveHeader = (
  */
 const de_ResponseHeadersPolicyRemoveHeaderList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResponseHeadersPolicyRemoveHeader[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -13749,7 +13749,7 @@ const de_ResponseHeadersPolicyRemoveHeaderList = (
  */
 const de_ResponseHeadersPolicyRemoveHeadersConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResponseHeadersPolicyRemoveHeadersConfig => {
   const contents: any = {};
   if (output[_Q] != null) {
@@ -13768,7 +13768,7 @@ const de_ResponseHeadersPolicyRemoveHeadersConfig = (
  */
 const de_ResponseHeadersPolicySecurityHeadersConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResponseHeadersPolicySecurityHeadersConfig => {
   const contents: any = {};
   if (output[_XSSP] != null) {
@@ -13797,7 +13797,7 @@ const de_ResponseHeadersPolicySecurityHeadersConfig = (
  */
 const de_ResponseHeadersPolicyServerTimingHeadersConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResponseHeadersPolicyServerTimingHeadersConfig => {
   const contents: any = {};
   if (output[_E] != null) {
@@ -13814,7 +13814,7 @@ const de_ResponseHeadersPolicyServerTimingHeadersConfig = (
  */
 const de_ResponseHeadersPolicyStrictTransportSecurity = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResponseHeadersPolicyStrictTransportSecurity => {
   const contents: any = {};
   if (output[_Ov] != null) {
@@ -13862,7 +13862,7 @@ const de_ResponseHeadersPolicySummaryList = (output: any, context: __SerdeContex
  */
 const de_ResponseHeadersPolicyXSSProtection = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResponseHeadersPolicyXSSProtection => {
   const contents: any = {};
   if (output[_Ov] != null) {

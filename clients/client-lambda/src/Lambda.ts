@@ -361,16 +361,16 @@ export interface Lambda {
    */
   addLayerVersionPermission(
     args: AddLayerVersionPermissionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AddLayerVersionPermissionCommandOutput>;
   addLayerVersionPermission(
     args: AddLayerVersionPermissionCommandInput,
-    cb: (err: any, data?: AddLayerVersionPermissionCommandOutput) => void
+    cb: (err: any, data?: AddLayerVersionPermissionCommandOutput) => void,
   ): void;
   addLayerVersionPermission(
     args: AddLayerVersionPermissionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddLayerVersionPermissionCommandOutput) => void
+    cb: (err: any, data?: AddLayerVersionPermissionCommandOutput) => void,
   ): void;
 
   /**
@@ -381,7 +381,7 @@ export interface Lambda {
   addPermission(
     args: AddPermissionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddPermissionCommandOutput) => void
+    cb: (err: any, data?: AddPermissionCommandOutput) => void,
   ): void;
 
   /**
@@ -392,7 +392,7 @@ export interface Lambda {
   createAlias(
     args: CreateAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAliasCommandOutput) => void
+    cb: (err: any, data?: CreateAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -400,16 +400,16 @@ export interface Lambda {
    */
   createCodeSigningConfig(
     args: CreateCodeSigningConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCodeSigningConfigCommandOutput>;
   createCodeSigningConfig(
     args: CreateCodeSigningConfigCommandInput,
-    cb: (err: any, data?: CreateCodeSigningConfigCommandOutput) => void
+    cb: (err: any, data?: CreateCodeSigningConfigCommandOutput) => void,
   ): void;
   createCodeSigningConfig(
     args: CreateCodeSigningConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCodeSigningConfigCommandOutput) => void
+    cb: (err: any, data?: CreateCodeSigningConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -417,16 +417,16 @@ export interface Lambda {
    */
   createEventSourceMapping(
     args: CreateEventSourceMappingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEventSourceMappingCommandOutput>;
   createEventSourceMapping(
     args: CreateEventSourceMappingCommandInput,
-    cb: (err: any, data?: CreateEventSourceMappingCommandOutput) => void
+    cb: (err: any, data?: CreateEventSourceMappingCommandOutput) => void,
   ): void;
   createEventSourceMapping(
     args: CreateEventSourceMappingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEventSourceMappingCommandOutput) => void
+    cb: (err: any, data?: CreateEventSourceMappingCommandOutput) => void,
   ): void;
 
   /**
@@ -434,13 +434,13 @@ export interface Lambda {
    */
   createFunction(
     args: CreateFunctionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateFunctionCommandOutput>;
   createFunction(args: CreateFunctionCommandInput, cb: (err: any, data?: CreateFunctionCommandOutput) => void): void;
   createFunction(
     args: CreateFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateFunctionCommandOutput) => void
+    cb: (err: any, data?: CreateFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -448,16 +448,16 @@ export interface Lambda {
    */
   createFunctionUrlConfig(
     args: CreateFunctionUrlConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateFunctionUrlConfigCommandOutput>;
   createFunctionUrlConfig(
     args: CreateFunctionUrlConfigCommandInput,
-    cb: (err: any, data?: CreateFunctionUrlConfigCommandOutput) => void
+    cb: (err: any, data?: CreateFunctionUrlConfigCommandOutput) => void,
   ): void;
   createFunctionUrlConfig(
     args: CreateFunctionUrlConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateFunctionUrlConfigCommandOutput) => void
+    cb: (err: any, data?: CreateFunctionUrlConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -468,7 +468,7 @@ export interface Lambda {
   deleteAlias(
     args: DeleteAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAliasCommandOutput) => void
+    cb: (err: any, data?: DeleteAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -476,16 +476,16 @@ export interface Lambda {
    */
   deleteCodeSigningConfig(
     args: DeleteCodeSigningConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCodeSigningConfigCommandOutput>;
   deleteCodeSigningConfig(
     args: DeleteCodeSigningConfigCommandInput,
-    cb: (err: any, data?: DeleteCodeSigningConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteCodeSigningConfigCommandOutput) => void,
   ): void;
   deleteCodeSigningConfig(
     args: DeleteCodeSigningConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCodeSigningConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteCodeSigningConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -493,16 +493,16 @@ export interface Lambda {
    */
   deleteEventSourceMapping(
     args: DeleteEventSourceMappingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEventSourceMappingCommandOutput>;
   deleteEventSourceMapping(
     args: DeleteEventSourceMappingCommandInput,
-    cb: (err: any, data?: DeleteEventSourceMappingCommandOutput) => void
+    cb: (err: any, data?: DeleteEventSourceMappingCommandOutput) => void,
   ): void;
   deleteEventSourceMapping(
     args: DeleteEventSourceMappingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEventSourceMappingCommandOutput) => void
+    cb: (err: any, data?: DeleteEventSourceMappingCommandOutput) => void,
   ): void;
 
   /**
@@ -510,13 +510,13 @@ export interface Lambda {
    */
   deleteFunction(
     args: DeleteFunctionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteFunctionCommandOutput>;
   deleteFunction(args: DeleteFunctionCommandInput, cb: (err: any, data?: DeleteFunctionCommandOutput) => void): void;
   deleteFunction(
     args: DeleteFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFunctionCommandOutput) => void
+    cb: (err: any, data?: DeleteFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -524,16 +524,16 @@ export interface Lambda {
    */
   deleteFunctionCodeSigningConfig(
     args: DeleteFunctionCodeSigningConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteFunctionCodeSigningConfigCommandOutput>;
   deleteFunctionCodeSigningConfig(
     args: DeleteFunctionCodeSigningConfigCommandInput,
-    cb: (err: any, data?: DeleteFunctionCodeSigningConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteFunctionCodeSigningConfigCommandOutput) => void,
   ): void;
   deleteFunctionCodeSigningConfig(
     args: DeleteFunctionCodeSigningConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFunctionCodeSigningConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteFunctionCodeSigningConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -541,16 +541,16 @@ export interface Lambda {
    */
   deleteFunctionConcurrency(
     args: DeleteFunctionConcurrencyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteFunctionConcurrencyCommandOutput>;
   deleteFunctionConcurrency(
     args: DeleteFunctionConcurrencyCommandInput,
-    cb: (err: any, data?: DeleteFunctionConcurrencyCommandOutput) => void
+    cb: (err: any, data?: DeleteFunctionConcurrencyCommandOutput) => void,
   ): void;
   deleteFunctionConcurrency(
     args: DeleteFunctionConcurrencyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFunctionConcurrencyCommandOutput) => void
+    cb: (err: any, data?: DeleteFunctionConcurrencyCommandOutput) => void,
   ): void;
 
   /**
@@ -558,16 +558,16 @@ export interface Lambda {
    */
   deleteFunctionEventInvokeConfig(
     args: DeleteFunctionEventInvokeConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteFunctionEventInvokeConfigCommandOutput>;
   deleteFunctionEventInvokeConfig(
     args: DeleteFunctionEventInvokeConfigCommandInput,
-    cb: (err: any, data?: DeleteFunctionEventInvokeConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteFunctionEventInvokeConfigCommandOutput) => void,
   ): void;
   deleteFunctionEventInvokeConfig(
     args: DeleteFunctionEventInvokeConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFunctionEventInvokeConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteFunctionEventInvokeConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -575,16 +575,16 @@ export interface Lambda {
    */
   deleteFunctionUrlConfig(
     args: DeleteFunctionUrlConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteFunctionUrlConfigCommandOutput>;
   deleteFunctionUrlConfig(
     args: DeleteFunctionUrlConfigCommandInput,
-    cb: (err: any, data?: DeleteFunctionUrlConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteFunctionUrlConfigCommandOutput) => void,
   ): void;
   deleteFunctionUrlConfig(
     args: DeleteFunctionUrlConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFunctionUrlConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteFunctionUrlConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -592,16 +592,16 @@ export interface Lambda {
    */
   deleteLayerVersion(
     args: DeleteLayerVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteLayerVersionCommandOutput>;
   deleteLayerVersion(
     args: DeleteLayerVersionCommandInput,
-    cb: (err: any, data?: DeleteLayerVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteLayerVersionCommandOutput) => void,
   ): void;
   deleteLayerVersion(
     args: DeleteLayerVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLayerVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteLayerVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -609,16 +609,16 @@ export interface Lambda {
    */
   deleteProvisionedConcurrencyConfig(
     args: DeleteProvisionedConcurrencyConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteProvisionedConcurrencyConfigCommandOutput>;
   deleteProvisionedConcurrencyConfig(
     args: DeleteProvisionedConcurrencyConfigCommandInput,
-    cb: (err: any, data?: DeleteProvisionedConcurrencyConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteProvisionedConcurrencyConfigCommandOutput) => void,
   ): void;
   deleteProvisionedConcurrencyConfig(
     args: DeleteProvisionedConcurrencyConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProvisionedConcurrencyConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteProvisionedConcurrencyConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -627,16 +627,16 @@ export interface Lambda {
   getAccountSettings(): Promise<GetAccountSettingsCommandOutput>;
   getAccountSettings(
     args: GetAccountSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAccountSettingsCommandOutput>;
   getAccountSettings(
     args: GetAccountSettingsCommandInput,
-    cb: (err: any, data?: GetAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: GetAccountSettingsCommandOutput) => void,
   ): void;
   getAccountSettings(
     args: GetAccountSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: GetAccountSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -647,7 +647,7 @@ export interface Lambda {
   getAlias(
     args: GetAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAliasCommandOutput) => void
+    cb: (err: any, data?: GetAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -655,16 +655,16 @@ export interface Lambda {
    */
   getCodeSigningConfig(
     args: GetCodeSigningConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCodeSigningConfigCommandOutput>;
   getCodeSigningConfig(
     args: GetCodeSigningConfigCommandInput,
-    cb: (err: any, data?: GetCodeSigningConfigCommandOutput) => void
+    cb: (err: any, data?: GetCodeSigningConfigCommandOutput) => void,
   ): void;
   getCodeSigningConfig(
     args: GetCodeSigningConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCodeSigningConfigCommandOutput) => void
+    cb: (err: any, data?: GetCodeSigningConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -672,16 +672,16 @@ export interface Lambda {
    */
   getEventSourceMapping(
     args: GetEventSourceMappingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEventSourceMappingCommandOutput>;
   getEventSourceMapping(
     args: GetEventSourceMappingCommandInput,
-    cb: (err: any, data?: GetEventSourceMappingCommandOutput) => void
+    cb: (err: any, data?: GetEventSourceMappingCommandOutput) => void,
   ): void;
   getEventSourceMapping(
     args: GetEventSourceMappingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEventSourceMappingCommandOutput) => void
+    cb: (err: any, data?: GetEventSourceMappingCommandOutput) => void,
   ): void;
 
   /**
@@ -692,7 +692,7 @@ export interface Lambda {
   getFunction(
     args: GetFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFunctionCommandOutput) => void
+    cb: (err: any, data?: GetFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -700,16 +700,16 @@ export interface Lambda {
    */
   getFunctionCodeSigningConfig(
     args: GetFunctionCodeSigningConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFunctionCodeSigningConfigCommandOutput>;
   getFunctionCodeSigningConfig(
     args: GetFunctionCodeSigningConfigCommandInput,
-    cb: (err: any, data?: GetFunctionCodeSigningConfigCommandOutput) => void
+    cb: (err: any, data?: GetFunctionCodeSigningConfigCommandOutput) => void,
   ): void;
   getFunctionCodeSigningConfig(
     args: GetFunctionCodeSigningConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFunctionCodeSigningConfigCommandOutput) => void
+    cb: (err: any, data?: GetFunctionCodeSigningConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -717,16 +717,16 @@ export interface Lambda {
    */
   getFunctionConcurrency(
     args: GetFunctionConcurrencyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFunctionConcurrencyCommandOutput>;
   getFunctionConcurrency(
     args: GetFunctionConcurrencyCommandInput,
-    cb: (err: any, data?: GetFunctionConcurrencyCommandOutput) => void
+    cb: (err: any, data?: GetFunctionConcurrencyCommandOutput) => void,
   ): void;
   getFunctionConcurrency(
     args: GetFunctionConcurrencyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFunctionConcurrencyCommandOutput) => void
+    cb: (err: any, data?: GetFunctionConcurrencyCommandOutput) => void,
   ): void;
 
   /**
@@ -734,16 +734,16 @@ export interface Lambda {
    */
   getFunctionConfiguration(
     args: GetFunctionConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFunctionConfigurationCommandOutput>;
   getFunctionConfiguration(
     args: GetFunctionConfigurationCommandInput,
-    cb: (err: any, data?: GetFunctionConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetFunctionConfigurationCommandOutput) => void,
   ): void;
   getFunctionConfiguration(
     args: GetFunctionConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFunctionConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetFunctionConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -751,16 +751,16 @@ export interface Lambda {
    */
   getFunctionEventInvokeConfig(
     args: GetFunctionEventInvokeConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFunctionEventInvokeConfigCommandOutput>;
   getFunctionEventInvokeConfig(
     args: GetFunctionEventInvokeConfigCommandInput,
-    cb: (err: any, data?: GetFunctionEventInvokeConfigCommandOutput) => void
+    cb: (err: any, data?: GetFunctionEventInvokeConfigCommandOutput) => void,
   ): void;
   getFunctionEventInvokeConfig(
     args: GetFunctionEventInvokeConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFunctionEventInvokeConfigCommandOutput) => void
+    cb: (err: any, data?: GetFunctionEventInvokeConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -768,16 +768,16 @@ export interface Lambda {
    */
   getFunctionUrlConfig(
     args: GetFunctionUrlConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFunctionUrlConfigCommandOutput>;
   getFunctionUrlConfig(
     args: GetFunctionUrlConfigCommandInput,
-    cb: (err: any, data?: GetFunctionUrlConfigCommandOutput) => void
+    cb: (err: any, data?: GetFunctionUrlConfigCommandOutput) => void,
   ): void;
   getFunctionUrlConfig(
     args: GetFunctionUrlConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFunctionUrlConfigCommandOutput) => void
+    cb: (err: any, data?: GetFunctionUrlConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -785,13 +785,13 @@ export interface Lambda {
    */
   getLayerVersion(
     args: GetLayerVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetLayerVersionCommandOutput>;
   getLayerVersion(args: GetLayerVersionCommandInput, cb: (err: any, data?: GetLayerVersionCommandOutput) => void): void;
   getLayerVersion(
     args: GetLayerVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLayerVersionCommandOutput) => void
+    cb: (err: any, data?: GetLayerVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -799,16 +799,16 @@ export interface Lambda {
    */
   getLayerVersionByArn(
     args: GetLayerVersionByArnCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetLayerVersionByArnCommandOutput>;
   getLayerVersionByArn(
     args: GetLayerVersionByArnCommandInput,
-    cb: (err: any, data?: GetLayerVersionByArnCommandOutput) => void
+    cb: (err: any, data?: GetLayerVersionByArnCommandOutput) => void,
   ): void;
   getLayerVersionByArn(
     args: GetLayerVersionByArnCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLayerVersionByArnCommandOutput) => void
+    cb: (err: any, data?: GetLayerVersionByArnCommandOutput) => void,
   ): void;
 
   /**
@@ -816,16 +816,16 @@ export interface Lambda {
    */
   getLayerVersionPolicy(
     args: GetLayerVersionPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetLayerVersionPolicyCommandOutput>;
   getLayerVersionPolicy(
     args: GetLayerVersionPolicyCommandInput,
-    cb: (err: any, data?: GetLayerVersionPolicyCommandOutput) => void
+    cb: (err: any, data?: GetLayerVersionPolicyCommandOutput) => void,
   ): void;
   getLayerVersionPolicy(
     args: GetLayerVersionPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLayerVersionPolicyCommandOutput) => void
+    cb: (err: any, data?: GetLayerVersionPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -836,7 +836,7 @@ export interface Lambda {
   getPolicy(
     args: GetPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPolicyCommandOutput) => void
+    cb: (err: any, data?: GetPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -844,16 +844,16 @@ export interface Lambda {
    */
   getProvisionedConcurrencyConfig(
     args: GetProvisionedConcurrencyConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetProvisionedConcurrencyConfigCommandOutput>;
   getProvisionedConcurrencyConfig(
     args: GetProvisionedConcurrencyConfigCommandInput,
-    cb: (err: any, data?: GetProvisionedConcurrencyConfigCommandOutput) => void
+    cb: (err: any, data?: GetProvisionedConcurrencyConfigCommandOutput) => void,
   ): void;
   getProvisionedConcurrencyConfig(
     args: GetProvisionedConcurrencyConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetProvisionedConcurrencyConfigCommandOutput) => void
+    cb: (err: any, data?: GetProvisionedConcurrencyConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -861,16 +861,16 @@ export interface Lambda {
    */
   getRuntimeManagementConfig(
     args: GetRuntimeManagementConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRuntimeManagementConfigCommandOutput>;
   getRuntimeManagementConfig(
     args: GetRuntimeManagementConfigCommandInput,
-    cb: (err: any, data?: GetRuntimeManagementConfigCommandOutput) => void
+    cb: (err: any, data?: GetRuntimeManagementConfigCommandOutput) => void,
   ): void;
   getRuntimeManagementConfig(
     args: GetRuntimeManagementConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRuntimeManagementConfigCommandOutput) => void
+    cb: (err: any, data?: GetRuntimeManagementConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -881,7 +881,7 @@ export interface Lambda {
   invoke(
     args: InvokeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InvokeCommandOutput) => void
+    cb: (err: any, data?: InvokeCommandOutput) => void,
   ): void;
 
   /**
@@ -892,7 +892,7 @@ export interface Lambda {
   invokeAsync(
     args: InvokeAsyncCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InvokeAsyncCommandOutput) => void
+    cb: (err: any, data?: InvokeAsyncCommandOutput) => void,
   ): void;
 
   /**
@@ -900,16 +900,16 @@ export interface Lambda {
    */
   invokeWithResponseStream(
     args: InvokeWithResponseStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<InvokeWithResponseStreamCommandOutput>;
   invokeWithResponseStream(
     args: InvokeWithResponseStreamCommandInput,
-    cb: (err: any, data?: InvokeWithResponseStreamCommandOutput) => void
+    cb: (err: any, data?: InvokeWithResponseStreamCommandOutput) => void,
   ): void;
   invokeWithResponseStream(
     args: InvokeWithResponseStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InvokeWithResponseStreamCommandOutput) => void
+    cb: (err: any, data?: InvokeWithResponseStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -920,7 +920,7 @@ export interface Lambda {
   listAliases(
     args: ListAliasesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAliasesCommandOutput) => void
+    cb: (err: any, data?: ListAliasesCommandOutput) => void,
   ): void;
 
   /**
@@ -929,16 +929,16 @@ export interface Lambda {
   listCodeSigningConfigs(): Promise<ListCodeSigningConfigsCommandOutput>;
   listCodeSigningConfigs(
     args: ListCodeSigningConfigsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCodeSigningConfigsCommandOutput>;
   listCodeSigningConfigs(
     args: ListCodeSigningConfigsCommandInput,
-    cb: (err: any, data?: ListCodeSigningConfigsCommandOutput) => void
+    cb: (err: any, data?: ListCodeSigningConfigsCommandOutput) => void,
   ): void;
   listCodeSigningConfigs(
     args: ListCodeSigningConfigsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCodeSigningConfigsCommandOutput) => void
+    cb: (err: any, data?: ListCodeSigningConfigsCommandOutput) => void,
   ): void;
 
   /**
@@ -947,16 +947,16 @@ export interface Lambda {
   listEventSourceMappings(): Promise<ListEventSourceMappingsCommandOutput>;
   listEventSourceMappings(
     args: ListEventSourceMappingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEventSourceMappingsCommandOutput>;
   listEventSourceMappings(
     args: ListEventSourceMappingsCommandInput,
-    cb: (err: any, data?: ListEventSourceMappingsCommandOutput) => void
+    cb: (err: any, data?: ListEventSourceMappingsCommandOutput) => void,
   ): void;
   listEventSourceMappings(
     args: ListEventSourceMappingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEventSourceMappingsCommandOutput) => void
+    cb: (err: any, data?: ListEventSourceMappingsCommandOutput) => void,
   ): void;
 
   /**
@@ -964,16 +964,16 @@ export interface Lambda {
    */
   listFunctionEventInvokeConfigs(
     args: ListFunctionEventInvokeConfigsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFunctionEventInvokeConfigsCommandOutput>;
   listFunctionEventInvokeConfigs(
     args: ListFunctionEventInvokeConfigsCommandInput,
-    cb: (err: any, data?: ListFunctionEventInvokeConfigsCommandOutput) => void
+    cb: (err: any, data?: ListFunctionEventInvokeConfigsCommandOutput) => void,
   ): void;
   listFunctionEventInvokeConfigs(
     args: ListFunctionEventInvokeConfigsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFunctionEventInvokeConfigsCommandOutput) => void
+    cb: (err: any, data?: ListFunctionEventInvokeConfigsCommandOutput) => void,
   ): void;
 
   /**
@@ -985,7 +985,7 @@ export interface Lambda {
   listFunctions(
     args: ListFunctionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFunctionsCommandOutput) => void
+    cb: (err: any, data?: ListFunctionsCommandOutput) => void,
   ): void;
 
   /**
@@ -993,16 +993,16 @@ export interface Lambda {
    */
   listFunctionsByCodeSigningConfig(
     args: ListFunctionsByCodeSigningConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFunctionsByCodeSigningConfigCommandOutput>;
   listFunctionsByCodeSigningConfig(
     args: ListFunctionsByCodeSigningConfigCommandInput,
-    cb: (err: any, data?: ListFunctionsByCodeSigningConfigCommandOutput) => void
+    cb: (err: any, data?: ListFunctionsByCodeSigningConfigCommandOutput) => void,
   ): void;
   listFunctionsByCodeSigningConfig(
     args: ListFunctionsByCodeSigningConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFunctionsByCodeSigningConfigCommandOutput) => void
+    cb: (err: any, data?: ListFunctionsByCodeSigningConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1010,16 +1010,16 @@ export interface Lambda {
    */
   listFunctionUrlConfigs(
     args: ListFunctionUrlConfigsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFunctionUrlConfigsCommandOutput>;
   listFunctionUrlConfigs(
     args: ListFunctionUrlConfigsCommandInput,
-    cb: (err: any, data?: ListFunctionUrlConfigsCommandOutput) => void
+    cb: (err: any, data?: ListFunctionUrlConfigsCommandOutput) => void,
   ): void;
   listFunctionUrlConfigs(
     args: ListFunctionUrlConfigsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFunctionUrlConfigsCommandOutput) => void
+    cb: (err: any, data?: ListFunctionUrlConfigsCommandOutput) => void,
   ): void;
 
   /**
@@ -1031,7 +1031,7 @@ export interface Lambda {
   listLayers(
     args: ListLayersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLayersCommandOutput) => void
+    cb: (err: any, data?: ListLayersCommandOutput) => void,
   ): void;
 
   /**
@@ -1039,16 +1039,16 @@ export interface Lambda {
    */
   listLayerVersions(
     args: ListLayerVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListLayerVersionsCommandOutput>;
   listLayerVersions(
     args: ListLayerVersionsCommandInput,
-    cb: (err: any, data?: ListLayerVersionsCommandOutput) => void
+    cb: (err: any, data?: ListLayerVersionsCommandOutput) => void,
   ): void;
   listLayerVersions(
     args: ListLayerVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLayerVersionsCommandOutput) => void
+    cb: (err: any, data?: ListLayerVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1056,16 +1056,16 @@ export interface Lambda {
    */
   listProvisionedConcurrencyConfigs(
     args: ListProvisionedConcurrencyConfigsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListProvisionedConcurrencyConfigsCommandOutput>;
   listProvisionedConcurrencyConfigs(
     args: ListProvisionedConcurrencyConfigsCommandInput,
-    cb: (err: any, data?: ListProvisionedConcurrencyConfigsCommandOutput) => void
+    cb: (err: any, data?: ListProvisionedConcurrencyConfigsCommandOutput) => void,
   ): void;
   listProvisionedConcurrencyConfigs(
     args: ListProvisionedConcurrencyConfigsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProvisionedConcurrencyConfigsCommandOutput) => void
+    cb: (err: any, data?: ListProvisionedConcurrencyConfigsCommandOutput) => void,
   ): void;
 
   /**
@@ -1076,7 +1076,7 @@ export interface Lambda {
   listTags(
     args: ListTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsCommandOutput) => void
+    cb: (err: any, data?: ListTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -1084,16 +1084,16 @@ export interface Lambda {
    */
   listVersionsByFunction(
     args: ListVersionsByFunctionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListVersionsByFunctionCommandOutput>;
   listVersionsByFunction(
     args: ListVersionsByFunctionCommandInput,
-    cb: (err: any, data?: ListVersionsByFunctionCommandOutput) => void
+    cb: (err: any, data?: ListVersionsByFunctionCommandOutput) => void,
   ): void;
   listVersionsByFunction(
     args: ListVersionsByFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListVersionsByFunctionCommandOutput) => void
+    cb: (err: any, data?: ListVersionsByFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -1101,16 +1101,16 @@ export interface Lambda {
    */
   publishLayerVersion(
     args: PublishLayerVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PublishLayerVersionCommandOutput>;
   publishLayerVersion(
     args: PublishLayerVersionCommandInput,
-    cb: (err: any, data?: PublishLayerVersionCommandOutput) => void
+    cb: (err: any, data?: PublishLayerVersionCommandOutput) => void,
   ): void;
   publishLayerVersion(
     args: PublishLayerVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PublishLayerVersionCommandOutput) => void
+    cb: (err: any, data?: PublishLayerVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -1118,13 +1118,13 @@ export interface Lambda {
    */
   publishVersion(
     args: PublishVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PublishVersionCommandOutput>;
   publishVersion(args: PublishVersionCommandInput, cb: (err: any, data?: PublishVersionCommandOutput) => void): void;
   publishVersion(
     args: PublishVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PublishVersionCommandOutput) => void
+    cb: (err: any, data?: PublishVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -1132,16 +1132,16 @@ export interface Lambda {
    */
   putFunctionCodeSigningConfig(
     args: PutFunctionCodeSigningConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutFunctionCodeSigningConfigCommandOutput>;
   putFunctionCodeSigningConfig(
     args: PutFunctionCodeSigningConfigCommandInput,
-    cb: (err: any, data?: PutFunctionCodeSigningConfigCommandOutput) => void
+    cb: (err: any, data?: PutFunctionCodeSigningConfigCommandOutput) => void,
   ): void;
   putFunctionCodeSigningConfig(
     args: PutFunctionCodeSigningConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutFunctionCodeSigningConfigCommandOutput) => void
+    cb: (err: any, data?: PutFunctionCodeSigningConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1149,16 +1149,16 @@ export interface Lambda {
    */
   putFunctionConcurrency(
     args: PutFunctionConcurrencyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutFunctionConcurrencyCommandOutput>;
   putFunctionConcurrency(
     args: PutFunctionConcurrencyCommandInput,
-    cb: (err: any, data?: PutFunctionConcurrencyCommandOutput) => void
+    cb: (err: any, data?: PutFunctionConcurrencyCommandOutput) => void,
   ): void;
   putFunctionConcurrency(
     args: PutFunctionConcurrencyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutFunctionConcurrencyCommandOutput) => void
+    cb: (err: any, data?: PutFunctionConcurrencyCommandOutput) => void,
   ): void;
 
   /**
@@ -1166,16 +1166,16 @@ export interface Lambda {
    */
   putFunctionEventInvokeConfig(
     args: PutFunctionEventInvokeConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutFunctionEventInvokeConfigCommandOutput>;
   putFunctionEventInvokeConfig(
     args: PutFunctionEventInvokeConfigCommandInput,
-    cb: (err: any, data?: PutFunctionEventInvokeConfigCommandOutput) => void
+    cb: (err: any, data?: PutFunctionEventInvokeConfigCommandOutput) => void,
   ): void;
   putFunctionEventInvokeConfig(
     args: PutFunctionEventInvokeConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutFunctionEventInvokeConfigCommandOutput) => void
+    cb: (err: any, data?: PutFunctionEventInvokeConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1183,16 +1183,16 @@ export interface Lambda {
    */
   putProvisionedConcurrencyConfig(
     args: PutProvisionedConcurrencyConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutProvisionedConcurrencyConfigCommandOutput>;
   putProvisionedConcurrencyConfig(
     args: PutProvisionedConcurrencyConfigCommandInput,
-    cb: (err: any, data?: PutProvisionedConcurrencyConfigCommandOutput) => void
+    cb: (err: any, data?: PutProvisionedConcurrencyConfigCommandOutput) => void,
   ): void;
   putProvisionedConcurrencyConfig(
     args: PutProvisionedConcurrencyConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutProvisionedConcurrencyConfigCommandOutput) => void
+    cb: (err: any, data?: PutProvisionedConcurrencyConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1200,16 +1200,16 @@ export interface Lambda {
    */
   putRuntimeManagementConfig(
     args: PutRuntimeManagementConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutRuntimeManagementConfigCommandOutput>;
   putRuntimeManagementConfig(
     args: PutRuntimeManagementConfigCommandInput,
-    cb: (err: any, data?: PutRuntimeManagementConfigCommandOutput) => void
+    cb: (err: any, data?: PutRuntimeManagementConfigCommandOutput) => void,
   ): void;
   putRuntimeManagementConfig(
     args: PutRuntimeManagementConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutRuntimeManagementConfigCommandOutput) => void
+    cb: (err: any, data?: PutRuntimeManagementConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1217,16 +1217,16 @@ export interface Lambda {
    */
   removeLayerVersionPermission(
     args: RemoveLayerVersionPermissionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveLayerVersionPermissionCommandOutput>;
   removeLayerVersionPermission(
     args: RemoveLayerVersionPermissionCommandInput,
-    cb: (err: any, data?: RemoveLayerVersionPermissionCommandOutput) => void
+    cb: (err: any, data?: RemoveLayerVersionPermissionCommandOutput) => void,
   ): void;
   removeLayerVersionPermission(
     args: RemoveLayerVersionPermissionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveLayerVersionPermissionCommandOutput) => void
+    cb: (err: any, data?: RemoveLayerVersionPermissionCommandOutput) => void,
   ): void;
 
   /**
@@ -1234,16 +1234,16 @@ export interface Lambda {
    */
   removePermission(
     args: RemovePermissionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemovePermissionCommandOutput>;
   removePermission(
     args: RemovePermissionCommandInput,
-    cb: (err: any, data?: RemovePermissionCommandOutput) => void
+    cb: (err: any, data?: RemovePermissionCommandOutput) => void,
   ): void;
   removePermission(
     args: RemovePermissionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemovePermissionCommandOutput) => void
+    cb: (err: any, data?: RemovePermissionCommandOutput) => void,
   ): void;
 
   /**
@@ -1254,7 +1254,7 @@ export interface Lambda {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1265,7 +1265,7 @@ export interface Lambda {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1276,7 +1276,7 @@ export interface Lambda {
   updateAlias(
     args: UpdateAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAliasCommandOutput) => void
+    cb: (err: any, data?: UpdateAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -1284,16 +1284,16 @@ export interface Lambda {
    */
   updateCodeSigningConfig(
     args: UpdateCodeSigningConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateCodeSigningConfigCommandOutput>;
   updateCodeSigningConfig(
     args: UpdateCodeSigningConfigCommandInput,
-    cb: (err: any, data?: UpdateCodeSigningConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateCodeSigningConfigCommandOutput) => void,
   ): void;
   updateCodeSigningConfig(
     args: UpdateCodeSigningConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateCodeSigningConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateCodeSigningConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1301,16 +1301,16 @@ export interface Lambda {
    */
   updateEventSourceMapping(
     args: UpdateEventSourceMappingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEventSourceMappingCommandOutput>;
   updateEventSourceMapping(
     args: UpdateEventSourceMappingCommandInput,
-    cb: (err: any, data?: UpdateEventSourceMappingCommandOutput) => void
+    cb: (err: any, data?: UpdateEventSourceMappingCommandOutput) => void,
   ): void;
   updateEventSourceMapping(
     args: UpdateEventSourceMappingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEventSourceMappingCommandOutput) => void
+    cb: (err: any, data?: UpdateEventSourceMappingCommandOutput) => void,
   ): void;
 
   /**
@@ -1318,16 +1318,16 @@ export interface Lambda {
    */
   updateFunctionCode(
     args: UpdateFunctionCodeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateFunctionCodeCommandOutput>;
   updateFunctionCode(
     args: UpdateFunctionCodeCommandInput,
-    cb: (err: any, data?: UpdateFunctionCodeCommandOutput) => void
+    cb: (err: any, data?: UpdateFunctionCodeCommandOutput) => void,
   ): void;
   updateFunctionCode(
     args: UpdateFunctionCodeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFunctionCodeCommandOutput) => void
+    cb: (err: any, data?: UpdateFunctionCodeCommandOutput) => void,
   ): void;
 
   /**
@@ -1335,16 +1335,16 @@ export interface Lambda {
    */
   updateFunctionConfiguration(
     args: UpdateFunctionConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateFunctionConfigurationCommandOutput>;
   updateFunctionConfiguration(
     args: UpdateFunctionConfigurationCommandInput,
-    cb: (err: any, data?: UpdateFunctionConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateFunctionConfigurationCommandOutput) => void,
   ): void;
   updateFunctionConfiguration(
     args: UpdateFunctionConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFunctionConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateFunctionConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1352,16 +1352,16 @@ export interface Lambda {
    */
   updateFunctionEventInvokeConfig(
     args: UpdateFunctionEventInvokeConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateFunctionEventInvokeConfigCommandOutput>;
   updateFunctionEventInvokeConfig(
     args: UpdateFunctionEventInvokeConfigCommandInput,
-    cb: (err: any, data?: UpdateFunctionEventInvokeConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateFunctionEventInvokeConfigCommandOutput) => void,
   ): void;
   updateFunctionEventInvokeConfig(
     args: UpdateFunctionEventInvokeConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFunctionEventInvokeConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateFunctionEventInvokeConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1369,16 +1369,16 @@ export interface Lambda {
    */
   updateFunctionUrlConfig(
     args: UpdateFunctionUrlConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateFunctionUrlConfigCommandOutput>;
   updateFunctionUrlConfig(
     args: UpdateFunctionUrlConfigCommandInput,
-    cb: (err: any, data?: UpdateFunctionUrlConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateFunctionUrlConfigCommandOutput) => void,
   ): void;
   updateFunctionUrlConfig(
     args: UpdateFunctionUrlConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFunctionUrlConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateFunctionUrlConfigCommandOutput) => void,
   ): void;
 }
 

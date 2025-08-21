@@ -26,14 +26,14 @@ if (!package) {
     ...["dynamodb", "storage"].map((lib) => ({
       pkg: `lib-${lib}`,
       pkgJsonFilePath: path.join(root, "lib", `lib-${lib}`, "package.json"),
-    }))
+    })),
   );
 
   packages.push(
     ...fs.readdirSync(path.join(root, "clients")).map((pkg) => ({
       pkgJsonFilePath: path.join(root, "clients", pkg, "package.json"),
       pkg,
-    }))
+    })),
   );
 
   for (const { pkg, pkgJsonFilePath } of packages) {

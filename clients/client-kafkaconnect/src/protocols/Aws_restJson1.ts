@@ -105,7 +105,7 @@ import {
  */
 export const se_CreateConnectorCommand = async (
   input: CreateConnectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -128,7 +128,7 @@ export const se_CreateConnectorCommand = async (
       serviceExecutionRoleArn: [],
       tags: (_) => _json(_),
       workerConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -139,7 +139,7 @@ export const se_CreateConnectorCommand = async (
  */
 export const se_CreateCustomPluginCommand = async (
   input: CreateCustomPluginCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -154,7 +154,7 @@ export const se_CreateCustomPluginCommand = async (
       location: (_) => _json(_),
       name: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -165,7 +165,7 @@ export const se_CreateCustomPluginCommand = async (
  */
 export const se_CreateWorkerConfigurationCommand = async (
   input: CreateWorkerConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -179,7 +179,7 @@ export const se_CreateWorkerConfigurationCommand = async (
       name: [],
       propertiesFileContent: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -190,7 +190,7 @@ export const se_CreateWorkerConfigurationCommand = async (
  */
 export const se_DeleteConnectorCommand = async (
   input: DeleteConnectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -209,7 +209,7 @@ export const se_DeleteConnectorCommand = async (
  */
 export const se_DeleteCustomPluginCommand = async (
   input: DeleteCustomPluginCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -225,7 +225,7 @@ export const se_DeleteCustomPluginCommand = async (
  */
 export const se_DeleteWorkerConfigurationCommand = async (
   input: DeleteWorkerConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -241,7 +241,7 @@ export const se_DeleteWorkerConfigurationCommand = async (
  */
 export const se_DescribeConnectorCommand = async (
   input: DescribeConnectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -257,7 +257,7 @@ export const se_DescribeConnectorCommand = async (
  */
 export const se_DescribeCustomPluginCommand = async (
   input: DescribeCustomPluginCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -273,7 +273,7 @@ export const se_DescribeCustomPluginCommand = async (
  */
 export const se_DescribeWorkerConfigurationCommand = async (
   input: DescribeWorkerConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -289,7 +289,7 @@ export const se_DescribeWorkerConfigurationCommand = async (
  */
 export const se_ListConnectorsCommand = async (
   input: ListConnectorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -309,7 +309,7 @@ export const se_ListConnectorsCommand = async (
  */
 export const se_ListCustomPluginsCommand = async (
   input: ListCustomPluginsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -329,7 +329,7 @@ export const se_ListCustomPluginsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -345,7 +345,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListWorkerConfigurationsCommand = async (
   input: ListWorkerConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -365,7 +365,7 @@ export const se_ListWorkerConfigurationsCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -377,7 +377,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -388,7 +388,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -410,7 +410,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateConnectorCommand = async (
   input: UpdateConnectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -425,7 +425,7 @@ export const se_UpdateConnectorCommand = async (
   body = JSON.stringify(
     take(input, {
       capacity: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -436,7 +436,7 @@ export const se_UpdateConnectorCommand = async (
  */
 export const de_CreateConnectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConnectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -459,7 +459,7 @@ export const de_CreateConnectorCommand = async (
  */
 export const de_CreateCustomPluginCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCustomPluginCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -483,7 +483,7 @@ export const de_CreateCustomPluginCommand = async (
  */
 export const de_CreateWorkerConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorkerConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -508,7 +508,7 @@ export const de_CreateWorkerConfigurationCommand = async (
  */
 export const de_DeleteConnectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConnectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -530,7 +530,7 @@ export const de_DeleteConnectorCommand = async (
  */
 export const de_DeleteCustomPluginCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCustomPluginCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -552,7 +552,7 @@ export const de_DeleteCustomPluginCommand = async (
  */
 export const de_DeleteWorkerConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorkerConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -574,7 +574,7 @@ export const de_DeleteWorkerConfigurationCommand = async (
  */
 export const de_DescribeConnectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConnectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -611,7 +611,7 @@ export const de_DescribeConnectorCommand = async (
  */
 export const de_DescribeCustomPluginCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCustomPluginCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -638,7 +638,7 @@ export const de_DescribeCustomPluginCommand = async (
  */
 export const de_DescribeWorkerConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWorkerConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -664,7 +664,7 @@ export const de_DescribeWorkerConfigurationCommand = async (
  */
 export const de_ListConnectorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConnectorsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -686,7 +686,7 @@ export const de_ListConnectorsCommand = async (
  */
 export const de_ListCustomPluginsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCustomPluginsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -708,7 +708,7 @@ export const de_ListCustomPluginsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -729,7 +729,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListWorkerConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkerConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -751,7 +751,7 @@ export const de_ListWorkerConfigurationsCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -768,7 +768,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -785,7 +785,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateConnectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConnectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -903,7 +903,7 @@ const de_ForbiddenExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_InternalServerErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -940,7 +940,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -960,7 +960,7 @@ const de_ServiceUnavailableExceptionRes = async (
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -980,7 +980,7 @@ const de_TooManyRequestsExceptionRes = async (
  */
 const de_UnauthorizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthorizedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1195,7 +1195,7 @@ const de_CustomPluginSummary = (output: any, context: __SerdeContext): CustomPlu
  */
 const de_WorkerConfigurationRevisionDescription = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): WorkerConfigurationRevisionDescription => {
   return take(output, {
     creationTime: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
@@ -1210,7 +1210,7 @@ const de_WorkerConfigurationRevisionDescription = (
  */
 const de_WorkerConfigurationRevisionSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): WorkerConfigurationRevisionSummary => {
   return take(output, {
     creationTime: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),

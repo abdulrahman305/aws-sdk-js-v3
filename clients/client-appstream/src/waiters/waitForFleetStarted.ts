@@ -64,7 +64,7 @@ const checkState = async (client: AppStreamClient, input: DescribeFleetsCommandI
  */
 export const waitForFleetStarted = async (
   params: WaiterConfiguration<AppStreamClient>,
-  input: DescribeFleetsCommandInput
+  input: DescribeFleetsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -76,7 +76,7 @@ export const waitForFleetStarted = async (
  */
 export const waitUntilFleetStarted = async (
   params: WaiterConfiguration<AppStreamClient>,
-  input: DescribeFleetsCommandInput
+  input: DescribeFleetsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

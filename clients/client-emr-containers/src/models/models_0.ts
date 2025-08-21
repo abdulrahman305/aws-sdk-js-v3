@@ -2313,7 +2313,7 @@ export const CredentialsFilterSensitiveLog = (obj: Credentials): any => {
  * @internal
  */
 export const GetManagedEndpointSessionCredentialsResponseFilterSensitiveLog = (
-  obj: GetManagedEndpointSessionCredentialsResponse
+  obj: GetManagedEndpointSessionCredentialsResponse,
 ): any => ({
   ...obj,
   ...(obj.credentials && { credentials: CredentialsFilterSensitiveLog(obj.credentials) }),

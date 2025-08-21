@@ -86,7 +86,7 @@ import {
  */
 export const se_ConverseCommand = async (
   input: ConverseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -104,7 +104,7 @@ export const se_ConverseCommand = async (
       messages: (_) => se_Messages(_, context),
       system: (_) => _json(_),
       toolConfig: (_) => se_ToolConfiguration(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -115,7 +115,7 @@ export const se_ConverseCommand = async (
  */
 export const se_ConverseStreamCommand = async (
   input: ConverseStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -133,7 +133,7 @@ export const se_ConverseStreamCommand = async (
       messages: (_) => se_Messages(_, context),
       system: (_) => _json(_),
       toolConfig: (_) => se_ToolConfiguration(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -144,7 +144,7 @@ export const se_ConverseStreamCommand = async (
  */
 export const se_InvokeModelCommand = async (
   input: InvokeModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -169,7 +169,7 @@ export const se_InvokeModelCommand = async (
  */
 export const se_InvokeModelWithResponseStreamCommand = async (
   input: InvokeModelWithResponseStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -194,7 +194,7 @@ export const se_InvokeModelWithResponseStreamCommand = async (
  */
 export const de_ConverseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConverseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -220,7 +220,7 @@ export const de_ConverseCommand = async (
  */
 export const de_ConverseStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): Promise<ConverseStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -238,7 +238,7 @@ export const de_ConverseStreamCommand = async (
  */
 export const de_InvokeModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvokeModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -257,7 +257,7 @@ export const de_InvokeModelCommand = async (
  */
 export const de_InvokeModelWithResponseStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): Promise<InvokeModelWithResponseStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -327,7 +327,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -347,7 +347,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -386,7 +386,7 @@ const de_ModelErrorExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_ModelNotReadyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModelNotReadyException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -406,7 +406,7 @@ const de_ModelNotReadyExceptionRes = async (
  */
 const de_ModelStreamErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModelStreamErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -428,7 +428,7 @@ const de_ModelStreamErrorExceptionRes = async (
  */
 const de_ModelTimeoutExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModelTimeoutException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -448,7 +448,7 @@ const de_ModelTimeoutExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -468,7 +468,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -522,7 +522,7 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_ConverseStreamOutput = (
   output: any,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): AsyncIterable<ConverseStreamOutput> => {
   return context.eventStreamMarshaller.deserialize(output, async (event) => {
     if (event["messageStart"] != null) {
@@ -564,7 +564,7 @@ const de_ConverseStreamOutput = (
       return {
         modelStreamErrorException: await de_ModelStreamErrorException_event(
           event["modelStreamErrorException"],
-          context
+          context,
         ),
       };
     }
@@ -586,7 +586,7 @@ const de_ConverseStreamOutput = (
  */
 const de_ResponseStream = (
   output: any,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): AsyncIterable<ResponseStream> => {
   return context.eventStreamMarshaller.deserialize(output, async (event) => {
     if (event["chunk"] != null) {
@@ -603,7 +603,7 @@ const de_ResponseStream = (
       return {
         modelStreamErrorException: await de_ModelStreamErrorException_event(
           event["modelStreamErrorException"],
-          context
+          context,
         ),
       };
     }
@@ -627,7 +627,7 @@ const de_ResponseStream = (
 };
 const de_ContentBlockDeltaEvent_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ContentBlockDeltaEvent> => {
   const contents: ContentBlockDeltaEvent = {} as any;
   const data: any = await parseBody(output.body, context);
@@ -636,7 +636,7 @@ const de_ContentBlockDeltaEvent_event = async (
 };
 const de_ContentBlockStartEvent_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ContentBlockStartEvent> => {
   const contents: ContentBlockStartEvent = {} as any;
   const data: any = await parseBody(output.body, context);
@@ -651,7 +651,7 @@ const de_ContentBlockStopEvent_event = async (output: any, context: __SerdeConte
 };
 const de_ConverseStreamMetadataEvent_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConverseStreamMetadataEvent> => {
   const contents: ConverseStreamMetadataEvent = {} as any;
   const data: any = await parseBody(output.body, context);
@@ -660,7 +660,7 @@ const de_ConverseStreamMetadataEvent_event = async (
 };
 const de_InternalServerException_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const parsedOutput: any = {
     ...output,
@@ -682,7 +682,7 @@ const de_MessageStopEvent_event = async (output: any, context: __SerdeContext): 
 };
 const de_ModelStreamErrorException_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModelStreamErrorException> => {
   const parsedOutput: any = {
     ...output,
@@ -733,7 +733,7 @@ const se_ContentBlock = (input: ContentBlock, context: __SerdeContext): any => {
     text: (value) => ({ text: value }),
     toolResult: (value) => ({ toolResult: se_ToolResultBlock(value, context) }),
     toolUse: (value) => ({ toolUse: se_ToolUseBlock(value, context) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -772,7 +772,7 @@ const se_ImageBlock = (input: ImageBlock, context: __SerdeContext): any => {
 const se_ImageSource = (input: ImageSource, context: __SerdeContext): any => {
   return ImageSource.visit(input, {
     bytes: (value) => ({ bytes: context.base64Encoder(value) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -823,7 +823,7 @@ const se_Messages = (input: Message[], context: __SerdeContext): any => {
 const se_Tool = (input: Tool, context: __SerdeContext): any => {
   return Tool.visit(input, {
     toolSpec: (value) => ({ toolSpec: se_ToolSpecification(value, context) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -845,7 +845,7 @@ const se_ToolConfiguration = (input: ToolConfiguration, context: __SerdeContext)
 const se_ToolInputSchema = (input: ToolInputSchema, context: __SerdeContext): any => {
   return ToolInputSchema.visit(input, {
     json: (value) => ({ json: se_Document(value, context) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -868,7 +868,7 @@ const se_ToolResultContentBlock = (input: ToolResultContentBlock, context: __Ser
     image: (value) => ({ image: se_ImageBlock(value, context) }),
     json: (value) => ({ json: se_Document(value, context) }),
     text: (value) => ({ text: value }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 

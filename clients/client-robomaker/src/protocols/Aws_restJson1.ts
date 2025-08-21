@@ -258,7 +258,7 @@ import { RoboMakerServiceException as __BaseException } from "../models/RoboMake
  */
 export const se_BatchDeleteWorldsCommand = async (
   input: BatchDeleteWorldsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -269,7 +269,7 @@ export const se_BatchDeleteWorldsCommand = async (
   body = JSON.stringify(
     take(input, {
       worlds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -280,7 +280,7 @@ export const se_BatchDeleteWorldsCommand = async (
  */
 export const se_BatchDescribeSimulationJobCommand = async (
   input: BatchDescribeSimulationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -291,7 +291,7 @@ export const se_BatchDescribeSimulationJobCommand = async (
   body = JSON.stringify(
     take(input, {
       jobs: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -302,7 +302,7 @@ export const se_BatchDescribeSimulationJobCommand = async (
  */
 export const se_CancelDeploymentJobCommand = async (
   input: CancelDeploymentJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -313,7 +313,7 @@ export const se_CancelDeploymentJobCommand = async (
   body = JSON.stringify(
     take(input, {
       job: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -324,7 +324,7 @@ export const se_CancelDeploymentJobCommand = async (
  */
 export const se_CancelSimulationJobCommand = async (
   input: CancelSimulationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -335,7 +335,7 @@ export const se_CancelSimulationJobCommand = async (
   body = JSON.stringify(
     take(input, {
       job: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -346,7 +346,7 @@ export const se_CancelSimulationJobCommand = async (
  */
 export const se_CancelSimulationJobBatchCommand = async (
   input: CancelSimulationJobBatchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -357,7 +357,7 @@ export const se_CancelSimulationJobBatchCommand = async (
   body = JSON.stringify(
     take(input, {
       batch: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -368,7 +368,7 @@ export const se_CancelSimulationJobBatchCommand = async (
  */
 export const se_CancelWorldExportJobCommand = async (
   input: CancelWorldExportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -379,7 +379,7 @@ export const se_CancelWorldExportJobCommand = async (
   body = JSON.stringify(
     take(input, {
       job: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -390,7 +390,7 @@ export const se_CancelWorldExportJobCommand = async (
  */
 export const se_CancelWorldGenerationJobCommand = async (
   input: CancelWorldGenerationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -401,7 +401,7 @@ export const se_CancelWorldGenerationJobCommand = async (
   body = JSON.stringify(
     take(input, {
       job: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -412,7 +412,7 @@ export const se_CancelWorldGenerationJobCommand = async (
  */
 export const se_CreateDeploymentJobCommand = async (
   input: CreateDeploymentJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -427,7 +427,7 @@ export const se_CreateDeploymentJobCommand = async (
       deploymentConfig: (_) => _json(_),
       fleet: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -438,7 +438,7 @@ export const se_CreateDeploymentJobCommand = async (
  */
 export const se_CreateFleetCommand = async (
   input: CreateFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -450,7 +450,7 @@ export const se_CreateFleetCommand = async (
     take(input, {
       name: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -461,7 +461,7 @@ export const se_CreateFleetCommand = async (
  */
 export const se_CreateRobotCommand = async (
   input: CreateRobotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -475,7 +475,7 @@ export const se_CreateRobotCommand = async (
       greengrassGroupId: [],
       name: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -486,7 +486,7 @@ export const se_CreateRobotCommand = async (
  */
 export const se_CreateRobotApplicationCommand = async (
   input: CreateRobotApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -501,7 +501,7 @@ export const se_CreateRobotApplicationCommand = async (
       robotSoftwareSuite: (_) => _json(_),
       sources: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -512,7 +512,7 @@ export const se_CreateRobotApplicationCommand = async (
  */
 export const se_CreateRobotApplicationVersionCommand = async (
   input: CreateRobotApplicationVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -526,7 +526,7 @@ export const se_CreateRobotApplicationVersionCommand = async (
       currentRevisionId: [],
       imageDigest: [],
       s3Etags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -537,7 +537,7 @@ export const se_CreateRobotApplicationVersionCommand = async (
  */
 export const se_CreateSimulationApplicationCommand = async (
   input: CreateSimulationApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -554,7 +554,7 @@ export const se_CreateSimulationApplicationCommand = async (
       simulationSoftwareSuite: (_) => _json(_),
       sources: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -565,7 +565,7 @@ export const se_CreateSimulationApplicationCommand = async (
  */
 export const se_CreateSimulationApplicationVersionCommand = async (
   input: CreateSimulationApplicationVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -579,7 +579,7 @@ export const se_CreateSimulationApplicationVersionCommand = async (
       currentRevisionId: [],
       imageDigest: [],
       s3Etags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -590,7 +590,7 @@ export const se_CreateSimulationApplicationVersionCommand = async (
  */
 export const se_CreateSimulationJobCommand = async (
   input: CreateSimulationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -612,7 +612,7 @@ export const se_CreateSimulationJobCommand = async (
       simulationApplications: (_) => _json(_),
       tags: (_) => _json(_),
       vpcConfig: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -623,7 +623,7 @@ export const se_CreateSimulationJobCommand = async (
  */
 export const se_CreateWorldExportJobCommand = async (
   input: CreateWorldExportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -638,7 +638,7 @@ export const se_CreateWorldExportJobCommand = async (
       outputLocation: (_) => _json(_),
       tags: (_) => _json(_),
       worlds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -649,7 +649,7 @@ export const se_CreateWorldExportJobCommand = async (
  */
 export const se_CreateWorldGenerationJobCommand = async (
   input: CreateWorldGenerationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -664,7 +664,7 @@ export const se_CreateWorldGenerationJobCommand = async (
       template: [],
       worldCount: (_) => _json(_),
       worldTags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -675,7 +675,7 @@ export const se_CreateWorldGenerationJobCommand = async (
  */
 export const se_CreateWorldTemplateCommand = async (
   input: CreateWorldTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -690,7 +690,7 @@ export const se_CreateWorldTemplateCommand = async (
       tags: (_) => _json(_),
       templateBody: [],
       templateLocation: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -701,7 +701,7 @@ export const se_CreateWorldTemplateCommand = async (
  */
 export const se_DeleteFleetCommand = async (
   input: DeleteFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -712,7 +712,7 @@ export const se_DeleteFleetCommand = async (
   body = JSON.stringify(
     take(input, {
       fleet: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -723,7 +723,7 @@ export const se_DeleteFleetCommand = async (
  */
 export const se_DeleteRobotCommand = async (
   input: DeleteRobotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -734,7 +734,7 @@ export const se_DeleteRobotCommand = async (
   body = JSON.stringify(
     take(input, {
       robot: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -745,7 +745,7 @@ export const se_DeleteRobotCommand = async (
  */
 export const se_DeleteRobotApplicationCommand = async (
   input: DeleteRobotApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -757,7 +757,7 @@ export const se_DeleteRobotApplicationCommand = async (
     take(input, {
       application: [],
       applicationVersion: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -768,7 +768,7 @@ export const se_DeleteRobotApplicationCommand = async (
  */
 export const se_DeleteSimulationApplicationCommand = async (
   input: DeleteSimulationApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -780,7 +780,7 @@ export const se_DeleteSimulationApplicationCommand = async (
     take(input, {
       application: [],
       applicationVersion: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -791,7 +791,7 @@ export const se_DeleteSimulationApplicationCommand = async (
  */
 export const se_DeleteWorldTemplateCommand = async (
   input: DeleteWorldTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -802,7 +802,7 @@ export const se_DeleteWorldTemplateCommand = async (
   body = JSON.stringify(
     take(input, {
       template: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -813,7 +813,7 @@ export const se_DeleteWorldTemplateCommand = async (
  */
 export const se_DeregisterRobotCommand = async (
   input: DeregisterRobotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -825,7 +825,7 @@ export const se_DeregisterRobotCommand = async (
     take(input, {
       fleet: [],
       robot: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -836,7 +836,7 @@ export const se_DeregisterRobotCommand = async (
  */
 export const se_DescribeDeploymentJobCommand = async (
   input: DescribeDeploymentJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -847,7 +847,7 @@ export const se_DescribeDeploymentJobCommand = async (
   body = JSON.stringify(
     take(input, {
       job: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -858,7 +858,7 @@ export const se_DescribeDeploymentJobCommand = async (
  */
 export const se_DescribeFleetCommand = async (
   input: DescribeFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -869,7 +869,7 @@ export const se_DescribeFleetCommand = async (
   body = JSON.stringify(
     take(input, {
       fleet: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -880,7 +880,7 @@ export const se_DescribeFleetCommand = async (
  */
 export const se_DescribeRobotCommand = async (
   input: DescribeRobotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -891,7 +891,7 @@ export const se_DescribeRobotCommand = async (
   body = JSON.stringify(
     take(input, {
       robot: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -902,7 +902,7 @@ export const se_DescribeRobotCommand = async (
  */
 export const se_DescribeRobotApplicationCommand = async (
   input: DescribeRobotApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -914,7 +914,7 @@ export const se_DescribeRobotApplicationCommand = async (
     take(input, {
       application: [],
       applicationVersion: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -925,7 +925,7 @@ export const se_DescribeRobotApplicationCommand = async (
  */
 export const se_DescribeSimulationApplicationCommand = async (
   input: DescribeSimulationApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -937,7 +937,7 @@ export const se_DescribeSimulationApplicationCommand = async (
     take(input, {
       application: [],
       applicationVersion: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -948,7 +948,7 @@ export const se_DescribeSimulationApplicationCommand = async (
  */
 export const se_DescribeSimulationJobCommand = async (
   input: DescribeSimulationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -959,7 +959,7 @@ export const se_DescribeSimulationJobCommand = async (
   body = JSON.stringify(
     take(input, {
       job: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -970,7 +970,7 @@ export const se_DescribeSimulationJobCommand = async (
  */
 export const se_DescribeSimulationJobBatchCommand = async (
   input: DescribeSimulationJobBatchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -981,7 +981,7 @@ export const se_DescribeSimulationJobBatchCommand = async (
   body = JSON.stringify(
     take(input, {
       batch: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -992,7 +992,7 @@ export const se_DescribeSimulationJobBatchCommand = async (
  */
 export const se_DescribeWorldCommand = async (
   input: DescribeWorldCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1003,7 +1003,7 @@ export const se_DescribeWorldCommand = async (
   body = JSON.stringify(
     take(input, {
       world: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1014,7 +1014,7 @@ export const se_DescribeWorldCommand = async (
  */
 export const se_DescribeWorldExportJobCommand = async (
   input: DescribeWorldExportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1025,7 +1025,7 @@ export const se_DescribeWorldExportJobCommand = async (
   body = JSON.stringify(
     take(input, {
       job: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1036,7 +1036,7 @@ export const se_DescribeWorldExportJobCommand = async (
  */
 export const se_DescribeWorldGenerationJobCommand = async (
   input: DescribeWorldGenerationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1047,7 +1047,7 @@ export const se_DescribeWorldGenerationJobCommand = async (
   body = JSON.stringify(
     take(input, {
       job: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1058,7 +1058,7 @@ export const se_DescribeWorldGenerationJobCommand = async (
  */
 export const se_DescribeWorldTemplateCommand = async (
   input: DescribeWorldTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1069,7 +1069,7 @@ export const se_DescribeWorldTemplateCommand = async (
   body = JSON.stringify(
     take(input, {
       template: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1080,7 +1080,7 @@ export const se_DescribeWorldTemplateCommand = async (
  */
 export const se_GetWorldTemplateBodyCommand = async (
   input: GetWorldTemplateBodyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1092,7 +1092,7 @@ export const se_GetWorldTemplateBodyCommand = async (
     take(input, {
       generationJob: [],
       template: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1103,7 +1103,7 @@ export const se_GetWorldTemplateBodyCommand = async (
  */
 export const se_ListDeploymentJobsCommand = async (
   input: ListDeploymentJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1116,7 +1116,7 @@ export const se_ListDeploymentJobsCommand = async (
       filters: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1127,7 +1127,7 @@ export const se_ListDeploymentJobsCommand = async (
  */
 export const se_ListFleetsCommand = async (
   input: ListFleetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1140,7 +1140,7 @@ export const se_ListFleetsCommand = async (
       filters: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1151,7 +1151,7 @@ export const se_ListFleetsCommand = async (
  */
 export const se_ListRobotApplicationsCommand = async (
   input: ListRobotApplicationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1165,7 +1165,7 @@ export const se_ListRobotApplicationsCommand = async (
       maxResults: [],
       nextToken: [],
       versionQualifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1176,7 +1176,7 @@ export const se_ListRobotApplicationsCommand = async (
  */
 export const se_ListRobotsCommand = async (
   input: ListRobotsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1189,7 +1189,7 @@ export const se_ListRobotsCommand = async (
       filters: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1200,7 +1200,7 @@ export const se_ListRobotsCommand = async (
  */
 export const se_ListSimulationApplicationsCommand = async (
   input: ListSimulationApplicationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1214,7 +1214,7 @@ export const se_ListSimulationApplicationsCommand = async (
       maxResults: [],
       nextToken: [],
       versionQualifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1225,7 +1225,7 @@ export const se_ListSimulationApplicationsCommand = async (
  */
 export const se_ListSimulationJobBatchesCommand = async (
   input: ListSimulationJobBatchesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1238,7 +1238,7 @@ export const se_ListSimulationJobBatchesCommand = async (
       filters: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1249,7 +1249,7 @@ export const se_ListSimulationJobBatchesCommand = async (
  */
 export const se_ListSimulationJobsCommand = async (
   input: ListSimulationJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1262,7 +1262,7 @@ export const se_ListSimulationJobsCommand = async (
       filters: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1273,7 +1273,7 @@ export const se_ListSimulationJobsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1289,7 +1289,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListWorldExportJobsCommand = async (
   input: ListWorldExportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1302,7 +1302,7 @@ export const se_ListWorldExportJobsCommand = async (
       filters: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1313,7 +1313,7 @@ export const se_ListWorldExportJobsCommand = async (
  */
 export const se_ListWorldGenerationJobsCommand = async (
   input: ListWorldGenerationJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1326,7 +1326,7 @@ export const se_ListWorldGenerationJobsCommand = async (
       filters: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1337,7 +1337,7 @@ export const se_ListWorldGenerationJobsCommand = async (
  */
 export const se_ListWorldsCommand = async (
   input: ListWorldsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1350,7 +1350,7 @@ export const se_ListWorldsCommand = async (
       filters: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1361,7 +1361,7 @@ export const se_ListWorldsCommand = async (
  */
 export const se_ListWorldTemplatesCommand = async (
   input: ListWorldTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1373,7 +1373,7 @@ export const se_ListWorldTemplatesCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1384,7 +1384,7 @@ export const se_ListWorldTemplatesCommand = async (
  */
 export const se_RegisterRobotCommand = async (
   input: RegisterRobotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1396,7 +1396,7 @@ export const se_RegisterRobotCommand = async (
     take(input, {
       fleet: [],
       robot: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1407,7 +1407,7 @@ export const se_RegisterRobotCommand = async (
  */
 export const se_RestartSimulationJobCommand = async (
   input: RestartSimulationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1418,7 +1418,7 @@ export const se_RestartSimulationJobCommand = async (
   body = JSON.stringify(
     take(input, {
       job: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1429,7 +1429,7 @@ export const se_RestartSimulationJobCommand = async (
  */
 export const se_StartSimulationJobBatchCommand = async (
   input: StartSimulationJobBatchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1443,7 +1443,7 @@ export const se_StartSimulationJobBatchCommand = async (
       clientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
       createSimulationJobRequests: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1454,7 +1454,7 @@ export const se_StartSimulationJobBatchCommand = async (
  */
 export const se_SyncDeploymentJobCommand = async (
   input: SyncDeploymentJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1466,7 +1466,7 @@ export const se_SyncDeploymentJobCommand = async (
     take(input, {
       clientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
       fleet: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1477,7 +1477,7 @@ export const se_SyncDeploymentJobCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1489,7 +1489,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1500,7 +1500,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1522,7 +1522,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateRobotApplicationCommand = async (
   input: UpdateRobotApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1537,7 +1537,7 @@ export const se_UpdateRobotApplicationCommand = async (
       environment: (_) => _json(_),
       robotSoftwareSuite: (_) => _json(_),
       sources: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1548,7 +1548,7 @@ export const se_UpdateRobotApplicationCommand = async (
  */
 export const se_UpdateSimulationApplicationCommand = async (
   input: UpdateSimulationApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1565,7 +1565,7 @@ export const se_UpdateSimulationApplicationCommand = async (
       robotSoftwareSuite: (_) => _json(_),
       simulationSoftwareSuite: (_) => _json(_),
       sources: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1576,7 +1576,7 @@ export const se_UpdateSimulationApplicationCommand = async (
  */
 export const se_UpdateWorldTemplateCommand = async (
   input: UpdateWorldTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1590,7 +1590,7 @@ export const se_UpdateWorldTemplateCommand = async (
       template: [],
       templateBody: [],
       templateLocation: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1601,7 +1601,7 @@ export const se_UpdateWorldTemplateCommand = async (
  */
 export const de_BatchDeleteWorldsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDeleteWorldsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1622,7 +1622,7 @@ export const de_BatchDeleteWorldsCommand = async (
  */
 export const de_BatchDescribeSimulationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDescribeSimulationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1644,7 +1644,7 @@ export const de_BatchDescribeSimulationJobCommand = async (
  */
 export const de_CancelDeploymentJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelDeploymentJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1661,7 +1661,7 @@ export const de_CancelDeploymentJobCommand = async (
  */
 export const de_CancelSimulationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelSimulationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1678,7 +1678,7 @@ export const de_CancelSimulationJobCommand = async (
  */
 export const de_CancelSimulationJobBatchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelSimulationJobBatchCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1695,7 +1695,7 @@ export const de_CancelSimulationJobBatchCommand = async (
  */
 export const de_CancelWorldExportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelWorldExportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1712,7 +1712,7 @@ export const de_CancelWorldExportJobCommand = async (
  */
 export const de_CancelWorldGenerationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelWorldGenerationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1729,7 +1729,7 @@ export const de_CancelWorldGenerationJobCommand = async (
  */
 export const de_CreateDeploymentJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDeploymentJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1758,7 +1758,7 @@ export const de_CreateDeploymentJobCommand = async (
  */
 export const de_CreateFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFleetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1782,7 +1782,7 @@ export const de_CreateFleetCommand = async (
  */
 export const de_CreateRobotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRobotCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1808,7 +1808,7 @@ export const de_CreateRobotCommand = async (
  */
 export const de_CreateRobotApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRobotApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1837,7 +1837,7 @@ export const de_CreateRobotApplicationCommand = async (
  */
 export const de_CreateRobotApplicationVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRobotApplicationVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1865,7 +1865,7 @@ export const de_CreateRobotApplicationVersionCommand = async (
  */
 export const de_CreateSimulationApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSimulationApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1896,7 +1896,7 @@ export const de_CreateSimulationApplicationCommand = async (
  */
 export const de_CreateSimulationApplicationVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSimulationApplicationVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1926,7 +1926,7 @@ export const de_CreateSimulationApplicationVersionCommand = async (
  */
 export const de_CreateSimulationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSimulationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1964,7 +1964,7 @@ export const de_CreateSimulationJobCommand = async (
  */
 export const de_CreateWorldExportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorldExportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1992,7 +1992,7 @@ export const de_CreateWorldExportJobCommand = async (
  */
 export const de_CreateWorldGenerationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorldGenerationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2021,7 +2021,7 @@ export const de_CreateWorldGenerationJobCommand = async (
  */
 export const de_CreateWorldTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorldTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2046,7 +2046,7 @@ export const de_CreateWorldTemplateCommand = async (
  */
 export const de_DeleteFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFleetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2063,7 +2063,7 @@ export const de_DeleteFleetCommand = async (
  */
 export const de_DeleteRobotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRobotCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2080,7 +2080,7 @@ export const de_DeleteRobotCommand = async (
  */
 export const de_DeleteRobotApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRobotApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2097,7 +2097,7 @@ export const de_DeleteRobotApplicationCommand = async (
  */
 export const de_DeleteSimulationApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSimulationApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2114,7 +2114,7 @@ export const de_DeleteSimulationApplicationCommand = async (
  */
 export const de_DeleteWorldTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorldTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2131,7 +2131,7 @@ export const de_DeleteWorldTemplateCommand = async (
  */
 export const de_DeregisterRobotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterRobotCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2153,7 +2153,7 @@ export const de_DeregisterRobotCommand = async (
  */
 export const de_DescribeDeploymentJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDeploymentJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2183,7 +2183,7 @@ export const de_DescribeDeploymentJobCommand = async (
  */
 export const de_DescribeFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFleetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2211,7 +2211,7 @@ export const de_DescribeFleetCommand = async (
  */
 export const de_DescribeRobotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRobotCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2241,7 +2241,7 @@ export const de_DescribeRobotCommand = async (
  */
 export const de_DescribeRobotApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRobotApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2271,7 +2271,7 @@ export const de_DescribeRobotApplicationCommand = async (
  */
 export const de_DescribeSimulationApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSimulationApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2303,7 +2303,7 @@ export const de_DescribeSimulationApplicationCommand = async (
  */
 export const de_DescribeSimulationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSimulationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2344,7 +2344,7 @@ export const de_DescribeSimulationJobCommand = async (
  */
 export const de_DescribeSimulationJobBatchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSimulationJobBatchCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2376,7 +2376,7 @@ export const de_DescribeSimulationJobBatchCommand = async (
  */
 export const de_DescribeWorldCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWorldCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2402,7 +2402,7 @@ export const de_DescribeWorldCommand = async (
  */
 export const de_DescribeWorldExportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWorldExportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2432,7 +2432,7 @@ export const de_DescribeWorldExportJobCommand = async (
  */
 export const de_DescribeWorldGenerationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWorldGenerationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2463,7 +2463,7 @@ export const de_DescribeWorldGenerationJobCommand = async (
  */
 export const de_DescribeWorldTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWorldTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2490,7 +2490,7 @@ export const de_DescribeWorldTemplateCommand = async (
  */
 export const de_GetWorldTemplateBodyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWorldTemplateBodyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2511,7 +2511,7 @@ export const de_GetWorldTemplateBodyCommand = async (
  */
 export const de_ListDeploymentJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDeploymentJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2533,7 +2533,7 @@ export const de_ListDeploymentJobsCommand = async (
  */
 export const de_ListFleetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFleetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2555,7 +2555,7 @@ export const de_ListFleetsCommand = async (
  */
 export const de_ListRobotApplicationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRobotApplicationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2577,7 +2577,7 @@ export const de_ListRobotApplicationsCommand = async (
  */
 export const de_ListRobotsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRobotsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2599,7 +2599,7 @@ export const de_ListRobotsCommand = async (
  */
 export const de_ListSimulationApplicationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSimulationApplicationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2621,7 +2621,7 @@ export const de_ListSimulationApplicationsCommand = async (
  */
 export const de_ListSimulationJobBatchesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSimulationJobBatchesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2643,7 +2643,7 @@ export const de_ListSimulationJobBatchesCommand = async (
  */
 export const de_ListSimulationJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSimulationJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2665,7 +2665,7 @@ export const de_ListSimulationJobsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2686,7 +2686,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListWorldExportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorldExportJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2708,7 +2708,7 @@ export const de_ListWorldExportJobsCommand = async (
  */
 export const de_ListWorldGenerationJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorldGenerationJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2730,7 +2730,7 @@ export const de_ListWorldGenerationJobsCommand = async (
  */
 export const de_ListWorldsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorldsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2752,7 +2752,7 @@ export const de_ListWorldsCommand = async (
  */
 export const de_ListWorldTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorldTemplatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2774,7 +2774,7 @@ export const de_ListWorldTemplatesCommand = async (
  */
 export const de_RegisterRobotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterRobotCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2796,7 +2796,7 @@ export const de_RegisterRobotCommand = async (
  */
 export const de_RestartSimulationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestartSimulationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2813,7 +2813,7 @@ export const de_RestartSimulationJobCommand = async (
  */
 export const de_StartSimulationJobBatchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartSimulationJobBatchCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2844,7 +2844,7 @@ export const de_StartSimulationJobBatchCommand = async (
  */
 export const de_SyncDeploymentJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SyncDeploymentJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2872,7 +2872,7 @@ export const de_SyncDeploymentJobCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2889,7 +2889,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2906,7 +2906,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateRobotApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRobotApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2934,7 +2934,7 @@ export const de_UpdateRobotApplicationCommand = async (
  */
 export const de_UpdateSimulationApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSimulationApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2964,7 +2964,7 @@ export const de_UpdateSimulationApplicationCommand = async (
  */
 export const de_UpdateWorldTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWorldTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3036,7 +3036,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_ConcurrentDeploymentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentDeploymentException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3056,7 +3056,7 @@ const de_ConcurrentDeploymentExceptionRes = async (
  */
 const de_IdempotentParameterMismatchExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IdempotentParameterMismatchException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3076,7 +3076,7 @@ const de_IdempotentParameterMismatchExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3096,7 +3096,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3116,7 +3116,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3136,7 +3136,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAlreadyExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3156,7 +3156,7 @@ const de_ResourceAlreadyExistsExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3176,7 +3176,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3369,7 +3369,7 @@ const de_DeploymentJobs = (output: any, context: __SerdeContext): DeploymentJob[
  */
 const de_FailedCreateSimulationJobRequest = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): FailedCreateSimulationJobRequest => {
   return take(output, {
     failedAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -3384,7 +3384,7 @@ const de_FailedCreateSimulationJobRequest = (
  */
 const de_FailedCreateSimulationJobRequests = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): FailedCreateSimulationJobRequest[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)

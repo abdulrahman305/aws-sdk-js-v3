@@ -12,7 +12,7 @@ export class S3ExpressIdentityCacheEntry {
   public constructor(
     private _identity: Promise<S3ExpressIdentity>,
     public isRefreshing = false,
-    public accessed = Date.now()
+    public accessed = Date.now(),
   ) {}
 
   public get identity() {

@@ -25,16 +25,16 @@ export interface WorkMailMessageFlow {
    */
   getRawMessageContent(
     args: GetRawMessageContentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRawMessageContentCommandOutput>;
   getRawMessageContent(
     args: GetRawMessageContentCommandInput,
-    cb: (err: any, data?: GetRawMessageContentCommandOutput) => void
+    cb: (err: any, data?: GetRawMessageContentCommandOutput) => void,
   ): void;
   getRawMessageContent(
     args: GetRawMessageContentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRawMessageContentCommandOutput) => void
+    cb: (err: any, data?: GetRawMessageContentCommandOutput) => void,
   ): void;
 
   /**
@@ -42,16 +42,16 @@ export interface WorkMailMessageFlow {
    */
   putRawMessageContent(
     args: PutRawMessageContentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutRawMessageContentCommandOutput>;
   putRawMessageContent(
     args: PutRawMessageContentCommandInput,
-    cb: (err: any, data?: PutRawMessageContentCommandOutput) => void
+    cb: (err: any, data?: PutRawMessageContentCommandOutput) => void,
   ): void;
   putRawMessageContent(
     args: PutRawMessageContentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutRawMessageContentCommandOutput) => void
+    cb: (err: any, data?: PutRawMessageContentCommandOutput) => void,
   ): void;
 }
 

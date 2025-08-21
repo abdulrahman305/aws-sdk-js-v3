@@ -40,7 +40,7 @@ When("I get information about the Route53 change ID", function (callback) {
     {
       Id: this.changeInfoId,
     },
-    callback
+    callback,
   );
 });
 
@@ -56,7 +56,7 @@ When("I get information about the Route53 hosted zone ID", function (callback) {
     {
       Id: this.hostedZoneId,
     },
-    callback
+    callback,
   );
 });
 
@@ -73,7 +73,7 @@ Then("I delete the Route53 hosted zone", function (callback) {
     {
       Id: this.hostedZoneId,
     },
-    callback
+    callback,
   );
 });
 

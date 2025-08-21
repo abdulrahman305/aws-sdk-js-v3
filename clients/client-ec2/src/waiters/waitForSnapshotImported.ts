@@ -53,7 +53,7 @@ const checkState = async (client: EC2Client, input: DescribeImportSnapshotTasksC
  */
 export const waitForSnapshotImported = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeImportSnapshotTasksCommandInput
+  input: DescribeImportSnapshotTasksCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -65,7 +65,7 @@ export const waitForSnapshotImported = async (
  */
 export const waitUntilSnapshotImported = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeImportSnapshotTasksCommandInput
+  input: DescribeImportSnapshotTasksCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

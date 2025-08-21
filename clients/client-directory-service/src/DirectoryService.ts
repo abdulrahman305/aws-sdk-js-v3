@@ -375,16 +375,16 @@ export interface DirectoryService {
    */
   acceptSharedDirectory(
     args: AcceptSharedDirectoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AcceptSharedDirectoryCommandOutput>;
   acceptSharedDirectory(
     args: AcceptSharedDirectoryCommandInput,
-    cb: (err: any, data?: AcceptSharedDirectoryCommandOutput) => void
+    cb: (err: any, data?: AcceptSharedDirectoryCommandOutput) => void,
   ): void;
   acceptSharedDirectory(
     args: AcceptSharedDirectoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AcceptSharedDirectoryCommandOutput) => void
+    cb: (err: any, data?: AcceptSharedDirectoryCommandOutput) => void,
   ): void;
 
   /**
@@ -395,7 +395,7 @@ export interface DirectoryService {
   addIpRoutes(
     args: AddIpRoutesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddIpRoutesCommandOutput) => void
+    cb: (err: any, data?: AddIpRoutesCommandOutput) => void,
   ): void;
 
   /**
@@ -406,7 +406,7 @@ export interface DirectoryService {
   addRegion(
     args: AddRegionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddRegionCommandOutput) => void
+    cb: (err: any, data?: AddRegionCommandOutput) => void,
   ): void;
 
   /**
@@ -414,16 +414,16 @@ export interface DirectoryService {
    */
   addTagsToResource(
     args: AddTagsToResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AddTagsToResourceCommandOutput>;
   addTagsToResource(
     args: AddTagsToResourceCommandInput,
-    cb: (err: any, data?: AddTagsToResourceCommandOutput) => void
+    cb: (err: any, data?: AddTagsToResourceCommandOutput) => void,
   ): void;
   addTagsToResource(
     args: AddTagsToResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddTagsToResourceCommandOutput) => void
+    cb: (err: any, data?: AddTagsToResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -431,16 +431,16 @@ export interface DirectoryService {
    */
   cancelSchemaExtension(
     args: CancelSchemaExtensionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelSchemaExtensionCommandOutput>;
   cancelSchemaExtension(
     args: CancelSchemaExtensionCommandInput,
-    cb: (err: any, data?: CancelSchemaExtensionCommandOutput) => void
+    cb: (err: any, data?: CancelSchemaExtensionCommandOutput) => void,
   ): void;
   cancelSchemaExtension(
     args: CancelSchemaExtensionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelSchemaExtensionCommandOutput) => void
+    cb: (err: any, data?: CancelSchemaExtensionCommandOutput) => void,
   ): void;
 
   /**
@@ -448,16 +448,16 @@ export interface DirectoryService {
    */
   connectDirectory(
     args: ConnectDirectoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ConnectDirectoryCommandOutput>;
   connectDirectory(
     args: ConnectDirectoryCommandInput,
-    cb: (err: any, data?: ConnectDirectoryCommandOutput) => void
+    cb: (err: any, data?: ConnectDirectoryCommandOutput) => void,
   ): void;
   connectDirectory(
     args: ConnectDirectoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ConnectDirectoryCommandOutput) => void
+    cb: (err: any, data?: ConnectDirectoryCommandOutput) => void,
   ): void;
 
   /**
@@ -468,7 +468,7 @@ export interface DirectoryService {
   createAlias(
     args: CreateAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAliasCommandOutput) => void
+    cb: (err: any, data?: CreateAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -476,13 +476,13 @@ export interface DirectoryService {
    */
   createComputer(
     args: CreateComputerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateComputerCommandOutput>;
   createComputer(args: CreateComputerCommandInput, cb: (err: any, data?: CreateComputerCommandOutput) => void): void;
   createComputer(
     args: CreateComputerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateComputerCommandOutput) => void
+    cb: (err: any, data?: CreateComputerCommandOutput) => void,
   ): void;
 
   /**
@@ -490,16 +490,16 @@ export interface DirectoryService {
    */
   createConditionalForwarder(
     args: CreateConditionalForwarderCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateConditionalForwarderCommandOutput>;
   createConditionalForwarder(
     args: CreateConditionalForwarderCommandInput,
-    cb: (err: any, data?: CreateConditionalForwarderCommandOutput) => void
+    cb: (err: any, data?: CreateConditionalForwarderCommandOutput) => void,
   ): void;
   createConditionalForwarder(
     args: CreateConditionalForwarderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateConditionalForwarderCommandOutput) => void
+    cb: (err: any, data?: CreateConditionalForwarderCommandOutput) => void,
   ): void;
 
   /**
@@ -507,13 +507,13 @@ export interface DirectoryService {
    */
   createDirectory(
     args: CreateDirectoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDirectoryCommandOutput>;
   createDirectory(args: CreateDirectoryCommandInput, cb: (err: any, data?: CreateDirectoryCommandOutput) => void): void;
   createDirectory(
     args: CreateDirectoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDirectoryCommandOutput) => void
+    cb: (err: any, data?: CreateDirectoryCommandOutput) => void,
   ): void;
 
   /**
@@ -521,16 +521,16 @@ export interface DirectoryService {
    */
   createLogSubscription(
     args: CreateLogSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateLogSubscriptionCommandOutput>;
   createLogSubscription(
     args: CreateLogSubscriptionCommandInput,
-    cb: (err: any, data?: CreateLogSubscriptionCommandOutput) => void
+    cb: (err: any, data?: CreateLogSubscriptionCommandOutput) => void,
   ): void;
   createLogSubscription(
     args: CreateLogSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateLogSubscriptionCommandOutput) => void
+    cb: (err: any, data?: CreateLogSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -538,16 +538,16 @@ export interface DirectoryService {
    */
   createMicrosoftAD(
     args: CreateMicrosoftADCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateMicrosoftADCommandOutput>;
   createMicrosoftAD(
     args: CreateMicrosoftADCommandInput,
-    cb: (err: any, data?: CreateMicrosoftADCommandOutput) => void
+    cb: (err: any, data?: CreateMicrosoftADCommandOutput) => void,
   ): void;
   createMicrosoftAD(
     args: CreateMicrosoftADCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMicrosoftADCommandOutput) => void
+    cb: (err: any, data?: CreateMicrosoftADCommandOutput) => void,
   ): void;
 
   /**
@@ -555,13 +555,13 @@ export interface DirectoryService {
    */
   createSnapshot(
     args: CreateSnapshotCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSnapshotCommandOutput>;
   createSnapshot(args: CreateSnapshotCommandInput, cb: (err: any, data?: CreateSnapshotCommandOutput) => void): void;
   createSnapshot(
     args: CreateSnapshotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSnapshotCommandOutput) => void
+    cb: (err: any, data?: CreateSnapshotCommandOutput) => void,
   ): void;
 
   /**
@@ -572,7 +572,7 @@ export interface DirectoryService {
   createTrust(
     args: CreateTrustCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTrustCommandOutput) => void
+    cb: (err: any, data?: CreateTrustCommandOutput) => void,
   ): void;
 
   /**
@@ -580,16 +580,16 @@ export interface DirectoryService {
    */
   deleteConditionalForwarder(
     args: DeleteConditionalForwarderCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConditionalForwarderCommandOutput>;
   deleteConditionalForwarder(
     args: DeleteConditionalForwarderCommandInput,
-    cb: (err: any, data?: DeleteConditionalForwarderCommandOutput) => void
+    cb: (err: any, data?: DeleteConditionalForwarderCommandOutput) => void,
   ): void;
   deleteConditionalForwarder(
     args: DeleteConditionalForwarderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConditionalForwarderCommandOutput) => void
+    cb: (err: any, data?: DeleteConditionalForwarderCommandOutput) => void,
   ): void;
 
   /**
@@ -597,13 +597,13 @@ export interface DirectoryService {
    */
   deleteDirectory(
     args: DeleteDirectoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDirectoryCommandOutput>;
   deleteDirectory(args: DeleteDirectoryCommandInput, cb: (err: any, data?: DeleteDirectoryCommandOutput) => void): void;
   deleteDirectory(
     args: DeleteDirectoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDirectoryCommandOutput) => void
+    cb: (err: any, data?: DeleteDirectoryCommandOutput) => void,
   ): void;
 
   /**
@@ -611,16 +611,16 @@ export interface DirectoryService {
    */
   deleteLogSubscription(
     args: DeleteLogSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteLogSubscriptionCommandOutput>;
   deleteLogSubscription(
     args: DeleteLogSubscriptionCommandInput,
-    cb: (err: any, data?: DeleteLogSubscriptionCommandOutput) => void
+    cb: (err: any, data?: DeleteLogSubscriptionCommandOutput) => void,
   ): void;
   deleteLogSubscription(
     args: DeleteLogSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLogSubscriptionCommandOutput) => void
+    cb: (err: any, data?: DeleteLogSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -628,13 +628,13 @@ export interface DirectoryService {
    */
   deleteSnapshot(
     args: DeleteSnapshotCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSnapshotCommandOutput>;
   deleteSnapshot(args: DeleteSnapshotCommandInput, cb: (err: any, data?: DeleteSnapshotCommandOutput) => void): void;
   deleteSnapshot(
     args: DeleteSnapshotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSnapshotCommandOutput) => void
+    cb: (err: any, data?: DeleteSnapshotCommandOutput) => void,
   ): void;
 
   /**
@@ -645,7 +645,7 @@ export interface DirectoryService {
   deleteTrust(
     args: DeleteTrustCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTrustCommandOutput) => void
+    cb: (err: any, data?: DeleteTrustCommandOutput) => void,
   ): void;
 
   /**
@@ -653,16 +653,16 @@ export interface DirectoryService {
    */
   deregisterCertificate(
     args: DeregisterCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterCertificateCommandOutput>;
   deregisterCertificate(
     args: DeregisterCertificateCommandInput,
-    cb: (err: any, data?: DeregisterCertificateCommandOutput) => void
+    cb: (err: any, data?: DeregisterCertificateCommandOutput) => void,
   ): void;
   deregisterCertificate(
     args: DeregisterCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterCertificateCommandOutput) => void
+    cb: (err: any, data?: DeregisterCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -670,16 +670,16 @@ export interface DirectoryService {
    */
   deregisterEventTopic(
     args: DeregisterEventTopicCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterEventTopicCommandOutput>;
   deregisterEventTopic(
     args: DeregisterEventTopicCommandInput,
-    cb: (err: any, data?: DeregisterEventTopicCommandOutput) => void
+    cb: (err: any, data?: DeregisterEventTopicCommandOutput) => void,
   ): void;
   deregisterEventTopic(
     args: DeregisterEventTopicCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterEventTopicCommandOutput) => void
+    cb: (err: any, data?: DeregisterEventTopicCommandOutput) => void,
   ): void;
 
   /**
@@ -687,16 +687,16 @@ export interface DirectoryService {
    */
   describeCertificate(
     args: DescribeCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeCertificateCommandOutput>;
   describeCertificate(
     args: DescribeCertificateCommandInput,
-    cb: (err: any, data?: DescribeCertificateCommandOutput) => void
+    cb: (err: any, data?: DescribeCertificateCommandOutput) => void,
   ): void;
   describeCertificate(
     args: DescribeCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeCertificateCommandOutput) => void
+    cb: (err: any, data?: DescribeCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -704,16 +704,16 @@ export interface DirectoryService {
    */
   describeClientAuthenticationSettings(
     args: DescribeClientAuthenticationSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeClientAuthenticationSettingsCommandOutput>;
   describeClientAuthenticationSettings(
     args: DescribeClientAuthenticationSettingsCommandInput,
-    cb: (err: any, data?: DescribeClientAuthenticationSettingsCommandOutput) => void
+    cb: (err: any, data?: DescribeClientAuthenticationSettingsCommandOutput) => void,
   ): void;
   describeClientAuthenticationSettings(
     args: DescribeClientAuthenticationSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeClientAuthenticationSettingsCommandOutput) => void
+    cb: (err: any, data?: DescribeClientAuthenticationSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -721,16 +721,16 @@ export interface DirectoryService {
    */
   describeConditionalForwarders(
     args: DescribeConditionalForwardersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConditionalForwardersCommandOutput>;
   describeConditionalForwarders(
     args: DescribeConditionalForwardersCommandInput,
-    cb: (err: any, data?: DescribeConditionalForwardersCommandOutput) => void
+    cb: (err: any, data?: DescribeConditionalForwardersCommandOutput) => void,
   ): void;
   describeConditionalForwarders(
     args: DescribeConditionalForwardersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConditionalForwardersCommandOutput) => void
+    cb: (err: any, data?: DescribeConditionalForwardersCommandOutput) => void,
   ): void;
 
   /**
@@ -739,16 +739,16 @@ export interface DirectoryService {
   describeDirectories(): Promise<DescribeDirectoriesCommandOutput>;
   describeDirectories(
     args: DescribeDirectoriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDirectoriesCommandOutput>;
   describeDirectories(
     args: DescribeDirectoriesCommandInput,
-    cb: (err: any, data?: DescribeDirectoriesCommandOutput) => void
+    cb: (err: any, data?: DescribeDirectoriesCommandOutput) => void,
   ): void;
   describeDirectories(
     args: DescribeDirectoriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDirectoriesCommandOutput) => void
+    cb: (err: any, data?: DescribeDirectoriesCommandOutput) => void,
   ): void;
 
   /**
@@ -756,16 +756,16 @@ export interface DirectoryService {
    */
   describeDomainControllers(
     args: DescribeDomainControllersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDomainControllersCommandOutput>;
   describeDomainControllers(
     args: DescribeDomainControllersCommandInput,
-    cb: (err: any, data?: DescribeDomainControllersCommandOutput) => void
+    cb: (err: any, data?: DescribeDomainControllersCommandOutput) => void,
   ): void;
   describeDomainControllers(
     args: DescribeDomainControllersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDomainControllersCommandOutput) => void
+    cb: (err: any, data?: DescribeDomainControllersCommandOutput) => void,
   ): void;
 
   /**
@@ -774,16 +774,16 @@ export interface DirectoryService {
   describeEventTopics(): Promise<DescribeEventTopicsCommandOutput>;
   describeEventTopics(
     args: DescribeEventTopicsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEventTopicsCommandOutput>;
   describeEventTopics(
     args: DescribeEventTopicsCommandInput,
-    cb: (err: any, data?: DescribeEventTopicsCommandOutput) => void
+    cb: (err: any, data?: DescribeEventTopicsCommandOutput) => void,
   ): void;
   describeEventTopics(
     args: DescribeEventTopicsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEventTopicsCommandOutput) => void
+    cb: (err: any, data?: DescribeEventTopicsCommandOutput) => void,
   ): void;
 
   /**
@@ -791,16 +791,16 @@ export interface DirectoryService {
    */
   describeLDAPSSettings(
     args: DescribeLDAPSSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLDAPSSettingsCommandOutput>;
   describeLDAPSSettings(
     args: DescribeLDAPSSettingsCommandInput,
-    cb: (err: any, data?: DescribeLDAPSSettingsCommandOutput) => void
+    cb: (err: any, data?: DescribeLDAPSSettingsCommandOutput) => void,
   ): void;
   describeLDAPSSettings(
     args: DescribeLDAPSSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLDAPSSettingsCommandOutput) => void
+    cb: (err: any, data?: DescribeLDAPSSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -808,13 +808,13 @@ export interface DirectoryService {
    */
   describeRegions(
     args: DescribeRegionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRegionsCommandOutput>;
   describeRegions(args: DescribeRegionsCommandInput, cb: (err: any, data?: DescribeRegionsCommandOutput) => void): void;
   describeRegions(
     args: DescribeRegionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRegionsCommandOutput) => void
+    cb: (err: any, data?: DescribeRegionsCommandOutput) => void,
   ): void;
 
   /**
@@ -822,16 +822,16 @@ export interface DirectoryService {
    */
   describeSettings(
     args: DescribeSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSettingsCommandOutput>;
   describeSettings(
     args: DescribeSettingsCommandInput,
-    cb: (err: any, data?: DescribeSettingsCommandOutput) => void
+    cb: (err: any, data?: DescribeSettingsCommandOutput) => void,
   ): void;
   describeSettings(
     args: DescribeSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSettingsCommandOutput) => void
+    cb: (err: any, data?: DescribeSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -839,16 +839,16 @@ export interface DirectoryService {
    */
   describeSharedDirectories(
     args: DescribeSharedDirectoriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSharedDirectoriesCommandOutput>;
   describeSharedDirectories(
     args: DescribeSharedDirectoriesCommandInput,
-    cb: (err: any, data?: DescribeSharedDirectoriesCommandOutput) => void
+    cb: (err: any, data?: DescribeSharedDirectoriesCommandOutput) => void,
   ): void;
   describeSharedDirectories(
     args: DescribeSharedDirectoriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSharedDirectoriesCommandOutput) => void
+    cb: (err: any, data?: DescribeSharedDirectoriesCommandOutput) => void,
   ): void;
 
   /**
@@ -857,16 +857,16 @@ export interface DirectoryService {
   describeSnapshots(): Promise<DescribeSnapshotsCommandOutput>;
   describeSnapshots(
     args: DescribeSnapshotsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSnapshotsCommandOutput>;
   describeSnapshots(
     args: DescribeSnapshotsCommandInput,
-    cb: (err: any, data?: DescribeSnapshotsCommandOutput) => void
+    cb: (err: any, data?: DescribeSnapshotsCommandOutput) => void,
   ): void;
   describeSnapshots(
     args: DescribeSnapshotsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSnapshotsCommandOutput) => void
+    cb: (err: any, data?: DescribeSnapshotsCommandOutput) => void,
   ): void;
 
   /**
@@ -875,13 +875,13 @@ export interface DirectoryService {
   describeTrusts(): Promise<DescribeTrustsCommandOutput>;
   describeTrusts(
     args: DescribeTrustsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTrustsCommandOutput>;
   describeTrusts(args: DescribeTrustsCommandInput, cb: (err: any, data?: DescribeTrustsCommandOutput) => void): void;
   describeTrusts(
     args: DescribeTrustsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTrustsCommandOutput) => void
+    cb: (err: any, data?: DescribeTrustsCommandOutput) => void,
   ): void;
 
   /**
@@ -889,16 +889,16 @@ export interface DirectoryService {
    */
   describeUpdateDirectory(
     args: DescribeUpdateDirectoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeUpdateDirectoryCommandOutput>;
   describeUpdateDirectory(
     args: DescribeUpdateDirectoryCommandInput,
-    cb: (err: any, data?: DescribeUpdateDirectoryCommandOutput) => void
+    cb: (err: any, data?: DescribeUpdateDirectoryCommandOutput) => void,
   ): void;
   describeUpdateDirectory(
     args: DescribeUpdateDirectoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeUpdateDirectoryCommandOutput) => void
+    cb: (err: any, data?: DescribeUpdateDirectoryCommandOutput) => void,
   ): void;
 
   /**
@@ -906,16 +906,16 @@ export interface DirectoryService {
    */
   disableClientAuthentication(
     args: DisableClientAuthenticationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisableClientAuthenticationCommandOutput>;
   disableClientAuthentication(
     args: DisableClientAuthenticationCommandInput,
-    cb: (err: any, data?: DisableClientAuthenticationCommandOutput) => void
+    cb: (err: any, data?: DisableClientAuthenticationCommandOutput) => void,
   ): void;
   disableClientAuthentication(
     args: DisableClientAuthenticationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableClientAuthenticationCommandOutput) => void
+    cb: (err: any, data?: DisableClientAuthenticationCommandOutput) => void,
   ): void;
 
   /**
@@ -926,7 +926,7 @@ export interface DirectoryService {
   disableLDAPS(
     args: DisableLDAPSCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableLDAPSCommandOutput) => void
+    cb: (err: any, data?: DisableLDAPSCommandOutput) => void,
   ): void;
 
   /**
@@ -937,7 +937,7 @@ export interface DirectoryService {
   disableRadius(
     args: DisableRadiusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableRadiusCommandOutput) => void
+    cb: (err: any, data?: DisableRadiusCommandOutput) => void,
   ): void;
 
   /**
@@ -948,7 +948,7 @@ export interface DirectoryService {
   disableSso(
     args: DisableSsoCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableSsoCommandOutput) => void
+    cb: (err: any, data?: DisableSsoCommandOutput) => void,
   ): void;
 
   /**
@@ -956,16 +956,16 @@ export interface DirectoryService {
    */
   enableClientAuthentication(
     args: EnableClientAuthenticationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EnableClientAuthenticationCommandOutput>;
   enableClientAuthentication(
     args: EnableClientAuthenticationCommandInput,
-    cb: (err: any, data?: EnableClientAuthenticationCommandOutput) => void
+    cb: (err: any, data?: EnableClientAuthenticationCommandOutput) => void,
   ): void;
   enableClientAuthentication(
     args: EnableClientAuthenticationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableClientAuthenticationCommandOutput) => void
+    cb: (err: any, data?: EnableClientAuthenticationCommandOutput) => void,
   ): void;
 
   /**
@@ -976,7 +976,7 @@ export interface DirectoryService {
   enableLDAPS(
     args: EnableLDAPSCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableLDAPSCommandOutput) => void
+    cb: (err: any, data?: EnableLDAPSCommandOutput) => void,
   ): void;
 
   /**
@@ -987,7 +987,7 @@ export interface DirectoryService {
   enableRadius(
     args: EnableRadiusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableRadiusCommandOutput) => void
+    cb: (err: any, data?: EnableRadiusCommandOutput) => void,
   ): void;
 
   /**
@@ -998,7 +998,7 @@ export interface DirectoryService {
   enableSso(
     args: EnableSsoCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableSsoCommandOutput) => void
+    cb: (err: any, data?: EnableSsoCommandOutput) => void,
   ): void;
 
   /**
@@ -1007,16 +1007,16 @@ export interface DirectoryService {
   getDirectoryLimits(): Promise<GetDirectoryLimitsCommandOutput>;
   getDirectoryLimits(
     args: GetDirectoryLimitsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDirectoryLimitsCommandOutput>;
   getDirectoryLimits(
     args: GetDirectoryLimitsCommandInput,
-    cb: (err: any, data?: GetDirectoryLimitsCommandOutput) => void
+    cb: (err: any, data?: GetDirectoryLimitsCommandOutput) => void,
   ): void;
   getDirectoryLimits(
     args: GetDirectoryLimitsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDirectoryLimitsCommandOutput) => void
+    cb: (err: any, data?: GetDirectoryLimitsCommandOutput) => void,
   ): void;
 
   /**
@@ -1024,16 +1024,16 @@ export interface DirectoryService {
    */
   getSnapshotLimits(
     args: GetSnapshotLimitsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSnapshotLimitsCommandOutput>;
   getSnapshotLimits(
     args: GetSnapshotLimitsCommandInput,
-    cb: (err: any, data?: GetSnapshotLimitsCommandOutput) => void
+    cb: (err: any, data?: GetSnapshotLimitsCommandOutput) => void,
   ): void;
   getSnapshotLimits(
     args: GetSnapshotLimitsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSnapshotLimitsCommandOutput) => void
+    cb: (err: any, data?: GetSnapshotLimitsCommandOutput) => void,
   ): void;
 
   /**
@@ -1041,16 +1041,16 @@ export interface DirectoryService {
    */
   listCertificates(
     args: ListCertificatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCertificatesCommandOutput>;
   listCertificates(
     args: ListCertificatesCommandInput,
-    cb: (err: any, data?: ListCertificatesCommandOutput) => void
+    cb: (err: any, data?: ListCertificatesCommandOutput) => void,
   ): void;
   listCertificates(
     args: ListCertificatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCertificatesCommandOutput) => void
+    cb: (err: any, data?: ListCertificatesCommandOutput) => void,
   ): void;
 
   /**
@@ -1061,7 +1061,7 @@ export interface DirectoryService {
   listIpRoutes(
     args: ListIpRoutesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListIpRoutesCommandOutput) => void
+    cb: (err: any, data?: ListIpRoutesCommandOutput) => void,
   ): void;
 
   /**
@@ -1070,16 +1070,16 @@ export interface DirectoryService {
   listLogSubscriptions(): Promise<ListLogSubscriptionsCommandOutput>;
   listLogSubscriptions(
     args: ListLogSubscriptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListLogSubscriptionsCommandOutput>;
   listLogSubscriptions(
     args: ListLogSubscriptionsCommandInput,
-    cb: (err: any, data?: ListLogSubscriptionsCommandOutput) => void
+    cb: (err: any, data?: ListLogSubscriptionsCommandOutput) => void,
   ): void;
   listLogSubscriptions(
     args: ListLogSubscriptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLogSubscriptionsCommandOutput) => void
+    cb: (err: any, data?: ListLogSubscriptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1087,16 +1087,16 @@ export interface DirectoryService {
    */
   listSchemaExtensions(
     args: ListSchemaExtensionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSchemaExtensionsCommandOutput>;
   listSchemaExtensions(
     args: ListSchemaExtensionsCommandInput,
-    cb: (err: any, data?: ListSchemaExtensionsCommandOutput) => void
+    cb: (err: any, data?: ListSchemaExtensionsCommandOutput) => void,
   ): void;
   listSchemaExtensions(
     args: ListSchemaExtensionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSchemaExtensionsCommandOutput) => void
+    cb: (err: any, data?: ListSchemaExtensionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1104,16 +1104,16 @@ export interface DirectoryService {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1121,16 +1121,16 @@ export interface DirectoryService {
    */
   registerCertificate(
     args: RegisterCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterCertificateCommandOutput>;
   registerCertificate(
     args: RegisterCertificateCommandInput,
-    cb: (err: any, data?: RegisterCertificateCommandOutput) => void
+    cb: (err: any, data?: RegisterCertificateCommandOutput) => void,
   ): void;
   registerCertificate(
     args: RegisterCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterCertificateCommandOutput) => void
+    cb: (err: any, data?: RegisterCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -1138,16 +1138,16 @@ export interface DirectoryService {
    */
   registerEventTopic(
     args: RegisterEventTopicCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterEventTopicCommandOutput>;
   registerEventTopic(
     args: RegisterEventTopicCommandInput,
-    cb: (err: any, data?: RegisterEventTopicCommandOutput) => void
+    cb: (err: any, data?: RegisterEventTopicCommandOutput) => void,
   ): void;
   registerEventTopic(
     args: RegisterEventTopicCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterEventTopicCommandOutput) => void
+    cb: (err: any, data?: RegisterEventTopicCommandOutput) => void,
   ): void;
 
   /**
@@ -1155,16 +1155,16 @@ export interface DirectoryService {
    */
   rejectSharedDirectory(
     args: RejectSharedDirectoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RejectSharedDirectoryCommandOutput>;
   rejectSharedDirectory(
     args: RejectSharedDirectoryCommandInput,
-    cb: (err: any, data?: RejectSharedDirectoryCommandOutput) => void
+    cb: (err: any, data?: RejectSharedDirectoryCommandOutput) => void,
   ): void;
   rejectSharedDirectory(
     args: RejectSharedDirectoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RejectSharedDirectoryCommandOutput) => void
+    cb: (err: any, data?: RejectSharedDirectoryCommandOutput) => void,
   ): void;
 
   /**
@@ -1172,13 +1172,13 @@ export interface DirectoryService {
    */
   removeIpRoutes(
     args: RemoveIpRoutesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveIpRoutesCommandOutput>;
   removeIpRoutes(args: RemoveIpRoutesCommandInput, cb: (err: any, data?: RemoveIpRoutesCommandOutput) => void): void;
   removeIpRoutes(
     args: RemoveIpRoutesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveIpRoutesCommandOutput) => void
+    cb: (err: any, data?: RemoveIpRoutesCommandOutput) => void,
   ): void;
 
   /**
@@ -1189,7 +1189,7 @@ export interface DirectoryService {
   removeRegion(
     args: RemoveRegionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveRegionCommandOutput) => void
+    cb: (err: any, data?: RemoveRegionCommandOutput) => void,
   ): void;
 
   /**
@@ -1197,16 +1197,16 @@ export interface DirectoryService {
    */
   removeTagsFromResource(
     args: RemoveTagsFromResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveTagsFromResourceCommandOutput>;
   removeTagsFromResource(
     args: RemoveTagsFromResourceCommandInput,
-    cb: (err: any, data?: RemoveTagsFromResourceCommandOutput) => void
+    cb: (err: any, data?: RemoveTagsFromResourceCommandOutput) => void,
   ): void;
   removeTagsFromResource(
     args: RemoveTagsFromResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveTagsFromResourceCommandOutput) => void
+    cb: (err: any, data?: RemoveTagsFromResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1214,16 +1214,16 @@ export interface DirectoryService {
    */
   resetUserPassword(
     args: ResetUserPasswordCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ResetUserPasswordCommandOutput>;
   resetUserPassword(
     args: ResetUserPasswordCommandInput,
-    cb: (err: any, data?: ResetUserPasswordCommandOutput) => void
+    cb: (err: any, data?: ResetUserPasswordCommandOutput) => void,
   ): void;
   resetUserPassword(
     args: ResetUserPasswordCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ResetUserPasswordCommandOutput) => void
+    cb: (err: any, data?: ResetUserPasswordCommandOutput) => void,
   ): void;
 
   /**
@@ -1231,16 +1231,16 @@ export interface DirectoryService {
    */
   restoreFromSnapshot(
     args: RestoreFromSnapshotCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RestoreFromSnapshotCommandOutput>;
   restoreFromSnapshot(
     args: RestoreFromSnapshotCommandInput,
-    cb: (err: any, data?: RestoreFromSnapshotCommandOutput) => void
+    cb: (err: any, data?: RestoreFromSnapshotCommandOutput) => void,
   ): void;
   restoreFromSnapshot(
     args: RestoreFromSnapshotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RestoreFromSnapshotCommandOutput) => void
+    cb: (err: any, data?: RestoreFromSnapshotCommandOutput) => void,
   ): void;
 
   /**
@@ -1248,13 +1248,13 @@ export interface DirectoryService {
    */
   shareDirectory(
     args: ShareDirectoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ShareDirectoryCommandOutput>;
   shareDirectory(args: ShareDirectoryCommandInput, cb: (err: any, data?: ShareDirectoryCommandOutput) => void): void;
   shareDirectory(
     args: ShareDirectoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ShareDirectoryCommandOutput) => void
+    cb: (err: any, data?: ShareDirectoryCommandOutput) => void,
   ): void;
 
   /**
@@ -1262,16 +1262,16 @@ export interface DirectoryService {
    */
   startSchemaExtension(
     args: StartSchemaExtensionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartSchemaExtensionCommandOutput>;
   startSchemaExtension(
     args: StartSchemaExtensionCommandInput,
-    cb: (err: any, data?: StartSchemaExtensionCommandOutput) => void
+    cb: (err: any, data?: StartSchemaExtensionCommandOutput) => void,
   ): void;
   startSchemaExtension(
     args: StartSchemaExtensionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartSchemaExtensionCommandOutput) => void
+    cb: (err: any, data?: StartSchemaExtensionCommandOutput) => void,
   ): void;
 
   /**
@@ -1279,16 +1279,16 @@ export interface DirectoryService {
    */
   unshareDirectory(
     args: UnshareDirectoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UnshareDirectoryCommandOutput>;
   unshareDirectory(
     args: UnshareDirectoryCommandInput,
-    cb: (err: any, data?: UnshareDirectoryCommandOutput) => void
+    cb: (err: any, data?: UnshareDirectoryCommandOutput) => void,
   ): void;
   unshareDirectory(
     args: UnshareDirectoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UnshareDirectoryCommandOutput) => void
+    cb: (err: any, data?: UnshareDirectoryCommandOutput) => void,
   ): void;
 
   /**
@@ -1296,16 +1296,16 @@ export interface DirectoryService {
    */
   updateConditionalForwarder(
     args: UpdateConditionalForwarderCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateConditionalForwarderCommandOutput>;
   updateConditionalForwarder(
     args: UpdateConditionalForwarderCommandInput,
-    cb: (err: any, data?: UpdateConditionalForwarderCommandOutput) => void
+    cb: (err: any, data?: UpdateConditionalForwarderCommandOutput) => void,
   ): void;
   updateConditionalForwarder(
     args: UpdateConditionalForwarderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateConditionalForwarderCommandOutput) => void
+    cb: (err: any, data?: UpdateConditionalForwarderCommandOutput) => void,
   ): void;
 
   /**
@@ -1313,16 +1313,16 @@ export interface DirectoryService {
    */
   updateDirectorySetup(
     args: UpdateDirectorySetupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDirectorySetupCommandOutput>;
   updateDirectorySetup(
     args: UpdateDirectorySetupCommandInput,
-    cb: (err: any, data?: UpdateDirectorySetupCommandOutput) => void
+    cb: (err: any, data?: UpdateDirectorySetupCommandOutput) => void,
   ): void;
   updateDirectorySetup(
     args: UpdateDirectorySetupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDirectorySetupCommandOutput) => void
+    cb: (err: any, data?: UpdateDirectorySetupCommandOutput) => void,
   ): void;
 
   /**
@@ -1330,16 +1330,16 @@ export interface DirectoryService {
    */
   updateNumberOfDomainControllers(
     args: UpdateNumberOfDomainControllersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateNumberOfDomainControllersCommandOutput>;
   updateNumberOfDomainControllers(
     args: UpdateNumberOfDomainControllersCommandInput,
-    cb: (err: any, data?: UpdateNumberOfDomainControllersCommandOutput) => void
+    cb: (err: any, data?: UpdateNumberOfDomainControllersCommandOutput) => void,
   ): void;
   updateNumberOfDomainControllers(
     args: UpdateNumberOfDomainControllersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateNumberOfDomainControllersCommandOutput) => void
+    cb: (err: any, data?: UpdateNumberOfDomainControllersCommandOutput) => void,
   ): void;
 
   /**
@@ -1350,7 +1350,7 @@ export interface DirectoryService {
   updateRadius(
     args: UpdateRadiusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRadiusCommandOutput) => void
+    cb: (err: any, data?: UpdateRadiusCommandOutput) => void,
   ): void;
 
   /**
@@ -1358,13 +1358,13 @@ export interface DirectoryService {
    */
   updateSettings(
     args: UpdateSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSettingsCommandOutput>;
   updateSettings(args: UpdateSettingsCommandInput, cb: (err: any, data?: UpdateSettingsCommandOutput) => void): void;
   updateSettings(
     args: UpdateSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -1375,7 +1375,7 @@ export interface DirectoryService {
   updateTrust(
     args: UpdateTrustCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTrustCommandOutput) => void
+    cb: (err: any, data?: UpdateTrustCommandOutput) => void,
   ): void;
 
   /**
@@ -1386,7 +1386,7 @@ export interface DirectoryService {
   verifyTrust(
     args: VerifyTrustCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: VerifyTrustCommandOutput) => void
+    cb: (err: any, data?: VerifyTrustCommandOutput) => void,
   ): void;
 }
 

@@ -391,13 +391,13 @@ export interface AutoScaling {
    */
   attachInstances(
     args: AttachInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AttachInstancesCommandOutput>;
   attachInstances(args: AttachInstancesCommandInput, cb: (err: any, data?: AttachInstancesCommandOutput) => void): void;
   attachInstances(
     args: AttachInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AttachInstancesCommandOutput) => void
+    cb: (err: any, data?: AttachInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -405,16 +405,16 @@ export interface AutoScaling {
    */
   attachLoadBalancers(
     args: AttachLoadBalancersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AttachLoadBalancersCommandOutput>;
   attachLoadBalancers(
     args: AttachLoadBalancersCommandInput,
-    cb: (err: any, data?: AttachLoadBalancersCommandOutput) => void
+    cb: (err: any, data?: AttachLoadBalancersCommandOutput) => void,
   ): void;
   attachLoadBalancers(
     args: AttachLoadBalancersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AttachLoadBalancersCommandOutput) => void
+    cb: (err: any, data?: AttachLoadBalancersCommandOutput) => void,
   ): void;
 
   /**
@@ -422,16 +422,16 @@ export interface AutoScaling {
    */
   attachLoadBalancerTargetGroups(
     args: AttachLoadBalancerTargetGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AttachLoadBalancerTargetGroupsCommandOutput>;
   attachLoadBalancerTargetGroups(
     args: AttachLoadBalancerTargetGroupsCommandInput,
-    cb: (err: any, data?: AttachLoadBalancerTargetGroupsCommandOutput) => void
+    cb: (err: any, data?: AttachLoadBalancerTargetGroupsCommandOutput) => void,
   ): void;
   attachLoadBalancerTargetGroups(
     args: AttachLoadBalancerTargetGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AttachLoadBalancerTargetGroupsCommandOutput) => void
+    cb: (err: any, data?: AttachLoadBalancerTargetGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -439,16 +439,16 @@ export interface AutoScaling {
    */
   attachTrafficSources(
     args: AttachTrafficSourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AttachTrafficSourcesCommandOutput>;
   attachTrafficSources(
     args: AttachTrafficSourcesCommandInput,
-    cb: (err: any, data?: AttachTrafficSourcesCommandOutput) => void
+    cb: (err: any, data?: AttachTrafficSourcesCommandOutput) => void,
   ): void;
   attachTrafficSources(
     args: AttachTrafficSourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AttachTrafficSourcesCommandOutput) => void
+    cb: (err: any, data?: AttachTrafficSourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -456,16 +456,16 @@ export interface AutoScaling {
    */
   batchDeleteScheduledAction(
     args: BatchDeleteScheduledActionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDeleteScheduledActionCommandOutput>;
   batchDeleteScheduledAction(
     args: BatchDeleteScheduledActionCommandInput,
-    cb: (err: any, data?: BatchDeleteScheduledActionCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteScheduledActionCommandOutput) => void,
   ): void;
   batchDeleteScheduledAction(
     args: BatchDeleteScheduledActionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDeleteScheduledActionCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteScheduledActionCommandOutput) => void,
   ): void;
 
   /**
@@ -473,16 +473,16 @@ export interface AutoScaling {
    */
   batchPutScheduledUpdateGroupAction(
     args: BatchPutScheduledUpdateGroupActionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchPutScheduledUpdateGroupActionCommandOutput>;
   batchPutScheduledUpdateGroupAction(
     args: BatchPutScheduledUpdateGroupActionCommandInput,
-    cb: (err: any, data?: BatchPutScheduledUpdateGroupActionCommandOutput) => void
+    cb: (err: any, data?: BatchPutScheduledUpdateGroupActionCommandOutput) => void,
   ): void;
   batchPutScheduledUpdateGroupAction(
     args: BatchPutScheduledUpdateGroupActionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchPutScheduledUpdateGroupActionCommandOutput) => void
+    cb: (err: any, data?: BatchPutScheduledUpdateGroupActionCommandOutput) => void,
   ): void;
 
   /**
@@ -490,16 +490,16 @@ export interface AutoScaling {
    */
   cancelInstanceRefresh(
     args: CancelInstanceRefreshCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelInstanceRefreshCommandOutput>;
   cancelInstanceRefresh(
     args: CancelInstanceRefreshCommandInput,
-    cb: (err: any, data?: CancelInstanceRefreshCommandOutput) => void
+    cb: (err: any, data?: CancelInstanceRefreshCommandOutput) => void,
   ): void;
   cancelInstanceRefresh(
     args: CancelInstanceRefreshCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelInstanceRefreshCommandOutput) => void
+    cb: (err: any, data?: CancelInstanceRefreshCommandOutput) => void,
   ): void;
 
   /**
@@ -507,16 +507,16 @@ export interface AutoScaling {
    */
   completeLifecycleAction(
     args: CompleteLifecycleActionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CompleteLifecycleActionCommandOutput>;
   completeLifecycleAction(
     args: CompleteLifecycleActionCommandInput,
-    cb: (err: any, data?: CompleteLifecycleActionCommandOutput) => void
+    cb: (err: any, data?: CompleteLifecycleActionCommandOutput) => void,
   ): void;
   completeLifecycleAction(
     args: CompleteLifecycleActionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CompleteLifecycleActionCommandOutput) => void
+    cb: (err: any, data?: CompleteLifecycleActionCommandOutput) => void,
   ): void;
 
   /**
@@ -524,16 +524,16 @@ export interface AutoScaling {
    */
   createAutoScalingGroup(
     args: CreateAutoScalingGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAutoScalingGroupCommandOutput>;
   createAutoScalingGroup(
     args: CreateAutoScalingGroupCommandInput,
-    cb: (err: any, data?: CreateAutoScalingGroupCommandOutput) => void
+    cb: (err: any, data?: CreateAutoScalingGroupCommandOutput) => void,
   ): void;
   createAutoScalingGroup(
     args: CreateAutoScalingGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAutoScalingGroupCommandOutput) => void
+    cb: (err: any, data?: CreateAutoScalingGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -541,16 +541,16 @@ export interface AutoScaling {
    */
   createLaunchConfiguration(
     args: CreateLaunchConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateLaunchConfigurationCommandOutput>;
   createLaunchConfiguration(
     args: CreateLaunchConfigurationCommandInput,
-    cb: (err: any, data?: CreateLaunchConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateLaunchConfigurationCommandOutput) => void,
   ): void;
   createLaunchConfiguration(
     args: CreateLaunchConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateLaunchConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateLaunchConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -558,16 +558,16 @@ export interface AutoScaling {
    */
   createOrUpdateTags(
     args: CreateOrUpdateTagsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateOrUpdateTagsCommandOutput>;
   createOrUpdateTags(
     args: CreateOrUpdateTagsCommandInput,
-    cb: (err: any, data?: CreateOrUpdateTagsCommandOutput) => void
+    cb: (err: any, data?: CreateOrUpdateTagsCommandOutput) => void,
   ): void;
   createOrUpdateTags(
     args: CreateOrUpdateTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateOrUpdateTagsCommandOutput) => void
+    cb: (err: any, data?: CreateOrUpdateTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -575,16 +575,16 @@ export interface AutoScaling {
    */
   deleteAutoScalingGroup(
     args: DeleteAutoScalingGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAutoScalingGroupCommandOutput>;
   deleteAutoScalingGroup(
     args: DeleteAutoScalingGroupCommandInput,
-    cb: (err: any, data?: DeleteAutoScalingGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteAutoScalingGroupCommandOutput) => void,
   ): void;
   deleteAutoScalingGroup(
     args: DeleteAutoScalingGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAutoScalingGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteAutoScalingGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -592,16 +592,16 @@ export interface AutoScaling {
    */
   deleteLaunchConfiguration(
     args: DeleteLaunchConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteLaunchConfigurationCommandOutput>;
   deleteLaunchConfiguration(
     args: DeleteLaunchConfigurationCommandInput,
-    cb: (err: any, data?: DeleteLaunchConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteLaunchConfigurationCommandOutput) => void,
   ): void;
   deleteLaunchConfiguration(
     args: DeleteLaunchConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLaunchConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteLaunchConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -609,16 +609,16 @@ export interface AutoScaling {
    */
   deleteLifecycleHook(
     args: DeleteLifecycleHookCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteLifecycleHookCommandOutput>;
   deleteLifecycleHook(
     args: DeleteLifecycleHookCommandInput,
-    cb: (err: any, data?: DeleteLifecycleHookCommandOutput) => void
+    cb: (err: any, data?: DeleteLifecycleHookCommandOutput) => void,
   ): void;
   deleteLifecycleHook(
     args: DeleteLifecycleHookCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLifecycleHookCommandOutput) => void
+    cb: (err: any, data?: DeleteLifecycleHookCommandOutput) => void,
   ): void;
 
   /**
@@ -626,16 +626,16 @@ export interface AutoScaling {
    */
   deleteNotificationConfiguration(
     args: DeleteNotificationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteNotificationConfigurationCommandOutput>;
   deleteNotificationConfiguration(
     args: DeleteNotificationConfigurationCommandInput,
-    cb: (err: any, data?: DeleteNotificationConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteNotificationConfigurationCommandOutput) => void,
   ): void;
   deleteNotificationConfiguration(
     args: DeleteNotificationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteNotificationConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteNotificationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -646,7 +646,7 @@ export interface AutoScaling {
   deletePolicy(
     args: DeletePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePolicyCommandOutput) => void
+    cb: (err: any, data?: DeletePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -654,16 +654,16 @@ export interface AutoScaling {
    */
   deleteScheduledAction(
     args: DeleteScheduledActionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteScheduledActionCommandOutput>;
   deleteScheduledAction(
     args: DeleteScheduledActionCommandInput,
-    cb: (err: any, data?: DeleteScheduledActionCommandOutput) => void
+    cb: (err: any, data?: DeleteScheduledActionCommandOutput) => void,
   ): void;
   deleteScheduledAction(
     args: DeleteScheduledActionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteScheduledActionCommandOutput) => void
+    cb: (err: any, data?: DeleteScheduledActionCommandOutput) => void,
   ): void;
 
   /**
@@ -674,7 +674,7 @@ export interface AutoScaling {
   deleteTags(
     args: DeleteTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTagsCommandOutput) => void
+    cb: (err: any, data?: DeleteTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -682,13 +682,13 @@ export interface AutoScaling {
    */
   deleteWarmPool(
     args: DeleteWarmPoolCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteWarmPoolCommandOutput>;
   deleteWarmPool(args: DeleteWarmPoolCommandInput, cb: (err: any, data?: DeleteWarmPoolCommandOutput) => void): void;
   deleteWarmPool(
     args: DeleteWarmPoolCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteWarmPoolCommandOutput) => void
+    cb: (err: any, data?: DeleteWarmPoolCommandOutput) => void,
   ): void;
 
   /**
@@ -697,16 +697,16 @@ export interface AutoScaling {
   describeAccountLimits(): Promise<DescribeAccountLimitsCommandOutput>;
   describeAccountLimits(
     args: DescribeAccountLimitsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAccountLimitsCommandOutput>;
   describeAccountLimits(
     args: DescribeAccountLimitsCommandInput,
-    cb: (err: any, data?: DescribeAccountLimitsCommandOutput) => void
+    cb: (err: any, data?: DescribeAccountLimitsCommandOutput) => void,
   ): void;
   describeAccountLimits(
     args: DescribeAccountLimitsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAccountLimitsCommandOutput) => void
+    cb: (err: any, data?: DescribeAccountLimitsCommandOutput) => void,
   ): void;
 
   /**
@@ -715,16 +715,16 @@ export interface AutoScaling {
   describeAdjustmentTypes(): Promise<DescribeAdjustmentTypesCommandOutput>;
   describeAdjustmentTypes(
     args: DescribeAdjustmentTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAdjustmentTypesCommandOutput>;
   describeAdjustmentTypes(
     args: DescribeAdjustmentTypesCommandInput,
-    cb: (err: any, data?: DescribeAdjustmentTypesCommandOutput) => void
+    cb: (err: any, data?: DescribeAdjustmentTypesCommandOutput) => void,
   ): void;
   describeAdjustmentTypes(
     args: DescribeAdjustmentTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAdjustmentTypesCommandOutput) => void
+    cb: (err: any, data?: DescribeAdjustmentTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -733,16 +733,16 @@ export interface AutoScaling {
   describeAutoScalingGroups(): Promise<DescribeAutoScalingGroupsCommandOutput>;
   describeAutoScalingGroups(
     args: DescribeAutoScalingGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAutoScalingGroupsCommandOutput>;
   describeAutoScalingGroups(
     args: DescribeAutoScalingGroupsCommandInput,
-    cb: (err: any, data?: DescribeAutoScalingGroupsCommandOutput) => void
+    cb: (err: any, data?: DescribeAutoScalingGroupsCommandOutput) => void,
   ): void;
   describeAutoScalingGroups(
     args: DescribeAutoScalingGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAutoScalingGroupsCommandOutput) => void
+    cb: (err: any, data?: DescribeAutoScalingGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -751,16 +751,16 @@ export interface AutoScaling {
   describeAutoScalingInstances(): Promise<DescribeAutoScalingInstancesCommandOutput>;
   describeAutoScalingInstances(
     args: DescribeAutoScalingInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAutoScalingInstancesCommandOutput>;
   describeAutoScalingInstances(
     args: DescribeAutoScalingInstancesCommandInput,
-    cb: (err: any, data?: DescribeAutoScalingInstancesCommandOutput) => void
+    cb: (err: any, data?: DescribeAutoScalingInstancesCommandOutput) => void,
   ): void;
   describeAutoScalingInstances(
     args: DescribeAutoScalingInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAutoScalingInstancesCommandOutput) => void
+    cb: (err: any, data?: DescribeAutoScalingInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -769,16 +769,16 @@ export interface AutoScaling {
   describeAutoScalingNotificationTypes(): Promise<DescribeAutoScalingNotificationTypesCommandOutput>;
   describeAutoScalingNotificationTypes(
     args: DescribeAutoScalingNotificationTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAutoScalingNotificationTypesCommandOutput>;
   describeAutoScalingNotificationTypes(
     args: DescribeAutoScalingNotificationTypesCommandInput,
-    cb: (err: any, data?: DescribeAutoScalingNotificationTypesCommandOutput) => void
+    cb: (err: any, data?: DescribeAutoScalingNotificationTypesCommandOutput) => void,
   ): void;
   describeAutoScalingNotificationTypes(
     args: DescribeAutoScalingNotificationTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAutoScalingNotificationTypesCommandOutput) => void
+    cb: (err: any, data?: DescribeAutoScalingNotificationTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -786,16 +786,16 @@ export interface AutoScaling {
    */
   describeInstanceRefreshes(
     args: DescribeInstanceRefreshesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeInstanceRefreshesCommandOutput>;
   describeInstanceRefreshes(
     args: DescribeInstanceRefreshesCommandInput,
-    cb: (err: any, data?: DescribeInstanceRefreshesCommandOutput) => void
+    cb: (err: any, data?: DescribeInstanceRefreshesCommandOutput) => void,
   ): void;
   describeInstanceRefreshes(
     args: DescribeInstanceRefreshesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeInstanceRefreshesCommandOutput) => void
+    cb: (err: any, data?: DescribeInstanceRefreshesCommandOutput) => void,
   ): void;
 
   /**
@@ -804,16 +804,16 @@ export interface AutoScaling {
   describeLaunchConfigurations(): Promise<DescribeLaunchConfigurationsCommandOutput>;
   describeLaunchConfigurations(
     args: DescribeLaunchConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLaunchConfigurationsCommandOutput>;
   describeLaunchConfigurations(
     args: DescribeLaunchConfigurationsCommandInput,
-    cb: (err: any, data?: DescribeLaunchConfigurationsCommandOutput) => void
+    cb: (err: any, data?: DescribeLaunchConfigurationsCommandOutput) => void,
   ): void;
   describeLaunchConfigurations(
     args: DescribeLaunchConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLaunchConfigurationsCommandOutput) => void
+    cb: (err: any, data?: DescribeLaunchConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -821,16 +821,16 @@ export interface AutoScaling {
    */
   describeLifecycleHooks(
     args: DescribeLifecycleHooksCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLifecycleHooksCommandOutput>;
   describeLifecycleHooks(
     args: DescribeLifecycleHooksCommandInput,
-    cb: (err: any, data?: DescribeLifecycleHooksCommandOutput) => void
+    cb: (err: any, data?: DescribeLifecycleHooksCommandOutput) => void,
   ): void;
   describeLifecycleHooks(
     args: DescribeLifecycleHooksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLifecycleHooksCommandOutput) => void
+    cb: (err: any, data?: DescribeLifecycleHooksCommandOutput) => void,
   ): void;
 
   /**
@@ -839,16 +839,16 @@ export interface AutoScaling {
   describeLifecycleHookTypes(): Promise<DescribeLifecycleHookTypesCommandOutput>;
   describeLifecycleHookTypes(
     args: DescribeLifecycleHookTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLifecycleHookTypesCommandOutput>;
   describeLifecycleHookTypes(
     args: DescribeLifecycleHookTypesCommandInput,
-    cb: (err: any, data?: DescribeLifecycleHookTypesCommandOutput) => void
+    cb: (err: any, data?: DescribeLifecycleHookTypesCommandOutput) => void,
   ): void;
   describeLifecycleHookTypes(
     args: DescribeLifecycleHookTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLifecycleHookTypesCommandOutput) => void
+    cb: (err: any, data?: DescribeLifecycleHookTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -856,16 +856,16 @@ export interface AutoScaling {
    */
   describeLoadBalancers(
     args: DescribeLoadBalancersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLoadBalancersCommandOutput>;
   describeLoadBalancers(
     args: DescribeLoadBalancersCommandInput,
-    cb: (err: any, data?: DescribeLoadBalancersCommandOutput) => void
+    cb: (err: any, data?: DescribeLoadBalancersCommandOutput) => void,
   ): void;
   describeLoadBalancers(
     args: DescribeLoadBalancersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLoadBalancersCommandOutput) => void
+    cb: (err: any, data?: DescribeLoadBalancersCommandOutput) => void,
   ): void;
 
   /**
@@ -873,16 +873,16 @@ export interface AutoScaling {
    */
   describeLoadBalancerTargetGroups(
     args: DescribeLoadBalancerTargetGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLoadBalancerTargetGroupsCommandOutput>;
   describeLoadBalancerTargetGroups(
     args: DescribeLoadBalancerTargetGroupsCommandInput,
-    cb: (err: any, data?: DescribeLoadBalancerTargetGroupsCommandOutput) => void
+    cb: (err: any, data?: DescribeLoadBalancerTargetGroupsCommandOutput) => void,
   ): void;
   describeLoadBalancerTargetGroups(
     args: DescribeLoadBalancerTargetGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLoadBalancerTargetGroupsCommandOutput) => void
+    cb: (err: any, data?: DescribeLoadBalancerTargetGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -891,16 +891,16 @@ export interface AutoScaling {
   describeMetricCollectionTypes(): Promise<DescribeMetricCollectionTypesCommandOutput>;
   describeMetricCollectionTypes(
     args: DescribeMetricCollectionTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeMetricCollectionTypesCommandOutput>;
   describeMetricCollectionTypes(
     args: DescribeMetricCollectionTypesCommandInput,
-    cb: (err: any, data?: DescribeMetricCollectionTypesCommandOutput) => void
+    cb: (err: any, data?: DescribeMetricCollectionTypesCommandOutput) => void,
   ): void;
   describeMetricCollectionTypes(
     args: DescribeMetricCollectionTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeMetricCollectionTypesCommandOutput) => void
+    cb: (err: any, data?: DescribeMetricCollectionTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -909,16 +909,16 @@ export interface AutoScaling {
   describeNotificationConfigurations(): Promise<DescribeNotificationConfigurationsCommandOutput>;
   describeNotificationConfigurations(
     args: DescribeNotificationConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeNotificationConfigurationsCommandOutput>;
   describeNotificationConfigurations(
     args: DescribeNotificationConfigurationsCommandInput,
-    cb: (err: any, data?: DescribeNotificationConfigurationsCommandOutput) => void
+    cb: (err: any, data?: DescribeNotificationConfigurationsCommandOutput) => void,
   ): void;
   describeNotificationConfigurations(
     args: DescribeNotificationConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeNotificationConfigurationsCommandOutput) => void
+    cb: (err: any, data?: DescribeNotificationConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -927,16 +927,16 @@ export interface AutoScaling {
   describePolicies(): Promise<DescribePoliciesCommandOutput>;
   describePolicies(
     args: DescribePoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePoliciesCommandOutput>;
   describePolicies(
     args: DescribePoliciesCommandInput,
-    cb: (err: any, data?: DescribePoliciesCommandOutput) => void
+    cb: (err: any, data?: DescribePoliciesCommandOutput) => void,
   ): void;
   describePolicies(
     args: DescribePoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePoliciesCommandOutput) => void
+    cb: (err: any, data?: DescribePoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -945,16 +945,16 @@ export interface AutoScaling {
   describeScalingActivities(): Promise<DescribeScalingActivitiesCommandOutput>;
   describeScalingActivities(
     args: DescribeScalingActivitiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeScalingActivitiesCommandOutput>;
   describeScalingActivities(
     args: DescribeScalingActivitiesCommandInput,
-    cb: (err: any, data?: DescribeScalingActivitiesCommandOutput) => void
+    cb: (err: any, data?: DescribeScalingActivitiesCommandOutput) => void,
   ): void;
   describeScalingActivities(
     args: DescribeScalingActivitiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeScalingActivitiesCommandOutput) => void
+    cb: (err: any, data?: DescribeScalingActivitiesCommandOutput) => void,
   ): void;
 
   /**
@@ -963,16 +963,16 @@ export interface AutoScaling {
   describeScalingProcessTypes(): Promise<DescribeScalingProcessTypesCommandOutput>;
   describeScalingProcessTypes(
     args: DescribeScalingProcessTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeScalingProcessTypesCommandOutput>;
   describeScalingProcessTypes(
     args: DescribeScalingProcessTypesCommandInput,
-    cb: (err: any, data?: DescribeScalingProcessTypesCommandOutput) => void
+    cb: (err: any, data?: DescribeScalingProcessTypesCommandOutput) => void,
   ): void;
   describeScalingProcessTypes(
     args: DescribeScalingProcessTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeScalingProcessTypesCommandOutput) => void
+    cb: (err: any, data?: DescribeScalingProcessTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -981,16 +981,16 @@ export interface AutoScaling {
   describeScheduledActions(): Promise<DescribeScheduledActionsCommandOutput>;
   describeScheduledActions(
     args: DescribeScheduledActionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeScheduledActionsCommandOutput>;
   describeScheduledActions(
     args: DescribeScheduledActionsCommandInput,
-    cb: (err: any, data?: DescribeScheduledActionsCommandOutput) => void
+    cb: (err: any, data?: DescribeScheduledActionsCommandOutput) => void,
   ): void;
   describeScheduledActions(
     args: DescribeScheduledActionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeScheduledActionsCommandOutput) => void
+    cb: (err: any, data?: DescribeScheduledActionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1002,7 +1002,7 @@ export interface AutoScaling {
   describeTags(
     args: DescribeTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTagsCommandOutput) => void
+    cb: (err: any, data?: DescribeTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -1011,16 +1011,16 @@ export interface AutoScaling {
   describeTerminationPolicyTypes(): Promise<DescribeTerminationPolicyTypesCommandOutput>;
   describeTerminationPolicyTypes(
     args: DescribeTerminationPolicyTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTerminationPolicyTypesCommandOutput>;
   describeTerminationPolicyTypes(
     args: DescribeTerminationPolicyTypesCommandInput,
-    cb: (err: any, data?: DescribeTerminationPolicyTypesCommandOutput) => void
+    cb: (err: any, data?: DescribeTerminationPolicyTypesCommandOutput) => void,
   ): void;
   describeTerminationPolicyTypes(
     args: DescribeTerminationPolicyTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTerminationPolicyTypesCommandOutput) => void
+    cb: (err: any, data?: DescribeTerminationPolicyTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -1028,16 +1028,16 @@ export interface AutoScaling {
    */
   describeTrafficSources(
     args: DescribeTrafficSourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTrafficSourcesCommandOutput>;
   describeTrafficSources(
     args: DescribeTrafficSourcesCommandInput,
-    cb: (err: any, data?: DescribeTrafficSourcesCommandOutput) => void
+    cb: (err: any, data?: DescribeTrafficSourcesCommandOutput) => void,
   ): void;
   describeTrafficSources(
     args: DescribeTrafficSourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTrafficSourcesCommandOutput) => void
+    cb: (err: any, data?: DescribeTrafficSourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -1045,16 +1045,16 @@ export interface AutoScaling {
    */
   describeWarmPool(
     args: DescribeWarmPoolCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeWarmPoolCommandOutput>;
   describeWarmPool(
     args: DescribeWarmPoolCommandInput,
-    cb: (err: any, data?: DescribeWarmPoolCommandOutput) => void
+    cb: (err: any, data?: DescribeWarmPoolCommandOutput) => void,
   ): void;
   describeWarmPool(
     args: DescribeWarmPoolCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeWarmPoolCommandOutput) => void
+    cb: (err: any, data?: DescribeWarmPoolCommandOutput) => void,
   ): void;
 
   /**
@@ -1062,13 +1062,13 @@ export interface AutoScaling {
    */
   detachInstances(
     args: DetachInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DetachInstancesCommandOutput>;
   detachInstances(args: DetachInstancesCommandInput, cb: (err: any, data?: DetachInstancesCommandOutput) => void): void;
   detachInstances(
     args: DetachInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DetachInstancesCommandOutput) => void
+    cb: (err: any, data?: DetachInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -1076,16 +1076,16 @@ export interface AutoScaling {
    */
   detachLoadBalancers(
     args: DetachLoadBalancersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DetachLoadBalancersCommandOutput>;
   detachLoadBalancers(
     args: DetachLoadBalancersCommandInput,
-    cb: (err: any, data?: DetachLoadBalancersCommandOutput) => void
+    cb: (err: any, data?: DetachLoadBalancersCommandOutput) => void,
   ): void;
   detachLoadBalancers(
     args: DetachLoadBalancersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DetachLoadBalancersCommandOutput) => void
+    cb: (err: any, data?: DetachLoadBalancersCommandOutput) => void,
   ): void;
 
   /**
@@ -1093,16 +1093,16 @@ export interface AutoScaling {
    */
   detachLoadBalancerTargetGroups(
     args: DetachLoadBalancerTargetGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DetachLoadBalancerTargetGroupsCommandOutput>;
   detachLoadBalancerTargetGroups(
     args: DetachLoadBalancerTargetGroupsCommandInput,
-    cb: (err: any, data?: DetachLoadBalancerTargetGroupsCommandOutput) => void
+    cb: (err: any, data?: DetachLoadBalancerTargetGroupsCommandOutput) => void,
   ): void;
   detachLoadBalancerTargetGroups(
     args: DetachLoadBalancerTargetGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DetachLoadBalancerTargetGroupsCommandOutput) => void
+    cb: (err: any, data?: DetachLoadBalancerTargetGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -1110,16 +1110,16 @@ export interface AutoScaling {
    */
   detachTrafficSources(
     args: DetachTrafficSourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DetachTrafficSourcesCommandOutput>;
   detachTrafficSources(
     args: DetachTrafficSourcesCommandInput,
-    cb: (err: any, data?: DetachTrafficSourcesCommandOutput) => void
+    cb: (err: any, data?: DetachTrafficSourcesCommandOutput) => void,
   ): void;
   detachTrafficSources(
     args: DetachTrafficSourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DetachTrafficSourcesCommandOutput) => void
+    cb: (err: any, data?: DetachTrafficSourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -1127,16 +1127,16 @@ export interface AutoScaling {
    */
   disableMetricsCollection(
     args: DisableMetricsCollectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisableMetricsCollectionCommandOutput>;
   disableMetricsCollection(
     args: DisableMetricsCollectionCommandInput,
-    cb: (err: any, data?: DisableMetricsCollectionCommandOutput) => void
+    cb: (err: any, data?: DisableMetricsCollectionCommandOutput) => void,
   ): void;
   disableMetricsCollection(
     args: DisableMetricsCollectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableMetricsCollectionCommandOutput) => void
+    cb: (err: any, data?: DisableMetricsCollectionCommandOutput) => void,
   ): void;
 
   /**
@@ -1144,16 +1144,16 @@ export interface AutoScaling {
    */
   enableMetricsCollection(
     args: EnableMetricsCollectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EnableMetricsCollectionCommandOutput>;
   enableMetricsCollection(
     args: EnableMetricsCollectionCommandInput,
-    cb: (err: any, data?: EnableMetricsCollectionCommandOutput) => void
+    cb: (err: any, data?: EnableMetricsCollectionCommandOutput) => void,
   ): void;
   enableMetricsCollection(
     args: EnableMetricsCollectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableMetricsCollectionCommandOutput) => void
+    cb: (err: any, data?: EnableMetricsCollectionCommandOutput) => void,
   ): void;
 
   /**
@@ -1164,7 +1164,7 @@ export interface AutoScaling {
   enterStandby(
     args: EnterStandbyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnterStandbyCommandOutput) => void
+    cb: (err: any, data?: EnterStandbyCommandOutput) => void,
   ): void;
 
   /**
@@ -1175,7 +1175,7 @@ export interface AutoScaling {
   executePolicy(
     args: ExecutePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExecutePolicyCommandOutput) => void
+    cb: (err: any, data?: ExecutePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1186,7 +1186,7 @@ export interface AutoScaling {
   exitStandby(
     args: ExitStandbyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExitStandbyCommandOutput) => void
+    cb: (err: any, data?: ExitStandbyCommandOutput) => void,
   ): void;
 
   /**
@@ -1194,16 +1194,16 @@ export interface AutoScaling {
    */
   getPredictiveScalingForecast(
     args: GetPredictiveScalingForecastCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPredictiveScalingForecastCommandOutput>;
   getPredictiveScalingForecast(
     args: GetPredictiveScalingForecastCommandInput,
-    cb: (err: any, data?: GetPredictiveScalingForecastCommandOutput) => void
+    cb: (err: any, data?: GetPredictiveScalingForecastCommandOutput) => void,
   ): void;
   getPredictiveScalingForecast(
     args: GetPredictiveScalingForecastCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPredictiveScalingForecastCommandOutput) => void
+    cb: (err: any, data?: GetPredictiveScalingForecastCommandOutput) => void,
   ): void;
 
   /**
@@ -1211,16 +1211,16 @@ export interface AutoScaling {
    */
   putLifecycleHook(
     args: PutLifecycleHookCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutLifecycleHookCommandOutput>;
   putLifecycleHook(
     args: PutLifecycleHookCommandInput,
-    cb: (err: any, data?: PutLifecycleHookCommandOutput) => void
+    cb: (err: any, data?: PutLifecycleHookCommandOutput) => void,
   ): void;
   putLifecycleHook(
     args: PutLifecycleHookCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutLifecycleHookCommandOutput) => void
+    cb: (err: any, data?: PutLifecycleHookCommandOutput) => void,
   ): void;
 
   /**
@@ -1228,16 +1228,16 @@ export interface AutoScaling {
    */
   putNotificationConfiguration(
     args: PutNotificationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutNotificationConfigurationCommandOutput>;
   putNotificationConfiguration(
     args: PutNotificationConfigurationCommandInput,
-    cb: (err: any, data?: PutNotificationConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutNotificationConfigurationCommandOutput) => void,
   ): void;
   putNotificationConfiguration(
     args: PutNotificationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutNotificationConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutNotificationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1245,16 +1245,16 @@ export interface AutoScaling {
    */
   putScalingPolicy(
     args: PutScalingPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutScalingPolicyCommandOutput>;
   putScalingPolicy(
     args: PutScalingPolicyCommandInput,
-    cb: (err: any, data?: PutScalingPolicyCommandOutput) => void
+    cb: (err: any, data?: PutScalingPolicyCommandOutput) => void,
   ): void;
   putScalingPolicy(
     args: PutScalingPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutScalingPolicyCommandOutput) => void
+    cb: (err: any, data?: PutScalingPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1262,16 +1262,16 @@ export interface AutoScaling {
    */
   putScheduledUpdateGroupAction(
     args: PutScheduledUpdateGroupActionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutScheduledUpdateGroupActionCommandOutput>;
   putScheduledUpdateGroupAction(
     args: PutScheduledUpdateGroupActionCommandInput,
-    cb: (err: any, data?: PutScheduledUpdateGroupActionCommandOutput) => void
+    cb: (err: any, data?: PutScheduledUpdateGroupActionCommandOutput) => void,
   ): void;
   putScheduledUpdateGroupAction(
     args: PutScheduledUpdateGroupActionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutScheduledUpdateGroupActionCommandOutput) => void
+    cb: (err: any, data?: PutScheduledUpdateGroupActionCommandOutput) => void,
   ): void;
 
   /**
@@ -1282,7 +1282,7 @@ export interface AutoScaling {
   putWarmPool(
     args: PutWarmPoolCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutWarmPoolCommandOutput) => void
+    cb: (err: any, data?: PutWarmPoolCommandOutput) => void,
   ): void;
 
   /**
@@ -1290,16 +1290,16 @@ export interface AutoScaling {
    */
   recordLifecycleActionHeartbeat(
     args: RecordLifecycleActionHeartbeatCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RecordLifecycleActionHeartbeatCommandOutput>;
   recordLifecycleActionHeartbeat(
     args: RecordLifecycleActionHeartbeatCommandInput,
-    cb: (err: any, data?: RecordLifecycleActionHeartbeatCommandOutput) => void
+    cb: (err: any, data?: RecordLifecycleActionHeartbeatCommandOutput) => void,
   ): void;
   recordLifecycleActionHeartbeat(
     args: RecordLifecycleActionHeartbeatCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RecordLifecycleActionHeartbeatCommandOutput) => void
+    cb: (err: any, data?: RecordLifecycleActionHeartbeatCommandOutput) => void,
   ): void;
 
   /**
@@ -1307,13 +1307,13 @@ export interface AutoScaling {
    */
   resumeProcesses(
     args: ResumeProcessesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ResumeProcessesCommandOutput>;
   resumeProcesses(args: ResumeProcessesCommandInput, cb: (err: any, data?: ResumeProcessesCommandOutput) => void): void;
   resumeProcesses(
     args: ResumeProcessesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ResumeProcessesCommandOutput) => void
+    cb: (err: any, data?: ResumeProcessesCommandOutput) => void,
   ): void;
 
   /**
@@ -1321,16 +1321,16 @@ export interface AutoScaling {
    */
   rollbackInstanceRefresh(
     args: RollbackInstanceRefreshCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RollbackInstanceRefreshCommandOutput>;
   rollbackInstanceRefresh(
     args: RollbackInstanceRefreshCommandInput,
-    cb: (err: any, data?: RollbackInstanceRefreshCommandOutput) => void
+    cb: (err: any, data?: RollbackInstanceRefreshCommandOutput) => void,
   ): void;
   rollbackInstanceRefresh(
     args: RollbackInstanceRefreshCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RollbackInstanceRefreshCommandOutput) => void
+    cb: (err: any, data?: RollbackInstanceRefreshCommandOutput) => void,
   ): void;
 
   /**
@@ -1338,16 +1338,16 @@ export interface AutoScaling {
    */
   setDesiredCapacity(
     args: SetDesiredCapacityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetDesiredCapacityCommandOutput>;
   setDesiredCapacity(
     args: SetDesiredCapacityCommandInput,
-    cb: (err: any, data?: SetDesiredCapacityCommandOutput) => void
+    cb: (err: any, data?: SetDesiredCapacityCommandOutput) => void,
   ): void;
   setDesiredCapacity(
     args: SetDesiredCapacityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetDesiredCapacityCommandOutput) => void
+    cb: (err: any, data?: SetDesiredCapacityCommandOutput) => void,
   ): void;
 
   /**
@@ -1355,16 +1355,16 @@ export interface AutoScaling {
    */
   setInstanceHealth(
     args: SetInstanceHealthCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetInstanceHealthCommandOutput>;
   setInstanceHealth(
     args: SetInstanceHealthCommandInput,
-    cb: (err: any, data?: SetInstanceHealthCommandOutput) => void
+    cb: (err: any, data?: SetInstanceHealthCommandOutput) => void,
   ): void;
   setInstanceHealth(
     args: SetInstanceHealthCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetInstanceHealthCommandOutput) => void
+    cb: (err: any, data?: SetInstanceHealthCommandOutput) => void,
   ): void;
 
   /**
@@ -1372,16 +1372,16 @@ export interface AutoScaling {
    */
   setInstanceProtection(
     args: SetInstanceProtectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetInstanceProtectionCommandOutput>;
   setInstanceProtection(
     args: SetInstanceProtectionCommandInput,
-    cb: (err: any, data?: SetInstanceProtectionCommandOutput) => void
+    cb: (err: any, data?: SetInstanceProtectionCommandOutput) => void,
   ): void;
   setInstanceProtection(
     args: SetInstanceProtectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetInstanceProtectionCommandOutput) => void
+    cb: (err: any, data?: SetInstanceProtectionCommandOutput) => void,
   ): void;
 
   /**
@@ -1389,16 +1389,16 @@ export interface AutoScaling {
    */
   startInstanceRefresh(
     args: StartInstanceRefreshCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartInstanceRefreshCommandOutput>;
   startInstanceRefresh(
     args: StartInstanceRefreshCommandInput,
-    cb: (err: any, data?: StartInstanceRefreshCommandOutput) => void
+    cb: (err: any, data?: StartInstanceRefreshCommandOutput) => void,
   ): void;
   startInstanceRefresh(
     args: StartInstanceRefreshCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartInstanceRefreshCommandOutput) => void
+    cb: (err: any, data?: StartInstanceRefreshCommandOutput) => void,
   ): void;
 
   /**
@@ -1406,16 +1406,16 @@ export interface AutoScaling {
    */
   suspendProcesses(
     args: SuspendProcessesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SuspendProcessesCommandOutput>;
   suspendProcesses(
     args: SuspendProcessesCommandInput,
-    cb: (err: any, data?: SuspendProcessesCommandOutput) => void
+    cb: (err: any, data?: SuspendProcessesCommandOutput) => void,
   ): void;
   suspendProcesses(
     args: SuspendProcessesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SuspendProcessesCommandOutput) => void
+    cb: (err: any, data?: SuspendProcessesCommandOutput) => void,
   ): void;
 
   /**
@@ -1423,16 +1423,16 @@ export interface AutoScaling {
    */
   terminateInstanceInAutoScalingGroup(
     args: TerminateInstanceInAutoScalingGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<TerminateInstanceInAutoScalingGroupCommandOutput>;
   terminateInstanceInAutoScalingGroup(
     args: TerminateInstanceInAutoScalingGroupCommandInput,
-    cb: (err: any, data?: TerminateInstanceInAutoScalingGroupCommandOutput) => void
+    cb: (err: any, data?: TerminateInstanceInAutoScalingGroupCommandOutput) => void,
   ): void;
   terminateInstanceInAutoScalingGroup(
     args: TerminateInstanceInAutoScalingGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TerminateInstanceInAutoScalingGroupCommandOutput) => void
+    cb: (err: any, data?: TerminateInstanceInAutoScalingGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1440,16 +1440,16 @@ export interface AutoScaling {
    */
   updateAutoScalingGroup(
     args: UpdateAutoScalingGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAutoScalingGroupCommandOutput>;
   updateAutoScalingGroup(
     args: UpdateAutoScalingGroupCommandInput,
-    cb: (err: any, data?: UpdateAutoScalingGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateAutoScalingGroupCommandOutput) => void,
   ): void;
   updateAutoScalingGroup(
     args: UpdateAutoScalingGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAutoScalingGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateAutoScalingGroupCommandOutput) => void,
   ): void;
 }
 

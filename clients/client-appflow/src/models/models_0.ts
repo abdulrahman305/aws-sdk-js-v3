@@ -6954,7 +6954,7 @@ export interface UpdateFlowResponse {
  * @internal
  */
 export const AmplitudeConnectorProfileCredentialsFilterSensitiveLog = (
-  obj: AmplitudeConnectorProfileCredentials
+  obj: AmplitudeConnectorProfileCredentials,
 ): any => ({
   ...obj,
   ...(obj.apiKey && { apiKey: SENSITIVE_STRING }),
@@ -7018,7 +7018,7 @@ export const DatadogConnectorProfileCredentialsFilterSensitiveLog = (obj: Datado
  * @internal
  */
 export const GoogleAnalyticsConnectorProfileCredentialsFilterSensitiveLog = (
-  obj: GoogleAnalyticsConnectorProfileCredentials
+  obj: GoogleAnalyticsConnectorProfileCredentials,
 ): any => ({
   ...obj,
   ...(obj.clientSecret && { clientSecret: SENSITIVE_STRING }),
@@ -7029,7 +7029,7 @@ export const GoogleAnalyticsConnectorProfileCredentialsFilterSensitiveLog = (
  * @internal
  */
 export const HoneycodeConnectorProfileCredentialsFilterSensitiveLog = (
-  obj: HoneycodeConnectorProfileCredentials
+  obj: HoneycodeConnectorProfileCredentials,
 ): any => ({
   ...obj,
   ...(obj.accessToken && { accessToken: SENSITIVE_STRING }),
@@ -7039,7 +7039,7 @@ export const HoneycodeConnectorProfileCredentialsFilterSensitiveLog = (
  * @internal
  */
 export const InforNexusConnectorProfileCredentialsFilterSensitiveLog = (
-  obj: InforNexusConnectorProfileCredentials
+  obj: InforNexusConnectorProfileCredentials,
 ): any => ({
   ...obj,
   ...(obj.accessKeyId && { accessKeyId: SENSITIVE_STRING }),
@@ -7067,7 +7067,7 @@ export const PardotConnectorProfileCredentialsFilterSensitiveLog = (obj: PardotC
  * @internal
  */
 export const RedshiftConnectorProfileCredentialsFilterSensitiveLog = (
-  obj: RedshiftConnectorProfileCredentials
+  obj: RedshiftConnectorProfileCredentials,
 ): any => ({
   ...obj,
   ...(obj.password && { password: SENSITIVE_STRING }),
@@ -7077,7 +7077,7 @@ export const RedshiftConnectorProfileCredentialsFilterSensitiveLog = (
  * @internal
  */
 export const SalesforceConnectorProfileCredentialsFilterSensitiveLog = (
-  obj: SalesforceConnectorProfileCredentials
+  obj: SalesforceConnectorProfileCredentials,
 ): any => ({
   ...obj,
   ...(obj.accessToken && { accessToken: SENSITIVE_STRING }),
@@ -7098,7 +7098,7 @@ export const OAuthCredentialsFilterSensitiveLog = (obj: OAuthCredentials): any =
  * @internal
  */
 export const SAPODataConnectorProfileCredentialsFilterSensitiveLog = (
-  obj: SAPODataConnectorProfileCredentials
+  obj: SAPODataConnectorProfileCredentials,
 ): any => ({
   ...obj,
   ...(obj.basicAuthCredentials && {
@@ -7111,7 +7111,7 @@ export const SAPODataConnectorProfileCredentialsFilterSensitiveLog = (
  * @internal
  */
 export const ServiceNowConnectorProfileCredentialsFilterSensitiveLog = (
-  obj: ServiceNowConnectorProfileCredentials
+  obj: ServiceNowConnectorProfileCredentials,
 ): any => ({
   ...obj,
   ...(obj.password && { password: SENSITIVE_STRING }),
@@ -7122,7 +7122,7 @@ export const ServiceNowConnectorProfileCredentialsFilterSensitiveLog = (
  * @internal
  */
 export const SingularConnectorProfileCredentialsFilterSensitiveLog = (
-  obj: SingularConnectorProfileCredentials
+  obj: SingularConnectorProfileCredentials,
 ): any => ({
   ...obj,
   ...(obj.apiKey && { apiKey: SENSITIVE_STRING }),
@@ -7141,7 +7141,7 @@ export const SlackConnectorProfileCredentialsFilterSensitiveLog = (obj: SlackCon
  * @internal
  */
 export const SnowflakeConnectorProfileCredentialsFilterSensitiveLog = (
-  obj: SnowflakeConnectorProfileCredentials
+  obj: SnowflakeConnectorProfileCredentials,
 ): any => ({
   ...obj,
   ...(obj.password && { password: SENSITIVE_STRING }),
@@ -7151,7 +7151,7 @@ export const SnowflakeConnectorProfileCredentialsFilterSensitiveLog = (
  * @internal
  */
 export const TrendmicroConnectorProfileCredentialsFilterSensitiveLog = (
-  obj: TrendmicroConnectorProfileCredentials
+  obj: TrendmicroConnectorProfileCredentials,
 ): any => ({
   ...obj,
   ...(obj.apiSecretKey && { apiSecretKey: SENSITIVE_STRING }),

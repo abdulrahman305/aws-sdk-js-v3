@@ -81,16 +81,16 @@ export interface IoTEventsData {
    */
   batchAcknowledgeAlarm(
     args: BatchAcknowledgeAlarmCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchAcknowledgeAlarmCommandOutput>;
   batchAcknowledgeAlarm(
     args: BatchAcknowledgeAlarmCommandInput,
-    cb: (err: any, data?: BatchAcknowledgeAlarmCommandOutput) => void
+    cb: (err: any, data?: BatchAcknowledgeAlarmCommandOutput) => void,
   ): void;
   batchAcknowledgeAlarm(
     args: BatchAcknowledgeAlarmCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchAcknowledgeAlarmCommandOutput) => void
+    cb: (err: any, data?: BatchAcknowledgeAlarmCommandOutput) => void,
   ): void;
 
   /**
@@ -98,16 +98,16 @@ export interface IoTEventsData {
    */
   batchDeleteDetector(
     args: BatchDeleteDetectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDeleteDetectorCommandOutput>;
   batchDeleteDetector(
     args: BatchDeleteDetectorCommandInput,
-    cb: (err: any, data?: BatchDeleteDetectorCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteDetectorCommandOutput) => void,
   ): void;
   batchDeleteDetector(
     args: BatchDeleteDetectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDeleteDetectorCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteDetectorCommandOutput) => void,
   ): void;
 
   /**
@@ -115,16 +115,16 @@ export interface IoTEventsData {
    */
   batchDisableAlarm(
     args: BatchDisableAlarmCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDisableAlarmCommandOutput>;
   batchDisableAlarm(
     args: BatchDisableAlarmCommandInput,
-    cb: (err: any, data?: BatchDisableAlarmCommandOutput) => void
+    cb: (err: any, data?: BatchDisableAlarmCommandOutput) => void,
   ): void;
   batchDisableAlarm(
     args: BatchDisableAlarmCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDisableAlarmCommandOutput) => void
+    cb: (err: any, data?: BatchDisableAlarmCommandOutput) => void,
   ): void;
 
   /**
@@ -132,16 +132,16 @@ export interface IoTEventsData {
    */
   batchEnableAlarm(
     args: BatchEnableAlarmCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchEnableAlarmCommandOutput>;
   batchEnableAlarm(
     args: BatchEnableAlarmCommandInput,
-    cb: (err: any, data?: BatchEnableAlarmCommandOutput) => void
+    cb: (err: any, data?: BatchEnableAlarmCommandOutput) => void,
   ): void;
   batchEnableAlarm(
     args: BatchEnableAlarmCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchEnableAlarmCommandOutput) => void
+    cb: (err: any, data?: BatchEnableAlarmCommandOutput) => void,
   ): void;
 
   /**
@@ -149,13 +149,13 @@ export interface IoTEventsData {
    */
   batchPutMessage(
     args: BatchPutMessageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchPutMessageCommandOutput>;
   batchPutMessage(args: BatchPutMessageCommandInput, cb: (err: any, data?: BatchPutMessageCommandOutput) => void): void;
   batchPutMessage(
     args: BatchPutMessageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchPutMessageCommandOutput) => void
+    cb: (err: any, data?: BatchPutMessageCommandOutput) => void,
   ): void;
 
   /**
@@ -163,13 +163,13 @@ export interface IoTEventsData {
    */
   batchResetAlarm(
     args: BatchResetAlarmCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchResetAlarmCommandOutput>;
   batchResetAlarm(args: BatchResetAlarmCommandInput, cb: (err: any, data?: BatchResetAlarmCommandOutput) => void): void;
   batchResetAlarm(
     args: BatchResetAlarmCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchResetAlarmCommandOutput) => void
+    cb: (err: any, data?: BatchResetAlarmCommandOutput) => void,
   ): void;
 
   /**
@@ -177,16 +177,16 @@ export interface IoTEventsData {
    */
   batchSnoozeAlarm(
     args: BatchSnoozeAlarmCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchSnoozeAlarmCommandOutput>;
   batchSnoozeAlarm(
     args: BatchSnoozeAlarmCommandInput,
-    cb: (err: any, data?: BatchSnoozeAlarmCommandOutput) => void
+    cb: (err: any, data?: BatchSnoozeAlarmCommandOutput) => void,
   ): void;
   batchSnoozeAlarm(
     args: BatchSnoozeAlarmCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchSnoozeAlarmCommandOutput) => void
+    cb: (err: any, data?: BatchSnoozeAlarmCommandOutput) => void,
   ): void;
 
   /**
@@ -194,16 +194,16 @@ export interface IoTEventsData {
    */
   batchUpdateDetector(
     args: BatchUpdateDetectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchUpdateDetectorCommandOutput>;
   batchUpdateDetector(
     args: BatchUpdateDetectorCommandInput,
-    cb: (err: any, data?: BatchUpdateDetectorCommandOutput) => void
+    cb: (err: any, data?: BatchUpdateDetectorCommandOutput) => void,
   ): void;
   batchUpdateDetector(
     args: BatchUpdateDetectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchUpdateDetectorCommandOutput) => void
+    cb: (err: any, data?: BatchUpdateDetectorCommandOutput) => void,
   ): void;
 
   /**
@@ -214,7 +214,7 @@ export interface IoTEventsData {
   describeAlarm(
     args: DescribeAlarmCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAlarmCommandOutput) => void
+    cb: (err: any, data?: DescribeAlarmCommandOutput) => void,
   ): void;
 
   /**
@@ -222,16 +222,16 @@ export interface IoTEventsData {
    */
   describeDetector(
     args: DescribeDetectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDetectorCommandOutput>;
   describeDetector(
     args: DescribeDetectorCommandInput,
-    cb: (err: any, data?: DescribeDetectorCommandOutput) => void
+    cb: (err: any, data?: DescribeDetectorCommandOutput) => void,
   ): void;
   describeDetector(
     args: DescribeDetectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDetectorCommandOutput) => void
+    cb: (err: any, data?: DescribeDetectorCommandOutput) => void,
   ): void;
 
   /**
@@ -242,7 +242,7 @@ export interface IoTEventsData {
   listAlarms(
     args: ListAlarmsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAlarmsCommandOutput) => void
+    cb: (err: any, data?: ListAlarmsCommandOutput) => void,
   ): void;
 
   /**
@@ -253,7 +253,7 @@ export interface IoTEventsData {
   listDetectors(
     args: ListDetectorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDetectorsCommandOutput) => void
+    cb: (err: any, data?: ListDetectorsCommandOutput) => void,
   ): void;
 }
 

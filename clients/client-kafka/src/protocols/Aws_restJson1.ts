@@ -256,7 +256,7 @@ import {
  */
 export const se_BatchAssociateScramSecretCommand = async (
   input: BatchAssociateScramSecretCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -268,7 +268,7 @@ export const se_BatchAssociateScramSecretCommand = async (
   body = JSON.stringify(
     take(input, {
       secretArnList: [, (_) => _json(_), `SecretArnList`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -279,7 +279,7 @@ export const se_BatchAssociateScramSecretCommand = async (
  */
 export const se_BatchDisassociateScramSecretCommand = async (
   input: BatchDisassociateScramSecretCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -291,7 +291,7 @@ export const se_BatchDisassociateScramSecretCommand = async (
   body = JSON.stringify(
     take(input, {
       secretArnList: [, (_) => _json(_), `SecretArnList`],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -302,7 +302,7 @@ export const se_BatchDisassociateScramSecretCommand = async (
  */
 export const se_CreateClusterCommand = async (
   input: CreateClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -324,7 +324,7 @@ export const se_CreateClusterCommand = async (
       openMonitoring: [, (_) => se_OpenMonitoringInfo(_, context), `OpenMonitoring`],
       storageMode: [, , `StorageMode`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -335,7 +335,7 @@ export const se_CreateClusterCommand = async (
  */
 export const se_CreateClusterV2Command = async (
   input: CreateClusterV2CommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -349,7 +349,7 @@ export const se_CreateClusterV2Command = async (
       provisioned: [, (_) => se_ProvisionedRequest(_, context), `Provisioned`],
       serverless: [, (_) => se_ServerlessRequest(_, context), `Serverless`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -360,7 +360,7 @@ export const se_CreateClusterV2Command = async (
  */
 export const se_CreateConfigurationCommand = async (
   input: CreateConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -374,7 +374,7 @@ export const se_CreateConfigurationCommand = async (
       kafkaVersions: [, (_) => _json(_), `KafkaVersions`],
       name: [, , `Name`],
       serverProperties: [, (_) => context.base64Encoder(_), `ServerProperties`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -385,7 +385,7 @@ export const se_CreateConfigurationCommand = async (
  */
 export const se_CreateReplicatorCommand = async (
   input: CreateReplicatorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -401,7 +401,7 @@ export const se_CreateReplicatorCommand = async (
       replicatorName: [, , `ReplicatorName`],
       serviceExecutionRoleArn: [, , `ServiceExecutionRoleArn`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -412,7 +412,7 @@ export const se_CreateReplicatorCommand = async (
  */
 export const se_CreateVpcConnectionCommand = async (
   input: CreateVpcConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -428,7 +428,7 @@ export const se_CreateVpcConnectionCommand = async (
       tags: [, (_) => _json(_), `Tags`],
       targetClusterArn: [, , `TargetClusterArn`],
       vpcId: [, , `VpcId`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -439,7 +439,7 @@ export const se_CreateVpcConnectionCommand = async (
  */
 export const se_DeleteClusterCommand = async (
   input: DeleteClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -458,7 +458,7 @@ export const se_DeleteClusterCommand = async (
  */
 export const se_DeleteClusterPolicyCommand = async (
   input: DeleteClusterPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -474,7 +474,7 @@ export const se_DeleteClusterPolicyCommand = async (
  */
 export const se_DeleteConfigurationCommand = async (
   input: DeleteConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -490,7 +490,7 @@ export const se_DeleteConfigurationCommand = async (
  */
 export const se_DeleteReplicatorCommand = async (
   input: DeleteReplicatorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -509,7 +509,7 @@ export const se_DeleteReplicatorCommand = async (
  */
 export const se_DeleteVpcConnectionCommand = async (
   input: DeleteVpcConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -525,7 +525,7 @@ export const se_DeleteVpcConnectionCommand = async (
  */
 export const se_DescribeClusterCommand = async (
   input: DescribeClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -541,7 +541,7 @@ export const se_DescribeClusterCommand = async (
  */
 export const se_DescribeClusterOperationCommand = async (
   input: DescribeClusterOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -557,7 +557,7 @@ export const se_DescribeClusterOperationCommand = async (
  */
 export const se_DescribeClusterOperationV2Command = async (
   input: DescribeClusterOperationV2CommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -573,7 +573,7 @@ export const se_DescribeClusterOperationV2Command = async (
  */
 export const se_DescribeClusterV2Command = async (
   input: DescribeClusterV2CommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -589,7 +589,7 @@ export const se_DescribeClusterV2Command = async (
  */
 export const se_DescribeConfigurationCommand = async (
   input: DescribeConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -605,7 +605,7 @@ export const se_DescribeConfigurationCommand = async (
  */
 export const se_DescribeConfigurationRevisionCommand = async (
   input: DescribeConfigurationRevisionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -622,7 +622,7 @@ export const se_DescribeConfigurationRevisionCommand = async (
  */
 export const se_DescribeReplicatorCommand = async (
   input: DescribeReplicatorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -638,7 +638,7 @@ export const se_DescribeReplicatorCommand = async (
  */
 export const se_DescribeVpcConnectionCommand = async (
   input: DescribeVpcConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -654,7 +654,7 @@ export const se_DescribeVpcConnectionCommand = async (
  */
 export const se_GetBootstrapBrokersCommand = async (
   input: GetBootstrapBrokersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -670,7 +670,7 @@ export const se_GetBootstrapBrokersCommand = async (
  */
 export const se_GetClusterPolicyCommand = async (
   input: GetClusterPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -686,7 +686,7 @@ export const se_GetClusterPolicyCommand = async (
  */
 export const se_GetCompatibleKafkaVersionsCommand = async (
   input: GetCompatibleKafkaVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -704,7 +704,7 @@ export const se_GetCompatibleKafkaVersionsCommand = async (
  */
 export const se_ListClientVpcConnectionsCommand = async (
   input: ListClientVpcConnectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -724,7 +724,7 @@ export const se_ListClientVpcConnectionsCommand = async (
  */
 export const se_ListClusterOperationsCommand = async (
   input: ListClusterOperationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -744,7 +744,7 @@ export const se_ListClusterOperationsCommand = async (
  */
 export const se_ListClusterOperationsV2Command = async (
   input: ListClusterOperationsV2CommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -764,7 +764,7 @@ export const se_ListClusterOperationsV2Command = async (
  */
 export const se_ListClustersCommand = async (
   input: ListClustersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -784,7 +784,7 @@ export const se_ListClustersCommand = async (
  */
 export const se_ListClustersV2Command = async (
   input: ListClustersV2CommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -805,7 +805,7 @@ export const se_ListClustersV2Command = async (
  */
 export const se_ListConfigurationRevisionsCommand = async (
   input: ListConfigurationRevisionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -825,7 +825,7 @@ export const se_ListConfigurationRevisionsCommand = async (
  */
 export const se_ListConfigurationsCommand = async (
   input: ListConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -844,7 +844,7 @@ export const se_ListConfigurationsCommand = async (
  */
 export const se_ListKafkaVersionsCommand = async (
   input: ListKafkaVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -863,7 +863,7 @@ export const se_ListKafkaVersionsCommand = async (
  */
 export const se_ListNodesCommand = async (
   input: ListNodesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -883,7 +883,7 @@ export const se_ListNodesCommand = async (
  */
 export const se_ListReplicatorsCommand = async (
   input: ListReplicatorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -903,7 +903,7 @@ export const se_ListReplicatorsCommand = async (
  */
 export const se_ListScramSecretsCommand = async (
   input: ListScramSecretsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -923,7 +923,7 @@ export const se_ListScramSecretsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -939,7 +939,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListVpcConnectionsCommand = async (
   input: ListVpcConnectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -958,7 +958,7 @@ export const se_ListVpcConnectionsCommand = async (
  */
 export const se_PutClusterPolicyCommand = async (
   input: PutClusterPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -971,7 +971,7 @@ export const se_PutClusterPolicyCommand = async (
     take(input, {
       currentVersion: [, , `CurrentVersion`],
       policy: [, , `Policy`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -982,7 +982,7 @@ export const se_PutClusterPolicyCommand = async (
  */
 export const se_RebootBrokerCommand = async (
   input: RebootBrokerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -994,7 +994,7 @@ export const se_RebootBrokerCommand = async (
   body = JSON.stringify(
     take(input, {
       brokerIds: [, (_) => _json(_), `BrokerIds`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1005,7 +1005,7 @@ export const se_RebootBrokerCommand = async (
  */
 export const se_RejectClientVpcConnectionCommand = async (
   input: RejectClientVpcConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1017,7 +1017,7 @@ export const se_RejectClientVpcConnectionCommand = async (
   body = JSON.stringify(
     take(input, {
       vpcConnectionArn: [, , `VpcConnectionArn`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1028,7 +1028,7 @@ export const se_RejectClientVpcConnectionCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1040,7 +1040,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1051,7 +1051,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1073,7 +1073,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateBrokerCountCommand = async (
   input: UpdateBrokerCountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1086,7 +1086,7 @@ export const se_UpdateBrokerCountCommand = async (
     take(input, {
       currentVersion: [, , `CurrentVersion`],
       targetNumberOfBrokerNodes: [, , `TargetNumberOfBrokerNodes`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1097,7 +1097,7 @@ export const se_UpdateBrokerCountCommand = async (
  */
 export const se_UpdateBrokerStorageCommand = async (
   input: UpdateBrokerStorageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1110,7 +1110,7 @@ export const se_UpdateBrokerStorageCommand = async (
     take(input, {
       currentVersion: [, , `CurrentVersion`],
       targetBrokerEBSVolumeInfo: [, (_) => se___listOfBrokerEBSVolumeInfo(_, context), `TargetBrokerEBSVolumeInfo`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1121,7 +1121,7 @@ export const se_UpdateBrokerStorageCommand = async (
  */
 export const se_UpdateBrokerTypeCommand = async (
   input: UpdateBrokerTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1134,7 +1134,7 @@ export const se_UpdateBrokerTypeCommand = async (
     take(input, {
       currentVersion: [, , `CurrentVersion`],
       targetInstanceType: [, , `TargetInstanceType`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1145,7 +1145,7 @@ export const se_UpdateBrokerTypeCommand = async (
  */
 export const se_UpdateClusterConfigurationCommand = async (
   input: UpdateClusterConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1158,7 +1158,7 @@ export const se_UpdateClusterConfigurationCommand = async (
     take(input, {
       configurationInfo: [, (_) => se_ConfigurationInfo(_, context), `ConfigurationInfo`],
       currentVersion: [, , `CurrentVersion`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1169,7 +1169,7 @@ export const se_UpdateClusterConfigurationCommand = async (
  */
 export const se_UpdateClusterKafkaVersionCommand = async (
   input: UpdateClusterKafkaVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1183,7 +1183,7 @@ export const se_UpdateClusterKafkaVersionCommand = async (
       configurationInfo: [, (_) => se_ConfigurationInfo(_, context), `ConfigurationInfo`],
       currentVersion: [, , `CurrentVersion`],
       targetKafkaVersion: [, , `TargetKafkaVersion`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1194,7 +1194,7 @@ export const se_UpdateClusterKafkaVersionCommand = async (
  */
 export const se_UpdateConfigurationCommand = async (
   input: UpdateConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1207,7 +1207,7 @@ export const se_UpdateConfigurationCommand = async (
     take(input, {
       description: [, , `Description`],
       serverProperties: [, (_) => context.base64Encoder(_), `ServerProperties`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1218,7 +1218,7 @@ export const se_UpdateConfigurationCommand = async (
  */
 export const se_UpdateConnectivityCommand = async (
   input: UpdateConnectivityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1231,7 +1231,7 @@ export const se_UpdateConnectivityCommand = async (
     take(input, {
       connectivityInfo: [, (_) => se_ConnectivityInfo(_, context), `ConnectivityInfo`],
       currentVersion: [, , `CurrentVersion`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1242,7 +1242,7 @@ export const se_UpdateConnectivityCommand = async (
  */
 export const se_UpdateMonitoringCommand = async (
   input: UpdateMonitoringCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1257,7 +1257,7 @@ export const se_UpdateMonitoringCommand = async (
       enhancedMonitoring: [, , `EnhancedMonitoring`],
       loggingInfo: [, (_) => se_LoggingInfo(_, context), `LoggingInfo`],
       openMonitoring: [, (_) => se_OpenMonitoringInfo(_, context), `OpenMonitoring`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1268,7 +1268,7 @@ export const se_UpdateMonitoringCommand = async (
  */
 export const se_UpdateReplicationInfoCommand = async (
   input: UpdateReplicationInfoCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1284,7 +1284,7 @@ export const se_UpdateReplicationInfoCommand = async (
       sourceKafkaClusterArn: [, , `SourceKafkaClusterArn`],
       targetKafkaClusterArn: [, , `TargetKafkaClusterArn`],
       topicReplication: [, (_) => se_TopicReplicationUpdate(_, context), `TopicReplication`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1295,7 +1295,7 @@ export const se_UpdateReplicationInfoCommand = async (
  */
 export const se_UpdateSecurityCommand = async (
   input: UpdateSecurityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1309,7 +1309,7 @@ export const se_UpdateSecurityCommand = async (
       clientAuthentication: [, (_) => se_ClientAuthentication(_, context), `ClientAuthentication`],
       currentVersion: [, , `CurrentVersion`],
       encryptionInfo: [, (_) => se_EncryptionInfo(_, context), `EncryptionInfo`],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1320,7 +1320,7 @@ export const se_UpdateSecurityCommand = async (
  */
 export const se_UpdateStorageCommand = async (
   input: UpdateStorageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1335,7 +1335,7 @@ export const se_UpdateStorageCommand = async (
       provisionedThroughput: [, (_) => se_ProvisionedThroughput(_, context), `ProvisionedThroughput`],
       storageMode: [, , `StorageMode`],
       volumeSizeGB: [, , `VolumeSizeGB`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1346,7 +1346,7 @@ export const se_UpdateStorageCommand = async (
  */
 export const de_BatchAssociateScramSecretCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchAssociateScramSecretCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1368,7 +1368,7 @@ export const de_BatchAssociateScramSecretCommand = async (
  */
 export const de_BatchDisassociateScramSecretCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDisassociateScramSecretCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1390,7 +1390,7 @@ export const de_BatchDisassociateScramSecretCommand = async (
  */
 export const de_CreateClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateClusterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1413,7 +1413,7 @@ export const de_CreateClusterCommand = async (
  */
 export const de_CreateClusterV2Command = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateClusterV2CommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1437,7 +1437,7 @@ export const de_CreateClusterV2Command = async (
  */
 export const de_CreateConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1462,7 +1462,7 @@ export const de_CreateConfigurationCommand = async (
  */
 export const de_CreateReplicatorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateReplicatorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1485,7 +1485,7 @@ export const de_CreateReplicatorCommand = async (
  */
 export const de_CreateVpcConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVpcConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1513,7 +1513,7 @@ export const de_CreateVpcConnectionCommand = async (
  */
 export const de_DeleteClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteClusterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1535,7 +1535,7 @@ export const de_DeleteClusterCommand = async (
  */
 export const de_DeleteClusterPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteClusterPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1552,7 +1552,7 @@ export const de_DeleteClusterPolicyCommand = async (
  */
 export const de_DeleteConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1574,7 +1574,7 @@ export const de_DeleteConfigurationCommand = async (
  */
 export const de_DeleteReplicatorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteReplicatorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1596,7 +1596,7 @@ export const de_DeleteReplicatorCommand = async (
  */
 export const de_DeleteVpcConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVpcConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1618,7 +1618,7 @@ export const de_DeleteVpcConnectionCommand = async (
  */
 export const de_DescribeClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeClusterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1639,7 +1639,7 @@ export const de_DescribeClusterCommand = async (
  */
 export const de_DescribeClusterOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeClusterOperationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1660,7 +1660,7 @@ export const de_DescribeClusterOperationCommand = async (
  */
 export const de_DescribeClusterOperationV2Command = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeClusterOperationV2CommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1681,7 +1681,7 @@ export const de_DescribeClusterOperationV2Command = async (
  */
 export const de_DescribeClusterV2Command = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeClusterV2CommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1702,7 +1702,7 @@ export const de_DescribeClusterV2Command = async (
  */
 export const de_DescribeConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1729,7 +1729,7 @@ export const de_DescribeConfigurationCommand = async (
  */
 export const de_DescribeConfigurationRevisionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConfigurationRevisionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1754,7 +1754,7 @@ export const de_DescribeConfigurationRevisionCommand = async (
  */
 export const de_DescribeReplicatorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReplicatorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1787,7 +1787,7 @@ export const de_DescribeReplicatorCommand = async (
  */
 export const de_DescribeVpcConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVpcConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1816,7 +1816,7 @@ export const de_DescribeVpcConnectionCommand = async (
  */
 export const de_GetBootstrapBrokersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBootstrapBrokersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1846,7 +1846,7 @@ export const de_GetBootstrapBrokersCommand = async (
  */
 export const de_GetClusterPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetClusterPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1868,7 +1868,7 @@ export const de_GetClusterPolicyCommand = async (
  */
 export const de_GetCompatibleKafkaVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCompatibleKafkaVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1889,7 +1889,7 @@ export const de_GetCompatibleKafkaVersionsCommand = async (
  */
 export const de_ListClientVpcConnectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListClientVpcConnectionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1911,7 +1911,7 @@ export const de_ListClientVpcConnectionsCommand = async (
  */
 export const de_ListClusterOperationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListClusterOperationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1933,7 +1933,7 @@ export const de_ListClusterOperationsCommand = async (
  */
 export const de_ListClusterOperationsV2Command = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListClusterOperationsV2CommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1955,7 +1955,7 @@ export const de_ListClusterOperationsV2Command = async (
  */
 export const de_ListClustersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListClustersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1977,7 +1977,7 @@ export const de_ListClustersCommand = async (
  */
 export const de_ListClustersV2Command = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListClustersV2CommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1999,7 +1999,7 @@ export const de_ListClustersV2Command = async (
  */
 export const de_ListConfigurationRevisionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConfigurationRevisionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2021,7 +2021,7 @@ export const de_ListConfigurationRevisionsCommand = async (
  */
 export const de_ListConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2043,7 +2043,7 @@ export const de_ListConfigurationsCommand = async (
  */
 export const de_ListKafkaVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListKafkaVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2065,7 +2065,7 @@ export const de_ListKafkaVersionsCommand = async (
  */
 export const de_ListNodesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListNodesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2087,7 +2087,7 @@ export const de_ListNodesCommand = async (
  */
 export const de_ListReplicatorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReplicatorsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2109,7 +2109,7 @@ export const de_ListReplicatorsCommand = async (
  */
 export const de_ListScramSecretsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListScramSecretsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2131,7 +2131,7 @@ export const de_ListScramSecretsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2152,7 +2152,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListVpcConnectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVpcConnectionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2174,7 +2174,7 @@ export const de_ListVpcConnectionsCommand = async (
  */
 export const de_PutClusterPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutClusterPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2195,7 +2195,7 @@ export const de_PutClusterPolicyCommand = async (
  */
 export const de_RebootBrokerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RebootBrokerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2217,7 +2217,7 @@ export const de_RebootBrokerCommand = async (
  */
 export const de_RejectClientVpcConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RejectClientVpcConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2234,7 +2234,7 @@ export const de_RejectClientVpcConnectionCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2251,7 +2251,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2268,7 +2268,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateBrokerCountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBrokerCountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2290,7 +2290,7 @@ export const de_UpdateBrokerCountCommand = async (
  */
 export const de_UpdateBrokerStorageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBrokerStorageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2312,7 +2312,7 @@ export const de_UpdateBrokerStorageCommand = async (
  */
 export const de_UpdateBrokerTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBrokerTypeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2334,7 +2334,7 @@ export const de_UpdateBrokerTypeCommand = async (
  */
 export const de_UpdateClusterConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateClusterConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2356,7 +2356,7 @@ export const de_UpdateClusterConfigurationCommand = async (
  */
 export const de_UpdateClusterKafkaVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateClusterKafkaVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2378,7 +2378,7 @@ export const de_UpdateClusterKafkaVersionCommand = async (
  */
 export const de_UpdateConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2400,7 +2400,7 @@ export const de_UpdateConfigurationCommand = async (
  */
 export const de_UpdateConnectivityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConnectivityCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2422,7 +2422,7 @@ export const de_UpdateConnectivityCommand = async (
  */
 export const de_UpdateMonitoringCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMonitoringCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2444,7 +2444,7 @@ export const de_UpdateMonitoringCommand = async (
  */
 export const de_UpdateReplicationInfoCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateReplicationInfoCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2466,7 +2466,7 @@ export const de_UpdateReplicationInfoCommand = async (
  */
 export const de_UpdateSecurityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSecurityCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2488,7 +2488,7 @@ export const de_UpdateSecurityCommand = async (
  */
 export const de_UpdateStorageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateStorageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2609,7 +2609,7 @@ const de_ForbiddenExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_InternalServerErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2648,7 +2648,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2669,7 +2669,7 @@ const de_ServiceUnavailableExceptionRes = async (
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2690,7 +2690,7 @@ const de_TooManyRequestsExceptionRes = async (
  */
 const de_UnauthorizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthorizedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3189,7 +3189,7 @@ const se_VpcConnectivity = (input: VpcConnectivity, context: __SerdeContext): an
  */
 const se_VpcConnectivityClientAuthentication = (
   input: VpcConnectivityClientAuthentication,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     sasl: [, (_) => se_VpcConnectivitySasl(_, context), `Sasl`],
@@ -4349,7 +4349,7 @@ const de_VpcConnectivity = (output: any, context: __SerdeContext): VpcConnectivi
  */
 const de_VpcConnectivityClientAuthentication = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): VpcConnectivityClientAuthentication => {
   return take(output, {
     Sasl: [, (_: any) => de_VpcConnectivitySasl(_, context), `sasl`],

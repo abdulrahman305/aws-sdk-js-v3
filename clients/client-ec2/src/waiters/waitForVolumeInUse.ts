@@ -50,7 +50,7 @@ const checkState = async (client: EC2Client, input: DescribeVolumesCommandInput)
  */
 export const waitForVolumeInUse = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeVolumesCommandInput
+  input: DescribeVolumesCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -62,7 +62,7 @@ export const waitForVolumeInUse = async (
  */
 export const waitUntilVolumeInUse = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeVolumesCommandInput
+  input: DescribeVolumesCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

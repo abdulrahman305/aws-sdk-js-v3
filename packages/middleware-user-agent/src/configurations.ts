@@ -28,7 +28,7 @@ export interface UserAgentResolvedConfig {
   runtime: string;
 }
 export function resolveUserAgentConfig<T>(
-  input: T & PreviouslyResolved & UserAgentInputConfig
+  input: T & PreviouslyResolved & UserAgentInputConfig,
 ): T & UserAgentResolvedConfig {
   return {
     ...input,

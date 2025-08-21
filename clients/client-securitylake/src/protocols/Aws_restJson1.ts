@@ -141,7 +141,7 @@ import { SecurityLakeServiceException as __BaseException } from "../models/Secur
  */
 export const se_CreateAwsLogSourceCommand = async (
   input: CreateAwsLogSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -152,7 +152,7 @@ export const se_CreateAwsLogSourceCommand = async (
   body = JSON.stringify(
     take(input, {
       sources: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -163,7 +163,7 @@ export const se_CreateAwsLogSourceCommand = async (
  */
 export const se_CreateCustomLogSourceCommand = async (
   input: CreateCustomLogSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -177,7 +177,7 @@ export const se_CreateCustomLogSourceCommand = async (
       eventClasses: (_) => _json(_),
       sourceName: [],
       sourceVersion: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -188,7 +188,7 @@ export const se_CreateCustomLogSourceCommand = async (
  */
 export const se_CreateDataLakeCommand = async (
   input: CreateDataLakeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -201,7 +201,7 @@ export const se_CreateDataLakeCommand = async (
       configurations: (_) => _json(_),
       metaStoreManagerRoleArn: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -212,7 +212,7 @@ export const se_CreateDataLakeCommand = async (
  */
 export const se_CreateDataLakeExceptionSubscriptionCommand = async (
   input: CreateDataLakeExceptionSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -225,7 +225,7 @@ export const se_CreateDataLakeExceptionSubscriptionCommand = async (
       exceptionTimeToLive: [],
       notificationEndpoint: [],
       subscriptionProtocol: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -236,7 +236,7 @@ export const se_CreateDataLakeExceptionSubscriptionCommand = async (
  */
 export const se_CreateDataLakeOrganizationConfigurationCommand = async (
   input: CreateDataLakeOrganizationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -247,7 +247,7 @@ export const se_CreateDataLakeOrganizationConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       autoEnableNewAccount: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -258,7 +258,7 @@ export const se_CreateDataLakeOrganizationConfigurationCommand = async (
  */
 export const se_CreateSubscriberCommand = async (
   input: CreateSubscriberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -274,7 +274,7 @@ export const se_CreateSubscriberCommand = async (
       subscriberIdentity: (_) => _json(_),
       subscriberName: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -285,7 +285,7 @@ export const se_CreateSubscriberCommand = async (
  */
 export const se_CreateSubscriberNotificationCommand = async (
   input: CreateSubscriberNotificationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -297,7 +297,7 @@ export const se_CreateSubscriberNotificationCommand = async (
   body = JSON.stringify(
     take(input, {
       configuration: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -308,7 +308,7 @@ export const se_CreateSubscriberNotificationCommand = async (
  */
 export const se_DeleteAwsLogSourceCommand = async (
   input: DeleteAwsLogSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -319,7 +319,7 @@ export const se_DeleteAwsLogSourceCommand = async (
   body = JSON.stringify(
     take(input, {
       sources: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -330,7 +330,7 @@ export const se_DeleteAwsLogSourceCommand = async (
  */
 export const se_DeleteCustomLogSourceCommand = async (
   input: DeleteCustomLogSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -349,7 +349,7 @@ export const se_DeleteCustomLogSourceCommand = async (
  */
 export const se_DeleteDataLakeCommand = async (
   input: DeleteDataLakeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -360,7 +360,7 @@ export const se_DeleteDataLakeCommand = async (
   body = JSON.stringify(
     take(input, {
       regions: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -371,7 +371,7 @@ export const se_DeleteDataLakeCommand = async (
  */
 export const se_DeleteDataLakeExceptionSubscriptionCommand = async (
   input: DeleteDataLakeExceptionSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -389,7 +389,7 @@ export const se_DeleteDataLakeExceptionSubscriptionCommand = async (
  */
 export const se_DeleteDataLakeOrganizationConfigurationCommand = async (
   input: DeleteDataLakeOrganizationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -400,7 +400,7 @@ export const se_DeleteDataLakeOrganizationConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       autoEnableNewAccount: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -411,7 +411,7 @@ export const se_DeleteDataLakeOrganizationConfigurationCommand = async (
  */
 export const se_DeleteSubscriberCommand = async (
   input: DeleteSubscriberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -427,7 +427,7 @@ export const se_DeleteSubscriberCommand = async (
  */
 export const se_DeleteSubscriberNotificationCommand = async (
   input: DeleteSubscriberNotificationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -443,7 +443,7 @@ export const se_DeleteSubscriberNotificationCommand = async (
  */
 export const se_DeregisterDataLakeDelegatedAdministratorCommand = async (
   input: DeregisterDataLakeDelegatedAdministratorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -461,7 +461,7 @@ export const se_DeregisterDataLakeDelegatedAdministratorCommand = async (
  */
 export const se_GetDataLakeExceptionSubscriptionCommand = async (
   input: GetDataLakeExceptionSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -479,7 +479,7 @@ export const se_GetDataLakeExceptionSubscriptionCommand = async (
  */
 export const se_GetDataLakeOrganizationConfigurationCommand = async (
   input: GetDataLakeOrganizationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -497,7 +497,7 @@ export const se_GetDataLakeOrganizationConfigurationCommand = async (
  */
 export const se_GetDataLakeSourcesCommand = async (
   input: GetDataLakeSourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -510,7 +510,7 @@ export const se_GetDataLakeSourcesCommand = async (
       accounts: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -521,7 +521,7 @@ export const se_GetDataLakeSourcesCommand = async (
  */
 export const se_GetSubscriberCommand = async (
   input: GetSubscriberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -537,7 +537,7 @@ export const se_GetSubscriberCommand = async (
  */
 export const se_ListDataLakeExceptionsCommand = async (
   input: ListDataLakeExceptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -550,7 +550,7 @@ export const se_ListDataLakeExceptionsCommand = async (
       maxResults: [],
       nextToken: [],
       regions: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -561,7 +561,7 @@ export const se_ListDataLakeExceptionsCommand = async (
  */
 export const se_ListDataLakesCommand = async (
   input: ListDataLakesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -579,7 +579,7 @@ export const se_ListDataLakesCommand = async (
  */
 export const se_ListLogSourcesCommand = async (
   input: ListLogSourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -594,7 +594,7 @@ export const se_ListLogSourcesCommand = async (
       nextToken: [],
       regions: (_) => _json(_),
       sources: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -605,7 +605,7 @@ export const se_ListLogSourcesCommand = async (
  */
 export const se_ListSubscribersCommand = async (
   input: ListSubscribersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -624,7 +624,7 @@ export const se_ListSubscribersCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -640,7 +640,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_RegisterDataLakeDelegatedAdministratorCommand = async (
   input: RegisterDataLakeDelegatedAdministratorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -651,7 +651,7 @@ export const se_RegisterDataLakeDelegatedAdministratorCommand = async (
   body = JSON.stringify(
     take(input, {
       accountId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -662,7 +662,7 @@ export const se_RegisterDataLakeDelegatedAdministratorCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -674,7 +674,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -685,7 +685,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -707,7 +707,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateDataLakeCommand = async (
   input: UpdateDataLakeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -719,7 +719,7 @@ export const se_UpdateDataLakeCommand = async (
     take(input, {
       configurations: (_) => _json(_),
       metaStoreManagerRoleArn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -730,7 +730,7 @@ export const se_UpdateDataLakeCommand = async (
  */
 export const se_UpdateDataLakeExceptionSubscriptionCommand = async (
   input: UpdateDataLakeExceptionSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -743,7 +743,7 @@ export const se_UpdateDataLakeExceptionSubscriptionCommand = async (
       exceptionTimeToLive: [],
       notificationEndpoint: [],
       subscriptionProtocol: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -754,7 +754,7 @@ export const se_UpdateDataLakeExceptionSubscriptionCommand = async (
  */
 export const se_UpdateSubscriberCommand = async (
   input: UpdateSubscriberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -769,7 +769,7 @@ export const se_UpdateSubscriberCommand = async (
       subscriberDescription: [],
       subscriberIdentity: (_) => _json(_),
       subscriberName: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -780,7 +780,7 @@ export const se_UpdateSubscriberCommand = async (
  */
 export const se_UpdateSubscriberNotificationCommand = async (
   input: UpdateSubscriberNotificationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -792,7 +792,7 @@ export const se_UpdateSubscriberNotificationCommand = async (
   body = JSON.stringify(
     take(input, {
       configuration: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -803,7 +803,7 @@ export const se_UpdateSubscriberNotificationCommand = async (
  */
 export const de_CreateAwsLogSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAwsLogSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -824,7 +824,7 @@ export const de_CreateAwsLogSourceCommand = async (
  */
 export const de_CreateCustomLogSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCustomLogSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -845,7 +845,7 @@ export const de_CreateCustomLogSourceCommand = async (
  */
 export const de_CreateDataLakeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDataLakeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -866,7 +866,7 @@ export const de_CreateDataLakeCommand = async (
  */
 export const de_CreateDataLakeExceptionSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDataLakeExceptionSubscriptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -883,7 +883,7 @@ export const de_CreateDataLakeExceptionSubscriptionCommand = async (
  */
 export const de_CreateDataLakeOrganizationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDataLakeOrganizationConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -900,7 +900,7 @@ export const de_CreateDataLakeOrganizationConfigurationCommand = async (
  */
 export const de_CreateSubscriberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSubscriberCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -921,7 +921,7 @@ export const de_CreateSubscriberCommand = async (
  */
 export const de_CreateSubscriberNotificationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSubscriberNotificationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -942,7 +942,7 @@ export const de_CreateSubscriberNotificationCommand = async (
  */
 export const de_DeleteAwsLogSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAwsLogSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -963,7 +963,7 @@ export const de_DeleteAwsLogSourceCommand = async (
  */
 export const de_DeleteCustomLogSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCustomLogSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -980,7 +980,7 @@ export const de_DeleteCustomLogSourceCommand = async (
  */
 export const de_DeleteDataLakeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDataLakeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -997,7 +997,7 @@ export const de_DeleteDataLakeCommand = async (
  */
 export const de_DeleteDataLakeExceptionSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDataLakeExceptionSubscriptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1014,7 +1014,7 @@ export const de_DeleteDataLakeExceptionSubscriptionCommand = async (
  */
 export const de_DeleteDataLakeOrganizationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDataLakeOrganizationConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1031,7 +1031,7 @@ export const de_DeleteDataLakeOrganizationConfigurationCommand = async (
  */
 export const de_DeleteSubscriberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSubscriberCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1048,7 +1048,7 @@ export const de_DeleteSubscriberCommand = async (
  */
 export const de_DeleteSubscriberNotificationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSubscriberNotificationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1065,7 +1065,7 @@ export const de_DeleteSubscriberNotificationCommand = async (
  */
 export const de_DeregisterDataLakeDelegatedAdministratorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterDataLakeDelegatedAdministratorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1082,7 +1082,7 @@ export const de_DeregisterDataLakeDelegatedAdministratorCommand = async (
  */
 export const de_GetDataLakeExceptionSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDataLakeExceptionSubscriptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1105,7 +1105,7 @@ export const de_GetDataLakeExceptionSubscriptionCommand = async (
  */
 export const de_GetDataLakeOrganizationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDataLakeOrganizationConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1126,7 +1126,7 @@ export const de_GetDataLakeOrganizationConfigurationCommand = async (
  */
 export const de_GetDataLakeSourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDataLakeSourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1149,7 +1149,7 @@ export const de_GetDataLakeSourcesCommand = async (
  */
 export const de_GetSubscriberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSubscriberCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1170,7 +1170,7 @@ export const de_GetSubscriberCommand = async (
  */
 export const de_ListDataLakeExceptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDataLakeExceptionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1192,7 +1192,7 @@ export const de_ListDataLakeExceptionsCommand = async (
  */
 export const de_ListDataLakesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDataLakesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1213,7 +1213,7 @@ export const de_ListDataLakesCommand = async (
  */
 export const de_ListLogSourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLogSourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1235,7 +1235,7 @@ export const de_ListLogSourcesCommand = async (
  */
 export const de_ListSubscribersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSubscribersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1257,7 +1257,7 @@ export const de_ListSubscribersCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1278,7 +1278,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_RegisterDataLakeDelegatedAdministratorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterDataLakeDelegatedAdministratorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1295,7 +1295,7 @@ export const de_RegisterDataLakeDelegatedAdministratorCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1312,7 +1312,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1329,7 +1329,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateDataLakeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDataLakeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1350,7 +1350,7 @@ export const de_UpdateDataLakeCommand = async (
  */
 export const de_UpdateDataLakeExceptionSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDataLakeExceptionSubscriptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1367,7 +1367,7 @@ export const de_UpdateDataLakeExceptionSubscriptionCommand = async (
  */
 export const de_UpdateSubscriberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSubscriberCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1388,7 +1388,7 @@ export const de_UpdateSubscriberCommand = async (
  */
 export const de_UpdateSubscriberNotificationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSubscriberNotificationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1448,7 +1448,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1505,7 +1505,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1525,7 +1525,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

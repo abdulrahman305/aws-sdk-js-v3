@@ -63,14 +63,14 @@ export class EndpointOperationSerializer
 
 export const getEndpointOperationHandler = <Context>(
   operation: __Operation<EndpointOperationServerInput, EndpointOperationServerOutput, Context>,
-  customizer: __ValidationCustomizer<"EndpointOperation">
+  customizer: __ValidationCustomizer<"EndpointOperation">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "EndpointOperation">([
     new httpbinding.UriSpec<"RestJson", "EndpointOperation">(
       "POST",
       [{ type: "path_literal", value: "EndpointOperation" }],
       [],
-      { service: "RestJson", operation: "EndpointOperation" }
+      { service: "RestJson", operation: "EndpointOperation" },
     ),
   ]);
   return new EndpointOperationHandler(
@@ -78,7 +78,7 @@ export const getEndpointOperationHandler = <Context>(
     mux,
     new EndpointOperationSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -99,7 +99,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -141,7 +141,7 @@ export class EndpointOperationHandler<Context> implements __ServiceHandler<Conte
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"EndpointOperation">;
   /**
@@ -158,7 +158,7 @@ export class EndpointOperationHandler<Context> implements __ServiceHandler<Conte
     mux: __Mux<"RestJson", "EndpointOperation">,
     serializer: __OperationSerializer<RestJsonService<Context>, "EndpointOperation", EndpointOperationErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"EndpointOperation">
+    validationCustomizer: __ValidationCustomizer<"EndpointOperation">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -170,7 +170,7 @@ export class EndpointOperationHandler<Context> implements __ServiceHandler<Conte
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.EndpointOperation. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.EndpointOperation. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -182,7 +182,7 @@ export class EndpointOperationHandler<Context> implements __ServiceHandler<Conte
       this.operation,
       this.serializeFrameworkException,
       EndpointOperationServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

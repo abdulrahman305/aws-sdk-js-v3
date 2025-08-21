@@ -237,13 +237,13 @@ export interface CodePipeline {
    */
   acknowledgeJob(
     args: AcknowledgeJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AcknowledgeJobCommandOutput>;
   acknowledgeJob(args: AcknowledgeJobCommandInput, cb: (err: any, data?: AcknowledgeJobCommandOutput) => void): void;
   acknowledgeJob(
     args: AcknowledgeJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AcknowledgeJobCommandOutput) => void
+    cb: (err: any, data?: AcknowledgeJobCommandOutput) => void,
   ): void;
 
   /**
@@ -251,16 +251,16 @@ export interface CodePipeline {
    */
   acknowledgeThirdPartyJob(
     args: AcknowledgeThirdPartyJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AcknowledgeThirdPartyJobCommandOutput>;
   acknowledgeThirdPartyJob(
     args: AcknowledgeThirdPartyJobCommandInput,
-    cb: (err: any, data?: AcknowledgeThirdPartyJobCommandOutput) => void
+    cb: (err: any, data?: AcknowledgeThirdPartyJobCommandOutput) => void,
   ): void;
   acknowledgeThirdPartyJob(
     args: AcknowledgeThirdPartyJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AcknowledgeThirdPartyJobCommandOutput) => void
+    cb: (err: any, data?: AcknowledgeThirdPartyJobCommandOutput) => void,
   ): void;
 
   /**
@@ -268,16 +268,16 @@ export interface CodePipeline {
    */
   createCustomActionType(
     args: CreateCustomActionTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCustomActionTypeCommandOutput>;
   createCustomActionType(
     args: CreateCustomActionTypeCommandInput,
-    cb: (err: any, data?: CreateCustomActionTypeCommandOutput) => void
+    cb: (err: any, data?: CreateCustomActionTypeCommandOutput) => void,
   ): void;
   createCustomActionType(
     args: CreateCustomActionTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCustomActionTypeCommandOutput) => void
+    cb: (err: any, data?: CreateCustomActionTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -285,13 +285,13 @@ export interface CodePipeline {
    */
   createPipeline(
     args: CreatePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePipelineCommandOutput>;
   createPipeline(args: CreatePipelineCommandInput, cb: (err: any, data?: CreatePipelineCommandOutput) => void): void;
   createPipeline(
     args: CreatePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePipelineCommandOutput) => void
+    cb: (err: any, data?: CreatePipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -299,16 +299,16 @@ export interface CodePipeline {
    */
   deleteCustomActionType(
     args: DeleteCustomActionTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCustomActionTypeCommandOutput>;
   deleteCustomActionType(
     args: DeleteCustomActionTypeCommandInput,
-    cb: (err: any, data?: DeleteCustomActionTypeCommandOutput) => void
+    cb: (err: any, data?: DeleteCustomActionTypeCommandOutput) => void,
   ): void;
   deleteCustomActionType(
     args: DeleteCustomActionTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCustomActionTypeCommandOutput) => void
+    cb: (err: any, data?: DeleteCustomActionTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -316,13 +316,13 @@ export interface CodePipeline {
    */
   deletePipeline(
     args: DeletePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePipelineCommandOutput>;
   deletePipeline(args: DeletePipelineCommandInput, cb: (err: any, data?: DeletePipelineCommandOutput) => void): void;
   deletePipeline(
     args: DeletePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePipelineCommandOutput) => void
+    cb: (err: any, data?: DeletePipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -333,7 +333,7 @@ export interface CodePipeline {
   deleteWebhook(
     args: DeleteWebhookCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteWebhookCommandOutput) => void
+    cb: (err: any, data?: DeleteWebhookCommandOutput) => void,
   ): void;
 
   /**
@@ -342,16 +342,16 @@ export interface CodePipeline {
   deregisterWebhookWithThirdParty(): Promise<DeregisterWebhookWithThirdPartyCommandOutput>;
   deregisterWebhookWithThirdParty(
     args: DeregisterWebhookWithThirdPartyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterWebhookWithThirdPartyCommandOutput>;
   deregisterWebhookWithThirdParty(
     args: DeregisterWebhookWithThirdPartyCommandInput,
-    cb: (err: any, data?: DeregisterWebhookWithThirdPartyCommandOutput) => void
+    cb: (err: any, data?: DeregisterWebhookWithThirdPartyCommandOutput) => void,
   ): void;
   deregisterWebhookWithThirdParty(
     args: DeregisterWebhookWithThirdPartyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterWebhookWithThirdPartyCommandOutput) => void
+    cb: (err: any, data?: DeregisterWebhookWithThirdPartyCommandOutput) => void,
   ): void;
 
   /**
@@ -359,16 +359,16 @@ export interface CodePipeline {
    */
   disableStageTransition(
     args: DisableStageTransitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisableStageTransitionCommandOutput>;
   disableStageTransition(
     args: DisableStageTransitionCommandInput,
-    cb: (err: any, data?: DisableStageTransitionCommandOutput) => void
+    cb: (err: any, data?: DisableStageTransitionCommandOutput) => void,
   ): void;
   disableStageTransition(
     args: DisableStageTransitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableStageTransitionCommandOutput) => void
+    cb: (err: any, data?: DisableStageTransitionCommandOutput) => void,
   ): void;
 
   /**
@@ -376,16 +376,16 @@ export interface CodePipeline {
    */
   enableStageTransition(
     args: EnableStageTransitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EnableStageTransitionCommandOutput>;
   enableStageTransition(
     args: EnableStageTransitionCommandInput,
-    cb: (err: any, data?: EnableStageTransitionCommandOutput) => void
+    cb: (err: any, data?: EnableStageTransitionCommandOutput) => void,
   ): void;
   enableStageTransition(
     args: EnableStageTransitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableStageTransitionCommandOutput) => void
+    cb: (err: any, data?: EnableStageTransitionCommandOutput) => void,
   ): void;
 
   /**
@@ -396,7 +396,7 @@ export interface CodePipeline {
   getActionType(
     args: GetActionTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetActionTypeCommandOutput) => void
+    cb: (err: any, data?: GetActionTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -407,7 +407,7 @@ export interface CodePipeline {
   getJobDetails(
     args: GetJobDetailsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetJobDetailsCommandOutput) => void
+    cb: (err: any, data?: GetJobDetailsCommandOutput) => void,
   ): void;
 
   /**
@@ -418,7 +418,7 @@ export interface CodePipeline {
   getPipeline(
     args: GetPipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPipelineCommandOutput) => void
+    cb: (err: any, data?: GetPipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -426,16 +426,16 @@ export interface CodePipeline {
    */
   getPipelineExecution(
     args: GetPipelineExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPipelineExecutionCommandOutput>;
   getPipelineExecution(
     args: GetPipelineExecutionCommandInput,
-    cb: (err: any, data?: GetPipelineExecutionCommandOutput) => void
+    cb: (err: any, data?: GetPipelineExecutionCommandOutput) => void,
   ): void;
   getPipelineExecution(
     args: GetPipelineExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPipelineExecutionCommandOutput) => void
+    cb: (err: any, data?: GetPipelineExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -443,16 +443,16 @@ export interface CodePipeline {
    */
   getPipelineState(
     args: GetPipelineStateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPipelineStateCommandOutput>;
   getPipelineState(
     args: GetPipelineStateCommandInput,
-    cb: (err: any, data?: GetPipelineStateCommandOutput) => void
+    cb: (err: any, data?: GetPipelineStateCommandOutput) => void,
   ): void;
   getPipelineState(
     args: GetPipelineStateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPipelineStateCommandOutput) => void
+    cb: (err: any, data?: GetPipelineStateCommandOutput) => void,
   ): void;
 
   /**
@@ -460,16 +460,16 @@ export interface CodePipeline {
    */
   getThirdPartyJobDetails(
     args: GetThirdPartyJobDetailsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetThirdPartyJobDetailsCommandOutput>;
   getThirdPartyJobDetails(
     args: GetThirdPartyJobDetailsCommandInput,
-    cb: (err: any, data?: GetThirdPartyJobDetailsCommandOutput) => void
+    cb: (err: any, data?: GetThirdPartyJobDetailsCommandOutput) => void,
   ): void;
   getThirdPartyJobDetails(
     args: GetThirdPartyJobDetailsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetThirdPartyJobDetailsCommandOutput) => void
+    cb: (err: any, data?: GetThirdPartyJobDetailsCommandOutput) => void,
   ): void;
 
   /**
@@ -477,16 +477,16 @@ export interface CodePipeline {
    */
   listActionExecutions(
     args: ListActionExecutionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListActionExecutionsCommandOutput>;
   listActionExecutions(
     args: ListActionExecutionsCommandInput,
-    cb: (err: any, data?: ListActionExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListActionExecutionsCommandOutput) => void,
   ): void;
   listActionExecutions(
     args: ListActionExecutionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListActionExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListActionExecutionsCommandOutput) => void,
   ): void;
 
   /**
@@ -495,13 +495,13 @@ export interface CodePipeline {
   listActionTypes(): Promise<ListActionTypesCommandOutput>;
   listActionTypes(
     args: ListActionTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListActionTypesCommandOutput>;
   listActionTypes(args: ListActionTypesCommandInput, cb: (err: any, data?: ListActionTypesCommandOutput) => void): void;
   listActionTypes(
     args: ListActionTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListActionTypesCommandOutput) => void
+    cb: (err: any, data?: ListActionTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -509,16 +509,16 @@ export interface CodePipeline {
    */
   listPipelineExecutions(
     args: ListPipelineExecutionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPipelineExecutionsCommandOutput>;
   listPipelineExecutions(
     args: ListPipelineExecutionsCommandInput,
-    cb: (err: any, data?: ListPipelineExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListPipelineExecutionsCommandOutput) => void,
   ): void;
   listPipelineExecutions(
     args: ListPipelineExecutionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPipelineExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListPipelineExecutionsCommandOutput) => void,
   ): void;
 
   /**
@@ -530,7 +530,7 @@ export interface CodePipeline {
   listPipelines(
     args: ListPipelinesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPipelinesCommandOutput) => void
+    cb: (err: any, data?: ListPipelinesCommandOutput) => void,
   ): void;
 
   /**
@@ -538,16 +538,16 @@ export interface CodePipeline {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -559,7 +559,7 @@ export interface CodePipeline {
   listWebhooks(
     args: ListWebhooksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWebhooksCommandOutput) => void
+    cb: (err: any, data?: ListWebhooksCommandOutput) => void,
   ): void;
 
   /**
@@ -570,7 +570,7 @@ export interface CodePipeline {
   pollForJobs(
     args: PollForJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PollForJobsCommandOutput) => void
+    cb: (err: any, data?: PollForJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -578,16 +578,16 @@ export interface CodePipeline {
    */
   pollForThirdPartyJobs(
     args: PollForThirdPartyJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PollForThirdPartyJobsCommandOutput>;
   pollForThirdPartyJobs(
     args: PollForThirdPartyJobsCommandInput,
-    cb: (err: any, data?: PollForThirdPartyJobsCommandOutput) => void
+    cb: (err: any, data?: PollForThirdPartyJobsCommandOutput) => void,
   ): void;
   pollForThirdPartyJobs(
     args: PollForThirdPartyJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PollForThirdPartyJobsCommandOutput) => void
+    cb: (err: any, data?: PollForThirdPartyJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -595,16 +595,16 @@ export interface CodePipeline {
    */
   putActionRevision(
     args: PutActionRevisionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutActionRevisionCommandOutput>;
   putActionRevision(
     args: PutActionRevisionCommandInput,
-    cb: (err: any, data?: PutActionRevisionCommandOutput) => void
+    cb: (err: any, data?: PutActionRevisionCommandOutput) => void,
   ): void;
   putActionRevision(
     args: PutActionRevisionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutActionRevisionCommandOutput) => void
+    cb: (err: any, data?: PutActionRevisionCommandOutput) => void,
   ): void;
 
   /**
@@ -612,16 +612,16 @@ export interface CodePipeline {
    */
   putApprovalResult(
     args: PutApprovalResultCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutApprovalResultCommandOutput>;
   putApprovalResult(
     args: PutApprovalResultCommandInput,
-    cb: (err: any, data?: PutApprovalResultCommandOutput) => void
+    cb: (err: any, data?: PutApprovalResultCommandOutput) => void,
   ): void;
   putApprovalResult(
     args: PutApprovalResultCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutApprovalResultCommandOutput) => void
+    cb: (err: any, data?: PutApprovalResultCommandOutput) => void,
   ): void;
 
   /**
@@ -629,16 +629,16 @@ export interface CodePipeline {
    */
   putJobFailureResult(
     args: PutJobFailureResultCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutJobFailureResultCommandOutput>;
   putJobFailureResult(
     args: PutJobFailureResultCommandInput,
-    cb: (err: any, data?: PutJobFailureResultCommandOutput) => void
+    cb: (err: any, data?: PutJobFailureResultCommandOutput) => void,
   ): void;
   putJobFailureResult(
     args: PutJobFailureResultCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutJobFailureResultCommandOutput) => void
+    cb: (err: any, data?: PutJobFailureResultCommandOutput) => void,
   ): void;
 
   /**
@@ -646,16 +646,16 @@ export interface CodePipeline {
    */
   putJobSuccessResult(
     args: PutJobSuccessResultCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutJobSuccessResultCommandOutput>;
   putJobSuccessResult(
     args: PutJobSuccessResultCommandInput,
-    cb: (err: any, data?: PutJobSuccessResultCommandOutput) => void
+    cb: (err: any, data?: PutJobSuccessResultCommandOutput) => void,
   ): void;
   putJobSuccessResult(
     args: PutJobSuccessResultCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutJobSuccessResultCommandOutput) => void
+    cb: (err: any, data?: PutJobSuccessResultCommandOutput) => void,
   ): void;
 
   /**
@@ -663,16 +663,16 @@ export interface CodePipeline {
    */
   putThirdPartyJobFailureResult(
     args: PutThirdPartyJobFailureResultCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutThirdPartyJobFailureResultCommandOutput>;
   putThirdPartyJobFailureResult(
     args: PutThirdPartyJobFailureResultCommandInput,
-    cb: (err: any, data?: PutThirdPartyJobFailureResultCommandOutput) => void
+    cb: (err: any, data?: PutThirdPartyJobFailureResultCommandOutput) => void,
   ): void;
   putThirdPartyJobFailureResult(
     args: PutThirdPartyJobFailureResultCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutThirdPartyJobFailureResultCommandOutput) => void
+    cb: (err: any, data?: PutThirdPartyJobFailureResultCommandOutput) => void,
   ): void;
 
   /**
@@ -680,16 +680,16 @@ export interface CodePipeline {
    */
   putThirdPartyJobSuccessResult(
     args: PutThirdPartyJobSuccessResultCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutThirdPartyJobSuccessResultCommandOutput>;
   putThirdPartyJobSuccessResult(
     args: PutThirdPartyJobSuccessResultCommandInput,
-    cb: (err: any, data?: PutThirdPartyJobSuccessResultCommandOutput) => void
+    cb: (err: any, data?: PutThirdPartyJobSuccessResultCommandOutput) => void,
   ): void;
   putThirdPartyJobSuccessResult(
     args: PutThirdPartyJobSuccessResultCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutThirdPartyJobSuccessResultCommandOutput) => void
+    cb: (err: any, data?: PutThirdPartyJobSuccessResultCommandOutput) => void,
   ): void;
 
   /**
@@ -700,7 +700,7 @@ export interface CodePipeline {
   putWebhook(
     args: PutWebhookCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutWebhookCommandOutput) => void
+    cb: (err: any, data?: PutWebhookCommandOutput) => void,
   ): void;
 
   /**
@@ -709,16 +709,16 @@ export interface CodePipeline {
   registerWebhookWithThirdParty(): Promise<RegisterWebhookWithThirdPartyCommandOutput>;
   registerWebhookWithThirdParty(
     args: RegisterWebhookWithThirdPartyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterWebhookWithThirdPartyCommandOutput>;
   registerWebhookWithThirdParty(
     args: RegisterWebhookWithThirdPartyCommandInput,
-    cb: (err: any, data?: RegisterWebhookWithThirdPartyCommandOutput) => void
+    cb: (err: any, data?: RegisterWebhookWithThirdPartyCommandOutput) => void,
   ): void;
   registerWebhookWithThirdParty(
     args: RegisterWebhookWithThirdPartyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterWebhookWithThirdPartyCommandOutput) => void
+    cb: (err: any, data?: RegisterWebhookWithThirdPartyCommandOutput) => void,
   ): void;
 
   /**
@@ -726,16 +726,16 @@ export interface CodePipeline {
    */
   retryStageExecution(
     args: RetryStageExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RetryStageExecutionCommandOutput>;
   retryStageExecution(
     args: RetryStageExecutionCommandInput,
-    cb: (err: any, data?: RetryStageExecutionCommandOutput) => void
+    cb: (err: any, data?: RetryStageExecutionCommandOutput) => void,
   ): void;
   retryStageExecution(
     args: RetryStageExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RetryStageExecutionCommandOutput) => void
+    cb: (err: any, data?: RetryStageExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -746,7 +746,7 @@ export interface CodePipeline {
   rollbackStage(
     args: RollbackStageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RollbackStageCommandOutput) => void
+    cb: (err: any, data?: RollbackStageCommandOutput) => void,
   ): void;
 
   /**
@@ -754,16 +754,16 @@ export interface CodePipeline {
    */
   startPipelineExecution(
     args: StartPipelineExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartPipelineExecutionCommandOutput>;
   startPipelineExecution(
     args: StartPipelineExecutionCommandInput,
-    cb: (err: any, data?: StartPipelineExecutionCommandOutput) => void
+    cb: (err: any, data?: StartPipelineExecutionCommandOutput) => void,
   ): void;
   startPipelineExecution(
     args: StartPipelineExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartPipelineExecutionCommandOutput) => void
+    cb: (err: any, data?: StartPipelineExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -771,16 +771,16 @@ export interface CodePipeline {
    */
   stopPipelineExecution(
     args: StopPipelineExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopPipelineExecutionCommandOutput>;
   stopPipelineExecution(
     args: StopPipelineExecutionCommandInput,
-    cb: (err: any, data?: StopPipelineExecutionCommandOutput) => void
+    cb: (err: any, data?: StopPipelineExecutionCommandOutput) => void,
   ): void;
   stopPipelineExecution(
     args: StopPipelineExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopPipelineExecutionCommandOutput) => void
+    cb: (err: any, data?: StopPipelineExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -791,7 +791,7 @@ export interface CodePipeline {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -802,7 +802,7 @@ export interface CodePipeline {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -810,16 +810,16 @@ export interface CodePipeline {
    */
   updateActionType(
     args: UpdateActionTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateActionTypeCommandOutput>;
   updateActionType(
     args: UpdateActionTypeCommandInput,
-    cb: (err: any, data?: UpdateActionTypeCommandOutput) => void
+    cb: (err: any, data?: UpdateActionTypeCommandOutput) => void,
   ): void;
   updateActionType(
     args: UpdateActionTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateActionTypeCommandOutput) => void
+    cb: (err: any, data?: UpdateActionTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -827,13 +827,13 @@ export interface CodePipeline {
    */
   updatePipeline(
     args: UpdatePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePipelineCommandOutput>;
   updatePipeline(args: UpdatePipelineCommandInput, cb: (err: any, data?: UpdatePipelineCommandOutput) => void): void;
   updatePipeline(
     args: UpdatePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePipelineCommandOutput) => void
+    cb: (err: any, data?: UpdatePipelineCommandOutput) => void,
   ): void;
 }
 

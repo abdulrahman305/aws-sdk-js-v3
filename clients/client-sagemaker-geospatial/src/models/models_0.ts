@@ -3747,7 +3747,7 @@ export const ListVectorEnrichmentJobOutputFilterSensitiveLog = (obj: ListVectorE
  * @internal
  */
 export const RasterDataCollectionQueryWithBandFilterInputFilterSensitiveLog = (
-  obj: RasterDataCollectionQueryWithBandFilterInput
+  obj: RasterDataCollectionQueryWithBandFilterInput,
 ): any => ({
   ...obj,
   ...(obj.TimeRangeFilter && { TimeRangeFilter: SENSITIVE_STRING }),
@@ -3762,7 +3762,7 @@ export const SearchRasterDataCollectionInputFilterSensitiveLog = (obj: SearchRas
   ...obj,
   ...(obj.RasterDataCollectionQuery && {
     RasterDataCollectionQuery: RasterDataCollectionQueryWithBandFilterInputFilterSensitiveLog(
-      obj.RasterDataCollectionQuery
+      obj.RasterDataCollectionQuery,
     ),
   }),
   ...(obj.NextToken && { NextToken: SENSITIVE_STRING }),

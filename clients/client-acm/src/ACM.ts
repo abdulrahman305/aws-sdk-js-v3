@@ -103,16 +103,16 @@ export interface ACM {
    */
   addTagsToCertificate(
     args: AddTagsToCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AddTagsToCertificateCommandOutput>;
   addTagsToCertificate(
     args: AddTagsToCertificateCommandInput,
-    cb: (err: any, data?: AddTagsToCertificateCommandOutput) => void
+    cb: (err: any, data?: AddTagsToCertificateCommandOutput) => void,
   ): void;
   addTagsToCertificate(
     args: AddTagsToCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddTagsToCertificateCommandOutput) => void
+    cb: (err: any, data?: AddTagsToCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -120,16 +120,16 @@ export interface ACM {
    */
   deleteCertificate(
     args: DeleteCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCertificateCommandOutput>;
   deleteCertificate(
     args: DeleteCertificateCommandInput,
-    cb: (err: any, data?: DeleteCertificateCommandOutput) => void
+    cb: (err: any, data?: DeleteCertificateCommandOutput) => void,
   ): void;
   deleteCertificate(
     args: DeleteCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCertificateCommandOutput) => void
+    cb: (err: any, data?: DeleteCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -137,16 +137,16 @@ export interface ACM {
    */
   describeCertificate(
     args: DescribeCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeCertificateCommandOutput>;
   describeCertificate(
     args: DescribeCertificateCommandInput,
-    cb: (err: any, data?: DescribeCertificateCommandOutput) => void
+    cb: (err: any, data?: DescribeCertificateCommandOutput) => void,
   ): void;
   describeCertificate(
     args: DescribeCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeCertificateCommandOutput) => void
+    cb: (err: any, data?: DescribeCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -154,16 +154,16 @@ export interface ACM {
    */
   exportCertificate(
     args: ExportCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExportCertificateCommandOutput>;
   exportCertificate(
     args: ExportCertificateCommandInput,
-    cb: (err: any, data?: ExportCertificateCommandOutput) => void
+    cb: (err: any, data?: ExportCertificateCommandOutput) => void,
   ): void;
   exportCertificate(
     args: ExportCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExportCertificateCommandOutput) => void
+    cb: (err: any, data?: ExportCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -172,16 +172,16 @@ export interface ACM {
   getAccountConfiguration(): Promise<GetAccountConfigurationCommandOutput>;
   getAccountConfiguration(
     args: GetAccountConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAccountConfigurationCommandOutput>;
   getAccountConfiguration(
     args: GetAccountConfigurationCommandInput,
-    cb: (err: any, data?: GetAccountConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetAccountConfigurationCommandOutput) => void,
   ): void;
   getAccountConfiguration(
     args: GetAccountConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAccountConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetAccountConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -189,13 +189,13 @@ export interface ACM {
    */
   getCertificate(
     args: GetCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCertificateCommandOutput>;
   getCertificate(args: GetCertificateCommandInput, cb: (err: any, data?: GetCertificateCommandOutput) => void): void;
   getCertificate(
     args: GetCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCertificateCommandOutput) => void
+    cb: (err: any, data?: GetCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -203,16 +203,16 @@ export interface ACM {
    */
   importCertificate(
     args: ImportCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ImportCertificateCommandOutput>;
   importCertificate(
     args: ImportCertificateCommandInput,
-    cb: (err: any, data?: ImportCertificateCommandOutput) => void
+    cb: (err: any, data?: ImportCertificateCommandOutput) => void,
   ): void;
   importCertificate(
     args: ImportCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportCertificateCommandOutput) => void
+    cb: (err: any, data?: ImportCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -221,16 +221,16 @@ export interface ACM {
   listCertificates(): Promise<ListCertificatesCommandOutput>;
   listCertificates(
     args: ListCertificatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCertificatesCommandOutput>;
   listCertificates(
     args: ListCertificatesCommandInput,
-    cb: (err: any, data?: ListCertificatesCommandOutput) => void
+    cb: (err: any, data?: ListCertificatesCommandOutput) => void,
   ): void;
   listCertificates(
     args: ListCertificatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCertificatesCommandOutput) => void
+    cb: (err: any, data?: ListCertificatesCommandOutput) => void,
   ): void;
 
   /**
@@ -238,16 +238,16 @@ export interface ACM {
    */
   listTagsForCertificate(
     args: ListTagsForCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForCertificateCommandOutput>;
   listTagsForCertificate(
     args: ListTagsForCertificateCommandInput,
-    cb: (err: any, data?: ListTagsForCertificateCommandOutput) => void
+    cb: (err: any, data?: ListTagsForCertificateCommandOutput) => void,
   ): void;
   listTagsForCertificate(
     args: ListTagsForCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForCertificateCommandOutput) => void
+    cb: (err: any, data?: ListTagsForCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -255,16 +255,16 @@ export interface ACM {
    */
   putAccountConfiguration(
     args: PutAccountConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAccountConfigurationCommandOutput>;
   putAccountConfiguration(
     args: PutAccountConfigurationCommandInput,
-    cb: (err: any, data?: PutAccountConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutAccountConfigurationCommandOutput) => void,
   ): void;
   putAccountConfiguration(
     args: PutAccountConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAccountConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutAccountConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -272,16 +272,16 @@ export interface ACM {
    */
   removeTagsFromCertificate(
     args: RemoveTagsFromCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveTagsFromCertificateCommandOutput>;
   removeTagsFromCertificate(
     args: RemoveTagsFromCertificateCommandInput,
-    cb: (err: any, data?: RemoveTagsFromCertificateCommandOutput) => void
+    cb: (err: any, data?: RemoveTagsFromCertificateCommandOutput) => void,
   ): void;
   removeTagsFromCertificate(
     args: RemoveTagsFromCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveTagsFromCertificateCommandOutput) => void
+    cb: (err: any, data?: RemoveTagsFromCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -289,16 +289,16 @@ export interface ACM {
    */
   renewCertificate(
     args: RenewCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RenewCertificateCommandOutput>;
   renewCertificate(
     args: RenewCertificateCommandInput,
-    cb: (err: any, data?: RenewCertificateCommandOutput) => void
+    cb: (err: any, data?: RenewCertificateCommandOutput) => void,
   ): void;
   renewCertificate(
     args: RenewCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RenewCertificateCommandOutput) => void
+    cb: (err: any, data?: RenewCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -306,16 +306,16 @@ export interface ACM {
    */
   requestCertificate(
     args: RequestCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RequestCertificateCommandOutput>;
   requestCertificate(
     args: RequestCertificateCommandInput,
-    cb: (err: any, data?: RequestCertificateCommandOutput) => void
+    cb: (err: any, data?: RequestCertificateCommandOutput) => void,
   ): void;
   requestCertificate(
     args: RequestCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RequestCertificateCommandOutput) => void
+    cb: (err: any, data?: RequestCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -323,16 +323,16 @@ export interface ACM {
    */
   resendValidationEmail(
     args: ResendValidationEmailCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ResendValidationEmailCommandOutput>;
   resendValidationEmail(
     args: ResendValidationEmailCommandInput,
-    cb: (err: any, data?: ResendValidationEmailCommandOutput) => void
+    cb: (err: any, data?: ResendValidationEmailCommandOutput) => void,
   ): void;
   resendValidationEmail(
     args: ResendValidationEmailCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ResendValidationEmailCommandOutput) => void
+    cb: (err: any, data?: ResendValidationEmailCommandOutput) => void,
   ): void;
 
   /**
@@ -340,16 +340,16 @@ export interface ACM {
    */
   updateCertificateOptions(
     args: UpdateCertificateOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateCertificateOptionsCommandOutput>;
   updateCertificateOptions(
     args: UpdateCertificateOptionsCommandInput,
-    cb: (err: any, data?: UpdateCertificateOptionsCommandOutput) => void
+    cb: (err: any, data?: UpdateCertificateOptionsCommandOutput) => void,
   ): void;
   updateCertificateOptions(
     args: UpdateCertificateOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateCertificateOptionsCommandOutput) => void
+    cb: (err: any, data?: UpdateCertificateOptionsCommandOutput) => void,
   ): void;
 }
 

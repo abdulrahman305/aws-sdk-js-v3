@@ -59,7 +59,7 @@ upload.on("httpUploadProgress", (progress) => {
 
   console.log(
     progress.loaded, // Bytes uploaded so far.
-    progress.total // Total bytes. Divide these two for progress percentage.
+    progress.total, // Total bytes. Divide these two for progress percentage.
   );
 });
 
@@ -82,10 +82,10 @@ handler.on(XhrHttpHandler.EVENTS.PROGRESS, (progress, request) => {
   if (progress.lengthComputable) {
     console.log(
       progress.loaded, // bytes
-      progress.total // bytes
+      progress.total, // bytes
     );
     console.log(
-      request // contains the request information to differentiate
+      request, // contains the request information to differentiate
       // requests from the same handler.
     );
   }

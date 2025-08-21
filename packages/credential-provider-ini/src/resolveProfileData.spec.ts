@@ -20,7 +20,7 @@ describe(resolveProfileData.name, () => {
     roleAssumerWithWebIdentity: jest.fn(),
   };
   const mockError = new CredentialsProviderError(
-    `Could not resolve credentials using profile: [${mockProfileName}] in configuration/credentials file(s).`
+    `Could not resolve credentials using profile: [${mockProfileName}] in configuration/credentials file(s).`,
   );
 
   const mockCreds = {

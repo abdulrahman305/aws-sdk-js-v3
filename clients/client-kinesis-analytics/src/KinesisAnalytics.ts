@@ -129,16 +129,16 @@ export interface KinesisAnalytics {
    */
   addApplicationCloudWatchLoggingOption(
     args: AddApplicationCloudWatchLoggingOptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AddApplicationCloudWatchLoggingOptionCommandOutput>;
   addApplicationCloudWatchLoggingOption(
     args: AddApplicationCloudWatchLoggingOptionCommandInput,
-    cb: (err: any, data?: AddApplicationCloudWatchLoggingOptionCommandOutput) => void
+    cb: (err: any, data?: AddApplicationCloudWatchLoggingOptionCommandOutput) => void,
   ): void;
   addApplicationCloudWatchLoggingOption(
     args: AddApplicationCloudWatchLoggingOptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddApplicationCloudWatchLoggingOptionCommandOutput) => void
+    cb: (err: any, data?: AddApplicationCloudWatchLoggingOptionCommandOutput) => void,
   ): void;
 
   /**
@@ -146,16 +146,16 @@ export interface KinesisAnalytics {
    */
   addApplicationInput(
     args: AddApplicationInputCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AddApplicationInputCommandOutput>;
   addApplicationInput(
     args: AddApplicationInputCommandInput,
-    cb: (err: any, data?: AddApplicationInputCommandOutput) => void
+    cb: (err: any, data?: AddApplicationInputCommandOutput) => void,
   ): void;
   addApplicationInput(
     args: AddApplicationInputCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddApplicationInputCommandOutput) => void
+    cb: (err: any, data?: AddApplicationInputCommandOutput) => void,
   ): void;
 
   /**
@@ -163,16 +163,16 @@ export interface KinesisAnalytics {
    */
   addApplicationInputProcessingConfiguration(
     args: AddApplicationInputProcessingConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AddApplicationInputProcessingConfigurationCommandOutput>;
   addApplicationInputProcessingConfiguration(
     args: AddApplicationInputProcessingConfigurationCommandInput,
-    cb: (err: any, data?: AddApplicationInputProcessingConfigurationCommandOutput) => void
+    cb: (err: any, data?: AddApplicationInputProcessingConfigurationCommandOutput) => void,
   ): void;
   addApplicationInputProcessingConfiguration(
     args: AddApplicationInputProcessingConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddApplicationInputProcessingConfigurationCommandOutput) => void
+    cb: (err: any, data?: AddApplicationInputProcessingConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -180,16 +180,16 @@ export interface KinesisAnalytics {
    */
   addApplicationOutput(
     args: AddApplicationOutputCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AddApplicationOutputCommandOutput>;
   addApplicationOutput(
     args: AddApplicationOutputCommandInput,
-    cb: (err: any, data?: AddApplicationOutputCommandOutput) => void
+    cb: (err: any, data?: AddApplicationOutputCommandOutput) => void,
   ): void;
   addApplicationOutput(
     args: AddApplicationOutputCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddApplicationOutputCommandOutput) => void
+    cb: (err: any, data?: AddApplicationOutputCommandOutput) => void,
   ): void;
 
   /**
@@ -197,16 +197,16 @@ export interface KinesisAnalytics {
    */
   addApplicationReferenceDataSource(
     args: AddApplicationReferenceDataSourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AddApplicationReferenceDataSourceCommandOutput>;
   addApplicationReferenceDataSource(
     args: AddApplicationReferenceDataSourceCommandInput,
-    cb: (err: any, data?: AddApplicationReferenceDataSourceCommandOutput) => void
+    cb: (err: any, data?: AddApplicationReferenceDataSourceCommandOutput) => void,
   ): void;
   addApplicationReferenceDataSource(
     args: AddApplicationReferenceDataSourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddApplicationReferenceDataSourceCommandOutput) => void
+    cb: (err: any, data?: AddApplicationReferenceDataSourceCommandOutput) => void,
   ): void;
 
   /**
@@ -214,16 +214,16 @@ export interface KinesisAnalytics {
    */
   createApplication(
     args: CreateApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateApplicationCommandOutput>;
   createApplication(
     args: CreateApplicationCommandInput,
-    cb: (err: any, data?: CreateApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationCommandOutput) => void,
   ): void;
   createApplication(
     args: CreateApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -231,16 +231,16 @@ export interface KinesisAnalytics {
    */
   deleteApplication(
     args: DeleteApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApplicationCommandOutput>;
   deleteApplication(
     args: DeleteApplicationCommandInput,
-    cb: (err: any, data?: DeleteApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCommandOutput) => void,
   ): void;
   deleteApplication(
     args: DeleteApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -248,16 +248,16 @@ export interface KinesisAnalytics {
    */
   deleteApplicationCloudWatchLoggingOption(
     args: DeleteApplicationCloudWatchLoggingOptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApplicationCloudWatchLoggingOptionCommandOutput>;
   deleteApplicationCloudWatchLoggingOption(
     args: DeleteApplicationCloudWatchLoggingOptionCommandInput,
-    cb: (err: any, data?: DeleteApplicationCloudWatchLoggingOptionCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCloudWatchLoggingOptionCommandOutput) => void,
   ): void;
   deleteApplicationCloudWatchLoggingOption(
     args: DeleteApplicationCloudWatchLoggingOptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApplicationCloudWatchLoggingOptionCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCloudWatchLoggingOptionCommandOutput) => void,
   ): void;
 
   /**
@@ -265,16 +265,16 @@ export interface KinesisAnalytics {
    */
   deleteApplicationInputProcessingConfiguration(
     args: DeleteApplicationInputProcessingConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApplicationInputProcessingConfigurationCommandOutput>;
   deleteApplicationInputProcessingConfiguration(
     args: DeleteApplicationInputProcessingConfigurationCommandInput,
-    cb: (err: any, data?: DeleteApplicationInputProcessingConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationInputProcessingConfigurationCommandOutput) => void,
   ): void;
   deleteApplicationInputProcessingConfiguration(
     args: DeleteApplicationInputProcessingConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApplicationInputProcessingConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationInputProcessingConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -282,16 +282,16 @@ export interface KinesisAnalytics {
    */
   deleteApplicationOutput(
     args: DeleteApplicationOutputCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApplicationOutputCommandOutput>;
   deleteApplicationOutput(
     args: DeleteApplicationOutputCommandInput,
-    cb: (err: any, data?: DeleteApplicationOutputCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationOutputCommandOutput) => void,
   ): void;
   deleteApplicationOutput(
     args: DeleteApplicationOutputCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApplicationOutputCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationOutputCommandOutput) => void,
   ): void;
 
   /**
@@ -299,16 +299,16 @@ export interface KinesisAnalytics {
    */
   deleteApplicationReferenceDataSource(
     args: DeleteApplicationReferenceDataSourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApplicationReferenceDataSourceCommandOutput>;
   deleteApplicationReferenceDataSource(
     args: DeleteApplicationReferenceDataSourceCommandInput,
-    cb: (err: any, data?: DeleteApplicationReferenceDataSourceCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationReferenceDataSourceCommandOutput) => void,
   ): void;
   deleteApplicationReferenceDataSource(
     args: DeleteApplicationReferenceDataSourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApplicationReferenceDataSourceCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationReferenceDataSourceCommandOutput) => void,
   ): void;
 
   /**
@@ -316,16 +316,16 @@ export interface KinesisAnalytics {
    */
   describeApplication(
     args: DescribeApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeApplicationCommandOutput>;
   describeApplication(
     args: DescribeApplicationCommandInput,
-    cb: (err: any, data?: DescribeApplicationCommandOutput) => void
+    cb: (err: any, data?: DescribeApplicationCommandOutput) => void,
   ): void;
   describeApplication(
     args: DescribeApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeApplicationCommandOutput) => void
+    cb: (err: any, data?: DescribeApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -334,16 +334,16 @@ export interface KinesisAnalytics {
   discoverInputSchema(): Promise<DiscoverInputSchemaCommandOutput>;
   discoverInputSchema(
     args: DiscoverInputSchemaCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DiscoverInputSchemaCommandOutput>;
   discoverInputSchema(
     args: DiscoverInputSchemaCommandInput,
-    cb: (err: any, data?: DiscoverInputSchemaCommandOutput) => void
+    cb: (err: any, data?: DiscoverInputSchemaCommandOutput) => void,
   ): void;
   discoverInputSchema(
     args: DiscoverInputSchemaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DiscoverInputSchemaCommandOutput) => void
+    cb: (err: any, data?: DiscoverInputSchemaCommandOutput) => void,
   ): void;
 
   /**
@@ -352,16 +352,16 @@ export interface KinesisAnalytics {
   listApplications(): Promise<ListApplicationsCommandOutput>;
   listApplications(
     args: ListApplicationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApplicationsCommandOutput>;
   listApplications(
     args: ListApplicationsCommandInput,
-    cb: (err: any, data?: ListApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationsCommandOutput) => void,
   ): void;
   listApplications(
     args: ListApplicationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationsCommandOutput) => void,
   ): void;
 
   /**
@@ -369,16 +369,16 @@ export interface KinesisAnalytics {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -386,16 +386,16 @@ export interface KinesisAnalytics {
    */
   startApplication(
     args: StartApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartApplicationCommandOutput>;
   startApplication(
     args: StartApplicationCommandInput,
-    cb: (err: any, data?: StartApplicationCommandOutput) => void
+    cb: (err: any, data?: StartApplicationCommandOutput) => void,
   ): void;
   startApplication(
     args: StartApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartApplicationCommandOutput) => void
+    cb: (err: any, data?: StartApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -403,13 +403,13 @@ export interface KinesisAnalytics {
    */
   stopApplication(
     args: StopApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopApplicationCommandOutput>;
   stopApplication(args: StopApplicationCommandInput, cb: (err: any, data?: StopApplicationCommandOutput) => void): void;
   stopApplication(
     args: StopApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopApplicationCommandOutput) => void
+    cb: (err: any, data?: StopApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -420,7 +420,7 @@ export interface KinesisAnalytics {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -431,7 +431,7 @@ export interface KinesisAnalytics {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -439,16 +439,16 @@ export interface KinesisAnalytics {
    */
   updateApplication(
     args: UpdateApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApplicationCommandOutput>;
   updateApplication(
     args: UpdateApplicationCommandInput,
-    cb: (err: any, data?: UpdateApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationCommandOutput) => void,
   ): void;
   updateApplication(
     args: UpdateApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationCommandOutput) => void,
   ): void;
 }
 

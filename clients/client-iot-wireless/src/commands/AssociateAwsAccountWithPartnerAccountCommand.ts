@@ -121,7 +121,7 @@ export class AssociateAwsAccountWithPartnerAccountCommand extends $Command
   .n("IoTWirelessClient", "AssociateAwsAccountWithPartnerAccountCommand")
   .f(
     AssociateAwsAccountWithPartnerAccountRequestFilterSensitiveLog,
-    AssociateAwsAccountWithPartnerAccountResponseFilterSensitiveLog
+    AssociateAwsAccountWithPartnerAccountResponseFilterSensitiveLog,
   )
   .ser(se_AssociateAwsAccountWithPartnerAccountCommand)
   .de(de_AssociateAwsAccountWithPartnerAccountCommand)

@@ -190,7 +190,7 @@ it("Ec2QueryDateTimeWithNegativeOffset:Response", async () => {
           <datetime>2019-12-16T22:48:18-01:00</datetime>
           <RequestId>requestid</RequestId>
       </DatetimeOffsetsResponse>
-      `
+      `,
     ),
   });
 
@@ -232,7 +232,7 @@ it("Ec2QueryDateTimeWithPositiveOffset:Response", async () => {
           <datetime>2019-12-17T00:48:18+01:00</datetime>
           <RequestId>requestid</RequestId>
       </DatetimeOffsetsResponse>
-      `
+      `,
     ),
   });
 
@@ -307,7 +307,7 @@ it("Ec2QueryEmptyInputAndEmptyOutput:Response", async () => {
       `<EmptyInputAndEmptyOutputResponse xmlns="https://example.com/">
           <RequestId>requestid</RequestId>
       </EmptyInputAndEmptyOutputResponse>
-      `
+      `,
     ),
   });
 
@@ -421,7 +421,7 @@ it("Ec2QueryDateTimeWithFractionalSeconds:Response", async () => {
           <datetime>2000-01-02T20:34:56.123Z</datetime>
           <RequestId>requestid</RequestId>
       </FractionalSecondsResponse>
-      `
+      `,
     ),
   });
 
@@ -463,7 +463,7 @@ it("Ec2GreetingWithErrors:Response", async () => {
           <greeting>Hello</greeting>
           <RequestId>requestid</RequestId>
       </GreetingWithErrorsResponse>
-      `
+      `,
     ),
   });
 
@@ -510,7 +510,7 @@ it("Ec2InvalidGreetingError:Error:GreetingWithErrors", async () => {
           </Errors>
           <RequestId>foo-id</RequestId>
       </Response>
-      `
+      `,
     ),
   });
 
@@ -563,7 +563,7 @@ it("Ec2ComplexError:Error:GreetingWithErrors", async () => {
           </Errors>
           <RequestId>foo-id</RequestId>
       </Response>
-      `
+      `,
     ),
   });
 
@@ -646,7 +646,7 @@ it("Ec2IgnoresWrappingXmlName:Response", async () => {
           <foo>bar</foo>
           <RequestId>requestid</RequestId>
       </IgnoresWrappingXmlNameResponse>
-      `
+      `,
     ),
   });
 
@@ -766,7 +766,7 @@ it("Ec2QueryNoInputAndOutput:Response", async () => {
       `<NoInputAndOutputResponse xmlns="https://example.com/">
           <RequestId>requestid</RequestId>
       </NoInputAndOutputResponse>
-      `
+      `,
     ),
   });
 
@@ -1182,7 +1182,7 @@ it("Ec2RecursiveShapes:Response", async () => {
           </nested>
           <RequestId>requestid</RequestId>
       </RecursiveXmlShapesResponse>
-      `
+      `,
     ),
   });
 
@@ -1738,7 +1738,7 @@ it("Ec2SimpleScalarProperties:Response", async () => {
           <DoubleDribble>6.5</DoubleDribble>
           <RequestId>requestid</RequestId>
       </SimpleScalarXmlPropertiesResponse>
-      `
+      `,
     ),
   });
 
@@ -1798,7 +1798,7 @@ it("Ec2QuerySupportsNaNFloatOutputs:Response", async () => {
           <floatValue>NaN</floatValue>
           <DoubleDribble>NaN</DoubleDribble>
       </SimpleScalarXmlPropertiesResponse>
-      `
+      `,
     ),
   });
 
@@ -1842,7 +1842,7 @@ it("Ec2QuerySupportsInfinityFloatOutputs:Response", async () => {
           <floatValue>Infinity</floatValue>
           <DoubleDribble>Infinity</DoubleDribble>
       </SimpleScalarXmlPropertiesResponse>
-      `
+      `,
     ),
   });
 
@@ -1886,7 +1886,7 @@ it("Ec2QuerySupportsNegativeInfinityFloatOutputs:Response", async () => {
           <floatValue>-Infinity</floatValue>
           <DoubleDribble>-Infinity</DoubleDribble>
       </SimpleScalarXmlPropertiesResponse>
-      `
+      `,
     ),
   });
 
@@ -1930,7 +1930,7 @@ it("Ec2XmlBlobs:Response", async () => {
           <data>dmFsdWU=</data>
           <RequestId>requestid</RequestId>
       </XmlBlobsResponse>
-      `
+      `,
     ),
   });
 
@@ -1972,7 +1972,7 @@ it("Ec2XmlEmptyBlobs:Response", async () => {
           <data></data>
           <RequestId>requestid</RequestId>
       </XmlEmptyBlobsResponse>
-      `
+      `,
     ),
   });
 
@@ -2014,7 +2014,7 @@ it("Ec2XmlEmptySelfClosedBlobs:Response", async () => {
           <data/>
           <RequestId>requestid</RequestId>
       </XmlEmptyBlobsResponse>
-      `
+      `,
     ),
   });
 
@@ -2056,7 +2056,7 @@ it("Ec2XmlEmptyLists:Response", async () => {
         <stringList/>
         <stringSet></stringSet>
       </XmlEmptyListsResponse>
-      `
+      `,
     ),
   });
 
@@ -2120,7 +2120,7 @@ it("Ec2XmlEnums:Response", async () => {
           </fooEnumMap>
           <RequestId>requestid</RequestId>
       </XmlEnumsResponse>
-      `
+      `,
     ),
   });
 
@@ -2196,7 +2196,7 @@ it("Ec2XmlIntEnums:Response", async () => {
           </intEnumMap>
           <RequestId>requestid</RequestId>
       </XmlIntEnumsResponse>
-      `
+      `,
     ),
   });
 
@@ -2319,7 +2319,7 @@ it("Ec2XmlLists:Response", async () => {
           </myStructureList>
           <RequestId>requestid</RequestId>
       </XmlListsResponse>
-      `
+      `,
     ),
   });
 
@@ -2417,7 +2417,7 @@ it("Ec2XmlNamespaces:Response", async () => {
           </nested>
           <RequestId>requestid</RequestId>
       </XmlNamespacesResponse>
-      `
+      `,
     ),
   });
 
@@ -2463,7 +2463,7 @@ it("Ec2XmlTimestamps:Response", async () => {
           <normal>2014-04-29T18:30:38Z</normal>
           <RequestId>requestid</RequestId>
       </XmlTimestampsResponse>
-      `
+      `,
     ),
   });
 
@@ -2505,7 +2505,7 @@ it("Ec2XmlTimestampsWithDateTimeFormat:Response", async () => {
           <dateTime>2014-04-29T18:30:38Z</dateTime>
           <RequestId>requestid</RequestId>
       </XmlTimestampsResponse>
-      `
+      `,
     ),
   });
 
@@ -2547,7 +2547,7 @@ it("Ec2XmlTimestampsWithDateTimeOnTargetFormat:Response", async () => {
           <dateTimeOnTarget>2014-04-29T18:30:38Z</dateTimeOnTarget>
           <RequestId>requestid</RequestId>
       </XmlTimestampsResponse>
-      `
+      `,
     ),
   });
 
@@ -2589,7 +2589,7 @@ it("Ec2XmlTimestampsWithEpochSecondsFormat:Response", async () => {
           <epochSeconds>1398796238</epochSeconds>
           <RequestId>requestid</RequestId>
       </XmlTimestampsResponse>
-      `
+      `,
     ),
   });
 
@@ -2631,7 +2631,7 @@ it("Ec2XmlTimestampsWithEpochSecondsOnTargetFormat:Response", async () => {
           <epochSecondsOnTarget>1398796238</epochSecondsOnTarget>
           <RequestId>requestid</RequestId>
       </XmlTimestampsResponse>
-      `
+      `,
     ),
   });
 
@@ -2673,7 +2673,7 @@ it("Ec2XmlTimestampsWithHttpDateFormat:Response", async () => {
           <httpDate>Tue, 29 Apr 2014 18:30:38 GMT</httpDate>
           <RequestId>requestid</RequestId>
       </XmlTimestampsResponse>
-      `
+      `,
     ),
   });
 
@@ -2715,7 +2715,7 @@ it("Ec2XmlTimestampsWithHttpDateOnTargetFormat:Response", async () => {
           <httpDateOnTarget>Tue, 29 Apr 2014 18:30:38 GMT</httpDateOnTarget>
           <RequestId>requestid</RequestId>
       </XmlTimestampsResponse>
-      `
+      `,
     ),
   });
 
@@ -2770,7 +2770,7 @@ const compareEquivalentFormUrlencodedBodies = (expectedBody: string, generatedBo
 const compareEquivalentUnknownTypeBodies = (
   utf8Encoder: __Encoder,
   expectedBody: string,
-  generatedBody: string | Uint8Array
+  generatedBody: string | Uint8Array,
 ): Object => {
   const expectedParts = { Value: expectedBody };
   const generatedParts = {

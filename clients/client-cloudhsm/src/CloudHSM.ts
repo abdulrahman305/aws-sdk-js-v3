@@ -93,16 +93,16 @@ export interface CloudHSM {
    */
   addTagsToResource(
     args: AddTagsToResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AddTagsToResourceCommandOutput>;
   addTagsToResource(
     args: AddTagsToResourceCommandInput,
-    cb: (err: any, data?: AddTagsToResourceCommandOutput) => void
+    cb: (err: any, data?: AddTagsToResourceCommandOutput) => void,
   ): void;
   addTagsToResource(
     args: AddTagsToResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddTagsToResourceCommandOutput) => void
+    cb: (err: any, data?: AddTagsToResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -113,7 +113,7 @@ export interface CloudHSM {
   createHapg(
     args: CreateHapgCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateHapgCommandOutput) => void
+    cb: (err: any, data?: CreateHapgCommandOutput) => void,
   ): void;
 
   /**
@@ -124,7 +124,7 @@ export interface CloudHSM {
   createHsm(
     args: CreateHsmCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateHsmCommandOutput) => void
+    cb: (err: any, data?: CreateHsmCommandOutput) => void,
   ): void;
 
   /**
@@ -132,16 +132,16 @@ export interface CloudHSM {
    */
   createLunaClient(
     args: CreateLunaClientCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateLunaClientCommandOutput>;
   createLunaClient(
     args: CreateLunaClientCommandInput,
-    cb: (err: any, data?: CreateLunaClientCommandOutput) => void
+    cb: (err: any, data?: CreateLunaClientCommandOutput) => void,
   ): void;
   createLunaClient(
     args: CreateLunaClientCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateLunaClientCommandOutput) => void
+    cb: (err: any, data?: CreateLunaClientCommandOutput) => void,
   ): void;
 
   /**
@@ -152,7 +152,7 @@ export interface CloudHSM {
   deleteHapg(
     args: DeleteHapgCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteHapgCommandOutput) => void
+    cb: (err: any, data?: DeleteHapgCommandOutput) => void,
   ): void;
 
   /**
@@ -163,7 +163,7 @@ export interface CloudHSM {
   deleteHsm(
     args: DeleteHsmCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteHsmCommandOutput) => void
+    cb: (err: any, data?: DeleteHsmCommandOutput) => void,
   ): void;
 
   /**
@@ -171,16 +171,16 @@ export interface CloudHSM {
    */
   deleteLunaClient(
     args: DeleteLunaClientCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteLunaClientCommandOutput>;
   deleteLunaClient(
     args: DeleteLunaClientCommandInput,
-    cb: (err: any, data?: DeleteLunaClientCommandOutput) => void
+    cb: (err: any, data?: DeleteLunaClientCommandOutput) => void,
   ): void;
   deleteLunaClient(
     args: DeleteLunaClientCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLunaClientCommandOutput) => void
+    cb: (err: any, data?: DeleteLunaClientCommandOutput) => void,
   ): void;
 
   /**
@@ -191,7 +191,7 @@ export interface CloudHSM {
   describeHapg(
     args: DescribeHapgCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeHapgCommandOutput) => void
+    cb: (err: any, data?: DescribeHapgCommandOutput) => void,
   ): void;
 
   /**
@@ -203,7 +203,7 @@ export interface CloudHSM {
   describeHsm(
     args: DescribeHsmCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeHsmCommandOutput) => void
+    cb: (err: any, data?: DescribeHsmCommandOutput) => void,
   ): void;
 
   /**
@@ -212,16 +212,16 @@ export interface CloudHSM {
   describeLunaClient(): Promise<DescribeLunaClientCommandOutput>;
   describeLunaClient(
     args: DescribeLunaClientCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLunaClientCommandOutput>;
   describeLunaClient(
     args: DescribeLunaClientCommandInput,
-    cb: (err: any, data?: DescribeLunaClientCommandOutput) => void
+    cb: (err: any, data?: DescribeLunaClientCommandOutput) => void,
   ): void;
   describeLunaClient(
     args: DescribeLunaClientCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLunaClientCommandOutput) => void
+    cb: (err: any, data?: DescribeLunaClientCommandOutput) => void,
   ): void;
 
   /**
@@ -232,7 +232,7 @@ export interface CloudHSM {
   getConfig(
     args: GetConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetConfigCommandOutput) => void
+    cb: (err: any, data?: GetConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -241,16 +241,16 @@ export interface CloudHSM {
   listAvailableZones(): Promise<ListAvailableZonesCommandOutput>;
   listAvailableZones(
     args: ListAvailableZonesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAvailableZonesCommandOutput>;
   listAvailableZones(
     args: ListAvailableZonesCommandInput,
-    cb: (err: any, data?: ListAvailableZonesCommandOutput) => void
+    cb: (err: any, data?: ListAvailableZonesCommandOutput) => void,
   ): void;
   listAvailableZones(
     args: ListAvailableZonesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAvailableZonesCommandOutput) => void
+    cb: (err: any, data?: ListAvailableZonesCommandOutput) => void,
   ): void;
 
   /**
@@ -262,7 +262,7 @@ export interface CloudHSM {
   listHapgs(
     args: ListHapgsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListHapgsCommandOutput) => void
+    cb: (err: any, data?: ListHapgsCommandOutput) => void,
   ): void;
 
   /**
@@ -274,7 +274,7 @@ export interface CloudHSM {
   listHsms(
     args: ListHsmsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListHsmsCommandOutput) => void
+    cb: (err: any, data?: ListHsmsCommandOutput) => void,
   ): void;
 
   /**
@@ -283,13 +283,13 @@ export interface CloudHSM {
   listLunaClients(): Promise<ListLunaClientsCommandOutput>;
   listLunaClients(
     args: ListLunaClientsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListLunaClientsCommandOutput>;
   listLunaClients(args: ListLunaClientsCommandInput, cb: (err: any, data?: ListLunaClientsCommandOutput) => void): void;
   listLunaClients(
     args: ListLunaClientsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLunaClientsCommandOutput) => void
+    cb: (err: any, data?: ListLunaClientsCommandOutput) => void,
   ): void;
 
   /**
@@ -297,16 +297,16 @@ export interface CloudHSM {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -317,7 +317,7 @@ export interface CloudHSM {
   modifyHapg(
     args: ModifyHapgCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ModifyHapgCommandOutput) => void
+    cb: (err: any, data?: ModifyHapgCommandOutput) => void,
   ): void;
 
   /**
@@ -328,7 +328,7 @@ export interface CloudHSM {
   modifyHsm(
     args: ModifyHsmCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ModifyHsmCommandOutput) => void
+    cb: (err: any, data?: ModifyHsmCommandOutput) => void,
   ): void;
 
   /**
@@ -336,16 +336,16 @@ export interface CloudHSM {
    */
   modifyLunaClient(
     args: ModifyLunaClientCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ModifyLunaClientCommandOutput>;
   modifyLunaClient(
     args: ModifyLunaClientCommandInput,
-    cb: (err: any, data?: ModifyLunaClientCommandOutput) => void
+    cb: (err: any, data?: ModifyLunaClientCommandOutput) => void,
   ): void;
   modifyLunaClient(
     args: ModifyLunaClientCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ModifyLunaClientCommandOutput) => void
+    cb: (err: any, data?: ModifyLunaClientCommandOutput) => void,
   ): void;
 
   /**
@@ -353,16 +353,16 @@ export interface CloudHSM {
    */
   removeTagsFromResource(
     args: RemoveTagsFromResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveTagsFromResourceCommandOutput>;
   removeTagsFromResource(
     args: RemoveTagsFromResourceCommandInput,
-    cb: (err: any, data?: RemoveTagsFromResourceCommandOutput) => void
+    cb: (err: any, data?: RemoveTagsFromResourceCommandOutput) => void,
   ): void;
   removeTagsFromResource(
     args: RemoveTagsFromResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveTagsFromResourceCommandOutput) => void
+    cb: (err: any, data?: RemoveTagsFromResourceCommandOutput) => void,
   ): void;
 }
 

@@ -137,7 +137,7 @@ export class PutVoiceConnectorEmergencyCallingConfigurationCommand extends $Comm
   .n("ChimeClient", "PutVoiceConnectorEmergencyCallingConfigurationCommand")
   .f(
     PutVoiceConnectorEmergencyCallingConfigurationRequestFilterSensitiveLog,
-    PutVoiceConnectorEmergencyCallingConfigurationResponseFilterSensitiveLog
+    PutVoiceConnectorEmergencyCallingConfigurationResponseFilterSensitiveLog,
   )
   .ser(se_PutVoiceConnectorEmergencyCallingConfigurationCommand)
   .de(de_PutVoiceConnectorEmergencyCallingConfigurationCommand)

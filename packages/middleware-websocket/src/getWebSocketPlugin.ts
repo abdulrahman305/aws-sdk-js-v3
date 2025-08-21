@@ -9,7 +9,7 @@ interface WebSocketResolvedConfig {
 
 export const getWebSocketPlugin = (
   config: WebSocketResolvedConfig,
-  options: { headerPrefix: string }
+  options: { headerPrefix: string },
 ): Pluggable<any, any> => ({
   applyToStack: (clientStack) => {
     clientStack.addRelativeTo(websocketEndpointMiddleware(config, options), websocketEndpointMiddlewareOptions);

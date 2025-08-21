@@ -171,7 +171,7 @@ import { QConnectServiceException as __BaseException } from "../models/QConnectS
  */
 export const se_CreateAssistantCommand = async (
   input: CreateAssistantCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -187,7 +187,7 @@ export const se_CreateAssistantCommand = async (
       serverSideEncryptionConfiguration: (_) => _json(_),
       tags: (_) => _json(_),
       type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -198,7 +198,7 @@ export const se_CreateAssistantCommand = async (
  */
 export const se_CreateAssistantAssociationCommand = async (
   input: CreateAssistantAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -213,7 +213,7 @@ export const se_CreateAssistantAssociationCommand = async (
       associationType: [],
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -224,7 +224,7 @@ export const se_CreateAssistantAssociationCommand = async (
  */
 export const se_CreateContentCommand = async (
   input: CreateContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -242,7 +242,7 @@ export const se_CreateContentCommand = async (
       tags: (_) => _json(_),
       title: [],
       uploadId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -253,7 +253,7 @@ export const se_CreateContentCommand = async (
  */
 export const se_CreateKnowledgeBaseCommand = async (
   input: CreateKnowledgeBaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -271,7 +271,7 @@ export const se_CreateKnowledgeBaseCommand = async (
       serverSideEncryptionConfiguration: (_) => _json(_),
       sourceConfiguration: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -282,7 +282,7 @@ export const se_CreateKnowledgeBaseCommand = async (
  */
 export const se_CreateQuickResponseCommand = async (
   input: CreateQuickResponseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -304,7 +304,7 @@ export const se_CreateQuickResponseCommand = async (
       name: [],
       shortcutKey: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -315,7 +315,7 @@ export const se_CreateQuickResponseCommand = async (
  */
 export const se_CreateSessionCommand = async (
   input: CreateSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -331,7 +331,7 @@ export const se_CreateSessionCommand = async (
       name: [],
       tagFilter: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -342,7 +342,7 @@ export const se_CreateSessionCommand = async (
  */
 export const se_DeleteAssistantCommand = async (
   input: DeleteAssistantCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -358,7 +358,7 @@ export const se_DeleteAssistantCommand = async (
  */
 export const se_DeleteAssistantAssociationCommand = async (
   input: DeleteAssistantAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -375,7 +375,7 @@ export const se_DeleteAssistantAssociationCommand = async (
  */
 export const se_DeleteContentCommand = async (
   input: DeleteContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -392,7 +392,7 @@ export const se_DeleteContentCommand = async (
  */
 export const se_DeleteImportJobCommand = async (
   input: DeleteImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -409,7 +409,7 @@ export const se_DeleteImportJobCommand = async (
  */
 export const se_DeleteKnowledgeBaseCommand = async (
   input: DeleteKnowledgeBaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -425,7 +425,7 @@ export const se_DeleteKnowledgeBaseCommand = async (
  */
 export const se_DeleteQuickResponseCommand = async (
   input: DeleteQuickResponseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -442,7 +442,7 @@ export const se_DeleteQuickResponseCommand = async (
  */
 export const se_GetAssistantCommand = async (
   input: GetAssistantCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -458,7 +458,7 @@ export const se_GetAssistantCommand = async (
  */
 export const se_GetAssistantAssociationCommand = async (
   input: GetAssistantAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -475,7 +475,7 @@ export const se_GetAssistantAssociationCommand = async (
  */
 export const se_GetContentCommand = async (
   input: GetContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -492,7 +492,7 @@ export const se_GetContentCommand = async (
  */
 export const se_GetContentSummaryCommand = async (
   input: GetContentSummaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -509,7 +509,7 @@ export const se_GetContentSummaryCommand = async (
  */
 export const se_GetImportJobCommand = async (
   input: GetImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -526,7 +526,7 @@ export const se_GetImportJobCommand = async (
  */
 export const se_GetKnowledgeBaseCommand = async (
   input: GetKnowledgeBaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -542,7 +542,7 @@ export const se_GetKnowledgeBaseCommand = async (
  */
 export const se_GetQuickResponseCommand = async (
   input: GetQuickResponseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -559,7 +559,7 @@ export const se_GetQuickResponseCommand = async (
  */
 export const se_GetRecommendationsCommand = async (
   input: GetRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -580,7 +580,7 @@ export const se_GetRecommendationsCommand = async (
  */
 export const se_GetSessionCommand = async (
   input: GetSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -597,7 +597,7 @@ export const se_GetSessionCommand = async (
  */
 export const se_ListAssistantAssociationsCommand = async (
   input: ListAssistantAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -617,7 +617,7 @@ export const se_ListAssistantAssociationsCommand = async (
  */
 export const se_ListAssistantsCommand = async (
   input: ListAssistantsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -636,7 +636,7 @@ export const se_ListAssistantsCommand = async (
  */
 export const se_ListContentsCommand = async (
   input: ListContentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -656,7 +656,7 @@ export const se_ListContentsCommand = async (
  */
 export const se_ListImportJobsCommand = async (
   input: ListImportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -676,7 +676,7 @@ export const se_ListImportJobsCommand = async (
  */
 export const se_ListKnowledgeBasesCommand = async (
   input: ListKnowledgeBasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -695,7 +695,7 @@ export const se_ListKnowledgeBasesCommand = async (
  */
 export const se_ListQuickResponsesCommand = async (
   input: ListQuickResponsesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -715,7 +715,7 @@ export const se_ListQuickResponsesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -731,7 +731,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_NotifyRecommendationsReceivedCommand = async (
   input: NotifyRecommendationsReceivedCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -744,7 +744,7 @@ export const se_NotifyRecommendationsReceivedCommand = async (
   body = JSON.stringify(
     take(input, {
       recommendationIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -755,7 +755,7 @@ export const se_NotifyRecommendationsReceivedCommand = async (
  */
 export const se_PutFeedbackCommand = async (
   input: PutFeedbackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -769,7 +769,7 @@ export const se_PutFeedbackCommand = async (
       contentFeedback: (_) => _json(_),
       targetId: [],
       targetType: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -780,7 +780,7 @@ export const se_PutFeedbackCommand = async (
  */
 export const se_QueryAssistantCommand = async (
   input: QueryAssistantCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -796,7 +796,7 @@ export const se_QueryAssistantCommand = async (
       queryCondition: (_) => _json(_),
       queryText: [],
       sessionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -807,7 +807,7 @@ export const se_QueryAssistantCommand = async (
  */
 export const se_RemoveKnowledgeBaseTemplateUriCommand = async (
   input: RemoveKnowledgeBaseTemplateUriCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -823,7 +823,7 @@ export const se_RemoveKnowledgeBaseTemplateUriCommand = async (
  */
 export const se_SearchContentCommand = async (
   input: SearchContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -839,7 +839,7 @@ export const se_SearchContentCommand = async (
   body = JSON.stringify(
     take(input, {
       searchExpression: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -850,7 +850,7 @@ export const se_SearchContentCommand = async (
  */
 export const se_SearchQuickResponsesCommand = async (
   input: SearchQuickResponsesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -867,7 +867,7 @@ export const se_SearchQuickResponsesCommand = async (
     take(input, {
       attributes: (_) => _json(_),
       searchExpression: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -878,7 +878,7 @@ export const se_SearchQuickResponsesCommand = async (
  */
 export const se_SearchSessionsCommand = async (
   input: SearchSessionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -894,7 +894,7 @@ export const se_SearchSessionsCommand = async (
   body = JSON.stringify(
     take(input, {
       searchExpression: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -905,7 +905,7 @@ export const se_SearchSessionsCommand = async (
  */
 export const se_StartContentUploadCommand = async (
   input: StartContentUploadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -918,7 +918,7 @@ export const se_StartContentUploadCommand = async (
     take(input, {
       contentType: [],
       presignedUrlTimeToLive: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -929,7 +929,7 @@ export const se_StartContentUploadCommand = async (
  */
 export const se_StartImportJobCommand = async (
   input: StartImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -945,7 +945,7 @@ export const se_StartImportJobCommand = async (
       importJobType: [],
       metadata: (_) => _json(_),
       uploadId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -956,7 +956,7 @@ export const se_StartImportJobCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -968,7 +968,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -979,7 +979,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1001,7 +1001,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateContentCommand = async (
   input: UpdateContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1019,7 +1019,7 @@ export const se_UpdateContentCommand = async (
       revisionId: [],
       title: [],
       uploadId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1030,7 +1030,7 @@ export const se_UpdateContentCommand = async (
  */
 export const se_UpdateKnowledgeBaseTemplateUriCommand = async (
   input: UpdateKnowledgeBaseTemplateUriCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1042,7 +1042,7 @@ export const se_UpdateKnowledgeBaseTemplateUriCommand = async (
   body = JSON.stringify(
     take(input, {
       templateUri: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1053,7 +1053,7 @@ export const se_UpdateKnowledgeBaseTemplateUriCommand = async (
  */
 export const se_UpdateQuickResponseCommand = async (
   input: UpdateQuickResponseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1077,7 +1077,7 @@ export const se_UpdateQuickResponseCommand = async (
       removeGroupingConfiguration: [],
       removeShortcutKey: [],
       shortcutKey: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1088,7 +1088,7 @@ export const se_UpdateQuickResponseCommand = async (
  */
 export const se_UpdateSessionCommand = async (
   input: UpdateSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1102,7 +1102,7 @@ export const se_UpdateSessionCommand = async (
     take(input, {
       description: [],
       tagFilter: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1113,7 +1113,7 @@ export const se_UpdateSessionCommand = async (
  */
 export const de_CreateAssistantCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAssistantCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1134,7 +1134,7 @@ export const de_CreateAssistantCommand = async (
  */
 export const de_CreateAssistantAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAssistantAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1155,7 +1155,7 @@ export const de_CreateAssistantAssociationCommand = async (
  */
 export const de_CreateContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateContentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1176,7 +1176,7 @@ export const de_CreateContentCommand = async (
  */
 export const de_CreateKnowledgeBaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateKnowledgeBaseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1197,7 +1197,7 @@ export const de_CreateKnowledgeBaseCommand = async (
  */
 export const de_CreateQuickResponseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateQuickResponseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1218,7 +1218,7 @@ export const de_CreateQuickResponseCommand = async (
  */
 export const de_CreateSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1239,7 +1239,7 @@ export const de_CreateSessionCommand = async (
  */
 export const de_DeleteAssistantCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAssistantCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1256,7 +1256,7 @@ export const de_DeleteAssistantCommand = async (
  */
 export const de_DeleteAssistantAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAssistantAssociationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1273,7 +1273,7 @@ export const de_DeleteAssistantAssociationCommand = async (
  */
 export const de_DeleteContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteContentCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1290,7 +1290,7 @@ export const de_DeleteContentCommand = async (
  */
 export const de_DeleteImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteImportJobCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1307,7 +1307,7 @@ export const de_DeleteImportJobCommand = async (
  */
 export const de_DeleteKnowledgeBaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteKnowledgeBaseCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1324,7 +1324,7 @@ export const de_DeleteKnowledgeBaseCommand = async (
  */
 export const de_DeleteQuickResponseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteQuickResponseCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1341,7 +1341,7 @@ export const de_DeleteQuickResponseCommand = async (
  */
 export const de_GetAssistantCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAssistantCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1362,7 +1362,7 @@ export const de_GetAssistantCommand = async (
  */
 export const de_GetAssistantAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAssistantAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1383,7 +1383,7 @@ export const de_GetAssistantAssociationCommand = async (
  */
 export const de_GetContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1404,7 +1404,7 @@ export const de_GetContentCommand = async (
  */
 export const de_GetContentSummaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContentSummaryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1425,7 +1425,7 @@ export const de_GetContentSummaryCommand = async (
  */
 export const de_GetImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1446,7 +1446,7 @@ export const de_GetImportJobCommand = async (
  */
 export const de_GetKnowledgeBaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetKnowledgeBaseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1467,7 +1467,7 @@ export const de_GetKnowledgeBaseCommand = async (
  */
 export const de_GetQuickResponseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetQuickResponseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1488,7 +1488,7 @@ export const de_GetQuickResponseCommand = async (
  */
 export const de_GetRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRecommendationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1510,7 +1510,7 @@ export const de_GetRecommendationsCommand = async (
  */
 export const de_GetSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1531,7 +1531,7 @@ export const de_GetSessionCommand = async (
  */
 export const de_ListAssistantAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssistantAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1553,7 +1553,7 @@ export const de_ListAssistantAssociationsCommand = async (
  */
 export const de_ListAssistantsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssistantsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1575,7 +1575,7 @@ export const de_ListAssistantsCommand = async (
  */
 export const de_ListContentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListContentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1597,7 +1597,7 @@ export const de_ListContentsCommand = async (
  */
 export const de_ListImportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListImportJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1619,7 +1619,7 @@ export const de_ListImportJobsCommand = async (
  */
 export const de_ListKnowledgeBasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListKnowledgeBasesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1641,7 +1641,7 @@ export const de_ListKnowledgeBasesCommand = async (
  */
 export const de_ListQuickResponsesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListQuickResponsesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1663,7 +1663,7 @@ export const de_ListQuickResponsesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1684,7 +1684,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_NotifyRecommendationsReceivedCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotifyRecommendationsReceivedCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1706,7 +1706,7 @@ export const de_NotifyRecommendationsReceivedCommand = async (
  */
 export const de_PutFeedbackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutFeedbackCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1731,7 +1731,7 @@ export const de_PutFeedbackCommand = async (
  */
 export const de_QueryAssistantCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<QueryAssistantCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1753,7 +1753,7 @@ export const de_QueryAssistantCommand = async (
  */
 export const de_RemoveKnowledgeBaseTemplateUriCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveKnowledgeBaseTemplateUriCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1770,7 +1770,7 @@ export const de_RemoveKnowledgeBaseTemplateUriCommand = async (
  */
 export const de_SearchContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchContentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1792,7 +1792,7 @@ export const de_SearchContentCommand = async (
  */
 export const de_SearchQuickResponsesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchQuickResponsesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1814,7 +1814,7 @@ export const de_SearchQuickResponsesCommand = async (
  */
 export const de_SearchSessionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchSessionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1836,7 +1836,7 @@ export const de_SearchSessionsCommand = async (
  */
 export const de_StartContentUploadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartContentUploadCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1860,7 +1860,7 @@ export const de_StartContentUploadCommand = async (
  */
 export const de_StartImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1881,7 +1881,7 @@ export const de_StartImportJobCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1898,7 +1898,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1915,7 +1915,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateContentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1936,7 +1936,7 @@ export const de_UpdateContentCommand = async (
  */
 export const de_UpdateKnowledgeBaseTemplateUriCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateKnowledgeBaseTemplateUriCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1957,7 +1957,7 @@ export const de_UpdateKnowledgeBaseTemplateUriCommand = async (
  */
 export const de_UpdateQuickResponseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateQuickResponseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1978,7 +1978,7 @@ export const de_UpdateQuickResponseCommand = async (
  */
 export const de_UpdateSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2044,7 +2044,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2081,7 +2081,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_PreconditionFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PreconditionFailedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2101,7 +2101,7 @@ const de_PreconditionFailedExceptionRes = async (
  */
 const de_RequestTimeoutExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestTimeoutException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2121,7 +2121,7 @@ const de_RequestTimeoutExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2142,7 +2142,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2162,7 +2162,7 @@ const de_ServiceQuotaExceededExceptionRes = async (
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

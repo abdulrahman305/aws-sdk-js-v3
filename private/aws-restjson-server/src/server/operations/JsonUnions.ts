@@ -61,7 +61,7 @@ export class JsonUnionsSerializer
 
 export const getJsonUnionsHandler = <Context>(
   operation: __Operation<JsonUnionsServerInput, JsonUnionsServerOutput, Context>,
-  customizer: __ValidationCustomizer<"JsonUnions">
+  customizer: __ValidationCustomizer<"JsonUnions">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "JsonUnions">([
     new httpbinding.UriSpec<"RestJson", "JsonUnions">("PUT", [{ type: "path_literal", value: "JsonUnions" }], [], {
@@ -89,7 +89,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -127,7 +127,7 @@ export class JsonUnionsHandler<Context> implements __ServiceHandler<Context> {
   private readonly serializer: __OperationSerializer<RestJsonService<Context>, "JsonUnions", JsonUnionsErrors>;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"JsonUnions">;
   /**
@@ -144,7 +144,7 @@ export class JsonUnionsHandler<Context> implements __ServiceHandler<Context> {
     mux: __Mux<"RestJson", "JsonUnions">,
     serializer: __OperationSerializer<RestJsonService<Context>, "JsonUnions", JsonUnionsErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"JsonUnions">
+    validationCustomizer: __ValidationCustomizer<"JsonUnions">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -156,7 +156,7 @@ export class JsonUnionsHandler<Context> implements __ServiceHandler<Context> {
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.JsonUnions. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.JsonUnions. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -168,7 +168,7 @@ export class JsonUnionsHandler<Context> implements __ServiceHandler<Context> {
       this.operation,
       this.serializeFrameworkException,
       JsonUnionsServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

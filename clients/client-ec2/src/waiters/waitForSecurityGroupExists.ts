@@ -38,7 +38,7 @@ const checkState = async (client: EC2Client, input: DescribeSecurityGroupsComman
  */
 export const waitForSecurityGroupExists = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeSecurityGroupsCommandInput
+  input: DescribeSecurityGroupsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -50,7 +50,7 @@ export const waitForSecurityGroupExists = async (
  */
 export const waitUntilSecurityGroupExists = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeSecurityGroupsCommandInput
+  input: DescribeSecurityGroupsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

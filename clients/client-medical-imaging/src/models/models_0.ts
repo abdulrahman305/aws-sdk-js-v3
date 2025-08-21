@@ -2032,7 +2032,7 @@ export const SearchImageSetsResponseFilterSensitiveLog = (obj: SearchImageSetsRe
   ...obj,
   ...(obj.imageSetsMetadataSummaries && {
     imageSetsMetadataSummaries: obj.imageSetsMetadataSummaries.map((item) =>
-      ImageSetsMetadataSummaryFilterSensitiveLog(item)
+      ImageSetsMetadataSummaryFilterSensitiveLog(item),
     ),
   }),
 });

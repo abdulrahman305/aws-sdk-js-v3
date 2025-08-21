@@ -9,7 +9,7 @@ import { DatabaseMigrationServiceClient } from "../DatabaseMigrationServiceClien
 
 const checkState = async (
   client: DatabaseMigrationServiceClient,
-  input: DescribeReplicationInstancesCommandInput
+  input: DescribeReplicationInstancesCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -98,7 +98,7 @@ const checkState = async (
  */
 export const waitForReplicationInstanceAvailable = async (
   params: WaiterConfiguration<DatabaseMigrationServiceClient>,
-  input: DescribeReplicationInstancesCommandInput
+  input: DescribeReplicationInstancesCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 60, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -110,7 +110,7 @@ export const waitForReplicationInstanceAvailable = async (
  */
 export const waitUntilReplicationInstanceAvailable = async (
   params: WaiterConfiguration<DatabaseMigrationServiceClient>,
-  input: DescribeReplicationInstancesCommandInput
+  input: DescribeReplicationInstancesCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 60, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

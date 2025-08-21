@@ -3109,7 +3109,7 @@ export const SmsSettingsFilterSensitiveLog = (obj: SmsSettings): any => ({
  * @internal
  */
 export const CreateBackendAuthForgotPasswordConfigFilterSensitiveLog = (
-  obj: CreateBackendAuthForgotPasswordConfig
+  obj: CreateBackendAuthForgotPasswordConfig,
 ): any => ({
   ...obj,
   ...(obj.EmailSettings && { EmailSettings: SENSITIVE_STRING }),
@@ -3155,7 +3155,7 @@ export const CreateBackendAuthOAuthConfigFilterSensitiveLog = (obj: CreateBacken
  * @internal
  */
 export const CreateBackendAuthVerificationMessageConfigFilterSensitiveLog = (
-  obj: CreateBackendAuthVerificationMessageConfig
+  obj: CreateBackendAuthVerificationMessageConfig,
 ): any => ({
   ...obj,
   ...(obj.EmailSettings && { EmailSettings: SENSITIVE_STRING }),
@@ -3206,7 +3206,7 @@ export const GetBackendAuthResponseFilterSensitiveLog = (obj: GetBackendAuthResp
  * @internal
  */
 export const UpdateBackendAuthForgotPasswordConfigFilterSensitiveLog = (
-  obj: UpdateBackendAuthForgotPasswordConfig
+  obj: UpdateBackendAuthForgotPasswordConfig,
 ): any => ({
   ...obj,
   ...(obj.EmailSettings && { EmailSettings: SENSITIVE_STRING }),
@@ -3227,7 +3227,7 @@ export const UpdateBackendAuthOAuthConfigFilterSensitiveLog = (obj: UpdateBacken
  * @internal
  */
 export const UpdateBackendAuthVerificationMessageConfigFilterSensitiveLog = (
-  obj: UpdateBackendAuthVerificationMessageConfig
+  obj: UpdateBackendAuthVerificationMessageConfig,
 ): any => ({
   ...obj,
   ...(obj.EmailSettings && { EmailSettings: SENSITIVE_STRING }),

@@ -5817,7 +5817,7 @@ export const DescribeJobsResponseFilterSensitiveLog = (obj: DescribeJobsResponse
  * @internal
  */
 export const CreateLaunchConfigurationTemplateRequestFilterSensitiveLog = (
-  obj: CreateLaunchConfigurationTemplateRequest
+  obj: CreateLaunchConfigurationTemplateRequest,
 ): any => ({
   ...obj,
   ...(obj.postLaunchActions && { postLaunchActions: obj.postLaunchActions }),
@@ -5837,7 +5837,7 @@ export const LaunchConfigurationTemplateFilterSensitiveLog = (obj: LaunchConfigu
  * @internal
  */
 export const DescribeLaunchConfigurationTemplatesResponseFilterSensitiveLog = (
-  obj: DescribeLaunchConfigurationTemplatesResponse
+  obj: DescribeLaunchConfigurationTemplatesResponse,
 ): any => ({
   ...obj,
   ...(obj.items && { items: obj.items.map((item) => LaunchConfigurationTemplateFilterSensitiveLog(item)) }),
@@ -5855,7 +5855,7 @@ export const ListTagsForResourceResponseFilterSensitiveLog = (obj: ListTagsForRe
  * @internal
  */
 export const CreateReplicationConfigurationTemplateRequestFilterSensitiveLog = (
-  obj: CreateReplicationConfigurationTemplateRequest
+  obj: CreateReplicationConfigurationTemplateRequest,
 ): any => ({
   ...obj,
   ...(obj.stagingAreaTags && { stagingAreaTags: SENSITIVE_STRING }),
@@ -5875,7 +5875,7 @@ export const ReplicationConfigurationTemplateFilterSensitiveLog = (obj: Replicat
  * @internal
  */
 export const DescribeReplicationConfigurationTemplatesResponseFilterSensitiveLog = (
-  obj: DescribeReplicationConfigurationTemplatesResponse
+  obj: DescribeReplicationConfigurationTemplatesResponse,
 ): any => ({
   ...obj,
   ...(obj.items && { items: obj.items.map((item) => ReplicationConfigurationTemplateFilterSensitiveLog(item)) }),
@@ -5885,7 +5885,7 @@ export const DescribeReplicationConfigurationTemplatesResponseFilterSensitiveLog
  * @internal
  */
 export const UpdateReplicationConfigurationTemplateRequestFilterSensitiveLog = (
-  obj: UpdateReplicationConfigurationTemplateRequest
+  obj: UpdateReplicationConfigurationTemplateRequest,
 ): any => ({
   ...obj,
   ...(obj.stagingAreaTags && { stagingAreaTags: SENSITIVE_STRING }),
@@ -5967,7 +5967,7 @@ export const TerminateTargetInstancesResponseFilterSensitiveLog = (obj: Terminat
  * @internal
  */
 export const UpdateReplicationConfigurationRequestFilterSensitiveLog = (
-  obj: UpdateReplicationConfigurationRequest
+  obj: UpdateReplicationConfigurationRequest,
 ): any => ({
   ...obj,
   ...(obj.stagingAreaTags && { stagingAreaTags: SENSITIVE_STRING }),

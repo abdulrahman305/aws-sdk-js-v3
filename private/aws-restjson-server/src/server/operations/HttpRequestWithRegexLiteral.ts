@@ -42,7 +42,7 @@ export namespace HttpRequestWithRegexLiteralServerInput {
    * @internal
    */
   export const validate: (
-    obj: Parameters<typeof HttpRequestWithRegexLiteralInput.validate>[0]
+    obj: Parameters<typeof HttpRequestWithRegexLiteralInput.validate>[0],
   ) => __ValidationFailure[] = HttpRequestWithRegexLiteralInput.validate;
 }
 export interface HttpRequestWithRegexLiteralServerOutput {}
@@ -67,14 +67,14 @@ export class HttpRequestWithRegexLiteralSerializer
 
 export const getHttpRequestWithRegexLiteralHandler = <Context>(
   operation: __Operation<HttpRequestWithRegexLiteralServerInput, HttpRequestWithRegexLiteralServerOutput, Context>,
-  customizer: __ValidationCustomizer<"HttpRequestWithRegexLiteral">
+  customizer: __ValidationCustomizer<"HttpRequestWithRegexLiteral">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "HttpRequestWithRegexLiteral">([
     new httpbinding.UriSpec<"RestJson", "HttpRequestWithRegexLiteral">(
       "GET",
       [{ type: "path_literal", value: "ReDosLiteral" }, { type: "path" }, { type: "path_literal", value: "(a+)+" }],
       [],
-      { service: "RestJson", operation: "HttpRequestWithRegexLiteral" }
+      { service: "RestJson", operation: "HttpRequestWithRegexLiteral" },
     ),
   ]);
   return new HttpRequestWithRegexLiteralHandler(
@@ -82,7 +82,7 @@ export const getHttpRequestWithRegexLiteralHandler = <Context>(
     mux,
     new HttpRequestWithRegexLiteralSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -103,7 +103,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -149,7 +149,7 @@ export class HttpRequestWithRegexLiteralHandler<Context> implements __ServiceHan
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"HttpRequestWithRegexLiteral">;
   /**
@@ -170,7 +170,7 @@ export class HttpRequestWithRegexLiteralHandler<Context> implements __ServiceHan
       HttpRequestWithRegexLiteralErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"HttpRequestWithRegexLiteral">
+    validationCustomizer: __ValidationCustomizer<"HttpRequestWithRegexLiteral">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -182,7 +182,7 @@ export class HttpRequestWithRegexLiteralHandler<Context> implements __ServiceHan
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpRequestWithRegexLiteral. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpRequestWithRegexLiteral. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -194,7 +194,7 @@ export class HttpRequestWithRegexLiteralHandler<Context> implements __ServiceHan
       this.operation,
       this.serializeFrameworkException,
       HttpRequestWithRegexLiteralServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

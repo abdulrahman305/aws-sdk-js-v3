@@ -65,7 +65,7 @@ describe("defaultUserAgent", () => {
     const userAgent = await defaultUserAgent({ serviceId: undefined, clientVersion: "0.1.0" })();
     validateUserAgent(
       userAgent,
-      basicUserAgent.filter((pair) => pair[0] !== "api/s3")
+      basicUserAgent.filter((pair) => pair[0] !== "api/s3"),
     );
   });
 

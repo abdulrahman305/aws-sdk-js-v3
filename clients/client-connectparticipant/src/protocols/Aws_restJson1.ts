@@ -60,7 +60,7 @@ import {
  */
 export const se_CompleteAttachmentUploadCommand = async (
   input: CompleteAttachmentUploadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -73,7 +73,7 @@ export const se_CompleteAttachmentUploadCommand = async (
     take(input, {
       AttachmentIds: (_) => _json(_),
       ClientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -84,7 +84,7 @@ export const se_CompleteAttachmentUploadCommand = async (
  */
 export const se_CreateParticipantConnectionCommand = async (
   input: CreateParticipantConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -97,7 +97,7 @@ export const se_CreateParticipantConnectionCommand = async (
     take(input, {
       ConnectParticipant: [],
       Type: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -108,7 +108,7 @@ export const se_CreateParticipantConnectionCommand = async (
  */
 export const se_DescribeViewCommand = async (
   input: DescribeViewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -126,7 +126,7 @@ export const se_DescribeViewCommand = async (
  */
 export const se_DisconnectParticipantCommand = async (
   input: DisconnectParticipantCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -138,7 +138,7 @@ export const se_DisconnectParticipantCommand = async (
   body = JSON.stringify(
     take(input, {
       ClientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -149,7 +149,7 @@ export const se_DisconnectParticipantCommand = async (
  */
 export const se_GetAttachmentCommand = async (
   input: GetAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -161,7 +161,7 @@ export const se_GetAttachmentCommand = async (
   body = JSON.stringify(
     take(input, {
       AttachmentId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -172,7 +172,7 @@ export const se_GetAttachmentCommand = async (
  */
 export const se_GetTranscriptCommand = async (
   input: GetTranscriptCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -189,7 +189,7 @@ export const se_GetTranscriptCommand = async (
       ScanDirection: [],
       SortOrder: [],
       StartPosition: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -200,7 +200,7 @@ export const se_GetTranscriptCommand = async (
  */
 export const se_SendEventCommand = async (
   input: SendEventCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -214,7 +214,7 @@ export const se_SendEventCommand = async (
       ClientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       Content: [],
       ContentType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -225,7 +225,7 @@ export const se_SendEventCommand = async (
  */
 export const se_SendMessageCommand = async (
   input: SendMessageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -239,7 +239,7 @@ export const se_SendMessageCommand = async (
       ClientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       Content: [],
       ContentType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -250,7 +250,7 @@ export const se_SendMessageCommand = async (
  */
 export const se_StartAttachmentUploadCommand = async (
   input: StartAttachmentUploadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -265,7 +265,7 @@ export const se_StartAttachmentUploadCommand = async (
       AttachmentSizeInBytes: [],
       ClientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       ContentType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -276,7 +276,7 @@ export const se_StartAttachmentUploadCommand = async (
  */
 export const de_CompleteAttachmentUploadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CompleteAttachmentUploadCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -293,7 +293,7 @@ export const de_CompleteAttachmentUploadCommand = async (
  */
 export const de_CreateParticipantConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateParticipantConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -315,7 +315,7 @@ export const de_CreateParticipantConnectionCommand = async (
  */
 export const de_DescribeViewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeViewCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -336,7 +336,7 @@ export const de_DescribeViewCommand = async (
  */
 export const de_DisconnectParticipantCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisconnectParticipantCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -353,7 +353,7 @@ export const de_DisconnectParticipantCommand = async (
  */
 export const de_GetAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAttachmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -375,7 +375,7 @@ export const de_GetAttachmentCommand = async (
  */
 export const de_GetTranscriptCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTranscriptCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -398,7 +398,7 @@ export const de_GetTranscriptCommand = async (
  */
 export const de_SendEventCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendEventCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -420,7 +420,7 @@ export const de_SendEventCommand = async (
  */
 export const de_SendMessageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendMessageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -442,7 +442,7 @@ export const de_SendMessageCommand = async (
  */
 export const de_StartAttachmentUploadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartAttachmentUploadCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -506,7 +506,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -543,7 +543,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -563,7 +563,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -585,7 +585,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

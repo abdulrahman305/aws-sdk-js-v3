@@ -38,7 +38,7 @@ exports.ensureTestStack = async (client, stackName, templateBody) => {
       ChangeSetName: `${stackName}ChangeSet${Date.now()}`,
       TemplateBody: templateBody,
       Capabilities: [Capability.CAPABILITY_IAM],
-    })
+    }),
   );
 
   try {
@@ -49,7 +49,7 @@ exports.ensureTestStack = async (client, stackName, templateBody) => {
       new DescribeChangeSetCommand({
         StackName: stackName,
         ChangeSetName: Id,
-      })
+      }),
     );
     if (Status === "FAILED" && StatusReason.includes("The submitted information didn't contain changes")) {
       await client
@@ -57,7 +57,7 @@ exports.ensureTestStack = async (client, stackName, templateBody) => {
           new DeleteChangeSetCommand({
             StackName: stackName,
             ChangeSetName: Id,
-          })
+          }),
         )
         .catch(() => {}); // ignored
       return;
@@ -69,7 +69,7 @@ exports.ensureTestStack = async (client, stackName, templateBody) => {
     new ExecuteChangeSetCommand({
       ChangeSetName: Id,
       StackName: stackName,
-    })
+    }),
   );
   if (hasExistingStack) {
     await waitUntilStackUpdateComplete({ client }, { StackName: stackName });

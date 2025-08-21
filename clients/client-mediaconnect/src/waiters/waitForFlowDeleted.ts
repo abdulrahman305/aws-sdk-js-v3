@@ -45,7 +45,7 @@ const checkState = async (client: MediaConnectClient, input: DescribeFlowCommand
  */
 export const waitForFlowDeleted = async (
   params: WaiterConfiguration<MediaConnectClient>,
-  input: DescribeFlowCommandInput
+  input: DescribeFlowCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -57,7 +57,7 @@ export const waitForFlowDeleted = async (
  */
 export const waitUntilFlowDeleted = async (
   params: WaiterConfiguration<MediaConnectClient>,
-  input: DescribeFlowCommandInput
+  input: DescribeFlowCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

@@ -95,7 +95,7 @@ const checkState = async (client: DocDBClient, input: DescribeDBInstancesCommand
  */
 export const waitForDBInstanceDeleted = async (
   params: WaiterConfiguration<DocDBClient>,
-  input: DescribeDBInstancesCommandInput
+  input: DescribeDBInstancesCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -107,7 +107,7 @@ export const waitForDBInstanceDeleted = async (
  */
 export const waitUntilDBInstanceDeleted = async (
   params: WaiterConfiguration<DocDBClient>,
-  input: DescribeDBInstancesCommandInput
+  input: DescribeDBInstancesCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

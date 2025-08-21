@@ -25,16 +25,16 @@ export interface EC2InstanceConnect {
    */
   sendSerialConsoleSSHPublicKey(
     args: SendSerialConsoleSSHPublicKeyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SendSerialConsoleSSHPublicKeyCommandOutput>;
   sendSerialConsoleSSHPublicKey(
     args: SendSerialConsoleSSHPublicKeyCommandInput,
-    cb: (err: any, data?: SendSerialConsoleSSHPublicKeyCommandOutput) => void
+    cb: (err: any, data?: SendSerialConsoleSSHPublicKeyCommandOutput) => void,
   ): void;
   sendSerialConsoleSSHPublicKey(
     args: SendSerialConsoleSSHPublicKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendSerialConsoleSSHPublicKeyCommandOutput) => void
+    cb: (err: any, data?: SendSerialConsoleSSHPublicKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -42,16 +42,16 @@ export interface EC2InstanceConnect {
    */
   sendSSHPublicKey(
     args: SendSSHPublicKeyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SendSSHPublicKeyCommandOutput>;
   sendSSHPublicKey(
     args: SendSSHPublicKeyCommandInput,
-    cb: (err: any, data?: SendSSHPublicKeyCommandOutput) => void
+    cb: (err: any, data?: SendSSHPublicKeyCommandOutput) => void,
   ): void;
   sendSSHPublicKey(
     args: SendSSHPublicKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendSSHPublicKeyCommandOutput) => void
+    cb: (err: any, data?: SendSSHPublicKeyCommandOutput) => void,
   ): void;
 }
 

@@ -9167,7 +9167,7 @@ export const BatchDetectDominantLanguageRequestFilterSensitiveLog = (obj: BatchD
  * @internal
  */
 export const BatchDetectDominantLanguageResponseFilterSensitiveLog = (
-  obj: BatchDetectDominantLanguageResponse
+  obj: BatchDetectDominantLanguageResponse,
 ): any => ({
   ...obj,
 });
@@ -9236,7 +9236,7 @@ export const BatchDetectSyntaxResponseFilterSensitiveLog = (obj: BatchDetectSynt
  * @internal
  */
 export const BatchDetectTargetedSentimentRequestFilterSensitiveLog = (
-  obj: BatchDetectTargetedSentimentRequest
+  obj: BatchDetectTargetedSentimentRequest,
 ): any => ({
   ...obj,
   ...(obj.TextList && { TextList: SENSITIVE_STRING }),
@@ -9246,7 +9246,7 @@ export const BatchDetectTargetedSentimentRequestFilterSensitiveLog = (
  * @internal
  */
 export const BatchDetectTargetedSentimentResponseFilterSensitiveLog = (
-  obj: BatchDetectTargetedSentimentResponse
+  obj: BatchDetectTargetedSentimentResponse,
 ): any => ({
   ...obj,
 });
@@ -9429,7 +9429,7 @@ export const ListDocumentClassifiersResponseFilterSensitiveLog = (obj: ListDocum
   ...obj,
   ...(obj.DocumentClassifierPropertiesList && {
     DocumentClassifierPropertiesList: obj.DocumentClassifierPropertiesList.map((item) =>
-      DocumentClassifierPropertiesFilterSensitiveLog(item)
+      DocumentClassifierPropertiesFilterSensitiveLog(item),
     ),
   }),
 });
@@ -9441,7 +9441,7 @@ export const ListEntityRecognizersResponseFilterSensitiveLog = (obj: ListEntityR
   ...obj,
   ...(obj.EntityRecognizerPropertiesList && {
     EntityRecognizerPropertiesList: obj.EntityRecognizerPropertiesList.map((item) =>
-      EntityRecognizerPropertiesFilterSensitiveLog(item)
+      EntityRecognizerPropertiesFilterSensitiveLog(item),
     ),
   }),
 });

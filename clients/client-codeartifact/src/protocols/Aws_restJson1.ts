@@ -193,7 +193,7 @@ import {
  */
 export const se_AssociateExternalConnectionCommand = async (
   input: AssociateExternalConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -214,7 +214,7 @@ export const se_AssociateExternalConnectionCommand = async (
  */
 export const se_CopyPackageVersionsCommand = async (
   input: CopyPackageVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -237,7 +237,7 @@ export const se_CopyPackageVersionsCommand = async (
       includeFromUpstream: [],
       versionRevisions: (_) => _json(_),
       versions: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -248,7 +248,7 @@ export const se_CopyPackageVersionsCommand = async (
  */
 export const se_CreateDomainCommand = async (
   input: CreateDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -263,7 +263,7 @@ export const se_CreateDomainCommand = async (
     take(input, {
       encryptionKey: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -274,7 +274,7 @@ export const se_CreateDomainCommand = async (
  */
 export const se_CreatePackageGroupCommand = async (
   input: CreatePackageGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -292,7 +292,7 @@ export const se_CreatePackageGroupCommand = async (
       description: [],
       packageGroup: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -303,7 +303,7 @@ export const se_CreatePackageGroupCommand = async (
  */
 export const se_CreateRepositoryCommand = async (
   input: CreateRepositoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -321,7 +321,7 @@ export const se_CreateRepositoryCommand = async (
       description: [],
       tags: (_) => _json(_),
       upstreams: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -332,7 +332,7 @@ export const se_CreateRepositoryCommand = async (
  */
 export const se_DeleteDomainCommand = async (
   input: DeleteDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -351,7 +351,7 @@ export const se_DeleteDomainCommand = async (
  */
 export const se_DeleteDomainPermissionsPolicyCommand = async (
   input: DeleteDomainPermissionsPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -371,7 +371,7 @@ export const se_DeleteDomainPermissionsPolicyCommand = async (
  */
 export const se_DeletePackageCommand = async (
   input: DeletePackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -394,7 +394,7 @@ export const se_DeletePackageCommand = async (
  */
 export const se_DeletePackageGroupCommand = async (
   input: DeletePackageGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -414,7 +414,7 @@ export const se_DeletePackageGroupCommand = async (
  */
 export const se_DeletePackageVersionsCommand = async (
   input: DeletePackageVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -434,7 +434,7 @@ export const se_DeletePackageVersionsCommand = async (
     take(input, {
       expectedStatus: [],
       versions: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -445,7 +445,7 @@ export const se_DeletePackageVersionsCommand = async (
  */
 export const se_DeleteRepositoryCommand = async (
   input: DeleteRepositoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -465,7 +465,7 @@ export const se_DeleteRepositoryCommand = async (
  */
 export const se_DeleteRepositoryPermissionsPolicyCommand = async (
   input: DeleteRepositoryPermissionsPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -486,7 +486,7 @@ export const se_DeleteRepositoryPermissionsPolicyCommand = async (
  */
 export const se_DescribeDomainCommand = async (
   input: DescribeDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -505,7 +505,7 @@ export const se_DescribeDomainCommand = async (
  */
 export const se_DescribePackageCommand = async (
   input: DescribePackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -528,7 +528,7 @@ export const se_DescribePackageCommand = async (
  */
 export const se_DescribePackageGroupCommand = async (
   input: DescribePackageGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -548,7 +548,7 @@ export const se_DescribePackageGroupCommand = async (
  */
 export const se_DescribePackageVersionCommand = async (
   input: DescribePackageVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -572,7 +572,7 @@ export const se_DescribePackageVersionCommand = async (
  */
 export const se_DescribeRepositoryCommand = async (
   input: DescribeRepositoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -592,7 +592,7 @@ export const se_DescribeRepositoryCommand = async (
  */
 export const se_DisassociateExternalConnectionCommand = async (
   input: DisassociateExternalConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -613,7 +613,7 @@ export const se_DisassociateExternalConnectionCommand = async (
  */
 export const se_DisposePackageVersionsCommand = async (
   input: DisposePackageVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -634,7 +634,7 @@ export const se_DisposePackageVersionsCommand = async (
       expectedStatus: [],
       versionRevisions: (_) => _json(_),
       versions: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -645,7 +645,7 @@ export const se_DisposePackageVersionsCommand = async (
  */
 export const se_GetAssociatedPackageGroupCommand = async (
   input: GetAssociatedPackageGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -667,7 +667,7 @@ export const se_GetAssociatedPackageGroupCommand = async (
  */
 export const se_GetAuthorizationTokenCommand = async (
   input: GetAuthorizationTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -687,7 +687,7 @@ export const se_GetAuthorizationTokenCommand = async (
  */
 export const se_GetDomainPermissionsPolicyCommand = async (
   input: GetDomainPermissionsPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -706,7 +706,7 @@ export const se_GetDomainPermissionsPolicyCommand = async (
  */
 export const se_GetPackageVersionAssetCommand = async (
   input: GetPackageVersionAssetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -732,7 +732,7 @@ export const se_GetPackageVersionAssetCommand = async (
  */
 export const se_GetPackageVersionReadmeCommand = async (
   input: GetPackageVersionReadmeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -756,7 +756,7 @@ export const se_GetPackageVersionReadmeCommand = async (
  */
 export const se_GetRepositoryEndpointCommand = async (
   input: GetRepositoryEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -777,7 +777,7 @@ export const se_GetRepositoryEndpointCommand = async (
  */
 export const se_GetRepositoryPermissionsPolicyCommand = async (
   input: GetRepositoryPermissionsPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -797,7 +797,7 @@ export const se_GetRepositoryPermissionsPolicyCommand = async (
  */
 export const se_ListAllowedRepositoriesForGroupCommand = async (
   input: ListAllowedRepositoriesForGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -820,7 +820,7 @@ export const se_ListAllowedRepositoriesForGroupCommand = async (
  */
 export const se_ListAssociatedPackagesCommand = async (
   input: ListAssociatedPackagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -843,7 +843,7 @@ export const se_ListAssociatedPackagesCommand = async (
  */
 export const se_ListDomainsCommand = async (
   input: ListDomainsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -855,7 +855,7 @@ export const se_ListDomainsCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -866,7 +866,7 @@ export const se_ListDomainsCommand = async (
  */
 export const se_ListPackageGroupsCommand = async (
   input: ListPackageGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -888,7 +888,7 @@ export const se_ListPackageGroupsCommand = async (
  */
 export const se_ListPackagesCommand = async (
   input: ListPackagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -915,7 +915,7 @@ export const se_ListPackagesCommand = async (
  */
 export const se_ListPackageVersionAssetsCommand = async (
   input: ListPackageVersionAssetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -941,7 +941,7 @@ export const se_ListPackageVersionAssetsCommand = async (
  */
 export const se_ListPackageVersionDependenciesCommand = async (
   input: ListPackageVersionDependenciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -966,7 +966,7 @@ export const se_ListPackageVersionDependenciesCommand = async (
  */
 export const se_ListPackageVersionsCommand = async (
   input: ListPackageVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -994,7 +994,7 @@ export const se_ListPackageVersionsCommand = async (
  */
 export const se_ListRepositoriesCommand = async (
   input: ListRepositoriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1014,7 +1014,7 @@ export const se_ListRepositoriesCommand = async (
  */
 export const se_ListRepositoriesInDomainCommand = async (
   input: ListRepositoriesInDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1037,7 +1037,7 @@ export const se_ListRepositoriesInDomainCommand = async (
  */
 export const se_ListSubPackageGroupsCommand = async (
   input: ListSubPackageGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1059,7 +1059,7 @@ export const se_ListSubPackageGroupsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1077,7 +1077,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PublishPackageVersionCommand = async (
   input: PublishPackageVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1109,7 +1109,7 @@ export const se_PublishPackageVersionCommand = async (
  */
 export const se_PutDomainPermissionsPolicyCommand = async (
   input: PutDomainPermissionsPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1123,7 +1123,7 @@ export const se_PutDomainPermissionsPolicyCommand = async (
       domainOwner: [],
       policyDocument: [],
       policyRevision: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1134,7 +1134,7 @@ export const se_PutDomainPermissionsPolicyCommand = async (
  */
 export const se_PutPackageOriginConfigurationCommand = async (
   input: PutPackageOriginConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1153,7 +1153,7 @@ export const se_PutPackageOriginConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       restrictions: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -1164,7 +1164,7 @@ export const se_PutPackageOriginConfigurationCommand = async (
  */
 export const se_PutRepositoryPermissionsPolicyCommand = async (
   input: PutRepositoryPermissionsPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1181,7 +1181,7 @@ export const se_PutRepositoryPermissionsPolicyCommand = async (
     take(input, {
       policyDocument: [],
       policyRevision: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -1192,7 +1192,7 @@ export const se_PutRepositoryPermissionsPolicyCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1206,7 +1206,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -1217,7 +1217,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1231,7 +1231,7 @@ export const se_UntagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tagKeys: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -1242,7 +1242,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdatePackageGroupCommand = async (
   input: UpdatePackageGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1259,7 +1259,7 @@ export const se_UpdatePackageGroupCommand = async (
       contactInfo: [],
       description: [],
       packageGroup: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -1270,7 +1270,7 @@ export const se_UpdatePackageGroupCommand = async (
  */
 export const se_UpdatePackageGroupOriginConfigurationCommand = async (
   input: UpdatePackageGroupOriginConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1288,7 +1288,7 @@ export const se_UpdatePackageGroupOriginConfigurationCommand = async (
       addAllowedRepositories: (_) => _json(_),
       removeAllowedRepositories: (_) => _json(_),
       restrictions: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -1299,7 +1299,7 @@ export const se_UpdatePackageGroupOriginConfigurationCommand = async (
  */
 export const se_UpdatePackageVersionsStatusCommand = async (
   input: UpdatePackageVersionsStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1321,7 +1321,7 @@ export const se_UpdatePackageVersionsStatusCommand = async (
       targetStatus: [],
       versionRevisions: (_) => _json(_),
       versions: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -1332,7 +1332,7 @@ export const se_UpdatePackageVersionsStatusCommand = async (
  */
 export const se_UpdateRepositoryCommand = async (
   input: UpdateRepositoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1349,7 +1349,7 @@ export const se_UpdateRepositoryCommand = async (
     take(input, {
       description: [],
       upstreams: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -1360,7 +1360,7 @@ export const se_UpdateRepositoryCommand = async (
  */
 export const de_AssociateExternalConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateExternalConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1381,7 +1381,7 @@ export const de_AssociateExternalConnectionCommand = async (
  */
 export const de_CopyPackageVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopyPackageVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1403,7 +1403,7 @@ export const de_CopyPackageVersionsCommand = async (
  */
 export const de_CreateDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1424,7 +1424,7 @@ export const de_CreateDomainCommand = async (
  */
 export const de_CreatePackageGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePackageGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1445,7 +1445,7 @@ export const de_CreatePackageGroupCommand = async (
  */
 export const de_CreateRepositoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRepositoryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1466,7 +1466,7 @@ export const de_CreateRepositoryCommand = async (
  */
 export const de_DeleteDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1487,7 +1487,7 @@ export const de_DeleteDomainCommand = async (
  */
 export const de_DeleteDomainPermissionsPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDomainPermissionsPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1508,7 +1508,7 @@ export const de_DeleteDomainPermissionsPolicyCommand = async (
  */
 export const de_DeletePackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePackageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1529,7 +1529,7 @@ export const de_DeletePackageCommand = async (
  */
 export const de_DeletePackageGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePackageGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1550,7 +1550,7 @@ export const de_DeletePackageGroupCommand = async (
  */
 export const de_DeletePackageVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePackageVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1572,7 +1572,7 @@ export const de_DeletePackageVersionsCommand = async (
  */
 export const de_DeleteRepositoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRepositoryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1593,7 +1593,7 @@ export const de_DeleteRepositoryCommand = async (
  */
 export const de_DeleteRepositoryPermissionsPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRepositoryPermissionsPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1614,7 +1614,7 @@ export const de_DeleteRepositoryPermissionsPolicyCommand = async (
  */
 export const de_DescribeDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1635,7 +1635,7 @@ export const de_DescribeDomainCommand = async (
  */
 export const de_DescribePackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePackageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1656,7 +1656,7 @@ export const de_DescribePackageCommand = async (
  */
 export const de_DescribePackageGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePackageGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1677,7 +1677,7 @@ export const de_DescribePackageGroupCommand = async (
  */
 export const de_DescribePackageVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePackageVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1698,7 +1698,7 @@ export const de_DescribePackageVersionCommand = async (
  */
 export const de_DescribeRepositoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRepositoryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1719,7 +1719,7 @@ export const de_DescribeRepositoryCommand = async (
  */
 export const de_DisassociateExternalConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateExternalConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1740,7 +1740,7 @@ export const de_DisassociateExternalConnectionCommand = async (
  */
 export const de_DisposePackageVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisposePackageVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1762,7 +1762,7 @@ export const de_DisposePackageVersionsCommand = async (
  */
 export const de_GetAssociatedPackageGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAssociatedPackageGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1784,7 +1784,7 @@ export const de_GetAssociatedPackageGroupCommand = async (
  */
 export const de_GetAuthorizationTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAuthorizationTokenCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1806,7 +1806,7 @@ export const de_GetAuthorizationTokenCommand = async (
  */
 export const de_GetDomainPermissionsPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDomainPermissionsPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1827,7 +1827,7 @@ export const de_GetDomainPermissionsPolicyCommand = async (
  */
 export const de_GetPackageVersionAssetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<GetPackageVersionAssetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1849,7 +1849,7 @@ export const de_GetPackageVersionAssetCommand = async (
  */
 export const de_GetPackageVersionReadmeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPackageVersionReadmeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1875,7 +1875,7 @@ export const de_GetPackageVersionReadmeCommand = async (
  */
 export const de_GetRepositoryEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRepositoryEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1896,7 +1896,7 @@ export const de_GetRepositoryEndpointCommand = async (
  */
 export const de_GetRepositoryPermissionsPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRepositoryPermissionsPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1917,7 +1917,7 @@ export const de_GetRepositoryPermissionsPolicyCommand = async (
  */
 export const de_ListAllowedRepositoriesForGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAllowedRepositoriesForGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1939,7 +1939,7 @@ export const de_ListAllowedRepositoriesForGroupCommand = async (
  */
 export const de_ListAssociatedPackagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssociatedPackagesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1961,7 +1961,7 @@ export const de_ListAssociatedPackagesCommand = async (
  */
 export const de_ListDomainsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDomainsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1983,7 +1983,7 @@ export const de_ListDomainsCommand = async (
  */
 export const de_ListPackageGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPackageGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2005,7 +2005,7 @@ export const de_ListPackageGroupsCommand = async (
  */
 export const de_ListPackagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPackagesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2027,7 +2027,7 @@ export const de_ListPackagesCommand = async (
  */
 export const de_ListPackageVersionAssetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPackageVersionAssetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2054,7 +2054,7 @@ export const de_ListPackageVersionAssetsCommand = async (
  */
 export const de_ListPackageVersionDependenciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPackageVersionDependenciesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2081,7 +2081,7 @@ export const de_ListPackageVersionDependenciesCommand = async (
  */
 export const de_ListPackageVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPackageVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2107,7 +2107,7 @@ export const de_ListPackageVersionsCommand = async (
  */
 export const de_ListRepositoriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRepositoriesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2129,7 +2129,7 @@ export const de_ListRepositoriesCommand = async (
  */
 export const de_ListRepositoriesInDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRepositoriesInDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2151,7 +2151,7 @@ export const de_ListRepositoriesInDomainCommand = async (
  */
 export const de_ListSubPackageGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSubPackageGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2173,7 +2173,7 @@ export const de_ListSubPackageGroupsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2194,7 +2194,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PublishPackageVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PublishPackageVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2221,7 +2221,7 @@ export const de_PublishPackageVersionCommand = async (
  */
 export const de_PutDomainPermissionsPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutDomainPermissionsPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2242,7 +2242,7 @@ export const de_PutDomainPermissionsPolicyCommand = async (
  */
 export const de_PutPackageOriginConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutPackageOriginConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2263,7 +2263,7 @@ export const de_PutPackageOriginConfigurationCommand = async (
  */
 export const de_PutRepositoryPermissionsPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutRepositoryPermissionsPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2284,7 +2284,7 @@ export const de_PutRepositoryPermissionsPolicyCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2301,7 +2301,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2318,7 +2318,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdatePackageGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePackageGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2339,7 +2339,7 @@ export const de_UpdatePackageGroupCommand = async (
  */
 export const de_UpdatePackageGroupOriginConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePackageGroupOriginConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2361,7 +2361,7 @@ export const de_UpdatePackageGroupOriginConfigurationCommand = async (
  */
 export const de_UpdatePackageVersionsStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePackageVersionsStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2383,7 +2383,7 @@ export const de_UpdatePackageVersionsStatusCommand = async (
  */
 export const de_UpdateRepositoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRepositoryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2446,7 +2446,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2485,7 +2485,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2505,7 +2505,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2527,7 +2527,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

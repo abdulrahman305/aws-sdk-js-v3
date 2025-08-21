@@ -92,7 +92,7 @@ import {
  */
 export const se_CreateEnvironmentEC2Command = async (
   input: CreateEnvironmentEC2CommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateEnvironmentEC2");
   let body: any;
@@ -105,7 +105,7 @@ export const se_CreateEnvironmentEC2Command = async (
  */
 export const se_CreateEnvironmentMembershipCommand = async (
   input: CreateEnvironmentMembershipCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateEnvironmentMembership");
   let body: any;
@@ -118,7 +118,7 @@ export const se_CreateEnvironmentMembershipCommand = async (
  */
 export const se_DeleteEnvironmentCommand = async (
   input: DeleteEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteEnvironment");
   let body: any;
@@ -131,7 +131,7 @@ export const se_DeleteEnvironmentCommand = async (
  */
 export const se_DeleteEnvironmentMembershipCommand = async (
   input: DeleteEnvironmentMembershipCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteEnvironmentMembership");
   let body: any;
@@ -144,7 +144,7 @@ export const se_DeleteEnvironmentMembershipCommand = async (
  */
 export const se_DescribeEnvironmentMembershipsCommand = async (
   input: DescribeEnvironmentMembershipsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEnvironmentMemberships");
   let body: any;
@@ -157,7 +157,7 @@ export const se_DescribeEnvironmentMembershipsCommand = async (
  */
 export const se_DescribeEnvironmentsCommand = async (
   input: DescribeEnvironmentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEnvironments");
   let body: any;
@@ -170,7 +170,7 @@ export const se_DescribeEnvironmentsCommand = async (
  */
 export const se_DescribeEnvironmentStatusCommand = async (
   input: DescribeEnvironmentStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEnvironmentStatus");
   let body: any;
@@ -183,7 +183,7 @@ export const se_DescribeEnvironmentStatusCommand = async (
  */
 export const se_ListEnvironmentsCommand = async (
   input: ListEnvironmentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListEnvironments");
   let body: any;
@@ -196,7 +196,7 @@ export const se_ListEnvironmentsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -209,7 +209,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -222,7 +222,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -235,7 +235,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateEnvironmentCommand = async (
   input: UpdateEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateEnvironment");
   let body: any;
@@ -248,7 +248,7 @@ export const se_UpdateEnvironmentCommand = async (
  */
 export const se_UpdateEnvironmentMembershipCommand = async (
   input: UpdateEnvironmentMembershipCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateEnvironmentMembership");
   let body: any;
@@ -261,7 +261,7 @@ export const se_UpdateEnvironmentMembershipCommand = async (
  */
 export const de_CreateEnvironmentEC2Command = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEnvironmentEC2CommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -281,7 +281,7 @@ export const de_CreateEnvironmentEC2Command = async (
  */
 export const de_CreateEnvironmentMembershipCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEnvironmentMembershipCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -301,7 +301,7 @@ export const de_CreateEnvironmentMembershipCommand = async (
  */
 export const de_DeleteEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEnvironmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -321,7 +321,7 @@ export const de_DeleteEnvironmentCommand = async (
  */
 export const de_DeleteEnvironmentMembershipCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEnvironmentMembershipCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -341,7 +341,7 @@ export const de_DeleteEnvironmentMembershipCommand = async (
  */
 export const de_DescribeEnvironmentMembershipsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEnvironmentMembershipsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -361,7 +361,7 @@ export const de_DescribeEnvironmentMembershipsCommand = async (
  */
 export const de_DescribeEnvironmentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEnvironmentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -381,7 +381,7 @@ export const de_DescribeEnvironmentsCommand = async (
  */
 export const de_DescribeEnvironmentStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEnvironmentStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -401,7 +401,7 @@ export const de_DescribeEnvironmentStatusCommand = async (
  */
 export const de_ListEnvironmentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEnvironmentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -421,7 +421,7 @@ export const de_ListEnvironmentsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -441,7 +441,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -461,7 +461,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -481,7 +481,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEnvironmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -501,7 +501,7 @@ export const de_UpdateEnvironmentCommand = async (
  */
 export const de_UpdateEnvironmentMembershipCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEnvironmentMembershipCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -578,7 +578,7 @@ const de_BadRequestExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_ConcurrentAccessExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentAccessException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -620,7 +620,7 @@ const de_ForbiddenExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_InternalServerErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerErrorException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -636,7 +636,7 @@ const de_InternalServerErrorExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -665,7 +665,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -725,7 +725,7 @@ const de_TooManyRequestsExceptionRes = async (
  */
 const de_CreateEnvironmentMembershipResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateEnvironmentMembershipResult => {
   return take(output, {
     membership: (_: any) => de_EnvironmentMember(_, context),
@@ -741,7 +741,7 @@ const de_CreateEnvironmentMembershipResult = (
  */
 const de_DescribeEnvironmentMembershipsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeEnvironmentMembershipsResult => {
   return take(output, {
     memberships: (_: any) => de_EnvironmentMembersList(_, context),
@@ -813,7 +813,7 @@ const de_EnvironmentMembersList = (output: any, context: __SerdeContext): Enviro
  */
 const de_UpdateEnvironmentMembershipResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateEnvironmentMembershipResult => {
   return take(output, {
     membership: (_: any) => de_EnvironmentMember(_, context),
@@ -840,7 +840,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

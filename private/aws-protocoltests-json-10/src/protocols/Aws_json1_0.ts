@@ -107,7 +107,7 @@ import {
  */
 export const se_EmptyInputAndEmptyOutputCommand = async (
   input: EmptyInputAndEmptyOutputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EmptyInputAndEmptyOutput");
   let body: any;
@@ -120,7 +120,7 @@ export const se_EmptyInputAndEmptyOutputCommand = async (
  */
 export const se_EndpointOperationCommand = async (
   input: EndpointOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EndpointOperation");
   const body = "{}";
@@ -139,7 +139,7 @@ export const se_EndpointOperationCommand = async (
  */
 export const se_EndpointWithHostLabelOperationCommand = async (
   input: EndpointWithHostLabelOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EndpointWithHostLabelOperation");
   let body: any;
@@ -163,7 +163,7 @@ export const se_EndpointWithHostLabelOperationCommand = async (
  */
 export const se_GreetingWithErrorsCommand = async (
   input: GreetingWithErrorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GreetingWithErrors");
   let body: any;
@@ -176,7 +176,7 @@ export const se_GreetingWithErrorsCommand = async (
  */
 export const se_HostWithPathOperationCommand = async (
   input: HostWithPathOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("HostWithPathOperation");
   const body = "{}";
@@ -188,7 +188,7 @@ export const se_HostWithPathOperationCommand = async (
  */
 export const se_JsonUnionsCommand = async (
   input: JsonUnionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("JsonUnions");
   let body: any;
@@ -201,7 +201,7 @@ export const se_JsonUnionsCommand = async (
  */
 export const se_NoInputAndNoOutputCommand = async (
   input: NoInputAndNoOutputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("NoInputAndNoOutput");
   const body = "{}";
@@ -213,7 +213,7 @@ export const se_NoInputAndNoOutputCommand = async (
  */
 export const se_NoInputAndOutputCommand = async (
   input: NoInputAndOutputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("NoInputAndOutput");
   const body = "{}";
@@ -225,7 +225,7 @@ export const se_NoInputAndOutputCommand = async (
  */
 export const se_OperationWithDefaultsCommand = async (
   input: OperationWithDefaultsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("OperationWithDefaults");
   let body: any;
@@ -238,7 +238,7 @@ export const se_OperationWithDefaultsCommand = async (
  */
 export const se_OperationWithNestedStructureCommand = async (
   input: OperationWithNestedStructureCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("OperationWithNestedStructure");
   let body: any;
@@ -251,7 +251,7 @@ export const se_OperationWithNestedStructureCommand = async (
  */
 export const se_OperationWithRequiredMembersCommand = async (
   input: OperationWithRequiredMembersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("OperationWithRequiredMembers");
   const body = "{}";
@@ -263,7 +263,7 @@ export const se_OperationWithRequiredMembersCommand = async (
  */
 export const se_PutWithContentEncodingCommand = async (
   input: PutWithContentEncodingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutWithContentEncoding");
   let body: any;
@@ -276,7 +276,7 @@ export const se_PutWithContentEncodingCommand = async (
  */
 export const se_SimpleScalarPropertiesCommand = async (
   input: SimpleScalarPropertiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SimpleScalarProperties");
   let body: any;
@@ -289,7 +289,7 @@ export const se_SimpleScalarPropertiesCommand = async (
  */
 export const de_EmptyInputAndEmptyOutputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EmptyInputAndEmptyOutputCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -309,7 +309,7 @@ export const de_EmptyInputAndEmptyOutputCommand = async (
  */
 export const de_EndpointOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EndpointOperationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -326,7 +326,7 @@ export const de_EndpointOperationCommand = async (
  */
 export const de_EndpointWithHostLabelOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EndpointWithHostLabelOperationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -343,7 +343,7 @@ export const de_EndpointWithHostLabelOperationCommand = async (
  */
 export const de_GreetingWithErrorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GreetingWithErrorsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -363,7 +363,7 @@ export const de_GreetingWithErrorsCommand = async (
  */
 export const de_HostWithPathOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HostWithPathOperationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -380,7 +380,7 @@ export const de_HostWithPathOperationCommand = async (
  */
 export const de_JsonUnionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<JsonUnionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -400,7 +400,7 @@ export const de_JsonUnionsCommand = async (
  */
 export const de_NoInputAndNoOutputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoInputAndNoOutputCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -417,7 +417,7 @@ export const de_NoInputAndNoOutputCommand = async (
  */
 export const de_NoInputAndOutputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoInputAndOutputCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -437,7 +437,7 @@ export const de_NoInputAndOutputCommand = async (
  */
 export const de_OperationWithDefaultsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationWithDefaultsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -457,7 +457,7 @@ export const de_OperationWithDefaultsCommand = async (
  */
 export const de_OperationWithNestedStructureCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationWithNestedStructureCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -477,7 +477,7 @@ export const de_OperationWithNestedStructureCommand = async (
  */
 export const de_OperationWithRequiredMembersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationWithRequiredMembersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -497,7 +497,7 @@ export const de_OperationWithRequiredMembersCommand = async (
  */
 export const de_PutWithContentEncodingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutWithContentEncodingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -514,7 +514,7 @@ export const de_PutWithContentEncodingCommand = async (
  */
 export const de_SimpleScalarPropertiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SimpleScalarPropertiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -673,7 +673,7 @@ const se_MyUnion = (input: MyUnion, context: __SerdeContext): any => {
     stringValue: (value) => ({ stringValue: value }),
     structureValue: (value) => ({ structureValue: _json(value) }),
     timestampValue: (value) => ({ timestampValue: value.getTime() / 1_000 }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -858,7 +858,7 @@ const de_OperationWithDefaultsOutput = (output: any, context: __SerdeContext): O
  */
 const de_OperationWithRequiredMembersOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): OperationWithRequiredMembersOutput => {
   return take(output, {
     requiredBlob: context.base64Decoder,
@@ -925,7 +925,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

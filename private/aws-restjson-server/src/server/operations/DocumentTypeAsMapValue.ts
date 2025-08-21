@@ -42,7 +42,7 @@ export namespace DocumentTypeAsMapValueServerInput {
    * @internal
    */
   export const validate: (
-    obj: Parameters<typeof DocumentTypeAsMapValueInputOutput.validate>[0]
+    obj: Parameters<typeof DocumentTypeAsMapValueInputOutput.validate>[0],
   ) => __ValidationFailure[] = DocumentTypeAsMapValueInputOutput.validate;
 }
 export interface DocumentTypeAsMapValueServerOutput extends DocumentTypeAsMapValueInputOutput {}
@@ -66,14 +66,14 @@ export class DocumentTypeAsMapValueSerializer
 
 export const getDocumentTypeAsMapValueHandler = <Context>(
   operation: __Operation<DocumentTypeAsMapValueServerInput, DocumentTypeAsMapValueServerOutput, Context>,
-  customizer: __ValidationCustomizer<"DocumentTypeAsMapValue">
+  customizer: __ValidationCustomizer<"DocumentTypeAsMapValue">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "DocumentTypeAsMapValue">([
     new httpbinding.UriSpec<"RestJson", "DocumentTypeAsMapValue">(
       "PUT",
       [{ type: "path_literal", value: "DocumentTypeAsMapValue" }],
       [],
-      { service: "RestJson", operation: "DocumentTypeAsMapValue" }
+      { service: "RestJson", operation: "DocumentTypeAsMapValue" },
     ),
   ]);
   return new DocumentTypeAsMapValueHandler(
@@ -81,7 +81,7 @@ export const getDocumentTypeAsMapValueHandler = <Context>(
     mux,
     new DocumentTypeAsMapValueSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -102,7 +102,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -148,7 +148,7 @@ export class DocumentTypeAsMapValueHandler<Context> implements __ServiceHandler<
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"DocumentTypeAsMapValue">;
   /**
@@ -165,7 +165,7 @@ export class DocumentTypeAsMapValueHandler<Context> implements __ServiceHandler<
     mux: __Mux<"RestJson", "DocumentTypeAsMapValue">,
     serializer: __OperationSerializer<RestJsonService<Context>, "DocumentTypeAsMapValue", DocumentTypeAsMapValueErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"DocumentTypeAsMapValue">
+    validationCustomizer: __ValidationCustomizer<"DocumentTypeAsMapValue">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -177,7 +177,7 @@ export class DocumentTypeAsMapValueHandler<Context> implements __ServiceHandler<
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.DocumentTypeAsMapValue. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.DocumentTypeAsMapValue. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -189,7 +189,7 @@ export class DocumentTypeAsMapValueHandler<Context> implements __ServiceHandler<
       this.operation,
       this.serializeFrameworkException,
       DocumentTypeAsMapValueServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

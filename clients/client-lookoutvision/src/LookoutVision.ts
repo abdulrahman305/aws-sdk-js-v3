@@ -124,7 +124,7 @@ export interface LookoutVision {
   createDataset(
     args: CreateDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDatasetCommandOutput) => void
+    cb: (err: any, data?: CreateDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -135,7 +135,7 @@ export interface LookoutVision {
   createModel(
     args: CreateModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateModelCommandOutput) => void
+    cb: (err: any, data?: CreateModelCommandOutput) => void,
   ): void;
 
   /**
@@ -146,7 +146,7 @@ export interface LookoutVision {
   createProject(
     args: CreateProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateProjectCommandOutput) => void
+    cb: (err: any, data?: CreateProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -157,7 +157,7 @@ export interface LookoutVision {
   deleteDataset(
     args: DeleteDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDatasetCommandOutput) => void
+    cb: (err: any, data?: DeleteDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -168,7 +168,7 @@ export interface LookoutVision {
   deleteModel(
     args: DeleteModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteModelCommandOutput) => void
+    cb: (err: any, data?: DeleteModelCommandOutput) => void,
   ): void;
 
   /**
@@ -179,7 +179,7 @@ export interface LookoutVision {
   deleteProject(
     args: DeleteProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProjectCommandOutput) => void
+    cb: (err: any, data?: DeleteProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -187,13 +187,13 @@ export interface LookoutVision {
    */
   describeDataset(
     args: DescribeDatasetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDatasetCommandOutput>;
   describeDataset(args: DescribeDatasetCommandInput, cb: (err: any, data?: DescribeDatasetCommandOutput) => void): void;
   describeDataset(
     args: DescribeDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDatasetCommandOutput) => void
+    cb: (err: any, data?: DescribeDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -204,7 +204,7 @@ export interface LookoutVision {
   describeModel(
     args: DescribeModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeModelCommandOutput) => void
+    cb: (err: any, data?: DescribeModelCommandOutput) => void,
   ): void;
 
   /**
@@ -212,16 +212,16 @@ export interface LookoutVision {
    */
   describeModelPackagingJob(
     args: DescribeModelPackagingJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeModelPackagingJobCommandOutput>;
   describeModelPackagingJob(
     args: DescribeModelPackagingJobCommandInput,
-    cb: (err: any, data?: DescribeModelPackagingJobCommandOutput) => void
+    cb: (err: any, data?: DescribeModelPackagingJobCommandOutput) => void,
   ): void;
   describeModelPackagingJob(
     args: DescribeModelPackagingJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeModelPackagingJobCommandOutput) => void
+    cb: (err: any, data?: DescribeModelPackagingJobCommandOutput) => void,
   ): void;
 
   /**
@@ -229,13 +229,13 @@ export interface LookoutVision {
    */
   describeProject(
     args: DescribeProjectCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeProjectCommandOutput>;
   describeProject(args: DescribeProjectCommandInput, cb: (err: any, data?: DescribeProjectCommandOutput) => void): void;
   describeProject(
     args: DescribeProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeProjectCommandOutput) => void
+    cb: (err: any, data?: DescribeProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -243,13 +243,13 @@ export interface LookoutVision {
    */
   detectAnomalies(
     args: DetectAnomaliesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DetectAnomaliesCommandOutput>;
   detectAnomalies(args: DetectAnomaliesCommandInput, cb: (err: any, data?: DetectAnomaliesCommandOutput) => void): void;
   detectAnomalies(
     args: DetectAnomaliesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DetectAnomaliesCommandOutput) => void
+    cb: (err: any, data?: DetectAnomaliesCommandOutput) => void,
   ): void;
 
   /**
@@ -257,16 +257,16 @@ export interface LookoutVision {
    */
   listDatasetEntries(
     args: ListDatasetEntriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDatasetEntriesCommandOutput>;
   listDatasetEntries(
     args: ListDatasetEntriesCommandInput,
-    cb: (err: any, data?: ListDatasetEntriesCommandOutput) => void
+    cb: (err: any, data?: ListDatasetEntriesCommandOutput) => void,
   ): void;
   listDatasetEntries(
     args: ListDatasetEntriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDatasetEntriesCommandOutput) => void
+    cb: (err: any, data?: ListDatasetEntriesCommandOutput) => void,
   ): void;
 
   /**
@@ -274,16 +274,16 @@ export interface LookoutVision {
    */
   listModelPackagingJobs(
     args: ListModelPackagingJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListModelPackagingJobsCommandOutput>;
   listModelPackagingJobs(
     args: ListModelPackagingJobsCommandInput,
-    cb: (err: any, data?: ListModelPackagingJobsCommandOutput) => void
+    cb: (err: any, data?: ListModelPackagingJobsCommandOutput) => void,
   ): void;
   listModelPackagingJobs(
     args: ListModelPackagingJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListModelPackagingJobsCommandOutput) => void
+    cb: (err: any, data?: ListModelPackagingJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -294,7 +294,7 @@ export interface LookoutVision {
   listModels(
     args: ListModelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListModelsCommandOutput) => void
+    cb: (err: any, data?: ListModelsCommandOutput) => void,
   ): void;
 
   /**
@@ -306,7 +306,7 @@ export interface LookoutVision {
   listProjects(
     args: ListProjectsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProjectsCommandOutput) => void
+    cb: (err: any, data?: ListProjectsCommandOutput) => void,
   ): void;
 
   /**
@@ -314,16 +314,16 @@ export interface LookoutVision {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -334,7 +334,7 @@ export interface LookoutVision {
   startModel(
     args: StartModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartModelCommandOutput) => void
+    cb: (err: any, data?: StartModelCommandOutput) => void,
   ): void;
 
   /**
@@ -342,16 +342,16 @@ export interface LookoutVision {
    */
   startModelPackagingJob(
     args: StartModelPackagingJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartModelPackagingJobCommandOutput>;
   startModelPackagingJob(
     args: StartModelPackagingJobCommandInput,
-    cb: (err: any, data?: StartModelPackagingJobCommandOutput) => void
+    cb: (err: any, data?: StartModelPackagingJobCommandOutput) => void,
   ): void;
   startModelPackagingJob(
     args: StartModelPackagingJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartModelPackagingJobCommandOutput) => void
+    cb: (err: any, data?: StartModelPackagingJobCommandOutput) => void,
   ): void;
 
   /**
@@ -362,7 +362,7 @@ export interface LookoutVision {
   stopModel(
     args: StopModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopModelCommandOutput) => void
+    cb: (err: any, data?: StopModelCommandOutput) => void,
   ): void;
 
   /**
@@ -373,7 +373,7 @@ export interface LookoutVision {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -384,7 +384,7 @@ export interface LookoutVision {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -392,16 +392,16 @@ export interface LookoutVision {
    */
   updateDatasetEntries(
     args: UpdateDatasetEntriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDatasetEntriesCommandOutput>;
   updateDatasetEntries(
     args: UpdateDatasetEntriesCommandInput,
-    cb: (err: any, data?: UpdateDatasetEntriesCommandOutput) => void
+    cb: (err: any, data?: UpdateDatasetEntriesCommandOutput) => void,
   ): void;
   updateDatasetEntries(
     args: UpdateDatasetEntriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDatasetEntriesCommandOutput) => void
+    cb: (err: any, data?: UpdateDatasetEntriesCommandOutput) => void,
   ): void;
 }
 

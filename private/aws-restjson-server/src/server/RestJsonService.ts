@@ -597,7 +597,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -633,11 +633,11 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
   private readonly service: RestJsonService<Context>;
   private readonly mux: __Mux<"RestJson", RestJsonServiceOperations>;
   private readonly serializerFactory: <T extends RestJsonServiceOperations>(
-    operation: T
+    operation: T,
   ) => __OperationSerializer<RestJsonService<Context>, T, __ServiceException>;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<RestJsonServiceOperations>;
   /**
@@ -653,10 +653,10 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
     service: RestJsonService<Context>,
     mux: __Mux<"RestJson", RestJsonServiceOperations>,
     serializerFactory: <T extends RestJsonServiceOperations>(
-      op: T
+      op: T,
     ) => __OperationSerializer<RestJsonService<Context>, T, __ServiceException>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<RestJsonServiceOperations>
+    validationCustomizer: __ValidationCustomizer<RestJsonServiceOperations>,
   ) {
     this.service = service;
     this.mux = mux;
@@ -679,7 +679,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.AllQueryStringTypes,
           this.serializeFrameworkException,
           AllQueryStringTypesServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "ConstantAndVariableQueryString": {
@@ -691,7 +691,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.ConstantAndVariableQueryString,
           this.serializeFrameworkException,
           ConstantAndVariableQueryStringServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "ConstantQueryString": {
@@ -703,7 +703,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.ConstantQueryString,
           this.serializeFrameworkException,
           ConstantQueryStringServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "DatetimeOffsets": {
@@ -715,7 +715,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.DatetimeOffsets,
           this.serializeFrameworkException,
           DatetimeOffsetsServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "DocumentType": {
@@ -727,7 +727,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.DocumentType,
           this.serializeFrameworkException,
           DocumentTypeServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "DocumentTypeAsMapValue": {
@@ -739,7 +739,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.DocumentTypeAsMapValue,
           this.serializeFrameworkException,
           DocumentTypeAsMapValueServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "DocumentTypeAsPayload": {
@@ -751,7 +751,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.DocumentTypeAsPayload,
           this.serializeFrameworkException,
           DocumentTypeAsPayloadServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "EmptyInputAndEmptyOutput": {
@@ -763,7 +763,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.EmptyInputAndEmptyOutput,
           this.serializeFrameworkException,
           EmptyInputAndEmptyOutputServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "EndpointOperation": {
@@ -775,7 +775,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.EndpointOperation,
           this.serializeFrameworkException,
           EndpointOperationServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "EndpointWithHostLabelOperation": {
@@ -787,7 +787,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.EndpointWithHostLabelOperation,
           this.serializeFrameworkException,
           EndpointWithHostLabelOperationServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "FractionalSeconds": {
@@ -799,7 +799,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.FractionalSeconds,
           this.serializeFrameworkException,
           FractionalSecondsServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "GreetingWithErrors": {
@@ -811,7 +811,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.GreetingWithErrors,
           this.serializeFrameworkException,
           GreetingWithErrorsServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "HostWithPathOperation": {
@@ -823,7 +823,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.HostWithPathOperation,
           this.serializeFrameworkException,
           HostWithPathOperationServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "HttpChecksumRequired": {
@@ -835,7 +835,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.HttpChecksumRequired,
           this.serializeFrameworkException,
           HttpChecksumRequiredServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "HttpEnumPayload": {
@@ -847,7 +847,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.HttpEnumPayload,
           this.serializeFrameworkException,
           HttpEnumPayloadServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "HttpPayloadTraits": {
@@ -859,7 +859,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.HttpPayloadTraits,
           this.serializeFrameworkException,
           HttpPayloadTraitsServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "HttpPayloadTraitsWithMediaType": {
@@ -871,7 +871,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.HttpPayloadTraitsWithMediaType,
           this.serializeFrameworkException,
           HttpPayloadTraitsWithMediaTypeServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "HttpPayloadWithStructure": {
@@ -883,7 +883,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.HttpPayloadWithStructure,
           this.serializeFrameworkException,
           HttpPayloadWithStructureServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "HttpPayloadWithUnion": {
@@ -895,7 +895,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.HttpPayloadWithUnion,
           this.serializeFrameworkException,
           HttpPayloadWithUnionServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "HttpPrefixHeaders": {
@@ -907,7 +907,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.HttpPrefixHeaders,
           this.serializeFrameworkException,
           HttpPrefixHeadersServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "HttpPrefixHeadersInResponse": {
@@ -919,7 +919,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.HttpPrefixHeadersInResponse,
           this.serializeFrameworkException,
           HttpPrefixHeadersInResponseServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "HttpRequestWithFloatLabels": {
@@ -931,7 +931,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.HttpRequestWithFloatLabels,
           this.serializeFrameworkException,
           HttpRequestWithFloatLabelsServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "HttpRequestWithGreedyLabelInPath": {
@@ -943,7 +943,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.HttpRequestWithGreedyLabelInPath,
           this.serializeFrameworkException,
           HttpRequestWithGreedyLabelInPathServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "HttpRequestWithLabels": {
@@ -955,7 +955,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.HttpRequestWithLabels,
           this.serializeFrameworkException,
           HttpRequestWithLabelsServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "HttpRequestWithLabelsAndTimestampFormat": {
@@ -967,7 +967,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.HttpRequestWithLabelsAndTimestampFormat,
           this.serializeFrameworkException,
           HttpRequestWithLabelsAndTimestampFormatServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "HttpRequestWithRegexLiteral": {
@@ -979,7 +979,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.HttpRequestWithRegexLiteral,
           this.serializeFrameworkException,
           HttpRequestWithRegexLiteralServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "HttpResponseCode": {
@@ -991,7 +991,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.HttpResponseCode,
           this.serializeFrameworkException,
           HttpResponseCodeServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "HttpStringPayload": {
@@ -1003,7 +1003,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.HttpStringPayload,
           this.serializeFrameworkException,
           HttpStringPayloadServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "IgnoreQueryParamsInResponse": {
@@ -1015,7 +1015,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.IgnoreQueryParamsInResponse,
           this.serializeFrameworkException,
           IgnoreQueryParamsInResponseServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "InputAndOutputWithHeaders": {
@@ -1027,7 +1027,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.InputAndOutputWithHeaders,
           this.serializeFrameworkException,
           InputAndOutputWithHeadersServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "JsonBlobs": {
@@ -1039,7 +1039,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.JsonBlobs,
           this.serializeFrameworkException,
           JsonBlobsServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "JsonEnums": {
@@ -1051,7 +1051,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.JsonEnums,
           this.serializeFrameworkException,
           JsonEnumsServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "JsonIntEnums": {
@@ -1063,7 +1063,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.JsonIntEnums,
           this.serializeFrameworkException,
           JsonIntEnumsServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "JsonLists": {
@@ -1075,7 +1075,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.JsonLists,
           this.serializeFrameworkException,
           JsonListsServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "JsonMaps": {
@@ -1087,7 +1087,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.JsonMaps,
           this.serializeFrameworkException,
           JsonMapsServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "JsonTimestamps": {
@@ -1099,7 +1099,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.JsonTimestamps,
           this.serializeFrameworkException,
           JsonTimestampsServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "JsonUnions": {
@@ -1111,7 +1111,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.JsonUnions,
           this.serializeFrameworkException,
           JsonUnionsServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedAcceptWithBody": {
@@ -1123,7 +1123,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedAcceptWithBody,
           this.serializeFrameworkException,
           MalformedAcceptWithBodyServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedAcceptWithGenericString": {
@@ -1135,7 +1135,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedAcceptWithGenericString,
           this.serializeFrameworkException,
           MalformedAcceptWithGenericStringServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedAcceptWithPayload": {
@@ -1147,7 +1147,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedAcceptWithPayload,
           this.serializeFrameworkException,
           MalformedAcceptWithPayloadServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedBlob": {
@@ -1159,7 +1159,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedBlob,
           this.serializeFrameworkException,
           MalformedBlobServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedBoolean": {
@@ -1171,7 +1171,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedBoolean,
           this.serializeFrameworkException,
           MalformedBooleanServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedByte": {
@@ -1183,7 +1183,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedByte,
           this.serializeFrameworkException,
           MalformedByteServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedContentTypeWithBody": {
@@ -1195,7 +1195,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedContentTypeWithBody,
           this.serializeFrameworkException,
           MalformedContentTypeWithBodyServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedContentTypeWithGenericString": {
@@ -1207,7 +1207,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedContentTypeWithGenericString,
           this.serializeFrameworkException,
           MalformedContentTypeWithGenericStringServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedContentTypeWithoutBody": {
@@ -1219,7 +1219,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedContentTypeWithoutBody,
           this.serializeFrameworkException,
           MalformedContentTypeWithoutBodyServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedContentTypeWithPayload": {
@@ -1231,7 +1231,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedContentTypeWithPayload,
           this.serializeFrameworkException,
           MalformedContentTypeWithPayloadServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedDouble": {
@@ -1243,7 +1243,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedDouble,
           this.serializeFrameworkException,
           MalformedDoubleServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedFloat": {
@@ -1255,7 +1255,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedFloat,
           this.serializeFrameworkException,
           MalformedFloatServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedInteger": {
@@ -1267,7 +1267,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedInteger,
           this.serializeFrameworkException,
           MalformedIntegerServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedList": {
@@ -1279,7 +1279,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedList,
           this.serializeFrameworkException,
           MalformedListServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedLong": {
@@ -1291,7 +1291,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedLong,
           this.serializeFrameworkException,
           MalformedLongServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedMap": {
@@ -1303,7 +1303,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedMap,
           this.serializeFrameworkException,
           MalformedMapServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedRequestBody": {
@@ -1315,7 +1315,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedRequestBody,
           this.serializeFrameworkException,
           MalformedRequestBodyServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedShort": {
@@ -1327,7 +1327,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedShort,
           this.serializeFrameworkException,
           MalformedShortServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedString": {
@@ -1339,7 +1339,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedString,
           this.serializeFrameworkException,
           MalformedStringServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedTimestampBodyDateTime": {
@@ -1351,7 +1351,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedTimestampBodyDateTime,
           this.serializeFrameworkException,
           MalformedTimestampBodyDateTimeServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedTimestampBodyDefault": {
@@ -1363,7 +1363,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedTimestampBodyDefault,
           this.serializeFrameworkException,
           MalformedTimestampBodyDefaultServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedTimestampBodyHttpDate": {
@@ -1375,7 +1375,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedTimestampBodyHttpDate,
           this.serializeFrameworkException,
           MalformedTimestampBodyHttpDateServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedTimestampHeaderDateTime": {
@@ -1387,7 +1387,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedTimestampHeaderDateTime,
           this.serializeFrameworkException,
           MalformedTimestampHeaderDateTimeServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedTimestampHeaderDefault": {
@@ -1399,7 +1399,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedTimestampHeaderDefault,
           this.serializeFrameworkException,
           MalformedTimestampHeaderDefaultServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedTimestampHeaderEpoch": {
@@ -1411,7 +1411,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedTimestampHeaderEpoch,
           this.serializeFrameworkException,
           MalformedTimestampHeaderEpochServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedTimestampPathDefault": {
@@ -1423,7 +1423,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedTimestampPathDefault,
           this.serializeFrameworkException,
           MalformedTimestampPathDefaultServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedTimestampPathEpoch": {
@@ -1435,7 +1435,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedTimestampPathEpoch,
           this.serializeFrameworkException,
           MalformedTimestampPathEpochServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedTimestampPathHttpDate": {
@@ -1447,7 +1447,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedTimestampPathHttpDate,
           this.serializeFrameworkException,
           MalformedTimestampPathHttpDateServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedTimestampQueryDefault": {
@@ -1459,7 +1459,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedTimestampQueryDefault,
           this.serializeFrameworkException,
           MalformedTimestampQueryDefaultServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedTimestampQueryEpoch": {
@@ -1471,7 +1471,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedTimestampQueryEpoch,
           this.serializeFrameworkException,
           MalformedTimestampQueryEpochServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedTimestampQueryHttpDate": {
@@ -1483,7 +1483,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedTimestampQueryHttpDate,
           this.serializeFrameworkException,
           MalformedTimestampQueryHttpDateServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MalformedUnion": {
@@ -1495,7 +1495,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MalformedUnion,
           this.serializeFrameworkException,
           MalformedUnionServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "MediaTypeHeader": {
@@ -1507,7 +1507,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.MediaTypeHeader,
           this.serializeFrameworkException,
           MediaTypeHeaderServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "NoInputAndNoOutput": {
@@ -1519,7 +1519,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.NoInputAndNoOutput,
           this.serializeFrameworkException,
           NoInputAndNoOutputServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "NoInputAndOutput": {
@@ -1531,7 +1531,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.NoInputAndOutput,
           this.serializeFrameworkException,
           NoInputAndOutputServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "NullAndEmptyHeadersClient": {
@@ -1543,7 +1543,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.NullAndEmptyHeadersClient,
           this.serializeFrameworkException,
           NullAndEmptyHeadersClientServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "NullAndEmptyHeadersServer": {
@@ -1555,7 +1555,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.NullAndEmptyHeadersServer,
           this.serializeFrameworkException,
           NullAndEmptyHeadersServerServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "OmitsNullSerializesEmptyString": {
@@ -1567,7 +1567,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.OmitsNullSerializesEmptyString,
           this.serializeFrameworkException,
           OmitsNullSerializesEmptyStringServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "OmitsSerializingEmptyLists": {
@@ -1579,7 +1579,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.OmitsSerializingEmptyLists,
           this.serializeFrameworkException,
           OmitsSerializingEmptyListsServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "PostPlayerAction": {
@@ -1591,7 +1591,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.PostPlayerAction,
           this.serializeFrameworkException,
           PostPlayerActionServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "PostUnionWithJsonName": {
@@ -1603,7 +1603,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.PostUnionWithJsonName,
           this.serializeFrameworkException,
           PostUnionWithJsonNameServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "PutWithContentEncoding": {
@@ -1615,7 +1615,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.PutWithContentEncoding,
           this.serializeFrameworkException,
           PutWithContentEncodingServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "QueryIdempotencyTokenAutoFill": {
@@ -1627,7 +1627,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.QueryIdempotencyTokenAutoFill,
           this.serializeFrameworkException,
           QueryIdempotencyTokenAutoFillServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "QueryParamsAsStringListMap": {
@@ -1639,7 +1639,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.QueryParamsAsStringListMap,
           this.serializeFrameworkException,
           QueryParamsAsStringListMapServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "QueryPrecedence": {
@@ -1651,7 +1651,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.QueryPrecedence,
           this.serializeFrameworkException,
           QueryPrecedenceServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "RecursiveShapes": {
@@ -1663,7 +1663,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.RecursiveShapes,
           this.serializeFrameworkException,
           RecursiveShapesServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "SimpleScalarProperties": {
@@ -1675,7 +1675,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.SimpleScalarProperties,
           this.serializeFrameworkException,
           SimpleScalarPropertiesServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "SparseJsonLists": {
@@ -1687,7 +1687,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.SparseJsonLists,
           this.serializeFrameworkException,
           SparseJsonListsServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "SparseJsonMaps": {
@@ -1699,7 +1699,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.SparseJsonMaps,
           this.serializeFrameworkException,
           SparseJsonMapsServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "StreamingTraits": {
@@ -1711,7 +1711,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.StreamingTraits,
           this.serializeFrameworkException,
           StreamingTraitsServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "StreamingTraitsRequireLength": {
@@ -1723,7 +1723,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.StreamingTraitsRequireLength,
           this.serializeFrameworkException,
           StreamingTraitsRequireLengthServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "StreamingTraitsWithMediaType": {
@@ -1735,7 +1735,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.StreamingTraitsWithMediaType,
           this.serializeFrameworkException,
           StreamingTraitsWithMediaTypeServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "TestBodyStructure": {
@@ -1747,7 +1747,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.TestBodyStructure,
           this.serializeFrameworkException,
           TestBodyStructureServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "TestNoPayload": {
@@ -1759,7 +1759,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.TestNoPayload,
           this.serializeFrameworkException,
           TestNoPayloadServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "TestPayloadBlob": {
@@ -1771,7 +1771,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.TestPayloadBlob,
           this.serializeFrameworkException,
           TestPayloadBlobServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "TestPayloadStructure": {
@@ -1783,7 +1783,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.TestPayloadStructure,
           this.serializeFrameworkException,
           TestPayloadStructureServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "TimestampFormatHeaders": {
@@ -1795,7 +1795,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.TimestampFormatHeaders,
           this.serializeFrameworkException,
           TimestampFormatHeadersServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
       case "UnitInputAndOutput": {
@@ -1807,7 +1807,7 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
           this.service.UnitInputAndOutput,
           this.serializeFrameworkException,
           UnitInputAndOutputServerInput.validate,
-          this.validationCustomizer
+          this.validationCustomizer,
         );
       }
     }
@@ -1816,20 +1816,20 @@ export class RestJsonServiceHandler<Context> implements __ServiceHandler<Context
 
 export const getRestJsonServiceHandler = <Context>(
   service: RestJsonService<Context>,
-  customizer: __ValidationCustomizer<RestJsonServiceOperations>
+  customizer: __ValidationCustomizer<RestJsonServiceOperations>,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", keyof RestJsonService<Context>>([
     new httpbinding.UriSpec<"RestJson", "AllQueryStringTypes">(
       "GET",
       [{ type: "path_literal", value: "AllQueryStringTypesInput" }],
       [],
-      { service: "RestJson", operation: "AllQueryStringTypes" }
+      { service: "RestJson", operation: "AllQueryStringTypes" },
     ),
     new httpbinding.UriSpec<"RestJson", "ConstantAndVariableQueryString">(
       "GET",
       [{ type: "path_literal", value: "ConstantAndVariableQueryString" }],
       [{ type: "query_literal", key: "foo", value: "bar" }],
-      { service: "RestJson", operation: "ConstantAndVariableQueryString" }
+      { service: "RestJson", operation: "ConstantAndVariableQueryString" },
     ),
     new httpbinding.UriSpec<"RestJson", "ConstantQueryString">(
       "GET",
@@ -1838,13 +1838,13 @@ export const getRestJsonServiceHandler = <Context>(
         { type: "query_literal", key: "foo", value: "bar" },
         { type: "query_literal", key: "hello", value: "" },
       ],
-      { service: "RestJson", operation: "ConstantQueryString" }
+      { service: "RestJson", operation: "ConstantQueryString" },
     ),
     new httpbinding.UriSpec<"RestJson", "DatetimeOffsets">(
       "POST",
       [{ type: "path_literal", value: "DatetimeOffsets" }],
       [],
-      { service: "RestJson", operation: "DatetimeOffsets" }
+      { service: "RestJson", operation: "DatetimeOffsets" },
     ),
     new httpbinding.UriSpec<"RestJson", "DocumentType">("PUT", [{ type: "path_literal", value: "DocumentType" }], [], {
       service: "RestJson",
@@ -1854,103 +1854,103 @@ export const getRestJsonServiceHandler = <Context>(
       "PUT",
       [{ type: "path_literal", value: "DocumentTypeAsMapValue" }],
       [],
-      { service: "RestJson", operation: "DocumentTypeAsMapValue" }
+      { service: "RestJson", operation: "DocumentTypeAsMapValue" },
     ),
     new httpbinding.UriSpec<"RestJson", "DocumentTypeAsPayload">(
       "PUT",
       [{ type: "path_literal", value: "DocumentTypeAsPayload" }],
       [],
-      { service: "RestJson", operation: "DocumentTypeAsPayload" }
+      { service: "RestJson", operation: "DocumentTypeAsPayload" },
     ),
     new httpbinding.UriSpec<"RestJson", "EmptyInputAndEmptyOutput">(
       "POST",
       [{ type: "path_literal", value: "EmptyInputAndEmptyOutput" }],
       [],
-      { service: "RestJson", operation: "EmptyInputAndEmptyOutput" }
+      { service: "RestJson", operation: "EmptyInputAndEmptyOutput" },
     ),
     new httpbinding.UriSpec<"RestJson", "EndpointOperation">(
       "POST",
       [{ type: "path_literal", value: "EndpointOperation" }],
       [],
-      { service: "RestJson", operation: "EndpointOperation" }
+      { service: "RestJson", operation: "EndpointOperation" },
     ),
     new httpbinding.UriSpec<"RestJson", "EndpointWithHostLabelOperation">(
       "POST",
       [{ type: "path_literal", value: "EndpointWithHostLabelOperation" }],
       [],
-      { service: "RestJson", operation: "EndpointWithHostLabelOperation" }
+      { service: "RestJson", operation: "EndpointWithHostLabelOperation" },
     ),
     new httpbinding.UriSpec<"RestJson", "FractionalSeconds">(
       "POST",
       [{ type: "path_literal", value: "FractionalSeconds" }],
       [],
-      { service: "RestJson", operation: "FractionalSeconds" }
+      { service: "RestJson", operation: "FractionalSeconds" },
     ),
     new httpbinding.UriSpec<"RestJson", "GreetingWithErrors">(
       "PUT",
       [{ type: "path_literal", value: "GreetingWithErrors" }],
       [],
-      { service: "RestJson", operation: "GreetingWithErrors" }
+      { service: "RestJson", operation: "GreetingWithErrors" },
     ),
     new httpbinding.UriSpec<"RestJson", "HostWithPathOperation">(
       "GET",
       [{ type: "path_literal", value: "HostWithPathOperation" }],
       [],
-      { service: "RestJson", operation: "HostWithPathOperation" }
+      { service: "RestJson", operation: "HostWithPathOperation" },
     ),
     new httpbinding.UriSpec<"RestJson", "HttpChecksumRequired">(
       "POST",
       [{ type: "path_literal", value: "HttpChecksumRequired" }],
       [],
-      { service: "RestJson", operation: "HttpChecksumRequired" }
+      { service: "RestJson", operation: "HttpChecksumRequired" },
     ),
     new httpbinding.UriSpec<"RestJson", "HttpEnumPayload">(
       "POST",
       [{ type: "path_literal", value: "EnumPayload" }],
       [],
-      { service: "RestJson", operation: "HttpEnumPayload" }
+      { service: "RestJson", operation: "HttpEnumPayload" },
     ),
     new httpbinding.UriSpec<"RestJson", "HttpPayloadTraits">(
       "POST",
       [{ type: "path_literal", value: "HttpPayloadTraits" }],
       [],
-      { service: "RestJson", operation: "HttpPayloadTraits" }
+      { service: "RestJson", operation: "HttpPayloadTraits" },
     ),
     new httpbinding.UriSpec<"RestJson", "HttpPayloadTraitsWithMediaType">(
       "POST",
       [{ type: "path_literal", value: "HttpPayloadTraitsWithMediaType" }],
       [],
-      { service: "RestJson", operation: "HttpPayloadTraitsWithMediaType" }
+      { service: "RestJson", operation: "HttpPayloadTraitsWithMediaType" },
     ),
     new httpbinding.UriSpec<"RestJson", "HttpPayloadWithStructure">(
       "PUT",
       [{ type: "path_literal", value: "HttpPayloadWithStructure" }],
       [],
-      { service: "RestJson", operation: "HttpPayloadWithStructure" }
+      { service: "RestJson", operation: "HttpPayloadWithStructure" },
     ),
     new httpbinding.UriSpec<"RestJson", "HttpPayloadWithUnion">(
       "PUT",
       [{ type: "path_literal", value: "HttpPayloadWithUnion" }],
       [],
-      { service: "RestJson", operation: "HttpPayloadWithUnion" }
+      { service: "RestJson", operation: "HttpPayloadWithUnion" },
     ),
     new httpbinding.UriSpec<"RestJson", "HttpPrefixHeaders">(
       "GET",
       [{ type: "path_literal", value: "HttpPrefixHeaders" }],
       [],
-      { service: "RestJson", operation: "HttpPrefixHeaders" }
+      { service: "RestJson", operation: "HttpPrefixHeaders" },
     ),
     new httpbinding.UriSpec<"RestJson", "HttpPrefixHeadersInResponse">(
       "GET",
       [{ type: "path_literal", value: "HttpPrefixHeadersResponse" }],
       [],
-      { service: "RestJson", operation: "HttpPrefixHeadersInResponse" }
+      { service: "RestJson", operation: "HttpPrefixHeadersInResponse" },
     ),
     new httpbinding.UriSpec<"RestJson", "HttpRequestWithFloatLabels">(
       "GET",
       [{ type: "path_literal", value: "FloatHttpLabels" }, { type: "path" }, { type: "path" }],
       [],
-      { service: "RestJson", operation: "HttpRequestWithFloatLabels" }
+      { service: "RestJson", operation: "HttpRequestWithFloatLabels" },
     ),
     new httpbinding.UriSpec<"RestJson", "HttpRequestWithGreedyLabelInPath">(
       "GET",
@@ -1962,7 +1962,7 @@ export const getRestJsonServiceHandler = <Context>(
         { type: "greedy" },
       ],
       [],
-      { service: "RestJson", operation: "HttpRequestWithGreedyLabelInPath" }
+      { service: "RestJson", operation: "HttpRequestWithGreedyLabelInPath" },
     ),
     new httpbinding.UriSpec<"RestJson", "HttpRequestWithLabels">(
       "GET",
@@ -1978,7 +1978,7 @@ export const getRestJsonServiceHandler = <Context>(
         { type: "path" },
       ],
       [],
-      { service: "RestJson", operation: "HttpRequestWithLabels" }
+      { service: "RestJson", operation: "HttpRequestWithLabels" },
     ),
     new httpbinding.UriSpec<"RestJson", "HttpRequestWithLabelsAndTimestampFormat">(
       "GET",
@@ -1993,37 +1993,37 @@ export const getRestJsonServiceHandler = <Context>(
         { type: "path" },
       ],
       [],
-      { service: "RestJson", operation: "HttpRequestWithLabelsAndTimestampFormat" }
+      { service: "RestJson", operation: "HttpRequestWithLabelsAndTimestampFormat" },
     ),
     new httpbinding.UriSpec<"RestJson", "HttpRequestWithRegexLiteral">(
       "GET",
       [{ type: "path_literal", value: "ReDosLiteral" }, { type: "path" }, { type: "path_literal", value: "(a+)+" }],
       [],
-      { service: "RestJson", operation: "HttpRequestWithRegexLiteral" }
+      { service: "RestJson", operation: "HttpRequestWithRegexLiteral" },
     ),
     new httpbinding.UriSpec<"RestJson", "HttpResponseCode">(
       "PUT",
       [{ type: "path_literal", value: "HttpResponseCode" }],
       [],
-      { service: "RestJson", operation: "HttpResponseCode" }
+      { service: "RestJson", operation: "HttpResponseCode" },
     ),
     new httpbinding.UriSpec<"RestJson", "HttpStringPayload">(
       "POST",
       [{ type: "path_literal", value: "StringPayload" }],
       [],
-      { service: "RestJson", operation: "HttpStringPayload" }
+      { service: "RestJson", operation: "HttpStringPayload" },
     ),
     new httpbinding.UriSpec<"RestJson", "IgnoreQueryParamsInResponse">(
       "GET",
       [{ type: "path_literal", value: "IgnoreQueryParamsInResponse" }],
       [],
-      { service: "RestJson", operation: "IgnoreQueryParamsInResponse" }
+      { service: "RestJson", operation: "IgnoreQueryParamsInResponse" },
     ),
     new httpbinding.UriSpec<"RestJson", "InputAndOutputWithHeaders">(
       "POST",
       [{ type: "path_literal", value: "InputAndOutputWithHeaders" }],
       [],
-      { service: "RestJson", operation: "InputAndOutputWithHeaders" }
+      { service: "RestJson", operation: "InputAndOutputWithHeaders" },
     ),
     new httpbinding.UriSpec<"RestJson", "JsonBlobs">("POST", [{ type: "path_literal", value: "JsonBlobs" }], [], {
       service: "RestJson",
@@ -2049,7 +2049,7 @@ export const getRestJsonServiceHandler = <Context>(
       "POST",
       [{ type: "path_literal", value: "JsonTimestamps" }],
       [],
-      { service: "RestJson", operation: "JsonTimestamps" }
+      { service: "RestJson", operation: "JsonTimestamps" },
     ),
     new httpbinding.UriSpec<"RestJson", "JsonUnions">("PUT", [{ type: "path_literal", value: "JsonUnions" }], [], {
       service: "RestJson",
@@ -2059,91 +2059,91 @@ export const getRestJsonServiceHandler = <Context>(
       "POST",
       [{ type: "path_literal", value: "MalformedAcceptWithBody" }],
       [],
-      { service: "RestJson", operation: "MalformedAcceptWithBody" }
+      { service: "RestJson", operation: "MalformedAcceptWithBody" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedAcceptWithGenericString">(
       "POST",
       [{ type: "path_literal", value: "MalformedAcceptWithGenericString" }],
       [],
-      { service: "RestJson", operation: "MalformedAcceptWithGenericString" }
+      { service: "RestJson", operation: "MalformedAcceptWithGenericString" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedAcceptWithPayload">(
       "POST",
       [{ type: "path_literal", value: "MalformedAcceptWithPayload" }],
       [],
-      { service: "RestJson", operation: "MalformedAcceptWithPayload" }
+      { service: "RestJson", operation: "MalformedAcceptWithPayload" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedBlob">(
       "POST",
       [{ type: "path_literal", value: "MalformedBlob" }],
       [],
-      { service: "RestJson", operation: "MalformedBlob" }
+      { service: "RestJson", operation: "MalformedBlob" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedBoolean">(
       "POST",
       [{ type: "path_literal", value: "MalformedBoolean" }, { type: "path" }],
       [],
-      { service: "RestJson", operation: "MalformedBoolean" }
+      { service: "RestJson", operation: "MalformedBoolean" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedByte">(
       "POST",
       [{ type: "path_literal", value: "MalformedByte" }, { type: "path" }],
       [],
-      { service: "RestJson", operation: "MalformedByte" }
+      { service: "RestJson", operation: "MalformedByte" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedContentTypeWithBody">(
       "POST",
       [{ type: "path_literal", value: "MalformedContentTypeWithBody" }],
       [],
-      { service: "RestJson", operation: "MalformedContentTypeWithBody" }
+      { service: "RestJson", operation: "MalformedContentTypeWithBody" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedContentTypeWithGenericString">(
       "POST",
       [{ type: "path_literal", value: "MalformedContentTypeWithGenericString" }],
       [],
-      { service: "RestJson", operation: "MalformedContentTypeWithGenericString" }
+      { service: "RestJson", operation: "MalformedContentTypeWithGenericString" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedContentTypeWithoutBody">(
       "POST",
       [{ type: "path_literal", value: "MalformedContentTypeWithoutBody" }],
       [],
-      { service: "RestJson", operation: "MalformedContentTypeWithoutBody" }
+      { service: "RestJson", operation: "MalformedContentTypeWithoutBody" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedContentTypeWithPayload">(
       "POST",
       [{ type: "path_literal", value: "MalformedContentTypeWithPayload" }],
       [],
-      { service: "RestJson", operation: "MalformedContentTypeWithPayload" }
+      { service: "RestJson", operation: "MalformedContentTypeWithPayload" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedDouble">(
       "POST",
       [{ type: "path_literal", value: "MalformedDouble" }, { type: "path" }],
       [],
-      { service: "RestJson", operation: "MalformedDouble" }
+      { service: "RestJson", operation: "MalformedDouble" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedFloat">(
       "POST",
       [{ type: "path_literal", value: "MalformedFloat" }, { type: "path" }],
       [],
-      { service: "RestJson", operation: "MalformedFloat" }
+      { service: "RestJson", operation: "MalformedFloat" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedInteger">(
       "POST",
       [{ type: "path_literal", value: "MalformedInteger" }, { type: "path" }],
       [],
-      { service: "RestJson", operation: "MalformedInteger" }
+      { service: "RestJson", operation: "MalformedInteger" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedList">(
       "POST",
       [{ type: "path_literal", value: "MalformedList" }],
       [],
-      { service: "RestJson", operation: "MalformedList" }
+      { service: "RestJson", operation: "MalformedList" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedLong">(
       "POST",
       [{ type: "path_literal", value: "MalformedLong" }, { type: "path" }],
       [],
-      { service: "RestJson", operation: "MalformedLong" }
+      { service: "RestJson", operation: "MalformedLong" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedMap">("POST", [{ type: "path_literal", value: "MalformedMap" }], [], {
       service: "RestJson",
@@ -2153,151 +2153,151 @@ export const getRestJsonServiceHandler = <Context>(
       "POST",
       [{ type: "path_literal", value: "MalformedRequestBody" }],
       [],
-      { service: "RestJson", operation: "MalformedRequestBody" }
+      { service: "RestJson", operation: "MalformedRequestBody" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedShort">(
       "POST",
       [{ type: "path_literal", value: "MalformedShort" }, { type: "path" }],
       [],
-      { service: "RestJson", operation: "MalformedShort" }
+      { service: "RestJson", operation: "MalformedShort" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedString">(
       "POST",
       [{ type: "path_literal", value: "MalformedString" }],
       [],
-      { service: "RestJson", operation: "MalformedString" }
+      { service: "RestJson", operation: "MalformedString" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedTimestampBodyDateTime">(
       "POST",
       [{ type: "path_literal", value: "MalformedTimestampBodyDateTime" }],
       [],
-      { service: "RestJson", operation: "MalformedTimestampBodyDateTime" }
+      { service: "RestJson", operation: "MalformedTimestampBodyDateTime" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedTimestampBodyDefault">(
       "POST",
       [{ type: "path_literal", value: "MalformedTimestampBodyDefault" }],
       [],
-      { service: "RestJson", operation: "MalformedTimestampBodyDefault" }
+      { service: "RestJson", operation: "MalformedTimestampBodyDefault" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedTimestampBodyHttpDate">(
       "POST",
       [{ type: "path_literal", value: "MalformedTimestampBodyHttpDate" }],
       [],
-      { service: "RestJson", operation: "MalformedTimestampBodyHttpDate" }
+      { service: "RestJson", operation: "MalformedTimestampBodyHttpDate" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedTimestampHeaderDateTime">(
       "POST",
       [{ type: "path_literal", value: "MalformedTimestampHeaderDateTime" }],
       [],
-      { service: "RestJson", operation: "MalformedTimestampHeaderDateTime" }
+      { service: "RestJson", operation: "MalformedTimestampHeaderDateTime" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedTimestampHeaderDefault">(
       "POST",
       [{ type: "path_literal", value: "MalformedTimestampHeaderDefault" }],
       [],
-      { service: "RestJson", operation: "MalformedTimestampHeaderDefault" }
+      { service: "RestJson", operation: "MalformedTimestampHeaderDefault" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedTimestampHeaderEpoch">(
       "POST",
       [{ type: "path_literal", value: "MalformedTimestampHeaderEpoch" }],
       [],
-      { service: "RestJson", operation: "MalformedTimestampHeaderEpoch" }
+      { service: "RestJson", operation: "MalformedTimestampHeaderEpoch" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedTimestampPathDefault">(
       "POST",
       [{ type: "path_literal", value: "MalformedTimestampPathDefault" }, { type: "path" }],
       [],
-      { service: "RestJson", operation: "MalformedTimestampPathDefault" }
+      { service: "RestJson", operation: "MalformedTimestampPathDefault" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedTimestampPathEpoch">(
       "POST",
       [{ type: "path_literal", value: "MalformedTimestampPathEpoch" }, { type: "path" }],
       [],
-      { service: "RestJson", operation: "MalformedTimestampPathEpoch" }
+      { service: "RestJson", operation: "MalformedTimestampPathEpoch" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedTimestampPathHttpDate">(
       "POST",
       [{ type: "path_literal", value: "MalformedTimestampPathHttpDate" }, { type: "path" }],
       [],
-      { service: "RestJson", operation: "MalformedTimestampPathHttpDate" }
+      { service: "RestJson", operation: "MalformedTimestampPathHttpDate" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedTimestampQueryDefault">(
       "POST",
       [{ type: "path_literal", value: "MalformedTimestampQueryDefault" }],
       [{ type: "query", key: "timestamp" }],
-      { service: "RestJson", operation: "MalformedTimestampQueryDefault" }
+      { service: "RestJson", operation: "MalformedTimestampQueryDefault" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedTimestampQueryEpoch">(
       "POST",
       [{ type: "path_literal", value: "MalformedTimestampQueryEpoch" }],
       [{ type: "query", key: "timestamp" }],
-      { service: "RestJson", operation: "MalformedTimestampQueryEpoch" }
+      { service: "RestJson", operation: "MalformedTimestampQueryEpoch" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedTimestampQueryHttpDate">(
       "POST",
       [{ type: "path_literal", value: "MalformedTimestampQueryHttpDate" }],
       [{ type: "query", key: "timestamp" }],
-      { service: "RestJson", operation: "MalformedTimestampQueryHttpDate" }
+      { service: "RestJson", operation: "MalformedTimestampQueryHttpDate" },
     ),
     new httpbinding.UriSpec<"RestJson", "MalformedUnion">(
       "POST",
       [{ type: "path_literal", value: "MalformedUnion" }],
       [],
-      { service: "RestJson", operation: "MalformedUnion" }
+      { service: "RestJson", operation: "MalformedUnion" },
     ),
     new httpbinding.UriSpec<"RestJson", "MediaTypeHeader">(
       "GET",
       [{ type: "path_literal", value: "MediaTypeHeader" }],
       [],
-      { service: "RestJson", operation: "MediaTypeHeader" }
+      { service: "RestJson", operation: "MediaTypeHeader" },
     ),
     new httpbinding.UriSpec<"RestJson", "NoInputAndNoOutput">(
       "POST",
       [{ type: "path_literal", value: "NoInputAndNoOutput" }],
       [],
-      { service: "RestJson", operation: "NoInputAndNoOutput" }
+      { service: "RestJson", operation: "NoInputAndNoOutput" },
     ),
     new httpbinding.UriSpec<"RestJson", "NoInputAndOutput">(
       "POST",
       [{ type: "path_literal", value: "NoInputAndOutputOutput" }],
       [],
-      { service: "RestJson", operation: "NoInputAndOutput" }
+      { service: "RestJson", operation: "NoInputAndOutput" },
     ),
     new httpbinding.UriSpec<"RestJson", "NullAndEmptyHeadersClient">(
       "GET",
       [{ type: "path_literal", value: "NullAndEmptyHeadersClient" }],
       [],
-      { service: "RestJson", operation: "NullAndEmptyHeadersClient" }
+      { service: "RestJson", operation: "NullAndEmptyHeadersClient" },
     ),
     new httpbinding.UriSpec<"RestJson", "NullAndEmptyHeadersServer">(
       "GET",
       [{ type: "path_literal", value: "NullAndEmptyHeadersServer" }],
       [],
-      { service: "RestJson", operation: "NullAndEmptyHeadersServer" }
+      { service: "RestJson", operation: "NullAndEmptyHeadersServer" },
     ),
     new httpbinding.UriSpec<"RestJson", "OmitsNullSerializesEmptyString">(
       "GET",
       [{ type: "path_literal", value: "OmitsNullSerializesEmptyString" }],
       [],
-      { service: "RestJson", operation: "OmitsNullSerializesEmptyString" }
+      { service: "RestJson", operation: "OmitsNullSerializesEmptyString" },
     ),
     new httpbinding.UriSpec<"RestJson", "OmitsSerializingEmptyLists">(
       "POST",
       [{ type: "path_literal", value: "OmitsSerializingEmptyLists" }],
       [],
-      { service: "RestJson", operation: "OmitsSerializingEmptyLists" }
+      { service: "RestJson", operation: "OmitsSerializingEmptyLists" },
     ),
     new httpbinding.UriSpec<"RestJson", "PostPlayerAction">(
       "POST",
       [{ type: "path_literal", value: "PostPlayerAction" }],
       [],
-      { service: "RestJson", operation: "PostPlayerAction" }
+      { service: "RestJson", operation: "PostPlayerAction" },
     ),
     new httpbinding.UriSpec<"RestJson", "PostUnionWithJsonName">(
       "POST",
       [{ type: "path_literal", value: "PostUnionWithJsonName" }],
       [],
-      { service: "RestJson", operation: "PostUnionWithJsonName" }
+      { service: "RestJson", operation: "PostUnionWithJsonName" },
     ),
     new httpbinding.UriSpec<"RestJson", "PutWithContentEncoding">(
       "POST",
@@ -2306,67 +2306,67 @@ export const getRestJsonServiceHandler = <Context>(
         { type: "path_literal", value: "putcontentwithencoding" },
       ],
       [],
-      { service: "RestJson", operation: "PutWithContentEncoding" }
+      { service: "RestJson", operation: "PutWithContentEncoding" },
     ),
     new httpbinding.UriSpec<"RestJson", "QueryIdempotencyTokenAutoFill">(
       "POST",
       [{ type: "path_literal", value: "QueryIdempotencyTokenAutoFill" }],
       [],
-      { service: "RestJson", operation: "QueryIdempotencyTokenAutoFill" }
+      { service: "RestJson", operation: "QueryIdempotencyTokenAutoFill" },
     ),
     new httpbinding.UriSpec<"RestJson", "QueryParamsAsStringListMap">(
       "POST",
       [{ type: "path_literal", value: "StringListMap" }],
       [],
-      { service: "RestJson", operation: "QueryParamsAsStringListMap" }
+      { service: "RestJson", operation: "QueryParamsAsStringListMap" },
     ),
     new httpbinding.UriSpec<"RestJson", "QueryPrecedence">(
       "POST",
       [{ type: "path_literal", value: "Precedence" }],
       [],
-      { service: "RestJson", operation: "QueryPrecedence" }
+      { service: "RestJson", operation: "QueryPrecedence" },
     ),
     new httpbinding.UriSpec<"RestJson", "RecursiveShapes">(
       "PUT",
       [{ type: "path_literal", value: "RecursiveShapes" }],
       [],
-      { service: "RestJson", operation: "RecursiveShapes" }
+      { service: "RestJson", operation: "RecursiveShapes" },
     ),
     new httpbinding.UriSpec<"RestJson", "SimpleScalarProperties">(
       "PUT",
       [{ type: "path_literal", value: "SimpleScalarProperties" }],
       [],
-      { service: "RestJson", operation: "SimpleScalarProperties" }
+      { service: "RestJson", operation: "SimpleScalarProperties" },
     ),
     new httpbinding.UriSpec<"RestJson", "SparseJsonLists">(
       "PUT",
       [{ type: "path_literal", value: "SparseJsonLists" }],
       [],
-      { service: "RestJson", operation: "SparseJsonLists" }
+      { service: "RestJson", operation: "SparseJsonLists" },
     ),
     new httpbinding.UriSpec<"RestJson", "SparseJsonMaps">(
       "POST",
       [{ type: "path_literal", value: "SparseJsonMaps" }],
       [],
-      { service: "RestJson", operation: "SparseJsonMaps" }
+      { service: "RestJson", operation: "SparseJsonMaps" },
     ),
     new httpbinding.UriSpec<"RestJson", "StreamingTraits">(
       "POST",
       [{ type: "path_literal", value: "StreamingTraits" }],
       [],
-      { service: "RestJson", operation: "StreamingTraits" }
+      { service: "RestJson", operation: "StreamingTraits" },
     ),
     new httpbinding.UriSpec<"RestJson", "StreamingTraitsRequireLength">(
       "POST",
       [{ type: "path_literal", value: "StreamingTraitsRequireLength" }],
       [],
-      { service: "RestJson", operation: "StreamingTraitsRequireLength" }
+      { service: "RestJson", operation: "StreamingTraitsRequireLength" },
     ),
     new httpbinding.UriSpec<"RestJson", "StreamingTraitsWithMediaType">(
       "POST",
       [{ type: "path_literal", value: "StreamingTraitsWithMediaType" }],
       [],
-      { service: "RestJson", operation: "StreamingTraitsWithMediaType" }
+      { service: "RestJson", operation: "StreamingTraitsWithMediaType" },
     ),
     new httpbinding.UriSpec<"RestJson", "TestBodyStructure">("POST", [{ type: "path_literal", value: "body" }], [], {
       service: "RestJson",
@@ -2380,29 +2380,29 @@ export const getRestJsonServiceHandler = <Context>(
       "POST",
       [{ type: "path_literal", value: "blob_payload" }],
       [],
-      { service: "RestJson", operation: "TestPayloadBlob" }
+      { service: "RestJson", operation: "TestPayloadBlob" },
     ),
     new httpbinding.UriSpec<"RestJson", "TestPayloadStructure">(
       "POST",
       [{ type: "path_literal", value: "payload" }],
       [],
-      { service: "RestJson", operation: "TestPayloadStructure" }
+      { service: "RestJson", operation: "TestPayloadStructure" },
     ),
     new httpbinding.UriSpec<"RestJson", "TimestampFormatHeaders">(
       "POST",
       [{ type: "path_literal", value: "TimestampFormatHeaders" }],
       [],
-      { service: "RestJson", operation: "TimestampFormatHeaders" }
+      { service: "RestJson", operation: "TimestampFormatHeaders" },
     ),
     new httpbinding.UriSpec<"RestJson", "UnitInputAndOutput">(
       "POST",
       [{ type: "path_literal", value: "UnitInputAndOutput" }],
       [],
-      { service: "RestJson", operation: "UnitInputAndOutput" }
+      { service: "RestJson", operation: "UnitInputAndOutput" },
     ),
   ]);
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<Context>, RestJsonServiceOperations, __ServiceException> = (op) => {
     switch (op) {
       case "AllQueryStringTypes":

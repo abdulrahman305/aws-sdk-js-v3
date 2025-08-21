@@ -9,7 +9,7 @@ import {
 
 const checkState = async (
   client: CloudControlClient,
-  input: GetResourceRequestStatusCommandInput
+  input: GetResourceRequestStatusCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -50,7 +50,7 @@ const checkState = async (
  */
 export const waitForResourceRequestSuccess = async (
   params: WaiterConfiguration<CloudControlClient>,
-  input: GetResourceRequestStatusCommandInput
+  input: GetResourceRequestStatusCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -62,7 +62,7 @@ export const waitForResourceRequestSuccess = async (
  */
 export const waitUntilResourceRequestSuccess = async (
   params: WaiterConfiguration<CloudControlClient>,
-  input: GetResourceRequestStatusCommandInput
+  input: GetResourceRequestStatusCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

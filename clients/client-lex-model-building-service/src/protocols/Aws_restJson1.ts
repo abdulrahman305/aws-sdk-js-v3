@@ -143,7 +143,7 @@ import {
  */
 export const se_CreateBotVersionCommand = async (
   input: CreateBotVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -155,7 +155,7 @@ export const se_CreateBotVersionCommand = async (
   body = JSON.stringify(
     take(input, {
       checksum: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -166,7 +166,7 @@ export const se_CreateBotVersionCommand = async (
  */
 export const se_CreateIntentVersionCommand = async (
   input: CreateIntentVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -178,7 +178,7 @@ export const se_CreateIntentVersionCommand = async (
   body = JSON.stringify(
     take(input, {
       checksum: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -189,7 +189,7 @@ export const se_CreateIntentVersionCommand = async (
  */
 export const se_CreateSlotTypeVersionCommand = async (
   input: CreateSlotTypeVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -201,7 +201,7 @@ export const se_CreateSlotTypeVersionCommand = async (
   body = JSON.stringify(
     take(input, {
       checksum: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -212,7 +212,7 @@ export const se_CreateSlotTypeVersionCommand = async (
  */
 export const se_DeleteBotCommand = async (
   input: DeleteBotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -228,7 +228,7 @@ export const se_DeleteBotCommand = async (
  */
 export const se_DeleteBotAliasCommand = async (
   input: DeleteBotAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -245,7 +245,7 @@ export const se_DeleteBotAliasCommand = async (
  */
 export const se_DeleteBotChannelAssociationCommand = async (
   input: DeleteBotChannelAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -263,7 +263,7 @@ export const se_DeleteBotChannelAssociationCommand = async (
  */
 export const se_DeleteBotVersionCommand = async (
   input: DeleteBotVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -280,7 +280,7 @@ export const se_DeleteBotVersionCommand = async (
  */
 export const se_DeleteIntentCommand = async (
   input: DeleteIntentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -296,7 +296,7 @@ export const se_DeleteIntentCommand = async (
  */
 export const se_DeleteIntentVersionCommand = async (
   input: DeleteIntentVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -313,7 +313,7 @@ export const se_DeleteIntentVersionCommand = async (
  */
 export const se_DeleteSlotTypeCommand = async (
   input: DeleteSlotTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -329,7 +329,7 @@ export const se_DeleteSlotTypeCommand = async (
  */
 export const se_DeleteSlotTypeVersionCommand = async (
   input: DeleteSlotTypeVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -346,7 +346,7 @@ export const se_DeleteSlotTypeVersionCommand = async (
  */
 export const se_DeleteUtterancesCommand = async (
   input: DeleteUtterancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -377,7 +377,7 @@ export const se_GetBotCommand = async (input: GetBotCommandInput, context: __Ser
  */
 export const se_GetBotAliasCommand = async (
   input: GetBotAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -394,7 +394,7 @@ export const se_GetBotAliasCommand = async (
  */
 export const se_GetBotAliasesCommand = async (
   input: GetBotAliasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -415,7 +415,7 @@ export const se_GetBotAliasesCommand = async (
  */
 export const se_GetBotChannelAssociationCommand = async (
   input: GetBotChannelAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -433,7 +433,7 @@ export const se_GetBotChannelAssociationCommand = async (
  */
 export const se_GetBotChannelAssociationsCommand = async (
   input: GetBotChannelAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -455,7 +455,7 @@ export const se_GetBotChannelAssociationsCommand = async (
  */
 export const se_GetBotsCommand = async (
   input: GetBotsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -475,7 +475,7 @@ export const se_GetBotsCommand = async (
  */
 export const se_GetBotVersionsCommand = async (
   input: GetBotVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -495,7 +495,7 @@ export const se_GetBotVersionsCommand = async (
  */
 export const se_GetBuiltinIntentCommand = async (
   input: GetBuiltinIntentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -511,7 +511,7 @@ export const se_GetBuiltinIntentCommand = async (
  */
 export const se_GetBuiltinIntentsCommand = async (
   input: GetBuiltinIntentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -532,7 +532,7 @@ export const se_GetBuiltinIntentsCommand = async (
  */
 export const se_GetBuiltinSlotTypesCommand = async (
   input: GetBuiltinSlotTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -553,7 +553,7 @@ export const se_GetBuiltinSlotTypesCommand = async (
  */
 export const se_GetExportCommand = async (
   input: GetExportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -574,7 +574,7 @@ export const se_GetExportCommand = async (
  */
 export const se_GetImportCommand = async (
   input: GetImportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -590,7 +590,7 @@ export const se_GetImportCommand = async (
  */
 export const se_GetIntentCommand = async (
   input: GetIntentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -607,7 +607,7 @@ export const se_GetIntentCommand = async (
  */
 export const se_GetIntentsCommand = async (
   input: GetIntentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -627,7 +627,7 @@ export const se_GetIntentsCommand = async (
  */
 export const se_GetIntentVersionsCommand = async (
   input: GetIntentVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -647,7 +647,7 @@ export const se_GetIntentVersionsCommand = async (
  */
 export const se_GetMigrationCommand = async (
   input: GetMigrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -663,7 +663,7 @@ export const se_GetMigrationCommand = async (
  */
 export const se_GetMigrationsCommand = async (
   input: GetMigrationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -686,7 +686,7 @@ export const se_GetMigrationsCommand = async (
  */
 export const se_GetSlotTypeCommand = async (
   input: GetSlotTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -703,7 +703,7 @@ export const se_GetSlotTypeCommand = async (
  */
 export const se_GetSlotTypesCommand = async (
   input: GetSlotTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -723,7 +723,7 @@ export const se_GetSlotTypesCommand = async (
  */
 export const se_GetSlotTypeVersionsCommand = async (
   input: GetSlotTypeVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -743,7 +743,7 @@ export const se_GetSlotTypeVersionsCommand = async (
  */
 export const se_GetUtterancesViewCommand = async (
   input: GetUtterancesViewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -767,7 +767,7 @@ export const se_GetUtterancesViewCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -806,7 +806,7 @@ export const se_PutBotCommand = async (input: PutBotCommandInput, context: __Ser
       processBehavior: [],
       tags: (_) => _json(_),
       voiceId: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -817,7 +817,7 @@ export const se_PutBotCommand = async (input: PutBotCommandInput, context: __Ser
  */
 export const se_PutBotAliasCommand = async (
   input: PutBotAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -834,7 +834,7 @@ export const se_PutBotAliasCommand = async (
       conversationLogs: (_) => _json(_),
       description: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -845,7 +845,7 @@ export const se_PutBotAliasCommand = async (
  */
 export const se_PutIntentCommand = async (
   input: PutIntentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -871,7 +871,7 @@ export const se_PutIntentCommand = async (
       rejectionStatement: (_) => _json(_),
       sampleUtterances: (_) => _json(_),
       slots: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -882,7 +882,7 @@ export const se_PutIntentCommand = async (
  */
 export const se_PutSlotTypeCommand = async (
   input: PutSlotTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -900,7 +900,7 @@ export const se_PutSlotTypeCommand = async (
       parentSlotTypeSignature: [],
       slotTypeConfigurations: (_) => _json(_),
       valueSelectionStrategy: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -911,7 +911,7 @@ export const se_PutSlotTypeCommand = async (
  */
 export const se_StartImportCommand = async (
   input: StartImportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -925,7 +925,7 @@ export const se_StartImportCommand = async (
       payload: (_) => context.base64Encoder(_),
       resourceType: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -936,7 +936,7 @@ export const se_StartImportCommand = async (
  */
 export const se_StartMigrationCommand = async (
   input: StartMigrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -951,7 +951,7 @@ export const se_StartMigrationCommand = async (
       v1BotVersion: [],
       v2BotName: [],
       v2BotRole: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -962,7 +962,7 @@ export const se_StartMigrationCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -974,7 +974,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -985,7 +985,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1007,7 +1007,7 @@ export const se_UntagResourceCommand = async (
  */
 export const de_CreateBotVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBotVersionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1044,7 +1044,7 @@ export const de_CreateBotVersionCommand = async (
  */
 export const de_CreateIntentVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateIntentVersionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1082,7 +1082,7 @@ export const de_CreateIntentVersionCommand = async (
  */
 export const de_CreateSlotTypeVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSlotTypeVersionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1112,7 +1112,7 @@ export const de_CreateSlotTypeVersionCommand = async (
  */
 export const de_DeleteBotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBotCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1129,7 +1129,7 @@ export const de_DeleteBotCommand = async (
  */
 export const de_DeleteBotAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBotAliasCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1146,7 +1146,7 @@ export const de_DeleteBotAliasCommand = async (
  */
 export const de_DeleteBotChannelAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBotChannelAssociationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1163,7 +1163,7 @@ export const de_DeleteBotChannelAssociationCommand = async (
  */
 export const de_DeleteBotVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBotVersionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1180,7 +1180,7 @@ export const de_DeleteBotVersionCommand = async (
  */
 export const de_DeleteIntentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIntentCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1197,7 +1197,7 @@ export const de_DeleteIntentCommand = async (
  */
 export const de_DeleteIntentVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIntentVersionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1214,7 +1214,7 @@ export const de_DeleteIntentVersionCommand = async (
  */
 export const de_DeleteSlotTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSlotTypeCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1231,7 +1231,7 @@ export const de_DeleteSlotTypeCommand = async (
  */
 export const de_DeleteSlotTypeVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSlotTypeVersionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1248,7 +1248,7 @@ export const de_DeleteSlotTypeVersionCommand = async (
  */
 export const de_DeleteUtterancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteUtterancesCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1265,7 +1265,7 @@ export const de_DeleteUtterancesCommand = async (
  */
 export const de_GetBotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBotCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1303,7 +1303,7 @@ export const de_GetBotCommand = async (
  */
 export const de_GetBotAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBotAliasCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1331,7 +1331,7 @@ export const de_GetBotAliasCommand = async (
  */
 export const de_GetBotAliasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBotAliasesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1353,7 +1353,7 @@ export const de_GetBotAliasesCommand = async (
  */
 export const de_GetBotChannelAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBotChannelAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1382,7 +1382,7 @@ export const de_GetBotChannelAssociationCommand = async (
  */
 export const de_GetBotChannelAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBotChannelAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1404,7 +1404,7 @@ export const de_GetBotChannelAssociationsCommand = async (
  */
 export const de_GetBotsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBotsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1426,7 +1426,7 @@ export const de_GetBotsCommand = async (
  */
 export const de_GetBotVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBotVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1448,7 +1448,7 @@ export const de_GetBotVersionsCommand = async (
  */
 export const de_GetBuiltinIntentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBuiltinIntentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1471,7 +1471,7 @@ export const de_GetBuiltinIntentCommand = async (
  */
 export const de_GetBuiltinIntentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBuiltinIntentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1493,7 +1493,7 @@ export const de_GetBuiltinIntentsCommand = async (
  */
 export const de_GetBuiltinSlotTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBuiltinSlotTypesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1515,7 +1515,7 @@ export const de_GetBuiltinSlotTypesCommand = async (
  */
 export const de_GetExportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetExportCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1542,7 +1542,7 @@ export const de_GetExportCommand = async (
  */
 export const de_GetImportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetImportCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1569,7 +1569,7 @@ export const de_GetImportCommand = async (
  */
 export const de_GetIntentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIntentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1607,7 +1607,7 @@ export const de_GetIntentCommand = async (
  */
 export const de_GetIntentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIntentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1629,7 +1629,7 @@ export const de_GetIntentsCommand = async (
  */
 export const de_GetIntentVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIntentVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1651,7 +1651,7 @@ export const de_GetIntentVersionsCommand = async (
  */
 export const de_GetMigrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMigrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1681,7 +1681,7 @@ export const de_GetMigrationCommand = async (
  */
 export const de_GetMigrationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMigrationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1703,7 +1703,7 @@ export const de_GetMigrationsCommand = async (
  */
 export const de_GetSlotTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSlotTypeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1733,7 +1733,7 @@ export const de_GetSlotTypeCommand = async (
  */
 export const de_GetSlotTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSlotTypesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1755,7 +1755,7 @@ export const de_GetSlotTypesCommand = async (
  */
 export const de_GetSlotTypeVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSlotTypeVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1777,7 +1777,7 @@ export const de_GetSlotTypeVersionsCommand = async (
  */
 export const de_GetUtterancesViewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetUtterancesViewCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1799,7 +1799,7 @@ export const de_GetUtterancesViewCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1820,7 +1820,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutBotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBotCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1860,7 +1860,7 @@ export const de_PutBotCommand = async (
  */
 export const de_PutBotAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBotAliasCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1889,7 +1889,7 @@ export const de_PutBotAliasCommand = async (
  */
 export const de_PutIntentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutIntentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1928,7 +1928,7 @@ export const de_PutIntentCommand = async (
  */
 export const de_PutSlotTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutSlotTypeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1959,7 +1959,7 @@ export const de_PutSlotTypeCommand = async (
  */
 export const de_StartImportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartImportCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1986,7 +1986,7 @@ export const de_StartImportCommand = async (
  */
 export const de_StartMigrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartMigrationCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2014,7 +2014,7 @@ export const de_StartMigrationCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2031,7 +2031,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2093,7 +2093,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2147,7 +2147,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalFailureException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2167,7 +2167,7 @@ const de_InternalFailureExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({
     [_rAS]: [, parsedOutput.headers[_ra]],
@@ -2206,7 +2206,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_PreconditionFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PreconditionFailedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2226,7 +2226,7 @@ const de_PreconditionFailedExceptionRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

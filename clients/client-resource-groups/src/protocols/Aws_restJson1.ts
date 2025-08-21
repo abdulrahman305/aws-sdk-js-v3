@@ -69,7 +69,7 @@ import { ResourceGroupsServiceException as __BaseException } from "../models/Res
  */
 export const se_CreateGroupCommand = async (
   input: CreateGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -84,7 +84,7 @@ export const se_CreateGroupCommand = async (
       Name: [],
       ResourceQuery: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -95,7 +95,7 @@ export const se_CreateGroupCommand = async (
  */
 export const se_DeleteGroupCommand = async (
   input: DeleteGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -107,7 +107,7 @@ export const se_DeleteGroupCommand = async (
     take(input, {
       Group: [],
       GroupName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -118,7 +118,7 @@ export const se_DeleteGroupCommand = async (
  */
 export const se_GetAccountSettingsCommand = async (
   input: GetAccountSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -136,7 +136,7 @@ export const se_GetAccountSettingsCommand = async (
  */
 export const se_GetGroupCommand = async (
   input: GetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -148,7 +148,7 @@ export const se_GetGroupCommand = async (
     take(input, {
       Group: [],
       GroupName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -159,7 +159,7 @@ export const se_GetGroupCommand = async (
  */
 export const se_GetGroupConfigurationCommand = async (
   input: GetGroupConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -170,7 +170,7 @@ export const se_GetGroupConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       Group: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -181,7 +181,7 @@ export const se_GetGroupConfigurationCommand = async (
  */
 export const se_GetGroupQueryCommand = async (
   input: GetGroupQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -193,7 +193,7 @@ export const se_GetGroupQueryCommand = async (
     take(input, {
       Group: [],
       GroupName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -204,7 +204,7 @@ export const se_GetGroupQueryCommand = async (
  */
 export const se_GetTagsCommand = async (
   input: GetTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -220,7 +220,7 @@ export const se_GetTagsCommand = async (
  */
 export const se_GroupResourcesCommand = async (
   input: GroupResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -232,7 +232,7 @@ export const se_GroupResourcesCommand = async (
     take(input, {
       Group: [],
       ResourceArns: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -243,7 +243,7 @@ export const se_GroupResourcesCommand = async (
  */
 export const se_ListGroupResourcesCommand = async (
   input: ListGroupResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -258,7 +258,7 @@ export const se_ListGroupResourcesCommand = async (
       GroupName: [],
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -269,7 +269,7 @@ export const se_ListGroupResourcesCommand = async (
  */
 export const se_ListGroupsCommand = async (
   input: ListGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -284,7 +284,7 @@ export const se_ListGroupsCommand = async (
   body = JSON.stringify(
     take(input, {
       Filters: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -295,7 +295,7 @@ export const se_ListGroupsCommand = async (
  */
 export const se_PutGroupConfigurationCommand = async (
   input: PutGroupConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -307,7 +307,7 @@ export const se_PutGroupConfigurationCommand = async (
     take(input, {
       Configuration: (_) => _json(_),
       Group: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -318,7 +318,7 @@ export const se_PutGroupConfigurationCommand = async (
  */
 export const se_SearchResourcesCommand = async (
   input: SearchResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -331,7 +331,7 @@ export const se_SearchResourcesCommand = async (
       MaxResults: [],
       NextToken: [],
       ResourceQuery: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -351,7 +351,7 @@ export const se_TagCommand = async (input: TagCommandInput, context: __SerdeCont
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -362,7 +362,7 @@ export const se_TagCommand = async (input: TagCommandInput, context: __SerdeCont
  */
 export const se_UngroupResourcesCommand = async (
   input: UngroupResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -374,7 +374,7 @@ export const se_UngroupResourcesCommand = async (
     take(input, {
       Group: [],
       ResourceArns: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -394,7 +394,7 @@ export const se_UntagCommand = async (input: UntagCommandInput, context: __Serde
   body = JSON.stringify(
     take(input, {
       Keys: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -405,7 +405,7 @@ export const se_UntagCommand = async (input: UntagCommandInput, context: __Serde
  */
 export const se_UpdateAccountSettingsCommand = async (
   input: UpdateAccountSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -416,7 +416,7 @@ export const se_UpdateAccountSettingsCommand = async (
   body = JSON.stringify(
     take(input, {
       GroupLifecycleEventsDesiredStatus: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -427,7 +427,7 @@ export const se_UpdateAccountSettingsCommand = async (
  */
 export const se_UpdateGroupCommand = async (
   input: UpdateGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -440,7 +440,7 @@ export const se_UpdateGroupCommand = async (
       Description: [],
       Group: [],
       GroupName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -451,7 +451,7 @@ export const se_UpdateGroupCommand = async (
  */
 export const se_UpdateGroupQueryCommand = async (
   input: UpdateGroupQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -464,7 +464,7 @@ export const se_UpdateGroupQueryCommand = async (
       Group: [],
       GroupName: [],
       ResourceQuery: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -475,7 +475,7 @@ export const se_UpdateGroupQueryCommand = async (
  */
 export const de_CreateGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -499,7 +499,7 @@ export const de_CreateGroupCommand = async (
  */
 export const de_DeleteGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -520,7 +520,7 @@ export const de_DeleteGroupCommand = async (
  */
 export const de_GetAccountSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccountSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -541,7 +541,7 @@ export const de_GetAccountSettingsCommand = async (
  */
 export const de_GetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -562,7 +562,7 @@ export const de_GetGroupCommand = async (
  */
 export const de_GetGroupConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGroupConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -583,7 +583,7 @@ export const de_GetGroupConfigurationCommand = async (
  */
 export const de_GetGroupQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGroupQueryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -604,7 +604,7 @@ export const de_GetGroupQueryCommand = async (
  */
 export const de_GetTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTagsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -626,7 +626,7 @@ export const de_GetTagsCommand = async (
  */
 export const de_GroupResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GroupResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -649,7 +649,7 @@ export const de_GroupResourcesCommand = async (
  */
 export const de_ListGroupResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGroupResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -673,7 +673,7 @@ export const de_ListGroupResourcesCommand = async (
  */
 export const de_ListGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -696,7 +696,7 @@ export const de_ListGroupsCommand = async (
  */
 export const de_PutGroupConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutGroupConfigurationCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -713,7 +713,7 @@ export const de_PutGroupConfigurationCommand = async (
  */
 export const de_SearchResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -755,7 +755,7 @@ export const de_TagCommand = async (output: __HttpResponse, context: __SerdeCont
  */
 export const de_UngroupResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UngroupResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -797,7 +797,7 @@ export const de_UntagCommand = async (output: __HttpResponse, context: __SerdeCo
  */
 export const de_UpdateAccountSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAccountSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -818,7 +818,7 @@ export const de_UpdateAccountSettingsCommand = async (
  */
 export const de_UpdateGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -839,7 +839,7 @@ export const de_UpdateGroupCommand = async (
  */
 export const de_UpdateGroupQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGroupQueryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -936,7 +936,7 @@ const de_ForbiddenExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_InternalServerErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -956,7 +956,7 @@ const de_InternalServerErrorExceptionRes = async (
  */
 const de_MethodNotAllowedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MethodNotAllowedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -993,7 +993,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1013,7 +1013,7 @@ const de_TooManyRequestsExceptionRes = async (
  */
 const de_UnauthorizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthorizedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

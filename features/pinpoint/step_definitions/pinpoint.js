@@ -30,7 +30,7 @@ Given('I run the "putEvents" operation with EventsRequest:', function (eventsReq
       EventsRequest: JSON.parse(eventsRequest),
     },
     callback,
-    false
+    false,
   );
 });
 
@@ -42,6 +42,6 @@ Given("I delete the application", function (callback) {
       ApplicationId: this.applicationId,
     },
     callback,
-    false
+    false,
   );
 });

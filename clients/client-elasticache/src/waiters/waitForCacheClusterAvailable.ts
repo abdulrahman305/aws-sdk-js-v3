@@ -9,7 +9,7 @@ import { ElastiCacheClient } from "../ElastiCacheClient";
 
 const checkState = async (
   client: ElastiCacheClient,
-  input: DescribeCacheClustersCommandInput
+  input: DescribeCacheClustersCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -98,7 +98,7 @@ const checkState = async (
  */
 export const waitForCacheClusterAvailable = async (
   params: WaiterConfiguration<ElastiCacheClient>,
-  input: DescribeCacheClustersCommandInput
+  input: DescribeCacheClustersCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -110,7 +110,7 @@ export const waitForCacheClusterAvailable = async (
  */
 export const waitUntilCacheClusterAvailable = async (
   params: WaiterConfiguration<ElastiCacheClient>,
-  input: DescribeCacheClustersCommandInput
+  input: DescribeCacheClustersCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

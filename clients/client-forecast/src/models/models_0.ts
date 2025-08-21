@@ -8494,7 +8494,7 @@ export const CreatePredictorRequestFilterSensitiveLog = (obj: CreatePredictorReq
  * @internal
  */
 export const CreatePredictorBacktestExportJobRequestFilterSensitiveLog = (
-  obj: CreatePredictorBacktestExportJobRequest
+  obj: CreatePredictorBacktestExportJobRequest,
 ): any => ({
   ...obj,
   ...(obj.Tags && { Tags: obj.Tags.map((item) => TagFilterSensitiveLog(item)) }),

@@ -502,7 +502,7 @@ import {
  */
 export const se_ActivateOrganizationsAccessCommand = async (
   input: ActivateOrganizationsAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -519,7 +519,7 @@ export const se_ActivateOrganizationsAccessCommand = async (
  */
 export const se_ActivateTypeCommand = async (
   input: ActivateTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -536,7 +536,7 @@ export const se_ActivateTypeCommand = async (
  */
 export const se_BatchDescribeTypeConfigurationsCommand = async (
   input: BatchDescribeTypeConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -553,7 +553,7 @@ export const se_BatchDescribeTypeConfigurationsCommand = async (
  */
 export const se_CancelUpdateStackCommand = async (
   input: CancelUpdateStackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -570,7 +570,7 @@ export const se_CancelUpdateStackCommand = async (
  */
 export const se_ContinueUpdateRollbackCommand = async (
   input: ContinueUpdateRollbackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -587,7 +587,7 @@ export const se_ContinueUpdateRollbackCommand = async (
  */
 export const se_CreateChangeSetCommand = async (
   input: CreateChangeSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -604,7 +604,7 @@ export const se_CreateChangeSetCommand = async (
  */
 export const se_CreateGeneratedTemplateCommand = async (
   input: CreateGeneratedTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -621,7 +621,7 @@ export const se_CreateGeneratedTemplateCommand = async (
  */
 export const se_CreateStackCommand = async (
   input: CreateStackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -638,7 +638,7 @@ export const se_CreateStackCommand = async (
  */
 export const se_CreateStackInstancesCommand = async (
   input: CreateStackInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -655,7 +655,7 @@ export const se_CreateStackInstancesCommand = async (
  */
 export const se_CreateStackSetCommand = async (
   input: CreateStackSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -672,7 +672,7 @@ export const se_CreateStackSetCommand = async (
  */
 export const se_DeactivateOrganizationsAccessCommand = async (
   input: DeactivateOrganizationsAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -689,7 +689,7 @@ export const se_DeactivateOrganizationsAccessCommand = async (
  */
 export const se_DeactivateTypeCommand = async (
   input: DeactivateTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -706,7 +706,7 @@ export const se_DeactivateTypeCommand = async (
  */
 export const se_DeleteChangeSetCommand = async (
   input: DeleteChangeSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -723,7 +723,7 @@ export const se_DeleteChangeSetCommand = async (
  */
 export const se_DeleteGeneratedTemplateCommand = async (
   input: DeleteGeneratedTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -740,7 +740,7 @@ export const se_DeleteGeneratedTemplateCommand = async (
  */
 export const se_DeleteStackCommand = async (
   input: DeleteStackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -757,7 +757,7 @@ export const se_DeleteStackCommand = async (
  */
 export const se_DeleteStackInstancesCommand = async (
   input: DeleteStackInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -774,7 +774,7 @@ export const se_DeleteStackInstancesCommand = async (
  */
 export const se_DeleteStackSetCommand = async (
   input: DeleteStackSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -791,7 +791,7 @@ export const se_DeleteStackSetCommand = async (
  */
 export const se_DeregisterTypeCommand = async (
   input: DeregisterTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -808,7 +808,7 @@ export const se_DeregisterTypeCommand = async (
  */
 export const se_DescribeAccountLimitsCommand = async (
   input: DescribeAccountLimitsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -825,7 +825,7 @@ export const se_DescribeAccountLimitsCommand = async (
  */
 export const se_DescribeChangeSetCommand = async (
   input: DescribeChangeSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -842,7 +842,7 @@ export const se_DescribeChangeSetCommand = async (
  */
 export const se_DescribeChangeSetHooksCommand = async (
   input: DescribeChangeSetHooksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -859,7 +859,7 @@ export const se_DescribeChangeSetHooksCommand = async (
  */
 export const se_DescribeGeneratedTemplateCommand = async (
   input: DescribeGeneratedTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -876,7 +876,7 @@ export const se_DescribeGeneratedTemplateCommand = async (
  */
 export const se_DescribeOrganizationsAccessCommand = async (
   input: DescribeOrganizationsAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -893,7 +893,7 @@ export const se_DescribeOrganizationsAccessCommand = async (
  */
 export const se_DescribePublisherCommand = async (
   input: DescribePublisherCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -910,7 +910,7 @@ export const se_DescribePublisherCommand = async (
  */
 export const se_DescribeResourceScanCommand = async (
   input: DescribeResourceScanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -927,7 +927,7 @@ export const se_DescribeResourceScanCommand = async (
  */
 export const se_DescribeStackDriftDetectionStatusCommand = async (
   input: DescribeStackDriftDetectionStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -944,7 +944,7 @@ export const se_DescribeStackDriftDetectionStatusCommand = async (
  */
 export const se_DescribeStackEventsCommand = async (
   input: DescribeStackEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -961,7 +961,7 @@ export const se_DescribeStackEventsCommand = async (
  */
 export const se_DescribeStackInstanceCommand = async (
   input: DescribeStackInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -978,7 +978,7 @@ export const se_DescribeStackInstanceCommand = async (
  */
 export const se_DescribeStackResourceCommand = async (
   input: DescribeStackResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -995,7 +995,7 @@ export const se_DescribeStackResourceCommand = async (
  */
 export const se_DescribeStackResourceDriftsCommand = async (
   input: DescribeStackResourceDriftsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1012,7 +1012,7 @@ export const se_DescribeStackResourceDriftsCommand = async (
  */
 export const se_DescribeStackResourcesCommand = async (
   input: DescribeStackResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1029,7 +1029,7 @@ export const se_DescribeStackResourcesCommand = async (
  */
 export const se_DescribeStacksCommand = async (
   input: DescribeStacksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1046,7 +1046,7 @@ export const se_DescribeStacksCommand = async (
  */
 export const se_DescribeStackSetCommand = async (
   input: DescribeStackSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1063,7 +1063,7 @@ export const se_DescribeStackSetCommand = async (
  */
 export const se_DescribeStackSetOperationCommand = async (
   input: DescribeStackSetOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1080,7 +1080,7 @@ export const se_DescribeStackSetOperationCommand = async (
  */
 export const se_DescribeTypeCommand = async (
   input: DescribeTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1097,7 +1097,7 @@ export const se_DescribeTypeCommand = async (
  */
 export const se_DescribeTypeRegistrationCommand = async (
   input: DescribeTypeRegistrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1114,7 +1114,7 @@ export const se_DescribeTypeRegistrationCommand = async (
  */
 export const se_DetectStackDriftCommand = async (
   input: DetectStackDriftCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1131,7 +1131,7 @@ export const se_DetectStackDriftCommand = async (
  */
 export const se_DetectStackResourceDriftCommand = async (
   input: DetectStackResourceDriftCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1148,7 +1148,7 @@ export const se_DetectStackResourceDriftCommand = async (
  */
 export const se_DetectStackSetDriftCommand = async (
   input: DetectStackSetDriftCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1165,7 +1165,7 @@ export const se_DetectStackSetDriftCommand = async (
  */
 export const se_EstimateTemplateCostCommand = async (
   input: EstimateTemplateCostCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1182,7 +1182,7 @@ export const se_EstimateTemplateCostCommand = async (
  */
 export const se_ExecuteChangeSetCommand = async (
   input: ExecuteChangeSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1199,7 +1199,7 @@ export const se_ExecuteChangeSetCommand = async (
  */
 export const se_GetGeneratedTemplateCommand = async (
   input: GetGeneratedTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1216,7 +1216,7 @@ export const se_GetGeneratedTemplateCommand = async (
  */
 export const se_GetStackPolicyCommand = async (
   input: GetStackPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1233,7 +1233,7 @@ export const se_GetStackPolicyCommand = async (
  */
 export const se_GetTemplateCommand = async (
   input: GetTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1250,7 +1250,7 @@ export const se_GetTemplateCommand = async (
  */
 export const se_GetTemplateSummaryCommand = async (
   input: GetTemplateSummaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1267,7 +1267,7 @@ export const se_GetTemplateSummaryCommand = async (
  */
 export const se_ImportStacksToStackSetCommand = async (
   input: ImportStacksToStackSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1284,7 +1284,7 @@ export const se_ImportStacksToStackSetCommand = async (
  */
 export const se_ListChangeSetsCommand = async (
   input: ListChangeSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1301,7 +1301,7 @@ export const se_ListChangeSetsCommand = async (
  */
 export const se_ListExportsCommand = async (
   input: ListExportsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1318,7 +1318,7 @@ export const se_ListExportsCommand = async (
  */
 export const se_ListGeneratedTemplatesCommand = async (
   input: ListGeneratedTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1335,7 +1335,7 @@ export const se_ListGeneratedTemplatesCommand = async (
  */
 export const se_ListImportsCommand = async (
   input: ListImportsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1352,7 +1352,7 @@ export const se_ListImportsCommand = async (
  */
 export const se_ListResourceScanRelatedResourcesCommand = async (
   input: ListResourceScanRelatedResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1369,7 +1369,7 @@ export const se_ListResourceScanRelatedResourcesCommand = async (
  */
 export const se_ListResourceScanResourcesCommand = async (
   input: ListResourceScanResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1386,7 +1386,7 @@ export const se_ListResourceScanResourcesCommand = async (
  */
 export const se_ListResourceScansCommand = async (
   input: ListResourceScansCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1403,7 +1403,7 @@ export const se_ListResourceScansCommand = async (
  */
 export const se_ListStackInstanceResourceDriftsCommand = async (
   input: ListStackInstanceResourceDriftsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1420,7 +1420,7 @@ export const se_ListStackInstanceResourceDriftsCommand = async (
  */
 export const se_ListStackInstancesCommand = async (
   input: ListStackInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1437,7 +1437,7 @@ export const se_ListStackInstancesCommand = async (
  */
 export const se_ListStackResourcesCommand = async (
   input: ListStackResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1454,7 +1454,7 @@ export const se_ListStackResourcesCommand = async (
  */
 export const se_ListStacksCommand = async (
   input: ListStacksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1471,7 +1471,7 @@ export const se_ListStacksCommand = async (
  */
 export const se_ListStackSetAutoDeploymentTargetsCommand = async (
   input: ListStackSetAutoDeploymentTargetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1488,7 +1488,7 @@ export const se_ListStackSetAutoDeploymentTargetsCommand = async (
  */
 export const se_ListStackSetOperationResultsCommand = async (
   input: ListStackSetOperationResultsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1505,7 +1505,7 @@ export const se_ListStackSetOperationResultsCommand = async (
  */
 export const se_ListStackSetOperationsCommand = async (
   input: ListStackSetOperationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1522,7 +1522,7 @@ export const se_ListStackSetOperationsCommand = async (
  */
 export const se_ListStackSetsCommand = async (
   input: ListStackSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1539,7 +1539,7 @@ export const se_ListStackSetsCommand = async (
  */
 export const se_ListTypeRegistrationsCommand = async (
   input: ListTypeRegistrationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1556,7 +1556,7 @@ export const se_ListTypeRegistrationsCommand = async (
  */
 export const se_ListTypesCommand = async (
   input: ListTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1573,7 +1573,7 @@ export const se_ListTypesCommand = async (
  */
 export const se_ListTypeVersionsCommand = async (
   input: ListTypeVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1590,7 +1590,7 @@ export const se_ListTypeVersionsCommand = async (
  */
 export const se_PublishTypeCommand = async (
   input: PublishTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1607,7 +1607,7 @@ export const se_PublishTypeCommand = async (
  */
 export const se_RecordHandlerProgressCommand = async (
   input: RecordHandlerProgressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1624,7 +1624,7 @@ export const se_RecordHandlerProgressCommand = async (
  */
 export const se_RegisterPublisherCommand = async (
   input: RegisterPublisherCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1641,7 +1641,7 @@ export const se_RegisterPublisherCommand = async (
  */
 export const se_RegisterTypeCommand = async (
   input: RegisterTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1658,7 +1658,7 @@ export const se_RegisterTypeCommand = async (
  */
 export const se_RollbackStackCommand = async (
   input: RollbackStackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1675,7 +1675,7 @@ export const se_RollbackStackCommand = async (
  */
 export const se_SetStackPolicyCommand = async (
   input: SetStackPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1692,7 +1692,7 @@ export const se_SetStackPolicyCommand = async (
  */
 export const se_SetTypeConfigurationCommand = async (
   input: SetTypeConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1709,7 +1709,7 @@ export const se_SetTypeConfigurationCommand = async (
  */
 export const se_SetTypeDefaultVersionCommand = async (
   input: SetTypeDefaultVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1726,7 +1726,7 @@ export const se_SetTypeDefaultVersionCommand = async (
  */
 export const se_SignalResourceCommand = async (
   input: SignalResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1743,7 +1743,7 @@ export const se_SignalResourceCommand = async (
  */
 export const se_StartResourceScanCommand = async (
   input: StartResourceScanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1760,7 +1760,7 @@ export const se_StartResourceScanCommand = async (
  */
 export const se_StopStackSetOperationCommand = async (
   input: StopStackSetOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1777,7 +1777,7 @@ export const se_StopStackSetOperationCommand = async (
  */
 export const se_TestTypeCommand = async (
   input: TestTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1794,7 +1794,7 @@ export const se_TestTypeCommand = async (
  */
 export const se_UpdateGeneratedTemplateCommand = async (
   input: UpdateGeneratedTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1811,7 +1811,7 @@ export const se_UpdateGeneratedTemplateCommand = async (
  */
 export const se_UpdateStackCommand = async (
   input: UpdateStackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1828,7 +1828,7 @@ export const se_UpdateStackCommand = async (
  */
 export const se_UpdateStackInstancesCommand = async (
   input: UpdateStackInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1845,7 +1845,7 @@ export const se_UpdateStackInstancesCommand = async (
  */
 export const se_UpdateStackSetCommand = async (
   input: UpdateStackSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1862,7 +1862,7 @@ export const se_UpdateStackSetCommand = async (
  */
 export const se_UpdateTerminationProtectionCommand = async (
   input: UpdateTerminationProtectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1879,7 +1879,7 @@ export const se_UpdateTerminationProtectionCommand = async (
  */
 export const se_ValidateTemplateCommand = async (
   input: ValidateTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1896,7 +1896,7 @@ export const se_ValidateTemplateCommand = async (
  */
 export const de_ActivateOrganizationsAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ActivateOrganizationsAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1916,7 +1916,7 @@ export const de_ActivateOrganizationsAccessCommand = async (
  */
 export const de_ActivateTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ActivateTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1936,7 +1936,7 @@ export const de_ActivateTypeCommand = async (
  */
 export const de_BatchDescribeTypeConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDescribeTypeConfigurationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1956,7 +1956,7 @@ export const de_BatchDescribeTypeConfigurationsCommand = async (
  */
 export const de_CancelUpdateStackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelUpdateStackCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1973,7 +1973,7 @@ export const de_CancelUpdateStackCommand = async (
  */
 export const de_ContinueUpdateRollbackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ContinueUpdateRollbackCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1993,7 +1993,7 @@ export const de_ContinueUpdateRollbackCommand = async (
  */
 export const de_CreateChangeSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateChangeSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2013,7 +2013,7 @@ export const de_CreateChangeSetCommand = async (
  */
 export const de_CreateGeneratedTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGeneratedTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2033,7 +2033,7 @@ export const de_CreateGeneratedTemplateCommand = async (
  */
 export const de_CreateStackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStackCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2053,7 +2053,7 @@ export const de_CreateStackCommand = async (
  */
 export const de_CreateStackInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStackInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2073,7 +2073,7 @@ export const de_CreateStackInstancesCommand = async (
  */
 export const de_CreateStackSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStackSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2093,7 +2093,7 @@ export const de_CreateStackSetCommand = async (
  */
 export const de_DeactivateOrganizationsAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeactivateOrganizationsAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2113,7 +2113,7 @@ export const de_DeactivateOrganizationsAccessCommand = async (
  */
 export const de_DeactivateTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeactivateTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2133,7 +2133,7 @@ export const de_DeactivateTypeCommand = async (
  */
 export const de_DeleteChangeSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteChangeSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2153,7 +2153,7 @@ export const de_DeleteChangeSetCommand = async (
  */
 export const de_DeleteGeneratedTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGeneratedTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2170,7 +2170,7 @@ export const de_DeleteGeneratedTemplateCommand = async (
  */
 export const de_DeleteStackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStackCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2187,7 +2187,7 @@ export const de_DeleteStackCommand = async (
  */
 export const de_DeleteStackInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStackInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2207,7 +2207,7 @@ export const de_DeleteStackInstancesCommand = async (
  */
 export const de_DeleteStackSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStackSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2227,7 +2227,7 @@ export const de_DeleteStackSetCommand = async (
  */
 export const de_DeregisterTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2247,7 +2247,7 @@ export const de_DeregisterTypeCommand = async (
  */
 export const de_DescribeAccountLimitsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAccountLimitsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2267,7 +2267,7 @@ export const de_DescribeAccountLimitsCommand = async (
  */
 export const de_DescribeChangeSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeChangeSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2287,7 +2287,7 @@ export const de_DescribeChangeSetCommand = async (
  */
 export const de_DescribeChangeSetHooksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeChangeSetHooksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2307,7 +2307,7 @@ export const de_DescribeChangeSetHooksCommand = async (
  */
 export const de_DescribeGeneratedTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGeneratedTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2327,7 +2327,7 @@ export const de_DescribeGeneratedTemplateCommand = async (
  */
 export const de_DescribeOrganizationsAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeOrganizationsAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2347,7 +2347,7 @@ export const de_DescribeOrganizationsAccessCommand = async (
  */
 export const de_DescribePublisherCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePublisherCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2367,7 +2367,7 @@ export const de_DescribePublisherCommand = async (
  */
 export const de_DescribeResourceScanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeResourceScanCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2387,7 +2387,7 @@ export const de_DescribeResourceScanCommand = async (
  */
 export const de_DescribeStackDriftDetectionStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStackDriftDetectionStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2407,7 +2407,7 @@ export const de_DescribeStackDriftDetectionStatusCommand = async (
  */
 export const de_DescribeStackEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStackEventsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2427,7 +2427,7 @@ export const de_DescribeStackEventsCommand = async (
  */
 export const de_DescribeStackInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStackInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2447,7 +2447,7 @@ export const de_DescribeStackInstanceCommand = async (
  */
 export const de_DescribeStackResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStackResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2467,7 +2467,7 @@ export const de_DescribeStackResourceCommand = async (
  */
 export const de_DescribeStackResourceDriftsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStackResourceDriftsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2487,7 +2487,7 @@ export const de_DescribeStackResourceDriftsCommand = async (
  */
 export const de_DescribeStackResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStackResourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2507,7 +2507,7 @@ export const de_DescribeStackResourcesCommand = async (
  */
 export const de_DescribeStacksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStacksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2527,7 +2527,7 @@ export const de_DescribeStacksCommand = async (
  */
 export const de_DescribeStackSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStackSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2547,7 +2547,7 @@ export const de_DescribeStackSetCommand = async (
  */
 export const de_DescribeStackSetOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStackSetOperationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2567,7 +2567,7 @@ export const de_DescribeStackSetOperationCommand = async (
  */
 export const de_DescribeTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2587,7 +2587,7 @@ export const de_DescribeTypeCommand = async (
  */
 export const de_DescribeTypeRegistrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTypeRegistrationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2607,7 +2607,7 @@ export const de_DescribeTypeRegistrationCommand = async (
  */
 export const de_DetectStackDriftCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetectStackDriftCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2627,7 +2627,7 @@ export const de_DetectStackDriftCommand = async (
  */
 export const de_DetectStackResourceDriftCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetectStackResourceDriftCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2647,7 +2647,7 @@ export const de_DetectStackResourceDriftCommand = async (
  */
 export const de_DetectStackSetDriftCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetectStackSetDriftCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2667,7 +2667,7 @@ export const de_DetectStackSetDriftCommand = async (
  */
 export const de_EstimateTemplateCostCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EstimateTemplateCostCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2687,7 +2687,7 @@ export const de_EstimateTemplateCostCommand = async (
  */
 export const de_ExecuteChangeSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteChangeSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2707,7 +2707,7 @@ export const de_ExecuteChangeSetCommand = async (
  */
 export const de_GetGeneratedTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGeneratedTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2727,7 +2727,7 @@ export const de_GetGeneratedTemplateCommand = async (
  */
 export const de_GetStackPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStackPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2747,7 +2747,7 @@ export const de_GetStackPolicyCommand = async (
  */
 export const de_GetTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2767,7 +2767,7 @@ export const de_GetTemplateCommand = async (
  */
 export const de_GetTemplateSummaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTemplateSummaryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2787,7 +2787,7 @@ export const de_GetTemplateSummaryCommand = async (
  */
 export const de_ImportStacksToStackSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportStacksToStackSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2807,7 +2807,7 @@ export const de_ImportStacksToStackSetCommand = async (
  */
 export const de_ListChangeSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListChangeSetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2827,7 +2827,7 @@ export const de_ListChangeSetsCommand = async (
  */
 export const de_ListExportsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListExportsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2847,7 +2847,7 @@ export const de_ListExportsCommand = async (
  */
 export const de_ListGeneratedTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGeneratedTemplatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2867,7 +2867,7 @@ export const de_ListGeneratedTemplatesCommand = async (
  */
 export const de_ListImportsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListImportsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2887,7 +2887,7 @@ export const de_ListImportsCommand = async (
  */
 export const de_ListResourceScanRelatedResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResourceScanRelatedResourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2907,7 +2907,7 @@ export const de_ListResourceScanRelatedResourcesCommand = async (
  */
 export const de_ListResourceScanResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResourceScanResourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2927,7 +2927,7 @@ export const de_ListResourceScanResourcesCommand = async (
  */
 export const de_ListResourceScansCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResourceScansCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2947,7 +2947,7 @@ export const de_ListResourceScansCommand = async (
  */
 export const de_ListStackInstanceResourceDriftsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStackInstanceResourceDriftsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2967,7 +2967,7 @@ export const de_ListStackInstanceResourceDriftsCommand = async (
  */
 export const de_ListStackInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStackInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2987,7 +2987,7 @@ export const de_ListStackInstancesCommand = async (
  */
 export const de_ListStackResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStackResourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3007,7 +3007,7 @@ export const de_ListStackResourcesCommand = async (
  */
 export const de_ListStacksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStacksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3027,7 +3027,7 @@ export const de_ListStacksCommand = async (
  */
 export const de_ListStackSetAutoDeploymentTargetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStackSetAutoDeploymentTargetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3047,7 +3047,7 @@ export const de_ListStackSetAutoDeploymentTargetsCommand = async (
  */
 export const de_ListStackSetOperationResultsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStackSetOperationResultsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3067,7 +3067,7 @@ export const de_ListStackSetOperationResultsCommand = async (
  */
 export const de_ListStackSetOperationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStackSetOperationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3087,7 +3087,7 @@ export const de_ListStackSetOperationsCommand = async (
  */
 export const de_ListStackSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStackSetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3107,7 +3107,7 @@ export const de_ListStackSetsCommand = async (
  */
 export const de_ListTypeRegistrationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTypeRegistrationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3127,7 +3127,7 @@ export const de_ListTypeRegistrationsCommand = async (
  */
 export const de_ListTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTypesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3147,7 +3147,7 @@ export const de_ListTypesCommand = async (
  */
 export const de_ListTypeVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTypeVersionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3167,7 +3167,7 @@ export const de_ListTypeVersionsCommand = async (
  */
 export const de_PublishTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PublishTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3187,7 +3187,7 @@ export const de_PublishTypeCommand = async (
  */
 export const de_RecordHandlerProgressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RecordHandlerProgressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3207,7 +3207,7 @@ export const de_RecordHandlerProgressCommand = async (
  */
 export const de_RegisterPublisherCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterPublisherCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3227,7 +3227,7 @@ export const de_RegisterPublisherCommand = async (
  */
 export const de_RegisterTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3247,7 +3247,7 @@ export const de_RegisterTypeCommand = async (
  */
 export const de_RollbackStackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RollbackStackCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3267,7 +3267,7 @@ export const de_RollbackStackCommand = async (
  */
 export const de_SetStackPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetStackPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3284,7 +3284,7 @@ export const de_SetStackPolicyCommand = async (
  */
 export const de_SetTypeConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetTypeConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3304,7 +3304,7 @@ export const de_SetTypeConfigurationCommand = async (
  */
 export const de_SetTypeDefaultVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetTypeDefaultVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3324,7 +3324,7 @@ export const de_SetTypeDefaultVersionCommand = async (
  */
 export const de_SignalResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SignalResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3341,7 +3341,7 @@ export const de_SignalResourceCommand = async (
  */
 export const de_StartResourceScanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartResourceScanCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3361,7 +3361,7 @@ export const de_StartResourceScanCommand = async (
  */
 export const de_StopStackSetOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopStackSetOperationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3381,7 +3381,7 @@ export const de_StopStackSetOperationCommand = async (
  */
 export const de_TestTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TestTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3401,7 +3401,7 @@ export const de_TestTypeCommand = async (
  */
 export const de_UpdateGeneratedTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGeneratedTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3421,7 +3421,7 @@ export const de_UpdateGeneratedTemplateCommand = async (
  */
 export const de_UpdateStackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateStackCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3441,7 +3441,7 @@ export const de_UpdateStackCommand = async (
  */
 export const de_UpdateStackInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateStackInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3461,7 +3461,7 @@ export const de_UpdateStackInstancesCommand = async (
  */
 export const de_UpdateStackSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateStackSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3481,7 +3481,7 @@ export const de_UpdateStackSetCommand = async (
  */
 export const de_UpdateTerminationProtectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTerminationProtectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3501,7 +3501,7 @@ export const de_UpdateTerminationProtectionCommand = async (
  */
 export const de_ValidateTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ValidateTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3622,7 +3622,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_AlreadyExistsException(body.Error, context);
@@ -3638,7 +3638,7 @@ const de_AlreadyExistsExceptionRes = async (
  */
 const de_CFNRegistryExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CFNRegistryException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CFNRegistryException(body.Error, context);
@@ -3654,7 +3654,7 @@ const de_CFNRegistryExceptionRes = async (
  */
 const de_ChangeSetNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ChangeSetNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ChangeSetNotFoundException(body.Error, context);
@@ -3670,7 +3670,7 @@ const de_ChangeSetNotFoundExceptionRes = async (
  */
 const de_ConcurrentResourcesLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentResourcesLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ConcurrentResourcesLimitExceededException(body.Error, context);
@@ -3686,7 +3686,7 @@ const de_ConcurrentResourcesLimitExceededExceptionRes = async (
  */
 const de_CreatedButModifiedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatedButModifiedException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CreatedButModifiedException(body.Error, context);
@@ -3702,7 +3702,7 @@ const de_CreatedButModifiedExceptionRes = async (
  */
 const de_GeneratedTemplateNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GeneratedTemplateNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_GeneratedTemplateNotFoundException(body.Error, context);
@@ -3718,7 +3718,7 @@ const de_GeneratedTemplateNotFoundExceptionRes = async (
  */
 const de_InsufficientCapabilitiesExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InsufficientCapabilitiesException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InsufficientCapabilitiesException(body.Error, context);
@@ -3734,7 +3734,7 @@ const de_InsufficientCapabilitiesExceptionRes = async (
  */
 const de_InvalidChangeSetStatusExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidChangeSetStatusException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidChangeSetStatusException(body.Error, context);
@@ -3750,7 +3750,7 @@ const de_InvalidChangeSetStatusExceptionRes = async (
  */
 const de_InvalidOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidOperationException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidOperationException(body.Error, context);
@@ -3766,7 +3766,7 @@ const de_InvalidOperationExceptionRes = async (
  */
 const de_InvalidStateTransitionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidStateTransitionException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidStateTransitionException(body.Error, context);
@@ -3782,7 +3782,7 @@ const de_InvalidStateTransitionExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_LimitExceededException(body.Error, context);
@@ -3798,7 +3798,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_NameAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NameAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_NameAlreadyExistsException(body.Error, context);
@@ -3814,7 +3814,7 @@ const de_NameAlreadyExistsExceptionRes = async (
  */
 const de_OperationIdAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationIdAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_OperationIdAlreadyExistsException(body.Error, context);
@@ -3830,7 +3830,7 @@ const de_OperationIdAlreadyExistsExceptionRes = async (
  */
 const de_OperationInProgressExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationInProgressException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_OperationInProgressException(body.Error, context);
@@ -3846,7 +3846,7 @@ const de_OperationInProgressExceptionRes = async (
  */
 const de_OperationNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_OperationNotFoundException(body.Error, context);
@@ -3862,7 +3862,7 @@ const de_OperationNotFoundExceptionRes = async (
  */
 const de_OperationStatusCheckFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationStatusCheckFailedException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_OperationStatusCheckFailedException(body.Error, context);
@@ -3878,7 +3878,7 @@ const de_OperationStatusCheckFailedExceptionRes = async (
  */
 const de_ResourceScanInProgressExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceScanInProgressException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ResourceScanInProgressException(body.Error, context);
@@ -3894,7 +3894,7 @@ const de_ResourceScanInProgressExceptionRes = async (
  */
 const de_ResourceScanLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceScanLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ResourceScanLimitExceededException(body.Error, context);
@@ -3910,7 +3910,7 @@ const de_ResourceScanLimitExceededExceptionRes = async (
  */
 const de_ResourceScanNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceScanNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ResourceScanNotFoundException(body.Error, context);
@@ -3926,7 +3926,7 @@ const de_ResourceScanNotFoundExceptionRes = async (
  */
 const de_StackInstanceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StackInstanceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_StackInstanceNotFoundException(body.Error, context);
@@ -3942,7 +3942,7 @@ const de_StackInstanceNotFoundExceptionRes = async (
  */
 const de_StackNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StackNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_StackNotFoundException(body.Error, context);
@@ -3958,7 +3958,7 @@ const de_StackNotFoundExceptionRes = async (
  */
 const de_StackSetNotEmptyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StackSetNotEmptyException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_StackSetNotEmptyException(body.Error, context);
@@ -3974,7 +3974,7 @@ const de_StackSetNotEmptyExceptionRes = async (
  */
 const de_StackSetNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StackSetNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_StackSetNotFoundException(body.Error, context);
@@ -3990,7 +3990,7 @@ const de_StackSetNotFoundExceptionRes = async (
  */
 const de_StaleRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StaleRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_StaleRequestException(body.Error, context);
@@ -4006,7 +4006,7 @@ const de_StaleRequestExceptionRes = async (
  */
 const de_TokenAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TokenAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TokenAlreadyExistsException(body.Error, context);
@@ -4022,7 +4022,7 @@ const de_TokenAlreadyExistsExceptionRes = async (
  */
 const de_TypeConfigurationNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TypeConfigurationNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TypeConfigurationNotFoundException(body.Error, context);
@@ -4038,7 +4038,7 @@ const de_TypeConfigurationNotFoundExceptionRes = async (
  */
 const de_TypeNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TypeNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TypeNotFoundException(body.Error, context);
@@ -4134,7 +4134,7 @@ const se_AutoDeployment = (input: AutoDeployment, context: __SerdeContext): any 
  */
 const se_BatchDescribeTypeConfigurationsInput = (
   input: BatchDescribeTypeConfigurationsInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TCI] != null) {
@@ -4604,7 +4604,7 @@ const se_CreateStackSetInput = (input: CreateStackSetInput, context: __SerdeCont
  */
 const se_DeactivateOrganizationsAccessInput = (
   input: DeactivateOrganizationsAccessInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   return entries;
@@ -4907,7 +4907,7 @@ const se_DescribeResourceScanInput = (input: DescribeResourceScanInput, context:
  */
 const se_DescribeStackDriftDetectionStatusInput = (
   input: DescribeStackDriftDetectionStatusInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SDDI] != null) {
@@ -5411,7 +5411,7 @@ const se_ListImportsInput = (input: ListImportsInput, context: __SerdeContext): 
  */
 const se_ListResourceScanRelatedResourcesInput = (
   input: ListResourceScanRelatedResourcesInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_RSI] != null) {
@@ -5484,7 +5484,7 @@ const se_ListResourceScansInput = (input: ListResourceScansInput, context: __Ser
  */
 const se_ListStackInstanceResourceDriftsInput = (
   input: ListStackInstanceResourceDriftsInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SSN] != null) {
@@ -5576,7 +5576,7 @@ const se_ListStackResourcesInput = (input: ListStackResourcesInput, context: __S
  */
 const se_ListStackSetAutoDeploymentTargetsInput = (
   input: ListStackSetAutoDeploymentTargetsInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SSN] != null) {
@@ -5599,7 +5599,7 @@ const se_ListStackSetAutoDeploymentTargetsInput = (
  */
 const se_ListStackSetOperationResultsInput = (
   input: ListStackSetOperationResultsInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SSN] != null) {
@@ -7064,7 +7064,7 @@ const de_AccountList = (output: any, context: __SerdeContext): string[] => {
  */
 const de_ActivateOrganizationsAccessOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ActivateOrganizationsAccessOutput => {
   const contents: any = {};
   return contents;
@@ -7122,7 +7122,7 @@ const de_AutoDeployment = (output: any, context: __SerdeContext): AutoDeployment
  */
 const de_BatchDescribeTypeConfigurationsError = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchDescribeTypeConfigurationsError => {
   const contents: any = {};
   if (output[_EC] != null) {
@@ -7142,7 +7142,7 @@ const de_BatchDescribeTypeConfigurationsError = (
  */
 const de_BatchDescribeTypeConfigurationsErrors = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchDescribeTypeConfigurationsError[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -7156,7 +7156,7 @@ const de_BatchDescribeTypeConfigurationsErrors = (
  */
 const de_BatchDescribeTypeConfigurationsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchDescribeTypeConfigurationsOutput => {
   const contents: any = {};
   if (output.Errors === "") {
@@ -7258,7 +7258,7 @@ const de_ChangeSetHook = (output: any, context: __SerdeContext): ChangeSetHook =
  */
 const de_ChangeSetHookResourceTargetDetails = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ChangeSetHookResourceTargetDetails => {
   const contents: any = {};
   if (output[_LRI] != null) {
@@ -7372,7 +7372,7 @@ const de_ChangeSetSummary = (output: any, context: __SerdeContext): ChangeSetSum
  */
 const de_ConcurrentResourcesLimitExceededException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ConcurrentResourcesLimitExceededException => {
   const contents: any = {};
   if (output[_M] != null) {
@@ -7463,7 +7463,7 @@ const de_CreateStackSetOutput = (output: any, context: __SerdeContext): CreateSt
  */
 const de_DeactivateOrganizationsAccessOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeactivateOrganizationsAccessOutput => {
   const contents: any = {};
   return contents;
@@ -7712,7 +7712,7 @@ const de_DescribeGeneratedTemplateOutput = (output: any, context: __SerdeContext
  */
 const de_DescribeOrganizationsAccessOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeOrganizationsAccessOutput => {
   const contents: any = {};
   if (output[_S] != null) {
@@ -7783,7 +7783,7 @@ const de_DescribeResourceScanOutput = (output: any, context: __SerdeContext): De
  */
 const de_DescribeStackDriftDetectionStatusOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeStackDriftDetectionStatusOutput => {
   const contents: any = {};
   if (output[_SI] != null) {
@@ -7842,7 +7842,7 @@ const de_DescribeStackInstanceOutput = (output: any, context: __SerdeContext): D
  */
 const de_DescribeStackResourceDriftsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeStackResourceDriftsOutput => {
   const contents: any = {};
   if (output.StackResourceDrifts === "") {
@@ -8114,7 +8114,7 @@ const de_Exports = (output: any, context: __SerdeContext): Export[] => {
  */
 const de_GeneratedTemplateNotFoundException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GeneratedTemplateNotFoundException => {
   const contents: any = {};
   if (output[_M] != null) {
@@ -8239,7 +8239,7 @@ const de_ImportStacksToStackSetOutput = (output: any, context: __SerdeContext): 
  */
 const de_InsufficientCapabilitiesException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InsufficientCapabilitiesException => {
   const contents: any = {};
   if (output[_M] != null) {
@@ -8374,7 +8374,7 @@ const de_ListImportsOutput = (output: any, context: __SerdeContext): ListImports
  */
 const de_ListResourceScanRelatedResourcesOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListResourceScanRelatedResourcesOutput => {
   const contents: any = {};
   if (output.RelatedResources === "") {
@@ -8425,7 +8425,7 @@ const de_ListResourceScansOutput = (output: any, context: __SerdeContext): ListR
  */
 const de_ListStackInstanceResourceDriftsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListStackInstanceResourceDriftsOutput => {
   const contents: any = {};
   if (output.Summaries === "") {
@@ -8476,7 +8476,7 @@ const de_ListStackResourcesOutput = (output: any, context: __SerdeContext): List
  */
 const de_ListStackSetAutoDeploymentTargetsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListStackSetAutoDeploymentTargetsOutput => {
   const contents: any = {};
   if (output.Summaries === "") {
@@ -8495,7 +8495,7 @@ const de_ListStackSetAutoDeploymentTargetsOutput = (
  */
 const de_ListStackSetOperationResultsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListStackSetOperationResultsOutput => {
   const contents: any = {};
   if (output.Summaries === "") {
@@ -8682,7 +8682,7 @@ const de_NotificationARNs = (output: any, context: __SerdeContext): string[] => 
  */
 const de_OperationIdAlreadyExistsException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): OperationIdAlreadyExistsException => {
   const contents: any = {};
   if (output[_M] != null) {
@@ -8718,7 +8718,7 @@ const de_OperationNotFoundException = (output: any, context: __SerdeContext): Op
  */
 const de_OperationStatusCheckFailedException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): OperationStatusCheckFailedException => {
   const contents: any = {};
   if (output[_M] != null) {
@@ -8855,7 +8855,7 @@ const de_Parameters = (output: any, context: __SerdeContext): Parameter[] => {
  */
 const de_PhysicalResourceIdContext = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PhysicalResourceIdContextKeyValuePair[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -8869,7 +8869,7 @@ const de_PhysicalResourceIdContext = (
  */
 const de_PhysicalResourceIdContextKeyValuePair = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PhysicalResourceIdContextKeyValuePair => {
   const contents: any = {};
   if (output[_K] != null) {
@@ -9211,7 +9211,7 @@ const de_ResourceScanInProgressException = (output: any, context: __SerdeContext
  */
 const de_ResourceScanLimitExceededException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResourceScanLimitExceededException => {
   const contents: any = {};
   if (output[_M] != null) {
@@ -9662,7 +9662,7 @@ const de_StackInstance = (output: any, context: __SerdeContext): StackInstance =
  */
 const de_StackInstanceComprehensiveStatus = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StackInstanceComprehensiveStatus => {
   const contents: any = {};
   if (output[_DSeta] != null) {
@@ -9687,7 +9687,7 @@ const de_StackInstanceNotFoundException = (output: any, context: __SerdeContext)
  */
 const de_StackInstanceResourceDriftsSummaries = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StackInstanceResourceDriftsSummary[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -9701,7 +9701,7 @@ const de_StackInstanceResourceDriftsSummaries = (
  */
 const de_StackInstanceResourceDriftsSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StackInstanceResourceDriftsSummary => {
   const contents: any = {};
   if (output[_SI] != null) {
@@ -9947,7 +9947,7 @@ const de_StackResourceDriftInformation = (output: any, context: __SerdeContext):
  */
 const de_StackResourceDriftInformationSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StackResourceDriftInformationSummary => {
   const contents: any = {};
   if (output[_SRDS] != null) {
@@ -10109,7 +10109,7 @@ const de_StackSet = (output: any, context: __SerdeContext): StackSet => {
  */
 const de_StackSetAutoDeploymentTargetSummaries = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StackSetAutoDeploymentTargetSummary[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -10123,7 +10123,7 @@ const de_StackSetAutoDeploymentTargetSummaries = (
  */
 const de_StackSetAutoDeploymentTargetSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StackSetAutoDeploymentTargetSummary => {
   const contents: any = {};
   if (output[_OUIr] != null) {
@@ -10277,7 +10277,7 @@ const de_StackSetOperationPreferences = (output: any, context: __SerdeContext): 
  */
 const de_StackSetOperationResultSummaries = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StackSetOperationResultSummary[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -10747,7 +10747,7 @@ const de_TypeConfigurationIdentifier = (output: any, context: __SerdeContext): T
  */
 const de_TypeConfigurationNotFoundException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TypeConfigurationNotFoundException => {
   const contents: any = {};
   if (output[_M] != null) {
@@ -10928,7 +10928,7 @@ const de_UpdateStackSetOutput = (output: any, context: __SerdeContext): UpdateSt
  */
 const de_UpdateTerminationProtectionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateTerminationProtectionOutput => {
   const contents: any = {};
   if (output[_SI] != null) {
@@ -11052,7 +11052,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

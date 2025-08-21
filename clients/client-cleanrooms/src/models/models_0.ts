@@ -6681,12 +6681,12 @@ export const CollaborationAnalysisTemplateFilterSensitiveLog = (obj: Collaborati
  * @internal
  */
 export const BatchGetCollaborationAnalysisTemplateOutputFilterSensitiveLog = (
-  obj: BatchGetCollaborationAnalysisTemplateOutput
+  obj: BatchGetCollaborationAnalysisTemplateOutput,
 ): any => ({
   ...obj,
   ...(obj.collaborationAnalysisTemplates && {
     collaborationAnalysisTemplates: obj.collaborationAnalysisTemplates.map((item) =>
-      CollaborationAnalysisTemplateFilterSensitiveLog(item)
+      CollaborationAnalysisTemplateFilterSensitiveLog(item),
     ),
   }),
 });
@@ -6695,7 +6695,7 @@ export const BatchGetCollaborationAnalysisTemplateOutputFilterSensitiveLog = (
  * @internal
  */
 export const GetCollaborationAnalysisTemplateOutputFilterSensitiveLog = (
-  obj: GetCollaborationAnalysisTemplateOutput
+  obj: GetCollaborationAnalysisTemplateOutput,
 ): any => ({
   ...obj,
   ...(obj.collaborationAnalysisTemplate && {

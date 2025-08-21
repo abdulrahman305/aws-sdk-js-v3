@@ -100,16 +100,16 @@ export interface ServerlessApplicationRepository {
    */
   createApplication(
     args: CreateApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateApplicationCommandOutput>;
   createApplication(
     args: CreateApplicationCommandInput,
-    cb: (err: any, data?: CreateApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationCommandOutput) => void,
   ): void;
   createApplication(
     args: CreateApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -117,16 +117,16 @@ export interface ServerlessApplicationRepository {
    */
   createApplicationVersion(
     args: CreateApplicationVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateApplicationVersionCommandOutput>;
   createApplicationVersion(
     args: CreateApplicationVersionCommandInput,
-    cb: (err: any, data?: CreateApplicationVersionCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationVersionCommandOutput) => void,
   ): void;
   createApplicationVersion(
     args: CreateApplicationVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateApplicationVersionCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -134,16 +134,16 @@ export interface ServerlessApplicationRepository {
    */
   createCloudFormationChangeSet(
     args: CreateCloudFormationChangeSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCloudFormationChangeSetCommandOutput>;
   createCloudFormationChangeSet(
     args: CreateCloudFormationChangeSetCommandInput,
-    cb: (err: any, data?: CreateCloudFormationChangeSetCommandOutput) => void
+    cb: (err: any, data?: CreateCloudFormationChangeSetCommandOutput) => void,
   ): void;
   createCloudFormationChangeSet(
     args: CreateCloudFormationChangeSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCloudFormationChangeSetCommandOutput) => void
+    cb: (err: any, data?: CreateCloudFormationChangeSetCommandOutput) => void,
   ): void;
 
   /**
@@ -151,16 +151,16 @@ export interface ServerlessApplicationRepository {
    */
   createCloudFormationTemplate(
     args: CreateCloudFormationTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCloudFormationTemplateCommandOutput>;
   createCloudFormationTemplate(
     args: CreateCloudFormationTemplateCommandInput,
-    cb: (err: any, data?: CreateCloudFormationTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateCloudFormationTemplateCommandOutput) => void,
   ): void;
   createCloudFormationTemplate(
     args: CreateCloudFormationTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCloudFormationTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateCloudFormationTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -168,16 +168,16 @@ export interface ServerlessApplicationRepository {
    */
   deleteApplication(
     args: DeleteApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApplicationCommandOutput>;
   deleteApplication(
     args: DeleteApplicationCommandInput,
-    cb: (err: any, data?: DeleteApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCommandOutput) => void,
   ): void;
   deleteApplication(
     args: DeleteApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -185,13 +185,13 @@ export interface ServerlessApplicationRepository {
    */
   getApplication(
     args: GetApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetApplicationCommandOutput>;
   getApplication(args: GetApplicationCommandInput, cb: (err: any, data?: GetApplicationCommandOutput) => void): void;
   getApplication(
     args: GetApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApplicationCommandOutput) => void
+    cb: (err: any, data?: GetApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -199,16 +199,16 @@ export interface ServerlessApplicationRepository {
    */
   getApplicationPolicy(
     args: GetApplicationPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetApplicationPolicyCommandOutput>;
   getApplicationPolicy(
     args: GetApplicationPolicyCommandInput,
-    cb: (err: any, data?: GetApplicationPolicyCommandOutput) => void
+    cb: (err: any, data?: GetApplicationPolicyCommandOutput) => void,
   ): void;
   getApplicationPolicy(
     args: GetApplicationPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApplicationPolicyCommandOutput) => void
+    cb: (err: any, data?: GetApplicationPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -216,16 +216,16 @@ export interface ServerlessApplicationRepository {
    */
   getCloudFormationTemplate(
     args: GetCloudFormationTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCloudFormationTemplateCommandOutput>;
   getCloudFormationTemplate(
     args: GetCloudFormationTemplateCommandInput,
-    cb: (err: any, data?: GetCloudFormationTemplateCommandOutput) => void
+    cb: (err: any, data?: GetCloudFormationTemplateCommandOutput) => void,
   ): void;
   getCloudFormationTemplate(
     args: GetCloudFormationTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCloudFormationTemplateCommandOutput) => void
+    cb: (err: any, data?: GetCloudFormationTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -233,16 +233,16 @@ export interface ServerlessApplicationRepository {
    */
   listApplicationDependencies(
     args: ListApplicationDependenciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApplicationDependenciesCommandOutput>;
   listApplicationDependencies(
     args: ListApplicationDependenciesCommandInput,
-    cb: (err: any, data?: ListApplicationDependenciesCommandOutput) => void
+    cb: (err: any, data?: ListApplicationDependenciesCommandOutput) => void,
   ): void;
   listApplicationDependencies(
     args: ListApplicationDependenciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApplicationDependenciesCommandOutput) => void
+    cb: (err: any, data?: ListApplicationDependenciesCommandOutput) => void,
   ): void;
 
   /**
@@ -251,16 +251,16 @@ export interface ServerlessApplicationRepository {
   listApplications(): Promise<ListApplicationsCommandOutput>;
   listApplications(
     args: ListApplicationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApplicationsCommandOutput>;
   listApplications(
     args: ListApplicationsCommandInput,
-    cb: (err: any, data?: ListApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationsCommandOutput) => void,
   ): void;
   listApplications(
     args: ListApplicationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationsCommandOutput) => void,
   ): void;
 
   /**
@@ -268,16 +268,16 @@ export interface ServerlessApplicationRepository {
    */
   listApplicationVersions(
     args: ListApplicationVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApplicationVersionsCommandOutput>;
   listApplicationVersions(
     args: ListApplicationVersionsCommandInput,
-    cb: (err: any, data?: ListApplicationVersionsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationVersionsCommandOutput) => void,
   ): void;
   listApplicationVersions(
     args: ListApplicationVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApplicationVersionsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -285,16 +285,16 @@ export interface ServerlessApplicationRepository {
    */
   putApplicationPolicy(
     args: PutApplicationPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutApplicationPolicyCommandOutput>;
   putApplicationPolicy(
     args: PutApplicationPolicyCommandInput,
-    cb: (err: any, data?: PutApplicationPolicyCommandOutput) => void
+    cb: (err: any, data?: PutApplicationPolicyCommandOutput) => void,
   ): void;
   putApplicationPolicy(
     args: PutApplicationPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutApplicationPolicyCommandOutput) => void
+    cb: (err: any, data?: PutApplicationPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -302,16 +302,16 @@ export interface ServerlessApplicationRepository {
    */
   unshareApplication(
     args: UnshareApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UnshareApplicationCommandOutput>;
   unshareApplication(
     args: UnshareApplicationCommandInput,
-    cb: (err: any, data?: UnshareApplicationCommandOutput) => void
+    cb: (err: any, data?: UnshareApplicationCommandOutput) => void,
   ): void;
   unshareApplication(
     args: UnshareApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UnshareApplicationCommandOutput) => void
+    cb: (err: any, data?: UnshareApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -319,16 +319,16 @@ export interface ServerlessApplicationRepository {
    */
   updateApplication(
     args: UpdateApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApplicationCommandOutput>;
   updateApplication(
     args: UpdateApplicationCommandInput,
-    cb: (err: any, data?: UpdateApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationCommandOutput) => void,
   ): void;
   updateApplication(
     args: UpdateApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationCommandOutput) => void,
   ): void;
 }
 

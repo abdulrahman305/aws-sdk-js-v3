@@ -67,7 +67,7 @@ export interface Mobile {
   createProject(
     args: CreateProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateProjectCommandOutput) => void
+    cb: (err: any, data?: CreateProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -78,7 +78,7 @@ export interface Mobile {
   deleteProject(
     args: DeleteProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProjectCommandOutput) => void
+    cb: (err: any, data?: DeleteProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -86,13 +86,13 @@ export interface Mobile {
    */
   describeBundle(
     args: DescribeBundleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeBundleCommandOutput>;
   describeBundle(args: DescribeBundleCommandInput, cb: (err: any, data?: DescribeBundleCommandOutput) => void): void;
   describeBundle(
     args: DescribeBundleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeBundleCommandOutput) => void
+    cb: (err: any, data?: DescribeBundleCommandOutput) => void,
   ): void;
 
   /**
@@ -100,13 +100,13 @@ export interface Mobile {
    */
   describeProject(
     args: DescribeProjectCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeProjectCommandOutput>;
   describeProject(args: DescribeProjectCommandInput, cb: (err: any, data?: DescribeProjectCommandOutput) => void): void;
   describeProject(
     args: DescribeProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeProjectCommandOutput) => void
+    cb: (err: any, data?: DescribeProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -117,7 +117,7 @@ export interface Mobile {
   exportBundle(
     args: ExportBundleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExportBundleCommandOutput) => void
+    cb: (err: any, data?: ExportBundleCommandOutput) => void,
   ): void;
 
   /**
@@ -128,7 +128,7 @@ export interface Mobile {
   exportProject(
     args: ExportProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExportProjectCommandOutput) => void
+    cb: (err: any, data?: ExportProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -140,7 +140,7 @@ export interface Mobile {
   listBundles(
     args: ListBundlesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBundlesCommandOutput) => void
+    cb: (err: any, data?: ListBundlesCommandOutput) => void,
   ): void;
 
   /**
@@ -152,7 +152,7 @@ export interface Mobile {
   listProjects(
     args: ListProjectsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProjectsCommandOutput) => void
+    cb: (err: any, data?: ListProjectsCommandOutput) => void,
   ): void;
 
   /**
@@ -163,7 +163,7 @@ export interface Mobile {
   updateProject(
     args: UpdateProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateProjectCommandOutput) => void
+    cb: (err: any, data?: UpdateProjectCommandOutput) => void,
   ): void;
 }
 

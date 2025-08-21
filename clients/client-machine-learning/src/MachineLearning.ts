@@ -168,7 +168,7 @@ export interface MachineLearning {
   addTags(
     args: AddTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddTagsCommandOutput) => void
+    cb: (err: any, data?: AddTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -176,16 +176,16 @@ export interface MachineLearning {
    */
   createBatchPrediction(
     args: CreateBatchPredictionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateBatchPredictionCommandOutput>;
   createBatchPrediction(
     args: CreateBatchPredictionCommandInput,
-    cb: (err: any, data?: CreateBatchPredictionCommandOutput) => void
+    cb: (err: any, data?: CreateBatchPredictionCommandOutput) => void,
   ): void;
   createBatchPrediction(
     args: CreateBatchPredictionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateBatchPredictionCommandOutput) => void
+    cb: (err: any, data?: CreateBatchPredictionCommandOutput) => void,
   ): void;
 
   /**
@@ -193,16 +193,16 @@ export interface MachineLearning {
    */
   createDataSourceFromRDS(
     args: CreateDataSourceFromRDSCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDataSourceFromRDSCommandOutput>;
   createDataSourceFromRDS(
     args: CreateDataSourceFromRDSCommandInput,
-    cb: (err: any, data?: CreateDataSourceFromRDSCommandOutput) => void
+    cb: (err: any, data?: CreateDataSourceFromRDSCommandOutput) => void,
   ): void;
   createDataSourceFromRDS(
     args: CreateDataSourceFromRDSCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDataSourceFromRDSCommandOutput) => void
+    cb: (err: any, data?: CreateDataSourceFromRDSCommandOutput) => void,
   ): void;
 
   /**
@@ -210,16 +210,16 @@ export interface MachineLearning {
    */
   createDataSourceFromRedshift(
     args: CreateDataSourceFromRedshiftCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDataSourceFromRedshiftCommandOutput>;
   createDataSourceFromRedshift(
     args: CreateDataSourceFromRedshiftCommandInput,
-    cb: (err: any, data?: CreateDataSourceFromRedshiftCommandOutput) => void
+    cb: (err: any, data?: CreateDataSourceFromRedshiftCommandOutput) => void,
   ): void;
   createDataSourceFromRedshift(
     args: CreateDataSourceFromRedshiftCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDataSourceFromRedshiftCommandOutput) => void
+    cb: (err: any, data?: CreateDataSourceFromRedshiftCommandOutput) => void,
   ): void;
 
   /**
@@ -227,16 +227,16 @@ export interface MachineLearning {
    */
   createDataSourceFromS3(
     args: CreateDataSourceFromS3CommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDataSourceFromS3CommandOutput>;
   createDataSourceFromS3(
     args: CreateDataSourceFromS3CommandInput,
-    cb: (err: any, data?: CreateDataSourceFromS3CommandOutput) => void
+    cb: (err: any, data?: CreateDataSourceFromS3CommandOutput) => void,
   ): void;
   createDataSourceFromS3(
     args: CreateDataSourceFromS3CommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDataSourceFromS3CommandOutput) => void
+    cb: (err: any, data?: CreateDataSourceFromS3CommandOutput) => void,
   ): void;
 
   /**
@@ -244,16 +244,16 @@ export interface MachineLearning {
    */
   createEvaluation(
     args: CreateEvaluationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEvaluationCommandOutput>;
   createEvaluation(
     args: CreateEvaluationCommandInput,
-    cb: (err: any, data?: CreateEvaluationCommandOutput) => void
+    cb: (err: any, data?: CreateEvaluationCommandOutput) => void,
   ): void;
   createEvaluation(
     args: CreateEvaluationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEvaluationCommandOutput) => void
+    cb: (err: any, data?: CreateEvaluationCommandOutput) => void,
   ): void;
 
   /**
@@ -264,7 +264,7 @@ export interface MachineLearning {
   createMLModel(
     args: CreateMLModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMLModelCommandOutput) => void
+    cb: (err: any, data?: CreateMLModelCommandOutput) => void,
   ): void;
 
   /**
@@ -272,16 +272,16 @@ export interface MachineLearning {
    */
   createRealtimeEndpoint(
     args: CreateRealtimeEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRealtimeEndpointCommandOutput>;
   createRealtimeEndpoint(
     args: CreateRealtimeEndpointCommandInput,
-    cb: (err: any, data?: CreateRealtimeEndpointCommandOutput) => void
+    cb: (err: any, data?: CreateRealtimeEndpointCommandOutput) => void,
   ): void;
   createRealtimeEndpoint(
     args: CreateRealtimeEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRealtimeEndpointCommandOutput) => void
+    cb: (err: any, data?: CreateRealtimeEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -289,16 +289,16 @@ export interface MachineLearning {
    */
   deleteBatchPrediction(
     args: DeleteBatchPredictionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteBatchPredictionCommandOutput>;
   deleteBatchPrediction(
     args: DeleteBatchPredictionCommandInput,
-    cb: (err: any, data?: DeleteBatchPredictionCommandOutput) => void
+    cb: (err: any, data?: DeleteBatchPredictionCommandOutput) => void,
   ): void;
   deleteBatchPrediction(
     args: DeleteBatchPredictionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteBatchPredictionCommandOutput) => void
+    cb: (err: any, data?: DeleteBatchPredictionCommandOutput) => void,
   ): void;
 
   /**
@@ -306,16 +306,16 @@ export interface MachineLearning {
    */
   deleteDataSource(
     args: DeleteDataSourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDataSourceCommandOutput>;
   deleteDataSource(
     args: DeleteDataSourceCommandInput,
-    cb: (err: any, data?: DeleteDataSourceCommandOutput) => void
+    cb: (err: any, data?: DeleteDataSourceCommandOutput) => void,
   ): void;
   deleteDataSource(
     args: DeleteDataSourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDataSourceCommandOutput) => void
+    cb: (err: any, data?: DeleteDataSourceCommandOutput) => void,
   ): void;
 
   /**
@@ -323,16 +323,16 @@ export interface MachineLearning {
    */
   deleteEvaluation(
     args: DeleteEvaluationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEvaluationCommandOutput>;
   deleteEvaluation(
     args: DeleteEvaluationCommandInput,
-    cb: (err: any, data?: DeleteEvaluationCommandOutput) => void
+    cb: (err: any, data?: DeleteEvaluationCommandOutput) => void,
   ): void;
   deleteEvaluation(
     args: DeleteEvaluationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEvaluationCommandOutput) => void
+    cb: (err: any, data?: DeleteEvaluationCommandOutput) => void,
   ): void;
 
   /**
@@ -343,7 +343,7 @@ export interface MachineLearning {
   deleteMLModel(
     args: DeleteMLModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMLModelCommandOutput) => void
+    cb: (err: any, data?: DeleteMLModelCommandOutput) => void,
   ): void;
 
   /**
@@ -351,16 +351,16 @@ export interface MachineLearning {
    */
   deleteRealtimeEndpoint(
     args: DeleteRealtimeEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRealtimeEndpointCommandOutput>;
   deleteRealtimeEndpoint(
     args: DeleteRealtimeEndpointCommandInput,
-    cb: (err: any, data?: DeleteRealtimeEndpointCommandOutput) => void
+    cb: (err: any, data?: DeleteRealtimeEndpointCommandOutput) => void,
   ): void;
   deleteRealtimeEndpoint(
     args: DeleteRealtimeEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRealtimeEndpointCommandOutput) => void
+    cb: (err: any, data?: DeleteRealtimeEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -371,7 +371,7 @@ export interface MachineLearning {
   deleteTags(
     args: DeleteTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTagsCommandOutput) => void
+    cb: (err: any, data?: DeleteTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -380,16 +380,16 @@ export interface MachineLearning {
   describeBatchPredictions(): Promise<DescribeBatchPredictionsCommandOutput>;
   describeBatchPredictions(
     args: DescribeBatchPredictionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeBatchPredictionsCommandOutput>;
   describeBatchPredictions(
     args: DescribeBatchPredictionsCommandInput,
-    cb: (err: any, data?: DescribeBatchPredictionsCommandOutput) => void
+    cb: (err: any, data?: DescribeBatchPredictionsCommandOutput) => void,
   ): void;
   describeBatchPredictions(
     args: DescribeBatchPredictionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeBatchPredictionsCommandOutput) => void
+    cb: (err: any, data?: DescribeBatchPredictionsCommandOutput) => void,
   ): void;
 
   /**
@@ -398,16 +398,16 @@ export interface MachineLearning {
   describeDataSources(): Promise<DescribeDataSourcesCommandOutput>;
   describeDataSources(
     args: DescribeDataSourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDataSourcesCommandOutput>;
   describeDataSources(
     args: DescribeDataSourcesCommandInput,
-    cb: (err: any, data?: DescribeDataSourcesCommandOutput) => void
+    cb: (err: any, data?: DescribeDataSourcesCommandOutput) => void,
   ): void;
   describeDataSources(
     args: DescribeDataSourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDataSourcesCommandOutput) => void
+    cb: (err: any, data?: DescribeDataSourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -416,16 +416,16 @@ export interface MachineLearning {
   describeEvaluations(): Promise<DescribeEvaluationsCommandOutput>;
   describeEvaluations(
     args: DescribeEvaluationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEvaluationsCommandOutput>;
   describeEvaluations(
     args: DescribeEvaluationsCommandInput,
-    cb: (err: any, data?: DescribeEvaluationsCommandOutput) => void
+    cb: (err: any, data?: DescribeEvaluationsCommandOutput) => void,
   ): void;
   describeEvaluations(
     args: DescribeEvaluationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEvaluationsCommandOutput) => void
+    cb: (err: any, data?: DescribeEvaluationsCommandOutput) => void,
   ): void;
 
   /**
@@ -434,16 +434,16 @@ export interface MachineLearning {
   describeMLModels(): Promise<DescribeMLModelsCommandOutput>;
   describeMLModels(
     args: DescribeMLModelsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeMLModelsCommandOutput>;
   describeMLModels(
     args: DescribeMLModelsCommandInput,
-    cb: (err: any, data?: DescribeMLModelsCommandOutput) => void
+    cb: (err: any, data?: DescribeMLModelsCommandOutput) => void,
   ): void;
   describeMLModels(
     args: DescribeMLModelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeMLModelsCommandOutput) => void
+    cb: (err: any, data?: DescribeMLModelsCommandOutput) => void,
   ): void;
 
   /**
@@ -454,7 +454,7 @@ export interface MachineLearning {
   describeTags(
     args: DescribeTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTagsCommandOutput) => void
+    cb: (err: any, data?: DescribeTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -462,16 +462,16 @@ export interface MachineLearning {
    */
   getBatchPrediction(
     args: GetBatchPredictionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBatchPredictionCommandOutput>;
   getBatchPrediction(
     args: GetBatchPredictionCommandInput,
-    cb: (err: any, data?: GetBatchPredictionCommandOutput) => void
+    cb: (err: any, data?: GetBatchPredictionCommandOutput) => void,
   ): void;
   getBatchPrediction(
     args: GetBatchPredictionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBatchPredictionCommandOutput) => void
+    cb: (err: any, data?: GetBatchPredictionCommandOutput) => void,
   ): void;
 
   /**
@@ -482,7 +482,7 @@ export interface MachineLearning {
   getDataSource(
     args: GetDataSourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDataSourceCommandOutput) => void
+    cb: (err: any, data?: GetDataSourceCommandOutput) => void,
   ): void;
 
   /**
@@ -493,7 +493,7 @@ export interface MachineLearning {
   getEvaluation(
     args: GetEvaluationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEvaluationCommandOutput) => void
+    cb: (err: any, data?: GetEvaluationCommandOutput) => void,
   ): void;
 
   /**
@@ -504,7 +504,7 @@ export interface MachineLearning {
   getMLModel(
     args: GetMLModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMLModelCommandOutput) => void
+    cb: (err: any, data?: GetMLModelCommandOutput) => void,
   ): void;
 
   /**
@@ -515,7 +515,7 @@ export interface MachineLearning {
   predict(
     args: PredictCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PredictCommandOutput) => void
+    cb: (err: any, data?: PredictCommandOutput) => void,
   ): void;
 
   /**
@@ -523,16 +523,16 @@ export interface MachineLearning {
    */
   updateBatchPrediction(
     args: UpdateBatchPredictionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateBatchPredictionCommandOutput>;
   updateBatchPrediction(
     args: UpdateBatchPredictionCommandInput,
-    cb: (err: any, data?: UpdateBatchPredictionCommandOutput) => void
+    cb: (err: any, data?: UpdateBatchPredictionCommandOutput) => void,
   ): void;
   updateBatchPrediction(
     args: UpdateBatchPredictionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateBatchPredictionCommandOutput) => void
+    cb: (err: any, data?: UpdateBatchPredictionCommandOutput) => void,
   ): void;
 
   /**
@@ -540,16 +540,16 @@ export interface MachineLearning {
    */
   updateDataSource(
     args: UpdateDataSourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDataSourceCommandOutput>;
   updateDataSource(
     args: UpdateDataSourceCommandInput,
-    cb: (err: any, data?: UpdateDataSourceCommandOutput) => void
+    cb: (err: any, data?: UpdateDataSourceCommandOutput) => void,
   ): void;
   updateDataSource(
     args: UpdateDataSourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDataSourceCommandOutput) => void
+    cb: (err: any, data?: UpdateDataSourceCommandOutput) => void,
   ): void;
 
   /**
@@ -557,16 +557,16 @@ export interface MachineLearning {
    */
   updateEvaluation(
     args: UpdateEvaluationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEvaluationCommandOutput>;
   updateEvaluation(
     args: UpdateEvaluationCommandInput,
-    cb: (err: any, data?: UpdateEvaluationCommandOutput) => void
+    cb: (err: any, data?: UpdateEvaluationCommandOutput) => void,
   ): void;
   updateEvaluation(
     args: UpdateEvaluationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEvaluationCommandOutput) => void
+    cb: (err: any, data?: UpdateEvaluationCommandOutput) => void,
   ): void;
 
   /**
@@ -577,7 +577,7 @@ export interface MachineLearning {
   updateMLModel(
     args: UpdateMLModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMLModelCommandOutput) => void
+    cb: (err: any, data?: UpdateMLModelCommandOutput) => void,
   ): void;
 }
 

@@ -134,7 +134,7 @@ micStream.setStream(
   await window.navigator.mediaDevices.getUserMedia({
     video: false,
     audio: true,
-  })
+  }),
 );
 const audioStream = async function* () {
   for await (const chunk of micStream) {

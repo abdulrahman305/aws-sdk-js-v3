@@ -297,16 +297,16 @@ export interface Finspace {
    */
   createEnvironment(
     args: CreateEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEnvironmentCommandOutput>;
   createEnvironment(
     args: CreateEnvironmentCommandInput,
-    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void,
   ): void;
   createEnvironment(
     args: CreateEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -314,16 +314,16 @@ export interface Finspace {
    */
   createKxChangeset(
     args: CreateKxChangesetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateKxChangesetCommandOutput>;
   createKxChangeset(
     args: CreateKxChangesetCommandInput,
-    cb: (err: any, data?: CreateKxChangesetCommandOutput) => void
+    cb: (err: any, data?: CreateKxChangesetCommandOutput) => void,
   ): void;
   createKxChangeset(
     args: CreateKxChangesetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateKxChangesetCommandOutput) => void
+    cb: (err: any, data?: CreateKxChangesetCommandOutput) => void,
   ): void;
 
   /**
@@ -331,13 +331,13 @@ export interface Finspace {
    */
   createKxCluster(
     args: CreateKxClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateKxClusterCommandOutput>;
   createKxCluster(args: CreateKxClusterCommandInput, cb: (err: any, data?: CreateKxClusterCommandOutput) => void): void;
   createKxCluster(
     args: CreateKxClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateKxClusterCommandOutput) => void
+    cb: (err: any, data?: CreateKxClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -345,16 +345,16 @@ export interface Finspace {
    */
   createKxDatabase(
     args: CreateKxDatabaseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateKxDatabaseCommandOutput>;
   createKxDatabase(
     args: CreateKxDatabaseCommandInput,
-    cb: (err: any, data?: CreateKxDatabaseCommandOutput) => void
+    cb: (err: any, data?: CreateKxDatabaseCommandOutput) => void,
   ): void;
   createKxDatabase(
     args: CreateKxDatabaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateKxDatabaseCommandOutput) => void
+    cb: (err: any, data?: CreateKxDatabaseCommandOutput) => void,
   ): void;
 
   /**
@@ -362,16 +362,16 @@ export interface Finspace {
    */
   createKxDataview(
     args: CreateKxDataviewCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateKxDataviewCommandOutput>;
   createKxDataview(
     args: CreateKxDataviewCommandInput,
-    cb: (err: any, data?: CreateKxDataviewCommandOutput) => void
+    cb: (err: any, data?: CreateKxDataviewCommandOutput) => void,
   ): void;
   createKxDataview(
     args: CreateKxDataviewCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateKxDataviewCommandOutput) => void
+    cb: (err: any, data?: CreateKxDataviewCommandOutput) => void,
   ): void;
 
   /**
@@ -379,16 +379,16 @@ export interface Finspace {
    */
   createKxEnvironment(
     args: CreateKxEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateKxEnvironmentCommandOutput>;
   createKxEnvironment(
     args: CreateKxEnvironmentCommandInput,
-    cb: (err: any, data?: CreateKxEnvironmentCommandOutput) => void
+    cb: (err: any, data?: CreateKxEnvironmentCommandOutput) => void,
   ): void;
   createKxEnvironment(
     args: CreateKxEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateKxEnvironmentCommandOutput) => void
+    cb: (err: any, data?: CreateKxEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -396,16 +396,16 @@ export interface Finspace {
    */
   createKxScalingGroup(
     args: CreateKxScalingGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateKxScalingGroupCommandOutput>;
   createKxScalingGroup(
     args: CreateKxScalingGroupCommandInput,
-    cb: (err: any, data?: CreateKxScalingGroupCommandOutput) => void
+    cb: (err: any, data?: CreateKxScalingGroupCommandOutput) => void,
   ): void;
   createKxScalingGroup(
     args: CreateKxScalingGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateKxScalingGroupCommandOutput) => void
+    cb: (err: any, data?: CreateKxScalingGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -416,7 +416,7 @@ export interface Finspace {
   createKxUser(
     args: CreateKxUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateKxUserCommandOutput) => void
+    cb: (err: any, data?: CreateKxUserCommandOutput) => void,
   ): void;
 
   /**
@@ -424,13 +424,13 @@ export interface Finspace {
    */
   createKxVolume(
     args: CreateKxVolumeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateKxVolumeCommandOutput>;
   createKxVolume(args: CreateKxVolumeCommandInput, cb: (err: any, data?: CreateKxVolumeCommandOutput) => void): void;
   createKxVolume(
     args: CreateKxVolumeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateKxVolumeCommandOutput) => void
+    cb: (err: any, data?: CreateKxVolumeCommandOutput) => void,
   ): void;
 
   /**
@@ -438,16 +438,16 @@ export interface Finspace {
    */
   deleteEnvironment(
     args: DeleteEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEnvironmentCommandOutput>;
   deleteEnvironment(
     args: DeleteEnvironmentCommandInput,
-    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void,
   ): void;
   deleteEnvironment(
     args: DeleteEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -455,13 +455,13 @@ export interface Finspace {
    */
   deleteKxCluster(
     args: DeleteKxClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteKxClusterCommandOutput>;
   deleteKxCluster(args: DeleteKxClusterCommandInput, cb: (err: any, data?: DeleteKxClusterCommandOutput) => void): void;
   deleteKxCluster(
     args: DeleteKxClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteKxClusterCommandOutput) => void
+    cb: (err: any, data?: DeleteKxClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -469,16 +469,16 @@ export interface Finspace {
    */
   deleteKxClusterNode(
     args: DeleteKxClusterNodeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteKxClusterNodeCommandOutput>;
   deleteKxClusterNode(
     args: DeleteKxClusterNodeCommandInput,
-    cb: (err: any, data?: DeleteKxClusterNodeCommandOutput) => void
+    cb: (err: any, data?: DeleteKxClusterNodeCommandOutput) => void,
   ): void;
   deleteKxClusterNode(
     args: DeleteKxClusterNodeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteKxClusterNodeCommandOutput) => void
+    cb: (err: any, data?: DeleteKxClusterNodeCommandOutput) => void,
   ): void;
 
   /**
@@ -486,16 +486,16 @@ export interface Finspace {
    */
   deleteKxDatabase(
     args: DeleteKxDatabaseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteKxDatabaseCommandOutput>;
   deleteKxDatabase(
     args: DeleteKxDatabaseCommandInput,
-    cb: (err: any, data?: DeleteKxDatabaseCommandOutput) => void
+    cb: (err: any, data?: DeleteKxDatabaseCommandOutput) => void,
   ): void;
   deleteKxDatabase(
     args: DeleteKxDatabaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteKxDatabaseCommandOutput) => void
+    cb: (err: any, data?: DeleteKxDatabaseCommandOutput) => void,
   ): void;
 
   /**
@@ -503,16 +503,16 @@ export interface Finspace {
    */
   deleteKxDataview(
     args: DeleteKxDataviewCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteKxDataviewCommandOutput>;
   deleteKxDataview(
     args: DeleteKxDataviewCommandInput,
-    cb: (err: any, data?: DeleteKxDataviewCommandOutput) => void
+    cb: (err: any, data?: DeleteKxDataviewCommandOutput) => void,
   ): void;
   deleteKxDataview(
     args: DeleteKxDataviewCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteKxDataviewCommandOutput) => void
+    cb: (err: any, data?: DeleteKxDataviewCommandOutput) => void,
   ): void;
 
   /**
@@ -520,16 +520,16 @@ export interface Finspace {
    */
   deleteKxEnvironment(
     args: DeleteKxEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteKxEnvironmentCommandOutput>;
   deleteKxEnvironment(
     args: DeleteKxEnvironmentCommandInput,
-    cb: (err: any, data?: DeleteKxEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteKxEnvironmentCommandOutput) => void,
   ): void;
   deleteKxEnvironment(
     args: DeleteKxEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteKxEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteKxEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -537,16 +537,16 @@ export interface Finspace {
    */
   deleteKxScalingGroup(
     args: DeleteKxScalingGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteKxScalingGroupCommandOutput>;
   deleteKxScalingGroup(
     args: DeleteKxScalingGroupCommandInput,
-    cb: (err: any, data?: DeleteKxScalingGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteKxScalingGroupCommandOutput) => void,
   ): void;
   deleteKxScalingGroup(
     args: DeleteKxScalingGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteKxScalingGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteKxScalingGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -557,7 +557,7 @@ export interface Finspace {
   deleteKxUser(
     args: DeleteKxUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteKxUserCommandOutput) => void
+    cb: (err: any, data?: DeleteKxUserCommandOutput) => void,
   ): void;
 
   /**
@@ -565,13 +565,13 @@ export interface Finspace {
    */
   deleteKxVolume(
     args: DeleteKxVolumeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteKxVolumeCommandOutput>;
   deleteKxVolume(args: DeleteKxVolumeCommandInput, cb: (err: any, data?: DeleteKxVolumeCommandOutput) => void): void;
   deleteKxVolume(
     args: DeleteKxVolumeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteKxVolumeCommandOutput) => void
+    cb: (err: any, data?: DeleteKxVolumeCommandOutput) => void,
   ): void;
 
   /**
@@ -579,13 +579,13 @@ export interface Finspace {
    */
   getEnvironment(
     args: GetEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEnvironmentCommandOutput>;
   getEnvironment(args: GetEnvironmentCommandInput, cb: (err: any, data?: GetEnvironmentCommandOutput) => void): void;
   getEnvironment(
     args: GetEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEnvironmentCommandOutput) => void
+    cb: (err: any, data?: GetEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -593,13 +593,13 @@ export interface Finspace {
    */
   getKxChangeset(
     args: GetKxChangesetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetKxChangesetCommandOutput>;
   getKxChangeset(args: GetKxChangesetCommandInput, cb: (err: any, data?: GetKxChangesetCommandOutput) => void): void;
   getKxChangeset(
     args: GetKxChangesetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetKxChangesetCommandOutput) => void
+    cb: (err: any, data?: GetKxChangesetCommandOutput) => void,
   ): void;
 
   /**
@@ -610,7 +610,7 @@ export interface Finspace {
   getKxCluster(
     args: GetKxClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetKxClusterCommandOutput) => void
+    cb: (err: any, data?: GetKxClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -618,16 +618,16 @@ export interface Finspace {
    */
   getKxConnectionString(
     args: GetKxConnectionStringCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetKxConnectionStringCommandOutput>;
   getKxConnectionString(
     args: GetKxConnectionStringCommandInput,
-    cb: (err: any, data?: GetKxConnectionStringCommandOutput) => void
+    cb: (err: any, data?: GetKxConnectionStringCommandOutput) => void,
   ): void;
   getKxConnectionString(
     args: GetKxConnectionStringCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetKxConnectionStringCommandOutput) => void
+    cb: (err: any, data?: GetKxConnectionStringCommandOutput) => void,
   ): void;
 
   /**
@@ -638,7 +638,7 @@ export interface Finspace {
   getKxDatabase(
     args: GetKxDatabaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetKxDatabaseCommandOutput) => void
+    cb: (err: any, data?: GetKxDatabaseCommandOutput) => void,
   ): void;
 
   /**
@@ -649,7 +649,7 @@ export interface Finspace {
   getKxDataview(
     args: GetKxDataviewCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetKxDataviewCommandOutput) => void
+    cb: (err: any, data?: GetKxDataviewCommandOutput) => void,
   ): void;
 
   /**
@@ -657,16 +657,16 @@ export interface Finspace {
    */
   getKxEnvironment(
     args: GetKxEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetKxEnvironmentCommandOutput>;
   getKxEnvironment(
     args: GetKxEnvironmentCommandInput,
-    cb: (err: any, data?: GetKxEnvironmentCommandOutput) => void
+    cb: (err: any, data?: GetKxEnvironmentCommandOutput) => void,
   ): void;
   getKxEnvironment(
     args: GetKxEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetKxEnvironmentCommandOutput) => void
+    cb: (err: any, data?: GetKxEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -674,16 +674,16 @@ export interface Finspace {
    */
   getKxScalingGroup(
     args: GetKxScalingGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetKxScalingGroupCommandOutput>;
   getKxScalingGroup(
     args: GetKxScalingGroupCommandInput,
-    cb: (err: any, data?: GetKxScalingGroupCommandOutput) => void
+    cb: (err: any, data?: GetKxScalingGroupCommandOutput) => void,
   ): void;
   getKxScalingGroup(
     args: GetKxScalingGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetKxScalingGroupCommandOutput) => void
+    cb: (err: any, data?: GetKxScalingGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -694,7 +694,7 @@ export interface Finspace {
   getKxUser(
     args: GetKxUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetKxUserCommandOutput) => void
+    cb: (err: any, data?: GetKxUserCommandOutput) => void,
   ): void;
 
   /**
@@ -705,7 +705,7 @@ export interface Finspace {
   getKxVolume(
     args: GetKxVolumeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetKxVolumeCommandOutput) => void
+    cb: (err: any, data?: GetKxVolumeCommandOutput) => void,
   ): void;
 
   /**
@@ -714,16 +714,16 @@ export interface Finspace {
   listEnvironments(): Promise<ListEnvironmentsCommandOutput>;
   listEnvironments(
     args: ListEnvironmentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEnvironmentsCommandOutput>;
   listEnvironments(
     args: ListEnvironmentsCommandInput,
-    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void,
   ): void;
   listEnvironments(
     args: ListEnvironmentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void,
   ): void;
 
   /**
@@ -731,16 +731,16 @@ export interface Finspace {
    */
   listKxChangesets(
     args: ListKxChangesetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListKxChangesetsCommandOutput>;
   listKxChangesets(
     args: ListKxChangesetsCommandInput,
-    cb: (err: any, data?: ListKxChangesetsCommandOutput) => void
+    cb: (err: any, data?: ListKxChangesetsCommandOutput) => void,
   ): void;
   listKxChangesets(
     args: ListKxChangesetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListKxChangesetsCommandOutput) => void
+    cb: (err: any, data?: ListKxChangesetsCommandOutput) => void,
   ): void;
 
   /**
@@ -748,16 +748,16 @@ export interface Finspace {
    */
   listKxClusterNodes(
     args: ListKxClusterNodesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListKxClusterNodesCommandOutput>;
   listKxClusterNodes(
     args: ListKxClusterNodesCommandInput,
-    cb: (err: any, data?: ListKxClusterNodesCommandOutput) => void
+    cb: (err: any, data?: ListKxClusterNodesCommandOutput) => void,
   ): void;
   listKxClusterNodes(
     args: ListKxClusterNodesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListKxClusterNodesCommandOutput) => void
+    cb: (err: any, data?: ListKxClusterNodesCommandOutput) => void,
   ): void;
 
   /**
@@ -765,13 +765,13 @@ export interface Finspace {
    */
   listKxClusters(
     args: ListKxClustersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListKxClustersCommandOutput>;
   listKxClusters(args: ListKxClustersCommandInput, cb: (err: any, data?: ListKxClustersCommandOutput) => void): void;
   listKxClusters(
     args: ListKxClustersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListKxClustersCommandOutput) => void
+    cb: (err: any, data?: ListKxClustersCommandOutput) => void,
   ): void;
 
   /**
@@ -779,13 +779,13 @@ export interface Finspace {
    */
   listKxDatabases(
     args: ListKxDatabasesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListKxDatabasesCommandOutput>;
   listKxDatabases(args: ListKxDatabasesCommandInput, cb: (err: any, data?: ListKxDatabasesCommandOutput) => void): void;
   listKxDatabases(
     args: ListKxDatabasesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListKxDatabasesCommandOutput) => void
+    cb: (err: any, data?: ListKxDatabasesCommandOutput) => void,
   ): void;
 
   /**
@@ -793,13 +793,13 @@ export interface Finspace {
    */
   listKxDataviews(
     args: ListKxDataviewsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListKxDataviewsCommandOutput>;
   listKxDataviews(args: ListKxDataviewsCommandInput, cb: (err: any, data?: ListKxDataviewsCommandOutput) => void): void;
   listKxDataviews(
     args: ListKxDataviewsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListKxDataviewsCommandOutput) => void
+    cb: (err: any, data?: ListKxDataviewsCommandOutput) => void,
   ): void;
 
   /**
@@ -808,16 +808,16 @@ export interface Finspace {
   listKxEnvironments(): Promise<ListKxEnvironmentsCommandOutput>;
   listKxEnvironments(
     args: ListKxEnvironmentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListKxEnvironmentsCommandOutput>;
   listKxEnvironments(
     args: ListKxEnvironmentsCommandInput,
-    cb: (err: any, data?: ListKxEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: ListKxEnvironmentsCommandOutput) => void,
   ): void;
   listKxEnvironments(
     args: ListKxEnvironmentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListKxEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: ListKxEnvironmentsCommandOutput) => void,
   ): void;
 
   /**
@@ -825,16 +825,16 @@ export interface Finspace {
    */
   listKxScalingGroups(
     args: ListKxScalingGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListKxScalingGroupsCommandOutput>;
   listKxScalingGroups(
     args: ListKxScalingGroupsCommandInput,
-    cb: (err: any, data?: ListKxScalingGroupsCommandOutput) => void
+    cb: (err: any, data?: ListKxScalingGroupsCommandOutput) => void,
   ): void;
   listKxScalingGroups(
     args: ListKxScalingGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListKxScalingGroupsCommandOutput) => void
+    cb: (err: any, data?: ListKxScalingGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -845,7 +845,7 @@ export interface Finspace {
   listKxUsers(
     args: ListKxUsersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListKxUsersCommandOutput) => void
+    cb: (err: any, data?: ListKxUsersCommandOutput) => void,
   ): void;
 
   /**
@@ -856,7 +856,7 @@ export interface Finspace {
   listKxVolumes(
     args: ListKxVolumesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListKxVolumesCommandOutput) => void
+    cb: (err: any, data?: ListKxVolumesCommandOutput) => void,
   ): void;
 
   /**
@@ -864,16 +864,16 @@ export interface Finspace {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -884,7 +884,7 @@ export interface Finspace {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -895,7 +895,7 @@ export interface Finspace {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -903,16 +903,16 @@ export interface Finspace {
    */
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEnvironmentCommandOutput>;
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
-    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void,
   ): void;
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -920,16 +920,16 @@ export interface Finspace {
    */
   updateKxClusterCodeConfiguration(
     args: UpdateKxClusterCodeConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateKxClusterCodeConfigurationCommandOutput>;
   updateKxClusterCodeConfiguration(
     args: UpdateKxClusterCodeConfigurationCommandInput,
-    cb: (err: any, data?: UpdateKxClusterCodeConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateKxClusterCodeConfigurationCommandOutput) => void,
   ): void;
   updateKxClusterCodeConfiguration(
     args: UpdateKxClusterCodeConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateKxClusterCodeConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateKxClusterCodeConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -937,16 +937,16 @@ export interface Finspace {
    */
   updateKxClusterDatabases(
     args: UpdateKxClusterDatabasesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateKxClusterDatabasesCommandOutput>;
   updateKxClusterDatabases(
     args: UpdateKxClusterDatabasesCommandInput,
-    cb: (err: any, data?: UpdateKxClusterDatabasesCommandOutput) => void
+    cb: (err: any, data?: UpdateKxClusterDatabasesCommandOutput) => void,
   ): void;
   updateKxClusterDatabases(
     args: UpdateKxClusterDatabasesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateKxClusterDatabasesCommandOutput) => void
+    cb: (err: any, data?: UpdateKxClusterDatabasesCommandOutput) => void,
   ): void;
 
   /**
@@ -954,16 +954,16 @@ export interface Finspace {
    */
   updateKxDatabase(
     args: UpdateKxDatabaseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateKxDatabaseCommandOutput>;
   updateKxDatabase(
     args: UpdateKxDatabaseCommandInput,
-    cb: (err: any, data?: UpdateKxDatabaseCommandOutput) => void
+    cb: (err: any, data?: UpdateKxDatabaseCommandOutput) => void,
   ): void;
   updateKxDatabase(
     args: UpdateKxDatabaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateKxDatabaseCommandOutput) => void
+    cb: (err: any, data?: UpdateKxDatabaseCommandOutput) => void,
   ): void;
 
   /**
@@ -971,16 +971,16 @@ export interface Finspace {
    */
   updateKxDataview(
     args: UpdateKxDataviewCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateKxDataviewCommandOutput>;
   updateKxDataview(
     args: UpdateKxDataviewCommandInput,
-    cb: (err: any, data?: UpdateKxDataviewCommandOutput) => void
+    cb: (err: any, data?: UpdateKxDataviewCommandOutput) => void,
   ): void;
   updateKxDataview(
     args: UpdateKxDataviewCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateKxDataviewCommandOutput) => void
+    cb: (err: any, data?: UpdateKxDataviewCommandOutput) => void,
   ): void;
 
   /**
@@ -988,16 +988,16 @@ export interface Finspace {
    */
   updateKxEnvironment(
     args: UpdateKxEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateKxEnvironmentCommandOutput>;
   updateKxEnvironment(
     args: UpdateKxEnvironmentCommandInput,
-    cb: (err: any, data?: UpdateKxEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateKxEnvironmentCommandOutput) => void,
   ): void;
   updateKxEnvironment(
     args: UpdateKxEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateKxEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateKxEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -1005,16 +1005,16 @@ export interface Finspace {
    */
   updateKxEnvironmentNetwork(
     args: UpdateKxEnvironmentNetworkCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateKxEnvironmentNetworkCommandOutput>;
   updateKxEnvironmentNetwork(
     args: UpdateKxEnvironmentNetworkCommandInput,
-    cb: (err: any, data?: UpdateKxEnvironmentNetworkCommandOutput) => void
+    cb: (err: any, data?: UpdateKxEnvironmentNetworkCommandOutput) => void,
   ): void;
   updateKxEnvironmentNetwork(
     args: UpdateKxEnvironmentNetworkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateKxEnvironmentNetworkCommandOutput) => void
+    cb: (err: any, data?: UpdateKxEnvironmentNetworkCommandOutput) => void,
   ): void;
 
   /**
@@ -1025,7 +1025,7 @@ export interface Finspace {
   updateKxUser(
     args: UpdateKxUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateKxUserCommandOutput) => void
+    cb: (err: any, data?: UpdateKxUserCommandOutput) => void,
   ): void;
 
   /**
@@ -1033,13 +1033,13 @@ export interface Finspace {
    */
   updateKxVolume(
     args: UpdateKxVolumeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateKxVolumeCommandOutput>;
   updateKxVolume(args: UpdateKxVolumeCommandInput, cb: (err: any, data?: UpdateKxVolumeCommandOutput) => void): void;
   updateKxVolume(
     args: UpdateKxVolumeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateKxVolumeCommandOutput) => void
+    cb: (err: any, data?: UpdateKxVolumeCommandOutput) => void,
   ): void;
 }
 

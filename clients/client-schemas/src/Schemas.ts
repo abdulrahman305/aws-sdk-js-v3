@@ -191,16 +191,16 @@ export interface Schemas {
    */
   createDiscoverer(
     args: CreateDiscovererCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDiscovererCommandOutput>;
   createDiscoverer(
     args: CreateDiscovererCommandInput,
-    cb: (err: any, data?: CreateDiscovererCommandOutput) => void
+    cb: (err: any, data?: CreateDiscovererCommandOutput) => void,
   ): void;
   createDiscoverer(
     args: CreateDiscovererCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDiscovererCommandOutput) => void
+    cb: (err: any, data?: CreateDiscovererCommandOutput) => void,
   ): void;
 
   /**
@@ -208,13 +208,13 @@ export interface Schemas {
    */
   createRegistry(
     args: CreateRegistryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRegistryCommandOutput>;
   createRegistry(args: CreateRegistryCommandInput, cb: (err: any, data?: CreateRegistryCommandOutput) => void): void;
   createRegistry(
     args: CreateRegistryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRegistryCommandOutput) => void
+    cb: (err: any, data?: CreateRegistryCommandOutput) => void,
   ): void;
 
   /**
@@ -225,7 +225,7 @@ export interface Schemas {
   createSchema(
     args: CreateSchemaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSchemaCommandOutput) => void
+    cb: (err: any, data?: CreateSchemaCommandOutput) => void,
   ): void;
 
   /**
@@ -233,16 +233,16 @@ export interface Schemas {
    */
   deleteDiscoverer(
     args: DeleteDiscovererCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDiscovererCommandOutput>;
   deleteDiscoverer(
     args: DeleteDiscovererCommandInput,
-    cb: (err: any, data?: DeleteDiscovererCommandOutput) => void
+    cb: (err: any, data?: DeleteDiscovererCommandOutput) => void,
   ): void;
   deleteDiscoverer(
     args: DeleteDiscovererCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDiscovererCommandOutput) => void
+    cb: (err: any, data?: DeleteDiscovererCommandOutput) => void,
   ): void;
 
   /**
@@ -250,13 +250,13 @@ export interface Schemas {
    */
   deleteRegistry(
     args: DeleteRegistryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRegistryCommandOutput>;
   deleteRegistry(args: DeleteRegistryCommandInput, cb: (err: any, data?: DeleteRegistryCommandOutput) => void): void;
   deleteRegistry(
     args: DeleteRegistryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRegistryCommandOutput) => void
+    cb: (err: any, data?: DeleteRegistryCommandOutput) => void,
   ): void;
 
   /**
@@ -265,16 +265,16 @@ export interface Schemas {
   deleteResourcePolicy(): Promise<DeleteResourcePolicyCommandOutput>;
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResourcePolicyCommandOutput>;
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
-    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void,
   ): void;
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -285,7 +285,7 @@ export interface Schemas {
   deleteSchema(
     args: DeleteSchemaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSchemaCommandOutput) => void
+    cb: (err: any, data?: DeleteSchemaCommandOutput) => void,
   ): void;
 
   /**
@@ -293,16 +293,16 @@ export interface Schemas {
    */
   deleteSchemaVersion(
     args: DeleteSchemaVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSchemaVersionCommandOutput>;
   deleteSchemaVersion(
     args: DeleteSchemaVersionCommandInput,
-    cb: (err: any, data?: DeleteSchemaVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteSchemaVersionCommandOutput) => void,
   ): void;
   deleteSchemaVersion(
     args: DeleteSchemaVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSchemaVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteSchemaVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -310,16 +310,16 @@ export interface Schemas {
    */
   describeCodeBinding(
     args: DescribeCodeBindingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeCodeBindingCommandOutput>;
   describeCodeBinding(
     args: DescribeCodeBindingCommandInput,
-    cb: (err: any, data?: DescribeCodeBindingCommandOutput) => void
+    cb: (err: any, data?: DescribeCodeBindingCommandOutput) => void,
   ): void;
   describeCodeBinding(
     args: DescribeCodeBindingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeCodeBindingCommandOutput) => void
+    cb: (err: any, data?: DescribeCodeBindingCommandOutput) => void,
   ): void;
 
   /**
@@ -327,16 +327,16 @@ export interface Schemas {
    */
   describeDiscoverer(
     args: DescribeDiscovererCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDiscovererCommandOutput>;
   describeDiscoverer(
     args: DescribeDiscovererCommandInput,
-    cb: (err: any, data?: DescribeDiscovererCommandOutput) => void
+    cb: (err: any, data?: DescribeDiscovererCommandOutput) => void,
   ): void;
   describeDiscoverer(
     args: DescribeDiscovererCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDiscovererCommandOutput) => void
+    cb: (err: any, data?: DescribeDiscovererCommandOutput) => void,
   ): void;
 
   /**
@@ -344,16 +344,16 @@ export interface Schemas {
    */
   describeRegistry(
     args: DescribeRegistryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRegistryCommandOutput>;
   describeRegistry(
     args: DescribeRegistryCommandInput,
-    cb: (err: any, data?: DescribeRegistryCommandOutput) => void
+    cb: (err: any, data?: DescribeRegistryCommandOutput) => void,
   ): void;
   describeRegistry(
     args: DescribeRegistryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRegistryCommandOutput) => void
+    cb: (err: any, data?: DescribeRegistryCommandOutput) => void,
   ): void;
 
   /**
@@ -361,13 +361,13 @@ export interface Schemas {
    */
   describeSchema(
     args: DescribeSchemaCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSchemaCommandOutput>;
   describeSchema(args: DescribeSchemaCommandInput, cb: (err: any, data?: DescribeSchemaCommandOutput) => void): void;
   describeSchema(
     args: DescribeSchemaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSchemaCommandOutput) => void
+    cb: (err: any, data?: DescribeSchemaCommandOutput) => void,
   ): void;
 
   /**
@@ -378,7 +378,7 @@ export interface Schemas {
   exportSchema(
     args: ExportSchemaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExportSchemaCommandOutput) => void
+    cb: (err: any, data?: ExportSchemaCommandOutput) => void,
   ): void;
 
   /**
@@ -386,16 +386,16 @@ export interface Schemas {
    */
   getCodeBindingSource(
     args: GetCodeBindingSourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCodeBindingSourceCommandOutput>;
   getCodeBindingSource(
     args: GetCodeBindingSourceCommandInput,
-    cb: (err: any, data?: GetCodeBindingSourceCommandOutput) => void
+    cb: (err: any, data?: GetCodeBindingSourceCommandOutput) => void,
   ): void;
   getCodeBindingSource(
     args: GetCodeBindingSourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCodeBindingSourceCommandOutput) => void
+    cb: (err: any, data?: GetCodeBindingSourceCommandOutput) => void,
   ): void;
 
   /**
@@ -403,16 +403,16 @@ export interface Schemas {
    */
   getDiscoveredSchema(
     args: GetDiscoveredSchemaCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDiscoveredSchemaCommandOutput>;
   getDiscoveredSchema(
     args: GetDiscoveredSchemaCommandInput,
-    cb: (err: any, data?: GetDiscoveredSchemaCommandOutput) => void
+    cb: (err: any, data?: GetDiscoveredSchemaCommandOutput) => void,
   ): void;
   getDiscoveredSchema(
     args: GetDiscoveredSchemaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDiscoveredSchemaCommandOutput) => void
+    cb: (err: any, data?: GetDiscoveredSchemaCommandOutput) => void,
   ): void;
 
   /**
@@ -421,16 +421,16 @@ export interface Schemas {
   getResourcePolicy(): Promise<GetResourcePolicyCommandOutput>;
   getResourcePolicy(
     args: GetResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResourcePolicyCommandOutput>;
   getResourcePolicy(
     args: GetResourcePolicyCommandInput,
-    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void,
   ): void;
   getResourcePolicy(
     args: GetResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -439,13 +439,13 @@ export interface Schemas {
   listDiscoverers(): Promise<ListDiscoverersCommandOutput>;
   listDiscoverers(
     args: ListDiscoverersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDiscoverersCommandOutput>;
   listDiscoverers(args: ListDiscoverersCommandInput, cb: (err: any, data?: ListDiscoverersCommandOutput) => void): void;
   listDiscoverers(
     args: ListDiscoverersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDiscoverersCommandOutput) => void
+    cb: (err: any, data?: ListDiscoverersCommandOutput) => void,
   ): void;
 
   /**
@@ -454,13 +454,13 @@ export interface Schemas {
   listRegistries(): Promise<ListRegistriesCommandOutput>;
   listRegistries(
     args: ListRegistriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRegistriesCommandOutput>;
   listRegistries(args: ListRegistriesCommandInput, cb: (err: any, data?: ListRegistriesCommandOutput) => void): void;
   listRegistries(
     args: ListRegistriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRegistriesCommandOutput) => void
+    cb: (err: any, data?: ListRegistriesCommandOutput) => void,
   ): void;
 
   /**
@@ -471,7 +471,7 @@ export interface Schemas {
   listSchemas(
     args: ListSchemasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSchemasCommandOutput) => void
+    cb: (err: any, data?: ListSchemasCommandOutput) => void,
   ): void;
 
   /**
@@ -479,16 +479,16 @@ export interface Schemas {
    */
   listSchemaVersions(
     args: ListSchemaVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSchemaVersionsCommandOutput>;
   listSchemaVersions(
     args: ListSchemaVersionsCommandInput,
-    cb: (err: any, data?: ListSchemaVersionsCommandOutput) => void
+    cb: (err: any, data?: ListSchemaVersionsCommandOutput) => void,
   ): void;
   listSchemaVersions(
     args: ListSchemaVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSchemaVersionsCommandOutput) => void
+    cb: (err: any, data?: ListSchemaVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -496,16 +496,16 @@ export interface Schemas {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -513,13 +513,13 @@ export interface Schemas {
    */
   putCodeBinding(
     args: PutCodeBindingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutCodeBindingCommandOutput>;
   putCodeBinding(args: PutCodeBindingCommandInput, cb: (err: any, data?: PutCodeBindingCommandOutput) => void): void;
   putCodeBinding(
     args: PutCodeBindingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutCodeBindingCommandOutput) => void
+    cb: (err: any, data?: PutCodeBindingCommandOutput) => void,
   ): void;
 
   /**
@@ -527,16 +527,16 @@ export interface Schemas {
    */
   putResourcePolicy(
     args: PutResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutResourcePolicyCommandOutput>;
   putResourcePolicy(
     args: PutResourcePolicyCommandInput,
-    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void,
   ): void;
   putResourcePolicy(
     args: PutResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -547,7 +547,7 @@ export interface Schemas {
   searchSchemas(
     args: SearchSchemasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchSchemasCommandOutput) => void
+    cb: (err: any, data?: SearchSchemasCommandOutput) => void,
   ): void;
 
   /**
@@ -555,13 +555,13 @@ export interface Schemas {
    */
   startDiscoverer(
     args: StartDiscovererCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartDiscovererCommandOutput>;
   startDiscoverer(args: StartDiscovererCommandInput, cb: (err: any, data?: StartDiscovererCommandOutput) => void): void;
   startDiscoverer(
     args: StartDiscovererCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartDiscovererCommandOutput) => void
+    cb: (err: any, data?: StartDiscovererCommandOutput) => void,
   ): void;
 
   /**
@@ -569,13 +569,13 @@ export interface Schemas {
    */
   stopDiscoverer(
     args: StopDiscovererCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopDiscovererCommandOutput>;
   stopDiscoverer(args: StopDiscovererCommandInput, cb: (err: any, data?: StopDiscovererCommandOutput) => void): void;
   stopDiscoverer(
     args: StopDiscovererCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopDiscovererCommandOutput) => void
+    cb: (err: any, data?: StopDiscovererCommandOutput) => void,
   ): void;
 
   /**
@@ -586,7 +586,7 @@ export interface Schemas {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -597,7 +597,7 @@ export interface Schemas {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -605,16 +605,16 @@ export interface Schemas {
    */
   updateDiscoverer(
     args: UpdateDiscovererCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDiscovererCommandOutput>;
   updateDiscoverer(
     args: UpdateDiscovererCommandInput,
-    cb: (err: any, data?: UpdateDiscovererCommandOutput) => void
+    cb: (err: any, data?: UpdateDiscovererCommandOutput) => void,
   ): void;
   updateDiscoverer(
     args: UpdateDiscovererCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDiscovererCommandOutput) => void
+    cb: (err: any, data?: UpdateDiscovererCommandOutput) => void,
   ): void;
 
   /**
@@ -622,13 +622,13 @@ export interface Schemas {
    */
   updateRegistry(
     args: UpdateRegistryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRegistryCommandOutput>;
   updateRegistry(args: UpdateRegistryCommandInput, cb: (err: any, data?: UpdateRegistryCommandOutput) => void): void;
   updateRegistry(
     args: UpdateRegistryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRegistryCommandOutput) => void
+    cb: (err: any, data?: UpdateRegistryCommandOutput) => void,
   ): void;
 
   /**
@@ -639,7 +639,7 @@ export interface Schemas {
   updateSchema(
     args: UpdateSchemaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSchemaCommandOutput) => void
+    cb: (err: any, data?: UpdateSchemaCommandOutput) => void,
   ): void;
 }
 

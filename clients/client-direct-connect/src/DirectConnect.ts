@@ -371,16 +371,16 @@ export interface DirectConnect {
    */
   acceptDirectConnectGatewayAssociationProposal(
     args: AcceptDirectConnectGatewayAssociationProposalCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AcceptDirectConnectGatewayAssociationProposalCommandOutput>;
   acceptDirectConnectGatewayAssociationProposal(
     args: AcceptDirectConnectGatewayAssociationProposalCommandInput,
-    cb: (err: any, data?: AcceptDirectConnectGatewayAssociationProposalCommandOutput) => void
+    cb: (err: any, data?: AcceptDirectConnectGatewayAssociationProposalCommandOutput) => void,
   ): void;
   acceptDirectConnectGatewayAssociationProposal(
     args: AcceptDirectConnectGatewayAssociationProposalCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AcceptDirectConnectGatewayAssociationProposalCommandOutput) => void
+    cb: (err: any, data?: AcceptDirectConnectGatewayAssociationProposalCommandOutput) => void,
   ): void;
 
   /**
@@ -388,16 +388,16 @@ export interface DirectConnect {
    */
   allocateConnectionOnInterconnect(
     args: AllocateConnectionOnInterconnectCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AllocateConnectionOnInterconnectCommandOutput>;
   allocateConnectionOnInterconnect(
     args: AllocateConnectionOnInterconnectCommandInput,
-    cb: (err: any, data?: AllocateConnectionOnInterconnectCommandOutput) => void
+    cb: (err: any, data?: AllocateConnectionOnInterconnectCommandOutput) => void,
   ): void;
   allocateConnectionOnInterconnect(
     args: AllocateConnectionOnInterconnectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AllocateConnectionOnInterconnectCommandOutput) => void
+    cb: (err: any, data?: AllocateConnectionOnInterconnectCommandOutput) => void,
   ): void;
 
   /**
@@ -405,16 +405,16 @@ export interface DirectConnect {
    */
   allocateHostedConnection(
     args: AllocateHostedConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AllocateHostedConnectionCommandOutput>;
   allocateHostedConnection(
     args: AllocateHostedConnectionCommandInput,
-    cb: (err: any, data?: AllocateHostedConnectionCommandOutput) => void
+    cb: (err: any, data?: AllocateHostedConnectionCommandOutput) => void,
   ): void;
   allocateHostedConnection(
     args: AllocateHostedConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AllocateHostedConnectionCommandOutput) => void
+    cb: (err: any, data?: AllocateHostedConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -422,16 +422,16 @@ export interface DirectConnect {
    */
   allocatePrivateVirtualInterface(
     args: AllocatePrivateVirtualInterfaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AllocatePrivateVirtualInterfaceCommandOutput>;
   allocatePrivateVirtualInterface(
     args: AllocatePrivateVirtualInterfaceCommandInput,
-    cb: (err: any, data?: AllocatePrivateVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: AllocatePrivateVirtualInterfaceCommandOutput) => void,
   ): void;
   allocatePrivateVirtualInterface(
     args: AllocatePrivateVirtualInterfaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AllocatePrivateVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: AllocatePrivateVirtualInterfaceCommandOutput) => void,
   ): void;
 
   /**
@@ -439,16 +439,16 @@ export interface DirectConnect {
    */
   allocatePublicVirtualInterface(
     args: AllocatePublicVirtualInterfaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AllocatePublicVirtualInterfaceCommandOutput>;
   allocatePublicVirtualInterface(
     args: AllocatePublicVirtualInterfaceCommandInput,
-    cb: (err: any, data?: AllocatePublicVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: AllocatePublicVirtualInterfaceCommandOutput) => void,
   ): void;
   allocatePublicVirtualInterface(
     args: AllocatePublicVirtualInterfaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AllocatePublicVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: AllocatePublicVirtualInterfaceCommandOutput) => void,
   ): void;
 
   /**
@@ -456,16 +456,16 @@ export interface DirectConnect {
    */
   allocateTransitVirtualInterface(
     args: AllocateTransitVirtualInterfaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AllocateTransitVirtualInterfaceCommandOutput>;
   allocateTransitVirtualInterface(
     args: AllocateTransitVirtualInterfaceCommandInput,
-    cb: (err: any, data?: AllocateTransitVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: AllocateTransitVirtualInterfaceCommandOutput) => void,
   ): void;
   allocateTransitVirtualInterface(
     args: AllocateTransitVirtualInterfaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AllocateTransitVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: AllocateTransitVirtualInterfaceCommandOutput) => void,
   ): void;
 
   /**
@@ -473,16 +473,16 @@ export interface DirectConnect {
    */
   associateConnectionWithLag(
     args: AssociateConnectionWithLagCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateConnectionWithLagCommandOutput>;
   associateConnectionWithLag(
     args: AssociateConnectionWithLagCommandInput,
-    cb: (err: any, data?: AssociateConnectionWithLagCommandOutput) => void
+    cb: (err: any, data?: AssociateConnectionWithLagCommandOutput) => void,
   ): void;
   associateConnectionWithLag(
     args: AssociateConnectionWithLagCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateConnectionWithLagCommandOutput) => void
+    cb: (err: any, data?: AssociateConnectionWithLagCommandOutput) => void,
   ): void;
 
   /**
@@ -490,16 +490,16 @@ export interface DirectConnect {
    */
   associateHostedConnection(
     args: AssociateHostedConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateHostedConnectionCommandOutput>;
   associateHostedConnection(
     args: AssociateHostedConnectionCommandInput,
-    cb: (err: any, data?: AssociateHostedConnectionCommandOutput) => void
+    cb: (err: any, data?: AssociateHostedConnectionCommandOutput) => void,
   ): void;
   associateHostedConnection(
     args: AssociateHostedConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateHostedConnectionCommandOutput) => void
+    cb: (err: any, data?: AssociateHostedConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -507,16 +507,16 @@ export interface DirectConnect {
    */
   associateMacSecKey(
     args: AssociateMacSecKeyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateMacSecKeyCommandOutput>;
   associateMacSecKey(
     args: AssociateMacSecKeyCommandInput,
-    cb: (err: any, data?: AssociateMacSecKeyCommandOutput) => void
+    cb: (err: any, data?: AssociateMacSecKeyCommandOutput) => void,
   ): void;
   associateMacSecKey(
     args: AssociateMacSecKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateMacSecKeyCommandOutput) => void
+    cb: (err: any, data?: AssociateMacSecKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -524,16 +524,16 @@ export interface DirectConnect {
    */
   associateVirtualInterface(
     args: AssociateVirtualInterfaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateVirtualInterfaceCommandOutput>;
   associateVirtualInterface(
     args: AssociateVirtualInterfaceCommandInput,
-    cb: (err: any, data?: AssociateVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: AssociateVirtualInterfaceCommandOutput) => void,
   ): void;
   associateVirtualInterface(
     args: AssociateVirtualInterfaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: AssociateVirtualInterfaceCommandOutput) => void,
   ): void;
 
   /**
@@ -541,16 +541,16 @@ export interface DirectConnect {
    */
   confirmConnection(
     args: ConfirmConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ConfirmConnectionCommandOutput>;
   confirmConnection(
     args: ConfirmConnectionCommandInput,
-    cb: (err: any, data?: ConfirmConnectionCommandOutput) => void
+    cb: (err: any, data?: ConfirmConnectionCommandOutput) => void,
   ): void;
   confirmConnection(
     args: ConfirmConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ConfirmConnectionCommandOutput) => void
+    cb: (err: any, data?: ConfirmConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -559,16 +559,16 @@ export interface DirectConnect {
   confirmCustomerAgreement(): Promise<ConfirmCustomerAgreementCommandOutput>;
   confirmCustomerAgreement(
     args: ConfirmCustomerAgreementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ConfirmCustomerAgreementCommandOutput>;
   confirmCustomerAgreement(
     args: ConfirmCustomerAgreementCommandInput,
-    cb: (err: any, data?: ConfirmCustomerAgreementCommandOutput) => void
+    cb: (err: any, data?: ConfirmCustomerAgreementCommandOutput) => void,
   ): void;
   confirmCustomerAgreement(
     args: ConfirmCustomerAgreementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ConfirmCustomerAgreementCommandOutput) => void
+    cb: (err: any, data?: ConfirmCustomerAgreementCommandOutput) => void,
   ): void;
 
   /**
@@ -576,16 +576,16 @@ export interface DirectConnect {
    */
   confirmPrivateVirtualInterface(
     args: ConfirmPrivateVirtualInterfaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ConfirmPrivateVirtualInterfaceCommandOutput>;
   confirmPrivateVirtualInterface(
     args: ConfirmPrivateVirtualInterfaceCommandInput,
-    cb: (err: any, data?: ConfirmPrivateVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: ConfirmPrivateVirtualInterfaceCommandOutput) => void,
   ): void;
   confirmPrivateVirtualInterface(
     args: ConfirmPrivateVirtualInterfaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ConfirmPrivateVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: ConfirmPrivateVirtualInterfaceCommandOutput) => void,
   ): void;
 
   /**
@@ -593,16 +593,16 @@ export interface DirectConnect {
    */
   confirmPublicVirtualInterface(
     args: ConfirmPublicVirtualInterfaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ConfirmPublicVirtualInterfaceCommandOutput>;
   confirmPublicVirtualInterface(
     args: ConfirmPublicVirtualInterfaceCommandInput,
-    cb: (err: any, data?: ConfirmPublicVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: ConfirmPublicVirtualInterfaceCommandOutput) => void,
   ): void;
   confirmPublicVirtualInterface(
     args: ConfirmPublicVirtualInterfaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ConfirmPublicVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: ConfirmPublicVirtualInterfaceCommandOutput) => void,
   ): void;
 
   /**
@@ -610,16 +610,16 @@ export interface DirectConnect {
    */
   confirmTransitVirtualInterface(
     args: ConfirmTransitVirtualInterfaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ConfirmTransitVirtualInterfaceCommandOutput>;
   confirmTransitVirtualInterface(
     args: ConfirmTransitVirtualInterfaceCommandInput,
-    cb: (err: any, data?: ConfirmTransitVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: ConfirmTransitVirtualInterfaceCommandOutput) => void,
   ): void;
   confirmTransitVirtualInterface(
     args: ConfirmTransitVirtualInterfaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ConfirmTransitVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: ConfirmTransitVirtualInterfaceCommandOutput) => void,
   ): void;
 
   /**
@@ -631,7 +631,7 @@ export interface DirectConnect {
   createBGPPeer(
     args: CreateBGPPeerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateBGPPeerCommandOutput) => void
+    cb: (err: any, data?: CreateBGPPeerCommandOutput) => void,
   ): void;
 
   /**
@@ -639,16 +639,16 @@ export interface DirectConnect {
    */
   createConnection(
     args: CreateConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateConnectionCommandOutput>;
   createConnection(
     args: CreateConnectionCommandInput,
-    cb: (err: any, data?: CreateConnectionCommandOutput) => void
+    cb: (err: any, data?: CreateConnectionCommandOutput) => void,
   ): void;
   createConnection(
     args: CreateConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateConnectionCommandOutput) => void
+    cb: (err: any, data?: CreateConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -656,16 +656,16 @@ export interface DirectConnect {
    */
   createDirectConnectGateway(
     args: CreateDirectConnectGatewayCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDirectConnectGatewayCommandOutput>;
   createDirectConnectGateway(
     args: CreateDirectConnectGatewayCommandInput,
-    cb: (err: any, data?: CreateDirectConnectGatewayCommandOutput) => void
+    cb: (err: any, data?: CreateDirectConnectGatewayCommandOutput) => void,
   ): void;
   createDirectConnectGateway(
     args: CreateDirectConnectGatewayCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDirectConnectGatewayCommandOutput) => void
+    cb: (err: any, data?: CreateDirectConnectGatewayCommandOutput) => void,
   ): void;
 
   /**
@@ -673,16 +673,16 @@ export interface DirectConnect {
    */
   createDirectConnectGatewayAssociation(
     args: CreateDirectConnectGatewayAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDirectConnectGatewayAssociationCommandOutput>;
   createDirectConnectGatewayAssociation(
     args: CreateDirectConnectGatewayAssociationCommandInput,
-    cb: (err: any, data?: CreateDirectConnectGatewayAssociationCommandOutput) => void
+    cb: (err: any, data?: CreateDirectConnectGatewayAssociationCommandOutput) => void,
   ): void;
   createDirectConnectGatewayAssociation(
     args: CreateDirectConnectGatewayAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDirectConnectGatewayAssociationCommandOutput) => void
+    cb: (err: any, data?: CreateDirectConnectGatewayAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -690,16 +690,16 @@ export interface DirectConnect {
    */
   createDirectConnectGatewayAssociationProposal(
     args: CreateDirectConnectGatewayAssociationProposalCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDirectConnectGatewayAssociationProposalCommandOutput>;
   createDirectConnectGatewayAssociationProposal(
     args: CreateDirectConnectGatewayAssociationProposalCommandInput,
-    cb: (err: any, data?: CreateDirectConnectGatewayAssociationProposalCommandOutput) => void
+    cb: (err: any, data?: CreateDirectConnectGatewayAssociationProposalCommandOutput) => void,
   ): void;
   createDirectConnectGatewayAssociationProposal(
     args: CreateDirectConnectGatewayAssociationProposalCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDirectConnectGatewayAssociationProposalCommandOutput) => void
+    cb: (err: any, data?: CreateDirectConnectGatewayAssociationProposalCommandOutput) => void,
   ): void;
 
   /**
@@ -707,16 +707,16 @@ export interface DirectConnect {
    */
   createInterconnect(
     args: CreateInterconnectCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateInterconnectCommandOutput>;
   createInterconnect(
     args: CreateInterconnectCommandInput,
-    cb: (err: any, data?: CreateInterconnectCommandOutput) => void
+    cb: (err: any, data?: CreateInterconnectCommandOutput) => void,
   ): void;
   createInterconnect(
     args: CreateInterconnectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateInterconnectCommandOutput) => void
+    cb: (err: any, data?: CreateInterconnectCommandOutput) => void,
   ): void;
 
   /**
@@ -727,7 +727,7 @@ export interface DirectConnect {
   createLag(
     args: CreateLagCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateLagCommandOutput) => void
+    cb: (err: any, data?: CreateLagCommandOutput) => void,
   ): void;
 
   /**
@@ -735,16 +735,16 @@ export interface DirectConnect {
    */
   createPrivateVirtualInterface(
     args: CreatePrivateVirtualInterfaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePrivateVirtualInterfaceCommandOutput>;
   createPrivateVirtualInterface(
     args: CreatePrivateVirtualInterfaceCommandInput,
-    cb: (err: any, data?: CreatePrivateVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: CreatePrivateVirtualInterfaceCommandOutput) => void,
   ): void;
   createPrivateVirtualInterface(
     args: CreatePrivateVirtualInterfaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePrivateVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: CreatePrivateVirtualInterfaceCommandOutput) => void,
   ): void;
 
   /**
@@ -752,16 +752,16 @@ export interface DirectConnect {
    */
   createPublicVirtualInterface(
     args: CreatePublicVirtualInterfaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePublicVirtualInterfaceCommandOutput>;
   createPublicVirtualInterface(
     args: CreatePublicVirtualInterfaceCommandInput,
-    cb: (err: any, data?: CreatePublicVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: CreatePublicVirtualInterfaceCommandOutput) => void,
   ): void;
   createPublicVirtualInterface(
     args: CreatePublicVirtualInterfaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePublicVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: CreatePublicVirtualInterfaceCommandOutput) => void,
   ): void;
 
   /**
@@ -769,16 +769,16 @@ export interface DirectConnect {
    */
   createTransitVirtualInterface(
     args: CreateTransitVirtualInterfaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateTransitVirtualInterfaceCommandOutput>;
   createTransitVirtualInterface(
     args: CreateTransitVirtualInterfaceCommandInput,
-    cb: (err: any, data?: CreateTransitVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: CreateTransitVirtualInterfaceCommandOutput) => void,
   ): void;
   createTransitVirtualInterface(
     args: CreateTransitVirtualInterfaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTransitVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: CreateTransitVirtualInterfaceCommandOutput) => void,
   ): void;
 
   /**
@@ -790,7 +790,7 @@ export interface DirectConnect {
   deleteBGPPeer(
     args: DeleteBGPPeerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteBGPPeerCommandOutput) => void
+    cb: (err: any, data?: DeleteBGPPeerCommandOutput) => void,
   ): void;
 
   /**
@@ -798,16 +798,16 @@ export interface DirectConnect {
    */
   deleteConnection(
     args: DeleteConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConnectionCommandOutput>;
   deleteConnection(
     args: DeleteConnectionCommandInput,
-    cb: (err: any, data?: DeleteConnectionCommandOutput) => void
+    cb: (err: any, data?: DeleteConnectionCommandOutput) => void,
   ): void;
   deleteConnection(
     args: DeleteConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConnectionCommandOutput) => void
+    cb: (err: any, data?: DeleteConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -815,16 +815,16 @@ export interface DirectConnect {
    */
   deleteDirectConnectGateway(
     args: DeleteDirectConnectGatewayCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDirectConnectGatewayCommandOutput>;
   deleteDirectConnectGateway(
     args: DeleteDirectConnectGatewayCommandInput,
-    cb: (err: any, data?: DeleteDirectConnectGatewayCommandOutput) => void
+    cb: (err: any, data?: DeleteDirectConnectGatewayCommandOutput) => void,
   ): void;
   deleteDirectConnectGateway(
     args: DeleteDirectConnectGatewayCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDirectConnectGatewayCommandOutput) => void
+    cb: (err: any, data?: DeleteDirectConnectGatewayCommandOutput) => void,
   ): void;
 
   /**
@@ -833,16 +833,16 @@ export interface DirectConnect {
   deleteDirectConnectGatewayAssociation(): Promise<DeleteDirectConnectGatewayAssociationCommandOutput>;
   deleteDirectConnectGatewayAssociation(
     args: DeleteDirectConnectGatewayAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDirectConnectGatewayAssociationCommandOutput>;
   deleteDirectConnectGatewayAssociation(
     args: DeleteDirectConnectGatewayAssociationCommandInput,
-    cb: (err: any, data?: DeleteDirectConnectGatewayAssociationCommandOutput) => void
+    cb: (err: any, data?: DeleteDirectConnectGatewayAssociationCommandOutput) => void,
   ): void;
   deleteDirectConnectGatewayAssociation(
     args: DeleteDirectConnectGatewayAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDirectConnectGatewayAssociationCommandOutput) => void
+    cb: (err: any, data?: DeleteDirectConnectGatewayAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -850,16 +850,16 @@ export interface DirectConnect {
    */
   deleteDirectConnectGatewayAssociationProposal(
     args: DeleteDirectConnectGatewayAssociationProposalCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDirectConnectGatewayAssociationProposalCommandOutput>;
   deleteDirectConnectGatewayAssociationProposal(
     args: DeleteDirectConnectGatewayAssociationProposalCommandInput,
-    cb: (err: any, data?: DeleteDirectConnectGatewayAssociationProposalCommandOutput) => void
+    cb: (err: any, data?: DeleteDirectConnectGatewayAssociationProposalCommandOutput) => void,
   ): void;
   deleteDirectConnectGatewayAssociationProposal(
     args: DeleteDirectConnectGatewayAssociationProposalCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDirectConnectGatewayAssociationProposalCommandOutput) => void
+    cb: (err: any, data?: DeleteDirectConnectGatewayAssociationProposalCommandOutput) => void,
   ): void;
 
   /**
@@ -867,16 +867,16 @@ export interface DirectConnect {
    */
   deleteInterconnect(
     args: DeleteInterconnectCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteInterconnectCommandOutput>;
   deleteInterconnect(
     args: DeleteInterconnectCommandInput,
-    cb: (err: any, data?: DeleteInterconnectCommandOutput) => void
+    cb: (err: any, data?: DeleteInterconnectCommandOutput) => void,
   ): void;
   deleteInterconnect(
     args: DeleteInterconnectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteInterconnectCommandOutput) => void
+    cb: (err: any, data?: DeleteInterconnectCommandOutput) => void,
   ): void;
 
   /**
@@ -887,7 +887,7 @@ export interface DirectConnect {
   deleteLag(
     args: DeleteLagCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLagCommandOutput) => void
+    cb: (err: any, data?: DeleteLagCommandOutput) => void,
   ): void;
 
   /**
@@ -895,16 +895,16 @@ export interface DirectConnect {
    */
   deleteVirtualInterface(
     args: DeleteVirtualInterfaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteVirtualInterfaceCommandOutput>;
   deleteVirtualInterface(
     args: DeleteVirtualInterfaceCommandInput,
-    cb: (err: any, data?: DeleteVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: DeleteVirtualInterfaceCommandOutput) => void,
   ): void;
   deleteVirtualInterface(
     args: DeleteVirtualInterfaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteVirtualInterfaceCommandOutput) => void
+    cb: (err: any, data?: DeleteVirtualInterfaceCommandOutput) => void,
   ): void;
 
   /**
@@ -912,16 +912,16 @@ export interface DirectConnect {
    */
   describeConnectionLoa(
     args: DescribeConnectionLoaCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConnectionLoaCommandOutput>;
   describeConnectionLoa(
     args: DescribeConnectionLoaCommandInput,
-    cb: (err: any, data?: DescribeConnectionLoaCommandOutput) => void
+    cb: (err: any, data?: DescribeConnectionLoaCommandOutput) => void,
   ): void;
   describeConnectionLoa(
     args: DescribeConnectionLoaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConnectionLoaCommandOutput) => void
+    cb: (err: any, data?: DescribeConnectionLoaCommandOutput) => void,
   ): void;
 
   /**
@@ -930,16 +930,16 @@ export interface DirectConnect {
   describeConnections(): Promise<DescribeConnectionsCommandOutput>;
   describeConnections(
     args: DescribeConnectionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConnectionsCommandOutput>;
   describeConnections(
     args: DescribeConnectionsCommandInput,
-    cb: (err: any, data?: DescribeConnectionsCommandOutput) => void
+    cb: (err: any, data?: DescribeConnectionsCommandOutput) => void,
   ): void;
   describeConnections(
     args: DescribeConnectionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConnectionsCommandOutput) => void
+    cb: (err: any, data?: DescribeConnectionsCommandOutput) => void,
   ): void;
 
   /**
@@ -947,16 +947,16 @@ export interface DirectConnect {
    */
   describeConnectionsOnInterconnect(
     args: DescribeConnectionsOnInterconnectCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConnectionsOnInterconnectCommandOutput>;
   describeConnectionsOnInterconnect(
     args: DescribeConnectionsOnInterconnectCommandInput,
-    cb: (err: any, data?: DescribeConnectionsOnInterconnectCommandOutput) => void
+    cb: (err: any, data?: DescribeConnectionsOnInterconnectCommandOutput) => void,
   ): void;
   describeConnectionsOnInterconnect(
     args: DescribeConnectionsOnInterconnectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConnectionsOnInterconnectCommandOutput) => void
+    cb: (err: any, data?: DescribeConnectionsOnInterconnectCommandOutput) => void,
   ): void;
 
   /**
@@ -965,16 +965,16 @@ export interface DirectConnect {
   describeCustomerMetadata(): Promise<DescribeCustomerMetadataCommandOutput>;
   describeCustomerMetadata(
     args: DescribeCustomerMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeCustomerMetadataCommandOutput>;
   describeCustomerMetadata(
     args: DescribeCustomerMetadataCommandInput,
-    cb: (err: any, data?: DescribeCustomerMetadataCommandOutput) => void
+    cb: (err: any, data?: DescribeCustomerMetadataCommandOutput) => void,
   ): void;
   describeCustomerMetadata(
     args: DescribeCustomerMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeCustomerMetadataCommandOutput) => void
+    cb: (err: any, data?: DescribeCustomerMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -983,16 +983,16 @@ export interface DirectConnect {
   describeDirectConnectGatewayAssociationProposals(): Promise<DescribeDirectConnectGatewayAssociationProposalsCommandOutput>;
   describeDirectConnectGatewayAssociationProposals(
     args: DescribeDirectConnectGatewayAssociationProposalsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDirectConnectGatewayAssociationProposalsCommandOutput>;
   describeDirectConnectGatewayAssociationProposals(
     args: DescribeDirectConnectGatewayAssociationProposalsCommandInput,
-    cb: (err: any, data?: DescribeDirectConnectGatewayAssociationProposalsCommandOutput) => void
+    cb: (err: any, data?: DescribeDirectConnectGatewayAssociationProposalsCommandOutput) => void,
   ): void;
   describeDirectConnectGatewayAssociationProposals(
     args: DescribeDirectConnectGatewayAssociationProposalsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDirectConnectGatewayAssociationProposalsCommandOutput) => void
+    cb: (err: any, data?: DescribeDirectConnectGatewayAssociationProposalsCommandOutput) => void,
   ): void;
 
   /**
@@ -1001,16 +1001,16 @@ export interface DirectConnect {
   describeDirectConnectGatewayAssociations(): Promise<DescribeDirectConnectGatewayAssociationsCommandOutput>;
   describeDirectConnectGatewayAssociations(
     args: DescribeDirectConnectGatewayAssociationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDirectConnectGatewayAssociationsCommandOutput>;
   describeDirectConnectGatewayAssociations(
     args: DescribeDirectConnectGatewayAssociationsCommandInput,
-    cb: (err: any, data?: DescribeDirectConnectGatewayAssociationsCommandOutput) => void
+    cb: (err: any, data?: DescribeDirectConnectGatewayAssociationsCommandOutput) => void,
   ): void;
   describeDirectConnectGatewayAssociations(
     args: DescribeDirectConnectGatewayAssociationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDirectConnectGatewayAssociationsCommandOutput) => void
+    cb: (err: any, data?: DescribeDirectConnectGatewayAssociationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1019,16 +1019,16 @@ export interface DirectConnect {
   describeDirectConnectGatewayAttachments(): Promise<DescribeDirectConnectGatewayAttachmentsCommandOutput>;
   describeDirectConnectGatewayAttachments(
     args: DescribeDirectConnectGatewayAttachmentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDirectConnectGatewayAttachmentsCommandOutput>;
   describeDirectConnectGatewayAttachments(
     args: DescribeDirectConnectGatewayAttachmentsCommandInput,
-    cb: (err: any, data?: DescribeDirectConnectGatewayAttachmentsCommandOutput) => void
+    cb: (err: any, data?: DescribeDirectConnectGatewayAttachmentsCommandOutput) => void,
   ): void;
   describeDirectConnectGatewayAttachments(
     args: DescribeDirectConnectGatewayAttachmentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDirectConnectGatewayAttachmentsCommandOutput) => void
+    cb: (err: any, data?: DescribeDirectConnectGatewayAttachmentsCommandOutput) => void,
   ): void;
 
   /**
@@ -1037,16 +1037,16 @@ export interface DirectConnect {
   describeDirectConnectGateways(): Promise<DescribeDirectConnectGatewaysCommandOutput>;
   describeDirectConnectGateways(
     args: DescribeDirectConnectGatewaysCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDirectConnectGatewaysCommandOutput>;
   describeDirectConnectGateways(
     args: DescribeDirectConnectGatewaysCommandInput,
-    cb: (err: any, data?: DescribeDirectConnectGatewaysCommandOutput) => void
+    cb: (err: any, data?: DescribeDirectConnectGatewaysCommandOutput) => void,
   ): void;
   describeDirectConnectGateways(
     args: DescribeDirectConnectGatewaysCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDirectConnectGatewaysCommandOutput) => void
+    cb: (err: any, data?: DescribeDirectConnectGatewaysCommandOutput) => void,
   ): void;
 
   /**
@@ -1054,16 +1054,16 @@ export interface DirectConnect {
    */
   describeHostedConnections(
     args: DescribeHostedConnectionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeHostedConnectionsCommandOutput>;
   describeHostedConnections(
     args: DescribeHostedConnectionsCommandInput,
-    cb: (err: any, data?: DescribeHostedConnectionsCommandOutput) => void
+    cb: (err: any, data?: DescribeHostedConnectionsCommandOutput) => void,
   ): void;
   describeHostedConnections(
     args: DescribeHostedConnectionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeHostedConnectionsCommandOutput) => void
+    cb: (err: any, data?: DescribeHostedConnectionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1071,16 +1071,16 @@ export interface DirectConnect {
    */
   describeInterconnectLoa(
     args: DescribeInterconnectLoaCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeInterconnectLoaCommandOutput>;
   describeInterconnectLoa(
     args: DescribeInterconnectLoaCommandInput,
-    cb: (err: any, data?: DescribeInterconnectLoaCommandOutput) => void
+    cb: (err: any, data?: DescribeInterconnectLoaCommandOutput) => void,
   ): void;
   describeInterconnectLoa(
     args: DescribeInterconnectLoaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeInterconnectLoaCommandOutput) => void
+    cb: (err: any, data?: DescribeInterconnectLoaCommandOutput) => void,
   ): void;
 
   /**
@@ -1089,16 +1089,16 @@ export interface DirectConnect {
   describeInterconnects(): Promise<DescribeInterconnectsCommandOutput>;
   describeInterconnects(
     args: DescribeInterconnectsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeInterconnectsCommandOutput>;
   describeInterconnects(
     args: DescribeInterconnectsCommandInput,
-    cb: (err: any, data?: DescribeInterconnectsCommandOutput) => void
+    cb: (err: any, data?: DescribeInterconnectsCommandOutput) => void,
   ): void;
   describeInterconnects(
     args: DescribeInterconnectsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeInterconnectsCommandOutput) => void
+    cb: (err: any, data?: DescribeInterconnectsCommandOutput) => void,
   ): void;
 
   /**
@@ -1110,7 +1110,7 @@ export interface DirectConnect {
   describeLags(
     args: DescribeLagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLagsCommandOutput) => void
+    cb: (err: any, data?: DescribeLagsCommandOutput) => void,
   ): void;
 
   /**
@@ -1121,7 +1121,7 @@ export interface DirectConnect {
   describeLoa(
     args: DescribeLoaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLoaCommandOutput) => void
+    cb: (err: any, data?: DescribeLoaCommandOutput) => void,
   ): void;
 
   /**
@@ -1130,16 +1130,16 @@ export interface DirectConnect {
   describeLocations(): Promise<DescribeLocationsCommandOutput>;
   describeLocations(
     args: DescribeLocationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLocationsCommandOutput>;
   describeLocations(
     args: DescribeLocationsCommandInput,
-    cb: (err: any, data?: DescribeLocationsCommandOutput) => void
+    cb: (err: any, data?: DescribeLocationsCommandOutput) => void,
   ): void;
   describeLocations(
     args: DescribeLocationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLocationsCommandOutput) => void
+    cb: (err: any, data?: DescribeLocationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1147,16 +1147,16 @@ export interface DirectConnect {
    */
   describeRouterConfiguration(
     args: DescribeRouterConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRouterConfigurationCommandOutput>;
   describeRouterConfiguration(
     args: DescribeRouterConfigurationCommandInput,
-    cb: (err: any, data?: DescribeRouterConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeRouterConfigurationCommandOutput) => void,
   ): void;
   describeRouterConfiguration(
     args: DescribeRouterConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRouterConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeRouterConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1167,7 +1167,7 @@ export interface DirectConnect {
   describeTags(
     args: DescribeTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTagsCommandOutput) => void
+    cb: (err: any, data?: DescribeTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -1176,16 +1176,16 @@ export interface DirectConnect {
   describeVirtualGateways(): Promise<DescribeVirtualGatewaysCommandOutput>;
   describeVirtualGateways(
     args: DescribeVirtualGatewaysCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeVirtualGatewaysCommandOutput>;
   describeVirtualGateways(
     args: DescribeVirtualGatewaysCommandInput,
-    cb: (err: any, data?: DescribeVirtualGatewaysCommandOutput) => void
+    cb: (err: any, data?: DescribeVirtualGatewaysCommandOutput) => void,
   ): void;
   describeVirtualGateways(
     args: DescribeVirtualGatewaysCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeVirtualGatewaysCommandOutput) => void
+    cb: (err: any, data?: DescribeVirtualGatewaysCommandOutput) => void,
   ): void;
 
   /**
@@ -1194,16 +1194,16 @@ export interface DirectConnect {
   describeVirtualInterfaces(): Promise<DescribeVirtualInterfacesCommandOutput>;
   describeVirtualInterfaces(
     args: DescribeVirtualInterfacesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeVirtualInterfacesCommandOutput>;
   describeVirtualInterfaces(
     args: DescribeVirtualInterfacesCommandInput,
-    cb: (err: any, data?: DescribeVirtualInterfacesCommandOutput) => void
+    cb: (err: any, data?: DescribeVirtualInterfacesCommandOutput) => void,
   ): void;
   describeVirtualInterfaces(
     args: DescribeVirtualInterfacesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeVirtualInterfacesCommandOutput) => void
+    cb: (err: any, data?: DescribeVirtualInterfacesCommandOutput) => void,
   ): void;
 
   /**
@@ -1211,16 +1211,16 @@ export interface DirectConnect {
    */
   disassociateConnectionFromLag(
     args: DisassociateConnectionFromLagCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateConnectionFromLagCommandOutput>;
   disassociateConnectionFromLag(
     args: DisassociateConnectionFromLagCommandInput,
-    cb: (err: any, data?: DisassociateConnectionFromLagCommandOutput) => void
+    cb: (err: any, data?: DisassociateConnectionFromLagCommandOutput) => void,
   ): void;
   disassociateConnectionFromLag(
     args: DisassociateConnectionFromLagCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateConnectionFromLagCommandOutput) => void
+    cb: (err: any, data?: DisassociateConnectionFromLagCommandOutput) => void,
   ): void;
 
   /**
@@ -1228,16 +1228,16 @@ export interface DirectConnect {
    */
   disassociateMacSecKey(
     args: DisassociateMacSecKeyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateMacSecKeyCommandOutput>;
   disassociateMacSecKey(
     args: DisassociateMacSecKeyCommandInput,
-    cb: (err: any, data?: DisassociateMacSecKeyCommandOutput) => void
+    cb: (err: any, data?: DisassociateMacSecKeyCommandOutput) => void,
   ): void;
   disassociateMacSecKey(
     args: DisassociateMacSecKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateMacSecKeyCommandOutput) => void
+    cb: (err: any, data?: DisassociateMacSecKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -1246,16 +1246,16 @@ export interface DirectConnect {
   listVirtualInterfaceTestHistory(): Promise<ListVirtualInterfaceTestHistoryCommandOutput>;
   listVirtualInterfaceTestHistory(
     args: ListVirtualInterfaceTestHistoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListVirtualInterfaceTestHistoryCommandOutput>;
   listVirtualInterfaceTestHistory(
     args: ListVirtualInterfaceTestHistoryCommandInput,
-    cb: (err: any, data?: ListVirtualInterfaceTestHistoryCommandOutput) => void
+    cb: (err: any, data?: ListVirtualInterfaceTestHistoryCommandOutput) => void,
   ): void;
   listVirtualInterfaceTestHistory(
     args: ListVirtualInterfaceTestHistoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListVirtualInterfaceTestHistoryCommandOutput) => void
+    cb: (err: any, data?: ListVirtualInterfaceTestHistoryCommandOutput) => void,
   ): void;
 
   /**
@@ -1263,16 +1263,16 @@ export interface DirectConnect {
    */
   startBgpFailoverTest(
     args: StartBgpFailoverTestCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartBgpFailoverTestCommandOutput>;
   startBgpFailoverTest(
     args: StartBgpFailoverTestCommandInput,
-    cb: (err: any, data?: StartBgpFailoverTestCommandOutput) => void
+    cb: (err: any, data?: StartBgpFailoverTestCommandOutput) => void,
   ): void;
   startBgpFailoverTest(
     args: StartBgpFailoverTestCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartBgpFailoverTestCommandOutput) => void
+    cb: (err: any, data?: StartBgpFailoverTestCommandOutput) => void,
   ): void;
 
   /**
@@ -1280,16 +1280,16 @@ export interface DirectConnect {
    */
   stopBgpFailoverTest(
     args: StopBgpFailoverTestCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopBgpFailoverTestCommandOutput>;
   stopBgpFailoverTest(
     args: StopBgpFailoverTestCommandInput,
-    cb: (err: any, data?: StopBgpFailoverTestCommandOutput) => void
+    cb: (err: any, data?: StopBgpFailoverTestCommandOutput) => void,
   ): void;
   stopBgpFailoverTest(
     args: StopBgpFailoverTestCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopBgpFailoverTestCommandOutput) => void
+    cb: (err: any, data?: StopBgpFailoverTestCommandOutput) => void,
   ): void;
 
   /**
@@ -1300,7 +1300,7 @@ export interface DirectConnect {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1311,7 +1311,7 @@ export interface DirectConnect {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1319,16 +1319,16 @@ export interface DirectConnect {
    */
   updateConnection(
     args: UpdateConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateConnectionCommandOutput>;
   updateConnection(
     args: UpdateConnectionCommandInput,
-    cb: (err: any, data?: UpdateConnectionCommandOutput) => void
+    cb: (err: any, data?: UpdateConnectionCommandOutput) => void,
   ): void;
   updateConnection(
     args: UpdateConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateConnectionCommandOutput) => void
+    cb: (err: any, data?: UpdateConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -1336,16 +1336,16 @@ export interface DirectConnect {
    */
   updateDirectConnectGateway(
     args: UpdateDirectConnectGatewayCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDirectConnectGatewayCommandOutput>;
   updateDirectConnectGateway(
     args: UpdateDirectConnectGatewayCommandInput,
-    cb: (err: any, data?: UpdateDirectConnectGatewayCommandOutput) => void
+    cb: (err: any, data?: UpdateDirectConnectGatewayCommandOutput) => void,
   ): void;
   updateDirectConnectGateway(
     args: UpdateDirectConnectGatewayCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDirectConnectGatewayCommandOutput) => void
+    cb: (err: any, data?: UpdateDirectConnectGatewayCommandOutput) => void,
   ): void;
 
   /**
@@ -1354,16 +1354,16 @@ export interface DirectConnect {
   updateDirectConnectGatewayAssociation(): Promise<UpdateDirectConnectGatewayAssociationCommandOutput>;
   updateDirectConnectGatewayAssociation(
     args: UpdateDirectConnectGatewayAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDirectConnectGatewayAssociationCommandOutput>;
   updateDirectConnectGatewayAssociation(
     args: UpdateDirectConnectGatewayAssociationCommandInput,
-    cb: (err: any, data?: UpdateDirectConnectGatewayAssociationCommandOutput) => void
+    cb: (err: any, data?: UpdateDirectConnectGatewayAssociationCommandOutput) => void,
   ): void;
   updateDirectConnectGatewayAssociation(
     args: UpdateDirectConnectGatewayAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDirectConnectGatewayAssociationCommandOutput) => void
+    cb: (err: any, data?: UpdateDirectConnectGatewayAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -1374,7 +1374,7 @@ export interface DirectConnect {
   updateLag(
     args: UpdateLagCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateLagCommandOutput) => void
+    cb: (err: any, data?: UpdateLagCommandOutput) => void,
   ): void;
 
   /**
@@ -1382,16 +1382,16 @@ export interface DirectConnect {
    */
   updateVirtualInterfaceAttributes(
     args: UpdateVirtualInterfaceAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateVirtualInterfaceAttributesCommandOutput>;
   updateVirtualInterfaceAttributes(
     args: UpdateVirtualInterfaceAttributesCommandInput,
-    cb: (err: any, data?: UpdateVirtualInterfaceAttributesCommandOutput) => void
+    cb: (err: any, data?: UpdateVirtualInterfaceAttributesCommandOutput) => void,
   ): void;
   updateVirtualInterfaceAttributes(
     args: UpdateVirtualInterfaceAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateVirtualInterfaceAttributesCommandOutput) => void
+    cb: (err: any, data?: UpdateVirtualInterfaceAttributesCommandOutput) => void,
   ): void;
 }
 

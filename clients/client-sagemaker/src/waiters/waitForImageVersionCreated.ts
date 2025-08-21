@@ -39,7 +39,7 @@ const checkState = async (client: SageMakerClient, input: DescribeImageVersionCo
  */
 export const waitForImageVersionCreated = async (
   params: WaiterConfiguration<SageMakerClient>,
-  input: DescribeImageVersionCommandInput
+  input: DescribeImageVersionCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 60, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -51,7 +51,7 @@ export const waitForImageVersionCreated = async (
  */
 export const waitUntilImageVersionCreated = async (
   params: WaiterConfiguration<SageMakerClient>,
-  input: DescribeImageVersionCommandInput
+  input: DescribeImageVersionCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 60, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

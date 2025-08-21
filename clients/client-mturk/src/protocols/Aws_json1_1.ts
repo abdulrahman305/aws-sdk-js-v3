@@ -209,7 +209,7 @@ import { MTurkServiceException as __BaseException } from "../models/MTurkService
  */
 export const se_AcceptQualificationRequestCommand = async (
   input: AcceptQualificationRequestCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AcceptQualificationRequest");
   let body: any;
@@ -222,7 +222,7 @@ export const se_AcceptQualificationRequestCommand = async (
  */
 export const se_ApproveAssignmentCommand = async (
   input: ApproveAssignmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ApproveAssignment");
   let body: any;
@@ -235,7 +235,7 @@ export const se_ApproveAssignmentCommand = async (
  */
 export const se_AssociateQualificationWithWorkerCommand = async (
   input: AssociateQualificationWithWorkerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateQualificationWithWorker");
   let body: any;
@@ -248,7 +248,7 @@ export const se_AssociateQualificationWithWorkerCommand = async (
  */
 export const se_CreateAdditionalAssignmentsForHITCommand = async (
   input: CreateAdditionalAssignmentsForHITCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAdditionalAssignmentsForHIT");
   let body: any;
@@ -261,7 +261,7 @@ export const se_CreateAdditionalAssignmentsForHITCommand = async (
  */
 export const se_CreateHITCommand = async (
   input: CreateHITCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateHIT");
   let body: any;
@@ -274,7 +274,7 @@ export const se_CreateHITCommand = async (
  */
 export const se_CreateHITTypeCommand = async (
   input: CreateHITTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateHITType");
   let body: any;
@@ -287,7 +287,7 @@ export const se_CreateHITTypeCommand = async (
  */
 export const se_CreateHITWithHITTypeCommand = async (
   input: CreateHITWithHITTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateHITWithHITType");
   let body: any;
@@ -300,7 +300,7 @@ export const se_CreateHITWithHITTypeCommand = async (
  */
 export const se_CreateQualificationTypeCommand = async (
   input: CreateQualificationTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateQualificationType");
   let body: any;
@@ -313,7 +313,7 @@ export const se_CreateQualificationTypeCommand = async (
  */
 export const se_CreateWorkerBlockCommand = async (
   input: CreateWorkerBlockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateWorkerBlock");
   let body: any;
@@ -326,7 +326,7 @@ export const se_CreateWorkerBlockCommand = async (
  */
 export const se_DeleteHITCommand = async (
   input: DeleteHITCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteHIT");
   let body: any;
@@ -339,7 +339,7 @@ export const se_DeleteHITCommand = async (
  */
 export const se_DeleteQualificationTypeCommand = async (
   input: DeleteQualificationTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteQualificationType");
   let body: any;
@@ -352,7 +352,7 @@ export const se_DeleteQualificationTypeCommand = async (
  */
 export const se_DeleteWorkerBlockCommand = async (
   input: DeleteWorkerBlockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteWorkerBlock");
   let body: any;
@@ -365,7 +365,7 @@ export const se_DeleteWorkerBlockCommand = async (
  */
 export const se_DisassociateQualificationFromWorkerCommand = async (
   input: DisassociateQualificationFromWorkerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateQualificationFromWorker");
   let body: any;
@@ -378,7 +378,7 @@ export const se_DisassociateQualificationFromWorkerCommand = async (
  */
 export const se_GetAccountBalanceCommand = async (
   input: GetAccountBalanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAccountBalance");
   let body: any;
@@ -391,7 +391,7 @@ export const se_GetAccountBalanceCommand = async (
  */
 export const se_GetAssignmentCommand = async (
   input: GetAssignmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAssignment");
   let body: any;
@@ -404,7 +404,7 @@ export const se_GetAssignmentCommand = async (
  */
 export const se_GetFileUploadURLCommand = async (
   input: GetFileUploadURLCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetFileUploadURL");
   let body: any;
@@ -427,7 +427,7 @@ export const se_GetHITCommand = async (input: GetHITCommandInput, context: __Ser
  */
 export const se_GetQualificationScoreCommand = async (
   input: GetQualificationScoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetQualificationScore");
   let body: any;
@@ -440,7 +440,7 @@ export const se_GetQualificationScoreCommand = async (
  */
 export const se_GetQualificationTypeCommand = async (
   input: GetQualificationTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetQualificationType");
   let body: any;
@@ -453,7 +453,7 @@ export const se_GetQualificationTypeCommand = async (
  */
 export const se_ListAssignmentsForHITCommand = async (
   input: ListAssignmentsForHITCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAssignmentsForHIT");
   let body: any;
@@ -466,7 +466,7 @@ export const se_ListAssignmentsForHITCommand = async (
  */
 export const se_ListBonusPaymentsCommand = async (
   input: ListBonusPaymentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListBonusPayments");
   let body: any;
@@ -479,7 +479,7 @@ export const se_ListBonusPaymentsCommand = async (
  */
 export const se_ListHITsCommand = async (
   input: ListHITsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListHITs");
   let body: any;
@@ -492,7 +492,7 @@ export const se_ListHITsCommand = async (
  */
 export const se_ListHITsForQualificationTypeCommand = async (
   input: ListHITsForQualificationTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListHITsForQualificationType");
   let body: any;
@@ -505,7 +505,7 @@ export const se_ListHITsForQualificationTypeCommand = async (
  */
 export const se_ListQualificationRequestsCommand = async (
   input: ListQualificationRequestsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListQualificationRequests");
   let body: any;
@@ -518,7 +518,7 @@ export const se_ListQualificationRequestsCommand = async (
  */
 export const se_ListQualificationTypesCommand = async (
   input: ListQualificationTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListQualificationTypes");
   let body: any;
@@ -531,7 +531,7 @@ export const se_ListQualificationTypesCommand = async (
  */
 export const se_ListReviewableHITsCommand = async (
   input: ListReviewableHITsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListReviewableHITs");
   let body: any;
@@ -544,7 +544,7 @@ export const se_ListReviewableHITsCommand = async (
  */
 export const se_ListReviewPolicyResultsForHITCommand = async (
   input: ListReviewPolicyResultsForHITCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListReviewPolicyResultsForHIT");
   let body: any;
@@ -557,7 +557,7 @@ export const se_ListReviewPolicyResultsForHITCommand = async (
  */
 export const se_ListWorkerBlocksCommand = async (
   input: ListWorkerBlocksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListWorkerBlocks");
   let body: any;
@@ -570,7 +570,7 @@ export const se_ListWorkerBlocksCommand = async (
  */
 export const se_ListWorkersWithQualificationTypeCommand = async (
   input: ListWorkersWithQualificationTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListWorkersWithQualificationType");
   let body: any;
@@ -583,7 +583,7 @@ export const se_ListWorkersWithQualificationTypeCommand = async (
  */
 export const se_NotifyWorkersCommand = async (
   input: NotifyWorkersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("NotifyWorkers");
   let body: any;
@@ -596,7 +596,7 @@ export const se_NotifyWorkersCommand = async (
  */
 export const se_RejectAssignmentCommand = async (
   input: RejectAssignmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RejectAssignment");
   let body: any;
@@ -609,7 +609,7 @@ export const se_RejectAssignmentCommand = async (
  */
 export const se_RejectQualificationRequestCommand = async (
   input: RejectQualificationRequestCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RejectQualificationRequest");
   let body: any;
@@ -622,7 +622,7 @@ export const se_RejectQualificationRequestCommand = async (
  */
 export const se_SendBonusCommand = async (
   input: SendBonusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SendBonus");
   let body: any;
@@ -635,7 +635,7 @@ export const se_SendBonusCommand = async (
  */
 export const se_SendTestEventNotificationCommand = async (
   input: SendTestEventNotificationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SendTestEventNotification");
   let body: any;
@@ -648,7 +648,7 @@ export const se_SendTestEventNotificationCommand = async (
  */
 export const se_UpdateExpirationForHITCommand = async (
   input: UpdateExpirationForHITCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateExpirationForHIT");
   let body: any;
@@ -661,7 +661,7 @@ export const se_UpdateExpirationForHITCommand = async (
  */
 export const se_UpdateHITReviewStatusCommand = async (
   input: UpdateHITReviewStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateHITReviewStatus");
   let body: any;
@@ -674,7 +674,7 @@ export const se_UpdateHITReviewStatusCommand = async (
  */
 export const se_UpdateHITTypeOfHITCommand = async (
   input: UpdateHITTypeOfHITCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateHITTypeOfHIT");
   let body: any;
@@ -687,7 +687,7 @@ export const se_UpdateHITTypeOfHITCommand = async (
  */
 export const se_UpdateNotificationSettingsCommand = async (
   input: UpdateNotificationSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateNotificationSettings");
   let body: any;
@@ -700,7 +700,7 @@ export const se_UpdateNotificationSettingsCommand = async (
  */
 export const se_UpdateQualificationTypeCommand = async (
   input: UpdateQualificationTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateQualificationType");
   let body: any;
@@ -713,7 +713,7 @@ export const se_UpdateQualificationTypeCommand = async (
  */
 export const de_AcceptQualificationRequestCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptQualificationRequestCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -733,7 +733,7 @@ export const de_AcceptQualificationRequestCommand = async (
  */
 export const de_ApproveAssignmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApproveAssignmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -753,7 +753,7 @@ export const de_ApproveAssignmentCommand = async (
  */
 export const de_AssociateQualificationWithWorkerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateQualificationWithWorkerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -773,7 +773,7 @@ export const de_AssociateQualificationWithWorkerCommand = async (
  */
 export const de_CreateAdditionalAssignmentsForHITCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAdditionalAssignmentsForHITCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -793,7 +793,7 @@ export const de_CreateAdditionalAssignmentsForHITCommand = async (
  */
 export const de_CreateHITCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateHITCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -813,7 +813,7 @@ export const de_CreateHITCommand = async (
  */
 export const de_CreateHITTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateHITTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -833,7 +833,7 @@ export const de_CreateHITTypeCommand = async (
  */
 export const de_CreateHITWithHITTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateHITWithHITTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -853,7 +853,7 @@ export const de_CreateHITWithHITTypeCommand = async (
  */
 export const de_CreateQualificationTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateQualificationTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -873,7 +873,7 @@ export const de_CreateQualificationTypeCommand = async (
  */
 export const de_CreateWorkerBlockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorkerBlockCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -893,7 +893,7 @@ export const de_CreateWorkerBlockCommand = async (
  */
 export const de_DeleteHITCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteHITCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -913,7 +913,7 @@ export const de_DeleteHITCommand = async (
  */
 export const de_DeleteQualificationTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteQualificationTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -933,7 +933,7 @@ export const de_DeleteQualificationTypeCommand = async (
  */
 export const de_DeleteWorkerBlockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorkerBlockCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -953,7 +953,7 @@ export const de_DeleteWorkerBlockCommand = async (
  */
 export const de_DisassociateQualificationFromWorkerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateQualificationFromWorkerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -973,7 +973,7 @@ export const de_DisassociateQualificationFromWorkerCommand = async (
  */
 export const de_GetAccountBalanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccountBalanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -993,7 +993,7 @@ export const de_GetAccountBalanceCommand = async (
  */
 export const de_GetAssignmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAssignmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1013,7 +1013,7 @@ export const de_GetAssignmentCommand = async (
  */
 export const de_GetFileUploadURLCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFileUploadURLCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1033,7 +1033,7 @@ export const de_GetFileUploadURLCommand = async (
  */
 export const de_GetHITCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetHITCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1053,7 +1053,7 @@ export const de_GetHITCommand = async (
  */
 export const de_GetQualificationScoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetQualificationScoreCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1073,7 +1073,7 @@ export const de_GetQualificationScoreCommand = async (
  */
 export const de_GetQualificationTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetQualificationTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1093,7 +1093,7 @@ export const de_GetQualificationTypeCommand = async (
  */
 export const de_ListAssignmentsForHITCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssignmentsForHITCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1113,7 +1113,7 @@ export const de_ListAssignmentsForHITCommand = async (
  */
 export const de_ListBonusPaymentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBonusPaymentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1133,7 +1133,7 @@ export const de_ListBonusPaymentsCommand = async (
  */
 export const de_ListHITsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListHITsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1153,7 +1153,7 @@ export const de_ListHITsCommand = async (
  */
 export const de_ListHITsForQualificationTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListHITsForQualificationTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1173,7 +1173,7 @@ export const de_ListHITsForQualificationTypeCommand = async (
  */
 export const de_ListQualificationRequestsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListQualificationRequestsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1193,7 +1193,7 @@ export const de_ListQualificationRequestsCommand = async (
  */
 export const de_ListQualificationTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListQualificationTypesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1213,7 +1213,7 @@ export const de_ListQualificationTypesCommand = async (
  */
 export const de_ListReviewableHITsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReviewableHITsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1233,7 +1233,7 @@ export const de_ListReviewableHITsCommand = async (
  */
 export const de_ListReviewPolicyResultsForHITCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReviewPolicyResultsForHITCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1253,7 +1253,7 @@ export const de_ListReviewPolicyResultsForHITCommand = async (
  */
 export const de_ListWorkerBlocksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkerBlocksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1273,7 +1273,7 @@ export const de_ListWorkerBlocksCommand = async (
  */
 export const de_ListWorkersWithQualificationTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkersWithQualificationTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1293,7 +1293,7 @@ export const de_ListWorkersWithQualificationTypeCommand = async (
  */
 export const de_NotifyWorkersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotifyWorkersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1313,7 +1313,7 @@ export const de_NotifyWorkersCommand = async (
  */
 export const de_RejectAssignmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RejectAssignmentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1333,7 +1333,7 @@ export const de_RejectAssignmentCommand = async (
  */
 export const de_RejectQualificationRequestCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RejectQualificationRequestCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1353,7 +1353,7 @@ export const de_RejectQualificationRequestCommand = async (
  */
 export const de_SendBonusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendBonusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1373,7 +1373,7 @@ export const de_SendBonusCommand = async (
  */
 export const de_SendTestEventNotificationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendTestEventNotificationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1393,7 +1393,7 @@ export const de_SendTestEventNotificationCommand = async (
  */
 export const de_UpdateExpirationForHITCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateExpirationForHITCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1413,7 +1413,7 @@ export const de_UpdateExpirationForHITCommand = async (
  */
 export const de_UpdateHITReviewStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateHITReviewStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1433,7 +1433,7 @@ export const de_UpdateHITReviewStatusCommand = async (
  */
 export const de_UpdateHITTypeOfHITCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateHITTypeOfHITCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1453,7 +1453,7 @@ export const de_UpdateHITTypeOfHITCommand = async (
  */
 export const de_UpdateNotificationSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateNotificationSettingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1473,7 +1473,7 @@ export const de_UpdateNotificationSettingsCommand = async (
  */
 export const de_UpdateQualificationTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateQualificationTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1877,7 +1877,7 @@ const de_ListBonusPaymentsResponse = (output: any, context: __SerdeContext): Lis
  */
 const de_ListHITsForQualificationTypeResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListHITsForQualificationTypeResponse => {
   return take(output, {
     HITs: (_: any) => de_HITList(_, context),
@@ -1902,7 +1902,7 @@ const de_ListHITsResponse = (output: any, context: __SerdeContext): ListHITsResp
  */
 const de_ListQualificationRequestsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListQualificationRequestsResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -1938,7 +1938,7 @@ const de_ListReviewableHITsResponse = (output: any, context: __SerdeContext): Li
  */
 const de_ListReviewPolicyResultsForHITResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListReviewPolicyResultsForHITResponse => {
   return take(output, {
     AssignmentReviewPolicy: _json,
@@ -1957,7 +1957,7 @@ const de_ListReviewPolicyResultsForHITResponse = (
  */
 const de_ListWorkersWithQualificationTypeResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListWorkersWithQualificationTypeResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -2170,7 +2170,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

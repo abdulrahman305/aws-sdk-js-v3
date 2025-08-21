@@ -9,7 +9,7 @@ import { OpsWorksCMClient } from "../OpsWorksCMClient";
 
 const checkState = async (
   client: OpsWorksCMClient,
-  input: DescribeNodeAssociationStatusCommandInput
+  input: DescribeNodeAssociationStatusCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -42,7 +42,7 @@ const checkState = async (
  */
 export const waitForNodeAssociated = async (
   params: WaiterConfiguration<OpsWorksCMClient>,
-  input: DescribeNodeAssociationStatusCommandInput
+  input: DescribeNodeAssociationStatusCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -54,7 +54,7 @@ export const waitForNodeAssociated = async (
  */
 export const waitUntilNodeAssociated = async (
   params: WaiterConfiguration<OpsWorksCMClient>,
-  input: DescribeNodeAssociationStatusCommandInput
+  input: DescribeNodeAssociationStatusCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

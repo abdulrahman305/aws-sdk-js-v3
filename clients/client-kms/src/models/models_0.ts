@@ -6697,7 +6697,7 @@ export interface VerifyMacResponse {
  * @internal
  */
 export const XksProxyAuthenticationCredentialTypeFilterSensitiveLog = (
-  obj: XksProxyAuthenticationCredentialType
+  obj: XksProxyAuthenticationCredentialType,
 ): any => ({
   ...obj,
   ...(obj.AccessKeyId && { AccessKeyId: SENSITIVE_STRING }),
@@ -6712,7 +6712,7 @@ export const CreateCustomKeyStoreRequestFilterSensitiveLog = (obj: CreateCustomK
   ...(obj.KeyStorePassword && { KeyStorePassword: SENSITIVE_STRING }),
   ...(obj.XksProxyAuthenticationCredential && {
     XksProxyAuthenticationCredential: XksProxyAuthenticationCredentialTypeFilterSensitiveLog(
-      obj.XksProxyAuthenticationCredential
+      obj.XksProxyAuthenticationCredential,
     ),
   }),
 });
@@ -6825,7 +6825,7 @@ export const UpdateCustomKeyStoreRequestFilterSensitiveLog = (obj: UpdateCustomK
   ...(obj.KeyStorePassword && { KeyStorePassword: SENSITIVE_STRING }),
   ...(obj.XksProxyAuthenticationCredential && {
     XksProxyAuthenticationCredential: XksProxyAuthenticationCredentialTypeFilterSensitiveLog(
-      obj.XksProxyAuthenticationCredential
+      obj.XksProxyAuthenticationCredential,
     ),
   }),
 });

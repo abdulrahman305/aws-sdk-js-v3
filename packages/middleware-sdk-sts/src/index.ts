@@ -46,7 +46,7 @@ export interface StsAuthConfigOptions {
  */
 export const resolveStsAuthConfig = <T>(
   input: T & PreviouslyResolved & StsAuthInputConfig,
-  { stsClientCtor }: StsAuthConfigOptions
+  { stsClientCtor }: StsAuthConfigOptions,
 ): T & StsAuthResolvedConfig =>
   resolveAwsAuthConfig({
     ...input,

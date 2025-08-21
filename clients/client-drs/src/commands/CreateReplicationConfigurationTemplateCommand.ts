@@ -165,7 +165,7 @@ export class CreateReplicationConfigurationTemplateCommand extends $Command
   .n("DrsClient", "CreateReplicationConfigurationTemplateCommand")
   .f(
     CreateReplicationConfigurationTemplateRequestFilterSensitiveLog,
-    ReplicationConfigurationTemplateFilterSensitiveLog
+    ReplicationConfigurationTemplateFilterSensitiveLog,
   )
   .ser(se_CreateReplicationConfigurationTemplateCommand)
   .de(de_CreateReplicationConfigurationTemplateCommand)

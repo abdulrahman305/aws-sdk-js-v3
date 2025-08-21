@@ -9218,7 +9218,7 @@ export const ServiceSpecificCredentialFilterSensitiveLog = (obj: ServiceSpecific
  * @internal
  */
 export const CreateServiceSpecificCredentialResponseFilterSensitiveLog = (
-  obj: CreateServiceSpecificCredentialResponse
+  obj: CreateServiceSpecificCredentialResponse,
 ): any => ({
   ...obj,
   ...(obj.ServiceSpecificCredential && {
@@ -9257,7 +9257,7 @@ export const ListVirtualMFADevicesResponseFilterSensitiveLog = (obj: ListVirtual
  * @internal
  */
 export const ResetServiceSpecificCredentialResponseFilterSensitiveLog = (
-  obj: ResetServiceSpecificCredentialResponse
+  obj: ResetServiceSpecificCredentialResponse,
 ): any => ({
   ...obj,
   ...(obj.ServiceSpecificCredential && {

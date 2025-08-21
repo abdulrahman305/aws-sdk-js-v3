@@ -8971,7 +8971,7 @@ export const AnonymousUserSnapshotJobResultFilterSensitiveLog = (obj: AnonymousU
  * @internal
  */
 export const AssetBundleImportJobDataSourceCredentialPairFilterSensitiveLog = (
-  obj: AssetBundleImportJobDataSourceCredentialPair
+  obj: AssetBundleImportJobDataSourceCredentialPair,
 ): any => ({
   ...obj,
 });
@@ -8980,7 +8980,7 @@ export const AssetBundleImportJobDataSourceCredentialPairFilterSensitiveLog = (
  * @internal
  */
 export const AssetBundleImportJobDataSourceCredentialsFilterSensitiveLog = (
-  obj: AssetBundleImportJobDataSourceCredentials
+  obj: AssetBundleImportJobDataSourceCredentials,
 ): any => ({
   ...obj,
   ...(obj.CredentialPair && { CredentialPair: SENSITIVE_STRING }),
@@ -8990,7 +8990,7 @@ export const AssetBundleImportJobDataSourceCredentialsFilterSensitiveLog = (
  * @internal
  */
 export const AssetBundleImportJobDataSourceOverrideParametersFilterSensitiveLog = (
-  obj: AssetBundleImportJobDataSourceOverrideParameters
+  obj: AssetBundleImportJobDataSourceOverrideParameters,
 ): any => ({
   ...obj,
   ...(obj.DataSourceParameters && { DataSourceParameters: obj.DataSourceParameters }),
@@ -9001,12 +9001,12 @@ export const AssetBundleImportJobDataSourceOverrideParametersFilterSensitiveLog 
  * @internal
  */
 export const AssetBundleImportJobOverrideParametersFilterSensitiveLog = (
-  obj: AssetBundleImportJobOverrideParameters
+  obj: AssetBundleImportJobOverrideParameters,
 ): any => ({
   ...obj,
   ...(obj.DataSources && {
     DataSources: obj.DataSources.map((item) =>
-      AssetBundleImportJobDataSourceOverrideParametersFilterSensitiveLog(item)
+      AssetBundleImportJobDataSourceOverrideParametersFilterSensitiveLog(item),
     ),
   }),
 });
@@ -9186,18 +9186,18 @@ export const CreateDataSetRequestFilterSensitiveLog = (obj: CreateDataSetRequest
   ...(obj.PhysicalTableMap && {
     PhysicalTableMap: Object.entries(obj.PhysicalTableMap).reduce(
       (acc: any, [key, value]: [string, PhysicalTable]) => ((acc[key] = value), acc),
-      {}
+      {},
     ),
   }),
   ...(obj.LogicalTableMap && {
     LogicalTableMap: Object.entries(obj.LogicalTableMap).reduce(
       (acc: any, [key, value]: [string, LogicalTable]) => ((acc[key] = LogicalTableFilterSensitiveLog(value)), acc),
-      {}
+      {},
     ),
   }),
   ...(obj.RowLevelPermissionTagConfiguration && {
     RowLevelPermissionTagConfiguration: RowLevelPermissionTagConfigurationFilterSensitiveLog(
-      obj.RowLevelPermissionTagConfiguration
+      obj.RowLevelPermissionTagConfiguration,
     ),
   }),
 });

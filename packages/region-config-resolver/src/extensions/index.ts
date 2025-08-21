@@ -32,7 +32,7 @@ export const getAwsRegionExtensionConfiguration = (runtimeConfig: RegionExtensio
  * @internal
  */
 export const resolveAwsRegionExtensionConfiguration = (
-  awsRegionExtensionConfiguration: AwsRegionExtensionConfiguration
+  awsRegionExtensionConfiguration: AwsRegionExtensionConfiguration,
 ): RegionExtensionRuntimeConfigType => {
   return {
     region: awsRegionExtensionConfiguration.region(),

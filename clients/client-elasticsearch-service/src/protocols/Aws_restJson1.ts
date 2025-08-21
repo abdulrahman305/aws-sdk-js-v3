@@ -261,7 +261,7 @@ import {
  */
 export const se_AcceptInboundCrossClusterSearchConnectionCommand = async (
   input: AcceptInboundCrossClusterSearchConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -270,7 +270,7 @@ export const se_AcceptInboundCrossClusterSearchConnectionCommand = async (
     "CrossClusterSearchConnectionId",
     () => input.CrossClusterSearchConnectionId!,
     "{CrossClusterSearchConnectionId}",
-    false
+    false,
   );
   let body: any;
   b.m("PUT").h(headers).b(body);
@@ -282,7 +282,7 @@ export const se_AcceptInboundCrossClusterSearchConnectionCommand = async (
  */
 export const se_AddTagsCommand = async (
   input: AddTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -294,7 +294,7 @@ export const se_AddTagsCommand = async (
     take(input, {
       ARN: [],
       TagList: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -305,7 +305,7 @@ export const se_AddTagsCommand = async (
  */
 export const se_AssociatePackageCommand = async (
   input: AssociatePackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -322,7 +322,7 @@ export const se_AssociatePackageCommand = async (
  */
 export const se_AuthorizeVpcEndpointAccessCommand = async (
   input: AuthorizeVpcEndpointAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -334,7 +334,7 @@ export const se_AuthorizeVpcEndpointAccessCommand = async (
   body = JSON.stringify(
     take(input, {
       Account: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -345,7 +345,7 @@ export const se_AuthorizeVpcEndpointAccessCommand = async (
  */
 export const se_CancelDomainConfigChangeCommand = async (
   input: CancelDomainConfigChangeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -357,7 +357,7 @@ export const se_CancelDomainConfigChangeCommand = async (
   body = JSON.stringify(
     take(input, {
       DryRun: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -368,7 +368,7 @@ export const se_CancelDomainConfigChangeCommand = async (
  */
 export const se_CancelElasticsearchServiceSoftwareUpdateCommand = async (
   input: CancelElasticsearchServiceSoftwareUpdateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -379,7 +379,7 @@ export const se_CancelElasticsearchServiceSoftwareUpdateCommand = async (
   body = JSON.stringify(
     take(input, {
       DomainName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -390,7 +390,7 @@ export const se_CancelElasticsearchServiceSoftwareUpdateCommand = async (
  */
 export const se_CreateElasticsearchDomainCommand = async (
   input: CreateElasticsearchDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -416,7 +416,7 @@ export const se_CreateElasticsearchDomainCommand = async (
       SnapshotOptions: (_) => _json(_),
       TagList: (_) => _json(_),
       VPCOptions: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -427,7 +427,7 @@ export const se_CreateElasticsearchDomainCommand = async (
  */
 export const se_CreateOutboundCrossClusterSearchConnectionCommand = async (
   input: CreateOutboundCrossClusterSearchConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -440,7 +440,7 @@ export const se_CreateOutboundCrossClusterSearchConnectionCommand = async (
       ConnectionAlias: [],
       DestinationDomainInfo: (_) => _json(_),
       SourceDomainInfo: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -451,7 +451,7 @@ export const se_CreateOutboundCrossClusterSearchConnectionCommand = async (
  */
 export const se_CreatePackageCommand = async (
   input: CreatePackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -465,7 +465,7 @@ export const se_CreatePackageCommand = async (
       PackageName: [],
       PackageSource: (_) => _json(_),
       PackageType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -476,7 +476,7 @@ export const se_CreatePackageCommand = async (
  */
 export const se_CreateVpcEndpointCommand = async (
   input: CreateVpcEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -489,7 +489,7 @@ export const se_CreateVpcEndpointCommand = async (
       ClientToken: [],
       DomainArn: [],
       VpcOptions: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -500,7 +500,7 @@ export const se_CreateVpcEndpointCommand = async (
  */
 export const se_DeleteElasticsearchDomainCommand = async (
   input: DeleteElasticsearchDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -516,7 +516,7 @@ export const se_DeleteElasticsearchDomainCommand = async (
  */
 export const se_DeleteElasticsearchServiceRoleCommand = async (
   input: DeleteElasticsearchServiceRoleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -534,7 +534,7 @@ export const se_DeleteElasticsearchServiceRoleCommand = async (
  */
 export const se_DeleteInboundCrossClusterSearchConnectionCommand = async (
   input: DeleteInboundCrossClusterSearchConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -543,7 +543,7 @@ export const se_DeleteInboundCrossClusterSearchConnectionCommand = async (
     "CrossClusterSearchConnectionId",
     () => input.CrossClusterSearchConnectionId!,
     "{CrossClusterSearchConnectionId}",
-    false
+    false,
   );
   let body: any;
   b.m("DELETE").h(headers).b(body);
@@ -555,7 +555,7 @@ export const se_DeleteInboundCrossClusterSearchConnectionCommand = async (
  */
 export const se_DeleteOutboundCrossClusterSearchConnectionCommand = async (
   input: DeleteOutboundCrossClusterSearchConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -564,7 +564,7 @@ export const se_DeleteOutboundCrossClusterSearchConnectionCommand = async (
     "CrossClusterSearchConnectionId",
     () => input.CrossClusterSearchConnectionId!,
     "{CrossClusterSearchConnectionId}",
-    false
+    false,
   );
   let body: any;
   b.m("DELETE").h(headers).b(body);
@@ -576,7 +576,7 @@ export const se_DeleteOutboundCrossClusterSearchConnectionCommand = async (
  */
 export const se_DeletePackageCommand = async (
   input: DeletePackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -592,7 +592,7 @@ export const se_DeletePackageCommand = async (
  */
 export const se_DeleteVpcEndpointCommand = async (
   input: DeleteVpcEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -608,7 +608,7 @@ export const se_DeleteVpcEndpointCommand = async (
  */
 export const se_DescribeDomainAutoTunesCommand = async (
   input: DescribeDomainAutoTunesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -621,7 +621,7 @@ export const se_DescribeDomainAutoTunesCommand = async (
     take(input, {
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("GET").h(headers).b(body);
   return b.build();
@@ -632,7 +632,7 @@ export const se_DescribeDomainAutoTunesCommand = async (
  */
 export const se_DescribeDomainChangeProgressCommand = async (
   input: DescribeDomainChangeProgressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -651,7 +651,7 @@ export const se_DescribeDomainChangeProgressCommand = async (
  */
 export const se_DescribeElasticsearchDomainCommand = async (
   input: DescribeElasticsearchDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -667,7 +667,7 @@ export const se_DescribeElasticsearchDomainCommand = async (
  */
 export const se_DescribeElasticsearchDomainConfigCommand = async (
   input: DescribeElasticsearchDomainConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -683,7 +683,7 @@ export const se_DescribeElasticsearchDomainConfigCommand = async (
  */
 export const se_DescribeElasticsearchDomainsCommand = async (
   input: DescribeElasticsearchDomainsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -694,7 +694,7 @@ export const se_DescribeElasticsearchDomainsCommand = async (
   body = JSON.stringify(
     take(input, {
       DomainNames: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -705,7 +705,7 @@ export const se_DescribeElasticsearchDomainsCommand = async (
  */
 export const se_DescribeElasticsearchInstanceTypeLimitsCommand = async (
   input: DescribeElasticsearchInstanceTypeLimitsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -725,7 +725,7 @@ export const se_DescribeElasticsearchInstanceTypeLimitsCommand = async (
  */
 export const se_DescribeInboundCrossClusterSearchConnectionsCommand = async (
   input: DescribeInboundCrossClusterSearchConnectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -738,7 +738,7 @@ export const se_DescribeInboundCrossClusterSearchConnectionsCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -749,7 +749,7 @@ export const se_DescribeInboundCrossClusterSearchConnectionsCommand = async (
  */
 export const se_DescribeOutboundCrossClusterSearchConnectionsCommand = async (
   input: DescribeOutboundCrossClusterSearchConnectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -762,7 +762,7 @@ export const se_DescribeOutboundCrossClusterSearchConnectionsCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -773,7 +773,7 @@ export const se_DescribeOutboundCrossClusterSearchConnectionsCommand = async (
  */
 export const se_DescribePackagesCommand = async (
   input: DescribePackagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -786,7 +786,7 @@ export const se_DescribePackagesCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -797,7 +797,7 @@ export const se_DescribePackagesCommand = async (
  */
 export const se_DescribeReservedElasticsearchInstanceOfferingsCommand = async (
   input: DescribeReservedElasticsearchInstanceOfferingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -817,7 +817,7 @@ export const se_DescribeReservedElasticsearchInstanceOfferingsCommand = async (
  */
 export const se_DescribeReservedElasticsearchInstancesCommand = async (
   input: DescribeReservedElasticsearchInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -837,7 +837,7 @@ export const se_DescribeReservedElasticsearchInstancesCommand = async (
  */
 export const se_DescribeVpcEndpointsCommand = async (
   input: DescribeVpcEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -848,7 +848,7 @@ export const se_DescribeVpcEndpointsCommand = async (
   body = JSON.stringify(
     take(input, {
       VpcEndpointIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -859,7 +859,7 @@ export const se_DescribeVpcEndpointsCommand = async (
  */
 export const se_DissociatePackageCommand = async (
   input: DissociatePackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -876,7 +876,7 @@ export const se_DissociatePackageCommand = async (
  */
 export const se_GetCompatibleElasticsearchVersionsCommand = async (
   input: GetCompatibleElasticsearchVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -894,7 +894,7 @@ export const se_GetCompatibleElasticsearchVersionsCommand = async (
  */
 export const se_GetPackageVersionHistoryCommand = async (
   input: GetPackageVersionHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -914,7 +914,7 @@ export const se_GetPackageVersionHistoryCommand = async (
  */
 export const se_GetUpgradeHistoryCommand = async (
   input: GetUpgradeHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -934,7 +934,7 @@ export const se_GetUpgradeHistoryCommand = async (
  */
 export const se_GetUpgradeStatusCommand = async (
   input: GetUpgradeStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -950,7 +950,7 @@ export const se_GetUpgradeStatusCommand = async (
  */
 export const se_ListDomainNamesCommand = async (
   input: ListDomainNamesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -968,7 +968,7 @@ export const se_ListDomainNamesCommand = async (
  */
 export const se_ListDomainsForPackageCommand = async (
   input: ListDomainsForPackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -988,7 +988,7 @@ export const se_ListDomainsForPackageCommand = async (
  */
 export const se_ListElasticsearchInstanceTypesCommand = async (
   input: ListElasticsearchInstanceTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1009,7 +1009,7 @@ export const se_ListElasticsearchInstanceTypesCommand = async (
  */
 export const se_ListElasticsearchVersionsCommand = async (
   input: ListElasticsearchVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1028,7 +1028,7 @@ export const se_ListElasticsearchVersionsCommand = async (
  */
 export const se_ListPackagesForDomainCommand = async (
   input: ListPackagesForDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1048,7 +1048,7 @@ export const se_ListPackagesForDomainCommand = async (
  */
 export const se_ListTagsCommand = async (
   input: ListTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1066,7 +1066,7 @@ export const se_ListTagsCommand = async (
  */
 export const se_ListVpcEndpointAccessCommand = async (
   input: ListVpcEndpointAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1085,7 +1085,7 @@ export const se_ListVpcEndpointAccessCommand = async (
  */
 export const se_ListVpcEndpointsCommand = async (
   input: ListVpcEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1103,7 +1103,7 @@ export const se_ListVpcEndpointsCommand = async (
  */
 export const se_ListVpcEndpointsForDomainCommand = async (
   input: ListVpcEndpointsForDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1122,7 +1122,7 @@ export const se_ListVpcEndpointsForDomainCommand = async (
  */
 export const se_PurchaseReservedElasticsearchInstanceOfferingCommand = async (
   input: PurchaseReservedElasticsearchInstanceOfferingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1135,7 +1135,7 @@ export const se_PurchaseReservedElasticsearchInstanceOfferingCommand = async (
       InstanceCount: [],
       ReservationName: [],
       ReservedElasticsearchInstanceOfferingId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1146,7 +1146,7 @@ export const se_PurchaseReservedElasticsearchInstanceOfferingCommand = async (
  */
 export const se_RejectInboundCrossClusterSearchConnectionCommand = async (
   input: RejectInboundCrossClusterSearchConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1155,7 +1155,7 @@ export const se_RejectInboundCrossClusterSearchConnectionCommand = async (
     "CrossClusterSearchConnectionId",
     () => input.CrossClusterSearchConnectionId!,
     "{CrossClusterSearchConnectionId}",
-    false
+    false,
   );
   let body: any;
   b.m("PUT").h(headers).b(body);
@@ -1167,7 +1167,7 @@ export const se_RejectInboundCrossClusterSearchConnectionCommand = async (
  */
 export const se_RemoveTagsCommand = async (
   input: RemoveTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1179,7 +1179,7 @@ export const se_RemoveTagsCommand = async (
     take(input, {
       ARN: [],
       TagKeys: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1190,7 +1190,7 @@ export const se_RemoveTagsCommand = async (
  */
 export const se_RevokeVpcEndpointAccessCommand = async (
   input: RevokeVpcEndpointAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1202,7 +1202,7 @@ export const se_RevokeVpcEndpointAccessCommand = async (
   body = JSON.stringify(
     take(input, {
       Account: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1213,7 +1213,7 @@ export const se_RevokeVpcEndpointAccessCommand = async (
  */
 export const se_StartElasticsearchServiceSoftwareUpdateCommand = async (
   input: StartElasticsearchServiceSoftwareUpdateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1224,7 +1224,7 @@ export const se_StartElasticsearchServiceSoftwareUpdateCommand = async (
   body = JSON.stringify(
     take(input, {
       DomainName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1235,7 +1235,7 @@ export const se_StartElasticsearchServiceSoftwareUpdateCommand = async (
  */
 export const se_UpdateElasticsearchDomainConfigCommand = async (
   input: UpdateElasticsearchDomainConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1260,7 +1260,7 @@ export const se_UpdateElasticsearchDomainConfigCommand = async (
       NodeToNodeEncryptionOptions: (_) => _json(_),
       SnapshotOptions: (_) => _json(_),
       VPCOptions: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1271,7 +1271,7 @@ export const se_UpdateElasticsearchDomainConfigCommand = async (
  */
 export const se_UpdatePackageCommand = async (
   input: UpdatePackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1285,7 +1285,7 @@ export const se_UpdatePackageCommand = async (
       PackageDescription: [],
       PackageID: [],
       PackageSource: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1296,7 +1296,7 @@ export const se_UpdatePackageCommand = async (
  */
 export const se_UpdateVpcEndpointCommand = async (
   input: UpdateVpcEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1308,7 +1308,7 @@ export const se_UpdateVpcEndpointCommand = async (
     take(input, {
       VpcEndpointId: [],
       VpcOptions: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1319,7 +1319,7 @@ export const se_UpdateVpcEndpointCommand = async (
  */
 export const se_UpgradeElasticsearchDomainCommand = async (
   input: UpgradeElasticsearchDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1332,7 +1332,7 @@ export const se_UpgradeElasticsearchDomainCommand = async (
       DomainName: [],
       PerformCheckOnly: [],
       TargetVersion: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1343,7 +1343,7 @@ export const se_UpgradeElasticsearchDomainCommand = async (
  */
 export const de_AcceptInboundCrossClusterSearchConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptInboundCrossClusterSearchConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1364,7 +1364,7 @@ export const de_AcceptInboundCrossClusterSearchConnectionCommand = async (
  */
 export const de_AddTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddTagsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1381,7 +1381,7 @@ export const de_AddTagsCommand = async (
  */
 export const de_AssociatePackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociatePackageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1402,7 +1402,7 @@ export const de_AssociatePackageCommand = async (
  */
 export const de_AuthorizeVpcEndpointAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AuthorizeVpcEndpointAccessCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1423,7 +1423,7 @@ export const de_AuthorizeVpcEndpointAccessCommand = async (
  */
 export const de_CancelDomainConfigChangeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelDomainConfigChangeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1446,7 +1446,7 @@ export const de_CancelDomainConfigChangeCommand = async (
  */
 export const de_CancelElasticsearchServiceSoftwareUpdateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelElasticsearchServiceSoftwareUpdateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1467,7 +1467,7 @@ export const de_CancelElasticsearchServiceSoftwareUpdateCommand = async (
  */
 export const de_CreateElasticsearchDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateElasticsearchDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1488,7 +1488,7 @@ export const de_CreateElasticsearchDomainCommand = async (
  */
 export const de_CreateOutboundCrossClusterSearchConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateOutboundCrossClusterSearchConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1513,7 +1513,7 @@ export const de_CreateOutboundCrossClusterSearchConnectionCommand = async (
  */
 export const de_CreatePackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePackageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1534,7 +1534,7 @@ export const de_CreatePackageCommand = async (
  */
 export const de_CreateVpcEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVpcEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1555,7 +1555,7 @@ export const de_CreateVpcEndpointCommand = async (
  */
 export const de_DeleteElasticsearchDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteElasticsearchDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1576,7 +1576,7 @@ export const de_DeleteElasticsearchDomainCommand = async (
  */
 export const de_DeleteElasticsearchServiceRoleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteElasticsearchServiceRoleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1593,7 +1593,7 @@ export const de_DeleteElasticsearchServiceRoleCommand = async (
  */
 export const de_DeleteInboundCrossClusterSearchConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteInboundCrossClusterSearchConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1614,7 +1614,7 @@ export const de_DeleteInboundCrossClusterSearchConnectionCommand = async (
  */
 export const de_DeleteOutboundCrossClusterSearchConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteOutboundCrossClusterSearchConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1635,7 +1635,7 @@ export const de_DeleteOutboundCrossClusterSearchConnectionCommand = async (
  */
 export const de_DeletePackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePackageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1656,7 +1656,7 @@ export const de_DeletePackageCommand = async (
  */
 export const de_DeleteVpcEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVpcEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1677,7 +1677,7 @@ export const de_DeleteVpcEndpointCommand = async (
  */
 export const de_DescribeDomainAutoTunesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDomainAutoTunesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1699,7 +1699,7 @@ export const de_DescribeDomainAutoTunesCommand = async (
  */
 export const de_DescribeDomainChangeProgressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDomainChangeProgressCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1720,7 +1720,7 @@ export const de_DescribeDomainChangeProgressCommand = async (
  */
 export const de_DescribeElasticsearchDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeElasticsearchDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1741,7 +1741,7 @@ export const de_DescribeElasticsearchDomainCommand = async (
  */
 export const de_DescribeElasticsearchDomainConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeElasticsearchDomainConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1762,7 +1762,7 @@ export const de_DescribeElasticsearchDomainConfigCommand = async (
  */
 export const de_DescribeElasticsearchDomainsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeElasticsearchDomainsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1783,7 +1783,7 @@ export const de_DescribeElasticsearchDomainsCommand = async (
  */
 export const de_DescribeElasticsearchInstanceTypeLimitsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeElasticsearchInstanceTypeLimitsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1804,7 +1804,7 @@ export const de_DescribeElasticsearchInstanceTypeLimitsCommand = async (
  */
 export const de_DescribeInboundCrossClusterSearchConnectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInboundCrossClusterSearchConnectionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1826,7 +1826,7 @@ export const de_DescribeInboundCrossClusterSearchConnectionsCommand = async (
  */
 export const de_DescribeOutboundCrossClusterSearchConnectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeOutboundCrossClusterSearchConnectionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1848,7 +1848,7 @@ export const de_DescribeOutboundCrossClusterSearchConnectionsCommand = async (
  */
 export const de_DescribePackagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePackagesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1870,7 +1870,7 @@ export const de_DescribePackagesCommand = async (
  */
 export const de_DescribeReservedElasticsearchInstanceOfferingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReservedElasticsearchInstanceOfferingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1892,7 +1892,7 @@ export const de_DescribeReservedElasticsearchInstanceOfferingsCommand = async (
  */
 export const de_DescribeReservedElasticsearchInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReservedElasticsearchInstancesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1914,7 +1914,7 @@ export const de_DescribeReservedElasticsearchInstancesCommand = async (
  */
 export const de_DescribeVpcEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVpcEndpointsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1936,7 +1936,7 @@ export const de_DescribeVpcEndpointsCommand = async (
  */
 export const de_DissociatePackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DissociatePackageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1957,7 +1957,7 @@ export const de_DissociatePackageCommand = async (
  */
 export const de_GetCompatibleElasticsearchVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCompatibleElasticsearchVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1978,7 +1978,7 @@ export const de_GetCompatibleElasticsearchVersionsCommand = async (
  */
 export const de_GetPackageVersionHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPackageVersionHistoryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2001,7 +2001,7 @@ export const de_GetPackageVersionHistoryCommand = async (
  */
 export const de_GetUpgradeHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetUpgradeHistoryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2023,7 +2023,7 @@ export const de_GetUpgradeHistoryCommand = async (
  */
 export const de_GetUpgradeStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetUpgradeStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2046,7 +2046,7 @@ export const de_GetUpgradeStatusCommand = async (
  */
 export const de_ListDomainNamesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDomainNamesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2067,7 +2067,7 @@ export const de_ListDomainNamesCommand = async (
  */
 export const de_ListDomainsForPackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDomainsForPackageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2089,7 +2089,7 @@ export const de_ListDomainsForPackageCommand = async (
  */
 export const de_ListElasticsearchInstanceTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListElasticsearchInstanceTypesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2111,7 +2111,7 @@ export const de_ListElasticsearchInstanceTypesCommand = async (
  */
 export const de_ListElasticsearchVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListElasticsearchVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2133,7 +2133,7 @@ export const de_ListElasticsearchVersionsCommand = async (
  */
 export const de_ListPackagesForDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPackagesForDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2155,7 +2155,7 @@ export const de_ListPackagesForDomainCommand = async (
  */
 export const de_ListTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2176,7 +2176,7 @@ export const de_ListTagsCommand = async (
  */
 export const de_ListVpcEndpointAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVpcEndpointAccessCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2198,7 +2198,7 @@ export const de_ListVpcEndpointAccessCommand = async (
  */
 export const de_ListVpcEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVpcEndpointsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2220,7 +2220,7 @@ export const de_ListVpcEndpointsCommand = async (
  */
 export const de_ListVpcEndpointsForDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVpcEndpointsForDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2242,7 +2242,7 @@ export const de_ListVpcEndpointsForDomainCommand = async (
  */
 export const de_PurchaseReservedElasticsearchInstanceOfferingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PurchaseReservedElasticsearchInstanceOfferingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2264,7 +2264,7 @@ export const de_PurchaseReservedElasticsearchInstanceOfferingCommand = async (
  */
 export const de_RejectInboundCrossClusterSearchConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RejectInboundCrossClusterSearchConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2285,7 +2285,7 @@ export const de_RejectInboundCrossClusterSearchConnectionCommand = async (
  */
 export const de_RemoveTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveTagsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2302,7 +2302,7 @@ export const de_RemoveTagsCommand = async (
  */
 export const de_RevokeVpcEndpointAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RevokeVpcEndpointAccessCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2319,7 +2319,7 @@ export const de_RevokeVpcEndpointAccessCommand = async (
  */
 export const de_StartElasticsearchServiceSoftwareUpdateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartElasticsearchServiceSoftwareUpdateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2340,7 +2340,7 @@ export const de_StartElasticsearchServiceSoftwareUpdateCommand = async (
  */
 export const de_UpdateElasticsearchDomainConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateElasticsearchDomainConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2362,7 +2362,7 @@ export const de_UpdateElasticsearchDomainConfigCommand = async (
  */
 export const de_UpdatePackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePackageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2383,7 +2383,7 @@ export const de_UpdatePackageCommand = async (
  */
 export const de_UpdateVpcEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVpcEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2404,7 +2404,7 @@ export const de_UpdateVpcEndpointCommand = async (
  */
 export const de_UpgradeElasticsearchDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpgradeElasticsearchDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2482,7 +2482,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2536,7 +2536,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_DisabledOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisabledOperationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2573,7 +2573,7 @@ const de_InternalExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InvalidPaginationTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPaginationTokenException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2593,7 +2593,7 @@ const de_InvalidPaginationTokenExceptionRes = async (
  */
 const de_InvalidTypeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTypeException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2613,7 +2613,7 @@ const de_InvalidTypeExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2633,7 +2633,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAlreadyExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2653,7 +2653,7 @@ const de_ResourceAlreadyExistsExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3082,7 +3082,7 @@ const de_EBSOptionsStatus = (output: any, context: __SerdeContext): EBSOptionsSt
  */
 const de_ElasticsearchClusterConfigStatus = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ElasticsearchClusterConfigStatus => {
   return take(output, {
     Options: _json,
@@ -3236,7 +3236,7 @@ const de_LogPublishingOptionsStatus = (output: any, context: __SerdeContext): Lo
  */
 const de_NodeToNodeEncryptionOptionsStatus = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): NodeToNodeEncryptionOptionsStatus => {
   return take(output, {
     Options: _json,
@@ -3363,7 +3363,7 @@ const de_ReservedElasticsearchInstance = (output: any, context: __SerdeContext):
  */
 const de_ReservedElasticsearchInstanceList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReservedElasticsearchInstance[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -3378,7 +3378,7 @@ const de_ReservedElasticsearchInstanceList = (
  */
 const de_ReservedElasticsearchInstanceOffering = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReservedElasticsearchInstanceOffering => {
   return take(output, {
     CurrencyCode: __expectString,
@@ -3397,7 +3397,7 @@ const de_ReservedElasticsearchInstanceOffering = (
  */
 const de_ReservedElasticsearchInstanceOfferingList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReservedElasticsearchInstanceOffering[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)

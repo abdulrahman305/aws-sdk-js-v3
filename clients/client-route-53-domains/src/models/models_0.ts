@@ -4000,7 +4000,7 @@ export interface ViewBillingResponse {
  * @internal
  */
 export const AcceptDomainTransferFromAnotherAwsAccountRequestFilterSensitiveLog = (
-  obj: AcceptDomainTransferFromAnotherAwsAccountRequest
+  obj: AcceptDomainTransferFromAnotherAwsAccountRequest,
 ): any => ({
   ...obj,
   ...(obj.Password && { Password: SENSITIVE_STRING }),
@@ -4070,7 +4070,7 @@ export const RegisterDomainRequestFilterSensitiveLog = (obj: RegisterDomainReque
  * @internal
  */
 export const ResendContactReachabilityEmailResponseFilterSensitiveLog = (
-  obj: ResendContactReachabilityEmailResponse
+  obj: ResendContactReachabilityEmailResponse,
 ): any => ({
   ...obj,
   ...(obj.emailAddress && { emailAddress: SENSITIVE_STRING }),
@@ -4100,7 +4100,7 @@ export const TransferDomainRequestFilterSensitiveLog = (obj: TransferDomainReque
  * @internal
  */
 export const TransferDomainToAnotherAwsAccountResponseFilterSensitiveLog = (
-  obj: TransferDomainToAnotherAwsAccountResponse
+  obj: TransferDomainToAnotherAwsAccountResponse,
 ): any => ({
   ...obj,
   ...(obj.Password && { Password: SENSITIVE_STRING }),

@@ -63,7 +63,7 @@ export const fromTemporaryCredentials = (options: FromTemporaryCredentialsOption
           {
             tryNextLink: false,
             logger: options.logger,
-          }
+          },
         );
       }
       params.TokenCode = await options.mfaCodeProvider(params?.SerialNumber);

@@ -26,5 +26,5 @@ export const paginateListMediaPipelineKinesisVideoStreamPools: (
   ListMediaPipelineKinesisVideoStreamPoolsCommand,
   "NextToken",
   "NextToken",
-  "MaxResults"
+  "MaxResults",
 );

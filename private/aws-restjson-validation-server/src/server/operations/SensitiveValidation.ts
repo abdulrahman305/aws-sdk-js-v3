@@ -76,14 +76,14 @@ export class SensitiveValidationSerializer
 }
 
 export const getSensitiveValidationHandler = <Context>(
-  operation: __Operation<SensitiveValidationServerInput, SensitiveValidationServerOutput, Context>
+  operation: __Operation<SensitiveValidationServerInput, SensitiveValidationServerOutput, Context>,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJsonValidation", "SensitiveValidation">([
     new httpbinding.UriSpec<"RestJsonValidation", "SensitiveValidation">(
       "POST",
       [{ type: "path_literal", value: "SensitiveValidation" }],
       [],
-      { service: "RestJsonValidation", operation: "SensitiveValidation" }
+      { service: "RestJsonValidation", operation: "SensitiveValidation" },
     ),
   ]);
   const customizer: __ValidationCustomizer<"SensitiveValidation"> = (ctx, failures) => {
@@ -105,7 +105,7 @@ export const getSensitiveValidationHandler = <Context>(
     mux,
     new SensitiveValidationSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -126,7 +126,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -168,7 +168,7 @@ export class SensitiveValidationHandler<Context> implements __ServiceHandler<Con
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"SensitiveValidation">;
   /**
@@ -189,7 +189,7 @@ export class SensitiveValidationHandler<Context> implements __ServiceHandler<Con
       SensitiveValidationErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"SensitiveValidation">
+    validationCustomizer: __ValidationCustomizer<"SensitiveValidation">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -201,7 +201,7 @@ export class SensitiveValidationHandler<Context> implements __ServiceHandler<Con
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson.validation#RestJsonValidation.SensitiveValidation. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson.validation#RestJsonValidation.SensitiveValidation. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -213,7 +213,7 @@ export class SensitiveValidationHandler<Context> implements __ServiceHandler<Con
       this.operation,
       this.serializeFrameworkException,
       SensitiveValidationServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

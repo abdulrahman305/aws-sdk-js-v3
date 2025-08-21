@@ -9,7 +9,7 @@ import { NimbleClient } from "../NimbleClient";
 
 const checkState = async (
   client: NimbleClient,
-  input: GetStreamingSessionStreamCommandInput
+  input: GetStreamingSessionStreamCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -42,7 +42,7 @@ const checkState = async (
  */
 export const waitForStreamingSessionStreamReady = async (
   params: WaiterConfiguration<NimbleClient>,
-  input: GetStreamingSessionStreamCommandInput
+  input: GetStreamingSessionStreamCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 150 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -54,7 +54,7 @@ export const waitForStreamingSessionStreamReady = async (
  */
 export const waitUntilStreamingSessionStreamReady = async (
   params: WaiterConfiguration<NimbleClient>,
-  input: GetStreamingSessionStreamCommandInput
+  input: GetStreamingSessionStreamCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 150 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

@@ -141,7 +141,7 @@ export class CreateMediaPipelineKinesisVideoStreamPoolCommand extends $Command
   .n("ChimeSDKMediaPipelinesClient", "CreateMediaPipelineKinesisVideoStreamPoolCommand")
   .f(
     CreateMediaPipelineKinesisVideoStreamPoolRequestFilterSensitiveLog,
-    CreateMediaPipelineKinesisVideoStreamPoolResponseFilterSensitiveLog
+    CreateMediaPipelineKinesisVideoStreamPoolResponseFilterSensitiveLog,
   )
   .ser(se_CreateMediaPipelineKinesisVideoStreamPoolCommand)
   .de(de_CreateMediaPipelineKinesisVideoStreamPoolCommand)

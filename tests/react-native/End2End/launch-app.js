@@ -45,7 +45,7 @@ const run = async () => {
   await spawnPromise(
     join("node_modules", ".bin", "detox"),
     ["test", "--configuration", "ios", "--loglevel", "verbose"],
-    { cwd: __dirname }
+    { cwd: __dirname },
   );
   localRegistry.kill(9);
 };

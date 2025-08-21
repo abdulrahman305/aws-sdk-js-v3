@@ -44,7 +44,7 @@ const checkState = async (client: ElasticTranscoderClient, input: ReadJobCommand
  */
 export const waitForJobComplete = async (
   params: WaiterConfiguration<ElasticTranscoderClient>,
-  input: ReadJobCommandInput
+  input: ReadJobCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -56,7 +56,7 @@ export const waitForJobComplete = async (
  */
 export const waitUntilJobComplete = async (
   params: WaiterConfiguration<ElasticTranscoderClient>,
-  input: ReadJobCommandInput
+  input: ReadJobCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

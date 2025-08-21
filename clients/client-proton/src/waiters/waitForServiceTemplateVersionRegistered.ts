@@ -9,7 +9,7 @@ import { ProtonClient } from "../ProtonClient";
 
 const checkState = async (
   client: ProtonClient,
-  input: GetServiceTemplateVersionCommandInput
+  input: GetServiceTemplateVersionCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -50,7 +50,7 @@ const checkState = async (
  */
 export const waitForServiceTemplateVersionRegistered = async (
   params: WaiterConfiguration<ProtonClient>,
-  input: GetServiceTemplateVersionCommandInput
+  input: GetServiceTemplateVersionCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 2, maxDelay: 300 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -62,7 +62,7 @@ export const waitForServiceTemplateVersionRegistered = async (
  */
 export const waitUntilServiceTemplateVersionRegistered = async (
   params: WaiterConfiguration<ProtonClient>,
-  input: GetServiceTemplateVersionCommandInput
+  input: GetServiceTemplateVersionCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 2, maxDelay: 300 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

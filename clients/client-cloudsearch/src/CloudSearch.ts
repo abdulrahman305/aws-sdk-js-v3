@@ -169,13 +169,13 @@ export interface CloudSearch {
    */
   buildSuggesters(
     args: BuildSuggestersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BuildSuggestersCommandOutput>;
   buildSuggesters(args: BuildSuggestersCommandInput, cb: (err: any, data?: BuildSuggestersCommandOutput) => void): void;
   buildSuggesters(
     args: BuildSuggestersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BuildSuggestersCommandOutput) => void
+    cb: (err: any, data?: BuildSuggestersCommandOutput) => void,
   ): void;
 
   /**
@@ -186,7 +186,7 @@ export interface CloudSearch {
   createDomain(
     args: CreateDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDomainCommandOutput) => void
+    cb: (err: any, data?: CreateDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -194,16 +194,16 @@ export interface CloudSearch {
    */
   defineAnalysisScheme(
     args: DefineAnalysisSchemeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DefineAnalysisSchemeCommandOutput>;
   defineAnalysisScheme(
     args: DefineAnalysisSchemeCommandInput,
-    cb: (err: any, data?: DefineAnalysisSchemeCommandOutput) => void
+    cb: (err: any, data?: DefineAnalysisSchemeCommandOutput) => void,
   ): void;
   defineAnalysisScheme(
     args: DefineAnalysisSchemeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DefineAnalysisSchemeCommandOutput) => void
+    cb: (err: any, data?: DefineAnalysisSchemeCommandOutput) => void,
   ): void;
 
   /**
@@ -211,16 +211,16 @@ export interface CloudSearch {
    */
   defineExpression(
     args: DefineExpressionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DefineExpressionCommandOutput>;
   defineExpression(
     args: DefineExpressionCommandInput,
-    cb: (err: any, data?: DefineExpressionCommandOutput) => void
+    cb: (err: any, data?: DefineExpressionCommandOutput) => void,
   ): void;
   defineExpression(
     args: DefineExpressionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DefineExpressionCommandOutput) => void
+    cb: (err: any, data?: DefineExpressionCommandOutput) => void,
   ): void;
 
   /**
@@ -228,16 +228,16 @@ export interface CloudSearch {
    */
   defineIndexField(
     args: DefineIndexFieldCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DefineIndexFieldCommandOutput>;
   defineIndexField(
     args: DefineIndexFieldCommandInput,
-    cb: (err: any, data?: DefineIndexFieldCommandOutput) => void
+    cb: (err: any, data?: DefineIndexFieldCommandOutput) => void,
   ): void;
   defineIndexField(
     args: DefineIndexFieldCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DefineIndexFieldCommandOutput) => void
+    cb: (err: any, data?: DefineIndexFieldCommandOutput) => void,
   ): void;
 
   /**
@@ -245,13 +245,13 @@ export interface CloudSearch {
    */
   defineSuggester(
     args: DefineSuggesterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DefineSuggesterCommandOutput>;
   defineSuggester(args: DefineSuggesterCommandInput, cb: (err: any, data?: DefineSuggesterCommandOutput) => void): void;
   defineSuggester(
     args: DefineSuggesterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DefineSuggesterCommandOutput) => void
+    cb: (err: any, data?: DefineSuggesterCommandOutput) => void,
   ): void;
 
   /**
@@ -259,16 +259,16 @@ export interface CloudSearch {
    */
   deleteAnalysisScheme(
     args: DeleteAnalysisSchemeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAnalysisSchemeCommandOutput>;
   deleteAnalysisScheme(
     args: DeleteAnalysisSchemeCommandInput,
-    cb: (err: any, data?: DeleteAnalysisSchemeCommandOutput) => void
+    cb: (err: any, data?: DeleteAnalysisSchemeCommandOutput) => void,
   ): void;
   deleteAnalysisScheme(
     args: DeleteAnalysisSchemeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAnalysisSchemeCommandOutput) => void
+    cb: (err: any, data?: DeleteAnalysisSchemeCommandOutput) => void,
   ): void;
 
   /**
@@ -279,7 +279,7 @@ export interface CloudSearch {
   deleteDomain(
     args: DeleteDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDomainCommandOutput) => void
+    cb: (err: any, data?: DeleteDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -287,16 +287,16 @@ export interface CloudSearch {
    */
   deleteExpression(
     args: DeleteExpressionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteExpressionCommandOutput>;
   deleteExpression(
     args: DeleteExpressionCommandInput,
-    cb: (err: any, data?: DeleteExpressionCommandOutput) => void
+    cb: (err: any, data?: DeleteExpressionCommandOutput) => void,
   ): void;
   deleteExpression(
     args: DeleteExpressionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteExpressionCommandOutput) => void
+    cb: (err: any, data?: DeleteExpressionCommandOutput) => void,
   ): void;
 
   /**
@@ -304,16 +304,16 @@ export interface CloudSearch {
    */
   deleteIndexField(
     args: DeleteIndexFieldCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteIndexFieldCommandOutput>;
   deleteIndexField(
     args: DeleteIndexFieldCommandInput,
-    cb: (err: any, data?: DeleteIndexFieldCommandOutput) => void
+    cb: (err: any, data?: DeleteIndexFieldCommandOutput) => void,
   ): void;
   deleteIndexField(
     args: DeleteIndexFieldCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteIndexFieldCommandOutput) => void
+    cb: (err: any, data?: DeleteIndexFieldCommandOutput) => void,
   ): void;
 
   /**
@@ -321,13 +321,13 @@ export interface CloudSearch {
    */
   deleteSuggester(
     args: DeleteSuggesterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSuggesterCommandOutput>;
   deleteSuggester(args: DeleteSuggesterCommandInput, cb: (err: any, data?: DeleteSuggesterCommandOutput) => void): void;
   deleteSuggester(
     args: DeleteSuggesterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSuggesterCommandOutput) => void
+    cb: (err: any, data?: DeleteSuggesterCommandOutput) => void,
   ): void;
 
   /**
@@ -335,16 +335,16 @@ export interface CloudSearch {
    */
   describeAnalysisSchemes(
     args: DescribeAnalysisSchemesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAnalysisSchemesCommandOutput>;
   describeAnalysisSchemes(
     args: DescribeAnalysisSchemesCommandInput,
-    cb: (err: any, data?: DescribeAnalysisSchemesCommandOutput) => void
+    cb: (err: any, data?: DescribeAnalysisSchemesCommandOutput) => void,
   ): void;
   describeAnalysisSchemes(
     args: DescribeAnalysisSchemesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAnalysisSchemesCommandOutput) => void
+    cb: (err: any, data?: DescribeAnalysisSchemesCommandOutput) => void,
   ): void;
 
   /**
@@ -352,16 +352,16 @@ export interface CloudSearch {
    */
   describeAvailabilityOptions(
     args: DescribeAvailabilityOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAvailabilityOptionsCommandOutput>;
   describeAvailabilityOptions(
     args: DescribeAvailabilityOptionsCommandInput,
-    cb: (err: any, data?: DescribeAvailabilityOptionsCommandOutput) => void
+    cb: (err: any, data?: DescribeAvailabilityOptionsCommandOutput) => void,
   ): void;
   describeAvailabilityOptions(
     args: DescribeAvailabilityOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAvailabilityOptionsCommandOutput) => void
+    cb: (err: any, data?: DescribeAvailabilityOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -369,16 +369,16 @@ export interface CloudSearch {
    */
   describeDomainEndpointOptions(
     args: DescribeDomainEndpointOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDomainEndpointOptionsCommandOutput>;
   describeDomainEndpointOptions(
     args: DescribeDomainEndpointOptionsCommandInput,
-    cb: (err: any, data?: DescribeDomainEndpointOptionsCommandOutput) => void
+    cb: (err: any, data?: DescribeDomainEndpointOptionsCommandOutput) => void,
   ): void;
   describeDomainEndpointOptions(
     args: DescribeDomainEndpointOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDomainEndpointOptionsCommandOutput) => void
+    cb: (err: any, data?: DescribeDomainEndpointOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -387,13 +387,13 @@ export interface CloudSearch {
   describeDomains(): Promise<DescribeDomainsCommandOutput>;
   describeDomains(
     args: DescribeDomainsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDomainsCommandOutput>;
   describeDomains(args: DescribeDomainsCommandInput, cb: (err: any, data?: DescribeDomainsCommandOutput) => void): void;
   describeDomains(
     args: DescribeDomainsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDomainsCommandOutput) => void
+    cb: (err: any, data?: DescribeDomainsCommandOutput) => void,
   ): void;
 
   /**
@@ -401,16 +401,16 @@ export interface CloudSearch {
    */
   describeExpressions(
     args: DescribeExpressionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeExpressionsCommandOutput>;
   describeExpressions(
     args: DescribeExpressionsCommandInput,
-    cb: (err: any, data?: DescribeExpressionsCommandOutput) => void
+    cb: (err: any, data?: DescribeExpressionsCommandOutput) => void,
   ): void;
   describeExpressions(
     args: DescribeExpressionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeExpressionsCommandOutput) => void
+    cb: (err: any, data?: DescribeExpressionsCommandOutput) => void,
   ): void;
 
   /**
@@ -418,16 +418,16 @@ export interface CloudSearch {
    */
   describeIndexFields(
     args: DescribeIndexFieldsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeIndexFieldsCommandOutput>;
   describeIndexFields(
     args: DescribeIndexFieldsCommandInput,
-    cb: (err: any, data?: DescribeIndexFieldsCommandOutput) => void
+    cb: (err: any, data?: DescribeIndexFieldsCommandOutput) => void,
   ): void;
   describeIndexFields(
     args: DescribeIndexFieldsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeIndexFieldsCommandOutput) => void
+    cb: (err: any, data?: DescribeIndexFieldsCommandOutput) => void,
   ): void;
 
   /**
@@ -435,16 +435,16 @@ export interface CloudSearch {
    */
   describeScalingParameters(
     args: DescribeScalingParametersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeScalingParametersCommandOutput>;
   describeScalingParameters(
     args: DescribeScalingParametersCommandInput,
-    cb: (err: any, data?: DescribeScalingParametersCommandOutput) => void
+    cb: (err: any, data?: DescribeScalingParametersCommandOutput) => void,
   ): void;
   describeScalingParameters(
     args: DescribeScalingParametersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeScalingParametersCommandOutput) => void
+    cb: (err: any, data?: DescribeScalingParametersCommandOutput) => void,
   ): void;
 
   /**
@@ -452,16 +452,16 @@ export interface CloudSearch {
    */
   describeServiceAccessPolicies(
     args: DescribeServiceAccessPoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeServiceAccessPoliciesCommandOutput>;
   describeServiceAccessPolicies(
     args: DescribeServiceAccessPoliciesCommandInput,
-    cb: (err: any, data?: DescribeServiceAccessPoliciesCommandOutput) => void
+    cb: (err: any, data?: DescribeServiceAccessPoliciesCommandOutput) => void,
   ): void;
   describeServiceAccessPolicies(
     args: DescribeServiceAccessPoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeServiceAccessPoliciesCommandOutput) => void
+    cb: (err: any, data?: DescribeServiceAccessPoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -469,16 +469,16 @@ export interface CloudSearch {
    */
   describeSuggesters(
     args: DescribeSuggestersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSuggestersCommandOutput>;
   describeSuggesters(
     args: DescribeSuggestersCommandInput,
-    cb: (err: any, data?: DescribeSuggestersCommandOutput) => void
+    cb: (err: any, data?: DescribeSuggestersCommandOutput) => void,
   ): void;
   describeSuggesters(
     args: DescribeSuggestersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSuggestersCommandOutput) => void
+    cb: (err: any, data?: DescribeSuggestersCommandOutput) => void,
   ): void;
 
   /**
@@ -486,13 +486,13 @@ export interface CloudSearch {
    */
   indexDocuments(
     args: IndexDocumentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<IndexDocumentsCommandOutput>;
   indexDocuments(args: IndexDocumentsCommandInput, cb: (err: any, data?: IndexDocumentsCommandOutput) => void): void;
   indexDocuments(
     args: IndexDocumentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: IndexDocumentsCommandOutput) => void
+    cb: (err: any, data?: IndexDocumentsCommandOutput) => void,
   ): void;
 
   /**
@@ -501,13 +501,13 @@ export interface CloudSearch {
   listDomainNames(): Promise<ListDomainNamesCommandOutput>;
   listDomainNames(
     args: ListDomainNamesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDomainNamesCommandOutput>;
   listDomainNames(args: ListDomainNamesCommandInput, cb: (err: any, data?: ListDomainNamesCommandOutput) => void): void;
   listDomainNames(
     args: ListDomainNamesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDomainNamesCommandOutput) => void
+    cb: (err: any, data?: ListDomainNamesCommandOutput) => void,
   ): void;
 
   /**
@@ -515,16 +515,16 @@ export interface CloudSearch {
    */
   updateAvailabilityOptions(
     args: UpdateAvailabilityOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAvailabilityOptionsCommandOutput>;
   updateAvailabilityOptions(
     args: UpdateAvailabilityOptionsCommandInput,
-    cb: (err: any, data?: UpdateAvailabilityOptionsCommandOutput) => void
+    cb: (err: any, data?: UpdateAvailabilityOptionsCommandOutput) => void,
   ): void;
   updateAvailabilityOptions(
     args: UpdateAvailabilityOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAvailabilityOptionsCommandOutput) => void
+    cb: (err: any, data?: UpdateAvailabilityOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -532,16 +532,16 @@ export interface CloudSearch {
    */
   updateDomainEndpointOptions(
     args: UpdateDomainEndpointOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDomainEndpointOptionsCommandOutput>;
   updateDomainEndpointOptions(
     args: UpdateDomainEndpointOptionsCommandInput,
-    cb: (err: any, data?: UpdateDomainEndpointOptionsCommandOutput) => void
+    cb: (err: any, data?: UpdateDomainEndpointOptionsCommandOutput) => void,
   ): void;
   updateDomainEndpointOptions(
     args: UpdateDomainEndpointOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDomainEndpointOptionsCommandOutput) => void
+    cb: (err: any, data?: UpdateDomainEndpointOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -549,16 +549,16 @@ export interface CloudSearch {
    */
   updateScalingParameters(
     args: UpdateScalingParametersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateScalingParametersCommandOutput>;
   updateScalingParameters(
     args: UpdateScalingParametersCommandInput,
-    cb: (err: any, data?: UpdateScalingParametersCommandOutput) => void
+    cb: (err: any, data?: UpdateScalingParametersCommandOutput) => void,
   ): void;
   updateScalingParameters(
     args: UpdateScalingParametersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateScalingParametersCommandOutput) => void
+    cb: (err: any, data?: UpdateScalingParametersCommandOutput) => void,
   ): void;
 
   /**
@@ -566,16 +566,16 @@ export interface CloudSearch {
    */
   updateServiceAccessPolicies(
     args: UpdateServiceAccessPoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateServiceAccessPoliciesCommandOutput>;
   updateServiceAccessPolicies(
     args: UpdateServiceAccessPoliciesCommandInput,
-    cb: (err: any, data?: UpdateServiceAccessPoliciesCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceAccessPoliciesCommandOutput) => void,
   ): void;
   updateServiceAccessPolicies(
     args: UpdateServiceAccessPoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateServiceAccessPoliciesCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceAccessPoliciesCommandOutput) => void,
   ): void;
 }
 

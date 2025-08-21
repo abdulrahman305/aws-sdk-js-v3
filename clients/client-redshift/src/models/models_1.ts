@@ -5720,7 +5720,7 @@ export const ModifyClusterMaintenanceResultFilterSensitiveLog = (obj: ModifyClus
  * @internal
  */
 export const ModifySnapshotCopyRetentionPeriodResultFilterSensitiveLog = (
-  obj: ModifySnapshotCopyRetentionPeriodResult
+  obj: ModifySnapshotCopyRetentionPeriodResult,
 ): any => ({
   ...obj,
   ...(obj.Cluster && { Cluster: ClusterFilterSensitiveLog(obj.Cluster) }),

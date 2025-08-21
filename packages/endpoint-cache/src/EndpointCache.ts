@@ -77,7 +77,7 @@ export class EndpointCache {
       endpoints.map(({ Address, CachePeriodInMinutes }) => ({
         Address,
         Expires: now + CachePeriodInMinutes * 60 * 1000,
-      }))
+      })),
     );
   }
 

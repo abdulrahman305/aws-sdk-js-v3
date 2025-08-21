@@ -44,7 +44,7 @@ export interface IoT1ClickDevicesServiceHttpAuthSchemeParametersProvider
 export const defaultIoT1ClickDevicesServiceHttpAuthSchemeParametersProvider = async (
   config: IoT1ClickDevicesServiceClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<IoT1ClickDevicesServiceHttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -57,7 +57,7 @@ export const defaultIoT1ClickDevicesServiceHttpAuthSchemeParametersProvider = as
 };
 
 function createAwsAuthSigv4HttpAuthOption(
-  authParameters: IoT1ClickDevicesServiceHttpAuthSchemeParameters
+  authParameters: IoT1ClickDevicesServiceHttpAuthSchemeParameters,
 ): HttpAuthOption {
   return {
     schemeId: "aws.auth#sigv4",
@@ -87,7 +87,7 @@ export interface IoT1ClickDevicesServiceHttpAuthSchemeProvider
  * @internal
  */
 export const defaultIoT1ClickDevicesServiceHttpAuthSchemeProvider: IoT1ClickDevicesServiceHttpAuthSchemeProvider = (
-  authParameters
+  authParameters,
 ) => {
   const options: HttpAuthOption[] = [];
   switch (authParameters.operation) {
@@ -136,7 +136,7 @@ export interface HttpAuthSchemeResolvedConfig extends AwsSdkSigV4AuthResolvedCon
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved
+  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved,
 ): T & HttpAuthSchemeResolvedConfig => {
   const config_0 = resolveAwsSdkSigV4Config(config);
   return {

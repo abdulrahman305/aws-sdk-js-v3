@@ -349,16 +349,16 @@ export interface WorkSpacesWeb {
    */
   associateBrowserSettings(
     args: AssociateBrowserSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateBrowserSettingsCommandOutput>;
   associateBrowserSettings(
     args: AssociateBrowserSettingsCommandInput,
-    cb: (err: any, data?: AssociateBrowserSettingsCommandOutput) => void
+    cb: (err: any, data?: AssociateBrowserSettingsCommandOutput) => void,
   ): void;
   associateBrowserSettings(
     args: AssociateBrowserSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateBrowserSettingsCommandOutput) => void
+    cb: (err: any, data?: AssociateBrowserSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -366,16 +366,16 @@ export interface WorkSpacesWeb {
    */
   associateIpAccessSettings(
     args: AssociateIpAccessSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateIpAccessSettingsCommandOutput>;
   associateIpAccessSettings(
     args: AssociateIpAccessSettingsCommandInput,
-    cb: (err: any, data?: AssociateIpAccessSettingsCommandOutput) => void
+    cb: (err: any, data?: AssociateIpAccessSettingsCommandOutput) => void,
   ): void;
   associateIpAccessSettings(
     args: AssociateIpAccessSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateIpAccessSettingsCommandOutput) => void
+    cb: (err: any, data?: AssociateIpAccessSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -383,16 +383,16 @@ export interface WorkSpacesWeb {
    */
   associateNetworkSettings(
     args: AssociateNetworkSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateNetworkSettingsCommandOutput>;
   associateNetworkSettings(
     args: AssociateNetworkSettingsCommandInput,
-    cb: (err: any, data?: AssociateNetworkSettingsCommandOutput) => void
+    cb: (err: any, data?: AssociateNetworkSettingsCommandOutput) => void,
   ): void;
   associateNetworkSettings(
     args: AssociateNetworkSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateNetworkSettingsCommandOutput) => void
+    cb: (err: any, data?: AssociateNetworkSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -400,16 +400,16 @@ export interface WorkSpacesWeb {
    */
   associateTrustStore(
     args: AssociateTrustStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateTrustStoreCommandOutput>;
   associateTrustStore(
     args: AssociateTrustStoreCommandInput,
-    cb: (err: any, data?: AssociateTrustStoreCommandOutput) => void
+    cb: (err: any, data?: AssociateTrustStoreCommandOutput) => void,
   ): void;
   associateTrustStore(
     args: AssociateTrustStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateTrustStoreCommandOutput) => void
+    cb: (err: any, data?: AssociateTrustStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -417,16 +417,16 @@ export interface WorkSpacesWeb {
    */
   associateUserAccessLoggingSettings(
     args: AssociateUserAccessLoggingSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateUserAccessLoggingSettingsCommandOutput>;
   associateUserAccessLoggingSettings(
     args: AssociateUserAccessLoggingSettingsCommandInput,
-    cb: (err: any, data?: AssociateUserAccessLoggingSettingsCommandOutput) => void
+    cb: (err: any, data?: AssociateUserAccessLoggingSettingsCommandOutput) => void,
   ): void;
   associateUserAccessLoggingSettings(
     args: AssociateUserAccessLoggingSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateUserAccessLoggingSettingsCommandOutput) => void
+    cb: (err: any, data?: AssociateUserAccessLoggingSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -434,16 +434,16 @@ export interface WorkSpacesWeb {
    */
   associateUserSettings(
     args: AssociateUserSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateUserSettingsCommandOutput>;
   associateUserSettings(
     args: AssociateUserSettingsCommandInput,
-    cb: (err: any, data?: AssociateUserSettingsCommandOutput) => void
+    cb: (err: any, data?: AssociateUserSettingsCommandOutput) => void,
   ): void;
   associateUserSettings(
     args: AssociateUserSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateUserSettingsCommandOutput) => void
+    cb: (err: any, data?: AssociateUserSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -451,16 +451,16 @@ export interface WorkSpacesWeb {
    */
   createBrowserSettings(
     args: CreateBrowserSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateBrowserSettingsCommandOutput>;
   createBrowserSettings(
     args: CreateBrowserSettingsCommandInput,
-    cb: (err: any, data?: CreateBrowserSettingsCommandOutput) => void
+    cb: (err: any, data?: CreateBrowserSettingsCommandOutput) => void,
   ): void;
   createBrowserSettings(
     args: CreateBrowserSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateBrowserSettingsCommandOutput) => void
+    cb: (err: any, data?: CreateBrowserSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -468,16 +468,16 @@ export interface WorkSpacesWeb {
    */
   createIdentityProvider(
     args: CreateIdentityProviderCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateIdentityProviderCommandOutput>;
   createIdentityProvider(
     args: CreateIdentityProviderCommandInput,
-    cb: (err: any, data?: CreateIdentityProviderCommandOutput) => void
+    cb: (err: any, data?: CreateIdentityProviderCommandOutput) => void,
   ): void;
   createIdentityProvider(
     args: CreateIdentityProviderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateIdentityProviderCommandOutput) => void
+    cb: (err: any, data?: CreateIdentityProviderCommandOutput) => void,
   ): void;
 
   /**
@@ -485,16 +485,16 @@ export interface WorkSpacesWeb {
    */
   createIpAccessSettings(
     args: CreateIpAccessSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateIpAccessSettingsCommandOutput>;
   createIpAccessSettings(
     args: CreateIpAccessSettingsCommandInput,
-    cb: (err: any, data?: CreateIpAccessSettingsCommandOutput) => void
+    cb: (err: any, data?: CreateIpAccessSettingsCommandOutput) => void,
   ): void;
   createIpAccessSettings(
     args: CreateIpAccessSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateIpAccessSettingsCommandOutput) => void
+    cb: (err: any, data?: CreateIpAccessSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -502,16 +502,16 @@ export interface WorkSpacesWeb {
    */
   createNetworkSettings(
     args: CreateNetworkSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateNetworkSettingsCommandOutput>;
   createNetworkSettings(
     args: CreateNetworkSettingsCommandInput,
-    cb: (err: any, data?: CreateNetworkSettingsCommandOutput) => void
+    cb: (err: any, data?: CreateNetworkSettingsCommandOutput) => void,
   ): void;
   createNetworkSettings(
     args: CreateNetworkSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateNetworkSettingsCommandOutput) => void
+    cb: (err: any, data?: CreateNetworkSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -523,7 +523,7 @@ export interface WorkSpacesWeb {
   createPortal(
     args: CreatePortalCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePortalCommandOutput) => void
+    cb: (err: any, data?: CreatePortalCommandOutput) => void,
   ): void;
 
   /**
@@ -531,16 +531,16 @@ export interface WorkSpacesWeb {
    */
   createTrustStore(
     args: CreateTrustStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateTrustStoreCommandOutput>;
   createTrustStore(
     args: CreateTrustStoreCommandInput,
-    cb: (err: any, data?: CreateTrustStoreCommandOutput) => void
+    cb: (err: any, data?: CreateTrustStoreCommandOutput) => void,
   ): void;
   createTrustStore(
     args: CreateTrustStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTrustStoreCommandOutput) => void
+    cb: (err: any, data?: CreateTrustStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -548,16 +548,16 @@ export interface WorkSpacesWeb {
    */
   createUserAccessLoggingSettings(
     args: CreateUserAccessLoggingSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateUserAccessLoggingSettingsCommandOutput>;
   createUserAccessLoggingSettings(
     args: CreateUserAccessLoggingSettingsCommandInput,
-    cb: (err: any, data?: CreateUserAccessLoggingSettingsCommandOutput) => void
+    cb: (err: any, data?: CreateUserAccessLoggingSettingsCommandOutput) => void,
   ): void;
   createUserAccessLoggingSettings(
     args: CreateUserAccessLoggingSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateUserAccessLoggingSettingsCommandOutput) => void
+    cb: (err: any, data?: CreateUserAccessLoggingSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -565,16 +565,16 @@ export interface WorkSpacesWeb {
    */
   createUserSettings(
     args: CreateUserSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateUserSettingsCommandOutput>;
   createUserSettings(
     args: CreateUserSettingsCommandInput,
-    cb: (err: any, data?: CreateUserSettingsCommandOutput) => void
+    cb: (err: any, data?: CreateUserSettingsCommandOutput) => void,
   ): void;
   createUserSettings(
     args: CreateUserSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateUserSettingsCommandOutput) => void
+    cb: (err: any, data?: CreateUserSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -582,16 +582,16 @@ export interface WorkSpacesWeb {
    */
   deleteBrowserSettings(
     args: DeleteBrowserSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteBrowserSettingsCommandOutput>;
   deleteBrowserSettings(
     args: DeleteBrowserSettingsCommandInput,
-    cb: (err: any, data?: DeleteBrowserSettingsCommandOutput) => void
+    cb: (err: any, data?: DeleteBrowserSettingsCommandOutput) => void,
   ): void;
   deleteBrowserSettings(
     args: DeleteBrowserSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteBrowserSettingsCommandOutput) => void
+    cb: (err: any, data?: DeleteBrowserSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -599,16 +599,16 @@ export interface WorkSpacesWeb {
    */
   deleteIdentityProvider(
     args: DeleteIdentityProviderCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteIdentityProviderCommandOutput>;
   deleteIdentityProvider(
     args: DeleteIdentityProviderCommandInput,
-    cb: (err: any, data?: DeleteIdentityProviderCommandOutput) => void
+    cb: (err: any, data?: DeleteIdentityProviderCommandOutput) => void,
   ): void;
   deleteIdentityProvider(
     args: DeleteIdentityProviderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteIdentityProviderCommandOutput) => void
+    cb: (err: any, data?: DeleteIdentityProviderCommandOutput) => void,
   ): void;
 
   /**
@@ -616,16 +616,16 @@ export interface WorkSpacesWeb {
    */
   deleteIpAccessSettings(
     args: DeleteIpAccessSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteIpAccessSettingsCommandOutput>;
   deleteIpAccessSettings(
     args: DeleteIpAccessSettingsCommandInput,
-    cb: (err: any, data?: DeleteIpAccessSettingsCommandOutput) => void
+    cb: (err: any, data?: DeleteIpAccessSettingsCommandOutput) => void,
   ): void;
   deleteIpAccessSettings(
     args: DeleteIpAccessSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteIpAccessSettingsCommandOutput) => void
+    cb: (err: any, data?: DeleteIpAccessSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -633,16 +633,16 @@ export interface WorkSpacesWeb {
    */
   deleteNetworkSettings(
     args: DeleteNetworkSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteNetworkSettingsCommandOutput>;
   deleteNetworkSettings(
     args: DeleteNetworkSettingsCommandInput,
-    cb: (err: any, data?: DeleteNetworkSettingsCommandOutput) => void
+    cb: (err: any, data?: DeleteNetworkSettingsCommandOutput) => void,
   ): void;
   deleteNetworkSettings(
     args: DeleteNetworkSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteNetworkSettingsCommandOutput) => void
+    cb: (err: any, data?: DeleteNetworkSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -653,7 +653,7 @@ export interface WorkSpacesWeb {
   deletePortal(
     args: DeletePortalCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePortalCommandOutput) => void
+    cb: (err: any, data?: DeletePortalCommandOutput) => void,
   ): void;
 
   /**
@@ -661,16 +661,16 @@ export interface WorkSpacesWeb {
    */
   deleteTrustStore(
     args: DeleteTrustStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteTrustStoreCommandOutput>;
   deleteTrustStore(
     args: DeleteTrustStoreCommandInput,
-    cb: (err: any, data?: DeleteTrustStoreCommandOutput) => void
+    cb: (err: any, data?: DeleteTrustStoreCommandOutput) => void,
   ): void;
   deleteTrustStore(
     args: DeleteTrustStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTrustStoreCommandOutput) => void
+    cb: (err: any, data?: DeleteTrustStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -678,16 +678,16 @@ export interface WorkSpacesWeb {
    */
   deleteUserAccessLoggingSettings(
     args: DeleteUserAccessLoggingSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteUserAccessLoggingSettingsCommandOutput>;
   deleteUserAccessLoggingSettings(
     args: DeleteUserAccessLoggingSettingsCommandInput,
-    cb: (err: any, data?: DeleteUserAccessLoggingSettingsCommandOutput) => void
+    cb: (err: any, data?: DeleteUserAccessLoggingSettingsCommandOutput) => void,
   ): void;
   deleteUserAccessLoggingSettings(
     args: DeleteUserAccessLoggingSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteUserAccessLoggingSettingsCommandOutput) => void
+    cb: (err: any, data?: DeleteUserAccessLoggingSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -695,16 +695,16 @@ export interface WorkSpacesWeb {
    */
   deleteUserSettings(
     args: DeleteUserSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteUserSettingsCommandOutput>;
   deleteUserSettings(
     args: DeleteUserSettingsCommandInput,
-    cb: (err: any, data?: DeleteUserSettingsCommandOutput) => void
+    cb: (err: any, data?: DeleteUserSettingsCommandOutput) => void,
   ): void;
   deleteUserSettings(
     args: DeleteUserSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteUserSettingsCommandOutput) => void
+    cb: (err: any, data?: DeleteUserSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -712,16 +712,16 @@ export interface WorkSpacesWeb {
    */
   disassociateBrowserSettings(
     args: DisassociateBrowserSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateBrowserSettingsCommandOutput>;
   disassociateBrowserSettings(
     args: DisassociateBrowserSettingsCommandInput,
-    cb: (err: any, data?: DisassociateBrowserSettingsCommandOutput) => void
+    cb: (err: any, data?: DisassociateBrowserSettingsCommandOutput) => void,
   ): void;
   disassociateBrowserSettings(
     args: DisassociateBrowserSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateBrowserSettingsCommandOutput) => void
+    cb: (err: any, data?: DisassociateBrowserSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -729,16 +729,16 @@ export interface WorkSpacesWeb {
    */
   disassociateIpAccessSettings(
     args: DisassociateIpAccessSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateIpAccessSettingsCommandOutput>;
   disassociateIpAccessSettings(
     args: DisassociateIpAccessSettingsCommandInput,
-    cb: (err: any, data?: DisassociateIpAccessSettingsCommandOutput) => void
+    cb: (err: any, data?: DisassociateIpAccessSettingsCommandOutput) => void,
   ): void;
   disassociateIpAccessSettings(
     args: DisassociateIpAccessSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateIpAccessSettingsCommandOutput) => void
+    cb: (err: any, data?: DisassociateIpAccessSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -746,16 +746,16 @@ export interface WorkSpacesWeb {
    */
   disassociateNetworkSettings(
     args: DisassociateNetworkSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateNetworkSettingsCommandOutput>;
   disassociateNetworkSettings(
     args: DisassociateNetworkSettingsCommandInput,
-    cb: (err: any, data?: DisassociateNetworkSettingsCommandOutput) => void
+    cb: (err: any, data?: DisassociateNetworkSettingsCommandOutput) => void,
   ): void;
   disassociateNetworkSettings(
     args: DisassociateNetworkSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateNetworkSettingsCommandOutput) => void
+    cb: (err: any, data?: DisassociateNetworkSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -763,16 +763,16 @@ export interface WorkSpacesWeb {
    */
   disassociateTrustStore(
     args: DisassociateTrustStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateTrustStoreCommandOutput>;
   disassociateTrustStore(
     args: DisassociateTrustStoreCommandInput,
-    cb: (err: any, data?: DisassociateTrustStoreCommandOutput) => void
+    cb: (err: any, data?: DisassociateTrustStoreCommandOutput) => void,
   ): void;
   disassociateTrustStore(
     args: DisassociateTrustStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateTrustStoreCommandOutput) => void
+    cb: (err: any, data?: DisassociateTrustStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -780,16 +780,16 @@ export interface WorkSpacesWeb {
    */
   disassociateUserAccessLoggingSettings(
     args: DisassociateUserAccessLoggingSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateUserAccessLoggingSettingsCommandOutput>;
   disassociateUserAccessLoggingSettings(
     args: DisassociateUserAccessLoggingSettingsCommandInput,
-    cb: (err: any, data?: DisassociateUserAccessLoggingSettingsCommandOutput) => void
+    cb: (err: any, data?: DisassociateUserAccessLoggingSettingsCommandOutput) => void,
   ): void;
   disassociateUserAccessLoggingSettings(
     args: DisassociateUserAccessLoggingSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateUserAccessLoggingSettingsCommandOutput) => void
+    cb: (err: any, data?: DisassociateUserAccessLoggingSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -797,16 +797,16 @@ export interface WorkSpacesWeb {
    */
   disassociateUserSettings(
     args: DisassociateUserSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateUserSettingsCommandOutput>;
   disassociateUserSettings(
     args: DisassociateUserSettingsCommandInput,
-    cb: (err: any, data?: DisassociateUserSettingsCommandOutput) => void
+    cb: (err: any, data?: DisassociateUserSettingsCommandOutput) => void,
   ): void;
   disassociateUserSettings(
     args: DisassociateUserSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateUserSettingsCommandOutput) => void
+    cb: (err: any, data?: DisassociateUserSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -814,16 +814,16 @@ export interface WorkSpacesWeb {
    */
   getBrowserSettings(
     args: GetBrowserSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBrowserSettingsCommandOutput>;
   getBrowserSettings(
     args: GetBrowserSettingsCommandInput,
-    cb: (err: any, data?: GetBrowserSettingsCommandOutput) => void
+    cb: (err: any, data?: GetBrowserSettingsCommandOutput) => void,
   ): void;
   getBrowserSettings(
     args: GetBrowserSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBrowserSettingsCommandOutput) => void
+    cb: (err: any, data?: GetBrowserSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -831,16 +831,16 @@ export interface WorkSpacesWeb {
    */
   getIdentityProvider(
     args: GetIdentityProviderCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetIdentityProviderCommandOutput>;
   getIdentityProvider(
     args: GetIdentityProviderCommandInput,
-    cb: (err: any, data?: GetIdentityProviderCommandOutput) => void
+    cb: (err: any, data?: GetIdentityProviderCommandOutput) => void,
   ): void;
   getIdentityProvider(
     args: GetIdentityProviderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetIdentityProviderCommandOutput) => void
+    cb: (err: any, data?: GetIdentityProviderCommandOutput) => void,
   ): void;
 
   /**
@@ -848,16 +848,16 @@ export interface WorkSpacesWeb {
    */
   getIpAccessSettings(
     args: GetIpAccessSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetIpAccessSettingsCommandOutput>;
   getIpAccessSettings(
     args: GetIpAccessSettingsCommandInput,
-    cb: (err: any, data?: GetIpAccessSettingsCommandOutput) => void
+    cb: (err: any, data?: GetIpAccessSettingsCommandOutput) => void,
   ): void;
   getIpAccessSettings(
     args: GetIpAccessSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetIpAccessSettingsCommandOutput) => void
+    cb: (err: any, data?: GetIpAccessSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -865,16 +865,16 @@ export interface WorkSpacesWeb {
    */
   getNetworkSettings(
     args: GetNetworkSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetNetworkSettingsCommandOutput>;
   getNetworkSettings(
     args: GetNetworkSettingsCommandInput,
-    cb: (err: any, data?: GetNetworkSettingsCommandOutput) => void
+    cb: (err: any, data?: GetNetworkSettingsCommandOutput) => void,
   ): void;
   getNetworkSettings(
     args: GetNetworkSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetNetworkSettingsCommandOutput) => void
+    cb: (err: any, data?: GetNetworkSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -885,7 +885,7 @@ export interface WorkSpacesWeb {
   getPortal(
     args: GetPortalCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPortalCommandOutput) => void
+    cb: (err: any, data?: GetPortalCommandOutput) => void,
   ): void;
 
   /**
@@ -893,16 +893,16 @@ export interface WorkSpacesWeb {
    */
   getPortalServiceProviderMetadata(
     args: GetPortalServiceProviderMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPortalServiceProviderMetadataCommandOutput>;
   getPortalServiceProviderMetadata(
     args: GetPortalServiceProviderMetadataCommandInput,
-    cb: (err: any, data?: GetPortalServiceProviderMetadataCommandOutput) => void
+    cb: (err: any, data?: GetPortalServiceProviderMetadataCommandOutput) => void,
   ): void;
   getPortalServiceProviderMetadata(
     args: GetPortalServiceProviderMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPortalServiceProviderMetadataCommandOutput) => void
+    cb: (err: any, data?: GetPortalServiceProviderMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -913,7 +913,7 @@ export interface WorkSpacesWeb {
   getTrustStore(
     args: GetTrustStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTrustStoreCommandOutput) => void
+    cb: (err: any, data?: GetTrustStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -921,16 +921,16 @@ export interface WorkSpacesWeb {
    */
   getTrustStoreCertificate(
     args: GetTrustStoreCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTrustStoreCertificateCommandOutput>;
   getTrustStoreCertificate(
     args: GetTrustStoreCertificateCommandInput,
-    cb: (err: any, data?: GetTrustStoreCertificateCommandOutput) => void
+    cb: (err: any, data?: GetTrustStoreCertificateCommandOutput) => void,
   ): void;
   getTrustStoreCertificate(
     args: GetTrustStoreCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTrustStoreCertificateCommandOutput) => void
+    cb: (err: any, data?: GetTrustStoreCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -938,16 +938,16 @@ export interface WorkSpacesWeb {
    */
   getUserAccessLoggingSettings(
     args: GetUserAccessLoggingSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetUserAccessLoggingSettingsCommandOutput>;
   getUserAccessLoggingSettings(
     args: GetUserAccessLoggingSettingsCommandInput,
-    cb: (err: any, data?: GetUserAccessLoggingSettingsCommandOutput) => void
+    cb: (err: any, data?: GetUserAccessLoggingSettingsCommandOutput) => void,
   ): void;
   getUserAccessLoggingSettings(
     args: GetUserAccessLoggingSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetUserAccessLoggingSettingsCommandOutput) => void
+    cb: (err: any, data?: GetUserAccessLoggingSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -955,13 +955,13 @@ export interface WorkSpacesWeb {
    */
   getUserSettings(
     args: GetUserSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetUserSettingsCommandOutput>;
   getUserSettings(args: GetUserSettingsCommandInput, cb: (err: any, data?: GetUserSettingsCommandOutput) => void): void;
   getUserSettings(
     args: GetUserSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetUserSettingsCommandOutput) => void
+    cb: (err: any, data?: GetUserSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -970,16 +970,16 @@ export interface WorkSpacesWeb {
   listBrowserSettings(): Promise<ListBrowserSettingsCommandOutput>;
   listBrowserSettings(
     args: ListBrowserSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListBrowserSettingsCommandOutput>;
   listBrowserSettings(
     args: ListBrowserSettingsCommandInput,
-    cb: (err: any, data?: ListBrowserSettingsCommandOutput) => void
+    cb: (err: any, data?: ListBrowserSettingsCommandOutput) => void,
   ): void;
   listBrowserSettings(
     args: ListBrowserSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBrowserSettingsCommandOutput) => void
+    cb: (err: any, data?: ListBrowserSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -987,16 +987,16 @@ export interface WorkSpacesWeb {
    */
   listIdentityProviders(
     args: ListIdentityProvidersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListIdentityProvidersCommandOutput>;
   listIdentityProviders(
     args: ListIdentityProvidersCommandInput,
-    cb: (err: any, data?: ListIdentityProvidersCommandOutput) => void
+    cb: (err: any, data?: ListIdentityProvidersCommandOutput) => void,
   ): void;
   listIdentityProviders(
     args: ListIdentityProvidersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListIdentityProvidersCommandOutput) => void
+    cb: (err: any, data?: ListIdentityProvidersCommandOutput) => void,
   ): void;
 
   /**
@@ -1005,16 +1005,16 @@ export interface WorkSpacesWeb {
   listIpAccessSettings(): Promise<ListIpAccessSettingsCommandOutput>;
   listIpAccessSettings(
     args: ListIpAccessSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListIpAccessSettingsCommandOutput>;
   listIpAccessSettings(
     args: ListIpAccessSettingsCommandInput,
-    cb: (err: any, data?: ListIpAccessSettingsCommandOutput) => void
+    cb: (err: any, data?: ListIpAccessSettingsCommandOutput) => void,
   ): void;
   listIpAccessSettings(
     args: ListIpAccessSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListIpAccessSettingsCommandOutput) => void
+    cb: (err: any, data?: ListIpAccessSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -1023,16 +1023,16 @@ export interface WorkSpacesWeb {
   listNetworkSettings(): Promise<ListNetworkSettingsCommandOutput>;
   listNetworkSettings(
     args: ListNetworkSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListNetworkSettingsCommandOutput>;
   listNetworkSettings(
     args: ListNetworkSettingsCommandInput,
-    cb: (err: any, data?: ListNetworkSettingsCommandOutput) => void
+    cb: (err: any, data?: ListNetworkSettingsCommandOutput) => void,
   ): void;
   listNetworkSettings(
     args: ListNetworkSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListNetworkSettingsCommandOutput) => void
+    cb: (err: any, data?: ListNetworkSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -1044,7 +1044,7 @@ export interface WorkSpacesWeb {
   listPortals(
     args: ListPortalsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPortalsCommandOutput) => void
+    cb: (err: any, data?: ListPortalsCommandOutput) => void,
   ): void;
 
   /**
@@ -1052,16 +1052,16 @@ export interface WorkSpacesWeb {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1069,16 +1069,16 @@ export interface WorkSpacesWeb {
    */
   listTrustStoreCertificates(
     args: ListTrustStoreCertificatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTrustStoreCertificatesCommandOutput>;
   listTrustStoreCertificates(
     args: ListTrustStoreCertificatesCommandInput,
-    cb: (err: any, data?: ListTrustStoreCertificatesCommandOutput) => void
+    cb: (err: any, data?: ListTrustStoreCertificatesCommandOutput) => void,
   ): void;
   listTrustStoreCertificates(
     args: ListTrustStoreCertificatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTrustStoreCertificatesCommandOutput) => void
+    cb: (err: any, data?: ListTrustStoreCertificatesCommandOutput) => void,
   ): void;
 
   /**
@@ -1087,13 +1087,13 @@ export interface WorkSpacesWeb {
   listTrustStores(): Promise<ListTrustStoresCommandOutput>;
   listTrustStores(
     args: ListTrustStoresCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTrustStoresCommandOutput>;
   listTrustStores(args: ListTrustStoresCommandInput, cb: (err: any, data?: ListTrustStoresCommandOutput) => void): void;
   listTrustStores(
     args: ListTrustStoresCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTrustStoresCommandOutput) => void
+    cb: (err: any, data?: ListTrustStoresCommandOutput) => void,
   ): void;
 
   /**
@@ -1102,16 +1102,16 @@ export interface WorkSpacesWeb {
   listUserAccessLoggingSettings(): Promise<ListUserAccessLoggingSettingsCommandOutput>;
   listUserAccessLoggingSettings(
     args: ListUserAccessLoggingSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListUserAccessLoggingSettingsCommandOutput>;
   listUserAccessLoggingSettings(
     args: ListUserAccessLoggingSettingsCommandInput,
-    cb: (err: any, data?: ListUserAccessLoggingSettingsCommandOutput) => void
+    cb: (err: any, data?: ListUserAccessLoggingSettingsCommandOutput) => void,
   ): void;
   listUserAccessLoggingSettings(
     args: ListUserAccessLoggingSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListUserAccessLoggingSettingsCommandOutput) => void
+    cb: (err: any, data?: ListUserAccessLoggingSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -1120,16 +1120,16 @@ export interface WorkSpacesWeb {
   listUserSettings(): Promise<ListUserSettingsCommandOutput>;
   listUserSettings(
     args: ListUserSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListUserSettingsCommandOutput>;
   listUserSettings(
     args: ListUserSettingsCommandInput,
-    cb: (err: any, data?: ListUserSettingsCommandOutput) => void
+    cb: (err: any, data?: ListUserSettingsCommandOutput) => void,
   ): void;
   listUserSettings(
     args: ListUserSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListUserSettingsCommandOutput) => void
+    cb: (err: any, data?: ListUserSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -1140,7 +1140,7 @@ export interface WorkSpacesWeb {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1151,7 +1151,7 @@ export interface WorkSpacesWeb {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1159,16 +1159,16 @@ export interface WorkSpacesWeb {
    */
   updateBrowserSettings(
     args: UpdateBrowserSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateBrowserSettingsCommandOutput>;
   updateBrowserSettings(
     args: UpdateBrowserSettingsCommandInput,
-    cb: (err: any, data?: UpdateBrowserSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateBrowserSettingsCommandOutput) => void,
   ): void;
   updateBrowserSettings(
     args: UpdateBrowserSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateBrowserSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateBrowserSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -1176,16 +1176,16 @@ export interface WorkSpacesWeb {
    */
   updateIdentityProvider(
     args: UpdateIdentityProviderCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateIdentityProviderCommandOutput>;
   updateIdentityProvider(
     args: UpdateIdentityProviderCommandInput,
-    cb: (err: any, data?: UpdateIdentityProviderCommandOutput) => void
+    cb: (err: any, data?: UpdateIdentityProviderCommandOutput) => void,
   ): void;
   updateIdentityProvider(
     args: UpdateIdentityProviderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateIdentityProviderCommandOutput) => void
+    cb: (err: any, data?: UpdateIdentityProviderCommandOutput) => void,
   ): void;
 
   /**
@@ -1193,16 +1193,16 @@ export interface WorkSpacesWeb {
    */
   updateIpAccessSettings(
     args: UpdateIpAccessSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateIpAccessSettingsCommandOutput>;
   updateIpAccessSettings(
     args: UpdateIpAccessSettingsCommandInput,
-    cb: (err: any, data?: UpdateIpAccessSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateIpAccessSettingsCommandOutput) => void,
   ): void;
   updateIpAccessSettings(
     args: UpdateIpAccessSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateIpAccessSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateIpAccessSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -1210,16 +1210,16 @@ export interface WorkSpacesWeb {
    */
   updateNetworkSettings(
     args: UpdateNetworkSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateNetworkSettingsCommandOutput>;
   updateNetworkSettings(
     args: UpdateNetworkSettingsCommandInput,
-    cb: (err: any, data?: UpdateNetworkSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateNetworkSettingsCommandOutput) => void,
   ): void;
   updateNetworkSettings(
     args: UpdateNetworkSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateNetworkSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateNetworkSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -1230,7 +1230,7 @@ export interface WorkSpacesWeb {
   updatePortal(
     args: UpdatePortalCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePortalCommandOutput) => void
+    cb: (err: any, data?: UpdatePortalCommandOutput) => void,
   ): void;
 
   /**
@@ -1238,16 +1238,16 @@ export interface WorkSpacesWeb {
    */
   updateTrustStore(
     args: UpdateTrustStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateTrustStoreCommandOutput>;
   updateTrustStore(
     args: UpdateTrustStoreCommandInput,
-    cb: (err: any, data?: UpdateTrustStoreCommandOutput) => void
+    cb: (err: any, data?: UpdateTrustStoreCommandOutput) => void,
   ): void;
   updateTrustStore(
     args: UpdateTrustStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTrustStoreCommandOutput) => void
+    cb: (err: any, data?: UpdateTrustStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -1255,16 +1255,16 @@ export interface WorkSpacesWeb {
    */
   updateUserAccessLoggingSettings(
     args: UpdateUserAccessLoggingSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateUserAccessLoggingSettingsCommandOutput>;
   updateUserAccessLoggingSettings(
     args: UpdateUserAccessLoggingSettingsCommandInput,
-    cb: (err: any, data?: UpdateUserAccessLoggingSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateUserAccessLoggingSettingsCommandOutput) => void,
   ): void;
   updateUserAccessLoggingSettings(
     args: UpdateUserAccessLoggingSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateUserAccessLoggingSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateUserAccessLoggingSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -1272,16 +1272,16 @@ export interface WorkSpacesWeb {
    */
   updateUserSettings(
     args: UpdateUserSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateUserSettingsCommandOutput>;
   updateUserSettings(
     args: UpdateUserSettingsCommandInput,
-    cb: (err: any, data?: UpdateUserSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateUserSettingsCommandOutput) => void,
   ): void;
   updateUserSettings(
     args: UpdateUserSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateUserSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateUserSettingsCommandOutput) => void,
   ): void;
 }
 

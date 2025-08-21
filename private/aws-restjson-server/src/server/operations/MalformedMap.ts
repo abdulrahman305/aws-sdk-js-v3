@@ -61,7 +61,7 @@ export class MalformedMapSerializer
 
 export const getMalformedMapHandler = <Context>(
   operation: __Operation<MalformedMapServerInput, MalformedMapServerOutput, Context>,
-  customizer: __ValidationCustomizer<"MalformedMap">
+  customizer: __ValidationCustomizer<"MalformedMap">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "MalformedMap">([
     new httpbinding.UriSpec<"RestJson", "MalformedMap">("POST", [{ type: "path_literal", value: "MalformedMap" }], [], {
@@ -89,7 +89,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -127,7 +127,7 @@ export class MalformedMapHandler<Context> implements __ServiceHandler<Context> {
   private readonly serializer: __OperationSerializer<RestJsonService<Context>, "MalformedMap", MalformedMapErrors>;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"MalformedMap">;
   /**
@@ -144,7 +144,7 @@ export class MalformedMapHandler<Context> implements __ServiceHandler<Context> {
     mux: __Mux<"RestJson", "MalformedMap">,
     serializer: __OperationSerializer<RestJsonService<Context>, "MalformedMap", MalformedMapErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"MalformedMap">
+    validationCustomizer: __ValidationCustomizer<"MalformedMap">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -156,7 +156,7 @@ export class MalformedMapHandler<Context> implements __ServiceHandler<Context> {
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedMap. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedMap. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -168,7 +168,7 @@ export class MalformedMapHandler<Context> implements __ServiceHandler<Context> {
       this.operation,
       this.serializeFrameworkException,
       MalformedMapServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

@@ -155,7 +155,7 @@ import { PcaConnectorAdServiceException as __BaseException } from "../models/Pca
  */
 export const se_CreateConnectorCommand = async (
   input: CreateConnectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -170,7 +170,7 @@ export const se_CreateConnectorCommand = async (
       DirectoryId: [],
       Tags: (_) => _json(_),
       VpcInformation: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -181,7 +181,7 @@ export const se_CreateConnectorCommand = async (
  */
 export const se_CreateDirectoryRegistrationCommand = async (
   input: CreateDirectoryRegistrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -194,7 +194,7 @@ export const se_CreateDirectoryRegistrationCommand = async (
       ClientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       DirectoryId: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -205,7 +205,7 @@ export const se_CreateDirectoryRegistrationCommand = async (
  */
 export const se_CreateServicePrincipalNameCommand = async (
   input: CreateServicePrincipalNameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -218,7 +218,7 @@ export const se_CreateServicePrincipalNameCommand = async (
   body = JSON.stringify(
     take(input, {
       ClientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -229,7 +229,7 @@ export const se_CreateServicePrincipalNameCommand = async (
  */
 export const se_CreateTemplateCommand = async (
   input: CreateTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -244,7 +244,7 @@ export const se_CreateTemplateCommand = async (
       Definition: (_) => _json(_),
       Name: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -255,7 +255,7 @@ export const se_CreateTemplateCommand = async (
  */
 export const se_CreateTemplateGroupAccessControlEntryCommand = async (
   input: CreateTemplateGroupAccessControlEntryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -270,7 +270,7 @@ export const se_CreateTemplateGroupAccessControlEntryCommand = async (
       ClientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       GroupDisplayName: [],
       GroupSecurityIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -281,7 +281,7 @@ export const se_CreateTemplateGroupAccessControlEntryCommand = async (
  */
 export const se_DeleteConnectorCommand = async (
   input: DeleteConnectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -297,7 +297,7 @@ export const se_DeleteConnectorCommand = async (
  */
 export const se_DeleteDirectoryRegistrationCommand = async (
   input: DeleteDirectoryRegistrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -313,7 +313,7 @@ export const se_DeleteDirectoryRegistrationCommand = async (
  */
 export const se_DeleteServicePrincipalNameCommand = async (
   input: DeleteServicePrincipalNameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -330,7 +330,7 @@ export const se_DeleteServicePrincipalNameCommand = async (
  */
 export const se_DeleteTemplateCommand = async (
   input: DeleteTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -346,7 +346,7 @@ export const se_DeleteTemplateCommand = async (
  */
 export const se_DeleteTemplateGroupAccessControlEntryCommand = async (
   input: DeleteTemplateGroupAccessControlEntryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -363,7 +363,7 @@ export const se_DeleteTemplateGroupAccessControlEntryCommand = async (
  */
 export const se_GetConnectorCommand = async (
   input: GetConnectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -379,7 +379,7 @@ export const se_GetConnectorCommand = async (
  */
 export const se_GetDirectoryRegistrationCommand = async (
   input: GetDirectoryRegistrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -395,7 +395,7 @@ export const se_GetDirectoryRegistrationCommand = async (
  */
 export const se_GetServicePrincipalNameCommand = async (
   input: GetServicePrincipalNameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -412,7 +412,7 @@ export const se_GetServicePrincipalNameCommand = async (
  */
 export const se_GetTemplateCommand = async (
   input: GetTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -428,7 +428,7 @@ export const se_GetTemplateCommand = async (
  */
 export const se_GetTemplateGroupAccessControlEntryCommand = async (
   input: GetTemplateGroupAccessControlEntryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -445,7 +445,7 @@ export const se_GetTemplateGroupAccessControlEntryCommand = async (
  */
 export const se_ListConnectorsCommand = async (
   input: ListConnectorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -464,7 +464,7 @@ export const se_ListConnectorsCommand = async (
  */
 export const se_ListDirectoryRegistrationsCommand = async (
   input: ListDirectoryRegistrationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -483,7 +483,7 @@ export const se_ListDirectoryRegistrationsCommand = async (
  */
 export const se_ListServicePrincipalNamesCommand = async (
   input: ListServicePrincipalNamesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -503,7 +503,7 @@ export const se_ListServicePrincipalNamesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -519,7 +519,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTemplateGroupAccessControlEntriesCommand = async (
   input: ListTemplateGroupAccessControlEntriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -539,7 +539,7 @@ export const se_ListTemplateGroupAccessControlEntriesCommand = async (
  */
 export const se_ListTemplatesCommand = async (
   input: ListTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -559,7 +559,7 @@ export const se_ListTemplatesCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -571,7 +571,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -582,7 +582,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -604,7 +604,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateTemplateCommand = async (
   input: UpdateTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -617,7 +617,7 @@ export const se_UpdateTemplateCommand = async (
     take(input, {
       Definition: (_) => _json(_),
       ReenrollAllCertificateHolders: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -628,7 +628,7 @@ export const se_UpdateTemplateCommand = async (
  */
 export const se_UpdateTemplateGroupAccessControlEntryCommand = async (
   input: UpdateTemplateGroupAccessControlEntryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -642,7 +642,7 @@ export const se_UpdateTemplateGroupAccessControlEntryCommand = async (
     take(input, {
       AccessRights: (_) => _json(_),
       GroupDisplayName: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -653,7 +653,7 @@ export const se_UpdateTemplateGroupAccessControlEntryCommand = async (
  */
 export const de_CreateConnectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConnectorCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -674,7 +674,7 @@ export const de_CreateConnectorCommand = async (
  */
 export const de_CreateDirectoryRegistrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDirectoryRegistrationCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -695,7 +695,7 @@ export const de_CreateDirectoryRegistrationCommand = async (
  */
 export const de_CreateServicePrincipalNameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateServicePrincipalNameCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -712,7 +712,7 @@ export const de_CreateServicePrincipalNameCommand = async (
  */
 export const de_CreateTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -733,7 +733,7 @@ export const de_CreateTemplateCommand = async (
  */
 export const de_CreateTemplateGroupAccessControlEntryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTemplateGroupAccessControlEntryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -750,7 +750,7 @@ export const de_CreateTemplateGroupAccessControlEntryCommand = async (
  */
 export const de_DeleteConnectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConnectorCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -767,7 +767,7 @@ export const de_DeleteConnectorCommand = async (
  */
 export const de_DeleteDirectoryRegistrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDirectoryRegistrationCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -784,7 +784,7 @@ export const de_DeleteDirectoryRegistrationCommand = async (
  */
 export const de_DeleteServicePrincipalNameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServicePrincipalNameCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -801,7 +801,7 @@ export const de_DeleteServicePrincipalNameCommand = async (
  */
 export const de_DeleteTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTemplateCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -818,7 +818,7 @@ export const de_DeleteTemplateCommand = async (
  */
 export const de_DeleteTemplateGroupAccessControlEntryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTemplateGroupAccessControlEntryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -835,7 +835,7 @@ export const de_DeleteTemplateGroupAccessControlEntryCommand = async (
  */
 export const de_GetConnectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConnectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -856,7 +856,7 @@ export const de_GetConnectorCommand = async (
  */
 export const de_GetDirectoryRegistrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDirectoryRegistrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -877,7 +877,7 @@ export const de_GetDirectoryRegistrationCommand = async (
  */
 export const de_GetServicePrincipalNameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServicePrincipalNameCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -898,7 +898,7 @@ export const de_GetServicePrincipalNameCommand = async (
  */
 export const de_GetTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -919,7 +919,7 @@ export const de_GetTemplateCommand = async (
  */
 export const de_GetTemplateGroupAccessControlEntryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTemplateGroupAccessControlEntryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -940,7 +940,7 @@ export const de_GetTemplateGroupAccessControlEntryCommand = async (
  */
 export const de_ListConnectorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConnectorsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -962,7 +962,7 @@ export const de_ListConnectorsCommand = async (
  */
 export const de_ListDirectoryRegistrationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDirectoryRegistrationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -984,7 +984,7 @@ export const de_ListDirectoryRegistrationsCommand = async (
  */
 export const de_ListServicePrincipalNamesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServicePrincipalNamesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1006,7 +1006,7 @@ export const de_ListServicePrincipalNamesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1027,7 +1027,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTemplateGroupAccessControlEntriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTemplateGroupAccessControlEntriesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1049,7 +1049,7 @@ export const de_ListTemplateGroupAccessControlEntriesCommand = async (
  */
 export const de_ListTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTemplatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1071,7 +1071,7 @@ export const de_ListTemplatesCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1088,7 +1088,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1105,7 +1105,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1122,7 +1122,7 @@ export const de_UpdateTemplateCommand = async (
  */
 export const de_UpdateTemplateGroupAccessControlEntryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTemplateGroupAccessControlEntryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1181,7 +1181,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1220,7 +1220,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1240,7 +1240,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1262,7 +1262,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

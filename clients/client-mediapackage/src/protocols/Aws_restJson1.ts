@@ -106,7 +106,7 @@ import {
  */
 export const se_ConfigureLogsCommand = async (
   input: ConfigureLogsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -119,7 +119,7 @@ export const se_ConfigureLogsCommand = async (
     take(input, {
       egressAccessLogs: [, (_) => se_EgressAccessLogs(_, context), `EgressAccessLogs`],
       ingressAccessLogs: [, (_) => se_IngressAccessLogs(_, context), `IngressAccessLogs`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -130,7 +130,7 @@ export const se_ConfigureLogsCommand = async (
  */
 export const se_CreateChannelCommand = async (
   input: CreateChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -143,7 +143,7 @@ export const se_CreateChannelCommand = async (
       description: [, , `Description`],
       id: [, , `Id`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -154,7 +154,7 @@ export const se_CreateChannelCommand = async (
  */
 export const se_CreateHarvestJobCommand = async (
   input: CreateHarvestJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -169,7 +169,7 @@ export const se_CreateHarvestJobCommand = async (
       originEndpointId: [, , `OriginEndpointId`],
       s3Destination: [, (_) => se_S3Destination(_, context), `S3Destination`],
       startTime: [, , `StartTime`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -180,7 +180,7 @@ export const se_CreateHarvestJobCommand = async (
  */
 export const se_CreateOriginEndpointCommand = async (
   input: CreateOriginEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -204,7 +204,7 @@ export const se_CreateOriginEndpointCommand = async (
       tags: [, (_) => _json(_), `Tags`],
       timeDelaySeconds: [, , `TimeDelaySeconds`],
       whitelist: [, (_) => _json(_), `Whitelist`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -215,7 +215,7 @@ export const se_CreateOriginEndpointCommand = async (
  */
 export const se_DeleteChannelCommand = async (
   input: DeleteChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -231,7 +231,7 @@ export const se_DeleteChannelCommand = async (
  */
 export const se_DeleteOriginEndpointCommand = async (
   input: DeleteOriginEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -247,7 +247,7 @@ export const se_DeleteOriginEndpointCommand = async (
  */
 export const se_DescribeChannelCommand = async (
   input: DescribeChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -263,7 +263,7 @@ export const se_DescribeChannelCommand = async (
  */
 export const se_DescribeHarvestJobCommand = async (
   input: DescribeHarvestJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -279,7 +279,7 @@ export const se_DescribeHarvestJobCommand = async (
  */
 export const se_DescribeOriginEndpointCommand = async (
   input: DescribeOriginEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -295,7 +295,7 @@ export const se_DescribeOriginEndpointCommand = async (
  */
 export const se_ListChannelsCommand = async (
   input: ListChannelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -314,7 +314,7 @@ export const se_ListChannelsCommand = async (
  */
 export const se_ListHarvestJobsCommand = async (
   input: ListHarvestJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -335,7 +335,7 @@ export const se_ListHarvestJobsCommand = async (
  */
 export const se_ListOriginEndpointsCommand = async (
   input: ListOriginEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -355,7 +355,7 @@ export const se_ListOriginEndpointsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -371,7 +371,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_RotateChannelCredentialsCommand = async (
   input: RotateChannelCredentialsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -387,7 +387,7 @@ export const se_RotateChannelCredentialsCommand = async (
  */
 export const se_RotateIngestEndpointCredentialsCommand = async (
   input: RotateIngestEndpointCredentialsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -404,7 +404,7 @@ export const se_RotateIngestEndpointCredentialsCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -416,7 +416,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -427,7 +427,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -449,7 +449,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateChannelCommand = async (
   input: UpdateChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -461,7 +461,7 @@ export const se_UpdateChannelCommand = async (
   body = JSON.stringify(
     take(input, {
       description: [, , `Description`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -472,7 +472,7 @@ export const se_UpdateChannelCommand = async (
  */
 export const se_UpdateOriginEndpointCommand = async (
   input: UpdateOriginEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -494,7 +494,7 @@ export const se_UpdateOriginEndpointCommand = async (
       startoverWindowSeconds: [, , `StartoverWindowSeconds`],
       timeDelaySeconds: [, , `TimeDelaySeconds`],
       whitelist: [, (_) => _json(_), `Whitelist`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -505,7 +505,7 @@ export const se_UpdateOriginEndpointCommand = async (
  */
 export const de_ConfigureLogsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConfigureLogsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -533,7 +533,7 @@ export const de_ConfigureLogsCommand = async (
  */
 export const de_CreateChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -561,7 +561,7 @@ export const de_CreateChannelCommand = async (
  */
 export const de_CreateHarvestJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateHarvestJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -590,7 +590,7 @@ export const de_CreateHarvestJobCommand = async (
  */
 export const de_CreateOriginEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateOriginEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -627,7 +627,7 @@ export const de_CreateOriginEndpointCommand = async (
  */
 export const de_DeleteChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteChannelCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -644,7 +644,7 @@ export const de_DeleteChannelCommand = async (
  */
 export const de_DeleteOriginEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteOriginEndpointCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -661,7 +661,7 @@ export const de_DeleteOriginEndpointCommand = async (
  */
 export const de_DescribeChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -689,7 +689,7 @@ export const de_DescribeChannelCommand = async (
  */
 export const de_DescribeHarvestJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeHarvestJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -718,7 +718,7 @@ export const de_DescribeHarvestJobCommand = async (
  */
 export const de_DescribeOriginEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeOriginEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -755,7 +755,7 @@ export const de_DescribeOriginEndpointCommand = async (
  */
 export const de_ListChannelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListChannelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -777,7 +777,7 @@ export const de_ListChannelsCommand = async (
  */
 export const de_ListHarvestJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListHarvestJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -799,7 +799,7 @@ export const de_ListHarvestJobsCommand = async (
  */
 export const de_ListOriginEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOriginEndpointsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -821,7 +821,7 @@ export const de_ListOriginEndpointsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -842,7 +842,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_RotateChannelCredentialsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RotateChannelCredentialsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -870,7 +870,7 @@ export const de_RotateChannelCredentialsCommand = async (
  */
 export const de_RotateIngestEndpointCredentialsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RotateIngestEndpointCredentialsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -898,7 +898,7 @@ export const de_RotateIngestEndpointCredentialsCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -915,7 +915,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -932,7 +932,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -960,7 +960,7 @@ export const de_UpdateChannelCommand = async (
  */
 export const de_UpdateOriginEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateOriginEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1053,7 +1053,7 @@ const de_ForbiddenExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_InternalServerErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1090,7 +1090,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1110,7 +1110,7 @@ const de_ServiceUnavailableExceptionRes = async (
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1130,7 +1130,7 @@ const de_TooManyRequestsExceptionRes = async (
  */
 const de_UnprocessableEntityExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnprocessableEntityException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1154,7 +1154,7 @@ const de_UnprocessableEntityExceptionRes = async (
  */
 const se___listOfHlsManifestCreateOrUpdateParameters = (
   input: HlsManifestCreateOrUpdateParameters[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -1194,7 +1194,7 @@ const se_CmafEncryption = (input: CmafEncryption, context: __SerdeContext): any 
  */
 const se_CmafPackageCreateOrUpdateParameters = (
   input: CmafPackageCreateOrUpdateParameters,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     encryption: [, (_) => se_CmafEncryption(_, context), `Encryption`],
@@ -1276,7 +1276,7 @@ const se_HlsEncryption = (input: HlsEncryption, context: __SerdeContext): any =>
  */
 const se_HlsManifestCreateOrUpdateParameters = (
   input: HlsManifestCreateOrUpdateParameters,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     adMarkers: [, , `AdMarkers`],

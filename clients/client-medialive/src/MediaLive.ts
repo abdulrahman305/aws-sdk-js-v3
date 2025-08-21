@@ -521,16 +521,16 @@ export interface MediaLive {
    */
   acceptInputDeviceTransfer(
     args: AcceptInputDeviceTransferCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AcceptInputDeviceTransferCommandOutput>;
   acceptInputDeviceTransfer(
     args: AcceptInputDeviceTransferCommandInput,
-    cb: (err: any, data?: AcceptInputDeviceTransferCommandOutput) => void
+    cb: (err: any, data?: AcceptInputDeviceTransferCommandOutput) => void,
   ): void;
   acceptInputDeviceTransfer(
     args: AcceptInputDeviceTransferCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AcceptInputDeviceTransferCommandOutput) => void
+    cb: (err: any, data?: AcceptInputDeviceTransferCommandOutput) => void,
   ): void;
 
   /**
@@ -542,7 +542,7 @@ export interface MediaLive {
   batchDelete(
     args: BatchDeleteCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDeleteCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteCommandOutput) => void,
   ): void;
 
   /**
@@ -554,7 +554,7 @@ export interface MediaLive {
   batchStart(
     args: BatchStartCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchStartCommandOutput) => void
+    cb: (err: any, data?: BatchStartCommandOutput) => void,
   ): void;
 
   /**
@@ -566,7 +566,7 @@ export interface MediaLive {
   batchStop(
     args: BatchStopCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchStopCommandOutput) => void
+    cb: (err: any, data?: BatchStopCommandOutput) => void,
   ): void;
 
   /**
@@ -574,16 +574,16 @@ export interface MediaLive {
    */
   batchUpdateSchedule(
     args: BatchUpdateScheduleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchUpdateScheduleCommandOutput>;
   batchUpdateSchedule(
     args: BatchUpdateScheduleCommandInput,
-    cb: (err: any, data?: BatchUpdateScheduleCommandOutput) => void
+    cb: (err: any, data?: BatchUpdateScheduleCommandOutput) => void,
   ): void;
   batchUpdateSchedule(
     args: BatchUpdateScheduleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchUpdateScheduleCommandOutput) => void
+    cb: (err: any, data?: BatchUpdateScheduleCommandOutput) => void,
   ): void;
 
   /**
@@ -591,16 +591,16 @@ export interface MediaLive {
    */
   cancelInputDeviceTransfer(
     args: CancelInputDeviceTransferCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelInputDeviceTransferCommandOutput>;
   cancelInputDeviceTransfer(
     args: CancelInputDeviceTransferCommandInput,
-    cb: (err: any, data?: CancelInputDeviceTransferCommandOutput) => void
+    cb: (err: any, data?: CancelInputDeviceTransferCommandOutput) => void,
   ): void;
   cancelInputDeviceTransfer(
     args: CancelInputDeviceTransferCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelInputDeviceTransferCommandOutput) => void
+    cb: (err: any, data?: CancelInputDeviceTransferCommandOutput) => void,
   ): void;
 
   /**
@@ -612,7 +612,7 @@ export interface MediaLive {
   claimDevice(
     args: ClaimDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ClaimDeviceCommandOutput) => void
+    cb: (err: any, data?: ClaimDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -624,7 +624,7 @@ export interface MediaLive {
   createChannel(
     args: CreateChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateChannelCommandOutput) => void
+    cb: (err: any, data?: CreateChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -632,16 +632,16 @@ export interface MediaLive {
    */
   createCloudWatchAlarmTemplate(
     args: CreateCloudWatchAlarmTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCloudWatchAlarmTemplateCommandOutput>;
   createCloudWatchAlarmTemplate(
     args: CreateCloudWatchAlarmTemplateCommandInput,
-    cb: (err: any, data?: CreateCloudWatchAlarmTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateCloudWatchAlarmTemplateCommandOutput) => void,
   ): void;
   createCloudWatchAlarmTemplate(
     args: CreateCloudWatchAlarmTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCloudWatchAlarmTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateCloudWatchAlarmTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -649,16 +649,16 @@ export interface MediaLive {
    */
   createCloudWatchAlarmTemplateGroup(
     args: CreateCloudWatchAlarmTemplateGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCloudWatchAlarmTemplateGroupCommandOutput>;
   createCloudWatchAlarmTemplateGroup(
     args: CreateCloudWatchAlarmTemplateGroupCommandInput,
-    cb: (err: any, data?: CreateCloudWatchAlarmTemplateGroupCommandOutput) => void
+    cb: (err: any, data?: CreateCloudWatchAlarmTemplateGroupCommandOutput) => void,
   ): void;
   createCloudWatchAlarmTemplateGroup(
     args: CreateCloudWatchAlarmTemplateGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCloudWatchAlarmTemplateGroupCommandOutput) => void
+    cb: (err: any, data?: CreateCloudWatchAlarmTemplateGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -666,16 +666,16 @@ export interface MediaLive {
    */
   createEventBridgeRuleTemplate(
     args: CreateEventBridgeRuleTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEventBridgeRuleTemplateCommandOutput>;
   createEventBridgeRuleTemplate(
     args: CreateEventBridgeRuleTemplateCommandInput,
-    cb: (err: any, data?: CreateEventBridgeRuleTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateEventBridgeRuleTemplateCommandOutput) => void,
   ): void;
   createEventBridgeRuleTemplate(
     args: CreateEventBridgeRuleTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEventBridgeRuleTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateEventBridgeRuleTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -683,16 +683,16 @@ export interface MediaLive {
    */
   createEventBridgeRuleTemplateGroup(
     args: CreateEventBridgeRuleTemplateGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEventBridgeRuleTemplateGroupCommandOutput>;
   createEventBridgeRuleTemplateGroup(
     args: CreateEventBridgeRuleTemplateGroupCommandInput,
-    cb: (err: any, data?: CreateEventBridgeRuleTemplateGroupCommandOutput) => void
+    cb: (err: any, data?: CreateEventBridgeRuleTemplateGroupCommandOutput) => void,
   ): void;
   createEventBridgeRuleTemplateGroup(
     args: CreateEventBridgeRuleTemplateGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEventBridgeRuleTemplateGroupCommandOutput) => void
+    cb: (err: any, data?: CreateEventBridgeRuleTemplateGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -704,7 +704,7 @@ export interface MediaLive {
   createInput(
     args: CreateInputCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateInputCommandOutput) => void
+    cb: (err: any, data?: CreateInputCommandOutput) => void,
   ): void;
 
   /**
@@ -713,16 +713,16 @@ export interface MediaLive {
   createInputSecurityGroup(): Promise<CreateInputSecurityGroupCommandOutput>;
   createInputSecurityGroup(
     args: CreateInputSecurityGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateInputSecurityGroupCommandOutput>;
   createInputSecurityGroup(
     args: CreateInputSecurityGroupCommandInput,
-    cb: (err: any, data?: CreateInputSecurityGroupCommandOutput) => void
+    cb: (err: any, data?: CreateInputSecurityGroupCommandOutput) => void,
   ): void;
   createInputSecurityGroup(
     args: CreateInputSecurityGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateInputSecurityGroupCommandOutput) => void
+    cb: (err: any, data?: CreateInputSecurityGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -730,13 +730,13 @@ export interface MediaLive {
    */
   createMultiplex(
     args: CreateMultiplexCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateMultiplexCommandOutput>;
   createMultiplex(args: CreateMultiplexCommandInput, cb: (err: any, data?: CreateMultiplexCommandOutput) => void): void;
   createMultiplex(
     args: CreateMultiplexCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMultiplexCommandOutput) => void
+    cb: (err: any, data?: CreateMultiplexCommandOutput) => void,
   ): void;
 
   /**
@@ -744,16 +744,16 @@ export interface MediaLive {
    */
   createMultiplexProgram(
     args: CreateMultiplexProgramCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateMultiplexProgramCommandOutput>;
   createMultiplexProgram(
     args: CreateMultiplexProgramCommandInput,
-    cb: (err: any, data?: CreateMultiplexProgramCommandOutput) => void
+    cb: (err: any, data?: CreateMultiplexProgramCommandOutput) => void,
   ): void;
   createMultiplexProgram(
     args: CreateMultiplexProgramCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMultiplexProgramCommandOutput) => void
+    cb: (err: any, data?: CreateMultiplexProgramCommandOutput) => void,
   ): void;
 
   /**
@@ -761,16 +761,16 @@ export interface MediaLive {
    */
   createPartnerInput(
     args: CreatePartnerInputCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePartnerInputCommandOutput>;
   createPartnerInput(
     args: CreatePartnerInputCommandInput,
-    cb: (err: any, data?: CreatePartnerInputCommandOutput) => void
+    cb: (err: any, data?: CreatePartnerInputCommandOutput) => void,
   ): void;
   createPartnerInput(
     args: CreatePartnerInputCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePartnerInputCommandOutput) => void
+    cb: (err: any, data?: CreatePartnerInputCommandOutput) => void,
   ): void;
 
   /**
@@ -778,13 +778,13 @@ export interface MediaLive {
    */
   createSignalMap(
     args: CreateSignalMapCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSignalMapCommandOutput>;
   createSignalMap(args: CreateSignalMapCommandInput, cb: (err: any, data?: CreateSignalMapCommandOutput) => void): void;
   createSignalMap(
     args: CreateSignalMapCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSignalMapCommandOutput) => void
+    cb: (err: any, data?: CreateSignalMapCommandOutput) => void,
   ): void;
 
   /**
@@ -795,7 +795,7 @@ export interface MediaLive {
   createTags(
     args: CreateTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTagsCommandOutput) => void
+    cb: (err: any, data?: CreateTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -806,7 +806,7 @@ export interface MediaLive {
   deleteChannel(
     args: DeleteChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -814,16 +814,16 @@ export interface MediaLive {
    */
   deleteCloudWatchAlarmTemplate(
     args: DeleteCloudWatchAlarmTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCloudWatchAlarmTemplateCommandOutput>;
   deleteCloudWatchAlarmTemplate(
     args: DeleteCloudWatchAlarmTemplateCommandInput,
-    cb: (err: any, data?: DeleteCloudWatchAlarmTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteCloudWatchAlarmTemplateCommandOutput) => void,
   ): void;
   deleteCloudWatchAlarmTemplate(
     args: DeleteCloudWatchAlarmTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCloudWatchAlarmTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteCloudWatchAlarmTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -831,16 +831,16 @@ export interface MediaLive {
    */
   deleteCloudWatchAlarmTemplateGroup(
     args: DeleteCloudWatchAlarmTemplateGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCloudWatchAlarmTemplateGroupCommandOutput>;
   deleteCloudWatchAlarmTemplateGroup(
     args: DeleteCloudWatchAlarmTemplateGroupCommandInput,
-    cb: (err: any, data?: DeleteCloudWatchAlarmTemplateGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteCloudWatchAlarmTemplateGroupCommandOutput) => void,
   ): void;
   deleteCloudWatchAlarmTemplateGroup(
     args: DeleteCloudWatchAlarmTemplateGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCloudWatchAlarmTemplateGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteCloudWatchAlarmTemplateGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -848,16 +848,16 @@ export interface MediaLive {
    */
   deleteEventBridgeRuleTemplate(
     args: DeleteEventBridgeRuleTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEventBridgeRuleTemplateCommandOutput>;
   deleteEventBridgeRuleTemplate(
     args: DeleteEventBridgeRuleTemplateCommandInput,
-    cb: (err: any, data?: DeleteEventBridgeRuleTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteEventBridgeRuleTemplateCommandOutput) => void,
   ): void;
   deleteEventBridgeRuleTemplate(
     args: DeleteEventBridgeRuleTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEventBridgeRuleTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteEventBridgeRuleTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -865,16 +865,16 @@ export interface MediaLive {
    */
   deleteEventBridgeRuleTemplateGroup(
     args: DeleteEventBridgeRuleTemplateGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEventBridgeRuleTemplateGroupCommandOutput>;
   deleteEventBridgeRuleTemplateGroup(
     args: DeleteEventBridgeRuleTemplateGroupCommandInput,
-    cb: (err: any, data?: DeleteEventBridgeRuleTemplateGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteEventBridgeRuleTemplateGroupCommandOutput) => void,
   ): void;
   deleteEventBridgeRuleTemplateGroup(
     args: DeleteEventBridgeRuleTemplateGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEventBridgeRuleTemplateGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteEventBridgeRuleTemplateGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -885,7 +885,7 @@ export interface MediaLive {
   deleteInput(
     args: DeleteInputCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteInputCommandOutput) => void
+    cb: (err: any, data?: DeleteInputCommandOutput) => void,
   ): void;
 
   /**
@@ -893,16 +893,16 @@ export interface MediaLive {
    */
   deleteInputSecurityGroup(
     args: DeleteInputSecurityGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteInputSecurityGroupCommandOutput>;
   deleteInputSecurityGroup(
     args: DeleteInputSecurityGroupCommandInput,
-    cb: (err: any, data?: DeleteInputSecurityGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteInputSecurityGroupCommandOutput) => void,
   ): void;
   deleteInputSecurityGroup(
     args: DeleteInputSecurityGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteInputSecurityGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteInputSecurityGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -910,13 +910,13 @@ export interface MediaLive {
    */
   deleteMultiplex(
     args: DeleteMultiplexCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteMultiplexCommandOutput>;
   deleteMultiplex(args: DeleteMultiplexCommandInput, cb: (err: any, data?: DeleteMultiplexCommandOutput) => void): void;
   deleteMultiplex(
     args: DeleteMultiplexCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMultiplexCommandOutput) => void
+    cb: (err: any, data?: DeleteMultiplexCommandOutput) => void,
   ): void;
 
   /**
@@ -924,16 +924,16 @@ export interface MediaLive {
    */
   deleteMultiplexProgram(
     args: DeleteMultiplexProgramCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteMultiplexProgramCommandOutput>;
   deleteMultiplexProgram(
     args: DeleteMultiplexProgramCommandInput,
-    cb: (err: any, data?: DeleteMultiplexProgramCommandOutput) => void
+    cb: (err: any, data?: DeleteMultiplexProgramCommandOutput) => void,
   ): void;
   deleteMultiplexProgram(
     args: DeleteMultiplexProgramCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMultiplexProgramCommandOutput) => void
+    cb: (err: any, data?: DeleteMultiplexProgramCommandOutput) => void,
   ): void;
 
   /**
@@ -941,16 +941,16 @@ export interface MediaLive {
    */
   deleteReservation(
     args: DeleteReservationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteReservationCommandOutput>;
   deleteReservation(
     args: DeleteReservationCommandInput,
-    cb: (err: any, data?: DeleteReservationCommandOutput) => void
+    cb: (err: any, data?: DeleteReservationCommandOutput) => void,
   ): void;
   deleteReservation(
     args: DeleteReservationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteReservationCommandOutput) => void
+    cb: (err: any, data?: DeleteReservationCommandOutput) => void,
   ): void;
 
   /**
@@ -958,13 +958,13 @@ export interface MediaLive {
    */
   deleteSchedule(
     args: DeleteScheduleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteScheduleCommandOutput>;
   deleteSchedule(args: DeleteScheduleCommandInput, cb: (err: any, data?: DeleteScheduleCommandOutput) => void): void;
   deleteSchedule(
     args: DeleteScheduleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteScheduleCommandOutput) => void
+    cb: (err: any, data?: DeleteScheduleCommandOutput) => void,
   ): void;
 
   /**
@@ -972,13 +972,13 @@ export interface MediaLive {
    */
   deleteSignalMap(
     args: DeleteSignalMapCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSignalMapCommandOutput>;
   deleteSignalMap(args: DeleteSignalMapCommandInput, cb: (err: any, data?: DeleteSignalMapCommandOutput) => void): void;
   deleteSignalMap(
     args: DeleteSignalMapCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSignalMapCommandOutput) => void
+    cb: (err: any, data?: DeleteSignalMapCommandOutput) => void,
   ): void;
 
   /**
@@ -989,7 +989,7 @@ export interface MediaLive {
   deleteTags(
     args: DeleteTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTagsCommandOutput) => void
+    cb: (err: any, data?: DeleteTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -998,16 +998,16 @@ export interface MediaLive {
   describeAccountConfiguration(): Promise<DescribeAccountConfigurationCommandOutput>;
   describeAccountConfiguration(
     args: DescribeAccountConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAccountConfigurationCommandOutput>;
   describeAccountConfiguration(
     args: DescribeAccountConfigurationCommandInput,
-    cb: (err: any, data?: DescribeAccountConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeAccountConfigurationCommandOutput) => void,
   ): void;
   describeAccountConfiguration(
     args: DescribeAccountConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAccountConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeAccountConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1015,13 +1015,13 @@ export interface MediaLive {
    */
   describeChannel(
     args: DescribeChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeChannelCommandOutput>;
   describeChannel(args: DescribeChannelCommandInput, cb: (err: any, data?: DescribeChannelCommandOutput) => void): void;
   describeChannel(
     args: DescribeChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeChannelCommandOutput) => void
+    cb: (err: any, data?: DescribeChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -1032,7 +1032,7 @@ export interface MediaLive {
   describeInput(
     args: DescribeInputCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeInputCommandOutput) => void
+    cb: (err: any, data?: DescribeInputCommandOutput) => void,
   ): void;
 
   /**
@@ -1040,16 +1040,16 @@ export interface MediaLive {
    */
   describeInputDevice(
     args: DescribeInputDeviceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeInputDeviceCommandOutput>;
   describeInputDevice(
     args: DescribeInputDeviceCommandInput,
-    cb: (err: any, data?: DescribeInputDeviceCommandOutput) => void
+    cb: (err: any, data?: DescribeInputDeviceCommandOutput) => void,
   ): void;
   describeInputDevice(
     args: DescribeInputDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeInputDeviceCommandOutput) => void
+    cb: (err: any, data?: DescribeInputDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -1057,16 +1057,16 @@ export interface MediaLive {
    */
   describeInputDeviceThumbnail(
     args: DescribeInputDeviceThumbnailCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeInputDeviceThumbnailCommandOutput>;
   describeInputDeviceThumbnail(
     args: DescribeInputDeviceThumbnailCommandInput,
-    cb: (err: any, data?: DescribeInputDeviceThumbnailCommandOutput) => void
+    cb: (err: any, data?: DescribeInputDeviceThumbnailCommandOutput) => void,
   ): void;
   describeInputDeviceThumbnail(
     args: DescribeInputDeviceThumbnailCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeInputDeviceThumbnailCommandOutput) => void
+    cb: (err: any, data?: DescribeInputDeviceThumbnailCommandOutput) => void,
   ): void;
 
   /**
@@ -1074,16 +1074,16 @@ export interface MediaLive {
    */
   describeInputSecurityGroup(
     args: DescribeInputSecurityGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeInputSecurityGroupCommandOutput>;
   describeInputSecurityGroup(
     args: DescribeInputSecurityGroupCommandInput,
-    cb: (err: any, data?: DescribeInputSecurityGroupCommandOutput) => void
+    cb: (err: any, data?: DescribeInputSecurityGroupCommandOutput) => void,
   ): void;
   describeInputSecurityGroup(
     args: DescribeInputSecurityGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeInputSecurityGroupCommandOutput) => void
+    cb: (err: any, data?: DescribeInputSecurityGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1091,16 +1091,16 @@ export interface MediaLive {
    */
   describeMultiplex(
     args: DescribeMultiplexCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeMultiplexCommandOutput>;
   describeMultiplex(
     args: DescribeMultiplexCommandInput,
-    cb: (err: any, data?: DescribeMultiplexCommandOutput) => void
+    cb: (err: any, data?: DescribeMultiplexCommandOutput) => void,
   ): void;
   describeMultiplex(
     args: DescribeMultiplexCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeMultiplexCommandOutput) => void
+    cb: (err: any, data?: DescribeMultiplexCommandOutput) => void,
   ): void;
 
   /**
@@ -1108,16 +1108,16 @@ export interface MediaLive {
    */
   describeMultiplexProgram(
     args: DescribeMultiplexProgramCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeMultiplexProgramCommandOutput>;
   describeMultiplexProgram(
     args: DescribeMultiplexProgramCommandInput,
-    cb: (err: any, data?: DescribeMultiplexProgramCommandOutput) => void
+    cb: (err: any, data?: DescribeMultiplexProgramCommandOutput) => void,
   ): void;
   describeMultiplexProgram(
     args: DescribeMultiplexProgramCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeMultiplexProgramCommandOutput) => void
+    cb: (err: any, data?: DescribeMultiplexProgramCommandOutput) => void,
   ): void;
 
   /**
@@ -1125,16 +1125,16 @@ export interface MediaLive {
    */
   describeOffering(
     args: DescribeOfferingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeOfferingCommandOutput>;
   describeOffering(
     args: DescribeOfferingCommandInput,
-    cb: (err: any, data?: DescribeOfferingCommandOutput) => void
+    cb: (err: any, data?: DescribeOfferingCommandOutput) => void,
   ): void;
   describeOffering(
     args: DescribeOfferingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeOfferingCommandOutput) => void
+    cb: (err: any, data?: DescribeOfferingCommandOutput) => void,
   ): void;
 
   /**
@@ -1142,16 +1142,16 @@ export interface MediaLive {
    */
   describeReservation(
     args: DescribeReservationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeReservationCommandOutput>;
   describeReservation(
     args: DescribeReservationCommandInput,
-    cb: (err: any, data?: DescribeReservationCommandOutput) => void
+    cb: (err: any, data?: DescribeReservationCommandOutput) => void,
   ): void;
   describeReservation(
     args: DescribeReservationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeReservationCommandOutput) => void
+    cb: (err: any, data?: DescribeReservationCommandOutput) => void,
   ): void;
 
   /**
@@ -1159,16 +1159,16 @@ export interface MediaLive {
    */
   describeSchedule(
     args: DescribeScheduleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeScheduleCommandOutput>;
   describeSchedule(
     args: DescribeScheduleCommandInput,
-    cb: (err: any, data?: DescribeScheduleCommandOutput) => void
+    cb: (err: any, data?: DescribeScheduleCommandOutput) => void,
   ): void;
   describeSchedule(
     args: DescribeScheduleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeScheduleCommandOutput) => void
+    cb: (err: any, data?: DescribeScheduleCommandOutput) => void,
   ): void;
 
   /**
@@ -1176,16 +1176,16 @@ export interface MediaLive {
    */
   describeThumbnails(
     args: DescribeThumbnailsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeThumbnailsCommandOutput>;
   describeThumbnails(
     args: DescribeThumbnailsCommandInput,
-    cb: (err: any, data?: DescribeThumbnailsCommandOutput) => void
+    cb: (err: any, data?: DescribeThumbnailsCommandOutput) => void,
   ): void;
   describeThumbnails(
     args: DescribeThumbnailsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeThumbnailsCommandOutput) => void
+    cb: (err: any, data?: DescribeThumbnailsCommandOutput) => void,
   ): void;
 
   /**
@@ -1193,16 +1193,16 @@ export interface MediaLive {
    */
   getCloudWatchAlarmTemplate(
     args: GetCloudWatchAlarmTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCloudWatchAlarmTemplateCommandOutput>;
   getCloudWatchAlarmTemplate(
     args: GetCloudWatchAlarmTemplateCommandInput,
-    cb: (err: any, data?: GetCloudWatchAlarmTemplateCommandOutput) => void
+    cb: (err: any, data?: GetCloudWatchAlarmTemplateCommandOutput) => void,
   ): void;
   getCloudWatchAlarmTemplate(
     args: GetCloudWatchAlarmTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCloudWatchAlarmTemplateCommandOutput) => void
+    cb: (err: any, data?: GetCloudWatchAlarmTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1210,16 +1210,16 @@ export interface MediaLive {
    */
   getCloudWatchAlarmTemplateGroup(
     args: GetCloudWatchAlarmTemplateGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCloudWatchAlarmTemplateGroupCommandOutput>;
   getCloudWatchAlarmTemplateGroup(
     args: GetCloudWatchAlarmTemplateGroupCommandInput,
-    cb: (err: any, data?: GetCloudWatchAlarmTemplateGroupCommandOutput) => void
+    cb: (err: any, data?: GetCloudWatchAlarmTemplateGroupCommandOutput) => void,
   ): void;
   getCloudWatchAlarmTemplateGroup(
     args: GetCloudWatchAlarmTemplateGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCloudWatchAlarmTemplateGroupCommandOutput) => void
+    cb: (err: any, data?: GetCloudWatchAlarmTemplateGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1227,16 +1227,16 @@ export interface MediaLive {
    */
   getEventBridgeRuleTemplate(
     args: GetEventBridgeRuleTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEventBridgeRuleTemplateCommandOutput>;
   getEventBridgeRuleTemplate(
     args: GetEventBridgeRuleTemplateCommandInput,
-    cb: (err: any, data?: GetEventBridgeRuleTemplateCommandOutput) => void
+    cb: (err: any, data?: GetEventBridgeRuleTemplateCommandOutput) => void,
   ): void;
   getEventBridgeRuleTemplate(
     args: GetEventBridgeRuleTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEventBridgeRuleTemplateCommandOutput) => void
+    cb: (err: any, data?: GetEventBridgeRuleTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1244,16 +1244,16 @@ export interface MediaLive {
    */
   getEventBridgeRuleTemplateGroup(
     args: GetEventBridgeRuleTemplateGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEventBridgeRuleTemplateGroupCommandOutput>;
   getEventBridgeRuleTemplateGroup(
     args: GetEventBridgeRuleTemplateGroupCommandInput,
-    cb: (err: any, data?: GetEventBridgeRuleTemplateGroupCommandOutput) => void
+    cb: (err: any, data?: GetEventBridgeRuleTemplateGroupCommandOutput) => void,
   ): void;
   getEventBridgeRuleTemplateGroup(
     args: GetEventBridgeRuleTemplateGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEventBridgeRuleTemplateGroupCommandOutput) => void
+    cb: (err: any, data?: GetEventBridgeRuleTemplateGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1264,7 +1264,7 @@ export interface MediaLive {
   getSignalMap(
     args: GetSignalMapCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSignalMapCommandOutput) => void
+    cb: (err: any, data?: GetSignalMapCommandOutput) => void,
   ): void;
 
   /**
@@ -1276,7 +1276,7 @@ export interface MediaLive {
   listChannels(
     args: ListChannelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListChannelsCommandOutput) => void
+    cb: (err: any, data?: ListChannelsCommandOutput) => void,
   ): void;
 
   /**
@@ -1285,16 +1285,16 @@ export interface MediaLive {
   listCloudWatchAlarmTemplateGroups(): Promise<ListCloudWatchAlarmTemplateGroupsCommandOutput>;
   listCloudWatchAlarmTemplateGroups(
     args: ListCloudWatchAlarmTemplateGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCloudWatchAlarmTemplateGroupsCommandOutput>;
   listCloudWatchAlarmTemplateGroups(
     args: ListCloudWatchAlarmTemplateGroupsCommandInput,
-    cb: (err: any, data?: ListCloudWatchAlarmTemplateGroupsCommandOutput) => void
+    cb: (err: any, data?: ListCloudWatchAlarmTemplateGroupsCommandOutput) => void,
   ): void;
   listCloudWatchAlarmTemplateGroups(
     args: ListCloudWatchAlarmTemplateGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCloudWatchAlarmTemplateGroupsCommandOutput) => void
+    cb: (err: any, data?: ListCloudWatchAlarmTemplateGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -1303,16 +1303,16 @@ export interface MediaLive {
   listCloudWatchAlarmTemplates(): Promise<ListCloudWatchAlarmTemplatesCommandOutput>;
   listCloudWatchAlarmTemplates(
     args: ListCloudWatchAlarmTemplatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCloudWatchAlarmTemplatesCommandOutput>;
   listCloudWatchAlarmTemplates(
     args: ListCloudWatchAlarmTemplatesCommandInput,
-    cb: (err: any, data?: ListCloudWatchAlarmTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListCloudWatchAlarmTemplatesCommandOutput) => void,
   ): void;
   listCloudWatchAlarmTemplates(
     args: ListCloudWatchAlarmTemplatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCloudWatchAlarmTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListCloudWatchAlarmTemplatesCommandOutput) => void,
   ): void;
 
   /**
@@ -1321,16 +1321,16 @@ export interface MediaLive {
   listEventBridgeRuleTemplateGroups(): Promise<ListEventBridgeRuleTemplateGroupsCommandOutput>;
   listEventBridgeRuleTemplateGroups(
     args: ListEventBridgeRuleTemplateGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEventBridgeRuleTemplateGroupsCommandOutput>;
   listEventBridgeRuleTemplateGroups(
     args: ListEventBridgeRuleTemplateGroupsCommandInput,
-    cb: (err: any, data?: ListEventBridgeRuleTemplateGroupsCommandOutput) => void
+    cb: (err: any, data?: ListEventBridgeRuleTemplateGroupsCommandOutput) => void,
   ): void;
   listEventBridgeRuleTemplateGroups(
     args: ListEventBridgeRuleTemplateGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEventBridgeRuleTemplateGroupsCommandOutput) => void
+    cb: (err: any, data?: ListEventBridgeRuleTemplateGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -1339,16 +1339,16 @@ export interface MediaLive {
   listEventBridgeRuleTemplates(): Promise<ListEventBridgeRuleTemplatesCommandOutput>;
   listEventBridgeRuleTemplates(
     args: ListEventBridgeRuleTemplatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEventBridgeRuleTemplatesCommandOutput>;
   listEventBridgeRuleTemplates(
     args: ListEventBridgeRuleTemplatesCommandInput,
-    cb: (err: any, data?: ListEventBridgeRuleTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListEventBridgeRuleTemplatesCommandOutput) => void,
   ): void;
   listEventBridgeRuleTemplates(
     args: ListEventBridgeRuleTemplatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEventBridgeRuleTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListEventBridgeRuleTemplatesCommandOutput) => void,
   ): void;
 
   /**
@@ -1357,16 +1357,16 @@ export interface MediaLive {
   listInputDevices(): Promise<ListInputDevicesCommandOutput>;
   listInputDevices(
     args: ListInputDevicesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListInputDevicesCommandOutput>;
   listInputDevices(
     args: ListInputDevicesCommandInput,
-    cb: (err: any, data?: ListInputDevicesCommandOutput) => void
+    cb: (err: any, data?: ListInputDevicesCommandOutput) => void,
   ): void;
   listInputDevices(
     args: ListInputDevicesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListInputDevicesCommandOutput) => void
+    cb: (err: any, data?: ListInputDevicesCommandOutput) => void,
   ): void;
 
   /**
@@ -1374,16 +1374,16 @@ export interface MediaLive {
    */
   listInputDeviceTransfers(
     args: ListInputDeviceTransfersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListInputDeviceTransfersCommandOutput>;
   listInputDeviceTransfers(
     args: ListInputDeviceTransfersCommandInput,
-    cb: (err: any, data?: ListInputDeviceTransfersCommandOutput) => void
+    cb: (err: any, data?: ListInputDeviceTransfersCommandOutput) => void,
   ): void;
   listInputDeviceTransfers(
     args: ListInputDeviceTransfersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListInputDeviceTransfersCommandOutput) => void
+    cb: (err: any, data?: ListInputDeviceTransfersCommandOutput) => void,
   ): void;
 
   /**
@@ -1395,7 +1395,7 @@ export interface MediaLive {
   listInputs(
     args: ListInputsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListInputsCommandOutput) => void
+    cb: (err: any, data?: ListInputsCommandOutput) => void,
   ): void;
 
   /**
@@ -1404,16 +1404,16 @@ export interface MediaLive {
   listInputSecurityGroups(): Promise<ListInputSecurityGroupsCommandOutput>;
   listInputSecurityGroups(
     args: ListInputSecurityGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListInputSecurityGroupsCommandOutput>;
   listInputSecurityGroups(
     args: ListInputSecurityGroupsCommandInput,
-    cb: (err: any, data?: ListInputSecurityGroupsCommandOutput) => void
+    cb: (err: any, data?: ListInputSecurityGroupsCommandOutput) => void,
   ): void;
   listInputSecurityGroups(
     args: ListInputSecurityGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListInputSecurityGroupsCommandOutput) => void
+    cb: (err: any, data?: ListInputSecurityGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -1422,13 +1422,13 @@ export interface MediaLive {
   listMultiplexes(): Promise<ListMultiplexesCommandOutput>;
   listMultiplexes(
     args: ListMultiplexesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMultiplexesCommandOutput>;
   listMultiplexes(args: ListMultiplexesCommandInput, cb: (err: any, data?: ListMultiplexesCommandOutput) => void): void;
   listMultiplexes(
     args: ListMultiplexesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMultiplexesCommandOutput) => void
+    cb: (err: any, data?: ListMultiplexesCommandOutput) => void,
   ): void;
 
   /**
@@ -1436,16 +1436,16 @@ export interface MediaLive {
    */
   listMultiplexPrograms(
     args: ListMultiplexProgramsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMultiplexProgramsCommandOutput>;
   listMultiplexPrograms(
     args: ListMultiplexProgramsCommandInput,
-    cb: (err: any, data?: ListMultiplexProgramsCommandOutput) => void
+    cb: (err: any, data?: ListMultiplexProgramsCommandOutput) => void,
   ): void;
   listMultiplexPrograms(
     args: ListMultiplexProgramsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMultiplexProgramsCommandOutput) => void
+    cb: (err: any, data?: ListMultiplexProgramsCommandOutput) => void,
   ): void;
 
   /**
@@ -1457,7 +1457,7 @@ export interface MediaLive {
   listOfferings(
     args: ListOfferingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOfferingsCommandOutput) => void
+    cb: (err: any, data?: ListOfferingsCommandOutput) => void,
   ): void;
 
   /**
@@ -1466,16 +1466,16 @@ export interface MediaLive {
   listReservations(): Promise<ListReservationsCommandOutput>;
   listReservations(
     args: ListReservationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListReservationsCommandOutput>;
   listReservations(
     args: ListReservationsCommandInput,
-    cb: (err: any, data?: ListReservationsCommandOutput) => void
+    cb: (err: any, data?: ListReservationsCommandOutput) => void,
   ): void;
   listReservations(
     args: ListReservationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListReservationsCommandOutput) => void
+    cb: (err: any, data?: ListReservationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1484,13 +1484,13 @@ export interface MediaLive {
   listSignalMaps(): Promise<ListSignalMapsCommandOutput>;
   listSignalMaps(
     args: ListSignalMapsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSignalMapsCommandOutput>;
   listSignalMaps(args: ListSignalMapsCommandInput, cb: (err: any, data?: ListSignalMapsCommandOutput) => void): void;
   listSignalMaps(
     args: ListSignalMapsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSignalMapsCommandOutput) => void
+    cb: (err: any, data?: ListSignalMapsCommandOutput) => void,
   ): void;
 
   /**
@@ -1498,16 +1498,16 @@ export interface MediaLive {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1515,16 +1515,16 @@ export interface MediaLive {
    */
   purchaseOffering(
     args: PurchaseOfferingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PurchaseOfferingCommandOutput>;
   purchaseOffering(
     args: PurchaseOfferingCommandInput,
-    cb: (err: any, data?: PurchaseOfferingCommandOutput) => void
+    cb: (err: any, data?: PurchaseOfferingCommandOutput) => void,
   ): void;
   purchaseOffering(
     args: PurchaseOfferingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PurchaseOfferingCommandOutput) => void
+    cb: (err: any, data?: PurchaseOfferingCommandOutput) => void,
   ): void;
 
   /**
@@ -1532,16 +1532,16 @@ export interface MediaLive {
    */
   rebootInputDevice(
     args: RebootInputDeviceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RebootInputDeviceCommandOutput>;
   rebootInputDevice(
     args: RebootInputDeviceCommandInput,
-    cb: (err: any, data?: RebootInputDeviceCommandOutput) => void
+    cb: (err: any, data?: RebootInputDeviceCommandOutput) => void,
   ): void;
   rebootInputDevice(
     args: RebootInputDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RebootInputDeviceCommandOutput) => void
+    cb: (err: any, data?: RebootInputDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -1549,16 +1549,16 @@ export interface MediaLive {
    */
   rejectInputDeviceTransfer(
     args: RejectInputDeviceTransferCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RejectInputDeviceTransferCommandOutput>;
   rejectInputDeviceTransfer(
     args: RejectInputDeviceTransferCommandInput,
-    cb: (err: any, data?: RejectInputDeviceTransferCommandOutput) => void
+    cb: (err: any, data?: RejectInputDeviceTransferCommandOutput) => void,
   ): void;
   rejectInputDeviceTransfer(
     args: RejectInputDeviceTransferCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RejectInputDeviceTransferCommandOutput) => void
+    cb: (err: any, data?: RejectInputDeviceTransferCommandOutput) => void,
   ): void;
 
   /**
@@ -1566,16 +1566,16 @@ export interface MediaLive {
    */
   restartChannelPipelines(
     args: RestartChannelPipelinesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RestartChannelPipelinesCommandOutput>;
   restartChannelPipelines(
     args: RestartChannelPipelinesCommandInput,
-    cb: (err: any, data?: RestartChannelPipelinesCommandOutput) => void
+    cb: (err: any, data?: RestartChannelPipelinesCommandOutput) => void,
   ): void;
   restartChannelPipelines(
     args: RestartChannelPipelinesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RestartChannelPipelinesCommandOutput) => void
+    cb: (err: any, data?: RestartChannelPipelinesCommandOutput) => void,
   ): void;
 
   /**
@@ -1586,7 +1586,7 @@ export interface MediaLive {
   startChannel(
     args: StartChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartChannelCommandOutput) => void
+    cb: (err: any, data?: StartChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -1594,16 +1594,16 @@ export interface MediaLive {
    */
   startDeleteMonitorDeployment(
     args: StartDeleteMonitorDeploymentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartDeleteMonitorDeploymentCommandOutput>;
   startDeleteMonitorDeployment(
     args: StartDeleteMonitorDeploymentCommandInput,
-    cb: (err: any, data?: StartDeleteMonitorDeploymentCommandOutput) => void
+    cb: (err: any, data?: StartDeleteMonitorDeploymentCommandOutput) => void,
   ): void;
   startDeleteMonitorDeployment(
     args: StartDeleteMonitorDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartDeleteMonitorDeploymentCommandOutput) => void
+    cb: (err: any, data?: StartDeleteMonitorDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -1611,16 +1611,16 @@ export interface MediaLive {
    */
   startInputDevice(
     args: StartInputDeviceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartInputDeviceCommandOutput>;
   startInputDevice(
     args: StartInputDeviceCommandInput,
-    cb: (err: any, data?: StartInputDeviceCommandOutput) => void
+    cb: (err: any, data?: StartInputDeviceCommandOutput) => void,
   ): void;
   startInputDevice(
     args: StartInputDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartInputDeviceCommandOutput) => void
+    cb: (err: any, data?: StartInputDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -1628,16 +1628,16 @@ export interface MediaLive {
    */
   startInputDeviceMaintenanceWindow(
     args: StartInputDeviceMaintenanceWindowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartInputDeviceMaintenanceWindowCommandOutput>;
   startInputDeviceMaintenanceWindow(
     args: StartInputDeviceMaintenanceWindowCommandInput,
-    cb: (err: any, data?: StartInputDeviceMaintenanceWindowCommandOutput) => void
+    cb: (err: any, data?: StartInputDeviceMaintenanceWindowCommandOutput) => void,
   ): void;
   startInputDeviceMaintenanceWindow(
     args: StartInputDeviceMaintenanceWindowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartInputDeviceMaintenanceWindowCommandOutput) => void
+    cb: (err: any, data?: StartInputDeviceMaintenanceWindowCommandOutput) => void,
   ): void;
 
   /**
@@ -1645,16 +1645,16 @@ export interface MediaLive {
    */
   startMonitorDeployment(
     args: StartMonitorDeploymentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartMonitorDeploymentCommandOutput>;
   startMonitorDeployment(
     args: StartMonitorDeploymentCommandInput,
-    cb: (err: any, data?: StartMonitorDeploymentCommandOutput) => void
+    cb: (err: any, data?: StartMonitorDeploymentCommandOutput) => void,
   ): void;
   startMonitorDeployment(
     args: StartMonitorDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartMonitorDeploymentCommandOutput) => void
+    cb: (err: any, data?: StartMonitorDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -1662,13 +1662,13 @@ export interface MediaLive {
    */
   startMultiplex(
     args: StartMultiplexCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartMultiplexCommandOutput>;
   startMultiplex(args: StartMultiplexCommandInput, cb: (err: any, data?: StartMultiplexCommandOutput) => void): void;
   startMultiplex(
     args: StartMultiplexCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartMultiplexCommandOutput) => void
+    cb: (err: any, data?: StartMultiplexCommandOutput) => void,
   ): void;
 
   /**
@@ -1676,16 +1676,16 @@ export interface MediaLive {
    */
   startUpdateSignalMap(
     args: StartUpdateSignalMapCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartUpdateSignalMapCommandOutput>;
   startUpdateSignalMap(
     args: StartUpdateSignalMapCommandInput,
-    cb: (err: any, data?: StartUpdateSignalMapCommandOutput) => void
+    cb: (err: any, data?: StartUpdateSignalMapCommandOutput) => void,
   ): void;
   startUpdateSignalMap(
     args: StartUpdateSignalMapCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartUpdateSignalMapCommandOutput) => void
+    cb: (err: any, data?: StartUpdateSignalMapCommandOutput) => void,
   ): void;
 
   /**
@@ -1696,7 +1696,7 @@ export interface MediaLive {
   stopChannel(
     args: StopChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopChannelCommandOutput) => void
+    cb: (err: any, data?: StopChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -1704,13 +1704,13 @@ export interface MediaLive {
    */
   stopInputDevice(
     args: StopInputDeviceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopInputDeviceCommandOutput>;
   stopInputDevice(args: StopInputDeviceCommandInput, cb: (err: any, data?: StopInputDeviceCommandOutput) => void): void;
   stopInputDevice(
     args: StopInputDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopInputDeviceCommandOutput) => void
+    cb: (err: any, data?: StopInputDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -1721,7 +1721,7 @@ export interface MediaLive {
   stopMultiplex(
     args: StopMultiplexCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopMultiplexCommandOutput) => void
+    cb: (err: any, data?: StopMultiplexCommandOutput) => void,
   ): void;
 
   /**
@@ -1729,16 +1729,16 @@ export interface MediaLive {
    */
   transferInputDevice(
     args: TransferInputDeviceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<TransferInputDeviceCommandOutput>;
   transferInputDevice(
     args: TransferInputDeviceCommandInput,
-    cb: (err: any, data?: TransferInputDeviceCommandOutput) => void
+    cb: (err: any, data?: TransferInputDeviceCommandOutput) => void,
   ): void;
   transferInputDevice(
     args: TransferInputDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TransferInputDeviceCommandOutput) => void
+    cb: (err: any, data?: TransferInputDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -1747,16 +1747,16 @@ export interface MediaLive {
   updateAccountConfiguration(): Promise<UpdateAccountConfigurationCommandOutput>;
   updateAccountConfiguration(
     args: UpdateAccountConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAccountConfigurationCommandOutput>;
   updateAccountConfiguration(
     args: UpdateAccountConfigurationCommandInput,
-    cb: (err: any, data?: UpdateAccountConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateAccountConfigurationCommandOutput) => void,
   ): void;
   updateAccountConfiguration(
     args: UpdateAccountConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAccountConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateAccountConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1767,7 +1767,7 @@ export interface MediaLive {
   updateChannel(
     args: UpdateChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -1775,16 +1775,16 @@ export interface MediaLive {
    */
   updateChannelClass(
     args: UpdateChannelClassCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateChannelClassCommandOutput>;
   updateChannelClass(
     args: UpdateChannelClassCommandInput,
-    cb: (err: any, data?: UpdateChannelClassCommandOutput) => void
+    cb: (err: any, data?: UpdateChannelClassCommandOutput) => void,
   ): void;
   updateChannelClass(
     args: UpdateChannelClassCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateChannelClassCommandOutput) => void
+    cb: (err: any, data?: UpdateChannelClassCommandOutput) => void,
   ): void;
 
   /**
@@ -1792,16 +1792,16 @@ export interface MediaLive {
    */
   updateCloudWatchAlarmTemplate(
     args: UpdateCloudWatchAlarmTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateCloudWatchAlarmTemplateCommandOutput>;
   updateCloudWatchAlarmTemplate(
     args: UpdateCloudWatchAlarmTemplateCommandInput,
-    cb: (err: any, data?: UpdateCloudWatchAlarmTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateCloudWatchAlarmTemplateCommandOutput) => void,
   ): void;
   updateCloudWatchAlarmTemplate(
     args: UpdateCloudWatchAlarmTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateCloudWatchAlarmTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateCloudWatchAlarmTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1809,16 +1809,16 @@ export interface MediaLive {
    */
   updateCloudWatchAlarmTemplateGroup(
     args: UpdateCloudWatchAlarmTemplateGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateCloudWatchAlarmTemplateGroupCommandOutput>;
   updateCloudWatchAlarmTemplateGroup(
     args: UpdateCloudWatchAlarmTemplateGroupCommandInput,
-    cb: (err: any, data?: UpdateCloudWatchAlarmTemplateGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateCloudWatchAlarmTemplateGroupCommandOutput) => void,
   ): void;
   updateCloudWatchAlarmTemplateGroup(
     args: UpdateCloudWatchAlarmTemplateGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateCloudWatchAlarmTemplateGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateCloudWatchAlarmTemplateGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1826,16 +1826,16 @@ export interface MediaLive {
    */
   updateEventBridgeRuleTemplate(
     args: UpdateEventBridgeRuleTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEventBridgeRuleTemplateCommandOutput>;
   updateEventBridgeRuleTemplate(
     args: UpdateEventBridgeRuleTemplateCommandInput,
-    cb: (err: any, data?: UpdateEventBridgeRuleTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateEventBridgeRuleTemplateCommandOutput) => void,
   ): void;
   updateEventBridgeRuleTemplate(
     args: UpdateEventBridgeRuleTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEventBridgeRuleTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateEventBridgeRuleTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1843,16 +1843,16 @@ export interface MediaLive {
    */
   updateEventBridgeRuleTemplateGroup(
     args: UpdateEventBridgeRuleTemplateGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEventBridgeRuleTemplateGroupCommandOutput>;
   updateEventBridgeRuleTemplateGroup(
     args: UpdateEventBridgeRuleTemplateGroupCommandInput,
-    cb: (err: any, data?: UpdateEventBridgeRuleTemplateGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateEventBridgeRuleTemplateGroupCommandOutput) => void,
   ): void;
   updateEventBridgeRuleTemplateGroup(
     args: UpdateEventBridgeRuleTemplateGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEventBridgeRuleTemplateGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateEventBridgeRuleTemplateGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1863,7 +1863,7 @@ export interface MediaLive {
   updateInput(
     args: UpdateInputCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateInputCommandOutput) => void
+    cb: (err: any, data?: UpdateInputCommandOutput) => void,
   ): void;
 
   /**
@@ -1871,16 +1871,16 @@ export interface MediaLive {
    */
   updateInputDevice(
     args: UpdateInputDeviceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateInputDeviceCommandOutput>;
   updateInputDevice(
     args: UpdateInputDeviceCommandInput,
-    cb: (err: any, data?: UpdateInputDeviceCommandOutput) => void
+    cb: (err: any, data?: UpdateInputDeviceCommandOutput) => void,
   ): void;
   updateInputDevice(
     args: UpdateInputDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateInputDeviceCommandOutput) => void
+    cb: (err: any, data?: UpdateInputDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -1888,16 +1888,16 @@ export interface MediaLive {
    */
   updateInputSecurityGroup(
     args: UpdateInputSecurityGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateInputSecurityGroupCommandOutput>;
   updateInputSecurityGroup(
     args: UpdateInputSecurityGroupCommandInput,
-    cb: (err: any, data?: UpdateInputSecurityGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateInputSecurityGroupCommandOutput) => void,
   ): void;
   updateInputSecurityGroup(
     args: UpdateInputSecurityGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateInputSecurityGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateInputSecurityGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1905,13 +1905,13 @@ export interface MediaLive {
    */
   updateMultiplex(
     args: UpdateMultiplexCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateMultiplexCommandOutput>;
   updateMultiplex(args: UpdateMultiplexCommandInput, cb: (err: any, data?: UpdateMultiplexCommandOutput) => void): void;
   updateMultiplex(
     args: UpdateMultiplexCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMultiplexCommandOutput) => void
+    cb: (err: any, data?: UpdateMultiplexCommandOutput) => void,
   ): void;
 
   /**
@@ -1919,16 +1919,16 @@ export interface MediaLive {
    */
   updateMultiplexProgram(
     args: UpdateMultiplexProgramCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateMultiplexProgramCommandOutput>;
   updateMultiplexProgram(
     args: UpdateMultiplexProgramCommandInput,
-    cb: (err: any, data?: UpdateMultiplexProgramCommandOutput) => void
+    cb: (err: any, data?: UpdateMultiplexProgramCommandOutput) => void,
   ): void;
   updateMultiplexProgram(
     args: UpdateMultiplexProgramCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMultiplexProgramCommandOutput) => void
+    cb: (err: any, data?: UpdateMultiplexProgramCommandOutput) => void,
   ): void;
 
   /**
@@ -1936,16 +1936,16 @@ export interface MediaLive {
    */
   updateReservation(
     args: UpdateReservationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateReservationCommandOutput>;
   updateReservation(
     args: UpdateReservationCommandInput,
-    cb: (err: any, data?: UpdateReservationCommandOutput) => void
+    cb: (err: any, data?: UpdateReservationCommandOutput) => void,
   ): void;
   updateReservation(
     args: UpdateReservationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateReservationCommandOutput) => void
+    cb: (err: any, data?: UpdateReservationCommandOutput) => void,
   ): void;
 }
 

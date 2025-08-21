@@ -245,16 +245,16 @@ export interface DataBrew {
    */
   batchDeleteRecipeVersion(
     args: BatchDeleteRecipeVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDeleteRecipeVersionCommandOutput>;
   batchDeleteRecipeVersion(
     args: BatchDeleteRecipeVersionCommandInput,
-    cb: (err: any, data?: BatchDeleteRecipeVersionCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteRecipeVersionCommandOutput) => void,
   ): void;
   batchDeleteRecipeVersion(
     args: BatchDeleteRecipeVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDeleteRecipeVersionCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteRecipeVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -265,7 +265,7 @@ export interface DataBrew {
   createDataset(
     args: CreateDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDatasetCommandOutput) => void
+    cb: (err: any, data?: CreateDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -273,16 +273,16 @@ export interface DataBrew {
    */
   createProfileJob(
     args: CreateProfileJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateProfileJobCommandOutput>;
   createProfileJob(
     args: CreateProfileJobCommandInput,
-    cb: (err: any, data?: CreateProfileJobCommandOutput) => void
+    cb: (err: any, data?: CreateProfileJobCommandOutput) => void,
   ): void;
   createProfileJob(
     args: CreateProfileJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateProfileJobCommandOutput) => void
+    cb: (err: any, data?: CreateProfileJobCommandOutput) => void,
   ): void;
 
   /**
@@ -293,7 +293,7 @@ export interface DataBrew {
   createProject(
     args: CreateProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateProjectCommandOutput) => void
+    cb: (err: any, data?: CreateProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -304,7 +304,7 @@ export interface DataBrew {
   createRecipe(
     args: CreateRecipeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRecipeCommandOutput) => void
+    cb: (err: any, data?: CreateRecipeCommandOutput) => void,
   ): void;
 
   /**
@@ -312,13 +312,13 @@ export interface DataBrew {
    */
   createRecipeJob(
     args: CreateRecipeJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRecipeJobCommandOutput>;
   createRecipeJob(args: CreateRecipeJobCommandInput, cb: (err: any, data?: CreateRecipeJobCommandOutput) => void): void;
   createRecipeJob(
     args: CreateRecipeJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRecipeJobCommandOutput) => void
+    cb: (err: any, data?: CreateRecipeJobCommandOutput) => void,
   ): void;
 
   /**
@@ -329,7 +329,7 @@ export interface DataBrew {
   createRuleset(
     args: CreateRulesetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRulesetCommandOutput) => void
+    cb: (err: any, data?: CreateRulesetCommandOutput) => void,
   ): void;
 
   /**
@@ -337,13 +337,13 @@ export interface DataBrew {
    */
   createSchedule(
     args: CreateScheduleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateScheduleCommandOutput>;
   createSchedule(args: CreateScheduleCommandInput, cb: (err: any, data?: CreateScheduleCommandOutput) => void): void;
   createSchedule(
     args: CreateScheduleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateScheduleCommandOutput) => void
+    cb: (err: any, data?: CreateScheduleCommandOutput) => void,
   ): void;
 
   /**
@@ -354,7 +354,7 @@ export interface DataBrew {
   deleteDataset(
     args: DeleteDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDatasetCommandOutput) => void
+    cb: (err: any, data?: DeleteDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -365,7 +365,7 @@ export interface DataBrew {
   deleteJob(
     args: DeleteJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteJobCommandOutput) => void
+    cb: (err: any, data?: DeleteJobCommandOutput) => void,
   ): void;
 
   /**
@@ -376,7 +376,7 @@ export interface DataBrew {
   deleteProject(
     args: DeleteProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProjectCommandOutput) => void
+    cb: (err: any, data?: DeleteProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -384,16 +384,16 @@ export interface DataBrew {
    */
   deleteRecipeVersion(
     args: DeleteRecipeVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRecipeVersionCommandOutput>;
   deleteRecipeVersion(
     args: DeleteRecipeVersionCommandInput,
-    cb: (err: any, data?: DeleteRecipeVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteRecipeVersionCommandOutput) => void,
   ): void;
   deleteRecipeVersion(
     args: DeleteRecipeVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRecipeVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteRecipeVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -404,7 +404,7 @@ export interface DataBrew {
   deleteRuleset(
     args: DeleteRulesetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRulesetCommandOutput) => void
+    cb: (err: any, data?: DeleteRulesetCommandOutput) => void,
   ): void;
 
   /**
@@ -412,13 +412,13 @@ export interface DataBrew {
    */
   deleteSchedule(
     args: DeleteScheduleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteScheduleCommandOutput>;
   deleteSchedule(args: DeleteScheduleCommandInput, cb: (err: any, data?: DeleteScheduleCommandOutput) => void): void;
   deleteSchedule(
     args: DeleteScheduleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteScheduleCommandOutput) => void
+    cb: (err: any, data?: DeleteScheduleCommandOutput) => void,
   ): void;
 
   /**
@@ -426,13 +426,13 @@ export interface DataBrew {
    */
   describeDataset(
     args: DescribeDatasetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDatasetCommandOutput>;
   describeDataset(args: DescribeDatasetCommandInput, cb: (err: any, data?: DescribeDatasetCommandOutput) => void): void;
   describeDataset(
     args: DescribeDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDatasetCommandOutput) => void
+    cb: (err: any, data?: DescribeDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -443,7 +443,7 @@ export interface DataBrew {
   describeJob(
     args: DescribeJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeJobCommandOutput) => void
+    cb: (err: any, data?: DescribeJobCommandOutput) => void,
   ): void;
 
   /**
@@ -451,13 +451,13 @@ export interface DataBrew {
    */
   describeJobRun(
     args: DescribeJobRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeJobRunCommandOutput>;
   describeJobRun(args: DescribeJobRunCommandInput, cb: (err: any, data?: DescribeJobRunCommandOutput) => void): void;
   describeJobRun(
     args: DescribeJobRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeJobRunCommandOutput) => void
+    cb: (err: any, data?: DescribeJobRunCommandOutput) => void,
   ): void;
 
   /**
@@ -465,13 +465,13 @@ export interface DataBrew {
    */
   describeProject(
     args: DescribeProjectCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeProjectCommandOutput>;
   describeProject(args: DescribeProjectCommandInput, cb: (err: any, data?: DescribeProjectCommandOutput) => void): void;
   describeProject(
     args: DescribeProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeProjectCommandOutput) => void
+    cb: (err: any, data?: DescribeProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -479,13 +479,13 @@ export interface DataBrew {
    */
   describeRecipe(
     args: DescribeRecipeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRecipeCommandOutput>;
   describeRecipe(args: DescribeRecipeCommandInput, cb: (err: any, data?: DescribeRecipeCommandOutput) => void): void;
   describeRecipe(
     args: DescribeRecipeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRecipeCommandOutput) => void
+    cb: (err: any, data?: DescribeRecipeCommandOutput) => void,
   ): void;
 
   /**
@@ -493,13 +493,13 @@ export interface DataBrew {
    */
   describeRuleset(
     args: DescribeRulesetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRulesetCommandOutput>;
   describeRuleset(args: DescribeRulesetCommandInput, cb: (err: any, data?: DescribeRulesetCommandOutput) => void): void;
   describeRuleset(
     args: DescribeRulesetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRulesetCommandOutput) => void
+    cb: (err: any, data?: DescribeRulesetCommandOutput) => void,
   ): void;
 
   /**
@@ -507,16 +507,16 @@ export interface DataBrew {
    */
   describeSchedule(
     args: DescribeScheduleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeScheduleCommandOutput>;
   describeSchedule(
     args: DescribeScheduleCommandInput,
-    cb: (err: any, data?: DescribeScheduleCommandOutput) => void
+    cb: (err: any, data?: DescribeScheduleCommandOutput) => void,
   ): void;
   describeSchedule(
     args: DescribeScheduleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeScheduleCommandOutput) => void
+    cb: (err: any, data?: DescribeScheduleCommandOutput) => void,
   ): void;
 
   /**
@@ -528,7 +528,7 @@ export interface DataBrew {
   listDatasets(
     args: ListDatasetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDatasetsCommandOutput) => void
+    cb: (err: any, data?: ListDatasetsCommandOutput) => void,
   ): void;
 
   /**
@@ -539,7 +539,7 @@ export interface DataBrew {
   listJobRuns(
     args: ListJobRunsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListJobRunsCommandOutput) => void
+    cb: (err: any, data?: ListJobRunsCommandOutput) => void,
   ): void;
 
   /**
@@ -551,7 +551,7 @@ export interface DataBrew {
   listJobs(
     args: ListJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListJobsCommandOutput) => void
+    cb: (err: any, data?: ListJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -563,7 +563,7 @@ export interface DataBrew {
   listProjects(
     args: ListProjectsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProjectsCommandOutput) => void
+    cb: (err: any, data?: ListProjectsCommandOutput) => void,
   ): void;
 
   /**
@@ -575,7 +575,7 @@ export interface DataBrew {
   listRecipes(
     args: ListRecipesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRecipesCommandOutput) => void
+    cb: (err: any, data?: ListRecipesCommandOutput) => void,
   ): void;
 
   /**
@@ -583,16 +583,16 @@ export interface DataBrew {
    */
   listRecipeVersions(
     args: ListRecipeVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRecipeVersionsCommandOutput>;
   listRecipeVersions(
     args: ListRecipeVersionsCommandInput,
-    cb: (err: any, data?: ListRecipeVersionsCommandOutput) => void
+    cb: (err: any, data?: ListRecipeVersionsCommandOutput) => void,
   ): void;
   listRecipeVersions(
     args: ListRecipeVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRecipeVersionsCommandOutput) => void
+    cb: (err: any, data?: ListRecipeVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -604,7 +604,7 @@ export interface DataBrew {
   listRulesets(
     args: ListRulesetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRulesetsCommandOutput) => void
+    cb: (err: any, data?: ListRulesetsCommandOutput) => void,
   ): void;
 
   /**
@@ -616,7 +616,7 @@ export interface DataBrew {
   listSchedules(
     args: ListSchedulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSchedulesCommandOutput) => void
+    cb: (err: any, data?: ListSchedulesCommandOutput) => void,
   ): void;
 
   /**
@@ -624,16 +624,16 @@ export interface DataBrew {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -644,7 +644,7 @@ export interface DataBrew {
   publishRecipe(
     args: PublishRecipeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PublishRecipeCommandOutput) => void
+    cb: (err: any, data?: PublishRecipeCommandOutput) => void,
   ): void;
 
   /**
@@ -652,16 +652,16 @@ export interface DataBrew {
    */
   sendProjectSessionAction(
     args: SendProjectSessionActionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SendProjectSessionActionCommandOutput>;
   sendProjectSessionAction(
     args: SendProjectSessionActionCommandInput,
-    cb: (err: any, data?: SendProjectSessionActionCommandOutput) => void
+    cb: (err: any, data?: SendProjectSessionActionCommandOutput) => void,
   ): void;
   sendProjectSessionAction(
     args: SendProjectSessionActionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendProjectSessionActionCommandOutput) => void
+    cb: (err: any, data?: SendProjectSessionActionCommandOutput) => void,
   ): void;
 
   /**
@@ -672,7 +672,7 @@ export interface DataBrew {
   startJobRun(
     args: StartJobRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartJobRunCommandOutput) => void
+    cb: (err: any, data?: StartJobRunCommandOutput) => void,
   ): void;
 
   /**
@@ -680,16 +680,16 @@ export interface DataBrew {
    */
   startProjectSession(
     args: StartProjectSessionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartProjectSessionCommandOutput>;
   startProjectSession(
     args: StartProjectSessionCommandInput,
-    cb: (err: any, data?: StartProjectSessionCommandOutput) => void
+    cb: (err: any, data?: StartProjectSessionCommandOutput) => void,
   ): void;
   startProjectSession(
     args: StartProjectSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartProjectSessionCommandOutput) => void
+    cb: (err: any, data?: StartProjectSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -700,7 +700,7 @@ export interface DataBrew {
   stopJobRun(
     args: StopJobRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopJobRunCommandOutput) => void
+    cb: (err: any, data?: StopJobRunCommandOutput) => void,
   ): void;
 
   /**
@@ -711,7 +711,7 @@ export interface DataBrew {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -722,7 +722,7 @@ export interface DataBrew {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -733,7 +733,7 @@ export interface DataBrew {
   updateDataset(
     args: UpdateDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDatasetCommandOutput) => void
+    cb: (err: any, data?: UpdateDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -741,16 +741,16 @@ export interface DataBrew {
    */
   updateProfileJob(
     args: UpdateProfileJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateProfileJobCommandOutput>;
   updateProfileJob(
     args: UpdateProfileJobCommandInput,
-    cb: (err: any, data?: UpdateProfileJobCommandOutput) => void
+    cb: (err: any, data?: UpdateProfileJobCommandOutput) => void,
   ): void;
   updateProfileJob(
     args: UpdateProfileJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateProfileJobCommandOutput) => void
+    cb: (err: any, data?: UpdateProfileJobCommandOutput) => void,
   ): void;
 
   /**
@@ -761,7 +761,7 @@ export interface DataBrew {
   updateProject(
     args: UpdateProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateProjectCommandOutput) => void
+    cb: (err: any, data?: UpdateProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -772,7 +772,7 @@ export interface DataBrew {
   updateRecipe(
     args: UpdateRecipeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRecipeCommandOutput) => void
+    cb: (err: any, data?: UpdateRecipeCommandOutput) => void,
   ): void;
 
   /**
@@ -780,13 +780,13 @@ export interface DataBrew {
    */
   updateRecipeJob(
     args: UpdateRecipeJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRecipeJobCommandOutput>;
   updateRecipeJob(args: UpdateRecipeJobCommandInput, cb: (err: any, data?: UpdateRecipeJobCommandOutput) => void): void;
   updateRecipeJob(
     args: UpdateRecipeJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRecipeJobCommandOutput) => void
+    cb: (err: any, data?: UpdateRecipeJobCommandOutput) => void,
   ): void;
 
   /**
@@ -797,7 +797,7 @@ export interface DataBrew {
   updateRuleset(
     args: UpdateRulesetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRulesetCommandOutput) => void
+    cb: (err: any, data?: UpdateRulesetCommandOutput) => void,
   ): void;
 
   /**
@@ -805,13 +805,13 @@ export interface DataBrew {
    */
   updateSchedule(
     args: UpdateScheduleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateScheduleCommandOutput>;
   updateSchedule(args: UpdateScheduleCommandInput, cb: (err: any, data?: UpdateScheduleCommandOutput) => void): void;
   updateSchedule(
     args: UpdateScheduleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateScheduleCommandOutput) => void
+    cb: (err: any, data?: UpdateScheduleCommandOutput) => void,
   ): void;
 }
 

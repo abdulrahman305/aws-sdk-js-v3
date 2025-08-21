@@ -258,7 +258,7 @@ import {
  */
 export const se_CreateAddonInstanceCommand = async (
   input: CreateAddonInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAddonInstance");
   let body: any;
@@ -271,7 +271,7 @@ export const se_CreateAddonInstanceCommand = async (
  */
 export const se_CreateAddonSubscriptionCommand = async (
   input: CreateAddonSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAddonSubscription");
   let body: any;
@@ -284,7 +284,7 @@ export const se_CreateAddonSubscriptionCommand = async (
  */
 export const se_CreateArchiveCommand = async (
   input: CreateArchiveCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateArchive");
   let body: any;
@@ -297,7 +297,7 @@ export const se_CreateArchiveCommand = async (
  */
 export const se_CreateIngressPointCommand = async (
   input: CreateIngressPointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateIngressPoint");
   let body: any;
@@ -310,7 +310,7 @@ export const se_CreateIngressPointCommand = async (
  */
 export const se_CreateRelayCommand = async (
   input: CreateRelayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateRelay");
   let body: any;
@@ -323,7 +323,7 @@ export const se_CreateRelayCommand = async (
  */
 export const se_CreateRuleSetCommand = async (
   input: CreateRuleSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateRuleSet");
   let body: any;
@@ -336,7 +336,7 @@ export const se_CreateRuleSetCommand = async (
  */
 export const se_CreateTrafficPolicyCommand = async (
   input: CreateTrafficPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateTrafficPolicy");
   let body: any;
@@ -349,7 +349,7 @@ export const se_CreateTrafficPolicyCommand = async (
  */
 export const se_DeleteAddonInstanceCommand = async (
   input: DeleteAddonInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAddonInstance");
   let body: any;
@@ -362,7 +362,7 @@ export const se_DeleteAddonInstanceCommand = async (
  */
 export const se_DeleteAddonSubscriptionCommand = async (
   input: DeleteAddonSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAddonSubscription");
   let body: any;
@@ -375,7 +375,7 @@ export const se_DeleteAddonSubscriptionCommand = async (
  */
 export const se_DeleteArchiveCommand = async (
   input: DeleteArchiveCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteArchive");
   let body: any;
@@ -388,7 +388,7 @@ export const se_DeleteArchiveCommand = async (
  */
 export const se_DeleteIngressPointCommand = async (
   input: DeleteIngressPointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteIngressPoint");
   let body: any;
@@ -401,7 +401,7 @@ export const se_DeleteIngressPointCommand = async (
  */
 export const se_DeleteRelayCommand = async (
   input: DeleteRelayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRelay");
   let body: any;
@@ -414,7 +414,7 @@ export const se_DeleteRelayCommand = async (
  */
 export const se_DeleteRuleSetCommand = async (
   input: DeleteRuleSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRuleSet");
   let body: any;
@@ -427,7 +427,7 @@ export const se_DeleteRuleSetCommand = async (
  */
 export const se_DeleteTrafficPolicyCommand = async (
   input: DeleteTrafficPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteTrafficPolicy");
   let body: any;
@@ -440,7 +440,7 @@ export const se_DeleteTrafficPolicyCommand = async (
  */
 export const se_GetAddonInstanceCommand = async (
   input: GetAddonInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAddonInstance");
   let body: any;
@@ -453,7 +453,7 @@ export const se_GetAddonInstanceCommand = async (
  */
 export const se_GetAddonSubscriptionCommand = async (
   input: GetAddonSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAddonSubscription");
   let body: any;
@@ -466,7 +466,7 @@ export const se_GetAddonSubscriptionCommand = async (
  */
 export const se_GetArchiveCommand = async (
   input: GetArchiveCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetArchive");
   let body: any;
@@ -479,7 +479,7 @@ export const se_GetArchiveCommand = async (
  */
 export const se_GetArchiveExportCommand = async (
   input: GetArchiveExportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetArchiveExport");
   let body: any;
@@ -492,7 +492,7 @@ export const se_GetArchiveExportCommand = async (
  */
 export const se_GetArchiveMessageCommand = async (
   input: GetArchiveMessageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetArchiveMessage");
   let body: any;
@@ -505,7 +505,7 @@ export const se_GetArchiveMessageCommand = async (
  */
 export const se_GetArchiveMessageContentCommand = async (
   input: GetArchiveMessageContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetArchiveMessageContent");
   let body: any;
@@ -518,7 +518,7 @@ export const se_GetArchiveMessageContentCommand = async (
  */
 export const se_GetArchiveSearchCommand = async (
   input: GetArchiveSearchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetArchiveSearch");
   let body: any;
@@ -531,7 +531,7 @@ export const se_GetArchiveSearchCommand = async (
  */
 export const se_GetArchiveSearchResultsCommand = async (
   input: GetArchiveSearchResultsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetArchiveSearchResults");
   let body: any;
@@ -544,7 +544,7 @@ export const se_GetArchiveSearchResultsCommand = async (
  */
 export const se_GetIngressPointCommand = async (
   input: GetIngressPointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetIngressPoint");
   let body: any;
@@ -557,7 +557,7 @@ export const se_GetIngressPointCommand = async (
  */
 export const se_GetRelayCommand = async (
   input: GetRelayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRelay");
   let body: any;
@@ -570,7 +570,7 @@ export const se_GetRelayCommand = async (
  */
 export const se_GetRuleSetCommand = async (
   input: GetRuleSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRuleSet");
   let body: any;
@@ -583,7 +583,7 @@ export const se_GetRuleSetCommand = async (
  */
 export const se_GetTrafficPolicyCommand = async (
   input: GetTrafficPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetTrafficPolicy");
   let body: any;
@@ -596,7 +596,7 @@ export const se_GetTrafficPolicyCommand = async (
  */
 export const se_ListAddonInstancesCommand = async (
   input: ListAddonInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAddonInstances");
   let body: any;
@@ -609,7 +609,7 @@ export const se_ListAddonInstancesCommand = async (
  */
 export const se_ListAddonSubscriptionsCommand = async (
   input: ListAddonSubscriptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAddonSubscriptions");
   let body: any;
@@ -622,7 +622,7 @@ export const se_ListAddonSubscriptionsCommand = async (
  */
 export const se_ListArchiveExportsCommand = async (
   input: ListArchiveExportsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListArchiveExports");
   let body: any;
@@ -635,7 +635,7 @@ export const se_ListArchiveExportsCommand = async (
  */
 export const se_ListArchivesCommand = async (
   input: ListArchivesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListArchives");
   let body: any;
@@ -648,7 +648,7 @@ export const se_ListArchivesCommand = async (
  */
 export const se_ListArchiveSearchesCommand = async (
   input: ListArchiveSearchesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListArchiveSearches");
   let body: any;
@@ -661,7 +661,7 @@ export const se_ListArchiveSearchesCommand = async (
  */
 export const se_ListIngressPointsCommand = async (
   input: ListIngressPointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListIngressPoints");
   let body: any;
@@ -674,7 +674,7 @@ export const se_ListIngressPointsCommand = async (
  */
 export const se_ListRelaysCommand = async (
   input: ListRelaysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRelays");
   let body: any;
@@ -687,7 +687,7 @@ export const se_ListRelaysCommand = async (
  */
 export const se_ListRuleSetsCommand = async (
   input: ListRuleSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRuleSets");
   let body: any;
@@ -700,7 +700,7 @@ export const se_ListRuleSetsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -713,7 +713,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTrafficPoliciesCommand = async (
   input: ListTrafficPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTrafficPolicies");
   let body: any;
@@ -726,7 +726,7 @@ export const se_ListTrafficPoliciesCommand = async (
  */
 export const se_StartArchiveExportCommand = async (
   input: StartArchiveExportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartArchiveExport");
   let body: any;
@@ -739,7 +739,7 @@ export const se_StartArchiveExportCommand = async (
  */
 export const se_StartArchiveSearchCommand = async (
   input: StartArchiveSearchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartArchiveSearch");
   let body: any;
@@ -752,7 +752,7 @@ export const se_StartArchiveSearchCommand = async (
  */
 export const se_StopArchiveExportCommand = async (
   input: StopArchiveExportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopArchiveExport");
   let body: any;
@@ -765,7 +765,7 @@ export const se_StopArchiveExportCommand = async (
  */
 export const se_StopArchiveSearchCommand = async (
   input: StopArchiveSearchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopArchiveSearch");
   let body: any;
@@ -778,7 +778,7 @@ export const se_StopArchiveSearchCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -791,7 +791,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -804,7 +804,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateArchiveCommand = async (
   input: UpdateArchiveCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateArchive");
   let body: any;
@@ -817,7 +817,7 @@ export const se_UpdateArchiveCommand = async (
  */
 export const se_UpdateIngressPointCommand = async (
   input: UpdateIngressPointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateIngressPoint");
   let body: any;
@@ -830,7 +830,7 @@ export const se_UpdateIngressPointCommand = async (
  */
 export const se_UpdateRelayCommand = async (
   input: UpdateRelayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRelay");
   let body: any;
@@ -843,7 +843,7 @@ export const se_UpdateRelayCommand = async (
  */
 export const se_UpdateRuleSetCommand = async (
   input: UpdateRuleSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRuleSet");
   let body: any;
@@ -856,7 +856,7 @@ export const se_UpdateRuleSetCommand = async (
  */
 export const se_UpdateTrafficPolicyCommand = async (
   input: UpdateTrafficPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateTrafficPolicy");
   let body: any;
@@ -869,7 +869,7 @@ export const se_UpdateTrafficPolicyCommand = async (
  */
 export const de_CreateAddonInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAddonInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -889,7 +889,7 @@ export const de_CreateAddonInstanceCommand = async (
  */
 export const de_CreateAddonSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAddonSubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -909,7 +909,7 @@ export const de_CreateAddonSubscriptionCommand = async (
  */
 export const de_CreateArchiveCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateArchiveCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -929,7 +929,7 @@ export const de_CreateArchiveCommand = async (
  */
 export const de_CreateIngressPointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateIngressPointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -949,7 +949,7 @@ export const de_CreateIngressPointCommand = async (
  */
 export const de_CreateRelayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRelayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -969,7 +969,7 @@ export const de_CreateRelayCommand = async (
  */
 export const de_CreateRuleSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRuleSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -989,7 +989,7 @@ export const de_CreateRuleSetCommand = async (
  */
 export const de_CreateTrafficPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTrafficPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1009,7 +1009,7 @@ export const de_CreateTrafficPolicyCommand = async (
  */
 export const de_DeleteAddonInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAddonInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1029,7 +1029,7 @@ export const de_DeleteAddonInstanceCommand = async (
  */
 export const de_DeleteAddonSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAddonSubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1049,7 +1049,7 @@ export const de_DeleteAddonSubscriptionCommand = async (
  */
 export const de_DeleteArchiveCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteArchiveCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1069,7 +1069,7 @@ export const de_DeleteArchiveCommand = async (
  */
 export const de_DeleteIngressPointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIngressPointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1089,7 +1089,7 @@ export const de_DeleteIngressPointCommand = async (
  */
 export const de_DeleteRelayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRelayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1109,7 +1109,7 @@ export const de_DeleteRelayCommand = async (
  */
 export const de_DeleteRuleSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRuleSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1129,7 +1129,7 @@ export const de_DeleteRuleSetCommand = async (
  */
 export const de_DeleteTrafficPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTrafficPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1149,7 +1149,7 @@ export const de_DeleteTrafficPolicyCommand = async (
  */
 export const de_GetAddonInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAddonInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1169,7 +1169,7 @@ export const de_GetAddonInstanceCommand = async (
  */
 export const de_GetAddonSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAddonSubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1189,7 +1189,7 @@ export const de_GetAddonSubscriptionCommand = async (
  */
 export const de_GetArchiveCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetArchiveCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1209,7 +1209,7 @@ export const de_GetArchiveCommand = async (
  */
 export const de_GetArchiveExportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetArchiveExportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1229,7 +1229,7 @@ export const de_GetArchiveExportCommand = async (
  */
 export const de_GetArchiveMessageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetArchiveMessageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1249,7 +1249,7 @@ export const de_GetArchiveMessageCommand = async (
  */
 export const de_GetArchiveMessageContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetArchiveMessageContentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1269,7 +1269,7 @@ export const de_GetArchiveMessageContentCommand = async (
  */
 export const de_GetArchiveSearchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetArchiveSearchCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1289,7 +1289,7 @@ export const de_GetArchiveSearchCommand = async (
  */
 export const de_GetArchiveSearchResultsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetArchiveSearchResultsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1309,7 +1309,7 @@ export const de_GetArchiveSearchResultsCommand = async (
  */
 export const de_GetIngressPointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIngressPointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1329,7 +1329,7 @@ export const de_GetIngressPointCommand = async (
  */
 export const de_GetRelayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRelayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1349,7 +1349,7 @@ export const de_GetRelayCommand = async (
  */
 export const de_GetRuleSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRuleSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1369,7 +1369,7 @@ export const de_GetRuleSetCommand = async (
  */
 export const de_GetTrafficPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTrafficPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1389,7 +1389,7 @@ export const de_GetTrafficPolicyCommand = async (
  */
 export const de_ListAddonInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAddonInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1409,7 +1409,7 @@ export const de_ListAddonInstancesCommand = async (
  */
 export const de_ListAddonSubscriptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAddonSubscriptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1429,7 +1429,7 @@ export const de_ListAddonSubscriptionsCommand = async (
  */
 export const de_ListArchiveExportsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListArchiveExportsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1449,7 +1449,7 @@ export const de_ListArchiveExportsCommand = async (
  */
 export const de_ListArchivesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListArchivesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1469,7 +1469,7 @@ export const de_ListArchivesCommand = async (
  */
 export const de_ListArchiveSearchesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListArchiveSearchesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1489,7 +1489,7 @@ export const de_ListArchiveSearchesCommand = async (
  */
 export const de_ListIngressPointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIngressPointsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1509,7 +1509,7 @@ export const de_ListIngressPointsCommand = async (
  */
 export const de_ListRelaysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRelaysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1529,7 +1529,7 @@ export const de_ListRelaysCommand = async (
  */
 export const de_ListRuleSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRuleSetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1549,7 +1549,7 @@ export const de_ListRuleSetsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1569,7 +1569,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTrafficPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTrafficPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1589,7 +1589,7 @@ export const de_ListTrafficPoliciesCommand = async (
  */
 export const de_StartArchiveExportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartArchiveExportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1609,7 +1609,7 @@ export const de_StartArchiveExportCommand = async (
  */
 export const de_StartArchiveSearchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartArchiveSearchCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1629,7 +1629,7 @@ export const de_StartArchiveSearchCommand = async (
  */
 export const de_StopArchiveExportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopArchiveExportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1649,7 +1649,7 @@ export const de_StopArchiveExportCommand = async (
  */
 export const de_StopArchiveSearchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopArchiveSearchCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1669,7 +1669,7 @@ export const de_StopArchiveSearchCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1689,7 +1689,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1709,7 +1709,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateArchiveCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateArchiveCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1729,7 +1729,7 @@ export const de_UpdateArchiveCommand = async (
  */
 export const de_UpdateIngressPointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateIngressPointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1749,7 +1749,7 @@ export const de_UpdateIngressPointCommand = async (
  */
 export const de_UpdateRelayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRelayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1769,7 +1769,7 @@ export const de_UpdateRelayCommand = async (
  */
 export const de_UpdateRuleSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRuleSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1789,7 +1789,7 @@ export const de_UpdateRuleSetCommand = async (
  */
 export const de_UpdateTrafficPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTrafficPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1847,7 +1847,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1876,7 +1876,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1892,7 +1892,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2176,7 +2176,7 @@ const se_RuleCondition = (input: RuleCondition, context: __SerdeContext): any =>
     NumberExpression: (value) => ({ NumberExpression: se_RuleNumberExpression(value, context) }),
     StringExpression: (value) => ({ StringExpression: _json(value) }),
     VerdictExpression: (value) => ({ VerdictExpression: _json(value) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -2649,7 +2649,7 @@ const de_IngressPointAuthConfiguration = (output: any, context: __SerdeContext):
  */
 const de_IngressPointPasswordConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): IngressPointPasswordConfiguration => {
   return take(output, {
     PreviousSmtpPasswordExpiryTimestamp: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -3062,7 +3062,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

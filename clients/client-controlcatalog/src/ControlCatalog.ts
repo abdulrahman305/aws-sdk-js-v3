@@ -28,16 +28,16 @@ export interface ControlCatalog {
   listCommonControls(): Promise<ListCommonControlsCommandOutput>;
   listCommonControls(
     args: ListCommonControlsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCommonControlsCommandOutput>;
   listCommonControls(
     args: ListCommonControlsCommandInput,
-    cb: (err: any, data?: ListCommonControlsCommandOutput) => void
+    cb: (err: any, data?: ListCommonControlsCommandOutput) => void,
   ): void;
   listCommonControls(
     args: ListCommonControlsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCommonControlsCommandOutput) => void
+    cb: (err: any, data?: ListCommonControlsCommandOutput) => void,
   ): void;
 
   /**
@@ -49,7 +49,7 @@ export interface ControlCatalog {
   listDomains(
     args: ListDomainsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDomainsCommandOutput) => void
+    cb: (err: any, data?: ListDomainsCommandOutput) => void,
   ): void;
 
   /**
@@ -58,13 +58,13 @@ export interface ControlCatalog {
   listObjectives(): Promise<ListObjectivesCommandOutput>;
   listObjectives(
     args: ListObjectivesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListObjectivesCommandOutput>;
   listObjectives(args: ListObjectivesCommandInput, cb: (err: any, data?: ListObjectivesCommandOutput) => void): void;
   listObjectives(
     args: ListObjectivesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListObjectivesCommandOutput) => void
+    cb: (err: any, data?: ListObjectivesCommandOutput) => void,
   ): void;
 }
 

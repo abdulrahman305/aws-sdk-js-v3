@@ -28,7 +28,7 @@ const checkState = async (client: EC2Client, input: GetPasswordDataCommandInput)
  */
 export const waitForPasswordDataAvailable = async (
   params: WaiterConfiguration<EC2Client>,
-  input: GetPasswordDataCommandInput
+  input: GetPasswordDataCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -40,7 +40,7 @@ export const waitForPasswordDataAvailable = async (
  */
 export const waitUntilPasswordDataAvailable = async (
   params: WaiterConfiguration<EC2Client>,
-  input: GetPasswordDataCommandInput
+  input: GetPasswordDataCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

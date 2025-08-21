@@ -40,7 +40,7 @@ export interface PresignedPost {
  */
 export const createPresignedPost = async (
   client: S3Client,
-  { Bucket, Key, Conditions = [], Fields = {}, Expires = 3600 }: PresignedPostOptions
+  { Bucket, Key, Conditions = [], Fields = {}, Expires = 3600 }: PresignedPostOptions,
 ): Promise<PresignedPost> => {
   const { systemClockOffset, base64Encoder, utf8Decoder, sha256 } = client.config;
   const now = new Date(Date.now() + systemClockOffset);
@@ -74,10 +74,10 @@ export const createPresignedPost = async (
     conditionsSet.add(stringifiedCondition);
   }
 
-  for (const [k,v] of Object.entries(fields)) {
-    conditionsSet.add(JSON.stringify({ [k]: v }))
-  }  
-  
+  for (const [k, v] of Object.entries(fields)) {
+    conditionsSet.add(JSON.stringify({ [k]: v }));
+  }
+
   if (Key.endsWith("${filename}")) {
     conditionsSet.add(JSON.stringify(["starts-with", "$key", Key.substring(0, Key.lastIndexOf("${filename}"))]));
   } else {
@@ -91,8 +91,8 @@ export const createPresignedPost = async (
       JSON.stringify({
         expiration: iso8601(expiration),
         conditions,
-      })
-    )
+      }),
+    ),
   );
 
   // Sign the request.
@@ -108,8 +108,8 @@ export const createPresignedPost = async (
       },
       {
         logger: client.config.logger,
-      }
-    )
+      },
+    ),
   );
 
   return {
@@ -128,7 +128,7 @@ const iso8601 = (date: Date) => date.toISOString().replace(/\.\d{3}Z$/, "Z");
 const hmac = (
   ctor: ChecksumConstructor | HashConstructor,
   secret: SourceData,
-  data: SourceData
+  data: SourceData,
 ): Promise<Uint8Array> => {
   const hash = new ctor(secret);
   hash.update(toUint8Array(data));

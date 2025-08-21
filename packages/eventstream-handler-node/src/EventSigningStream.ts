@@ -50,7 +50,7 @@ export class EventSigningStream extends Transform {
         },
         {
           signingDate: now,
-        }
+        },
       );
       this.priorSignature = signedMessage.signature;
       const serializedSigned = this.eventStreamCodec.encode({

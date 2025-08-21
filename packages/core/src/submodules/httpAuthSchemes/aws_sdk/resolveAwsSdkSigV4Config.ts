@@ -100,7 +100,7 @@ export interface AwsSdkSigV4AuthResolvedConfig {
  * @internal
  */
 export const resolveAwsSdkSigV4Config = <T>(
-  config: T & AwsSdkSigV4AuthInputConfig & AwsSdkSigV4PreviouslyResolved
+  config: T & AwsSdkSigV4AuthInputConfig & AwsSdkSigV4PreviouslyResolved,
 ): T & AwsSdkSigV4AuthResolvedConfig => {
   // Normalize credentials
   let normalizedCreds: AwsCredentialIdentityProvider | undefined;
@@ -115,8 +115,8 @@ export const resolveAwsSdkSigV4Config = <T>(
         config.credentialDefaultProvider(
           Object.assign({}, config as any, {
             parentClientConfig: config,
-          })
-        )
+          }),
+        ),
       );
     } else {
       normalizedCreds = async () => {
@@ -153,7 +153,7 @@ export const resolveAwsSdkSigV4Config = <T>(
                 useDualstackEndpoint: await config.useDualstackEndpoint(),
               })) || {},
               region,
-            ] as [RegionInfo, string]
+            ] as [RegionInfo, string],
         )
         .then(([regionInfo, region]) => {
           const { signingRegion, signingService } = regionInfo;
@@ -188,7 +188,7 @@ export const resolveAwsSdkSigV4Config = <T>(
           signingRegion: await normalizeProvider(config.region)(),
           properties: {},
         },
-        authScheme
+        authScheme,
       );
 
       const signingRegion = authScheme.signingRegion;

@@ -73,7 +73,7 @@ describe("S3 Expires e2e test", () => {
 
     expect(get.Expires).toBeUndefined();
     expect(s3.config.logger.warn).toHaveBeenCalledWith(
-      `AWS SDK Warning for S3Client::GetObjectCommand response parsing (undefined, NaN undefined NaN NaN:NaN:NaN GMT): TypeError: Invalid RFC-7231 date-time value`
+      `AWS SDK Warning for S3Client::GetObjectCommand response parsing (undefined, NaN undefined NaN NaN:NaN:NaN GMT): TypeError: Invalid RFC-7231 date-time value`,
     );
     expect(get.ExpiresString).toEqual("undefined, NaN undefined NaN NaN:NaN:NaN GMT");
   });
@@ -109,7 +109,7 @@ async function deleteBucket(s3: S3, bucketName: string) {
       s3.deleteObject({
         Bucket,
         Key: key.Key,
-      })
+      }),
     );
   }
   await Promise.all(promises);

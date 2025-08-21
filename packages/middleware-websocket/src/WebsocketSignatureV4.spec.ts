@@ -72,7 +72,7 @@ describe("WebsocketSignatureV4", () => {
             ...options,
             expiresIn: 60,
             unsignableHeaders: new Set(Object.keys(request.headers).filter((header) => header !== "host")),
-          }
+          },
         );
         expect(sign).not.toHaveBeenCalled();
       };

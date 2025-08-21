@@ -61,14 +61,14 @@ export class SparseJsonListsSerializer
 
 export const getSparseJsonListsHandler = <Context>(
   operation: __Operation<SparseJsonListsServerInput, SparseJsonListsServerOutput, Context>,
-  customizer: __ValidationCustomizer<"SparseJsonLists">
+  customizer: __ValidationCustomizer<"SparseJsonLists">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "SparseJsonLists">([
     new httpbinding.UriSpec<"RestJson", "SparseJsonLists">(
       "PUT",
       [{ type: "path_literal", value: "SparseJsonLists" }],
       [],
-      { service: "RestJson", operation: "SparseJsonLists" }
+      { service: "RestJson", operation: "SparseJsonLists" },
     ),
   ]);
   return new SparseJsonListsHandler(
@@ -76,7 +76,7 @@ export const getSparseJsonListsHandler = <Context>(
     mux,
     new SparseJsonListsSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -97,7 +97,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -139,7 +139,7 @@ export class SparseJsonListsHandler<Context> implements __ServiceHandler<Context
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"SparseJsonLists">;
   /**
@@ -156,7 +156,7 @@ export class SparseJsonListsHandler<Context> implements __ServiceHandler<Context
     mux: __Mux<"RestJson", "SparseJsonLists">,
     serializer: __OperationSerializer<RestJsonService<Context>, "SparseJsonLists", SparseJsonListsErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"SparseJsonLists">
+    validationCustomizer: __ValidationCustomizer<"SparseJsonLists">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -168,7 +168,7 @@ export class SparseJsonListsHandler<Context> implements __ServiceHandler<Context
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.SparseJsonLists. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.SparseJsonLists. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -180,7 +180,7 @@ export class SparseJsonListsHandler<Context> implements __ServiceHandler<Context
       this.operation,
       this.serializeFrameworkException,
       SparseJsonListsServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

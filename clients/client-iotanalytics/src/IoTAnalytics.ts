@@ -213,13 +213,13 @@ export interface IoTAnalytics {
    */
   batchPutMessage(
     args: BatchPutMessageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchPutMessageCommandOutput>;
   batchPutMessage(args: BatchPutMessageCommandInput, cb: (err: any, data?: BatchPutMessageCommandOutput) => void): void;
   batchPutMessage(
     args: BatchPutMessageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchPutMessageCommandOutput) => void
+    cb: (err: any, data?: BatchPutMessageCommandOutput) => void,
   ): void;
 
   /**
@@ -227,16 +227,16 @@ export interface IoTAnalytics {
    */
   cancelPipelineReprocessing(
     args: CancelPipelineReprocessingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelPipelineReprocessingCommandOutput>;
   cancelPipelineReprocessing(
     args: CancelPipelineReprocessingCommandInput,
-    cb: (err: any, data?: CancelPipelineReprocessingCommandOutput) => void
+    cb: (err: any, data?: CancelPipelineReprocessingCommandOutput) => void,
   ): void;
   cancelPipelineReprocessing(
     args: CancelPipelineReprocessingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelPipelineReprocessingCommandOutput) => void
+    cb: (err: any, data?: CancelPipelineReprocessingCommandOutput) => void,
   ): void;
 
   /**
@@ -247,7 +247,7 @@ export interface IoTAnalytics {
   createChannel(
     args: CreateChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateChannelCommandOutput) => void
+    cb: (err: any, data?: CreateChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -258,7 +258,7 @@ export interface IoTAnalytics {
   createDataset(
     args: CreateDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDatasetCommandOutput) => void
+    cb: (err: any, data?: CreateDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -266,16 +266,16 @@ export interface IoTAnalytics {
    */
   createDatasetContent(
     args: CreateDatasetContentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDatasetContentCommandOutput>;
   createDatasetContent(
     args: CreateDatasetContentCommandInput,
-    cb: (err: any, data?: CreateDatasetContentCommandOutput) => void
+    cb: (err: any, data?: CreateDatasetContentCommandOutput) => void,
   ): void;
   createDatasetContent(
     args: CreateDatasetContentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDatasetContentCommandOutput) => void
+    cb: (err: any, data?: CreateDatasetContentCommandOutput) => void,
   ): void;
 
   /**
@@ -283,13 +283,13 @@ export interface IoTAnalytics {
    */
   createDatastore(
     args: CreateDatastoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDatastoreCommandOutput>;
   createDatastore(args: CreateDatastoreCommandInput, cb: (err: any, data?: CreateDatastoreCommandOutput) => void): void;
   createDatastore(
     args: CreateDatastoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDatastoreCommandOutput) => void
+    cb: (err: any, data?: CreateDatastoreCommandOutput) => void,
   ): void;
 
   /**
@@ -297,13 +297,13 @@ export interface IoTAnalytics {
    */
   createPipeline(
     args: CreatePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePipelineCommandOutput>;
   createPipeline(args: CreatePipelineCommandInput, cb: (err: any, data?: CreatePipelineCommandOutput) => void): void;
   createPipeline(
     args: CreatePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePipelineCommandOutput) => void
+    cb: (err: any, data?: CreatePipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -314,7 +314,7 @@ export interface IoTAnalytics {
   deleteChannel(
     args: DeleteChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -325,7 +325,7 @@ export interface IoTAnalytics {
   deleteDataset(
     args: DeleteDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDatasetCommandOutput) => void
+    cb: (err: any, data?: DeleteDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -333,16 +333,16 @@ export interface IoTAnalytics {
    */
   deleteDatasetContent(
     args: DeleteDatasetContentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDatasetContentCommandOutput>;
   deleteDatasetContent(
     args: DeleteDatasetContentCommandInput,
-    cb: (err: any, data?: DeleteDatasetContentCommandOutput) => void
+    cb: (err: any, data?: DeleteDatasetContentCommandOutput) => void,
   ): void;
   deleteDatasetContent(
     args: DeleteDatasetContentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDatasetContentCommandOutput) => void
+    cb: (err: any, data?: DeleteDatasetContentCommandOutput) => void,
   ): void;
 
   /**
@@ -350,13 +350,13 @@ export interface IoTAnalytics {
    */
   deleteDatastore(
     args: DeleteDatastoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDatastoreCommandOutput>;
   deleteDatastore(args: DeleteDatastoreCommandInput, cb: (err: any, data?: DeleteDatastoreCommandOutput) => void): void;
   deleteDatastore(
     args: DeleteDatastoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDatastoreCommandOutput) => void
+    cb: (err: any, data?: DeleteDatastoreCommandOutput) => void,
   ): void;
 
   /**
@@ -364,13 +364,13 @@ export interface IoTAnalytics {
    */
   deletePipeline(
     args: DeletePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePipelineCommandOutput>;
   deletePipeline(args: DeletePipelineCommandInput, cb: (err: any, data?: DeletePipelineCommandOutput) => void): void;
   deletePipeline(
     args: DeletePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePipelineCommandOutput) => void
+    cb: (err: any, data?: DeletePipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -378,13 +378,13 @@ export interface IoTAnalytics {
    */
   describeChannel(
     args: DescribeChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeChannelCommandOutput>;
   describeChannel(args: DescribeChannelCommandInput, cb: (err: any, data?: DescribeChannelCommandOutput) => void): void;
   describeChannel(
     args: DescribeChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeChannelCommandOutput) => void
+    cb: (err: any, data?: DescribeChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -392,13 +392,13 @@ export interface IoTAnalytics {
    */
   describeDataset(
     args: DescribeDatasetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDatasetCommandOutput>;
   describeDataset(args: DescribeDatasetCommandInput, cb: (err: any, data?: DescribeDatasetCommandOutput) => void): void;
   describeDataset(
     args: DescribeDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDatasetCommandOutput) => void
+    cb: (err: any, data?: DescribeDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -406,16 +406,16 @@ export interface IoTAnalytics {
    */
   describeDatastore(
     args: DescribeDatastoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDatastoreCommandOutput>;
   describeDatastore(
     args: DescribeDatastoreCommandInput,
-    cb: (err: any, data?: DescribeDatastoreCommandOutput) => void
+    cb: (err: any, data?: DescribeDatastoreCommandOutput) => void,
   ): void;
   describeDatastore(
     args: DescribeDatastoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDatastoreCommandOutput) => void
+    cb: (err: any, data?: DescribeDatastoreCommandOutput) => void,
   ): void;
 
   /**
@@ -424,16 +424,16 @@ export interface IoTAnalytics {
   describeLoggingOptions(): Promise<DescribeLoggingOptionsCommandOutput>;
   describeLoggingOptions(
     args: DescribeLoggingOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLoggingOptionsCommandOutput>;
   describeLoggingOptions(
     args: DescribeLoggingOptionsCommandInput,
-    cb: (err: any, data?: DescribeLoggingOptionsCommandOutput) => void
+    cb: (err: any, data?: DescribeLoggingOptionsCommandOutput) => void,
   ): void;
   describeLoggingOptions(
     args: DescribeLoggingOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLoggingOptionsCommandOutput) => void
+    cb: (err: any, data?: DescribeLoggingOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -441,16 +441,16 @@ export interface IoTAnalytics {
    */
   describePipeline(
     args: DescribePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePipelineCommandOutput>;
   describePipeline(
     args: DescribePipelineCommandInput,
-    cb: (err: any, data?: DescribePipelineCommandOutput) => void
+    cb: (err: any, data?: DescribePipelineCommandOutput) => void,
   ): void;
   describePipeline(
     args: DescribePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePipelineCommandOutput) => void
+    cb: (err: any, data?: DescribePipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -458,16 +458,16 @@ export interface IoTAnalytics {
    */
   getDatasetContent(
     args: GetDatasetContentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDatasetContentCommandOutput>;
   getDatasetContent(
     args: GetDatasetContentCommandInput,
-    cb: (err: any, data?: GetDatasetContentCommandOutput) => void
+    cb: (err: any, data?: GetDatasetContentCommandOutput) => void,
   ): void;
   getDatasetContent(
     args: GetDatasetContentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDatasetContentCommandOutput) => void
+    cb: (err: any, data?: GetDatasetContentCommandOutput) => void,
   ): void;
 
   /**
@@ -479,7 +479,7 @@ export interface IoTAnalytics {
   listChannels(
     args: ListChannelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListChannelsCommandOutput) => void
+    cb: (err: any, data?: ListChannelsCommandOutput) => void,
   ): void;
 
   /**
@@ -487,16 +487,16 @@ export interface IoTAnalytics {
    */
   listDatasetContents(
     args: ListDatasetContentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDatasetContentsCommandOutput>;
   listDatasetContents(
     args: ListDatasetContentsCommandInput,
-    cb: (err: any, data?: ListDatasetContentsCommandOutput) => void
+    cb: (err: any, data?: ListDatasetContentsCommandOutput) => void,
   ): void;
   listDatasetContents(
     args: ListDatasetContentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDatasetContentsCommandOutput) => void
+    cb: (err: any, data?: ListDatasetContentsCommandOutput) => void,
   ): void;
 
   /**
@@ -508,7 +508,7 @@ export interface IoTAnalytics {
   listDatasets(
     args: ListDatasetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDatasetsCommandOutput) => void
+    cb: (err: any, data?: ListDatasetsCommandOutput) => void,
   ): void;
 
   /**
@@ -517,13 +517,13 @@ export interface IoTAnalytics {
   listDatastores(): Promise<ListDatastoresCommandOutput>;
   listDatastores(
     args: ListDatastoresCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDatastoresCommandOutput>;
   listDatastores(args: ListDatastoresCommandInput, cb: (err: any, data?: ListDatastoresCommandOutput) => void): void;
   listDatastores(
     args: ListDatastoresCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDatastoresCommandOutput) => void
+    cb: (err: any, data?: ListDatastoresCommandOutput) => void,
   ): void;
 
   /**
@@ -535,7 +535,7 @@ export interface IoTAnalytics {
   listPipelines(
     args: ListPipelinesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPipelinesCommandOutput) => void
+    cb: (err: any, data?: ListPipelinesCommandOutput) => void,
   ): void;
 
   /**
@@ -543,16 +543,16 @@ export interface IoTAnalytics {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -560,16 +560,16 @@ export interface IoTAnalytics {
    */
   putLoggingOptions(
     args: PutLoggingOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutLoggingOptionsCommandOutput>;
   putLoggingOptions(
     args: PutLoggingOptionsCommandInput,
-    cb: (err: any, data?: PutLoggingOptionsCommandOutput) => void
+    cb: (err: any, data?: PutLoggingOptionsCommandOutput) => void,
   ): void;
   putLoggingOptions(
     args: PutLoggingOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutLoggingOptionsCommandOutput) => void
+    cb: (err: any, data?: PutLoggingOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -577,16 +577,16 @@ export interface IoTAnalytics {
    */
   runPipelineActivity(
     args: RunPipelineActivityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RunPipelineActivityCommandOutput>;
   runPipelineActivity(
     args: RunPipelineActivityCommandInput,
-    cb: (err: any, data?: RunPipelineActivityCommandOutput) => void
+    cb: (err: any, data?: RunPipelineActivityCommandOutput) => void,
   ): void;
   runPipelineActivity(
     args: RunPipelineActivityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RunPipelineActivityCommandOutput) => void
+    cb: (err: any, data?: RunPipelineActivityCommandOutput) => void,
   ): void;
 
   /**
@@ -594,16 +594,16 @@ export interface IoTAnalytics {
    */
   sampleChannelData(
     args: SampleChannelDataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SampleChannelDataCommandOutput>;
   sampleChannelData(
     args: SampleChannelDataCommandInput,
-    cb: (err: any, data?: SampleChannelDataCommandOutput) => void
+    cb: (err: any, data?: SampleChannelDataCommandOutput) => void,
   ): void;
   sampleChannelData(
     args: SampleChannelDataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SampleChannelDataCommandOutput) => void
+    cb: (err: any, data?: SampleChannelDataCommandOutput) => void,
   ): void;
 
   /**
@@ -611,16 +611,16 @@ export interface IoTAnalytics {
    */
   startPipelineReprocessing(
     args: StartPipelineReprocessingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartPipelineReprocessingCommandOutput>;
   startPipelineReprocessing(
     args: StartPipelineReprocessingCommandInput,
-    cb: (err: any, data?: StartPipelineReprocessingCommandOutput) => void
+    cb: (err: any, data?: StartPipelineReprocessingCommandOutput) => void,
   ): void;
   startPipelineReprocessing(
     args: StartPipelineReprocessingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartPipelineReprocessingCommandOutput) => void
+    cb: (err: any, data?: StartPipelineReprocessingCommandOutput) => void,
   ): void;
 
   /**
@@ -631,7 +631,7 @@ export interface IoTAnalytics {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -642,7 +642,7 @@ export interface IoTAnalytics {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -653,7 +653,7 @@ export interface IoTAnalytics {
   updateChannel(
     args: UpdateChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -664,7 +664,7 @@ export interface IoTAnalytics {
   updateDataset(
     args: UpdateDatasetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDatasetCommandOutput) => void
+    cb: (err: any, data?: UpdateDatasetCommandOutput) => void,
   ): void;
 
   /**
@@ -672,13 +672,13 @@ export interface IoTAnalytics {
    */
   updateDatastore(
     args: UpdateDatastoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDatastoreCommandOutput>;
   updateDatastore(args: UpdateDatastoreCommandInput, cb: (err: any, data?: UpdateDatastoreCommandOutput) => void): void;
   updateDatastore(
     args: UpdateDatastoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDatastoreCommandOutput) => void
+    cb: (err: any, data?: UpdateDatastoreCommandOutput) => void,
   ): void;
 
   /**
@@ -686,13 +686,13 @@ export interface IoTAnalytics {
    */
   updatePipeline(
     args: UpdatePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePipelineCommandOutput>;
   updatePipeline(args: UpdatePipelineCommandInput, cb: (err: any, data?: UpdatePipelineCommandOutput) => void): void;
   updatePipeline(
     args: UpdatePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePipelineCommandOutput) => void
+    cb: (err: any, data?: UpdatePipelineCommandOutput) => void,
   ): void;
 }
 

@@ -9113,7 +9113,7 @@ export interface DeleteManagedPrefixListResult {
  * @internal
  */
 export const CreateVerifiedAccessTrustProviderOidcOptionsFilterSensitiveLog = (
-  obj: CreateVerifiedAccessTrustProviderOidcOptions
+  obj: CreateVerifiedAccessTrustProviderOidcOptions,
 ): any => ({
   ...obj,
   ...(obj.ClientSecret && { ClientSecret: SENSITIVE_STRING }),
@@ -9123,7 +9123,7 @@ export const CreateVerifiedAccessTrustProviderOidcOptionsFilterSensitiveLog = (
  * @internal
  */
 export const CreateVerifiedAccessTrustProviderRequestFilterSensitiveLog = (
-  obj: CreateVerifiedAccessTrustProviderRequest
+  obj: CreateVerifiedAccessTrustProviderRequest,
 ): any => ({
   ...obj,
   ...(obj.OidcOptions && {
@@ -9135,7 +9135,7 @@ export const CreateVerifiedAccessTrustProviderRequestFilterSensitiveLog = (
  * @internal
  */
 export const CreateVerifiedAccessTrustProviderResultFilterSensitiveLog = (
-  obj: CreateVerifiedAccessTrustProviderResult
+  obj: CreateVerifiedAccessTrustProviderResult,
 ): any => ({
   ...obj,
   ...(obj.VerifiedAccessTrustProvider && {

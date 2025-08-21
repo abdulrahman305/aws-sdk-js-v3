@@ -122,7 +122,7 @@ export class ListChannelsAssociatedWithChannelFlowCommand extends $Command
   .n("ChimeSDKMessagingClient", "ListChannelsAssociatedWithChannelFlowCommand")
   .f(
     ListChannelsAssociatedWithChannelFlowRequestFilterSensitiveLog,
-    ListChannelsAssociatedWithChannelFlowResponseFilterSensitiveLog
+    ListChannelsAssociatedWithChannelFlowResponseFilterSensitiveLog,
   )
   .ser(se_ListChannelsAssociatedWithChannelFlowCommand)
   .de(de_ListChannelsAssociatedWithChannelFlowCommand)

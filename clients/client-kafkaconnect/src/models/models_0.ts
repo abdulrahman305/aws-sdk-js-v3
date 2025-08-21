@@ -2233,7 +2233,7 @@ export const DescribeConnectorResponseFilterSensitiveLog = (obj: DescribeConnect
  * @internal
  */
 export const WorkerConfigurationRevisionDescriptionFilterSensitiveLog = (
-  obj: WorkerConfigurationRevisionDescription
+  obj: WorkerConfigurationRevisionDescription,
 ): any => ({
   ...obj,
   ...(obj.propertiesFileContent && { propertiesFileContent: SENSITIVE_STRING }),
@@ -2243,7 +2243,7 @@ export const WorkerConfigurationRevisionDescriptionFilterSensitiveLog = (
  * @internal
  */
 export const DescribeWorkerConfigurationResponseFilterSensitiveLog = (
-  obj: DescribeWorkerConfigurationResponse
+  obj: DescribeWorkerConfigurationResponse,
 ): any => ({
   ...obj,
   ...(obj.latestRevision && {

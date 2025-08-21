@@ -9,7 +9,7 @@ import { SESClient } from "../SESClient";
 
 const checkState = async (
   client: SESClient,
-  input: GetIdentityVerificationAttributesCommandInput
+  input: GetIdentityVerificationAttributesCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -41,7 +41,7 @@ const checkState = async (
  */
 export const waitForIdentityExists = async (
   params: WaiterConfiguration<SESClient>,
-  input: GetIdentityVerificationAttributesCommandInput
+  input: GetIdentityVerificationAttributesCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -53,7 +53,7 @@ export const waitForIdentityExists = async (
  */
 export const waitUntilIdentityExists = async (
   params: WaiterConfiguration<SESClient>,
-  input: GetIdentityVerificationAttributesCommandInput
+  input: GetIdentityVerificationAttributesCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

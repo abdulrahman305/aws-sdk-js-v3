@@ -173,9 +173,8 @@ const copyToClients = async (sourceDir, destinationDir, solo) => {
         const modelFile = join(__dirname, "..", "..", "codegen", "sdk-codegen", "aws-models", serviceName + ".json");
 
         if (existsSync(modelFile)) {
-          mergedManifest.scripts[
-            "generate:client"
-          ] = `node ../../scripts/generate-clients/single-service --solo ${serviceName}`;
+          mergedManifest.scripts["generate:client"] =
+            `node ../../scripts/generate-clients/single-service --solo ${serviceName}`;
         }
 
         writeFileSync(destSubPath, prettier.format(JSON.stringify(mergedManifest), { parser: "json-stringify" }));
@@ -248,7 +247,11 @@ const copyServerTests = async (sourceDir, destinationDir) => {
       const jestConfigPath = join(destPath, "jest.config.js");
       writeFileSync(
         jestConfigPath,
-        'const base = require("../../jest.config.base.js");\n' + "\n" + "module.exports = {\n" + "  ...base,\n" + "};\n"
+        'const base = require("../../jest.config.base.js");\n' +
+          "\n" +
+          "module.exports = {\n" +
+          "  ...base,\n" +
+          "};\n",
       );
     }
   }

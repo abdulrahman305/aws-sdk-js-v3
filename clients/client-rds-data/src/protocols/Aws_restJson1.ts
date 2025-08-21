@@ -76,7 +76,7 @@ import { RDSDataServiceException as __BaseException } from "../models/RDSDataSer
  */
 export const se_BatchExecuteStatementCommand = async (
   input: BatchExecuteStatementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -93,7 +93,7 @@ export const se_BatchExecuteStatementCommand = async (
       secretArn: [],
       sql: [],
       transactionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -104,7 +104,7 @@ export const se_BatchExecuteStatementCommand = async (
  */
 export const se_BeginTransactionCommand = async (
   input: BeginTransactionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -118,7 +118,7 @@ export const se_BeginTransactionCommand = async (
       resourceArn: [],
       schema: [],
       secretArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -129,7 +129,7 @@ export const se_BeginTransactionCommand = async (
  */
 export const se_CommitTransactionCommand = async (
   input: CommitTransactionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -142,7 +142,7 @@ export const se_CommitTransactionCommand = async (
       resourceArn: [],
       secretArn: [],
       transactionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -153,7 +153,7 @@ export const se_CommitTransactionCommand = async (
  */
 export const se_ExecuteSqlCommand = async (
   input: ExecuteSqlCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -168,7 +168,7 @@ export const se_ExecuteSqlCommand = async (
       dbClusterOrInstanceArn: [],
       schema: [],
       sqlStatements: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -179,7 +179,7 @@ export const se_ExecuteSqlCommand = async (
  */
 export const se_ExecuteStatementCommand = async (
   input: ExecuteStatementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -200,7 +200,7 @@ export const se_ExecuteStatementCommand = async (
       secretArn: [],
       sql: [],
       transactionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -211,7 +211,7 @@ export const se_ExecuteStatementCommand = async (
  */
 export const se_RollbackTransactionCommand = async (
   input: RollbackTransactionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -224,7 +224,7 @@ export const se_RollbackTransactionCommand = async (
       resourceArn: [],
       secretArn: [],
       transactionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -235,7 +235,7 @@ export const se_RollbackTransactionCommand = async (
  */
 export const de_BatchExecuteStatementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchExecuteStatementCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -256,7 +256,7 @@ export const de_BatchExecuteStatementCommand = async (
  */
 export const de_BeginTransactionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BeginTransactionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -277,7 +277,7 @@ export const de_BeginTransactionCommand = async (
  */
 export const de_CommitTransactionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CommitTransactionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -298,7 +298,7 @@ export const de_CommitTransactionCommand = async (
  */
 export const de_ExecuteSqlCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteSqlCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -319,7 +319,7 @@ export const de_ExecuteSqlCommand = async (
  */
 export const de_ExecuteStatementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteStatementCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -344,7 +344,7 @@ export const de_ExecuteStatementCommand = async (
  */
 export const de_RollbackTransactionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RollbackTransactionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -431,7 +431,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -468,7 +468,7 @@ const de_BadRequestExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_DatabaseErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DatabaseErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -488,7 +488,7 @@ const de_DatabaseErrorExceptionRes = async (
  */
 const de_DatabaseNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DatabaseNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -508,7 +508,7 @@ const de_DatabaseNotFoundExceptionRes = async (
  */
 const de_DatabaseUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DatabaseUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -543,7 +543,7 @@ const de_ForbiddenExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_HttpEndpointNotEnabledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpEndpointNotEnabledException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -563,7 +563,7 @@ const de_HttpEndpointNotEnabledExceptionRes = async (
  */
 const de_InternalServerErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -581,7 +581,7 @@ const de_InternalServerErrorExceptionRes = async (
  */
 const de_InvalidSecretExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSecretException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -618,7 +618,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_SecretsErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SecretsErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -638,7 +638,7 @@ const de_SecretsErrorExceptionRes = async (
  */
 const de_ServiceUnavailableErrorRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableError> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -656,7 +656,7 @@ const de_ServiceUnavailableErrorRes = async (
  */
 const de_StatementTimeoutExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StatementTimeoutException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -677,7 +677,7 @@ const de_StatementTimeoutExceptionRes = async (
  */
 const de_TransactionNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TransactionNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -697,7 +697,7 @@ const de_TransactionNotFoundExceptionRes = async (
  */
 const de_UnsupportedResultExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedResultException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -733,7 +733,7 @@ const se_ArrayValue = (input: ArrayValue, context: __SerdeContext): any => {
     doubleValues: (value) => ({ doubleValues: se_DoubleArray(value, context) }),
     longValues: (value) => ({ longValues: _json(value) }),
     stringValues: (value) => ({ stringValues: _json(value) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -762,7 +762,7 @@ const se_Field = (input: Field, context: __SerdeContext): any => {
     isNull: (value) => ({ isNull: value }),
     longValue: (value) => ({ longValue: value }),
     stringValue: (value) => ({ stringValue: value }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 

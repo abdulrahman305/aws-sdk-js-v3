@@ -9,7 +9,7 @@ import {
 
 const checkState = async (
   client: ACMPCAClient,
-  input: GetCertificateAuthorityCsrCommandInput
+  input: GetCertificateAuthorityCsrCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -33,7 +33,7 @@ const checkState = async (
  */
 export const waitForCertificateAuthorityCSRCreated = async (
   params: WaiterConfiguration<ACMPCAClient>,
-  input: GetCertificateAuthorityCsrCommandInput
+  input: GetCertificateAuthorityCsrCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -45,7 +45,7 @@ export const waitForCertificateAuthorityCSRCreated = async (
  */
 export const waitUntilCertificateAuthorityCSRCreated = async (
   params: WaiterConfiguration<ACMPCAClient>,
-  input: GetCertificateAuthorityCsrCommandInput
+  input: GetCertificateAuthorityCsrCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

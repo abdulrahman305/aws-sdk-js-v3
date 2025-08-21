@@ -145,7 +145,7 @@ import {
  */
 export const se_CreateAudienceModelCommand = async (
   input: CreateAudienceModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -162,7 +162,7 @@ export const se_CreateAudienceModelCommand = async (
       trainingDataEndTime: (_) => __serializeDateTime(_),
       trainingDataStartTime: (_) => __serializeDateTime(_),
       trainingDatasetArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -173,7 +173,7 @@ export const se_CreateAudienceModelCommand = async (
  */
 export const se_CreateConfiguredAudienceModelCommand = async (
   input: CreateConfiguredAudienceModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -192,7 +192,7 @@ export const se_CreateConfiguredAudienceModelCommand = async (
       outputConfig: (_) => _json(_),
       sharedAudienceMetrics: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -203,7 +203,7 @@ export const se_CreateConfiguredAudienceModelCommand = async (
  */
 export const se_CreateTrainingDatasetCommand = async (
   input: CreateTrainingDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -218,7 +218,7 @@ export const se_CreateTrainingDatasetCommand = async (
       roleArn: [],
       tags: (_) => _json(_),
       trainingData: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -229,7 +229,7 @@ export const se_CreateTrainingDatasetCommand = async (
  */
 export const se_DeleteAudienceGenerationJobCommand = async (
   input: DeleteAudienceGenerationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -245,7 +245,7 @@ export const se_DeleteAudienceGenerationJobCommand = async (
  */
 export const se_DeleteAudienceModelCommand = async (
   input: DeleteAudienceModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -261,7 +261,7 @@ export const se_DeleteAudienceModelCommand = async (
  */
 export const se_DeleteConfiguredAudienceModelCommand = async (
   input: DeleteConfiguredAudienceModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -277,7 +277,7 @@ export const se_DeleteConfiguredAudienceModelCommand = async (
  */
 export const se_DeleteConfiguredAudienceModelPolicyCommand = async (
   input: DeleteConfiguredAudienceModelPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -293,7 +293,7 @@ export const se_DeleteConfiguredAudienceModelPolicyCommand = async (
  */
 export const se_DeleteTrainingDatasetCommand = async (
   input: DeleteTrainingDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -309,7 +309,7 @@ export const se_DeleteTrainingDatasetCommand = async (
  */
 export const se_GetAudienceGenerationJobCommand = async (
   input: GetAudienceGenerationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -325,7 +325,7 @@ export const se_GetAudienceGenerationJobCommand = async (
  */
 export const se_GetAudienceModelCommand = async (
   input: GetAudienceModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -341,7 +341,7 @@ export const se_GetAudienceModelCommand = async (
  */
 export const se_GetConfiguredAudienceModelCommand = async (
   input: GetConfiguredAudienceModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -357,7 +357,7 @@ export const se_GetConfiguredAudienceModelCommand = async (
  */
 export const se_GetConfiguredAudienceModelPolicyCommand = async (
   input: GetConfiguredAudienceModelPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -373,7 +373,7 @@ export const se_GetConfiguredAudienceModelPolicyCommand = async (
  */
 export const se_GetTrainingDatasetCommand = async (
   input: GetTrainingDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -389,7 +389,7 @@ export const se_GetTrainingDatasetCommand = async (
  */
 export const se_ListAudienceExportJobsCommand = async (
   input: ListAudienceExportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -409,7 +409,7 @@ export const se_ListAudienceExportJobsCommand = async (
  */
 export const se_ListAudienceGenerationJobsCommand = async (
   input: ListAudienceGenerationJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -430,7 +430,7 @@ export const se_ListAudienceGenerationJobsCommand = async (
  */
 export const se_ListAudienceModelsCommand = async (
   input: ListAudienceModelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -449,7 +449,7 @@ export const se_ListAudienceModelsCommand = async (
  */
 export const se_ListConfiguredAudienceModelsCommand = async (
   input: ListConfiguredAudienceModelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -468,7 +468,7 @@ export const se_ListConfiguredAudienceModelsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -484,7 +484,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTrainingDatasetsCommand = async (
   input: ListTrainingDatasetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -503,7 +503,7 @@ export const se_ListTrainingDatasetsCommand = async (
  */
 export const se_PutConfiguredAudienceModelPolicyCommand = async (
   input: PutConfiguredAudienceModelPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -517,7 +517,7 @@ export const se_PutConfiguredAudienceModelPolicyCommand = async (
       configuredAudienceModelPolicy: [],
       policyExistenceCondition: [],
       previousPolicyHash: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -528,7 +528,7 @@ export const se_PutConfiguredAudienceModelPolicyCommand = async (
  */
 export const se_StartAudienceExportJobCommand = async (
   input: StartAudienceExportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -542,7 +542,7 @@ export const se_StartAudienceExportJobCommand = async (
       audienceSize: (_) => _json(_),
       description: [],
       name: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -553,7 +553,7 @@ export const se_StartAudienceExportJobCommand = async (
  */
 export const se_StartAudienceGenerationJobCommand = async (
   input: StartAudienceGenerationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -570,7 +570,7 @@ export const se_StartAudienceGenerationJobCommand = async (
       name: [],
       seedAudience: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -581,7 +581,7 @@ export const se_StartAudienceGenerationJobCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -593,7 +593,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -604,7 +604,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -626,7 +626,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateConfiguredAudienceModelCommand = async (
   input: UpdateConfiguredAudienceModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -643,7 +643,7 @@ export const se_UpdateConfiguredAudienceModelCommand = async (
       minMatchingSeedSize: [],
       outputConfig: (_) => _json(_),
       sharedAudienceMetrics: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -654,7 +654,7 @@ export const se_UpdateConfiguredAudienceModelCommand = async (
  */
 export const de_CreateAudienceModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAudienceModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -675,7 +675,7 @@ export const de_CreateAudienceModelCommand = async (
  */
 export const de_CreateConfiguredAudienceModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConfiguredAudienceModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -696,7 +696,7 @@ export const de_CreateConfiguredAudienceModelCommand = async (
  */
 export const de_CreateTrainingDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTrainingDatasetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -717,7 +717,7 @@ export const de_CreateTrainingDatasetCommand = async (
  */
 export const de_DeleteAudienceGenerationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAudienceGenerationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -734,7 +734,7 @@ export const de_DeleteAudienceGenerationJobCommand = async (
  */
 export const de_DeleteAudienceModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAudienceModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -751,7 +751,7 @@ export const de_DeleteAudienceModelCommand = async (
  */
 export const de_DeleteConfiguredAudienceModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConfiguredAudienceModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -768,7 +768,7 @@ export const de_DeleteConfiguredAudienceModelCommand = async (
  */
 export const de_DeleteConfiguredAudienceModelPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConfiguredAudienceModelPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -785,7 +785,7 @@ export const de_DeleteConfiguredAudienceModelPolicyCommand = async (
  */
 export const de_DeleteTrainingDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTrainingDatasetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -802,7 +802,7 @@ export const de_DeleteTrainingDatasetCommand = async (
  */
 export const de_GetAudienceGenerationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAudienceGenerationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -836,7 +836,7 @@ export const de_GetAudienceGenerationJobCommand = async (
  */
 export const de_GetAudienceModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAudienceModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -868,7 +868,7 @@ export const de_GetAudienceModelCommand = async (
  */
 export const de_GetConfiguredAudienceModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConfiguredAudienceModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -901,7 +901,7 @@ export const de_GetConfiguredAudienceModelCommand = async (
  */
 export const de_GetConfiguredAudienceModelPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConfiguredAudienceModelPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -924,7 +924,7 @@ export const de_GetConfiguredAudienceModelPolicyCommand = async (
  */
 export const de_GetTrainingDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTrainingDatasetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -953,7 +953,7 @@ export const de_GetTrainingDatasetCommand = async (
  */
 export const de_ListAudienceExportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAudienceExportJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -975,7 +975,7 @@ export const de_ListAudienceExportJobsCommand = async (
  */
 export const de_ListAudienceGenerationJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAudienceGenerationJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -997,7 +997,7 @@ export const de_ListAudienceGenerationJobsCommand = async (
  */
 export const de_ListAudienceModelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAudienceModelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1019,7 +1019,7 @@ export const de_ListAudienceModelsCommand = async (
  */
 export const de_ListConfiguredAudienceModelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConfiguredAudienceModelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1041,7 +1041,7 @@ export const de_ListConfiguredAudienceModelsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1062,7 +1062,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTrainingDatasetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTrainingDatasetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1084,7 +1084,7 @@ export const de_ListTrainingDatasetsCommand = async (
  */
 export const de_PutConfiguredAudienceModelPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutConfiguredAudienceModelPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1106,7 +1106,7 @@ export const de_PutConfiguredAudienceModelPolicyCommand = async (
  */
 export const de_StartAudienceExportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartAudienceExportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1123,7 +1123,7 @@ export const de_StartAudienceExportJobCommand = async (
  */
 export const de_StartAudienceGenerationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartAudienceGenerationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1144,7 +1144,7 @@ export const de_StartAudienceGenerationJobCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1161,7 +1161,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1178,7 +1178,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateConfiguredAudienceModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConfiguredAudienceModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1235,7 +1235,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1272,7 +1272,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1292,7 +1292,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

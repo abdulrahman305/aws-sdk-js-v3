@@ -20,7 +20,7 @@ export class SignatureV4S3Express extends SignatureV4 {
   public async signWithCredentials(
     requestToSign: IHttpRequest,
     credentials: AwsCredentialIdentity,
-    options?: RequestSigningArguments
+    options?: RequestSigningArguments,
   ): Promise<IHttpRequest> {
     const credentialsWithoutSessionToken = getCredentialsWithoutSessionToken(credentials);
     requestToSign.headers[SESSION_TOKEN_HEADER] = credentials.sessionToken!;
@@ -40,7 +40,7 @@ export class SignatureV4S3Express extends SignatureV4 {
   public async presignWithCredentials(
     requestToSign: IHttpRequest,
     credentials: AwsCredentialIdentity,
-    options?: RequestPresigningArguments
+    options?: RequestPresigningArguments,
   ): Promise<IHttpRequest> {
     const credentialsWithoutSessionToken = getCredentialsWithoutSessionToken(credentials);
 
@@ -78,7 +78,7 @@ function getCredentialsWithoutSessionToken(credentials: AwsCredentialIdentity): 
  */
 function setSingleOverride(
   privateAccess: { credentialProvider: Provider<AwsCredentialIdentity> },
-  credentialsWithoutSessionToken: Omit<AwsCredentialIdentity, "sessionToken">
+  credentialsWithoutSessionToken: Omit<AwsCredentialIdentity, "sessionToken">,
 ) {
   const id = setTimeout(() => {
     throw new Error("SignatureV4S3Express credential override was created but not called.");

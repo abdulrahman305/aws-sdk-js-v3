@@ -71,7 +71,7 @@ import { STSServiceException as __BaseException } from "../models/STSServiceExce
  */
 export const se_AssumeRoleCommand = async (
   input: AssumeRoleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -88,7 +88,7 @@ export const se_AssumeRoleCommand = async (
  */
 export const se_AssumeRoleWithSAMLCommand = async (
   input: AssumeRoleWithSAMLCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -105,7 +105,7 @@ export const se_AssumeRoleWithSAMLCommand = async (
  */
 export const se_AssumeRoleWithWebIdentityCommand = async (
   input: AssumeRoleWithWebIdentityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -122,7 +122,7 @@ export const se_AssumeRoleWithWebIdentityCommand = async (
  */
 export const se_DecodeAuthorizationMessageCommand = async (
   input: DecodeAuthorizationMessageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -139,7 +139,7 @@ export const se_DecodeAuthorizationMessageCommand = async (
  */
 export const se_GetAccessKeyInfoCommand = async (
   input: GetAccessKeyInfoCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -156,7 +156,7 @@ export const se_GetAccessKeyInfoCommand = async (
  */
 export const se_GetCallerIdentityCommand = async (
   input: GetCallerIdentityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -173,7 +173,7 @@ export const se_GetCallerIdentityCommand = async (
  */
 export const se_GetFederationTokenCommand = async (
   input: GetFederationTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -190,7 +190,7 @@ export const se_GetFederationTokenCommand = async (
  */
 export const se_GetSessionTokenCommand = async (
   input: GetSessionTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -207,7 +207,7 @@ export const se_GetSessionTokenCommand = async (
  */
 export const de_AssumeRoleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssumeRoleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -227,7 +227,7 @@ export const de_AssumeRoleCommand = async (
  */
 export const de_AssumeRoleWithSAMLCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssumeRoleWithSAMLCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -247,7 +247,7 @@ export const de_AssumeRoleWithSAMLCommand = async (
  */
 export const de_AssumeRoleWithWebIdentityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssumeRoleWithWebIdentityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -267,7 +267,7 @@ export const de_AssumeRoleWithWebIdentityCommand = async (
  */
 export const de_DecodeAuthorizationMessageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DecodeAuthorizationMessageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -287,7 +287,7 @@ export const de_DecodeAuthorizationMessageCommand = async (
  */
 export const de_GetAccessKeyInfoCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccessKeyInfoCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -307,7 +307,7 @@ export const de_GetAccessKeyInfoCommand = async (
  */
 export const de_GetCallerIdentityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCallerIdentityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -327,7 +327,7 @@ export const de_GetCallerIdentityCommand = async (
  */
 export const de_GetFederationTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFederationTokenCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -347,7 +347,7 @@ export const de_GetFederationTokenCommand = async (
  */
 export const de_GetSessionTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSessionTokenCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -411,7 +411,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ExpiredTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExpiredTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ExpiredTokenException(body.Error, context);
@@ -427,7 +427,7 @@ const de_ExpiredTokenExceptionRes = async (
  */
 const de_IDPCommunicationErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IDPCommunicationErrorException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_IDPCommunicationErrorException(body.Error, context);
@@ -443,7 +443,7 @@ const de_IDPCommunicationErrorExceptionRes = async (
  */
 const de_IDPRejectedClaimExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IDPRejectedClaimException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_IDPRejectedClaimException(body.Error, context);
@@ -459,7 +459,7 @@ const de_IDPRejectedClaimExceptionRes = async (
  */
 const de_InvalidAuthorizationMessageExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidAuthorizationMessageException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidAuthorizationMessageException(body.Error, context);
@@ -475,7 +475,7 @@ const de_InvalidAuthorizationMessageExceptionRes = async (
  */
 const de_InvalidIdentityTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidIdentityTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidIdentityTokenException(body.Error, context);
@@ -491,7 +491,7 @@ const de_InvalidIdentityTokenExceptionRes = async (
  */
 const de_MalformedPolicyDocumentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedPolicyDocumentException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_MalformedPolicyDocumentException(body.Error, context);
@@ -507,7 +507,7 @@ const de_MalformedPolicyDocumentExceptionRes = async (
  */
 const de_PackedPolicyTooLargeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PackedPolicyTooLargeException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_PackedPolicyTooLargeException(body.Error, context);
@@ -523,7 +523,7 @@ const de_PackedPolicyTooLargeExceptionRes = async (
  */
 const de_RegionDisabledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegionDisabledException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_RegionDisabledException(body.Error, context);
@@ -680,7 +680,7 @@ const se_AssumeRoleWithWebIdentityRequest = (input: AssumeRoleWithWebIdentityReq
  */
 const se_DecodeAuthorizationMessageRequest = (
   input: DecodeAuthorizationMessageRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_EM] != null) {
@@ -948,7 +948,7 @@ const de_AssumeRoleWithSAMLResponse = (output: any, context: __SerdeContext): As
  */
 const de_AssumeRoleWithWebIdentityResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AssumeRoleWithWebIdentityResponse => {
   const contents: any = {};
   if (output[_C] != null) {
@@ -1000,7 +1000,7 @@ const de_Credentials = (output: any, context: __SerdeContext): Credentials => {
  */
 const de_DecodeAuthorizationMessageResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DecodeAuthorizationMessageResponse => {
   const contents: any = {};
   if (output[_DM] != null) {
@@ -1117,7 +1117,7 @@ const de_IDPRejectedClaimException = (output: any, context: __SerdeContext): IDP
  */
 const de_InvalidAuthorizationMessageException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidAuthorizationMessageException => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -1142,7 +1142,7 @@ const de_InvalidIdentityTokenException = (output: any, context: __SerdeContext):
  */
 const de_MalformedPolicyDocumentException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MalformedPolicyDocumentException => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -1191,7 +1191,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

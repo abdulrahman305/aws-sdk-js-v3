@@ -158,7 +158,7 @@ import {
  */
 export const se_CreateChimeWebhookConfigurationCommand = async (
   input: CreateChimeWebhookConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -175,7 +175,7 @@ export const se_CreateChimeWebhookConfigurationCommand = async (
       Tags: (_) => _json(_),
       WebhookDescription: [],
       WebhookUrl: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -186,7 +186,7 @@ export const se_CreateChimeWebhookConfigurationCommand = async (
  */
 export const se_CreateMicrosoftTeamsChannelConfigurationCommand = async (
   input: CreateMicrosoftTeamsChannelConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -208,7 +208,7 @@ export const se_CreateMicrosoftTeamsChannelConfigurationCommand = async (
       TeamName: [],
       TenantId: [],
       UserAuthorizationRequired: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -219,7 +219,7 @@ export const se_CreateMicrosoftTeamsChannelConfigurationCommand = async (
  */
 export const se_CreateSlackChannelConfigurationCommand = async (
   input: CreateSlackChannelConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -239,7 +239,7 @@ export const se_CreateSlackChannelConfigurationCommand = async (
       SnsTopicArns: (_) => _json(_),
       Tags: (_) => _json(_),
       UserAuthorizationRequired: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -250,7 +250,7 @@ export const se_CreateSlackChannelConfigurationCommand = async (
  */
 export const se_DeleteChimeWebhookConfigurationCommand = async (
   input: DeleteChimeWebhookConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -261,7 +261,7 @@ export const se_DeleteChimeWebhookConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       ChatConfigurationArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -272,7 +272,7 @@ export const se_DeleteChimeWebhookConfigurationCommand = async (
  */
 export const se_DeleteMicrosoftTeamsChannelConfigurationCommand = async (
   input: DeleteMicrosoftTeamsChannelConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -283,7 +283,7 @@ export const se_DeleteMicrosoftTeamsChannelConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       ChatConfigurationArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -294,7 +294,7 @@ export const se_DeleteMicrosoftTeamsChannelConfigurationCommand = async (
  */
 export const se_DeleteMicrosoftTeamsConfiguredTeamCommand = async (
   input: DeleteMicrosoftTeamsConfiguredTeamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -305,7 +305,7 @@ export const se_DeleteMicrosoftTeamsConfiguredTeamCommand = async (
   body = JSON.stringify(
     take(input, {
       TeamId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -316,7 +316,7 @@ export const se_DeleteMicrosoftTeamsConfiguredTeamCommand = async (
  */
 export const se_DeleteMicrosoftTeamsUserIdentityCommand = async (
   input: DeleteMicrosoftTeamsUserIdentityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -328,7 +328,7 @@ export const se_DeleteMicrosoftTeamsUserIdentityCommand = async (
     take(input, {
       ChatConfigurationArn: [],
       UserId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -339,7 +339,7 @@ export const se_DeleteMicrosoftTeamsUserIdentityCommand = async (
  */
 export const se_DeleteSlackChannelConfigurationCommand = async (
   input: DeleteSlackChannelConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -350,7 +350,7 @@ export const se_DeleteSlackChannelConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       ChatConfigurationArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -361,7 +361,7 @@ export const se_DeleteSlackChannelConfigurationCommand = async (
  */
 export const se_DeleteSlackUserIdentityCommand = async (
   input: DeleteSlackUserIdentityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -374,7 +374,7 @@ export const se_DeleteSlackUserIdentityCommand = async (
       ChatConfigurationArn: [],
       SlackTeamId: [],
       SlackUserId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -385,7 +385,7 @@ export const se_DeleteSlackUserIdentityCommand = async (
  */
 export const se_DeleteSlackWorkspaceAuthorizationCommand = async (
   input: DeleteSlackWorkspaceAuthorizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -396,7 +396,7 @@ export const se_DeleteSlackWorkspaceAuthorizationCommand = async (
   body = JSON.stringify(
     take(input, {
       SlackTeamId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -407,7 +407,7 @@ export const se_DeleteSlackWorkspaceAuthorizationCommand = async (
  */
 export const se_DescribeChimeWebhookConfigurationsCommand = async (
   input: DescribeChimeWebhookConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -420,7 +420,7 @@ export const se_DescribeChimeWebhookConfigurationsCommand = async (
       ChatConfigurationArn: [],
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -431,7 +431,7 @@ export const se_DescribeChimeWebhookConfigurationsCommand = async (
  */
 export const se_DescribeSlackChannelConfigurationsCommand = async (
   input: DescribeSlackChannelConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -444,7 +444,7 @@ export const se_DescribeSlackChannelConfigurationsCommand = async (
       ChatConfigurationArn: [],
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -455,7 +455,7 @@ export const se_DescribeSlackChannelConfigurationsCommand = async (
  */
 export const se_DescribeSlackUserIdentitiesCommand = async (
   input: DescribeSlackUserIdentitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -468,7 +468,7 @@ export const se_DescribeSlackUserIdentitiesCommand = async (
       ChatConfigurationArn: [],
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -479,7 +479,7 @@ export const se_DescribeSlackUserIdentitiesCommand = async (
  */
 export const se_DescribeSlackWorkspacesCommand = async (
   input: DescribeSlackWorkspacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -491,7 +491,7 @@ export const se_DescribeSlackWorkspacesCommand = async (
     take(input, {
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -502,7 +502,7 @@ export const se_DescribeSlackWorkspacesCommand = async (
  */
 export const se_GetAccountPreferencesCommand = async (
   input: GetAccountPreferencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -520,7 +520,7 @@ export const se_GetAccountPreferencesCommand = async (
  */
 export const se_GetMicrosoftTeamsChannelConfigurationCommand = async (
   input: GetMicrosoftTeamsChannelConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -531,7 +531,7 @@ export const se_GetMicrosoftTeamsChannelConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       ChatConfigurationArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -542,7 +542,7 @@ export const se_GetMicrosoftTeamsChannelConfigurationCommand = async (
  */
 export const se_ListMicrosoftTeamsChannelConfigurationsCommand = async (
   input: ListMicrosoftTeamsChannelConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -555,7 +555,7 @@ export const se_ListMicrosoftTeamsChannelConfigurationsCommand = async (
       MaxResults: [],
       NextToken: [],
       TeamId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -566,7 +566,7 @@ export const se_ListMicrosoftTeamsChannelConfigurationsCommand = async (
  */
 export const se_ListMicrosoftTeamsConfiguredTeamsCommand = async (
   input: ListMicrosoftTeamsConfiguredTeamsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -578,7 +578,7 @@ export const se_ListMicrosoftTeamsConfiguredTeamsCommand = async (
     take(input, {
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -589,7 +589,7 @@ export const se_ListMicrosoftTeamsConfiguredTeamsCommand = async (
  */
 export const se_ListMicrosoftTeamsUserIdentitiesCommand = async (
   input: ListMicrosoftTeamsUserIdentitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -602,7 +602,7 @@ export const se_ListMicrosoftTeamsUserIdentitiesCommand = async (
       ChatConfigurationArn: [],
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -613,7 +613,7 @@ export const se_ListMicrosoftTeamsUserIdentitiesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -624,7 +624,7 @@ export const se_ListTagsForResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       ResourceARN: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -635,7 +635,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -647,7 +647,7 @@ export const se_TagResourceCommand = async (
     take(input, {
       ResourceARN: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -658,7 +658,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -670,7 +670,7 @@ export const se_UntagResourceCommand = async (
     take(input, {
       ResourceARN: [],
       TagKeys: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -681,7 +681,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAccountPreferencesCommand = async (
   input: UpdateAccountPreferencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -693,7 +693,7 @@ export const se_UpdateAccountPreferencesCommand = async (
     take(input, {
       TrainingDataCollectionEnabled: [],
       UserAuthorizationRequired: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -704,7 +704,7 @@ export const se_UpdateAccountPreferencesCommand = async (
  */
 export const se_UpdateChimeWebhookConfigurationCommand = async (
   input: UpdateChimeWebhookConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -720,7 +720,7 @@ export const se_UpdateChimeWebhookConfigurationCommand = async (
       SnsTopicArns: (_) => _json(_),
       WebhookDescription: [],
       WebhookUrl: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -731,7 +731,7 @@ export const se_UpdateChimeWebhookConfigurationCommand = async (
  */
 export const se_UpdateMicrosoftTeamsChannelConfigurationCommand = async (
   input: UpdateMicrosoftTeamsChannelConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -749,7 +749,7 @@ export const se_UpdateMicrosoftTeamsChannelConfigurationCommand = async (
       LoggingLevel: [],
       SnsTopicArns: (_) => _json(_),
       UserAuthorizationRequired: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -760,7 +760,7 @@ export const se_UpdateMicrosoftTeamsChannelConfigurationCommand = async (
  */
 export const se_UpdateSlackChannelConfigurationCommand = async (
   input: UpdateSlackChannelConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -778,7 +778,7 @@ export const se_UpdateSlackChannelConfigurationCommand = async (
       SlackChannelName: [],
       SnsTopicArns: (_) => _json(_),
       UserAuthorizationRequired: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -789,7 +789,7 @@ export const se_UpdateSlackChannelConfigurationCommand = async (
  */
 export const de_CreateChimeWebhookConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateChimeWebhookConfigurationCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -810,7 +810,7 @@ export const de_CreateChimeWebhookConfigurationCommand = async (
  */
 export const de_CreateMicrosoftTeamsChannelConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMicrosoftTeamsChannelConfigurationCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -831,7 +831,7 @@ export const de_CreateMicrosoftTeamsChannelConfigurationCommand = async (
  */
 export const de_CreateSlackChannelConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSlackChannelConfigurationCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -852,7 +852,7 @@ export const de_CreateSlackChannelConfigurationCommand = async (
  */
 export const de_DeleteChimeWebhookConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteChimeWebhookConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -869,7 +869,7 @@ export const de_DeleteChimeWebhookConfigurationCommand = async (
  */
 export const de_DeleteMicrosoftTeamsChannelConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMicrosoftTeamsChannelConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -886,7 +886,7 @@ export const de_DeleteMicrosoftTeamsChannelConfigurationCommand = async (
  */
 export const de_DeleteMicrosoftTeamsConfiguredTeamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMicrosoftTeamsConfiguredTeamCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -903,7 +903,7 @@ export const de_DeleteMicrosoftTeamsConfiguredTeamCommand = async (
  */
 export const de_DeleteMicrosoftTeamsUserIdentityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMicrosoftTeamsUserIdentityCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -920,7 +920,7 @@ export const de_DeleteMicrosoftTeamsUserIdentityCommand = async (
  */
 export const de_DeleteSlackChannelConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSlackChannelConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -937,7 +937,7 @@ export const de_DeleteSlackChannelConfigurationCommand = async (
  */
 export const de_DeleteSlackUserIdentityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSlackUserIdentityCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -954,7 +954,7 @@ export const de_DeleteSlackUserIdentityCommand = async (
  */
 export const de_DeleteSlackWorkspaceAuthorizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSlackWorkspaceAuthorizationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -971,7 +971,7 @@ export const de_DeleteSlackWorkspaceAuthorizationCommand = async (
  */
 export const de_DescribeChimeWebhookConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeChimeWebhookConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -993,7 +993,7 @@ export const de_DescribeChimeWebhookConfigurationsCommand = async (
  */
 export const de_DescribeSlackChannelConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSlackChannelConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1015,7 +1015,7 @@ export const de_DescribeSlackChannelConfigurationsCommand = async (
  */
 export const de_DescribeSlackUserIdentitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSlackUserIdentitiesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1037,7 +1037,7 @@ export const de_DescribeSlackUserIdentitiesCommand = async (
  */
 export const de_DescribeSlackWorkspacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSlackWorkspacesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1059,7 +1059,7 @@ export const de_DescribeSlackWorkspacesCommand = async (
  */
 export const de_GetAccountPreferencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccountPreferencesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1080,7 +1080,7 @@ export const de_GetAccountPreferencesCommand = async (
  */
 export const de_GetMicrosoftTeamsChannelConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMicrosoftTeamsChannelConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1101,7 +1101,7 @@ export const de_GetMicrosoftTeamsChannelConfigurationCommand = async (
  */
 export const de_ListMicrosoftTeamsChannelConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMicrosoftTeamsChannelConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1123,7 +1123,7 @@ export const de_ListMicrosoftTeamsChannelConfigurationsCommand = async (
  */
 export const de_ListMicrosoftTeamsConfiguredTeamsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMicrosoftTeamsConfiguredTeamsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1145,7 +1145,7 @@ export const de_ListMicrosoftTeamsConfiguredTeamsCommand = async (
  */
 export const de_ListMicrosoftTeamsUserIdentitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMicrosoftTeamsUserIdentitiesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1167,7 +1167,7 @@ export const de_ListMicrosoftTeamsUserIdentitiesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1188,7 +1188,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1205,7 +1205,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1222,7 +1222,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAccountPreferencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAccountPreferencesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1243,7 +1243,7 @@ export const de_UpdateAccountPreferencesCommand = async (
  */
 export const de_UpdateChimeWebhookConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateChimeWebhookConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1264,7 +1264,7 @@ export const de_UpdateChimeWebhookConfigurationCommand = async (
  */
 export const de_UpdateMicrosoftTeamsChannelConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMicrosoftTeamsChannelConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1285,7 +1285,7 @@ export const de_UpdateMicrosoftTeamsChannelConfigurationCommand = async (
  */
 export const de_UpdateSlackChannelConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSlackChannelConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1437,7 +1437,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_CreateChimeWebhookConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateChimeWebhookConfigurationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1457,7 +1457,7 @@ const de_CreateChimeWebhookConfigurationExceptionRes = async (
  */
 const de_CreateSlackChannelConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSlackChannelConfigurationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1477,7 +1477,7 @@ const de_CreateSlackChannelConfigurationExceptionRes = async (
  */
 const de_CreateTeamsChannelConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTeamsChannelConfigurationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1497,7 +1497,7 @@ const de_CreateTeamsChannelConfigurationExceptionRes = async (
  */
 const de_DeleteChimeWebhookConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteChimeWebhookConfigurationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1517,7 +1517,7 @@ const de_DeleteChimeWebhookConfigurationExceptionRes = async (
  */
 const de_DeleteMicrosoftTeamsUserIdentityExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMicrosoftTeamsUserIdentityException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1537,7 +1537,7 @@ const de_DeleteMicrosoftTeamsUserIdentityExceptionRes = async (
  */
 const de_DeleteSlackChannelConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSlackChannelConfigurationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1557,7 +1557,7 @@ const de_DeleteSlackChannelConfigurationExceptionRes = async (
  */
 const de_DeleteSlackUserIdentityExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSlackUserIdentityException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1577,7 +1577,7 @@ const de_DeleteSlackUserIdentityExceptionRes = async (
  */
 const de_DeleteSlackWorkspaceAuthorizationFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSlackWorkspaceAuthorizationFault> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1597,7 +1597,7 @@ const de_DeleteSlackWorkspaceAuthorizationFaultRes = async (
  */
 const de_DeleteTeamsChannelConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTeamsChannelConfigurationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1617,7 +1617,7 @@ const de_DeleteTeamsChannelConfigurationExceptionRes = async (
  */
 const de_DeleteTeamsConfiguredTeamExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTeamsConfiguredTeamException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1637,7 +1637,7 @@ const de_DeleteTeamsConfiguredTeamExceptionRes = async (
  */
 const de_DescribeChimeWebhookConfigurationsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeChimeWebhookConfigurationsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1657,7 +1657,7 @@ const de_DescribeChimeWebhookConfigurationsExceptionRes = async (
  */
 const de_DescribeSlackChannelConfigurationsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSlackChannelConfigurationsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1677,7 +1677,7 @@ const de_DescribeSlackChannelConfigurationsExceptionRes = async (
  */
 const de_DescribeSlackUserIdentitiesExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSlackUserIdentitiesException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1697,7 +1697,7 @@ const de_DescribeSlackUserIdentitiesExceptionRes = async (
  */
 const de_DescribeSlackWorkspacesExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSlackWorkspacesException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1717,7 +1717,7 @@ const de_DescribeSlackWorkspacesExceptionRes = async (
  */
 const de_GetAccountPreferencesExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccountPreferencesException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1737,7 +1737,7 @@ const de_GetAccountPreferencesExceptionRes = async (
  */
 const de_GetTeamsChannelConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTeamsChannelConfigurationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1757,7 +1757,7 @@ const de_GetTeamsChannelConfigurationExceptionRes = async (
  */
 const de_InternalServiceErrorRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceError> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1777,7 +1777,7 @@ const de_InternalServiceErrorRes = async (
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1797,7 +1797,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1817,7 +1817,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1837,7 +1837,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ListMicrosoftTeamsConfiguredTeamsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMicrosoftTeamsConfiguredTeamsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1857,7 +1857,7 @@ const de_ListMicrosoftTeamsConfiguredTeamsExceptionRes = async (
  */
 const de_ListMicrosoftTeamsUserIdentitiesExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMicrosoftTeamsUserIdentitiesException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1877,7 +1877,7 @@ const de_ListMicrosoftTeamsUserIdentitiesExceptionRes = async (
  */
 const de_ListTeamsChannelConfigurationsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTeamsChannelConfigurationsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1897,7 +1897,7 @@ const de_ListTeamsChannelConfigurationsExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1917,7 +1917,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1937,7 +1937,7 @@ const de_ServiceUnavailableExceptionRes = async (
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1957,7 +1957,7 @@ const de_TooManyTagsExceptionRes = async (
  */
 const de_UpdateAccountPreferencesExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAccountPreferencesException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1977,7 +1977,7 @@ const de_UpdateAccountPreferencesExceptionRes = async (
  */
 const de_UpdateChimeWebhookConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateChimeWebhookConfigurationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1997,7 +1997,7 @@ const de_UpdateChimeWebhookConfigurationExceptionRes = async (
  */
 const de_UpdateSlackChannelConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSlackChannelConfigurationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2017,7 +2017,7 @@ const de_UpdateSlackChannelConfigurationExceptionRes = async (
  */
 const de_UpdateTeamsChannelConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTeamsChannelConfigurationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

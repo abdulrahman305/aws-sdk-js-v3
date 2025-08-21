@@ -165,13 +165,13 @@ export interface XRay {
    */
   batchGetTraces(
     args: BatchGetTracesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetTracesCommandOutput>;
   batchGetTraces(args: BatchGetTracesCommandInput, cb: (err: any, data?: BatchGetTracesCommandOutput) => void): void;
   batchGetTraces(
     args: BatchGetTracesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetTracesCommandOutput) => void
+    cb: (err: any, data?: BatchGetTracesCommandOutput) => void,
   ): void;
 
   /**
@@ -182,7 +182,7 @@ export interface XRay {
   createGroup(
     args: CreateGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateGroupCommandOutput) => void
+    cb: (err: any, data?: CreateGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -190,16 +190,16 @@ export interface XRay {
    */
   createSamplingRule(
     args: CreateSamplingRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSamplingRuleCommandOutput>;
   createSamplingRule(
     args: CreateSamplingRuleCommandInput,
-    cb: (err: any, data?: CreateSamplingRuleCommandOutput) => void
+    cb: (err: any, data?: CreateSamplingRuleCommandOutput) => void,
   ): void;
   createSamplingRule(
     args: CreateSamplingRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSamplingRuleCommandOutput) => void
+    cb: (err: any, data?: CreateSamplingRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -211,7 +211,7 @@ export interface XRay {
   deleteGroup(
     args: DeleteGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -219,16 +219,16 @@ export interface XRay {
    */
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResourcePolicyCommandOutput>;
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
-    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void,
   ): void;
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -237,16 +237,16 @@ export interface XRay {
   deleteSamplingRule(): Promise<DeleteSamplingRuleCommandOutput>;
   deleteSamplingRule(
     args: DeleteSamplingRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSamplingRuleCommandOutput>;
   deleteSamplingRule(
     args: DeleteSamplingRuleCommandInput,
-    cb: (err: any, data?: DeleteSamplingRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteSamplingRuleCommandOutput) => void,
   ): void;
   deleteSamplingRule(
     args: DeleteSamplingRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSamplingRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteSamplingRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -255,16 +255,16 @@ export interface XRay {
   getEncryptionConfig(): Promise<GetEncryptionConfigCommandOutput>;
   getEncryptionConfig(
     args: GetEncryptionConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEncryptionConfigCommandOutput>;
   getEncryptionConfig(
     args: GetEncryptionConfigCommandInput,
-    cb: (err: any, data?: GetEncryptionConfigCommandOutput) => void
+    cb: (err: any, data?: GetEncryptionConfigCommandOutput) => void,
   ): void;
   getEncryptionConfig(
     args: GetEncryptionConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEncryptionConfigCommandOutput) => void
+    cb: (err: any, data?: GetEncryptionConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -276,7 +276,7 @@ export interface XRay {
   getGroup(
     args: GetGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetGroupCommandOutput) => void
+    cb: (err: any, data?: GetGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -288,7 +288,7 @@ export interface XRay {
   getGroups(
     args: GetGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetGroupsCommandOutput) => void
+    cb: (err: any, data?: GetGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -299,7 +299,7 @@ export interface XRay {
   getInsight(
     args: GetInsightCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetInsightCommandOutput) => void
+    cb: (err: any, data?: GetInsightCommandOutput) => void,
   ): void;
 
   /**
@@ -307,16 +307,16 @@ export interface XRay {
    */
   getInsightEvents(
     args: GetInsightEventsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetInsightEventsCommandOutput>;
   getInsightEvents(
     args: GetInsightEventsCommandInput,
-    cb: (err: any, data?: GetInsightEventsCommandOutput) => void
+    cb: (err: any, data?: GetInsightEventsCommandOutput) => void,
   ): void;
   getInsightEvents(
     args: GetInsightEventsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetInsightEventsCommandOutput) => void
+    cb: (err: any, data?: GetInsightEventsCommandOutput) => void,
   ): void;
 
   /**
@@ -324,16 +324,16 @@ export interface XRay {
    */
   getInsightImpactGraph(
     args: GetInsightImpactGraphCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetInsightImpactGraphCommandOutput>;
   getInsightImpactGraph(
     args: GetInsightImpactGraphCommandInput,
-    cb: (err: any, data?: GetInsightImpactGraphCommandOutput) => void
+    cb: (err: any, data?: GetInsightImpactGraphCommandOutput) => void,
   ): void;
   getInsightImpactGraph(
     args: GetInsightImpactGraphCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetInsightImpactGraphCommandOutput) => void
+    cb: (err: any, data?: GetInsightImpactGraphCommandOutput) => void,
   ): void;
 
   /**
@@ -341,16 +341,16 @@ export interface XRay {
    */
   getInsightSummaries(
     args: GetInsightSummariesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetInsightSummariesCommandOutput>;
   getInsightSummaries(
     args: GetInsightSummariesCommandInput,
-    cb: (err: any, data?: GetInsightSummariesCommandOutput) => void
+    cb: (err: any, data?: GetInsightSummariesCommandOutput) => void,
   ): void;
   getInsightSummaries(
     args: GetInsightSummariesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetInsightSummariesCommandOutput) => void
+    cb: (err: any, data?: GetInsightSummariesCommandOutput) => void,
   ): void;
 
   /**
@@ -359,16 +359,16 @@ export interface XRay {
   getSamplingRules(): Promise<GetSamplingRulesCommandOutput>;
   getSamplingRules(
     args: GetSamplingRulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSamplingRulesCommandOutput>;
   getSamplingRules(
     args: GetSamplingRulesCommandInput,
-    cb: (err: any, data?: GetSamplingRulesCommandOutput) => void
+    cb: (err: any, data?: GetSamplingRulesCommandOutput) => void,
   ): void;
   getSamplingRules(
     args: GetSamplingRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSamplingRulesCommandOutput) => void
+    cb: (err: any, data?: GetSamplingRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -377,16 +377,16 @@ export interface XRay {
   getSamplingStatisticSummaries(): Promise<GetSamplingStatisticSummariesCommandOutput>;
   getSamplingStatisticSummaries(
     args: GetSamplingStatisticSummariesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSamplingStatisticSummariesCommandOutput>;
   getSamplingStatisticSummaries(
     args: GetSamplingStatisticSummariesCommandInput,
-    cb: (err: any, data?: GetSamplingStatisticSummariesCommandOutput) => void
+    cb: (err: any, data?: GetSamplingStatisticSummariesCommandOutput) => void,
   ): void;
   getSamplingStatisticSummaries(
     args: GetSamplingStatisticSummariesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSamplingStatisticSummariesCommandOutput) => void
+    cb: (err: any, data?: GetSamplingStatisticSummariesCommandOutput) => void,
   ): void;
 
   /**
@@ -394,16 +394,16 @@ export interface XRay {
    */
   getSamplingTargets(
     args: GetSamplingTargetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSamplingTargetsCommandOutput>;
   getSamplingTargets(
     args: GetSamplingTargetsCommandInput,
-    cb: (err: any, data?: GetSamplingTargetsCommandOutput) => void
+    cb: (err: any, data?: GetSamplingTargetsCommandOutput) => void,
   ): void;
   getSamplingTargets(
     args: GetSamplingTargetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSamplingTargetsCommandOutput) => void
+    cb: (err: any, data?: GetSamplingTargetsCommandOutput) => void,
   ): void;
 
   /**
@@ -411,13 +411,13 @@ export interface XRay {
    */
   getServiceGraph(
     args: GetServiceGraphCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetServiceGraphCommandOutput>;
   getServiceGraph(args: GetServiceGraphCommandInput, cb: (err: any, data?: GetServiceGraphCommandOutput) => void): void;
   getServiceGraph(
     args: GetServiceGraphCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetServiceGraphCommandOutput) => void
+    cb: (err: any, data?: GetServiceGraphCommandOutput) => void,
   ): void;
 
   /**
@@ -425,16 +425,16 @@ export interface XRay {
    */
   getTimeSeriesServiceStatistics(
     args: GetTimeSeriesServiceStatisticsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTimeSeriesServiceStatisticsCommandOutput>;
   getTimeSeriesServiceStatistics(
     args: GetTimeSeriesServiceStatisticsCommandInput,
-    cb: (err: any, data?: GetTimeSeriesServiceStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetTimeSeriesServiceStatisticsCommandOutput) => void,
   ): void;
   getTimeSeriesServiceStatistics(
     args: GetTimeSeriesServiceStatisticsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTimeSeriesServiceStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetTimeSeriesServiceStatisticsCommandOutput) => void,
   ): void;
 
   /**
@@ -445,7 +445,7 @@ export interface XRay {
   getTraceGraph(
     args: GetTraceGraphCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTraceGraphCommandOutput) => void
+    cb: (err: any, data?: GetTraceGraphCommandOutput) => void,
   ): void;
 
   /**
@@ -453,16 +453,16 @@ export interface XRay {
    */
   getTraceSummaries(
     args: GetTraceSummariesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTraceSummariesCommandOutput>;
   getTraceSummaries(
     args: GetTraceSummariesCommandInput,
-    cb: (err: any, data?: GetTraceSummariesCommandOutput) => void
+    cb: (err: any, data?: GetTraceSummariesCommandOutput) => void,
   ): void;
   getTraceSummaries(
     args: GetTraceSummariesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTraceSummariesCommandOutput) => void
+    cb: (err: any, data?: GetTraceSummariesCommandOutput) => void,
   ): void;
 
   /**
@@ -471,16 +471,16 @@ export interface XRay {
   listResourcePolicies(): Promise<ListResourcePoliciesCommandOutput>;
   listResourcePolicies(
     args: ListResourcePoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResourcePoliciesCommandOutput>;
   listResourcePolicies(
     args: ListResourcePoliciesCommandInput,
-    cb: (err: any, data?: ListResourcePoliciesCommandOutput) => void
+    cb: (err: any, data?: ListResourcePoliciesCommandOutput) => void,
   ): void;
   listResourcePolicies(
     args: ListResourcePoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResourcePoliciesCommandOutput) => void
+    cb: (err: any, data?: ListResourcePoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -488,16 +488,16 @@ export interface XRay {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -505,16 +505,16 @@ export interface XRay {
    */
   putEncryptionConfig(
     args: PutEncryptionConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutEncryptionConfigCommandOutput>;
   putEncryptionConfig(
     args: PutEncryptionConfigCommandInput,
-    cb: (err: any, data?: PutEncryptionConfigCommandOutput) => void
+    cb: (err: any, data?: PutEncryptionConfigCommandOutput) => void,
   ): void;
   putEncryptionConfig(
     args: PutEncryptionConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutEncryptionConfigCommandOutput) => void
+    cb: (err: any, data?: PutEncryptionConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -522,16 +522,16 @@ export interface XRay {
    */
   putResourcePolicy(
     args: PutResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutResourcePolicyCommandOutput>;
   putResourcePolicy(
     args: PutResourcePolicyCommandInput,
-    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void,
   ): void;
   putResourcePolicy(
     args: PutResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -539,16 +539,16 @@ export interface XRay {
    */
   putTelemetryRecords(
     args: PutTelemetryRecordsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutTelemetryRecordsCommandOutput>;
   putTelemetryRecords(
     args: PutTelemetryRecordsCommandInput,
-    cb: (err: any, data?: PutTelemetryRecordsCommandOutput) => void
+    cb: (err: any, data?: PutTelemetryRecordsCommandOutput) => void,
   ): void;
   putTelemetryRecords(
     args: PutTelemetryRecordsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutTelemetryRecordsCommandOutput) => void
+    cb: (err: any, data?: PutTelemetryRecordsCommandOutput) => void,
   ): void;
 
   /**
@@ -556,16 +556,16 @@ export interface XRay {
    */
   putTraceSegments(
     args: PutTraceSegmentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutTraceSegmentsCommandOutput>;
   putTraceSegments(
     args: PutTraceSegmentsCommandInput,
-    cb: (err: any, data?: PutTraceSegmentsCommandOutput) => void
+    cb: (err: any, data?: PutTraceSegmentsCommandOutput) => void,
   ): void;
   putTraceSegments(
     args: PutTraceSegmentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutTraceSegmentsCommandOutput) => void
+    cb: (err: any, data?: PutTraceSegmentsCommandOutput) => void,
   ): void;
 
   /**
@@ -576,7 +576,7 @@ export interface XRay {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -587,7 +587,7 @@ export interface XRay {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -599,7 +599,7 @@ export interface XRay {
   updateGroup(
     args: UpdateGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -607,16 +607,16 @@ export interface XRay {
    */
   updateSamplingRule(
     args: UpdateSamplingRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSamplingRuleCommandOutput>;
   updateSamplingRule(
     args: UpdateSamplingRuleCommandInput,
-    cb: (err: any, data?: UpdateSamplingRuleCommandOutput) => void
+    cb: (err: any, data?: UpdateSamplingRuleCommandOutput) => void,
   ): void;
   updateSamplingRule(
     args: UpdateSamplingRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSamplingRuleCommandOutput) => void
+    cb: (err: any, data?: UpdateSamplingRuleCommandOutput) => void,
   ): void;
 }
 

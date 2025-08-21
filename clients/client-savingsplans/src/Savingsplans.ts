@@ -69,16 +69,16 @@ export interface Savingsplans {
    */
   createSavingsPlan(
     args: CreateSavingsPlanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSavingsPlanCommandOutput>;
   createSavingsPlan(
     args: CreateSavingsPlanCommandInput,
-    cb: (err: any, data?: CreateSavingsPlanCommandOutput) => void
+    cb: (err: any, data?: CreateSavingsPlanCommandOutput) => void,
   ): void;
   createSavingsPlan(
     args: CreateSavingsPlanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSavingsPlanCommandOutput) => void
+    cb: (err: any, data?: CreateSavingsPlanCommandOutput) => void,
   ): void;
 
   /**
@@ -86,16 +86,16 @@ export interface Savingsplans {
    */
   deleteQueuedSavingsPlan(
     args: DeleteQueuedSavingsPlanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteQueuedSavingsPlanCommandOutput>;
   deleteQueuedSavingsPlan(
     args: DeleteQueuedSavingsPlanCommandInput,
-    cb: (err: any, data?: DeleteQueuedSavingsPlanCommandOutput) => void
+    cb: (err: any, data?: DeleteQueuedSavingsPlanCommandOutput) => void,
   ): void;
   deleteQueuedSavingsPlan(
     args: DeleteQueuedSavingsPlanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteQueuedSavingsPlanCommandOutput) => void
+    cb: (err: any, data?: DeleteQueuedSavingsPlanCommandOutput) => void,
   ): void;
 
   /**
@@ -103,16 +103,16 @@ export interface Savingsplans {
    */
   describeSavingsPlanRates(
     args: DescribeSavingsPlanRatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSavingsPlanRatesCommandOutput>;
   describeSavingsPlanRates(
     args: DescribeSavingsPlanRatesCommandInput,
-    cb: (err: any, data?: DescribeSavingsPlanRatesCommandOutput) => void
+    cb: (err: any, data?: DescribeSavingsPlanRatesCommandOutput) => void,
   ): void;
   describeSavingsPlanRates(
     args: DescribeSavingsPlanRatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSavingsPlanRatesCommandOutput) => void
+    cb: (err: any, data?: DescribeSavingsPlanRatesCommandOutput) => void,
   ): void;
 
   /**
@@ -121,16 +121,16 @@ export interface Savingsplans {
   describeSavingsPlans(): Promise<DescribeSavingsPlansCommandOutput>;
   describeSavingsPlans(
     args: DescribeSavingsPlansCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSavingsPlansCommandOutput>;
   describeSavingsPlans(
     args: DescribeSavingsPlansCommandInput,
-    cb: (err: any, data?: DescribeSavingsPlansCommandOutput) => void
+    cb: (err: any, data?: DescribeSavingsPlansCommandOutput) => void,
   ): void;
   describeSavingsPlans(
     args: DescribeSavingsPlansCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSavingsPlansCommandOutput) => void
+    cb: (err: any, data?: DescribeSavingsPlansCommandOutput) => void,
   ): void;
 
   /**
@@ -139,16 +139,16 @@ export interface Savingsplans {
   describeSavingsPlansOfferingRates(): Promise<DescribeSavingsPlansOfferingRatesCommandOutput>;
   describeSavingsPlansOfferingRates(
     args: DescribeSavingsPlansOfferingRatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSavingsPlansOfferingRatesCommandOutput>;
   describeSavingsPlansOfferingRates(
     args: DescribeSavingsPlansOfferingRatesCommandInput,
-    cb: (err: any, data?: DescribeSavingsPlansOfferingRatesCommandOutput) => void
+    cb: (err: any, data?: DescribeSavingsPlansOfferingRatesCommandOutput) => void,
   ): void;
   describeSavingsPlansOfferingRates(
     args: DescribeSavingsPlansOfferingRatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSavingsPlansOfferingRatesCommandOutput) => void
+    cb: (err: any, data?: DescribeSavingsPlansOfferingRatesCommandOutput) => void,
   ): void;
 
   /**
@@ -157,16 +157,16 @@ export interface Savingsplans {
   describeSavingsPlansOfferings(): Promise<DescribeSavingsPlansOfferingsCommandOutput>;
   describeSavingsPlansOfferings(
     args: DescribeSavingsPlansOfferingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSavingsPlansOfferingsCommandOutput>;
   describeSavingsPlansOfferings(
     args: DescribeSavingsPlansOfferingsCommandInput,
-    cb: (err: any, data?: DescribeSavingsPlansOfferingsCommandOutput) => void
+    cb: (err: any, data?: DescribeSavingsPlansOfferingsCommandOutput) => void,
   ): void;
   describeSavingsPlansOfferings(
     args: DescribeSavingsPlansOfferingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSavingsPlansOfferingsCommandOutput) => void
+    cb: (err: any, data?: DescribeSavingsPlansOfferingsCommandOutput) => void,
   ): void;
 
   /**
@@ -174,16 +174,16 @@ export interface Savingsplans {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -191,16 +191,16 @@ export interface Savingsplans {
    */
   returnSavingsPlan(
     args: ReturnSavingsPlanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ReturnSavingsPlanCommandOutput>;
   returnSavingsPlan(
     args: ReturnSavingsPlanCommandInput,
-    cb: (err: any, data?: ReturnSavingsPlanCommandOutput) => void
+    cb: (err: any, data?: ReturnSavingsPlanCommandOutput) => void,
   ): void;
   returnSavingsPlan(
     args: ReturnSavingsPlanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ReturnSavingsPlanCommandOutput) => void
+    cb: (err: any, data?: ReturnSavingsPlanCommandOutput) => void,
   ): void;
 
   /**
@@ -211,7 +211,7 @@ export interface Savingsplans {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -222,7 +222,7 @@ export interface Savingsplans {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 }
 

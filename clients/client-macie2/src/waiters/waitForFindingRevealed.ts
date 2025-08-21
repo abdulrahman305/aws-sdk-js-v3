@@ -9,7 +9,7 @@ import { Macie2Client } from "../Macie2Client";
 
 const checkState = async (
   client: Macie2Client,
-  input: GetSensitiveDataOccurrencesCommandInput
+  input: GetSensitiveDataOccurrencesCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -42,7 +42,7 @@ const checkState = async (
  */
 export const waitForFindingRevealed = async (
   params: WaiterConfiguration<Macie2Client>,
-  input: GetSensitiveDataOccurrencesCommandInput
+  input: GetSensitiveDataOccurrencesCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 2, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -54,7 +54,7 @@ export const waitForFindingRevealed = async (
  */
 export const waitUntilFindingRevealed = async (
   params: WaiterConfiguration<Macie2Client>,
-  input: GetSensitiveDataOccurrencesCommandInput
+  input: GetSensitiveDataOccurrencesCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 2, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

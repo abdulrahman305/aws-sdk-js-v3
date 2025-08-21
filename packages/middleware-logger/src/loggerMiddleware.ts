@@ -13,7 +13,7 @@ export const loggerMiddleware =
   () =>
   <Output extends MetadataBearer = MetadataBearer>(
     next: InitializeHandler<any, Output>,
-    context: HandlerExecutionContext
+    context: HandlerExecutionContext,
   ): InitializeHandler<any, Output> =>
   async (args: InitializeHandlerArguments<any>): Promise<InitializeHandlerOutput<Output>> => {
     try {

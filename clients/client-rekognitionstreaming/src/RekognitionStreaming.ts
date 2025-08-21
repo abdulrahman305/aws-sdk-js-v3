@@ -19,16 +19,16 @@ export interface RekognitionStreaming {
    */
   startFaceLivenessSession(
     args: StartFaceLivenessSessionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartFaceLivenessSessionCommandOutput>;
   startFaceLivenessSession(
     args: StartFaceLivenessSessionCommandInput,
-    cb: (err: any, data?: StartFaceLivenessSessionCommandOutput) => void
+    cb: (err: any, data?: StartFaceLivenessSessionCommandOutput) => void,
   ): void;
   startFaceLivenessSession(
     args: StartFaceLivenessSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartFaceLivenessSessionCommandOutput) => void
+    cb: (err: any, data?: StartFaceLivenessSessionCommandOutput) => void,
   ): void;
 }
 

@@ -61,14 +61,14 @@ export class MalformedLongSerializer
 
 export const getMalformedLongHandler = <Context>(
   operation: __Operation<MalformedLongServerInput, MalformedLongServerOutput, Context>,
-  customizer: __ValidationCustomizer<"MalformedLong">
+  customizer: __ValidationCustomizer<"MalformedLong">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "MalformedLong">([
     new httpbinding.UriSpec<"RestJson", "MalformedLong">(
       "POST",
       [{ type: "path_literal", value: "MalformedLong" }, { type: "path" }],
       [],
-      { service: "RestJson", operation: "MalformedLong" }
+      { service: "RestJson", operation: "MalformedLong" },
     ),
   ]);
   return new MalformedLongHandler(
@@ -76,7 +76,7 @@ export const getMalformedLongHandler = <Context>(
     mux,
     new MalformedLongSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -97,7 +97,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -135,7 +135,7 @@ export class MalformedLongHandler<Context> implements __ServiceHandler<Context> 
   private readonly serializer: __OperationSerializer<RestJsonService<Context>, "MalformedLong", MalformedLongErrors>;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"MalformedLong">;
   /**
@@ -152,7 +152,7 @@ export class MalformedLongHandler<Context> implements __ServiceHandler<Context> 
     mux: __Mux<"RestJson", "MalformedLong">,
     serializer: __OperationSerializer<RestJsonService<Context>, "MalformedLong", MalformedLongErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"MalformedLong">
+    validationCustomizer: __ValidationCustomizer<"MalformedLong">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -164,7 +164,7 @@ export class MalformedLongHandler<Context> implements __ServiceHandler<Context> 
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedLong. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedLong. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -176,7 +176,7 @@ export class MalformedLongHandler<Context> implements __ServiceHandler<Context> 
       this.operation,
       this.serializeFrameworkException,
       MalformedLongServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

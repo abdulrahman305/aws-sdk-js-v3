@@ -103,7 +103,7 @@ export class Upload extends EventEmitter {
   public async done(): Promise<CompleteMultipartUploadCommandOutput> {
     if (this.sent) {
       throw new Error(
-        "@aws-sdk/lib-storage: this instance of Upload has already executed .done(). Create a new instance."
+        "@aws-sdk/lib-storage: this instance of Upload has already executed .done(). Create a new instance.",
       );
     }
     this.sent = true;
@@ -147,7 +147,7 @@ export class Upload extends EventEmitter {
       endpoint = toEndpointV1(
         await getEndpointFromInstructions(params, PutObjectCommand as EndpointParameterInstructionsSupplier, {
           ...clientConfig,
-        })
+        }),
       );
     }
 
@@ -217,7 +217,7 @@ export class Upload extends EventEmitter {
     for await (const dataPart of dataFeeder) {
       if (this.uploadEnqueuedPartsCount > this.MAX_PARTS) {
         throw new Error(
-          `Exceeded ${this.MAX_PARTS} parts in multipart upload to Bucket: ${this.params.Bucket} Key: ${this.params.Key}.`
+          `Exceeded ${this.MAX_PARTS} parts in multipart upload to Bucket: ${this.params.Bucket} Key: ${this.params.Key}.`,
         );
       }
 
@@ -282,7 +282,7 @@ export class Upload extends EventEmitter {
           UploadId: this.uploadId,
           Body: dataPart.data,
           PartNumber: dataPart.partNumber,
-        })
+        }),
       );
 
       if (eventEmitter !== null) {
@@ -295,7 +295,7 @@ export class Upload extends EventEmitter {
 
       if (!partResult.ETag) {
         throw new Error(
-          `Part ${dataPart.partNumber} is missing ETag in UploadPart response. Missing Bucket CORS configuration for ETag header?`
+          `Part ${dataPart.partNumber} is missing ETag in UploadPart response. Missing Bucket CORS configuration for ETag header?`,
         );
       }
 
@@ -383,7 +383,7 @@ export class Upload extends EventEmitter {
           Tagging: {
             TagSet: this.tags,
           },
-        })
+        }),
       );
     }
 
@@ -429,7 +429,7 @@ export class Upload extends EventEmitter {
 
     if (this.partSize < MIN_PART_SIZE) {
       throw new Error(
-        `EntityTooSmall: Your proposed upload partsize [${this.partSize}] is smaller than the minimum allowed size [${MIN_PART_SIZE}] (5MB)`
+        `EntityTooSmall: Your proposed upload partsize [${this.partSize}] is smaller than the minimum allowed size [${MIN_PART_SIZE}] (5MB)`,
       );
     }
 

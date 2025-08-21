@@ -40,7 +40,7 @@ Then("the value at {string} should contain {string} with {string}", function (pa
   });
   this.assert.ok(
     containDefault === true,
-    `No ${path} has member key ${key} of the value ${value}: ${JSON.stringify(this.data, null, 2)}`
+    `No ${path} has member key ${key} of the value ${value}: ${JSON.stringify(this.data, null, 2)}`,
   );
   callback();
 });

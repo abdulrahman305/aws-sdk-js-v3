@@ -314,7 +314,7 @@ import {
  */
 export const se_AcceptDirectConnectGatewayAssociationProposalCommand = async (
   input: AcceptDirectConnectGatewayAssociationProposalCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AcceptDirectConnectGatewayAssociationProposal");
   let body: any;
@@ -327,7 +327,7 @@ export const se_AcceptDirectConnectGatewayAssociationProposalCommand = async (
  */
 export const se_AllocateConnectionOnInterconnectCommand = async (
   input: AllocateConnectionOnInterconnectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AllocateConnectionOnInterconnect");
   let body: any;
@@ -340,7 +340,7 @@ export const se_AllocateConnectionOnInterconnectCommand = async (
  */
 export const se_AllocateHostedConnectionCommand = async (
   input: AllocateHostedConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AllocateHostedConnection");
   let body: any;
@@ -353,7 +353,7 @@ export const se_AllocateHostedConnectionCommand = async (
  */
 export const se_AllocatePrivateVirtualInterfaceCommand = async (
   input: AllocatePrivateVirtualInterfaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AllocatePrivateVirtualInterface");
   let body: any;
@@ -366,7 +366,7 @@ export const se_AllocatePrivateVirtualInterfaceCommand = async (
  */
 export const se_AllocatePublicVirtualInterfaceCommand = async (
   input: AllocatePublicVirtualInterfaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AllocatePublicVirtualInterface");
   let body: any;
@@ -379,7 +379,7 @@ export const se_AllocatePublicVirtualInterfaceCommand = async (
  */
 export const se_AllocateTransitVirtualInterfaceCommand = async (
   input: AllocateTransitVirtualInterfaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AllocateTransitVirtualInterface");
   let body: any;
@@ -392,7 +392,7 @@ export const se_AllocateTransitVirtualInterfaceCommand = async (
  */
 export const se_AssociateConnectionWithLagCommand = async (
   input: AssociateConnectionWithLagCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateConnectionWithLag");
   let body: any;
@@ -405,7 +405,7 @@ export const se_AssociateConnectionWithLagCommand = async (
  */
 export const se_AssociateHostedConnectionCommand = async (
   input: AssociateHostedConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateHostedConnection");
   let body: any;
@@ -418,7 +418,7 @@ export const se_AssociateHostedConnectionCommand = async (
  */
 export const se_AssociateMacSecKeyCommand = async (
   input: AssociateMacSecKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateMacSecKey");
   let body: any;
@@ -431,7 +431,7 @@ export const se_AssociateMacSecKeyCommand = async (
  */
 export const se_AssociateVirtualInterfaceCommand = async (
   input: AssociateVirtualInterfaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateVirtualInterface");
   let body: any;
@@ -444,7 +444,7 @@ export const se_AssociateVirtualInterfaceCommand = async (
  */
 export const se_ConfirmConnectionCommand = async (
   input: ConfirmConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ConfirmConnection");
   let body: any;
@@ -457,7 +457,7 @@ export const se_ConfirmConnectionCommand = async (
  */
 export const se_ConfirmCustomerAgreementCommand = async (
   input: ConfirmCustomerAgreementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ConfirmCustomerAgreement");
   let body: any;
@@ -470,7 +470,7 @@ export const se_ConfirmCustomerAgreementCommand = async (
  */
 export const se_ConfirmPrivateVirtualInterfaceCommand = async (
   input: ConfirmPrivateVirtualInterfaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ConfirmPrivateVirtualInterface");
   let body: any;
@@ -483,7 +483,7 @@ export const se_ConfirmPrivateVirtualInterfaceCommand = async (
  */
 export const se_ConfirmPublicVirtualInterfaceCommand = async (
   input: ConfirmPublicVirtualInterfaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ConfirmPublicVirtualInterface");
   let body: any;
@@ -496,7 +496,7 @@ export const se_ConfirmPublicVirtualInterfaceCommand = async (
  */
 export const se_ConfirmTransitVirtualInterfaceCommand = async (
   input: ConfirmTransitVirtualInterfaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ConfirmTransitVirtualInterface");
   let body: any;
@@ -509,7 +509,7 @@ export const se_ConfirmTransitVirtualInterfaceCommand = async (
  */
 export const se_CreateBGPPeerCommand = async (
   input: CreateBGPPeerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateBGPPeer");
   let body: any;
@@ -522,7 +522,7 @@ export const se_CreateBGPPeerCommand = async (
  */
 export const se_CreateConnectionCommand = async (
   input: CreateConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateConnection");
   let body: any;
@@ -535,7 +535,7 @@ export const se_CreateConnectionCommand = async (
  */
 export const se_CreateDirectConnectGatewayCommand = async (
   input: CreateDirectConnectGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDirectConnectGateway");
   let body: any;
@@ -548,7 +548,7 @@ export const se_CreateDirectConnectGatewayCommand = async (
  */
 export const se_CreateDirectConnectGatewayAssociationCommand = async (
   input: CreateDirectConnectGatewayAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDirectConnectGatewayAssociation");
   let body: any;
@@ -561,7 +561,7 @@ export const se_CreateDirectConnectGatewayAssociationCommand = async (
  */
 export const se_CreateDirectConnectGatewayAssociationProposalCommand = async (
   input: CreateDirectConnectGatewayAssociationProposalCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDirectConnectGatewayAssociationProposal");
   let body: any;
@@ -574,7 +574,7 @@ export const se_CreateDirectConnectGatewayAssociationProposalCommand = async (
  */
 export const se_CreateInterconnectCommand = async (
   input: CreateInterconnectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateInterconnect");
   let body: any;
@@ -587,7 +587,7 @@ export const se_CreateInterconnectCommand = async (
  */
 export const se_CreateLagCommand = async (
   input: CreateLagCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLag");
   let body: any;
@@ -600,7 +600,7 @@ export const se_CreateLagCommand = async (
  */
 export const se_CreatePrivateVirtualInterfaceCommand = async (
   input: CreatePrivateVirtualInterfaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreatePrivateVirtualInterface");
   let body: any;
@@ -613,7 +613,7 @@ export const se_CreatePrivateVirtualInterfaceCommand = async (
  */
 export const se_CreatePublicVirtualInterfaceCommand = async (
   input: CreatePublicVirtualInterfaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreatePublicVirtualInterface");
   let body: any;
@@ -626,7 +626,7 @@ export const se_CreatePublicVirtualInterfaceCommand = async (
  */
 export const se_CreateTransitVirtualInterfaceCommand = async (
   input: CreateTransitVirtualInterfaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateTransitVirtualInterface");
   let body: any;
@@ -639,7 +639,7 @@ export const se_CreateTransitVirtualInterfaceCommand = async (
  */
 export const se_DeleteBGPPeerCommand = async (
   input: DeleteBGPPeerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteBGPPeer");
   let body: any;
@@ -652,7 +652,7 @@ export const se_DeleteBGPPeerCommand = async (
  */
 export const se_DeleteConnectionCommand = async (
   input: DeleteConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteConnection");
   let body: any;
@@ -665,7 +665,7 @@ export const se_DeleteConnectionCommand = async (
  */
 export const se_DeleteDirectConnectGatewayCommand = async (
   input: DeleteDirectConnectGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDirectConnectGateway");
   let body: any;
@@ -678,7 +678,7 @@ export const se_DeleteDirectConnectGatewayCommand = async (
  */
 export const se_DeleteDirectConnectGatewayAssociationCommand = async (
   input: DeleteDirectConnectGatewayAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDirectConnectGatewayAssociation");
   let body: any;
@@ -691,7 +691,7 @@ export const se_DeleteDirectConnectGatewayAssociationCommand = async (
  */
 export const se_DeleteDirectConnectGatewayAssociationProposalCommand = async (
   input: DeleteDirectConnectGatewayAssociationProposalCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDirectConnectGatewayAssociationProposal");
   let body: any;
@@ -704,7 +704,7 @@ export const se_DeleteDirectConnectGatewayAssociationProposalCommand = async (
  */
 export const se_DeleteInterconnectCommand = async (
   input: DeleteInterconnectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteInterconnect");
   let body: any;
@@ -717,7 +717,7 @@ export const se_DeleteInterconnectCommand = async (
  */
 export const se_DeleteLagCommand = async (
   input: DeleteLagCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteLag");
   let body: any;
@@ -730,7 +730,7 @@ export const se_DeleteLagCommand = async (
  */
 export const se_DeleteVirtualInterfaceCommand = async (
   input: DeleteVirtualInterfaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteVirtualInterface");
   let body: any;
@@ -743,7 +743,7 @@ export const se_DeleteVirtualInterfaceCommand = async (
  */
 export const se_DescribeConnectionLoaCommand = async (
   input: DescribeConnectionLoaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeConnectionLoa");
   let body: any;
@@ -756,7 +756,7 @@ export const se_DescribeConnectionLoaCommand = async (
  */
 export const se_DescribeConnectionsCommand = async (
   input: DescribeConnectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeConnections");
   let body: any;
@@ -769,7 +769,7 @@ export const se_DescribeConnectionsCommand = async (
  */
 export const se_DescribeConnectionsOnInterconnectCommand = async (
   input: DescribeConnectionsOnInterconnectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeConnectionsOnInterconnect");
   let body: any;
@@ -782,7 +782,7 @@ export const se_DescribeConnectionsOnInterconnectCommand = async (
  */
 export const se_DescribeCustomerMetadataCommand = async (
   input: DescribeCustomerMetadataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCustomerMetadata");
   const body = "{}";
@@ -794,7 +794,7 @@ export const se_DescribeCustomerMetadataCommand = async (
  */
 export const se_DescribeDirectConnectGatewayAssociationProposalsCommand = async (
   input: DescribeDirectConnectGatewayAssociationProposalsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDirectConnectGatewayAssociationProposals");
   let body: any;
@@ -807,7 +807,7 @@ export const se_DescribeDirectConnectGatewayAssociationProposalsCommand = async 
  */
 export const se_DescribeDirectConnectGatewayAssociationsCommand = async (
   input: DescribeDirectConnectGatewayAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDirectConnectGatewayAssociations");
   let body: any;
@@ -820,7 +820,7 @@ export const se_DescribeDirectConnectGatewayAssociationsCommand = async (
  */
 export const se_DescribeDirectConnectGatewayAttachmentsCommand = async (
   input: DescribeDirectConnectGatewayAttachmentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDirectConnectGatewayAttachments");
   let body: any;
@@ -833,7 +833,7 @@ export const se_DescribeDirectConnectGatewayAttachmentsCommand = async (
  */
 export const se_DescribeDirectConnectGatewaysCommand = async (
   input: DescribeDirectConnectGatewaysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDirectConnectGateways");
   let body: any;
@@ -846,7 +846,7 @@ export const se_DescribeDirectConnectGatewaysCommand = async (
  */
 export const se_DescribeHostedConnectionsCommand = async (
   input: DescribeHostedConnectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeHostedConnections");
   let body: any;
@@ -859,7 +859,7 @@ export const se_DescribeHostedConnectionsCommand = async (
  */
 export const se_DescribeInterconnectLoaCommand = async (
   input: DescribeInterconnectLoaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeInterconnectLoa");
   let body: any;
@@ -872,7 +872,7 @@ export const se_DescribeInterconnectLoaCommand = async (
  */
 export const se_DescribeInterconnectsCommand = async (
   input: DescribeInterconnectsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeInterconnects");
   let body: any;
@@ -885,7 +885,7 @@ export const se_DescribeInterconnectsCommand = async (
  */
 export const se_DescribeLagsCommand = async (
   input: DescribeLagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeLags");
   let body: any;
@@ -898,7 +898,7 @@ export const se_DescribeLagsCommand = async (
  */
 export const se_DescribeLoaCommand = async (
   input: DescribeLoaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeLoa");
   let body: any;
@@ -911,7 +911,7 @@ export const se_DescribeLoaCommand = async (
  */
 export const se_DescribeLocationsCommand = async (
   input: DescribeLocationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeLocations");
   const body = "{}";
@@ -923,7 +923,7 @@ export const se_DescribeLocationsCommand = async (
  */
 export const se_DescribeRouterConfigurationCommand = async (
   input: DescribeRouterConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeRouterConfiguration");
   let body: any;
@@ -936,7 +936,7 @@ export const se_DescribeRouterConfigurationCommand = async (
  */
 export const se_DescribeTagsCommand = async (
   input: DescribeTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTags");
   let body: any;
@@ -949,7 +949,7 @@ export const se_DescribeTagsCommand = async (
  */
 export const se_DescribeVirtualGatewaysCommand = async (
   input: DescribeVirtualGatewaysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeVirtualGateways");
   const body = "{}";
@@ -961,7 +961,7 @@ export const se_DescribeVirtualGatewaysCommand = async (
  */
 export const se_DescribeVirtualInterfacesCommand = async (
   input: DescribeVirtualInterfacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeVirtualInterfaces");
   let body: any;
@@ -974,7 +974,7 @@ export const se_DescribeVirtualInterfacesCommand = async (
  */
 export const se_DisassociateConnectionFromLagCommand = async (
   input: DisassociateConnectionFromLagCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateConnectionFromLag");
   let body: any;
@@ -987,7 +987,7 @@ export const se_DisassociateConnectionFromLagCommand = async (
  */
 export const se_DisassociateMacSecKeyCommand = async (
   input: DisassociateMacSecKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateMacSecKey");
   let body: any;
@@ -1000,7 +1000,7 @@ export const se_DisassociateMacSecKeyCommand = async (
  */
 export const se_ListVirtualInterfaceTestHistoryCommand = async (
   input: ListVirtualInterfaceTestHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListVirtualInterfaceTestHistory");
   let body: any;
@@ -1013,7 +1013,7 @@ export const se_ListVirtualInterfaceTestHistoryCommand = async (
  */
 export const se_StartBgpFailoverTestCommand = async (
   input: StartBgpFailoverTestCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartBgpFailoverTest");
   let body: any;
@@ -1026,7 +1026,7 @@ export const se_StartBgpFailoverTestCommand = async (
  */
 export const se_StopBgpFailoverTestCommand = async (
   input: StopBgpFailoverTestCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopBgpFailoverTest");
   let body: any;
@@ -1039,7 +1039,7 @@ export const se_StopBgpFailoverTestCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -1052,7 +1052,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -1065,7 +1065,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateConnectionCommand = async (
   input: UpdateConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateConnection");
   let body: any;
@@ -1078,7 +1078,7 @@ export const se_UpdateConnectionCommand = async (
  */
 export const se_UpdateDirectConnectGatewayCommand = async (
   input: UpdateDirectConnectGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateDirectConnectGateway");
   let body: any;
@@ -1091,7 +1091,7 @@ export const se_UpdateDirectConnectGatewayCommand = async (
  */
 export const se_UpdateDirectConnectGatewayAssociationCommand = async (
   input: UpdateDirectConnectGatewayAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateDirectConnectGatewayAssociation");
   let body: any;
@@ -1104,7 +1104,7 @@ export const se_UpdateDirectConnectGatewayAssociationCommand = async (
  */
 export const se_UpdateLagCommand = async (
   input: UpdateLagCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateLag");
   let body: any;
@@ -1117,7 +1117,7 @@ export const se_UpdateLagCommand = async (
  */
 export const se_UpdateVirtualInterfaceAttributesCommand = async (
   input: UpdateVirtualInterfaceAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateVirtualInterfaceAttributes");
   let body: any;
@@ -1130,7 +1130,7 @@ export const se_UpdateVirtualInterfaceAttributesCommand = async (
  */
 export const de_AcceptDirectConnectGatewayAssociationProposalCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptDirectConnectGatewayAssociationProposalCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1150,7 +1150,7 @@ export const de_AcceptDirectConnectGatewayAssociationProposalCommand = async (
  */
 export const de_AllocateConnectionOnInterconnectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AllocateConnectionOnInterconnectCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1170,7 +1170,7 @@ export const de_AllocateConnectionOnInterconnectCommand = async (
  */
 export const de_AllocateHostedConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AllocateHostedConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1190,7 +1190,7 @@ export const de_AllocateHostedConnectionCommand = async (
  */
 export const de_AllocatePrivateVirtualInterfaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AllocatePrivateVirtualInterfaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1210,7 +1210,7 @@ export const de_AllocatePrivateVirtualInterfaceCommand = async (
  */
 export const de_AllocatePublicVirtualInterfaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AllocatePublicVirtualInterfaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1230,7 +1230,7 @@ export const de_AllocatePublicVirtualInterfaceCommand = async (
  */
 export const de_AllocateTransitVirtualInterfaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AllocateTransitVirtualInterfaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1250,7 +1250,7 @@ export const de_AllocateTransitVirtualInterfaceCommand = async (
  */
 export const de_AssociateConnectionWithLagCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateConnectionWithLagCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1270,7 +1270,7 @@ export const de_AssociateConnectionWithLagCommand = async (
  */
 export const de_AssociateHostedConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateHostedConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1290,7 +1290,7 @@ export const de_AssociateHostedConnectionCommand = async (
  */
 export const de_AssociateMacSecKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateMacSecKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1310,7 +1310,7 @@ export const de_AssociateMacSecKeyCommand = async (
  */
 export const de_AssociateVirtualInterfaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateVirtualInterfaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1330,7 +1330,7 @@ export const de_AssociateVirtualInterfaceCommand = async (
  */
 export const de_ConfirmConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConfirmConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1350,7 +1350,7 @@ export const de_ConfirmConnectionCommand = async (
  */
 export const de_ConfirmCustomerAgreementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConfirmCustomerAgreementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1370,7 +1370,7 @@ export const de_ConfirmCustomerAgreementCommand = async (
  */
 export const de_ConfirmPrivateVirtualInterfaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConfirmPrivateVirtualInterfaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1390,7 +1390,7 @@ export const de_ConfirmPrivateVirtualInterfaceCommand = async (
  */
 export const de_ConfirmPublicVirtualInterfaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConfirmPublicVirtualInterfaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1410,7 +1410,7 @@ export const de_ConfirmPublicVirtualInterfaceCommand = async (
  */
 export const de_ConfirmTransitVirtualInterfaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConfirmTransitVirtualInterfaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1430,7 +1430,7 @@ export const de_ConfirmTransitVirtualInterfaceCommand = async (
  */
 export const de_CreateBGPPeerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBGPPeerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1450,7 +1450,7 @@ export const de_CreateBGPPeerCommand = async (
  */
 export const de_CreateConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1470,7 +1470,7 @@ export const de_CreateConnectionCommand = async (
  */
 export const de_CreateDirectConnectGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDirectConnectGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1490,7 +1490,7 @@ export const de_CreateDirectConnectGatewayCommand = async (
  */
 export const de_CreateDirectConnectGatewayAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDirectConnectGatewayAssociationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1510,7 +1510,7 @@ export const de_CreateDirectConnectGatewayAssociationCommand = async (
  */
 export const de_CreateDirectConnectGatewayAssociationProposalCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDirectConnectGatewayAssociationProposalCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1530,7 +1530,7 @@ export const de_CreateDirectConnectGatewayAssociationProposalCommand = async (
  */
 export const de_CreateInterconnectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateInterconnectCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1550,7 +1550,7 @@ export const de_CreateInterconnectCommand = async (
  */
 export const de_CreateLagCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLagCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1570,7 +1570,7 @@ export const de_CreateLagCommand = async (
  */
 export const de_CreatePrivateVirtualInterfaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePrivateVirtualInterfaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1590,7 +1590,7 @@ export const de_CreatePrivateVirtualInterfaceCommand = async (
  */
 export const de_CreatePublicVirtualInterfaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePublicVirtualInterfaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1610,7 +1610,7 @@ export const de_CreatePublicVirtualInterfaceCommand = async (
  */
 export const de_CreateTransitVirtualInterfaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTransitVirtualInterfaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1630,7 +1630,7 @@ export const de_CreateTransitVirtualInterfaceCommand = async (
  */
 export const de_DeleteBGPPeerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBGPPeerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1650,7 +1650,7 @@ export const de_DeleteBGPPeerCommand = async (
  */
 export const de_DeleteConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1670,7 +1670,7 @@ export const de_DeleteConnectionCommand = async (
  */
 export const de_DeleteDirectConnectGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDirectConnectGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1690,7 +1690,7 @@ export const de_DeleteDirectConnectGatewayCommand = async (
  */
 export const de_DeleteDirectConnectGatewayAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDirectConnectGatewayAssociationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1710,7 +1710,7 @@ export const de_DeleteDirectConnectGatewayAssociationCommand = async (
  */
 export const de_DeleteDirectConnectGatewayAssociationProposalCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDirectConnectGatewayAssociationProposalCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1730,7 +1730,7 @@ export const de_DeleteDirectConnectGatewayAssociationProposalCommand = async (
  */
 export const de_DeleteInterconnectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteInterconnectCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1750,7 +1750,7 @@ export const de_DeleteInterconnectCommand = async (
  */
 export const de_DeleteLagCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLagCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1770,7 +1770,7 @@ export const de_DeleteLagCommand = async (
  */
 export const de_DeleteVirtualInterfaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVirtualInterfaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1790,7 +1790,7 @@ export const de_DeleteVirtualInterfaceCommand = async (
  */
 export const de_DescribeConnectionLoaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConnectionLoaCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1810,7 +1810,7 @@ export const de_DescribeConnectionLoaCommand = async (
  */
 export const de_DescribeConnectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConnectionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1830,7 +1830,7 @@ export const de_DescribeConnectionsCommand = async (
  */
 export const de_DescribeConnectionsOnInterconnectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConnectionsOnInterconnectCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1850,7 +1850,7 @@ export const de_DescribeConnectionsOnInterconnectCommand = async (
  */
 export const de_DescribeCustomerMetadataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCustomerMetadataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1870,7 +1870,7 @@ export const de_DescribeCustomerMetadataCommand = async (
  */
 export const de_DescribeDirectConnectGatewayAssociationProposalsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDirectConnectGatewayAssociationProposalsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1890,7 +1890,7 @@ export const de_DescribeDirectConnectGatewayAssociationProposalsCommand = async 
  */
 export const de_DescribeDirectConnectGatewayAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDirectConnectGatewayAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1910,7 +1910,7 @@ export const de_DescribeDirectConnectGatewayAssociationsCommand = async (
  */
 export const de_DescribeDirectConnectGatewayAttachmentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDirectConnectGatewayAttachmentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1930,7 +1930,7 @@ export const de_DescribeDirectConnectGatewayAttachmentsCommand = async (
  */
 export const de_DescribeDirectConnectGatewaysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDirectConnectGatewaysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1950,7 +1950,7 @@ export const de_DescribeDirectConnectGatewaysCommand = async (
  */
 export const de_DescribeHostedConnectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeHostedConnectionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1970,7 +1970,7 @@ export const de_DescribeHostedConnectionsCommand = async (
  */
 export const de_DescribeInterconnectLoaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInterconnectLoaCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1990,7 +1990,7 @@ export const de_DescribeInterconnectLoaCommand = async (
  */
 export const de_DescribeInterconnectsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInterconnectsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2010,7 +2010,7 @@ export const de_DescribeInterconnectsCommand = async (
  */
 export const de_DescribeLagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2030,7 +2030,7 @@ export const de_DescribeLagsCommand = async (
  */
 export const de_DescribeLoaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLoaCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2050,7 +2050,7 @@ export const de_DescribeLoaCommand = async (
  */
 export const de_DescribeLocationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLocationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2070,7 +2070,7 @@ export const de_DescribeLocationsCommand = async (
  */
 export const de_DescribeRouterConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRouterConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2090,7 +2090,7 @@ export const de_DescribeRouterConfigurationCommand = async (
  */
 export const de_DescribeTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2110,7 +2110,7 @@ export const de_DescribeTagsCommand = async (
  */
 export const de_DescribeVirtualGatewaysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVirtualGatewaysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2130,7 +2130,7 @@ export const de_DescribeVirtualGatewaysCommand = async (
  */
 export const de_DescribeVirtualInterfacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVirtualInterfacesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2150,7 +2150,7 @@ export const de_DescribeVirtualInterfacesCommand = async (
  */
 export const de_DisassociateConnectionFromLagCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateConnectionFromLagCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2170,7 +2170,7 @@ export const de_DisassociateConnectionFromLagCommand = async (
  */
 export const de_DisassociateMacSecKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateMacSecKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2190,7 +2190,7 @@ export const de_DisassociateMacSecKeyCommand = async (
  */
 export const de_ListVirtualInterfaceTestHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVirtualInterfaceTestHistoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2210,7 +2210,7 @@ export const de_ListVirtualInterfaceTestHistoryCommand = async (
  */
 export const de_StartBgpFailoverTestCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartBgpFailoverTestCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2230,7 +2230,7 @@ export const de_StartBgpFailoverTestCommand = async (
  */
 export const de_StopBgpFailoverTestCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopBgpFailoverTestCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2250,7 +2250,7 @@ export const de_StopBgpFailoverTestCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2270,7 +2270,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2290,7 +2290,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2310,7 +2310,7 @@ export const de_UpdateConnectionCommand = async (
  */
 export const de_UpdateDirectConnectGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDirectConnectGatewayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2330,7 +2330,7 @@ export const de_UpdateDirectConnectGatewayCommand = async (
  */
 export const de_UpdateDirectConnectGatewayAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDirectConnectGatewayAssociationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2350,7 +2350,7 @@ export const de_UpdateDirectConnectGatewayAssociationCommand = async (
  */
 export const de_UpdateLagCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLagCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2370,7 +2370,7 @@ export const de_UpdateLagCommand = async (
  */
 export const de_UpdateVirtualInterfaceAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVirtualInterfaceAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2422,7 +2422,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_DirectConnectClientExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DirectConnectClientException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2438,7 +2438,7 @@ const de_DirectConnectClientExceptionRes = async (
  */
 const de_DirectConnectServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DirectConnectServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2454,7 +2454,7 @@ const de_DirectConnectServerExceptionRes = async (
  */
 const de_DuplicateTagKeysExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicateTagKeysException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2470,7 +2470,7 @@ const de_DuplicateTagKeysExceptionRes = async (
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2889,7 +2889,7 @@ const de_Lags = (output: any, context: __SerdeContext): Lags => {
  */
 const de_ListVirtualInterfaceTestHistoryResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListVirtualInterfaceTestHistoryResponse => {
   return take(output, {
     nextToken: __expectString,
@@ -3019,7 +3019,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

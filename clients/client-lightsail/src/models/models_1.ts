@@ -7010,7 +7010,7 @@ export interface UpdateRelationalDatabaseParametersResult {
  * @internal
  */
 export const GetRelationalDatabaseMasterUserPasswordResultFilterSensitiveLog = (
-  obj: GetRelationalDatabaseMasterUserPasswordResult
+  obj: GetRelationalDatabaseMasterUserPasswordResult,
 ): any => ({
   ...obj,
   ...(obj.masterUserPassword && { masterUserPassword: SENSITIVE_STRING }),

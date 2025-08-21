@@ -184,7 +184,7 @@ import { VerifiedPermissionsServiceException as __BaseException } from "../model
  */
 export const se_BatchIsAuthorizedCommand = async (
   input: BatchIsAuthorizedCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchIsAuthorized");
   let body: any;
@@ -197,7 +197,7 @@ export const se_BatchIsAuthorizedCommand = async (
  */
 export const se_BatchIsAuthorizedWithTokenCommand = async (
   input: BatchIsAuthorizedWithTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchIsAuthorizedWithToken");
   let body: any;
@@ -210,7 +210,7 @@ export const se_BatchIsAuthorizedWithTokenCommand = async (
  */
 export const se_CreateIdentitySourceCommand = async (
   input: CreateIdentitySourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateIdentitySource");
   let body: any;
@@ -223,7 +223,7 @@ export const se_CreateIdentitySourceCommand = async (
  */
 export const se_CreatePolicyCommand = async (
   input: CreatePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreatePolicy");
   let body: any;
@@ -236,7 +236,7 @@ export const se_CreatePolicyCommand = async (
  */
 export const se_CreatePolicyStoreCommand = async (
   input: CreatePolicyStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreatePolicyStore");
   let body: any;
@@ -249,7 +249,7 @@ export const se_CreatePolicyStoreCommand = async (
  */
 export const se_CreatePolicyTemplateCommand = async (
   input: CreatePolicyTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreatePolicyTemplate");
   let body: any;
@@ -262,7 +262,7 @@ export const se_CreatePolicyTemplateCommand = async (
  */
 export const se_DeleteIdentitySourceCommand = async (
   input: DeleteIdentitySourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteIdentitySource");
   let body: any;
@@ -275,7 +275,7 @@ export const se_DeleteIdentitySourceCommand = async (
  */
 export const se_DeletePolicyCommand = async (
   input: DeletePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeletePolicy");
   let body: any;
@@ -288,7 +288,7 @@ export const se_DeletePolicyCommand = async (
  */
 export const se_DeletePolicyStoreCommand = async (
   input: DeletePolicyStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeletePolicyStore");
   let body: any;
@@ -301,7 +301,7 @@ export const se_DeletePolicyStoreCommand = async (
  */
 export const se_DeletePolicyTemplateCommand = async (
   input: DeletePolicyTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeletePolicyTemplate");
   let body: any;
@@ -314,7 +314,7 @@ export const se_DeletePolicyTemplateCommand = async (
  */
 export const se_GetIdentitySourceCommand = async (
   input: GetIdentitySourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetIdentitySource");
   let body: any;
@@ -327,7 +327,7 @@ export const se_GetIdentitySourceCommand = async (
  */
 export const se_GetPolicyCommand = async (
   input: GetPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetPolicy");
   let body: any;
@@ -340,7 +340,7 @@ export const se_GetPolicyCommand = async (
  */
 export const se_GetPolicyStoreCommand = async (
   input: GetPolicyStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetPolicyStore");
   let body: any;
@@ -353,7 +353,7 @@ export const se_GetPolicyStoreCommand = async (
  */
 export const se_GetPolicyTemplateCommand = async (
   input: GetPolicyTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetPolicyTemplate");
   let body: any;
@@ -366,7 +366,7 @@ export const se_GetPolicyTemplateCommand = async (
  */
 export const se_GetSchemaCommand = async (
   input: GetSchemaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSchema");
   let body: any;
@@ -379,7 +379,7 @@ export const se_GetSchemaCommand = async (
  */
 export const se_IsAuthorizedCommand = async (
   input: IsAuthorizedCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("IsAuthorized");
   let body: any;
@@ -392,7 +392,7 @@ export const se_IsAuthorizedCommand = async (
  */
 export const se_IsAuthorizedWithTokenCommand = async (
   input: IsAuthorizedWithTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("IsAuthorizedWithToken");
   let body: any;
@@ -405,7 +405,7 @@ export const se_IsAuthorizedWithTokenCommand = async (
  */
 export const se_ListIdentitySourcesCommand = async (
   input: ListIdentitySourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListIdentitySources");
   let body: any;
@@ -418,7 +418,7 @@ export const se_ListIdentitySourcesCommand = async (
  */
 export const se_ListPoliciesCommand = async (
   input: ListPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPolicies");
   let body: any;
@@ -431,7 +431,7 @@ export const se_ListPoliciesCommand = async (
  */
 export const se_ListPolicyStoresCommand = async (
   input: ListPolicyStoresCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPolicyStores");
   let body: any;
@@ -444,7 +444,7 @@ export const se_ListPolicyStoresCommand = async (
  */
 export const se_ListPolicyTemplatesCommand = async (
   input: ListPolicyTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPolicyTemplates");
   let body: any;
@@ -457,7 +457,7 @@ export const se_ListPolicyTemplatesCommand = async (
  */
 export const se_PutSchemaCommand = async (
   input: PutSchemaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutSchema");
   let body: any;
@@ -470,7 +470,7 @@ export const se_PutSchemaCommand = async (
  */
 export const se_UpdateIdentitySourceCommand = async (
   input: UpdateIdentitySourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateIdentitySource");
   let body: any;
@@ -483,7 +483,7 @@ export const se_UpdateIdentitySourceCommand = async (
  */
 export const se_UpdatePolicyCommand = async (
   input: UpdatePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdatePolicy");
   let body: any;
@@ -496,7 +496,7 @@ export const se_UpdatePolicyCommand = async (
  */
 export const se_UpdatePolicyStoreCommand = async (
   input: UpdatePolicyStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdatePolicyStore");
   let body: any;
@@ -509,7 +509,7 @@ export const se_UpdatePolicyStoreCommand = async (
  */
 export const se_UpdatePolicyTemplateCommand = async (
   input: UpdatePolicyTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdatePolicyTemplate");
   let body: any;
@@ -522,7 +522,7 @@ export const se_UpdatePolicyTemplateCommand = async (
  */
 export const de_BatchIsAuthorizedCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchIsAuthorizedCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -542,7 +542,7 @@ export const de_BatchIsAuthorizedCommand = async (
  */
 export const de_BatchIsAuthorizedWithTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchIsAuthorizedWithTokenCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -562,7 +562,7 @@ export const de_BatchIsAuthorizedWithTokenCommand = async (
  */
 export const de_CreateIdentitySourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateIdentitySourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -582,7 +582,7 @@ export const de_CreateIdentitySourceCommand = async (
  */
 export const de_CreatePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -602,7 +602,7 @@ export const de_CreatePolicyCommand = async (
  */
 export const de_CreatePolicyStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePolicyStoreCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -622,7 +622,7 @@ export const de_CreatePolicyStoreCommand = async (
  */
 export const de_CreatePolicyTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePolicyTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -642,7 +642,7 @@ export const de_CreatePolicyTemplateCommand = async (
  */
 export const de_DeleteIdentitySourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIdentitySourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -662,7 +662,7 @@ export const de_DeleteIdentitySourceCommand = async (
  */
 export const de_DeletePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -682,7 +682,7 @@ export const de_DeletePolicyCommand = async (
  */
 export const de_DeletePolicyStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePolicyStoreCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -702,7 +702,7 @@ export const de_DeletePolicyStoreCommand = async (
  */
 export const de_DeletePolicyTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePolicyTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -722,7 +722,7 @@ export const de_DeletePolicyTemplateCommand = async (
  */
 export const de_GetIdentitySourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIdentitySourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -742,7 +742,7 @@ export const de_GetIdentitySourceCommand = async (
  */
 export const de_GetPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -762,7 +762,7 @@ export const de_GetPolicyCommand = async (
  */
 export const de_GetPolicyStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPolicyStoreCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -782,7 +782,7 @@ export const de_GetPolicyStoreCommand = async (
  */
 export const de_GetPolicyTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPolicyTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -802,7 +802,7 @@ export const de_GetPolicyTemplateCommand = async (
  */
 export const de_GetSchemaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSchemaCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -822,7 +822,7 @@ export const de_GetSchemaCommand = async (
  */
 export const de_IsAuthorizedCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IsAuthorizedCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -842,7 +842,7 @@ export const de_IsAuthorizedCommand = async (
  */
 export const de_IsAuthorizedWithTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IsAuthorizedWithTokenCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -862,7 +862,7 @@ export const de_IsAuthorizedWithTokenCommand = async (
  */
 export const de_ListIdentitySourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIdentitySourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -882,7 +882,7 @@ export const de_ListIdentitySourcesCommand = async (
  */
 export const de_ListPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -902,7 +902,7 @@ export const de_ListPoliciesCommand = async (
  */
 export const de_ListPolicyStoresCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPolicyStoresCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -922,7 +922,7 @@ export const de_ListPolicyStoresCommand = async (
  */
 export const de_ListPolicyTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPolicyTemplatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -942,7 +942,7 @@ export const de_ListPolicyTemplatesCommand = async (
  */
 export const de_PutSchemaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutSchemaCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -962,7 +962,7 @@ export const de_PutSchemaCommand = async (
  */
 export const de_UpdateIdentitySourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateIdentitySourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -982,7 +982,7 @@ export const de_UpdateIdentitySourceCommand = async (
  */
 export const de_UpdatePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1002,7 +1002,7 @@ export const de_UpdatePolicyCommand = async (
  */
 export const de_UpdatePolicyStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePolicyStoreCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1022,7 +1022,7 @@ export const de_UpdatePolicyStoreCommand = async (
  */
 export const de_UpdatePolicyTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePolicyTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1083,7 +1083,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1112,7 +1112,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1128,7 +1128,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1144,7 +1144,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1194,7 +1194,7 @@ const se_AttributeValue = (input: AttributeValue, context: __SerdeContext): any 
     record: (value) => ({ record: se_RecordAttribute(value, context) }),
     set: (value) => ({ set: se_SetAttribute(value, context) }),
     string: (value) => ({ string: value }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -1252,7 +1252,7 @@ const se_BatchIsAuthorizedWithTokenInput = (input: BatchIsAuthorizedWithTokenInp
  */
 const se_BatchIsAuthorizedWithTokenInputItem = (
   input: BatchIsAuthorizedWithTokenInputItem,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     action: _json,
@@ -1266,7 +1266,7 @@ const se_BatchIsAuthorizedWithTokenInputItem = (
  */
 const se_BatchIsAuthorizedWithTokenInputList = (
   input: BatchIsAuthorizedWithTokenInputItem[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -1289,7 +1289,7 @@ const se_BatchIsAuthorizedWithTokenInputList = (
 const se_ContextDefinition = (input: ContextDefinition, context: __SerdeContext): any => {
   return ContextDefinition.visit(input, {
     contextMap: (value) => ({ contextMap: se_ContextMap(value, context) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -1366,7 +1366,7 @@ const se_CreatePolicyTemplateInput = (input: CreatePolicyTemplateInput, context:
 const se_EntitiesDefinition = (input: EntitiesDefinition, context: __SerdeContext): any => {
   return EntitiesDefinition.visit(input, {
     entityList: (value) => ({ entityList: se_EntityList(value, context) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -1627,7 +1627,7 @@ const de_BatchIsAuthorizedOutputList = (output: any, context: __SerdeContext): B
  */
 const de_BatchIsAuthorizedWithTokenInputItem = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchIsAuthorizedWithTokenInputItem => {
   return take(output, {
     action: _json,
@@ -1641,7 +1641,7 @@ const de_BatchIsAuthorizedWithTokenInputItem = (
  */
 const de_BatchIsAuthorizedWithTokenOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchIsAuthorizedWithTokenOutput => {
   return take(output, {
     principal: _json,
@@ -1654,7 +1654,7 @@ const de_BatchIsAuthorizedWithTokenOutput = (
  */
 const de_BatchIsAuthorizedWithTokenOutputItem = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchIsAuthorizedWithTokenOutputItem => {
   return take(output, {
     decision: __expectString,
@@ -1669,7 +1669,7 @@ const de_BatchIsAuthorizedWithTokenOutputItem = (
  */
 const de_BatchIsAuthorizedWithTokenOutputList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchIsAuthorizedWithTokenOutputItem[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -1711,13 +1711,16 @@ const de_ContextDefinition = (output: any, context: __SerdeContext): ContextDefi
  * deserializeAws_json1_0ContextMap
  */
 const de_ContextMap = (output: any, context: __SerdeContext): Record<string, AttributeValue> => {
-  return Object.entries(output).reduce((acc: Record<string, AttributeValue>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, AttributeValue>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_AttributeValue(__expectUnion(value), context);
       return acc;
-    }
-    acc[key as string] = de_AttributeValue(__expectUnion(value), context);
-    return acc;
-  }, {} as Record<string, AttributeValue>);
+    },
+    {} as Record<string, AttributeValue>,
+  );
 };
 
 /**
@@ -2064,13 +2067,16 @@ const de_PutSchemaOutput = (output: any, context: __SerdeContext): PutSchemaOutp
  * deserializeAws_json1_0RecordAttribute
  */
 const de_RecordAttribute = (output: any, context: __SerdeContext): Record<string, AttributeValue> => {
-  return Object.entries(output).reduce((acc: Record<string, AttributeValue>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, AttributeValue>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_AttributeValue(__expectUnion(value), context);
       return acc;
-    }
-    acc[key as string] = de_AttributeValue(__expectUnion(value), context);
-    return acc;
-  }, {} as Record<string, AttributeValue>);
+    },
+    {} as Record<string, AttributeValue>,
+  );
 };
 
 // de_ResourceConflict omitted.
@@ -2182,7 +2188,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

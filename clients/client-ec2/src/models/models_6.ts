@@ -9639,7 +9639,7 @@ export const GetPasswordDataResultFilterSensitiveLog = (obj: GetPasswordDataResu
  * @internal
  */
 export const GetVpnConnectionDeviceSampleConfigurationResultFilterSensitiveLog = (
-  obj: GetVpnConnectionDeviceSampleConfigurationResult
+  obj: GetVpnConnectionDeviceSampleConfigurationResult,
 ): any => ({
   ...obj,
   ...(obj.VpnConnectionDeviceSampleConfiguration && { VpnConnectionDeviceSampleConfiguration: SENSITIVE_STRING }),
@@ -9767,7 +9767,7 @@ export const ImportVolumeResultFilterSensitiveLog = (obj: ImportVolumeResult): a
  * @internal
  */
 export const ModifyVerifiedAccessTrustProviderOidcOptionsFilterSensitiveLog = (
-  obj: ModifyVerifiedAccessTrustProviderOidcOptions
+  obj: ModifyVerifiedAccessTrustProviderOidcOptions,
 ): any => ({
   ...obj,
   ...(obj.ClientSecret && { ClientSecret: SENSITIVE_STRING }),
@@ -9777,7 +9777,7 @@ export const ModifyVerifiedAccessTrustProviderOidcOptionsFilterSensitiveLog = (
  * @internal
  */
 export const ModifyVerifiedAccessTrustProviderRequestFilterSensitiveLog = (
-  obj: ModifyVerifiedAccessTrustProviderRequest
+  obj: ModifyVerifiedAccessTrustProviderRequest,
 ): any => ({
   ...obj,
   ...(obj.OidcOptions && {
@@ -9789,7 +9789,7 @@ export const ModifyVerifiedAccessTrustProviderRequestFilterSensitiveLog = (
  * @internal
  */
 export const ModifyVerifiedAccessTrustProviderResultFilterSensitiveLog = (
-  obj: ModifyVerifiedAccessTrustProviderResult
+  obj: ModifyVerifiedAccessTrustProviderResult,
 ): any => ({
   ...obj,
   ...(obj.VerifiedAccessTrustProvider && {
@@ -9825,7 +9825,7 @@ export const ModifyVpnTunnelCertificateResultFilterSensitiveLog = (obj: ModifyVp
  * @internal
  */
 export const ModifyVpnTunnelOptionsSpecificationFilterSensitiveLog = (
-  obj: ModifyVpnTunnelOptionsSpecification
+  obj: ModifyVpnTunnelOptionsSpecification,
 ): any => ({
   ...obj,
   ...(obj.PreSharedKey && { PreSharedKey: SENSITIVE_STRING }),

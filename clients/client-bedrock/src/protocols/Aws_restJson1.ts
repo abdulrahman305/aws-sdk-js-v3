@@ -164,7 +164,7 @@ import {
  */
 export const se_CreateEvaluationJobCommand = async (
   input: CreateEvaluationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -183,7 +183,7 @@ export const se_CreateEvaluationJobCommand = async (
       jobTags: (_) => _json(_),
       outputDataConfig: (_) => _json(_),
       roleArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -194,7 +194,7 @@ export const se_CreateEvaluationJobCommand = async (
  */
 export const se_CreateGuardrailCommand = async (
   input: CreateGuardrailCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -215,7 +215,7 @@ export const se_CreateGuardrailCommand = async (
       tags: (_) => _json(_),
       topicPolicyConfig: (_) => _json(_),
       wordPolicyConfig: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -226,7 +226,7 @@ export const se_CreateGuardrailCommand = async (
  */
 export const se_CreateGuardrailVersionCommand = async (
   input: CreateGuardrailVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -239,7 +239,7 @@ export const se_CreateGuardrailVersionCommand = async (
     take(input, {
       clientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
       description: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -250,7 +250,7 @@ export const se_CreateGuardrailVersionCommand = async (
  */
 export const se_CreateModelCustomizationJobCommand = async (
   input: CreateModelCustomizationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -274,7 +274,7 @@ export const se_CreateModelCustomizationJobCommand = async (
       trainingDataConfig: (_) => _json(_),
       validationDataConfig: (_) => _json(_),
       vpcConfig: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -285,7 +285,7 @@ export const se_CreateModelCustomizationJobCommand = async (
  */
 export const se_CreateProvisionedModelThroughputCommand = async (
   input: CreateProvisionedModelThroughputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -301,7 +301,7 @@ export const se_CreateProvisionedModelThroughputCommand = async (
       modelUnits: [],
       provisionedModelName: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -312,7 +312,7 @@ export const se_CreateProvisionedModelThroughputCommand = async (
  */
 export const se_DeleteCustomModelCommand = async (
   input: DeleteCustomModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -328,7 +328,7 @@ export const se_DeleteCustomModelCommand = async (
  */
 export const se_DeleteGuardrailCommand = async (
   input: DeleteGuardrailCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -347,7 +347,7 @@ export const se_DeleteGuardrailCommand = async (
  */
 export const se_DeleteModelInvocationLoggingConfigurationCommand = async (
   input: DeleteModelInvocationLoggingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -365,7 +365,7 @@ export const se_DeleteModelInvocationLoggingConfigurationCommand = async (
  */
 export const se_DeleteProvisionedModelThroughputCommand = async (
   input: DeleteProvisionedModelThroughputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -381,7 +381,7 @@ export const se_DeleteProvisionedModelThroughputCommand = async (
  */
 export const se_GetCustomModelCommand = async (
   input: GetCustomModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -397,7 +397,7 @@ export const se_GetCustomModelCommand = async (
  */
 export const se_GetEvaluationJobCommand = async (
   input: GetEvaluationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -413,7 +413,7 @@ export const se_GetEvaluationJobCommand = async (
  */
 export const se_GetFoundationModelCommand = async (
   input: GetFoundationModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -429,7 +429,7 @@ export const se_GetFoundationModelCommand = async (
  */
 export const se_GetGuardrailCommand = async (
   input: GetGuardrailCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -448,7 +448,7 @@ export const se_GetGuardrailCommand = async (
  */
 export const se_GetModelCustomizationJobCommand = async (
   input: GetModelCustomizationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -464,7 +464,7 @@ export const se_GetModelCustomizationJobCommand = async (
  */
 export const se_GetModelInvocationLoggingConfigurationCommand = async (
   input: GetModelInvocationLoggingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -482,7 +482,7 @@ export const se_GetModelInvocationLoggingConfigurationCommand = async (
  */
 export const se_GetProvisionedModelThroughputCommand = async (
   input: GetProvisionedModelThroughputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -498,7 +498,7 @@ export const se_GetProvisionedModelThroughputCommand = async (
  */
 export const se_ListCustomModelsCommand = async (
   input: ListCustomModelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -524,7 +524,7 @@ export const se_ListCustomModelsCommand = async (
  */
 export const se_ListEvaluationJobsCommand = async (
   input: ListEvaluationJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -549,7 +549,7 @@ export const se_ListEvaluationJobsCommand = async (
  */
 export const se_ListFoundationModelsCommand = async (
   input: ListFoundationModelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -570,7 +570,7 @@ export const se_ListFoundationModelsCommand = async (
  */
 export const se_ListGuardrailsCommand = async (
   input: ListGuardrailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -590,7 +590,7 @@ export const se_ListGuardrailsCommand = async (
  */
 export const se_ListModelCustomizationJobsCommand = async (
   input: ListModelCustomizationJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -615,7 +615,7 @@ export const se_ListModelCustomizationJobsCommand = async (
  */
 export const se_ListProvisionedModelThroughputsCommand = async (
   input: ListProvisionedModelThroughputsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -641,7 +641,7 @@ export const se_ListProvisionedModelThroughputsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -652,7 +652,7 @@ export const se_ListTagsForResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       resourceARN: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -663,7 +663,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutModelInvocationLoggingConfigurationCommand = async (
   input: PutModelInvocationLoggingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -674,7 +674,7 @@ export const se_PutModelInvocationLoggingConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       loggingConfig: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -685,7 +685,7 @@ export const se_PutModelInvocationLoggingConfigurationCommand = async (
  */
 export const se_StopEvaluationJobCommand = async (
   input: StopEvaluationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -701,7 +701,7 @@ export const se_StopEvaluationJobCommand = async (
  */
 export const se_StopModelCustomizationJobCommand = async (
   input: StopModelCustomizationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -717,7 +717,7 @@ export const se_StopModelCustomizationJobCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -729,7 +729,7 @@ export const se_TagResourceCommand = async (
     take(input, {
       resourceARN: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -740,7 +740,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -752,7 +752,7 @@ export const se_UntagResourceCommand = async (
     take(input, {
       resourceARN: [],
       tagKeys: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -763,7 +763,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateGuardrailCommand = async (
   input: UpdateGuardrailCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -783,7 +783,7 @@ export const se_UpdateGuardrailCommand = async (
       sensitiveInformationPolicyConfig: (_) => _json(_),
       topicPolicyConfig: (_) => _json(_),
       wordPolicyConfig: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -794,7 +794,7 @@ export const se_UpdateGuardrailCommand = async (
  */
 export const se_UpdateProvisionedModelThroughputCommand = async (
   input: UpdateProvisionedModelThroughputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -807,7 +807,7 @@ export const se_UpdateProvisionedModelThroughputCommand = async (
     take(input, {
       desiredModelId: [],
       desiredProvisionedModelName: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -818,7 +818,7 @@ export const se_UpdateProvisionedModelThroughputCommand = async (
  */
 export const de_CreateEvaluationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEvaluationJobCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -839,7 +839,7 @@ export const de_CreateEvaluationJobCommand = async (
  */
 export const de_CreateGuardrailCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGuardrailCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -863,7 +863,7 @@ export const de_CreateGuardrailCommand = async (
  */
 export const de_CreateGuardrailVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGuardrailVersionCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -885,7 +885,7 @@ export const de_CreateGuardrailVersionCommand = async (
  */
 export const de_CreateModelCustomizationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateModelCustomizationJobCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -906,7 +906,7 @@ export const de_CreateModelCustomizationJobCommand = async (
  */
 export const de_CreateProvisionedModelThroughputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateProvisionedModelThroughputCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -927,7 +927,7 @@ export const de_CreateProvisionedModelThroughputCommand = async (
  */
 export const de_DeleteCustomModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCustomModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -944,7 +944,7 @@ export const de_DeleteCustomModelCommand = async (
  */
 export const de_DeleteGuardrailCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGuardrailCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -961,7 +961,7 @@ export const de_DeleteGuardrailCommand = async (
  */
 export const de_DeleteModelInvocationLoggingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteModelInvocationLoggingConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -978,7 +978,7 @@ export const de_DeleteModelInvocationLoggingConfigurationCommand = async (
  */
 export const de_DeleteProvisionedModelThroughputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProvisionedModelThroughputCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -995,7 +995,7 @@ export const de_DeleteProvisionedModelThroughputCommand = async (
  */
 export const de_GetCustomModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCustomModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1029,7 +1029,7 @@ export const de_GetCustomModelCommand = async (
  */
 export const de_GetEvaluationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEvaluationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1062,7 +1062,7 @@ export const de_GetEvaluationJobCommand = async (
  */
 export const de_GetFoundationModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFoundationModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1083,7 +1083,7 @@ export const de_GetFoundationModelCommand = async (
  */
 export const de_GetGuardrailCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGuardrailCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1120,7 +1120,7 @@ export const de_GetGuardrailCommand = async (
  */
 export const de_GetModelCustomizationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetModelCustomizationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1161,7 +1161,7 @@ export const de_GetModelCustomizationJobCommand = async (
  */
 export const de_GetModelInvocationLoggingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetModelInvocationLoggingConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1182,7 +1182,7 @@ export const de_GetModelInvocationLoggingConfigurationCommand = async (
  */
 export const de_GetProvisionedModelThroughputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetProvisionedModelThroughputCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1215,7 +1215,7 @@ export const de_GetProvisionedModelThroughputCommand = async (
  */
 export const de_ListCustomModelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCustomModelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1237,7 +1237,7 @@ export const de_ListCustomModelsCommand = async (
  */
 export const de_ListEvaluationJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEvaluationJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1259,7 +1259,7 @@ export const de_ListEvaluationJobsCommand = async (
  */
 export const de_ListFoundationModelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFoundationModelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1280,7 +1280,7 @@ export const de_ListFoundationModelsCommand = async (
  */
 export const de_ListGuardrailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGuardrailsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1302,7 +1302,7 @@ export const de_ListGuardrailsCommand = async (
  */
 export const de_ListModelCustomizationJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListModelCustomizationJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1324,7 +1324,7 @@ export const de_ListModelCustomizationJobsCommand = async (
  */
 export const de_ListProvisionedModelThroughputsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProvisionedModelThroughputsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1346,7 +1346,7 @@ export const de_ListProvisionedModelThroughputsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1367,7 +1367,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutModelInvocationLoggingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutModelInvocationLoggingConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1384,7 +1384,7 @@ export const de_PutModelInvocationLoggingConfigurationCommand = async (
  */
 export const de_StopEvaluationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopEvaluationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1401,7 +1401,7 @@ export const de_StopEvaluationJobCommand = async (
  */
 export const de_StopModelCustomizationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopModelCustomizationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1418,7 +1418,7 @@ export const de_StopModelCustomizationJobCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1435,7 +1435,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1452,7 +1452,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateGuardrailCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGuardrailCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1476,7 +1476,7 @@ export const de_UpdateGuardrailCommand = async (
  */
 export const de_UpdateProvisionedModelThroughputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProvisionedModelThroughputCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1538,7 +1538,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1575,7 +1575,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1595,7 +1595,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1615,7 +1615,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1652,7 +1652,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

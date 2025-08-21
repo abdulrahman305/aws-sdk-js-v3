@@ -67,7 +67,7 @@ import { RekognitionStreamingServiceException as __BaseException } from "../mode
  */
 export const se_StartFaceLivenessSessionCommand = async (
   input: StartFaceLivenessSessionCommandInput,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -90,7 +90,7 @@ export const se_StartFaceLivenessSessionCommand = async (
  */
 export const de_StartFaceLivenessSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): Promise<StartFaceLivenessSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -151,7 +151,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -172,7 +172,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -193,7 +193,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -214,7 +214,7 @@ const de_ServiceQuotaExceededExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -235,7 +235,7 @@ const de_ServiceUnavailableExceptionRes = async (
  */
 const de_SessionNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SessionNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -301,7 +301,7 @@ const se_LivenessRequestStream = (input: any, context: __SerdeContext & __EventS
 };
 const se_ClientSessionInformationEvent_event = (
   input: ClientSessionInformationEvent,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): __Message => {
   const headers: __MessageHeaders = {
     ":event-type": { type: "string", value: "ClientSessionInformationEvent" },
@@ -329,14 +329,14 @@ const se_VideoEvent_event = (input: VideoEvent, context: __SerdeContext): __Mess
  */
 const de_LivenessResponseStream = (
   output: any,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): AsyncIterable<LivenessResponseStream> => {
   return context.eventStreamMarshaller.deserialize(output, async (event) => {
     if (event["ServerSessionInformationEvent"] != null) {
       return {
         ServerSessionInformationEvent: await de_ServerSessionInformationEvent_event(
           event["ServerSessionInformationEvent"],
-          context
+          context,
         ),
       };
     }
@@ -364,7 +364,7 @@ const de_LivenessResponseStream = (
       return {
         ServiceQuotaExceededException: await de_ServiceQuotaExceededException_event(
           event["ServiceQuotaExceededException"],
-          context
+          context,
         ),
       };
     }
@@ -372,7 +372,7 @@ const de_LivenessResponseStream = (
       return {
         ServiceUnavailableException: await de_ServiceUnavailableException_event(
           event["ServiceUnavailableException"],
-          context
+          context,
         ),
       };
     }
@@ -387,7 +387,7 @@ const de_DisconnectionEvent_event = async (output: any, context: __SerdeContext)
 };
 const de_InternalServerException_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const parsedOutput: any = {
     ...output,
@@ -397,7 +397,7 @@ const de_InternalServerException_event = async (
 };
 const de_ServerSessionInformationEvent_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServerSessionInformationEvent> => {
   const contents: ServerSessionInformationEvent = {} as any;
   const data: any = await parseBody(output.body, context);
@@ -406,7 +406,7 @@ const de_ServerSessionInformationEvent_event = async (
 };
 const de_ServiceQuotaExceededException_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const parsedOutput: any = {
     ...output,
@@ -416,7 +416,7 @@ const de_ServiceQuotaExceededException_event = async (
 };
 const de_ServiceUnavailableException_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const parsedOutput: any = {
     ...output,
@@ -458,7 +458,7 @@ const se_ClientChallenge = (input: ClientChallenge, context: __SerdeContext): an
     FaceMovementAndLightChallenge: (value) => ({
       FaceMovementAndLightChallenge: se_FaceMovementAndLightClientChallenge(value, context),
     }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -480,7 +480,7 @@ const se_ClientSessionInformationEvent = (input: ClientSessionInformationEvent, 
  */
 const se_FaceMovementAndLightClientChallenge = (
   input: FaceMovementAndLightClientChallenge,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     ChallengeId: [],
@@ -576,7 +576,7 @@ const de_ColorSequences = (output: any, context: __SerdeContext): ColorSequence[
  */
 const de_FaceMovementAndLightServerChallenge = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): FaceMovementAndLightServerChallenge => {
   return take(output, {
     ChallengeConfig: (_: any) => de_ChallengeConfig(_, context),
@@ -608,7 +608,7 @@ const de_ServerChallenge = (output: any, context: __SerdeContext): ServerChallen
     return {
       FaceMovementAndLightChallenge: de_FaceMovementAndLightServerChallenge(
         output.FaceMovementAndLightChallenge,
-        context
+        context,
       ),
     };
   }

@@ -39,7 +39,7 @@ const checkState = async (client: MediaLiveClient, input: DescribeInputCommandIn
  */
 export const waitForInputAttached = async (
   params: WaiterConfiguration<MediaLiveClient>,
-  input: DescribeInputCommandInput
+  input: DescribeInputCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -51,7 +51,7 @@ export const waitForInputAttached = async (
  */
 export const waitUntilInputAttached = async (
   params: WaiterConfiguration<MediaLiveClient>,
-  input: DescribeInputCommandInput
+  input: DescribeInputCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

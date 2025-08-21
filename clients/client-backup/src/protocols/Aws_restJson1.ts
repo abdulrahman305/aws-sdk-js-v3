@@ -340,7 +340,7 @@ import {
  */
 export const se_CancelLegalHoldCommand = async (
   input: CancelLegalHoldCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -360,7 +360,7 @@ export const se_CancelLegalHoldCommand = async (
  */
 export const se_CreateBackupPlanCommand = async (
   input: CreateBackupPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -373,7 +373,7 @@ export const se_CreateBackupPlanCommand = async (
       BackupPlan: (_) => _json(_),
       BackupPlanTags: (_) => _json(_),
       CreatorRequestId: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -384,7 +384,7 @@ export const se_CreateBackupPlanCommand = async (
  */
 export const se_CreateBackupSelectionCommand = async (
   input: CreateBackupSelectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -397,7 +397,7 @@ export const se_CreateBackupSelectionCommand = async (
     take(input, {
       BackupSelection: (_) => _json(_),
       CreatorRequestId: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -408,7 +408,7 @@ export const se_CreateBackupSelectionCommand = async (
  */
 export const se_CreateBackupVaultCommand = async (
   input: CreateBackupVaultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -422,7 +422,7 @@ export const se_CreateBackupVaultCommand = async (
       BackupVaultTags: (_) => _json(_),
       CreatorRequestId: [],
       EncryptionKeyArn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -433,7 +433,7 @@ export const se_CreateBackupVaultCommand = async (
  */
 export const se_CreateFrameworkCommand = async (
   input: CreateFrameworkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -448,7 +448,7 @@ export const se_CreateFrameworkCommand = async (
       FrameworkName: [],
       FrameworkTags: (_) => _json(_),
       IdempotencyToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -459,7 +459,7 @@ export const se_CreateFrameworkCommand = async (
  */
 export const se_CreateLegalHoldCommand = async (
   input: CreateLegalHoldCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -474,7 +474,7 @@ export const se_CreateLegalHoldCommand = async (
       RecoveryPointSelection: (_) => se_RecoveryPointSelection(_, context),
       Tags: (_) => _json(_),
       Title: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -485,7 +485,7 @@ export const se_CreateLegalHoldCommand = async (
  */
 export const se_CreateLogicallyAirGappedBackupVaultCommand = async (
   input: CreateLogicallyAirGappedBackupVaultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -500,7 +500,7 @@ export const se_CreateLogicallyAirGappedBackupVaultCommand = async (
       CreatorRequestId: [],
       MaxRetentionDays: [],
       MinRetentionDays: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -511,7 +511,7 @@ export const se_CreateLogicallyAirGappedBackupVaultCommand = async (
  */
 export const se_CreateReportPlanCommand = async (
   input: CreateReportPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -527,7 +527,7 @@ export const se_CreateReportPlanCommand = async (
       ReportPlanName: [],
       ReportPlanTags: (_) => _json(_),
       ReportSetting: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -538,7 +538,7 @@ export const se_CreateReportPlanCommand = async (
  */
 export const se_CreateRestoreTestingPlanCommand = async (
   input: CreateRestoreTestingPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -551,7 +551,7 @@ export const se_CreateRestoreTestingPlanCommand = async (
       CreatorRequestId: [],
       RestoreTestingPlan: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -562,7 +562,7 @@ export const se_CreateRestoreTestingPlanCommand = async (
  */
 export const se_CreateRestoreTestingSelectionCommand = async (
   input: CreateRestoreTestingSelectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -575,7 +575,7 @@ export const se_CreateRestoreTestingSelectionCommand = async (
     take(input, {
       CreatorRequestId: [],
       RestoreTestingSelection: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -586,7 +586,7 @@ export const se_CreateRestoreTestingSelectionCommand = async (
  */
 export const se_DeleteBackupPlanCommand = async (
   input: DeleteBackupPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -602,7 +602,7 @@ export const se_DeleteBackupPlanCommand = async (
  */
 export const se_DeleteBackupSelectionCommand = async (
   input: DeleteBackupSelectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -619,7 +619,7 @@ export const se_DeleteBackupSelectionCommand = async (
  */
 export const se_DeleteBackupVaultCommand = async (
   input: DeleteBackupVaultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -635,7 +635,7 @@ export const se_DeleteBackupVaultCommand = async (
  */
 export const se_DeleteBackupVaultAccessPolicyCommand = async (
   input: DeleteBackupVaultAccessPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -651,7 +651,7 @@ export const se_DeleteBackupVaultAccessPolicyCommand = async (
  */
 export const se_DeleteBackupVaultLockConfigurationCommand = async (
   input: DeleteBackupVaultLockConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -667,7 +667,7 @@ export const se_DeleteBackupVaultLockConfigurationCommand = async (
  */
 export const se_DeleteBackupVaultNotificationsCommand = async (
   input: DeleteBackupVaultNotificationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -683,7 +683,7 @@ export const se_DeleteBackupVaultNotificationsCommand = async (
  */
 export const se_DeleteFrameworkCommand = async (
   input: DeleteFrameworkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -699,7 +699,7 @@ export const se_DeleteFrameworkCommand = async (
  */
 export const se_DeleteRecoveryPointCommand = async (
   input: DeleteRecoveryPointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -716,7 +716,7 @@ export const se_DeleteRecoveryPointCommand = async (
  */
 export const se_DeleteReportPlanCommand = async (
   input: DeleteReportPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -732,7 +732,7 @@ export const se_DeleteReportPlanCommand = async (
  */
 export const se_DeleteRestoreTestingPlanCommand = async (
   input: DeleteRestoreTestingPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -748,7 +748,7 @@ export const se_DeleteRestoreTestingPlanCommand = async (
  */
 export const se_DeleteRestoreTestingSelectionCommand = async (
   input: DeleteRestoreTestingSelectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -765,7 +765,7 @@ export const se_DeleteRestoreTestingSelectionCommand = async (
  */
 export const se_DescribeBackupJobCommand = async (
   input: DescribeBackupJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -781,7 +781,7 @@ export const se_DescribeBackupJobCommand = async (
  */
 export const se_DescribeBackupVaultCommand = async (
   input: DescribeBackupVaultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -800,7 +800,7 @@ export const se_DescribeBackupVaultCommand = async (
  */
 export const se_DescribeCopyJobCommand = async (
   input: DescribeCopyJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -816,7 +816,7 @@ export const se_DescribeCopyJobCommand = async (
  */
 export const se_DescribeFrameworkCommand = async (
   input: DescribeFrameworkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -832,7 +832,7 @@ export const se_DescribeFrameworkCommand = async (
  */
 export const se_DescribeGlobalSettingsCommand = async (
   input: DescribeGlobalSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -850,7 +850,7 @@ export const se_DescribeGlobalSettingsCommand = async (
  */
 export const se_DescribeProtectedResourceCommand = async (
   input: DescribeProtectedResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -866,7 +866,7 @@ export const se_DescribeProtectedResourceCommand = async (
  */
 export const se_DescribeRecoveryPointCommand = async (
   input: DescribeRecoveryPointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -886,7 +886,7 @@ export const se_DescribeRecoveryPointCommand = async (
  */
 export const se_DescribeRegionSettingsCommand = async (
   input: DescribeRegionSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -904,7 +904,7 @@ export const se_DescribeRegionSettingsCommand = async (
  */
 export const se_DescribeReportJobCommand = async (
   input: DescribeReportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -920,7 +920,7 @@ export const se_DescribeReportJobCommand = async (
  */
 export const se_DescribeReportPlanCommand = async (
   input: DescribeReportPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -936,7 +936,7 @@ export const se_DescribeReportPlanCommand = async (
  */
 export const se_DescribeRestoreJobCommand = async (
   input: DescribeRestoreJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -952,7 +952,7 @@ export const se_DescribeRestoreJobCommand = async (
  */
 export const se_DisassociateRecoveryPointCommand = async (
   input: DisassociateRecoveryPointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -969,7 +969,7 @@ export const se_DisassociateRecoveryPointCommand = async (
  */
 export const se_DisassociateRecoveryPointFromParentCommand = async (
   input: DisassociateRecoveryPointFromParentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -986,7 +986,7 @@ export const se_DisassociateRecoveryPointFromParentCommand = async (
  */
 export const se_ExportBackupPlanTemplateCommand = async (
   input: ExportBackupPlanTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1002,7 +1002,7 @@ export const se_ExportBackupPlanTemplateCommand = async (
  */
 export const se_GetBackupPlanCommand = async (
   input: GetBackupPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1021,7 +1021,7 @@ export const se_GetBackupPlanCommand = async (
  */
 export const se_GetBackupPlanFromJSONCommand = async (
   input: GetBackupPlanFromJSONCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1032,7 +1032,7 @@ export const se_GetBackupPlanFromJSONCommand = async (
   body = JSON.stringify(
     take(input, {
       BackupPlanTemplateJson: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1043,7 +1043,7 @@ export const se_GetBackupPlanFromJSONCommand = async (
  */
 export const se_GetBackupPlanFromTemplateCommand = async (
   input: GetBackupPlanFromTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1059,7 +1059,7 @@ export const se_GetBackupPlanFromTemplateCommand = async (
  */
 export const se_GetBackupSelectionCommand = async (
   input: GetBackupSelectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1076,7 +1076,7 @@ export const se_GetBackupSelectionCommand = async (
  */
 export const se_GetBackupVaultAccessPolicyCommand = async (
   input: GetBackupVaultAccessPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1092,7 +1092,7 @@ export const se_GetBackupVaultAccessPolicyCommand = async (
  */
 export const se_GetBackupVaultNotificationsCommand = async (
   input: GetBackupVaultNotificationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1108,7 +1108,7 @@ export const se_GetBackupVaultNotificationsCommand = async (
  */
 export const se_GetLegalHoldCommand = async (
   input: GetLegalHoldCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1124,7 +1124,7 @@ export const se_GetLegalHoldCommand = async (
  */
 export const se_GetRecoveryPointRestoreMetadataCommand = async (
   input: GetRecoveryPointRestoreMetadataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1144,7 +1144,7 @@ export const se_GetRecoveryPointRestoreMetadataCommand = async (
  */
 export const se_GetRestoreJobMetadataCommand = async (
   input: GetRestoreJobMetadataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1160,7 +1160,7 @@ export const se_GetRestoreJobMetadataCommand = async (
  */
 export const se_GetRestoreTestingInferredMetadataCommand = async (
   input: GetRestoreTestingInferredMetadataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1180,7 +1180,7 @@ export const se_GetRestoreTestingInferredMetadataCommand = async (
  */
 export const se_GetRestoreTestingPlanCommand = async (
   input: GetRestoreTestingPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1196,7 +1196,7 @@ export const se_GetRestoreTestingPlanCommand = async (
  */
 export const se_GetRestoreTestingSelectionCommand = async (
   input: GetRestoreTestingSelectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1213,7 +1213,7 @@ export const se_GetRestoreTestingSelectionCommand = async (
  */
 export const se_GetSupportedResourceTypesCommand = async (
   input: GetSupportedResourceTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1231,7 +1231,7 @@ export const se_GetSupportedResourceTypesCommand = async (
  */
 export const se_ListBackupJobsCommand = async (
   input: ListBackupJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1261,7 +1261,7 @@ export const se_ListBackupJobsCommand = async (
  */
 export const se_ListBackupJobSummariesCommand = async (
   input: ListBackupJobSummariesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1285,7 +1285,7 @@ export const se_ListBackupJobSummariesCommand = async (
  */
 export const se_ListBackupPlansCommand = async (
   input: ListBackupPlansCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1305,7 +1305,7 @@ export const se_ListBackupPlansCommand = async (
  */
 export const se_ListBackupPlanTemplatesCommand = async (
   input: ListBackupPlanTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1324,7 +1324,7 @@ export const se_ListBackupPlanTemplatesCommand = async (
  */
 export const se_ListBackupPlanVersionsCommand = async (
   input: ListBackupPlanVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1344,7 +1344,7 @@ export const se_ListBackupPlanVersionsCommand = async (
  */
 export const se_ListBackupSelectionsCommand = async (
   input: ListBackupSelectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1364,7 +1364,7 @@ export const se_ListBackupSelectionsCommand = async (
  */
 export const se_ListBackupVaultsCommand = async (
   input: ListBackupVaultsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1385,7 +1385,7 @@ export const se_ListBackupVaultsCommand = async (
  */
 export const se_ListCopyJobsCommand = async (
   input: ListCopyJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1415,7 +1415,7 @@ export const se_ListCopyJobsCommand = async (
  */
 export const se_ListCopyJobSummariesCommand = async (
   input: ListCopyJobSummariesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1439,7 +1439,7 @@ export const se_ListCopyJobSummariesCommand = async (
  */
 export const se_ListFrameworksCommand = async (
   input: ListFrameworksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1458,7 +1458,7 @@ export const se_ListFrameworksCommand = async (
  */
 export const se_ListLegalHoldsCommand = async (
   input: ListLegalHoldsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1477,7 +1477,7 @@ export const se_ListLegalHoldsCommand = async (
  */
 export const se_ListProtectedResourcesCommand = async (
   input: ListProtectedResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1496,7 +1496,7 @@ export const se_ListProtectedResourcesCommand = async (
  */
 export const se_ListProtectedResourcesByBackupVaultCommand = async (
   input: ListProtectedResourcesByBackupVaultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1517,7 +1517,7 @@ export const se_ListProtectedResourcesByBackupVaultCommand = async (
  */
 export const se_ListRecoveryPointsByBackupVaultCommand = async (
   input: ListRecoveryPointsByBackupVaultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1544,7 +1544,7 @@ export const se_ListRecoveryPointsByBackupVaultCommand = async (
  */
 export const se_ListRecoveryPointsByLegalHoldCommand = async (
   input: ListRecoveryPointsByLegalHoldCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1564,7 +1564,7 @@ export const se_ListRecoveryPointsByLegalHoldCommand = async (
  */
 export const se_ListRecoveryPointsByResourceCommand = async (
   input: ListRecoveryPointsByResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1585,7 +1585,7 @@ export const se_ListRecoveryPointsByResourceCommand = async (
  */
 export const se_ListReportJobsCommand = async (
   input: ListReportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1608,7 +1608,7 @@ export const se_ListReportJobsCommand = async (
  */
 export const se_ListReportPlansCommand = async (
   input: ListReportPlansCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1627,7 +1627,7 @@ export const se_ListReportPlansCommand = async (
  */
 export const se_ListRestoreJobsCommand = async (
   input: ListRestoreJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1654,7 +1654,7 @@ export const se_ListRestoreJobsCommand = async (
  */
 export const se_ListRestoreJobsByProtectedResourceCommand = async (
   input: ListRestoreJobsByProtectedResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1683,7 +1683,7 @@ export const se_ListRestoreJobsByProtectedResourceCommand = async (
  */
 export const se_ListRestoreJobSummariesCommand = async (
   input: ListRestoreJobSummariesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1706,7 +1706,7 @@ export const se_ListRestoreJobSummariesCommand = async (
  */
 export const se_ListRestoreTestingPlansCommand = async (
   input: ListRestoreTestingPlansCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1725,7 +1725,7 @@ export const se_ListRestoreTestingPlansCommand = async (
  */
 export const se_ListRestoreTestingSelectionsCommand = async (
   input: ListRestoreTestingSelectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1745,7 +1745,7 @@ export const se_ListRestoreTestingSelectionsCommand = async (
  */
 export const se_ListTagsCommand = async (
   input: ListTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1765,7 +1765,7 @@ export const se_ListTagsCommand = async (
  */
 export const se_PutBackupVaultAccessPolicyCommand = async (
   input: PutBackupVaultAccessPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1777,7 +1777,7 @@ export const se_PutBackupVaultAccessPolicyCommand = async (
   body = JSON.stringify(
     take(input, {
       Policy: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1788,7 +1788,7 @@ export const se_PutBackupVaultAccessPolicyCommand = async (
  */
 export const se_PutBackupVaultLockConfigurationCommand = async (
   input: PutBackupVaultLockConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1802,7 +1802,7 @@ export const se_PutBackupVaultLockConfigurationCommand = async (
       ChangeableForDays: [],
       MaxRetentionDays: [],
       MinRetentionDays: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1813,7 +1813,7 @@ export const se_PutBackupVaultLockConfigurationCommand = async (
  */
 export const se_PutBackupVaultNotificationsCommand = async (
   input: PutBackupVaultNotificationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1826,7 +1826,7 @@ export const se_PutBackupVaultNotificationsCommand = async (
     take(input, {
       BackupVaultEvents: (_) => _json(_),
       SNSTopicArn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1837,7 +1837,7 @@ export const se_PutBackupVaultNotificationsCommand = async (
  */
 export const se_PutRestoreValidationResultCommand = async (
   input: PutRestoreValidationResultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1850,7 +1850,7 @@ export const se_PutRestoreValidationResultCommand = async (
     take(input, {
       ValidationStatus: [],
       ValidationStatusMessage: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1861,7 +1861,7 @@ export const se_PutRestoreValidationResultCommand = async (
  */
 export const se_StartBackupJobCommand = async (
   input: StartBackupJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1880,7 +1880,7 @@ export const se_StartBackupJobCommand = async (
       RecoveryPointTags: (_) => _json(_),
       ResourceArn: [],
       StartWindowMinutes: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1891,7 +1891,7 @@ export const se_StartBackupJobCommand = async (
  */
 export const se_StartCopyJobCommand = async (
   input: StartCopyJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1907,7 +1907,7 @@ export const se_StartCopyJobCommand = async (
       Lifecycle: (_) => _json(_),
       RecoveryPointArn: [],
       SourceBackupVaultName: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1918,7 +1918,7 @@ export const se_StartCopyJobCommand = async (
  */
 export const se_StartReportJobCommand = async (
   input: StartReportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1930,7 +1930,7 @@ export const se_StartReportJobCommand = async (
   body = JSON.stringify(
     take(input, {
       IdempotencyToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1941,7 +1941,7 @@ export const se_StartReportJobCommand = async (
  */
 export const se_StartRestoreJobCommand = async (
   input: StartRestoreJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1957,7 +1957,7 @@ export const se_StartRestoreJobCommand = async (
       Metadata: (_) => _json(_),
       RecoveryPointArn: [],
       ResourceType: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1968,7 +1968,7 @@ export const se_StartRestoreJobCommand = async (
  */
 export const se_StopBackupJobCommand = async (
   input: StopBackupJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1984,7 +1984,7 @@ export const se_StopBackupJobCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1996,7 +1996,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2007,7 +2007,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2019,7 +2019,7 @@ export const se_UntagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       TagKeyList: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2030,7 +2030,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateBackupPlanCommand = async (
   input: UpdateBackupPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2042,7 +2042,7 @@ export const se_UpdateBackupPlanCommand = async (
   body = JSON.stringify(
     take(input, {
       BackupPlan: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2053,7 +2053,7 @@ export const se_UpdateBackupPlanCommand = async (
  */
 export const se_UpdateFrameworkCommand = async (
   input: UpdateFrameworkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2067,7 +2067,7 @@ export const se_UpdateFrameworkCommand = async (
       FrameworkControls: (_) => _json(_),
       FrameworkDescription: [],
       IdempotencyToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2078,7 +2078,7 @@ export const se_UpdateFrameworkCommand = async (
  */
 export const se_UpdateGlobalSettingsCommand = async (
   input: UpdateGlobalSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2089,7 +2089,7 @@ export const se_UpdateGlobalSettingsCommand = async (
   body = JSON.stringify(
     take(input, {
       GlobalSettings: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2100,7 +2100,7 @@ export const se_UpdateGlobalSettingsCommand = async (
  */
 export const se_UpdateRecoveryPointLifecycleCommand = async (
   input: UpdateRecoveryPointLifecycleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2113,7 +2113,7 @@ export const se_UpdateRecoveryPointLifecycleCommand = async (
   body = JSON.stringify(
     take(input, {
       Lifecycle: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2124,7 +2124,7 @@ export const se_UpdateRecoveryPointLifecycleCommand = async (
  */
 export const se_UpdateRegionSettingsCommand = async (
   input: UpdateRegionSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2136,7 +2136,7 @@ export const se_UpdateRegionSettingsCommand = async (
     take(input, {
       ResourceTypeManagementPreference: (_) => _json(_),
       ResourceTypeOptInPreference: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2147,7 +2147,7 @@ export const se_UpdateRegionSettingsCommand = async (
  */
 export const se_UpdateReportPlanCommand = async (
   input: UpdateReportPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2162,7 +2162,7 @@ export const se_UpdateReportPlanCommand = async (
       ReportDeliveryChannel: (_) => _json(_),
       ReportPlanDescription: [],
       ReportSetting: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2173,7 +2173,7 @@ export const se_UpdateReportPlanCommand = async (
  */
 export const se_UpdateRestoreTestingPlanCommand = async (
   input: UpdateRestoreTestingPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2185,7 +2185,7 @@ export const se_UpdateRestoreTestingPlanCommand = async (
   body = JSON.stringify(
     take(input, {
       RestoreTestingPlan: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2196,7 +2196,7 @@ export const se_UpdateRestoreTestingPlanCommand = async (
  */
 export const se_UpdateRestoreTestingSelectionCommand = async (
   input: UpdateRestoreTestingSelectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2209,7 +2209,7 @@ export const se_UpdateRestoreTestingSelectionCommand = async (
   body = JSON.stringify(
     take(input, {
       RestoreTestingSelection: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2220,7 +2220,7 @@ export const se_UpdateRestoreTestingSelectionCommand = async (
  */
 export const de_CancelLegalHoldCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelLegalHoldCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2237,7 +2237,7 @@ export const de_CancelLegalHoldCommand = async (
  */
 export const de_CreateBackupPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBackupPlanCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2262,7 +2262,7 @@ export const de_CreateBackupPlanCommand = async (
  */
 export const de_CreateBackupSelectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBackupSelectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2285,7 +2285,7 @@ export const de_CreateBackupSelectionCommand = async (
  */
 export const de_CreateBackupVaultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBackupVaultCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2308,7 +2308,7 @@ export const de_CreateBackupVaultCommand = async (
  */
 export const de_CreateFrameworkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFrameworkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2330,7 +2330,7 @@ export const de_CreateFrameworkCommand = async (
  */
 export const de_CreateLegalHoldCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLegalHoldCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2357,7 +2357,7 @@ export const de_CreateLegalHoldCommand = async (
  */
 export const de_CreateLogicallyAirGappedBackupVaultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLogicallyAirGappedBackupVaultCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2381,7 +2381,7 @@ export const de_CreateLogicallyAirGappedBackupVaultCommand = async (
  */
 export const de_CreateReportPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateReportPlanCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2404,7 +2404,7 @@ export const de_CreateReportPlanCommand = async (
  */
 export const de_CreateRestoreTestingPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRestoreTestingPlanCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2427,7 +2427,7 @@ export const de_CreateRestoreTestingPlanCommand = async (
  */
 export const de_CreateRestoreTestingSelectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRestoreTestingSelectionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2451,7 +2451,7 @@ export const de_CreateRestoreTestingSelectionCommand = async (
  */
 export const de_DeleteBackupPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBackupPlanCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2475,7 +2475,7 @@ export const de_DeleteBackupPlanCommand = async (
  */
 export const de_DeleteBackupSelectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBackupSelectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2492,7 +2492,7 @@ export const de_DeleteBackupSelectionCommand = async (
  */
 export const de_DeleteBackupVaultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBackupVaultCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2509,7 +2509,7 @@ export const de_DeleteBackupVaultCommand = async (
  */
 export const de_DeleteBackupVaultAccessPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBackupVaultAccessPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2526,7 +2526,7 @@ export const de_DeleteBackupVaultAccessPolicyCommand = async (
  */
 export const de_DeleteBackupVaultLockConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBackupVaultLockConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2543,7 +2543,7 @@ export const de_DeleteBackupVaultLockConfigurationCommand = async (
  */
 export const de_DeleteBackupVaultNotificationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBackupVaultNotificationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2560,7 +2560,7 @@ export const de_DeleteBackupVaultNotificationsCommand = async (
  */
 export const de_DeleteFrameworkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFrameworkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2577,7 +2577,7 @@ export const de_DeleteFrameworkCommand = async (
  */
 export const de_DeleteRecoveryPointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRecoveryPointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2594,7 +2594,7 @@ export const de_DeleteRecoveryPointCommand = async (
  */
 export const de_DeleteReportPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteReportPlanCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2611,7 +2611,7 @@ export const de_DeleteReportPlanCommand = async (
  */
 export const de_DeleteRestoreTestingPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRestoreTestingPlanCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2628,7 +2628,7 @@ export const de_DeleteRestoreTestingPlanCommand = async (
  */
 export const de_DeleteRestoreTestingSelectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRestoreTestingSelectionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2645,7 +2645,7 @@ export const de_DeleteRestoreTestingSelectionCommand = async (
  */
 export const de_DescribeBackupJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBackupJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2692,7 +2692,7 @@ export const de_DescribeBackupJobCommand = async (
  */
 export const de_DescribeBackupVaultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBackupVaultCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2723,7 +2723,7 @@ export const de_DescribeBackupVaultCommand = async (
  */
 export const de_DescribeCopyJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCopyJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2744,7 +2744,7 @@ export const de_DescribeCopyJobCommand = async (
  */
 export const de_DescribeFrameworkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFrameworkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2772,7 +2772,7 @@ export const de_DescribeFrameworkCommand = async (
  */
 export const de_DescribeGlobalSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGlobalSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2794,7 +2794,7 @@ export const de_DescribeGlobalSettingsCommand = async (
  */
 export const de_DescribeProtectedResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeProtectedResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2823,7 +2823,7 @@ export const de_DescribeProtectedResourceCommand = async (
  */
 export const de_DescribeRecoveryPointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRecoveryPointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2867,7 +2867,7 @@ export const de_DescribeRecoveryPointCommand = async (
  */
 export const de_DescribeRegionSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRegionSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2889,7 +2889,7 @@ export const de_DescribeRegionSettingsCommand = async (
  */
 export const de_DescribeReportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2910,7 +2910,7 @@ export const de_DescribeReportJobCommand = async (
  */
 export const de_DescribeReportPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReportPlanCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2931,7 +2931,7 @@ export const de_DescribeReportPlanCommand = async (
  */
 export const de_DescribeRestoreJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRestoreJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2970,7 +2970,7 @@ export const de_DescribeRestoreJobCommand = async (
  */
 export const de_DisassociateRecoveryPointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateRecoveryPointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2987,7 +2987,7 @@ export const de_DisassociateRecoveryPointCommand = async (
  */
 export const de_DisassociateRecoveryPointFromParentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateRecoveryPointFromParentCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3004,7 +3004,7 @@ export const de_DisassociateRecoveryPointFromParentCommand = async (
  */
 export const de_ExportBackupPlanTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportBackupPlanTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3025,7 +3025,7 @@ export const de_ExportBackupPlanTemplateCommand = async (
  */
 export const de_GetBackupPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBackupPlanCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3054,7 +3054,7 @@ export const de_GetBackupPlanCommand = async (
  */
 export const de_GetBackupPlanFromJSONCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBackupPlanFromJSONCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3075,7 +3075,7 @@ export const de_GetBackupPlanFromJSONCommand = async (
  */
 export const de_GetBackupPlanFromTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBackupPlanFromTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3096,7 +3096,7 @@ export const de_GetBackupPlanFromTemplateCommand = async (
  */
 export const de_GetBackupSelectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBackupSelectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3121,7 +3121,7 @@ export const de_GetBackupSelectionCommand = async (
  */
 export const de_GetBackupVaultAccessPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBackupVaultAccessPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3144,7 +3144,7 @@ export const de_GetBackupVaultAccessPolicyCommand = async (
  */
 export const de_GetBackupVaultNotificationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBackupVaultNotificationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3168,7 +3168,7 @@ export const de_GetBackupVaultNotificationsCommand = async (
  */
 export const de_GetLegalHoldCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLegalHoldCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3198,7 +3198,7 @@ export const de_GetLegalHoldCommand = async (
  */
 export const de_GetRecoveryPointRestoreMetadataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRecoveryPointRestoreMetadataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3222,7 +3222,7 @@ export const de_GetRecoveryPointRestoreMetadataCommand = async (
  */
 export const de_GetRestoreJobMetadataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRestoreJobMetadataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3244,7 +3244,7 @@ export const de_GetRestoreJobMetadataCommand = async (
  */
 export const de_GetRestoreTestingInferredMetadataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRestoreTestingInferredMetadataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3265,7 +3265,7 @@ export const de_GetRestoreTestingInferredMetadataCommand = async (
  */
 export const de_GetRestoreTestingPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRestoreTestingPlanCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3286,7 +3286,7 @@ export const de_GetRestoreTestingPlanCommand = async (
  */
 export const de_GetRestoreTestingSelectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRestoreTestingSelectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3307,7 +3307,7 @@ export const de_GetRestoreTestingSelectionCommand = async (
  */
 export const de_GetSupportedResourceTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSupportedResourceTypesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3328,7 +3328,7 @@ export const de_GetSupportedResourceTypesCommand = async (
  */
 export const de_ListBackupJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBackupJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3350,7 +3350,7 @@ export const de_ListBackupJobsCommand = async (
  */
 export const de_ListBackupJobSummariesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBackupJobSummariesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3373,7 +3373,7 @@ export const de_ListBackupJobSummariesCommand = async (
  */
 export const de_ListBackupPlansCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBackupPlansCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3395,7 +3395,7 @@ export const de_ListBackupPlansCommand = async (
  */
 export const de_ListBackupPlanTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBackupPlanTemplatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3417,7 +3417,7 @@ export const de_ListBackupPlanTemplatesCommand = async (
  */
 export const de_ListBackupPlanVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBackupPlanVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3439,7 +3439,7 @@ export const de_ListBackupPlanVersionsCommand = async (
  */
 export const de_ListBackupSelectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBackupSelectionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3461,7 +3461,7 @@ export const de_ListBackupSelectionsCommand = async (
  */
 export const de_ListBackupVaultsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBackupVaultsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3483,7 +3483,7 @@ export const de_ListBackupVaultsCommand = async (
  */
 export const de_ListCopyJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCopyJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3505,7 +3505,7 @@ export const de_ListCopyJobsCommand = async (
  */
 export const de_ListCopyJobSummariesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCopyJobSummariesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3528,7 +3528,7 @@ export const de_ListCopyJobSummariesCommand = async (
  */
 export const de_ListFrameworksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFrameworksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3550,7 +3550,7 @@ export const de_ListFrameworksCommand = async (
  */
 export const de_ListLegalHoldsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLegalHoldsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3572,7 +3572,7 @@ export const de_ListLegalHoldsCommand = async (
  */
 export const de_ListProtectedResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProtectedResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3594,7 +3594,7 @@ export const de_ListProtectedResourcesCommand = async (
  */
 export const de_ListProtectedResourcesByBackupVaultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProtectedResourcesByBackupVaultCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3616,7 +3616,7 @@ export const de_ListProtectedResourcesByBackupVaultCommand = async (
  */
 export const de_ListRecoveryPointsByBackupVaultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRecoveryPointsByBackupVaultCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3638,7 +3638,7 @@ export const de_ListRecoveryPointsByBackupVaultCommand = async (
  */
 export const de_ListRecoveryPointsByLegalHoldCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRecoveryPointsByLegalHoldCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3660,7 +3660,7 @@ export const de_ListRecoveryPointsByLegalHoldCommand = async (
  */
 export const de_ListRecoveryPointsByResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRecoveryPointsByResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3682,7 +3682,7 @@ export const de_ListRecoveryPointsByResourceCommand = async (
  */
 export const de_ListReportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReportJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3704,7 +3704,7 @@ export const de_ListReportJobsCommand = async (
  */
 export const de_ListReportPlansCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReportPlansCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3726,7 +3726,7 @@ export const de_ListReportPlansCommand = async (
  */
 export const de_ListRestoreJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRestoreJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3748,7 +3748,7 @@ export const de_ListRestoreJobsCommand = async (
  */
 export const de_ListRestoreJobsByProtectedResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRestoreJobsByProtectedResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3770,7 +3770,7 @@ export const de_ListRestoreJobsByProtectedResourceCommand = async (
  */
 export const de_ListRestoreJobSummariesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRestoreJobSummariesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3793,7 +3793,7 @@ export const de_ListRestoreJobSummariesCommand = async (
  */
 export const de_ListRestoreTestingPlansCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRestoreTestingPlansCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3815,7 +3815,7 @@ export const de_ListRestoreTestingPlansCommand = async (
  */
 export const de_ListRestoreTestingSelectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRestoreTestingSelectionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3837,7 +3837,7 @@ export const de_ListRestoreTestingSelectionsCommand = async (
  */
 export const de_ListTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3859,7 +3859,7 @@ export const de_ListTagsCommand = async (
  */
 export const de_PutBackupVaultAccessPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBackupVaultAccessPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3876,7 +3876,7 @@ export const de_PutBackupVaultAccessPolicyCommand = async (
  */
 export const de_PutBackupVaultLockConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBackupVaultLockConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3893,7 +3893,7 @@ export const de_PutBackupVaultLockConfigurationCommand = async (
  */
 export const de_PutBackupVaultNotificationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBackupVaultNotificationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3910,7 +3910,7 @@ export const de_PutBackupVaultNotificationsCommand = async (
  */
 export const de_PutRestoreValidationResultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutRestoreValidationResultCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3927,7 +3927,7 @@ export const de_PutRestoreValidationResultCommand = async (
  */
 export const de_StartBackupJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartBackupJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3951,7 +3951,7 @@ export const de_StartBackupJobCommand = async (
  */
 export const de_StartCopyJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartCopyJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3974,7 +3974,7 @@ export const de_StartCopyJobCommand = async (
  */
 export const de_StartReportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartReportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3995,7 +3995,7 @@ export const de_StartReportJobCommand = async (
  */
 export const de_StartRestoreJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartRestoreJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4016,7 +4016,7 @@ export const de_StartRestoreJobCommand = async (
  */
 export const de_StopBackupJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopBackupJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4033,7 +4033,7 @@ export const de_StopBackupJobCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4050,7 +4050,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4067,7 +4067,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateBackupPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBackupPlanCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4092,7 +4092,7 @@ export const de_UpdateBackupPlanCommand = async (
  */
 export const de_UpdateFrameworkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFrameworkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4115,7 +4115,7 @@ export const de_UpdateFrameworkCommand = async (
  */
 export const de_UpdateGlobalSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGlobalSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4132,7 +4132,7 @@ export const de_UpdateGlobalSettingsCommand = async (
  */
 export const de_UpdateRecoveryPointLifecycleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRecoveryPointLifecycleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4156,7 +4156,7 @@ export const de_UpdateRecoveryPointLifecycleCommand = async (
  */
 export const de_UpdateRegionSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRegionSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4173,7 +4173,7 @@ export const de_UpdateRegionSettingsCommand = async (
  */
 export const de_UpdateReportPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateReportPlanCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4196,7 +4196,7 @@ export const de_UpdateReportPlanCommand = async (
  */
 export const de_UpdateRestoreTestingPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRestoreTestingPlanCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4220,7 +4220,7 @@ export const de_UpdateRestoreTestingPlanCommand = async (
  */
 export const de_UpdateRestoreTestingSelectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRestoreTestingSelectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4296,7 +4296,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AlreadyExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4341,7 +4341,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_DependencyFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DependencyFailureException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4364,7 +4364,7 @@ const de_DependencyFailureExceptionRes = async (
  */
 const de_InvalidParameterValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterValueException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4387,7 +4387,7 @@ const de_InvalidParameterValueExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4410,7 +4410,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_InvalidResourceStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidResourceStateException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4433,7 +4433,7 @@ const de_InvalidResourceStateExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4456,7 +4456,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_MissingParameterValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MissingParameterValueException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4479,7 +4479,7 @@ const de_MissingParameterValueExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4502,7 +4502,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

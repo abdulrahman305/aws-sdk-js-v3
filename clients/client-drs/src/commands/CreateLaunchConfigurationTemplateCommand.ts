@@ -134,7 +134,7 @@ export class CreateLaunchConfigurationTemplateCommand extends $Command
   .n("DrsClient", "CreateLaunchConfigurationTemplateCommand")
   .f(
     CreateLaunchConfigurationTemplateRequestFilterSensitiveLog,
-    CreateLaunchConfigurationTemplateResponseFilterSensitiveLog
+    CreateLaunchConfigurationTemplateResponseFilterSensitiveLog,
   )
   .ser(se_CreateLaunchConfigurationTemplateCommand)
   .de(de_CreateLaunchConfigurationTemplateCommand)

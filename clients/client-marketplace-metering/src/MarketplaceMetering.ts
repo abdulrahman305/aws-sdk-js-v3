@@ -33,13 +33,13 @@ export interface MarketplaceMetering {
    */
   batchMeterUsage(
     args: BatchMeterUsageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchMeterUsageCommandOutput>;
   batchMeterUsage(args: BatchMeterUsageCommandInput, cb: (err: any, data?: BatchMeterUsageCommandOutput) => void): void;
   batchMeterUsage(
     args: BatchMeterUsageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchMeterUsageCommandOutput) => void
+    cb: (err: any, data?: BatchMeterUsageCommandOutput) => void,
   ): void;
 
   /**
@@ -50,7 +50,7 @@ export interface MarketplaceMetering {
   meterUsage(
     args: MeterUsageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: MeterUsageCommandOutput) => void
+    cb: (err: any, data?: MeterUsageCommandOutput) => void,
   ): void;
 
   /**
@@ -61,7 +61,7 @@ export interface MarketplaceMetering {
   registerUsage(
     args: RegisterUsageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterUsageCommandOutput) => void
+    cb: (err: any, data?: RegisterUsageCommandOutput) => void,
   ): void;
 
   /**
@@ -69,13 +69,13 @@ export interface MarketplaceMetering {
    */
   resolveCustomer(
     args: ResolveCustomerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ResolveCustomerCommandOutput>;
   resolveCustomer(args: ResolveCustomerCommandInput, cb: (err: any, data?: ResolveCustomerCommandOutput) => void): void;
   resolveCustomer(
     args: ResolveCustomerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ResolveCustomerCommandOutput) => void
+    cb: (err: any, data?: ResolveCustomerCommandOutput) => void,
   ): void;
 }
 

@@ -297,7 +297,7 @@ import { NetworkManagerServiceException as __BaseException } from "../models/Net
  */
 export const se_AcceptAttachmentCommand = async (
   input: AcceptAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -313,7 +313,7 @@ export const se_AcceptAttachmentCommand = async (
  */
 export const se_AssociateConnectPeerCommand = async (
   input: AssociateConnectPeerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -327,7 +327,7 @@ export const se_AssociateConnectPeerCommand = async (
       ConnectPeerId: [],
       DeviceId: [],
       LinkId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -338,7 +338,7 @@ export const se_AssociateConnectPeerCommand = async (
  */
 export const se_AssociateCustomerGatewayCommand = async (
   input: AssociateCustomerGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -352,7 +352,7 @@ export const se_AssociateCustomerGatewayCommand = async (
       CustomerGatewayArn: [],
       DeviceId: [],
       LinkId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -363,7 +363,7 @@ export const se_AssociateCustomerGatewayCommand = async (
  */
 export const se_AssociateLinkCommand = async (
   input: AssociateLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -376,7 +376,7 @@ export const se_AssociateLinkCommand = async (
     take(input, {
       DeviceId: [],
       LinkId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -387,7 +387,7 @@ export const se_AssociateLinkCommand = async (
  */
 export const se_AssociateTransitGatewayConnectPeerCommand = async (
   input: AssociateTransitGatewayConnectPeerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -401,7 +401,7 @@ export const se_AssociateTransitGatewayConnectPeerCommand = async (
       DeviceId: [],
       LinkId: [],
       TransitGatewayConnectPeerArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -412,7 +412,7 @@ export const se_AssociateTransitGatewayConnectPeerCommand = async (
  */
 export const se_CreateConnectAttachmentCommand = async (
   input: CreateConnectAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -428,7 +428,7 @@ export const se_CreateConnectAttachmentCommand = async (
       Options: (_) => _json(_),
       Tags: (_) => _json(_),
       TransportAttachmentId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -439,7 +439,7 @@ export const se_CreateConnectAttachmentCommand = async (
  */
 export const se_CreateConnectionCommand = async (
   input: CreateConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -456,7 +456,7 @@ export const se_CreateConnectionCommand = async (
       DeviceId: [],
       LinkId: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -467,7 +467,7 @@ export const se_CreateConnectionCommand = async (
  */
 export const se_CreateConnectPeerCommand = async (
   input: CreateConnectPeerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -485,7 +485,7 @@ export const se_CreateConnectPeerCommand = async (
       PeerAddress: [],
       SubnetArn: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -496,7 +496,7 @@ export const se_CreateConnectPeerCommand = async (
  */
 export const se_CreateCoreNetworkCommand = async (
   input: CreateCoreNetworkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -511,7 +511,7 @@ export const se_CreateCoreNetworkCommand = async (
       GlobalNetworkId: [],
       PolicyDocument: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -522,7 +522,7 @@ export const se_CreateCoreNetworkCommand = async (
  */
 export const se_CreateDeviceCommand = async (
   input: CreateDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -542,7 +542,7 @@ export const se_CreateDeviceCommand = async (
       Tags: (_) => _json(_),
       Type: [],
       Vendor: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -553,7 +553,7 @@ export const se_CreateDeviceCommand = async (
  */
 export const se_CreateGlobalNetworkCommand = async (
   input: CreateGlobalNetworkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -565,7 +565,7 @@ export const se_CreateGlobalNetworkCommand = async (
     take(input, {
       Description: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -576,7 +576,7 @@ export const se_CreateGlobalNetworkCommand = async (
  */
 export const se_CreateLinkCommand = async (
   input: CreateLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -593,7 +593,7 @@ export const se_CreateLinkCommand = async (
       SiteId: [],
       Tags: (_) => _json(_),
       Type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -604,7 +604,7 @@ export const se_CreateLinkCommand = async (
  */
 export const se_CreateSiteCommand = async (
   input: CreateSiteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -618,7 +618,7 @@ export const se_CreateSiteCommand = async (
       Description: [],
       Location: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -629,7 +629,7 @@ export const se_CreateSiteCommand = async (
  */
 export const se_CreateSiteToSiteVpnAttachmentCommand = async (
   input: CreateSiteToSiteVpnAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -643,7 +643,7 @@ export const se_CreateSiteToSiteVpnAttachmentCommand = async (
       CoreNetworkId: [],
       Tags: (_) => _json(_),
       VpnConnectionArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -654,7 +654,7 @@ export const se_CreateSiteToSiteVpnAttachmentCommand = async (
  */
 export const se_CreateTransitGatewayPeeringCommand = async (
   input: CreateTransitGatewayPeeringCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -668,7 +668,7 @@ export const se_CreateTransitGatewayPeeringCommand = async (
       CoreNetworkId: [],
       Tags: (_) => _json(_),
       TransitGatewayArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -679,7 +679,7 @@ export const se_CreateTransitGatewayPeeringCommand = async (
  */
 export const se_CreateTransitGatewayRouteTableAttachmentCommand = async (
   input: CreateTransitGatewayRouteTableAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -693,7 +693,7 @@ export const se_CreateTransitGatewayRouteTableAttachmentCommand = async (
       PeeringId: [],
       Tags: (_) => _json(_),
       TransitGatewayRouteTableArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -704,7 +704,7 @@ export const se_CreateTransitGatewayRouteTableAttachmentCommand = async (
  */
 export const se_CreateVpcAttachmentCommand = async (
   input: CreateVpcAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -720,7 +720,7 @@ export const se_CreateVpcAttachmentCommand = async (
       SubnetArns: (_) => _json(_),
       Tags: (_) => _json(_),
       VpcArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -731,7 +731,7 @@ export const se_CreateVpcAttachmentCommand = async (
  */
 export const se_DeleteAttachmentCommand = async (
   input: DeleteAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -747,7 +747,7 @@ export const se_DeleteAttachmentCommand = async (
  */
 export const se_DeleteConnectionCommand = async (
   input: DeleteConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -764,7 +764,7 @@ export const se_DeleteConnectionCommand = async (
  */
 export const se_DeleteConnectPeerCommand = async (
   input: DeleteConnectPeerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -780,7 +780,7 @@ export const se_DeleteConnectPeerCommand = async (
  */
 export const se_DeleteCoreNetworkCommand = async (
   input: DeleteCoreNetworkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -796,7 +796,7 @@ export const se_DeleteCoreNetworkCommand = async (
  */
 export const se_DeleteCoreNetworkPolicyVersionCommand = async (
   input: DeleteCoreNetworkPolicyVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -813,7 +813,7 @@ export const se_DeleteCoreNetworkPolicyVersionCommand = async (
  */
 export const se_DeleteDeviceCommand = async (
   input: DeleteDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -830,7 +830,7 @@ export const se_DeleteDeviceCommand = async (
  */
 export const se_DeleteGlobalNetworkCommand = async (
   input: DeleteGlobalNetworkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -846,7 +846,7 @@ export const se_DeleteGlobalNetworkCommand = async (
  */
 export const se_DeleteLinkCommand = async (
   input: DeleteLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -863,7 +863,7 @@ export const se_DeleteLinkCommand = async (
  */
 export const se_DeletePeeringCommand = async (
   input: DeletePeeringCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -879,7 +879,7 @@ export const se_DeletePeeringCommand = async (
  */
 export const se_DeleteResourcePolicyCommand = async (
   input: DeleteResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -895,7 +895,7 @@ export const se_DeleteResourcePolicyCommand = async (
  */
 export const se_DeleteSiteCommand = async (
   input: DeleteSiteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -912,7 +912,7 @@ export const se_DeleteSiteCommand = async (
  */
 export const se_DeregisterTransitGatewayCommand = async (
   input: DeregisterTransitGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -929,7 +929,7 @@ export const se_DeregisterTransitGatewayCommand = async (
  */
 export const se_DescribeGlobalNetworksCommand = async (
   input: DescribeGlobalNetworksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -949,7 +949,7 @@ export const se_DescribeGlobalNetworksCommand = async (
  */
 export const se_DisassociateConnectPeerCommand = async (
   input: DisassociateConnectPeerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -966,7 +966,7 @@ export const se_DisassociateConnectPeerCommand = async (
  */
 export const se_DisassociateCustomerGatewayCommand = async (
   input: DisassociateCustomerGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -983,7 +983,7 @@ export const se_DisassociateCustomerGatewayCommand = async (
  */
 export const se_DisassociateLinkCommand = async (
   input: DisassociateLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1003,7 +1003,7 @@ export const se_DisassociateLinkCommand = async (
  */
 export const se_DisassociateTransitGatewayConnectPeerCommand = async (
   input: DisassociateTransitGatewayConnectPeerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1013,7 +1013,7 @@ export const se_DisassociateTransitGatewayConnectPeerCommand = async (
     "TransitGatewayConnectPeerArn",
     () => input.TransitGatewayConnectPeerArn!,
     "{TransitGatewayConnectPeerArn}",
-    false
+    false,
   );
   let body: any;
   b.m("DELETE").h(headers).b(body);
@@ -1025,7 +1025,7 @@ export const se_DisassociateTransitGatewayConnectPeerCommand = async (
  */
 export const se_ExecuteCoreNetworkChangeSetCommand = async (
   input: ExecuteCoreNetworkChangeSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1042,7 +1042,7 @@ export const se_ExecuteCoreNetworkChangeSetCommand = async (
  */
 export const se_GetConnectAttachmentCommand = async (
   input: GetConnectAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1058,7 +1058,7 @@ export const se_GetConnectAttachmentCommand = async (
  */
 export const se_GetConnectionsCommand = async (
   input: GetConnectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1080,7 +1080,7 @@ export const se_GetConnectionsCommand = async (
  */
 export const se_GetConnectPeerCommand = async (
   input: GetConnectPeerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1096,7 +1096,7 @@ export const se_GetConnectPeerCommand = async (
  */
 export const se_GetConnectPeerAssociationsCommand = async (
   input: GetConnectPeerAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1117,7 +1117,7 @@ export const se_GetConnectPeerAssociationsCommand = async (
  */
 export const se_GetCoreNetworkCommand = async (
   input: GetCoreNetworkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1133,7 +1133,7 @@ export const se_GetCoreNetworkCommand = async (
  */
 export const se_GetCoreNetworkChangeEventsCommand = async (
   input: GetCoreNetworkChangeEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1154,7 +1154,7 @@ export const se_GetCoreNetworkChangeEventsCommand = async (
  */
 export const se_GetCoreNetworkChangeSetCommand = async (
   input: GetCoreNetworkChangeSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1175,7 +1175,7 @@ export const se_GetCoreNetworkChangeSetCommand = async (
  */
 export const se_GetCoreNetworkPolicyCommand = async (
   input: GetCoreNetworkPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1195,7 +1195,7 @@ export const se_GetCoreNetworkPolicyCommand = async (
  */
 export const se_GetCustomerGatewayAssociationsCommand = async (
   input: GetCustomerGatewayAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1216,7 +1216,7 @@ export const se_GetCustomerGatewayAssociationsCommand = async (
  */
 export const se_GetDevicesCommand = async (
   input: GetDevicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1238,7 +1238,7 @@ export const se_GetDevicesCommand = async (
  */
 export const se_GetLinkAssociationsCommand = async (
   input: GetLinkAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1260,7 +1260,7 @@ export const se_GetLinkAssociationsCommand = async (
  */
 export const se_GetLinksCommand = async (
   input: GetLinksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1284,7 +1284,7 @@ export const se_GetLinksCommand = async (
  */
 export const se_GetNetworkResourceCountsCommand = async (
   input: GetNetworkResourceCountsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1305,7 +1305,7 @@ export const se_GetNetworkResourceCountsCommand = async (
  */
 export const se_GetNetworkResourceRelationshipsCommand = async (
   input: GetNetworkResourceRelationshipsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1331,7 +1331,7 @@ export const se_GetNetworkResourceRelationshipsCommand = async (
  */
 export const se_GetNetworkResourcesCommand = async (
   input: GetNetworkResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1357,7 +1357,7 @@ export const se_GetNetworkResourcesCommand = async (
  */
 export const se_GetNetworkRoutesCommand = async (
   input: GetNetworkRoutesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1377,7 +1377,7 @@ export const se_GetNetworkRoutesCommand = async (
       SubnetOfMatches: (_) => _json(_),
       SupernetOfMatches: (_) => _json(_),
       Types: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1388,7 +1388,7 @@ export const se_GetNetworkRoutesCommand = async (
  */
 export const se_GetNetworkTelemetryCommand = async (
   input: GetNetworkTelemetryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1414,7 +1414,7 @@ export const se_GetNetworkTelemetryCommand = async (
  */
 export const se_GetResourcePolicyCommand = async (
   input: GetResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1430,7 +1430,7 @@ export const se_GetResourcePolicyCommand = async (
  */
 export const se_GetRouteAnalysisCommand = async (
   input: GetRouteAnalysisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1447,7 +1447,7 @@ export const se_GetRouteAnalysisCommand = async (
  */
 export const se_GetSitesCommand = async (
   input: GetSitesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1468,7 +1468,7 @@ export const se_GetSitesCommand = async (
  */
 export const se_GetSiteToSiteVpnAttachmentCommand = async (
   input: GetSiteToSiteVpnAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1484,7 +1484,7 @@ export const se_GetSiteToSiteVpnAttachmentCommand = async (
  */
 export const se_GetTransitGatewayConnectPeerAssociationsCommand = async (
   input: GetTransitGatewayConnectPeerAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1508,7 +1508,7 @@ export const se_GetTransitGatewayConnectPeerAssociationsCommand = async (
  */
 export const se_GetTransitGatewayPeeringCommand = async (
   input: GetTransitGatewayPeeringCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1524,7 +1524,7 @@ export const se_GetTransitGatewayPeeringCommand = async (
  */
 export const se_GetTransitGatewayRegistrationsCommand = async (
   input: GetTransitGatewayRegistrationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1545,7 +1545,7 @@ export const se_GetTransitGatewayRegistrationsCommand = async (
  */
 export const se_GetTransitGatewayRouteTableAttachmentCommand = async (
   input: GetTransitGatewayRouteTableAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1561,7 +1561,7 @@ export const se_GetTransitGatewayRouteTableAttachmentCommand = async (
  */
 export const se_GetVpcAttachmentCommand = async (
   input: GetVpcAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1577,7 +1577,7 @@ export const se_GetVpcAttachmentCommand = async (
  */
 export const se_ListAttachmentsCommand = async (
   input: ListAttachmentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1600,7 +1600,7 @@ export const se_ListAttachmentsCommand = async (
  */
 export const se_ListConnectPeersCommand = async (
   input: ListConnectPeersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1621,7 +1621,7 @@ export const se_ListConnectPeersCommand = async (
  */
 export const se_ListCoreNetworkPolicyVersionsCommand = async (
   input: ListCoreNetworkPolicyVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1641,7 +1641,7 @@ export const se_ListCoreNetworkPolicyVersionsCommand = async (
  */
 export const se_ListCoreNetworksCommand = async (
   input: ListCoreNetworksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1660,7 +1660,7 @@ export const se_ListCoreNetworksCommand = async (
  */
 export const se_ListOrganizationServiceAccessStatusCommand = async (
   input: ListOrganizationServiceAccessStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1679,7 +1679,7 @@ export const se_ListOrganizationServiceAccessStatusCommand = async (
  */
 export const se_ListPeeringsCommand = async (
   input: ListPeeringsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1702,7 +1702,7 @@ export const se_ListPeeringsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1718,7 +1718,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutCoreNetworkPolicyCommand = async (
   input: PutCoreNetworkPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1733,7 +1733,7 @@ export const se_PutCoreNetworkPolicyCommand = async (
       Description: [],
       LatestVersionId: [],
       PolicyDocument: (_) => __LazyJsonString.fromObject(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1744,7 +1744,7 @@ export const se_PutCoreNetworkPolicyCommand = async (
  */
 export const se_PutResourcePolicyCommand = async (
   input: PutResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1756,7 +1756,7 @@ export const se_PutResourcePolicyCommand = async (
   body = JSON.stringify(
     take(input, {
       PolicyDocument: (_) => __LazyJsonString.fromObject(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1767,7 +1767,7 @@ export const se_PutResourcePolicyCommand = async (
  */
 export const se_RegisterTransitGatewayCommand = async (
   input: RegisterTransitGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1779,7 +1779,7 @@ export const se_RegisterTransitGatewayCommand = async (
   body = JSON.stringify(
     take(input, {
       TransitGatewayArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1790,7 +1790,7 @@ export const se_RegisterTransitGatewayCommand = async (
  */
 export const se_RejectAttachmentCommand = async (
   input: RejectAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1806,7 +1806,7 @@ export const se_RejectAttachmentCommand = async (
  */
 export const se_RestoreCoreNetworkPolicyVersionCommand = async (
   input: RestoreCoreNetworkPolicyVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1823,7 +1823,7 @@ export const se_RestoreCoreNetworkPolicyVersionCommand = async (
  */
 export const se_StartOrganizationServiceAccessUpdateCommand = async (
   input: StartOrganizationServiceAccessUpdateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1834,7 +1834,7 @@ export const se_StartOrganizationServiceAccessUpdateCommand = async (
   body = JSON.stringify(
     take(input, {
       Action: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1845,7 +1845,7 @@ export const se_StartOrganizationServiceAccessUpdateCommand = async (
  */
 export const se_StartRouteAnalysisCommand = async (
   input: StartRouteAnalysisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1860,7 +1860,7 @@ export const se_StartRouteAnalysisCommand = async (
       IncludeReturnPath: [],
       Source: (_) => _json(_),
       UseMiddleboxes: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1871,7 +1871,7 @@ export const se_StartRouteAnalysisCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1883,7 +1883,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1894,7 +1894,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1916,7 +1916,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateConnectionCommand = async (
   input: UpdateConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1931,7 +1931,7 @@ export const se_UpdateConnectionCommand = async (
       ConnectedLinkId: [],
       Description: [],
       LinkId: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1942,7 +1942,7 @@ export const se_UpdateConnectionCommand = async (
  */
 export const se_UpdateCoreNetworkCommand = async (
   input: UpdateCoreNetworkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1954,7 +1954,7 @@ export const se_UpdateCoreNetworkCommand = async (
   body = JSON.stringify(
     take(input, {
       Description: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1965,7 +1965,7 @@ export const se_UpdateCoreNetworkCommand = async (
  */
 export const se_UpdateDeviceCommand = async (
   input: UpdateDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1985,7 +1985,7 @@ export const se_UpdateDeviceCommand = async (
       SiteId: [],
       Type: [],
       Vendor: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1996,7 +1996,7 @@ export const se_UpdateDeviceCommand = async (
  */
 export const se_UpdateGlobalNetworkCommand = async (
   input: UpdateGlobalNetworkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2008,7 +2008,7 @@ export const se_UpdateGlobalNetworkCommand = async (
   body = JSON.stringify(
     take(input, {
       Description: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2019,7 +2019,7 @@ export const se_UpdateGlobalNetworkCommand = async (
  */
 export const se_UpdateLinkCommand = async (
   input: UpdateLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2035,7 +2035,7 @@ export const se_UpdateLinkCommand = async (
       Description: [],
       Provider: [],
       Type: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2046,7 +2046,7 @@ export const se_UpdateLinkCommand = async (
  */
 export const se_UpdateNetworkResourceMetadataCommand = async (
   input: UpdateNetworkResourceMetadataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2059,7 +2059,7 @@ export const se_UpdateNetworkResourceMetadataCommand = async (
   body = JSON.stringify(
     take(input, {
       Metadata: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2070,7 +2070,7 @@ export const se_UpdateNetworkResourceMetadataCommand = async (
  */
 export const se_UpdateSiteCommand = async (
   input: UpdateSiteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2084,7 +2084,7 @@ export const se_UpdateSiteCommand = async (
     take(input, {
       Description: [],
       Location: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2095,7 +2095,7 @@ export const se_UpdateSiteCommand = async (
  */
 export const se_UpdateVpcAttachmentCommand = async (
   input: UpdateVpcAttachmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2109,7 +2109,7 @@ export const se_UpdateVpcAttachmentCommand = async (
       AddSubnetArns: (_) => _json(_),
       Options: (_) => _json(_),
       RemoveSubnetArns: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -2120,7 +2120,7 @@ export const se_UpdateVpcAttachmentCommand = async (
  */
 export const de_AcceptAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptAttachmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2141,7 +2141,7 @@ export const de_AcceptAttachmentCommand = async (
  */
 export const de_AssociateConnectPeerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateConnectPeerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2162,7 +2162,7 @@ export const de_AssociateConnectPeerCommand = async (
  */
 export const de_AssociateCustomerGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateCustomerGatewayCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2183,7 +2183,7 @@ export const de_AssociateCustomerGatewayCommand = async (
  */
 export const de_AssociateLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateLinkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2204,7 +2204,7 @@ export const de_AssociateLinkCommand = async (
  */
 export const de_AssociateTransitGatewayConnectPeerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateTransitGatewayConnectPeerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2225,7 +2225,7 @@ export const de_AssociateTransitGatewayConnectPeerCommand = async (
  */
 export const de_CreateConnectAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConnectAttachmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2246,7 +2246,7 @@ export const de_CreateConnectAttachmentCommand = async (
  */
 export const de_CreateConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2267,7 +2267,7 @@ export const de_CreateConnectionCommand = async (
  */
 export const de_CreateConnectPeerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConnectPeerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2288,7 +2288,7 @@ export const de_CreateConnectPeerCommand = async (
  */
 export const de_CreateCoreNetworkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCoreNetworkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2309,7 +2309,7 @@ export const de_CreateCoreNetworkCommand = async (
  */
 export const de_CreateDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2330,7 +2330,7 @@ export const de_CreateDeviceCommand = async (
  */
 export const de_CreateGlobalNetworkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGlobalNetworkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2351,7 +2351,7 @@ export const de_CreateGlobalNetworkCommand = async (
  */
 export const de_CreateLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLinkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2372,7 +2372,7 @@ export const de_CreateLinkCommand = async (
  */
 export const de_CreateSiteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSiteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2393,7 +2393,7 @@ export const de_CreateSiteCommand = async (
  */
 export const de_CreateSiteToSiteVpnAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSiteToSiteVpnAttachmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2414,7 +2414,7 @@ export const de_CreateSiteToSiteVpnAttachmentCommand = async (
  */
 export const de_CreateTransitGatewayPeeringCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTransitGatewayPeeringCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2435,7 +2435,7 @@ export const de_CreateTransitGatewayPeeringCommand = async (
  */
 export const de_CreateTransitGatewayRouteTableAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTransitGatewayRouteTableAttachmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2456,7 +2456,7 @@ export const de_CreateTransitGatewayRouteTableAttachmentCommand = async (
  */
 export const de_CreateVpcAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVpcAttachmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2477,7 +2477,7 @@ export const de_CreateVpcAttachmentCommand = async (
  */
 export const de_DeleteAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAttachmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2498,7 +2498,7 @@ export const de_DeleteAttachmentCommand = async (
  */
 export const de_DeleteConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2519,7 +2519,7 @@ export const de_DeleteConnectionCommand = async (
  */
 export const de_DeleteConnectPeerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConnectPeerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2540,7 +2540,7 @@ export const de_DeleteConnectPeerCommand = async (
  */
 export const de_DeleteCoreNetworkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCoreNetworkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2561,7 +2561,7 @@ export const de_DeleteCoreNetworkCommand = async (
  */
 export const de_DeleteCoreNetworkPolicyVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCoreNetworkPolicyVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2582,7 +2582,7 @@ export const de_DeleteCoreNetworkPolicyVersionCommand = async (
  */
 export const de_DeleteDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2603,7 +2603,7 @@ export const de_DeleteDeviceCommand = async (
  */
 export const de_DeleteGlobalNetworkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGlobalNetworkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2624,7 +2624,7 @@ export const de_DeleteGlobalNetworkCommand = async (
  */
 export const de_DeleteLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLinkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2645,7 +2645,7 @@ export const de_DeleteLinkCommand = async (
  */
 export const de_DeletePeeringCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePeeringCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2666,7 +2666,7 @@ export const de_DeletePeeringCommand = async (
  */
 export const de_DeleteResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResourcePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2683,7 +2683,7 @@ export const de_DeleteResourcePolicyCommand = async (
  */
 export const de_DeleteSiteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSiteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2704,7 +2704,7 @@ export const de_DeleteSiteCommand = async (
  */
 export const de_DeregisterTransitGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterTransitGatewayCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2725,7 +2725,7 @@ export const de_DeregisterTransitGatewayCommand = async (
  */
 export const de_DescribeGlobalNetworksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGlobalNetworksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2747,7 +2747,7 @@ export const de_DescribeGlobalNetworksCommand = async (
  */
 export const de_DisassociateConnectPeerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateConnectPeerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2768,7 +2768,7 @@ export const de_DisassociateConnectPeerCommand = async (
  */
 export const de_DisassociateCustomerGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateCustomerGatewayCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2789,7 +2789,7 @@ export const de_DisassociateCustomerGatewayCommand = async (
  */
 export const de_DisassociateLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateLinkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2810,7 +2810,7 @@ export const de_DisassociateLinkCommand = async (
  */
 export const de_DisassociateTransitGatewayConnectPeerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateTransitGatewayConnectPeerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2831,7 +2831,7 @@ export const de_DisassociateTransitGatewayConnectPeerCommand = async (
  */
 export const de_ExecuteCoreNetworkChangeSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteCoreNetworkChangeSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2848,7 +2848,7 @@ export const de_ExecuteCoreNetworkChangeSetCommand = async (
  */
 export const de_GetConnectAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConnectAttachmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2869,7 +2869,7 @@ export const de_GetConnectAttachmentCommand = async (
  */
 export const de_GetConnectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConnectionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2891,7 +2891,7 @@ export const de_GetConnectionsCommand = async (
  */
 export const de_GetConnectPeerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConnectPeerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2912,7 +2912,7 @@ export const de_GetConnectPeerCommand = async (
  */
 export const de_GetConnectPeerAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConnectPeerAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2934,7 +2934,7 @@ export const de_GetConnectPeerAssociationsCommand = async (
  */
 export const de_GetCoreNetworkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCoreNetworkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2955,7 +2955,7 @@ export const de_GetCoreNetworkCommand = async (
  */
 export const de_GetCoreNetworkChangeEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCoreNetworkChangeEventsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2977,7 +2977,7 @@ export const de_GetCoreNetworkChangeEventsCommand = async (
  */
 export const de_GetCoreNetworkChangeSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCoreNetworkChangeSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2999,7 +2999,7 @@ export const de_GetCoreNetworkChangeSetCommand = async (
  */
 export const de_GetCoreNetworkPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCoreNetworkPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3020,7 +3020,7 @@ export const de_GetCoreNetworkPolicyCommand = async (
  */
 export const de_GetCustomerGatewayAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCustomerGatewayAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3042,7 +3042,7 @@ export const de_GetCustomerGatewayAssociationsCommand = async (
  */
 export const de_GetDevicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDevicesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3064,7 +3064,7 @@ export const de_GetDevicesCommand = async (
  */
 export const de_GetLinkAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLinkAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3086,7 +3086,7 @@ export const de_GetLinkAssociationsCommand = async (
  */
 export const de_GetLinksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLinksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3108,7 +3108,7 @@ export const de_GetLinksCommand = async (
  */
 export const de_GetNetworkResourceCountsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetNetworkResourceCountsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3130,7 +3130,7 @@ export const de_GetNetworkResourceCountsCommand = async (
  */
 export const de_GetNetworkResourceRelationshipsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetNetworkResourceRelationshipsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3152,7 +3152,7 @@ export const de_GetNetworkResourceRelationshipsCommand = async (
  */
 export const de_GetNetworkResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetNetworkResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3174,7 +3174,7 @@ export const de_GetNetworkResourcesCommand = async (
  */
 export const de_GetNetworkRoutesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetNetworkRoutesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3199,7 +3199,7 @@ export const de_GetNetworkRoutesCommand = async (
  */
 export const de_GetNetworkTelemetryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetNetworkTelemetryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3221,7 +3221,7 @@ export const de_GetNetworkTelemetryCommand = async (
  */
 export const de_GetResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourcePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3242,7 +3242,7 @@ export const de_GetResourcePolicyCommand = async (
  */
 export const de_GetRouteAnalysisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRouteAnalysisCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3263,7 +3263,7 @@ export const de_GetRouteAnalysisCommand = async (
  */
 export const de_GetSitesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSitesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3285,7 +3285,7 @@ export const de_GetSitesCommand = async (
  */
 export const de_GetSiteToSiteVpnAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSiteToSiteVpnAttachmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3306,7 +3306,7 @@ export const de_GetSiteToSiteVpnAttachmentCommand = async (
  */
 export const de_GetTransitGatewayConnectPeerAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTransitGatewayConnectPeerAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3328,7 +3328,7 @@ export const de_GetTransitGatewayConnectPeerAssociationsCommand = async (
  */
 export const de_GetTransitGatewayPeeringCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTransitGatewayPeeringCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3349,7 +3349,7 @@ export const de_GetTransitGatewayPeeringCommand = async (
  */
 export const de_GetTransitGatewayRegistrationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTransitGatewayRegistrationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3371,7 +3371,7 @@ export const de_GetTransitGatewayRegistrationsCommand = async (
  */
 export const de_GetTransitGatewayRouteTableAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTransitGatewayRouteTableAttachmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3392,7 +3392,7 @@ export const de_GetTransitGatewayRouteTableAttachmentCommand = async (
  */
 export const de_GetVpcAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVpcAttachmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3413,7 +3413,7 @@ export const de_GetVpcAttachmentCommand = async (
  */
 export const de_ListAttachmentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAttachmentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3435,7 +3435,7 @@ export const de_ListAttachmentsCommand = async (
  */
 export const de_ListConnectPeersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConnectPeersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3457,7 +3457,7 @@ export const de_ListConnectPeersCommand = async (
  */
 export const de_ListCoreNetworkPolicyVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCoreNetworkPolicyVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3479,7 +3479,7 @@ export const de_ListCoreNetworkPolicyVersionsCommand = async (
  */
 export const de_ListCoreNetworksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCoreNetworksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3501,7 +3501,7 @@ export const de_ListCoreNetworksCommand = async (
  */
 export const de_ListOrganizationServiceAccessStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOrganizationServiceAccessStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3523,7 +3523,7 @@ export const de_ListOrganizationServiceAccessStatusCommand = async (
  */
 export const de_ListPeeringsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPeeringsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3545,7 +3545,7 @@ export const de_ListPeeringsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3566,7 +3566,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutCoreNetworkPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutCoreNetworkPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3587,7 +3587,7 @@ export const de_PutCoreNetworkPolicyCommand = async (
  */
 export const de_PutResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutResourcePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3604,7 +3604,7 @@ export const de_PutResourcePolicyCommand = async (
  */
 export const de_RegisterTransitGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterTransitGatewayCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3625,7 +3625,7 @@ export const de_RegisterTransitGatewayCommand = async (
  */
 export const de_RejectAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RejectAttachmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3646,7 +3646,7 @@ export const de_RejectAttachmentCommand = async (
  */
 export const de_RestoreCoreNetworkPolicyVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreCoreNetworkPolicyVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3667,7 +3667,7 @@ export const de_RestoreCoreNetworkPolicyVersionCommand = async (
  */
 export const de_StartOrganizationServiceAccessUpdateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartOrganizationServiceAccessUpdateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3688,7 +3688,7 @@ export const de_StartOrganizationServiceAccessUpdateCommand = async (
  */
 export const de_StartRouteAnalysisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartRouteAnalysisCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3709,7 +3709,7 @@ export const de_StartRouteAnalysisCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3726,7 +3726,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3743,7 +3743,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3764,7 +3764,7 @@ export const de_UpdateConnectionCommand = async (
  */
 export const de_UpdateCoreNetworkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCoreNetworkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3785,7 +3785,7 @@ export const de_UpdateCoreNetworkCommand = async (
  */
 export const de_UpdateDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3806,7 +3806,7 @@ export const de_UpdateDeviceCommand = async (
  */
 export const de_UpdateGlobalNetworkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGlobalNetworkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3827,7 +3827,7 @@ export const de_UpdateGlobalNetworkCommand = async (
  */
 export const de_UpdateLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLinkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3848,7 +3848,7 @@ export const de_UpdateLinkCommand = async (
  */
 export const de_UpdateNetworkResourceMetadataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateNetworkResourceMetadataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3870,7 +3870,7 @@ export const de_UpdateNetworkResourceMetadataCommand = async (
  */
 export const de_UpdateSiteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSiteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3891,7 +3891,7 @@ export const de_UpdateSiteCommand = async (
  */
 export const de_UpdateVpcAttachmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVpcAttachmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3957,7 +3957,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3996,7 +3996,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_CoreNetworkPolicyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CoreNetworkPolicyException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4017,7 +4017,7 @@ const de_CoreNetworkPolicyExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({
     [_RAS]: [() => void 0 !== parsedOutput.headers[_ra], () => __strictParseInt32(parsedOutput.headers[_ra])],
@@ -4039,7 +4039,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4062,7 +4062,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4767,7 +4767,7 @@ const de_TransitGatewayPeering = (output: any, context: __SerdeContext): Transit
  */
 const de_TransitGatewayRouteTableAttachment = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TransitGatewayRouteTableAttachment => {
   return take(output, {
     Attachment: (_: any) => de_Attachment(_, context),

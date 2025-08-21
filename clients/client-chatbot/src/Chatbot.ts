@@ -165,16 +165,16 @@ export interface Chatbot {
    */
   createChimeWebhookConfiguration(
     args: CreateChimeWebhookConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateChimeWebhookConfigurationCommandOutput>;
   createChimeWebhookConfiguration(
     args: CreateChimeWebhookConfigurationCommandInput,
-    cb: (err: any, data?: CreateChimeWebhookConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateChimeWebhookConfigurationCommandOutput) => void,
   ): void;
   createChimeWebhookConfiguration(
     args: CreateChimeWebhookConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateChimeWebhookConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateChimeWebhookConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -182,16 +182,16 @@ export interface Chatbot {
    */
   createMicrosoftTeamsChannelConfiguration(
     args: CreateMicrosoftTeamsChannelConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateMicrosoftTeamsChannelConfigurationCommandOutput>;
   createMicrosoftTeamsChannelConfiguration(
     args: CreateMicrosoftTeamsChannelConfigurationCommandInput,
-    cb: (err: any, data?: CreateMicrosoftTeamsChannelConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateMicrosoftTeamsChannelConfigurationCommandOutput) => void,
   ): void;
   createMicrosoftTeamsChannelConfiguration(
     args: CreateMicrosoftTeamsChannelConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMicrosoftTeamsChannelConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateMicrosoftTeamsChannelConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -199,16 +199,16 @@ export interface Chatbot {
    */
   createSlackChannelConfiguration(
     args: CreateSlackChannelConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSlackChannelConfigurationCommandOutput>;
   createSlackChannelConfiguration(
     args: CreateSlackChannelConfigurationCommandInput,
-    cb: (err: any, data?: CreateSlackChannelConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateSlackChannelConfigurationCommandOutput) => void,
   ): void;
   createSlackChannelConfiguration(
     args: CreateSlackChannelConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSlackChannelConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateSlackChannelConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -216,16 +216,16 @@ export interface Chatbot {
    */
   deleteChimeWebhookConfiguration(
     args: DeleteChimeWebhookConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteChimeWebhookConfigurationCommandOutput>;
   deleteChimeWebhookConfiguration(
     args: DeleteChimeWebhookConfigurationCommandInput,
-    cb: (err: any, data?: DeleteChimeWebhookConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteChimeWebhookConfigurationCommandOutput) => void,
   ): void;
   deleteChimeWebhookConfiguration(
     args: DeleteChimeWebhookConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteChimeWebhookConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteChimeWebhookConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -233,16 +233,16 @@ export interface Chatbot {
    */
   deleteMicrosoftTeamsChannelConfiguration(
     args: DeleteMicrosoftTeamsChannelConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteMicrosoftTeamsChannelConfigurationCommandOutput>;
   deleteMicrosoftTeamsChannelConfiguration(
     args: DeleteMicrosoftTeamsChannelConfigurationCommandInput,
-    cb: (err: any, data?: DeleteMicrosoftTeamsChannelConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteMicrosoftTeamsChannelConfigurationCommandOutput) => void,
   ): void;
   deleteMicrosoftTeamsChannelConfiguration(
     args: DeleteMicrosoftTeamsChannelConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMicrosoftTeamsChannelConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteMicrosoftTeamsChannelConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -250,16 +250,16 @@ export interface Chatbot {
    */
   deleteMicrosoftTeamsConfiguredTeam(
     args: DeleteMicrosoftTeamsConfiguredTeamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteMicrosoftTeamsConfiguredTeamCommandOutput>;
   deleteMicrosoftTeamsConfiguredTeam(
     args: DeleteMicrosoftTeamsConfiguredTeamCommandInput,
-    cb: (err: any, data?: DeleteMicrosoftTeamsConfiguredTeamCommandOutput) => void
+    cb: (err: any, data?: DeleteMicrosoftTeamsConfiguredTeamCommandOutput) => void,
   ): void;
   deleteMicrosoftTeamsConfiguredTeam(
     args: DeleteMicrosoftTeamsConfiguredTeamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMicrosoftTeamsConfiguredTeamCommandOutput) => void
+    cb: (err: any, data?: DeleteMicrosoftTeamsConfiguredTeamCommandOutput) => void,
   ): void;
 
   /**
@@ -267,16 +267,16 @@ export interface Chatbot {
    */
   deleteMicrosoftTeamsUserIdentity(
     args: DeleteMicrosoftTeamsUserIdentityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteMicrosoftTeamsUserIdentityCommandOutput>;
   deleteMicrosoftTeamsUserIdentity(
     args: DeleteMicrosoftTeamsUserIdentityCommandInput,
-    cb: (err: any, data?: DeleteMicrosoftTeamsUserIdentityCommandOutput) => void
+    cb: (err: any, data?: DeleteMicrosoftTeamsUserIdentityCommandOutput) => void,
   ): void;
   deleteMicrosoftTeamsUserIdentity(
     args: DeleteMicrosoftTeamsUserIdentityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMicrosoftTeamsUserIdentityCommandOutput) => void
+    cb: (err: any, data?: DeleteMicrosoftTeamsUserIdentityCommandOutput) => void,
   ): void;
 
   /**
@@ -284,16 +284,16 @@ export interface Chatbot {
    */
   deleteSlackChannelConfiguration(
     args: DeleteSlackChannelConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSlackChannelConfigurationCommandOutput>;
   deleteSlackChannelConfiguration(
     args: DeleteSlackChannelConfigurationCommandInput,
-    cb: (err: any, data?: DeleteSlackChannelConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteSlackChannelConfigurationCommandOutput) => void,
   ): void;
   deleteSlackChannelConfiguration(
     args: DeleteSlackChannelConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSlackChannelConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteSlackChannelConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -301,16 +301,16 @@ export interface Chatbot {
    */
   deleteSlackUserIdentity(
     args: DeleteSlackUserIdentityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSlackUserIdentityCommandOutput>;
   deleteSlackUserIdentity(
     args: DeleteSlackUserIdentityCommandInput,
-    cb: (err: any, data?: DeleteSlackUserIdentityCommandOutput) => void
+    cb: (err: any, data?: DeleteSlackUserIdentityCommandOutput) => void,
   ): void;
   deleteSlackUserIdentity(
     args: DeleteSlackUserIdentityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSlackUserIdentityCommandOutput) => void
+    cb: (err: any, data?: DeleteSlackUserIdentityCommandOutput) => void,
   ): void;
 
   /**
@@ -318,16 +318,16 @@ export interface Chatbot {
    */
   deleteSlackWorkspaceAuthorization(
     args: DeleteSlackWorkspaceAuthorizationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSlackWorkspaceAuthorizationCommandOutput>;
   deleteSlackWorkspaceAuthorization(
     args: DeleteSlackWorkspaceAuthorizationCommandInput,
-    cb: (err: any, data?: DeleteSlackWorkspaceAuthorizationCommandOutput) => void
+    cb: (err: any, data?: DeleteSlackWorkspaceAuthorizationCommandOutput) => void,
   ): void;
   deleteSlackWorkspaceAuthorization(
     args: DeleteSlackWorkspaceAuthorizationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSlackWorkspaceAuthorizationCommandOutput) => void
+    cb: (err: any, data?: DeleteSlackWorkspaceAuthorizationCommandOutput) => void,
   ): void;
 
   /**
@@ -336,16 +336,16 @@ export interface Chatbot {
   describeChimeWebhookConfigurations(): Promise<DescribeChimeWebhookConfigurationsCommandOutput>;
   describeChimeWebhookConfigurations(
     args: DescribeChimeWebhookConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeChimeWebhookConfigurationsCommandOutput>;
   describeChimeWebhookConfigurations(
     args: DescribeChimeWebhookConfigurationsCommandInput,
-    cb: (err: any, data?: DescribeChimeWebhookConfigurationsCommandOutput) => void
+    cb: (err: any, data?: DescribeChimeWebhookConfigurationsCommandOutput) => void,
   ): void;
   describeChimeWebhookConfigurations(
     args: DescribeChimeWebhookConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeChimeWebhookConfigurationsCommandOutput) => void
+    cb: (err: any, data?: DescribeChimeWebhookConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -354,16 +354,16 @@ export interface Chatbot {
   describeSlackChannelConfigurations(): Promise<DescribeSlackChannelConfigurationsCommandOutput>;
   describeSlackChannelConfigurations(
     args: DescribeSlackChannelConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSlackChannelConfigurationsCommandOutput>;
   describeSlackChannelConfigurations(
     args: DescribeSlackChannelConfigurationsCommandInput,
-    cb: (err: any, data?: DescribeSlackChannelConfigurationsCommandOutput) => void
+    cb: (err: any, data?: DescribeSlackChannelConfigurationsCommandOutput) => void,
   ): void;
   describeSlackChannelConfigurations(
     args: DescribeSlackChannelConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSlackChannelConfigurationsCommandOutput) => void
+    cb: (err: any, data?: DescribeSlackChannelConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -372,16 +372,16 @@ export interface Chatbot {
   describeSlackUserIdentities(): Promise<DescribeSlackUserIdentitiesCommandOutput>;
   describeSlackUserIdentities(
     args: DescribeSlackUserIdentitiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSlackUserIdentitiesCommandOutput>;
   describeSlackUserIdentities(
     args: DescribeSlackUserIdentitiesCommandInput,
-    cb: (err: any, data?: DescribeSlackUserIdentitiesCommandOutput) => void
+    cb: (err: any, data?: DescribeSlackUserIdentitiesCommandOutput) => void,
   ): void;
   describeSlackUserIdentities(
     args: DescribeSlackUserIdentitiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSlackUserIdentitiesCommandOutput) => void
+    cb: (err: any, data?: DescribeSlackUserIdentitiesCommandOutput) => void,
   ): void;
 
   /**
@@ -390,16 +390,16 @@ export interface Chatbot {
   describeSlackWorkspaces(): Promise<DescribeSlackWorkspacesCommandOutput>;
   describeSlackWorkspaces(
     args: DescribeSlackWorkspacesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSlackWorkspacesCommandOutput>;
   describeSlackWorkspaces(
     args: DescribeSlackWorkspacesCommandInput,
-    cb: (err: any, data?: DescribeSlackWorkspacesCommandOutput) => void
+    cb: (err: any, data?: DescribeSlackWorkspacesCommandOutput) => void,
   ): void;
   describeSlackWorkspaces(
     args: DescribeSlackWorkspacesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSlackWorkspacesCommandOutput) => void
+    cb: (err: any, data?: DescribeSlackWorkspacesCommandOutput) => void,
   ): void;
 
   /**
@@ -408,16 +408,16 @@ export interface Chatbot {
   getAccountPreferences(): Promise<GetAccountPreferencesCommandOutput>;
   getAccountPreferences(
     args: GetAccountPreferencesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAccountPreferencesCommandOutput>;
   getAccountPreferences(
     args: GetAccountPreferencesCommandInput,
-    cb: (err: any, data?: GetAccountPreferencesCommandOutput) => void
+    cb: (err: any, data?: GetAccountPreferencesCommandOutput) => void,
   ): void;
   getAccountPreferences(
     args: GetAccountPreferencesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAccountPreferencesCommandOutput) => void
+    cb: (err: any, data?: GetAccountPreferencesCommandOutput) => void,
   ): void;
 
   /**
@@ -425,16 +425,16 @@ export interface Chatbot {
    */
   getMicrosoftTeamsChannelConfiguration(
     args: GetMicrosoftTeamsChannelConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMicrosoftTeamsChannelConfigurationCommandOutput>;
   getMicrosoftTeamsChannelConfiguration(
     args: GetMicrosoftTeamsChannelConfigurationCommandInput,
-    cb: (err: any, data?: GetMicrosoftTeamsChannelConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetMicrosoftTeamsChannelConfigurationCommandOutput) => void,
   ): void;
   getMicrosoftTeamsChannelConfiguration(
     args: GetMicrosoftTeamsChannelConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMicrosoftTeamsChannelConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetMicrosoftTeamsChannelConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -443,16 +443,16 @@ export interface Chatbot {
   listMicrosoftTeamsChannelConfigurations(): Promise<ListMicrosoftTeamsChannelConfigurationsCommandOutput>;
   listMicrosoftTeamsChannelConfigurations(
     args: ListMicrosoftTeamsChannelConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMicrosoftTeamsChannelConfigurationsCommandOutput>;
   listMicrosoftTeamsChannelConfigurations(
     args: ListMicrosoftTeamsChannelConfigurationsCommandInput,
-    cb: (err: any, data?: ListMicrosoftTeamsChannelConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListMicrosoftTeamsChannelConfigurationsCommandOutput) => void,
   ): void;
   listMicrosoftTeamsChannelConfigurations(
     args: ListMicrosoftTeamsChannelConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMicrosoftTeamsChannelConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListMicrosoftTeamsChannelConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -461,16 +461,16 @@ export interface Chatbot {
   listMicrosoftTeamsConfiguredTeams(): Promise<ListMicrosoftTeamsConfiguredTeamsCommandOutput>;
   listMicrosoftTeamsConfiguredTeams(
     args: ListMicrosoftTeamsConfiguredTeamsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMicrosoftTeamsConfiguredTeamsCommandOutput>;
   listMicrosoftTeamsConfiguredTeams(
     args: ListMicrosoftTeamsConfiguredTeamsCommandInput,
-    cb: (err: any, data?: ListMicrosoftTeamsConfiguredTeamsCommandOutput) => void
+    cb: (err: any, data?: ListMicrosoftTeamsConfiguredTeamsCommandOutput) => void,
   ): void;
   listMicrosoftTeamsConfiguredTeams(
     args: ListMicrosoftTeamsConfiguredTeamsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMicrosoftTeamsConfiguredTeamsCommandOutput) => void
+    cb: (err: any, data?: ListMicrosoftTeamsConfiguredTeamsCommandOutput) => void,
   ): void;
 
   /**
@@ -479,16 +479,16 @@ export interface Chatbot {
   listMicrosoftTeamsUserIdentities(): Promise<ListMicrosoftTeamsUserIdentitiesCommandOutput>;
   listMicrosoftTeamsUserIdentities(
     args: ListMicrosoftTeamsUserIdentitiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMicrosoftTeamsUserIdentitiesCommandOutput>;
   listMicrosoftTeamsUserIdentities(
     args: ListMicrosoftTeamsUserIdentitiesCommandInput,
-    cb: (err: any, data?: ListMicrosoftTeamsUserIdentitiesCommandOutput) => void
+    cb: (err: any, data?: ListMicrosoftTeamsUserIdentitiesCommandOutput) => void,
   ): void;
   listMicrosoftTeamsUserIdentities(
     args: ListMicrosoftTeamsUserIdentitiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMicrosoftTeamsUserIdentitiesCommandOutput) => void
+    cb: (err: any, data?: ListMicrosoftTeamsUserIdentitiesCommandOutput) => void,
   ): void;
 
   /**
@@ -496,16 +496,16 @@ export interface Chatbot {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -516,7 +516,7 @@ export interface Chatbot {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -527,7 +527,7 @@ export interface Chatbot {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -536,16 +536,16 @@ export interface Chatbot {
   updateAccountPreferences(): Promise<UpdateAccountPreferencesCommandOutput>;
   updateAccountPreferences(
     args: UpdateAccountPreferencesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAccountPreferencesCommandOutput>;
   updateAccountPreferences(
     args: UpdateAccountPreferencesCommandInput,
-    cb: (err: any, data?: UpdateAccountPreferencesCommandOutput) => void
+    cb: (err: any, data?: UpdateAccountPreferencesCommandOutput) => void,
   ): void;
   updateAccountPreferences(
     args: UpdateAccountPreferencesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAccountPreferencesCommandOutput) => void
+    cb: (err: any, data?: UpdateAccountPreferencesCommandOutput) => void,
   ): void;
 
   /**
@@ -553,16 +553,16 @@ export interface Chatbot {
    */
   updateChimeWebhookConfiguration(
     args: UpdateChimeWebhookConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateChimeWebhookConfigurationCommandOutput>;
   updateChimeWebhookConfiguration(
     args: UpdateChimeWebhookConfigurationCommandInput,
-    cb: (err: any, data?: UpdateChimeWebhookConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateChimeWebhookConfigurationCommandOutput) => void,
   ): void;
   updateChimeWebhookConfiguration(
     args: UpdateChimeWebhookConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateChimeWebhookConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateChimeWebhookConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -570,16 +570,16 @@ export interface Chatbot {
    */
   updateMicrosoftTeamsChannelConfiguration(
     args: UpdateMicrosoftTeamsChannelConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateMicrosoftTeamsChannelConfigurationCommandOutput>;
   updateMicrosoftTeamsChannelConfiguration(
     args: UpdateMicrosoftTeamsChannelConfigurationCommandInput,
-    cb: (err: any, data?: UpdateMicrosoftTeamsChannelConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateMicrosoftTeamsChannelConfigurationCommandOutput) => void,
   ): void;
   updateMicrosoftTeamsChannelConfiguration(
     args: UpdateMicrosoftTeamsChannelConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMicrosoftTeamsChannelConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateMicrosoftTeamsChannelConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -587,16 +587,16 @@ export interface Chatbot {
    */
   updateSlackChannelConfiguration(
     args: UpdateSlackChannelConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSlackChannelConfigurationCommandOutput>;
   updateSlackChannelConfiguration(
     args: UpdateSlackChannelConfigurationCommandInput,
-    cb: (err: any, data?: UpdateSlackChannelConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateSlackChannelConfigurationCommandOutput) => void,
   ): void;
   updateSlackChannelConfiguration(
     args: UpdateSlackChannelConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSlackChannelConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateSlackChannelConfigurationCommandOutput) => void,
   ): void;
 }
 

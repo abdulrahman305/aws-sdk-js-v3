@@ -31,16 +31,16 @@ export interface MarketplaceAgreement {
    */
   describeAgreement(
     args: DescribeAgreementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAgreementCommandOutput>;
   describeAgreement(
     args: DescribeAgreementCommandInput,
-    cb: (err: any, data?: DescribeAgreementCommandOutput) => void
+    cb: (err: any, data?: DescribeAgreementCommandOutput) => void,
   ): void;
   describeAgreement(
     args: DescribeAgreementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAgreementCommandOutput) => void
+    cb: (err: any, data?: DescribeAgreementCommandOutput) => void,
   ): void;
 
   /**
@@ -48,16 +48,16 @@ export interface MarketplaceAgreement {
    */
   getAgreementTerms(
     args: GetAgreementTermsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAgreementTermsCommandOutput>;
   getAgreementTerms(
     args: GetAgreementTermsCommandInput,
-    cb: (err: any, data?: GetAgreementTermsCommandOutput) => void
+    cb: (err: any, data?: GetAgreementTermsCommandOutput) => void,
   ): void;
   getAgreementTerms(
     args: GetAgreementTermsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAgreementTermsCommandOutput) => void
+    cb: (err: any, data?: GetAgreementTermsCommandOutput) => void,
   ): void;
 
   /**
@@ -66,16 +66,16 @@ export interface MarketplaceAgreement {
   searchAgreements(): Promise<SearchAgreementsCommandOutput>;
   searchAgreements(
     args: SearchAgreementsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchAgreementsCommandOutput>;
   searchAgreements(
     args: SearchAgreementsCommandInput,
-    cb: (err: any, data?: SearchAgreementsCommandOutput) => void
+    cb: (err: any, data?: SearchAgreementsCommandOutput) => void,
   ): void;
   searchAgreements(
     args: SearchAgreementsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchAgreementsCommandOutput) => void
+    cb: (err: any, data?: SearchAgreementsCommandOutput) => void,
   ): void;
 }
 

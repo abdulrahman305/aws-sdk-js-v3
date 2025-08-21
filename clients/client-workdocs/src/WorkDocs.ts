@@ -257,16 +257,16 @@ export interface WorkDocs {
    */
   abortDocumentVersionUpload(
     args: AbortDocumentVersionUploadCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AbortDocumentVersionUploadCommandOutput>;
   abortDocumentVersionUpload(
     args: AbortDocumentVersionUploadCommandInput,
-    cb: (err: any, data?: AbortDocumentVersionUploadCommandOutput) => void
+    cb: (err: any, data?: AbortDocumentVersionUploadCommandOutput) => void,
   ): void;
   abortDocumentVersionUpload(
     args: AbortDocumentVersionUploadCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AbortDocumentVersionUploadCommandOutput) => void
+    cb: (err: any, data?: AbortDocumentVersionUploadCommandOutput) => void,
   ): void;
 
   /**
@@ -277,7 +277,7 @@ export interface WorkDocs {
   activateUser(
     args: ActivateUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ActivateUserCommandOutput) => void
+    cb: (err: any, data?: ActivateUserCommandOutput) => void,
   ): void;
 
   /**
@@ -285,16 +285,16 @@ export interface WorkDocs {
    */
   addResourcePermissions(
     args: AddResourcePermissionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AddResourcePermissionsCommandOutput>;
   addResourcePermissions(
     args: AddResourcePermissionsCommandInput,
-    cb: (err: any, data?: AddResourcePermissionsCommandOutput) => void
+    cb: (err: any, data?: AddResourcePermissionsCommandOutput) => void,
   ): void;
   addResourcePermissions(
     args: AddResourcePermissionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddResourcePermissionsCommandOutput) => void
+    cb: (err: any, data?: AddResourcePermissionsCommandOutput) => void,
   ): void;
 
   /**
@@ -305,7 +305,7 @@ export interface WorkDocs {
   createComment(
     args: CreateCommentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCommentCommandOutput) => void
+    cb: (err: any, data?: CreateCommentCommandOutput) => void,
   ): void;
 
   /**
@@ -313,16 +313,16 @@ export interface WorkDocs {
    */
   createCustomMetadata(
     args: CreateCustomMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCustomMetadataCommandOutput>;
   createCustomMetadata(
     args: CreateCustomMetadataCommandInput,
-    cb: (err: any, data?: CreateCustomMetadataCommandOutput) => void
+    cb: (err: any, data?: CreateCustomMetadataCommandOutput) => void,
   ): void;
   createCustomMetadata(
     args: CreateCustomMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCustomMetadataCommandOutput) => void
+    cb: (err: any, data?: CreateCustomMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -333,7 +333,7 @@ export interface WorkDocs {
   createFolder(
     args: CreateFolderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateFolderCommandOutput) => void
+    cb: (err: any, data?: CreateFolderCommandOutput) => void,
   ): void;
 
   /**
@@ -344,7 +344,7 @@ export interface WorkDocs {
   createLabels(
     args: CreateLabelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateLabelsCommandOutput) => void
+    cb: (err: any, data?: CreateLabelsCommandOutput) => void,
   ): void;
 
   /**
@@ -352,16 +352,16 @@ export interface WorkDocs {
    */
   createNotificationSubscription(
     args: CreateNotificationSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateNotificationSubscriptionCommandOutput>;
   createNotificationSubscription(
     args: CreateNotificationSubscriptionCommandInput,
-    cb: (err: any, data?: CreateNotificationSubscriptionCommandOutput) => void
+    cb: (err: any, data?: CreateNotificationSubscriptionCommandOutput) => void,
   ): void;
   createNotificationSubscription(
     args: CreateNotificationSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateNotificationSubscriptionCommandOutput) => void
+    cb: (err: any, data?: CreateNotificationSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -372,7 +372,7 @@ export interface WorkDocs {
   createUser(
     args: CreateUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateUserCommandOutput) => void
+    cb: (err: any, data?: CreateUserCommandOutput) => void,
   ): void;
 
   /**
@@ -380,13 +380,13 @@ export interface WorkDocs {
    */
   deactivateUser(
     args: DeactivateUserCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeactivateUserCommandOutput>;
   deactivateUser(args: DeactivateUserCommandInput, cb: (err: any, data?: DeactivateUserCommandOutput) => void): void;
   deactivateUser(
     args: DeactivateUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeactivateUserCommandOutput) => void
+    cb: (err: any, data?: DeactivateUserCommandOutput) => void,
   ): void;
 
   /**
@@ -397,7 +397,7 @@ export interface WorkDocs {
   deleteComment(
     args: DeleteCommentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCommentCommandOutput) => void
+    cb: (err: any, data?: DeleteCommentCommandOutput) => void,
   ): void;
 
   /**
@@ -405,16 +405,16 @@ export interface WorkDocs {
    */
   deleteCustomMetadata(
     args: DeleteCustomMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCustomMetadataCommandOutput>;
   deleteCustomMetadata(
     args: DeleteCustomMetadataCommandInput,
-    cb: (err: any, data?: DeleteCustomMetadataCommandOutput) => void
+    cb: (err: any, data?: DeleteCustomMetadataCommandOutput) => void,
   ): void;
   deleteCustomMetadata(
     args: DeleteCustomMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCustomMetadataCommandOutput) => void
+    cb: (err: any, data?: DeleteCustomMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -422,13 +422,13 @@ export interface WorkDocs {
    */
   deleteDocument(
     args: DeleteDocumentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDocumentCommandOutput>;
   deleteDocument(args: DeleteDocumentCommandInput, cb: (err: any, data?: DeleteDocumentCommandOutput) => void): void;
   deleteDocument(
     args: DeleteDocumentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDocumentCommandOutput) => void
+    cb: (err: any, data?: DeleteDocumentCommandOutput) => void,
   ): void;
 
   /**
@@ -436,16 +436,16 @@ export interface WorkDocs {
    */
   deleteDocumentVersion(
     args: DeleteDocumentVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDocumentVersionCommandOutput>;
   deleteDocumentVersion(
     args: DeleteDocumentVersionCommandInput,
-    cb: (err: any, data?: DeleteDocumentVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteDocumentVersionCommandOutput) => void,
   ): void;
   deleteDocumentVersion(
     args: DeleteDocumentVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDocumentVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteDocumentVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -456,7 +456,7 @@ export interface WorkDocs {
   deleteFolder(
     args: DeleteFolderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFolderCommandOutput) => void
+    cb: (err: any, data?: DeleteFolderCommandOutput) => void,
   ): void;
 
   /**
@@ -464,16 +464,16 @@ export interface WorkDocs {
    */
   deleteFolderContents(
     args: DeleteFolderContentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteFolderContentsCommandOutput>;
   deleteFolderContents(
     args: DeleteFolderContentsCommandInput,
-    cb: (err: any, data?: DeleteFolderContentsCommandOutput) => void
+    cb: (err: any, data?: DeleteFolderContentsCommandOutput) => void,
   ): void;
   deleteFolderContents(
     args: DeleteFolderContentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFolderContentsCommandOutput) => void
+    cb: (err: any, data?: DeleteFolderContentsCommandOutput) => void,
   ): void;
 
   /**
@@ -484,7 +484,7 @@ export interface WorkDocs {
   deleteLabels(
     args: DeleteLabelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLabelsCommandOutput) => void
+    cb: (err: any, data?: DeleteLabelsCommandOutput) => void,
   ): void;
 
   /**
@@ -492,16 +492,16 @@ export interface WorkDocs {
    */
   deleteNotificationSubscription(
     args: DeleteNotificationSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteNotificationSubscriptionCommandOutput>;
   deleteNotificationSubscription(
     args: DeleteNotificationSubscriptionCommandInput,
-    cb: (err: any, data?: DeleteNotificationSubscriptionCommandOutput) => void
+    cb: (err: any, data?: DeleteNotificationSubscriptionCommandOutput) => void,
   ): void;
   deleteNotificationSubscription(
     args: DeleteNotificationSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteNotificationSubscriptionCommandOutput) => void
+    cb: (err: any, data?: DeleteNotificationSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -512,7 +512,7 @@ export interface WorkDocs {
   deleteUser(
     args: DeleteUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteUserCommandOutput) => void
+    cb: (err: any, data?: DeleteUserCommandOutput) => void,
   ): void;
 
   /**
@@ -521,16 +521,16 @@ export interface WorkDocs {
   describeActivities(): Promise<DescribeActivitiesCommandOutput>;
   describeActivities(
     args: DescribeActivitiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeActivitiesCommandOutput>;
   describeActivities(
     args: DescribeActivitiesCommandInput,
-    cb: (err: any, data?: DescribeActivitiesCommandOutput) => void
+    cb: (err: any, data?: DescribeActivitiesCommandOutput) => void,
   ): void;
   describeActivities(
     args: DescribeActivitiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeActivitiesCommandOutput) => void
+    cb: (err: any, data?: DescribeActivitiesCommandOutput) => void,
   ): void;
 
   /**
@@ -538,16 +538,16 @@ export interface WorkDocs {
    */
   describeComments(
     args: DescribeCommentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeCommentsCommandOutput>;
   describeComments(
     args: DescribeCommentsCommandInput,
-    cb: (err: any, data?: DescribeCommentsCommandOutput) => void
+    cb: (err: any, data?: DescribeCommentsCommandOutput) => void,
   ): void;
   describeComments(
     args: DescribeCommentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeCommentsCommandOutput) => void
+    cb: (err: any, data?: DescribeCommentsCommandOutput) => void,
   ): void;
 
   /**
@@ -555,16 +555,16 @@ export interface WorkDocs {
    */
   describeDocumentVersions(
     args: DescribeDocumentVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDocumentVersionsCommandOutput>;
   describeDocumentVersions(
     args: DescribeDocumentVersionsCommandInput,
-    cb: (err: any, data?: DescribeDocumentVersionsCommandOutput) => void
+    cb: (err: any, data?: DescribeDocumentVersionsCommandOutput) => void,
   ): void;
   describeDocumentVersions(
     args: DescribeDocumentVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDocumentVersionsCommandOutput) => void
+    cb: (err: any, data?: DescribeDocumentVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -572,16 +572,16 @@ export interface WorkDocs {
    */
   describeFolderContents(
     args: DescribeFolderContentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeFolderContentsCommandOutput>;
   describeFolderContents(
     args: DescribeFolderContentsCommandInput,
-    cb: (err: any, data?: DescribeFolderContentsCommandOutput) => void
+    cb: (err: any, data?: DescribeFolderContentsCommandOutput) => void,
   ): void;
   describeFolderContents(
     args: DescribeFolderContentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeFolderContentsCommandOutput) => void
+    cb: (err: any, data?: DescribeFolderContentsCommandOutput) => void,
   ): void;
 
   /**
@@ -589,13 +589,13 @@ export interface WorkDocs {
    */
   describeGroups(
     args: DescribeGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeGroupsCommandOutput>;
   describeGroups(args: DescribeGroupsCommandInput, cb: (err: any, data?: DescribeGroupsCommandOutput) => void): void;
   describeGroups(
     args: DescribeGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeGroupsCommandOutput) => void
+    cb: (err: any, data?: DescribeGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -603,16 +603,16 @@ export interface WorkDocs {
    */
   describeNotificationSubscriptions(
     args: DescribeNotificationSubscriptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeNotificationSubscriptionsCommandOutput>;
   describeNotificationSubscriptions(
     args: DescribeNotificationSubscriptionsCommandInput,
-    cb: (err: any, data?: DescribeNotificationSubscriptionsCommandOutput) => void
+    cb: (err: any, data?: DescribeNotificationSubscriptionsCommandOutput) => void,
   ): void;
   describeNotificationSubscriptions(
     args: DescribeNotificationSubscriptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeNotificationSubscriptionsCommandOutput) => void
+    cb: (err: any, data?: DescribeNotificationSubscriptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -620,16 +620,16 @@ export interface WorkDocs {
    */
   describeResourcePermissions(
     args: DescribeResourcePermissionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeResourcePermissionsCommandOutput>;
   describeResourcePermissions(
     args: DescribeResourcePermissionsCommandInput,
-    cb: (err: any, data?: DescribeResourcePermissionsCommandOutput) => void
+    cb: (err: any, data?: DescribeResourcePermissionsCommandOutput) => void,
   ): void;
   describeResourcePermissions(
     args: DescribeResourcePermissionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeResourcePermissionsCommandOutput) => void
+    cb: (err: any, data?: DescribeResourcePermissionsCommandOutput) => void,
   ): void;
 
   /**
@@ -637,16 +637,16 @@ export interface WorkDocs {
    */
   describeRootFolders(
     args: DescribeRootFoldersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRootFoldersCommandOutput>;
   describeRootFolders(
     args: DescribeRootFoldersCommandInput,
-    cb: (err: any, data?: DescribeRootFoldersCommandOutput) => void
+    cb: (err: any, data?: DescribeRootFoldersCommandOutput) => void,
   ): void;
   describeRootFolders(
     args: DescribeRootFoldersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRootFoldersCommandOutput) => void
+    cb: (err: any, data?: DescribeRootFoldersCommandOutput) => void,
   ): void;
 
   /**
@@ -658,7 +658,7 @@ export interface WorkDocs {
   describeUsers(
     args: DescribeUsersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeUsersCommandOutput) => void
+    cb: (err: any, data?: DescribeUsersCommandOutput) => void,
   ): void;
 
   /**
@@ -666,13 +666,13 @@ export interface WorkDocs {
    */
   getCurrentUser(
     args: GetCurrentUserCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCurrentUserCommandOutput>;
   getCurrentUser(args: GetCurrentUserCommandInput, cb: (err: any, data?: GetCurrentUserCommandOutput) => void): void;
   getCurrentUser(
     args: GetCurrentUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCurrentUserCommandOutput) => void
+    cb: (err: any, data?: GetCurrentUserCommandOutput) => void,
   ): void;
 
   /**
@@ -683,7 +683,7 @@ export interface WorkDocs {
   getDocument(
     args: GetDocumentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDocumentCommandOutput) => void
+    cb: (err: any, data?: GetDocumentCommandOutput) => void,
   ): void;
 
   /**
@@ -691,13 +691,13 @@ export interface WorkDocs {
    */
   getDocumentPath(
     args: GetDocumentPathCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDocumentPathCommandOutput>;
   getDocumentPath(args: GetDocumentPathCommandInput, cb: (err: any, data?: GetDocumentPathCommandOutput) => void): void;
   getDocumentPath(
     args: GetDocumentPathCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDocumentPathCommandOutput) => void
+    cb: (err: any, data?: GetDocumentPathCommandOutput) => void,
   ): void;
 
   /**
@@ -705,16 +705,16 @@ export interface WorkDocs {
    */
   getDocumentVersion(
     args: GetDocumentVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDocumentVersionCommandOutput>;
   getDocumentVersion(
     args: GetDocumentVersionCommandInput,
-    cb: (err: any, data?: GetDocumentVersionCommandOutput) => void
+    cb: (err: any, data?: GetDocumentVersionCommandOutput) => void,
   ): void;
   getDocumentVersion(
     args: GetDocumentVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDocumentVersionCommandOutput) => void
+    cb: (err: any, data?: GetDocumentVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -725,7 +725,7 @@ export interface WorkDocs {
   getFolder(
     args: GetFolderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFolderCommandOutput) => void
+    cb: (err: any, data?: GetFolderCommandOutput) => void,
   ): void;
 
   /**
@@ -736,7 +736,7 @@ export interface WorkDocs {
   getFolderPath(
     args: GetFolderPathCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFolderPathCommandOutput) => void
+    cb: (err: any, data?: GetFolderPathCommandOutput) => void,
   ): void;
 
   /**
@@ -748,7 +748,7 @@ export interface WorkDocs {
   getResources(
     args: GetResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourcesCommandOutput) => void
+    cb: (err: any, data?: GetResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -757,16 +757,16 @@ export interface WorkDocs {
   initiateDocumentVersionUpload(): Promise<InitiateDocumentVersionUploadCommandOutput>;
   initiateDocumentVersionUpload(
     args: InitiateDocumentVersionUploadCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<InitiateDocumentVersionUploadCommandOutput>;
   initiateDocumentVersionUpload(
     args: InitiateDocumentVersionUploadCommandInput,
-    cb: (err: any, data?: InitiateDocumentVersionUploadCommandOutput) => void
+    cb: (err: any, data?: InitiateDocumentVersionUploadCommandOutput) => void,
   ): void;
   initiateDocumentVersionUpload(
     args: InitiateDocumentVersionUploadCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InitiateDocumentVersionUploadCommandOutput) => void
+    cb: (err: any, data?: InitiateDocumentVersionUploadCommandOutput) => void,
   ): void;
 
   /**
@@ -774,16 +774,16 @@ export interface WorkDocs {
    */
   removeAllResourcePermissions(
     args: RemoveAllResourcePermissionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveAllResourcePermissionsCommandOutput>;
   removeAllResourcePermissions(
     args: RemoveAllResourcePermissionsCommandInput,
-    cb: (err: any, data?: RemoveAllResourcePermissionsCommandOutput) => void
+    cb: (err: any, data?: RemoveAllResourcePermissionsCommandOutput) => void,
   ): void;
   removeAllResourcePermissions(
     args: RemoveAllResourcePermissionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveAllResourcePermissionsCommandOutput) => void
+    cb: (err: any, data?: RemoveAllResourcePermissionsCommandOutput) => void,
   ): void;
 
   /**
@@ -791,16 +791,16 @@ export interface WorkDocs {
    */
   removeResourcePermission(
     args: RemoveResourcePermissionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveResourcePermissionCommandOutput>;
   removeResourcePermission(
     args: RemoveResourcePermissionCommandInput,
-    cb: (err: any, data?: RemoveResourcePermissionCommandOutput) => void
+    cb: (err: any, data?: RemoveResourcePermissionCommandOutput) => void,
   ): void;
   removeResourcePermission(
     args: RemoveResourcePermissionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveResourcePermissionCommandOutput) => void
+    cb: (err: any, data?: RemoveResourcePermissionCommandOutput) => void,
   ): void;
 
   /**
@@ -808,16 +808,16 @@ export interface WorkDocs {
    */
   restoreDocumentVersions(
     args: RestoreDocumentVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RestoreDocumentVersionsCommandOutput>;
   restoreDocumentVersions(
     args: RestoreDocumentVersionsCommandInput,
-    cb: (err: any, data?: RestoreDocumentVersionsCommandOutput) => void
+    cb: (err: any, data?: RestoreDocumentVersionsCommandOutput) => void,
   ): void;
   restoreDocumentVersions(
     args: RestoreDocumentVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RestoreDocumentVersionsCommandOutput) => void
+    cb: (err: any, data?: RestoreDocumentVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -826,13 +826,13 @@ export interface WorkDocs {
   searchResources(): Promise<SearchResourcesCommandOutput>;
   searchResources(
     args: SearchResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchResourcesCommandOutput>;
   searchResources(args: SearchResourcesCommandInput, cb: (err: any, data?: SearchResourcesCommandOutput) => void): void;
   searchResources(
     args: SearchResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchResourcesCommandOutput) => void
+    cb: (err: any, data?: SearchResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -840,13 +840,13 @@ export interface WorkDocs {
    */
   updateDocument(
     args: UpdateDocumentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDocumentCommandOutput>;
   updateDocument(args: UpdateDocumentCommandInput, cb: (err: any, data?: UpdateDocumentCommandOutput) => void): void;
   updateDocument(
     args: UpdateDocumentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDocumentCommandOutput) => void
+    cb: (err: any, data?: UpdateDocumentCommandOutput) => void,
   ): void;
 
   /**
@@ -854,16 +854,16 @@ export interface WorkDocs {
    */
   updateDocumentVersion(
     args: UpdateDocumentVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDocumentVersionCommandOutput>;
   updateDocumentVersion(
     args: UpdateDocumentVersionCommandInput,
-    cb: (err: any, data?: UpdateDocumentVersionCommandOutput) => void
+    cb: (err: any, data?: UpdateDocumentVersionCommandOutput) => void,
   ): void;
   updateDocumentVersion(
     args: UpdateDocumentVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDocumentVersionCommandOutput) => void
+    cb: (err: any, data?: UpdateDocumentVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -874,7 +874,7 @@ export interface WorkDocs {
   updateFolder(
     args: UpdateFolderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFolderCommandOutput) => void
+    cb: (err: any, data?: UpdateFolderCommandOutput) => void,
   ): void;
 
   /**
@@ -885,7 +885,7 @@ export interface WorkDocs {
   updateUser(
     args: UpdateUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateUserCommandOutput) => void
+    cb: (err: any, data?: UpdateUserCommandOutput) => void,
   ): void;
 }
 

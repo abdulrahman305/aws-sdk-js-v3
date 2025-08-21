@@ -87,7 +87,7 @@ const checkState = async (client: SSMClient, input: GetCommandInvocationCommandI
  */
 export const waitForCommandExecuted = async (
   params: WaiterConfiguration<SSMClient>,
-  input: GetCommandInvocationCommandInput
+  input: GetCommandInvocationCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -99,7 +99,7 @@ export const waitForCommandExecuted = async (
  */
 export const waitUntilCommandExecuted = async (
   params: WaiterConfiguration<SSMClient>,
-  input: GetCommandInvocationCommandInput
+  input: GetCommandInvocationCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

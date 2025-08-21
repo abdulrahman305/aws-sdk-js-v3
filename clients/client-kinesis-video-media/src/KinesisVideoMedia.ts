@@ -18,7 +18,7 @@ export interface KinesisVideoMedia {
   getMedia(
     args: GetMediaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMediaCommandOutput) => void
+    cb: (err: any, data?: GetMediaCommandOutput) => void,
   ): void;
 }
 

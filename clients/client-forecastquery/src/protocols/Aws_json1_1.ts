@@ -42,7 +42,7 @@ import {
  */
 export const se_QueryForecastCommand = async (
   input: QueryForecastCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("QueryForecast");
   let body: any;
@@ -55,7 +55,7 @@ export const se_QueryForecastCommand = async (
  */
 export const se_QueryWhatIfForecastCommand = async (
   input: QueryWhatIfForecastCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("QueryWhatIfForecast");
   let body: any;
@@ -68,7 +68,7 @@ export const se_QueryWhatIfForecastCommand = async (
  */
 export const de_QueryForecastCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<QueryForecastCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -88,7 +88,7 @@ export const de_QueryForecastCommand = async (
  */
 export const de_QueryWhatIfForecastCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<QueryWhatIfForecastCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -143,7 +143,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_InvalidInputExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidInputException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -159,7 +159,7 @@ const de_InvalidInputExceptionRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -175,7 +175,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -191,7 +191,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -207,7 +207,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -253,13 +253,16 @@ const de_Forecast = (output: any, context: __SerdeContext): Forecast => {
  * deserializeAws_json1_1Predictions
  */
 const de_Predictions = (output: any, context: __SerdeContext): Record<string, DataPoint[]> => {
-  return Object.entries(output).reduce((acc: Record<string, DataPoint[]>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, DataPoint[]>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_TimeSeries(value, context);
       return acc;
-    }
-    acc[key as string] = de_TimeSeries(value, context);
-    return acc;
-  }, {} as Record<string, DataPoint[]>);
+    },
+    {} as Record<string, DataPoint[]>,
+  );
 };
 
 /**
@@ -314,7 +317,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

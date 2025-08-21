@@ -156,7 +156,7 @@ export interface RolesAnywhere {
   createProfile(
     args: CreateProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateProfileCommandOutput) => void
+    cb: (err: any, data?: CreateProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -164,16 +164,16 @@ export interface RolesAnywhere {
    */
   createTrustAnchor(
     args: CreateTrustAnchorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateTrustAnchorCommandOutput>;
   createTrustAnchor(
     args: CreateTrustAnchorCommandInput,
-    cb: (err: any, data?: CreateTrustAnchorCommandOutput) => void
+    cb: (err: any, data?: CreateTrustAnchorCommandOutput) => void,
   ): void;
   createTrustAnchor(
     args: CreateTrustAnchorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTrustAnchorCommandOutput) => void
+    cb: (err: any, data?: CreateTrustAnchorCommandOutput) => void,
   ): void;
 
   /**
@@ -181,16 +181,16 @@ export interface RolesAnywhere {
    */
   deleteAttributeMapping(
     args: DeleteAttributeMappingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAttributeMappingCommandOutput>;
   deleteAttributeMapping(
     args: DeleteAttributeMappingCommandInput,
-    cb: (err: any, data?: DeleteAttributeMappingCommandOutput) => void
+    cb: (err: any, data?: DeleteAttributeMappingCommandOutput) => void,
   ): void;
   deleteAttributeMapping(
     args: DeleteAttributeMappingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAttributeMappingCommandOutput) => void
+    cb: (err: any, data?: DeleteAttributeMappingCommandOutput) => void,
   ): void;
 
   /**
@@ -201,7 +201,7 @@ export interface RolesAnywhere {
   deleteCrl(
     args: DeleteCrlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCrlCommandOutput) => void
+    cb: (err: any, data?: DeleteCrlCommandOutput) => void,
   ): void;
 
   /**
@@ -212,7 +212,7 @@ export interface RolesAnywhere {
   deleteProfile(
     args: DeleteProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -220,16 +220,16 @@ export interface RolesAnywhere {
    */
   deleteTrustAnchor(
     args: DeleteTrustAnchorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteTrustAnchorCommandOutput>;
   deleteTrustAnchor(
     args: DeleteTrustAnchorCommandInput,
-    cb: (err: any, data?: DeleteTrustAnchorCommandOutput) => void
+    cb: (err: any, data?: DeleteTrustAnchorCommandOutput) => void,
   ): void;
   deleteTrustAnchor(
     args: DeleteTrustAnchorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTrustAnchorCommandOutput) => void
+    cb: (err: any, data?: DeleteTrustAnchorCommandOutput) => void,
   ): void;
 
   /**
@@ -240,7 +240,7 @@ export interface RolesAnywhere {
   disableCrl(
     args: DisableCrlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableCrlCommandOutput) => void
+    cb: (err: any, data?: DisableCrlCommandOutput) => void,
   ): void;
 
   /**
@@ -248,13 +248,13 @@ export interface RolesAnywhere {
    */
   disableProfile(
     args: DisableProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisableProfileCommandOutput>;
   disableProfile(args: DisableProfileCommandInput, cb: (err: any, data?: DisableProfileCommandOutput) => void): void;
   disableProfile(
     args: DisableProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableProfileCommandOutput) => void
+    cb: (err: any, data?: DisableProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -262,16 +262,16 @@ export interface RolesAnywhere {
    */
   disableTrustAnchor(
     args: DisableTrustAnchorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisableTrustAnchorCommandOutput>;
   disableTrustAnchor(
     args: DisableTrustAnchorCommandInput,
-    cb: (err: any, data?: DisableTrustAnchorCommandOutput) => void
+    cb: (err: any, data?: DisableTrustAnchorCommandOutput) => void,
   ): void;
   disableTrustAnchor(
     args: DisableTrustAnchorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableTrustAnchorCommandOutput) => void
+    cb: (err: any, data?: DisableTrustAnchorCommandOutput) => void,
   ): void;
 
   /**
@@ -282,7 +282,7 @@ export interface RolesAnywhere {
   enableCrl(
     args: EnableCrlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableCrlCommandOutput) => void
+    cb: (err: any, data?: EnableCrlCommandOutput) => void,
   ): void;
 
   /**
@@ -293,7 +293,7 @@ export interface RolesAnywhere {
   enableProfile(
     args: EnableProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableProfileCommandOutput) => void
+    cb: (err: any, data?: EnableProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -301,16 +301,16 @@ export interface RolesAnywhere {
    */
   enableTrustAnchor(
     args: EnableTrustAnchorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EnableTrustAnchorCommandOutput>;
   enableTrustAnchor(
     args: EnableTrustAnchorCommandInput,
-    cb: (err: any, data?: EnableTrustAnchorCommandOutput) => void
+    cb: (err: any, data?: EnableTrustAnchorCommandOutput) => void,
   ): void;
   enableTrustAnchor(
     args: EnableTrustAnchorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableTrustAnchorCommandOutput) => void
+    cb: (err: any, data?: EnableTrustAnchorCommandOutput) => void,
   ): void;
 
   /**
@@ -321,7 +321,7 @@ export interface RolesAnywhere {
   getCrl(
     args: GetCrlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCrlCommandOutput) => void
+    cb: (err: any, data?: GetCrlCommandOutput) => void,
   ): void;
 
   /**
@@ -332,7 +332,7 @@ export interface RolesAnywhere {
   getProfile(
     args: GetProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetProfileCommandOutput) => void
+    cb: (err: any, data?: GetProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -343,7 +343,7 @@ export interface RolesAnywhere {
   getSubject(
     args: GetSubjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSubjectCommandOutput) => void
+    cb: (err: any, data?: GetSubjectCommandOutput) => void,
   ): void;
 
   /**
@@ -351,13 +351,13 @@ export interface RolesAnywhere {
    */
   getTrustAnchor(
     args: GetTrustAnchorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTrustAnchorCommandOutput>;
   getTrustAnchor(args: GetTrustAnchorCommandInput, cb: (err: any, data?: GetTrustAnchorCommandOutput) => void): void;
   getTrustAnchor(
     args: GetTrustAnchorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTrustAnchorCommandOutput) => void
+    cb: (err: any, data?: GetTrustAnchorCommandOutput) => void,
   ): void;
 
   /**
@@ -368,7 +368,7 @@ export interface RolesAnywhere {
   importCrl(
     args: ImportCrlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportCrlCommandOutput) => void
+    cb: (err: any, data?: ImportCrlCommandOutput) => void,
   ): void;
 
   /**
@@ -380,7 +380,7 @@ export interface RolesAnywhere {
   listCrls(
     args: ListCrlsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCrlsCommandOutput) => void
+    cb: (err: any, data?: ListCrlsCommandOutput) => void,
   ): void;
 
   /**
@@ -392,7 +392,7 @@ export interface RolesAnywhere {
   listProfiles(
     args: ListProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProfilesCommandOutput) => void
+    cb: (err: any, data?: ListProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -404,7 +404,7 @@ export interface RolesAnywhere {
   listSubjects(
     args: ListSubjectsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSubjectsCommandOutput) => void
+    cb: (err: any, data?: ListSubjectsCommandOutput) => void,
   ): void;
 
   /**
@@ -412,16 +412,16 @@ export interface RolesAnywhere {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -430,16 +430,16 @@ export interface RolesAnywhere {
   listTrustAnchors(): Promise<ListTrustAnchorsCommandOutput>;
   listTrustAnchors(
     args: ListTrustAnchorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTrustAnchorsCommandOutput>;
   listTrustAnchors(
     args: ListTrustAnchorsCommandInput,
-    cb: (err: any, data?: ListTrustAnchorsCommandOutput) => void
+    cb: (err: any, data?: ListTrustAnchorsCommandOutput) => void,
   ): void;
   listTrustAnchors(
     args: ListTrustAnchorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTrustAnchorsCommandOutput) => void
+    cb: (err: any, data?: ListTrustAnchorsCommandOutput) => void,
   ): void;
 
   /**
@@ -447,16 +447,16 @@ export interface RolesAnywhere {
    */
   putAttributeMapping(
     args: PutAttributeMappingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAttributeMappingCommandOutput>;
   putAttributeMapping(
     args: PutAttributeMappingCommandInput,
-    cb: (err: any, data?: PutAttributeMappingCommandOutput) => void
+    cb: (err: any, data?: PutAttributeMappingCommandOutput) => void,
   ): void;
   putAttributeMapping(
     args: PutAttributeMappingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAttributeMappingCommandOutput) => void
+    cb: (err: any, data?: PutAttributeMappingCommandOutput) => void,
   ): void;
 
   /**
@@ -464,16 +464,16 @@ export interface RolesAnywhere {
    */
   putNotificationSettings(
     args: PutNotificationSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutNotificationSettingsCommandOutput>;
   putNotificationSettings(
     args: PutNotificationSettingsCommandInput,
-    cb: (err: any, data?: PutNotificationSettingsCommandOutput) => void
+    cb: (err: any, data?: PutNotificationSettingsCommandOutput) => void,
   ): void;
   putNotificationSettings(
     args: PutNotificationSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutNotificationSettingsCommandOutput) => void
+    cb: (err: any, data?: PutNotificationSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -481,16 +481,16 @@ export interface RolesAnywhere {
    */
   resetNotificationSettings(
     args: ResetNotificationSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ResetNotificationSettingsCommandOutput>;
   resetNotificationSettings(
     args: ResetNotificationSettingsCommandInput,
-    cb: (err: any, data?: ResetNotificationSettingsCommandOutput) => void
+    cb: (err: any, data?: ResetNotificationSettingsCommandOutput) => void,
   ): void;
   resetNotificationSettings(
     args: ResetNotificationSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ResetNotificationSettingsCommandOutput) => void
+    cb: (err: any, data?: ResetNotificationSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -501,7 +501,7 @@ export interface RolesAnywhere {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -512,7 +512,7 @@ export interface RolesAnywhere {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -523,7 +523,7 @@ export interface RolesAnywhere {
   updateCrl(
     args: UpdateCrlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateCrlCommandOutput) => void
+    cb: (err: any, data?: UpdateCrlCommandOutput) => void,
   ): void;
 
   /**
@@ -534,7 +534,7 @@ export interface RolesAnywhere {
   updateProfile(
     args: UpdateProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -542,16 +542,16 @@ export interface RolesAnywhere {
    */
   updateTrustAnchor(
     args: UpdateTrustAnchorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateTrustAnchorCommandOutput>;
   updateTrustAnchor(
     args: UpdateTrustAnchorCommandInput,
-    cb: (err: any, data?: UpdateTrustAnchorCommandOutput) => void
+    cb: (err: any, data?: UpdateTrustAnchorCommandOutput) => void,
   ): void;
   updateTrustAnchor(
     args: UpdateTrustAnchorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTrustAnchorCommandOutput) => void
+    cb: (err: any, data?: UpdateTrustAnchorCommandOutput) => void,
   ): void;
 }
 

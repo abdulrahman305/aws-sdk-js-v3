@@ -17,7 +17,7 @@ export interface HostHeaderResolvedConfig {
   requestHandler: RequestHandler<any, any>;
 }
 export function resolveHostHeaderConfig<T>(
-  input: T & PreviouslyResolved & HostHeaderInputConfig
+  input: T & PreviouslyResolved & HostHeaderInputConfig,
 ): T & HostHeaderResolvedConfig {
   return input;
 }

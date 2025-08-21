@@ -84,7 +84,7 @@ const populateLineContent = (
     webpackVersion: string;
     esbuildVersion: string;
     rollupVersion: string;
-  }
+  },
 ): ReportLine => ({
   package: report.name,
   version: report.version,
@@ -99,7 +99,7 @@ export const updateReport = (
   options: {
     reportPath: string;
     limitConfigPath: string;
-  }
+  },
 ): void => {
   console.info(`Updating ${output.length} rows in the report ${options.reportPath}`);
   const validator = new LimitValidator(options);
@@ -112,7 +112,7 @@ export const updateReport = (
       esbuildVersion,
       webpackVersion,
       rollupVersion,
-    })
+    }),
   );
   const newReportedPackages = newLines.map((line) => line.package);
   const existingReportLines = report.filter((line) => !newReportedPackages.includes(line.package));

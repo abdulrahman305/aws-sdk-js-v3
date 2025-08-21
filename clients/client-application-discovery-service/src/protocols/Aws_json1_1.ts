@@ -174,7 +174,7 @@ import {
  */
 export const se_AssociateConfigurationItemsToApplicationCommand = async (
   input: AssociateConfigurationItemsToApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateConfigurationItemsToApplication");
   let body: any;
@@ -187,7 +187,7 @@ export const se_AssociateConfigurationItemsToApplicationCommand = async (
  */
 export const se_BatchDeleteAgentsCommand = async (
   input: BatchDeleteAgentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchDeleteAgents");
   let body: any;
@@ -200,7 +200,7 @@ export const se_BatchDeleteAgentsCommand = async (
  */
 export const se_BatchDeleteImportDataCommand = async (
   input: BatchDeleteImportDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchDeleteImportData");
   let body: any;
@@ -213,7 +213,7 @@ export const se_BatchDeleteImportDataCommand = async (
  */
 export const se_CreateApplicationCommand = async (
   input: CreateApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateApplication");
   let body: any;
@@ -226,7 +226,7 @@ export const se_CreateApplicationCommand = async (
  */
 export const se_CreateTagsCommand = async (
   input: CreateTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateTags");
   let body: any;
@@ -239,7 +239,7 @@ export const se_CreateTagsCommand = async (
  */
 export const se_DeleteApplicationsCommand = async (
   input: DeleteApplicationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteApplications");
   let body: any;
@@ -252,7 +252,7 @@ export const se_DeleteApplicationsCommand = async (
  */
 export const se_DeleteTagsCommand = async (
   input: DeleteTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteTags");
   let body: any;
@@ -265,7 +265,7 @@ export const se_DeleteTagsCommand = async (
  */
 export const se_DescribeAgentsCommand = async (
   input: DescribeAgentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAgents");
   let body: any;
@@ -278,7 +278,7 @@ export const se_DescribeAgentsCommand = async (
  */
 export const se_DescribeBatchDeleteConfigurationTaskCommand = async (
   input: DescribeBatchDeleteConfigurationTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeBatchDeleteConfigurationTask");
   let body: any;
@@ -291,7 +291,7 @@ export const se_DescribeBatchDeleteConfigurationTaskCommand = async (
  */
 export const se_DescribeConfigurationsCommand = async (
   input: DescribeConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeConfigurations");
   let body: any;
@@ -304,7 +304,7 @@ export const se_DescribeConfigurationsCommand = async (
  */
 export const se_DescribeContinuousExportsCommand = async (
   input: DescribeContinuousExportsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeContinuousExports");
   let body: any;
@@ -317,7 +317,7 @@ export const se_DescribeContinuousExportsCommand = async (
  */
 export const se_DescribeExportConfigurationsCommand = async (
   input: DescribeExportConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeExportConfigurations");
   let body: any;
@@ -330,7 +330,7 @@ export const se_DescribeExportConfigurationsCommand = async (
  */
 export const se_DescribeExportTasksCommand = async (
   input: DescribeExportTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeExportTasks");
   let body: any;
@@ -343,7 +343,7 @@ export const se_DescribeExportTasksCommand = async (
  */
 export const se_DescribeImportTasksCommand = async (
   input: DescribeImportTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeImportTasks");
   let body: any;
@@ -356,7 +356,7 @@ export const se_DescribeImportTasksCommand = async (
  */
 export const se_DescribeTagsCommand = async (
   input: DescribeTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTags");
   let body: any;
@@ -369,7 +369,7 @@ export const se_DescribeTagsCommand = async (
  */
 export const se_DisassociateConfigurationItemsFromApplicationCommand = async (
   input: DisassociateConfigurationItemsFromApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateConfigurationItemsFromApplication");
   let body: any;
@@ -382,7 +382,7 @@ export const se_DisassociateConfigurationItemsFromApplicationCommand = async (
  */
 export const se_ExportConfigurationsCommand = async (
   input: ExportConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ExportConfigurations");
   const body = "{}";
@@ -394,7 +394,7 @@ export const se_ExportConfigurationsCommand = async (
  */
 export const se_GetDiscoverySummaryCommand = async (
   input: GetDiscoverySummaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDiscoverySummary");
   let body: any;
@@ -407,7 +407,7 @@ export const se_GetDiscoverySummaryCommand = async (
  */
 export const se_ListConfigurationsCommand = async (
   input: ListConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListConfigurations");
   let body: any;
@@ -420,7 +420,7 @@ export const se_ListConfigurationsCommand = async (
  */
 export const se_ListServerNeighborsCommand = async (
   input: ListServerNeighborsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListServerNeighbors");
   let body: any;
@@ -433,7 +433,7 @@ export const se_ListServerNeighborsCommand = async (
  */
 export const se_StartBatchDeleteConfigurationTaskCommand = async (
   input: StartBatchDeleteConfigurationTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartBatchDeleteConfigurationTask");
   let body: any;
@@ -446,7 +446,7 @@ export const se_StartBatchDeleteConfigurationTaskCommand = async (
  */
 export const se_StartContinuousExportCommand = async (
   input: StartContinuousExportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartContinuousExport");
   let body: any;
@@ -459,7 +459,7 @@ export const se_StartContinuousExportCommand = async (
  */
 export const se_StartDataCollectionByAgentIdsCommand = async (
   input: StartDataCollectionByAgentIdsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartDataCollectionByAgentIds");
   let body: any;
@@ -472,7 +472,7 @@ export const se_StartDataCollectionByAgentIdsCommand = async (
  */
 export const se_StartExportTaskCommand = async (
   input: StartExportTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartExportTask");
   let body: any;
@@ -485,7 +485,7 @@ export const se_StartExportTaskCommand = async (
  */
 export const se_StartImportTaskCommand = async (
   input: StartImportTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartImportTask");
   let body: any;
@@ -498,7 +498,7 @@ export const se_StartImportTaskCommand = async (
  */
 export const se_StopContinuousExportCommand = async (
   input: StopContinuousExportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopContinuousExport");
   let body: any;
@@ -511,7 +511,7 @@ export const se_StopContinuousExportCommand = async (
  */
 export const se_StopDataCollectionByAgentIdsCommand = async (
   input: StopDataCollectionByAgentIdsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopDataCollectionByAgentIds");
   let body: any;
@@ -524,7 +524,7 @@ export const se_StopDataCollectionByAgentIdsCommand = async (
  */
 export const se_UpdateApplicationCommand = async (
   input: UpdateApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateApplication");
   let body: any;
@@ -537,7 +537,7 @@ export const se_UpdateApplicationCommand = async (
  */
 export const de_AssociateConfigurationItemsToApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateConfigurationItemsToApplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -557,7 +557,7 @@ export const de_AssociateConfigurationItemsToApplicationCommand = async (
  */
 export const de_BatchDeleteAgentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDeleteAgentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -577,7 +577,7 @@ export const de_BatchDeleteAgentsCommand = async (
  */
 export const de_BatchDeleteImportDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDeleteImportDataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -597,7 +597,7 @@ export const de_BatchDeleteImportDataCommand = async (
  */
 export const de_CreateApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateApplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -617,7 +617,7 @@ export const de_CreateApplicationCommand = async (
  */
 export const de_CreateTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -637,7 +637,7 @@ export const de_CreateTagsCommand = async (
  */
 export const de_DeleteApplicationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteApplicationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -657,7 +657,7 @@ export const de_DeleteApplicationsCommand = async (
  */
 export const de_DeleteTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -677,7 +677,7 @@ export const de_DeleteTagsCommand = async (
  */
 export const de_DescribeAgentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAgentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -697,7 +697,7 @@ export const de_DescribeAgentsCommand = async (
  */
 export const de_DescribeBatchDeleteConfigurationTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBatchDeleteConfigurationTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -717,7 +717,7 @@ export const de_DescribeBatchDeleteConfigurationTaskCommand = async (
  */
 export const de_DescribeConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConfigurationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -737,7 +737,7 @@ export const de_DescribeConfigurationsCommand = async (
  */
 export const de_DescribeContinuousExportsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeContinuousExportsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -757,7 +757,7 @@ export const de_DescribeContinuousExportsCommand = async (
  */
 export const de_DescribeExportConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeExportConfigurationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -777,7 +777,7 @@ export const de_DescribeExportConfigurationsCommand = async (
  */
 export const de_DescribeExportTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeExportTasksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -797,7 +797,7 @@ export const de_DescribeExportTasksCommand = async (
  */
 export const de_DescribeImportTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeImportTasksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -817,7 +817,7 @@ export const de_DescribeImportTasksCommand = async (
  */
 export const de_DescribeTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -837,7 +837,7 @@ export const de_DescribeTagsCommand = async (
  */
 export const de_DisassociateConfigurationItemsFromApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateConfigurationItemsFromApplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -857,7 +857,7 @@ export const de_DisassociateConfigurationItemsFromApplicationCommand = async (
  */
 export const de_ExportConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportConfigurationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -877,7 +877,7 @@ export const de_ExportConfigurationsCommand = async (
  */
 export const de_GetDiscoverySummaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDiscoverySummaryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -897,7 +897,7 @@ export const de_GetDiscoverySummaryCommand = async (
  */
 export const de_ListConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConfigurationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -917,7 +917,7 @@ export const de_ListConfigurationsCommand = async (
  */
 export const de_ListServerNeighborsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServerNeighborsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -937,7 +937,7 @@ export const de_ListServerNeighborsCommand = async (
  */
 export const de_StartBatchDeleteConfigurationTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartBatchDeleteConfigurationTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -957,7 +957,7 @@ export const de_StartBatchDeleteConfigurationTaskCommand = async (
  */
 export const de_StartContinuousExportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartContinuousExportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -977,7 +977,7 @@ export const de_StartContinuousExportCommand = async (
  */
 export const de_StartDataCollectionByAgentIdsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartDataCollectionByAgentIdsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -997,7 +997,7 @@ export const de_StartDataCollectionByAgentIdsCommand = async (
  */
 export const de_StartExportTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartExportTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1017,7 +1017,7 @@ export const de_StartExportTaskCommand = async (
  */
 export const de_StartImportTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartImportTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1037,7 +1037,7 @@ export const de_StartImportTaskCommand = async (
  */
 export const de_StopContinuousExportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopContinuousExportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1057,7 +1057,7 @@ export const de_StopContinuousExportCommand = async (
  */
 export const de_StopDataCollectionByAgentIdsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopDataCollectionByAgentIdsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1077,7 +1077,7 @@ export const de_StopDataCollectionByAgentIdsCommand = async (
  */
 export const de_UpdateApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1147,7 +1147,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AuthorizationErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AuthorizationErrorException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1163,7 +1163,7 @@ const de_AuthorizationErrorExceptionRes = async (
  */
 const de_ConflictErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConflictErrorException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1179,7 +1179,7 @@ const de_ConflictErrorExceptionRes = async (
  */
 const de_HomeRegionNotSetExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HomeRegionNotSetException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1195,7 +1195,7 @@ const de_HomeRegionNotSetExceptionRes = async (
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1211,7 +1211,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_InvalidParameterValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterValueException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1227,7 +1227,7 @@ const de_InvalidParameterValueExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1243,7 +1243,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_OperationNotPermittedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationNotPermittedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1259,7 +1259,7 @@ const de_OperationNotPermittedExceptionRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1275,7 +1275,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1291,7 +1291,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServerInternalErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServerInternalErrorException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1353,7 +1353,7 @@ const de_ServerInternalErrorExceptionRes = async (
  */
 const se_Ec2RecommendationsExportPreferences = (
   input: Ec2RecommendationsExportPreferences,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     cpuPerformanceMetricBasis: (_) => se_UsageMetricBasis(_, context),
@@ -1384,7 +1384,7 @@ const se_ExportPreferences = (input: ExportPreferences, context: __SerdeContext)
     ec2RecommendationsPreferences: (value) => ({
       ec2RecommendationsPreferences: se_Ec2RecommendationsExportPreferences(value, context),
     }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -1599,7 +1599,7 @@ const de_ContinuousExportDescriptions = (output: any, context: __SerdeContext): 
  */
 const de_DescribeBatchDeleteConfigurationTaskResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeBatchDeleteConfigurationTaskResponse => {
   return take(output, {
     task: (_: any) => de_BatchDeleteConfigurationTask(_, context),
@@ -1617,7 +1617,7 @@ const de_DescribeBatchDeleteConfigurationTaskResponse = (
  */
 const de_DescribeContinuousExportsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeContinuousExportsResponse => {
   return take(output, {
     descriptions: (_: any) => de_ContinuousExportDescriptions(_, context),
@@ -1630,7 +1630,7 @@ const de_DescribeContinuousExportsResponse = (
  */
 const de_DescribeExportConfigurationsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeExportConfigurationsResponse => {
   return take(output, {
     exportsInfo: (_: any) => de_ExportsInfo(_, context),
@@ -1825,7 +1825,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {
